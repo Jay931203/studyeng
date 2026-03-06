@@ -24,9 +24,9 @@ export function LevelUpModal() {
             className="text-center"
           >
             <p className="text-6xl mb-4">{'\uD83C\uDF8A'}</p>
-            <p className="text-white text-3xl font-bold mb-2">Level Up!</p>
+            <p className="text-white text-3xl font-bold mb-2">레벨 업!</p>
             <p className="text-yellow-400 text-5xl font-black">{level}</p>
-            <p className="text-gray-400 text-sm mt-4">Tap to continue</p>
+            <p className="text-gray-400 text-sm mt-4">탭해서 계속</p>
           </motion.div>
         </motion.div>
       )}

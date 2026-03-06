@@ -32,7 +32,7 @@ export function FillBlankGame({ subtitle, onComplete }: FillBlankGameProps) {
   return (
     <div className="flex flex-col items-center justify-center h-full px-6">
       <p className="text-gray-400 text-xs uppercase tracking-wider mb-8">
-        Fill in the blank
+        빈칸을 채워보세요
       </p>
 
       <p className="text-white text-xl font-medium text-center leading-relaxed mb-4">

@@ -99,7 +99,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
         </span>
       </div>
 
-      <SaveToast show={showToast} message="Phrase saved!" />
+      <SaveToast show={showToast} message="표현이 저장됐어요!" />
     </div>
   )
 }

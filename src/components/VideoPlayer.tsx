@@ -66,9 +66,9 @@ export function VideoPlayer({ youtubeId, subtitles, onSavePhrase }: VideoPlayerP
         }}
         className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs font-medium z-10"
       >
-        {subtitleMode === 'none' && 'CC Off'}
-        {subtitleMode === 'en' && 'EN'}
-        {subtitleMode === 'en-ko' && 'EN/KO'}
+        {subtitleMode === 'none' && '자막 끔'}
+        {subtitleMode === 'en' && '영어'}
+        {subtitleMode === 'en-ko' && '영+한'}
       </button>
 
       <SubtitleTimeline

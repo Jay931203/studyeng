@@ -46,7 +46,7 @@ export function SentencePuzzleGame({ subtitle, onComplete }: SentencePuzzleGameP
   return (
     <div className="flex flex-col items-center justify-center h-full px-6">
       <p className="text-gray-400 text-xs uppercase tracking-wider mb-8">
-        Arrange the words
+        단어를 순서대로 배열하세요
       </p>
 
       <p className="text-gray-500 text-sm mb-6">{subtitle.ko}</p>
@@ -93,7 +93,7 @@ export function SentencePuzzleGame({ subtitle, onComplete }: SentencePuzzleGameP
           onClick={handleSubmit}
           className="bg-blue-500 text-white px-8 py-3 rounded-full font-medium"
         >
-          Check
+          확인
         </motion.button>
       )}
 

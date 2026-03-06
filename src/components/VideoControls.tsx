@@ -1,25 +1,14 @@
 'use client'
 
 import { usePlayerStore } from '@/stores/usePlayerStore'
-
-const speeds = [0.5, 0.75, 1, 1.25]
+import { SpeedSlider } from './SpeedSlider'
 
 export function VideoControls() {
-  const { playbackRate, setPlaybackRate, isLooping, clearLoop } = usePlayerStore()
+  const { isLooping, clearLoop } = usePlayerStore()
 
   return (
     <div className="absolute bottom-20 right-4 flex flex-col gap-3 z-10">
-      <button
-        onClick={(e) => {
-          e.stopPropagation()
-          const currentIdx = speeds.indexOf(playbackRate)
-          const nextIdx = (currentIdx + 1) % speeds.length
-          setPlaybackRate(speeds[nextIdx])
-        }}
-        className="bg-black/50 backdrop-blur-sm text-white w-10 h-10 rounded-full flex items-center justify-center text-xs font-bold"
-      >
-        {playbackRate}x
-      </button>
+      <SpeedSlider />
 
       {isLooping && (
         <button

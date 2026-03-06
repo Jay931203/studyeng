@@ -12,8 +12,8 @@ export function StreakDisplay({ days }: StreakDisplayProps) {
       <div className="flex items-center gap-3 mb-4">
         <span className="text-3xl">{'\uD83D\uDD25'}</span>
         <div>
-          <p className="text-white text-2xl font-bold">{days} days</p>
-          <p className="text-orange-300/70 text-xs">Keep it going!</p>
+          <p className="text-white text-2xl font-bold">{days}일 연속</p>
+          <p className="text-orange-300/70 text-xs">계속 이어가세요!</p>
         </div>
       </div>
       <div className="flex justify-between">

@@ -9,15 +9,15 @@ vi.mock('next/navigation', () => ({
 describe('BottomNav', () => {
   it('renders 4 navigation tabs', () => {
     render(<BottomNav />)
-    expect(screen.getByText('Feed')).toBeInTheDocument()
-    expect(screen.getByText('Explore')).toBeInTheDocument()
-    expect(screen.getByText('Learning')).toBeInTheDocument()
-    expect(screen.getByText('Profile')).toBeInTheDocument()
+    expect(screen.getByText('홈')).toBeInTheDocument()
+    expect(screen.getByText('탐색')).toBeInTheDocument()
+    expect(screen.getByText('학습')).toBeInTheDocument()
+    expect(screen.getByText('MY')).toBeInTheDocument()
   })
 
   it('highlights active tab', () => {
     render(<BottomNav />)
-    const feedLink = screen.getByText('Feed').closest('a')
+    const feedLink = screen.getByText('홈').closest('a')
     expect(feedLink).toHaveClass('text-blue-500')
   })
 })

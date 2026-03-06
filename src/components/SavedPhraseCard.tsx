@@ -21,13 +21,13 @@ export function SavedPhraseCard({ phrase, onDelete }: SavedPhraseCardProps) {
       <p className="text-gray-400 text-sm mt-1">{phrase.ko}</p>
       <div className="flex items-center justify-between mt-3">
         <span className="text-gray-500 text-xs">
-          {phrase.videoTitle} &middot; reviewed {phrase.reviewCount}x
+          {phrase.videoTitle} &middot; {phrase.reviewCount}회 복습
         </span>
         <button
           onClick={onDelete}
           className="text-red-400/60 text-xs hover:text-red-400"
         >
-          Delete
+          삭제
         </button>
       </div>
     </motion.div>

@@ -4,10 +4,10 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 const tabs = [
-  { href: '/', label: 'Feed', icon: 'home' },
-  { href: '/explore', label: 'Explore', icon: 'search' },
-  { href: '/learning', label: 'Learning', icon: 'book' },
-  { href: '/profile', label: 'Profile', icon: 'user' },
+  { href: '/', label: '홈', icon: 'home' },
+  { href: '/explore', label: '탐색', icon: 'search' },
+  { href: '/learning', label: '학습', icon: 'book' },
+  { href: '/profile', label: 'MY', icon: 'user' },
 ] as const
 
 const icons: Record<string, (active: boolean) => React.ReactNode> = {

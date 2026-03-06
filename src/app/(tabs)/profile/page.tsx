@@ -31,15 +31,15 @@ export default function ProfilePage() {
           </div>
           <div>
             <p className="text-white font-bold text-lg">
-              {user?.user_metadata?.full_name ?? 'Guest'}
+              {user?.user_metadata?.full_name ?? '게스트'}
             </p>
-            <p className="text-gray-400 text-sm">Level {level}</p>
+            <p className="text-gray-400 text-sm">레벨 {level}</p>
           </div>
         </div>
 
         <div className="mb-6">
           <div className="flex justify-between text-xs text-gray-400 mb-1">
-            <span>XP</span>
+            <span>경험치</span>
             <span>{xp} / {xpForNextLevel}</span>
           </div>
           <div className="h-2 bg-white/10 rounded-full overflow-hidden">
@@ -55,11 +55,11 @@ export default function ProfilePage() {
         <div className="grid grid-cols-2 gap-3 mt-4">
           <div className="bg-white/5 rounded-xl p-4 text-center">
             <p className="text-white text-2xl font-bold">{phraseCount}</p>
-            <p className="text-gray-400 text-xs">Saved Phrases</p>
+            <p className="text-gray-400 text-xs">저장한 표현</p>
           </div>
           <div className="bg-white/5 rounded-xl p-4 text-center">
             <p className="text-white text-2xl font-bold">{level}</p>
-            <p className="text-gray-400 text-xs">Current Level</p>
+            <p className="text-gray-400 text-xs">현재 레벨</p>
           </div>
         </div>
 
@@ -69,7 +69,7 @@ export default function ProfilePage() {
               onClick={signOut}
               className="w-full py-3 bg-white/5 text-gray-400 rounded-xl text-sm"
             >
-              Sign Out
+              로그아웃
             </button>
           ) : (
             <button
@@ -82,7 +82,7 @@ export default function ProfilePage() {
                 <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
                 <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
               </svg>
-              Sign in with Google
+              Google로 로그인
             </button>
           )}
         </div>
