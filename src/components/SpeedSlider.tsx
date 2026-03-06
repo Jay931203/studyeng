@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useRef, useCallback } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
 import { usePlayerStore } from '@/stores/usePlayerStore'
 
 const SNAP_VALUES = [0.5, 0.75, 1.0, 1.25, 1.5, 2.0]
@@ -79,19 +78,12 @@ export function SpeedSlider() {
         {playbackRate === 1 ? '1x' : `${playbackRate}x`}
       </button>
 
-      <AnimatePresence>
-        {showSlider && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+      {showSlider && (
+          <div
             className="fixed inset-0 z-50"
             onClick={() => setShowSlider(false)}
           >
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 20 }}
+            <div
               onClick={(e) => e.stopPropagation()}
               onPointerDown={(e) => e.stopPropagation()}
               onPointerMove={(e) => e.stopPropagation()}
@@ -147,10 +139,9 @@ export function SpeedSlider() {
                 <span>느리게</span>
                 <span>빠르게</span>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         )}
-      </AnimatePresence>
     </>
   )
 }

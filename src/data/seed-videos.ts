@@ -99,7 +99,7 @@ export const seedVideos: VideoData[] = [
   // === Friends 시즌1 시리즈 ===
   {
     id: 'friends-1',
-    youtubeId: 'yQBGEjcZqfs',
+    youtubeId: 'RjpvuPAzJUw',
     title: 'Friends EP1: 첫 만남',
     category: 'drama',
     difficulty: 2,
@@ -117,7 +117,7 @@ export const seedVideos: VideoData[] = [
   },
   {
     id: 'friends-2',
-    youtubeId: '7K_j41BOSIS',
+    youtubeId: '2_XiKIvXVEw',
     title: 'Friends EP2: 커피숍 일상',
     category: 'drama',
     difficulty: 2,
@@ -135,7 +135,7 @@ export const seedVideos: VideoData[] = [
   },
   {
     id: 'friends-3',
-    youtubeId: '286JzTD5gMI',
+    youtubeId: 'Pzq6O31u8fY',
     title: 'Friends EP3: 로스의 고백',
     category: 'drama',
     difficulty: 3,
@@ -153,7 +153,7 @@ export const seedVideos: VideoData[] = [
   },
   {
     id: 'friends-4',
-    youtubeId: 'mPczNoUHi2M',
+    youtubeId: '1lfyb9sIxuc',
     title: 'Friends EP4: 감동의 순간',
     category: 'drama',
     difficulty: 2,
@@ -173,7 +173,7 @@ export const seedVideos: VideoData[] = [
   // === 악마는 프라다를 입는다 시리즈 ===
   {
     id: 'prada-1',
-    youtubeId: 'tY4nOyMo1lQ',
+    youtubeId: '2PjZAeiU7uM',
     title: '프라다 EP1: 면접',
     category: 'movie',
     difficulty: 3,
@@ -191,7 +191,7 @@ export const seedVideos: VideoData[] = [
   },
   {
     id: 'prada-2',
-    youtubeId: 'b0CYwEDN_HU',
+    youtubeId: 'b2f2Kqt_KcE',
     title: '프라다 EP2: 직장 생활',
     category: 'movie',
     difficulty: 4,
@@ -209,7 +209,7 @@ export const seedVideos: VideoData[] = [
   },
   {
     id: 'prada-3',
-    youtubeId: 'pwCe7sXYXY8',
+    youtubeId: '-qdHE9-8spU',
     title: '프라다 EP3: 성장',
     category: 'movie',
     difficulty: 3,
@@ -229,7 +229,7 @@ export const seedVideos: VideoData[] = [
   // === 카페 영어 시리즈 ===
   {
     id: 'cafe-1',
-    youtubeId: 'M0CfNA12aFw',
+    youtubeId: 'jhEtBuuYNj4',
     title: '카페 EP1: 기본 주문',
     category: 'daily',
     difficulty: 1,
@@ -247,7 +247,7 @@ export const seedVideos: VideoData[] = [
   },
   {
     id: 'cafe-2',
-    youtubeId: 'PIJwLSqXkfk',
+    youtubeId: 'v-jIvacpsxI',
     title: '카페 EP2: 커스터마이징',
     category: 'daily',
     difficulty: 2,
@@ -265,7 +265,7 @@ export const seedVideos: VideoData[] = [
   },
   {
     id: 'cafe-3',
-    youtubeId: 'LfRYvFSVJbk',
+    youtubeId: 'CjzrznCrUTI',
     title: '카페 EP3: 문제 해결',
     category: 'daily',
     difficulty: 2,
@@ -285,7 +285,7 @@ export const seedVideos: VideoData[] = [
   // === 공항 서바이벌 시리즈 ===
   {
     id: 'airport-1',
-    youtubeId: 'udJcdGlkFa0',
+    youtubeId: 'f-d-R_6Wtlc',
     title: '공항 EP1: 체크인',
     category: 'travel',
     difficulty: 2,
@@ -303,7 +303,7 @@ export const seedVideos: VideoData[] = [
   },
   {
     id: 'airport-2',
-    youtubeId: 'HDEBfoyLLIg',
+    youtubeId: 'Lympa-566Ek',
     title: '공항 EP2: 보안검색',
     category: 'travel',
     difficulty: 2,
@@ -321,7 +321,7 @@ export const seedVideos: VideoData[] = [
   },
   {
     id: 'airport-3',
-    youtubeId: 'Mv4lzFREI8E',
+    youtubeId: 'jJI5AsI5lBc',
     title: '공항 EP3: 길 찾기',
     category: 'travel',
     difficulty: 1,
@@ -341,7 +341,7 @@ export const seedVideos: VideoData[] = [
   // === 직장인 영어 시리즈 ===
   {
     id: 'office-1',
-    youtubeId: 'zhkQ6cRIwIw',
+    youtubeId: 'MTM_bnkrz-c',
     title: '직장 EP1: 회의 스몰톡',
     category: 'business',
     difficulty: 3,
@@ -359,7 +359,7 @@ export const seedVideos: VideoData[] = [
   },
   {
     id: 'office-2',
-    youtubeId: 'sz4YqwH_6D0',
+    youtubeId: 'XFkDSotI-Z8',
     title: '직장 EP2: 이메일 표현',
     category: 'business',
     difficulty: 3,
@@ -377,7 +377,7 @@ export const seedVideos: VideoData[] = [
   },
   {
     id: 'office-3',
-    youtubeId: 'Unzc731iCUY',
+    youtubeId: 'vwxIz4sYpBw',
     title: '직장 EP3: 프레젠테이션',
     category: 'business',
     difficulty: 4,
@@ -397,7 +397,7 @@ export const seedVideos: VideoData[] = [
   // === 토크쇼 시리즈 ===
   {
     id: 'talkshow-1',
-    youtubeId: 'arj7oStGLkU',
+    youtubeId: 'R8vNn0WFUnY',
     title: '토크쇼 EP1: 재밌는 인터뷰',
     category: 'entertainment',
     difficulty: 3,
@@ -415,7 +415,7 @@ export const seedVideos: VideoData[] = [
   },
   {
     id: 'talkshow-2',
-    youtubeId: 'nKIu9yen5nc',
+    youtubeId: 'ZNHvU6TK93w',
     title: '토크쇼 EP2: 즉흥 게임',
     category: 'entertainment',
     difficulty: 2,
