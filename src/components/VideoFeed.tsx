@@ -4,6 +4,8 @@ import { useState, useRef, useCallback } from 'react'
 import { motion, AnimatePresence, type PanInfo } from 'framer-motion'
 import { VideoPlayer } from './VideoPlayer'
 import { VideoControls } from './VideoControls'
+import { SaveToast } from './SaveToast'
+import { usePhraseStore } from '@/stores/usePhraseStore'
 import type { VideoData } from '@/data/seed-videos'
 
 interface VideoFeedProps {
@@ -13,7 +15,9 @@ interface VideoFeedProps {
 export function VideoFeed({ videos }: VideoFeedProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [direction, setDirection] = useState(0)
+  const [showToast, setShowToast] = useState(false)
   const constraintsRef = useRef(null)
+  const savePhrase = usePhraseStore((s) => s.savePhrase)
 
   const swipeThreshold = 50
 
@@ -58,6 +62,18 @@ export function VideoFeed({ videos }: VideoFeedProps) {
           <VideoPlayer
             youtubeId={currentVideo.youtubeId}
             subtitles={currentVideo.subtitles}
+            onSavePhrase={(phrase) => {
+              savePhrase({
+                videoId: currentVideo.id,
+                videoTitle: currentVideo.title,
+                en: phrase.en,
+                ko: phrase.ko,
+                timestampStart: phrase.start,
+                timestampEnd: phrase.end,
+              })
+              setShowToast(true)
+              setTimeout(() => setShowToast(false), 2000)
+            }}
           />
           <VideoControls />
 
@@ -82,6 +98,8 @@ export function VideoFeed({ videos }: VideoFeedProps) {
           {currentIndex + 1} / {videos.length}
         </span>
       </div>
+
+      <SaveToast show={showToast} message="Phrase saved!" />
     </div>
   )
 }
