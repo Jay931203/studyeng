@@ -16,13 +16,13 @@ export function SavedPhraseCard({ phrase, onDelete, onPlay }: SavedPhraseCardPro
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, x: -100 }}
-      className="bg-white/5 border border-white/10 rounded-xl p-4 cursor-pointer"
+      className="bg-[var(--bg-card)] border border-[var(--border-card)] rounded-xl p-4 cursor-pointer"
       onClick={onPlay}
     >
       <div className="flex items-start justify-between gap-3">
         <div className="flex-1 min-w-0">
-          <p className="text-white font-medium">{phrase.en}</p>
-          <p className="text-gray-400 text-sm mt-1">{phrase.ko}</p>
+          <p className="text-[var(--text-primary)] font-medium">{phrase.en}</p>
+          <p className="text-[var(--text-secondary)] text-sm mt-1">{phrase.ko}</p>
         </div>
         {onPlay && (
           <button
@@ -37,7 +37,7 @@ export function SavedPhraseCard({ phrase, onDelete, onPlay }: SavedPhraseCardPro
         )}
       </div>
       <div className="flex items-center justify-between mt-3">
-        <span className="text-gray-500 text-xs">
+        <span className="text-[var(--text-muted)] text-xs">
           {phrase.videoTitle} &middot; {phrase.reviewCount}회 복습
         </span>
         <button

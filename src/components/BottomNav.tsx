@@ -37,7 +37,7 @@ export function BottomNav() {
   const pathname = usePathname()
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-lg border-t border-white/10 safe-area-bottom">
+    <nav className="fixed bottom-0 left-0 right-0 z-50 bg-[var(--bg-nav)] backdrop-blur-lg border-t border-[var(--border-card)] safe-area-bottom">
       <div className="flex justify-around items-center h-16 max-w-lg mx-auto">
         {tabs.map(({ href, label, icon }) => {
           const isActive = href === '/' ? pathname === '/' : pathname.startsWith(href)
@@ -46,7 +46,7 @@ export function BottomNav() {
               key={href}
               href={href}
               className={`flex flex-col items-center gap-0.5 px-3 py-1 transition-colors ${
-                isActive ? 'text-blue-500' : 'text-gray-400'
+                isActive ? 'text-blue-500' : 'text-[var(--text-secondary)]'
               }`}
             >
               {icons[icon](isActive)}

@@ -12,7 +12,7 @@ export function VideoControls({ videoId }: VideoControlsProps) {
   const { isLooping, clearLoop } = usePlayerStore()
 
   return (
-    <div className="absolute bottom-20 right-4 flex flex-col gap-3 z-10">
+    <div className="absolute bottom-[100px] right-4 flex flex-col gap-3 z-10">
       {videoId && <BookmarkButton videoId={videoId} />}
 
       <SpeedSlider />

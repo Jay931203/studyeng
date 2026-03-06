@@ -12,7 +12,7 @@ export function StreakDisplay({ days }: StreakDisplayProps) {
       <div className="flex items-center gap-3 mb-4">
         <span className="text-3xl">{'\uD83D\uDD25'}</span>
         <div>
-          <p className="text-white text-2xl font-bold">{days}일 연속</p>
+          <p className="text-[var(--text-primary)] text-2xl font-bold">{days}일 연속</p>
           <p className="text-orange-300/70 text-xs">계속 이어가세요!</p>
         </div>
       </div>
@@ -23,7 +23,7 @@ export function StreakDisplay({ days }: StreakDisplayProps) {
               className={`w-8 h-8 rounded-full flex items-center justify-center text-xs ${
                 i < (days % 7)
                   ? 'bg-orange-500 text-white'
-                  : 'bg-white/5 text-gray-500'
+                  : 'bg-[var(--bg-card)] text-[var(--text-muted)]'
               }`}
             >
               {i < (days % 7) ? '\u2713' : day}

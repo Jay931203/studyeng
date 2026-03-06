@@ -48,11 +48,11 @@ export function VideoFeed({ videos }: VideoFeedProps) {
 
   return (
     <div ref={constraintsRef} className="relative w-full h-full overflow-hidden">
-      <AnimatePresence mode="wait" custom={direction}>
+      <AnimatePresence custom={direction}>
         <motion.div
           key={currentVideo.id}
           custom={direction}
-          initial={{ y: direction > 0 ? '100%' : '-100%', opacity: 0 }}
+          initial={direction === 0 ? false : { y: direction > 0 ? '100%' : '-100%', opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           exit={{ y: direction > 0 ? '-100%' : '100%', opacity: 0 }}
           transition={{ type: 'spring', damping: 25, stiffness: 200 }}
@@ -81,7 +81,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
           <VideoControls videoId={currentVideo.id} />
 
           {/* Video info - positioned above subtitle area */}
-          <div className="absolute bottom-28 left-4 right-16 z-10 pointer-events-none">
+          <div className="absolute bottom-[100px] left-4 right-20 z-10 pointer-events-none">
             <p className="text-white font-bold text-base drop-shadow-lg">
               {currentVideo.title}
             </p>

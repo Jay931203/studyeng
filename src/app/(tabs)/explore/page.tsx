@@ -37,7 +37,7 @@ export default function ExplorePage() {
   return (
     <div className="h-full overflow-y-auto no-scrollbar pb-20 pt-12">
       <div className="px-4">
-        <h1 className="text-white text-2xl font-bold mb-4">탐색</h1>
+        <h1 className="text-[var(--text-primary)] text-2xl font-bold mb-4">탐색</h1>
 
         <SearchBar />
 
@@ -48,7 +48,7 @@ export default function ExplorePage() {
             className={`px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
               activeCategory === 'all'
                 ? 'bg-blue-500 text-white'
-                : 'bg-white/10 text-gray-400'
+                : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
             }`}
           >
             전체
@@ -60,7 +60,7 @@ export default function ExplorePage() {
               className={`px-4 py-1.5 rounded-full text-sm font-medium whitespace-nowrap transition-colors ${
                 activeCategory === cat.id
                   ? 'bg-blue-500 text-white'
-                  : 'bg-white/10 text-gray-400'
+                  : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
               }`}
             >
               {cat.label}
@@ -71,19 +71,19 @@ export default function ExplorePage() {
         {/* Series section */}
         {!selectedSeries && filteredSeries.length > 0 && (
           <div className="mb-6">
-            <h2 className="text-white font-bold text-lg mb-3">시리즈 몰아보기</h2>
+            <h2 className="text-[var(--text-primary)] font-bold text-lg mb-3">시리즈 몰아보기</h2>
             <div className="flex gap-3 overflow-x-auto no-scrollbar pb-2">
               {filteredSeries.map((s) => (
                 <button
                   key={s.id}
                   onClick={() => setSelectedSeries(s)}
-                  className="flex-shrink-0 w-40 bg-white/5 border border-white/10 rounded-xl p-4 text-left"
+                  className="flex-shrink-0 w-40 bg-[var(--bg-card)] border border-[var(--border-card)] rounded-xl p-4 text-left"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center text-white font-bold text-lg mb-2">
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center text-[var(--text-primary)] font-bold text-lg mb-2">
                     {s.title.charAt(0)}
                   </div>
-                  <p className="text-white font-medium text-sm line-clamp-2">{s.title}</p>
-                  <p className="text-gray-500 text-xs mt-1">{s.episodeCount}편</p>
+                  <p className="text-[var(--text-primary)] font-medium text-sm line-clamp-2">{s.title}</p>
+                  <p className="text-[var(--text-muted)] text-xs mt-1">{s.episodeCount}편</p>
                 </button>
               ))}
             </div>
@@ -109,19 +109,19 @@ export default function ExplorePage() {
                 뒤로
               </button>
 
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-5 mb-4">
+              <div className="bg-[var(--bg-card)] border border-[var(--border-card)] rounded-2xl p-5 mb-4">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center text-[var(--text-primary)] font-bold text-xl flex-shrink-0">
                     {selectedSeries.title.charAt(0)}
                   </div>
                   <div>
-                    <h2 className="text-white font-bold text-lg">{selectedSeries.title}</h2>
-                    <p className="text-gray-400 text-sm mt-1">{selectedSeries.description}</p>
+                    <h2 className="text-[var(--text-primary)] font-bold text-lg">{selectedSeries.title}</h2>
+                    <p className="text-[var(--text-secondary)] text-sm mt-1">{selectedSeries.description}</p>
                     <div className="flex gap-2 mt-2">
                       <span className="text-xs bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded-full">
                         {categories.find(c => c.id === selectedSeries.category)?.label}
                       </span>
-                      <span className="text-xs bg-white/10 text-gray-400 px-2 py-0.5 rounded-full">
+                      <span className="text-xs bg-[var(--bg-secondary)] text-[var(--text-secondary)] px-2 py-0.5 rounded-full">
                         {selectedSeries.episodeCount}편
                       </span>
                     </div>
@@ -135,18 +135,18 @@ export default function ExplorePage() {
                   <button
                     key={video.id}
                     onClick={() => router.push(`/?v=${video.id}`)}
-                    className="bg-white/5 border border-white/10 rounded-xl p-4 text-left flex items-center gap-4"
+                    className="bg-[var(--bg-card)] border border-[var(--border-card)] rounded-xl p-4 text-left flex items-center gap-4"
                   >
                     <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-sm flex-shrink-0">
                       {video.episodeNumber}
                     </div>
                     <div className="flex-1 min-w-0">
-                      <p className="text-white font-medium text-sm truncate">{video.title}</p>
-                      <p className="text-gray-500 text-xs mt-0.5">
+                      <p className="text-[var(--text-primary)] font-medium text-sm truncate">{video.title}</p>
+                      <p className="text-[var(--text-muted)] text-xs mt-0.5">
                         난이도 {'★'.repeat(video.difficulty)}{'☆'.repeat(5 - video.difficulty)}
                       </p>
                     </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-gray-500 flex-shrink-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[var(--text-muted)] flex-shrink-0">
                       <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
                     </svg>
                   </button>
@@ -171,7 +171,7 @@ export default function ExplorePage() {
         {/* All videos grid (when no series selected) */}
         {!selectedSeries && (
           <>
-            <h2 className="text-white font-bold text-lg mb-3">전체 영상</h2>
+            <h2 className="text-[var(--text-primary)] font-bold text-lg mb-3">전체 영상</h2>
             <div className="grid grid-cols-2 gap-3">
               {filteredVideos.map((video) => (
                 <VideoCard

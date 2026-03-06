@@ -14,14 +14,14 @@ export default function LoginPage() {
   }, [user, loading, router])
 
   return (
-    <div className="h-dvh flex flex-col items-center justify-center bg-black px-8">
+    <div className="h-dvh flex flex-col items-center justify-center bg-[var(--bg-primary)] px-8">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="text-center"
       >
-        <h1 className="text-5xl font-black text-white mb-2">StudyEng</h1>
-        <p className="text-gray-400 text-lg mb-12">숏폼으로 쉽고 재밌게 영어 공부</p>
+        <h1 className="text-5xl font-black text-[var(--text-primary)] mb-2">StudyEng</h1>
+        <p className="text-[var(--text-secondary)] text-lg mb-12">숏폼으로 쉽고 재밌게 영어 공부</p>
 
         <div className="space-y-4 w-full max-w-sm">
           <button
@@ -39,13 +39,13 @@ export default function LoginPage() {
 
           <button
             onClick={() => router.push('/')}
-            className="w-full py-3.5 bg-white/5 text-gray-400 rounded-xl text-base"
+            className="w-full py-3.5 bg-[var(--bg-card)] border border-[var(--border-card)] text-[var(--text-secondary)] rounded-xl text-base"
           >
             둘러보기
           </button>
         </div>
 
-        <p className="text-gray-600 text-xs mt-8">
+        <p className="text-[var(--text-muted)] text-xs mt-8">
           계속하면 이용약관에 동의하는 것으로 간주합니다
         </p>
       </motion.div>

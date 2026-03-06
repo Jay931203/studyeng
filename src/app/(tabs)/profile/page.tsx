@@ -32,19 +32,19 @@ export default function ProfilePage() {
             )}
           </div>
           <div>
-            <p className="text-white font-bold text-lg">
+            <p className="text-[var(--text-primary)] font-bold text-lg">
               {user?.user_metadata?.full_name ?? '게스트'}
             </p>
-            <p className="text-gray-400 text-sm">레벨 {level}</p>
+            <p className="text-[var(--text-secondary)] text-sm">레벨 {level}</p>
           </div>
         </div>
 
         <div className="mb-6">
-          <div className="flex justify-between text-xs text-gray-400 mb-1">
+          <div className="flex justify-between text-xs text-[var(--text-secondary)] mb-1">
             <span>경험치</span>
             <span>{xp} / {xpForNextLevel}</span>
           </div>
-          <div className="h-2 bg-white/10 rounded-full overflow-hidden">
+          <div className="h-2 bg-[var(--bg-secondary)] rounded-full overflow-hidden">
             <div
               className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-500"
               style={{ width: `${xpProgress}%` }}
@@ -55,23 +55,23 @@ export default function ProfilePage() {
         <StreakDisplay days={streakDays} />
 
         <div className="grid grid-cols-2 gap-3 mt-4">
-          <div className="bg-white/5 rounded-xl p-4 text-center">
-            <p className="text-white text-2xl font-bold">{phraseCount}</p>
-            <p className="text-gray-400 text-xs">저장한 표현</p>
+          <div className="bg-[var(--bg-card)] rounded-xl p-4 text-center">
+            <p className="text-[var(--text-primary)] text-2xl font-bold">{phraseCount}</p>
+            <p className="text-[var(--text-secondary)] text-xs">저장한 표현</p>
           </div>
-          <div className="bg-white/5 rounded-xl p-4 text-center">
-            <p className="text-white text-2xl font-bold">{level}</p>
-            <p className="text-gray-400 text-xs">현재 레벨</p>
+          <div className="bg-[var(--bg-card)] rounded-xl p-4 text-center">
+            <p className="text-[var(--text-primary)] text-2xl font-bold">{level}</p>
+            <p className="text-[var(--text-secondary)] text-xs">현재 레벨</p>
           </div>
         </div>
 
         {/* Theme toggle */}
         <button
           onClick={toggleTheme}
-          className="w-full mt-6 py-3 bg-white/5 rounded-xl flex items-center justify-between px-4"
+          className="w-full mt-6 py-3 bg-[var(--bg-card)] border border-[var(--border-card)] rounded-xl flex items-center justify-between px-4"
         >
-          <span className="text-gray-400 text-sm">테마</span>
-          <span className="text-white text-sm font-medium">
+          <span className="text-[var(--text-secondary)] text-sm">테마</span>
+          <span className="text-[var(--text-primary)] text-sm font-medium">
             {theme === 'dark' ? '다크 모드' : '라이트 모드'}
           </span>
         </button>
@@ -80,7 +80,7 @@ export default function ProfilePage() {
           {loading ? null : user ? (
             <button
               onClick={signOut}
-              className="w-full py-3 bg-white/5 text-gray-400 rounded-xl text-sm"
+              className="w-full py-3 bg-[var(--bg-card)] border border-[var(--border-card)] text-[var(--text-secondary)] rounded-xl text-sm"
             >
               로그아웃
             </button>

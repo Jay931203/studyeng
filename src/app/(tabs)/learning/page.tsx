@@ -13,8 +13,8 @@ export default function LearningPage() {
   return (
     <div className="h-full overflow-y-auto no-scrollbar pb-20 pt-12">
       <div className="px-4">
-        <h1 className="text-white text-2xl font-bold mb-1">내 학습</h1>
-        <p className="text-gray-500 text-sm mb-6">
+        <h1 className="text-[var(--text-primary)] text-2xl font-bold mb-1">내 학습</h1>
+        <p className="text-[var(--text-muted)] text-sm mb-6">
           {phrases.length}개 표현 저장됨
         </p>
 
@@ -22,8 +22,8 @@ export default function LearningPage() {
 
         {phrases.length === 0 ? (
           <div className="text-center py-20">
-            <p className="text-gray-500 text-lg">저장한 표현이 없어요</p>
-            <p className="text-gray-600 text-sm mt-2">
+            <p className="text-[var(--text-muted)] text-lg">저장한 표현이 없어요</p>
+            <p className="text-[var(--text-muted)] text-sm mt-2">
               영상에서 표현을 저장해보세요
             </p>
           </div>

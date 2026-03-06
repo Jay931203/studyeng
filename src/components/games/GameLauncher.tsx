@@ -34,16 +34,16 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
           className="flex-1 bg-gradient-to-br from-purple-500/20 to-blue-500/20 border border-purple-500/30 rounded-xl p-4 text-left"
         >
           <span className="text-2xl mb-2 block">{'\uD83C\uDFAF'}</span>
-          <span className="text-white font-medium text-sm">빈칸 채우기</span>
-          <span className="text-gray-400 text-xs block mt-1">빠진 단어를 맞춰보세요</span>
+          <span className="text-[var(--text-primary)] font-medium text-sm">빈칸 채우기</span>
+          <span className="text-[var(--text-secondary)] text-xs block mt-1">빠진 단어를 맞춰보세요</span>
         </button>
         <button
           onClick={() => setActiveGame('sentence-puzzle')}
           className="flex-1 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-xl p-4 text-left"
         >
           <span className="text-2xl mb-2 block">{'\uD83D\uDD00'}</span>
-          <span className="text-white font-medium text-sm">문장 만들기</span>
-          <span className="text-gray-400 text-xs block mt-1">단어를 조합해보세요</span>
+          <span className="text-[var(--text-primary)] font-medium text-sm">문장 만들기</span>
+          <span className="text-[var(--text-secondary)] text-xs block mt-1">단어를 조합해보세요</span>
         </button>
       </div>
 

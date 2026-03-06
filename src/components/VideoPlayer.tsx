@@ -20,7 +20,7 @@ interface VideoPlayerProps {
 
 export function VideoPlayer({ youtubeId, subtitles, onSavePhrase }: VideoPlayerProps) {
   const containerId = `yt-player-${useId().replace(/:/g, '')}`
-  const { ready, play, pause } = useYouTubePlayer(containerId, youtubeId)
+  const { ready, play, pause, seekTo } = useYouTubePlayer(containerId, youtubeId)
   const { subtitleMode, currentTime, isPlaying, toggleSubtitleMode } = usePlayerStore()
   const [showPauseIcon, setShowPauseIcon] = useState(false)
   const [pauseIconType, setPauseIconType] = useState<'play' | 'pause'>('pause')
@@ -76,14 +76,14 @@ export function VideoPlayer({ youtubeId, subtitles, onSavePhrase }: VideoPlayerP
           We position subtitles at approximately top-[35%] to sit just below the video. */}
       {currentSub && subtitleMode !== 'none' && (
         <div
-          className="absolute top-[38%] left-4 right-4 text-center z-10"
+          className="absolute bottom-[200px] left-4 right-4 text-center z-10"
           onClick={(e) => e.stopPropagation()}
           onContextMenu={(e) => {
             e.preventDefault()
             if (onSavePhrase && currentSub) onSavePhrase(currentSub)
           }}
         >
-          <p className="text-white text-lg font-semibold drop-shadow-lg bg-black/40 rounded-lg px-4 py-2 inline-block">
+          <p className="text-white text-lg font-semibold drop-shadow-lg bg-black/60 rounded-lg px-4 py-2 inline-block">
             {currentSub.en}
           </p>
           {subtitleMode === 'en-ko' && (
@@ -110,6 +110,7 @@ export function VideoPlayer({ youtubeId, subtitles, onSavePhrase }: VideoPlayerP
       <SubtitleTimeline
         subtitles={subtitles}
         onSavePhrase={(phrase) => onSavePhrase?.(phrase)}
+        onSeek={(time) => seekTo(time)}
       />
 
       {!ready && (
