@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import type { VideoData } from '@/data/seed-videos'
+import { categories, type VideoData } from '@/data/seed-videos'
 
 interface VideoCardProps {
   video: VideoData
@@ -22,7 +22,7 @@ export function VideoCard({ video, onClick }: VideoCardProps) {
         <p className="text-white font-medium text-sm line-clamp-2">{video.title}</p>
         <div className="flex gap-2 mt-2">
           <span className="text-gray-400 text-xs bg-white/5 px-2 py-0.5 rounded-full">
-            {video.category}
+            {categories.find(c => c.id === video.category)?.icon} {categories.find(c => c.id === video.category)?.label ?? video.category}
           </span>
           <span className="text-yellow-400 text-xs">
             {'\u2605'.repeat(video.difficulty)}{'\u2606'.repeat(5 - video.difficulty)}

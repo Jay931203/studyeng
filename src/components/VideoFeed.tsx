@@ -6,7 +6,7 @@ import { VideoPlayer } from './VideoPlayer'
 import { VideoControls } from './VideoControls'
 import { SaveToast } from './SaveToast'
 import { usePhraseStore } from '@/stores/usePhraseStore'
-import type { VideoData } from '@/data/seed-videos'
+import { categories, type VideoData } from '@/data/seed-videos'
 
 interface VideoFeedProps {
   videos: VideoData[]
@@ -83,7 +83,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
             </p>
             <div className="flex gap-2 mt-1">
               <span className="text-white/70 text-xs bg-white/10 px-2 py-0.5 rounded-full">
-                {currentVideo.category}
+                {categories.find(c => c.id === currentVideo.category)?.icon} {categories.find(c => c.id === currentVideo.category)?.label ?? currentVideo.category}
               </span>
               <span className="text-white/70 text-xs bg-white/10 px-2 py-0.5 rounded-full">
                 {'★'.repeat(currentVideo.difficulty)}
