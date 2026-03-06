@@ -3,6 +3,7 @@
 import { useUserStore } from '@/stores/useUserStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useAuth } from '@/hooks/useAuth'
+import { useThemeStore } from '@/stores/useThemeStore'
 import { StreakDisplay } from '@/components/StreakDisplay'
 import { calculateXpForLevel } from '@/lib/gamification'
 
@@ -10,6 +11,7 @@ export default function ProfilePage() {
   const { level, xp, streakDays } = useUserStore()
   const phraseCount = usePhraseStore((s) => s.phrases.length)
   const { user, signInWithGoogle, signOut, loading } = useAuth()
+  const { theme, toggleTheme } = useThemeStore()
 
   const xpForNextLevel = calculateXpForLevel(level)
   const xpProgress = (xp / xpForNextLevel) * 100
@@ -63,7 +65,18 @@ export default function ProfilePage() {
           </div>
         </div>
 
-        <div className="mt-8">
+        {/* Theme toggle */}
+        <button
+          onClick={toggleTheme}
+          className="w-full mt-6 py-3 bg-white/5 rounded-xl flex items-center justify-between px-4"
+        >
+          <span className="text-gray-400 text-sm">테마</span>
+          <span className="text-white text-sm font-medium">
+            {theme === 'dark' ? '다크 모드' : '라이트 모드'}
+          </span>
+        </button>
+
+        <div className="mt-4">
           {loading ? null : user ? (
             <button
               onClick={signOut}

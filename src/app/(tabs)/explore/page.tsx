@@ -13,6 +13,7 @@ import {
   type Series as SeriesType,
 } from '@/data/seed-videos'
 import { VideoCard } from '@/components/VideoCard'
+import { SearchBar } from '@/components/SearchBar'
 
 export default function ExplorePage() {
   const [activeCategory, setActiveCategory] = useState<'all' | CategoryId>('all')
@@ -38,6 +39,8 @@ export default function ExplorePage() {
       <div className="px-4">
         <h1 className="text-white text-2xl font-bold mb-4">탐색</h1>
 
+        <SearchBar />
+
         {/* Category tabs */}
         <div className="flex gap-2 mb-6 overflow-x-auto no-scrollbar">
           <button
@@ -60,7 +63,7 @@ export default function ExplorePage() {
                   : 'bg-white/10 text-gray-400'
               }`}
             >
-              {cat.icon} {cat.label}
+              {cat.label}
             </button>
           ))}
         </div>
@@ -76,7 +79,9 @@ export default function ExplorePage() {
                   onClick={() => setSelectedSeries(s)}
                   className="flex-shrink-0 w-40 bg-white/5 border border-white/10 rounded-xl p-4 text-left"
                 >
-                  <span className="text-3xl block mb-2">{s.thumbnailEmoji}</span>
+                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center text-white font-bold text-lg mb-2">
+                    {s.title.charAt(0)}
+                  </div>
                   <p className="text-white font-medium text-sm line-clamp-2">{s.title}</p>
                   <p className="text-gray-500 text-xs mt-1">{s.episodeCount}편</p>
                 </button>
@@ -106,7 +111,9 @@ export default function ExplorePage() {
 
               <div className="bg-white/5 border border-white/10 rounded-2xl p-5 mb-4">
                 <div className="flex items-start gap-4">
-                  <span className="text-4xl">{selectedSeries.thumbnailEmoji}</span>
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center text-white font-bold text-xl flex-shrink-0">
+                    {selectedSeries.title.charAt(0)}
+                  </div>
                   <div>
                     <h2 className="text-white font-bold text-lg">{selectedSeries.title}</h2>
                     <p className="text-gray-400 text-sm mt-1">{selectedSeries.description}</p>

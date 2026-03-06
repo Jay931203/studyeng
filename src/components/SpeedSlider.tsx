@@ -93,6 +93,12 @@ export function SpeedSlider() {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 20 }}
               onClick={(e) => e.stopPropagation()}
+              onPointerDown={(e) => e.stopPropagation()}
+              onPointerMove={(e) => e.stopPropagation()}
+              onPointerUp={(e) => e.stopPropagation()}
+              onTouchStart={(e) => e.stopPropagation()}
+              onTouchMove={(e) => e.stopPropagation()}
+              onTouchEnd={(e) => e.stopPropagation()}
               className="absolute right-16 top-1/2 -translate-y-1/2 bg-black/90 backdrop-blur-lg rounded-2xl p-4 flex flex-col items-center gap-2"
             >
               <span className="text-white text-lg font-bold mb-2">

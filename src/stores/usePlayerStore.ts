@@ -9,6 +9,7 @@ interface PlayerState {
   loopStart: number | null
   loopEnd: number | null
   currentTime: number
+  duration: number
   isPlaying: boolean
 
   toggleSubtitleMode: () => void
@@ -16,6 +17,7 @@ interface PlayerState {
   setLoop: (start: number, end: number) => void
   clearLoop: () => void
   setCurrentTime: (time: number) => void
+  setDuration: (duration: number) => void
   setIsPlaying: (playing: boolean) => void
 }
 
@@ -28,6 +30,7 @@ export const usePlayerStore = create<PlayerState>((set, get) => ({
   loopStart: null,
   loopEnd: null,
   currentTime: 0,
+  duration: 0,
   isPlaying: false,
 
   toggleSubtitleMode: () => {
@@ -43,6 +46,8 @@ export const usePlayerStore = create<PlayerState>((set, get) => ({
   clearLoop: () => set({ isLooping: false, loopStart: null, loopEnd: null }),
 
   setCurrentTime: (time) => set({ currentTime: time }),
+
+  setDuration: (duration) => set({ duration }),
 
   setIsPlaying: (playing) => set({ isPlaying: playing }),
 }))

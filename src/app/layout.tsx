@@ -1,9 +1,16 @@
 import type { Metadata, Viewport } from 'next'
+import { ThemeProvider } from '@/components/ThemeProvider'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'StudyEng - Learn English the Fun Way',
-  description: 'Learn English through short-form videos and games',
+  title: 'StudyEng - 영어 공부',
+  description: '숏폼으로 쉽고 재밌게 영어 공부',
+  manifest: '/manifest.json',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'black-translucent',
+    title: 'StudyEng',
+  },
 }
 
 export const viewport: Viewport = {
@@ -20,8 +27,10 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ko">
-      <body>{children}</body>
+    <html lang="ko" className="dark">
+      <body>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   )
 }

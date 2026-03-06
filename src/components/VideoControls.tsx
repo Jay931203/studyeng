@@ -2,12 +2,19 @@
 
 import { usePlayerStore } from '@/stores/usePlayerStore'
 import { SpeedSlider } from './SpeedSlider'
+import { BookmarkButton } from './BookmarkButton'
 
-export function VideoControls() {
+interface VideoControlsProps {
+  videoId?: string
+}
+
+export function VideoControls({ videoId }: VideoControlsProps) {
   const { isLooping, clearLoop } = usePlayerStore()
 
   return (
     <div className="absolute bottom-20 right-4 flex flex-col gap-3 z-10">
+      {videoId && <BookmarkButton videoId={videoId} />}
+
       <SpeedSlider />
 
       {isLooping && (

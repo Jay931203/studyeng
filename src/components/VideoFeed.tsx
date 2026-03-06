@@ -5,6 +5,7 @@ import { motion, AnimatePresence, type PanInfo } from 'framer-motion'
 import { VideoPlayer } from './VideoPlayer'
 import { VideoControls } from './VideoControls'
 import { SaveToast } from './SaveToast'
+import { ProgressBar } from './ProgressBar'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { categories, type VideoData } from '@/data/seed-videos'
 
@@ -43,6 +44,8 @@ export function VideoFeed({ videos }: VideoFeedProps) {
   const currentVideo = videos[currentIndex]
   if (!currentVideo) return null
 
+  const categoryLabel = categories.find(c => c.id === currentVideo.category)?.label ?? currentVideo.category
+
   return (
     <div ref={constraintsRef} className="relative w-full h-full overflow-hidden">
       <AnimatePresence mode="wait" custom={direction}>
@@ -75,15 +78,16 @@ export function VideoFeed({ videos }: VideoFeedProps) {
               setTimeout(() => setShowToast(false), 2000)
             }}
           />
-          <VideoControls />
+          <VideoControls videoId={currentVideo.id} />
 
-          <div className="absolute bottom-24 left-4 z-10 pointer-events-none">
+          {/* Video info - positioned above subtitle area */}
+          <div className="absolute bottom-28 left-4 right-16 z-10 pointer-events-none">
             <p className="text-white font-bold text-base drop-shadow-lg">
               {currentVideo.title}
             </p>
             <div className="flex gap-2 mt-1">
               <span className="text-white/70 text-xs bg-white/10 px-2 py-0.5 rounded-full">
-                {categories.find(c => c.id === currentVideo.category)?.icon} {categories.find(c => c.id === currentVideo.category)?.label ?? currentVideo.category}
+                {categoryLabel}
               </span>
               <span className="text-white/70 text-xs bg-white/10 px-2 py-0.5 rounded-full">
                 {'★'.repeat(currentVideo.difficulty)}
@@ -93,6 +97,10 @@ export function VideoFeed({ videos }: VideoFeedProps) {
         </motion.div>
       </AnimatePresence>
 
+      {/* Progress bar - YouTube Shorts style */}
+      <ProgressBar />
+
+      {/* Counter + time */}
       <div className="absolute top-4 left-4 z-10">
         <span className="text-white/50 text-xs">
           {currentIndex + 1} / {videos.length}

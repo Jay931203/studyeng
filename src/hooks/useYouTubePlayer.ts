@@ -42,6 +42,7 @@ export function useYouTubePlayer(containerId: string, videoId: string) {
     loopStart,
     loopEnd,
     setCurrentTime,
+    setDuration,
     setIsPlaying,
   } = usePlayerStore()
 
@@ -68,6 +69,9 @@ export function useYouTubePlayer(containerId: string, videoId: string) {
       events: {
         onReady: (event) => {
           event.target.setPlaybackRate(playbackRate)
+          event.target.playVideo()
+          const dur = event.target.getDuration()
+          if (dur > 0) setDuration(dur)
           setReady(true)
         },
         onStateChange: (event) => {
@@ -84,6 +88,9 @@ export function useYouTubePlayer(containerId: string, videoId: string) {
       if (!playerRef.current) return
       const time = playerRef.current.getCurrentTime()
       setCurrentTime(time)
+
+      const dur = playerRef.current.getDuration()
+      if (dur > 0) setDuration(dur)
 
       if (isLooping && loopStart !== null && loopEnd !== null) {
         if (time >= loopEnd) {
