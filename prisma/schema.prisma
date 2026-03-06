@@ -1,0 +1,93 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id         String   @id @default(uuid())
+  email      String   @unique
+  name       String?
+  avatar     String?
+  level      Int      @default(1)
+  xp         Int      @default(0)
+  streakDays Int      @default(0)
+  lastActiveDate DateTime?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  savedPhrases  SavedPhrase[]
+  gameResults   GameResult[]
+  userProgress  UserProgress[]
+}
+
+model Video {
+  id           String   @id @default(uuid())
+  youtubeId    String   @unique
+  title        String
+  category     String
+  difficulty   Int      @default(1)
+  duration     Int
+  thumbnailUrl String?
+  subtitleData Json
+  createdAt    DateTime @default(now())
+
+  savedPhrases SavedPhrase[]
+  gameResults  GameResult[]
+  userProgress UserProgress[]
+}
+
+model SavedPhrase {
+  id             String   @id @default(uuid())
+  userId         String
+  videoId        String
+  englishText    String
+  koreanText     String
+  timestampStart Float
+  timestampEnd   Float
+  reviewCount    Int      @default(0)
+  lastReviewed   DateTime?
+  createdAt      DateTime @default(now())
+
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  video Video @relation(fields: [videoId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([videoId])
+}
+
+model GameResult {
+  id        String   @id @default(uuid())
+  userId    String
+  videoId   String
+  gameType  String
+  score     Int
+  xpEarned  Int
+  playedAt  DateTime @default(now())
+
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  video Video @relation(fields: [videoId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@index([videoId])
+}
+
+model UserProgress {
+  id              String   @id @default(uuid())
+  userId          String
+  videoId         String
+  watchCount      Int      @default(0)
+  subtitleModeUsed String[]
+  gamesPlayed     Int      @default(0)
+  gamesCompleted  Int      @default(0)
+  lastWatchedAt   DateTime @default(now())
+
+  user  User  @relation(fields: [userId], references: [id], onDelete: Cascade)
+  video Video @relation(fields: [videoId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, videoId])
+  @@index([userId])
+}
