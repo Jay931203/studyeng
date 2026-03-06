@@ -4,13 +4,7 @@ import { useId, useState, useRef, useCallback } from 'react'
 import { useYouTubePlayer } from '@/hooks/useYouTubePlayer'
 import { usePlayerStore } from '@/stores/usePlayerStore'
 import { SubtitleTimeline } from './SubtitleTimeline'
-
-export interface SubtitleEntry {
-  start: number
-  end: number
-  en: string
-  ko: string
-}
+import type { SubtitleEntry } from '@/data/seed-videos'
 
 interface VideoPlayerProps {
   youtubeId: string
