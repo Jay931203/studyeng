@@ -3,6 +3,7 @@
 import { AnimatePresence } from 'framer-motion'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { SavedPhraseCard } from '@/components/SavedPhraseCard'
+import { GameLauncher } from '@/components/games/GameLauncher'
 
 export default function LearningPage() {
   const { phrases, removePhrase } = usePhraseStore()
@@ -14,6 +15,8 @@ export default function LearningPage() {
         <p className="text-gray-500 text-sm mb-6">
           {phrases.length} phrases saved
         </p>
+
+        <GameLauncher phrases={phrases} />
 
         {phrases.length === 0 ? (
           <div className="text-center py-20">
