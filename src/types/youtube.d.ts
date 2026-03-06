@@ -32,6 +32,8 @@ declare namespace YT {
     rel?: 0 | 1
     cc_load_policy?: 0 | 1
     iv_load_policy?: 1 | 3
+    start?: number
+    end?: number
   }
 
   interface Events {

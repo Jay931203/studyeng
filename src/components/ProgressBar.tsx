@@ -3,8 +3,9 @@
 import { usePlayerStore } from '@/stores/usePlayerStore'
 
 export function ProgressBar() {
-  const { currentTime, duration } = usePlayerStore()
-  const progress = duration > 0 ? (currentTime / duration) * 100 : 0
+  const { currentTime, clipStart, clipEnd } = usePlayerStore()
+  const clipDuration = clipEnd > clipStart ? clipEnd - clipStart : 0
+  const progress = clipDuration > 0 ? ((currentTime - clipStart) / clipDuration) * 100 : 0
 
   return (
     <div className="absolute bottom-[72px] left-0 right-0 z-20">

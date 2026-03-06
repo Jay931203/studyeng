@@ -14,11 +14,13 @@ import {
 } from '@/data/seed-videos'
 import { VideoCard } from '@/components/VideoCard'
 import { SearchBar } from '@/components/SearchBar'
+import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 
 export default function ExplorePage() {
   const [activeCategory, setActiveCategory] = useState<'all' | CategoryId>('all')
   const [selectedSeries, setSelectedSeries] = useState<SeriesType | null>(null)
   const router = useRouter()
+  const { getSeriesProgress, getNextEpisode, isWatched } = useWatchHistoryStore()
 
   const filteredSeries =
     activeCategory === 'all'
@@ -73,19 +75,29 @@ export default function ExplorePage() {
           <div className="mb-6">
             <h2 className="text-[var(--text-primary)] font-bold text-lg mb-3">시리즈 몰아보기</h2>
             <div className="flex gap-3 overflow-x-auto no-scrollbar pb-2">
-              {filteredSeries.map((s) => (
-                <button
-                  key={s.id}
-                  onClick={() => setSelectedSeries(s)}
-                  className="flex-shrink-0 w-40 bg-[var(--bg-card)] border border-[var(--border-card)] rounded-xl p-4 text-left"
-                >
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center text-[var(--text-primary)] font-bold text-lg mb-2">
-                    {s.title.charAt(0)}
-                  </div>
-                  <p className="text-[var(--text-primary)] font-medium text-sm line-clamp-2">{s.title}</p>
-                  <p className="text-[var(--text-muted)] text-xs mt-1">{s.episodeCount}편</p>
-                </button>
-              ))}
+              {filteredSeries.map((s) => {
+                const progress = getSeriesProgress(s.id, s.episodeCount)
+                return (
+                  <button
+                    key={s.id}
+                    onClick={() => setSelectedSeries(s)}
+                    className="flex-shrink-0 w-40 bg-[var(--bg-card)] border border-[var(--border-card)] rounded-xl p-4 pb-0 text-left overflow-hidden"
+                  >
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center text-[var(--text-primary)] font-bold text-lg mb-2">
+                      {s.title.charAt(0)}
+                    </div>
+                    <p className="text-[var(--text-primary)] font-medium text-sm line-clamp-2">{s.title}</p>
+                    <p className="text-[var(--text-muted)] text-xs mt-1 mb-4">{s.episodeCount}편</p>
+                    {/* Progress bar */}
+                    <div className="h-1 -mx-4 bg-[var(--bg-secondary)]">
+                      <div
+                        className="h-full bg-green-500 transition-all duration-300"
+                        style={{ width: `${progress}%` }}
+                      />
+                    </div>
+                  </button>
+                )
+              })}
             </div>
           </div>
         )}
@@ -131,38 +143,81 @@ export default function ExplorePage() {
 
               {/* Episode list */}
               <div className="flex flex-col gap-3">
-                {seriesEpisodes.map((video) => (
-                  <button
-                    key={video.id}
-                    onClick={() => router.push(`/?v=${video.id}`)}
-                    className="bg-[var(--bg-card)] border border-[var(--border-card)] rounded-xl p-4 text-left flex items-center gap-4"
-                  >
-                    <div className="w-10 h-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-sm flex-shrink-0">
-                      {video.episodeNumber}
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <p className="text-[var(--text-primary)] font-medium text-sm truncate">{video.title}</p>
-                      <p className="text-[var(--text-muted)] text-xs mt-0.5">
-                        난이도 {'★'.repeat(video.difficulty)}{'☆'.repeat(5 - video.difficulty)}
-                      </p>
-                    </div>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[var(--text-muted)] flex-shrink-0">
-                      <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
-                    </svg>
-                  </button>
-                ))}
+                {seriesEpisodes.map((video) => {
+                  const watched = selectedSeries ? isWatched(selectedSeries.id, video.id) : false
+                  return (
+                    <button
+                      key={video.id}
+                      onClick={() => router.push(`/?v=${video.id}`)}
+                      className="bg-[var(--bg-card)] border border-[var(--border-card)] rounded-xl p-4 text-left flex items-center gap-4"
+                    >
+                      <div className="relative w-10 h-10 flex-shrink-0">
+                        <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm ${
+                          watched
+                            ? 'bg-green-500/20 text-green-400'
+                            : 'bg-blue-500/20 text-blue-400'
+                        }`}>
+                          {video.episodeNumber}
+                        </div>
+                        {watched && (
+                          <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" className="w-3 h-3">
+                              <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
+                            </svg>
+                          </div>
+                        )}
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className={`font-medium text-sm truncate ${
+                          watched ? 'text-[var(--text-secondary)]' : 'text-[var(--text-primary)]'
+                        }`}>{video.title}</p>
+                        <p className="text-[var(--text-muted)] text-xs mt-0.5">
+                          난이도 {'★'.repeat(video.difficulty)}{'☆'.repeat(5 - video.difficulty)}
+                        </p>
+                      </div>
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[var(--text-muted)] flex-shrink-0">
+                        <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
+                      </svg>
+                    </button>
+                  )
+                })}
 
-                {/* Play all button */}
-                <button
-                  onClick={() => {
-                    if (seriesEpisodes[0]) {
-                      router.push(`/?v=${seriesEpisodes[0].id}`)
-                    }
-                  }}
-                  className="w-full py-3 bg-blue-500 text-white rounded-xl font-medium mt-2"
-                >
-                  처음부터 재생
-                </button>
+                {/* Play / Continue button */}
+                {(() => {
+                  const allIds = seriesEpisodes.map((v) => v.id)
+                  const progress = selectedSeries
+                    ? getSeriesProgress(selectedSeries.id, selectedSeries.episodeCount)
+                    : 0
+                  const nextId = selectedSeries
+                    ? getNextEpisode(selectedSeries.id, allIds)
+                    : null
+                  const hasProgress = progress > 0
+                  const isComplete = progress >= 100
+
+                  return (
+                    <button
+                      onClick={() => {
+                        if (isComplete) {
+                          // All watched - start from beginning
+                          if (seriesEpisodes[0]) {
+                            router.push(`/?v=${seriesEpisodes[0].id}`)
+                          }
+                        } else if (nextId) {
+                          router.push(`/?v=${nextId}`)
+                        } else if (seriesEpisodes[0]) {
+                          router.push(`/?v=${seriesEpisodes[0].id}`)
+                        }
+                      }}
+                      className="w-full py-3 bg-blue-500 text-white rounded-xl font-medium mt-2"
+                    >
+                      {isComplete
+                        ? '처음부터 다시보기'
+                        : hasProgress
+                          ? '이어보기'
+                          : '처음부터 재생'}
+                    </button>
+                  )
+                })()}
               </div>
             </motion.div>
           )}

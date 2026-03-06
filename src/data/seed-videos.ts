@@ -11,6 +11,8 @@ export interface VideoData {
   title: string
   category: CategoryId
   difficulty: number
+  clipStart: number
+  clipEnd: number
   seriesId?: string
   episodeNumber?: number
   subtitles: SubtitleEntry[]
@@ -101,6 +103,8 @@ export const seedVideos: VideoData[] = [
     title: 'Friends EP1: 첫 만남',
     category: 'drama',
     difficulty: 2,
+    clipStart: 0,
+    clipEnd: 30,
     seriesId: 'friends-s1',
     episodeNumber: 1,
     subtitles: [
@@ -117,6 +121,8 @@ export const seedVideos: VideoData[] = [
     title: 'Friends EP2: 커피숍 일상',
     category: 'drama',
     difficulty: 2,
+    clipStart: 0,
+    clipEnd: 30,
     seriesId: 'friends-s1',
     episodeNumber: 2,
     subtitles: [
@@ -133,6 +139,8 @@ export const seedVideos: VideoData[] = [
     title: 'Friends EP3: 로스의 고백',
     category: 'drama',
     difficulty: 3,
+    clipStart: 0,
+    clipEnd: 30,
     seriesId: 'friends-s1',
     episodeNumber: 3,
     subtitles: [
@@ -149,6 +157,8 @@ export const seedVideos: VideoData[] = [
     title: 'Friends EP4: 감동의 순간',
     category: 'drama',
     difficulty: 2,
+    clipStart: 0,
+    clipEnd: 30,
     seriesId: 'friends-s1',
     episodeNumber: 4,
     subtitles: [
@@ -167,6 +177,8 @@ export const seedVideos: VideoData[] = [
     title: '프라다 EP1: 면접',
     category: 'movie',
     difficulty: 3,
+    clipStart: 0,
+    clipEnd: 30,
     seriesId: 'devil-wears-prada',
     episodeNumber: 1,
     subtitles: [
@@ -183,6 +195,8 @@ export const seedVideos: VideoData[] = [
     title: '프라다 EP2: 직장 생활',
     category: 'movie',
     difficulty: 4,
+    clipStart: 0,
+    clipEnd: 30,
     seriesId: 'devil-wears-prada',
     episodeNumber: 2,
     subtitles: [
@@ -199,6 +213,8 @@ export const seedVideos: VideoData[] = [
     title: '프라다 EP3: 성장',
     category: 'movie',
     difficulty: 3,
+    clipStart: 0,
+    clipEnd: 30,
     seriesId: 'devil-wears-prada',
     episodeNumber: 3,
     subtitles: [
@@ -217,6 +233,8 @@ export const seedVideos: VideoData[] = [
     title: '카페 EP1: 기본 주문',
     category: 'daily',
     difficulty: 1,
+    clipStart: 0,
+    clipEnd: 30,
     seriesId: 'coffee-english',
     episodeNumber: 1,
     subtitles: [
@@ -233,6 +251,8 @@ export const seedVideos: VideoData[] = [
     title: '카페 EP2: 커스터마이징',
     category: 'daily',
     difficulty: 2,
+    clipStart: 0,
+    clipEnd: 30,
     seriesId: 'coffee-english',
     episodeNumber: 2,
     subtitles: [
@@ -249,6 +269,8 @@ export const seedVideos: VideoData[] = [
     title: '카페 EP3: 문제 해결',
     category: 'daily',
     difficulty: 2,
+    clipStart: 0,
+    clipEnd: 30,
     seriesId: 'coffee-english',
     episodeNumber: 3,
     subtitles: [
@@ -267,6 +289,8 @@ export const seedVideos: VideoData[] = [
     title: '공항 EP1: 체크인',
     category: 'travel',
     difficulty: 2,
+    clipStart: 0,
+    clipEnd: 30,
     seriesId: 'airport-survival',
     episodeNumber: 1,
     subtitles: [
@@ -283,6 +307,8 @@ export const seedVideos: VideoData[] = [
     title: '공항 EP2: 보안검색',
     category: 'travel',
     difficulty: 2,
+    clipStart: 0,
+    clipEnd: 30,
     seriesId: 'airport-survival',
     episodeNumber: 2,
     subtitles: [
@@ -299,6 +325,8 @@ export const seedVideos: VideoData[] = [
     title: '공항 EP3: 길 찾기',
     category: 'travel',
     difficulty: 1,
+    clipStart: 0,
+    clipEnd: 30,
     seriesId: 'airport-survival',
     episodeNumber: 3,
     subtitles: [
@@ -317,6 +345,8 @@ export const seedVideos: VideoData[] = [
     title: '직장 EP1: 회의 스몰톡',
     category: 'business',
     difficulty: 3,
+    clipStart: 0,
+    clipEnd: 60,
     seriesId: 'office-talk',
     episodeNumber: 1,
     subtitles: [
@@ -333,6 +363,8 @@ export const seedVideos: VideoData[] = [
     title: '직장 EP2: 이메일 표현',
     category: 'business',
     difficulty: 3,
+    clipStart: 0,
+    clipEnd: 60,
     seriesId: 'office-talk',
     episodeNumber: 2,
     subtitles: [
@@ -349,6 +381,8 @@ export const seedVideos: VideoData[] = [
     title: '직장 EP3: 프레젠테이션',
     category: 'business',
     difficulty: 4,
+    clipStart: 0,
+    clipEnd: 60,
     seriesId: 'office-talk',
     episodeNumber: 3,
     subtitles: [
@@ -367,6 +401,8 @@ export const seedVideos: VideoData[] = [
     title: '토크쇼 EP1: 재밌는 인터뷰',
     category: 'entertainment',
     difficulty: 3,
+    clipStart: 0,
+    clipEnd: 60,
     seriesId: 'talk-show-best',
     episodeNumber: 1,
     subtitles: [
@@ -383,6 +419,8 @@ export const seedVideos: VideoData[] = [
     title: '토크쇼 EP2: 즉흥 게임',
     category: 'entertainment',
     difficulty: 2,
+    clipStart: 0,
+    clipEnd: 60,
     seriesId: 'talk-show-best',
     episodeNumber: 2,
     subtitles: [

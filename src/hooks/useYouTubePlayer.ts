@@ -31,7 +31,7 @@ function loadYouTubeAPI(): Promise<void> {
   })
 }
 
-export function useYouTubePlayer(containerId: string, videoId: string) {
+export function useYouTubePlayer(containerId: string, videoId: string, clipStart = 0, clipEnd = 0) {
   const playerRef = useRef<YT.Player | null>(null)
   const intervalRef = useRef<number | null>(null)
   const [ready, setReady] = useState(false)
@@ -44,6 +44,7 @@ export function useYouTubePlayer(containerId: string, videoId: string) {
     setCurrentTime,
     setDuration,
     setIsPlaying,
+    setClipBounds,
   } = usePlayerStore()
 
   const initPlayer = useCallback(async () => {
@@ -65,13 +66,15 @@ export function useYouTubePlayer(containerId: string, videoId: string) {
         rel: 0,
         cc_load_policy: 0,
         iv_load_policy: 3,
+        start: clipStart,
       },
       events: {
         onReady: (event) => {
           event.target.setPlaybackRate(playbackRate)
           event.target.playVideo()
-          const dur = event.target.getDuration()
-          if (dur > 0) setDuration(dur)
+          const clipDuration = clipEnd > clipStart ? clipEnd - clipStart : event.target.getDuration()
+          if (clipDuration > 0) setDuration(clipDuration)
+          setClipBounds(clipStart, clipEnd)
           setReady(true)
         },
         onStateChange: (event) => {
@@ -79,7 +82,7 @@ export function useYouTubePlayer(containerId: string, videoId: string) {
         },
       },
     })
-  }, [containerId, videoId])
+  }, [containerId, videoId, clipStart, clipEnd])
 
   useEffect(() => {
     if (!ready) return
@@ -89,9 +92,12 @@ export function useYouTubePlayer(containerId: string, videoId: string) {
       const time = playerRef.current.getCurrentTime()
       setCurrentTime(time)
 
-      const dur = playerRef.current.getDuration()
-      if (dur > 0) setDuration(dur)
+      // Clip boundary looping: seek back to clipStart when reaching clipEnd
+      if (clipEnd > clipStart && time >= clipEnd) {
+        playerRef.current.seekTo(clipStart, true)
+      }
 
+      // Subtitle loop (user-triggered A-B repeat) takes priority within clip
       if (isLooping && loopStart !== null && loopEnd !== null) {
         if (time >= loopEnd) {
           playerRef.current.seekTo(loopStart, true)
@@ -102,7 +108,7 @@ export function useYouTubePlayer(containerId: string, videoId: string) {
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current)
     }
-  }, [ready, isLooping, loopStart, loopEnd])
+  }, [ready, isLooping, loopStart, loopEnd, clipStart, clipEnd])
 
   useEffect(() => {
     if (playerRef.current && ready) {

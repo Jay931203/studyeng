@@ -1,12 +1,13 @@
 'use client'
 
-import { useState, useRef, useCallback } from 'react'
+import { useState, useRef, useCallback, useEffect } from 'react'
 import { motion, AnimatePresence, type PanInfo } from 'framer-motion'
 import { VideoPlayer } from './VideoPlayer'
 import { VideoControls } from './VideoControls'
 import { SaveToast } from './SaveToast'
 import { ProgressBar } from './ProgressBar'
 import { usePhraseStore } from '@/stores/usePhraseStore'
+import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { categories, type VideoData } from '@/data/seed-videos'
 
 interface VideoFeedProps {
@@ -19,6 +20,15 @@ export function VideoFeed({ videos }: VideoFeedProps) {
   const [showToast, setShowToast] = useState(false)
   const constraintsRef = useRef(null)
   const savePhrase = usePhraseStore((s) => s.savePhrase)
+  const markWatched = useWatchHistoryStore((s) => s.markWatched)
+
+  // Mark episode as watched when it appears in the feed
+  useEffect(() => {
+    const video = videos[currentIndex]
+    if (video?.seriesId) {
+      markWatched(video.seriesId, video.id)
+    }
+  }, [currentIndex, videos, markWatched])
 
   const swipeThreshold = 50
 
@@ -65,6 +75,8 @@ export function VideoFeed({ videos }: VideoFeedProps) {
           <VideoPlayer
             youtubeId={currentVideo.youtubeId}
             subtitles={currentVideo.subtitles}
+            clipStart={currentVideo.clipStart}
+            clipEnd={currentVideo.clipEnd}
             onSavePhrase={(phrase) => {
               savePhrase({
                 videoId: currentVideo.id,

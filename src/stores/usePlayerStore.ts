@@ -11,6 +11,8 @@ interface PlayerState {
   currentTime: number
   duration: number
   isPlaying: boolean
+  clipStart: number
+  clipEnd: number
 
   toggleSubtitleMode: () => void
   setPlaybackRate: (rate: number) => void
@@ -19,6 +21,7 @@ interface PlayerState {
   setCurrentTime: (time: number) => void
   setDuration: (duration: number) => void
   setIsPlaying: (playing: boolean) => void
+  setClipBounds: (clipStart: number, clipEnd: number) => void
 }
 
 const subtitleCycle: SubtitleMode[] = ['none', 'en', 'en-ko']
@@ -32,6 +35,8 @@ export const usePlayerStore = create<PlayerState>((set, get) => ({
   currentTime: 0,
   duration: 0,
   isPlaying: false,
+  clipStart: 0,
+  clipEnd: 0,
 
   toggleSubtitleMode: () => {
     const current = subtitleCycle.indexOf(get().subtitleMode)
@@ -50,4 +55,6 @@ export const usePlayerStore = create<PlayerState>((set, get) => ({
   setDuration: (duration) => set({ duration }),
 
   setIsPlaying: (playing) => set({ isPlaying: playing }),
+
+  setClipBounds: (clipStart, clipEnd) => set({ clipStart, clipEnd }),
 }))

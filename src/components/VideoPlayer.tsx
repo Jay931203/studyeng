@@ -15,12 +15,14 @@ export interface SubtitleEntry {
 interface VideoPlayerProps {
   youtubeId: string
   subtitles: SubtitleEntry[]
+  clipStart?: number
+  clipEnd?: number
   onSavePhrase?: (phrase: SubtitleEntry) => void
 }
 
-export function VideoPlayer({ youtubeId, subtitles, onSavePhrase }: VideoPlayerProps) {
+export function VideoPlayer({ youtubeId, subtitles, clipStart = 0, clipEnd = 0, onSavePhrase }: VideoPlayerProps) {
   const containerId = `yt-player-${useId().replace(/:/g, '')}`
-  const { ready, play, pause, seekTo } = useYouTubePlayer(containerId, youtubeId)
+  const { ready, play, pause, seekTo } = useYouTubePlayer(containerId, youtubeId, clipStart, clipEnd)
   const { subtitleMode, currentTime, isPlaying, toggleSubtitleMode } = usePlayerStore()
   const [showPauseIcon, setShowPauseIcon] = useState(false)
   const [pauseIconType, setPauseIconType] = useState<'play' | 'pause'>('pause')
