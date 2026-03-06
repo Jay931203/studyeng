@@ -10,13 +10,13 @@ interface SubtitleTimelineProps {
 }
 
 export function SubtitleTimeline({ subtitles, onSavePhrase, onSeek }: SubtitleTimelineProps) {
-  const { currentTime, setLoop, isLooping, loopStart, loopEnd } = usePlayerStore()
+  const { activeSubIndex, setLoop, isLooping, loopStart, loopEnd } = usePlayerStore()
 
   return (
     <div className="absolute bottom-[152px] left-0 right-0 px-4 z-10 pointer-events-auto">
       <div className="flex gap-1.5 overflow-x-auto no-scrollbar py-2">
         {subtitles.map((sub, idx) => {
-          const isActive = currentTime >= sub.start && currentTime <= sub.end
+          const isActive = idx === activeSubIndex
           const isInLoop =
             isLooping &&
             loopStart !== null &&

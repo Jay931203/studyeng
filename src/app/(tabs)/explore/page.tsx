@@ -81,7 +81,7 @@ export default function ExplorePage() {
                   <button
                     key={s.id}
                     onClick={() => setSelectedSeries(s)}
-                    className="flex-shrink-0 w-40 bg-[var(--bg-card)] border border-[var(--border-card)] rounded-xl p-4 pb-0 text-left overflow-hidden"
+                    className="flex-shrink-0 w-40 bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-4 pb-0 text-left overflow-hidden"
                   >
                     <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center text-[var(--text-primary)] font-bold text-lg mb-2">
                       {s.title.charAt(0)}
@@ -121,7 +121,7 @@ export default function ExplorePage() {
                 뒤로
               </button>
 
-              <div className="bg-[var(--bg-card)] border border-[var(--border-card)] rounded-2xl p-5 mb-4">
+              <div className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-2xl p-5 mb-4">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center text-[var(--text-primary)] font-bold text-xl flex-shrink-0">
                     {selectedSeries.title.charAt(0)}
@@ -149,7 +149,7 @@ export default function ExplorePage() {
                     <button
                       key={video.id}
                       onClick={() => router.push(`/?v=${video.id}`)}
-                      className="bg-[var(--bg-card)] border border-[var(--border-card)] rounded-xl p-4 text-left flex items-center gap-4"
+                      className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-4 text-left flex items-center gap-4"
                     >
                       <div className="relative w-10 h-10 flex-shrink-0">
                         <div className={`w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm ${

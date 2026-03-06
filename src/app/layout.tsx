@@ -28,6 +28,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko" className="dark">
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: `
+          try {
+            var stored = JSON.parse(localStorage.getItem('studyeng-theme') || '{}');
+            if (stored.state && stored.state.theme !== 'dark') {
+              document.documentElement.classList.remove('dark');
+            }
+          } catch(e) {}
+        ` }} />
+      </head>
       <body>
         <ThemeProvider>{children}</ThemeProvider>
       </body>

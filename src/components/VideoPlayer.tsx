@@ -22,15 +22,13 @@ interface VideoPlayerProps {
 
 export function VideoPlayer({ youtubeId, subtitles, clipStart = 0, clipEnd = 0, onSavePhrase }: VideoPlayerProps) {
   const containerId = `yt-player-${useId().replace(/:/g, '')}`
-  const { ready, play, pause, seekTo } = useYouTubePlayer(containerId, youtubeId, clipStart, clipEnd)
-  const { subtitleMode, currentTime, isPlaying, toggleSubtitleMode } = usePlayerStore()
+  const { ready, play, pause, seekTo } = useYouTubePlayer(containerId, youtubeId, clipStart, clipEnd, subtitles)
+  const { subtitleMode, activeSubIndex, isPlaying, toggleSubtitleMode } = usePlayerStore()
   const [showPauseIcon, setShowPauseIcon] = useState(false)
   const [pauseIconType, setPauseIconType] = useState<'play' | 'pause'>('pause')
   const iconTimerRef = useRef<number | null>(null)
 
-  const currentSub = subtitles.find(
-    (s) => currentTime >= s.start && currentTime <= s.end
-  )
+  const currentSub = activeSubIndex >= 0 ? subtitles[activeSubIndex] : undefined
 
   const handleTap = useCallback(() => {
     if (isPlaying) {

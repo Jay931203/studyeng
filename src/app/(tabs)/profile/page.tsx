@@ -68,7 +68,7 @@ export default function ProfilePage() {
         {/* Theme toggle */}
         <button
           onClick={toggleTheme}
-          className="w-full mt-6 py-3 bg-[var(--bg-card)] border border-[var(--border-card)] rounded-xl flex items-center justify-between px-4"
+          className="w-full mt-6 py-3 bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl flex items-center justify-between px-4"
         >
           <span className="text-[var(--text-secondary)] text-sm">테마</span>
           <span className="text-[var(--text-primary)] text-sm font-medium">
@@ -80,7 +80,7 @@ export default function ProfilePage() {
           {loading ? null : user ? (
             <button
               onClick={signOut}
-              className="w-full py-3 bg-[var(--bg-card)] border border-[var(--border-card)] text-[var(--text-secondary)] rounded-xl text-sm"
+              className="w-full py-3 bg-[var(--bg-card)] shadow-[var(--card-shadow)] text-[var(--text-secondary)] rounded-xl text-sm"
             >
               로그아웃
             </button>

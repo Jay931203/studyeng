@@ -1,7 +1,8 @@
 'use client'
 
 import { useEffect, useRef, useCallback, useState } from 'react'
-import { usePlayerStore } from '@/stores/usePlayerStore'
+import { usePlayerStore, currentTimeRef } from '@/stores/usePlayerStore'
+import type { SubtitleEntry } from '@/data/seed-videos'
 
 let apiLoaded = false
 let apiLoading = false
@@ -31,10 +32,31 @@ function loadYouTubeAPI(): Promise<void> {
   })
 }
 
-export function useYouTubePlayer(containerId: string, videoId: string, clipStart = 0, clipEnd = 0) {
+/**
+ * Find the index of the subtitle that covers the given time.
+ * Returns -1 if no subtitle is active.
+ */
+function findActiveSubIndex(subtitles: SubtitleEntry[], time: number): number {
+  for (let i = 0; i < subtitles.length; i++) {
+    if (time >= subtitles[i].start && time <= subtitles[i].end) return i
+  }
+  return -1
+}
+
+export function useYouTubePlayer(
+  containerId: string,
+  videoId: string,
+  clipStart = 0,
+  clipEnd = 0,
+  subtitles: SubtitleEntry[] = [],
+) {
   const playerRef = useRef<YT.Player | null>(null)
   const intervalRef = useRef<number | null>(null)
   const [ready, setReady] = useState(false)
+
+  // Refs to track previous values and avoid unnecessary Zustand writes
+  const prevSubIndexRef = useRef(-1)
+  const lastProgressWriteRef = useRef(0)
 
   const {
     playbackRate,
@@ -45,6 +67,7 @@ export function useYouTubePlayer(containerId: string, videoId: string, clipStart
     setDuration,
     setIsPlaying,
     setClipBounds,
+    setActiveSubIndex,
   } = usePlayerStore()
 
   const initPlayer = useCallback(async () => {
@@ -90,7 +113,23 @@ export function useYouTubePlayer(containerId: string, videoId: string, clipStart
     intervalRef.current = window.setInterval(() => {
       if (!playerRef.current) return
       const time = playerRef.current.getCurrentTime()
-      setCurrentTime(time)
+
+      // Always update the shared mutable ref (no React re-render cost)
+      currentTimeRef.current = time
+
+      // --- Active subtitle detection (updates only when subtitle changes ~every 3s) ---
+      const newSubIndex = findActiveSubIndex(subtitles, time)
+      if (newSubIndex !== prevSubIndexRef.current) {
+        prevSubIndexRef.current = newSubIndex
+        setActiveSubIndex(newSubIndex)
+      }
+
+      // --- Throttled Zustand currentTime for ProgressBar (every 500ms max) ---
+      const now = performance.now()
+      if (now - lastProgressWriteRef.current >= 500) {
+        lastProgressWriteRef.current = now
+        setCurrentTime(time)
+      }
 
       // Clip boundary looping: seek back to clipStart when reaching clipEnd
       if (clipEnd > clipStart && time >= clipEnd) {
@@ -108,7 +147,7 @@ export function useYouTubePlayer(containerId: string, videoId: string, clipStart
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current)
     }
-  }, [ready, isLooping, loopStart, loopEnd, clipStart, clipEnd])
+  }, [ready, isLooping, loopStart, loopEnd, clipStart, clipEnd, subtitles])
 
   useEffect(() => {
     if (playerRef.current && ready) {

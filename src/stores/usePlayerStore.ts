@@ -13,6 +13,7 @@ interface PlayerState {
   isPlaying: boolean
   clipStart: number
   clipEnd: number
+  activeSubIndex: number
 
   toggleSubtitleMode: () => void
   setPlaybackRate: (rate: number) => void
@@ -22,9 +23,17 @@ interface PlayerState {
   setDuration: (duration: number) => void
   setIsPlaying: (playing: boolean) => void
   setClipBounds: (clipStart: number, clipEnd: number) => void
+  setActiveSubIndex: (idx: number) => void
 }
 
 const subtitleCycle: SubtitleMode[] = ['none', 'en', 'en-ko']
+
+/**
+ * Shared mutable ref for high-frequency currentTime updates.
+ * Components that need 60fps-smooth progress (e.g. ProgressBar) read from
+ * this ref via requestAnimationFrame instead of subscribing to Zustand state.
+ */
+export const currentTimeRef = { current: 0 }
 
 export const usePlayerStore = create<PlayerState>((set, get) => ({
   subtitleMode: 'none',
@@ -37,6 +46,7 @@ export const usePlayerStore = create<PlayerState>((set, get) => ({
   isPlaying: false,
   clipStart: 0,
   clipEnd: 0,
+  activeSubIndex: -1,
 
   toggleSubtitleMode: () => {
     const current = subtitleCycle.indexOf(get().subtitleMode)
@@ -57,4 +67,8 @@ export const usePlayerStore = create<PlayerState>((set, get) => ({
   setIsPlaying: (playing) => set({ isPlaying: playing }),
 
   setClipBounds: (clipStart, clipEnd) => set({ clipStart, clipEnd }),
+
+  setActiveSubIndex: (idx) => {
+    if (get().activeSubIndex !== idx) set({ activeSubIndex: idx })
+  },
 }))
