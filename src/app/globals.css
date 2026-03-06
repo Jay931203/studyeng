@@ -5,8 +5,9 @@
   --foreground: #ffffff;
   --bg-primary: #000000;
   --bg-secondary: rgba(255,255,255,0.1);
-  --bg-card: rgba(255,255,255,0.05);
+  --bg-card: rgba(255,255,255,0.07);
   --border-card: rgba(255,255,255,0.1);
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.4);
   --text-primary: #ffffff;
   --text-secondary: #9ca3af;
   --text-muted: #6b7280;
@@ -21,6 +22,7 @@
   --bg-secondary: #e5e7eb;
   --bg-card: #ffffff;
   --border-card: #e5e7eb;
+  --card-shadow: 0 1px 4px rgba(0,0,0,0.08), 0 0 0 0.5px rgba(0,0,0,0.04);
   --text-primary: #111827;
   --text-secondary: #4b5563;
   --text-muted: #6b7280;

@@ -62,10 +62,10 @@ export function VideoFeed({ videos }: VideoFeedProps) {
         <motion.div
           key={currentVideo.id}
           custom={direction}
-          initial={direction === 0 ? false : { y: direction > 0 ? '100%' : '-100%', opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          exit={{ y: direction > 0 ? '-100%' : '100%', opacity: 0 }}
-          transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+          initial={direction === 0 ? false : { y: direction > 0 ? '100%' : '-100%' }}
+          animate={{ y: 0 }}
+          exit={{ y: direction > 0 ? '-100%' : '100%' }}
+          transition={{ type: 'tween', duration: 0.28, ease: [0.25, 0.46, 0.45, 0.94] }}
           drag="y"
           dragConstraints={{ top: 0, bottom: 0 }}
           dragElastic={0.2}

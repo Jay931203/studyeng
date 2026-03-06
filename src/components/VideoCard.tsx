@@ -13,10 +13,22 @@ export function VideoCard({ video, onClick }: VideoCardProps) {
     <motion.button
       whileTap={{ scale: 0.97 }}
       onClick={onClick}
-      className="bg-[var(--bg-card)] border border-[var(--border-card)] rounded-xl overflow-hidden text-left w-full"
+      className="bg-[var(--bg-card)] rounded-xl overflow-hidden text-left w-full shadow-[var(--card-shadow)]"
     >
-      <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 flex items-center justify-center">
-        <span className="text-4xl">&#9654;</span>
+      <div className="aspect-video relative overflow-hidden">
+        <img
+          src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
+          alt={video.title}
+          className="w-full h-full object-cover"
+          loading="lazy"
+        />
+        <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+          <div className="w-10 h-10 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center">
+            <svg viewBox="0 0 24 24" fill="white" className="w-5 h-5 ml-0.5">
+              <path d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" />
+            </svg>
+          </div>
+        </div>
       </div>
       <div className="p-3">
         <p className="text-[var(--text-primary)] font-medium text-sm line-clamp-2">{video.title}</p>

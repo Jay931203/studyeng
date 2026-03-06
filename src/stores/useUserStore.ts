@@ -1,4 +1,5 @@
 import { create } from 'zustand'
+import { persist } from 'zustand/middleware'
 
 interface UserState {
   level: number
@@ -11,7 +12,7 @@ interface UserState {
   dismissLevelUp: () => void
 }
 
-export const useUserStore = create<UserState>((set, get) => ({
+export const useUserStore = create<UserState>()(persist((set, get) => ({
   level: 1,
   xp: 0,
   streakDays: 0,
@@ -36,4 +37,4 @@ export const useUserStore = create<UserState>((set, get) => ({
   },
 
   dismissLevelUp: () => set({ showLevelUp: false }),
-}))
+}), { name: 'studyeng-user' }))

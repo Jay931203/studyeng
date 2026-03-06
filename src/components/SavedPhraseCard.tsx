@@ -16,7 +16,7 @@ export function SavedPhraseCard({ phrase, onDelete, onPlay }: SavedPhraseCardPro
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, x: -100 }}
-      className="bg-[var(--bg-card)] border border-[var(--border-card)] rounded-xl p-4 cursor-pointer"
+      className="bg-[var(--bg-card)] rounded-xl shadow-[var(--card-shadow)] p-4 cursor-pointer"
       onClick={onPlay}
     >
       <div className="flex items-start justify-between gap-3">

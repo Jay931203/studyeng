@@ -80,14 +80,16 @@ export function VideoPlayer({ youtubeId, subtitles, clipStart = 0, clipEnd = 0, 
         <div
           className="absolute bottom-[200px] left-4 right-4 text-center z-10"
           onClick={(e) => e.stopPropagation()}
-          onContextMenu={(e) => {
-            e.preventDefault()
-            if (onSavePhrase && currentSub) onSavePhrase(currentSub)
-          }}
         >
-          <p className="text-white text-lg font-semibold drop-shadow-lg bg-black/60 rounded-lg px-4 py-2 inline-block">
+          <button
+            onClick={(e) => {
+              e.stopPropagation()
+              if (onSavePhrase && currentSub) onSavePhrase(currentSub)
+            }}
+            className="text-white text-lg font-semibold drop-shadow-lg bg-black/60 rounded-lg px-4 py-2 inline-block active:bg-blue-500/80 transition-colors duration-150"
+          >
             {currentSub.en}
-          </p>
+          </button>
           {subtitleMode === 'en-ko' && (
             <p className="text-gray-300 text-sm mt-1 drop-shadow-lg">
               {currentSub.ko}

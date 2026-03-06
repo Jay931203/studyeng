@@ -1,13 +1,7 @@
 'use client'
 
 import { usePlayerStore } from '@/stores/usePlayerStore'
-
-interface SubtitleEntry {
-  start: number
-  end: number
-  en: string
-  ko: string
-}
+import type { SubtitleEntry } from '@/data/seed-videos'
 
 interface SubtitleTimelineProps {
   subtitles: SubtitleEntry[]
@@ -31,27 +25,37 @@ export function SubtitleTimeline({ subtitles, onSavePhrase, onSeek }: SubtitleTi
             sub.end <= loopEnd
 
           return (
-            <button
-              key={idx}
-              onClick={(e) => {
-                e.stopPropagation()
-                onSeek?.(sub.start)
-                setLoop(sub.start, sub.end)
-              }}
-              onDoubleClick={(e) => {
-                e.stopPropagation()
-                onSavePhrase(sub)
-              }}
-              className={`flex-shrink-0 px-3 py-1.5 rounded-full text-xs transition-all ${
-                isActive
-                  ? 'bg-blue-500 text-white scale-105'
-                  : isInLoop
-                  ? 'bg-blue-500/30 text-blue-300 ring-1 ring-blue-500/50'
-                  : 'bg-white/10 text-white/60'
-              }`}
-            >
-              {sub.en.slice(0, 25)}{sub.en.length > 25 ? '...' : ''}
-            </button>
+            <div key={idx} className="flex-shrink-0 flex items-center gap-0.5">
+              <button
+                onClick={(e) => {
+                  e.stopPropagation()
+                  onSeek?.(sub.start)
+                  setLoop(sub.start, sub.end)
+                }}
+                className={`px-3 py-1.5 rounded-l-full text-xs transition-all ${
+                  isActive
+                    ? 'bg-blue-500 text-white'
+                    : isInLoop
+                    ? 'bg-blue-500/30 text-blue-300 ring-1 ring-blue-500/50'
+                    : 'bg-white/10 text-white/60'
+                }`}
+              >
+                {sub.en.slice(0, 22)}{sub.en.length > 22 ? '...' : ''}
+              </button>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation()
+                  onSavePhrase(sub)
+                }}
+                className={`py-1.5 px-1.5 rounded-r-full text-[10px] transition-all ${
+                  isActive
+                    ? 'bg-blue-500 text-white/80'
+                    : 'bg-white/10 text-white/40'
+                }`}
+              >
+                +
+              </button>
+            </div>
           )
         })}
       </div>
