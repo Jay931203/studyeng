@@ -49,7 +49,7 @@ const subtitleCycle: SubtitleMode[] = ['none', 'en', 'en-ko']
 export const currentTimeRef = { current: 0 }
 
 export const usePlayerStore = create<PlayerState>((set, get) => ({
-  subtitleMode: 'none',
+  subtitleMode: 'en',
   playbackRate: 1,
   isLooping: false,
   loopStart: null,
@@ -67,16 +67,6 @@ export const usePlayerStore = create<PlayerState>((set, get) => ({
   toggleSubtitleMode: () => {
     const current = subtitleCycle.indexOf(get().subtitleMode)
     const next = subtitleCycle[(current + 1) % subtitleCycle.length]
-
-    // Gate en-ko mode for non-premium users
-    if (next === 'en-ko' && !usePremiumStore.getState().isPremium) {
-      set({ subtitleGateBlocked: true })
-      // Skip en-ko and go to the next mode in the cycle
-      const skipNext = subtitleCycle[(current + 2) % subtitleCycle.length]
-      set({ subtitleMode: skipNext })
-      return
-    }
-
     set({ subtitleMode: next })
   },
 

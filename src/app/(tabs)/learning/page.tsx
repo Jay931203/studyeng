@@ -5,6 +5,7 @@ import { AnimatePresence } from 'framer-motion'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { SavedPhraseCard } from '@/components/SavedPhraseCard'
 import { GameLauncher } from '@/components/games/GameLauncher'
+import { WatchHistory } from '@/components/WatchHistory'
 
 export default function LearningPage() {
   const { phrases, removePhrase } = usePhraseStore()
@@ -17,6 +18,8 @@ export default function LearningPage() {
         <p className="text-[var(--text-muted)] text-sm mb-6">
           {phrases.length}개 표현 저장됨
         </p>
+
+        <WatchHistory />
 
         <GameLauncher phrases={phrases} />
 

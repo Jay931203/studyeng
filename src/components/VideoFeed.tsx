@@ -65,12 +65,16 @@ export function VideoFeed({ videos }: VideoFeedProps) {
     if (newCount >= targetCount) {
       // All repetitions done — auto-advance to next video
       if (currentIndex < videos.length - 1) {
-        const allowed = incrementDailyView()
-        if (!allowed) {
-          setPremiumTrigger('video-limit')
-          setShowPremiumModal(true)
-          resetRepeatCount()
-          return
+        const nextVideo = videos[currentIndex + 1]
+        const alreadyWatched = nextVideo && getViewCount(nextVideo.id) > 0
+        if (!alreadyWatched) {
+          const allowed = incrementDailyView()
+          if (!allowed) {
+            setPremiumTrigger('video-limit')
+            setShowPremiumModal(true)
+            resetRepeatCount()
+            return
+          }
         }
         resetRepeatCount()
         setDirection(1)
@@ -98,12 +102,16 @@ export function VideoFeed({ videos }: VideoFeedProps) {
 
       if (offset.y < -swipeThreshold || velocity.y < -500) {
         if (currentIndex < videos.length - 1) {
-          // Check daily view limit before allowing next video
-          const allowed = incrementDailyView()
-          if (!allowed) {
-            setPremiumTrigger('video-limit')
-            setShowPremiumModal(true)
-            return
+          // Already-watched videos don't consume daily limit
+          const nextVideo = videos[currentIndex + 1]
+          const alreadyWatched = nextVideo && getViewCount(nextVideo.id) > 0
+          if (!alreadyWatched) {
+            const allowed = incrementDailyView()
+            if (!allowed) {
+              setPremiumTrigger('video-limit')
+              setShowPremiumModal(true)
+              return
+            }
           }
           resetRepeatCount()
           setDirection(1)

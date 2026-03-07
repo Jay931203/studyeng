@@ -2,6 +2,7 @@
 
 import { useUserStore } from '@/stores/useUserStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
+import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { useAuth } from '@/hooks/useAuth'
 import { useThemeStore } from '@/stores/useThemeStore'
 import { StreakDisplay } from '@/components/StreakDisplay'
@@ -10,6 +11,10 @@ import { calculateXpForLevel } from '@/lib/gamification'
 export default function ProfilePage() {
   const { level, xp, streakDays } = useUserStore()
   const phraseCount = usePhraseStore((s) => s.phrases.length)
+  const totalWatched = useWatchHistoryStore((s) => s.watchedVideoIds.length)
+  const totalViews = useWatchHistoryStore((s) =>
+    Object.values(s.viewCounts).reduce((sum, c) => sum + c, 0)
+  )
   const { user, signInWithGoogle, signOut, loading } = useAuth()
   const { theme, toggleTheme } = useThemeStore()
 
@@ -54,14 +59,18 @@ export default function ProfilePage() {
 
         <StreakDisplay days={streakDays} />
 
-        <div className="grid grid-cols-2 gap-3 mt-4">
+        <div className="grid grid-cols-3 gap-3 mt-4">
+          <div className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-4 text-center">
+            <p className="text-[var(--text-primary)] text-2xl font-bold">{totalViews}</p>
+            <p className="text-[var(--text-secondary)] text-xs">총 시청</p>
+          </div>
           <div className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-4 text-center">
             <p className="text-[var(--text-primary)] text-2xl font-bold">{phraseCount}</p>
             <p className="text-[var(--text-secondary)] text-xs">저장한 표현</p>
           </div>
           <div className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-4 text-center">
-            <p className="text-[var(--text-primary)] text-2xl font-bold">{level}</p>
-            <p className="text-[var(--text-secondary)] text-xs">현재 레벨</p>
+            <p className="text-[var(--text-primary)] text-2xl font-bold">{totalWatched}</p>
+            <p className="text-[var(--text-secondary)] text-xs">본 영상</p>
           </div>
         </div>
 
