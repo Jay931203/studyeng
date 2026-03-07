@@ -19,23 +19,43 @@ function shuffleArray<T>(arr: T[]): T[] {
   return shuffled
 }
 
-/** Generate 3 wrong choices from other phrases or seed video subtitles */
+// Fallback decoy pool for when user has few saved phrases
+const FALLBACK_PHRASES = [
+  "I can't believe you just said that",
+  "That's what I'm talking about",
+  "Are you kidding me right now?",
+  "I've been thinking about it",
+  "You have no idea what happened",
+  "This is the best day ever",
+  "I told you it was a bad idea",
+  "What are you doing here?",
+  "I'm so sorry about that",
+  "Let me think about it",
+  "That doesn't make any sense",
+  "We need to talk about this",
+  "I didn't see that coming",
+  "You're not gonna believe this",
+  "How did you know that?",
+  "I wish I could help you",
+  "It's not what it looks like",
+  "Can we just move on?",
+  "I've never seen anything like it",
+  "That's exactly what I mean",
+]
+
+/** Generate 3 wrong choices from other phrases or fallback pool */
 function generateDecoys(correctEn: string, allPhrases: SavedPhrase[]): string[] {
-  // Gather candidate wrong answers from other saved phrases
   const candidates = allPhrases
     .map((p) => p.en)
     .filter((en) => en !== correctEn)
 
-  // If not enough from saved phrases, add from seed video subtitles
+  // Fill with fallback phrases if not enough
   if (candidates.length < 3) {
-    for (const video of seedVideos) {
-      for (const sub of video.subtitles) {
-        if (sub.en && sub.en !== correctEn && !candidates.includes(sub.en)) {
-          candidates.push(sub.en)
-        }
-        if (candidates.length >= 20) break
+    for (const phrase of FALLBACK_PHRASES) {
+      if (phrase !== correctEn && !candidates.includes(phrase)) {
+        candidates.push(phrase)
       }
-      if (candidates.length >= 20) break
+      if (candidates.length >= 10) break
     }
   }
 
