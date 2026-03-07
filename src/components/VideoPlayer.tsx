@@ -73,15 +73,13 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
 
   return (
     <div className="relative w-full h-full bg-black" onClick={handleTap}>
-      {/* YouTube player container */}
+      {/* YouTube player container — controls:0 and iv_load_policy:3 already
+          hide most YouTube UI. Allow pointer events so the user can dismiss
+          any YouTube-forced overlays (e.g. "more info" X button). */}
       <div
         id={containerId}
-        className="absolute inset-0 w-full h-full pointer-events-none"
+        className="absolute inset-0 w-full h-full"
       />
-
-      {/* Transparent overlay to block YouTube's own UI elements (share, title, etc.)
-          while still allowing our own tap-to-play/pause via the parent onClick */}
-      <div className="absolute inset-0 w-full h-full z-[1]" />
 
       {/* Play/Pause icon overlay */}
       {showPauseIcon && (
