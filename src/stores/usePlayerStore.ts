@@ -3,6 +3,8 @@ import { usePremiumStore } from './usePremiumStore'
 
 type SubtitleMode = 'none' | 'en' | 'en-ko'
 
+type RepeatMode = 'off' | 'x2' | 'x3'
+
 interface PlayerState {
   subtitleMode: SubtitleMode
   playbackRate: number
@@ -17,6 +19,10 @@ interface PlayerState {
   activeSubIndex: number
   /** Set to true when a non-premium user tries to access en-ko subtitles */
   subtitleGateBlocked: boolean
+  /** How many times to repeat the current video before auto-advancing */
+  repeatMode: RepeatMode
+  /** How many times the current video has fully played through */
+  currentRepeatCount: number
 
   toggleSubtitleMode: () => void
   setPlaybackRate: (rate: number) => void
@@ -28,6 +34,9 @@ interface PlayerState {
   setClipBounds: (clipStart: number, clipEnd: number) => void
   setActiveSubIndex: (idx: number) => void
   clearSubtitleGateBlocked: () => void
+  setRepeatMode: (mode: RepeatMode) => void
+  incrementRepeatCount: () => void
+  resetRepeatCount: () => void
 }
 
 const subtitleCycle: SubtitleMode[] = ['none', 'en', 'en-ko']
@@ -52,6 +61,8 @@ export const usePlayerStore = create<PlayerState>((set, get) => ({
   clipEnd: 0,
   activeSubIndex: -1,
   subtitleGateBlocked: false,
+  repeatMode: 'off',
+  currentRepeatCount: 0,
 
   toggleSubtitleMode: () => {
     const current = subtitleCycle.indexOf(get().subtitleMode)
@@ -88,4 +99,10 @@ export const usePlayerStore = create<PlayerState>((set, get) => ({
   setActiveSubIndex: (idx) => {
     if (get().activeSubIndex !== idx) set({ activeSubIndex: idx })
   },
+
+  setRepeatMode: (mode) => set({ repeatMode: mode, currentRepeatCount: 0 }),
+
+  incrementRepeatCount: () => set((state) => ({ currentRepeatCount: state.currentRepeatCount + 1 })),
+
+  resetRepeatCount: () => set({ currentRepeatCount: 0 }),
 }))

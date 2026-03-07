@@ -46,7 +46,7 @@ export default function ProfilePage() {
           </div>
           <div className="h-2 bg-[var(--bg-secondary)] rounded-full overflow-hidden">
             <div
-              className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-500"
+              className="h-full bg-gradient-to-r from-blue-500 via-purple-400 to-blue-500 rounded-full transition-all duration-500 animate-shimmer"
               style={{ width: `${xpProgress}%` }}
             />
           </div>
@@ -55,11 +55,11 @@ export default function ProfilePage() {
         <StreakDisplay days={streakDays} />
 
         <div className="grid grid-cols-2 gap-3 mt-4">
-          <div className="bg-[var(--bg-card)] rounded-xl p-4 text-center">
+          <div className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-4 text-center">
             <p className="text-[var(--text-primary)] text-2xl font-bold">{phraseCount}</p>
             <p className="text-[var(--text-secondary)] text-xs">저장한 표현</p>
           </div>
-          <div className="bg-[var(--bg-card)] rounded-xl p-4 text-center">
+          <div className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-4 text-center">
             <p className="text-[var(--text-primary)] text-2xl font-bold">{level}</p>
             <p className="text-[var(--text-secondary)] text-xs">현재 레벨</p>
           </div>

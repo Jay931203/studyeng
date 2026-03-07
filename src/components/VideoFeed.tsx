@@ -9,6 +9,7 @@ import { ProgressBar } from './ProgressBar'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { usePremiumStore, FREE_DAILY_VIEW_LIMIT } from '@/stores/usePremiumStore'
+import { usePlayerStore } from '@/stores/usePlayerStore'
 import { PremiumModal } from './PremiumModal'
 import { categories, type VideoData } from '@/data/seed-videos'
 
@@ -31,6 +32,14 @@ export function VideoFeed({ videos }: VideoFeedProps) {
   const getDailyViewsRemaining = usePremiumStore((s) => s.getDailyViewsRemaining)
   const canSaveMorePhrases = usePremiumStore((s) => s.canSaveMorePhrases)
   const incrementSavedPhrases = usePremiumStore((s) => s.incrementSavedPhrases)
+  const repeatMode = usePlayerStore((s) => s.repeatMode)
+  const currentRepeatCount = usePlayerStore((s) => s.currentRepeatCount)
+  const incrementRepeatCount = usePlayerStore((s) => s.incrementRepeatCount)
+  const resetRepeatCount = usePlayerStore((s) => s.resetRepeatCount)
+
+  // Brief overlay indicator for repeat progress
+  const [repeatIndicator, setRepeatIndicator] = useState<string | null>(null)
+  const repeatIndicatorTimerRef = useRef<number | null>(null)
 
   // Mark episode as watched when it appears in the feed
   useEffect(() => {
@@ -39,6 +48,42 @@ export function VideoFeed({ videos }: VideoFeedProps) {
       markWatched(video.seriesId, video.id)
     }
   }, [currentIndex, videos, markWatched])
+
+  // Handle clip completion for repeat mode auto-advance
+  const handleClipComplete = useCallback(() => {
+    if (repeatMode === 'off') return // Normal loop, do nothing
+
+    const targetCount = repeatMode === 'x2' ? 2 : 3
+    const newCount = currentRepeatCount + 1
+    incrementRepeatCount()
+
+    if (newCount >= targetCount) {
+      // All repetitions done — auto-advance to next video
+      if (currentIndex < videos.length - 1) {
+        const allowed = incrementDailyView()
+        if (!allowed) {
+          setPremiumTrigger('video-limit')
+          setShowPremiumModal(true)
+          resetRepeatCount()
+          return
+        }
+        resetRepeatCount()
+        setDirection(1)
+        setCurrentIndex((prev) => prev + 1)
+      } else {
+        // Already at the last video, just reset count and keep looping
+        resetRepeatCount()
+      }
+    } else {
+      // Show repeat progress indicator briefly
+      const label = `${newCount}/${targetCount} 반복 중`
+      setRepeatIndicator(label)
+      if (repeatIndicatorTimerRef.current) clearTimeout(repeatIndicatorTimerRef.current)
+      repeatIndicatorTimerRef.current = window.setTimeout(() => {
+        setRepeatIndicator(null)
+      }, 1500)
+    }
+  }, [repeatMode, currentRepeatCount, currentIndex, videos.length, incrementRepeatCount, resetRepeatCount, incrementDailyView])
 
   const swipeThreshold = 50
 
@@ -55,17 +100,19 @@ export function VideoFeed({ videos }: VideoFeedProps) {
             setShowPremiumModal(true)
             return
           }
+          resetRepeatCount()
           setDirection(1)
           setCurrentIndex((prev) => prev + 1)
         }
       } else if (offset.y > swipeThreshold || velocity.y > 500) {
         if (currentIndex > 0) {
+          resetRepeatCount()
           setDirection(-1)
           setCurrentIndex((prev) => prev - 1)
         }
       }
     },
-    [currentIndex, videos.length, incrementDailyView]
+    [currentIndex, videos.length, incrementDailyView, resetRepeatCount]
   )
 
   const currentVideo = videos[currentIndex]
@@ -94,6 +141,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
             subtitles={currentVideo.subtitles}
             clipStart={currentVideo.clipStart}
             clipEnd={currentVideo.clipEnd}
+            onClipComplete={handleClipComplete}
             onSavePhrase={(phrase) => {
               if (!canSaveMorePhrases()) {
                 setPremiumTrigger('phrase-limit')
@@ -115,8 +163,11 @@ export function VideoFeed({ videos }: VideoFeedProps) {
           />
           <VideoControls videoId={currentVideo.id} videoTitle={currentVideo.title} />
 
+          {/* Gradient overlay for text readability */}
+          <div className="absolute bottom-0 left-0 right-0 h-[300px] bg-gradient-to-t from-black/60 to-transparent pointer-events-none z-[5]" />
+
           {/* Video info - positioned above subtitle area */}
-          <div className="absolute bottom-[100px] left-4 right-20 z-10 pointer-events-none">
+          <div className="absolute bottom-[220px] left-4 right-20 z-10 pointer-events-none">
             <p className="text-white font-bold text-base drop-shadow-lg">
               {currentVideo.title}
             </p>
@@ -134,6 +185,15 @@ export function VideoFeed({ videos }: VideoFeedProps) {
 
       {/* Progress bar - YouTube Shorts style */}
       <ProgressBar />
+
+      {/* Repeat progress indicator overlay */}
+      {repeatIndicator && (
+        <div className="absolute top-16 left-0 right-0 flex justify-center z-20 pointer-events-none">
+          <div className="bg-purple-500/80 backdrop-blur-sm rounded-full px-4 py-1.5 animate-pulse">
+            <span className="text-white text-sm font-medium">{repeatIndicator}</span>
+          </div>
+        </div>
+      )}
 
       {/* Counter + daily limit */}
       <div className="absolute top-4 left-4 z-10">

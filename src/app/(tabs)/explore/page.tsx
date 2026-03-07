@@ -149,8 +149,8 @@ export default function ExplorePage() {
                     onClick={() => setSelectedSeries(s)}
                     className="flex-shrink-0 w-40 bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-4 pb-0 text-left overflow-hidden"
                   >
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center text-[var(--text-primary)] font-bold text-lg mb-2">
-                      {s.title.charAt(0)}
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center text-lg mb-2">
+                      {s.thumbnailEmoji}
                     </div>
                     <p className="text-[var(--text-primary)] font-medium text-sm line-clamp-2">{s.title}</p>
                     <p className="text-[var(--text-muted)] text-xs mt-1 mb-4">{s.episodeCount}편</p>
@@ -189,8 +189,8 @@ export default function ExplorePage() {
 
               <div className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-2xl p-5 mb-4">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center text-[var(--text-primary)] font-bold text-xl flex-shrink-0">
-                    {selectedSeries.title.charAt(0)}
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center text-xl flex-shrink-0">
+                    {selectedSeries.thumbnailEmoji}
                   </div>
                   <div>
                     <h2 className="text-[var(--text-primary)] font-bold text-lg">{selectedSeries.title}</h2>

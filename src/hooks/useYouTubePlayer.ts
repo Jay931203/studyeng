@@ -49,6 +49,7 @@ export function useYouTubePlayer(
   clipStart = 0,
   clipEnd = 0,
   subtitles: SubtitleEntry[] = [],
+  onClipComplete?: () => void,
 ) {
   const playerRef = useRef<YT.Player | null>(null)
   const intervalRef = useRef<number | null>(null)
@@ -57,6 +58,10 @@ export function useYouTubePlayer(
   // Refs to track previous values and avoid unnecessary Zustand writes
   const prevSubIndexRef = useRef(-1)
   const lastProgressWriteRef = useRef(0)
+
+  // Keep onClipComplete in a ref so the polling interval always sees the latest callback
+  const onClipCompleteRef = useRef(onClipComplete)
+  onClipCompleteRef.current = onClipComplete
 
   const {
     playbackRate,
@@ -131,8 +136,11 @@ export function useYouTubePlayer(
         setCurrentTime(time)
       }
 
-      // Clip boundary looping: seek back to clipStart when reaching clipEnd
+      // Clip boundary: when reaching clipEnd, notify via callback then loop back
       if (clipEnd > clipStart && time >= clipEnd) {
+        if (onClipCompleteRef.current) {
+          onClipCompleteRef.current()
+        }
         playerRef.current.seekTo(clipStart, true)
       }
 

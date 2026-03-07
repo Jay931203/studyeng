@@ -14,9 +14,10 @@ interface VideoPlayerProps {
   clipStart?: number
   clipEnd?: number
   onSavePhrase?: (phrase: SubtitleEntry) => void
+  onClipComplete?: () => void
 }
 
-export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0, clipEnd = 0, onSavePhrase }: VideoPlayerProps) {
+export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0, clipEnd = 0, onSavePhrase, onClipComplete }: VideoPlayerProps) {
   const containerId = `yt-player-${useId().replace(/:/g, '')}`
 
   // Fetch real transcript from YouTube
@@ -33,7 +34,7 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
     return raw
   }, [fetchedSubtitles, propSubtitles, clipStart, clipEnd])
 
-  const { ready, play, pause, seekTo } = useYouTubePlayer(containerId, youtubeId, clipStart, clipEnd, subtitles)
+  const { ready, play, pause, seekTo } = useYouTubePlayer(containerId, youtubeId, clipStart, clipEnd, subtitles, onClipComplete)
   const { subtitleMode, activeSubIndex, isPlaying, toggleSubtitleMode, subtitleGateBlocked, clearSubtitleGateBlocked } = usePlayerStore()
   const [showPauseIcon, setShowPauseIcon] = useState(false)
   const [pauseIconType, setPauseIconType] = useState<'play' | 'pause'>('pause')
@@ -96,7 +97,7 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
           We position subtitles at approximately top-[35%] to sit just below the video. */}
       {currentSub && subtitleMode !== 'none' && (
         <div
-          className="absolute bottom-[200px] left-4 right-4 text-center z-10"
+          className="absolute bottom-[260px] left-4 right-4 text-center z-10"
           onClick={(e) => e.stopPropagation()}
         >
           <button
@@ -104,7 +105,8 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
               e.stopPropagation()
               if (onSavePhrase && currentSub) onSavePhrase(currentSub)
             }}
-            className="text-white text-lg font-semibold drop-shadow-lg bg-black/60 rounded-lg px-4 py-2 inline-block active:bg-blue-500/80 transition-colors duration-150"
+            className="text-white text-xl font-semibold drop-shadow-lg bg-black/60 backdrop-blur-md rounded-lg px-4 py-2 inline-block active:bg-blue-500/80 transition-colors duration-150"
+            style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}
           >
             {currentSub.en}
           </button>

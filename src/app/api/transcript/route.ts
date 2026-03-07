@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { YoutubeTranscript } from 'youtube-transcript'
+import Anthropic from '@anthropic-ai/sdk'
 
 export interface TranscriptSubtitle {
   start: number
@@ -99,6 +100,67 @@ function decodeHTMLEntities(text: string): string {
     .replace(/\n/g, ' ')
 }
 
+/**
+ * Translate English subtitles to Korean using Claude API.
+ * Batches entries to stay within token limits.
+ * Falls back gracefully if no API key or on error.
+ */
+async function translateSubtitles(
+  entries: TranscriptSubtitle[]
+): Promise<TranscriptSubtitle[]> {
+  const apiKey = process.env.ANTHROPIC_API_KEY
+  if (!apiKey || entries.length === 0) {
+    return entries
+  }
+
+  try {
+    const client = new Anthropic({ apiKey })
+
+    // Batch into chunks of ~50 entries to avoid overly long prompts
+    const BATCH_SIZE = 50
+    const translated = [...entries]
+
+    for (let batchStart = 0; batchStart < entries.length; batchStart += BATCH_SIZE) {
+      const batchEnd = Math.min(batchStart + BATCH_SIZE, entries.length)
+      const batch = entries.slice(batchStart, batchEnd)
+
+      const englishTexts = batch
+        .map((e, i) => `${i}: ${e.en}`)
+        .join('\n')
+
+      const response = await client.messages.create({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 4096,
+        messages: [
+          {
+            role: 'user',
+            content: `Translate each numbered English sentence to natural, conversational Korean. Return ONLY the translations, one per line, with the same number prefix. Do not add any explanation.\n\n${englishTexts}`,
+          },
+        ],
+      })
+
+      const text =
+        response.content[0].type === 'text' ? response.content[0].text : ''
+      const lines = text.split('\n').filter((l) => l.trim())
+
+      for (let i = 0; i < batch.length; i++) {
+        const line = lines.find((l) => l.startsWith(`${i}:`))
+        if (line) {
+          translated[batchStart + i] = {
+            ...translated[batchStart + i],
+            ko: line.replace(/^\d+:\s*/, '').trim(),
+          }
+        }
+      }
+    }
+
+    return translated
+  } catch (error) {
+    console.error('[transcript] Translation error:', error)
+    return entries // Return without translation on error
+  }
+}
+
 export async function GET(request: NextRequest) {
   const videoId = request.nextUrl.searchParams.get('v')
 
@@ -137,9 +199,12 @@ export async function GET(request: NextRequest) {
       )
     }
 
-    const subtitles = groupTranscriptEntries(rawTranscript)
+    const grouped = groupTranscriptEntries(rawTranscript)
 
-    // Cache the result
+    // Translate English subtitles to Korean via Claude API
+    const subtitles = await translateSubtitles(grouped)
+
+    // Cache the translated result
     transcriptCache.set(videoId, subtitles)
 
     // Limit cache size to prevent memory issues

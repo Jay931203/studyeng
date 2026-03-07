@@ -13,7 +13,7 @@ export function SubtitleTimeline({ subtitles, onSavePhrase, onSeek }: SubtitleTi
   const { activeSubIndex, setLoop, clearLoop, isLooping, loopStart, loopEnd } = usePlayerStore()
 
   return (
-    <div className="absolute bottom-[152px] left-0 right-0 px-4 z-10 pointer-events-auto">
+    <div className="absolute bottom-[160px] left-0 right-0 px-4 z-10 pointer-events-auto">
       <div className="flex gap-1.5 overflow-x-auto no-scrollbar py-2">
         {subtitles.map((sub, idx) => {
           const isActive = idx === activeSubIndex
