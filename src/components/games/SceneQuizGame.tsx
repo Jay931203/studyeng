@@ -1,239 +1,236 @@
 'use client'
 
-import { useState, useMemo, useCallback } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import type { SavedPhrase } from '@/stores/usePhraseStore'
-import { seedVideos } from '@/data/seed-videos'
+import { useState, useMemo } from 'react'
+import { motion } from 'framer-motion'
+import { GameResult } from './GameResult'
+import { useUserStore } from '@/stores/useUserStore'
 
 interface SceneQuizGameProps {
-  phrases: SavedPhrase[]
-  onComplete: () => void
+  subtitle: { en: string; ko: string }
+  onComplete: (correct: boolean) => void
 }
 
-function shuffleArray<T>(arr: T[]): T[] {
-  const shuffled = [...arr]
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]]
-  }
-  return shuffled
-}
-
-// Fallback decoy pool for when user has few saved phrases
-const FALLBACK_PHRASES = [
-  "I can't believe you just said that",
-  "That's what I'm talking about",
-  "Are you kidding me right now?",
-  "I've been thinking about it",
-  "You have no idea what happened",
-  "This is the best day ever",
-  "I told you it was a bad idea",
-  "What are you doing here?",
-  "I'm so sorry about that",
-  "Let me think about it",
-  "That doesn't make any sense",
-  "We need to talk about this",
-  "I didn't see that coming",
-  "You're not gonna believe this",
-  "How did you know that?",
-  "I wish I could help you",
-  "It's not what it looks like",
-  "Can we just move on?",
-  "I've never seen anything like it",
-  "That's exactly what I mean",
+const COMMON_DISTRACTORS = [
+  'always', 'never', 'really', 'going', 'about', 'think', 'believe',
+  'around', 'before', 'after', 'under', 'every', 'could', 'would',
+  'should', 'might', 'doing', 'being', 'having', 'making', 'coming',
+  'getting', 'saying', 'looking', 'trying', 'asking', 'using', 'working',
+  'called', 'wanted', 'needed', 'people', 'place', 'world', 'still',
+  'these', 'other', 'where', 'right', 'while', 'until', 'since',
+  'those', 'their', 'which', 'there', 'thing', 'whole', 'again',
+  'money', 'house', 'night', 'point', 'story', 'water', 'young',
 ]
 
-/** Generate 3 wrong choices from other phrases or fallback pool */
-function generateDecoys(correctEn: string, allPhrases: SavedPhrase[]): string[] {
-  const candidates = allPhrases
-    .map((p) => p.en)
-    .filter((en) => en !== correctEn)
+function shuffle<T>(array: T[]): T[] {
+  const arr = [...array]
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[arr[i], arr[j]] = [arr[j], arr[i]]
+  }
+  return arr
+}
 
-  // Fill with fallback phrases if not enough
-  if (candidates.length < 3) {
-    for (const phrase of FALLBACK_PHRASES) {
-      if (phrase !== correctEn && !candidates.includes(phrase)) {
-        candidates.push(phrase)
-      }
-      if (candidates.length >= 10) break
+interface BlankQuestion {
+  displayParts: string[]  // The sentence split around blanks, e.g. ["I ", " believe ", " said that"]
+  blankedWords: string[]  // The words that were blanked out
+  options: string[]       // 4 choices per blank
+  correctIndex: number    // Which blank to test (we test one at a time)
+}
+
+function generateBlankQuestion(sentence: string): BlankQuestion {
+  const words = sentence.split(/\s+/).filter((w) => w.length > 0)
+
+  // Find "key words" - words that are 3+ alpha chars, not super common articles
+  const skipWords = new Set(['the', 'a', 'an', 'is', 'am', 'are', 'was', 'were', 'i', 'you', 'he', 'she', 'it', 'we', 'they', 'my', 'your', 'his', 'her', 'its', 'our', 'to', 'of', 'in', 'on', 'at', 'by', 'and', 'but', 'or', 'so', 'do', 'did', 'be', 'no', 'not'])
+  const candidates: number[] = []
+  for (let i = 0; i < words.length; i++) {
+    const clean = words[i].replace(/[^a-zA-Z']/g, '').toLowerCase()
+    if (clean.length >= 3 && !skipWords.has(clean)) {
+      candidates.push(i)
     }
   }
 
-  return shuffleArray(candidates).slice(0, 3)
-}
-
-export function SceneQuizGame({ phrases, onComplete }: SceneQuizGameProps) {
-  const [round, setRound] = useState(0)
-  const [score, setScore] = useState(0)
-  const [selected, setSelected] = useState<string | null>(null)
-  const [showResult, setShowResult] = useState(false)
-  const [showGameResult, setShowGameResult] = useState(false)
-
-  const totalRounds = Math.min(phrases.length, 5)
-
-  // Pre-generate quiz data for all rounds
-  const quizData = useMemo(() => {
-    const shuffled = shuffleArray(phrases).slice(0, totalRounds)
-    return shuffled.map((phrase) => {
-      const video = seedVideos.find((v) => v.id === phrase.videoId)
-      const decoys = generateDecoys(phrase.en, phrases)
-      const choices = shuffleArray([phrase.en, ...decoys])
-      return { phrase, video, choices }
-    })
-  }, [phrases, totalRounds])
-
-  const current = quizData[round]
-  if (!current) return null
-
-  const isCorrect = selected === current.phrase.en
-
-  const handleSelect = useCallback(
-    (choice: string) => {
-      if (selected) return // Already answered
-      setSelected(choice)
-      if (choice === current.phrase.en) {
-        setScore((s) => s + 1)
-      }
-      setShowResult(true)
-
-      // Auto-advance after brief delay
-      setTimeout(() => {
-        if (round + 1 >= totalRounds) {
-          setShowGameResult(true)
-        } else {
-          setRound((r) => r + 1)
-          setSelected(null)
-          setShowResult(false)
-        }
-      }, 1500)
-    },
-    [selected, current, round, totalRounds]
+  // Pick 2-3 words to blank out (or fewer if sentence is short)
+  const blankCount = Math.min(
+    candidates.length,
+    words.length <= 5 ? 1 : words.length <= 8 ? 2 : 3
   )
+  const blankedIndices = shuffle(candidates).slice(0, blankCount).sort((a, b) => a - b)
 
-  if (showGameResult) {
-    const pct = Math.round((score / totalRounds) * 100)
-    return (
-      <div className="h-full flex flex-col items-center justify-center bg-black px-6">
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ type: 'spring', damping: 10 }}
-          className="text-6xl mb-4"
-        >
-          {pct >= 80 ? '\uD83C\uDF89' : pct >= 50 ? '\uD83D\uDC4D' : '\uD83D\uDCAA'}
-        </motion.div>
-        <p className="text-white text-2xl font-bold mb-2">
-          {score} / {totalRounds}
-        </p>
-        <p className="text-white/60 text-sm mb-8">
-          {pct >= 80 ? '대단해! 거의 다 맞혔어' : pct >= 50 ? '잘했어! 계속 해보자' : '다시 도전해볼까?'}
-        </p>
-        <button
-          onClick={onComplete}
-          className="px-8 py-3 bg-blue-500 text-white rounded-xl font-medium"
-        >
-          완료
-        </button>
-      </div>
-    )
+  // If no candidates found, just blank the longest word
+  if (blankedIndices.length === 0) {
+    let longest = 0
+    for (let i = 1; i < words.length; i++) {
+      if (words[i].length > words[longest].length) longest = i
+    }
+    blankedIndices.push(longest)
   }
 
-  const youtubeId = current.video?.youtubeId
+  const blankedWords = blankedIndices.map((i) => words[i])
+
+  // Build display parts: interleave text between blanks
+  const displayParts: string[] = []
+  let lastEnd = 0
+  for (const idx of blankedIndices) {
+    displayParts.push(words.slice(lastEnd, idx).join(' '))
+    lastEnd = idx + 1
+  }
+  displayParts.push(words.slice(lastEnd).join(' '))
+
+  // We test ONE blank - pick randomly from blanked words
+  const correctIndex = Math.floor(Math.random() * blankedWords.length)
+  const correctWord = blankedWords[correctIndex].replace(/[^a-zA-Z']/g, '').toLowerCase()
+
+  // Generate 3 distractors with similar length
+  const distractors: string[] = []
+  const used = new Set([correctWord])
+  const pool = shuffle(COMMON_DISTRACTORS).filter(
+    (w) => Math.abs(w.length - correctWord.length) <= 3
+  )
+  for (const w of pool) {
+    if (!used.has(w.toLowerCase())) {
+      distractors.push(w)
+      used.add(w.toLowerCase())
+    }
+    if (distractors.length >= 3) break
+  }
+  // Pad if needed
+  while (distractors.length < 3) {
+    distractors.push(`word${distractors.length + 1}`)
+  }
+
+  const options = shuffle([correctWord, ...distractors])
+
+  return { displayParts, blankedWords, options, correctIndex }
+}
+
+export function SceneQuizGame({ subtitle, onComplete }: SceneQuizGameProps) {
+  const question = useMemo(() => generateBlankQuestion(subtitle.en), [subtitle])
+  const [selected, setSelected] = useState<string | null>(null)
+  const [showResult, setShowResult] = useState(false)
+  const gainXp = useUserStore((s) => s.gainXp)
+
+  const correctWord = question.blankedWords[question.correctIndex]
+    .replace(/[^a-zA-Z']/g, '')
+    .toLowerCase()
+  const isCorrect = selected === correctWord
+  const xpEarned = isCorrect ? 10 : 0
+
+  const handleSelect = (option: string) => {
+    if (selected) return
+    setSelected(option)
+    if (option === correctWord) {
+      gainXp(10)
+    }
+    setTimeout(() => setShowResult(true), 500)
+  }
+
+  // Build the sentence display with blanks
+  const renderSentence = () => {
+    const elements: React.ReactNode[] = []
+    for (let i = 0; i < question.displayParts.length; i++) {
+      if (question.displayParts[i]) {
+        elements.push(
+          <span key={`text-${i}`} className="text-white">
+            {question.displayParts[i]}
+          </span>
+        )
+      }
+      if (i < question.blankedWords.length) {
+        const isTarget = i === question.correctIndex
+        const word = question.blankedWords[i]
+        const cleanWord = word.replace(/[^a-zA-Z']/g, '').toLowerCase()
+
+        if (isTarget) {
+          // This is the blank the user must fill
+          elements.push(
+            <span
+              key={`blank-${i}`}
+              className={`inline-block min-w-[60px] mx-1 px-2 py-0.5 rounded-md text-center font-bold ${
+                selected
+                  ? isCorrect
+                    ? 'bg-green-500/30 text-green-300 border border-green-400/50'
+                    : 'bg-red-500/30 text-red-300 border border-red-400/50'
+                  : 'bg-blue-500/20 text-blue-300 border border-blue-400/40 border-dashed'
+              }`}
+            >
+              {selected ? cleanWord : '?'}
+            </span>
+          )
+        } else {
+          // Other blanked words shown as dimmed underlines
+          elements.push(
+            <span
+              key={`blank-${i}`}
+              className="inline-block min-w-[40px] mx-1 border-b border-white/20 text-white/30 text-center"
+            >
+              {cleanWord}
+            </span>
+          )
+        }
+        // Add space after blank if needed
+        if (i < question.blankedWords.length - 1 || question.displayParts[i + 1]) {
+          elements.push(<span key={`space-${i}`}> </span>)
+        }
+      }
+    }
+    return elements
+  }
 
   return (
-    <div className="h-full flex flex-col bg-black">
-      {/* Scene freeze-frame */}
-      <div className="relative w-full aspect-video flex-shrink-0">
-        {youtubeId ? (
-          <img
-            src={`https://img.youtube.com/vi/${youtubeId}/hqdefault.jpg`}
-            alt="Scene"
-            className="w-full h-full object-cover"
-          />
-        ) : (
-          <div className="w-full h-full bg-gray-800 flex items-center justify-center">
-            <span className="text-white/40 text-sm">No scene available</span>
-          </div>
-        )}
+    <div className="flex flex-col items-center justify-center h-full px-6">
+      <p className="text-gray-400 text-xs uppercase tracking-wider mb-8">
+        빈칸에 들어갈 단어는?
+      </p>
 
-        {/* Overlay gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/80" />
-
-        {/* Round indicator */}
-        <div className="absolute top-4 left-4">
-          <span className="text-white/60 text-sm font-medium">
-            {round + 1} / {totalRounds}
-          </span>
-        </div>
-
-        {/* Score */}
-        <div className="absolute top-4 right-4">
-          <span className="text-white/60 text-sm font-medium">
-            {score}점
-          </span>
-        </div>
-
-        {/* Question overlay */}
-        <div className="absolute bottom-4 left-4 right-4 text-center">
-          <p className="text-white/80 text-sm mb-1">이 장면에서 뭐라고 했을까?</p>
-          {current.phrase.ko && (
-            <p className="text-blue-300 text-xs">
-              힌트: {current.phrase.ko}
-            </p>
-          )}
-        </div>
+      {/* Sentence with blanks */}
+      <div className="text-xl font-medium text-center leading-relaxed mb-6 flex flex-wrap items-center justify-center gap-y-2">
+        {renderSentence()}
       </div>
 
-      {/* Choices */}
-      <div className="flex-1 flex flex-col justify-center px-4 gap-3 pb-8">
-        <AnimatePresence mode="wait">
-          {current.choices.map((choice, i) => {
-            let bgClass = 'bg-white/10'
-            if (showResult) {
-              if (choice === current.phrase.en) {
-                bgClass = 'bg-green-500/30 border-green-400'
-              } else if (choice === selected && !isCorrect) {
-                bgClass = 'bg-red-500/30 border-red-400'
-              } else {
-                bgClass = 'bg-white/5'
-              }
-            }
+      {/* Korean translation - only shown after answering */}
+      {selected && (
+        <motion.p
+          initial={{ opacity: 0, y: 5 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-gray-500 text-sm mb-8 text-center"
+        >
+          {subtitle.ko}
+        </motion.p>
+      )}
 
-            return (
-              <motion.button
-                key={`${round}-${i}`}
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: i * 0.08 }}
-                onClick={() => handleSelect(choice)}
-                disabled={!!selected}
-                className={`w-full py-3.5 px-4 rounded-xl text-left text-white text-sm font-medium border border-white/10 transition-all active:scale-[0.98] ${bgClass}`}
-              >
-                <span className="text-white/40 mr-2">{String.fromCharCode(65 + i)}</span>
-                {choice}
-              </motion.button>
-            )
-          })}
-        </AnimatePresence>
+      {!selected && <div className="mb-8" />}
 
-        {/* Feedback */}
-        {showResult && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-center mt-2"
-          >
-            <p className={`text-lg font-bold ${isCorrect ? 'text-green-400' : 'text-red-400'}`}>
-              {isCorrect ? '정답!' : '아쉽!'}
-            </p>
-            {!isCorrect && (
-              <p className="text-white/60 text-xs mt-1">
-                정답: {current.phrase.en}
-              </p>
-            )}
-          </motion.div>
-        )}
+      {/* 4 choices */}
+      <div className="grid grid-cols-2 gap-3 w-full max-w-sm">
+        {question.options.map((option) => {
+          let bg = 'bg-white/10'
+          if (selected) {
+            if (option === correctWord) bg = 'bg-green-500/80'
+            else if (option === selected) bg = 'bg-red-500/80'
+          }
+
+          return (
+            <motion.button
+              key={option}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => handleSelect(option)}
+              disabled={selected !== null}
+              className={`${bg} text-white py-3 px-4 rounded-xl text-center font-medium transition-colors`}
+            >
+              {option}
+            </motion.button>
+          )
+        })}
       </div>
+
+      {showResult && (
+        <GameResult
+          correct={isCorrect}
+          xpEarned={xpEarned}
+          onContinue={() => onComplete(isCorrect)}
+        />
+      )}
     </div>
   )
 }

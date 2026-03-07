@@ -65,8 +65,9 @@ export default function ExplorePage() {
             </h2>
             <div className="flex gap-3 overflow-x-auto no-scrollbar pb-2 -mx-4 px-4">
               {popularVideos.map((video) => (
-                <button
+                <motion.button
                   key={video.id}
+                  whileTap={{ scale: 0.97 }}
                   onClick={() => router.push(`/?v=${video.id}`)}
                   className="flex-shrink-0 w-44 bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl overflow-hidden text-left"
                 >
@@ -103,7 +104,7 @@ export default function ExplorePage() {
                       </div>
                     )}
                   </div>
-                </button>
+                </motion.button>
               ))}
             </div>
           </div>
@@ -137,44 +138,53 @@ export default function ExplorePage() {
         </div>
 
         {/* Series section */}
-        {!selectedSeries && filteredSeries.length > 0 && (
+        {!selectedSeries && (
           <div className="mb-6">
             <h2 className="text-[var(--text-primary)] font-bold text-lg mb-3">시리즈 몰아보기</h2>
-            <div className="flex gap-3 overflow-x-auto no-scrollbar pb-2">
-              {filteredSeries.map((s) => {
-                const progress = getSeriesProgress(s.id, s.episodeCount)
-                const firstVideo = getVideosBySeries(s.id)[0]
-                return (
-                  <button
-                    key={s.id}
-                    onClick={() => setSelectedSeries(s)}
-                    className="flex-shrink-0 w-48 bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-3 pb-0 text-left overflow-hidden"
-                  >
-                    <div className="w-full aspect-video rounded-lg overflow-hidden mb-2 relative">
-                      {firstVideo && (
-                        <img
-                          src={`https://img.youtube.com/vi/${firstVideo.youtubeId}/mqdefault.jpg`}
-                          alt={s.title}
-                          className="w-full h-full object-cover"
-                          loading="lazy"
-                        />
-                      )}
-                      <div className="absolute bottom-1 right-1 bg-black/70 text-white text-[10px] px-1.5 py-0.5 rounded-md font-medium">
-                        {s.episodeCount}편
+            {filteredSeries.length > 0 ? (
+              <div className="flex gap-3 overflow-x-auto no-scrollbar pb-2">
+                {filteredSeries.map((s) => {
+                  const progress = getSeriesProgress(s.id, s.episodeCount)
+                  const firstVideo = getVideosBySeries(s.id)[0]
+                  return (
+                    <motion.button
+                      key={s.id}
+                      whileTap={{ scale: 0.97 }}
+                      onClick={() => setSelectedSeries(s)}
+                      className="flex-shrink-0 w-48 bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-3 pb-0 text-left overflow-hidden"
+                    >
+                      <div className="w-full aspect-video rounded-lg overflow-hidden mb-2 relative">
+                        {firstVideo && (
+                          <img
+                            src={`https://img.youtube.com/vi/${firstVideo.youtubeId}/mqdefault.jpg`}
+                            alt={s.title}
+                            className="w-full h-full object-cover"
+                            loading="lazy"
+                          />
+                        )}
+                        <div className="absolute bottom-1 right-1 bg-black/70 text-white text-[10px] px-1.5 py-0.5 rounded-md font-medium">
+                          {s.episodeCount}편
+                        </div>
                       </div>
-                    </div>
-                    <p className="text-[var(--text-primary)] font-medium text-sm line-clamp-2 mb-3">{s.title}</p>
-                    {/* Progress bar */}
-                    <div className="h-1 -mx-3 bg-[var(--bg-secondary)]">
-                      <div
-                        className="h-full bg-green-500 transition-all duration-300"
-                        style={{ width: `${progress}%` }}
-                      />
-                    </div>
-                  </button>
-                )
-              })}
-            </div>
+                      <p className="text-[var(--text-primary)] font-medium text-sm line-clamp-2 mb-3">{s.title}</p>
+                      {/* Progress bar */}
+                      <div className="h-1 -mx-3 bg-[var(--bg-secondary)]">
+                        <div
+                          className="h-full bg-green-500 transition-all duration-300"
+                          style={{ width: `${progress}%` }}
+                        />
+                      </div>
+                    </motion.button>
+                  )
+                })}
+              </div>
+            ) : (
+              <div className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-6 text-center">
+                <p className="text-[var(--text-muted)] text-sm">
+                  이 카테고리에는 아직 시리즈가 없어요
+                </p>
+              </div>
+            )}
           </div>
         )}
 
@@ -232,8 +242,9 @@ export default function ExplorePage() {
                   const watched = selectedSeries ? isWatched(selectedSeries.id, video.id) : false
                   const viewCount = getViewCount(video.id)
                   return (
-                    <button
+                    <motion.button
                       key={video.id}
+                      whileTap={{ scale: 0.98 }}
                       onClick={() => router.push(`/?v=${video.id}&series=${selectedSeries.id}`)}
                       className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-4 text-left flex items-center gap-4"
                     >
@@ -264,7 +275,7 @@ export default function ExplorePage() {
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[var(--text-muted)] flex-shrink-0">
                         <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
                       </svg>
-                    </button>
+                    </motion.button>
                   )
                 })}
 
@@ -281,7 +292,8 @@ export default function ExplorePage() {
                   const isComplete = progress >= 100
 
                   return (
-                    <button
+                    <motion.button
+                      whileTap={{ scale: 0.98 }}
                       onClick={() => {
                         if (isComplete) {
                           // All watched - start from beginning
@@ -301,7 +313,7 @@ export default function ExplorePage() {
                         : hasProgress
                           ? '이어보기'
                           : '처음부터 재생'}
-                    </button>
+                    </motion.button>
                   )
                 })()}
               </div>
@@ -313,15 +325,26 @@ export default function ExplorePage() {
         {!selectedSeries && (
           <>
             <h2 className="text-[var(--text-primary)] font-bold text-lg mb-3">전체 영상</h2>
-            <div className="grid grid-cols-2 gap-3">
-              {filteredVideos.map((video) => (
-                <VideoCard
-                  key={video.id}
-                  video={video}
-                  onClick={() => router.push(`/?v=${video.id}`)}
-                />
-              ))}
-            </div>
+            {filteredVideos.length > 0 ? (
+              <div className="grid grid-cols-2 gap-3">
+                {filteredVideos.map((video) => (
+                  <VideoCard
+                    key={video.id}
+                    video={video}
+                    onClick={() => router.push(`/?v=${video.id}`)}
+                  />
+                ))}
+              </div>
+            ) : (
+              <div className="flex flex-col items-center justify-center py-12">
+                <div className="w-14 h-14 rounded-2xl bg-[var(--bg-secondary)] flex items-center justify-center mb-3">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-7 h-7 text-[var(--text-muted)]">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
+                  </svg>
+                </div>
+                <p className="text-[var(--text-muted)] text-sm">이 카테고리에는 아직 영상이 없어요</p>
+              </div>
+            )}
           </>
         )}
       </div>

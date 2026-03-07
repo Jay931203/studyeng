@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useCallback } from 'react'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { usePlayerStore } from '@/stores/usePlayerStore'
 import { useLikeStore } from '@/stores/useLikeStore'
 import { SaveToast } from './SaveToast'
@@ -101,12 +101,12 @@ export function UnifiedControls({ videoId, videoTitle }: UnifiedControlsProps) {
         {/* Like / Heart */}
         {videoId && (
           <motion.button
-            whileTap={{ scale: 0.8 }}
+            whileTap={{ scale: 0.75 }}
             onClick={(e) => {
               e.stopPropagation()
               toggleLike(videoId)
             }}
-            className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors"
+            className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 transition-colors relative"
             aria-label={liked ? '좋아요 취소' : '좋아요'}
           >
             <motion.svg
@@ -116,8 +116,14 @@ export function UnifiedControls({ videoId, videoTitle }: UnifiedControlsProps) {
               stroke={liked ? '#EF4444' : 'white'}
               strokeWidth={2}
               className="w-4 h-4"
-              animate={liked ? { scale: [1, 1.3, 1] } : {}}
-              transition={{ duration: 0.3 }}
+              animate={liked ? {
+                scale: [1, 1.35, 0.9, 1.1, 1],
+              } : { scale: 1 }}
+              transition={liked ? {
+                duration: 0.5,
+                ease: 'easeOut',
+                times: [0, 0.2, 0.4, 0.6, 1],
+              } : { duration: 0.15 }}
             >
               <path
                 strokeLinecap="round"
@@ -125,6 +131,28 @@ export function UnifiedControls({ videoId, videoTitle }: UnifiedControlsProps) {
                 d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
               />
             </motion.svg>
+            {/* Burst particles on like */}
+            <AnimatePresence>
+              {liked && (
+                <>
+                  {[0, 60, 120, 180, 240, 300].map((angle) => (
+                    <motion.div
+                      key={angle}
+                      initial={{ opacity: 1, scale: 0, x: 0, y: 0 }}
+                      animate={{
+                        opacity: 0,
+                        scale: 1,
+                        x: Math.cos((angle * Math.PI) / 180) * 14,
+                        y: Math.sin((angle * Math.PI) / 180) * 14,
+                      }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.45, ease: 'easeOut' }}
+                      className="absolute w-1 h-1 rounded-full bg-red-400"
+                    />
+                  ))}
+                </>
+              )}
+            </AnimatePresence>
           </motion.button>
         )}
 

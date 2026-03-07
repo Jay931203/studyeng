@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
+import { motion } from 'framer-motion'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { seedVideos, categories } from '@/data/seed-videos'
 
@@ -110,8 +111,9 @@ export function WatchHistory() {
                 categories.find((c) => c.id === video.category)?.label ?? ''
 
               return (
-                <button
+                <motion.button
                   key={video.id}
+                  whileTap={{ scale: 0.98 }}
                   onClick={() => router.push(`/?v=${video.id}`)}
                   className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-3 text-left flex items-center gap-3"
                 >
@@ -153,7 +155,7 @@ export function WatchHistory() {
                       clipRule="evenodd"
                     />
                   </svg>
-                </button>
+                </motion.button>
               )
             })}
           </div>

@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { motion } from 'framer-motion'
 
 const tabs = [
   { href: '/', label: '홈', icon: 'home' },
@@ -45,12 +46,29 @@ export function BottomNav() {
             <Link
               key={href}
               href={href}
-              className={`flex flex-col items-center gap-0.5 px-3 py-1 transition-all active:scale-90 duration-150 ${
+              className={`relative flex flex-col items-center gap-0.5 px-3 py-1 transition-colors duration-200 active:scale-90 ${
                 isActive ? 'text-blue-500' : 'text-[var(--text-secondary)]'
               }`}
             >
-              {icons[icon](isActive)}
-              <span className="text-[10px] font-medium">{label}</span>
+              <motion.div
+                animate={{ scale: isActive ? 1 : 0.9, y: isActive ? -1 : 0 }}
+                transition={{ type: 'spring', stiffness: 400, damping: 25 }}
+              >
+                {icons[icon](isActive)}
+              </motion.div>
+              <span className={`text-[10px] font-medium transition-colors duration-200 ${
+                isActive ? 'text-blue-500' : 'text-[var(--text-secondary)]'
+              }`}>
+                {label}
+              </span>
+              {/* Active indicator dot */}
+              {isActive && (
+                <motion.div
+                  layoutId="nav-indicator"
+                  className="absolute -bottom-0.5 w-1 h-1 rounded-full bg-blue-500"
+                  transition={{ type: 'spring', stiffness: 500, damping: 30 }}
+                />
+              )}
             </Link>
           )
         })}

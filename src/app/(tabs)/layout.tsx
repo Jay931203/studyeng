@@ -1,5 +1,6 @@
 import { BottomNav } from '@/components/BottomNav'
 import { LevelUpModal } from '@/components/LevelUpModal'
+import { XpGainToast } from '@/components/XpGainToast'
 
 export default function TabsLayout({
   children,
@@ -11,6 +12,7 @@ export default function TabsLayout({
       <main className="flex-1 overflow-hidden">{children}</main>
       <BottomNav />
       <LevelUpModal />
+      <XpGainToast />
     </div>
   )
 }
