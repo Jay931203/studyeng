@@ -1,4 +1,5 @@
 import { create } from 'zustand'
+import { usePremiumStore } from './usePremiumStore'
 
 type SubtitleMode = 'none' | 'en' | 'en-ko'
 
@@ -14,6 +15,8 @@ interface PlayerState {
   clipStart: number
   clipEnd: number
   activeSubIndex: number
+  /** Set to true when a non-premium user tries to access en-ko subtitles */
+  subtitleGateBlocked: boolean
 
   toggleSubtitleMode: () => void
   setPlaybackRate: (rate: number) => void
@@ -24,6 +27,7 @@ interface PlayerState {
   setIsPlaying: (playing: boolean) => void
   setClipBounds: (clipStart: number, clipEnd: number) => void
   setActiveSubIndex: (idx: number) => void
+  clearSubtitleGateBlocked: () => void
 }
 
 const subtitleCycle: SubtitleMode[] = ['none', 'en', 'en-ko']
@@ -47,12 +51,25 @@ export const usePlayerStore = create<PlayerState>((set, get) => ({
   clipStart: 0,
   clipEnd: 0,
   activeSubIndex: -1,
+  subtitleGateBlocked: false,
 
   toggleSubtitleMode: () => {
     const current = subtitleCycle.indexOf(get().subtitleMode)
     const next = subtitleCycle[(current + 1) % subtitleCycle.length]
+
+    // Gate en-ko mode for non-premium users
+    if (next === 'en-ko' && !usePremiumStore.getState().isPremium) {
+      set({ subtitleGateBlocked: true })
+      // Skip en-ko and go to the next mode in the cycle
+      const skipNext = subtitleCycle[(current + 2) % subtitleCycle.length]
+      set({ subtitleMode: skipNext })
+      return
+    }
+
     set({ subtitleMode: next })
   },
+
+  clearSubtitleGateBlocked: () => set({ subtitleGateBlocked: false }),
 
   setPlaybackRate: (rate) => set({ playbackRate: rate }),
 

@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-03-06T17:24:23.926Z",
+  "lastUpdated": "2026-03-07T01:08:49.155Z",
   "activeFeatures": [
     "studyeng",
     "test",
@@ -28,9 +28,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:11:44.237Z",
-        "lastUpdated": "2026-03-06T16:45:44.835Z"
+        "lastUpdated": "2026-03-07T01:08:49.154Z"
       },
-      "lastFile": "C:/Users/hyunj/studyeng/src/lib/recommend.ts"
+      "lastFile": "C:/Users/hyunj/studyeng/src/components/VideoPlayer.tsx"
     },
     "test": {
       "phase": "do",
@@ -132,9 +132,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:34:15.688Z",
-        "lastUpdated": "2026-03-06T16:44:17.759Z"
+        "lastUpdated": "2026-03-07T01:08:32.911Z"
       },
-      "lastFile": "C:/Users/hyunj/studyeng/src/stores/useLikeStore.ts"
+      "lastFile": "C:/Users/hyunj/studyeng/src/stores/usePlayerStore.ts"
     },
     "data": {
       "phase": "do",
@@ -210,7 +210,7 @@
   "session": {
     "startedAt": "2026-03-06T12:21:45.757Z",
     "onboardingCompleted": false,
-    "lastActivity": "2026-03-06T17:24:23.926Z"
+    "lastActivity": "2026-03-07T01:08:49.155Z"
   },
   "history": [
     {
@@ -2154,6 +2154,84 @@
     {
       "timestamp": "2026-03-06T17:24:23.926Z",
       "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-07T01:06:54.845Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-07T01:07:38.399Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-07T01:07:44.541Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-07T01:07:51.965Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-07T01:07:59.781Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-07T01:08:05.154Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-07T01:08:12.103Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-07T01:08:16.616Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-07T01:08:25.552Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-07T01:08:32.911Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-07T01:08:38.237Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-07T01:08:44.105Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-07T01:08:49.155Z",
+      "feature": "studyeng",
       "phase": "do",
       "action": "updated"
     }

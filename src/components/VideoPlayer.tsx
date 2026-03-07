@@ -1,9 +1,10 @@
 'use client'
 
-import { useId, useState, useRef, useCallback } from 'react'
+import { useId, useState, useRef, useCallback, useEffect } from 'react'
 import { useYouTubePlayer } from '@/hooks/useYouTubePlayer'
 import { usePlayerStore } from '@/stores/usePlayerStore'
 import { SubtitleTimeline } from './SubtitleTimeline'
+import { PremiumModal } from './PremiumModal'
 import type { SubtitleEntry } from '@/data/seed-videos'
 
 interface VideoPlayerProps {
@@ -17,10 +18,19 @@ interface VideoPlayerProps {
 export function VideoPlayer({ youtubeId, subtitles, clipStart = 0, clipEnd = 0, onSavePhrase }: VideoPlayerProps) {
   const containerId = `yt-player-${useId().replace(/:/g, '')}`
   const { ready, play, pause, seekTo } = useYouTubePlayer(containerId, youtubeId, clipStart, clipEnd, subtitles)
-  const { subtitleMode, activeSubIndex, isPlaying, toggleSubtitleMode } = usePlayerStore()
+  const { subtitleMode, activeSubIndex, isPlaying, toggleSubtitleMode, subtitleGateBlocked, clearSubtitleGateBlocked } = usePlayerStore()
   const [showPauseIcon, setShowPauseIcon] = useState(false)
   const [pauseIconType, setPauseIconType] = useState<'play' | 'pause'>('pause')
+  const [showSubtitleGate, setShowSubtitleGate] = useState(false)
   const iconTimerRef = useRef<number | null>(null)
+
+  // Show premium modal when subtitle gate is triggered
+  useEffect(() => {
+    if (subtitleGateBlocked) {
+      setShowSubtitleGate(true)
+      clearSubtitleGateBlocked()
+    }
+  }, [subtitleGateBlocked, clearSubtitleGateBlocked])
 
   const currentSub = activeSubIndex >= 0 ? subtitles[activeSubIndex] : undefined
 
@@ -114,6 +124,12 @@ export function VideoPlayer({ youtubeId, subtitles, clipStart = 0, clipEnd = 0, 
           <div className="w-8 h-8 border-2 border-white/30 border-t-white rounded-full animate-spin" />
         </div>
       )}
+
+      <PremiumModal
+        isOpen={showSubtitleGate}
+        onClose={() => setShowSubtitleGate(false)}
+        trigger="subtitle"
+      />
     </div>
   )
 }

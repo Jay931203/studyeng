@@ -1,14 +1,35 @@
 {
   "version": "1.0",
-  "enabled": false,
+  "enabled": true,
   "teamName": "",
   "feature": "studyeng",
   "pdcaPhase": "do",
   "orchestrationPattern": "leader",
   "ctoAgent": "opus",
-  "startedAt": "2026-03-06T15:39:28.135Z",
-  "lastUpdated": "2026-03-06T17:26:14.031Z",
-  "teammates": [],
+  "startedAt": "2026-03-07T01:05:57.061Z",
+  "lastUpdated": "2026-03-07T01:41:49.431Z",
+  "teammates": [
+    {
+      "name": "a67121cd6286a658d",
+      "role": "general-purpose",
+      "model": "sonnet",
+      "status": "completed",
+      "currentTask": null,
+      "taskId": null,
+      "startedAt": "2026-03-07T01:05:57.063Z",
+      "lastActivityAt": "2026-03-07T01:41:49.427Z"
+    },
+    {
+      "name": "a74c01436e5ac2844",
+      "role": "frontend-developer",
+      "model": "sonnet",
+      "status": "completed",
+      "currentTask": null,
+      "taskId": null,
+      "startedAt": "2026-03-07T01:06:15.402Z",
+      "lastActivityAt": "2026-03-07T01:09:39.864Z"
+    }
+  ],
   "progress": {
     "totalTasks": 0,
     "completedTasks": 0,

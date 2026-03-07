@@ -8,6 +8,8 @@ import { SaveToast } from './SaveToast'
 import { ProgressBar } from './ProgressBar'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
+import { usePremiumStore, FREE_DAILY_VIEW_LIMIT } from '@/stores/usePremiumStore'
+import { PremiumModal } from './PremiumModal'
 import { categories, type VideoData } from '@/data/seed-videos'
 
 interface VideoFeedProps {
@@ -18,10 +20,17 @@ export function VideoFeed({ videos }: VideoFeedProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [direction, setDirection] = useState(0)
   const [showToast, setShowToast] = useState(false)
+  const [showPremiumModal, setShowPremiumModal] = useState(false)
+  const [premiumTrigger, setPremiumTrigger] = useState<'video-limit' | 'subtitle' | 'phrase-limit'>('video-limit')
   const constraintsRef = useRef(null)
   const savePhrase = usePhraseStore((s) => s.savePhrase)
   const markWatched = useWatchHistoryStore((s) => s.markWatched)
   const isWatchedFn = useWatchHistoryStore((s) => s.isWatched)
+  const isPremium = usePremiumStore((s) => s.isPremium)
+  const incrementDailyView = usePremiumStore((s) => s.incrementDailyView)
+  const getDailyViewsRemaining = usePremiumStore((s) => s.getDailyViewsRemaining)
+  const canSaveMorePhrases = usePremiumStore((s) => s.canSaveMorePhrases)
+  const incrementSavedPhrases = usePremiumStore((s) => s.incrementSavedPhrases)
 
   // Mark episode as watched when it appears in the feed
   useEffect(() => {
@@ -39,6 +48,13 @@ export function VideoFeed({ videos }: VideoFeedProps) {
 
       if (offset.y < -swipeThreshold || velocity.y < -500) {
         if (currentIndex < videos.length - 1) {
+          // Check daily view limit before allowing next video
+          const allowed = incrementDailyView()
+          if (!allowed) {
+            setPremiumTrigger('video-limit')
+            setShowPremiumModal(true)
+            return
+          }
           setDirection(1)
           setCurrentIndex((prev) => prev + 1)
         }
@@ -49,7 +65,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
         }
       }
     },
-    [currentIndex, videos.length]
+    [currentIndex, videos.length, incrementDailyView]
   )
 
   const currentVideo = videos[currentIndex]
@@ -79,6 +95,11 @@ export function VideoFeed({ videos }: VideoFeedProps) {
             clipStart={currentVideo.clipStart}
             clipEnd={currentVideo.clipEnd}
             onSavePhrase={(phrase) => {
+              if (!canSaveMorePhrases()) {
+                setPremiumTrigger('phrase-limit')
+                setShowPremiumModal(true)
+                return
+              }
               savePhrase({
                 videoId: currentVideo.id,
                 videoTitle: currentVideo.title,
@@ -87,6 +108,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
                 timestampStart: phrase.start,
                 timestampEnd: phrase.end,
               })
+              incrementSavedPhrases()
               setShowToast(true)
               setTimeout(() => setShowToast(false), 2000)
             }}
@@ -113,11 +135,16 @@ export function VideoFeed({ videos }: VideoFeedProps) {
       {/* Progress bar - YouTube Shorts style */}
       <ProgressBar />
 
-      {/* Counter + time */}
+      {/* Counter + daily limit */}
       <div className="absolute top-4 left-4 z-10">
         <span className="text-white/50 text-xs">
           {currentIndex + 1} / {videos.length}
         </span>
+        {!isPremium && (
+          <span className="text-white/40 text-xs ml-2 bg-white/10 px-2 py-0.5 rounded-full">
+            {getDailyViewsRemaining()}/{FREE_DAILY_VIEW_LIMIT} 남음
+          </span>
+        )}
       </div>
 
       {/* Today's Pick badge - only on first video if unwatched */}
@@ -130,6 +157,12 @@ export function VideoFeed({ videos }: VideoFeedProps) {
       )}
 
       <SaveToast show={showToast} message="표현이 저장됐어요!" />
+
+      <PremiumModal
+        isOpen={showPremiumModal}
+        onClose={() => setShowPremiumModal(false)}
+        trigger={premiumTrigger}
+      />
     </div>
   )
 }
