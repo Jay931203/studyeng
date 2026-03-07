@@ -39,7 +39,7 @@ export function SearchBar() {
           onFocus={() => setFocused(true)}
           onBlur={() => setTimeout(() => setFocused(false), 200)}
           placeholder="표현, 주제 검색..."
-          className="w-full bg-[var(--bg-card)] border border-[var(--border-card)] rounded-xl pl-9 pr-9 py-2.5 text-[var(--text-primary)] text-sm placeholder-[var(--text-muted)] outline-none focus:border-blue-500/50"
+          className="w-full bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl pl-9 pr-9 py-2.5 text-[var(--text-primary)] text-sm placeholder-[var(--text-muted)] outline-none focus:ring-1 focus:ring-blue-500/50"
         />
         {query && (
           <button
@@ -54,12 +54,12 @@ export function SearchBar() {
       </div>
 
       {showResults && (
-        <div className="absolute top-full left-0 right-0 mt-1 bg-[var(--bg-search-dropdown)] border border-[var(--border-card)] rounded-xl overflow-hidden z-50 max-h-64 overflow-y-auto shadow-lg">
+        <div className="absolute top-full left-0 right-0 mt-1 bg-[var(--bg-search-dropdown)] rounded-xl overflow-hidden z-50 max-h-64 overflow-y-auto shadow-lg">
           {results.map((r) => (
             <button
               key={r.video.id}
               onMouseDown={() => router.push(`/?v=${r.video.id}`)}
-              className="w-full p-3 text-left hover:bg-[var(--bg-card)] border-b border-[var(--border-card)] last:border-0"
+              className="w-full p-3 text-left hover:bg-[var(--bg-card)] border-b border-white/5 last:border-0"
             >
               <p className="text-[var(--text-primary)] text-sm font-medium truncate">{r.video.title}</p>
               {r.matchedPhrase && (

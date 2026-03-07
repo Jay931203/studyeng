@@ -31,22 +31,13 @@ export function useTranscript(youtubeId: string) {
 
     const controller = new AbortController()
 
-    fetch(`/api/transcript?v=${encodeURIComponent(youtubeId)}`, {
-      signal: controller.signal,
-    })
-      .then((res) => {
-        if (!res.ok) throw new Error(`HTTP ${res.status}`)
-        return res.json()
-      })
-      .then((data: { subtitles: SubtitleEntry[]; error?: string }) => {
-        // Only update if this is still the active request
+    // Try static JSON first (pre-baked transcripts), then fallback to API
+    fetchWithStaticFallback(youtubeId, controller.signal)
+      .then((subs) => {
         if (activeIdRef.current !== youtubeId) return
-
-        const subs = data.subtitles ?? []
         clientCache.set(youtubeId, subs)
         setSubtitles(subs)
         setLoading(false)
-        if (data.error) setError(data.error)
       })
       .catch((err) => {
         if (err.name === 'AbortError') return
@@ -64,4 +55,32 @@ export function useTranscript(youtubeId: string) {
   }, [youtubeId])
 
   return { subtitles, loading, error }
+}
+
+async function fetchWithStaticFallback(
+  youtubeId: string,
+  signal: AbortSignal
+): Promise<SubtitleEntry[]> {
+  // 1. Try pre-baked static JSON file (no API cost, instant)
+  try {
+    const staticRes = await fetch(`/transcripts/${youtubeId}.json`, { signal })
+    if (staticRes.ok) {
+      const data = await staticRes.json()
+      if (Array.isArray(data) && data.length > 0) {
+        return data
+      }
+    }
+  } catch (err: unknown) {
+    if (err instanceof Error && err.name === 'AbortError') throw err
+    // Static file not found, fall through to API
+  }
+
+  // 2. Fallback to API (fetches from YouTube + optional translation)
+  const apiRes = await fetch(
+    `/api/transcript?v=${encodeURIComponent(youtubeId)}`,
+    { signal }
+  )
+  if (!apiRes.ok) throw new Error(`HTTP ${apiRes.status}`)
+  const data: { subtitles: SubtitleEntry[]; error?: string } = await apiRes.json()
+  return data.subtitles ?? []
 }

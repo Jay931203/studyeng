@@ -31,7 +31,7 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
       <div className="flex gap-3 mb-6">
         <button
           onClick={() => setActiveGame('fill-blank')}
-          className="flex-1 bg-gradient-to-br from-purple-500/20 to-blue-500/20 border border-purple-500/30 rounded-xl p-4 text-left"
+          className="flex-1 bg-gradient-to-br from-purple-500/20 to-blue-500/20 shadow-[var(--card-shadow)] rounded-xl p-4 text-left active:scale-95 transition-transform"
         >
           <span className="text-2xl mb-2 block">{'\uD83C\uDFAF'}</span>
           <span className="text-[var(--text-primary)] font-medium text-sm">빈칸 채우기</span>
@@ -39,7 +39,7 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
         </button>
         <button
           onClick={() => setActiveGame('sentence-puzzle')}
-          className="flex-1 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 border border-blue-500/30 rounded-xl p-4 text-left"
+          className="flex-1 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 shadow-[var(--card-shadow)] rounded-xl p-4 text-left active:scale-95 transition-transform"
         >
           <span className="text-2xl mb-2 block">{'\uD83D\uDD00'}</span>
           <span className="text-[var(--text-primary)] font-medium text-sm">문장 만들기</span>

@@ -8,7 +8,7 @@ export function StreakDisplay({ days }: StreakDisplayProps) {
   const weekDays = ['M', 'T', 'W', 'T', 'F', 'S', 'S']
 
   return (
-    <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 border border-orange-500/30 rounded-2xl p-5">
+    <div className="bg-gradient-to-br from-orange-500/20 to-red-500/20 shadow-[var(--card-shadow)] rounded-2xl p-5">
       <div className="flex items-center gap-3 mb-4">
         <span className="text-3xl">{'\uD83D\uDD25'}</span>
         <div>
