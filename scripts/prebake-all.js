@@ -16,7 +16,11 @@ const path = require('path');
 const OUT_DIR = path.join(__dirname, '..', 'public', 'transcripts');
 const TMP_DIR = path.join(__dirname, '..', 'tmp');
 
-const GROQ_API_KEY = process.env.GROQ_API_KEY || 'GROQ_API_KEY_REMOVED';
+const GROQ_API_KEY = process.env.GROQ_API_KEY;
+if (!GROQ_API_KEY) {
+  console.error('Error: GROQ_API_KEY environment variable is required');
+  process.exit(1);
+}
 
 const FORCE = process.argv.includes('--force');
 const TRANSLATE_ONLY = process.argv.includes('--translate-only');
