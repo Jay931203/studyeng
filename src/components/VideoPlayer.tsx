@@ -49,7 +49,9 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
     }
   }, [subtitleGateBlocked, clearSubtitleGateBlocked])
 
+  const prevSub = activeSubIndex > 0 ? subtitles[activeSubIndex - 1] : undefined
   const currentSub = activeSubIndex >= 0 ? subtitles[activeSubIndex] : undefined
+  const nextSub = activeSubIndex >= 0 && activeSubIndex < subtitles.length - 1 ? subtitles[activeSubIndex + 1] : undefined
 
   const handleTap = useCallback(() => {
     if (isPlaying) {
@@ -99,24 +101,44 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
       {/* Subtitles - positioned just below the video area (landscape 16:9 video in portrait)
           A 16:9 video in a 9:16 portrait screen occupies roughly top ~30% of screen height.
           We position subtitles at approximately top-[35%] to sit just below the video. */}
-      {currentSub && subtitleMode !== 'none' && (
+      {/* Lyrics-style subtitle display: prev / current / next */}
+      {subtitleMode !== 'none' && (activeSubIndex >= 0 || prevSub || nextSub) && (
         <div
-          className="absolute bottom-[260px] left-4 right-4 text-center z-10"
+          className="absolute bottom-[140px] left-4 right-4 z-10 flex flex-col items-center gap-1"
           onClick={(e) => e.stopPropagation()}
         >
-          <button
-            onClick={(e) => {
-              e.stopPropagation()
-              if (onSavePhrase && currentSub) onSavePhrase(currentSub)
-            }}
-            className="text-white text-xl font-semibold drop-shadow-lg bg-black/60 backdrop-blur-md rounded-lg px-4 py-2 inline-block active:bg-blue-500/80 transition-colors duration-150"
-            style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}
-          >
-            {currentSub.en}
-          </button>
-          {subtitleMode === 'en-ko' && (
-            <p className="text-gray-300 text-sm mt-1 drop-shadow-lg">
-              {currentSub.ko}
+          {/* Previous subtitle - small, faded */}
+          {prevSub && (
+            <p className="text-white/30 text-xs drop-shadow-lg text-center line-clamp-1 transition-all duration-300">
+              {prevSub.en}
+            </p>
+          )}
+
+          {/* Current subtitle - large, prominent, tappable to save */}
+          {currentSub && (
+            <>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation()
+                  if (onSavePhrase && currentSub) onSavePhrase(currentSub)
+                }}
+                className="text-white text-lg font-semibold drop-shadow-lg bg-black/50 backdrop-blur-md rounded-lg px-4 py-2 inline-block active:bg-blue-500/80 transition-all duration-300 text-center max-w-full"
+                style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}
+              >
+                {currentSub.en}
+              </button>
+              {subtitleMode === 'en-ko' && currentSub.ko && (
+                <p className="text-blue-200/80 text-sm drop-shadow-lg text-center transition-all duration-300">
+                  {currentSub.ko}
+                </p>
+              )}
+            </>
+          )}
+
+          {/* Next subtitle - small, faded */}
+          {nextSub && (
+            <p className="text-white/25 text-xs drop-shadow-lg text-center line-clamp-1 transition-all duration-300">
+              {nextSub.en}
             </p>
           )}
         </div>

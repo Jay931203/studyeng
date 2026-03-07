@@ -176,28 +176,9 @@ export function VideoFeed({ videos }: VideoFeedProps) {
           />
           <VideoControls videoId={currentVideo.id} videoTitle={currentVideo.title} />
 
-          {/* Gradient overlay for text readability */}
-          <div className="absolute bottom-0 left-0 right-0 h-[300px] bg-gradient-to-t from-black/60 to-transparent pointer-events-none z-[5]" />
-
-          {/* Video info - positioned above subtitle area */}
-          <div className="absolute bottom-[220px] left-4 right-20 z-10 pointer-events-none">
-            <p className="text-white font-bold text-base drop-shadow-lg">
-              {currentVideo.title}
-            </p>
-            <div className="flex gap-2 mt-1 items-center">
-              <span className="text-white/70 text-xs bg-white/10 px-2 py-0.5 rounded-full">
-                {categoryLabel}
-              </span>
-              <span className="text-white/70 text-xs bg-white/10 px-2 py-0.5 rounded-full">
-                {'★'.repeat(currentVideo.difficulty)}
-              </span>
-              {getViewCount(currentVideo.id) > 1 && (
-                <span className="text-white/70 text-xs bg-white/10 px-2 py-0.5 rounded-full">
-                  x{getViewCount(currentVideo.id)}
-                </span>
-              )}
-            </div>
-          </div>
+          {/* Gradient overlays for text readability */}
+          <div className="absolute top-0 left-0 right-0 h-[120px] bg-gradient-to-b from-black/60 to-transparent pointer-events-none z-[5]" />
+          <div className="absolute bottom-0 left-0 right-0 h-[200px] bg-gradient-to-t from-black/60 to-transparent pointer-events-none z-[5]" />
         </motion.div>
       </AnimatePresence>
 
@@ -213,26 +194,43 @@ export function VideoFeed({ videos }: VideoFeedProps) {
         </div>
       )}
 
-      {/* Counter + daily limit */}
-      <div className="absolute top-4 left-4 z-10">
-        <span className="text-white/50 text-xs">
-          {currentIndex + 1} / {videos.length}
-        </span>
-        {!isPremium && (
-          <span className="text-white/40 text-xs ml-2 bg-white/10 px-2 py-0.5 rounded-full">
-            {getDailyViewsRemaining()}/{FREE_DAILY_VIEW_LIMIT} 남음
+      {/* Top area: counter + video info */}
+      <div className="absolute top-4 left-4 right-4 z-10 pointer-events-none">
+        <div className="flex items-center justify-between mb-2">
+          <span className="text-white/50 text-xs">
+            {currentIndex + 1} / {videos.length}
+            {!isPremium && (
+              <span className="text-white/40 text-xs ml-2 bg-white/10 px-2 py-0.5 rounded-full">
+                {getDailyViewsRemaining()}/{FREE_DAILY_VIEW_LIMIT} 남음
+              </span>
+            )}
           </span>
-        )}
-      </div>
-
-      {/* Today's Pick badge - only on first video if unwatched */}
-      {currentIndex === 0 && currentVideo.seriesId && !isWatchedFn(currentVideo.seriesId, currentVideo.id) && (
-        <div className="absolute top-4 right-4 z-10">
-          <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-medium px-3 py-1 rounded-full shadow-lg">
-            오늘의 추천
-          </span>
+          {currentIndex === 0 && currentVideo.seriesId && !isWatchedFn(currentVideo.seriesId, currentVideo.id) && (
+            <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-medium px-3 py-1 rounded-full shadow-lg">
+              오늘의 추천
+            </span>
+          )}
         </div>
-      )}
+        <p className="text-white font-bold text-base drop-shadow-lg">
+          {currentVideo.title}
+        </p>
+        <div className="flex gap-2 mt-1 items-center">
+          <span className="text-white/70 text-xs bg-white/10 px-2 py-0.5 rounded-full">
+            {categoryLabel}
+          </span>
+          <span className="text-white/70 text-xs bg-white/10 px-2 py-0.5 rounded-full">
+            {'★'.repeat(currentVideo.difficulty)}
+          </span>
+          <span className="text-white/70 text-xs bg-white/10 px-2 py-0.5 rounded-full">
+            {currentVideo.clipEnd - currentVideo.clipStart}초
+          </span>
+          {getViewCount(currentVideo.id) > 1 && (
+            <span className="text-white/70 text-xs bg-white/10 px-2 py-0.5 rounded-full">
+              x{getViewCount(currentVideo.id)}
+            </span>
+          )}
+        </div>
+      </div>
 
       <SaveToast show={showToast} message="표현이 저장됐어요!" />
 

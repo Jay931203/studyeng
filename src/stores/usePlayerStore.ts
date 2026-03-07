@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { usePremiumStore } from './usePremiumStore'
+import { persist } from 'zustand/middleware'
 
 type SubtitleMode = 'none' | 'en' | 'en-ko'
 
@@ -48,7 +48,7 @@ const subtitleCycle: SubtitleMode[] = ['none', 'en', 'en-ko']
  */
 export const currentTimeRef = { current: 0 }
 
-export const usePlayerStore = create<PlayerState>((set, get) => ({
+export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
   subtitleMode: 'en',
   playbackRate: 1,
   isLooping: false,
@@ -95,4 +95,12 @@ export const usePlayerStore = create<PlayerState>((set, get) => ({
   incrementRepeatCount: () => set((state) => ({ currentRepeatCount: state.currentRepeatCount + 1 })),
 
   resetRepeatCount: () => set({ currentRepeatCount: 0 }),
-}))
+}),
+  {
+    name: 'studyeng-player',
+    partialize: (state) => ({
+      subtitleMode: state.subtitleMode,
+      playbackRate: state.playbackRate,
+    }),
+  }
+))
