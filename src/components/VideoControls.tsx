@@ -15,7 +15,7 @@ export function VideoControls({ videoId, videoTitle }: VideoControlsProps) {
   const { isLooping, clearLoop } = usePlayerStore()
 
   return (
-    <div className="absolute bottom-[160px] right-4 flex flex-col gap-3 z-10">
+    <div className="absolute top-[100px] right-4 flex flex-col gap-3 z-10">
       {videoId && <LikeButton videoId={videoId} />}
       {videoId && <ShareButton videoId={videoId} videoTitle={videoTitle} />}
 

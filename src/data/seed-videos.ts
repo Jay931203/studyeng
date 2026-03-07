@@ -54,7 +54,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '프렌즈 시즌1의 재밌는 장면으로 일상 영어를 배워요',
     thumbnailEmoji: '🛋️',
-    episodeCount: 4,
+    episodeCount: 3,
   },
   {
     id: 'the-office',
@@ -62,7 +62,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '오피스 최고의 순간들로 직장 영어를 배워요',
     thumbnailEmoji: '🏢',
-    episodeCount: 5,
+    episodeCount: 4,
   },
   {
     id: 'brooklyn-99',
@@ -79,7 +79,7 @@ export const series: Series[] = [
     category: 'movie',
     description: '패션 업계 영어와 비즈니스 표현을 배워요',
     thumbnailEmoji: '👠',
-    episodeCount: 3,
+    episodeCount: 2,
   },
   {
     id: 'forrest-gump',
@@ -95,7 +95,7 @@ export const series: Series[] = [
     category: 'movie',
     description: '마법 세계의 명장면으로 영어를 배워요',
     thumbnailEmoji: '⚡',
-    episodeCount: 3,
+    episodeCount: 1,
   },
   // === Daily Series ===
   {
@@ -104,7 +104,7 @@ export const series: Series[] = [
     category: 'daily',
     description: '카페에서 자주 쓰는 영어 표현 총정리',
     thumbnailEmoji: '☕',
-    episodeCount: 3,
+    episodeCount: 2,
   },
   {
     id: 'restaurant-english',
@@ -146,25 +146,9 @@ export const series: Series[] = [
     category: 'business',
     description: '회의, 이메일, 스몰톡까지',
     thumbnailEmoji: '🏢',
-    episodeCount: 3,
-  },
-  {
-    id: 'job-interview',
-    title: '영어 면접 마스터',
-    category: 'business',
-    description: '영어 면접에서 자주 나오는 표현',
-    thumbnailEmoji: '👔',
-    episodeCount: 1,
+    episodeCount: 2,
   },
   // === Entertainment Series ===
-  {
-    id: 'talk-show-best',
-    title: '토크쇼 베스트 모먼트',
-    category: 'entertainment',
-    description: '미국 토크쇼에서 배우는 자연스러운 영어',
-    thumbnailEmoji: '🎙️',
-    episodeCount: 5,
-  },
   {
     id: 'graham-norton',
     title: 'Graham Norton 베스트',
@@ -188,7 +172,7 @@ export const series: Series[] = [
     category: 'music',
     description: '인기 팝송 가사로 자연스럽게 영어를 배워요',
     thumbnailEmoji: '🎶',
-    episodeCount: 4,
+    episodeCount: 2,
   },
   // === Animation Series ===
   {
@@ -197,7 +181,7 @@ export const series: Series[] = [
     category: 'animation',
     description: '픽사 애니메이션 명장면으로 영어를 배워요',
     thumbnailEmoji: '🎬',
-    episodeCount: 4,
+    episodeCount: 2,
   },
 ]
 
@@ -243,18 +227,6 @@ export const seedVideos: VideoData[] = [
     episodeNumber: 3,
     subtitles: [],
   },
-  {
-    id: 'friends-4',
-    youtubeId: 'jHOMQt_hSDg',  // VERIFIED: Rachel Can't Stand Her New Coworker | Friends | TBS
-    title: 'Friends EP4: 새 동료가 싫은 레이첼',
-    category: 'drama',
-    difficulty: 2,
-    clipStart: 0,
-    clipEnd: 60,
-    seriesId: 'friends-s1',
-    episodeNumber: 4,
-    subtitles: [],
-  },
 
   // --- The Office 시리즈 ---
   {
@@ -267,18 +239,6 @@ export const seedVideos: VideoData[] = [
     clipEnd: 60,
     seriesId: 'the-office',
     episodeNumber: 1,
-    subtitles: [],
-  },
-  {
-    id: 'office-firstaid',
-    youtubeId: 'Vmb1tqYqyII',  // VERIFIED: First Aid Fail - The Office US | The Office
-    title: 'The Office: 응급처치 대참사',
-    category: 'drama',
-    difficulty: 3,
-    clipStart: 0,
-    clipEnd: 60,
-    seriesId: 'the-office',
-    episodeNumber: 2,
     subtitles: [],
   },
   {
@@ -373,18 +333,6 @@ export const seedVideos: VideoData[] = [
     episodeNumber: 2,
     subtitles: [],
   },
-  {
-    id: 'prada-3',
-    youtubeId: '-qdHE9-8spU',  // VERIFIED: The Devil Wears Prada (5/5) - Everyone Wants to Be Us | Movieclips
-    title: '프라다 EP3: 모두가 우리가 되고 싶어해',
-    category: 'movie',
-    difficulty: 3,
-    clipStart: 0,
-    clipEnd: 60,
-    seriesId: 'devil-wears-prada',
-    episodeNumber: 3,
-    subtitles: [],
-  },
 
   // --- 포레스트 검프 시리즈 ---
   {
@@ -412,31 +360,6 @@ export const seedVideos: VideoData[] = [
     subtitles: [],
   },
 
-  // --- 해리포터 시리즈 ---
-  {
-    id: 'hp-birthday',
-    youtubeId: '50N2eB0JI80',  // VERIFIED: Harry Potter Sorcerer's Stone (1/5) - Harry's Birthday | Movieclips
-    title: '해리포터: 해리의 생일',
-    category: 'movie',
-    difficulty: 2,
-    clipStart: 0,
-    clipEnd: 60,
-    seriesId: 'harry-potter',
-    episodeNumber: 1,
-    subtitles: [],
-  },
-  {
-    id: 'hp-voldemort',
-    youtubeId: '2bujRZhOt9w',  // VERIFIED: Harry Battles Voldemort - Goblet of Fire (4/5) | Movieclips
-    title: '해리포터: 볼드모트와의 대결',
-    category: 'movie',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 60,
-    seriesId: 'harry-potter',
-    episodeNumber: 2,
-    subtitles: [],
-  },
   {
     id: 'hp-moody',
     youtubeId: 'wsl5fS7KGZc',  // VERIFIED: Harry Potter Goblet of Fire (1/5) - Mad-Eye Moody's Class | Movieclips
@@ -462,17 +385,6 @@ export const seedVideos: VideoData[] = [
     subtitles: [],
   },
 
-  // --- Titanic ---
-  {
-    id: 'titanic-wontletgo',
-    youtubeId: 'zSRvmHSgaBg',  // VERIFIED: TITANIC | "Won't Let Go" Clip | Paramount Movies
-    title: '타이타닉: 절대 놓지 않을게',
-    category: 'movie',
-    difficulty: 3,
-    clipStart: 0,
-    clipEnd: 60,
-    subtitles: [],
-  },
 
   // ============================================================
   // === DAILY (8 videos) ========================================
@@ -489,18 +401,6 @@ export const seedVideos: VideoData[] = [
     clipEnd: 30,
     seriesId: 'coffee-english',
     episodeNumber: 1,
-    subtitles: [],
-  },
-  {
-    id: 'cafe-2',
-    youtubeId: 'v-jIvacpsxI',  // VERIFIED: How to ORDER COFFEE in English at Starbucks | Cloud English
-    title: '카페 EP2: 스타벅스 주문하기',
-    category: 'daily',
-    difficulty: 2,
-    clipStart: 0,
-    clipEnd: 30,
-    seriesId: 'coffee-english',
-    episodeNumber: 2,
     subtitles: [],
   },
   {
@@ -568,17 +468,6 @@ export const seedVideos: VideoData[] = [
     subtitles: [],
   },
 
-  // --- HIMYM ---
-  {
-    id: 'daily-himym',
-    youtubeId: 'IY_bhVSGKEg',  // VERIFIED: Robin Sparkles - Let's Go To The Mall (full version)
-    title: 'HIMYM: 로빈 스파클스 - 몰에 가자!',
-    category: 'daily',
-    difficulty: 2,
-    clipStart: 0,
-    clipEnd: 60,
-    subtitles: [],
-  },
 
   // ============================================================
   // === TRAVEL (6 videos) =======================================
@@ -689,32 +578,7 @@ export const seedVideos: VideoData[] = [
     episodeNumber: 2,
     subtitles: [],
   },
-  {
-    id: 'office-3',
-    youtubeId: 'vwxIz4sYpBw',  // VERIFIED: Global Business Speaks English | Delightful to Speak
-    title: '직장 EP3: 프레젠테이션',
-    category: 'business',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 60,
-    seriesId: 'office-talk',
-    episodeNumber: 3,
-    subtitles: [],
-  },
 
-  // --- 영어 면접 시리즈 ---
-  {
-    id: 'interview-1',
-    youtubeId: '-JNjsOX0N0c',  // VERIFIED: English Job Interview Dos & Don'ts! | Rachel's English
-    title: '영어 면접: Do & Don\'t',
-    category: 'business',
-    difficulty: 3,
-    clipStart: 0,
-    clipEnd: 60,
-    seriesId: 'job-interview',
-    episodeNumber: 1,
-    subtitles: [],
-  },
 
   // --- ESL 면접 ---
   {
@@ -744,67 +608,6 @@ export const seedVideos: VideoData[] = [
   // === ENTERTAINMENT (10 videos) ===============================
   // ============================================================
 
-  // --- 토크쇼 베스트 시리즈 ---
-  {
-    id: 'talkshow-1',
-    youtubeId: 'R8vNn0WFUnY',  // VERIFIED: Box of Lies with Emma Stone | The Tonight Show
-    title: '지미 팰런: 엠마 스톤과 거짓말 상자',
-    category: 'entertainment',
-    difficulty: 3,
-    clipStart: 0,
-    clipEnd: 60,
-    seriesId: 'talk-show-best',
-    episodeNumber: 1,
-    subtitles: [],
-  },
-  {
-    id: 'talkshow-2',
-    youtubeId: 'ZNHvU6TK93w',  // VERIFIED: Word Sneak with Chris Pratt | The Tonight Show
-    title: '지미 팰런: 크리스 프랫과 단어 몰래 넣기',
-    category: 'entertainment',
-    difficulty: 2,
-    clipStart: 0,
-    clipEnd: 60,
-    seriesId: 'talk-show-best',
-    episodeNumber: 2,
-    subtitles: [],
-  },
-  {
-    id: 'talkshow-3',
-    youtubeId: 'NaY91YjVbEM',  // VERIFIED: Musical Genre Challenge with Ariana Grande | Tonight Show
-    title: '지미 팰런: 아리아나 그란데 뮤지컬 챌린지',
-    category: 'entertainment',
-    difficulty: 3,
-    clipStart: 0,
-    clipEnd: 60,
-    seriesId: 'talk-show-best',
-    episodeNumber: 3,
-    subtitles: [],
-  },
-  {
-    id: 'talkshow-4',
-    youtubeId: 'DO9U_XxN-Kc',  // VERIFIED: Kevin Hart Is Terrified of Robert Irwin's Animals | Tonight Show
-    title: '지미 팰런: 케빈 하트 동물 공포',
-    category: 'entertainment',
-    difficulty: 2,
-    clipStart: 0,
-    clipEnd: 60,
-    seriesId: 'talk-show-best',
-    episodeNumber: 4,
-    subtitles: [],
-  },
-  {
-    id: 'talkshow-5',
-    youtubeId: 'L3ymBk6Vb04',  // VERIFIED: Avengers: Infinity War Cast Sings "The Marvel Bunch" | Tonight Show
-    title: '지미 팰런: 어벤져스 캐스트 노래',
-    category: 'entertainment',
-    difficulty: 3,
-    clipStart: 0,
-    clipEnd: 60,
-    seriesId: 'talk-show-best',
-    episodeNumber: 5,
-    subtitles: [],
-  },
 
   // --- Graham Norton 시리즈 ---
   {
@@ -858,17 +661,6 @@ export const seedVideos: VideoData[] = [
     subtitles: [],
   },
 
-  // --- Box of Lies ---
-  {
-    id: 'boxoflies-cardi',
-    youtubeId: 'g693z6yy1rw',  // VERIFIED: Box of Lies with Cardi B | The Tonight Show
-    title: '지미 팰런: 카디 비와 거짓말 상자',
-    category: 'entertainment',
-    difficulty: 2,
-    clipStart: 0,
-    clipEnd: 60,
-    subtitles: [],
-  },
 
   // ============================================================
   // === MUSIC (4 videos) ========================================
@@ -887,18 +679,6 @@ export const seedVideos: VideoData[] = [
     subtitles: [],
   },
   {
-    id: 'music-uptown',
-    youtubeId: 'OPf0YbXqDm0',  // VERIFIED: Mark Ronson - Uptown Funk ft. Bruno Mars
-    title: 'Uptown Funk - Bruno Mars',
-    category: 'music',
-    difficulty: 2,
-    clipStart: 0,
-    clipEnd: 60,
-    seriesId: 'pop-hits',
-    episodeNumber: 2,
-    subtitles: [],
-  },
-  {
     id: 'music-hello',
     youtubeId: 'YQHsXMglC9A',  // VERIFIED: Adele - Hello (Official Music Video)
     title: 'Adele - Hello',
@@ -910,35 +690,11 @@ export const seedVideos: VideoData[] = [
     episodeNumber: 3,
     subtitles: [],
   },
-  {
-    id: 'music-radioactive',
-    youtubeId: 'ktvTqknDobU',  // VERIFIED: Imagine Dragons - Radioactive
-    title: 'Imagine Dragons - Radioactive',
-    category: 'music',
-    difficulty: 3,
-    clipStart: 0,
-    clipEnd: 60,
-    seriesId: 'pop-hits',
-    episodeNumber: 4,
-    subtitles: [],
-  },
 
   // ============================================================
   // === ANIMATION (4 videos) ====================================
   // ============================================================
 
-  {
-    id: 'anim-nemo',
-    youtubeId: '3sAWDQjCOeU',  // VERIFIED: The Dentist Scene from Finding Nemo | Pixar Side by Side | Pixar
-    title: '니모를 찾아서: 치과 장면',
-    category: 'animation',
-    difficulty: 2,
-    clipStart: 0,
-    clipEnd: 60,
-    seriesId: 'pixar-moments',
-    episodeNumber: 1,
-    subtitles: [],
-  },
   {
     id: 'anim-insideout',
     youtubeId: 'M7KelAaqsCg',  // VERIFIED: Inside Out 2 - All Clips From The Movie (2024) | Animation Society
@@ -961,18 +717,6 @@ export const seedVideos: VideoData[] = [
     clipEnd: 60,
     seriesId: 'pixar-moments',
     episodeNumber: 3,
-    subtitles: [],
-  },
-  {
-    id: 'anim-up',
-    youtubeId: 'F2bk_9T482g',  // VERIFIED: Pixar's Up scene - Ellie and Carl's relationship through time
-    title: 'UP: 칼과 엘리의 사랑 이야기',
-    category: 'animation',
-    difficulty: 1,
-    clipStart: 0,
-    clipEnd: 60,
-    seriesId: 'pixar-moments',
-    episodeNumber: 4,
     subtitles: [],
   },
 ]
