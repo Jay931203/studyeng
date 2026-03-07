@@ -26,17 +26,24 @@ export const usePhraseStore = create<PhraseState>()(
       phrases: [],
 
       savePhrase: (phrase) =>
-        set((state) => ({
-          phrases: [
-            {
-              ...phrase,
-              id: crypto.randomUUID(),
-              savedAt: Date.now(),
-              reviewCount: 0,
-            },
-            ...state.phrases,
-          ],
-        })),
+        set((state) => {
+          // Prevent duplicate: same video + same English text
+          const exists = state.phrases.some(
+            (p) => p.videoId === phrase.videoId && p.en === phrase.en
+          )
+          if (exists) return state
+          return {
+            phrases: [
+              {
+                ...phrase,
+                id: crypto.randomUUID(),
+                savedAt: Date.now(),
+                reviewCount: 0,
+              },
+              ...state.phrases,
+            ],
+          }
+        }),
 
       removePhrase: (id) =>
         set((state) => ({

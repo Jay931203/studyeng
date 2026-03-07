@@ -256,7 +256,7 @@ async function translateWithGroq(entries) {
           model: 'llama-3.3-70b-versatile',
           messages: [{
             role: 'system',
-            content: 'You are a professional English-to-Korean translator for a language learning app. Translate each numbered English sentence to natural, conversational Korean. Return ONLY the translations, one per line, with the same number prefix. Do not add explanations or extra text.'
+            content: 'You are a professional English-to-Korean translator for a language learning app. Translate each numbered English sentence to natural, conversational Korean. IMPORTANT: Use only Korean (한글) characters. Do NOT use any Chinese characters (漢字/한자) or Japanese characters. Return ONLY the translations, one per line, with the same number prefix. Do not add explanations or extra text.'
           }, {
             role: 'user',
             content: englishTexts,

@@ -4,7 +4,7 @@ import { useId, useState, useRef, useCallback, useEffect, useMemo } from 'react'
 import { useYouTubePlayer } from '@/hooks/useYouTubePlayer'
 import { useTranscript } from '@/hooks/useTranscript'
 import { usePlayerStore } from '@/stores/usePlayerStore'
-import { SubtitleTimeline } from './SubtitleTimeline'
+import { LyricsSubtitles } from './LyricsSubtitles'
 import { PremiumModal } from './PremiumModal'
 import type { SubtitleEntry } from '@/data/seed-videos'
 
@@ -35,7 +35,7 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
   }, [fetchedSubtitles, propSubtitles, clipStart, clipEnd])
 
   const { ready, play, pause, seekTo } = useYouTubePlayer(containerId, youtubeId, clipStart, clipEnd, subtitles, onClipComplete)
-  const { subtitleMode, activeSubIndex, isPlaying, toggleSubtitleMode, subtitleGateBlocked, clearSubtitleGateBlocked } = usePlayerStore()
+  const { subtitleMode, isPlaying, toggleSubtitleMode, subtitleGateBlocked, clearSubtitleGateBlocked } = usePlayerStore()
   const [showPauseIcon, setShowPauseIcon] = useState(false)
   const [pauseIconType, setPauseIconType] = useState<'play' | 'pause'>('pause')
   const [showSubtitleGate, setShowSubtitleGate] = useState(false)
@@ -48,10 +48,6 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
       clearSubtitleGateBlocked()
     }
   }, [subtitleGateBlocked, clearSubtitleGateBlocked])
-
-  const prevSub = activeSubIndex > 0 ? subtitles[activeSubIndex - 1] : undefined
-  const currentSub = activeSubIndex >= 0 ? subtitles[activeSubIndex] : undefined
-  const nextSub = activeSubIndex >= 0 && activeSubIndex < subtitles.length - 1 ? subtitles[activeSubIndex + 1] : undefined
 
   const handleTap = useCallback(() => {
     if (isPlaying) {
@@ -98,51 +94,12 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
         </div>
       )}
 
-      {/* Subtitles - positioned just below the video area (landscape 16:9 video in portrait)
-          A 16:9 video in a 9:16 portrait screen occupies roughly top ~30% of screen height.
-          We position subtitles at approximately top-[35%] to sit just below the video. */}
-      {/* Lyrics-style subtitle display: prev / current / next */}
-      {subtitleMode !== 'none' && (activeSubIndex >= 0 || prevSub || nextSub) && (
-        <div
-          className="absolute bottom-[140px] left-4 right-4 z-10 flex flex-col items-center gap-1"
-          onClick={(e) => e.stopPropagation()}
-        >
-          {/* Previous subtitle - small, faded */}
-          {prevSub && (
-            <p className="text-white/30 text-xs drop-shadow-lg text-center line-clamp-1 transition-all duration-300">
-              {prevSub.en}
-            </p>
-          )}
-
-          {/* Current subtitle - large, prominent, tappable to save */}
-          {currentSub && (
-            <>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation()
-                  if (onSavePhrase && currentSub) onSavePhrase(currentSub)
-                }}
-                className="text-white text-lg font-semibold drop-shadow-lg bg-black/50 backdrop-blur-md rounded-lg px-4 py-2 inline-block active:bg-blue-500/80 transition-all duration-300 text-center max-w-full"
-                style={{ textShadow: '0 1px 4px rgba(0,0,0,0.8)' }}
-              >
-                {currentSub.en}
-              </button>
-              {subtitleMode === 'en-ko' && currentSub.ko && (
-                <p className="text-blue-200/80 text-sm drop-shadow-lg text-center transition-all duration-300">
-                  {currentSub.ko}
-                </p>
-              )}
-            </>
-          )}
-
-          {/* Next subtitle - small, faded */}
-          {nextSub && (
-            <p className="text-white/25 text-xs drop-shadow-lg text-center line-clamp-1 transition-all duration-300">
-              {nextSub.en}
-            </p>
-          )}
-        </div>
-      )}
+      {/* Scrollable lyrics-style subtitles */}
+      <LyricsSubtitles
+        subtitles={subtitles}
+        onSavePhrase={onSavePhrase}
+        onSeek={(time) => seekTo(time)}
+      />
 
       {/* Subtitle mode toggle button */}
       <button
@@ -167,11 +124,6 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
         </div>
       )}
 
-      <SubtitleTimeline
-        subtitles={subtitles}
-        onSavePhrase={(phrase) => onSavePhrase?.(phrase)}
-        onSeek={(time) => seekTo(time)}
-      />
 
       {!ready && (
         <div className="absolute inset-0 flex items-center justify-center bg-black">
