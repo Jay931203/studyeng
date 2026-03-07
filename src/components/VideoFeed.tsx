@@ -3,7 +3,7 @@
 import { useState, useRef, useCallback, useEffect } from 'react'
 import { motion, AnimatePresence, type PanInfo } from 'framer-motion'
 import { VideoPlayer } from './VideoPlayer'
-import { VideoControls } from './VideoControls'
+import { UnifiedControls } from './UnifiedControls'
 import { SaveToast } from './SaveToast'
 import { ProgressBar } from './ProgressBar'
 import { usePhraseStore } from '@/stores/usePhraseStore'
@@ -174,7 +174,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
               setTimeout(() => setShowToast(false), 2000)
             }}
           />
-          <VideoControls videoId={currentVideo.id} videoTitle={currentVideo.title} />
+          <UnifiedControls videoId={currentVideo.id} videoTitle={currentVideo.title} />
 
           {/* Gradient overlays for text readability */}
           <div className="absolute top-0 left-0 right-0 h-[120px] bg-gradient-to-b from-black/60 to-transparent pointer-events-none z-[5]" />

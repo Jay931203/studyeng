@@ -48,6 +48,13 @@ const subtitleCycle: SubtitleMode[] = ['none', 'en', 'en-ko']
  */
 export const currentTimeRef = { current: 0 }
 
+/**
+ * Shared mutable ref for the seekTo function.
+ * Registered by the active VideoPlayer so that sibling components
+ * (e.g. ProgressBar) can seek the YouTube player without prop drilling.
+ */
+export const seekToRef: { current: ((seconds: number) => void) | null } = { current: null }
+
 export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
   subtitleMode: 'en',
   playbackRate: 1,

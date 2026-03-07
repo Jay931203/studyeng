@@ -34,11 +34,17 @@ function loadYouTubeAPI(): Promise<void> {
 
 /**
  * Find the index of the subtitle that covers the given time.
- * Returns -1 if no subtitle is active.
+ * Uses a small buffer on end time to prevent flickering between subtitles,
+ * and fills gaps by extending the previous subtitle until the next one starts.
  */
 function findActiveSubIndex(subtitles: SubtitleEntry[], time: number): number {
   for (let i = 0; i < subtitles.length; i++) {
-    if (time >= subtitles[i].start && time <= subtitles[i].end) return i
+    const sub = subtitles[i]
+    const nextStart = i < subtitles.length - 1 ? subtitles[i + 1].start : sub.end + 1
+    // Extend end time: use the later of (original end + 0.3s buffer) or next subtitle start
+    // This fills gaps between subtitles so there's no flicker
+    const effectiveEnd = Math.min(sub.end + 0.3, nextStart)
+    if (time >= sub.start - 0.1 && time <= Math.max(sub.end, effectiveEnd)) return i
   }
   return -1
 }
@@ -201,9 +207,9 @@ export function useYouTubePlayer(
     }
   }, [initPlayer])
 
-  const play = () => playerRef.current?.playVideo()
-  const pause = () => playerRef.current?.pauseVideo()
-  const seekTo = (seconds: number) => playerRef.current?.seekTo(seconds, true)
+  const play = useCallback(() => playerRef.current?.playVideo(), [])
+  const pause = useCallback(() => playerRef.current?.pauseVideo(), [])
+  const seekTo = useCallback((seconds: number) => playerRef.current?.seekTo(seconds, true), [])
 
   return { ready, play, pause, seekTo, player: playerRef }
 }

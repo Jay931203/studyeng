@@ -3,7 +3,7 @@
 import { useId, useState, useRef, useCallback, useEffect, useMemo } from 'react'
 import { useYouTubePlayer } from '@/hooks/useYouTubePlayer'
 import { useTranscript } from '@/hooks/useTranscript'
-import { usePlayerStore } from '@/stores/usePlayerStore'
+import { usePlayerStore, seekToRef } from '@/stores/usePlayerStore'
 import { LyricsSubtitles } from './LyricsSubtitles'
 import { PremiumModal } from './PremiumModal'
 import type { SubtitleEntry } from '@/data/seed-videos'
@@ -35,7 +35,13 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
   }, [fetchedSubtitles, propSubtitles, clipStart, clipEnd])
 
   const { ready, play, pause, seekTo } = useYouTubePlayer(containerId, youtubeId, clipStart, clipEnd, subtitles, onClipComplete)
-  const { subtitleMode, isPlaying, toggleSubtitleMode, subtitleGateBlocked, clearSubtitleGateBlocked } = usePlayerStore()
+  const { isPlaying, subtitleGateBlocked, clearSubtitleGateBlocked } = usePlayerStore()
+
+  // Register seekTo in the shared ref so sibling components (e.g. ProgressBar) can seek
+  useEffect(() => {
+    seekToRef.current = seekTo
+    return () => { seekToRef.current = null }
+  }, [seekTo])
   const [showPauseIcon, setShowPauseIcon] = useState(false)
   const [pauseIconType, setPauseIconType] = useState<'play' | 'pause'>('pause')
   const [showSubtitleGate, setShowSubtitleGate] = useState(false)
@@ -100,19 +106,6 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
         onSavePhrase={onSavePhrase}
         onSeek={(time) => seekTo(time)}
       />
-
-      {/* Subtitle mode toggle button */}
-      <button
-        onClick={(e) => {
-          e.stopPropagation()
-          toggleSubtitleMode()
-        }}
-        className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs font-medium z-10"
-      >
-        {subtitleMode === 'none' && '자막 끔'}
-        {subtitleMode === 'en' && '영어'}
-        {subtitleMode === 'en-ko' && '영+한'}
-      </button>
 
       {/* Transcript loading indicator */}
       {transcriptLoading && (
