@@ -75,6 +75,10 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
         className="absolute inset-0 w-full h-full pointer-events-none"
       />
 
+      {/* Transparent overlay to block YouTube's own UI elements (share, title, etc.)
+          while still allowing our own tap-to-play/pause via the parent onClick */}
+      <div className="absolute inset-0 w-full h-full z-[1]" />
+
       {/* Play/Pause icon overlay */}
       {showPauseIcon && (
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">

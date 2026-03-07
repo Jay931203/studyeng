@@ -21,7 +21,7 @@ export default function ExplorePage() {
   const [activeCategory, setActiveCategory] = useState<'all' | CategoryId>('all')
   const [selectedSeries, setSelectedSeries] = useState<SeriesType | null>(null)
   const router = useRouter()
-  const { getSeriesProgress, getNextEpisode, isWatched } = useWatchHistoryStore()
+  const { getSeriesProgress, getNextEpisode, isWatched, getViewCount } = useWatchHistoryStore()
   const likes = useLikeStore((s) => s.likes)
 
   // Compute popular videos: top 5 most-liked, or first 5 as curated picks
@@ -143,19 +143,29 @@ export default function ExplorePage() {
             <div className="flex gap-3 overflow-x-auto no-scrollbar pb-2">
               {filteredSeries.map((s) => {
                 const progress = getSeriesProgress(s.id, s.episodeCount)
+                const firstVideo = getVideosBySeries(s.id)[0]
                 return (
                   <button
                     key={s.id}
                     onClick={() => setSelectedSeries(s)}
-                    className="flex-shrink-0 w-40 bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-4 pb-0 text-left overflow-hidden"
+                    className="flex-shrink-0 w-48 bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-3 pb-0 text-left overflow-hidden"
                   >
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center text-lg mb-2">
-                      {s.thumbnailEmoji}
+                    <div className="w-full aspect-video rounded-lg overflow-hidden mb-2 relative">
+                      {firstVideo && (
+                        <img
+                          src={`https://img.youtube.com/vi/${firstVideo.youtubeId}/mqdefault.jpg`}
+                          alt={s.title}
+                          className="w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      )}
+                      <div className="absolute bottom-1 right-1 bg-black/70 text-white text-[10px] px-1.5 py-0.5 rounded-md font-medium">
+                        {s.episodeCount}편
+                      </div>
                     </div>
-                    <p className="text-[var(--text-primary)] font-medium text-sm line-clamp-2">{s.title}</p>
-                    <p className="text-[var(--text-muted)] text-xs mt-1 mb-4">{s.episodeCount}편</p>
+                    <p className="text-[var(--text-primary)] font-medium text-sm line-clamp-2 mb-3">{s.title}</p>
                     {/* Progress bar */}
-                    <div className="h-1 -mx-4 bg-[var(--bg-secondary)]">
+                    <div className="h-1 -mx-3 bg-[var(--bg-secondary)]">
                       <div
                         className="h-full bg-green-500 transition-all duration-300"
                         style={{ width: `${progress}%` }}
@@ -187,22 +197,31 @@ export default function ExplorePage() {
                 뒤로
               </button>
 
-              <div className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-2xl p-5 mb-4">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500/30 to-purple-500/30 flex items-center justify-center text-xl flex-shrink-0">
-                    {selectedSeries.thumbnailEmoji}
-                  </div>
-                  <div>
-                    <h2 className="text-[var(--text-primary)] font-bold text-lg">{selectedSeries.title}</h2>
-                    <p className="text-[var(--text-secondary)] text-sm mt-1">{selectedSeries.description}</p>
-                    <div className="flex gap-2 mt-2">
-                      <span className="text-xs bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded-full">
-                        {categories.find(c => c.id === selectedSeries.category)?.label}
-                      </span>
-                      <span className="text-xs bg-[var(--bg-secondary)] text-[var(--text-secondary)] px-2 py-0.5 rounded-full">
-                        {selectedSeries.episodeCount}편
-                      </span>
+              <div className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-2xl overflow-hidden mb-4">
+                {(() => {
+                  const detailFirstVideo = getVideosBySeries(selectedSeries.id)[0]
+                  return detailFirstVideo ? (
+                    <div className="w-full aspect-video relative">
+                      <img
+                        src={`https://img.youtube.com/vi/${detailFirstVideo.youtubeId}/mqdefault.jpg`}
+                        alt={selectedSeries.title}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     </div>
+                  ) : null
+                })()}
+                <div className="p-5">
+                  <h2 className="text-[var(--text-primary)] font-bold text-lg">{selectedSeries.title}</h2>
+                  <p className="text-[var(--text-secondary)] text-sm mt-1">{selectedSeries.description}</p>
+                  <div className="flex gap-2 mt-2">
+                    <span className="text-xs bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded-full">
+                      {categories.find(c => c.id === selectedSeries.category)?.label}
+                    </span>
+                    <span className="text-xs bg-[var(--bg-secondary)] text-[var(--text-secondary)] px-2 py-0.5 rounded-full">
+                      {selectedSeries.episodeCount}편
+                    </span>
                   </div>
                 </div>
               </div>
@@ -211,6 +230,7 @@ export default function ExplorePage() {
               <div className="flex flex-col gap-3">
                 {seriesEpisodes.map((video) => {
                   const watched = selectedSeries ? isWatched(selectedSeries.id, video.id) : false
+                  const viewCount = getViewCount(video.id)
                   return (
                     <button
                       key={video.id}
@@ -225,11 +245,11 @@ export default function ExplorePage() {
                         }`}>
                           {video.episodeNumber}
                         </div>
-                        {watched && (
-                          <div className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" className="w-3 h-3">
-                              <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
-                            </svg>
+                        {viewCount > 0 && (
+                          <div className="absolute -top-1 -right-1 min-w-[18px] h-[18px] bg-blue-500 rounded-full flex items-center justify-center px-1">
+                            <span className="text-white text-[9px] font-bold">
+                              {viewCount > 99 ? '99+' : `x${viewCount}`}
+                            </span>
                           </div>
                         )}
                       </div>

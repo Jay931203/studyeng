@@ -26,6 +26,8 @@ export function VideoFeed({ videos }: VideoFeedProps) {
   const constraintsRef = useRef(null)
   const savePhrase = usePhraseStore((s) => s.savePhrase)
   const markWatched = useWatchHistoryStore((s) => s.markWatched)
+  const incrementViewCount = useWatchHistoryStore((s) => s.incrementViewCount)
+  const getViewCount = useWatchHistoryStore((s) => s.getViewCount)
   const isWatchedFn = useWatchHistoryStore((s) => s.isWatched)
   const isPremium = usePremiumStore((s) => s.isPremium)
   const incrementDailyView = usePremiumStore((s) => s.incrementDailyView)
@@ -41,13 +43,16 @@ export function VideoFeed({ videos }: VideoFeedProps) {
   const [repeatIndicator, setRepeatIndicator] = useState<string | null>(null)
   const repeatIndicatorTimerRef = useRef<number | null>(null)
 
-  // Mark episode as watched when it appears in the feed
+  // Mark episode as watched and count views
   useEffect(() => {
     const video = videos[currentIndex]
-    if (video?.seriesId) {
-      markWatched(video.seriesId, video.id)
+    if (video) {
+      incrementViewCount(video.id)
+      if (video.seriesId) {
+        markWatched(video.seriesId, video.id)
+      }
     }
-  }, [currentIndex, videos, markWatched])
+  }, [currentIndex, videos, markWatched, incrementViewCount])
 
   // Handle clip completion for repeat mode auto-advance
   const handleClipComplete = useCallback(() => {
@@ -171,13 +176,18 @@ export function VideoFeed({ videos }: VideoFeedProps) {
             <p className="text-white font-bold text-base drop-shadow-lg">
               {currentVideo.title}
             </p>
-            <div className="flex gap-2 mt-1">
+            <div className="flex gap-2 mt-1 items-center">
               <span className="text-white/70 text-xs bg-white/10 px-2 py-0.5 rounded-full">
                 {categoryLabel}
               </span>
               <span className="text-white/70 text-xs bg-white/10 px-2 py-0.5 rounded-full">
                 {'★'.repeat(currentVideo.difficulty)}
               </span>
+              {getViewCount(currentVideo.id) > 1 && (
+                <span className="text-white/70 text-xs bg-white/10 px-2 py-0.5 rounded-full">
+                  x{getViewCount(currentVideo.id)}
+                </span>
+              )}
             </div>
           </div>
         </motion.div>

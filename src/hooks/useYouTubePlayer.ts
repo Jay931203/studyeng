@@ -63,6 +63,13 @@ export function useYouTubePlayer(
   const onClipCompleteRef = useRef(onClipComplete)
   onClipCompleteRef.current = onClipComplete
 
+  // Guard against rapid-fire clip boundary triggers
+  const clipBoundaryCooldownRef = useRef(false)
+
+  // Effective clip bounds, capped to actual video duration
+  const effectiveClipStartRef = useRef(clipStart)
+  const effectiveClipEndRef = useRef(clipEnd)
+
   const {
     playbackRate,
     isLooping,
@@ -100,9 +107,19 @@ export function useYouTubePlayer(
         onReady: (event) => {
           event.target.setPlaybackRate(playbackRate)
           event.target.playVideo()
-          const clipDuration = clipEnd > clipStart ? clipEnd - clipStart : event.target.getDuration()
+          const dur = event.target.getDuration()
+          // Cap clipEnd to actual video duration minus a small buffer so we
+          // never try to seek past the real end of the video.  When clipEnd
+          // is 0 (unset) or exceeds the video length, fall back to the
+          // actual duration.
+          const maxEnd = Math.max(dur - 0.5, 1)
+          const effEnd = clipEnd > 0 ? Math.min(clipEnd, maxEnd) : maxEnd
+          const effStart = Math.min(clipStart, Math.max(effEnd - 5, 0))
+          effectiveClipStartRef.current = effStart
+          effectiveClipEndRef.current = effEnd
+          const clipDuration = effEnd - effStart
           if (clipDuration > 0) setDuration(clipDuration)
-          setClipBounds(clipStart, clipEnd)
+          setClipBounds(effStart, effEnd)
           setReady(true)
         },
         onStateChange: (event) => {
@@ -117,10 +134,24 @@ export function useYouTubePlayer(
 
     intervalRef.current = window.setInterval(() => {
       if (!playerRef.current) return
-      const time = playerRef.current.getCurrentTime()
+
+      let time: number
+      try {
+        time = playerRef.current.getCurrentTime()
+      } catch {
+        return // Player not ready
+      }
 
       // Always update the shared mutable ref (no React re-render cost)
       currentTimeRef.current = time
+
+      // --- Subtitle loop (user-triggered A-B repeat) takes highest priority ---
+      if (isLooping && loopStart !== null && loopEnd !== null) {
+        if (time >= loopEnd) {
+          playerRef.current.seekTo(loopStart, true)
+          return // Don't process clip boundary when in subtitle loop
+        }
+      }
 
       // --- Active subtitle detection (updates only when subtitle changes ~every 3s) ---
       const newSubIndex = findActiveSubIndex(subtitles, time)
@@ -136,26 +167,25 @@ export function useYouTubePlayer(
         setCurrentTime(time)
       }
 
-      // Clip boundary: when reaching clipEnd, notify via callback then loop back
-      if (clipEnd > clipStart && time >= clipEnd) {
+      // --- Clip boundary looping (use effective refs capped to real duration) ---
+      const effEnd = effectiveClipEndRef.current
+      const effStart = effectiveClipStartRef.current
+      if (effEnd > effStart && time >= effEnd && !clipBoundaryCooldownRef.current) {
+        // Set cooldown to prevent rapid-fire triggers while seek is in progress
+        clipBoundaryCooldownRef.current = true
+        setTimeout(() => { clipBoundaryCooldownRef.current = false }, 1000)
+
         if (onClipCompleteRef.current) {
           onClipCompleteRef.current()
         }
-        playerRef.current.seekTo(clipStart, true)
-      }
-
-      // Subtitle loop (user-triggered A-B repeat) takes priority within clip
-      if (isLooping && loopStart !== null && loopEnd !== null) {
-        if (time >= loopEnd) {
-          playerRef.current.seekTo(loopStart, true)
-        }
+        playerRef.current.seekTo(effStart, true)
       }
     }, 100)
 
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current)
     }
-  }, [ready, isLooping, loopStart, loopEnd, clipStart, clipEnd, subtitles])
+  }, [ready, isLooping, loopStart, loopEnd, subtitles])
 
   useEffect(() => {
     if (playerRef.current && ready) {

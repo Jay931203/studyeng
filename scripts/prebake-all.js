@@ -1,10 +1,13 @@
 /**
- * Pre-bake all seed video subtitles using yt-dlp.
- * Downloads English subtitles and saves as static JSON files.
+ * Pre-bake all seed video subtitles using yt-dlp (SRT format).
+ * Downloads English subtitles, groups into natural sentence/phrase blocks,
+ * translates to Korean via Groq API.
  *
  * Prerequisites: pip install yt-dlp
- * Usage: node scripts/prebake-all.js
- * With translation: ANTHROPIC_API_KEY=sk-... node scripts/prebake-all.js
+ * Usage:
+ *   node scripts/prebake-all.js           # Download + group + translate all
+ *   node scripts/prebake-all.js --force   # Re-process even if exists
+ *   node scripts/prebake-all.js --translate-only  # Only translate existing
  */
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -13,27 +16,56 @@ const path = require('path');
 const OUT_DIR = path.join(__dirname, '..', 'public', 'transcripts');
 const TMP_DIR = path.join(__dirname, '..', 'tmp');
 
-// Grouping config
-const TARGET_DURATION = 4;
-const MAX_DURATION = 6;
+const GROQ_API_KEY = process.env.GROQ_API_KEY || 'GROQ_API_KEY_REMOVED';
 
-function extractYoutubeIds() {
+const FORCE = process.argv.includes('--force');
+const TRANSLATE_ONLY = process.argv.includes('--translate-only');
+
+// ============================================================
+// Video info extraction
+// ============================================================
+
+function extractVideoInfo() {
   const seedPath = path.join(__dirname, '..', 'src', 'data', 'seed-videos.ts');
   const content = fs.readFileSync(seedPath, 'utf-8');
-  const matches = [...content.matchAll(/youtubeId:\s*'([^']+)'/g)];
-  return [...new Set(matches.map(m => m[1]))];
+  const videos = [];
+  const blocks = content.split(/\{[\s\n]*id:/g).slice(1);
+
+  for (const block of blocks) {
+    const idMatch = block.match(/youtubeId:\s*'([^']+)'/);
+    const startMatch = block.match(/clipStart:\s*(\d+)/);
+    const endMatch = block.match(/clipEnd:\s*(\d+)/);
+    if (idMatch) {
+      videos.push({
+        youtubeId: idMatch[1],
+        clipStart: startMatch ? parseInt(startMatch[1]) : 0,
+        clipEnd: endMatch ? parseInt(endMatch[1]) : 60,
+      });
+    }
+  }
+
+  const seen = new Set();
+  return videos.filter(v => {
+    if (seen.has(v.youtubeId)) return false;
+    seen.add(v.youtubeId);
+    return true;
+  });
 }
 
-function downloadSubtitles(videoId) {
+// ============================================================
+// SRT Download & Parse
+// ============================================================
+
+function downloadSrt(videoId) {
   const outPath = path.join(TMP_DIR, videoId);
   try {
     execSync(
-      `yt-dlp --write-auto-sub --sub-lang en --skip-download --sub-format json3 -o "${outPath}" "https://www.youtube.com/watch?v=${videoId}"`,
+      `yt-dlp --write-auto-sub --sub-lang en --skip-download --sub-format srt -o "${outPath}" "https://www.youtube.com/watch?v=${videoId}"`,
       { timeout: 30000, stdio: 'pipe' }
     );
-    const json3Path = path.join(TMP_DIR, `${videoId}.en.json3`);
-    if (fs.existsSync(json3Path)) {
-      return JSON.parse(fs.readFileSync(json3Path, 'utf8'));
+    const srtPath = path.join(TMP_DIR, `${videoId}.en.srt`);
+    if (fs.existsSync(srtPath)) {
+      return fs.readFileSync(srtPath, 'utf8');
     }
   } catch (err) {
     console.error(`  yt-dlp failed for ${videoId}:`, err.message?.substring(0, 100));
@@ -41,72 +73,168 @@ function downloadSubtitles(videoId) {
   return null;
 }
 
-function groupEntries(events) {
-  const raw = events
-    .filter(e => e.segs)
-    .map(e => ({
-      text: e.segs.map(s => s.utf8 || '').join('').trim(),
-      start: (e.tStartMs || 0) / 1000,
-      duration: (e.dDurationMs || 0) / 1000,
-    }))
-    .filter(e => e.text && e.text !== '\n');
+function parseSrt(srtContent) {
+  const blocks = srtContent.trim().split(/\n\n+/);
+  const entries = [];
 
-  if (raw.length === 0) return [];
+  for (const block of blocks) {
+    const lines = block.trim().split('\n');
+    if (lines.length < 3) continue;
 
-  const subtitles = [];
-  let currentTexts = [];
-  let segStart = raw[0].start;
-  let segEnd = segStart;
+    const timeLine = lines[1];
+    const timeMatch = timeLine.match(/(\d{2}):(\d{2}):(\d{2}),(\d{3})\s*-->\s*(\d{2}):(\d{2}):(\d{2}),(\d{3})/);
+    if (!timeMatch) continue;
 
-  for (const entry of raw) {
-    const entryEnd = entry.start + entry.duration;
+    const start = parseInt(timeMatch[1]) * 3600 + parseInt(timeMatch[2]) * 60 + parseInt(timeMatch[3]) + parseInt(timeMatch[4]) / 1000;
+    const end = parseInt(timeMatch[5]) * 3600 + parseInt(timeMatch[6]) * 60 + parseInt(timeMatch[7]) + parseInt(timeMatch[8]) / 1000;
 
-    if (currentTexts.length === 0) {
-      segStart = entry.start;
-      segEnd = entryEnd;
-      currentTexts.push(entry.text);
+    const text = lines.slice(2).join(' ')
+      .replace(/<[^>]+>/g, '')  // Strip HTML tags
+      .replace(/\[.*?\]/g, '')  // Remove [Music], [Applause]
+      .replace(/\(.*?\)/g, '')  // Remove (inaudible)
+      .replace(/♪[^♪]*♪?/g, '') // Remove music notes
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    if (text && text.length >= 2) {
+      entries.push({ text, start: round2(start), end: round2(end) });
+    }
+  }
+
+  return entries;
+}
+
+// ============================================================
+// Smart Sentence Grouping
+// ============================================================
+
+/**
+ * Groups SRT entries into natural sentence/phrase blocks.
+ *
+ * Strategy:
+ * 1. Filter to clip range
+ * 2. Deduplicate overlapping entries (SRT auto-subs show text in pairs)
+ * 3. Build continuous text stream
+ * 4. Split into 5-10 second groups at natural boundaries
+ */
+function groupIntoSentences(srtEntries, clipStart, clipEnd) {
+  // Filter to clip range (with 1s buffer)
+  let filtered = srtEntries.filter(e => e.start >= clipStart - 1 && e.start <= clipEnd + 1);
+
+  // If nothing in clip range, try first 65 seconds
+  if (filtered.length === 0) {
+    filtered = srtEntries.filter(e => e.start <= 65);
+  }
+  if (filtered.length === 0) return [];
+
+  // Deduplicate: SRT auto-subs pair lines, take only unique phrase segments
+  // Each SRT entry represents a unique phrase even though time ranges overlap
+  // We use each entry's text once, with its START time
+  const phrases = filtered.map((e, i) => ({
+    text: e.text,
+    start: e.start,
+    // End = next entry's start, or this entry's end if last
+    end: i + 1 < filtered.length ? filtered[i + 1].start : e.end,
+  }));
+
+  // Merge phrases into groups targeting 5-10 seconds
+  const TARGET_MIN_SEC = 4;
+  const TARGET_MAX_SEC = 10;
+  const groups = [];
+  let currentTexts = [phrases[0].text];
+  let groupStart = phrases[0].start;
+  let groupEnd = phrases[0].end;
+
+  for (let i = 1; i < phrases.length; i++) {
+    const phrase = phrases[i];
+    const currentDur = groupEnd - groupStart;
+    const potentialDur = phrase.end - groupStart;
+
+    // Check if adding this phrase would create a good group
+    const currentText = currentTexts.join(' ');
+    const endsWithSentence = /[.!?]["']?\s*$/.test(currentText);
+
+    if (endsWithSentence && currentDur >= TARGET_MIN_SEC) {
+      // Current group ends at a sentence boundary and is long enough - flush it
+      groups.push(makeGroup(currentTexts, groupStart, groupEnd));
+      currentTexts = [phrase.text];
+      groupStart = phrase.start;
+      groupEnd = phrase.end;
+    } else if (potentialDur <= TARGET_MAX_SEC) {
+      // Can still add to current group
+      currentTexts.push(phrase.text);
+      groupEnd = phrase.end;
+    } else if (currentDur >= TARGET_MIN_SEC) {
+      // Current group is long enough, start new
+      groups.push(makeGroup(currentTexts, groupStart, groupEnd));
+      currentTexts = [phrase.text];
+      groupStart = phrase.start;
+      groupEnd = phrase.end;
     } else {
-      const potDur = entryEnd - segStart;
-      if (potDur <= TARGET_DURATION) {
-        currentTexts.push(entry.text);
-        segEnd = entryEnd;
-      } else if (potDur <= MAX_DURATION && !/[.!?]["']?\s*$/.test(currentTexts[currentTexts.length - 1])) {
-        currentTexts.push(entry.text);
-        segEnd = entryEnd;
-      } else {
-        subtitles.push({
-          start: round2(segStart),
-          end: round2(segEnd),
-          en: currentTexts.join(' '),
-          ko: '',
-        });
-        segStart = entry.start;
-        segEnd = entryEnd;
-        currentTexts = [entry.text];
+      // Current group is too short but adding would exceed max - add anyway
+      currentTexts.push(phrase.text);
+      groupEnd = phrase.end;
+      // Flush if now over target
+      if (groupEnd - groupStart >= TARGET_MIN_SEC) {
+        groups.push(makeGroup(currentTexts, groupStart, groupEnd));
+        currentTexts = [];
+        if (i + 1 < phrases.length) {
+          groupStart = phrases[i + 1].start;
+          groupEnd = phrases[i + 1].end;
+        }
       }
     }
   }
 
+  // Flush remaining
   if (currentTexts.length > 0) {
-    subtitles.push({
-      start: round2(segStart),
-      end: round2(segEnd),
-      en: currentTexts.join(' '),
-      ko: '',
-    });
+    groups.push(makeGroup(currentTexts, groupStart, groupEnd));
   }
 
-  return subtitles;
+  // Post-process: merge very short groups with neighbors
+  const result = [];
+  for (let i = 0; i < groups.length; i++) {
+    const g = groups[i];
+    const dur = g.end - g.start;
+    if (dur < 2 && result.length > 0) {
+      // Merge with previous group
+      const prev = result[result.length - 1];
+      prev.en = prev.en + ' ' + g.en;
+      prev.end = g.end;
+    } else {
+      result.push(g);
+    }
+  }
+
+  return result;
+}
+
+function makeGroup(texts, start, end) {
+  let text = texts.join(' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  // Capitalize first letter
+  text = text.charAt(0).toUpperCase() + text.slice(1);
+
+  return {
+    start: round2(start),
+    end: round2(end),
+    en: text,
+    ko: '',
+  };
 }
 
 function round2(n) {
   return Math.round(n * 100) / 100;
 }
 
-async function translateBatch(entries, apiKey) {
-  const Anthropic = (await import('@anthropic-ai/sdk')).default;
-  const client = new Anthropic.default({ apiKey });
-  const BATCH_SIZE = 50;
+// ============================================================
+// Groq Translation
+// ============================================================
+
+async function translateWithGroq(entries) {
+  const BATCH_SIZE = 25;
 
   for (let batchStart = 0; batchStart < entries.length; batchStart += BATCH_SIZE) {
     const batchEnd = Math.min(batchStart + BATCH_SIZE, entries.length);
@@ -114,16 +242,40 @@ async function translateBatch(entries, apiKey) {
     const englishTexts = batch.map((e, i) => `${i}: ${e.en}`).join('\n');
 
     try {
-      const response = await client.messages.create({
-        model: 'claude-haiku-4-5-20251001',
-        max_tokens: 4096,
-        messages: [{
-          role: 'user',
-          content: `Translate each numbered English sentence to natural, conversational Korean. Return ONLY the translations, one per line, with the same number prefix.\n\n${englishTexts}`,
-        }],
+      const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${GROQ_API_KEY}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          model: 'llama-3.3-70b-versatile',
+          messages: [{
+            role: 'system',
+            content: 'You are a professional English-to-Korean translator for a language learning app. Translate each numbered English sentence to natural, conversational Korean. Return ONLY the translations, one per line, with the same number prefix. Do not add explanations or extra text.'
+          }, {
+            role: 'user',
+            content: englishTexts,
+          }],
+          temperature: 0.3,
+          max_tokens: 4096,
+        }),
       });
 
-      const text = response.content[0].type === 'text' ? response.content[0].text : '';
+      if (!response.ok) {
+        const errText = await response.text();
+        if (response.status === 429) {
+          console.log('  Rate limited, waiting 60s...');
+          await new Promise(r => setTimeout(r, 60000));
+          batchStart -= BATCH_SIZE; // retry
+          continue;
+        }
+        console.error(`  Groq error (${response.status}):`, errText.substring(0, 150));
+        continue;
+      }
+
+      const data = await response.json();
+      const text = data.choices?.[0]?.message?.content || '';
       const lines = text.split('\n').filter(l => l.trim());
 
       for (let i = 0; i < batch.length; i++) {
@@ -132,27 +284,53 @@ async function translateBatch(entries, apiKey) {
           entries[batchStart + i].ko = line.replace(/^\d+:\s*/, '').trim();
         }
       }
+
+      // Delay between batches
+      if (batchEnd < entries.length) {
+        await new Promise(r => setTimeout(r, 2000));
+      }
     } catch (err) {
-      console.error('  Translation batch failed:', err.message?.substring(0, 100));
+      console.error('  Translation failed:', err.message?.substring(0, 100));
     }
   }
 }
+
+// ============================================================
+// Main
+// ============================================================
 
 async function main() {
   fs.mkdirSync(OUT_DIR, { recursive: true });
   fs.mkdirSync(TMP_DIR, { recursive: true });
 
-  const videoIds = extractYoutubeIds();
-  console.log(`Found ${videoIds.length} unique videos\n`);
+  const videos = extractVideoInfo();
+  console.log(`Found ${videos.length} unique videos\n`);
 
-  const apiKey = process.env.ANTHROPIC_API_KEY;
-  let success = 0, skip = 0, fail = 0;
+  let success = 0, skip = 0, fail = 0, translated = 0;
 
-  for (const id of videoIds) {
+  for (const video of videos) {
+    const { youtubeId: id, clipStart, clipEnd } = video;
     const outFile = path.join(OUT_DIR, `${id}.json`);
 
-    // Skip if already exists with content
-    if (fs.existsSync(outFile)) {
+    // Translate-only mode
+    if (TRANSLATE_ONLY) {
+      if (!fs.existsSync(outFile)) { skip++; continue; }
+      const existing = JSON.parse(fs.readFileSync(outFile, 'utf8'));
+      if (!Array.isArray(existing) || existing.length === 0) { skip++; continue; }
+      if (existing.some(e => e.ko && e.ko.trim() !== '')) {
+        console.log(`SKIP ${id} (already translated)`);
+        skip++;
+        continue;
+      }
+      console.log(`TRANSLATE ${id} (${existing.length} entries)...`);
+      await translateWithGroq(existing);
+      fs.writeFileSync(outFile, JSON.stringify(existing, null, 2), 'utf8');
+      translated++;
+      continue;
+    }
+
+    // Skip if exists with good content
+    if (!FORCE && fs.existsSync(outFile)) {
       try {
         const existing = JSON.parse(fs.readFileSync(outFile, 'utf8'));
         if (Array.isArray(existing) && existing.length > 0) {
@@ -163,21 +341,29 @@ async function main() {
       } catch {}
     }
 
-    console.log(`FETCH ${id}...`);
-    const data = downloadSubtitles(id);
+    console.log(`FETCH ${id} [clip: ${clipStart}-${clipEnd}s]...`);
+    const srtContent = downloadSrt(id);
 
-    if (!data || !data.events) {
-      console.log(`  FAIL ${id}: No subtitle data`);
+    if (!srtContent) {
+      console.log(`  FAIL ${id}: No subtitles`);
       fail++;
       continue;
     }
 
-    const grouped = groupEntries(data.events);
-    console.log(`  OK ${id}: ${grouped.length} entries`);
+    const srtEntries = parseSrt(srtContent);
+    if (srtEntries.length === 0) {
+      console.log(`  FAIL ${id}: Empty after parsing`);
+      fail++;
+      continue;
+    }
 
-    if (apiKey && grouped.length > 0) {
+    const grouped = groupIntoSentences(srtEntries, clipStart, clipEnd);
+    console.log(`  OK ${id}: ${grouped.length} groups (from ${srtEntries.length} SRT entries)`);
+
+    if (grouped.length > 0) {
       console.log(`  TRANSLATE ${id}...`);
-      await translateBatch(grouped, apiKey);
+      await translateWithGroq(grouped);
+      translated++;
     }
 
     fs.writeFileSync(outFile, JSON.stringify(grouped, null, 2), 'utf8');
@@ -185,16 +371,14 @@ async function main() {
     success++;
   }
 
-  // Clean up tmp files
+  // Clean up
   try {
     const tmpFiles = fs.readdirSync(TMP_DIR);
-    for (const f of tmpFiles) {
-      fs.unlinkSync(path.join(TMP_DIR, f));
-    }
+    for (const f of tmpFiles) fs.unlinkSync(path.join(TMP_DIR, f));
     fs.rmdirSync(TMP_DIR);
   } catch {}
 
-  console.log(`\nDone! Success: ${success}, Skipped: ${skip}, Failed: ${fail}`);
+  console.log(`\nDone! Success: ${success}, Skipped: ${skip}, Failed: ${fail}, Translated: ${translated}`);
 }
 
 main().catch(console.error);

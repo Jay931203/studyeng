@@ -62,12 +62,20 @@ async function fetchWithStaticFallback(
   signal: AbortSignal
 ): Promise<SubtitleEntry[]> {
   // 1. Try pre-baked static JSON file (no API cost, instant)
+  let staticData: SubtitleEntry[] | null = null
   try {
     const staticRes = await fetch(`/transcripts/${youtubeId}.json`, { signal })
     if (staticRes.ok) {
       const data = await staticRes.json()
       if (Array.isArray(data) && data.length > 0) {
-        return data
+        staticData = data
+        // If static data already has Korean translations, return it directly
+        const hasKorean = data.some((s: SubtitleEntry) => s.ko && s.ko.trim() !== '')
+        if (hasKorean) {
+          return data
+        }
+        // Otherwise, static data exists but lacks Korean translations.
+        // Try API for a translated version, but use static as fallback.
       }
     }
   } catch (err: unknown) {
@@ -76,11 +84,27 @@ async function fetchWithStaticFallback(
   }
 
   // 2. Fallback to API (fetches from YouTube + optional translation)
-  const apiRes = await fetch(
-    `/api/transcript?v=${encodeURIComponent(youtubeId)}`,
-    { signal }
-  )
-  if (!apiRes.ok) throw new Error(`HTTP ${apiRes.status}`)
-  const data: { subtitles: SubtitleEntry[]; error?: string } = await apiRes.json()
-  return data.subtitles ?? []
+  try {
+    const apiRes = await fetch(
+      `/api/transcript?v=${encodeURIComponent(youtubeId)}`,
+      { signal }
+    )
+    if (!apiRes.ok) {
+      // If API fails but we have static data, use it without Korean
+      if (staticData) return staticData
+      throw new Error(`HTTP ${apiRes.status}`)
+    }
+    const data: { subtitles: SubtitleEntry[]; error?: string } = await apiRes.json()
+    const apiSubs = data.subtitles ?? []
+    // If API returned subtitles, use them (they may have Korean translations)
+    if (apiSubs.length > 0) return apiSubs
+    // If API returned empty but we have static data, use static
+    if (staticData) return staticData
+    return []
+  } catch (err: unknown) {
+    if (err instanceof Error && err.name === 'AbortError') throw err
+    // If API fails but we have static data, use it without Korean
+    if (staticData) return staticData
+    throw err
+  }
 }
