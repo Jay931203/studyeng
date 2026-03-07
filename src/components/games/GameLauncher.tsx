@@ -7,6 +7,8 @@ import { SentencePuzzleGame } from './SentencePuzzleGame'
 import { SceneQuizGame } from './SceneQuizGame'
 import { ListeningGame } from './ListeningGame'
 import type { SavedPhrase } from '@/stores/usePhraseStore'
+import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
+import { useBadgeStore } from '@/stores/useBadgeStore'
 import { seedVideos, type SubtitleEntry } from '@/data/seed-videos'
 
 type GameType = 'fill-blank' | 'sentence-puzzle' | 'scene-quiz' | 'listening'
@@ -48,6 +50,8 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
   const [currentPhraseIdx, setCurrentPhraseIdx] = useState(0)
   const [transcriptPhrases, setTranscriptPhrases] = useState<{ en: string; ko: string }[]>([])
   const [loadingTranscripts, setLoadingTranscripts] = useState(false)
+  const incrementMission = useDailyMissionStore((s) => s.incrementMission)
+  const incrementGamesCleared = useBadgeStore((s) => s.incrementGamesCleared)
 
   // Load transcript data from seed videos so new users can also play
   useEffect(() => {
@@ -105,9 +109,13 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
     ? gamePhrases[currentPhraseIdx % gamePhrases.length]
     : null
 
-  const handleComplete = () => {
+  const handleComplete = (correct: boolean) => {
     setCurrentPhraseIdx((prev) => prev + 1)
     setActiveGame(null)
+    if (correct) {
+      incrementMission('play-game')
+    }
+    incrementGamesCleared()
   }
 
   const launchGame = (type: GameType) => {

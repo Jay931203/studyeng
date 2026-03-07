@@ -23,6 +23,8 @@ interface PlayerState {
   repeatMode: RepeatMode
   /** How many times the current video has fully played through */
   currentRepeatCount: number
+  /** True while the user is swiping between videos */
+  isSwiping: boolean
 
   toggleSubtitleMode: () => void
   setPlaybackRate: (rate: number) => void
@@ -37,6 +39,7 @@ interface PlayerState {
   setRepeatMode: (mode: RepeatMode) => void
   incrementRepeatCount: () => void
   resetRepeatCount: () => void
+  setIsSwiping: (swiping: boolean) => void
 }
 
 const subtitleCycle: SubtitleMode[] = ['none', 'en', 'en-ko']
@@ -70,6 +73,7 @@ export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
   subtitleGateBlocked: false,
   repeatMode: 'off',
   currentRepeatCount: 0,
+  isSwiping: false,
 
   toggleSubtitleMode: () => {
     const current = subtitleCycle.indexOf(get().subtitleMode)
@@ -102,6 +106,8 @@ export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
   incrementRepeatCount: () => set((state) => ({ currentRepeatCount: state.currentRepeatCount + 1 })),
 
   resetRepeatCount: () => set({ currentRepeatCount: 0 }),
+
+  setIsSwiping: (swiping) => set({ isSwiping: swiping }),
 }),
   {
     name: 'studyeng-player',

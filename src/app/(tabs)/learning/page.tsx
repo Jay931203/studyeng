@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { SavedPhraseCard } from '@/components/SavedPhraseCard'
+import { DailyMissions } from '@/components/DailyMissions'
 import { GameLauncher } from '@/components/games/GameLauncher'
 import { WatchHistory } from '@/components/WatchHistory'
 
@@ -24,6 +25,8 @@ export default function LearningPage() {
             ? `${phrases.length}개 표현 저장됨`
             : '영상을 보고 표현을 모아보세요'}
         </p>
+
+        <DailyMissions />
 
         {/* Full empty state for brand new users */}
         {isCompletelyEmpty ? (

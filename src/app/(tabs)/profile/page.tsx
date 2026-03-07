@@ -8,6 +8,7 @@ import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { useAuth } from '@/hooks/useAuth'
 import { useThemeStore } from '@/stores/useThemeStore'
 import { StreakDisplay } from '@/components/StreakDisplay'
+import { BadgeGrid } from '@/components/BadgeGrid'
 import { calculateXpForLevel } from '@/lib/gamification'
 
 function AnimatedStat({ value, label }: { value: number; label: string }) {
@@ -139,6 +140,9 @@ export default function ProfilePage() {
           <AnimatedStat value={phraseCount} label="저장한 표현" />
           <AnimatedStat value={totalWatched} label="본 영상" />
         </div>
+
+        {/* Badges */}
+        <BadgeGrid />
 
         {/* Theme toggle */}
         <motion.button

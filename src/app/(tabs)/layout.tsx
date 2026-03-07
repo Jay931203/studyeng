@@ -5,7 +5,9 @@ import { useRouter } from 'next/navigation'
 import { BottomNav } from '@/components/BottomNav'
 import { LevelUpModal } from '@/components/LevelUpModal'
 import { XpGainToast } from '@/components/XpGainToast'
+import { BadgeUnlock } from '@/components/BadgeUnlock'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
+import { useBadgeChecker } from '@/hooks/useBadgeChecker'
 
 export default function TabsLayout({
   children,
@@ -15,6 +17,9 @@ export default function TabsLayout({
   const router = useRouter()
   const hasOnboarded = useOnboardingStore((s) => s.hasOnboarded)
   const [checked, setChecked] = useState(false)
+
+  // Reactively check badge conditions whenever relevant stats change
+  useBadgeChecker()
 
   useEffect(() => {
     if (!hasOnboarded) {
@@ -40,6 +45,7 @@ export default function TabsLayout({
       <BottomNav />
       <LevelUpModal />
       <XpGainToast />
+      <BadgeUnlock />
     </div>
   )
 }

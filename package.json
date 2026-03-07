@@ -8,7 +8,10 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest",
-    "test:run": "vitest run"
+    "test:run": "vitest run",
+    "transcripts:check": "node scripts/check-transcripts.mjs",
+    "transcripts:generate": "node scripts/generate-transcripts.mjs",
+    "transcripts:regenerate": "node scripts/generate-transcripts.mjs --all"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",

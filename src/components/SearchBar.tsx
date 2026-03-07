@@ -9,12 +9,22 @@ export function SearchBar() {
   const [results, setResults] = useState<SearchResult[]>([])
   const [focused, setFocused] = useState(false)
   const debounceRef = useRef<number | null>(null)
+  const searchIdRef = useRef(0)
   const router = useRouter()
 
   useEffect(() => {
     if (debounceRef.current) clearTimeout(debounceRef.current)
+
+    // Increment search ID to invalidate stale responses
+    const currentSearchId = ++searchIdRef.current
+
     debounceRef.current = window.setTimeout(() => {
-      setResults(searchVideos(query))
+      searchVideos(query).then((r) => {
+        // Only apply results if this is still the latest search
+        if (searchIdRef.current === currentSearchId) {
+          setResults(r)
+        }
+      })
     }, 300)
     return () => { if (debounceRef.current) clearTimeout(debounceRef.current) }
   }, [query])

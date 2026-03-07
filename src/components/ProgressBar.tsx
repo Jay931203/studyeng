@@ -21,6 +21,7 @@ export function ProgressBar() {
   const clipStart = usePlayerStore((s) => s.clipStart)
   const clipEnd = usePlayerStore((s) => s.clipEnd)
   const isPlaying = usePlayerStore((s) => s.isPlaying)
+  const isSwiping = usePlayerStore((s) => s.isSwiping)
 
   const clipDuration = clipEnd > clipStart ? clipEnd - clipStart : 0
 
@@ -110,7 +111,7 @@ export function ProgressBar() {
   }, [clipStart, clipDuration, isPlaying])
 
   return (
-    <div className="absolute bottom-[72px] left-0 right-0 z-20">
+    <div className={`absolute bottom-[72px] left-0 right-0 z-20 transition-opacity duration-200 ${isSwiping ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
       {/* Touch target: tall (24px) transparent area for easy tapping/dragging */}
       <div
         ref={containerRef}

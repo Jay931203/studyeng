@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
-const FREE_DAILY_VIEW_LIMIT = 10
+const FREE_DAILY_VIEW_LIMIT = 5
 const FREE_SAVED_PHRASES_LIMIT = 20
 
 function getTodayString(): string {

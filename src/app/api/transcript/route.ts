@@ -23,6 +23,7 @@ function groupTranscriptEntries(
 
   const TARGET_DURATION = 4 // target ~4 seconds per segment
   const MAX_DURATION = 6 // never exceed 6 seconds
+  const MAX_TEXT_LENGTH = 120 // max characters per subtitle
 
   const subtitles: TranscriptSubtitle[] = []
   let currentTexts: string[] = []
@@ -44,12 +45,13 @@ function groupTranscriptEntries(
       currentTexts.push(text)
     } else {
       const potentialDuration = entryEnd - segmentStart
+      const potentialText = [...currentTexts, text].join(' ')
 
-      if (potentialDuration <= TARGET_DURATION) {
+      if (potentialDuration <= TARGET_DURATION && potentialText.length <= MAX_TEXT_LENGTH) {
         // Still within target, add to current segment
         currentTexts.push(text)
         segmentEnd = entryEnd
-      } else if (potentialDuration <= MAX_DURATION && !endsWithSentenceBoundary(currentTexts[currentTexts.length - 1])) {
+      } else if (potentialDuration <= MAX_DURATION && potentialText.length <= MAX_TEXT_LENGTH && !endsWithSentenceBoundary(currentTexts[currentTexts.length - 1])) {
         // Slightly over target but not at sentence boundary, keep going
         currentTexts.push(text)
         segmentEnd = entryEnd

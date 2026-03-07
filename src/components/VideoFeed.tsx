@@ -11,6 +11,7 @@ import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { usePremiumStore, FREE_DAILY_VIEW_LIMIT } from '@/stores/usePremiumStore'
 import { usePlayerStore } from '@/stores/usePlayerStore'
 import { useUserStore } from '@/stores/useUserStore'
+import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { PremiumModal } from './PremiumModal'
 import { categories, type VideoData } from '@/data/seed-videos'
 
@@ -37,10 +38,12 @@ export function VideoFeed({ videos }: VideoFeedProps) {
   const incrementSavedPhrases = usePremiumStore((s) => s.incrementSavedPhrases)
   const gainXp = useUserStore((s) => s.gainXp)
   const checkAndUpdateStreak = useUserStore((s) => s.checkAndUpdateStreak)
+  const incrementMission = useDailyMissionStore((s) => s.incrementMission)
   const repeatMode = usePlayerStore((s) => s.repeatMode)
   const currentRepeatCount = usePlayerStore((s) => s.currentRepeatCount)
   const incrementRepeatCount = usePlayerStore((s) => s.incrementRepeatCount)
   const resetRepeatCount = usePlayerStore((s) => s.resetRepeatCount)
+  const setIsSwiping = usePlayerStore((s) => s.setIsSwiping)
 
   // Track which videos have already awarded XP this session (prevents re-awarding on re-watch)
   const xpAwardedRef = useRef<Set<string>>(new Set())
@@ -68,6 +71,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
       xpAwardedRef.current.add(currentVideo.id)
       gainXp(5)
       checkAndUpdateStreak()
+      incrementMission('watch-videos')
     }
 
     if (repeatMode === 'off') return // Normal loop, do nothing
@@ -106,7 +110,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
         setRepeatIndicator(null)
       }, 1500)
     }
-  }, [repeatMode, currentRepeatCount, currentIndex, videos, gainXp, checkAndUpdateStreak, incrementRepeatCount, resetRepeatCount, incrementDailyView])
+  }, [repeatMode, currentRepeatCount, currentIndex, videos, gainXp, checkAndUpdateStreak, incrementMission, incrementRepeatCount, resetRepeatCount, incrementDailyView])
 
   const swipeThreshold = 50
 
@@ -160,7 +164,8 @@ export function VideoFeed({ videos }: VideoFeedProps) {
           drag="y"
           dragConstraints={{ top: 0, bottom: 0 }}
           dragElastic={0.2}
-          onDragEnd={handleDragEnd}
+          onDragStart={() => setIsSwiping(true)}
+          onDragEnd={(...args) => { setIsSwiping(false); handleDragEnd(...args) }}
           className="absolute inset-0"
         >
           <VideoPlayer
@@ -184,6 +189,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
                 timestampEnd: phrase.end,
               })
               incrementSavedPhrases()
+              incrementMission('save-phrase')
               setShowToast(true)
               setTimeout(() => setShowToast(false), 2000)
             }}
@@ -215,7 +221,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
             {currentIndex + 1} / {videos.length}
             {!isPremium && (
               <span className="text-white/40 text-xs ml-2 bg-white/10 px-2 py-0.5 rounded-full">
-                {getDailyViewsRemaining()}/{FREE_DAILY_VIEW_LIMIT} 남음
+                오늘 {FREE_DAILY_VIEW_LIMIT - getDailyViewsRemaining()}/{FREE_DAILY_VIEW_LIMIT} 영상
               </span>
             )}
           </span>

@@ -7,6 +7,7 @@ import { seedVideos } from '@/data/seed-videos'
 import { recommendVideos, seriesPlaylist } from '@/lib/recommend'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { useLikeStore } from '@/stores/useLikeStore'
+import { useOnboardingStore } from '@/stores/useOnboardingStore'
 
 function FeedContent() {
   const searchParams = useSearchParams()
@@ -14,9 +15,11 @@ function FeedContent() {
   const seriesId = searchParams.get('series')
   const watchedEpisodes = useWatchHistoryStore((s) => s.watchedEpisodes)
   const likes = useLikeStore((s) => s.likes)
+  const interests = useOnboardingStore((s) => s.interests)
+  const level = useOnboardingStore((s) => s.level)
 
   const recommended = useMemo(() => {
-    const options = { watchedEpisodes, likes }
+    const options = { watchedEpisodes, likes, interests, level }
     // Series mode: play series episodes in order, then recommended
     if (seriesId && videoId) {
       return seriesPlaylist(seriesId, videoId, options)
@@ -31,7 +34,7 @@ function FeedContent() {
     }
     // Default: pure recommendation
     return recommendVideos(seedVideos, options)
-  }, [videoId, seriesId, watchedEpisodes, likes])
+  }, [videoId, seriesId, watchedEpisodes, likes, interests, level])
 
   return <VideoFeed videos={recommended} />
 }
