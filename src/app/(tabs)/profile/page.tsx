@@ -7,6 +7,7 @@ import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { useAuth } from '@/hooks/useAuth'
 import { useThemeStore } from '@/stores/useThemeStore'
+import { useAdminStore } from '@/stores/useAdminStore'
 import { StreakDisplay } from '@/components/StreakDisplay'
 import { BadgeGrid } from '@/components/BadgeGrid'
 import { calculateXpForLevel } from '@/lib/gamification'
@@ -42,6 +43,7 @@ export default function ProfilePage() {
   )
   const { user, signInWithGoogle, signOut, loading } = useAuth()
   const { theme, toggleTheme } = useThemeStore()
+  const { isAdmin, setAdmin, flaggedSubtitles, exportFlags, clearFlags } = useAdminStore()
 
   const xpForNextLevel = calculateXpForLevel(level)
   const xpProgress = (xp / xpForNextLevel) * 100
@@ -155,6 +157,57 @@ export default function ProfilePage() {
             {theme === 'dark' ? '다크 모드' : '라이트 모드'}
           </span>
         </motion.button>
+
+        {/* Admin panel - only visible when admin mode is active */}
+        {isAdmin && (
+          <div className="mt-3 bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl overflow-hidden">
+            <div className="px-4 py-3 border-b border-[var(--border-card)] flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 text-red-400">
+                  <path d="M3.5 2.75a.75.75 0 0 0-1.5 0v14.5a.75.75 0 0 0 1.5 0v-4.392l1.657-.348a6.449 6.449 0 0 1 4.271.572 7.948 7.948 0 0 0 5.965.524l2.078-.64A.75.75 0 0 0 18 11.75V3.885a.75.75 0 0 0-.975-.716l-2.296.707a6.449 6.449 0 0 1-4.848-.426 7.948 7.948 0 0 0-5.259-.704L3.5 3.99V2.75Z" />
+                </svg>
+                <span className="text-red-400 text-xs font-semibold">ADMIN</span>
+              </div>
+              <span className="text-[var(--text-muted)] text-xs">
+                {flaggedSubtitles.length}건 플래그
+              </span>
+            </div>
+            <div className="px-4 py-3 flex gap-2">
+              <button
+                onClick={() => {
+                  const json = exportFlags()
+                  navigator.clipboard.writeText(json).then(() => {
+                    alert(`${flaggedSubtitles.length}건 복사됨`)
+                  }).catch(() => {
+                    // Fallback: show in prompt for manual copy
+                    prompt('JSON 복사:', json)
+                  })
+                }}
+                disabled={flaggedSubtitles.length === 0}
+                className="flex-1 py-2 bg-red-500/10 text-red-400 rounded-lg text-xs font-medium disabled:opacity-30 disabled:cursor-not-allowed active:scale-95 transition-transform"
+              >
+                Export ({flaggedSubtitles.length})
+              </button>
+              <button
+                onClick={() => {
+                  if (confirm('모든 플래그를 삭제하시겠습니까?')) {
+                    clearFlags()
+                  }
+                }}
+                disabled={flaggedSubtitles.length === 0}
+                className="py-2 px-4 bg-[var(--bg-secondary)] text-[var(--text-muted)] rounded-lg text-xs font-medium disabled:opacity-30 disabled:cursor-not-allowed active:scale-95 transition-transform"
+              >
+                Clear
+              </button>
+              <button
+                onClick={() => setAdmin(false)}
+                className="py-2 px-4 bg-[var(--bg-secondary)] text-[var(--text-muted)] rounded-lg text-xs font-medium active:scale-95 transition-transform"
+              >
+                Off
+              </button>
+            </div>
+          </div>
+        )}
 
         {/* Legal links */}
         <div className="mt-3 bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl overflow-hidden">

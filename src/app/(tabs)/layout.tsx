@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { BottomNav } from '@/components/BottomNav'
 import { LevelUpModal } from '@/components/LevelUpModal'
@@ -85,7 +85,9 @@ export default function TabsLayout({
       <XpGainToast />
       <BadgeUnlock />
       <LoginGateModal isOpen={showLoginGate} />
-      <AdminActivator />
+      <Suspense fallback={null}>
+        <AdminActivator />
+      </Suspense>
     </div>
   )
 }
