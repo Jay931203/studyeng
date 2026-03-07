@@ -103,6 +103,7 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
       {/* Scrollable lyrics-style subtitles */}
       <LyricsSubtitles
         subtitles={subtitles}
+        videoId={youtubeId}
         onSavePhrase={onSavePhrase}
         onSeek={(time) => seekTo(time)}
       />

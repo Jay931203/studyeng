@@ -114,6 +114,8 @@ export function useYouTubePlayer(
         cc_load_policy: 0,
         iv_load_policy: 3,
         start: clipStart,
+        // Prevent YouTube endscreen by stopping playback before video's true end
+        ...(clipEnd > 0 ? { end: Math.floor(clipEnd) } : {}),
       },
       events: {
         onReady: (event) => {
@@ -135,6 +137,16 @@ export function useYouTubePlayer(
           setReady(true)
         },
         onStateChange: (event) => {
+          // Intercept ENDED state to prevent YouTube endscreen overlay
+          if (event.data === 0) {
+            const effStart = effectiveClipStartRef.current
+            event.target.seekTo(effStart, true)
+            event.target.playVideo()
+            if (onClipCompleteRef.current) {
+              onClipCompleteRef.current()
+            }
+            return
+          }
           setIsPlaying(event.data === 1)
         },
         onError: (event) => {
@@ -195,9 +207,11 @@ export function useYouTubePlayer(
       }
 
       // --- Clip boundary looping (use effective refs capped to real duration) ---
+      // Trigger 1.5s early to preempt YouTube endscreen
       const effEnd = effectiveClipEndRef.current
       const effStart = effectiveClipStartRef.current
-      if (effEnd > effStart && time >= effEnd && !clipBoundaryCooldownRef.current) {
+      const earlyTrigger = effEnd - 1.5
+      if (effEnd > effStart && time >= earlyTrigger && !clipBoundaryCooldownRef.current) {
         // Set cooldown to prevent rapid-fire triggers while seek is in progress
         clipBoundaryCooldownRef.current = true
         setTimeout(() => { clipBoundaryCooldownRef.current = false }, 1000)
@@ -284,7 +298,8 @@ export function useYouTubePlayer(
 
             const effEnd = effectiveClipEndRef.current
             const effStart = effectiveClipStartRef.current
-            if (effEnd > effStart && time >= effEnd && !clipBoundaryCooldownRef.current) {
+            const earlyTrigger = effEnd - 1.5
+            if (effEnd > effStart && time >= earlyTrigger && !clipBoundaryCooldownRef.current) {
               clipBoundaryCooldownRef.current = true
               setTimeout(() => { clipBoundaryCooldownRef.current = false }, 1000)
               if (onClipCompleteRef.current) {

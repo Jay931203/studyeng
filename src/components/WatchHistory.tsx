@@ -67,7 +67,7 @@ export function WatchHistory() {
   const allItems = groupedByDate.flatMap((g) =>
     g.videos.map((v) => ({ ...v, dateLabel: g.label, dateKey: g.key }))
   )
-  const displayItems = showAll ? allItems : allItems.slice(0, 6)
+  const displayItems = showAll ? allItems : allItems.slice(0, 3)
 
   // Group displayed items by date for rendering
   const displayGroups: { label: string; videos: typeof seedVideos }[] = []
@@ -89,7 +89,7 @@ export function WatchHistory() {
             {totalWatched}개
           </span>
         </h2>
-        {totalWatched > 6 && (
+        {totalWatched > 3 && (
           <button
             onClick={() => setShowAll(!showAll)}
             className="text-blue-400 text-sm"

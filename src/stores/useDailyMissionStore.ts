@@ -2,6 +2,7 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { useUserStore } from './useUserStore'
 import { useOnboardingStore } from './useOnboardingStore'
+import { useDiscountStore } from './useDiscountStore'
 
 export interface DailyMission {
   id: string
@@ -107,6 +108,8 @@ export const useDailyMissionStore = create<DailyMissionState>()(
         const allDone = updatedMissions.every((m) => m.completed)
         if (allDone && !allCompleteBonus) {
           gainXp(20)
+          // 올클리어 시 할인 스토어에 기록
+          useDiscountStore.getState().recordDailyCompletion()
           set({ missions: updatedMissions, allCompleteBonus: true })
         } else {
           set({ missions: updatedMissions })

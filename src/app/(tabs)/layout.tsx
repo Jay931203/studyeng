@@ -6,8 +6,14 @@ import { BottomNav } from '@/components/BottomNav'
 import { LevelUpModal } from '@/components/LevelUpModal'
 import { XpGainToast } from '@/components/XpGainToast'
 import { BadgeUnlock } from '@/components/BadgeUnlock'
+import { LoginGateModal } from '@/components/LoginGateModal'
+import { AdminActivator } from '@/components/AdminActivator'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
+import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { useBadgeChecker } from '@/hooks/useBadgeChecker'
+import { useAuth } from '@/hooks/useAuth'
+
+const GUEST_VIEW_LIMIT = 3
 
 export default function TabsLayout({
   children,
@@ -17,6 +23,9 @@ export default function TabsLayout({
   const router = useRouter()
   const hasOnboarded = useOnboardingStore((s) => s.hasOnboarded)
   const [checked, setChecked] = useState(false)
+  const [showLoginGate, setShowLoginGate] = useState(false)
+  const { user, loading: authLoading } = useAuth()
+  const watchedVideoIds = useWatchHistoryStore((s) => s.watchedVideoIds)
 
   // Reactively check badge conditions whenever relevant stats change
   useBadgeChecker()
@@ -28,6 +37,35 @@ export default function TabsLayout({
       setChecked(true)
     }
   }, [hasOnboarded, router])
+
+  // Track guest views: show login gate when limit exceeded
+  useEffect(() => {
+    if (authLoading) return
+    if (user) {
+      setShowLoginGate(false)
+      return
+    }
+    // Non-logged-in user: check unique video watch count
+    if (watchedVideoIds.length > GUEST_VIEW_LIMIT) {
+      setShowLoginGate(true)
+      // Also persist to localStorage for cross-session awareness
+      try {
+        localStorage.setItem('studyeng-guest-views', JSON.stringify(watchedVideoIds.length))
+      } catch {}
+    }
+  }, [watchedVideoIds.length, user, authLoading])
+
+  // On mount, check if guest was already over limit from a previous session
+  useEffect(() => {
+    if (authLoading) return
+    if (user) return
+    try {
+      const stored = localStorage.getItem('studyeng-guest-views')
+      if (stored && JSON.parse(stored) > GUEST_VIEW_LIMIT) {
+        setShowLoginGate(true)
+      }
+    } catch {}
+  }, [user, authLoading])
 
   // Show nothing until we confirm onboarding is complete.
   // This prevents the feed from flashing before the redirect fires.
@@ -46,6 +84,8 @@ export default function TabsLayout({
       <LevelUpModal />
       <XpGainToast />
       <BadgeUnlock />
+      <LoginGateModal isOpen={showLoginGate} />
+      <AdminActivator />
     </div>
   )
 }

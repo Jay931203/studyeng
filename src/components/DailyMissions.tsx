@@ -3,6 +3,8 @@
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
+import { useDiscountStore } from '@/stores/useDiscountStore'
+import { usePremiumStore } from '@/stores/usePremiumStore'
 
 const missionIcons: Record<string, React.ReactNode> = {
   'watch-videos': (
@@ -269,6 +271,101 @@ export function DailyMissions() {
             </motion.div>
           )}
         </AnimatePresence>
+
+        {/* 이번 달 할인 진행률 */}
+        <DiscountProgress />
+      </div>
+    </motion.div>
+  )
+}
+
+function DiscountProgress() {
+  const isPremium = usePremiumStore((s) => s.isPremium)
+  const checkAndResetMonthly = useDiscountStore((s) => s.checkAndResetMonthly)
+  const completedDays = useDiscountStore((s) => s.completedDays)
+  const getCompletionRate = useDiscountStore((s) => s.getCompletionRate)
+  const getDiscountRate = useDiscountStore((s) => s.getDiscountRate)
+  const getNextTierInfo = useDiscountStore((s) => s.getNextTierInfo)
+  const getDaysInCurrentMonth = useDiscountStore((s) => s.getDaysInCurrentMonth)
+
+  useEffect(() => {
+    checkAndResetMonthly()
+  }, [checkAndResetMonthly])
+
+  const completionRate = getCompletionRate()
+  const discountRate = getDiscountRate()
+  const nextTier = getNextTierInfo()
+  const totalDays = getDaysInCurrentMonth()
+  const completedCount = completedDays.length
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.4 }}
+      className="mx-4 mb-4"
+    >
+      <div className="bg-white/[0.03] rounded-lg px-3 py-3">
+        {/* 헤더 */}
+        <div className="flex items-center justify-between mb-2">
+          <div className="flex items-center gap-1.5">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-emerald-400">
+              <path fillRule="evenodd" d="M12 1.5a5.25 5.25 0 00-5.25 5.25v3a3 3 0 00-3 3v6.75a3 3 0 003 3h10.5a3 3 0 003-3v-6.75a3 3 0 00-3-3v-3c0-2.9-2.35-5.25-5.25-5.25zm3.75 8.25v-3a3.75 3.75 0 10-7.5 0v3h7.5z" clipRule="evenodd" />
+            </svg>
+            <span className="text-xs font-bold text-[var(--text-primary)]">
+              이번 달 구독 할인
+            </span>
+          </div>
+          {discountRate > 0 && (
+            <motion.span
+              initial={{ scale: 0 }}
+              animate={{ scale: 1 }}
+              className="text-xs font-bold text-emerald-400 bg-emerald-500/15 px-2 py-0.5 rounded-full"
+            >
+              {discountRate}% 할인
+            </motion.span>
+          )}
+        </div>
+
+        {/* 프로그레스바 */}
+        <div className="relative h-2 bg-white/5 rounded-full overflow-hidden mb-2">
+          <motion.div
+            className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-green-400"
+            initial={{ width: 0 }}
+            animate={{ width: `${Math.min(completionRate, 100)}%` }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+          />
+          {/* 티어 마커 */}
+          {[30, 50, 70, 90].map((mark) => (
+            <div
+              key={mark}
+              className="absolute top-0 bottom-0 w-px bg-white/20"
+              style={{ left: `${mark}%` }}
+            />
+          ))}
+        </div>
+
+        {/* 달성 정보 */}
+        <div className="flex items-center justify-between">
+          <span className="text-[10px] text-[var(--text-muted)]">
+            {completedCount}/{totalDays}일 완료 ({Math.round(completionRate)}%)
+          </span>
+          {isPremium ? (
+            nextTier ? (
+              <span className="text-[10px] font-medium text-emerald-400">
+                {nextTier.daysNeeded}일 더 하면 {nextTier.nextDiscount}% 할인!
+              </span>
+            ) : discountRate >= 50 ? (
+              <span className="text-[10px] font-medium text-yellow-400">
+                최대 할인 달성! 매일 쓰면 반값
+              </span>
+            ) : null
+          ) : (
+            <span className="text-[10px] text-[var(--text-muted)]">
+              구독하면 할인 적용
+            </span>
+          )}
+        </div>
       </div>
     </motion.div>
   )

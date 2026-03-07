@@ -2,8 +2,6 @@
 
 import { useState, useEffect, useMemo } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { FillBlankGame } from './FillBlankGame'
-import { SentencePuzzleGame } from './SentencePuzzleGame'
 import { SceneQuizGame } from './SceneQuizGame'
 import { ListeningGame } from './ListeningGame'
 import type { SavedPhrase } from '@/stores/usePhraseStore'
@@ -11,7 +9,7 @@ import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { useBadgeStore } from '@/stores/useBadgeStore'
 import { seedVideos, type SubtitleEntry } from '@/data/seed-videos'
 
-type GameType = 'fill-blank' | 'sentence-puzzle' | 'scene-quiz' | 'listening'
+type GameType = 'scene-quiz' | 'listening'
 
 interface GameLauncherProps {
   phrases: SavedPhrase[]
@@ -43,7 +41,7 @@ async function loadTranscript(youtubeId: string): Promise<SubtitleEntry[]> {
   }
 }
 
-const GAME_TYPES: GameType[] = ['fill-blank', 'sentence-puzzle', 'scene-quiz', 'listening']
+const GAME_TYPES: GameType[] = ['scene-quiz', 'listening']
 
 export function GameLauncher({ phrases }: GameLauncherProps) {
   const [activeGame, setActiveGame] = useState<GameType | null>(null)
@@ -140,8 +138,7 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
   return (
     <>
       <div className="mb-6">
-        {/* Top row: Scene Quiz + Listening */}
-        <div className="flex gap-3 mb-3">
+        <div className="flex gap-3">
           <motion.button
             whileTap={{ scale: 0.96 }}
             onClick={() => launchGame('scene-quiz')}
@@ -173,30 +170,10 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
                 </svg>
               </div>
               <div>
-                <span className="text-[var(--text-primary)] font-bold text-sm">리스닝 게임</span>
-                <span className="text-[var(--text-secondary)] text-xs block mt-0.5">들었던 문장 고르기</span>
+                <span className="text-[var(--text-primary)] font-bold text-sm">다음 문장 맞추기</span>
+                <span className="text-[var(--text-secondary)] text-xs block mt-0.5">문맥 이해력 테스트</span>
               </div>
             </div>
-          </motion.button>
-        </div>
-
-        {/* Bottom row: Fill Blank + Sentence Puzzle */}
-        <div className="flex gap-3">
-          <motion.button
-            whileTap={{ scale: 0.96 }}
-            onClick={() => launchGame('fill-blank')}
-            className="flex-1 bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-3 text-left"
-          >
-            <span className="text-[var(--text-primary)] font-medium text-sm">빈칸 채우기</span>
-            <span className="text-[var(--text-secondary)] text-xs block mt-0.5">빠진 단어 맞추기</span>
-          </motion.button>
-          <motion.button
-            whileTap={{ scale: 0.96 }}
-            onClick={() => launchGame('sentence-puzzle')}
-            className="flex-1 bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-3 text-left"
-          >
-            <span className="text-[var(--text-primary)] font-medium text-sm">문장 만들기</span>
-            <span className="text-[var(--text-secondary)] text-xs block mt-0.5">단어 조합하기</span>
           </motion.button>
         </div>
       </div>
@@ -218,12 +195,6 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
 
             {activeGame === 'scene-quiz' && (
               <SceneQuizGame subtitle={currentPhrase} onComplete={handleComplete} />
-            )}
-            {activeGame === 'fill-blank' && (
-              <FillBlankGame subtitle={currentPhrase} onComplete={handleComplete} />
-            )}
-            {activeGame === 'sentence-puzzle' && (
-              <SentencePuzzleGame subtitle={currentPhrase} onComplete={handleComplete} />
             )}
             {activeGame === 'listening' && (
               <ListeningGame

@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion'
 import { usePremiumStore } from '@/stores/usePremiumStore'
+import { useDiscountStore } from '@/stores/useDiscountStore'
 
 interface PremiumModalProps {
   isOpen: boolean
@@ -50,8 +51,30 @@ const features = [
   },
 ]
 
+const MONTHLY_PRICE = 9900
+const YEARLY_PRICE = 79900
+
+function formatPrice(price: number): string {
+  return price.toLocaleString('ko-KR')
+}
+
 export function PremiumModal({ isOpen, onClose, trigger = 'video-limit' }: PremiumModalProps) {
   const setPremium = usePremiumStore((s) => s.setPremium)
+  const getCompletionRate = useDiscountStore((s) => s.getCompletionRate)
+  const getDiscountRate = useDiscountStore((s) => s.getDiscountRate)
+  const checkAndResetMonthly = useDiscountStore((s) => s.checkAndResetMonthly)
+
+  // 월 리셋 확인
+  if (isOpen) {
+    checkAndResetMonthly()
+  }
+
+  const completionRate = getCompletionRate()
+  const discountRate = getDiscountRate()
+  const hasDiscount = discountRate > 0
+
+  const discountedMonthly = Math.round(MONTHLY_PRICE * (1 - discountRate / 100))
+  const discountedYearly = Math.round(YEARLY_PRICE * (1 - discountRate / 100))
 
   const handleUpgrade = () => {
     // For now, just set premium directly (no real payment)
@@ -92,9 +115,34 @@ export function PremiumModal({ isOpen, onClose, trigger = 'video-limit' }: Premi
             </p>
 
             {/* Title */}
-            <h2 className="text-[var(--text-primary)] text-2xl font-bold text-center mb-8">
+            <h2 className="text-[var(--text-primary)] text-2xl font-bold text-center mb-4">
               더 많은 영상을 보고 싶다면
             </h2>
+
+            {/* 할인 배지 - 할인율이 있을 때만 */}
+            {hasDiscount && (
+              <motion.div
+                initial={{ opacity: 0, y: -10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+                className="mb-6"
+              >
+                <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-xl px-4 py-3 text-center">
+                  <p className="text-emerald-400 text-sm font-bold">
+                    이번 달 달성률: {Math.round(completionRate)}% → {discountRate}% 할인 적용!
+                  </p>
+                  <p className="text-[var(--text-muted)] text-xs mt-1">
+                    매일 미션 완료하면 최대 50% 할인
+                  </p>
+                </div>
+              </motion.div>
+            )}
+
+            {!hasDiscount && (
+              <p className="text-[var(--text-muted)] text-xs text-center mb-6">
+                매일 미션을 완료하면 다음 달 구독료 최대 50% 할인
+              </p>
+            )}
 
             {/* Features list */}
             <div className="space-y-4 mb-8">
@@ -112,35 +160,64 @@ export function PremiumModal({ isOpen, onClose, trigger = 'video-limit' }: Premi
 
             {/* Pricing */}
             <div className="space-y-3 mb-8">
+              {/* 연간 플랜 */}
               <div className="flex items-center justify-between bg-blue-500/10 rounded-2xl px-5 py-4 ring-2 ring-blue-500/40">
                 <div>
                   <p className="text-[var(--text-primary)] font-bold">
                     연간 플랜
                   </p>
                   <p className="text-blue-400 text-sm font-medium mt-0.5">
-                    33% 할인
+                    {hasDiscount ? `33% + ${discountRate}% 추가 할인` : '33% 할인'}
                   </p>
                 </div>
                 <div className="text-right">
-                  <p className="text-[var(--text-primary)] font-bold text-lg">
-                    79,900원
-                  </p>
+                  {hasDiscount ? (
+                    <>
+                      <p className="text-[var(--text-muted)] text-sm line-through">
+                        {formatPrice(YEARLY_PRICE)}원
+                      </p>
+                      <p className="text-emerald-400 font-bold text-lg">
+                        {formatPrice(discountedYearly)}원
+                      </p>
+                    </>
+                  ) : (
+                    <p className="text-[var(--text-primary)] font-bold text-lg">
+                      {formatPrice(YEARLY_PRICE)}원
+                    </p>
+                  )}
                   <p className="text-[var(--text-muted)] text-xs">
                     /년
                   </p>
                 </div>
               </div>
 
+              {/* 월간 플랜 */}
               <div className="flex items-center justify-between bg-[var(--bg-secondary)] rounded-2xl px-5 py-4">
                 <div>
                   <p className="text-[var(--text-primary)] font-medium">
                     월간 플랜
                   </p>
+                  {hasDiscount && (
+                    <p className="text-emerald-400 text-sm font-medium mt-0.5">
+                      {discountRate}% 할인
+                    </p>
+                  )}
                 </div>
                 <div className="text-right">
-                  <p className="text-[var(--text-primary)] font-bold text-lg">
-                    9,900원
-                  </p>
+                  {hasDiscount ? (
+                    <>
+                      <p className="text-[var(--text-muted)] text-sm line-through">
+                        {formatPrice(MONTHLY_PRICE)}원
+                      </p>
+                      <p className="text-emerald-400 font-bold text-lg">
+                        {formatPrice(discountedMonthly)}원
+                      </p>
+                    </>
+                  ) : (
+                    <p className="text-[var(--text-primary)] font-bold text-lg">
+                      {formatPrice(MONTHLY_PRICE)}원
+                    </p>
+                  )}
                   <p className="text-[var(--text-muted)] text-xs">
                     /월
                   </p>
@@ -153,7 +230,7 @@ export function PremiumModal({ isOpen, onClose, trigger = 'video-limit' }: Premi
               onClick={handleUpgrade}
               className="w-full py-4 rounded-2xl bg-blue-500 text-white font-bold text-base transition-colors hover:bg-blue-600 active:bg-blue-700"
             >
-              프리미엄 시작
+              {hasDiscount ? `${discountRate}% 할인된 가격으로 시작` : '프리미엄 시작'}
             </button>
 
             <button

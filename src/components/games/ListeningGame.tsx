@@ -46,17 +46,18 @@ function shuffle<T>(array: T[]): T[] {
 
 function generateDecoys(
   correctEn: string,
+  currentEn: string,
   allSubtitles: { en: string }[]
 ): string[] {
-  // Gather candidates from other subtitles
+  // Gather candidates from other subtitles (exclude both the current and next sentence)
   const candidates = allSubtitles
     .map((s) => s.en)
-    .filter((en) => en !== correctEn)
+    .filter((en) => en !== correctEn && en !== currentEn)
 
   // Add fallback sentences if not enough
   if (candidates.length < 3) {
     for (const sentence of FALLBACK_SENTENCES) {
-      if (sentence !== correctEn && !candidates.includes(sentence)) {
+      if (sentence !== correctEn && sentence !== currentEn && !candidates.includes(sentence)) {
         candidates.push(sentence)
       }
       if (candidates.length >= 15) break
@@ -67,22 +68,40 @@ function generateDecoys(
 }
 
 export function ListeningGame({ subtitle, allSubtitles, onComplete }: ListeningGameProps) {
-  const choices = useMemo(() => {
-    const decoys = generateDecoys(subtitle.en, allSubtitles)
-    return shuffle([subtitle.en, ...decoys])
+  // Find current subtitle index and determine the next subtitle (the answer)
+  const { currentSentence, nextSubtitle, choices } = useMemo(() => {
+    const currentIndex = allSubtitles.findIndex((s) => s.en === subtitle.en)
+
+    // If current subtitle is the last one or not found, wrap around
+    let nextIdx: number
+    if (currentIndex === -1 || currentIndex >= allSubtitles.length - 1) {
+      nextIdx = 0
+    } else {
+      nextIdx = currentIndex + 1
+    }
+
+    const next = allSubtitles[nextIdx]
+    const decoys = generateDecoys(next.en, subtitle.en, allSubtitles)
+    const shuffledChoices = shuffle([next.en, ...decoys])
+
+    return {
+      currentSentence: subtitle.en,
+      nextSubtitle: next,
+      choices: shuffledChoices,
+    }
   }, [subtitle, allSubtitles])
 
   const [selected, setSelected] = useState<string | null>(null)
   const [showResult, setShowResult] = useState(false)
   const gainXp = useUserStore((s) => s.gainXp)
 
-  const isCorrect = selected === subtitle.en
+  const isCorrect = selected === nextSubtitle.en
   const xpEarned = isCorrect ? 10 : 0
 
   const handleSelect = (choice: string) => {
     if (selected) return
     setSelected(choice)
-    if (choice === subtitle.en) {
+    if (choice === nextSubtitle.en) {
       gainXp(10)
     }
     setTimeout(() => setShowResult(true), 500)
@@ -91,36 +110,47 @@ export function ListeningGame({ subtitle, allSubtitles, onComplete }: ListeningG
   return (
     <div className="flex flex-col items-center justify-center h-full px-6">
       <p className="text-gray-400 text-xs uppercase tracking-wider mb-3">
-        영상에서 들었던 문장은?
+        다음에 올 문장은?
       </p>
 
-      {/* Ear icon */}
-      <div className="w-16 h-16 rounded-full bg-blue-500/15 flex items-center justify-center mb-6">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth={1.5}
-          className="w-8 h-8 text-blue-400"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M19.114 5.636a9 9 0 010 12.728M16.463 8.288a5.25 5.25 0 010 7.424M6.75 8.25l4.72-4.72a.75.75 0 011.28.53v15.88a.75.75 0 01-1.28.53l-4.72-4.72H4.51c-.88 0-1.704-.507-1.938-1.354A9.01 9.01 0 012.25 12c0-.83.112-1.633.322-2.396C2.806 8.756 3.63 8.25 4.51 8.25H6.75z"
-          />
-        </svg>
+      {/* Current sentence display */}
+      <div className="w-full max-w-md mb-6">
+        <div className="bg-white/10 rounded-xl px-5 py-4 border border-white/10">
+          <p className="text-white text-base font-medium text-center leading-relaxed">
+            {currentSentence}
+          </p>
+          <p className="text-gray-500 text-xs text-center mt-1.5">
+            {subtitle.ko}
+          </p>
+        </div>
+        <div className="flex justify-center mt-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            className="w-5 h-5 text-gray-500"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+          </svg>
+        </div>
       </div>
 
-      {/* Korean translation shown after answer */}
+      {/* Korean translation of the answer shown after selection */}
       {selected && (
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 5 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-gray-500 text-sm mb-6 text-center"
+          className="mb-4 text-center"
         >
-          {subtitle.ko}
-        </motion.p>
+          <p className="text-green-400/80 text-sm font-medium">
+            {nextSubtitle.en}
+          </p>
+          <p className="text-gray-500 text-xs mt-1">
+            {nextSubtitle.ko}
+          </p>
+        </motion.div>
       )}
 
       {/* 4 sentence choices */}
@@ -129,7 +159,7 @@ export function ListeningGame({ subtitle, allSubtitles, onComplete }: ListeningG
           let bg = 'bg-white/10'
           let borderClass = 'border-white/10'
           if (selected) {
-            if (choice === subtitle.en) {
+            if (choice === nextSubtitle.en) {
               bg = 'bg-green-500/20'
               borderClass = 'border-green-400/60'
             } else if (choice === selected && !isCorrect) {

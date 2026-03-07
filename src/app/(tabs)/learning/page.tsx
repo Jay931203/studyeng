@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { usePhraseStore } from '@/stores/usePhraseStore'
@@ -13,6 +14,7 @@ export default function LearningPage() {
   const { phrases, removePhrase } = usePhraseStore()
   const totalWatched = useWatchHistoryStore((s) => s.watchedVideoIds.length)
   const router = useRouter()
+  const [showAllPhrases, setShowAllPhrases] = useState(false)
 
   const isCompletelyEmpty = phrases.length === 0 && totalWatched === 0
 
@@ -102,10 +104,25 @@ export default function LearningPage() {
               </motion.div>
             ) : (
               <>
-                <h2 className="text-[var(--text-primary)] font-bold text-lg mb-3">저장한 표현</h2>
+                <div className="flex items-center justify-between mb-3">
+                  <h2 className="text-[var(--text-primary)] font-bold text-lg">
+                    저장한 표현
+                    <span className="text-[var(--text-muted)] text-sm font-normal ml-2">
+                      {phrases.length}개
+                    </span>
+                  </h2>
+                  {phrases.length > 3 && (
+                    <button
+                      onClick={() => setShowAllPhrases(!showAllPhrases)}
+                      className="text-blue-400 text-sm"
+                    >
+                      {showAllPhrases ? '접기' : '전체보기'}
+                    </button>
+                  )}
+                </div>
                 <div className="flex flex-col gap-3">
                   <AnimatePresence>
-                    {phrases.map((phrase) => (
+                    {(showAllPhrases ? phrases : phrases.slice(0, 3)).map((phrase) => (
                       <SavedPhraseCard
                         key={phrase.id}
                         phrase={phrase}
