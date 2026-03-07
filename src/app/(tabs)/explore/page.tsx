@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
@@ -15,12 +15,26 @@ import {
 import { VideoCard } from '@/components/VideoCard'
 import { SearchBar } from '@/components/SearchBar'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
+import { useLikeStore } from '@/stores/useLikeStore'
 
 export default function ExplorePage() {
   const [activeCategory, setActiveCategory] = useState<'all' | CategoryId>('all')
   const [selectedSeries, setSelectedSeries] = useState<SeriesType | null>(null)
   const router = useRouter()
   const { getSeriesProgress, getNextEpisode, isWatched } = useWatchHistoryStore()
+  const likes = useLikeStore((s) => s.likes)
+
+  // Compute popular videos: top 5 most-liked, or first 5 as curated picks
+  const popularVideos = useMemo(() => {
+    const likedIds = Object.keys(likes)
+    if (likedIds.length > 0) {
+      // Return liked videos (up to 5), ordered by their position in seedVideos
+      const likedVideos = seedVideos.filter((v) => likes[v.id])
+      return likedVideos.slice(0, 5)
+    }
+    // Fallback: curated "추천 영상" with first 5 videos
+    return seedVideos.slice(0, 5)
+  }, [likes])
 
   const filteredSeries =
     activeCategory === 'all'
@@ -42,6 +56,58 @@ export default function ExplorePage() {
         <h1 className="text-[var(--text-primary)] text-2xl font-bold mb-4">탐색</h1>
 
         <SearchBar />
+
+        {/* Popular / Trending section */}
+        {!selectedSeries && (
+          <div className="mb-6">
+            <h2 className="text-[var(--text-primary)] font-bold text-lg mb-3">
+              {Object.keys(likes).length > 0 ? '인기 영상' : '추천 영상'}
+            </h2>
+            <div className="flex gap-3 overflow-x-auto no-scrollbar pb-2 -mx-4 px-4">
+              {popularVideos.map((video) => (
+                <button
+                  key={video.id}
+                  onClick={() => router.push(`/?v=${video.id}`)}
+                  className="flex-shrink-0 w-44 bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl overflow-hidden text-left"
+                >
+                  <div className="aspect-video relative overflow-hidden">
+                    <img
+                      src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
+                      alt={video.title}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                      <div className="w-8 h-8 rounded-full bg-black/50 backdrop-blur-sm flex items-center justify-center">
+                        <svg viewBox="0 0 24 24" fill="white" className="w-4 h-4 ml-0.5">
+                          <path d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="p-2">
+                    <p className="text-[var(--text-primary)] font-medium text-xs line-clamp-2 leading-tight">
+                      {video.title}
+                    </p>
+                    {likes[video.id] && (
+                      <div className="flex items-center gap-1 mt-1">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="#EF4444"
+                          className="w-3 h-3"
+                        >
+                          <path d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                        </svg>
+                        <span className="text-[var(--text-muted)] text-[10px]">좋아요</span>
+                      </div>
+                    )}
+                  </div>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Category tabs */}
         <div className="flex gap-2 mb-6 overflow-x-auto no-scrollbar">

@@ -21,6 +21,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
   const constraintsRef = useRef(null)
   const savePhrase = usePhraseStore((s) => s.savePhrase)
   const markWatched = useWatchHistoryStore((s) => s.markWatched)
+  const isWatchedFn = useWatchHistoryStore((s) => s.isWatched)
 
   // Mark episode as watched when it appears in the feed
   useEffect(() => {
@@ -90,7 +91,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
               setTimeout(() => setShowToast(false), 2000)
             }}
           />
-          <VideoControls videoId={currentVideo.id} />
+          <VideoControls videoId={currentVideo.id} videoTitle={currentVideo.title} />
 
           {/* Video info - positioned above subtitle area */}
           <div className="absolute bottom-[100px] left-4 right-20 z-10 pointer-events-none">
@@ -118,6 +119,15 @@ export function VideoFeed({ videos }: VideoFeedProps) {
           {currentIndex + 1} / {videos.length}
         </span>
       </div>
+
+      {/* Today's Pick badge - only on first video if unwatched */}
+      {currentIndex === 0 && currentVideo.seriesId && !isWatchedFn(currentVideo.seriesId, currentVideo.id) && (
+        <div className="absolute top-4 right-4 z-10">
+          <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-medium px-3 py-1 rounded-full shadow-lg">
+            오늘의 추천
+          </span>
+        </div>
+      )}
 
       <SaveToast show={showToast} message="표현이 저장됐어요!" />
     </div>
