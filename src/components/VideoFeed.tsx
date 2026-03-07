@@ -10,6 +10,7 @@ import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { usePremiumStore, FREE_DAILY_VIEW_LIMIT } from '@/stores/usePremiumStore'
 import { usePlayerStore } from '@/stores/usePlayerStore'
+import { useUserStore } from '@/stores/useUserStore'
 import { PremiumModal } from './PremiumModal'
 import { categories, type VideoData } from '@/data/seed-videos'
 
@@ -34,10 +35,15 @@ export function VideoFeed({ videos }: VideoFeedProps) {
   const getDailyViewsRemaining = usePremiumStore((s) => s.getDailyViewsRemaining)
   const canSaveMorePhrases = usePremiumStore((s) => s.canSaveMorePhrases)
   const incrementSavedPhrases = usePremiumStore((s) => s.incrementSavedPhrases)
+  const gainXp = useUserStore((s) => s.gainXp)
+  const checkAndUpdateStreak = useUserStore((s) => s.checkAndUpdateStreak)
   const repeatMode = usePlayerStore((s) => s.repeatMode)
   const currentRepeatCount = usePlayerStore((s) => s.currentRepeatCount)
   const incrementRepeatCount = usePlayerStore((s) => s.incrementRepeatCount)
   const resetRepeatCount = usePlayerStore((s) => s.resetRepeatCount)
+
+  // Track which videos have already awarded XP this session (prevents re-awarding on re-watch)
+  const xpAwardedRef = useRef<Set<string>>(new Set())
 
   // Brief overlay indicator for repeat progress
   const [repeatIndicator, setRepeatIndicator] = useState<string | null>(null)
@@ -54,8 +60,16 @@ export function VideoFeed({ videos }: VideoFeedProps) {
     }
   }, [currentIndex, videos, markWatched, incrementViewCount])
 
-  // Handle clip completion for repeat mode auto-advance
+  // Handle clip completion for repeat mode auto-advance + XP/streak rewards
   const handleClipComplete = useCallback(() => {
+    // Award XP and update streak on first completion of each video this session
+    const currentVideo = videos[currentIndex]
+    if (currentVideo && !xpAwardedRef.current.has(currentVideo.id)) {
+      xpAwardedRef.current.add(currentVideo.id)
+      gainXp(5)
+      checkAndUpdateStreak()
+    }
+
     if (repeatMode === 'off') return // Normal loop, do nothing
 
     const targetCount = repeatMode === 'x2' ? 2 : 3
@@ -92,7 +106,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
         setRepeatIndicator(null)
       }, 1500)
     }
-  }, [repeatMode, currentRepeatCount, currentIndex, videos.length, incrementRepeatCount, resetRepeatCount, incrementDailyView])
+  }, [repeatMode, currentRepeatCount, currentIndex, videos, gainXp, checkAndUpdateStreak, incrementRepeatCount, resetRepeatCount, incrementDailyView])
 
   const swipeThreshold = 50
 

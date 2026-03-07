@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { useAuth } from '@/hooks/useAuth'
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
+import Link from 'next/link'
 
 export default function LoginPage() {
   const { user, loading, signInWithGoogle } = useAuth()
@@ -46,7 +47,15 @@ export default function LoginPage() {
         </div>
 
         <p className="text-[var(--text-muted)] text-xs mt-8">
-          계속하면 이용약관에 동의하는 것으로 간주합니다
+          계속하면{' '}
+          <Link href="/terms" className="text-[var(--text-secondary)] underline underline-offset-2">
+            이용약관
+          </Link>
+          {' '}및{' '}
+          <Link href="/privacy" className="text-[var(--text-secondary)] underline underline-offset-2">
+            개인정보처리방침
+          </Link>
+          에 동의하는 것으로 간주합니다
         </p>
       </motion.div>
     </div>

@@ -34,7 +34,7 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
     return raw
   }, [fetchedSubtitles, propSubtitles, clipStart, clipEnd])
 
-  const { ready, play, pause, seekTo } = useYouTubePlayer(containerId, youtubeId, clipStart, clipEnd, subtitles, onClipComplete)
+  const { ready, play, pause, seekTo, videoError, clearVideoError } = useYouTubePlayer(containerId, youtubeId, clipStart, clipEnd, subtitles, onClipComplete)
   const { isPlaying, subtitleGateBlocked, clearSubtitleGateBlocked } = usePlayerStore()
 
   // Register seekTo in the shared ref so sibling components (e.g. ProgressBar) can seek
@@ -118,7 +118,41 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
       )}
 
 
-      {!ready && (
+      {/* Video error overlay */}
+      {videoError && (
+        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/90 z-30 gap-4 px-8">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-12 h-12 text-red-400">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+          </svg>
+          <p className="text-white text-center text-base font-medium">{videoError}</p>
+          <div className="flex gap-3 mt-2">
+            <button
+              onClick={(e) => {
+                e.stopPropagation()
+                clearVideoError()
+                window.location.reload()
+              }}
+              className="px-5 py-2.5 bg-white/10 text-white rounded-xl text-sm font-medium"
+            >
+              다시 시도
+            </button>
+            {onClipComplete && (
+              <button
+                onClick={(e) => {
+                  e.stopPropagation()
+                  clearVideoError()
+                  onClipComplete()
+                }}
+                className="px-5 py-2.5 bg-blue-500 text-white rounded-xl text-sm font-medium"
+              >
+                다음 영상
+              </button>
+            )}
+          </div>
+        </div>
+      )}
+
+      {!ready && !videoError && (
         <div className="absolute inset-0 flex items-center justify-center bg-black">
           <div className="w-8 h-8 border-2 border-white/30 border-t-white rounded-full animate-spin" />
         </div>

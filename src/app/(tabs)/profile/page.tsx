@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 import { useUserStore } from '@/stores/useUserStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
@@ -150,6 +151,28 @@ export default function ProfilePage() {
             {theme === 'dark' ? '다크 모드' : '라이트 모드'}
           </span>
         </motion.button>
+
+        {/* Legal links */}
+        <div className="mt-3 bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl overflow-hidden">
+          <Link
+            href="/terms"
+            className="w-full py-3 flex items-center justify-between px-4 border-b border-[var(--border-card)]"
+          >
+            <span className="text-[var(--text-secondary)] text-sm">이용약관</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 text-[var(--text-muted)]">
+              <path fillRule="evenodd" d="M8.22 5.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 010-1.06z" clipRule="evenodd" />
+            </svg>
+          </Link>
+          <Link
+            href="/privacy"
+            className="w-full py-3 flex items-center justify-between px-4"
+          >
+            <span className="text-[var(--text-secondary)] text-sm">개인정보처리방침</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 text-[var(--text-muted)]">
+              <path fillRule="evenodd" d="M8.22 5.22a.75.75 0 011.06 0l4.25 4.25a.75.75 0 010 1.06l-4.25 4.25a.75.75 0 01-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 010-1.06z" clipRule="evenodd" />
+            </svg>
+          </Link>
+        </div>
 
         <div className="mt-4">
           {loading ? null : user ? (

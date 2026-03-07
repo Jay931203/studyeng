@@ -10,7 +10,7 @@
   --card-shadow: 0 1px 3px rgba(0,0,0,0.4);
   --text-primary: #ffffff;
   --text-secondary: #9ca3af;
-  --text-muted: #6b7280;
+  --text-muted: #8b95a5;
   --bg-nav: rgba(0,0,0,0.95);
   --bg-search-dropdown: #111827;
 }
@@ -38,7 +38,7 @@ body {
   overscroll-behavior: none;
   overflow: hidden;
   height: 100dvh;
-  width: 100vw;
+  max-width: 100vw;
 }
 
 * {
@@ -72,4 +72,20 @@ body {
 .animate-shimmer {
   background-size: 200% 100%;
   animation: shimmer 2s linear infinite;
+}
+
+/* Focus styles for keyboard accessibility */
+*:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Respect reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

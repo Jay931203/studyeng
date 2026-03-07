@@ -38,8 +38,8 @@ export function BottomNav() {
   const pathname = usePathname()
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 z-50 bg-[var(--bg-nav)] backdrop-blur-lg shadow-[0_-1px_10px_rgba(0,0,0,0.1)] safe-area-bottom">
-      <div className="flex justify-around items-center h-16 max-w-lg mx-auto">
+    <nav className="sticky bottom-0 left-0 right-0 z-50 bg-[var(--bg-nav)] backdrop-blur-lg shadow-[0_-1px_10px_rgba(0,0,0,0.1)] safe-area-bottom">
+      <div className="flex justify-around items-center h-16">
         {tabs.map(({ href, label, icon }) => {
           const isActive = href === '/' ? pathname === '/' : pathname.startsWith(href)
           return (

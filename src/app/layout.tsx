@@ -11,6 +11,18 @@ export const metadata: Metadata = {
     statusBarStyle: 'black-translucent',
     title: 'StudyEng',
   },
+  openGraph: {
+    title: 'StudyEng - 숏폼으로 영어 공부',
+    description: '유튜브 영상으로 쉽고 재밌게 영어를 배워요. 자막, 게임, 반복학습까지.',
+    type: 'website',
+    locale: 'ko_KR',
+    siteName: 'StudyEng',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'StudyEng - 숏폼으로 영어 공부',
+    description: '유튜브 영상으로 쉽고 재밌게 영어를 배워요',
+  },
 }
 
 export const viewport: Viewport = {

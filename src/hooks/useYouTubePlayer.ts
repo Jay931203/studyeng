@@ -60,6 +60,12 @@ export function useYouTubePlayer(
   const playerRef = useRef<YT.Player | null>(null)
   const intervalRef = useRef<number | null>(null)
   const [ready, setReady] = useState(false)
+  const [videoError, setVideoError] = useState<string | null>(null)
+
+  // Track whether the tab/page is currently visible
+  const visibleRef = useRef(true)
+  // Remember if the player was playing when the tab became hidden
+  const wasPlayingBeforeHideRef = useRef(false)
 
   // Refs to track previous values and avoid unnecessary Zustand writes
   const prevSubIndexRef = useRef(-1)
@@ -131,6 +137,21 @@ export function useYouTubePlayer(
         onStateChange: (event) => {
           setIsPlaying(event.data === 1)
         },
+        onError: (event) => {
+          // YouTube IFrame API error codes:
+          // 2 = invalid parameter, 5 = HTML5 player error,
+          // 100 = not found / removed, 101/150 = embedding disallowed
+          const code = event.data
+          if (code === 100) {
+            setVideoError('삭제되었거나 존재하지 않는 영상이에요')
+          } else if (code === 101 || code === 150) {
+            setVideoError('이 영상은 외부 재생이 제한되어 있어요')
+          } else if (code === 5) {
+            setVideoError('영상 재생 중 오류가 발생했어요')
+          } else {
+            setVideoError('영상을 불러올 수 없습니다')
+          }
+        },
       },
     })
   }, [containerId, videoId, clipStart, clipEnd])
@@ -193,6 +214,95 @@ export function useYouTubePlayer(
     }
   }, [ready, isLooping, loopStart, loopEnd, subtitles])
 
+  // Pause player and stop polling when the browser tab becomes hidden,
+  // resume when it becomes visible again.
+  useEffect(() => {
+    if (!ready) return
+
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        visibleRef.current = false
+
+        // Remember whether the player was playing so we can resume later
+        try {
+          const state = playerRef.current?.getPlayerState()
+          wasPlayingBeforeHideRef.current = state === 1 // YT.PlayerState.PLAYING
+        } catch {
+          wasPlayingBeforeHideRef.current = false
+        }
+
+        // Pause the player
+        playerRef.current?.pauseVideo()
+
+        // Stop the polling interval to save CPU/battery
+        if (intervalRef.current) {
+          clearInterval(intervalRef.current)
+          intervalRef.current = null
+        }
+      } else {
+        visibleRef.current = true
+
+        // Resume playback if it was playing before the tab was hidden
+        if (wasPlayingBeforeHideRef.current) {
+          playerRef.current?.playVideo()
+        }
+
+        // The polling interval will be restarted by the polling useEffect
+        // because this visibility change does not trigger that effect directly.
+        // We need to manually restart it here.
+        if (!intervalRef.current) {
+          intervalRef.current = window.setInterval(() => {
+            if (!playerRef.current) return
+
+            let time: number
+            try {
+              time = playerRef.current.getCurrentTime()
+            } catch {
+              return
+            }
+
+            currentTimeRef.current = time
+
+            if (isLooping && loopStart !== null && loopEnd !== null) {
+              if (time >= loopEnd) {
+                playerRef.current.seekTo(loopStart, true)
+                return
+              }
+            }
+
+            const newSubIndex = findActiveSubIndex(subtitles, time)
+            if (newSubIndex !== prevSubIndexRef.current) {
+              prevSubIndexRef.current = newSubIndex
+              setActiveSubIndex(newSubIndex)
+            }
+
+            const now = performance.now()
+            if (now - lastProgressWriteRef.current >= 500) {
+              lastProgressWriteRef.current = now
+              setCurrentTime(time)
+            }
+
+            const effEnd = effectiveClipEndRef.current
+            const effStart = effectiveClipStartRef.current
+            if (effEnd > effStart && time >= effEnd && !clipBoundaryCooldownRef.current) {
+              clipBoundaryCooldownRef.current = true
+              setTimeout(() => { clipBoundaryCooldownRef.current = false }, 1000)
+              if (onClipCompleteRef.current) {
+                onClipCompleteRef.current()
+              }
+              playerRef.current.seekTo(effStart, true)
+            }
+          }, 100)
+        }
+      }
+    }
+
+    document.addEventListener('visibilitychange', handleVisibilityChange)
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange)
+    }
+  }, [ready, isLooping, loopStart, loopEnd, subtitles, setActiveSubIndex, setCurrentTime])
+
   useEffect(() => {
     if (playerRef.current && ready) {
       playerRef.current.setPlaybackRate(playbackRate)
@@ -210,6 +320,7 @@ export function useYouTubePlayer(
   const play = useCallback(() => playerRef.current?.playVideo(), [])
   const pause = useCallback(() => playerRef.current?.pauseVideo(), [])
   const seekTo = useCallback((seconds: number) => playerRef.current?.seekTo(seconds, true), [])
+  const clearVideoError = useCallback(() => setVideoError(null), [])
 
-  return { ready, play, pause, seekTo, player: playerRef }
+  return { ready, play, pause, seekTo, player: playerRef, videoError, clearVideoError }
 }
