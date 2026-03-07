@@ -1,7 +1,8 @@
 'use client'
 
-import { useId, useState, useRef, useCallback, useEffect } from 'react'
+import { useId, useState, useRef, useCallback, useEffect, useMemo } from 'react'
 import { useYouTubePlayer } from '@/hooks/useYouTubePlayer'
+import { useTranscript } from '@/hooks/useTranscript'
 import { usePlayerStore } from '@/stores/usePlayerStore'
 import { SubtitleTimeline } from './SubtitleTimeline'
 import { PremiumModal } from './PremiumModal'
@@ -15,8 +16,23 @@ interface VideoPlayerProps {
   onSavePhrase?: (phrase: SubtitleEntry) => void
 }
 
-export function VideoPlayer({ youtubeId, subtitles, clipStart = 0, clipEnd = 0, onSavePhrase }: VideoPlayerProps) {
+export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0, clipEnd = 0, onSavePhrase }: VideoPlayerProps) {
   const containerId = `yt-player-${useId().replace(/:/g, '')}`
+
+  // Fetch real transcript from YouTube
+  const { subtitles: fetchedSubtitles, loading: transcriptLoading } = useTranscript(youtubeId)
+
+  // Use fetched subtitles if available, fall back to prop subtitles.
+  // Filter to clip range when clipStart/clipEnd are set so that only
+  // relevant subtitles appear in the timeline and subtitle overlay.
+  const subtitles = useMemo(() => {
+    const raw = fetchedSubtitles.length > 0 ? fetchedSubtitles : propSubtitles
+    if (clipEnd > clipStart) {
+      return raw.filter((s) => s.end > clipStart && s.start < clipEnd)
+    }
+    return raw
+  }, [fetchedSubtitles, propSubtitles, clipStart, clipEnd])
+
   const { ready, play, pause, seekTo } = useYouTubePlayer(containerId, youtubeId, clipStart, clipEnd, subtitles)
   const { subtitleMode, activeSubIndex, isPlaying, toggleSubtitleMode, subtitleGateBlocked, clearSubtitleGateBlocked } = usePlayerStore()
   const [showPauseIcon, setShowPauseIcon] = useState(false)
@@ -112,6 +128,16 @@ export function VideoPlayer({ youtubeId, subtitles, clipStart = 0, clipEnd = 0, 
         {subtitleMode === 'en' && '영어'}
         {subtitleMode === 'en-ko' && '영+한'}
       </button>
+
+      {/* Transcript loading indicator */}
+      {transcriptLoading && (
+        <div className="absolute bottom-[160px] left-0 right-0 flex justify-center z-10 pointer-events-none">
+          <div className="bg-black/60 backdrop-blur-sm rounded-full px-3 py-1.5 flex items-center gap-2">
+            <div className="w-3 h-3 border border-white/30 border-t-white rounded-full animate-spin" />
+            <span className="text-white/60 text-xs">Loading subtitles...</span>
+          </div>
+        </div>
+      )}
 
       <SubtitleTimeline
         subtitles={subtitles}

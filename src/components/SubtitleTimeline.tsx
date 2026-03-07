@@ -10,7 +10,7 @@ interface SubtitleTimelineProps {
 }
 
 export function SubtitleTimeline({ subtitles, onSavePhrase, onSeek }: SubtitleTimelineProps) {
-  const { activeSubIndex, setLoop, isLooping, loopStart, loopEnd } = usePlayerStore()
+  const { activeSubIndex, setLoop, clearLoop, isLooping, loopStart, loopEnd } = usePlayerStore()
 
   return (
     <div className="absolute bottom-[152px] left-0 right-0 px-4 z-10 pointer-events-auto">
@@ -29,8 +29,13 @@ export function SubtitleTimeline({ subtitles, onSavePhrase, onSeek }: SubtitleTi
               <button
                 onClick={(e) => {
                   e.stopPropagation()
-                  onSeek?.(sub.start)
-                  setLoop(sub.start, sub.end)
+                  // If already looping on this exact pill, clear the loop
+                  if (isLooping && loopStart === sub.start && loopEnd === sub.end) {
+                    clearLoop()
+                  } else {
+                    onSeek?.(sub.start)
+                    setLoop(sub.start, sub.end)
+                  }
                 }}
                 className={`px-3 py-1.5 rounded-l-full text-xs transition-all ${
                   isActive

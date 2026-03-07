@@ -1,4 +1,5 @@
 import type { VideoData, CategoryId } from '@/data/seed-videos'
+import { getVideosBySeries, seedVideos } from '@/data/seed-videos'
 
 interface RecommendOptions {
   /** Record of seriesId -> array of watched videoIds */
@@ -116,6 +117,29 @@ export function recommendVideos(
   const diverseUnwatched = interleaveByCategory(shuffle([...unwatched]))
   const diverseWatched = interleaveByCategory(shuffle([...watched]))
   return [...diverseUnwatched, ...diverseWatched]
+}
+
+/**
+ * Build a playlist starting from a specific episode in a series.
+ * Episodes are ordered: clicked episode first, then remaining series episodes
+ * in order, followed by recommended videos (excluding series episodes).
+ */
+export function seriesPlaylist(
+  seriesId: string,
+  startVideoId: string,
+  options: RecommendOptions = {}
+): VideoData[] {
+  const episodes = getVideosBySeries(seriesId)
+  const startIdx = episodes.findIndex(v => v.id === startVideoId)
+  // Rotate episodes so startVideoId is first, rest follow in order
+  const rotated = startIdx > 0
+    ? [...episodes.slice(startIdx), ...episodes.slice(0, startIdx)]
+    : episodes
+  // Append recommended videos (excluding series episodes) after
+  const seriesIds = new Set(episodes.map(v => v.id))
+  const others = seedVideos.filter(v => !seriesIds.has(v.id))
+  const recommended = recommendVideos(others, options)
+  return [...rotated, ...recommended]
 }
 
 /**

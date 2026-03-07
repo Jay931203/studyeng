@@ -214,7 +214,7 @@ export default function ExplorePage() {
                   return (
                     <button
                       key={video.id}
-                      onClick={() => router.push(`/?v=${video.id}`)}
+                      onClick={() => router.push(`/?v=${video.id}&series=${selectedSeries.id}`)}
                       className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-4 text-left flex items-center gap-4"
                     >
                       <div className="relative w-10 h-10 flex-shrink-0">
@@ -266,12 +266,12 @@ export default function ExplorePage() {
                         if (isComplete) {
                           // All watched - start from beginning
                           if (seriesEpisodes[0]) {
-                            router.push(`/?v=${seriesEpisodes[0].id}`)
+                            router.push(`/?v=${seriesEpisodes[0].id}&series=${selectedSeries.id}`)
                           }
                         } else if (nextId) {
-                          router.push(`/?v=${nextId}`)
+                          router.push(`/?v=${nextId}&series=${selectedSeries.id}`)
                         } else if (seriesEpisodes[0]) {
-                          router.push(`/?v=${seriesEpisodes[0].id}`)
+                          router.push(`/?v=${seriesEpisodes[0].id}&series=${selectedSeries.id}`)
                         }
                       }}
                       className="w-full py-3 bg-blue-500 text-white rounded-xl font-medium mt-2"
