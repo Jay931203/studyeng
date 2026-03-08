@@ -31,7 +31,13 @@ export default function TabsLayout({
   const { isLandscape } = useOrientation()
 
   const [checked, setChecked] = useState(false)
+  const [splashDone, setSplashDone] = useState(false)
   const [showLoginGate, setShowLoginGate] = useState(false)
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => setSplashDone(true), 1500)
+    return () => clearTimeout(timer)
+  }, [])
 
   useEffect(() => {
     if (authLoading || !onboardingHydrated) return
@@ -94,10 +100,10 @@ export default function TabsLayout({
     } catch {}
   }, [authLoading, user])
 
-  if (!checked) {
+  if (!checked || !splashDone) {
     return (
       <div className="flex h-dvh items-center justify-center bg-black">
-        <LogoFull className="h-12 text-white animate-fade-in" />
+        <LogoFull className="h-12 animate-fade-in" />
       </div>
     )
   }

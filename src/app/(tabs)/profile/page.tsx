@@ -3,14 +3,18 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { AdminIssuesList } from '@/components/AdminIssuesList'
+import { StreakDisplay } from '@/components/StreakDisplay'
 import { useAuth } from '@/hooks/useAuth'
 import { useAdminStore } from '@/stores/useAdminStore'
+import { usePhraseStore } from '@/stores/usePhraseStore'
 import { usePremiumStore } from '@/stores/usePremiumStore'
 import {
   useThemeStore,
   type ThemeAccent,
   type ThemeBackground,
 } from '@/stores/useThemeStore'
+import { useUserStore } from '@/stores/useUserStore'
+import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 
 const BACKGROUND_OPTIONS = [
   {
@@ -76,7 +80,6 @@ export default function ProfilePage() {
   const setBackgroundTheme = useThemeStore((state) => state.setBackgroundTheme)
   const setColorTheme = useThemeStore((state) => state.setColorTheme)
   const {
-    adminEmail,
     adminEnabled,
     clearFlags,
     exportReportBundle,
@@ -87,9 +90,15 @@ export default function ProfilePage() {
     setAdminEnabled,
   } = useAdminStore()
 
+  const streakDays = useUserStore((state) => state.streakDays)
+  const phraseCount = usePhraseStore((state) => state.phrases.length)
+  const totalWatched = useWatchHistoryStore((state) => state.watchedVideoIds.length)
+  const totalViews = useWatchHistoryStore((state) =>
+    Object.values(state.viewCounts).reduce((sum, count) => sum + count, 0),
+  )
   const isPremium = usePremiumStore((state) => state.isPremium)
   const setPremium = usePremiumStore((state) => state.setPremium)
-  const isAdminOwner = isAdmin && user?.email === adminEmail
+  const isAdminOwner = isAdmin
   const unresolvedCount = issues.filter((issue) => !issue.resolved).length
   const profileName =
     user?.user_metadata?.full_name ??
@@ -178,6 +187,25 @@ export default function ProfilePage() {
             )}
           </div>
         </motion.section>
+
+        <section className="mb-4 rounded-[30px] border border-[var(--border-card)] bg-[var(--bg-card)] p-5 shadow-[var(--card-shadow)]">
+          <SectionTitle title="활동" description="시청, 저장, 연속 학습 기록입니다." />
+          <StreakDisplay days={streakDays} />
+          <div className="mt-4 grid grid-cols-3 gap-3">
+            <div className="rounded-xl bg-[var(--bg-primary)] p-3 text-center">
+              <p className="text-2xl font-bold text-[var(--text-primary)]">{totalViews}</p>
+              <p className="text-xs text-[var(--text-secondary)]">총 시청</p>
+            </div>
+            <div className="rounded-xl bg-[var(--bg-primary)] p-3 text-center">
+              <p className="text-2xl font-bold text-[var(--text-primary)]">{phraseCount}</p>
+              <p className="text-xs text-[var(--text-secondary)]">저장 표현</p>
+            </div>
+            <div className="rounded-xl bg-[var(--bg-primary)] p-3 text-center">
+              <p className="text-2xl font-bold text-[var(--text-primary)]">{totalWatched}</p>
+              <p className="text-xs text-[var(--text-secondary)]">본 영상</p>
+            </div>
+          </div>
+        </section>
 
         <section className="mb-4 rounded-[30px] border border-[var(--border-card)] bg-[var(--bg-card)] p-5 shadow-[var(--card-shadow)]">
           <SectionTitle

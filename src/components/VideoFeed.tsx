@@ -384,41 +384,39 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
           </VideoPlayer>
 
           <div
-            className="absolute left-3 top-3 z-10 flex items-start gap-3"
-            style={isLandscape ? { width: 'calc(62% - 24px)' } : { right: '12px' }}
+            className="absolute left-3 right-3 top-3 z-10 flex items-center gap-2 rounded-2xl border px-3 py-1.5 backdrop-blur-md"
+            style={{
+              backgroundColor: 'var(--player-control-bg)',
+              borderColor: 'var(--player-control-border)',
+              ...(isLandscape ? { right: 'auto', width: 'calc(62% - 24px)' } : {}),
+            }}
           >
             <div className="min-w-0 flex-1">
               {seriesInfo ? (
                 <button
                   onClick={() => router.push(buildExploreSeriesUrl(currentVideo), { scroll: false })}
-                  className="block w-full truncate rounded-lg border px-2.5 py-1.5 text-left text-xs font-medium backdrop-blur-sm"
-                  style={{
-                    backgroundColor: 'var(--player-control-bg)',
-                    borderColor: 'var(--player-control-border)',
-                    color: 'var(--player-text)',
-                  }}
+                  className="block w-full truncate text-left text-xs font-medium"
+                  style={{ color: 'var(--player-text)' }}
                 >
                   {seriesInfo.title}
                   {currentVideo.episodeNumber != null && ` Ep.${currentVideo.episodeNumber}`}
                 </button>
               ) : (
                 <span
-                  className="block w-full truncate rounded-lg border px-2.5 py-1.5 text-xs font-medium backdrop-blur-sm"
-                  style={{
-                    backgroundColor: 'var(--player-control-bg)',
-                    borderColor: 'var(--player-control-border)',
-                    color: 'var(--player-text)',
-                  }}
+                  className="block w-full truncate text-xs font-medium"
+                  style={{ color: 'var(--player-text)' }}
                 >
                   {currentVideo.title}
                 </span>
               )}
             </div>
 
+            <div className="h-4 w-px shrink-0" style={{ backgroundColor: 'var(--player-divider)' }} />
+
             <UnifiedControls
               videoId={currentVideo.id}
               videoTitle={currentVideo.title}
-              className="inline-flex shrink-0 items-center gap-0.5 rounded-full border px-1.5 py-1 backdrop-blur-md"
+              className="inline-flex shrink-0 items-center gap-0.5"
             />
           </div>
           <div

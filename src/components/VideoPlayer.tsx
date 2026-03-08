@@ -104,10 +104,7 @@ export function VideoPlayer({
   )
 
   const progressArea = (
-    <div
-      className="flex-shrink-0 px-4 pb-3 pt-2"
-      style={{ borderTop: `1px solid var(--player-divider)` }}
-    >
+    <div className="flex-shrink-0 px-4 pb-3 pt-2">
       <ProgressBar />
     </div>
   )
@@ -263,7 +260,6 @@ export function VideoPlayer({
   return (
     <div className="flex h-full w-full flex-col" style={{ backgroundColor: 'var(--player-surface)' }}>
       {videoArea}
-      <div className="h-px w-full flex-shrink-0" style={{ backgroundColor: 'var(--player-divider)' }} />
       <div className="h-[176px] flex-shrink-0" style={{ backgroundColor: 'var(--player-surface)' }}>
         {subtitleArea}
       </div>
