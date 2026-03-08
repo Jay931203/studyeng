@@ -1,6 +1,15 @@
 'use client'
 
-import { useId, useState, useRef, useEffect, useMemo, type CSSProperties, type ReactNode } from 'react'
+import {
+  memo,
+  useId,
+  useState,
+  useRef,
+  useEffect,
+  useMemo,
+  type CSSProperties,
+  type ReactNode,
+} from 'react'
 import { useYouTubePlayer } from '@/hooks/useYouTubePlayer'
 import { useTranscript } from '@/hooks/useTranscript'
 import { usePlayerStore, seekToRef, playRef, pauseRef } from '@/stores/usePlayerStore'
@@ -23,6 +32,10 @@ interface VideoPlayerProps {
   initialSeekTime?: number
   children?: ReactNode
 }
+
+const PlayerMount = memo(function PlayerMount({ containerId }: { containerId: string }) {
+  return <div id={containerId} className="h-full w-full" />
+})
 
 export function VideoPlayer({
   videoId,
@@ -169,12 +182,9 @@ export function VideoPlayer({
       onClick={handleTap}
       style={{ backgroundColor: 'var(--player-surface)' }}
     >
-      <div
-        className="pointer-events-none absolute inset-0"
-        dangerouslySetInnerHTML={{
-          __html: `<div id="${containerId}" class="h-full w-full"></div>`,
-        }}
-      />
+      <div className="pointer-events-none absolute inset-0">
+        <PlayerMount containerId={containerId} />
+      </div>
 
       {showPauseIcon && (
         <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center">
