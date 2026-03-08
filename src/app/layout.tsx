@@ -15,8 +15,8 @@ const displayFont = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Shortee - 영어는 장면으로 남는다',
-  description: '짧은 장면을 넘기다 보면 영어가 따라오는 숏폼 앱',
+  title: 'Shortee - 보다 보면 귀가 먼저 익숙해집니다',
+  description: '짧은 장면과 반복으로 영어가 덜 낯설어지는 쇼츠 피드',
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
@@ -24,16 +24,16 @@ export const metadata: Metadata = {
     title: 'Shortee',
   },
   openGraph: {
-    title: 'Shortee - 영어는 장면으로 남는다',
-    description: '짧은 장면을 넘기다 보면 영어가 따라오는 숏폼 앱',
+    title: 'Shortee - 보다 보면 귀가 먼저 익숙해집니다',
+    description: '짧은 장면과 반복으로 영어가 덜 낯설어지는 쇼츠 피드',
     type: 'website',
     locale: 'ko_KR',
     siteName: 'Shortee',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shortee - 영어는 장면으로 남는다',
-    description: '짧은 장면을 넘기다 보면 영어가 따라오는 숏폼 앱',
+    title: 'Shortee - 보다 보면 귀가 먼저 익숙해집니다',
+    description: '짧은 장면과 반복으로 영어가 덜 낯설어지는 쇼츠 피드',
   },
 }
 

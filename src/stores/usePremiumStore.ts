@@ -1,5 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
+import { isPremiumEnforcementEnabled } from '@/lib/billing'
+import { usePhraseStore } from '@/stores/usePhraseStore'
 
 const FREE_DAILY_VIEW_LIMIT = 5
 const FREE_SAVED_PHRASES_LIMIT = 20
@@ -7,6 +9,10 @@ const FREE_SAVED_PHRASES_LIMIT = 20
 function getTodayString(): string {
   const now = new Date()
   return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(now.getDate()).padStart(2, '0')}`
+}
+
+function getSavedPhraseCount() {
+  return usePhraseStore.getState().phrases.length
 }
 
 interface PremiumState {
@@ -18,9 +24,9 @@ interface PremiumState {
   incrementDailyView: () => boolean
   canViewMore: () => boolean
   canSaveMorePhrases: () => boolean
-  setPremium: (value: boolean) => void
   setPremiumEntitlement: (value: boolean) => void
   resetDailyCount: () => void
+  resetState: () => void
   incrementSavedPhrases: () => void
   getDailyViewsRemaining: () => number
 }
@@ -35,7 +41,7 @@ export const usePremiumStore = create<PremiumState>()(
 
       incrementDailyView: () => {
         const state = get()
-        if (state.isPremium) return true
+        if (!isPremiumEnforcementEnabled() || state.isPremium) return true
 
         const today = getTodayString()
 
@@ -55,7 +61,7 @@ export const usePremiumStore = create<PremiumState>()(
 
       canViewMore: () => {
         const state = get()
-        if (state.isPremium) return true
+        if (!isPremiumEnforcementEnabled() || state.isPremium) return true
 
         const today = getTodayString()
         if (state.lastViewDate !== today) return true
@@ -65,22 +71,31 @@ export const usePremiumStore = create<PremiumState>()(
 
       canSaveMorePhrases: () => {
         const state = get()
-        if (state.isPremium) return true
-        return state.savedPhrasesUsed < FREE_SAVED_PHRASES_LIMIT
+        if (!isPremiumEnforcementEnabled() || state.isPremium) return true
+        return getSavedPhraseCount() < FREE_SAVED_PHRASES_LIMIT
       },
 
-      setPremium: (value) => set({ isPremium: value }),
       setPremiumEntitlement: (value) => set({ isPremium: value }),
 
       resetDailyCount: () => set({ dailyViewCount: 0, lastViewDate: null }),
 
+      resetState: () =>
+        set({
+          isPremium: false,
+          dailyViewCount: 0,
+          lastViewDate: null,
+          savedPhrasesUsed: 0,
+        }),
+
       incrementSavedPhrases: () => {
-        set((state) => ({ savedPhrasesUsed: state.savedPhrasesUsed + 1 }))
+        set((state) => ({
+          savedPhrasesUsed: Math.max(state.savedPhrasesUsed, getSavedPhraseCount()),
+        }))
       },
 
       getDailyViewsRemaining: () => {
         const state = get()
-        if (state.isPremium) return Infinity
+        if (!isPremiumEnforcementEnabled() || state.isPremium) return Infinity
 
         const today = getTodayString()
         if (state.lastViewDate !== today) return FREE_DAILY_VIEW_LIMIT

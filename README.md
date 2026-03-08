@@ -23,6 +23,7 @@ npm run build
 - [Brand OS](./docs/reports/2026-03-08-shortee-brand-os.md)
 - [Brand UI handoff](./docs/reports/2026-03-08-shortee-brand-ui-handoff.md)
 - [OMX brand playbook](./docs/reports/2026-03-08-shortee-omx-brand-playbook.md)
+- [Brand council review](./docs/reports/2026-03-08-shortee-brand-council-review.md)
 - [Brand and growth command center](./docs/reports/2026-03-08-shortee-brand-command-center.md)
 - [Store launch kit](./docs/reports/2026-03-08-shortee-store-launch-kit.md)
 - [Channel growth playbook](./docs/reports/2026-03-08-shortee-channel-growth-playbook.md)

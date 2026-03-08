@@ -17,11 +17,11 @@ Use **`Shortee`** everywhere user-facing.
 
 ### Brand sentence
 
-> **재밌는 장면을 넘기다 보면 영어가 따라온다.**
+> **보다 보면 귀가 먼저 익숙해진다.**
 
 ### Working tagline
 
-- Korean: **영어를 공부하지 말고, 장면을 즐겨라**
+- Korean: **보다 보면 귀가 먼저 익숙해진다**
 - English: **Play the clip. English follows.**
 
 ### Positioning
