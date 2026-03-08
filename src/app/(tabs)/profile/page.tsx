@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { AdminIssuesList } from '@/components/AdminIssuesList'
 import { useAuth } from '@/hooks/useAuth'
 import { useAdminStore } from '@/stores/useAdminStore'
+import { usePremiumStore } from '@/stores/usePremiumStore'
 import {
   useThemeStore,
   type ThemeAccent,
@@ -86,6 +87,8 @@ export default function ProfilePage() {
     setAdminEnabled,
   } = useAdminStore()
 
+  const isPremium = usePremiumStore((state) => state.isPremium)
+  const setPremium = usePremiumStore((state) => state.setPremium)
   const isAdminOwner = isAdmin && user?.email === adminEmail
   const unresolvedCount = issues.filter((issue) => !issue.resolved).length
   const profileName =
@@ -280,6 +283,29 @@ export default function ProfilePage() {
                 <span
                   className={`absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white transition-transform ${
                     adminEnabled ? 'translate-x-5' : ''
+                  }`}
+                />
+              </button>
+            </div>
+
+            <div className="mt-3 flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
+              <div>
+                <p className="text-sm font-medium text-[var(--text-primary)]">프리미엄 모드</p>
+                <p className="text-xs text-[var(--text-muted)]">
+                  프리미엄 기능 잠금을 해제합니다.
+                </p>
+              </div>
+              <button
+                onClick={() => setPremium(!isPremium)}
+                className={`relative h-6 w-11 rounded-full ${
+                  isPremium ? 'bg-[var(--accent-primary)]' : 'bg-[var(--bg-secondary)]'
+                }`}
+                role="switch"
+                aria-checked={isPremium}
+              >
+                <span
+                  className={`absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white transition-transform ${
+                    isPremium ? 'translate-x-5' : ''
                   }`}
                 />
               </button>
