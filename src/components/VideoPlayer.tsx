@@ -3,7 +3,7 @@
 import { useId, useState, useRef, useCallback, useEffect, useMemo, type CSSProperties, type ReactNode } from 'react'
 import { useYouTubePlayer } from '@/hooks/useYouTubePlayer'
 import { useTranscript } from '@/hooks/useTranscript'
-import { usePlayerStore, seekToRef } from '@/stores/usePlayerStore'
+import { usePlayerStore, seekToRef, playRef, pauseRef } from '@/stores/usePlayerStore'
 import { LyricsSubtitles } from './LyricsSubtitles'
 import { ProgressBar } from './ProgressBar'
 import type { SubtitleEntry } from '@/data/seed-videos'
@@ -17,6 +17,7 @@ interface VideoPlayerProps {
   onSavePhrase?: (phrase: SubtitleEntry) => void
   onClipComplete?: () => void
   onVideoErrorSkip?: () => void
+  onEmbedBlocked?: () => void
   isLandscape?: boolean
   initialSeekTime?: number
   children?: ReactNode
@@ -31,6 +32,7 @@ export function VideoPlayer({
   onSavePhrase,
   onClipComplete,
   onVideoErrorSkip,
+  onEmbedBlocked,
   isLandscape = false,
   initialSeekTime,
   children,
@@ -48,7 +50,16 @@ export function VideoPlayer({
   }, [clipEnd, clipStart, fetchedSubtitles, propSubtitles])
 
   const { ready, playbackStarted, play, pause, seekTo, videoError, clearVideoError } =
-    useYouTubePlayer(containerId, youtubeId, clipStart, clipEnd, subtitles, onClipComplete, initialSeekTime)
+    useYouTubePlayer(
+      containerId,
+      youtubeId,
+      clipStart,
+      clipEnd,
+      subtitles,
+      onClipComplete,
+      initialSeekTime,
+      onEmbedBlocked,
+    )
   const isPlaying = usePlayerStore((state) => state.isPlaying)
 
   const [overlayVisible, setOverlayVisible] = useState(true)
@@ -71,6 +82,15 @@ export function VideoPlayer({
       seekToRef.current = null
     }
   }, [seekTo])
+
+  useEffect(() => {
+    playRef.current = play
+    pauseRef.current = pause
+    return () => {
+      playRef.current = null
+      pauseRef.current = null
+    }
+  }, [play, pause])
 
   useEffect(() => {
     return () => {

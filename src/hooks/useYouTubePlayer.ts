@@ -122,6 +122,7 @@ export function useYouTubePlayer(
   subtitles: SubtitleEntry[] = [],
   onClipComplete?: () => void,
   initialSeekTime?: number,
+  onEmbedBlocked?: () => void,
 ) {
   const playerRef = useRef<YT.Player | null>(null)
   const intervalRef = useRef<number | null>(null)
@@ -157,6 +158,10 @@ export function useYouTubePlayer(
 
   const handleClipComplete = useEffectEvent(() => {
     onClipComplete?.()
+  })
+
+  const handleEmbedBlocked = useEffectEvent(() => {
+    onEmbedBlocked?.()
   })
 
   const handlePlayerTick = useEffectEvent(() => {
@@ -384,6 +389,10 @@ export function useYouTubePlayer(
               sessionKey: playerSessionKey,
               message: getVideoErrorMessage(event.data),
             })
+
+            if (event.data === 101 || event.data === 150) {
+              handleEmbedBlocked()
+            }
           },
         },
       })
@@ -406,6 +415,7 @@ export function useYouTubePlayer(
     clipStart,
     containerId,
     initialSeekTime,
+    onEmbedBlocked,
     playerSessionKey,
     setActiveSubIndex,
     setClipBounds,

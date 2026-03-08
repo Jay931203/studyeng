@@ -1,7 +1,7 @@
 'use client'
 
 import { AnimatePresence, motion, type PanInfo } from 'framer-motion'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { series as allSeries, type VideoData } from '@/data/seed-videos'
 import { useOrientation } from '@/hooks/useOrientation'
@@ -25,6 +25,8 @@ interface VideoFeedProps {
   initialSeekTime?: number
 }
 
+const EMBED_BLOCKED_STORAGE_KEY = 'studyeng-embed-blocked-videos'
+
 function buildExploreSeriesUrl(video: VideoData) {
   const params = new URLSearchParams()
 
@@ -42,6 +44,17 @@ function buildExploreSeriesUrl(video: VideoData) {
 export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeedProps) {
   const router = useRouter()
   const { isLandscape } = useOrientation()
+  const [embedBlockedVideoIds, setEmbedBlockedVideoIds] = useState<string[]>(() => {
+    if (typeof window === 'undefined') return []
+
+    try {
+      const parsed = JSON.parse(window.localStorage.getItem(EMBED_BLOCKED_STORAGE_KEY) ?? '[]')
+      return Array.isArray(parsed) ? parsed.filter((value) => typeof value === 'string') : []
+    } catch {
+      return []
+    }
+  })
+  const embedBlockedIdSet = useMemo(() => new Set(embedBlockedVideoIds), [embedBlockedVideoIds])
   const [currentIndex, setCurrentIndex] = useState(() => {
     if (videos.length === 0) return 0
     const targetIndex = initialVideoId
@@ -90,8 +103,56 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
   const currentVideo = videos[currentIndex]
 
   useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    try {
+      window.localStorage.setItem(
+        EMBED_BLOCKED_STORAGE_KEY,
+        JSON.stringify(embedBlockedVideoIds.slice(-200)),
+      )
+    } catch {
+      // Ignore storage write failures.
+    }
+  }, [embedBlockedVideoIds])
+
+  const findPlayableIndex = useCallback(
+    (startIndex: number, step: 1 | -1) => {
+      for (
+        let index = startIndex;
+        index >= 0 && index < videos.length;
+        index += step
+      ) {
+        if (!embedBlockedIdSet.has(videos[index].id)) {
+          return index
+        }
+      }
+
+      return -1
+    },
+    [embedBlockedIdSet, videos],
+  )
+
+  useEffect(() => {
     playbackMetricsRef.current = { currentTime, clipStart, clipEnd }
   }, [clipEnd, clipStart, currentTime])
+
+  useEffect(() => {
+    if (!currentVideo) return
+    if (!embedBlockedIdSet.has(currentVideo.id)) return
+
+    const forwardIndex = findPlayableIndex(currentIndex + 1, 1)
+    if (forwardIndex >= 0) {
+      setDirection(1)
+      setCurrentIndex(forwardIndex)
+      return
+    }
+
+    const backwardIndex = findPlayableIndex(currentIndex - 1, -1)
+    if (backwardIndex >= 0) {
+      setDirection(-1)
+      setCurrentIndex(backwardIndex)
+    }
+  }, [currentIndex, currentVideo, embedBlockedIdSet, findPlayableIndex])
 
   const finalizeVideoSession = useCallback(
     (videoId: string, completed: boolean) => {
@@ -180,12 +241,13 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
   }, [])
 
   const moveToNextVideo = useCallback(() => {
-    if (currentIndex >= videos.length - 1) {
+    const nextPlayableIndex = findPlayableIndex(currentIndex + 1, 1)
+    if (nextPlayableIndex < 0) {
       resetRepeatCount()
       return false
     }
 
-    const nextVideo = videos[currentIndex + 1]
+    const nextVideo = videos[nextPlayableIndex]
     const alreadyWatched = nextVideo ? getViewCount(nextVideo.id) > 0 : false
 
     if (!alreadyWatched) {
@@ -203,11 +265,12 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
 
     resetRepeatCount()
     setDirection(1)
-    setCurrentIndex((prev) => prev + 1)
+    setCurrentIndex(nextPlayableIndex)
     return true
   }, [
     currentIndex,
     currentVideo,
+    findPlayableIndex,
     finalizeVideoSession,
     getViewCount,
     incrementDailyView,
@@ -254,7 +317,8 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
   }, [moveToNextVideo])
 
   const handlePrevVideo = useCallback(() => {
-    if (currentIndex <= 0) return
+    const previousPlayableIndex = findPlayableIndex(currentIndex - 1, -1)
+    if (previousPlayableIndex < 0) return
 
     if (currentVideo) {
       finalizeVideoSession(currentVideo.id, false)
@@ -262,8 +326,19 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
 
     resetRepeatCount()
     setDirection(-1)
-    setCurrentIndex((prev) => prev - 1)
-  }, [currentIndex, currentVideo, finalizeVideoSession, resetRepeatCount])
+    setCurrentIndex(previousPlayableIndex)
+  }, [currentIndex, currentVideo, finalizeVideoSession, findPlayableIndex, resetRepeatCount])
+
+  const handleEmbedBlocked = useCallback(() => {
+    if (!currentVideo) return
+
+    setEmbedBlockedVideoIds((state) => {
+      if (state.includes(currentVideo.id)) return state
+      return [...state, currentVideo.id]
+    })
+
+    moveToNextVideo()
+  }, [currentVideo, moveToNextVideo])
 
   const handleDragEnd = useCallback(
     (_: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
@@ -317,6 +392,7 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
             isLandscape={isLandscape}
             onClipComplete={handleClipComplete}
             onVideoErrorSkip={currentIndex < videos.length - 1 ? handleNextVideo : undefined}
+            onEmbedBlocked={handleEmbedBlocked}
             initialSeekTime={currentIndex === 0 ? initialSeekTime : undefined}
             onSavePhrase={(phrase) => {
               if (!canSaveMorePhrases()) {
