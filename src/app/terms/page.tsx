@@ -28,7 +28,7 @@ export default function TermsPage() {
         <section>
           <h2 className="text-base font-bold text-[var(--text-primary)] mb-3">제1조 (목적)</h2>
           <p>
-            이 약관은 StudyEng(이하 &quot;회사&quot;)이 제공하는 영어 학습 서비스(이하 &quot;서비스&quot;)의
+            이 약관은 Shortee(이하 &quot;회사&quot;)이 제공하는 영어 학습 서비스(이하 &quot;서비스&quot;)의
             이용 조건 및 절차, 회사와 이용자 간의 권리, 의무 및 책임사항을 규정함을 목적으로 합니다.
           </p>
         </section>

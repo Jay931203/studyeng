@@ -3,25 +3,25 @@ import { ThemeProvider } from '@/components/ThemeProvider'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'StudyEng - 영어 공부',
-  description: '숏폼으로 쉽고 재밌게 영어 공부',
+  title: 'Shortee - Learn English with Shorts',
+  description: 'Learn English with Shorts',
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
-    title: 'StudyEng',
+    title: 'Shortee',
   },
   openGraph: {
-    title: 'StudyEng - 숏폼으로 영어 공부',
-    description: '유튜브 영상으로 쉽고 재밌게 영어를 배워요. 자막, 게임, 반복학습까지.',
+    title: 'Shortee - Learn English with Shorts',
+    description: 'Learn English with Shorts',
     type: 'website',
     locale: 'ko_KR',
-    siteName: 'StudyEng',
+    siteName: 'Shortee',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'StudyEng - 숏폼으로 영어 공부',
-    description: '유튜브 영상으로 쉽고 재밌게 영어를 배워요',
+    title: 'Shortee - Learn English with Shorts',
+    description: 'Learn English with Shorts',
   },
 }
 
@@ -40,7 +40,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ko" className="dark" data-theme="purple-dark">
+    <html
+      lang="ko"
+      className="dark"
+      data-theme="purple-dark"
+      suppressHydrationWarning
+    >
       <head>
         <script dangerouslySetInnerHTML={{ __html: `
           try {

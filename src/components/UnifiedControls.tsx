@@ -13,9 +13,10 @@ const REPEAT_CYCLE = ['off', 'x2', 'x3'] as const
 interface UnifiedControlsProps {
   videoId?: string
   videoTitle?: string
+  className?: string
 }
 
-export function UnifiedControls({ videoId, videoTitle }: UnifiedControlsProps) {
+export function UnifiedControls({ videoId, videoTitle, className }: UnifiedControlsProps) {
   const {
     subtitleMode,
     toggleSubtitleMode,
@@ -38,13 +39,13 @@ export function UnifiedControls({ videoId, videoTitle }: UnifiedControlsProps) {
 
       const shareUrl = `${window.location.origin}${buildShortsUrl(videoId)}`
       const shareText = videoTitle
-        ? `${videoTitle} - StudyEng에서 영어 배우기`
-        : 'StudyEng에서 영어 배우기'
+        ? `${videoTitle} - Shortee에서 영어 배우기`
+        : 'Shortee에서 영어 배우기'
 
       if (typeof navigator !== 'undefined' && navigator.share) {
         try {
           await navigator.share({
-            title: videoTitle ?? 'StudyEng',
+            title: videoTitle ?? 'Shortee',
             text: shareText,
             url: shareUrl,
           })
@@ -82,7 +83,10 @@ export function UnifiedControls({ videoId, videoTitle }: UnifiedControlsProps) {
   return (
     <>
       <div
-        className="absolute right-3 top-3 z-10 flex items-center gap-0.5 rounded-full border px-1.5 py-1 backdrop-blur-md"
+        className={
+          className ??
+          'inline-flex items-center gap-0.5 rounded-full border px-1.5 py-1 backdrop-blur-md'
+        }
         style={{
           backgroundColor: 'var(--player-control-bg)',
           borderColor: 'var(--player-control-border)',

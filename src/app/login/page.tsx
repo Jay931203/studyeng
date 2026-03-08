@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { Suspense, useEffect, useMemo } from 'react'
+import { Logo } from '@/components/Logo'
 import { useAuth } from '@/hooks/useAuth'
 
 function LoginPageContent() {
@@ -28,7 +29,7 @@ function LoginPageContent() {
         <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--accent-text)]">
           Sign in
         </p>
-        <h1 className="mt-4 text-5xl font-black text-[var(--text-primary)]">StudyEng</h1>
+        <Logo className="h-10 mx-auto mt-4 text-[var(--text-primary)]" />
         <p className="mt-4 text-base leading-relaxed text-[var(--text-secondary)]">
           로그인 후 한 번만 취향을 설정하면
           <br />

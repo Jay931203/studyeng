@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
+import { Logo } from '@/components/Logo'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useAuth } from '@/hooks/useAuth'
 
@@ -101,7 +102,7 @@ export default function OnboardingPage() {
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--accent-text)]">
                   Welcome
                 </p>
-                <h1 className="mb-3 mt-4 text-3xl font-black text-white">StudyEng</h1>
+                <Logo className="h-8 mx-auto mt-4 mb-3 text-white" />
                 <p className="mb-12 text-lg leading-relaxed text-gray-400">
                   로그인 후 처음 한 번만 취향을 맞추면
                   <br />
