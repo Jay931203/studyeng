@@ -5,6 +5,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { series as allSeries, type VideoData } from '@/data/seed-videos'
 import { useOrientation } from '@/hooks/useOrientation'
+import { getCatalogVideosBySeries } from '@/lib/catalog'
 import { readEmbedBlockedVideoIds, writeEmbedBlockedVideoIds } from '@/lib/embedBlocklist'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
@@ -25,20 +26,6 @@ interface VideoFeedProps {
   initialVideoId?: string
   initialSeekTime?: number
   initialReviewPhraseId?: string
-}
-
-function buildExploreSeriesUrl(video: VideoData) {
-  const params = new URLSearchParams()
-
-  if (video.seriesId) {
-    params.set('series', video.seriesId)
-    params.set('returnSeriesId', video.seriesId)
-  }
-
-  params.set('source', 'shorts')
-  params.set('returnVideoId', video.id)
-
-  return `/explore?${params.toString()}`
 }
 
 export function VideoFeed({
@@ -63,6 +50,7 @@ export function VideoFeed({
   const [direction, setDirection] = useState(0)
   const [showToast, setShowToast] = useState(false)
   const [showPremiumModal, setShowPremiumModal] = useState(false)
+  const [showSeriesEpisodes, setShowSeriesEpisodes] = useState(false)
   const [premiumTrigger, setPremiumTrigger] = useState<'video-limit' | 'phrase-limit'>(
     'video-limit',
   )
@@ -101,6 +89,10 @@ export function VideoFeed({
   const clipStart = usePlayerStore((state) => state.clipStart)
   const clipEnd = usePlayerStore((state) => state.clipEnd)
   const currentVideo = videos[currentIndex]
+  const seriesEpisodes = useMemo(
+    () => (currentVideo?.seriesId ? getCatalogVideosBySeries(currentVideo.seriesId) : []),
+    [currentVideo],
+  )
 
   useEffect(() => {
     writeEmbedBlockedVideoIds(embedBlockedVideoIds)
@@ -201,33 +193,6 @@ export function VideoFeed({
     markWatched,
     registerImpression,
   ])
-
-  useEffect(() => {
-    if (!currentVideo || typeof window === 'undefined') return
-
-    const params = new URLSearchParams()
-    params.set('v', currentVideo.id)
-    if (currentVideo.seriesId) {
-      params.set('series', currentVideo.seriesId)
-    }
-    if (
-      currentIndex === 0 &&
-      currentVideo.id === initialVideoId &&
-      initialSeekTime !== undefined &&
-      Number.isFinite(initialSeekTime)
-    ) {
-      params.set('t', String(initialSeekTime))
-      if (initialReviewPhraseId) {
-        params.set('phraseId', initialReviewPhraseId)
-      }
-    }
-    const nextUrl = `/shorts?${params.toString()}`
-    const currentUrl = `${window.location.pathname}${window.location.search}`
-
-    if (currentUrl !== nextUrl) {
-      window.history.replaceState(window.history.state, '', nextUrl)
-    }
-  }, [currentIndex, currentVideo, initialReviewPhraseId, initialSeekTime, initialVideoId])
 
   useEffect(() => {
     return () => {
@@ -480,17 +445,19 @@ export function VideoFeed({
                 : {}),
             }}
           >
-            <div
+            <button
+              onClick={() => router.push('/explore')}
               className="flex h-10 w-10 items-center justify-center rounded-2xl"
               style={{
                 backgroundColor: 'var(--player-panel)',
                 color: 'var(--accent-text)',
               }}
+              aria-label="홈으로"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
-                <path d="M6.75 5.653c0-1.336 1.433-2.183 2.603-1.54l9.161 5.036c1.211.666 1.211 2.404 0 3.07l-9.16 5.036c-1.171.643-2.604-.204-2.604-1.54V5.653Z" />
+                <path d="M11.47 3.84a.75.75 0 0 1 1.06 0l7 7a.75.75 0 1 1-1.06 1.06L18 11.44V19.5a.75.75 0 0 1-.75.75h-3.5a.75.75 0 0 1-.75-.75v-4h-2v4a.75.75 0 0 1-.75.75h-3.5A.75.75 0 0 1 6 19.5v-8.06l-.47.46a.75.75 0 0 1-1.06-1.06l7-7Z" />
               </svg>
-            </div>
+            </button>
 
             <div className="min-w-0 flex-1">
               <p className="text-[10px] font-semibold uppercase tracking-[0.18em]" style={{ color: 'var(--player-muted)' }}>
@@ -498,7 +465,7 @@ export function VideoFeed({
               </p>
               {seriesInfo ? (
                 <button
-                  onClick={() => router.push(buildExploreSeriesUrl(currentVideo), { scroll: false })}
+                  onClick={() => setShowSeriesEpisodes((current) => !current)}
                   className="mt-1 block w-full truncate text-left text-sm font-semibold"
                   style={{ color: 'var(--player-text)' }}
                 >
@@ -527,6 +494,60 @@ export function VideoFeed({
               className="inline-flex shrink-0 items-center gap-0.5"
             />
           </div>
+          {seriesInfo && showSeriesEpisodes && seriesEpisodes.length > 0 && (
+            <div
+              className="absolute left-3 right-3 top-[68px] z-10 overflow-x-auto rounded-[22px] border px-3 py-3 backdrop-blur-md"
+              style={{
+                backgroundColor: 'var(--player-control-bg)',
+                borderColor: 'var(--player-control-border)',
+                ...(isLandscape
+                  ? {
+                      left: 'max(12px, env(safe-area-inset-left, 0px))',
+                      right: 'auto',
+                      width: 'calc(62% - 24px)',
+                    }
+                  : {}),
+              }}
+            >
+              <div className="flex gap-2">
+                {seriesEpisodes.map((episode) => {
+                  const active = episode.id === currentVideo.id
+                  return (
+                    <button
+                      key={episode.id}
+                      onClick={() => {
+                        const nextIndex = videos.findIndex((video) => video.id === episode.id)
+                        if (nextIndex >= 0) {
+                          setDirection(nextIndex > currentIndex ? 1 : -1)
+                          setCurrentIndex(nextIndex)
+                        } else {
+                          router.push(`/shorts?v=${episode.id}&series=${seriesInfo.id}`, {
+                            scroll: false,
+                          })
+                        }
+                      }}
+                      className={`min-w-[88px] rounded-2xl px-3 py-2 text-left ${
+                        active ? 'bg-[var(--accent-glow)]' : 'bg-[var(--player-panel)]'
+                      }`}
+                    >
+                      <p
+                        className="text-[10px] font-semibold uppercase"
+                        style={{ color: active ? 'var(--accent-text)' : 'var(--player-muted)' }}
+                      >
+                        Ep.{episode.episodeNumber ?? 0}
+                      </p>
+                      <p
+                        className="mt-1 truncate text-xs font-medium"
+                        style={{ color: 'var(--player-text)' }}
+                      >
+                        {episode.title}
+                      </p>
+                    </button>
+                  )
+                })}
+              </div>
+            </div>
+          )}
           <div
             className={`pointer-events-none absolute top-0 z-[5] h-[100px] ${
               isLandscape ? 'left-0' : 'left-0 right-0'
