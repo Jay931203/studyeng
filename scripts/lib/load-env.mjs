@@ -18,7 +18,7 @@ export function loadEnv() {
 
   for (const path of candidates) {
     if (existsSync(path)) {
-      dotenv.config({ path, override: false })
+      dotenv.config({ path, override: false, quiet: true })
     }
   }
 

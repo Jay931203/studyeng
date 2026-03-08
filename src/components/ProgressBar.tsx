@@ -148,7 +148,7 @@ export function ProgressBar({ className = '', style }: ProgressBarProps) {
 
   return (
     <div
-      className={`absolute z-30 transition-opacity duration-200 ${isSwiping ? 'opacity-0 pointer-events-none' : 'opacity-100'} ${className}`}
+      className={`z-30 w-full transition-opacity duration-200 ${isSwiping ? 'opacity-0 pointer-events-none' : 'opacity-100'} ${className}`}
       style={style}
     >
       {/* Touch target: tall (24px) transparent area for easy tapping/dragging */}
@@ -164,14 +164,17 @@ export function ProgressBar({ className = '', style }: ProgressBarProps) {
       >
         {/* Visual track */}
         <div
-          className="w-full bg-white/30 overflow-visible transition-[height] duration-150"
-          style={{ height: isDragging ? '5px' : '3px' }}
+          className="w-full overflow-visible rounded-full transition-[height] duration-150"
+          style={{
+            backgroundColor: 'var(--player-progress-track)',
+            height: isDragging ? '5px' : '3px',
+          }}
         >
           {/* Filled portion */}
           <div
             ref={barRef}
-            className="h-full bg-white/80 relative"
-            style={{ width: '0%' }}
+            className="relative h-full rounded-full"
+            style={{ backgroundColor: 'var(--player-progress-fill)', width: '0%' }}
           />
         </div>
 
@@ -187,8 +190,8 @@ export function ProgressBar({ className = '', style }: ProgressBarProps) {
           }}
         >
           <div
-            className="rounded-full bg-white shadow-md"
-            style={{ width: '12px', height: '12px' }}
+            className="rounded-full shadow-md"
+            style={{ backgroundColor: 'var(--player-progress-knob)', width: '12px', height: '12px' }}
           />
         </div>
       </div>

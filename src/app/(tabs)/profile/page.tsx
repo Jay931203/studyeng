@@ -5,18 +5,55 @@ import Link from 'next/link'
 import { useAuth } from '@/hooks/useAuth'
 import { useAdminStore } from '@/stores/useAdminStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
-import { useThemeStore, type ThemeId } from '@/stores/useThemeStore'
+import {
+  useThemeStore,
+  type ThemeAccent,
+  type ThemeBackground,
+} from '@/stores/useThemeStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { StreakDisplay } from '@/components/StreakDisplay'
 import { AdminIssuesList } from '@/components/AdminIssuesList'
 
-const THEME_OPTIONS = [
-  { id: 'purple-dark' as const, label: '블랙 · 보라', swatch: 'bg-black border-purple-500', dot: 'bg-purple-500' },
-  { id: 'blue-dark' as const, label: '블랙 · 블루', swatch: 'bg-black border-blue-500', dot: 'bg-blue-500' },
-  { id: 'light' as const, label: '화이트 · 보라', swatch: 'bg-white border-purple-600', dot: 'bg-purple-600' },
-  { id: 'light-blue' as const, label: '화이트 · 블루', swatch: 'bg-white border-blue-600', dot: 'bg-blue-600' },
-] satisfies Array<{ id: ThemeId; label: string; swatch: string; dot: string }>
+const BACKGROUND_OPTIONS = [
+  {
+    id: 'dark' as const,
+    label: '다크',
+    description: '쇼츠와 플레이어를 어둡게 봅니다.',
+    previewClass: 'bg-[#050505] border-white/10',
+  },
+  {
+    id: 'light' as const,
+    label: '라이트',
+    description: '쇼츠와 플레이어를 밝게 봅니다.',
+    previewClass: 'bg-[#f8fafc] border-slate-300',
+  },
+] satisfies Array<{
+  id: ThemeBackground
+  label: string
+  description: string
+  previewClass: string
+}>
+
+const COLOR_OPTIONS = [
+  {
+    id: 'violet' as const,
+    label: '바이올렛',
+    description: '프리즈와 강조 포인트를 보라로 맞춥니다.',
+    swatchClass: 'bg-violet-500',
+  },
+  {
+    id: 'blue' as const,
+    label: '블루',
+    description: '프리즈와 강조 포인트를 블루로 맞춥니다.',
+    swatchClass: 'bg-blue-500',
+  },
+] satisfies Array<{
+  id: ThemeAccent
+  label: string
+  description: string
+  swatchClass: string
+}>
 
 function Stat({ value, label }: { value: number; label: string }) {
   return (
@@ -29,7 +66,10 @@ function Stat({ value, label }: { value: number; label: string }) {
 
 export default function ProfilePage() {
   const { user, loading, signInWithGoogle, signInWithKakao, signOut } = useAuth()
-  const { theme, setTheme } = useThemeStore()
+  const backgroundTheme = useThemeStore((state) => state.backgroundTheme)
+  const colorTheme = useThemeStore((state) => state.colorTheme)
+  const setBackgroundTheme = useThemeStore((state) => state.setBackgroundTheme)
+  const setColorTheme = useThemeStore((state) => state.setColorTheme)
   const streakDays = useUserStore((state) => state.streakDays)
   const phraseCount = usePhraseStore((state) => state.phrases.length)
   const totalWatched = useWatchHistoryStore((state) => state.watchedVideoIds.length)
@@ -86,29 +126,74 @@ export default function ProfilePage() {
           <Stat value={totalWatched} label="본 영상" />
         </div>
 
-        <div className="mt-6 rounded-xl bg-[var(--bg-card)] px-4 py-3 shadow-[var(--card-shadow)]">
-          <p className="mb-3 text-sm text-[var(--text-secondary)]">테마</p>
-          <div className="grid grid-cols-2 gap-3">
-            {THEME_OPTIONS.map((option) => {
-              const selected = theme === option.id
-              return (
-                <button
-                  key={option.id}
-                  onClick={() => setTheme(option.id)}
-                  className={`flex items-center gap-3 rounded-xl border px-3 py-3 text-left ${
-                    selected ? 'border-[var(--accent-primary)] bg-[var(--accent-glow)]' : 'border-[var(--border-card)] bg-[var(--bg-primary)]'
-                  }`}
-                >
-                  <div className={`flex h-10 w-10 items-center justify-center rounded-full border-[3px] ${option.swatch}`}>
-                    <div className={`h-4 w-4 rounded-full ${option.dot}`} />
-                  </div>
-                  <div>
-                    <p className="text-sm font-medium text-[var(--text-primary)]">{option.label}</p>
-                    <p className="text-xs text-[var(--text-muted)]">{selected ? '현재 사용 중' : '색 조합 바꾸기'}</p>
-                  </div>
-                </button>
-              )
-            })}
+        <div className="mt-6 rounded-xl bg-[var(--bg-card)] px-4 py-4 shadow-[var(--card-shadow)]">
+          <div className="mb-4">
+            <p className="text-sm text-[var(--text-secondary)]">테마</p>
+            <p className="mt-1 text-xs text-[var(--text-muted)]">
+              배경 밝기와 포인트 색상을 따로 고를 수 있습니다.
+            </p>
+          </div>
+
+          <div className="mb-5">
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--text-muted)]">
+              배경 테마
+            </p>
+            <div className="grid grid-cols-2 gap-3">
+              {BACKGROUND_OPTIONS.map((option) => {
+                const selected = backgroundTheme === option.id
+                return (
+                  <button
+                    key={option.id}
+                    onClick={() => setBackgroundTheme(option.id)}
+                    className={`rounded-2xl border p-3 text-left ${
+                      selected
+                        ? 'border-[var(--accent-primary)] bg-[var(--accent-glow)]'
+                        : 'border-[var(--border-card)] bg-[var(--bg-primary)]'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className={`h-11 w-11 rounded-2xl border ${option.previewClass}`} />
+                      <div className="min-w-0">
+                        <p className="text-sm font-medium text-[var(--text-primary)]">{option.label}</p>
+                        <p className="mt-1 text-xs text-[var(--text-muted)]">{option.description}</p>
+                      </div>
+                    </div>
+                  </button>
+                )
+              })}
+            </div>
+          </div>
+
+          <div>
+            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--text-muted)]">
+              색상 테마
+            </p>
+            <div className="grid grid-cols-2 gap-3">
+              {COLOR_OPTIONS.map((option) => {
+                const selected = colorTheme === option.id
+                return (
+                  <button
+                    key={option.id}
+                    onClick={() => setColorTheme(option.id)}
+                    className={`rounded-2xl border p-3 text-left ${
+                      selected
+                        ? 'border-[var(--accent-primary)] bg-[var(--accent-glow)]'
+                        : 'border-[var(--border-card)] bg-[var(--bg-primary)]'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)]">
+                        <div className={`h-5 w-5 rounded-full ${option.swatchClass}`} />
+                      </div>
+                      <div className="min-w-0">
+                        <p className="text-sm font-medium text-[var(--text-primary)]">{option.label}</p>
+                        <p className="mt-1 text-xs text-[var(--text-muted)]">{option.description}</p>
+                      </div>
+                    </div>
+                  </button>
+                )
+              })}
+            </div>
           </div>
         </div>
 

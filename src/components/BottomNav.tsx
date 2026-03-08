@@ -75,7 +75,7 @@ export function BottomNav() {
 
   return (
     <nav className="safe-area-bottom sticky bottom-0 left-0 right-0 z-50 border-t border-[var(--border-card)] bg-[var(--bg-nav)] backdrop-blur-2xl">
-      <div className="grid h-[64px] grid-cols-4 px-2">
+      <div className="grid h-[62px] grid-cols-4 px-2">
         {tabs.map(({ href, icon, label }) => {
           const isActive =
             href === '/shorts'
@@ -89,7 +89,7 @@ export function BottomNav() {
               key={href}
               href={href}
               aria-label={label}
-              className={`relative flex flex-col items-center justify-center gap-1 rounded-2xl transition-all duration-200 active:scale-95 ${
+              className={`relative flex items-center justify-center rounded-2xl transition-all duration-200 active:scale-95 ${
                 isActive ? 'text-[var(--nav-active)]' : 'text-[var(--nav-inactive)]'
               }`}
             >
@@ -108,14 +108,7 @@ export function BottomNav() {
               >
                 {icons[icon](isActive)}
               </motion.div>
-
-              <span
-                className={`text-[11px] font-medium leading-none ${
-                  isActive ? 'opacity-100' : 'opacity-85'
-                }`}
-              >
-                {label}
-              </span>
+              <span className="sr-only">{label}</span>
             </Link>
           )
         })}

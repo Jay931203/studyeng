@@ -68,6 +68,7 @@ export function VideoFeed({ videos, initialVideoId, navigationKey }: VideoFeedPr
   const incrementRepeatCount = usePlayerStore((state) => state.incrementRepeatCount)
   const resetRepeatCount = usePlayerStore((state) => state.resetRepeatCount)
   const setIsSwiping = usePlayerStore((state) => state.setIsSwiping)
+  const currentVideo = videos[currentIndex]
 
   useEffect(() => {
     if (videos.length === 0) {
@@ -92,14 +93,13 @@ export function VideoFeed({ videos, initialVideoId, navigationKey }: VideoFeedPr
   }, [currentIndex, videos.length])
 
   useEffect(() => {
-    const video = videos[currentIndex]
-    if (!video) return
+    if (!currentVideo) return
 
-    incrementViewCount(video.id)
-    if (video.seriesId) {
-      markWatched(video.seriesId, video.id)
+    incrementViewCount(currentVideo.id)
+    if (currentVideo.seriesId) {
+      markWatched(currentVideo.seriesId, currentVideo.id)
     }
-  }, [currentIndex, incrementViewCount, markWatched, videos])
+  }, [currentIndex, currentVideo?.id, currentVideo?.seriesId, incrementViewCount, markWatched])
 
   useEffect(() => {
     return () => {
@@ -207,7 +207,6 @@ export function VideoFeed({ videos, initialVideoId, navigationKey }: VideoFeedPr
     [handleNextVideo, handlePrevVideo],
   )
 
-  const currentVideo = videos[currentIndex]
   if (!currentVideo) return null
 
   const seriesInfo = currentVideo.seriesId

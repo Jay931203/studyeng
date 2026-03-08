@@ -1837,7 +1837,7 @@ export const seedVideos: VideoData[] = [
     category: 'movie',
     difficulty: 3,
     clipStart: 4,
-    clipEnd: 45,
+    clipEnd: 50,
     seriesId: 'devil-wears-prada',
     episodeNumber: 1,
     subtitles: [],

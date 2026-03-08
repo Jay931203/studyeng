@@ -17,9 +17,9 @@
 import { readFile, writeFile, mkdtemp, rm, appendFile, readdir } from 'fs/promises'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
-import { execSync } from 'child_process'
+import { execFileSync } from 'child_process'
 import { tmpdir } from 'os'
-import { existsSync, statSync } from 'fs'
+import { existsSync, readdirSync, statSync } from 'fs'
 import { loadEnv } from './lib/load-env.mjs'
 import { loadSeedData } from './lib/load-seed-data.mjs'
 
@@ -30,11 +30,16 @@ const TRANSCRIPTS_DIR = join(__dirname, '..', 'public', 'transcripts')
 const SEED_VIDEOS_PATH = join(__dirname, '..', 'src', 'data', 'seed-videos.ts')
 const COST_LOG_PATH = join(__dirname, '..', 'whisper-cost-log.json')
 const MANIFEST_PATH = join(__dirname, 'whisper-manifest.json')
+const FFMPEG_LOCATION = resolveFfmpegLocation()
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY
 if (!OPENAI_API_KEY) {
   console.error('ERROR: OPENAI_API_KEY environment variable required')
   process.exit(1)
+}
+
+if (FFMPEG_LOCATION === false) {
+  console.warn('WARN: ffmpeg not found, falling back to full-audio downloads for Whisper input.')
 }
 
 const args = process.argv.slice(2)
@@ -142,7 +147,7 @@ async function main() {
 
     try {
       // 1. Download audio. Prefer low enough bitrate to stay under OpenAI upload cap.
-      let audioPath = await downloadAudio(videoId, tempDir, 'bestaudio[ext=webm]/bestaudio')
+      let audioPath = await downloadAudio(videoId, tempDir, 'bestaudio[ext=webm]/bestaudio', clipStart, clipEnd)
 
       if (!existsSync(audioPath)) {
         console.log('SKIP (no audio)')
@@ -156,7 +161,7 @@ async function main() {
         whisperResult = await transcribeWithOpenAI(audioPath)
       } catch (error) {
         if (String(error.message).includes('OpenAI API 413')) {
-          audioPath = await downloadAudio(videoId, tempDir, 'worstaudio[ext=webm]/worstaudio/worstaudio')
+          audioPath = await downloadAudio(videoId, tempDir, 'worstaudio[ext=webm]/worstaudio/worstaudio', clipStart, clipEnd)
           whisperResult = await transcribeWithOpenAI(audioPath)
         } else {
           throw error
@@ -328,12 +333,23 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
 }
 
-async function downloadAudio(videoId, tempDir, format) {
+async function downloadAudio(videoId, tempDir, format, clipStart, clipEnd) {
   const outTemplate = join(tempDir, `${videoId}.%(ext)s`)
-  execSync(
-    `yt-dlp -f "${format}" --no-post-overwrites -o "${outTemplate}" "https://www.youtube.com/watch?v=${videoId}"`,
-    { stdio: 'pipe', timeout: 120000 }
-  )
+  const args = ['-f', format, '--no-post-overwrites']
+
+  if (FFMPEG_LOCATION) {
+    args.push('--ffmpeg-location', FFMPEG_LOCATION)
+  }
+
+  if (FFMPEG_LOCATION !== false) {
+    const sectionStart = Math.max(0, round2(clipStart - 1))
+    const sectionEnd = round2(clipEnd + 1)
+    args.push('--download-sections', `*${sectionStart}-${sectionEnd}`)
+  }
+
+  args.push('-o', outTemplate, `https://www.youtube.com/watch?v=${videoId}`)
+
+  execFileSync('yt-dlp', args, { stdio: 'pipe', timeout: 120000 })
 
   const files = (await readdir(tempDir))
     .filter(file => file.startsWith(videoId))
@@ -364,6 +380,66 @@ async function readBatchIds(filePath) {
 function getArgValue(name) {
   const arg = args.find(entry => entry.startsWith(`${name}=`))
   return arg ? arg.slice(name.length + 1) : null
+}
+
+function resolveFfmpegLocation() {
+  if (process.env.FFMPEG_LOCATION?.trim()) {
+    return process.env.FFMPEG_LOCATION.trim()
+  }
+
+  if (commandExists('ffmpeg')) {
+    return null
+  }
+
+  const packagesRoot = join(process.env.LOCALAPPDATA ?? '', 'Microsoft', 'WinGet', 'Packages')
+  if (!existsSync(packagesRoot)) {
+    return false
+  }
+
+  const packageDirs = readdirSync(packagesRoot, { withFileTypes: true })
+    .filter(entry => entry.isDirectory())
+    .map(entry => entry.name)
+    .filter(name => /^(yt-dlp\.FFmpeg|Gyan\.FFmpeg|BtbN\.FFmpeg)/i.test(name))
+
+  for (const dirName of packageDirs) {
+    const ffmpegExe = findFileRecursive(join(packagesRoot, dirName), 'ffmpeg.exe', 5)
+    if (ffmpegExe) {
+      return dirname(ffmpegExe)
+    }
+  }
+
+  return false
+}
+
+function commandExists(command) {
+  try {
+    execFileSync('where.exe', [command], { stdio: 'pipe' })
+    return true
+  } catch {
+    return false
+  }
+}
+
+function findFileRecursive(rootDir, targetName, maxDepth, depth = 0) {
+  if (depth > maxDepth || !existsSync(rootDir)) {
+    return null
+  }
+
+  const entries = readdirSync(rootDir, { withFileTypes: true })
+  for (const entry of entries) {
+    const fullPath = join(rootDir, entry.name)
+    if (entry.isFile() && entry.name.toLowerCase() === targetName) {
+      return fullPath
+    }
+    if (entry.isDirectory()) {
+      const match = findFileRecursive(fullPath, targetName, maxDepth, depth + 1)
+      if (match) {
+        return match
+      }
+    }
+  }
+
+  return null
 }
 
 main().catch(console.error)
