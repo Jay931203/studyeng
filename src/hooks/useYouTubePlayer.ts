@@ -6,7 +6,6 @@ import type { SubtitleEntry } from '@/data/seed-videos'
 
 const YOUTUBE_API_SRC = 'https://www.youtube.com/iframe_api'
 const YOUTUBE_API_TIMEOUT_MS = 10000
-const AUTOPLAY_RETRY_DELAY_MS = 1200
 
 let apiLoadPromise: Promise<void> | null = null
 
@@ -143,7 +142,6 @@ export function useYouTubePlayer(
 ) {
   const playerRef = useRef<YT.Player | null>(null)
   const intervalRef = useRef<number | null>(null)
-  const autoplayRetryTimeoutRef = useRef<number | null>(null)
   const wasPlayingBeforeHideRef = useRef(false)
   const prevSubIndexRef = useRef(-1)
   const lastProgressWriteRef = useRef(0)
@@ -180,13 +178,6 @@ export function useYouTubePlayer(
 
   const handleEmbedBlocked = useEffectEvent(() => {
     onEmbedBlocked?.()
-  })
-
-  const clearAutoplayRetryTimeout = useEffectEvent(() => {
-    if (autoplayRetryTimeoutRef.current !== null) {
-      window.clearTimeout(autoplayRetryTimeoutRef.current)
-      autoplayRetryTimeoutRef.current = null
-    }
   })
 
   const handlePlayerTick = useEffectEvent(() => {
@@ -367,19 +358,6 @@ export function useYouTubePlayer(
             event.target.setPlaybackRate(usePlayerStore.getState().playbackRate)
             event.target.playVideo()
 
-            autoplayRetryTimeoutRef.current = window.setTimeout(() => {
-              if (disposed || playbackStartedSessionKey === playerSessionKey) {
-                return
-              }
-
-              try {
-                ;(event.target as unknown as { mute: () => void }).mute()
-                event.target.playVideo()
-              } catch {
-                // Ignore autoplay fallback failures.
-              }
-            }, AUTOPLAY_RETRY_DELAY_MS)
-
             const duration = event.target.getDuration()
             const maxEnd = Math.max(duration - 0.5, 1)
             const effectiveClipEnd = clipEnd > 0 ? Math.min(clipEnd, maxEnd) : maxEnd
@@ -420,13 +398,11 @@ export function useYouTubePlayer(
             setIsPlaying(playing)
 
             if (playing) {
-              clearAutoplayRetryTimeout()
               setPlaybackStartedSessionKey(playerSessionKey)
             }
           },
           onError: (event) => {
             if (disposed) return
-            clearAutoplayRetryTimeout()
             setVideoErrorState({
               sessionKey: playerSessionKey,
               message: getVideoErrorMessage(event.data),
@@ -444,7 +420,6 @@ export function useYouTubePlayer(
 
     return () => {
       disposed = true
-      clearAutoplayRetryTimeout()
       if (intervalRef.current !== null) {
         window.clearInterval(intervalRef.current)
         intervalRef.current = null
