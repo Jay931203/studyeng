@@ -1,7 +1,7 @@
 'use client'
 
-import { useState, useMemo } from 'react'
-import { useRouter } from 'next/navigation'
+import { useState, useMemo, useCallback } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { motion, AnimatePresence, LayoutGroup } from 'framer-motion'
 import {
   seedVideos,
@@ -79,9 +79,27 @@ function CategoryIcon({ id, className }: { id: CategoryId | 'all'; className?: s
 
 export default function ExplorePage() {
   const [activeCategory, setActiveCategory] = useState<'all' | CategoryId>('all')
-  const [selectedSeries, setSelectedSeries] = useState<SeriesType | null>(null)
   const router = useRouter()
+  const searchParams = useSearchParams()
   const { getSeriesProgress, getNextEpisode, isWatched, getViewCount } = useWatchHistoryStore()
+
+  // Drive selected series from URL search params so browser back works
+  const selectedSeriesId = searchParams.get('series')
+  const selectedSeries = useMemo(
+    () => (selectedSeriesId ? series.find((s) => s.id === selectedSeriesId) ?? null : null),
+    [selectedSeriesId],
+  )
+
+  const setSelectedSeries = useCallback(
+    (s: SeriesType | null) => {
+      if (s) {
+        router.push(`/explore?series=${s.id}`, { scroll: false })
+      } else {
+        router.back()
+      }
+    },
+    [router],
+  )
 
   const filteredSeries = useMemo(() => {
     return activeCategory === 'all' ? series : getSeriesByCategory(activeCategory as CategoryId)
@@ -109,7 +127,7 @@ export default function ExplorePage() {
             whileTap={{ scale: 0.95 }}
             onClick={() => {
               setActiveCategory('all')
-              setSelectedSeries(null)
+              if (selectedSeriesId) router.push('/explore', { scroll: false })
             }}
             className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 flex-shrink-0 ${
               activeCategory === 'all'
@@ -132,7 +150,7 @@ export default function ExplorePage() {
                 whileTap={{ scale: 0.95 }}
                 onClick={() => {
                   setActiveCategory(cat.id)
-                  setSelectedSeries(null)
+                  if (selectedSeriesId) router.push('/explore', { scroll: false })
                 }}
                 className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 flex-shrink-0 ${
                   activeCategory === cat.id
@@ -162,7 +180,7 @@ export default function ExplorePage() {
             >
               {/* Back button */}
               <button
-                onClick={() => setSelectedSeries(null)}
+                onClick={() => router.back()}
                 className="text-blue-400 text-sm mb-4 flex items-center gap-1.5 hover:text-blue-300 transition-colors"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
