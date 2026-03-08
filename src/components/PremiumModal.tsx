@@ -28,7 +28,7 @@ export function PremiumModal({
   onClose,
   trigger = 'video-limit',
 }: PremiumModalProps) {
-  const setPremium = usePremiumStore((state) => state.setPremium)
+  const setPremiumEntitlement = usePremiumStore((state) => state.setPremiumEntitlement)
   const getCompletionRate = useDiscountStore((state) => state.getCompletionRate)
   const getDiscountRate = useDiscountStore((state) => state.getDiscountRate)
   const checkAndResetMonthly = useDiscountStore((state) => state.checkAndResetMonthly)
@@ -130,7 +130,7 @@ export function PremiumModal({
 
             <button
               onClick={() => {
-                setPremium(true)
+                setPremiumEntitlement(true)
                 onClose()
               }}
               className="w-full rounded-2xl bg-[var(--accent-primary)] py-4 text-base font-bold text-white"

@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { AdminIssuesList } from '@/components/AdminIssuesList'
 import { StreakDisplay } from '@/components/StreakDisplay'
+import { AppPage, MetricCard, PageHeader, SurfaceCard } from '@/components/ui/AppPage'
 import { useAuth } from '@/hooks/useAuth'
 import { useAdminStore } from '@/stores/useAdminStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
@@ -100,7 +101,7 @@ export default function ProfilePage() {
     Object.values(state.viewCounts).reduce((sum, count) => sum + count, 0),
   )
   const isPremium = usePremiumStore((state) => state.isPremium)
-  const setPremium = usePremiumStore((state) => state.setPremium)
+  const setPremiumEntitlement = usePremiumStore((state) => state.setPremiumEntitlement)
   const unresolvedCount = issues.filter((issue) => !issue.resolved).length
   const profileName =
     user?.user_metadata?.full_name ??
@@ -120,19 +121,12 @@ export default function ProfilePage() {
   }
 
   return (
-    <div className="h-full overflow-y-auto pb-24 pt-6 lg:pb-10 lg:pt-8">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--accent-text)]">
-              나
-            </p>
-            <h1 className="mt-2 text-3xl font-bold text-[var(--text-primary)]">나</h1>
-            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[var(--text-secondary)]">
-              계정, 앱 톤, 현재 루프를 한곳에 모았습니다.
-            </p>
-          </div>
-        </div>
+    <AppPage>
+        <PageHeader
+          eyebrow="나"
+          title="나"
+          description="계정, 앱 톤, 현재 루프를 한곳에 모았습니다."
+        />
 
         {!authAvailable && (
           <section className="mb-6 rounded-[28px] border border-amber-500/20 bg-amber-500/10 px-5 py-4">
@@ -147,7 +141,7 @@ export default function ProfilePage() {
 
         <div className="grid gap-6 xl:grid-cols-[1.08fr_0.92fr]">
           <div className="space-y-6">
-            <motion.section
+            <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               className="rounded-[32px] border border-[var(--border-card)] bg-[var(--bg-card)] p-6 shadow-[var(--card-shadow)]"
@@ -209,9 +203,9 @@ export default function ProfilePage() {
                   </div>
                 )}
               </div>
-            </motion.section>
+            </motion.div>
 
-            <section className="rounded-[32px] border border-[var(--border-card)] bg-[var(--bg-card)] p-6 shadow-[var(--card-shadow)]">
+            <SurfaceCard className="p-6">
               <SectionTitle
                 title="앱 톤"
                 description="배경과 포인트 색을 바로 바꿔볼 수 있습니다."
@@ -288,10 +282,10 @@ export default function ProfilePage() {
                   })}
                 </div>
               </div>
-            </section>
+            </SurfaceCard>
 
             {isAdmin && (
-              <section className="rounded-[32px] border border-[var(--border-card)] bg-[var(--bg-card)] p-6 shadow-[var(--card-shadow)]">
+              <SurfaceCard className="p-6">
                 <SectionTitle
                   title="운영 도구"
                   description="검수에 필요한 모드와 플래그를 빠르게 제어합니다."
@@ -329,7 +323,7 @@ export default function ProfilePage() {
                       </p>
                     </div>
                     <button
-                      onClick={() => setPremium(!isPremium)}
+                      onClick={() => setPremiumEntitlement(!isPremium)}
                       className={`relative h-6 w-11 rounded-full ${
                         isPremium ? 'bg-[var(--accent-primary)]' : 'bg-[var(--bg-secondary)]'
                       }`}
@@ -344,35 +338,26 @@ export default function ProfilePage() {
                     </button>
                   </div>
                 </div>
-              </section>
+              </SurfaceCard>
             )}
           </div>
 
           <div className="space-y-6">
-            <section className="rounded-[32px] border border-[var(--border-card)] bg-[var(--bg-card)] p-6 shadow-[var(--card-shadow)]">
+            <SurfaceCard className="p-6">
               <SectionTitle
                 title="활동"
                 description="지금 쌓인 루틴과 활동량을 확인합니다."
               />
               <StreakDisplay days={streakDays} />
               <div className="mt-4 grid grid-cols-3 gap-3">
-                <div className="rounded-2xl bg-[var(--bg-primary)] p-4 text-center">
-                  <p className="text-3xl font-bold text-[var(--text-primary)]">{totalViews}</p>
-                  <p className="mt-1 text-xs text-[var(--text-secondary)]">누적 재생</p>
-                </div>
-                <div className="rounded-2xl bg-[var(--bg-primary)] p-4 text-center">
-                  <p className="text-3xl font-bold text-[var(--text-primary)]">{phraseCount}</p>
-                  <p className="mt-1 text-xs text-[var(--text-secondary)]">저장 표현</p>
-                </div>
-                <div className="rounded-2xl bg-[var(--bg-primary)] p-4 text-center">
-                  <p className="text-3xl font-bold text-[var(--text-primary)]">{totalWatched}</p>
-                  <p className="mt-1 text-xs text-[var(--text-secondary)]">본 장면</p>
-                </div>
+                <MetricCard label="누적 재생" value={totalViews} className="text-center" />
+                <MetricCard label="저장 표현" value={phraseCount} className="text-center" />
+                <MetricCard label="본 장면" value={totalWatched} className="text-center" />
               </div>
-            </section>
+            </SurfaceCard>
 
             {isAdminActive() && (
-              <section className="rounded-[32px] border border-[var(--border-card)] bg-[var(--bg-card)] p-6 shadow-[var(--card-shadow)]">
+              <SurfaceCard className="p-6">
                 <SectionTitle
                   title="리포트 번들"
                   description="리포트와 플래그 데이터를 복사하거나 정리할 수 있습니다."
@@ -398,10 +383,10 @@ export default function ProfilePage() {
                     </button>
                   </div>
                 </div>
-              </section>
+              </SurfaceCard>
             )}
 
-            <section className="overflow-hidden rounded-[32px] border border-[var(--border-card)] bg-[var(--bg-card)] shadow-[var(--card-shadow)]">
+            <SurfaceCard className="overflow-hidden">
               <Link
                 href="/terms"
                 className="flex items-center justify-between border-b border-[var(--border-card)] px-5 py-4 text-sm text-[var(--text-secondary)]"
@@ -416,14 +401,13 @@ export default function ProfilePage() {
                 <span>개인정보처리방침</span>
                 <span aria-hidden>→</span>
               </Link>
-            </section>
+            </SurfaceCard>
           </div>
         </div>
 
         <div className="mt-6">
           <AdminIssuesList />
         </div>
-      </div>
-    </div>
+    </AppPage>
   )
 }

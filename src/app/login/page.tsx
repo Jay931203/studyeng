@@ -24,7 +24,7 @@ function FeatureRow({
   )
 }
 
-function BrandNote() {
+function FlowNote() {
   return (
     <div className="rounded-[28px] border border-[var(--border-card)] bg-[var(--bg-card)]/88 p-5 shadow-[var(--card-shadow)]">
       <div className="flex flex-wrap gap-2">
@@ -39,10 +39,10 @@ function BrandNote() {
         </span>
       </div>
       <p className="mt-4 text-xl font-bold text-[var(--text-primary)]">
-        공부처럼 보이면 실패입니다.
+        피드에서 보고, 필요한 표현만 남겨두세요.
       </p>
       <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-        설명보다 장면, 퀴즈보다 리듬에 더 가까운 흐름으로 설계했습니다.
+        계정을 연결하면 이어보기와 저장 표현이 끊기지 않게 같은 흐름으로 묶입니다.
       </p>
     </div>
   )
@@ -69,16 +69,16 @@ function LoginPageContent() {
           </p>
           <Logo className="mt-4 h-12 text-[var(--text-primary)]" />
           <h1 className="mt-6 text-4xl font-bold leading-tight text-[var(--text-primary)]">
-            영어는 장면으로 남는다
+            짧은 장면으로 보는 영어
             <br />
-            짧게 넘기면 오래 남는다
+            보고, 남기고, 다시 보기
           </h1>
           <p className="mt-4 max-w-xl text-base leading-relaxed text-[var(--text-secondary)]">
-            로그인하면 오늘 본 장면과 저장 표현, 이어보기 흐름이 한 계정에 붙습니다.
+            로그인하면 본 장면과 저장 표현, 이어보기가 한 계정에 정리됩니다.
           </p>
 
           <div className="mt-8 max-w-xl">
-            <BrandNote />
+            <FlowNote />
           </div>
 
           <div className="mt-8 grid gap-3 sm:grid-cols-2">

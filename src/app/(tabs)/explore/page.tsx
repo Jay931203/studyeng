@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image'
-import { useCallback, useMemo, useRef, useState, type ReactNode } from 'react'
+import { useCallback, useMemo, useRef, useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import {
@@ -12,6 +12,7 @@ import {
 import { LogoFull } from '@/components/Logo'
 import { SearchBar } from '@/components/SearchBar'
 import { VideoCard } from '@/components/VideoCard'
+import { AppPage, MetricCard, PageHeader, SectionHeader, SurfaceCard } from '@/components/ui/AppPage'
 import { useAuth } from '@/hooks/useAuth'
 import {
   catalogSeries,
@@ -53,44 +54,6 @@ interface ContinueSeriesCard {
 
 function getSeriesSubtitle(seriesItem: SeriesType) {
   return `${categoryLabels[seriesItem.category]} · ${seriesItem.description}`
-}
-
-function SectionHeading({
-  eyebrow,
-  title,
-  description,
-  action,
-}: {
-  eyebrow?: string
-  title: string
-  description: string
-  action?: ReactNode
-}) {
-  return (
-    <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-      <div>
-        {eyebrow && (
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
-            {eyebrow}
-          </p>
-        )}
-        <h2 className="mt-2 text-2xl font-bold text-[var(--text-primary)]">{title}</h2>
-        <p className="mt-1 text-sm leading-relaxed text-[var(--text-secondary)]">
-          {description}
-        </p>
-      </div>
-      {action}
-    </div>
-  )
-}
-
-function SummaryStat({ label, value }: { label: string; value: string }) {
-  return (
-    <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)]/45 px-4 py-3">
-      <p className="text-xs text-[var(--text-muted)]">{label}</p>
-      <p className="mt-2 text-lg font-semibold text-[var(--text-primary)]">{value}</p>
-    </div>
-  )
 }
 
 export default function ExplorePage() {
@@ -241,8 +204,7 @@ export default function ExplorePage() {
 
   if (selectedSeries) {
     return (
-      <div className="h-full overflow-y-auto pb-24 pt-6 lg:pb-10 lg:pt-8">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <AppPage>
           <div className="mb-6 flex items-start justify-between gap-4">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
@@ -261,7 +223,7 @@ export default function ExplorePage() {
           </div>
 
           <section className="grid gap-4 xl:grid-cols-[0.92fr_1.08fr]">
-            <div className="rounded-[32px] border border-[var(--border-card)] bg-[var(--bg-card)] p-6 shadow-[var(--card-shadow)]">
+            <SurfaceCard className="p-6">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
                 {categoryLabels[selectedSeries.category]}
               </p>
@@ -294,7 +256,7 @@ export default function ExplorePage() {
               >
                 이어 보기
               </button>
-            </div>
+            </SurfaceCard>
 
             <div className="space-y-3">
               {seriesEpisodes.map((video) => (
@@ -325,27 +287,18 @@ export default function ExplorePage() {
               ))}
             </div>
           </section>
-        </div>
-      </div>
+      </AppPage>
     )
   }
 
   return (
-    <div className="h-full overflow-y-auto pb-24 pt-6 lg:pb-10 lg:pt-8">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--accent-text)]">
-              오늘
-            </p>
-            <h1 className="mt-2 text-3xl font-bold text-[var(--text-primary)] sm:text-4xl">
-              {userName ? `${userName}님, 오늘 볼 장면` : '오늘 볼 장면'}
-            </h1>
-            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[var(--text-secondary)]">
-              먼저 볼 것, 바로 넘길 것, 다시 꺼낼 것을 한 화면에 모았습니다.
-            </p>
-          </div>
-          <div className="flex items-center gap-3">
+    <AppPage>
+        <PageHeader
+          eyebrow="오늘"
+          title={userName ? `${userName}님, 오늘 볼 장면` : '오늘 볼 장면'}
+          description="먼저 볼 것, 바로 넘길 것, 다시 꺼낼 것을 한 화면에 모았습니다."
+          action={
+            <div className="flex items-center gap-3">
             <LogoFull className="h-7 text-[var(--text-primary)]" />
             {cameFromVideo && returnVideoId && (
               <button
@@ -356,10 +309,11 @@ export default function ExplorePage() {
               </button>
             )}
           </div>
-        </div>
+          }
+        />
 
         <section className="mb-8 grid gap-4 xl:grid-cols-[1.15fr_0.85fr]">
-          <div className="overflow-hidden rounded-[32px] border border-[var(--border-card)] bg-[var(--bg-card)] shadow-[var(--card-shadow)]">
+          <SurfaceCard className="overflow-hidden">
             <div className="grid min-h-[360px] lg:grid-cols-[1.02fr_0.98fr]">
               <div className="order-2 p-6 sm:p-8 lg:order-1 lg:p-10">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
@@ -398,9 +352,9 @@ export default function ExplorePage() {
                 </div>
 
                 <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
-                  <SummaryStat label="저장 표현" value={`${phrases.length}개`} />
-                  <SummaryStat label="반영 난이도" value={levelLabels[level]} />
-                  <SummaryStat label="좋아요" value={`${likedCount}개`} />
+                  <MetricCard label="저장 표현" value={`${phrases.length}개`} />
+                  <MetricCard label="반영 난이도" value={levelLabels[level]} />
+                  <MetricCard label="좋아요" value={`${likedCount}개`} />
                 </div>
                 <div className="mt-4 flex flex-wrap gap-2">
                   <span className="rounded-full bg-[var(--accent-glow)] px-3 py-1.5 text-xs font-medium text-[var(--accent-text)]">
@@ -441,12 +395,12 @@ export default function ExplorePage() {
                 </div>
               </div>
             </div>
-          </div>
+          </SurfaceCard>
 
           <div className="flex flex-col gap-4">
             <SearchBar />
 
-            <div className="rounded-[28px] border border-[var(--border-card)] bg-[var(--bg-card)] p-5 shadow-[var(--card-shadow)]">
+            <SurfaceCard className="rounded-[28px] p-5">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
                 오늘 메모
               </p>
@@ -457,17 +411,17 @@ export default function ExplorePage() {
                 오늘 바로 이어볼 수 있는 것만 추려둡니다.
               </p>
               <div className="mt-4 grid grid-cols-2 gap-3">
-                <SummaryStat label="이어볼 시리즈" value={`${continueSeries.length}개`} />
-                <SummaryStat label="추천 큐" value={`${recommended.length}개`} />
-                <SummaryStat label="최근 반응" value={`${recentVideoIds.length}개`} />
-                <SummaryStat label="좋아요" value={`${likedCount}개`} />
+                <MetricCard label="이어볼 시리즈" value={`${continueSeries.length}개`} />
+                <MetricCard label="추천 큐" value={`${recommended.length}개`} />
+                <MetricCard label="최근 반응" value={`${recentVideoIds.length}개`} />
+                <MetricCard label="좋아요" value={`${likedCount}개`} />
               </div>
-            </div>
+            </SurfaceCard>
           </div>
         </section>
 
         <section className="mb-8">
-          <SectionHeading
+          <SectionHeader
             eyebrow="이어보기"
             title="이어보기"
             description={
@@ -544,7 +498,7 @@ export default function ExplorePage() {
         </section>
 
         <section className="mb-8">
-          <SectionHeading
+          <SectionHeader
             eyebrow="추천"
             title="지금 뜨는 장면"
             description={
@@ -565,7 +519,7 @@ export default function ExplorePage() {
         </section>
 
         <section ref={seriesSectionRef} className="mb-8">
-          <SectionHeading
+          <SectionHeader
             eyebrow="시리즈"
             title="시리즈"
             description="한 흐름으로 이어지는 장면만 따로 모았습니다."
@@ -626,7 +580,6 @@ export default function ExplorePage() {
             ))}
           </div>
         </section>
-      </div>
-    </div>
+    </AppPage>
   )
 }

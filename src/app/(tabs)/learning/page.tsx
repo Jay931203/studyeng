@@ -8,19 +8,11 @@ import { SavedPhraseCard } from '@/components/SavedPhraseCard'
 import { StreakDisplay } from '@/components/StreakDisplay'
 import { ViewingStats } from '@/components/ViewingStats'
 import { WatchHistory } from '@/components/WatchHistory'
+import { AppPage, MetricCard, PageHeader, SurfaceCard } from '@/components/ui/AppPage'
 import { useAuth } from '@/hooks/useAuth'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
-
-function StatCard({ value, label }: { value: number; label: string }) {
-  return (
-    <div className="rounded-[24px] border border-[var(--border-card)] bg-[var(--bg-card)] p-4 text-center shadow-[var(--card-shadow)]">
-      <p className="text-3xl font-bold text-[var(--text-primary)]">{value}</p>
-      <p className="mt-1 text-sm text-[var(--text-secondary)]">{label}</p>
-    </div>
-  )
-}
 
 export default function LearningPage() {
   const router = useRouter()
@@ -46,30 +38,23 @@ export default function LearningPage() {
   const isEmpty = phrases.length === 0 && totalWatched === 0
 
   return (
-    <div className="h-full overflow-y-auto pb-24 pt-6 lg:pb-10 lg:pt-8">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
-              복습
-            </p>
-            <h1 className="mt-2 text-3xl font-bold text-[var(--text-primary)]">
-              복습
-            </h1>
-            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[var(--text-secondary)]">
-              남겨둔 표현과 본 장면만 다시 꺼낼 수 있게 정리했습니다.
-            </p>
-          </div>
-          <button
+    <AppPage>
+        <PageHeader
+          eyebrow="복습"
+          title="복습"
+          description="남겨둔 표현과 본 장면만 다시 꺼낼 수 있게 정리했습니다."
+          action={
+            <button
             onClick={() => router.push('/shorts')}
             className="rounded-full bg-[var(--accent-primary)] px-5 py-2.5 text-sm font-semibold text-white"
           >
             피드 열기
           </button>
-        </div>
+          }
+        />
 
         <section className="grid gap-4 lg:grid-cols-[1.02fr_0.98fr]">
-          <div className="rounded-[32px] border border-[var(--border-card)] bg-[var(--bg-card)] p-6 shadow-[var(--card-shadow)]">
+          <SurfaceCard className="p-6">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
               오늘 상태
             </p>
@@ -91,11 +76,11 @@ export default function LearningPage() {
             </div>
 
             <div className="mt-6 grid gap-3 sm:grid-cols-3">
-              <StatCard value={totalViews} label="누적 재생" />
-              <StatCard value={phrases.length} label="저장 표현" />
-              <StatCard value={totalWatched} label="본 장면" />
+              <MetricCard label="누적 재생" value={totalViews} className="text-center" />
+              <MetricCard label="저장 표현" value={phrases.length} className="text-center" />
+              <MetricCard label="본 장면" value={totalWatched} className="text-center" />
             </div>
-          </div>
+          </SurfaceCard>
 
           <StreakDisplay days={streakDays} />
         </section>
@@ -108,7 +93,7 @@ export default function LearningPage() {
 
           <div className="space-y-6">
             {isEmpty ? (
-              <div className="rounded-[32px] border border-[var(--border-card)] bg-[var(--bg-card)] px-6 py-12 text-center shadow-[var(--card-shadow)]">
+              <SurfaceCard className="px-6 py-12 text-center">
                 <p className="text-lg font-semibold text-[var(--text-primary)]">
                   아직 쌓인 기록이 없습니다
                 </p>
@@ -121,14 +106,14 @@ export default function LearningPage() {
                 >
                   첫 장면 보러 가기
                 </button>
-              </div>
+              </SurfaceCard>
             ) : (
               <>
                 <WatchHistory />
               </>
             )}
 
-            <section className="rounded-[32px] border border-[var(--border-card)] bg-[var(--bg-card)] p-5 shadow-[var(--card-shadow)]">
+            <SurfaceCard className="p-5">
               <div className="mb-4 flex items-end justify-between gap-4">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
@@ -174,10 +159,9 @@ export default function LearningPage() {
                   </AnimatePresence>
                 </div>
               )}
-            </section>
+            </SurfaceCard>
           </div>
         </div>
-      </div>
-    </div>
+    </AppPage>
   )
 }
