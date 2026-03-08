@@ -62,12 +62,27 @@ function extractVideoInfo() {
 
 function downloadSrt(videoId) {
   const outPath = path.join(TMP_DIR, videoId);
+  const srtPath = path.join(TMP_DIR, `${videoId}.en.srt`);
+
+  // Try auto-generated subtitles first
   try {
     execSync(
       `yt-dlp --write-auto-sub --sub-lang en --skip-download --sub-format srt -o "${outPath}" "https://www.youtube.com/watch?v=${videoId}"`,
       { timeout: 30000, stdio: 'pipe' }
     );
-    const srtPath = path.join(TMP_DIR, `${videoId}.en.srt`);
+    if (fs.existsSync(srtPath)) {
+      return fs.readFileSync(srtPath, 'utf8');
+    }
+  } catch (err) {
+    // Auto-sub failed, will try manual subs next
+  }
+
+  // Fallback: try manually uploaded subtitles
+  try {
+    execSync(
+      `yt-dlp --write-sub --sub-lang en --skip-download --sub-format srt -o "${outPath}" "https://www.youtube.com/watch?v=${videoId}"`,
+      { timeout: 30000, stdio: 'pipe' }
+    );
     if (fs.existsSync(srtPath)) {
       return fs.readFileSync(srtPath, 'utf8');
     }

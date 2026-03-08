@@ -81,18 +81,20 @@ export function WatchHistory() {
   }
 
   return (
-    <div className="mb-6">
-      <div className="flex items-center justify-between mb-3">
-        <h2 className="text-[var(--text-primary)] font-bold text-lg">
-          시청 기록
-          <span className="text-[var(--text-muted)] text-sm font-normal ml-2">
+    <div className="mb-8">
+      <div className="flex items-center justify-between mb-4">
+        <div className="flex items-baseline gap-2">
+          <h2 className="text-[var(--text-primary)] font-semibold text-base">
+            시청 기록
+          </h2>
+          <span className="text-[var(--text-muted)] text-xs">
             {totalWatched}개
           </span>
-        </h2>
+        </div>
         {totalWatched > 3 && (
           <button
             onClick={() => setShowAll(!showAll)}
-            className="text-blue-400 text-sm"
+            className="text-[var(--text-secondary)] text-xs"
           >
             {showAll ? '접기' : '전체보기'}
           </button>
@@ -100,8 +102,8 @@ export function WatchHistory() {
       </div>
 
       {displayGroups.map((group) => (
-        <div key={group.label} className="mb-4">
-          <p className="text-[var(--text-muted)] text-xs font-medium mb-2 px-1">
+        <div key={group.label} className="mb-4 last:mb-0">
+          <p className="text-[var(--text-muted)] text-[11px] font-medium mb-2 tracking-wide uppercase">
             {group.label}
           </p>
           <div className="flex flex-col gap-2">
@@ -115,9 +117,9 @@ export function WatchHistory() {
                   key={video.id}
                   whileTap={{ scale: 0.98 }}
                   onClick={() => router.push(`/?v=${video.id}`)}
-                  className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-3 text-left flex items-center gap-3"
+                  className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-2xl p-3 text-left flex items-center gap-3 border border-white/[0.04]"
                 >
-                  <div className="w-20 h-12 flex-shrink-0 rounded-lg overflow-hidden relative">
+                  <div className="w-20 h-12 flex-shrink-0 rounded-xl overflow-hidden relative">
                     <img
                       src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
                       alt={video.title}
@@ -134,24 +136,27 @@ export function WatchHistory() {
                     <p className="text-[var(--text-primary)] font-medium text-sm truncate">
                       {video.title}
                     </p>
-                    <div className="flex items-center gap-2 mt-0.5">
+                    <div className="flex items-center gap-1.5 mt-1">
                       <span className="text-[var(--text-muted)] text-xs">
                         {categoryLabel}
                       </span>
+                      <span className="text-[var(--text-muted)] text-[10px]">
+                        {'·'}
+                      </span>
                       <span className="text-[var(--text-muted)] text-xs">
-                        {'★'.repeat(video.difficulty)}
+                        Lv.{video.difficulty}
                       </span>
                     </div>
                   </div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
+                    viewBox="0 0 20 20"
                     fill="currentColor"
-                    className="w-5 h-5 text-blue-400 flex-shrink-0"
+                    className="w-4 h-4 text-[var(--text-muted)] flex-shrink-0"
                   >
                     <path
                       fillRule="evenodd"
-                      d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                      d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
                       clipRule="evenodd"
                     />
                   </svg>

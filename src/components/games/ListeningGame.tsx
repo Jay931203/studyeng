@@ -109,17 +109,17 @@ export function ListeningGame({ subtitle, allSubtitles, onComplete }: ListeningG
 
   return (
     <div className="flex flex-col items-center justify-center h-full px-6">
-      <p className="text-gray-400 text-xs uppercase tracking-wider mb-3">
-        다음에 올 문장은?
+      <p className="text-gray-500 text-xs uppercase tracking-wider mb-3">
+        다음에 올 대사는?
       </p>
 
       {/* Current sentence display */}
       <div className="w-full max-w-md mb-6">
-        <div className="bg-white/10 rounded-xl px-5 py-4 border border-white/10">
+        <div className="bg-white/[0.06] rounded-2xl px-5 py-4 border border-white/[0.06]">
           <p className="text-white text-base font-medium text-center leading-relaxed">
             {currentSentence}
           </p>
-          <p className="text-gray-500 text-xs text-center mt-1.5">
+          <p className="text-gray-600 text-xs text-center mt-1.5">
             {subtitle.ko}
           </p>
         </div>
@@ -130,7 +130,7 @@ export function ListeningGame({ subtitle, allSubtitles, onComplete }: ListeningG
             fill="none"
             stroke="currentColor"
             strokeWidth={2}
-            className="w-5 h-5 text-gray-500"
+            className="w-4 h-4 text-gray-600"
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
           </svg>
@@ -140,49 +140,50 @@ export function ListeningGame({ subtitle, allSubtitles, onComplete }: ListeningG
       {/* Korean translation of the answer shown after selection */}
       {selected && (
         <motion.div
-          initial={{ opacity: 0, y: 5 }}
+          initial={{ opacity: 0, y: 4 }}
           animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2, ease: 'easeOut' }}
           className="mb-4 text-center"
         >
           <p className="text-green-400/80 text-sm font-medium">
             {nextSubtitle.en}
           </p>
-          <p className="text-gray-500 text-xs mt-1">
+          <p className="text-gray-600 text-xs mt-1">
             {nextSubtitle.ko}
           </p>
         </motion.div>
       )}
 
       {/* 4 sentence choices */}
-      <div className="flex flex-col gap-3 w-full max-w-md">
+      <div className="flex flex-col gap-2.5 w-full max-w-md">
         {choices.map((choice, i) => {
-          let bg = 'bg-white/10'
-          let borderClass = 'border-white/10'
+          let bg = 'bg-white/[0.06]'
+          let borderClass = 'border-white/[0.06]'
           if (selected) {
             if (choice === nextSubtitle.en) {
-              bg = 'bg-green-500/20'
-              borderClass = 'border-green-400/60'
+              bg = 'bg-green-500/15'
+              borderClass = 'border-green-400/40'
             } else if (choice === selected && !isCorrect) {
-              bg = 'bg-red-500/20'
-              borderClass = 'border-red-400/60'
+              bg = 'bg-red-500/15'
+              borderClass = 'border-red-400/40'
             } else {
-              bg = 'bg-white/5'
-              borderClass = 'border-white/5'
+              bg = 'bg-white/[0.02]'
+              borderClass = 'border-white/[0.03]'
             }
           }
 
           return (
             <motion.button
               key={i}
-              initial={{ opacity: 0, x: 20 }}
+              initial={{ opacity: 0, x: 10 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: i * 0.08 }}
-              whileTap={{ scale: 0.97 }}
+              transition={{ delay: i * 0.06, duration: 0.2, ease: 'easeOut' }}
+              whileTap={{ scale: 0.98 }}
               onClick={() => handleSelect(choice)}
               disabled={!!selected}
               className={`w-full py-3.5 px-4 rounded-xl text-left text-white text-sm font-medium border transition-all ${bg} ${borderClass}`}
             >
-              <span className="text-white/40 mr-2 text-xs font-bold">
+              <span className="text-white/30 mr-2 text-xs font-bold">
                 {String.fromCharCode(65 + i)}
               </span>
               {choice}

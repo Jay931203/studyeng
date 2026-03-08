@@ -13,7 +13,7 @@ import { usePlayerStore } from '@/stores/usePlayerStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { PremiumModal } from './PremiumModal'
-import { categories, type VideoData } from '@/data/seed-videos'
+import { categories, series as allSeries, type VideoData } from '@/data/seed-videos'
 
 interface VideoFeedProps {
   videos: VideoData[]
@@ -24,13 +24,14 @@ export function VideoFeed({ videos }: VideoFeedProps) {
   const [direction, setDirection] = useState(0)
   const [showToast, setShowToast] = useState(false)
   const [showPremiumModal, setShowPremiumModal] = useState(false)
-  const [premiumTrigger, setPremiumTrigger] = useState<'video-limit' | 'subtitle' | 'phrase-limit'>('video-limit')
+  const [premiumTrigger, setPremiumTrigger] = useState<'video-limit' | 'phrase-limit'>('video-limit')
+  const [showOverlay, setShowOverlay] = useState(true)
+  const overlayTimerRef = useRef<number | null>(null)
   const constraintsRef = useRef(null)
   const savePhrase = usePhraseStore((s) => s.savePhrase)
   const markWatched = useWatchHistoryStore((s) => s.markWatched)
   const incrementViewCount = useWatchHistoryStore((s) => s.incrementViewCount)
   const getViewCount = useWatchHistoryStore((s) => s.getViewCount)
-  const isWatchedFn = useWatchHistoryStore((s) => s.isWatched)
   const isPremium = usePremiumStore((s) => s.isPremium)
   const incrementDailyView = usePremiumStore((s) => s.incrementDailyView)
   const getDailyViewsRemaining = usePremiumStore((s) => s.getDailyViewsRemaining)
@@ -51,6 +52,18 @@ export function VideoFeed({ videos }: VideoFeedProps) {
   // Brief overlay indicator for repeat progress
   const [repeatIndicator, setRepeatIndicator] = useState<string | null>(null)
   const repeatIndicatorTimerRef = useRef<number | null>(null)
+
+  // Auto-hide top overlay after 3 seconds, re-show on video change
+  useEffect(() => {
+    setShowOverlay(true)
+    if (overlayTimerRef.current) clearTimeout(overlayTimerRef.current)
+    overlayTimerRef.current = window.setTimeout(() => {
+      setShowOverlay(false)
+    }, 3000)
+    return () => {
+      if (overlayTimerRef.current) clearTimeout(overlayTimerRef.current)
+    }
+  }, [currentIndex])
 
   // Mark episode as watched and count views
   useEffect(() => {
@@ -149,10 +162,13 @@ export function VideoFeed({ videos }: VideoFeedProps) {
   const currentVideo = videos[currentIndex]
   if (!currentVideo) return null
 
+  const seriesInfo = currentVideo.seriesId
+    ? allSeries.find(s => s.id === currentVideo.seriesId)
+    : null
   const categoryLabel = categories.find(c => c.id === currentVideo.category)?.label ?? currentVideo.category
 
   return (
-    <div ref={constraintsRef} className="relative w-full h-full overflow-hidden">
+    <div ref={constraintsRef} className="relative w-full h-full overflow-hidden bg-black">
       <AnimatePresence custom={direction}>
         <motion.div
           key={currentVideo.id}
@@ -160,10 +176,10 @@ export function VideoFeed({ videos }: VideoFeedProps) {
           initial={direction === 0 ? false : { y: direction > 0 ? '100%' : '-100%' }}
           animate={{ y: 0 }}
           exit={{ y: direction > 0 ? '-100%' : '100%' }}
-          transition={{ type: 'tween', duration: 0.28, ease: [0.25, 0.46, 0.45, 0.94] }}
+          transition={{ type: 'tween', duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
           drag="y"
           dragConstraints={{ top: 0, bottom: 0 }}
-          dragElastic={0.2}
+          dragElastic={0.15}
           onDragStart={() => setIsSwiping(true)}
           onDragEnd={(...args) => { setIsSwiping(false); handleDragEnd(...args) }}
           className="absolute inset-0"
@@ -196,62 +212,87 @@ export function VideoFeed({ videos }: VideoFeedProps) {
           />
           <UnifiedControls videoId={currentVideo.id} videoTitle={currentVideo.title} />
 
-          {/* Gradient overlay for top text readability */}
-          <div className="absolute top-0 left-0 right-0 h-[120px] bg-gradient-to-b from-black/60 to-transparent pointer-events-none z-[5]" />
+          {/* Top gradient for text readability — subtle, barely visible */}
+          <div className="absolute top-0 left-0 right-0 h-[100px] bg-gradient-to-b from-black/50 via-black/20 to-transparent pointer-events-none z-[5]" />
         </motion.div>
       </AnimatePresence>
 
-      {/* Progress bar - YouTube Shorts style */}
+      {/* Progress bar */}
       <ProgressBar />
 
       {/* Repeat progress indicator overlay */}
       {repeatIndicator && (
-        <div className="absolute top-16 left-0 right-0 flex justify-center z-20 pointer-events-none">
-          <div className="bg-purple-500/80 backdrop-blur-sm rounded-full px-4 py-1.5 animate-pulse">
-            <span className="text-white text-sm font-medium">{repeatIndicator}</span>
+        <div className="absolute top-14 left-0 right-0 flex justify-center z-20 pointer-events-none">
+          <div className="bg-white/10 backdrop-blur-md rounded-full px-4 py-1.5">
+            <span className="text-white/80 text-xs font-medium">{repeatIndicator}</span>
           </div>
         </div>
       )}
 
-      {/* Top area: counter + video info */}
-      <div className="absolute top-4 left-4 right-4 z-10 pointer-events-none">
-        <div className="flex items-center justify-between mb-2">
-          <span className="text-white/50 text-xs">
-            {currentIndex + 1} / {videos.length}
-            {!isPremium && (
-              <span className="text-white/40 text-xs ml-2 bg-white/10 px-2 py-0.5 rounded-full">
-                오늘 {FREE_DAILY_VIEW_LIMIT - getDailyViewsRemaining()}/{FREE_DAILY_VIEW_LIMIT} 영상
-              </span>
-            )}
-          </span>
-          {currentIndex === 0 && currentVideo.seriesId && !isWatchedFn(currentVideo.seriesId, currentVideo.id) && (
-            <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-white text-xs font-medium px-3 py-1 rounded-full shadow-lg">
-              오늘의 추천
-            </span>
-          )}
-        </div>
-        <p className="text-white font-bold text-base drop-shadow-lg">
+      {/* Top overlay: video info — auto-hides after 3s */}
+      <div
+        className="absolute top-0 left-0 right-16 z-10 pointer-events-none pt-4 pl-4 pr-4 transition-opacity duration-700 ease-out"
+        style={{ opacity: showOverlay ? 1 : 0 }}
+      >
+        {/* Video title */}
+        <p className="text-white/90 font-semibold text-sm drop-shadow-md leading-snug line-clamp-1">
           {currentVideo.title}
         </p>
-        <div className="flex gap-2 mt-1 items-center">
-          <span className="text-white/70 text-xs bg-white/10 px-2 py-0.5 rounded-full">
+
+        {/* Series name + episode indicator */}
+        {seriesInfo && (
+          <p className="text-white/50 text-[11px] mt-0.5 leading-snug">
+            {seriesInfo.title}
+            {currentVideo.episodeNumber && (
+              <span className="text-white/35 ml-1.5">
+                {currentVideo.episodeNumber}/{seriesInfo.episodeCount}
+              </span>
+            )}
+          </p>
+        )}
+
+        {/* Minimal metadata row */}
+        <div className="flex gap-1.5 mt-1.5 items-center">
+          <span className="text-white/40 text-[10px]">
             {categoryLabel}
           </span>
-          <span className="text-white/70 text-xs bg-white/10 px-2 py-0.5 rounded-full">
-            {'★'.repeat(currentVideo.difficulty)}
+          <span className="text-white/20 text-[10px]">
+            ·
           </span>
-          <span className="text-white/70 text-xs bg-white/10 px-2 py-0.5 rounded-full">
-            {currentVideo.clipEnd - currentVideo.clipStart}초
+          <span className="text-white/40 text-[10px]">
+            {currentVideo.clipEnd - currentVideo.clipStart}s
           </span>
-          {getViewCount(currentVideo.id) > 1 && (
-            <span className="text-white/70 text-xs bg-white/10 px-2 py-0.5 rounded-full">
-              x{getViewCount(currentVideo.id)}
-            </span>
+          {!isPremium && (
+            <>
+              <span className="text-white/20 text-[10px]">·</span>
+              <span className="text-white/30 text-[10px]">
+                {FREE_DAILY_VIEW_LIMIT - getDailyViewsRemaining()}/{FREE_DAILY_VIEW_LIMIT}
+              </span>
+            </>
           )}
         </div>
       </div>
 
-      <SaveToast show={showToast} message="표현이 저장됐어요!" />
+      {/* Dot position indicators — always visible, very subtle */}
+      {videos.length > 1 && videos.length <= 20 && (
+        <div className="absolute top-5 right-3 z-10 pointer-events-none flex flex-col gap-[3px]">
+          {videos.slice(0, Math.min(videos.length, 12)).map((_, idx) => (
+            <div
+              key={idx}
+              className={`rounded-full transition-all duration-300 ${
+                idx === currentIndex
+                  ? 'w-[4px] h-[4px] bg-white/80'
+                  : 'w-[3px] h-[3px] bg-white/20'
+              }`}
+            />
+          ))}
+          {videos.length > 12 && (
+            <div className="w-[3px] h-[3px] bg-white/10 rounded-full" />
+          )}
+        </div>
+      )}
+
+      <SaveToast show={showToast} message="표현 저장됨" />
 
       <PremiumModal
         isOpen={showPremiumModal}

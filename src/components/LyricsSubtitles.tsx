@@ -213,7 +213,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
                     }}
                   >
                     {isJustSaved ? (
-                      <span className="text-blue-200 font-semibold text-sm">Saved!</span>
+                      <span className="text-blue-200/80 font-medium text-sm">saved</span>
                     ) : (
                       <>
                         <span className={isActive && showKo ? 'line-clamp-2' : undefined}>{sub.en}</span>

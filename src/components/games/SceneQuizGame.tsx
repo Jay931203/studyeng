@@ -179,7 +179,7 @@ export function SceneQuizGame({ subtitle, onComplete }: SceneQuizGameProps) {
 
   return (
     <div className="flex flex-col items-center justify-center h-full px-6">
-      <p className="text-gray-400 text-xs uppercase tracking-wider mb-8">
+      <p className="text-gray-500 text-xs uppercase tracking-wider mb-8">
         빈칸에 들어갈 단어는?
       </p>
 
@@ -191,8 +191,9 @@ export function SceneQuizGame({ subtitle, onComplete }: SceneQuizGameProps) {
       {/* Korean translation - only shown after answering */}
       {selected && (
         <motion.p
-          initial={{ opacity: 0, y: 5 }}
+          initial={{ opacity: 0, y: 4 }}
           animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.2, ease: 'easeOut' }}
           className="text-gray-500 text-sm mb-8 text-center"
         >
           {subtitle.ko}
@@ -213,7 +214,7 @@ export function SceneQuizGame({ subtitle, onComplete }: SceneQuizGameProps) {
           return (
             <motion.button
               key={option}
-              whileTap={{ scale: 0.95 }}
+              whileTap={{ scale: 0.97 }}
               onClick={() => handleSelect(option)}
               disabled={selected !== null}
               className={`${bg} text-white py-3 px-4 rounded-xl text-center font-medium transition-colors`}

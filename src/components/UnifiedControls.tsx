@@ -251,7 +251,7 @@ export function UnifiedControls({ videoId, videoTitle }: UnifiedControlsProps) {
         )}
       </div>
 
-      <SaveToast show={showToast} message="링크가 복사됐어요!" />
+      <SaveToast show={showToast} message="링크 복사됨" />
     </>
   )
 }

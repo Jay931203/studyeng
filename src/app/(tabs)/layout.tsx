@@ -68,8 +68,11 @@ export default function TabsLayout({
   // This prevents the feed from flashing before the redirect fires.
   if (!checked) {
     return (
-      <div className="h-dvh bg-black flex items-center justify-center">
-        <div className="w-8 h-8 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+      <div className="h-dvh bg-black flex flex-col items-center justify-center">
+        <div className="relative">
+          <div className="w-8 h-8 border-[1.5px] border-white/10 rounded-full" />
+          <div className="absolute inset-0 w-8 h-8 border-[1.5px] border-transparent border-t-white/60 rounded-full animate-spin" />
+        </div>
       </div>
     )
   }

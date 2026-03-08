@@ -53,17 +53,9 @@ export function DoubleTapTip() {
           onClick={dismiss}
           className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 pointer-events-auto cursor-pointer"
         >
-          <div className="bg-white/10 backdrop-blur-md rounded-full px-4 py-2 flex items-center gap-2 shadow-lg border border-white/10">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              className="w-4 h-4 text-blue-400 flex-shrink-0"
-            >
-              <path d="M15.98 1.804a1 1 0 00-1.96 0l-.24 1.192a1 1 0 01-.784.785l-1.192.238a1 1 0 000 1.962l1.192.238a1 1 0 01.785.785l.238 1.192a1 1 0 001.962 0l.238-1.192a1 1 0 01.785-.785l1.192-.238a1 1 0 000-1.962l-1.192-.238a1 1 0 01-.785-.785l-.238-1.192zM6.949 5.684a1 1 0 00-1.898 0l-.683 2.051a1 1 0 01-.633.633l-2.051.683a1 1 0 000 1.898l2.051.684a1 1 0 01.633.632l.683 2.051a1 1 0 001.898 0l.683-2.051a1 1 0 01.633-.633l2.051-.683a1 1 0 000-1.898l-2.051-.683a1 1 0 01-.633-.633L6.95 5.684zM13.949 13.684a1 1 0 00-1.898 0l-.184.551a1 1 0 01-.632.633l-.551.183a1 1 0 000 1.898l.551.183a1 1 0 01.633.633l.183.551a1 1 0 001.898 0l.184-.551a1 1 0 01.632-.633l.551-.183a1 1 0 000-1.898l-.551-.184a1 1 0 01-.633-.632l-.183-.551z" />
-            </svg>
-            <span className="text-white/90 text-xs font-medium whitespace-nowrap">
-              문장을 두 번 탭하면 저장!
+          <div className="bg-white/8 backdrop-blur-md rounded-full px-3.5 py-1.5 flex items-center gap-1.5 border border-white/6">
+            <span className="text-white/50 text-[11px] font-medium whitespace-nowrap">
+              두 번 탭해서 문장 저장
             </span>
           </div>
         </motion.div>

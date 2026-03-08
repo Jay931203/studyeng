@@ -11,38 +11,48 @@ interface GameResultProps {
 export function GameResult({ correct, xpEarned, onContinue }: GameResultProps) {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.2 }}
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
       onClick={onContinue}
     >
       <motion.div
-        initial={{ y: 20 }}
-        animate={{ y: 0 }}
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.25, ease: 'easeOut' }}
         className="text-center"
       >
-        <motion.div
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ type: 'spring', damping: 10, delay: 0.1 }}
-          className="text-6xl mb-4"
-        >
-          {correct ? '\uD83C\uDF89' : '\uD83D\uDCAA'}
-        </motion.div>
+        {/* Clean icon instead of emoji */}
+        <div className="mb-5">
+          {correct ? (
+            <div className="w-16 h-16 mx-auto rounded-full bg-green-500/15 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-8 h-8 text-green-400">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+            </div>
+          ) : (
+            <div className="w-16 h-16 mx-auto rounded-full bg-white/5 flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-8 h-8 text-white/40">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </div>
+          )}
+        </div>
         <p className="text-white text-2xl font-bold mb-2">
-          {correct ? '정답!' : '아깝다!'}
+          {correct ? '맞았어' : '틀렸어'}
         </p>
         {correct && xpEarned > 0 && (
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
+            transition={{ delay: 0.15, duration: 0.2 }}
             className="text-yellow-400 font-bold text-lg"
           >
             +{xpEarned} XP
           </motion.p>
         )}
-        <p className="text-gray-400 text-sm mt-4">탭해서 계속</p>
+        <p className="text-gray-500 text-sm mt-6">탭해서 계속</p>
       </motion.div>
     </motion.div>
   )

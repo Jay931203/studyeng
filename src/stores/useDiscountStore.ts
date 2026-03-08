@@ -2,12 +2,13 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
 /**
- * 할인율 테이블:
- * 0~30%  달성 → 0% 할인
- * 30~50% 달성 → 10% 할인
- * 50~70% 달성 → 20% 할인
- * 70~90% 달성 → 30% 할인
- * 90~100% 달성 → 50% 할인
+ * 미션 달성 할인율 테이블:
+ * 0~70%  달성 → 0% 할인
+ * 70~90% 달성 → 10% 할인 (연간 플랜 추가 할인)
+ * 90~100% 달성 → 15% 할인 (연간 플랜 추가 할인)
+ * 3개월 연속 90%+ → 20% 할인 (연간 갱신 시)
+ *
+ * 최저 마진 라인: 연간 48,900원 이하 불가
  */
 
 interface DiscountTier {
@@ -16,16 +17,19 @@ interface DiscountTier {
 }
 
 const DISCOUNT_TIERS: DiscountTier[] = [
-  { minRate: 90, discount: 50 },
-  { minRate: 70, discount: 30 },
-  { minRate: 50, discount: 20 },
-  { minRate: 30, discount: 10 },
+  { minRate: 90, discount: 15 },
+  { minRate: 70, discount: 10 },
   { minRate: 0, discount: 0 },
 ]
+
+/** 3개월 연속 90%+ 달성 시 보너스 할인율 */
+const CONSECUTIVE_BONUS_DISCOUNT = 20
 
 interface DiscountState {
   completedDays: string[] // 미션 올클리어한 날짜들 (YYYY-MM-DD)
   currentMonth: string // YYYY-MM 형식
+  /** 연속 90%+ 달성 월 수 (월 리셋 시 이전 달 달성률 체크 후 갱신) */
+  consecutiveHighMonths: number
 
   recordDailyCompletion: () => void
   getCompletionRate: () => number
@@ -34,6 +38,8 @@ interface DiscountState {
   getDaysInCurrentMonth: () => number
   getNextTierInfo: () => { daysNeeded: number; nextDiscount: number } | null
   checkAndResetMonthly: () => void
+  /** 3개월 연속 90%+ 달성 여부 */
+  hasConsecutiveBonus: () => boolean
 }
 
 function getCurrentMonthString(): string {
@@ -65,15 +71,25 @@ export const useDiscountStore = create<DiscountState>()(
     (set, get) => ({
       completedDays: [],
       currentMonth: getCurrentMonthString(),
+      consecutiveHighMonths: 0,
 
       checkAndResetMonthly: () => {
         const thisMonth = getCurrentMonthString()
-        const { currentMonth } = get()
+        const { currentMonth, completedDays, consecutiveHighMonths } = get()
 
         if (currentMonth !== thisMonth) {
+          // 이전 달 달성률 계산 후 연속 90%+ 카운터 갱신
+          const prevMonthDays = getDaysInMonth(currentMonth)
+          const prevRate = prevMonthDays > 0 ? (completedDays.length / prevMonthDays) * 100 : 0
+
+          const newConsecutive = prevRate >= 90
+            ? consecutiveHighMonths + 1
+            : 0
+
           set({
             completedDays: [],
             currentMonth: thisMonth,
+            consecutiveHighMonths: newConsecutive,
           })
         }
       },
@@ -106,8 +122,17 @@ export const useDiscountStore = create<DiscountState>()(
       },
 
       getDiscountRate: () => {
-        const rate = get().getCompletionRate()
+        const state = get()
+        // 3개월 연속 90%+ 보너스가 있으면 20% 적용
+        if (state.consecutiveHighMonths >= 3) {
+          return CONSECUTIVE_BONUS_DISCOUNT
+        }
+        const rate = state.getCompletionRate()
         return calculateDiscountRate(rate)
+      },
+
+      hasConsecutiveBonus: () => {
+        return get().consecutiveHighMonths >= 3
       },
 
       getNextTierInfo: () => {
@@ -116,8 +141,8 @@ export const useDiscountStore = create<DiscountState>()(
         const currentRate = get().getCompletionRate()
         const currentDiscount = calculateDiscountRate(currentRate)
 
-        // 이미 최고 티어(50%)에 도달
-        if (currentDiscount >= 50) return null
+        // 이미 최고 티어(15%) 또는 연속 보너스(20%)에 도달
+        if (currentDiscount >= 15) return null
 
         // 다음 티어 찾기
         const nextTier = [...DISCOUNT_TIERS]
@@ -140,4 +165,4 @@ export const useDiscountStore = create<DiscountState>()(
   )
 )
 
-export { DISCOUNT_TIERS }
+export { DISCOUNT_TIERS, CONSECUTIVE_BONUS_DISCOUNT }

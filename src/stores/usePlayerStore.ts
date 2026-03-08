@@ -17,8 +17,6 @@ interface PlayerState {
   clipStart: number
   clipEnd: number
   activeSubIndex: number
-  /** Set to true when a non-premium user tries to access en-ko subtitles */
-  subtitleGateBlocked: boolean
   /** How many times to repeat the current video before auto-advancing */
   repeatMode: RepeatMode
   /** How many times the current video has fully played through */
@@ -35,7 +33,6 @@ interface PlayerState {
   setIsPlaying: (playing: boolean) => void
   setClipBounds: (clipStart: number, clipEnd: number) => void
   setActiveSubIndex: (idx: number) => void
-  clearSubtitleGateBlocked: () => void
   setRepeatMode: (mode: RepeatMode) => void
   incrementRepeatCount: () => void
   resetRepeatCount: () => void
@@ -70,7 +67,6 @@ export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
   clipStart: 0,
   clipEnd: 0,
   activeSubIndex: -1,
-  subtitleGateBlocked: false,
   repeatMode: 'off',
   currentRepeatCount: 0,
   isSwiping: false,
@@ -80,8 +76,6 @@ export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
     const next = subtitleCycle[(current + 1) % subtitleCycle.length]
     set({ subtitleMode: next })
   },
-
-  clearSubtitleGateBlocked: () => set({ subtitleGateBlocked: false }),
 
   setPlaybackRate: (rate) => set({ playbackRate: rate }),
 

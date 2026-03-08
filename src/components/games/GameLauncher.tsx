@@ -122,9 +122,9 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
   // Show nothing only when both saved phrases AND transcripts are empty and still loading
   if (!hasPhrases && loadingTranscripts) {
     return (
-      <div className="mb-6">
-        <div className="w-full bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-6 text-center">
-          <p className="text-[var(--text-secondary)] text-sm animate-pulse">
+      <div className="mb-8">
+        <div className="w-full bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-2xl border border-white/[0.04] p-6 text-center">
+          <p className="text-[var(--text-muted)] text-sm animate-pulse">
             게임 준비 중...
           </p>
         </div>
@@ -136,41 +136,44 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
 
   return (
     <>
-      <div className="mb-6">
+      <div className="mb-8">
+        <h2 className="text-[var(--text-secondary)] text-xs font-medium tracking-wide uppercase mb-3">
+          게임
+        </h2>
         <div className="flex gap-3">
           <motion.button
-            whileTap={{ scale: 0.96 }}
+            whileTap={{ scale: 0.97 }}
             onClick={() => launchGame('scene-quiz')}
-            className="flex-1 bg-gradient-to-br from-blue-500/20 to-purple-500/20 shadow-[var(--card-shadow)] rounded-xl p-4 text-left"
+            className="flex-1 bg-[var(--bg-card)] shadow-[var(--card-shadow)] border border-blue-500/10 rounded-2xl p-4 text-left"
           >
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-blue-500/20 flex items-center justify-center flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-blue-400">
+              <div className="w-9 h-9 rounded-xl bg-blue-500/10 flex items-center justify-center flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-blue-400">
                   <path fillRule="evenodd" d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 01-3.476.383.39.39 0 00-.297.17l-2.755 4.133a.75.75 0 01-1.248 0l-2.755-4.133a.39.39 0 00-.297-.17 48.9 48.9 0 01-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97zM6.75 8.25a.75.75 0 01.75-.75h9a.75.75 0 010 1.5h-9a.75.75 0 01-.75-.75zm.75 3.75a.75.75 0 000 1.5H12a.75.75 0 000-1.5H7.5z" clipRule="evenodd" />
                 </svg>
               </div>
               <div>
-                <span className="text-[var(--text-primary)] font-bold text-sm">빈칸 퀴즈</span>
-                <span className="text-[var(--text-secondary)] text-xs block mt-0.5">핵심 단어 맞추기</span>
+                <span className="text-[var(--text-primary)] font-semibold text-sm block">빈칸 퀴즈</span>
+                <span className="text-[var(--text-muted)] text-xs block mt-0.5">핵심 단어 맞추기</span>
               </div>
             </div>
           </motion.button>
 
           <motion.button
-            whileTap={{ scale: 0.96 }}
+            whileTap={{ scale: 0.97 }}
             onClick={() => launchGame('listening')}
-            className="flex-1 bg-gradient-to-br from-green-500/20 to-teal-500/20 shadow-[var(--card-shadow)] rounded-xl p-4 text-left"
+            className="flex-1 bg-[var(--bg-card)] shadow-[var(--card-shadow)] border border-green-500/10 rounded-2xl p-4 text-left"
           >
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-green-500/20 flex items-center justify-center flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 text-green-400">
+              <div className="w-9 h-9 rounded-xl bg-green-500/10 flex items-center justify-center flex-shrink-0">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-green-400">
                   <path d="M8.25 4.5a3.75 3.75 0 117.5 0v8.25a3.75 3.75 0 11-7.5 0V4.5z" />
                   <path d="M6 10.5a.75.75 0 01.75.75v1.5a5.25 5.25 0 1010.5 0v-1.5a.75.75 0 011.5 0v1.5a6.751 6.751 0 01-6 6.709v2.291h3a.75.75 0 010 1.5h-7.5a.75.75 0 010-1.5h3v-2.291a6.751 6.751 0 01-6-6.709v-1.5A.75.75 0 016 10.5z" />
                 </svg>
               </div>
               <div>
-                <span className="text-[var(--text-primary)] font-bold text-sm">다음 문장 맞추기</span>
-                <span className="text-[var(--text-secondary)] text-xs block mt-0.5">문맥 이해력 테스트</span>
+                <span className="text-[var(--text-primary)] font-semibold text-sm block">다음 대사 맞추기</span>
+                <span className="text-[var(--text-muted)] text-xs block mt-0.5">문맥 읽기</span>
               </div>
             </div>
           </motion.button>
@@ -183,6 +186,7 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
             className="fixed inset-0 z-40 bg-black"
           >
             <button
