@@ -111,7 +111,7 @@ export function ProgressBar() {
   }, [clipStart, clipDuration, isPlaying])
 
   return (
-    <div className={`absolute bottom-0 left-0 right-0 z-20 transition-opacity duration-200 ${isSwiping ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+    <div className={`absolute bottom-0 left-0 right-0 z-30 transition-opacity duration-200 ${isSwiping ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
       {/* Touch target: tall (24px) transparent area for easy tapping/dragging */}
       <div
         ref={containerRef}
@@ -124,8 +124,8 @@ export function ProgressBar() {
       >
         {/* Visual track */}
         <div
-          className="w-full bg-white/20 overflow-visible transition-[height] duration-150"
-          style={{ height: isDragging ? '4px' : '2px' }}
+          className="w-full bg-white/30 overflow-visible transition-[height] duration-150"
+          style={{ height: isDragging ? '5px' : '3px' }}
         >
           {/* Filled portion */}
           <div

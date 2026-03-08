@@ -43,8 +43,8 @@ export default function ProfilePage() {
     Object.values(s.viewCounts).reduce((sum, c) => sum + c, 0)
   )
   const { user, signInWithGoogle, signInWithKakao, signOut, loading } = useAuth()
-  const { theme, toggleTheme } = useThemeStore()
-  const { isAdmin, setAdmin, flaggedSubtitles, exportFlags, clearFlags } = useAdminStore()
+  const { theme, setTheme } = useThemeStore()
+  const { isAdmin, isAdminActive, adminEnabled, setAdminEnabled, adminEmail, flaggedSubtitles, exportFlags, clearFlags } = useAdminStore()
   const { hasSeenWelcome, markWelcomeSeen } = useOnboardingStore()
 
   const isNewUser = totalViews === 0 && phraseCount === 0 && streakDays === 0
@@ -120,20 +120,84 @@ export default function ProfilePage() {
           <AnimatedStat value={totalWatched} label="본 영상" />
         </div>
 
-        {/* Theme toggle */}
-        <motion.button
-          whileTap={{ scale: 0.98 }}
-          onClick={toggleTheme}
-          className="w-full mt-6 py-3 bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl flex items-center justify-between px-4"
-        >
-          <span className="text-[var(--text-secondary)] text-sm">테마</span>
-          <span className="text-[var(--text-primary)] text-sm font-medium">
-            {theme === 'dark' ? '다크 모드' : '라이트 모드'}
-          </span>
-        </motion.button>
+        {/* Theme selector */}
+        <div className="mt-6 bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl px-4 py-3">
+          <p className="text-[var(--text-secondary)] text-sm mb-3">테마</p>
+          <div className="flex items-center gap-3">
+            {/* Purple Dark */}
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setTheme('purple-dark')}
+              className="flex flex-col items-center gap-1.5"
+              aria-label="보라 다크 테마"
+            >
+              <div className={`w-10 h-10 rounded-full bg-black border-[3px] flex items-center justify-center ${theme === 'purple-dark' ? 'border-purple-500 ring-2 ring-purple-500/30' : 'border-gray-600'}`}>
+                <div className="w-4 h-4 rounded-full bg-purple-500" />
+              </div>
+              <span className={`text-[10px] ${theme === 'purple-dark' ? 'text-[var(--text-primary)] font-semibold' : 'text-[var(--text-muted)]'}`}>보라</span>
+            </motion.button>
+
+            {/* Blue Dark */}
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setTheme('blue-dark')}
+              className="flex flex-col items-center gap-1.5"
+              aria-label="블루 다크 테마"
+            >
+              <div className={`w-10 h-10 rounded-full bg-black border-[3px] flex items-center justify-center ${theme === 'blue-dark' ? 'border-blue-500 ring-2 ring-blue-500/30' : 'border-gray-600'}`}>
+                <div className="w-4 h-4 rounded-full bg-blue-500" />
+              </div>
+              <span className={`text-[10px] ${theme === 'blue-dark' ? 'text-[var(--text-primary)] font-semibold' : 'text-[var(--text-muted)]'}`}>블루</span>
+            </motion.button>
+
+            {/* Light */}
+            <motion.button
+              whileTap={{ scale: 0.9 }}
+              onClick={() => setTheme('light')}
+              className="flex flex-col items-center gap-1.5"
+              aria-label="라이트 테마"
+            >
+              <div className={`w-10 h-10 rounded-full bg-white border-[3px] flex items-center justify-center ${theme === 'light' ? 'border-purple-600 ring-2 ring-purple-600/30' : 'border-gray-300'}`}>
+                <div className="w-4 h-4 rounded-full bg-purple-600" />
+              </div>
+              <span className={`text-[10px] ${theme === 'light' ? 'text-[var(--text-primary)] font-semibold' : 'text-[var(--text-muted)]'}`}>라이트</span>
+            </motion.button>
+          </div>
+        </div>
+
+        {/* Admin mode toggle - only visible when user email matches admin email */}
+        {isAdmin && user?.email === adminEmail && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="mt-3 bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl px-4 py-3 flex items-center justify-between"
+          >
+            <div className="flex items-center gap-2">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4 text-red-400">
+                <path fillRule="evenodd" d="M10 1a4.5 4.5 0 0 0-4.5 4.5V9H5a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6a2 2 0 0 0-2-2h-.5V5.5A4.5 4.5 0 0 0 10 1Zm3 8V5.5a3 3 0 1 0-6 0V9h6Z" clipRule="evenodd" />
+              </svg>
+              <span className="text-[var(--text-secondary)] text-sm">관리자 모드</span>
+            </div>
+            <button
+              onClick={() => setAdminEnabled(!adminEnabled)}
+              className={`relative w-11 h-6 rounded-full transition-colors duration-200 ${
+                adminEnabled ? 'bg-red-500' : 'bg-[var(--bg-secondary)]'
+              }`}
+              role="switch"
+              aria-checked={adminEnabled}
+              aria-label="관리자 모드 토글"
+            >
+              <span
+                className={`absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white shadow transition-transform duration-200 ${
+                  adminEnabled ? 'translate-x-5' : 'translate-x-0'
+                }`}
+              />
+            </button>
+          </motion.div>
+        )}
 
         {/* Admin panel - only visible when admin mode is active */}
-        {isAdmin && (
+        {isAdminActive() && (
           <div className="mt-3 bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl overflow-hidden">
             <div className="px-4 py-3 border-b border-[var(--border-card)] flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -172,12 +236,6 @@ export default function ProfilePage() {
                 className="py-2 px-4 bg-[var(--bg-secondary)] text-[var(--text-muted)] rounded-lg text-xs font-medium disabled:opacity-30 disabled:cursor-not-allowed active:scale-95 transition-transform"
               >
                 Clear
-              </button>
-              <button
-                onClick={() => setAdmin(false)}
-                className="py-2 px-4 bg-[var(--bg-secondary)] text-[var(--text-muted)] rounded-lg text-xs font-medium active:scale-95 transition-transform"
-              >
-                Off
               </button>
             </div>
           </div>

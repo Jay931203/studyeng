@@ -1,6 +1,16 @@
 @import "tailwindcss";
 
-:root {
+/* =====================================================
+   Theme System
+   Three themes controlled via data-theme attribute on <html>
+   - purple-dark (default): Purple accent on black
+   - blue-dark: Blue accent on black
+   - light: Purple accent on white
+   ===================================================== */
+
+/* Purple Dark (default) */
+:root,
+[data-theme="purple-dark"] {
   --background: #000000;
   --foreground: #ffffff;
   --bg-primary: #000000;
@@ -13,9 +23,38 @@
   --text-muted: #8b95a5;
   --bg-nav: rgba(0,0,0,0.95);
   --bg-search-dropdown: #111827;
+
+  --accent-primary: #a855f7;
+  --accent-secondary: #7c3aed;
+  --accent-primary-rgb: 168, 85, 247;
+  --accent-glow: rgba(168, 85, 247, 0.2);
+  --accent-text: #c084fc;
 }
 
-:root:not(.dark) {
+/* Blue Dark */
+[data-theme="blue-dark"] {
+  --background: #000000;
+  --foreground: #ffffff;
+  --bg-primary: #000000;
+  --bg-secondary: rgba(255,255,255,0.1);
+  --bg-card: rgba(255,255,255,0.07);
+  --border-card: rgba(255,255,255,0.1);
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --text-muted: #8b95a5;
+  --bg-nav: rgba(0,0,0,0.95);
+  --bg-search-dropdown: #111827;
+
+  --accent-primary: #3b82f6;
+  --accent-secondary: #2563eb;
+  --accent-primary-rgb: 59, 130, 246;
+  --accent-glow: rgba(59, 130, 246, 0.2);
+  --accent-text: #60a5fa;
+}
+
+/* Light */
+[data-theme="light"] {
   --background: #f5f5f5;
   --foreground: #111827;
   --bg-primary: #f5f5f5;
@@ -28,6 +67,12 @@
   --text-muted: #6b7280;
   --bg-nav: rgba(255,255,255,0.95);
   --bg-search-dropdown: #ffffff;
+
+  --accent-primary: #9333ea;
+  --accent-secondary: #7c3aed;
+  --accent-primary-rgb: 147, 51, 234;
+  --accent-glow: rgba(147, 51, 234, 0.15);
+  --accent-text: #7c3aed;
 }
 
 body {

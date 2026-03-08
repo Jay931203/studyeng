@@ -1,6 +1,6 @@
 'use client'
 
-import { useId, useState, useRef, useCallback, useEffect, useMemo } from 'react'
+import { useId, useState, useRef, useCallback, useEffect, useMemo, type CSSProperties } from 'react'
 import { useYouTubePlayer } from '@/hooks/useYouTubePlayer'
 import { useTranscript } from '@/hooks/useTranscript'
 import { usePlayerStore, seekToRef } from '@/stores/usePlayerStore'
@@ -33,8 +33,28 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
     return raw
   }, [fetchedSubtitles, propSubtitles, clipStart, clipEnd])
 
-  const { ready, play, pause, seekTo, videoError, clearVideoError } = useYouTubePlayer(containerId, youtubeId, clipStart, clipEnd, subtitles, onClipComplete)
+  const { ready, playbackStarted, play, pause, seekTo, videoError, clearVideoError } = useYouTubePlayer(containerId, youtubeId, clipStart, clipEnd, subtitles, onClipComplete)
   const { isPlaying } = usePlayerStore()
+
+  // Transition overlay: starts fully opaque, fades out after playback begins.
+  // This hides the YouTube logo/branding that briefly flashes during video load.
+  const [overlayVisible, setOverlayVisible] = useState(true)
+
+  useEffect(() => {
+    if (playbackStarted) {
+      // Wait 300ms after first PLAYING state to ensure the video frame is
+      // actually visible before starting the fade — prevents the YouTube
+      // logo from flashing between overlay disappearing and video rendering.
+      const timer = window.setTimeout(() => {
+        setOverlayVisible(false)
+      }, 300)
+      return () => clearTimeout(timer)
+    } else {
+      // When playback hasn't started (new video loading), ensure overlay is
+      // visible. Handles edge cases where React preserves component state.
+      setOverlayVisible(true)
+    }
+  }, [playbackStarted])
 
   // Register seekTo in the shared ref so sibling components (e.g. ProgressBar) can seek
   useEffect(() => {
@@ -63,8 +83,8 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
 
   return (
     <div className="flex flex-col w-full h-full bg-black">
-      {/* Video area — top 55% */}
-      <div className="relative flex-shrink-0" style={{ height: '55%' }} onClick={handleTap}>
+      {/* Video area — fills remaining space above fixed subtitle area */}
+      <div className="relative flex-1 min-h-0" onClick={handleTap}>
         {/* YouTube player container */}
         <div
           id={containerId}
@@ -124,13 +144,25 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
           </div>
         )}
 
-        {/* Loading state — branded, minimal */}
-        {!ready && !videoError && (
-          <div className="absolute inset-0 flex flex-col items-center justify-center bg-black">
-            <div className="relative">
-              <div className="w-8 h-8 border-[1.5px] border-white/10 rounded-full" />
-              <div className="absolute inset-0 w-8 h-8 border-[1.5px] border-transparent border-t-white/60 rounded-full animate-spin" />
-            </div>
+        {/* Video transition overlay — covers YouTube branding during load.
+            Stays fully opaque until playback actually starts, then fades out. */}
+        {!videoError && (
+          <div
+            className="absolute inset-0 z-10 pointer-events-none flex items-center justify-center bg-black"
+            style={{
+              opacity: overlayVisible ? 1 : 0,
+              transition: 'opacity 0.5s ease-out',
+              // Remove from layout after fade completes to not block interactions
+              ...(overlayVisible ? {} : { pointerEvents: 'none' } as CSSProperties),
+            }}
+          >
+            {/* Spinner shown while loading */}
+            {!ready && (
+              <div className="relative">
+                <div className="w-8 h-8 border-[1.5px] border-white/10 rounded-full" />
+                <div className="absolute inset-0 w-8 h-8 border-[1.5px] border-transparent border-t-white/60 rounded-full animate-spin" />
+              </div>
+            )}
           </div>
         )}
 
@@ -148,8 +180,8 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
       {/* Soft divider between video and subtitle areas */}
       <div className="w-full h-px bg-gradient-to-r from-transparent via-white/8 to-transparent flex-shrink-0" />
 
-      {/* Subtitles area — bottom 45% */}
-      <div className="flex-1 min-h-0 bg-black">
+      {/* Subtitles area — fixed height for 3 subtitle lines */}
+      <div className="flex-shrink-0 h-[200px] bg-black">
         <LyricsSubtitles
           subtitles={subtitles}
           videoId={youtubeId}

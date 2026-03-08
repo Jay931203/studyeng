@@ -21,12 +21,17 @@ const LONG_PRESS_DURATION = 500
 
 export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: LyricsSubtitlesProps) {
   const { subtitleMode, activeSubIndex, freezeSubIndex, setFreezeSubIndex } = usePlayerStore()
-  const { isAdmin, toggleFlag, isFlagged } = useAdminStore()
+  const { isAdminActive, toggleFlag, isFlagged } = useAdminStore()
   const phrases = usePhraseStore((s) => s.phrases)
   const containerRef = useRef<HTMLDivElement>(null)
   const lineRefs = useRef<(HTMLDivElement | null)[]>([])
   const prevActiveRef = useRef<number>(-1)
   const scrollRafRef = useRef<number | null>(null)
+
+  // User-scroll detection: distinguish manual scroll from programmatic scroll
+  const [isUserScrolling, setIsUserScrolling] = useState(false)
+  const isProgrammaticScrollRef = useRef(false)
+  const userScrollTimerRef = useRef<number | null>(null)
 
   // Reset refs when subtitles change
   useEffect(() => {
@@ -46,7 +51,9 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
 
   // Freeze mode indicator (shows briefly then fades)
   const [showFreezeIndicator, setShowFreezeIndicator] = useState(false)
+  const [freezeIndicatorText, setFreezeIndicatorText] = useState('프리즈 모드')
   const freezeIndicatorTimerRef = useRef<number | null>(null)
+  const prevFreezeSubIndexRef = useRef<number | null>(null)
 
   // First-time tooltip
   const [showFreezeTip, setShowFreezeTip] = useState(false)
@@ -62,6 +69,36 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
     }
   }, [])
 
+  // Detect user-initiated scroll via touch events + onScroll
+  const handleTouchStart = useCallback(() => {
+    // User is touching the scroll area — any scroll events during touch are user-initiated
+    isProgrammaticScrollRef.current = false
+  }, [])
+
+  // Desktop: mouse wheel also counts as user-initiated scroll
+  const handleWheel = useCallback(() => {
+    isProgrammaticScrollRef.current = false
+    setIsUserScrolling(true)
+    if (userScrollTimerRef.current) clearTimeout(userScrollTimerRef.current)
+    userScrollTimerRef.current = window.setTimeout(() => {
+      setIsUserScrolling(false)
+    }, 2500)
+  }, [])
+
+  const handleScroll = useCallback(() => {
+    // If the scroll was triggered programmatically (auto-scroll), ignore it
+    if (isProgrammaticScrollRef.current) return
+
+    // User is manually scrolling — reveal all subtitles
+    setIsUserScrolling(true)
+
+    // Reset the timer on every scroll event
+    if (userScrollTimerRef.current) clearTimeout(userScrollTimerRef.current)
+    userScrollTimerRef.current = window.setTimeout(() => {
+      setIsUserScrolling(false)
+    }, 2500)
+  }, [])
+
   // Check if a subtitle is already saved
   const isSavedPhrase = useCallback(
     (sub: SubtitleEntry) => phrases.some((p) => p.en === sub.en),
@@ -69,8 +106,10 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
   )
 
   // Auto-scroll to keep the active subtitle centered — smoothed with rAF
+  // Skip auto-scroll while user is manually scrolling to avoid fighting with their input
   useEffect(() => {
     if (activeSubIndex < 0 || !containerRef.current) return
+    if (isUserScrolling) return
     const line = lineRefs.current[activeSubIndex]
     if (!line) return
 
@@ -83,6 +122,9 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
     // For consecutive subtitles (distance=1), use animated scroll for fluidity
     const isConsecutive = prevActiveRef.current >= 0 && Math.abs(activeSubIndex - prevActiveRef.current) === 1
     prevActiveRef.current = activeSubIndex
+
+    // Mark as programmatic scroll so onScroll handler ignores it
+    isProgrammaticScrollRef.current = true
 
     if (isConsecutive) {
       if (scrollRafRef.current) cancelAnimationFrame(scrollRafRef.current)
@@ -101,23 +143,46 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
         container.scrollTop = startTop + diff * easeOutCubic(progress)
         if (progress < 1) {
           scrollRafRef.current = requestAnimationFrame(animate)
+        } else {
+          // Reset programmatic flag after animation completes
+          isProgrammaticScrollRef.current = false
         }
       }
       scrollRafRef.current = requestAnimationFrame(animate)
     } else {
       container.scrollTo({ top: targetTop, behavior: 'smooth' })
+      // Reset programmatic flag after smooth scroll settles
+      window.setTimeout(() => { isProgrammaticScrollRef.current = false }, 500)
     }
-  }, [activeSubIndex])
+  }, [activeSubIndex, isUserScrolling])
+
+  // Show freeze indicator only on freeze state transitions (enter/exit), not on subtitle changes
+  useEffect(() => {
+    const wasFrozen = prevFreezeSubIndexRef.current !== null
+    const isFrozenNow = freezeSubIndex !== null
+    prevFreezeSubIndexRef.current = freezeSubIndex
+
+    if (!wasFrozen && isFrozenNow) {
+      // Entered freeze mode (null → number)
+      setFreezeIndicatorText('프리즈 모드')
+      setShowFreezeIndicator(true)
+      if (freezeIndicatorTimerRef.current) clearTimeout(freezeIndicatorTimerRef.current)
+      freezeIndicatorTimerRef.current = window.setTimeout(() => setShowFreezeIndicator(false), 2500)
+    } else if (wasFrozen && !isFrozenNow) {
+      // Exited freeze mode (number → null)
+      setFreezeIndicatorText('프리즈 해제')
+      setShowFreezeIndicator(true)
+      if (freezeIndicatorTimerRef.current) clearTimeout(freezeIndicatorTimerRef.current)
+      freezeIndicatorTimerRef.current = window.setTimeout(() => setShowFreezeIndicator(false), 1500)
+    }
+    // If both were frozen (number → different number), do nothing — no indicator re-show
+  }, [freezeSubIndex])
 
   // Enter or move freeze mode to the given subtitle
   const enterFreeze = useCallback(
     (sub: SubtitleEntry, idx: number) => {
       setFreezeSubIndex(idx)
       onSeek?.(sub.start)
-      // Show the indicator briefly
-      setShowFreezeIndicator(true)
-      if (freezeIndicatorTimerRef.current) clearTimeout(freezeIndicatorTimerRef.current)
-      freezeIndicatorTimerRef.current = window.setTimeout(() => setShowFreezeIndicator(false), 2000)
     },
     [setFreezeSubIndex, onSeek],
   )
@@ -125,8 +190,6 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
   // Exit freeze mode
   const exitFreeze = useCallback(() => {
     setFreezeSubIndex(null)
-    setShowFreezeIndicator(false)
-    if (freezeIndicatorTimerRef.current) clearTimeout(freezeIndicatorTimerRef.current)
   }, [setFreezeSubIndex])
 
   const handleLineClick = useCallback(
@@ -226,6 +289,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
       if (scrollRafRef.current) cancelAnimationFrame(scrollRafRef.current)
       if (longPressTimerRef.current) clearTimeout(longPressTimerRef.current)
       if (freezeIndicatorTimerRef.current) clearTimeout(freezeIndicatorTimerRef.current)
+      if (userScrollTimerRef.current) clearTimeout(userScrollTimerRef.current)
     }
   }, [])
 
@@ -248,7 +312,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
             animation: 'freezeFadeIn 300ms ease-out',
           }}
         >
-          프리즈 모드
+          {freezeIndicatorText}
         </div>
       )}
 
@@ -278,6 +342,9 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
       <div
         ref={containerRef}
         className="h-full overflow-y-auto no-scrollbar px-4 py-2"
+        onTouchStart={handleTouchStart}
+        onWheel={handleWheel}
+        onScroll={handleScroll}
         style={{
           maskImage: 'linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%)',
           WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%)',
@@ -295,15 +362,31 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
             const saved = isSavedPhrase(sub)
 
             // Show only active + 1 before/after (frozen subtitle always visible)
-            const opacityClass = isJustSaved || isActive || isFrozen
+            // When user is manually scrolling, reveal all subtitles
+            // IMPORTANT: Never use pointer-events-none on individual items —
+            // it blocks touch events and prevents scroll initiation.
+            const opacityClass = isUserScrolling
+              ? (isJustSaved || isActive || isFrozen
+                ? 'opacity-100'
+                : distance === 1
+                ? 'opacity-70'
+                : 'opacity-50')
+              : isJustSaved || isActive || isFrozen
               ? 'opacity-100'
               : distance === 1
               ? 'opacity-40'
-              : 'opacity-0 pointer-events-none'
+              : 'opacity-0'
 
-            const scaleValue = isJustSaved || isActive || isFrozen ? 1 : distance === 1 ? 0.92 : 0.85
+            // Whether this subtitle is fully hidden (not visible, not interactable)
+            // Wrapper div stays pointer-events-auto for scroll, but inner button is disabled
+            const isHidden = !isUserScrolling && !isJustSaved && !isActive && !isFrozen && distance > 1
 
-            const flagged = isAdmin && videoId ? isFlagged(videoId, idx) : false
+            const scaleValue = isUserScrolling
+              ? (isJustSaved || isActive || isFrozen ? 1 : 0.95)
+              : isJustSaved || isActive || isFrozen ? 1 : distance === 1 ? 0.92 : 0.85
+
+            const adminActive = isAdminActive()
+            const flagged = adminActive && videoId ? isFlagged(videoId, idx) : false
 
             return (
               <div
@@ -315,9 +398,9 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
                   transition: 'opacity 250ms ease-out, transform 350ms cubic-bezier(0.22, 1, 0.36, 1)',
                 }}
               >
-                <div className="flex items-center gap-1.5 max-w-[92%]">
+                <div className="relative flex items-center gap-1.5 max-w-[92%]">
                   {/* Admin flag — inline left of text */}
-                  {isAdmin && videoId && (
+                  {adminActive && videoId && (
                     <button
                       onClick={(e) => {
                         e.stopPropagation()
@@ -335,18 +418,27 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
                     </button>
                   )}
 
-                  {/* Freeze repeat icon */}
+                  {/* Freeze repeat icon — absolutely positioned so it never shifts subtitle text */}
                   {isFrozen && (
-                    <span className="flex-shrink-0 text-purple-400 text-xs font-bold select-none">
+                    <span className="absolute -left-6 top-1/2 -translate-y-1/2 text-purple-400 select-none pointer-events-none">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
                         <path fillRule="evenodd" d="M15.312 11.424a5.5 5.5 0 0 1-9.201 2.466l-.312-.311h2.433a.75.75 0 0 0 0-1.5H4.647a.75.75 0 0 0-.75.75v3.585a.75.75 0 0 0 1.5 0v-2.19l.238.238a7 7 0 0 0 11.712-3.138.75.75 0 0 0-1.035-.1zm-2.623-7.26a7 7 0 0 0-11.712 3.138.75.75 0 0 0 1.035.1 5.5 5.5 0 0 1 9.201-2.466l.312.311H9.092a.75.75 0 0 0 0 1.5h3.585a.75.75 0 0 0 .75-.75V2.412a.75.75 0 0 0-1.5 0v2.19l-.238-.238z" clipRule="evenodd" />
                       </svg>
                     </span>
                   )}
 
+                  {/* Saved phrase bookmark icon — absolutely positioned on the right, symmetrical with freeze icon */}
+                  {saved && !isJustSaved && (
+                    <span className="absolute -right-6 top-1/2 -translate-y-1/2 text-blue-400/60 select-none pointer-events-none">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                        <path fillRule="evenodd" d="M6.32 2.577a49.255 49.255 0 0 1 11.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 0 1-1.085.67L12 18.089l-7.165 3.583A.75.75 0 0 1 3.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93Z" clipRule="evenodd" />
+                      </svg>
+                    </span>
+                  )}
+
                   <button
-                    onClick={(e) => handleLineClick(sub, idx, e)}
-                    onPointerDown={(e) => handlePointerDown(sub, idx, e)}
+                    onClick={(e) => { if (!isHidden) handleLineClick(sub, idx, e) }}
+                    onPointerDown={(e) => { if (!isHidden) handlePointerDown(sub, idx, e) }}
                     onPointerMove={handlePointerMove}
                     onPointerUp={handlePointerUp}
                     onPointerCancel={handlePointerUp}
@@ -357,17 +449,12 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
                         : isJustSaved
                         ? 'text-white font-semibold drop-shadow-lg bg-blue-500/40 backdrop-blur-md rounded-lg ring-2 ring-blue-400/60'
                         : isActive
-                        ? `text-white font-semibold drop-shadow-lg backdrop-blur-md rounded-lg ${
-                            saved
-                              ? 'bg-blue-500/20 ring-1 ring-blue-400/40'
-                              : 'bg-black/50'
-                          }`
-                        : saved && distance <= 1
-                        ? `text-white/60 rounded-lg ring-1 ring-blue-400/25`
-                        : distance === 1
+                        ? 'text-white font-semibold drop-shadow-lg backdrop-blur-md rounded-lg bg-black/50'
+                        : distance === 1 || isUserScrolling
                         ? 'text-white/50'
                         : 'text-white/20'
                     }`}
+                    /* NOTE: saved subtitles get NO box/ring — only the right-side icon */
                     style={{
                       transition: 'color 200ms ease-out, background-color 350ms ease-out, box-shadow 300ms ease-out',
                       ...(isFrozen
@@ -382,7 +469,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
                     <>
                       <span>{sub.en}</span>
                       {(isActive || isFrozen) && showKo && sub.ko && (
-                        <p className={`${isFrozen ? 'text-purple-200/70' : 'text-blue-200/70'} text-xs mt-0.5`}>{sub.ko}</p>
+                        <p className={`${isFrozen ? 'text-purple-200/70' : 'text-purple-200/70'} text-xs mt-0.5`}>{sub.ko}</p>
                       )}
                     </>
                   </button>

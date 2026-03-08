@@ -14,6 +14,7 @@ import { useUserStore } from '@/stores/useUserStore'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { PremiumModal } from './PremiumModal'
 import { AdminReportButton } from './AdminReportButton'
+import { useRouter } from 'next/navigation'
 import { categories, series as allSeries, type VideoData } from '@/data/seed-videos'
 
 interface VideoFeedProps {
@@ -21,6 +22,7 @@ interface VideoFeedProps {
 }
 
 export function VideoFeed({ videos }: VideoFeedProps) {
+  const router = useRouter()
   const [currentIndex, setCurrentIndex] = useState(0)
   const [direction, setDirection] = useState(0)
   const [showToast, setShowToast] = useState(false)
@@ -124,6 +126,31 @@ export function VideoFeed({ videos }: VideoFeedProps) {
     }
   }, [repeatMode, currentRepeatCount, currentIndex, videos, checkAndUpdateStreak, incrementMission, incrementRepeatCount, resetRepeatCount, incrementDailyView])
 
+  const handleNextVideo = useCallback(() => {
+    if (currentIndex >= videos.length - 1) return
+    // Already-watched videos don't consume daily limit
+    const nextVideo = videos[currentIndex + 1]
+    const alreadyWatched = nextVideo && getViewCount(nextVideo.id) > 0
+    if (!alreadyWatched) {
+      const allowed = incrementDailyView()
+      if (!allowed) {
+        setPremiumTrigger('video-limit')
+        setShowPremiumModal(true)
+        return
+      }
+    }
+    resetRepeatCount()
+    setDirection(1)
+    setCurrentIndex((prev) => prev + 1)
+  }, [currentIndex, videos, getViewCount, incrementDailyView, resetRepeatCount])
+
+  const handlePrevVideo = useCallback(() => {
+    if (currentIndex <= 0) return
+    resetRepeatCount()
+    setDirection(-1)
+    setCurrentIndex((prev) => prev - 1)
+  }, [currentIndex, resetRepeatCount])
+
   const swipeThreshold = 50
 
   const handleDragEnd = useCallback(
@@ -131,31 +158,12 @@ export function VideoFeed({ videos }: VideoFeedProps) {
       const { offset, velocity } = info
 
       if (offset.y < -swipeThreshold || velocity.y < -500) {
-        if (currentIndex < videos.length - 1) {
-          // Already-watched videos don't consume daily limit
-          const nextVideo = videos[currentIndex + 1]
-          const alreadyWatched = nextVideo && getViewCount(nextVideo.id) > 0
-          if (!alreadyWatched) {
-            const allowed = incrementDailyView()
-            if (!allowed) {
-              setPremiumTrigger('video-limit')
-              setShowPremiumModal(true)
-              return
-            }
-          }
-          resetRepeatCount()
-          setDirection(1)
-          setCurrentIndex((prev) => prev + 1)
-        }
+        handleNextVideo()
       } else if (offset.y > swipeThreshold || velocity.y > 500) {
-        if (currentIndex > 0) {
-          resetRepeatCount()
-          setDirection(-1)
-          setCurrentIndex((prev) => prev - 1)
-        }
+        handlePrevVideo()
       }
     },
-    [currentIndex, videos.length, incrementDailyView, resetRepeatCount]
+    [handleNextVideo, handlePrevVideo]
   )
 
   const currentVideo = videos[currentIndex]
@@ -290,6 +298,32 @@ export function VideoFeed({ videos }: VideoFeedProps) {
           )}
         </div>
       )}
+
+      {/* Previous / Next video navigation buttons — right side */}
+      <div className="absolute right-3 top-1/2 -translate-y-1/2 z-20 flex flex-col gap-3">
+        {currentIndex > 0 && (
+          <button
+            onClick={handlePrevVideo}
+            className="w-9 h-9 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full active:bg-white/20 transition-colors"
+            aria-label="이전 영상"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-white/80">
+              <path fillRule="evenodd" d="M9.47 6.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 8.06l-3.72 3.72a.75.75 0 0 1-1.06-1.06l4.25-4.25Z" clipRule="evenodd" />
+            </svg>
+          </button>
+        )}
+        {currentIndex < videos.length - 1 && (
+          <button
+            onClick={handleNextVideo}
+            className="w-9 h-9 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full active:bg-white/20 transition-colors"
+            aria-label="다음 영상"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-white/80">
+              <path fillRule="evenodd" d="M10.53 13.53a.75.75 0 0 1-1.06 0l-4.25-4.25a.75.75 0 0 1 1.06-1.06L10 11.94l3.72-3.72a.75.75 0 0 1 1.06 1.06l-4.25 4.25Z" clipRule="evenodd" />
+            </svg>
+          </button>
+        )}
+      </div>
 
       <SaveToast show={showToast} message="표현 저장됨" />
 

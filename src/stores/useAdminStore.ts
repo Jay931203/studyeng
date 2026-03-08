@@ -23,7 +23,10 @@ export interface AdminIssue {
 interface AdminState {
   isAdmin: boolean
   adminEmail: string
+  adminEnabled: boolean
   setAdmin: (val: boolean) => void
+  setAdminEnabled: (val: boolean) => void
+  isAdminActive: () => boolean
   flaggedSubtitles: SubtitleFlag[]
   toggleFlag: (videoId: string, entryIndex: number, en: string) => void
   isFlagged: (videoId: string, entryIndex: number) => boolean
@@ -43,8 +46,11 @@ export const useAdminStore = create<AdminState>()(
     (set, get) => ({
       isAdmin: false,
       adminEmail: 'hyunjae.park93@gmail.com',
+      adminEnabled: true,
 
       setAdmin: (val) => set({ isAdmin: val }),
+      setAdminEnabled: (val) => set({ adminEnabled: val }),
+      isAdminActive: () => get().isAdmin && get().adminEnabled,
 
       flaggedSubtitles: [],
 

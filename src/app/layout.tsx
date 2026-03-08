@@ -39,13 +39,20 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="ko" className="dark">
+    <html lang="ko" className="dark" data-theme="purple-dark">
       <head>
         <script dangerouslySetInnerHTML={{ __html: `
           try {
             var stored = JSON.parse(localStorage.getItem('studyeng-theme') || '{}');
-            if (stored.state && stored.state.theme !== 'dark') {
-              document.documentElement.classList.remove('dark');
+            var theme = stored.state && stored.state.theme;
+            if (theme) {
+              // Migrate old values
+              if (theme === 'dark') theme = 'purple-dark';
+              document.documentElement.setAttribute('data-theme', theme);
+              if (theme === 'light') {
+                document.documentElement.classList.remove('dark');
+                document.documentElement.style.colorScheme = 'light';
+              }
             }
           } catch(e) {}
         ` }} />

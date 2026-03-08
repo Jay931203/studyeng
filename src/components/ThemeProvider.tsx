@@ -1,20 +1,26 @@
 'use client'
 
 import { useEffect } from 'react'
-import { useThemeStore } from '@/stores/useThemeStore'
+import { useThemeStore, type ThemeId } from '@/stores/useThemeStore'
+
+function applyTheme(theme: ThemeId) {
+  const root = document.documentElement
+  root.setAttribute('data-theme', theme)
+
+  if (theme === 'light') {
+    root.classList.remove('dark')
+    root.style.colorScheme = 'light'
+  } else {
+    root.classList.add('dark')
+    root.style.colorScheme = 'dark'
+  }
+}
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const { theme } = useThemeStore()
 
   useEffect(() => {
-    const root = document.documentElement
-    if (theme === 'dark') {
-      root.classList.add('dark')
-      root.style.colorScheme = 'dark'
-    } else {
-      root.classList.remove('dark')
-      root.style.colorScheme = 'light'
-    }
+    applyTheme(theme)
   }, [theme])
 
   return <>{children}</>

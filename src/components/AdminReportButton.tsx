@@ -16,12 +16,12 @@ const issueTypes: { value: IssueType; label: string }[] = [
 ]
 
 export function AdminReportButton({ videoId, youtubeId }: AdminReportButtonProps) {
-  const { isAdmin, addIssue, getUnresolvedCount } = useAdminStore()
+  const { isAdminActive, addIssue, getUnresolvedCount } = useAdminStore()
   const [isOpen, setIsOpen] = useState(false)
   const [type, setType] = useState<IssueType>('subtitle')
   const [description, setDescription] = useState('')
 
-  if (!isAdmin) return null
+  if (!isAdminActive()) return null
 
   const unresolvedCount = getUnresolvedCount()
 
@@ -39,7 +39,7 @@ export function AdminReportButton({ videoId, youtubeId }: AdminReportButtonProps
       <motion.button
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-[76px] right-4 z-40 w-11 h-11 rounded-full bg-red-500/90 backdrop-blur-sm flex items-center justify-center shadow-lg shadow-red-500/25"
+        className="fixed bottom-[140px] right-4 z-40 w-11 h-11 rounded-full bg-red-500/90 backdrop-blur-sm flex items-center justify-center shadow-lg shadow-red-500/25"
         aria-label="이슈 리포트"
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-white">

@@ -63,6 +63,8 @@ export function useYouTubePlayer(
   const playerRef = useRef<YT.Player | null>(null)
   const intervalRef = useRef<number | null>(null)
   const [ready, setReady] = useState(false)
+  // True once the video has actually started playing (first PLAYING state)
+  const [playbackStarted, setPlaybackStarted] = useState(false)
   const [videoError, setVideoError] = useState<string | null>(null)
 
   // Track whether the tab/page is currently visible
@@ -151,7 +153,12 @@ export function useYouTubePlayer(
             }
             return
           }
-          setIsPlaying(event.data === 1)
+          const isPlaying = event.data === 1
+          setIsPlaying(isPlaying)
+          // Signal that the video has actually started rendering frames
+          if (isPlaying) {
+            setPlaybackStarted(true)
+          }
         },
         onError: (event) => {
           // YouTube IFrame API error codes:
@@ -359,5 +366,5 @@ export function useYouTubePlayer(
   const seekTo = useCallback((seconds: number) => playerRef.current?.seekTo(seconds, true), [])
   const clearVideoError = useCallback(() => setVideoError(null), [])
 
-  return { ready, play, pause, seekTo, player: playerRef, videoError, clearVideoError }
+  return { ready, playbackStarted, play, pause, seekTo, player: playerRef, videoError, clearVideoError }
 }
