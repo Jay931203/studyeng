@@ -15,17 +15,17 @@ interface PaceMilestone {
 const PACE_MILESTONES: PaceMilestone[] = [
   {
     label: '기초 페이스',
-    description: '월간 달성률 70% 이상',
+    description: '월간 70%',
     targetRate: 70,
   },
   {
     label: '집중 구간',
-    description: '월간 달성률 90% 이상',
+    description: '월간 90%',
     targetRate: 90,
   },
   {
     label: '최상위 구간',
-    description: '3개월 연속 90% 이상',
+    description: '3개월 연속 90%',
     targetRate: 90,
   },
 ]
@@ -49,12 +49,7 @@ export function DailyMissions() {
             <span className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
               Rhythm
             </span>
-            <h2 className="mt-2 text-xl font-bold text-[var(--text-primary)]">
-              오늘의 루틴
-            </h2>
-            <p className="mt-1 text-sm text-[var(--text-secondary)]">
-              짧게 여러 번 누적하면서 학습 흐름을 끊지 않는 데 초점을 둡니다.
-            </p>
+            <h2 className="mt-2 text-xl font-bold text-[var(--text-primary)]">오늘의 루틴</h2>
           </div>
           <span
             className={`rounded-full px-3 py-1 text-[11px] font-semibold ${
@@ -63,13 +58,13 @@ export function DailyMissions() {
                 : 'bg-[var(--bg-secondary)] text-[var(--text-muted)]'
             }`}
           >
-            {allCompleteBonus ? '전체 완료' : `${completedCount}/${missions.length} 완료`}
+            {allCompleteBonus ? '완료' : `${completedCount}/${missions.length}`}
           </span>
         </div>
 
         <div className="mt-4">
           <div className="mb-2 flex items-center justify-between text-xs text-[var(--text-muted)]">
-            <span>오늘 진행률</span>
+            <span>진행률</span>
             <span>{Math.round(completionRate)}%</span>
           </div>
           <div className="h-2 overflow-hidden rounded-full bg-[var(--bg-secondary)]">
@@ -128,7 +123,7 @@ export function DailyMissions() {
       {allCompleteBonus && (
         <div className="px-5 pb-4">
           <p className="rounded-2xl bg-green-500/10 px-4 py-3 text-center text-xs text-green-300/90">
-            오늘 루틴을 모두 채웠습니다. 이 기록은 월간 학습 페이스 추적에 반영됩니다.
+            오늘 루틴 완료
           </p>
         </div>
       )}
@@ -164,23 +159,20 @@ function LearningPaceCard() {
   })
 
   const nextMilestoneText = hasTopTier
-    ? '최상위 구간 유지 중'
+    ? '최상위 유지 중'
     : nextMilestone
       ? `${nextMilestone.label}까지 ${Math.max(
           0,
           Math.ceil((nextMilestone.targetRate / 100) * totalDays) - completedCount,
         )}일`
-      : '이번 달 최고 구간 도달'
+      : '완료'
 
   return (
     <>
       <div className="mx-4 mb-4">
         {!billingEnabled && (
           <div className="mb-3 rounded-xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-4 py-3">
-            <p className="text-sm font-semibold text-[var(--text-secondary)]">현재는 무료 운영 중</p>
-            <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">
-              학습 페이스는 계속 기록되지만, 결제와 직접 연결된 혜택 문구는 노출하지 않습니다.
-            </p>
+            <p className="text-sm font-semibold text-[var(--text-secondary)]">무료 운영 중</p>
           </div>
         )}
 
@@ -190,9 +182,9 @@ function LearningPaceCard() {
         >
           <div className="mb-2 flex items-center justify-between gap-3">
             <span className="min-w-0 truncate text-xs font-medium text-[var(--text-secondary)]">
-              이번 달 학습 페이스
+              이번 달 페이스
             </span>
-            <span className="shrink-0 text-[10px] text-[var(--text-muted)]">상세 보기</span>
+            <span className="shrink-0 text-[10px] text-[var(--text-muted)]">상세</span>
           </div>
           <div className="mb-2 h-1.5 overflow-hidden rounded-full bg-[var(--bg-secondary)]">
             <div
@@ -202,9 +194,11 @@ function LearningPaceCard() {
           </div>
           <div className="flex items-center justify-between gap-3 text-[10px]">
             <span className="shrink-0 text-[var(--text-muted)]">
-              {completedCount}/{totalDays}일 완료 ({Math.round(completionRate)}%)
+              {completedCount}/{totalDays} ({Math.round(completionRate)}%)
             </span>
-            <span className="min-w-0 truncate font-medium text-emerald-400">{nextMilestoneText}</span>
+            <span className="min-w-0 truncate font-medium text-emerald-400">
+              {nextMilestoneText}
+            </span>
           </div>
         </button>
       </div>
@@ -236,53 +230,33 @@ function LearningPaceCard() {
                       Pace
                     </p>
                     <h3 className="mt-2 text-lg font-semibold text-[var(--text-primary)]">
-                      이번 달 학습 페이스
+                      이번 달 페이스
                     </h3>
-                    <p className="mt-1 text-sm text-[var(--text-muted)]">
-                      월간 루틴 완수율과 연속 달성 흐름을 한 번에 확인할 수 있습니다.
-                    </p>
                   </div>
                   <button
                     onClick={() => setOpen(false)}
                     className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--bg-secondary)] text-[var(--text-muted)]"
-                    aria-label="학습 페이스 닫기"
+                    aria-label="닫기"
                   >
-                    횞
+                    ×
                   </button>
                 </div>
 
                 <div className="rounded-2xl bg-[var(--bg-secondary)] p-4">
                   <div className="flex items-end justify-between gap-3">
                     <div>
-                      <p className="text-xs text-[var(--text-muted)]">현재 달성률</p>
+                      <p className="text-xs text-[var(--text-muted)]">달성률</p>
                       <p className="mt-1 text-2xl font-bold text-[var(--text-primary)]">
                         {Math.round(completionRate)}%
                       </p>
                     </div>
                     <div className="text-right">
-                      <p className="text-xs text-[var(--text-muted)]">이번 달 완료 일수</p>
+                      <p className="text-xs text-[var(--text-muted)]">완료 일수</p>
                       <p className="mt-1 text-lg font-semibold text-emerald-400">
-                        {completedCount}/{totalDays}일
+                        {completedCount}/{totalDays}
                       </p>
                     </div>
                   </div>
-                  <div className="mt-4 h-2 overflow-hidden rounded-full bg-black/10">
-                    <div
-                      className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-green-400"
-                      style={{ width: `${Math.min(completionRate, 100)}%` }}
-                    />
-                  </div>
-                </div>
-
-                <div className="mt-4 rounded-2xl border border-[var(--border-card)] bg-[var(--bg-primary)]/35 p-4">
-                  <p className="text-sm font-semibold text-[var(--text-primary)]">다음 목표</p>
-                  <p className="mt-2 text-sm text-[var(--text-secondary)]">
-                    {hasTopTier
-                      ? '현재 연속 달성 최고 구간을 유지하고 있습니다.'
-                      : nextMilestone
-                        ? `${nextMilestone.label}까지 남은 페이스를 채우면 다음 구간으로 올라갑니다.`
-                        : '이번 달 목표 구간을 모두 달성했습니다.'}
-                  </p>
                 </div>
 
                 <div className="mt-4 space-y-2">

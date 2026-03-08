@@ -27,17 +27,12 @@ export default function LearningPage() {
       <div className="mt-6 space-y-6">
         {isEmpty ? (
           <SurfaceCard className="px-6 py-12 text-center">
-            <p className="text-lg font-semibold text-[var(--text-primary)]">
-              아직 쌓인 기록이 없습니다
-            </p>
-            <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-              장면을 보기 시작하면 시청 기록과 저장 표현이 이 화면에 자동으로 쌓입니다.
-            </p>
+            <p className="text-lg font-semibold text-[var(--text-primary)]">아직 기록이 없습니다</p>
             <button
               onClick={() => router.push('/shorts')}
               className="mt-6 rounded-full bg-[var(--accent-primary)] px-5 py-2.5 text-sm font-semibold text-white"
             >
-              첫 장면 보러 가기
+              쇼츠 보기
             </button>
           </SurfaceCard>
         ) : (
@@ -48,14 +43,9 @@ export default function LearningPage() {
           <div className="mb-4 flex items-end justify-between gap-4">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
-                저장 표현
+                표현
               </p>
-              <h2 className="mt-2 text-2xl font-bold text-[var(--text-primary)]">
-                다시 볼 표현
-              </h2>
-              <p className="mt-1 text-sm text-[var(--text-secondary)]">
-                짧은 대사만 따로 남겨뒀다가 다시 꺼내볼 수 있습니다.
-              </p>
+              <h2 className="mt-2 text-2xl font-bold text-[var(--text-primary)]">다시 볼 표현</h2>
             </div>
             {phrases.length > 3 && (
               <button
@@ -69,9 +59,7 @@ export default function LearningPage() {
 
           {phrases.length === 0 ? (
             <div className="rounded-[24px] border border-dashed border-[var(--border-card)] px-5 py-8 text-center">
-              <p className="text-sm text-[var(--text-secondary)]">
-                장면에서 문장을 저장하면 여기에 쌓입니다.
-              </p>
+              <p className="text-sm text-[var(--text-secondary)]">저장한 표현이 없습니다.</p>
             </div>
           ) : (
             <div className="flex flex-col gap-3">

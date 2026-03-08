@@ -46,10 +46,7 @@ export function BillingManagementCard() {
 
     const loadStatus = async () => {
       try {
-        const response = await fetch('/api/billing/status', {
-          cache: 'no-store',
-        })
-
+        const response = await fetch('/api/billing/status', { cache: 'no-store' })
         if (!response.ok) {
           throw new Error('billing-status-failed')
         }
@@ -82,11 +79,9 @@ export function BillingManagementCard() {
     setErrorMessage(null)
 
     try {
-      const response = await fetch('/api/billing/portal', {
-        method: 'POST',
-      })
-
+      const response = await fetch('/api/billing/portal', { method: 'POST' })
       const payload = (await response.json().catch(() => null)) as { url?: string } | null
+
       if (!response.ok || !payload?.url) {
         throw new Error('billing-portal-failed')
       }
@@ -101,28 +96,17 @@ export function BillingManagementCard() {
 
   return (
     <SurfaceCard className="p-6">
-      <div className="mb-4">
-        <h2 className="text-xl font-bold text-[var(--text-primary)]">구독 상태</h2>
-        <p className="mt-1 text-sm leading-relaxed text-[var(--text-secondary)]">
-          프리미엄 권한은 서버 결제와 구독 상태 기준으로 관리됩니다.
-        </p>
-      </div>
+      <h2 className="mb-4 text-xl font-bold text-[var(--text-primary)]">구독 상태</h2>
 
       {!billingEnabled && (
         <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-4 py-3">
           <p className="text-sm font-semibold text-[var(--text-secondary)]">결제 비활성</p>
-          <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">
-            운영 환경에서 billing 설정이 완료되면 이 카드가 실제 구독 상태를 표시합니다.
-          </p>
         </div>
       )}
 
       {billingEnabled && !user && (
         <div className="rounded-2xl border border-sky-500/20 bg-sky-500/10 px-4 py-3">
           <p className="text-sm font-semibold text-sky-300">로그인 필요</p>
-          <p className="mt-1 text-xs leading-relaxed text-sky-100/80">
-            구독 상태와 결제 관리는 로그인한 계정 기준으로만 확인할 수 있습니다.
-          </p>
         </div>
       )}
 
@@ -135,11 +119,11 @@ export function BillingManagementCard() {
             </p>
             {status?.entitlement?.currentPeriodEnd && (
               <p className="mt-2 text-xs text-[var(--text-secondary)]">
-                다음 갱신 기준일 {formatDate(status.entitlement.currentPeriodEnd)}
+                갱신일 {formatDate(status.entitlement.currentPeriodEnd)}
               </p>
             )}
             {status?.entitlement?.cancelAtPeriodEnd && (
-              <p className="mt-1 text-xs text-[var(--text-secondary)]">기간 종료 후 자동 갱신이 중지됩니다.</p>
+              <p className="mt-1 text-xs text-[var(--text-secondary)]">자동 갱신 중지 예정</p>
             )}
           </div>
 
@@ -149,7 +133,7 @@ export function BillingManagementCard() {
               disabled={managing}
               className="w-full rounded-2xl bg-[var(--accent-primary)] py-3 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50"
             >
-              {managing ? '구독 관리 연결 중...' : '구독 관리 열기'}
+              {managing ? '연결 중...' : '구독 관리'}
             </button>
           )}
         </div>

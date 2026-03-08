@@ -294,6 +294,25 @@ export function useYouTubePlayer(
   }, [playbackRate, ready])
 
   useEffect(() => {
+    if (!ready || playbackStarted) return
+
+    const player = playerRef.current
+    if (!isYouTubePlayer(player)) return
+
+    const rafId = window.requestAnimationFrame(() => {
+      try {
+        player.playVideo()
+      } catch {
+        // Ignore initial autoplay failures.
+      }
+    })
+
+    return () => {
+      window.cancelAnimationFrame(rafId)
+    }
+  }, [playbackStarted, ready])
+
+  useEffect(() => {
     let disposed = false
 
     setIsPlaying(false)
@@ -371,7 +390,6 @@ export function useYouTubePlayer(
             }
 
             event.target.setPlaybackRate(usePlayerStore.getState().playbackRate)
-            event.target.playVideo()
 
             const duration = event.target.getDuration()
             const maxEnd = Math.max(duration - 0.5, 1)

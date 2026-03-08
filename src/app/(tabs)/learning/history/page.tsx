@@ -4,7 +4,7 @@ import Image from 'next/image'
 import { useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
-import { getCatalogVideoById } from '@/lib/catalog'
+import { getCatalogSeriesById, getCatalogVideoById } from '@/lib/catalog'
 import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { categories, type VideoData } from '@/data/seed-videos'
@@ -136,6 +136,9 @@ export default function WatchHistoryPage() {
                   const count = viewCounts[video.id] ?? 0
                   const categoryLabel =
                     categories.find((category) => category.id === video.category)?.label ?? ''
+                  const seriesTitle = video.seriesId
+                    ? getCatalogSeriesById(video.seriesId)?.title
+                    : null
 
                   return (
                     <motion.div
@@ -170,6 +173,11 @@ export default function WatchHistoryPage() {
                           <p className="truncate text-sm font-medium text-[var(--text-primary)]">
                             {video.title}
                           </p>
+                          {seriesTitle && (
+                            <p className="mt-1 truncate text-xs text-[var(--text-secondary)]">
+                              {seriesTitle}
+                            </p>
+                          )}
                           <div className="mt-1 flex items-center gap-1.5">
                             <span className="text-xs text-[var(--text-muted)]">{categoryLabel}</span>
                             <span className="text-[10px] text-[var(--text-muted)]">·</span>
