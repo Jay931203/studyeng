@@ -3,8 +3,6 @@
 import { motion } from 'framer-motion'
 import { useAuth } from '@/hooks/useAuth'
 
-const GUEST_VIEW_LIMIT = 3
-
 interface LoginGateModalProps {
   isOpen: boolean
   onClose?: () => void
@@ -37,7 +35,7 @@ export function LoginGateModal({ isOpen, onClose }: LoginGateModalProps) {
         <div className="mb-5 flex items-start justify-between gap-4 text-left">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
-              Keep watching
+              이어보기
             </p>
             <h2 className="mt-2 text-2xl font-bold text-[var(--text-primary)]">
               로그인하고 이어보기

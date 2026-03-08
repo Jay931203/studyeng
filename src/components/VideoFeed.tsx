@@ -304,6 +304,7 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
             clipEnd={currentVideo.clipEnd}
             isLandscape={isLandscape}
             onClipComplete={handleClipComplete}
+            onVideoErrorSkip={currentIndex < videos.length - 1 ? handleNextVideo : undefined}
             initialSeekTime={currentIndex === 0 ? initialSeekTime : undefined}
             onSavePhrase={(phrase) => {
               if (!canSaveMorePhrases()) {
@@ -342,7 +343,7 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
               {currentIndex > 0 && (
                 <button
                   onClick={handlePrevVideo}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border backdrop-blur-sm transition-colors"
+                  className="flex h-10 w-10 items-center justify-center rounded-2xl border backdrop-blur-sm transition-colors"
                   style={{
                     backgroundColor: 'var(--player-control-bg)',
                     borderColor: 'var(--player-control-border)',
@@ -363,7 +364,7 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
               {currentIndex < videos.length - 1 && (
                 <button
                   onClick={handleNextVideo}
-                  className="flex h-9 w-9 items-center justify-center rounded-full border backdrop-blur-sm transition-colors"
+                  className="flex h-10 w-10 items-center justify-center rounded-2xl border backdrop-blur-sm transition-colors"
                   style={{
                     backgroundColor: 'var(--player-control-bg)',
                     borderColor: 'var(--player-control-border)',
@@ -384,31 +385,50 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
           </VideoPlayer>
 
           <div
-            className="absolute left-3 right-3 top-3 z-10 flex items-center gap-2 rounded-2xl border px-3 py-1.5 backdrop-blur-md"
+            className="absolute left-3 right-3 top-3 z-10 flex items-center gap-3 rounded-[22px] border px-3 py-2 backdrop-blur-md"
             style={{
               backgroundColor: 'var(--player-control-bg)',
               borderColor: 'var(--player-control-border)',
               ...(isLandscape ? { right: 'auto', width: 'calc(62% - 24px)' } : {}),
             }}
           >
+            <div
+              className="flex h-10 w-10 items-center justify-center rounded-2xl"
+              style={{
+                backgroundColor: 'var(--player-panel)',
+                color: 'var(--accent-text)',
+              }}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                <path d="M6.75 5.653c0-1.336 1.433-2.183 2.603-1.54l9.161 5.036c1.211.666 1.211 2.404 0 3.07l-9.16 5.036c-1.171.643-2.604-.204-2.604-1.54V5.653Z" />
+              </svg>
+            </div>
+
             <div className="min-w-0 flex-1">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.18em]" style={{ color: 'var(--player-muted)' }}>
+                피드
+              </p>
               {seriesInfo ? (
                 <button
                   onClick={() => router.push(buildExploreSeriesUrl(currentVideo), { scroll: false })}
-                  className="block w-full truncate text-left text-xs font-medium"
+                  className="mt-1 block w-full truncate text-left text-sm font-semibold"
                   style={{ color: 'var(--player-text)' }}
                 >
                   {seriesInfo.title}
-                  {currentVideo.episodeNumber != null && ` Ep.${currentVideo.episodeNumber}`}
                 </button>
               ) : (
                 <span
-                  className="block w-full truncate text-xs font-medium"
+                  className="mt-1 block w-full truncate text-sm font-semibold"
                   style={{ color: 'var(--player-text)' }}
                 >
                   {currentVideo.title}
                 </span>
               )}
+              <p className="mt-0.5 truncate text-[11px]" style={{ color: 'var(--player-muted)' }}>
+                {seriesInfo && currentVideo.episodeNumber != null
+                  ? `에피소드 ${currentVideo.episodeNumber}`
+                  : '지금 재생 중'}
+              </p>
             </div>
 
             <div className="h-4 w-px shrink-0" style={{ backgroundColor: 'var(--player-divider)' }} />
