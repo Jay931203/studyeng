@@ -44,14 +44,10 @@ export function VideoFeed({ videos }: VideoFeedProps) {
   const resetRepeatCount = usePlayerStore((s) => s.resetRepeatCount)
   const setIsSwiping = usePlayerStore((s) => s.setIsSwiping)
 
-  // Track which videos have already counted streak/missions this session
   const awardedRef = useRef<Set<string>>(new Set())
-
-  // Brief overlay indicator for repeat progress
   const [repeatIndicator, setRepeatIndicator] = useState<string | null>(null)
   const repeatIndicatorTimerRef = useRef<number | null>(null)
 
-  // Mark episode as watched and count views
   useEffect(() => {
     const video = videos[currentIndex]
     if (video) {
@@ -62,9 +58,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
     }
   }, [currentIndex, videos, markWatched, incrementViewCount])
 
-  // Handle clip completion for repeat mode auto-advance + streak rewards
   const handleClipComplete = useCallback(() => {
-    // Update streak and missions on first completion of each video this session
     const currentVideo = videos[currentIndex]
     if (currentVideo && !awardedRef.current.has(currentVideo.id)) {
       awardedRef.current.add(currentVideo.id)
@@ -72,14 +66,13 @@ export function VideoFeed({ videos }: VideoFeedProps) {
       incrementMission('watch-videos')
     }
 
-    if (repeatMode === 'off') return // Normal loop, do nothing
+    if (repeatMode === 'off') return
 
     const targetCount = repeatMode === 'x2' ? 2 : 3
     const newCount = currentRepeatCount + 1
     incrementRepeatCount()
 
     if (newCount >= targetCount) {
-      // All repetitions done — auto-advance to next video
       if (currentIndex < videos.length - 1) {
         const nextVideo = videos[currentIndex + 1]
         const alreadyWatched = nextVideo && getViewCount(nextVideo.id) > 0
@@ -96,11 +89,9 @@ export function VideoFeed({ videos }: VideoFeedProps) {
         setDirection(1)
         setCurrentIndex((prev) => prev + 1)
       } else {
-        // Already at the last video, just reset count and keep looping
         resetRepeatCount()
       }
     } else {
-      // Show repeat progress indicator briefly
       const label = `${newCount}/${targetCount} 반복 중`
       setRepeatIndicator(label)
       if (repeatIndicatorTimerRef.current) clearTimeout(repeatIndicatorTimerRef.current)
@@ -108,11 +99,22 @@ export function VideoFeed({ videos }: VideoFeedProps) {
         setRepeatIndicator(null)
       }, 1500)
     }
-  }, [repeatMode, currentRepeatCount, currentIndex, videos, checkAndUpdateStreak, incrementMission, incrementRepeatCount, resetRepeatCount, incrementDailyView])
+  }, [
+    repeatMode,
+    currentRepeatCount,
+    currentIndex,
+    videos,
+    checkAndUpdateStreak,
+    incrementMission,
+    incrementRepeatCount,
+    resetRepeatCount,
+    incrementDailyView,
+    getViewCount,
+  ])
 
   const handleNextVideo = useCallback(() => {
     if (currentIndex >= videos.length - 1) return
-    // Already-watched videos don't consume daily limit
+
     const nextVideo = videos[currentIndex + 1]
     const alreadyWatched = nextVideo && getViewCount(nextVideo.id) > 0
     if (!alreadyWatched) {
@@ -123,6 +125,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
         return
       }
     }
+
     resetRepeatCount()
     setDirection(1)
     setCurrentIndex((prev) => prev + 1)
@@ -135,15 +138,13 @@ export function VideoFeed({ videos }: VideoFeedProps) {
     setCurrentIndex((prev) => prev - 1)
   }, [currentIndex, resetRepeatCount])
 
-  const swipeThreshold = 50
-
   const handleDragEnd = useCallback(
     (_: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
       const { offset, velocity } = info
 
-      if (offset.y < -swipeThreshold || velocity.y < -500) {
+      if (offset.y < -50 || velocity.y < -500) {
         handleNextVideo()
-      } else if (offset.y > swipeThreshold || velocity.y > 500) {
+      } else if (offset.y > 50 || velocity.y > 500) {
         handlePrevVideo()
       }
     },
@@ -154,7 +155,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
   if (!currentVideo) return null
 
   const seriesInfo = currentVideo.seriesId
-    ? allSeries.find(s => s.id === currentVideo.seriesId)
+    ? allSeries.find((s) => s.id === currentVideo.seriesId)
     : null
 
   return (
@@ -171,7 +172,10 @@ export function VideoFeed({ videos }: VideoFeedProps) {
           dragConstraints={{ top: 0, bottom: 0 }}
           dragElastic={0.15}
           onDragStart={() => setIsSwiping(true)}
-          onDragEnd={(...args) => { setIsSwiping(false); handleDragEnd(...args) }}
+          onDragEnd={(...args) => {
+            setIsSwiping(false)
+            handleDragEnd(...args)
+          }}
           className="absolute inset-0"
         >
           <VideoPlayer
@@ -186,6 +190,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
                 setShowPremiumModal(true)
                 return
               }
+
               savePhrase({
                 videoId: currentVideo.id,
                 videoTitle: currentVideo.title,
@@ -199,18 +204,52 @@ export function VideoFeed({ videos }: VideoFeedProps) {
               setShowToast(true)
               setTimeout(() => setShowToast(false), 2000)
             }}
-          />
+          >
+            <ProgressBar className="bottom-0 left-0 right-0" />
+
+            <div
+              className="absolute right-3 bottom-8 z-20 flex flex-col gap-3"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {currentIndex > 0 && (
+                <button
+                  onClick={handlePrevVideo}
+                  className="w-9 h-9 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full active:bg-white/20 transition-colors"
+                  aria-label="이전 영상"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-white/80">
+                    <path
+                      fillRule="evenodd"
+                      d="M9.47 6.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 8.06l-3.72 3.72a.75.75 0 0 1-1.06-1.06l4.25-4.25Z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </button>
+              )}
+              {currentIndex < videos.length - 1 && (
+                <button
+                  onClick={handleNextVideo}
+                  className="w-9 h-9 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full active:bg-white/20 transition-colors"
+                  aria-label="다음 영상"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-white/80">
+                    <path
+                      fillRule="evenodd"
+                      d="M10.53 13.53a.75.75 0 0 1-1.06 0l-4.25-4.25a.75.75 0 0 1 1.06-1.06L10 11.94l3.72-3.72a.75.75 0 0 1 1.06 1.06l-4.25 4.25Z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </button>
+              )}
+            </div>
+          </VideoPlayer>
+
           <UnifiedControls videoId={currentVideo.id} videoTitle={currentVideo.title} />
 
-          {/* Top gradient for text readability — subtle, barely visible */}
           <div className="absolute top-0 left-0 right-0 h-[100px] bg-gradient-to-b from-black/50 via-black/20 to-transparent pointer-events-none z-[5]" />
         </motion.div>
       </AnimatePresence>
 
-      {/* Progress bar */}
-      <ProgressBar />
-
-      {/* Repeat progress indicator overlay */}
       {repeatIndicator && (
         <div className="absolute top-14 left-0 right-0 flex justify-center z-20 pointer-events-none">
           <div className="bg-white/10 backdrop-blur-md rounded-full px-4 py-1.5">
@@ -219,7 +258,6 @@ export function VideoFeed({ videos }: VideoFeedProps) {
         </div>
       )}
 
-      {/* Top-left video title badge */}
       <div className="absolute top-3 left-3 z-10 max-w-[65%]">
         {seriesInfo ? (
           <button
@@ -236,7 +274,6 @@ export function VideoFeed({ videos }: VideoFeedProps) {
         )}
       </div>
 
-      {/* Dot position indicators — always visible, very subtle */}
       {videos.length > 1 && videos.length <= 20 && (
         <div className="absolute top-5 right-3 z-10 pointer-events-none flex flex-col gap-[3px]">
           {videos.slice(0, Math.min(videos.length, 12)).map((_, idx) => (
@@ -249,37 +286,9 @@ export function VideoFeed({ videos }: VideoFeedProps) {
               }`}
             />
           ))}
-          {videos.length > 12 && (
-            <div className="w-[3px] h-[3px] bg-white/10 rounded-full" />
-          )}
+          {videos.length > 12 && <div className="w-[3px] h-[3px] bg-white/10 rounded-full" />}
         </div>
       )}
-
-      {/* Previous / Next video navigation buttons — right side */}
-      <div className="absolute right-3 top-1/2 -translate-y-1/2 z-20 flex flex-col gap-3">
-        {currentIndex > 0 && (
-          <button
-            onClick={handlePrevVideo}
-            className="w-9 h-9 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full active:bg-white/20 transition-colors"
-            aria-label="이전 영상"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-white/80">
-              <path fillRule="evenodd" d="M9.47 6.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 8.06l-3.72 3.72a.75.75 0 0 1-1.06-1.06l4.25-4.25Z" clipRule="evenodd" />
-            </svg>
-          </button>
-        )}
-        {currentIndex < videos.length - 1 && (
-          <button
-            onClick={handleNextVideo}
-            className="w-9 h-9 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full active:bg-white/20 transition-colors"
-            aria-label="다음 영상"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-white/80">
-              <path fillRule="evenodd" d="M10.53 13.53a.75.75 0 0 1-1.06 0l-4.25-4.25a.75.75 0 0 1 1.06-1.06L10 11.94l3.72-3.72a.75.75 0 0 1 1.06 1.06l-4.25 4.25Z" clipRule="evenodd" />
-            </svg>
-          </button>
-        )}
-      </div>
 
       <SaveToast show={showToast} message="표현 저장됨" />
 

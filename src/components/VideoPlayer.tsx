@@ -1,6 +1,6 @@
 'use client'
 
-import { useId, useState, useRef, useCallback, useEffect, useMemo, type CSSProperties } from 'react'
+import { useId, useState, useRef, useCallback, useEffect, useMemo, type CSSProperties, type ReactNode } from 'react'
 import { useYouTubePlayer } from '@/hooks/useYouTubePlayer'
 import { useTranscript } from '@/hooks/useTranscript'
 import { usePlayerStore, seekToRef } from '@/stores/usePlayerStore'
@@ -14,9 +14,18 @@ interface VideoPlayerProps {
   clipEnd?: number
   onSavePhrase?: (phrase: SubtitleEntry) => void
   onClipComplete?: () => void
+  children?: ReactNode
 }
 
-export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0, clipEnd = 0, onSavePhrase, onClipComplete }: VideoPlayerProps) {
+export function VideoPlayer({
+  youtubeId,
+  subtitles: propSubtitles,
+  clipStart = 0,
+  clipEnd = 0,
+  onSavePhrase,
+  onClipComplete,
+  children,
+}: VideoPlayerProps) {
   const containerId = `yt-player-${useId().replace(/:/g, '')}`
 
   // Fetch real transcript from YouTube
@@ -175,6 +184,7 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
             </div>
           </div>
         )}
+        {children}
       </div>
 
       {/* Soft divider between video and subtitle areas */}

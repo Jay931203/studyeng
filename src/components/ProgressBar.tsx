@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useEffect, useState, useCallback } from 'react'
+import { useRef, useEffect, useState, useCallback, type CSSProperties } from 'react'
 import { usePlayerStore, currentTimeRef, seekToRef } from '@/stores/usePlayerStore'
 
 /**
@@ -10,12 +10,20 @@ import { usePlayerStore, currentTimeRef, seekToRef } from '@/stores/usePlayerSto
  *
  * Supports tap-to-seek and drag-to-seek via pointer events.
  */
-export function ProgressBar() {
+interface ProgressBarProps {
+  className?: string
+  style?: CSSProperties
+}
+
+export function ProgressBar({ className = '', style }: ProgressBarProps) {
   const barRef = useRef<HTMLDivElement>(null)
   const knobRef = useRef<HTMLDivElement>(null)
   const containerRef = useRef<HTMLDivElement>(null)
   const rafRef = useRef<number>(0)
   const isDraggingRef = useRef(false)
+  const activePointerIdRef = useRef<number | null>(null)
+  const pointerStartRef = useRef<{ x: number; y: number } | null>(null)
+  const gestureModeRef = useRef<'pending' | 'seek' | 'swipe' | null>(null)
   const [isDragging, setIsDragging] = useState(false)
 
   const clipStart = usePlayerStore((s) => s.clipStart)
@@ -51,28 +59,50 @@ export function ProgressBar() {
     if (knobRef.current) knobRef.current.style.left = `${percent}%`
   }, [])
 
+  const resetGesture = useCallback(() => {
+    activePointerIdRef.current = null
+    pointerStartRef.current = null
+    gestureModeRef.current = null
+    isDraggingRef.current = false
+    setIsDragging(false)
+  }, [])
+
   // --- Pointer event handlers ---
 
   const handlePointerDown = useCallback(
     (e: React.PointerEvent) => {
-      e.stopPropagation()
-      e.preventDefault()
-      // Capture pointer so pointermove/pointerup fire even outside the element
-      ;(e.target as HTMLElement).setPointerCapture(e.pointerId)
-      isDraggingRef.current = true
-      setIsDragging(true)
-
-      const pct = clientXToPercent(e.clientX)
-      updateBarVisuals(pct)
-      seekToPercent(pct)
+      activePointerIdRef.current = e.pointerId
+      pointerStartRef.current = { x: e.clientX, y: e.clientY }
+      gestureModeRef.current = 'pending'
     },
-    [clientXToPercent, updateBarVisuals, seekToPercent],
+    [],
   )
 
   const handlePointerMove = useCallback(
     (e: React.PointerEvent) => {
-      if (!isDraggingRef.current) return
-      e.stopPropagation()
+      if (activePointerIdRef.current !== e.pointerId || !pointerStartRef.current) return
+
+      if (gestureModeRef.current === 'swipe') return
+
+      if (gestureModeRef.current === 'pending') {
+        const deltaX = e.clientX - pointerStartRef.current.x
+        const deltaY = e.clientY - pointerStartRef.current.y
+
+        if (Math.abs(deltaX) < 6 && Math.abs(deltaY) < 6) return
+
+        if (Math.abs(deltaY) > Math.abs(deltaX)) {
+          gestureModeRef.current = 'swipe'
+          return
+        }
+
+        gestureModeRef.current = 'seek'
+        isDraggingRef.current = true
+        setIsDragging(true)
+        e.currentTarget.setPointerCapture(e.pointerId)
+      }
+
+      if (gestureModeRef.current !== 'seek') return
+
       e.preventDefault()
       const pct = clientXToPercent(e.clientX)
       updateBarVisuals(pct)
@@ -83,12 +113,17 @@ export function ProgressBar() {
 
   const handlePointerUp = useCallback(
     (e: React.PointerEvent) => {
-      if (!isDraggingRef.current) return
-      e.stopPropagation()
-      isDraggingRef.current = false
-      setIsDragging(false)
+      if (activePointerIdRef.current !== e.pointerId) return
+
+      if (gestureModeRef.current === 'pending') {
+        const pct = clientXToPercent(e.clientX)
+        updateBarVisuals(pct)
+        seekToPercent(pct)
+      }
+
+      resetGesture()
     },
-    [],
+    [clientXToPercent, updateBarVisuals, seekToPercent, resetGesture],
   )
 
   // --- RAF loop: auto-update bar when NOT dragging ---
@@ -111,16 +146,20 @@ export function ProgressBar() {
   }, [clipStart, clipDuration, isPlaying])
 
   return (
-    <div className={`absolute bottom-0 left-0 right-0 z-30 transition-opacity duration-200 ${isSwiping ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+    <div
+      className={`absolute z-30 transition-opacity duration-200 ${isSwiping ? 'opacity-0 pointer-events-none' : 'opacity-100'} ${className}`}
+      style={style}
+    >
       {/* Touch target: tall (24px) transparent area for easy tapping/dragging */}
       <div
         ref={containerRef}
         className="relative flex items-end cursor-pointer touch-none"
         style={{ height: '24px' }}
+        onClick={(e) => e.stopPropagation()}
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
-        onPointerCancel={handlePointerUp}
+        onPointerCancel={resetGesture}
       >
         {/* Visual track */}
         <div
