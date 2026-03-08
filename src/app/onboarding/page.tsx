@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
-import { Logo } from '@/components/Logo'
+import { Logo, LogoFull } from '@/components/Logo'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useAuth } from '@/hooks/useAuth'
 
@@ -28,10 +28,7 @@ const LEVELS = [
 function LoadingScreen() {
   return (
     <div className="flex h-dvh items-center justify-center bg-black">
-      <div className="relative">
-        <div className="h-8 w-8 rounded-full border-[1.5px] border-white/10" />
-        <div className="absolute inset-0 h-8 w-8 animate-spin rounded-full border-[1.5px] border-transparent border-t-white/60" />
-      </div>
+      <LogoFull className="h-12 text-white animate-fade-in" />
     </div>
   )
 }

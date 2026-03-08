@@ -3,6 +3,7 @@
 import { Suspense, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { BottomNav } from '@/components/BottomNav'
+import { LogoFull } from '@/components/Logo'
 import { LoginGateModal } from '@/components/LoginGateModal'
 import { AdminActivator } from '@/components/AdminActivator'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
@@ -95,11 +96,8 @@ export default function TabsLayout({
 
   if (!checked) {
     return (
-      <div className="flex h-dvh flex-col items-center justify-center bg-black">
-        <div className="relative">
-          <div className="h-8 w-8 rounded-full border-[1.5px] border-white/10" />
-          <div className="absolute inset-0 h-8 w-8 animate-spin rounded-full border-[1.5px] border-transparent border-t-white/60" />
-        </div>
+      <div className="flex h-dvh items-center justify-center bg-black">
+        <LogoFull className="h-12 text-white animate-fade-in" />
       </div>
     )
   }

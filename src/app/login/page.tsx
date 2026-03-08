@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { Suspense, useEffect, useMemo } from 'react'
-import { Logo } from '@/components/Logo'
+import { Logo, LogoFull } from '@/components/Logo'
 import { useAuth } from '@/hooks/useAuth'
 
 function LoginPageContent() {
@@ -102,10 +102,7 @@ function LoginPageContent() {
 function LoginPageFallback() {
   return (
     <div className="flex h-dvh items-center justify-center bg-[var(--bg-primary)]">
-      <div className="relative">
-        <div className="h-8 w-8 rounded-full border-[1.5px] border-white/10" />
-        <div className="absolute inset-0 h-8 w-8 animate-spin rounded-full border-[1.5px] border-transparent border-t-white/60" />
-      </div>
+      <LogoFull className="h-12 text-[var(--text-primary)] animate-fade-in" />
     </div>
   )
 }

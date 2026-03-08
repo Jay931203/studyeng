@@ -8,8 +8,8 @@ import { usePathname, useSearchParams } from 'next/navigation'
 const tabs = [
   { href: '/explore', icon: 'home', label: '홈' },
   { href: '/shorts', icon: 'play', label: '쇼츠' },
-  { href: '/learning', icon: 'book', label: '복습' },
-  { href: '/profile', icon: 'user', label: 'MY' },
+  { href: '/learning', icon: 'user', label: '프로필' },
+  { href: '/profile', icon: 'settings', label: '설정' },
 ] as const
 
 const icons: Record<string, (active: boolean) => ReactNode> = {
@@ -37,18 +37,6 @@ const icons: Record<string, (active: boolean) => ReactNode> = {
       <path d="M6.75 5.653c0-1.336 1.433-2.183 2.603-1.54l9.161 5.036c1.211.666 1.211 2.404 0 3.07l-9.16 5.036c-1.171.643-2.604-.204-2.604-1.54V5.653Z" />
     </svg>
   ),
-  book: (active) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill={active ? 'currentColor' : 'none'}
-      stroke="currentColor"
-      strokeWidth={active ? 0 : 1.7}
-      className="h-[21px] w-[21px]"
-    >
-      <path d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-    </svg>
-  ),
   user: (active) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -63,6 +51,25 @@ const icons: Record<string, (active: boolean) => ReactNode> = {
         strokeLinejoin="round"
         d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
       />
+    </svg>
+  ),
+  settings: (active) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill={active ? 'currentColor' : 'none'}
+      stroke="currentColor"
+      strokeWidth={active ? 0 : 1.7}
+      className="h-[21px] w-[21px]"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M4.5 6.75h6m3 0h6m-15 5.25h10.5m3 0h1.5M4.5 17.25h1.5m3 0h10.5"
+      />
+      <circle cx="12" cy="6.75" r="1.5" />
+      <circle cx="15" cy="12" r="1.5" />
+      <circle cx="7.5" cy="17.25" r="1.5" />
     </svg>
   ),
 }
