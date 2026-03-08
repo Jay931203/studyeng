@@ -1,8 +1,8 @@
 'use client'
 
 import Image from 'next/image'
-import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { motion } from 'framer-motion'
 import { AdminIssuesList } from '@/components/AdminIssuesList'
 import { BillingManagementCard } from '@/components/BillingManagementCard'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
@@ -26,10 +26,19 @@ const COLOR_OPTIONS = [
   { id: 'purple' as const, swatchClass: 'bg-[#a855f7]' },
 ] satisfies Array<{ id: ThemeAccent; swatchClass: string }>
 
-function SectionTitle({ title }: { title: string }) {
+function SectionTitle({
+  eyebrow,
+  title,
+}: {
+  eyebrow: string
+  title: string
+}) {
   return (
     <div className="mb-4">
-      <h2 className="text-xl font-bold text-[var(--text-primary)]">{title}</h2>
+      <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+        {eyebrow}
+      </p>
+      <h2 className="mt-2 text-xl font-bold text-[var(--text-primary)]">{title}</h2>
     </div>
   )
 }
@@ -57,7 +66,7 @@ export default function ProfilePage() {
     user?.user_metadata?.full_name ??
     user?.user_metadata?.name ??
     user?.email?.split('@')[0] ??
-    'Shortee 사용자'
+    'Guest'
 
   const copyBundle = async () => {
     const json = exportReportBundle()
@@ -72,222 +81,211 @@ export default function ProfilePage() {
 
   return (
     <AppPage>
+      {!authAvailable && (
+        <section className="mb-6 rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-5 py-4">
+          <p className="text-sm font-semibold text-[var(--text-secondary)]">로그인 연결 비활성</p>
+        </section>
+      )}
 
-        {!authAvailable && (
-          <section className="mb-6 rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-5 py-4">
-            <p className="text-sm font-semibold text-[var(--text-secondary)]">
-              로그인 연결이 아직 비어 있습니다.
-            </p>
-            <p className="mt-1 text-sm leading-relaxed text-[var(--text-secondary)]">
-              지금은 로컬 상태만 점검할 수 있습니다. Supabase 환경 변수를 연결하면 계정 동기화가 켜집니다.
-            </p>
-          </section>
-        )}
-
-        <div className="grid gap-6 xl:grid-cols-[1.08fr_0.92fr]">
-          <div className="space-y-6">
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-6 shadow-[var(--card-shadow)]"
-            >
-              <SectionTitle title="계정" />
-              <div className="flex items-center gap-4">
-                <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-[var(--accent-primary)] to-[var(--accent-secondary)] text-2xl font-bold text-white">
-                  {user?.user_metadata?.avatar_url ? (
-                    <span className="relative block h-full w-full">
-                      <Image
+      <div className="grid gap-6 xl:grid-cols-[1.08fr_0.92fr]">
+        <div className="space-y-6">
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-6 shadow-[var(--card-shadow)]"
+          >
+            <SectionTitle eyebrow="ACCOUNT" title="계정" />
+            <div className="flex items-center gap-4">
+              <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-[var(--accent-primary)] to-[var(--accent-secondary)] text-2xl font-bold text-white">
+                {user?.user_metadata?.avatar_url ? (
+                  <span className="relative block h-full w-full">
+                    <Image
                       src={user.user_metadata.avatar_url}
                       alt={profileName}
-                        fill
-                        sizes="64px"
-                        className="object-cover"
-                      />
-                    </span>
-                  ) : (
-                    <span>{profileName.slice(0, 1).toUpperCase()}</span>
-                  )}
-                </div>
-                <div className="min-w-0 flex-1">
-                  <p className="truncate text-xl font-bold text-[var(--text-primary)]">
-                    {profileName}
-                  </p>
-                  <p className="mt-1 truncate text-sm text-[var(--text-secondary)]">
-                    {user?.email ?? '게스트'}
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-5">
-                {loading ? null : user ? (
-                  <button
-                    onClick={signOut}
-                    className="w-full rounded-2xl bg-[var(--bg-secondary)] py-3 text-sm font-medium text-[var(--text-primary)]"
-                  >
-                    로그아웃
-                  </button>
+                      fill
+                      sizes="64px"
+                      className="object-cover"
+                    />
+                  </span>
                 ) : (
-                  <div className="grid gap-3">
-                    <button
-                      onClick={() => signInWithGoogle('/profile')}
-                      disabled={!authAvailable}
-                      className="w-full rounded-2xl bg-white py-3 text-sm font-medium text-black disabled:cursor-not-allowed disabled:opacity-50"
-                    >
-                      Google로 이어가기
-                    </button>
-                    <button
-                      onClick={() => signInWithKakao('/profile')}
-                      disabled={!authAvailable}
-                      className="w-full rounded-2xl bg-[#FEE500] py-3 text-sm font-medium text-[#191919] disabled:cursor-not-allowed disabled:opacity-50"
-                    >
-                      Kakao로 이어가기
-                    </button>
-                  </div>
+                  <span>{profileName.slice(0, 1).toUpperCase()}</span>
                 )}
               </div>
-            </motion.div>
+              <div className="min-w-0 flex-1">
+                <p className="truncate text-xl font-bold text-[var(--text-primary)]">
+                  {profileName}
+                </p>
+                <p className="mt-1 truncate text-sm text-[var(--text-secondary)]">
+                  {user?.email ?? 'Guest'}
+                </p>
+              </div>
+            </div>
 
+            <div className="mt-5">
+              {loading ? null : user ? (
+                <button
+                  onClick={signOut}
+                  className="w-full rounded-2xl bg-[var(--bg-secondary)] py-3 text-sm font-medium text-[var(--text-primary)]"
+                >
+                  로그아웃
+                </button>
+              ) : (
+                <div className="grid gap-3">
+                  <button
+                    onClick={() => signInWithGoogle('/profile')}
+                    disabled={!authAvailable}
+                    className="w-full rounded-2xl bg-white py-3 text-sm font-medium text-black disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    Google로 로그인
+                  </button>
+                  <button
+                    onClick={() => signInWithKakao('/profile')}
+                    disabled={!authAvailable}
+                    className="w-full rounded-2xl bg-[#FEE500] py-3 text-sm font-medium text-[#191919] disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    Kakao로 로그인
+                  </button>
+                </div>
+              )}
+            </div>
+          </motion.div>
+
+          <SurfaceCard className="p-6">
+            <SectionTitle eyebrow="THEME" title="테마" />
+
+            <div className="space-y-4">
+              <div className="flex items-center gap-4">
+                <p className="w-12 shrink-0 text-xs font-semibold text-[var(--text-muted)]">배경</p>
+                <div className="flex min-h-10 flex-wrap items-center gap-3">
+                  {BACKGROUND_OPTIONS.map((option) => (
+                    <button
+                      key={option.id}
+                      onClick={() => setBackgroundTheme(option.id)}
+                      className={`h-10 w-10 rounded-full ${option.swatchClass} ${
+                        backgroundTheme === option.id
+                          ? 'ring-2 ring-[var(--accent-primary)] ring-offset-2 ring-offset-[var(--bg-card)]'
+                          : ''
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <p className="w-12 shrink-0 text-xs font-semibold text-[var(--text-muted)]">컬러</p>
+                <div className="flex min-h-10 flex-wrap items-center gap-3">
+                  {COLOR_OPTIONS.map((option) => (
+                    <button
+                      key={option.id}
+                      onClick={() => setColorTheme(option.id)}
+                      className={`h-10 w-10 rounded-full ${option.swatchClass} ${
+                        colorTheme === option.id
+                          ? 'ring-2 ring-[var(--accent-primary)] ring-offset-2 ring-offset-[var(--bg-card)]'
+                          : ''
+                      }`}
+                    />
+                  ))}
+                </div>
+              </div>
+            </div>
+          </SurfaceCard>
+
+          {isAdmin && (
             <SurfaceCard className="p-6">
-              <SectionTitle title="앱 톤" />
+              <SectionTitle eyebrow="ADMIN" title="운영 도구" />
 
-              <div className="flex gap-8">
-                <div>
-                  <p className="mb-2 text-xs font-semibold text-[var(--text-muted)]">배경</p>
-                  <div className="flex gap-3">
-                    {BACKGROUND_OPTIONS.map((option) => (
-                      <button
-                        key={option.id}
-                        onClick={() => setBackgroundTheme(option.id)}
-                        className={`h-10 w-10 rounded-full ${option.swatchClass} ${
-                          backgroundTheme === option.id
-                            ? 'ring-2 ring-[var(--accent-primary)] ring-offset-2 ring-offset-[var(--bg-card)]'
-                            : ''
-                        }`}
-                      />
-                    ))}
+              <div className="space-y-3">
+                <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
+                  <div>
+                    <p className="text-sm font-medium text-[var(--text-primary)]">관리자 모드</p>
+                    <p className="text-xs text-[var(--text-muted)]">리포트와 플래그 정리</p>
                   </div>
+                  <button
+                    onClick={() => setAdminEnabled(!adminEnabled)}
+                    className={`relative h-6 w-11 rounded-full ${
+                      adminEnabled ? 'bg-red-500' : 'bg-[var(--bg-secondary)]'
+                    }`}
+                    role="switch"
+                    aria-checked={adminEnabled}
+                  >
+                    <span
+                      className={`absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white transition-transform ${
+                        adminEnabled ? 'translate-x-5' : ''
+                      }`}
+                    />
+                  </button>
                 </div>
 
-                <div>
-                  <p className="mb-2 text-xs font-semibold text-[var(--text-muted)]">컬러</p>
-                  <div className="flex gap-3">
-                    {COLOR_OPTIONS.map((option) => (
-                      <button
-                        key={option.id}
-                        onClick={() => setColorTheme(option.id)}
-                        className={`h-10 w-10 rounded-full ${option.swatchClass} ${
-                          colorTheme === option.id
-                            ? 'ring-2 ring-[var(--accent-primary)] ring-offset-2 ring-offset-[var(--bg-card)]'
-                            : ''
-                        }`}
-                      />
-                    ))}
+                <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
+                  <div>
+                    <p className="text-sm font-medium text-[var(--text-primary)]">프리미엄 모드</p>
                   </div>
+                  <span
+                    className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
+                      billingEnabled
+                        ? 'bg-emerald-500/15 text-emerald-300'
+                        : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
+                    }`}
+                  >
+                    {billingEnabled ? '활성' : '비활성'}
+                  </span>
                 </div>
               </div>
             </SurfaceCard>
+          )}
+        </div>
 
-            {isAdmin && (
-              <SurfaceCard className="p-6">
-                <SectionTitle title="운영 도구" />
+        <div className="space-y-6">
+          {isAdminActive() && (
+            <SurfaceCard className="p-6">
+              <SectionTitle eyebrow="REPORTS" title="리포트 번들" />
 
-                <div className="space-y-3">
-                  <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
-                    <div>
-                      <p className="text-sm font-medium text-[var(--text-primary)]">관리자 모드</p>
-                      <p className="text-xs text-[var(--text-muted)]">
-                        리포트 확인과 플래그 정리에 사용합니다.
-                      </p>
-                    </div>
-                    <button
-                      onClick={() => setAdminEnabled(!adminEnabled)}
-                      className={`relative h-6 w-11 rounded-full ${
-                        adminEnabled ? 'bg-red-500' : 'bg-[var(--bg-secondary)]'
-                      }`}
-                      role="switch"
-                      aria-checked={adminEnabled}
-                    >
-                      <span
-                        className={`absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white transition-transform ${
-                          adminEnabled ? 'translate-x-5' : ''
-                        }`}
-                      />
-                    </button>
-                  </div>
-
-                  <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
-                    <div>
-                      <p className="text-sm font-medium text-[var(--text-primary)]">프리미엄 모드</p>
-                      <p className="text-xs text-[var(--text-muted)]">
-                        프리미엄 기능 잠금을 점검할 때 사용합니다.
-                      </p>
-                    </div>
-                    <span
-                      className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
-                        billingEnabled
-                          ? 'bg-emerald-500/15 text-emerald-300'
-                          : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
-                      }`}
-                    >
-                      {billingEnabled ? '활성' : '비활성'}
-                    </span>
-                  </div>
+              <div className="rounded-2xl bg-[var(--bg-primary)] p-4">
+                <p className="text-sm font-semibold text-red-400">
+                  미해결 {unresolvedCount}건 · 플래그 {flaggedSubtitles.length}건
+                </p>
+                <div className="mt-3 flex gap-2">
+                  <button
+                    onClick={copyBundle}
+                    className="flex-1 rounded-xl bg-red-500/10 py-2 text-xs font-medium text-red-400"
+                  >
+                    JSON 복사
+                  </button>
+                  <button
+                    onClick={clearFlags}
+                    disabled={flaggedSubtitles.length === 0}
+                    className="rounded-xl bg-[var(--bg-secondary)] px-4 py-2 text-xs text-[var(--text-muted)] disabled:opacity-30"
+                  >
+                    플래그 비우기
+                  </button>
                 </div>
-              </SurfaceCard>
-            )}
-          </div>
-
-          <div className="space-y-6">
-            {isAdminActive() && (
-              <SurfaceCard className="p-6">
-                <SectionTitle title="리포트 번들" />
-
-                <div className="rounded-2xl bg-[var(--bg-primary)] p-4">
-                  <p className="text-sm font-semibold text-red-400">
-                    미해결 {unresolvedCount}건 · 플래그 {flaggedSubtitles.length}건
-                  </p>
-                  <div className="mt-3 flex gap-2">
-                    <button
-                      onClick={copyBundle}
-                      className="flex-1 rounded-xl bg-red-500/10 py-2 text-xs font-medium text-red-400"
-                    >
-                      리포트 번들 복사
-                    </button>
-                    <button
-                      onClick={clearFlags}
-                      disabled={flaggedSubtitles.length === 0}
-                      className="rounded-xl bg-[var(--bg-secondary)] px-4 py-2 text-xs text-[var(--text-muted)] disabled:opacity-30"
-                    >
-                      플래그 비우기
-                    </button>
-                  </div>
-                </div>
-              </SurfaceCard>
-            )}
-
-            <SurfaceCard className="overflow-hidden">
-              <Link
-                href="/terms"
-                className="flex items-center justify-between border-b border-[var(--border-card)] px-5 py-4 text-sm text-[var(--text-secondary)]"
-              >
-                <span>이용약관</span>
-                <span aria-hidden>→</span>
-              </Link>
-              <Link
-                href="/privacy"
-                className="flex items-center justify-between px-5 py-4 text-sm text-[var(--text-secondary)]"
-              >
-                <span>개인정보처리방침</span>
-                <span aria-hidden>→</span>
-              </Link>
+              </div>
             </SurfaceCard>
-          </div>
-        </div>
+          )}
 
-        <div className="mt-6 space-y-6">
-          <BillingManagementCard />
-          <AdminIssuesList />
+          <SurfaceCard className="overflow-hidden">
+            <Link
+              href="/terms"
+              className="flex items-center justify-between border-b border-[var(--border-card)] px-5 py-4 text-sm text-[var(--text-secondary)]"
+            >
+              <span>이용약관</span>
+              <span aria-hidden>→</span>
+            </Link>
+            <Link
+              href="/privacy"
+              className="flex items-center justify-between px-5 py-4 text-sm text-[var(--text-secondary)]"
+            >
+              <span>개인정보처리방침</span>
+              <span aria-hidden>→</span>
+            </Link>
+          </SurfaceCard>
         </div>
+      </div>
+
+      <div className="mt-6 space-y-6">
+        <BillingManagementCard />
+        <AdminIssuesList />
+      </div>
     </AppPage>
   )
 }

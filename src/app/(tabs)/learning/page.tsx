@@ -42,8 +42,8 @@ export default function LearningPage() {
         <SurfaceCard className="p-5">
           <div className="mb-4 flex items-end justify-between gap-4">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
-                표현
+              <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+                EXPRESSIONS
               </p>
               <h2 className="mt-2 text-2xl font-bold text-[var(--text-primary)]">다시 볼 표현</h2>
             </div>
