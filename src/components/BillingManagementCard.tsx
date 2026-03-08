@@ -109,9 +109,9 @@ export function BillingManagementCard() {
       </div>
 
       {!billingEnabled && (
-        <div className="rounded-2xl border border-amber-500/20 bg-amber-500/10 px-4 py-3">
-          <p className="text-sm font-semibold text-amber-300">결제 비활성</p>
-          <p className="mt-1 text-xs leading-relaxed text-amber-100/80">
+        <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-4 py-3">
+          <p className="text-sm font-semibold text-[var(--text-secondary)]">결제 비활성</p>
+          <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">
             운영 환경에서 billing 설정이 완료되면 이 카드가 실제 구독 상태를 표시합니다.
           </p>
         </div>
@@ -139,7 +139,7 @@ export function BillingManagementCard() {
               </p>
             )}
             {status?.entitlement?.cancelAtPeriodEnd && (
-              <p className="mt-1 text-xs text-amber-300">기간 종료 후 자동 갱신이 중지됩니다.</p>
+              <p className="mt-1 text-xs text-[var(--text-secondary)]">기간 종료 후 자동 갱신이 중지됩니다.</p>
             )}
           </div>
 

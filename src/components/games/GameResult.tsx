@@ -49,7 +49,7 @@ export function GameResult({ correct, xpEarned, onContinue }: GameResultProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.15, duration: 0.2 }}
-            className="text-yellow-400 font-bold text-lg"
+            className="text-[var(--accent-text)] font-bold text-lg"
           >
             +{xpEarned} XP
           </motion.p>

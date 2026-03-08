@@ -42,7 +42,7 @@ export function DailyMissions() {
   }, [checkAndResetDaily])
 
   return (
-    <div className="mb-8 overflow-hidden rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] shadow-[var(--card-shadow)]">
+    <div className="mb-8 min-w-0 overflow-hidden rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] shadow-[var(--card-shadow)]">
       <div className="border-b border-[var(--border-card)]/60 px-5 pb-4 pt-5">
         <div className="flex items-start justify-between gap-4">
           <div>
@@ -189,10 +189,10 @@ function LearningPaceCard() {
           className="w-full rounded-xl border border-[var(--border-card)] bg-[var(--bg-secondary)]/40 px-3 py-3 text-left transition-colors hover:bg-[var(--bg-secondary)]"
         >
           <div className="mb-2 flex items-center justify-between gap-3">
-            <span className="text-xs font-medium text-[var(--text-secondary)]">
+            <span className="min-w-0 truncate text-xs font-medium text-[var(--text-secondary)]">
               이번 달 학습 페이스
             </span>
-            <span className="text-[10px] text-[var(--text-muted)]">상세 보기</span>
+            <span className="shrink-0 text-[10px] text-[var(--text-muted)]">상세 보기</span>
           </div>
           <div className="mb-2 h-1.5 overflow-hidden rounded-full bg-[var(--bg-secondary)]">
             <div
@@ -201,10 +201,10 @@ function LearningPaceCard() {
             />
           </div>
           <div className="flex items-center justify-between gap-3 text-[10px]">
-            <span className="text-[var(--text-muted)]">
+            <span className="shrink-0 text-[var(--text-muted)]">
               {completedCount}/{totalDays}일 완료 ({Math.round(completionRate)}%)
             </span>
-            <span className="font-medium text-emerald-400">{nextMilestoneText}</span>
+            <span className="min-w-0 truncate font-medium text-emerald-400">{nextMilestoneText}</span>
           </div>
         </button>
       </div>

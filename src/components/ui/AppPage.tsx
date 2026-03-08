@@ -8,8 +8,8 @@ function joinClassNames(...tokens: Array<string | false | null | undefined>) {
 
 export function AppPage({ children }: { children: ReactNode }) {
   return (
-    <div className="h-full overflow-y-auto pb-20 pt-6 lg:pb-10 lg:pt-8">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">{children}</div>
+    <div className="h-full overflow-x-hidden overflow-y-auto pb-20 pt-6 lg:pb-10 lg:pt-8">
+      <div className="mx-auto min-w-0 max-w-6xl px-4 sm:px-6 lg:px-8">{children}</div>
     </div>
   )
 }

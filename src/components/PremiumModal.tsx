@@ -156,9 +156,9 @@ export function PremiumModal({
           })}
         </div>
       ) : (
-        <div className="mb-5 rounded-2xl border border-amber-500/20 bg-amber-500/10 px-4 py-3">
-          <p className="text-sm font-semibold text-amber-300">현재는 무료 운영 중</p>
-          <p className="mt-1 text-xs leading-relaxed text-amber-100/80">
+        <div className="mb-5 rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-4 py-3">
+          <p className="text-sm font-semibold text-[var(--text-secondary)]">현재는 무료 운영 중</p>
+          <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">
             서버 결제, 웹훅, 권한 검증이 모두 준비될 때까지는 판매를 비활성화합니다.
           </p>
         </div>

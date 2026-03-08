@@ -136,11 +136,11 @@ function LoginPageContent() {
           </div>
 
           {!authAvailable && (
-            <div className="mt-5 rounded-2xl border border-amber-500/20 bg-amber-500/10 px-4 py-3">
-              <p className="text-sm font-semibold text-amber-300">
+            <div className="mt-5 rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-4 py-3">
+              <p className="text-sm font-semibold text-[var(--text-secondary)]">
                 로그인 연결이 아직 비어 있습니다.
               </p>
-              <p className="mt-1 text-xs leading-relaxed text-amber-100/80">
+              <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">
                 지금은 둘러보기만 가능합니다. Supabase 환경 변수를 연결하면 로그인 버튼이 활성화됩니다.
               </p>
             </div>

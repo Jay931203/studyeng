@@ -16,43 +16,15 @@ import {
 } from '@/stores/useThemeStore'
 
 const BACKGROUND_OPTIONS = [
-  {
-    id: 'dark' as const,
-    label: '다크',
-    previewClass: 'border-white/10 bg-[#050505]',
-  },
-  {
-    id: 'light' as const,
-    label: '라이트',
-    previewClass: 'border-slate-300 bg-[#f8fafc]',
-  },
-] satisfies Array<{
-  id: ThemeBackground
-  label: string
-  previewClass: string
-}>
+  { id: 'dark' as const, swatchClass: 'bg-[#050505] border border-white/10' },
+  { id: 'light' as const, swatchClass: 'bg-[#f8fafc] border border-slate-300' },
+] satisfies Array<{ id: ThemeBackground; swatchClass: string }>
 
 const COLOR_OPTIONS = [
-  {
-    id: 'teal' as const,
-    label: '제이드',
-    swatchClass: 'bg-teal-500',
-  },
-  {
-    id: 'blue' as const,
-    label: '블루',
-    swatchClass: 'bg-blue-500',
-  },
-  {
-    id: 'purple' as const,
-    label: '퍼플',
-    swatchClass: 'bg-purple-500',
-  },
-] satisfies Array<{
-  id: ThemeAccent
-  label: string
-  swatchClass: string
-}>
+  { id: 'teal' as const, swatchClass: 'bg-[#14b8a6]' },
+  { id: 'blue' as const, swatchClass: 'bg-[#3b82f6]' },
+  { id: 'purple' as const, swatchClass: 'bg-[#a855f7]' },
+] satisfies Array<{ id: ThemeAccent; swatchClass: string }>
 
 function SectionTitle({ title }: { title: string }) {
   return (
@@ -102,11 +74,11 @@ export default function ProfilePage() {
     <AppPage>
 
         {!authAvailable && (
-          <section className="mb-6 rounded-2xl border border-amber-500/20 bg-amber-500/10 px-5 py-4">
-            <p className="text-sm font-semibold text-amber-300">
+          <section className="mb-6 rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-5 py-4">
+            <p className="text-sm font-semibold text-[var(--text-secondary)]">
               로그인 연결이 아직 비어 있습니다.
             </p>
-            <p className="mt-1 text-sm leading-relaxed text-amber-100/80">
+            <p className="mt-1 text-sm leading-relaxed text-[var(--text-secondary)]">
               지금은 로컬 상태만 점검할 수 있습니다. Supabase 환경 변수를 연결하면 계정 동기화가 켜집니다.
             </p>
           </section>
@@ -178,65 +150,39 @@ export default function ProfilePage() {
             <SurfaceCard className="p-6">
               <SectionTitle title="앱 톤" />
 
-              <div className="mb-5">
-                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--text-muted)]">
-                  배경 테마
-                </p>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {BACKGROUND_OPTIONS.map((option) => {
-                    const selected = backgroundTheme === option.id
-
-                    return (
+              <div className="flex gap-8">
+                <div>
+                  <p className="mb-2 text-xs font-semibold text-[var(--text-muted)]">배경</p>
+                  <div className="flex gap-3">
+                    {BACKGROUND_OPTIONS.map((option) => (
                       <button
                         key={option.id}
                         onClick={() => setBackgroundTheme(option.id)}
-                        className={`rounded-2xl border p-3 text-left ${
-                          selected
-                            ? 'border-[var(--accent-primary)] bg-[var(--accent-glow)]'
-                            : 'border-[var(--border-card)] bg-[var(--bg-primary)]'
+                        className={`h-10 w-10 rounded-full ${option.swatchClass} ${
+                          backgroundTheme === option.id
+                            ? 'ring-2 ring-[var(--accent-primary)] ring-offset-2 ring-offset-[var(--bg-card)]'
+                            : ''
                         }`}
-                      >
-                        <div className="flex items-center gap-3">
-                          <div className={`h-11 w-11 rounded-2xl border ${option.previewClass}`} />
-                          <p className="text-sm font-medium text-[var(--text-primary)]">
-                            {option.label}
-                          </p>
-                        </div>
-                      </button>
-                    )
-                  })}
+                      />
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              <div>
-                <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--text-muted)]">
-                  강조 색상
-                </p>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {COLOR_OPTIONS.map((option) => {
-                    const selected = colorTheme === option.id
-
-                    return (
+                <div>
+                  <p className="mb-2 text-xs font-semibold text-[var(--text-muted)]">컬러</p>
+                  <div className="flex gap-3">
+                    {COLOR_OPTIONS.map((option) => (
                       <button
                         key={option.id}
                         onClick={() => setColorTheme(option.id)}
-                        className={`rounded-2xl border p-3 text-left ${
-                          selected
-                            ? 'border-[var(--accent-primary)] bg-[var(--accent-glow)]'
-                            : 'border-[var(--border-card)] bg-[var(--bg-primary)]'
+                        className={`h-10 w-10 rounded-full ${option.swatchClass} ${
+                          colorTheme === option.id
+                            ? 'ring-2 ring-[var(--accent-primary)] ring-offset-2 ring-offset-[var(--bg-card)]'
+                            : ''
                         }`}
-                      >
-                        <div className="flex items-center gap-3">
-                          <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)]">
-                            <div className={`h-5 w-5 rounded-full ${option.swatchClass}`} />
-                          </div>
-                          <p className="text-sm font-medium text-[var(--text-primary)]">
-                            {option.label}
-                          </p>
-                        </div>
-                      </button>
-                    )
-                  })}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </SurfaceCard>

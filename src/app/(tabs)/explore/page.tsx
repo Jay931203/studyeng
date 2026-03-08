@@ -404,7 +404,7 @@ export default function ExplorePage() {
         </section>
 
         {continueSeries.length > 0 && (
-          <section className="mb-8">
+          <section className="mb-8 overflow-hidden">
             <SectionHeader title="이어보기" />
 
             <div className="flex gap-3 overflow-x-auto pb-2 no-scrollbar">

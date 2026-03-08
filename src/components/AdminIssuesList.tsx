@@ -5,7 +5,7 @@ import { seedVideos } from '@/data/seed-videos'
 import { useAdminStore, type AdminIssue, type IssueType } from '@/stores/useAdminStore'
 
 const typeStyles: Record<IssueType, { label: string; className: string }> = {
-  subtitle: { label: '자막', className: 'bg-yellow-400/10 text-yellow-400' },
+  subtitle: { label: '자막', className: 'bg-[var(--accent-primary)]/10 text-[var(--accent-text)]' },
   video: { label: '영상', className: 'bg-blue-400/10 text-blue-400' },
   other: { label: '기타', className: 'bg-gray-400/10 text-gray-400' },
 }
@@ -160,12 +160,12 @@ export function AdminIssuesList() {
 
       <div className="max-h-[320px] space-y-2 overflow-y-auto px-3 py-3 no-scrollbar">
         {adminSyncError && (
-          <div className="rounded-xl border border-amber-500/20 bg-amber-500/10 px-3 py-2 text-xs text-amber-200">
+          <div className="rounded-xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-3 py-2 text-xs text-[var(--text-secondary)]">
             <div className="flex items-start justify-between gap-3">
               <span>{adminSyncError}</span>
               <button
                 onClick={() => setAdminSyncError(null)}
-                className="text-[10px] font-semibold text-amber-300"
+                className="text-[10px] font-semibold text-[var(--text-secondary)]"
               >
                 닫기
               </button>

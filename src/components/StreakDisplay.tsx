@@ -36,7 +36,7 @@ export function StreakDisplay({ days }: StreakDisplayProps) {
       className={`rounded-2xl border p-5 shadow-[var(--card-shadow)] sm:p-6 ${
         isZero
           ? 'border-[var(--border-card)] bg-[var(--bg-card)]'
-          : 'border-amber-400/20 bg-gradient-to-br from-amber-400/14 via-transparent to-transparent'
+          : 'border-[var(--border-card)] bg-gradient-to-br from-[var(--accent-primary)]/14 via-transparent to-transparent'
       }`}
     >
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
@@ -45,7 +45,7 @@ export function StreakDisplay({ days }: StreakDisplayProps) {
             className={`flex h-14 w-14 items-center justify-center rounded-[20px] border ${
               isZero
                 ? 'border-[var(--border-card)] bg-[var(--bg-secondary)] text-[var(--accent-text)]'
-                : 'border-amber-400/20 bg-amber-400/12 text-amber-300'
+                : 'border-[var(--border-card)] bg-[var(--accent-primary)]/12 text-[var(--accent-text)]'
             }`}
           >
             <LoopIcon active={!isZero} />
@@ -59,7 +59,7 @@ export function StreakDisplay({ days }: StreakDisplayProps) {
             </p>
             <p
               className={`mt-1 text-sm ${
-                isZero ? 'text-[var(--text-secondary)]' : 'text-amber-100/80'
+                isZero ? 'text-[var(--text-secondary)]' : 'text-[var(--text-secondary)]'
               }`}
             >
               {isZero
@@ -92,7 +92,7 @@ export function StreakDisplay({ days }: StreakDisplayProps) {
                 transition={{ type: 'spring', stiffness: 400, damping: 20, delay: index * 0.05 }}
                 className={`flex h-10 w-10 items-center justify-center rounded-2xl border text-xs font-semibold transition-colors duration-300 sm:h-11 sm:w-11 ${
                   isCompleted
-                    ? 'border-transparent bg-amber-300 text-black shadow-lg shadow-amber-300/20'
+                    ? 'border-transparent bg-[var(--accent-primary)] text-white shadow-lg shadow-[var(--accent-primary)]/20'
                     : 'border-[var(--border-card)] bg-[var(--bg-secondary)] text-[var(--text-muted)]'
                 }`}
               >
