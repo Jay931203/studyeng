@@ -125,6 +125,17 @@ export function useYouTubePlayer(
       },
       events: {
         onReady: (event) => {
+          // Disable YouTube's built-in captions/subtitles
+          // unloadModule is part of the YouTube IFrame API but not in @types/youtube
+          try {
+            const p = event.target as unknown as Record<string, (m: string) => void>
+            if (typeof p.unloadModule === 'function') {
+              p.unloadModule('captions')
+              p.unloadModule('cc')
+            }
+          } catch {
+            // Some environments may not support unloadModule
+          }
           event.target.setPlaybackRate(playbackRate)
           event.target.playVideo()
           const dur = event.target.getDuration()

@@ -8,14 +8,14 @@ import { SaveToast } from './SaveToast'
 import { ProgressBar } from './ProgressBar'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
-import { usePremiumStore, FREE_DAILY_VIEW_LIMIT } from '@/stores/usePremiumStore'
+import { usePremiumStore } from '@/stores/usePremiumStore'
 import { usePlayerStore } from '@/stores/usePlayerStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { PremiumModal } from './PremiumModal'
 import { AdminReportButton } from './AdminReportButton'
 import { useRouter } from 'next/navigation'
-import { categories, series as allSeries, type VideoData } from '@/data/seed-videos'
+import { series as allSeries, type VideoData } from '@/data/seed-videos'
 
 interface VideoFeedProps {
   videos: VideoData[]
@@ -28,16 +28,12 @@ export function VideoFeed({ videos }: VideoFeedProps) {
   const [showToast, setShowToast] = useState(false)
   const [showPremiumModal, setShowPremiumModal] = useState(false)
   const [premiumTrigger, setPremiumTrigger] = useState<'video-limit' | 'phrase-limit'>('video-limit')
-  const [showOverlay, setShowOverlay] = useState(true)
-  const overlayTimerRef = useRef<number | null>(null)
   const constraintsRef = useRef(null)
   const savePhrase = usePhraseStore((s) => s.savePhrase)
   const markWatched = useWatchHistoryStore((s) => s.markWatched)
   const incrementViewCount = useWatchHistoryStore((s) => s.incrementViewCount)
   const getViewCount = useWatchHistoryStore((s) => s.getViewCount)
-  const isPremium = usePremiumStore((s) => s.isPremium)
   const incrementDailyView = usePremiumStore((s) => s.incrementDailyView)
-  const getDailyViewsRemaining = usePremiumStore((s) => s.getDailyViewsRemaining)
   const canSaveMorePhrases = usePremiumStore((s) => s.canSaveMorePhrases)
   const incrementSavedPhrases = usePremiumStore((s) => s.incrementSavedPhrases)
   const checkAndUpdateStreak = useUserStore((s) => s.checkAndUpdateStreak)
@@ -54,18 +50,6 @@ export function VideoFeed({ videos }: VideoFeedProps) {
   // Brief overlay indicator for repeat progress
   const [repeatIndicator, setRepeatIndicator] = useState<string | null>(null)
   const repeatIndicatorTimerRef = useRef<number | null>(null)
-
-  // Auto-hide top overlay after 3 seconds, re-show on video change
-  useEffect(() => {
-    setShowOverlay(true)
-    if (overlayTimerRef.current) clearTimeout(overlayTimerRef.current)
-    overlayTimerRef.current = window.setTimeout(() => {
-      setShowOverlay(false)
-    }, 3000)
-    return () => {
-      if (overlayTimerRef.current) clearTimeout(overlayTimerRef.current)
-    }
-  }, [currentIndex])
 
   // Mark episode as watched and count views
   useEffect(() => {
@@ -172,7 +156,6 @@ export function VideoFeed({ videos }: VideoFeedProps) {
   const seriesInfo = currentVideo.seriesId
     ? allSeries.find(s => s.id === currentVideo.seriesId)
     : null
-  const categoryLabel = categories.find(c => c.id === currentVideo.category)?.label ?? currentVideo.category
 
   return (
     <div ref={constraintsRef} className="relative w-full h-full overflow-hidden bg-black">
@@ -236,48 +219,21 @@ export function VideoFeed({ videos }: VideoFeedProps) {
         </div>
       )}
 
-      {/* Top overlay: video info — auto-hides after 3s */}
-      <div
-        className="absolute top-0 left-0 right-16 z-10 pointer-events-none pt-4 pl-4 pr-4 transition-opacity duration-700 ease-out"
-        style={{ opacity: showOverlay ? 1 : 0 }}
-      >
-        {/* Video title */}
-        <p className="text-white/90 font-semibold text-sm drop-shadow-md leading-snug line-clamp-1">
-          {currentVideo.title}
-        </p>
-
-        {/* Series name + episode indicator */}
-        {seriesInfo && (
-          <p className="text-white/50 text-[11px] mt-0.5 leading-snug">
+      {/* Top-left video title badge */}
+      <div className="absolute top-3 left-3 z-10 max-w-[65%]">
+        {seriesInfo ? (
+          <button
+            onClick={() => router.push(`/explore?series=${currentVideo.seriesId}`)}
+            className="text-white text-xs font-medium bg-black/40 backdrop-blur-sm rounded-lg px-2.5 py-1.5 truncate block max-w-full text-left"
+          >
             {seriesInfo.title}
-            {currentVideo.episodeNumber && (
-              <span className="text-white/35 ml-1.5">
-                {currentVideo.episodeNumber}/{seriesInfo.episodeCount}
-              </span>
-            )}
-          </p>
+            {currentVideo.episodeNumber != null && ` Ep.${currentVideo.episodeNumber}`}
+          </button>
+        ) : (
+          <span className="text-white text-xs font-medium bg-black/40 backdrop-blur-sm rounded-lg px-2.5 py-1.5 truncate block max-w-full">
+            {currentVideo.title}
+          </span>
         )}
-
-        {/* Minimal metadata row */}
-        <div className="flex gap-1.5 mt-1.5 items-center">
-          <span className="text-white/40 text-[10px]">
-            {categoryLabel}
-          </span>
-          <span className="text-white/20 text-[10px]">
-            ·
-          </span>
-          <span className="text-white/40 text-[10px]">
-            {currentVideo.clipEnd - currentVideo.clipStart}s
-          </span>
-          {!isPremium && (
-            <>
-              <span className="text-white/20 text-[10px]">·</span>
-              <span className="text-white/30 text-[10px]">
-                {FREE_DAILY_VIEW_LIMIT - getDailyViewsRemaining()}/{FREE_DAILY_VIEW_LIMIT}
-              </span>
-            </>
-          )}
-        </div>
       </div>
 
       {/* Dot position indicators — always visible, very subtle */}

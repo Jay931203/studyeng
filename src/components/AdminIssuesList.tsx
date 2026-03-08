@@ -57,9 +57,9 @@ function IssueCard({ issue, onResolve }: { issue: AdminIssue; onResolve: () => v
 }
 
 export function AdminIssuesList() {
-  const { isAdmin, issues, resolveIssue, clearResolved } = useAdminStore()
+  const { isAdminActive, issues, resolveIssue, clearResolved } = useAdminStore()
 
-  if (!isAdmin) return null
+  if (!isAdminActive()) return null
 
   const unresolvedIssues = issues.filter((i) => !i.resolved)
   const resolvedCount = issues.filter((i) => i.resolved).length
