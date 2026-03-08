@@ -1,16 +1,34 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { isBillingEnabled } from '@/lib/billing'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { useDiscountStore } from '@/stores/useDiscountStore'
-import { usePremiumStore } from '@/stores/usePremiumStore'
 
-const YEARLY_PRICE = 79900
-
-function formatWon(value: number) {
-  return `${value.toLocaleString('ko-KR')}원`
+interface PaceMilestone {
+  label: string
+  description: string
+  targetRate: number
 }
+
+const PACE_MILESTONES: PaceMilestone[] = [
+  {
+    label: '기초 페이스',
+    description: '월간 달성률 70% 이상',
+    targetRate: 70,
+  },
+  {
+    label: '집중 구간',
+    description: '월간 달성률 90% 이상',
+    targetRate: 90,
+  },
+  {
+    label: '최상위 구간',
+    description: '3개월 연속 90% 이상',
+    targetRate: 90,
+  },
+]
 
 export function DailyMissions() {
   const missions = useDailyMissionStore((state) => state.missions)
@@ -24,23 +42,25 @@ export function DailyMissions() {
   }, [checkAndResetDaily])
 
   return (
-    <div className="mb-8 overflow-hidden rounded-[28px] border border-[var(--border-card)] bg-[var(--bg-card)] shadow-[var(--card-shadow)]">
+    <div className="mb-8 overflow-hidden rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] shadow-[var(--card-shadow)]">
       <div className="border-b border-[var(--border-card)]/60 px-5 pb-4 pt-5">
         <div className="flex items-start justify-between gap-4">
           <div>
-            <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
-              루틴
+            <span className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+              Rhythm
             </span>
             <h2 className="mt-2 text-xl font-bold text-[var(--text-primary)]">
-              오늘 루틴
+              오늘의 루틴
             </h2>
             <p className="mt-1 text-sm text-[var(--text-secondary)]">
-              크게 힘 주지 않고 한 바퀴만 돌 수 있게 묶어뒀습니다.
+              짧게 여러 번 누적하면서 학습 흐름을 끊지 않는 데 초점을 둡니다.
             </p>
           </div>
           <span
             className={`rounded-full px-3 py-1 text-[11px] font-semibold ${
-              allCompleteBonus ? 'bg-green-500/15 text-green-400' : 'bg-[var(--bg-secondary)] text-[var(--text-muted)]'
+              allCompleteBonus
+                ? 'bg-green-500/15 text-green-400'
+                : 'bg-[var(--bg-secondary)] text-[var(--text-muted)]'
             }`}
           >
             {allCompleteBonus ? '전체 완료' : `${completedCount}/${missions.length} 완료`}
@@ -63,20 +83,6 @@ export function DailyMissions() {
       </div>
 
       <div className="px-5 pb-2 pt-2">
-        <div className="mb-1 flex items-center justify-between">
-          <span className="text-xs font-medium uppercase tracking-wide text-[var(--text-secondary)]">
-            체크포인트
-          </span>
-          <span
-            className={`rounded-full px-2 py-0.5 text-[10px] font-semibold ${
-              allCompleteBonus
-                ? 'bg-green-500/15 text-green-400'
-                : 'bg-[var(--bg-secondary)] text-[var(--text-muted)]'
-            }`}
-          >
-            {allCompleteBonus ? '전체 완료' : '진행 중'}
-          </span>
-        </div>
         {missions.map((mission, index) => {
           const progress = mission.target > 0 ? (mission.current / mission.target) * 100 : 0
           return (
@@ -122,23 +128,21 @@ export function DailyMissions() {
       {allCompleteBonus && (
         <div className="px-5 pb-4">
           <p className="rounded-2xl bg-green-500/10 px-4 py-3 text-center text-xs text-green-300/90">
-            오늘 루틴이 이번 달 할인 진행률에 반영됐습니다.
+            오늘 루틴을 모두 채웠습니다. 이 기록은 월간 학습 페이스 추적에 반영됩니다.
           </p>
         </div>
       )}
 
-      <DiscountProgress />
+      <LearningPaceCard />
     </div>
   )
 }
 
-function DiscountProgress() {
-  const isPremium = usePremiumStore((state) => state.isPremium)
+function LearningPaceCard() {
+  const billingEnabled = isBillingEnabled()
   const checkAndResetMonthly = useDiscountStore((state) => state.checkAndResetMonthly)
   const completedDays = useDiscountStore((state) => state.completedDays)
   const getCompletionRate = useDiscountStore((state) => state.getCompletionRate)
-  const getDiscountRate = useDiscountStore((state) => state.getDiscountRate)
-  const getNextTierInfo = useDiscountStore((state) => state.getNextTierInfo)
   const getDaysInCurrentMonth = useDiscountStore((state) => state.getDaysInCurrentMonth)
   const hasConsecutiveBonus = useDiscountStore((state) => state.hasConsecutiveBonus)
   const [open, setOpen] = useState(false)
@@ -148,32 +152,46 @@ function DiscountProgress() {
   }, [checkAndResetMonthly])
 
   const completionRate = getCompletionRate()
-  const discountRate = getDiscountRate()
-  const nextTier = getNextTierInfo()
   const totalDays = getDaysInCurrentMonth()
   const completedCount = completedDays.length
-  const currentCoupon = Math.round((YEARLY_PRICE * discountRate) / 100)
-  const nextCoupon = nextTier ? Math.round((YEARLY_PRICE * nextTier.nextDiscount) / 100) : 0
-  const hasBonus = hasConsecutiveBonus()
+  const hasTopTier = hasConsecutiveBonus()
+  const nextMilestone = PACE_MILESTONES.find((milestone, index) => {
+    if (index === PACE_MILESTONES.length - 1) {
+      return !hasTopTier
+    }
 
-  const milestoneRows = useMemo(
-    () => [
-      { label: '70% 달성', value: '10% 쿠폰', info: `${formatWon(Math.round(YEARLY_PRICE * 0.1))}` },
-      { label: '90% 달성', value: '15% 쿠폰', info: `${formatWon(Math.round(YEARLY_PRICE * 0.15))}` },
-      { label: '3개월 연속 90%', value: '20% 쿠폰', info: `${formatWon(Math.round(YEARLY_PRICE * 0.2))}` },
-    ],
-    [],
-  )
+    return completionRate < milestone.targetRate
+  })
+
+  const nextMilestoneText = hasTopTier
+    ? '최상위 구간 유지 중'
+    : nextMilestone
+      ? `${nextMilestone.label}까지 ${Math.max(
+          0,
+          Math.ceil((nextMilestone.targetRate / 100) * totalDays) - completedCount,
+        )}일`
+      : '이번 달 최고 구간 도달'
 
   return (
     <>
       <div className="mx-4 mb-4">
+        {!billingEnabled && (
+          <div className="mb-3 rounded-xl border border-amber-500/20 bg-amber-500/10 px-4 py-3">
+            <p className="text-sm font-semibold text-amber-300">현재는 무료 운영 중</p>
+            <p className="mt-1 text-xs leading-relaxed text-amber-100/80">
+              학습 페이스는 계속 기록되지만, 결제와 직접 연결된 혜택 문구는 노출하지 않습니다.
+            </p>
+          </div>
+        )}
+
         <button
           onClick={() => setOpen(true)}
           className="w-full rounded-xl border border-white/[0.03] bg-white/[0.02] px-3 py-3 text-left transition-colors hover:bg-white/[0.04]"
         >
           <div className="mb-2 flex items-center justify-between gap-3">
-            <span className="text-xs font-medium text-[var(--text-secondary)]">이번 달 구독 할인</span>
+            <span className="text-xs font-medium text-[var(--text-secondary)]">
+              이번 달 학습 페이스
+            </span>
             <span className="text-[10px] text-[var(--text-muted)]">상세 보기</span>
           </div>
           <div className="mb-2 h-1.5 overflow-hidden rounded-full bg-white/[0.04]">
@@ -186,9 +204,7 @@ function DiscountProgress() {
             <span className="text-[var(--text-muted)]">
               {completedCount}/{totalDays}일 완료 ({Math.round(completionRate)}%)
             </span>
-            <span className="font-medium text-emerald-400">
-              {nextTier ? `${nextTier.daysNeeded}일 더 채우면 ${nextTier.nextDiscount}%` : hasBonus ? '보너스 적용 중' : isPremium ? '현재 최고 구간' : '구독 시 적용'}
-            </span>
+            <span className="font-medium text-emerald-400">{nextMilestoneText}</span>
           </div>
         </button>
       </div>
@@ -216,18 +232,22 @@ function DiscountProgress() {
               >
                 <div className="mb-4 flex items-start justify-between gap-4">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400">혜택</p>
-                    <h3 className="mt-2 text-lg font-semibold text-[var(--text-primary)]">이번 달 할인 진행 상황</h3>
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400">
+                      Pace
+                    </p>
+                    <h3 className="mt-2 text-lg font-semibold text-[var(--text-primary)]">
+                      이번 달 학습 페이스
+                    </h3>
                     <p className="mt-1 text-sm text-[var(--text-muted)]">
-                      지금 달성한 정도와 다음 연간 결제 할인 쿠폰 예상 금액을 볼 수 있습니다.
+                      월간 루틴 완수율과 연속 달성 흐름을 한 번에 확인할 수 있습니다.
                     </p>
                   </div>
                   <button
                     onClick={() => setOpen(false)}
                     className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--bg-secondary)] text-[var(--text-muted)]"
-                    aria-label="할인 상세 닫기"
+                    aria-label="학습 페이스 닫기"
                   >
-                    ×
+                    횞
                   </button>
                 </div>
 
@@ -235,12 +255,14 @@ function DiscountProgress() {
                   <div className="flex items-end justify-between gap-3">
                     <div>
                       <p className="text-xs text-[var(--text-muted)]">현재 달성률</p>
-                      <p className="mt-1 text-2xl font-bold text-[var(--text-primary)]">{Math.round(completionRate)}%</p>
+                      <p className="mt-1 text-2xl font-bold text-[var(--text-primary)]">
+                        {Math.round(completionRate)}%
+                      </p>
                     </div>
                     <div className="text-right">
-                      <p className="text-xs text-[var(--text-muted)]">지금 기준 연간 쿠폰</p>
+                      <p className="text-xs text-[var(--text-muted)]">이번 달 완료 일수</p>
                       <p className="mt-1 text-lg font-semibold text-emerald-400">
-                        {discountRate > 0 ? formatWon(currentCoupon) : '아직 없음'}
+                        {completedCount}/{totalDays}일
                       </p>
                     </div>
                   </div>
@@ -253,30 +275,46 @@ function DiscountProgress() {
                 </div>
 
                 <div className="mt-4 rounded-2xl border border-[var(--border-card)] bg-[var(--bg-primary)]/35 p-4">
-                  <p className="text-sm font-semibold text-[var(--text-primary)]">다음 할인 구간</p>
-                  {nextTier ? (
-                    <p className="mt-2 text-sm text-[var(--text-secondary)]">
-                      앞으로 <span className="font-semibold text-[var(--text-primary)]">{nextTier.daysNeeded}일</span> 더 달성하면{' '}
-                      <span className="font-semibold text-emerald-400">{nextTier.nextDiscount}% 쿠폰</span>을 받고,
-                      예상 금액은 {formatWon(nextCoupon)}입니다.
-                    </p>
-                  ) : (
-                    <p className="mt-2 text-sm text-[var(--text-secondary)]">
-                      {hasBonus ? '현재 연속 달성 보너스로 최고 할인 구간이 적용 중입니다.' : '이번 달 최고 구간을 이미 달성했습니다.'}
-                    </p>
-                  )}
+                  <p className="text-sm font-semibold text-[var(--text-primary)]">다음 목표</p>
+                  <p className="mt-2 text-sm text-[var(--text-secondary)]">
+                    {hasTopTier
+                      ? '현재 연속 달성 최고 구간을 유지하고 있습니다.'
+                      : nextMilestone
+                        ? `${nextMilestone.label}까지 남은 페이스를 채우면 다음 구간으로 올라갑니다.`
+                        : '이번 달 목표 구간을 모두 달성했습니다.'}
+                  </p>
                 </div>
 
                 <div className="mt-4 space-y-2">
-                  {milestoneRows.map((row) => (
-                    <div key={row.label} className="flex items-center justify-between rounded-2xl bg-[var(--bg-secondary)] px-4 py-3">
-                      <div>
-                        <p className="text-sm font-medium text-[var(--text-primary)]">{row.label}</p>
-                        <p className="mt-1 text-xs text-[var(--text-muted)]">{row.info}</p>
+                  {PACE_MILESTONES.map((milestone) => {
+                    const reached =
+                      milestone.label === '최상위 구간'
+                        ? hasTopTier
+                        : completionRate >= milestone.targetRate
+
+                    return (
+                      <div
+                        key={milestone.label}
+                        className="flex items-center justify-between rounded-2xl bg-[var(--bg-secondary)] px-4 py-3"
+                      >
+                        <div>
+                          <p className="text-sm font-medium text-[var(--text-primary)]">
+                            {milestone.label}
+                          </p>
+                          <p className="mt-1 text-xs text-[var(--text-muted)]">
+                            {milestone.description}
+                          </p>
+                        </div>
+                        <p
+                          className={`text-sm font-semibold ${
+                            reached ? 'text-emerald-400' : 'text-[var(--text-secondary)]'
+                          }`}
+                        >
+                          {reached ? '달성' : '진행 중'}
+                        </p>
                       </div>
-                      <p className="text-sm font-semibold text-emerald-400">{row.value}</p>
-                    </div>
-                  ))}
+                    )
+                  })}
                 </div>
               </div>
             </motion.div>

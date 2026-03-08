@@ -12,7 +12,7 @@ import {
 import { LogoFull } from '@/components/Logo'
 import { SearchBar } from '@/components/SearchBar'
 import { VideoCard } from '@/components/VideoCard'
-import { AppPage, MetricCard, PageHeader, SectionHeader, SurfaceCard } from '@/components/ui/AppPage'
+import { AppPage, PageHeader, SectionHeader, SurfaceCard } from '@/components/ui/AppPage'
 import { useAuth } from '@/hooks/useAuth'
 import {
   catalogSeries,
@@ -36,12 +36,6 @@ const categoryLabels: Record<CategoryId, string> = {
   music: '음악',
   animation: '애니',
 }
-
-const levelLabels = {
-  beginner: '입문',
-  intermediate: '중급',
-  advanced: '고급',
-} as const
 
 interface ContinueSeriesCard {
   seriesItem: SeriesType
@@ -198,7 +192,6 @@ export default function ExplorePage() {
     user?.user_metadata?.given_name ??
     user?.user_metadata?.name?.split(' ')?.[0] ??
     null
-  const likedCount = Object.values(likes).filter(Boolean).length
 
   if (!spotlightVideo) return null
 
@@ -307,7 +300,7 @@ export default function ExplorePage() {
 
         <section className="mb-8 grid gap-4 xl:grid-cols-[1.15fr_0.85fr]">
           <SurfaceCard className="overflow-hidden">
-            <div className="grid min-h-[360px] lg:grid-cols-[1.02fr_0.98fr]">
+            <div className="grid min-h-[240px] lg:grid-cols-[1.02fr_0.98fr]">
               <div className="order-2 p-6 sm:p-8 lg:order-1 lg:p-10">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
                   {continueSeries.length > 0 ? '이어보기' : '오늘 추천'}
@@ -331,35 +324,15 @@ export default function ExplorePage() {
                     바로 보기
                   </button>
                   <button
-                    onClick={() => router.push('/shorts')}
-                    className="rounded-full bg-[var(--bg-secondary)] px-5 py-2.5 text-sm font-medium text-[var(--text-primary)]"
-                  >
-                    피드 열기
-                  </button>
-                  <button
                     onClick={scrollToSeriesSection}
                     className="rounded-full border border-[var(--border-card)] px-5 py-2.5 text-sm font-medium text-[var(--text-secondary)]"
                   >
                     시리즈
                   </button>
                 </div>
-
-                <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
-                  <MetricCard label="저장 표현" value={`${phrases.length}개`} />
-                  <MetricCard label="반영 난이도" value={levelLabels[level]} />
-                  <MetricCard label="좋아요" value={`${likedCount}개`} />
-                </div>
-                <div className="mt-4 flex flex-wrap gap-2">
-                  <span className="rounded-full bg-[var(--accent-glow)] px-3 py-1.5 text-xs font-medium text-[var(--accent-text)]">
-                    {interests.length > 0 ? `${interests.length}개 취향 반영` : '기본 추천'}
-                  </span>
-                  <span className="rounded-full bg-[var(--bg-secondary)] px-3 py-1.5 text-xs font-medium text-[var(--text-secondary)]">
-                    {continueSeries.length > 0 ? `${continueSeries.length}개 이어보기` : '새 큐'}
-                  </span>
-                </div>
               </div>
 
-              <div className="order-1 relative min-h-[280px] overflow-hidden lg:order-2 lg:min-h-full">
+              <div className="order-1 relative min-h-[180px] overflow-hidden lg:order-2 lg:min-h-full">
                 <Image
                   src={`https://img.youtube.com/vi/${spotlightVideo.youtubeId}/hqdefault.jpg`}
                   alt={spotlightVideo.title}
@@ -392,30 +365,11 @@ export default function ExplorePage() {
 
           <div className="flex flex-col gap-4">
             <SearchBar />
-
-            <SurfaceCard className="rounded-[28px] p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
-                오늘 메모
-              </p>
-              <h2 className="mt-2 text-xl font-bold text-[var(--text-primary)]">
-                지금 상태
-              </h2>
-              <p className="mt-1 text-sm text-[var(--text-secondary)]">
-                오늘 바로 이어볼 수 있는 것만 추려둡니다.
-              </p>
-              <div className="mt-4 grid grid-cols-2 gap-3">
-                <MetricCard label="이어볼 시리즈" value={`${continueSeries.length}개`} />
-                <MetricCard label="추천 큐" value={`${recommended.length}개`} />
-                <MetricCard label="최근 반응" value={`${recentVideoIds.length}개`} />
-                <MetricCard label="좋아요" value={`${likedCount}개`} />
-              </div>
-            </SurfaceCard>
           </div>
         </section>
 
         <section className="mb-8">
           <SectionHeader
-            eyebrow="이어보기"
             title="이어보기"
             description={
               continueSeries.length > 0
@@ -443,7 +397,7 @@ export default function ExplorePage() {
                   onClick={() => openShorts(item.nextVideo.id, item.seriesItem.id)}
                   className="overflow-hidden rounded-[28px] border border-[var(--border-card)] bg-[var(--bg-card)] text-left shadow-[var(--card-shadow)]"
                 >
-                  <div className="relative aspect-[1.6] overflow-hidden">
+                  <div className="relative aspect-video overflow-hidden">
                     <Image
                       src={`https://img.youtube.com/vi/${item.nextVideo.youtubeId}/hqdefault.jpg`}
                       alt={item.nextVideo.title}
@@ -513,7 +467,6 @@ export default function ExplorePage() {
 
         <section ref={seriesSectionRef} className="mb-8">
           <SectionHeader
-            eyebrow="시리즈"
             title="시리즈"
             description="한 흐름으로 이어지는 장면만 따로 모았습니다."
           />

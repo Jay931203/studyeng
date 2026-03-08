@@ -33,7 +33,7 @@ export function StreakDisplay({ days }: StreakDisplayProps) {
 
   return (
     <div
-      className={`rounded-[32px] border p-5 shadow-[var(--card-shadow)] sm:p-6 ${
+      className={`rounded-2xl border p-5 shadow-[var(--card-shadow)] sm:p-6 ${
         isZero
           ? 'border-[var(--border-card)] bg-[var(--bg-card)]'
           : 'border-amber-400/20 bg-gradient-to-br from-amber-400/14 via-transparent to-transparent'
@@ -51,7 +51,7 @@ export function StreakDisplay({ days }: StreakDisplayProps) {
             <LoopIcon active={!isZero} />
           </div>
           <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
+            <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
               루틴
             </p>
             <p className="mt-2 text-2xl font-bold text-[var(--text-primary)]">
@@ -85,7 +85,7 @@ export function StreakDisplay({ days }: StreakDisplayProps) {
           const isCompleted = index < activeCount
 
           return (
-            <div key={day} className="flex flex-col items-center gap-2">
+            <div key={day} className="flex flex-col items-center">
               <motion.div
                 initial={isCompleted ? { scale: 0.5 } : false}
                 animate={isCompleted ? { scale: 1 } : {}}
@@ -98,7 +98,6 @@ export function StreakDisplay({ days }: StreakDisplayProps) {
               >
                 {isCompleted ? <span className="h-2.5 w-2.5 rounded-full bg-black/75" /> : day}
               </motion.div>
-              <span className="text-[11px] text-[var(--text-muted)]">{day}</span>
             </div>
           )
         })}

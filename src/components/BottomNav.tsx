@@ -125,9 +125,6 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
             Shortee
           </p>
           <Logo className="mt-3 h-7 text-[var(--text-primary)]" />
-          <p className="mt-3 text-sm leading-relaxed text-[var(--text-secondary)]">
-            짧은 장면을 보고, 자막에서 멈추고, 남겨두고, 다시 꺼내보는 영어 피드.
-          </p>
         </div>
 
         <nav className="mt-5 flex flex-1 flex-col gap-2">
@@ -166,17 +163,6 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
           })}
         </nav>
 
-        <div className="rounded-[24px] border border-[var(--border-card)] bg-[var(--bg-secondary)]/40 p-4">
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--text-muted)]">
-            오늘 흐름
-          </p>
-          <p className="mt-2 text-sm font-semibold text-[var(--text-primary)]">
-            오늘 → 피드 → 보관함
-          </p>
-          <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">
-            볼 장면을 받고, 자막에서 멈추고, 남겨둔 표현과 기록만 다시 꺼내는 흐름입니다.
-          </p>
-        </div>
       </aside>
     )
   }

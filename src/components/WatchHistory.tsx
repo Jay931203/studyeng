@@ -66,7 +66,7 @@ export function WatchHistory() {
   const allItems = groupedByDate.flatMap((g) =>
     g.videos.map((v) => ({ ...v, dateLabel: g.label, dateKey: g.key }))
   )
-  const displayItems = allItems.slice(0, 3)
+  const displayItems = allItems.slice(0, 5)
 
   const displayGroups: { label: string; videos: typeof seedVideos }[] = []
   for (const item of displayItems) {
@@ -91,7 +91,7 @@ export function WatchHistory() {
             </span>
           )}
         </div>
-        {totalWatched > 3 && (
+        {totalWatched > 5 && (
           <Link
             href="/learning/history"
             className="text-[var(--text-secondary)] text-xs"
@@ -126,7 +126,7 @@ export function WatchHistory() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, x: -100, transition: { duration: 0.2 } }}
                       transition={{ duration: 0.25 }}
-                      className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-2xl p-3 flex items-center gap-3 border border-white/[0.04]"
+                      className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-2xl p-3 flex items-center gap-3 border border-[var(--border-card)]"
                     >
                       <button
                         onClick={() => { clearDeletedFlag(video.id); router.push(`/shorts?v=${video.id}`) }}

@@ -49,21 +49,7 @@ export function SearchBar() {
   const showDropdown = focused && normalizedQuery.length > 0
 
   return (
-    <section className="relative rounded-[28px] border border-[var(--border-card)] bg-[var(--bg-card)]/92 p-4 shadow-[var(--card-shadow)] backdrop-blur-xl">
-      <div className="mb-3 flex items-center justify-between gap-3">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
-            빠른 검색
-          </p>
-          <p className="mt-1 text-sm text-[var(--text-secondary)]">대사, 상황, 시리즈</p>
-        </div>
-        {normalizedQuery.length > 0 && (
-          <span className="rounded-full bg-[var(--bg-secondary)] px-2.5 py-1 text-[11px] font-medium text-[var(--text-secondary)]">
-            {results.length}개 결과
-          </span>
-        )}
-      </div>
-
+    <section className="relative">
       <label htmlFor="video-search" className="sr-only">
         표현 또는 주제 검색
       </label>
@@ -94,6 +80,11 @@ export function SearchBar() {
           placeholder="표현, 장면, 상황 검색"
           className="w-full rounded-2xl border border-[var(--border-card)] bg-[var(--bg-primary)]/55 py-3 pl-11 pr-11 text-sm text-[var(--text-primary)] outline-none transition focus:border-[var(--accent-primary)] focus:ring-2 focus:ring-[rgba(var(--accent-primary-rgb),0.18)]"
         />
+        {normalizedQuery.length > 0 && (
+          <span className="absolute right-10 top-1/2 -translate-y-1/2 rounded-full bg-[var(--bg-secondary)] px-2.5 py-1 text-[11px] font-medium text-[var(--text-secondary)]">
+            {results.length}개 결과
+          </span>
+        )}
         {query && (
           <button
             onClick={() => {

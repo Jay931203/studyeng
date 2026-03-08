@@ -5,8 +5,7 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { AdminIssuesList } from '@/components/AdminIssuesList'
 import { BillingManagementCard } from '@/components/BillingManagementCard'
-import { StreakDisplay } from '@/components/StreakDisplay'
-import { AppPage, MetricCard, PageHeader, SurfaceCard } from '@/components/ui/AppPage'
+import { AppPage, MetricCard, SurfaceCard } from '@/components/ui/AppPage'
 import { useAuth } from '@/hooks/useAuth'
 import { isBillingEnabled } from '@/lib/billing'
 import { useAdminStore } from '@/stores/useAdminStore'
@@ -16,7 +15,6 @@ import {
   type ThemeAccent,
   type ThemeBackground,
 } from '@/stores/useThemeStore'
-import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 
 const BACKGROUND_OPTIONS = [
@@ -101,7 +99,6 @@ export default function ProfilePage() {
     setAdminEnabled,
   } = useAdminStore()
 
-  const streakDays = useUserStore((state) => state.streakDays)
   const phraseCount = usePhraseStore((state) => state.phrases.length)
   const totalWatched = useWatchHistoryStore((state) => state.watchedVideoIds.length)
   const totalViews = useWatchHistoryStore((state) =>
@@ -130,7 +127,7 @@ export default function ProfilePage() {
     <AppPage>
 
         {!authAvailable && (
-          <section className="mb-6 rounded-[28px] border border-amber-500/20 bg-amber-500/10 px-5 py-4">
+          <section className="mb-6 rounded-2xl border border-amber-500/20 bg-amber-500/10 px-5 py-4">
             <p className="text-sm font-semibold text-amber-300">
               로그인 연결이 아직 비어 있습니다.
             </p>
@@ -145,7 +142,7 @@ export default function ProfilePage() {
             <motion.div
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              className="rounded-[32px] border border-[var(--border-card)] bg-[var(--bg-card)] p-6 shadow-[var(--card-shadow)]"
+              className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-6 shadow-[var(--card-shadow)]"
             >
               <SectionTitle
                 title="계정"
@@ -344,8 +341,7 @@ export default function ProfilePage() {
                 title="활동"
                 description="지금 쌓인 상태와 활동량을 확인합니다."
               />
-              <StreakDisplay days={streakDays} />
-              <div className="mt-4 grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-3 gap-3">
                 <MetricCard label="누적 재생" value={totalViews} className="text-center" />
                 <MetricCard label="저장 표현" value={phraseCount} className="text-center" />
                 <MetricCard label="본 장면" value={totalWatched} className="text-center" />

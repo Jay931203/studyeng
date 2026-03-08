@@ -17,7 +17,7 @@ export function SavedPhraseCard({ phrase, onDelete, onPlay }: SavedPhraseCardPro
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, x: -100 }}
       transition={{ duration: 0.25, ease: 'easeOut' }}
-      className="bg-[var(--bg-card)] rounded-2xl shadow-[var(--card-shadow)] border border-white/[0.04] p-4 cursor-pointer"
+      className="bg-[var(--bg-card)] rounded-2xl shadow-[var(--card-shadow)] border border-[var(--border-card)] p-4 cursor-pointer"
       onClick={onPlay}
     >
       <div className="flex items-start justify-between gap-3">
@@ -41,7 +41,7 @@ export function SavedPhraseCard({ phrase, onDelete, onPlay }: SavedPhraseCardPro
           </button>
         )}
       </div>
-      <div className="flex items-center justify-between mt-3 pt-3 border-t border-white/[0.04]">
+      <div className="flex items-center justify-between mt-3 pt-3 border-t border-[var(--border-card)]">
         <span className="text-[var(--text-muted)] text-xs">
           {phrase.videoTitle} · {phrase.reviewCount}회 복습
         </span>

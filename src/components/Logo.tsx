@@ -34,8 +34,9 @@ export function LogoFull({ className = 'h-10' }: LogoProps) {
     <img
       src="/logo-full-alt.png"
       alt="Shortee"
-      className={`opacity-95 dark:invert ${className}`}
+      className={`opacity-95 ${className}`}
       draggable={false}
+      style={{ filter: 'var(--logo-filter, none)' }}
     />
   )
 }

@@ -8,7 +8,7 @@ import { SavedPhraseCard } from '@/components/SavedPhraseCard'
 import { StreakDisplay } from '@/components/StreakDisplay'
 import { ViewingStats } from '@/components/ViewingStats'
 import { WatchHistory } from '@/components/WatchHistory'
-import { AppPage, MetricCard, PageHeader, SurfaceCard } from '@/components/ui/AppPage'
+import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import { useAuth } from '@/hooks/useAuth'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useUserStore } from '@/stores/useUserStore'
@@ -20,9 +20,6 @@ export default function LearningPage() {
   const streakDays = useUserStore((state) => state.streakDays)
   const { phrases, removePhrase } = usePhraseStore()
   const totalWatched = useWatchHistoryStore((state) => state.watchedVideoIds.length)
-  const totalViews = useWatchHistoryStore((state) =>
-    Object.values(state.viewCounts).reduce((sum, count) => sum + count, 0),
-  )
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)
   const [showAllPhrases, setShowAllPhrases] = useState(false)
 
@@ -70,11 +67,6 @@ export default function LearningPage() {
               </div>
             </div>
 
-            <div className="mt-6 grid gap-3 sm:grid-cols-3">
-              <MetricCard label="누적 재생" value={totalViews} className="text-center" />
-              <MetricCard label="저장 표현" value={phrases.length} className="text-center" />
-              <MetricCard label="본 장면" value={totalWatched} className="text-center" />
-            </div>
           </SurfaceCard>
 
           <StreakDisplay days={streakDays} />

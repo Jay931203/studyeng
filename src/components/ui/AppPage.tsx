@@ -8,7 +8,7 @@ function joinClassNames(...tokens: Array<string | false | null | undefined>) {
 
 export function AppPage({ children }: { children: ReactNode }) {
   return (
-    <div className="h-full overflow-y-auto pb-24 pt-6 lg:pb-10 lg:pt-8">
+    <div className="h-full overflow-y-auto pb-20 pt-6 lg:pb-10 lg:pt-8">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">{children}</div>
     </div>
   )
@@ -28,7 +28,7 @@ export function PageHeader({
   return (
     <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
       <div>
-        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--accent-text)]">
+        <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
           {eyebrow}
         </p>
         <h1 className="mt-2 text-3xl font-bold text-[var(--text-primary)] sm:text-4xl">
@@ -57,8 +57,8 @@ export function SectionHeader({
   return (
     <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
       <div>
-        {eyebrow && (
-          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
+        {eyebrow && eyebrow !== title && (
+          <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
             {eyebrow}
           </p>
         )}
@@ -82,7 +82,7 @@ export function SurfaceCard({
   return (
     <div
       className={joinClassNames(
-        'rounded-[32px] border border-[var(--border-card)] bg-[var(--bg-card)] shadow-[var(--card-shadow)]',
+        'rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] shadow-[var(--card-shadow)]',
         className,
       )}
     >
