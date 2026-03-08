@@ -8,6 +8,8 @@ import { recommendVideos, seriesPlaylist } from '@/lib/recommend'
 import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useLikeStore } from '@/stores/useLikeStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
+import { usePhraseStore } from '@/stores/usePhraseStore'
+import { useRecommendationStore } from '@/stores/useRecommendationStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 
 function cloneWatchedEpisodes(watchedEpisodes: Record<string, string[]>) {
@@ -16,26 +18,50 @@ function cloneWatchedEpisodes(watchedEpisodes: Record<string, string[]>) {
   )
 }
 
+function cloneVideoSignals(
+  videoSignals: ReturnType<typeof useRecommendationStore.getState>['videoSignals'],
+) {
+  return Object.fromEntries(
+    Object.entries(videoSignals).map(([videoId, signal]) => [videoId, { ...signal }]),
+  )
+}
+
 function ShortsFeedContent() {
   const searchParams = useSearchParams()
   const videoId = searchParams.get('v')
   const seriesId = searchParams.get('series')
-  const navigationKey = buildShortsUrl(videoId, seriesId)
+  const seekTime = searchParams.get('t')
+  const navigationKey = buildShortsUrl(videoId, seriesId) + (seekTime ? `&t=${seekTime}` : '')
 
   // Freeze the recommendation inputs for the current route so that
   // watch-history or like updates inside the player do not reshuffle
   // the active shorts feed mid-session.
   const recommendationSnapshot = useMemo(() => {
     void navigationKey
-    const { watchedEpisodes } = useWatchHistoryStore.getState()
+    const { watchedEpisodes, watchRecords, viewCounts, completionCounts } =
+      useWatchHistoryStore.getState()
     const { likes } = useLikeStore.getState()
     const { interests, level } = useOnboardingStore.getState()
+    const { phrases } = usePhraseStore.getState()
+    const { recentVideoIds, videoSignals } = useRecommendationStore.getState()
 
     return {
       watchedEpisodes: cloneWatchedEpisodes(watchedEpisodes),
+      watchRecords: watchRecords.map((record) => ({ ...record })),
+      viewCounts: { ...viewCounts },
+      completionCounts: { ...completionCounts },
       likes: { ...likes },
       interests: [...interests],
       level,
+      phrases: phrases.map((phrase) => ({
+        videoId: phrase.videoId,
+        videoTitle: phrase.videoTitle,
+        en: phrase.en,
+        savedAt: phrase.savedAt,
+        reviewCount: phrase.reviewCount,
+      })),
+      recentVideoIds: [...recentVideoIds],
+      videoSignals: cloneVideoSignals(videoSignals),
     }
   }, [navigationKey])
 
@@ -68,6 +94,7 @@ function ShortsFeedContent() {
       key={navigationKey}
       videos={recommended}
       initialVideoId={videoId ?? undefined}
+      initialSeekTime={seekTime ? parseFloat(seekTime) : undefined}
     />
   )
 }

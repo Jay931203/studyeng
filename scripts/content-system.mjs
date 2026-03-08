@@ -6,6 +6,10 @@ import { dirname, join } from 'path'
 import { fileURLToPath } from 'url'
 import { loadSeedData } from './lib/load-seed-data.mjs'
 import {
+  buildAssetRecommendationSignals,
+  buildRecommendationManifest,
+} from './lib/recommendation-manifest.mjs'
+import {
   TRANSCRIPT_RULES,
   checkTranscript,
   filterIssuesByReview,
@@ -25,6 +29,7 @@ const WHISPER_MANIFEST_PATH = join(__dirname, 'whisper-manifest.json')
 const YOUTUBE_VALIDATION_PATH = join(ROOT, 'src', 'data', 'youtube-validation-cache.json')
 const REVIEW_REGISTRY_PATH = join(ROOT, 'src', 'data', 'content-review-registry.json')
 const CONTENT_MANIFEST_PATH = join(ROOT, 'src', 'data', 'content-manifest.json')
+const RECOMMENDATION_MANIFEST_PATH = join(ROOT, 'src', 'data', 'recommendation-manifest.json')
 const CONTENT_REPORT_PATH = join(ROOT, 'docs', 'reports', 'content-system-report.md')
 const TARGET_VIDEO_COUNT = 1000
 
@@ -45,6 +50,7 @@ async function main() {
   const categoryIds = new Set(categories.map(category => category.id))
   const seriesMap = new Map(series.map(entry => [entry.id, entry]))
   const videosByYoutubeId = groupBy(seedVideos, video => video.youtubeId)
+  const assetRecommendationSignals = new Map()
   const archivedOrphanIds = new Set(Object.keys(reviewRegistry.archivedOrphanAssets ?? {}))
   const transcriptYoutubeIds = existsSync(TRANSCRIPTS_DIR)
     ? (await readdir(TRANSCRIPTS_DIR))
@@ -81,6 +87,14 @@ async function main() {
       timingStatus,
       linkedVideoCount: videos.length,
     })
+
+    assetRecommendationSignals.set(
+      youtubeId,
+      buildAssetRecommendationSignals({
+        coverage,
+        transcriptEntries,
+      })
+    )
 
     assets.push({
       youtubeId,
@@ -158,11 +172,23 @@ async function main() {
     assets,
     reviewRegistry,
   })
+  const recommendationManifest = buildRecommendationManifest({
+    assets,
+    assetSignals: assetRecommendationSignals,
+    generatedAt: new Date().toISOString(),
+    sourceManifestGeneratedAt: manifest.generatedAt,
+    videos,
+  })
 
   if (writeOutputs) {
     await mkdir(dirname(CONTENT_MANIFEST_PATH), { recursive: true })
     await mkdir(dirname(CONTENT_REPORT_PATH), { recursive: true })
     await writeFile(CONTENT_MANIFEST_PATH, JSON.stringify(manifest, null, 2) + '\n', 'utf-8')
+    await writeFile(
+      RECOMMENDATION_MANIFEST_PATH,
+      JSON.stringify(recommendationManifest, null, 2) + '\n',
+      'utf-8'
+    )
     await writeFile(CONTENT_REPORT_PATH, buildMarkdownReport(manifest), 'utf-8')
   }
 

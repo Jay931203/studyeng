@@ -19,6 +19,8 @@ import { recommendVideos } from '@/lib/recommend'
 import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useLikeStore } from '@/stores/useLikeStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
+import { usePhraseStore } from '@/stores/usePhraseStore'
+import { useRecommendationStore } from '@/stores/useRecommendationStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 
 const categoryLabels: Record<CategoryId, string> = {
@@ -50,10 +52,15 @@ export default function ExplorePage() {
   const { user } = useAuth()
   const seriesSectionRef = useRef<HTMLElement | null>(null)
   const likes = useLikeStore((state) => state.likes)
+  const phrases = usePhraseStore((state) => state.phrases)
   const interests = useOnboardingStore((state) => state.interests)
   const level = useOnboardingStore((state) => state.level)
+  const recentVideoIds = useRecommendationStore((state) => state.recentVideoIds)
+  const videoSignals = useRecommendationStore((state) => state.videoSignals)
   const {
     watchedEpisodes,
+    completionCounts,
+    viewCounts,
     watchRecords,
     getSeriesProgress,
     getNextEpisode,
@@ -150,13 +157,30 @@ export default function ExplorePage() {
   const recommended = useMemo(() => {
     const sourceVideos = recommendVideos(seedVideos, {
       watchedEpisodes,
+      completionCounts,
+      watchRecords,
+      viewCounts,
       likes,
       interests,
       level,
+      phrases,
+      recentVideoIds,
+      videoSignals,
     })
 
     return sourceVideos.slice(0, 4)
-  }, [interests, level, likes, watchedEpisodes])
+  }, [
+    completionCounts,
+    interests,
+    level,
+    likes,
+    phrases,
+    recentVideoIds,
+    videoSignals,
+    viewCounts,
+    watchRecords,
+    watchedEpisodes,
+  ])
 
   const spotlightVideo = continueSeries[0]?.nextVideo ?? recommended[0] ?? seedVideos[0]
   const userName =
@@ -172,7 +196,7 @@ export default function ExplorePage() {
         <div className="mb-5 flex items-start justify-between gap-4">
           <div>
             <p className="text-sm font-semibold tracking-[0.08em] text-[var(--text-primary)]">
-              StudyEng
+              Shortee
             </p>
           </div>
           {cameFromVideo && returnVideoId && (

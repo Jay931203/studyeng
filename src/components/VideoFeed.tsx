@@ -9,6 +9,7 @@ import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { usePlayerStore } from '@/stores/usePlayerStore'
 import { usePremiumStore } from '@/stores/usePremiumStore'
+import { useRecommendationStore } from '@/stores/useRecommendationStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { AdminReportButton } from './AdminReportButton'
@@ -20,6 +21,7 @@ import { VideoPlayer } from './VideoPlayer'
 interface VideoFeedProps {
   videos: VideoData[]
   initialVideoId?: string
+  initialSeekTime?: number
 }
 
 function buildExploreSeriesUrl(video: VideoData) {
@@ -36,7 +38,7 @@ function buildExploreSeriesUrl(video: VideoData) {
   return `/explore?${params.toString()}`
 }
 
-export function VideoFeed({ videos, initialVideoId }: VideoFeedProps) {
+export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeedProps) {
   const router = useRouter()
   const { isLandscape } = useOrientation()
   const [currentIndex, setCurrentIndex] = useState(() => {
@@ -57,11 +59,20 @@ export function VideoFeed({ videos, initialVideoId }: VideoFeedProps) {
   const saveToastTimerRef = useRef<number | null>(null)
   const repeatIndicatorTimerRef = useRef<number | null>(null)
   const awardedRef = useRef<Set<string>>(new Set())
+  const playbackMetricsRef = useRef({ currentTime: 0, clipStart: 0, clipEnd: 0 })
+  const engagementRef = useRef<{ finalized: boolean; videoId: string | null }>({
+    finalized: false,
+    videoId: null,
+  })
 
   const savePhrase = usePhraseStore((state) => state.savePhrase)
   const markWatched = useWatchHistoryStore((state) => state.markWatched)
+  const recordCompletion = useWatchHistoryStore((state) => state.recordCompletion)
   const incrementViewCount = useWatchHistoryStore((state) => state.incrementViewCount)
   const getViewCount = useWatchHistoryStore((state) => state.getViewCount)
+  const registerImpression = useRecommendationStore((state) => state.registerImpression)
+  const recordBehaviorCompletion = useRecommendationStore((state) => state.recordCompletion)
+  const recordSkip = useRecommendationStore((state) => state.recordSkip)
   const incrementDailyView = usePremiumStore((state) => state.incrementDailyView)
   const canSaveMorePhrases = usePremiumStore((state) => state.canSaveMorePhrases)
   const incrementSavedPhrases = usePremiumStore((state) => state.incrementSavedPhrases)
@@ -72,16 +83,66 @@ export function VideoFeed({ videos, initialVideoId }: VideoFeedProps) {
   const incrementRepeatCount = usePlayerStore((state) => state.incrementRepeatCount)
   const resetRepeatCount = usePlayerStore((state) => state.resetRepeatCount)
   const setIsSwiping = usePlayerStore((state) => state.setIsSwiping)
+  const currentTime = usePlayerStore((state) => state.currentTime)
+  const clipStart = usePlayerStore((state) => state.clipStart)
+  const clipEnd = usePlayerStore((state) => state.clipEnd)
   const currentVideo = videos[currentIndex]
+
+  useEffect(() => {
+    playbackMetricsRef.current = { currentTime, clipStart, clipEnd }
+  }, [clipEnd, clipStart, currentTime])
+
+  const finalizeVideoSession = useCallback(
+    (videoId: string, completed: boolean) => {
+      if (engagementRef.current.videoId !== videoId || engagementRef.current.finalized) {
+        return
+      }
+
+      engagementRef.current.finalized = true
+
+      if (completed) {
+        recordBehaviorCompletion(videoId)
+        return
+      }
+
+      const metrics = playbackMetricsRef.current
+      const clipDuration = Math.max(metrics.clipEnd - metrics.clipStart, 1)
+      const completionRatio = Math.min(
+        1,
+        Math.max(0, (metrics.currentTime - metrics.clipStart) / clipDuration),
+      )
+      recordSkip(videoId, completionRatio)
+    },
+    [recordBehaviorCompletion, recordSkip],
+  )
 
   useEffect(() => {
     if (!currentVideo) return
 
+    engagementRef.current = {
+      finalized: false,
+      videoId: currentVideo.id,
+    }
+
+    registerImpression(currentVideo.id)
     incrementViewCount(currentVideo.id)
     if (currentVideo.seriesId) {
       markWatched(currentVideo.seriesId, currentVideo.id)
     }
-  }, [currentIndex, currentVideo, incrementViewCount, markWatched])
+
+    return () => {
+      finalizeVideoSession(currentVideo.id, false)
+    }
+  }, [
+    currentIndex,
+    currentVideo,
+    currentVideo?.id,
+    currentVideo?.seriesId,
+    finalizeVideoSession,
+    incrementViewCount,
+    markWatched,
+    registerImpression,
+  ])
 
   useEffect(() => {
     return () => {
@@ -124,15 +185,29 @@ export function VideoFeed({ videos, initialVideoId }: VideoFeedProps) {
       }
     }
 
+    if (currentVideo) {
+      finalizeVideoSession(currentVideo.id, false)
+    }
+
     resetRepeatCount()
     setDirection(1)
     setCurrentIndex((prev) => prev + 1)
     return true
-  }, [currentIndex, getViewCount, incrementDailyView, resetRepeatCount, videos])
+  }, [
+    currentIndex,
+    currentVideo,
+    finalizeVideoSession,
+    getViewCount,
+    incrementDailyView,
+    resetRepeatCount,
+    videos,
+  ])
 
   const handleClipComplete = useCallback(() => {
     if (currentVideo && !awardedRef.current.has(currentVideo.id)) {
       awardedRef.current.add(currentVideo.id)
+      finalizeVideoSession(currentVideo.id, true)
+      recordCompletion(currentVideo.id)
       checkAndUpdateStreak()
       incrementMission('watch-videos')
     }
@@ -156,6 +231,8 @@ export function VideoFeed({ videos, initialVideoId }: VideoFeedProps) {
     incrementMission,
     incrementRepeatCount,
     moveToNextVideo,
+    finalizeVideoSession,
+    recordCompletion,
     repeatMode,
     showRepeatProgress,
   ])
@@ -167,10 +244,14 @@ export function VideoFeed({ videos, initialVideoId }: VideoFeedProps) {
   const handlePrevVideo = useCallback(() => {
     if (currentIndex <= 0) return
 
+    if (currentVideo) {
+      finalizeVideoSession(currentVideo.id, false)
+    }
+
     resetRepeatCount()
     setDirection(-1)
     setCurrentIndex((prev) => prev - 1)
-  }, [currentIndex, resetRepeatCount])
+  }, [currentIndex, currentVideo, finalizeVideoSession, resetRepeatCount])
 
   const handleDragEnd = useCallback(
     (_: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
@@ -223,6 +304,7 @@ export function VideoFeed({ videos, initialVideoId }: VideoFeedProps) {
             clipEnd={currentVideo.clipEnd}
             isLandscape={isLandscape}
             onClipComplete={handleClipComplete}
+            initialSeekTime={currentIndex === 0 ? initialSeekTime : undefined}
             onSavePhrase={(phrase) => {
               if (!canSaveMorePhrases()) {
                 setPremiumTrigger('phrase-limit')
@@ -301,9 +383,43 @@ export function VideoFeed({ videos, initialVideoId }: VideoFeedProps) {
             </div>
           </VideoPlayer>
 
-          {/* UnifiedControls: in landscape, constrain to the video area (left 62%) */}
-          <div className={isLandscape ? 'absolute top-0 left-0 z-10' : 'contents'} style={isLandscape ? { width: '62%' } : undefined}>
-            <UnifiedControls videoId={currentVideo.id} videoTitle={currentVideo.title} />
+          <div
+            className="absolute left-3 top-3 z-10 flex items-start gap-3"
+            style={isLandscape ? { width: 'calc(62% - 24px)' } : { right: '12px' }}
+          >
+            <div className="min-w-0 flex-1">
+              {seriesInfo ? (
+                <button
+                  onClick={() => router.push(buildExploreSeriesUrl(currentVideo), { scroll: false })}
+                  className="block w-full truncate rounded-lg border px-2.5 py-1.5 text-left text-xs font-medium backdrop-blur-sm"
+                  style={{
+                    backgroundColor: 'var(--player-control-bg)',
+                    borderColor: 'var(--player-control-border)',
+                    color: 'var(--player-text)',
+                  }}
+                >
+                  {seriesInfo.title}
+                  {currentVideo.episodeNumber != null && ` Ep.${currentVideo.episodeNumber}`}
+                </button>
+              ) : (
+                <span
+                  className="block w-full truncate rounded-lg border px-2.5 py-1.5 text-xs font-medium backdrop-blur-sm"
+                  style={{
+                    backgroundColor: 'var(--player-control-bg)',
+                    borderColor: 'var(--player-control-border)',
+                    color: 'var(--player-text)',
+                  }}
+                >
+                  {currentVideo.title}
+                </span>
+              )}
+            </div>
+
+            <UnifiedControls
+              videoId={currentVideo.id}
+              videoTitle={currentVideo.title}
+              className="inline-flex shrink-0 items-center gap-0.5 rounded-full border px-1.5 py-1 backdrop-blur-md"
+            />
           </div>
           <div
             className={`pointer-events-none absolute top-0 z-[5] h-[100px] ${
@@ -333,34 +449,6 @@ export function VideoFeed({ videos, initialVideoId }: VideoFeedProps) {
           </div>
         </div>
       )}
-
-      <div className={`absolute left-3 top-3 z-10 ${isLandscape ? 'max-w-[40%]' : 'max-w-[65%]'}`}>
-        {seriesInfo ? (
-          <button
-            onClick={() => router.push(buildExploreSeriesUrl(currentVideo), { scroll: false })}
-            className="block max-w-full truncate rounded-lg border px-2.5 py-1.5 text-left text-xs font-medium backdrop-blur-sm"
-            style={{
-              backgroundColor: 'var(--player-control-bg)',
-              borderColor: 'var(--player-control-border)',
-              color: 'var(--player-text)',
-            }}
-          >
-            {seriesInfo.title}
-            {currentVideo.episodeNumber != null && ` Ep.${currentVideo.episodeNumber}`}
-          </button>
-        ) : (
-          <span
-            className="block max-w-full truncate rounded-lg border px-2.5 py-1.5 text-xs font-medium backdrop-blur-sm"
-            style={{
-              backgroundColor: 'var(--player-control-bg)',
-              borderColor: 'var(--player-control-border)',
-              color: 'var(--player-text)',
-            }}
-          >
-            {currentVideo.title}
-          </span>
-        )}
-      </div>
 
       {videos.length > 1 && videos.length <= 20 && (
         <div

@@ -15,11 +15,13 @@ interface WatchRecord {
 interface WatchHistoryState {
   watchedEpisodes: Record<string, string[]> // seriesId -> array of videoIds
   viewCounts: Record<string, number> // videoId -> total view count
+  completionCounts: Record<string, number> // videoId -> completed play count
   watchedVideoIds: string[] // ordered list of watched videoIds (most recent first)
   watchRecords: WatchRecord[] // ordered by date (most recent first)
   deletedVideoIds: string[] // videoIds explicitly deleted by user (prevents auto-re-add from feed)
   markWatched: (seriesId: string, videoId: string) => void
   incrementViewCount: (videoId: string) => void
+  recordCompletion: (videoId: string) => void
   getViewCount: (videoId: string) => number
   getSeriesProgress: (seriesId: string, totalEpisodes: number) => number
   getNextEpisode: (seriesId: string, allVideoIds: string[]) => string | null
@@ -35,6 +37,7 @@ export const useWatchHistoryStore = create<WatchHistoryState>()(
     (set, get) => ({
       watchedEpisodes: {},
       viewCounts: {},
+      completionCounts: {},
       watchedVideoIds: [],
       watchRecords: [],
       deletedVideoIds: [],
@@ -75,6 +78,18 @@ export const useWatchHistoryStore = create<WatchHistoryState>()(
         }
       },
 
+      recordCompletion: (videoId) => {
+        if (get().deletedVideoIds.includes(videoId)) return
+
+        const current = get().completionCounts[videoId] ?? 0
+        set({
+          completionCounts: {
+            ...get().completionCounts,
+            [videoId]: current + 1,
+          },
+        })
+      },
+
       getViewCount: (videoId) => {
         return get().viewCounts[videoId] ?? 0
       },
@@ -100,14 +115,24 @@ export const useWatchHistoryStore = create<WatchHistoryState>()(
       },
 
       removeRecord: (videoId) => {
-        const { viewCounts, watchedVideoIds, watchRecords, watchedEpisodes, deletedVideoIds } = get()
+        const {
+          completionCounts,
+          viewCounts,
+          watchedVideoIds,
+          watchRecords,
+          watchedEpisodes,
+          deletedVideoIds,
+        } = get()
         const newCounts = { ...viewCounts }
+        const newCompletionCounts = { ...completionCounts }
         delete newCounts[videoId]
+        delete newCompletionCounts[videoId]
         const newEpisodes = { ...watchedEpisodes }
         for (const seriesId of Object.keys(newEpisodes)) {
           newEpisodes[seriesId] = newEpisodes[seriesId].filter((id) => id !== videoId)
         }
         set({
+          completionCounts: newCompletionCounts,
           viewCounts: newCounts,
           watchedVideoIds: watchedVideoIds.filter((id) => id !== videoId),
           watchRecords: watchRecords.filter((r) => r.videoId !== videoId),
@@ -135,6 +160,7 @@ export const useWatchHistoryStore = create<WatchHistoryState>()(
       clearAllHistory: () => {
         const allWatchedIds = get().watchedVideoIds
         set({
+          completionCounts: {},
           viewCounts: {},
           watchedVideoIds: [],
           watchRecords: [],
