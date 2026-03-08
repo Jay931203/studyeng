@@ -1,6 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { shouldUpdateStreak } from '@/lib/gamification'
+import { debouncedSyncProfile } from '@/lib/supabase/sync'
 
 interface UserState {
   level: number
@@ -22,7 +23,10 @@ export const useUserStore = create<UserState>()(persist((set, get) => ({
   lastActivityDate: null,
   showLevelUp: false,
 
-  setUser: (data) => set(data),
+  setUser: (data) => {
+    set(data)
+    debouncedSyncProfile()
+  },
 
   gainXp: (amount) => {
     const { level, xp } = get()
@@ -38,6 +42,7 @@ export const useUserStore = create<UserState>()(persist((set, get) => ({
     } else {
       set({ xp: newXp })
     }
+    debouncedSyncProfile()
   },
 
   checkAndUpdateStreak: () => {
@@ -52,12 +57,14 @@ export const useUserStore = create<UserState>()(persist((set, get) => ({
         streakDays: streakDays + 1,
         lastActivityDate: now.toISOString(),
       })
+      debouncedSyncProfile()
     } else if (result === 'reset') {
       // Missed a day or more: reset streak to 1 (today counts)
       set({
         streakDays: 1,
         lastActivityDate: now.toISOString(),
       })
+      debouncedSyncProfile()
     }
     // result === false means same day, no update needed
   },

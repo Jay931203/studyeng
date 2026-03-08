@@ -1,21 +1,24 @@
 'use client'
 
-import { useState, useMemo, useCallback } from 'react'
+import { useMemo, useState, useCallback } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { motion, AnimatePresence, LayoutGroup } from 'framer-motion'
 import {
+  categories,
+  getSeriesByCategory,
+  getVideosBySeries,
   seedVideos,
   series,
-  categories,
-  getVideosBySeries,
-  getSeriesByCategory,
   type CategoryId,
   type Series as SeriesType,
 } from '@/data/seed-videos'
+import { DailyMissions } from '@/components/DailyMissions'
 import { SearchBar } from '@/components/SearchBar'
+import { WatchHistory } from '@/components/WatchHistory'
+import { useAuth } from '@/hooks/useAuth'
+import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 
-// Category label map (no emojis)
 const categoryLabels: Record<CategoryId, string> = {
   drama: '드라마',
   movie: '영화',
@@ -26,12 +29,12 @@ const categoryLabels: Record<CategoryId, string> = {
 }
 
 function getCategorySeriesCount(categoryId: CategoryId): number {
-  return series.filter((s) => s.category === categoryId).length
+  return series.filter((item) => item.category === categoryId).length
 }
 
-// SVG icons to replace emojis for category chips
 function CategoryIcon({ id, className }: { id: CategoryId | 'all'; className?: string }) {
   const cls = className ?? 'w-4 h-4'
+
   switch (id) {
     case 'all':
       return (
@@ -81,129 +84,197 @@ export default function ExplorePage() {
   const [activeCategory, setActiveCategory] = useState<'all' | CategoryId>('all')
   const router = useRouter()
   const searchParams = useSearchParams()
-  const { getSeriesProgress, getNextEpisode, isWatched, getViewCount, clearDeletedFlag } = useWatchHistoryStore()
+  const { user } = useAuth()
+  const {
+    watchedVideoIds,
+    getSeriesProgress,
+    getNextEpisode,
+    isWatched,
+    getViewCount,
+    clearDeletedFlag,
+  } = useWatchHistoryStore()
 
   const selectedSeriesId = searchParams.get('series')
   const source = searchParams.get('source')
   const returnVideoId = searchParams.get('returnVideoId')
   const returnSeriesId = searchParams.get('returnSeriesId')
-  const cameFromVideo = source === 'video' && Boolean(returnVideoId)
+  const cameFromVideo = Boolean(returnVideoId) && (source === 'video' || source === 'shorts')
+
   const selectedSeries = useMemo(
-    () => (selectedSeriesId ? series.find((s) => s.id === selectedSeriesId) ?? null : null),
-    [selectedSeriesId],
+    () => (selectedSeriesId ? series.find((item) => item.id === selectedSeriesId) ?? null : null),
+    [selectedSeriesId]
   )
 
   const buildExploreUrl = useCallback(
     (seriesId: string | null) => {
       const params = new URLSearchParams()
+
       if (seriesId) {
         params.set('series', seriesId)
       }
+
       if (cameFromVideo && returnVideoId) {
-        params.set('source', 'video')
+        params.set('source', 'shorts')
         params.set('returnVideoId', returnVideoId)
         if (returnSeriesId) {
           params.set('returnSeriesId', returnSeriesId)
         }
       }
+
       const query = params.toString()
       return query ? `/explore?${query}` : '/explore'
     },
-    [cameFromVideo, returnSeriesId, returnVideoId],
+    [cameFromVideo, returnSeriesId, returnVideoId]
   )
 
   const returnToVideo = useCallback(() => {
     if (!returnVideoId) {
-      router.push('/explore', { scroll: false })
+      router.push('/shorts', { scroll: false })
       return
     }
 
     clearDeletedFlag(returnVideoId)
-    const params = new URLSearchParams()
-    params.set('v', returnVideoId)
-    if (returnSeriesId) {
-      params.set('series', returnSeriesId)
-    }
-    router.push(`/?${params.toString()}`, { scroll: false })
+    router.push(buildShortsUrl(returnVideoId, returnSeriesId), { scroll: false })
   }, [clearDeletedFlag, returnSeriesId, returnVideoId, router])
 
   const setSelectedSeries = useCallback(
-    (s: SeriesType | null) => {
-      router.push(buildExploreUrl(s?.id ?? null), { scroll: false })
+    (seriesItem: SeriesType | null) => {
+      router.replace(buildExploreUrl(seriesItem?.id ?? null), { scroll: false })
     },
-    [buildExploreUrl, router],
+    [buildExploreUrl, router]
   )
 
-  const filteredSeries = useMemo(() => {
-    return activeCategory === 'all' ? series : getSeriesByCategory(activeCategory as CategoryId)
-  }, [activeCategory])
+  const filteredSeries = useMemo(
+    () => (activeCategory === 'all' ? series : getSeriesByCategory(activeCategory)),
+    [activeCategory]
+  )
 
   const seriesEpisodes = selectedSeries ? getVideosBySeries(selectedSeries.id) : []
+  const greetingName =
+    user?.user_metadata?.given_name ??
+    user?.user_metadata?.name?.split(' ')?.[0] ??
+    '영어 루틴'
 
   return (
     <div className="h-full overflow-y-auto no-scrollbar pb-20 pt-12">
       <div className="px-4">
-        {/* Header */}
-        <div className="flex items-center justify-between mb-5">
-          <h1 className="text-[var(--text-primary)] text-2xl font-bold">탐색</h1>
+        <div className="mb-6 flex items-center justify-between">
+          <div>
+            <p className="text-xs font-medium uppercase tracking-[0.24em] text-[var(--accent-text)]">
+              StudyEng Home
+            </p>
+            <h1 className="mt-1 text-2xl font-bold text-[var(--text-primary)]">홈</h1>
+          </div>
           <div className="flex items-center gap-3">
-            <div className="text-[var(--text-muted)] text-sm">
-            {series.length}개 시리즈 / {seedVideos.length}개 영상
-            </div>
+            <span className="text-sm text-[var(--text-muted)]">
+              시리즈 {series.length}개 · 영상 {seedVideos.length}개
+            </span>
             {cameFromVideo && (
               <button
                 onClick={returnToVideo}
-                className="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+                className="text-sm text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
               >
-                취소
+                원래 영상으로
               </button>
             )}
           </div>
         </div>
 
-        {/* Search */}
+        <div className="mb-6 overflow-hidden rounded-3xl border border-[var(--border-card)] bg-[var(--bg-card)] p-5 shadow-[var(--card-shadow)]">
+          <div className="flex items-start justify-between gap-4">
+            <div className="max-w-[70%]">
+              <p className="text-sm text-[var(--text-secondary)]">{greetingName}님, 오늘도 이어서 해볼까요?</p>
+              <h2 className="mt-2 text-2xl font-black leading-tight text-[var(--text-primary)]">
+                짧은 쇼츠로 시작하고
+                <br />
+                취향대로 시리즈를 찾아보세요.
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-[var(--text-muted)]">
+                최근 시청 기록과 할인 진행률을 한 번에 보고, 바로 랜덤 쇼츠나 시리즈 탐색으로 이어갈 수 있습니다.
+              </p>
+            </div>
+            <div className="rounded-2xl bg-[var(--accent-glow)] p-3 text-[var(--accent-text)]">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-8 w-8">
+                <path d="M6.75 5.653c0-1.336 1.433-2.183 2.603-1.54l9.161 5.036c1.211.666 1.211 2.404 0 3.07l-9.16 5.036c-1.171.643-2.604-.204-2.604-1.54V5.653Z" />
+              </svg>
+            </div>
+          </div>
+
+          <div className="mt-5 flex flex-wrap gap-2">
+            <button
+              onClick={() => router.push('/shorts', { scroll: false })}
+              className="rounded-full bg-[var(--accent-primary)] px-4 py-2 text-sm font-semibold text-white"
+            >
+              랜덤 쇼츠 보기
+            </button>
+            <button
+              onClick={() => {
+                setActiveCategory('all')
+                if (selectedSeriesId) {
+                  router.replace(buildExploreUrl(null), { scroll: false })
+                }
+              }}
+              className="rounded-full bg-[var(--bg-secondary)] px-4 py-2 text-sm font-medium text-[var(--text-secondary)]"
+            >
+              시리즈 둘러보기
+            </button>
+            {watchedVideoIds.length > 0 && (
+              <span className="rounded-full bg-[var(--bg-secondary)] px-4 py-2 text-sm text-[var(--text-secondary)]">
+                최근 본 영상 {watchedVideoIds.length}개
+              </span>
+            )}
+          </div>
+        </div>
+
+        <DailyMissions />
+        <WatchHistory />
         <SearchBar />
 
-        {/* Category Filter Bar */}
-        <div className="flex gap-2 mb-6 overflow-x-auto no-scrollbar -mx-4 px-4 py-1">
+        <div className="mb-6 flex gap-2 overflow-x-auto no-scrollbar -mx-4 px-4 py-1">
           <motion.button
             whileTap={{ scale: 0.95 }}
             onClick={() => {
               setActiveCategory('all')
-              if (selectedSeriesId) router.push(buildExploreUrl(null), { scroll: false })
+              if (selectedSeriesId) {
+                router.push(buildExploreUrl(null), { scroll: false })
+              }
             }}
-            className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 flex-shrink-0 ${
+            className={`flex flex-shrink-0 items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 ${
               activeCategory === 'all'
-                ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/25'
-                : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)] hover:bg-[var(--bg-secondary)]/80'
+                ? 'bg-[var(--accent-primary)] text-white shadow-lg'
+                : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
             }`}
           >
-            <CategoryIcon id="all" className="w-3.5 h-3.5" />
+            <CategoryIcon id="all" className="h-3.5 w-3.5" />
             <span>전체</span>
             <span className={`text-xs ${activeCategory === 'all' ? 'text-white/70' : 'text-[var(--text-muted)]'}`}>
               {series.length}
             </span>
           </motion.button>
-          {categories.map((cat) => {
-            const seriesCount = getCategorySeriesCount(cat.id)
+
+          {categories.map((category) => {
+            const seriesCount = getCategorySeriesCount(category.id)
             if (seriesCount === 0) return null
+
             return (
               <motion.button
-                key={cat.id}
+                key={category.id}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => {
-                  setActiveCategory(cat.id)
-                  if (selectedSeriesId) router.push(buildExploreUrl(null), { scroll: false })
+                  setActiveCategory(category.id)
+                  if (selectedSeriesId) {
+                    router.replace(buildExploreUrl(null), { scroll: false })
+                  }
                 }}
-                className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 flex-shrink-0 ${
-                  activeCategory === cat.id
-                    ? 'bg-blue-500 text-white shadow-lg shadow-blue-500/25'
-                    : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)] hover:bg-[var(--bg-secondary)]/80'
+                className={`flex flex-shrink-0 items-center gap-1.5 rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 ${
+                  activeCategory === category.id
+                    ? 'bg-[var(--accent-primary)] text-white shadow-lg'
+                    : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
                 }`}
               >
-                <CategoryIcon id={cat.id} className="w-3.5 h-3.5" />
-                <span>{cat.label}</span>
-                <span className={`text-xs ${activeCategory === cat.id ? 'text-white/70' : 'text-[var(--text-muted)]'}`}>
+                <CategoryIcon id={category.id} className="h-3.5 w-3.5" />
+                <span>{category.label}</span>
+                <span className={`text-xs ${activeCategory === category.id ? 'text-white/70' : 'text-[var(--text-muted)]'}`}>
                   {seriesCount}
                 </span>
               </motion.button>
@@ -211,7 +282,6 @@ export default function ExplorePage() {
           })}
         </div>
 
-        {/* Series Detail View */}
         <AnimatePresence mode="wait">
           {selectedSeries && (
             <motion.div
@@ -221,131 +291,123 @@ export default function ExplorePage() {
               exit={{ opacity: 0, y: -12 }}
               transition={{ duration: 0.25, ease: 'easeOut' }}
             >
-              {/* Back button */}
               <button
                 onClick={() => setSelectedSeries(null)}
-                className="text-blue-400 text-sm mb-4 flex items-center gap-1.5 hover:text-blue-300 transition-colors"
+                className="mb-4 flex items-center gap-1.5 text-sm text-[var(--accent-text)] transition-colors hover:text-[var(--accent-primary)]"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-                  <path fillRule="evenodd" d="M17 10a.75.75 0 01-.75.75H5.612l4.158 3.96a.75.75 0 11-1.04 1.08l-5.5-5.25a.75.75 0 010-1.08l5.5-5.25a.75.75 0 111.04 1.08L5.612 9.25H16.25A.75.75 0 0117 10z" clipRule="evenodd" />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4">
+                  <path fillRule="evenodd" d="M17 10a.75.75 0 01-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 010-1.08l5.5-5.25a.75.75 0 111.04 1.08L5.612 9.25H16.25A.75.75 0 0117 10z" clipRule="evenodd" />
                 </svg>
                 목록으로
               </button>
 
-              {/* Series hero card */}
-              <div className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-2xl overflow-hidden mb-5">
+              <div className="mb-5 overflow-hidden rounded-2xl bg-[var(--bg-card)] shadow-[var(--card-shadow)]">
                 {(() => {
                   const detailFirstVideo = getVideosBySeries(selectedSeries.id)[0]
-                  return detailFirstVideo ? (
-                    <div className="w-full aspect-video relative">
+                  if (!detailFirstVideo) return null
+
+                  return (
+                    <div className="relative aspect-video w-full">
                       <img
                         src={`https://img.youtube.com/vi/${detailFirstVideo.youtubeId}/mqdefault.jpg`}
                         alt={selectedSeries.title}
-                        className="w-full h-full object-cover"
+                        className="h-full w-full object-cover"
                         loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                       <div className="absolute bottom-4 left-4 right-4">
-                        <h2 className="text-white font-bold text-xl drop-shadow-lg">{selectedSeries.title}</h2>
-                        <p className="text-white/80 text-sm mt-1">{selectedSeries.description}</p>
+                        <h2 className="text-xl font-bold text-white drop-shadow-lg">{selectedSeries.title}</h2>
+                        <p className="mt-1 text-sm text-white/80">{selectedSeries.description}</p>
                       </div>
                     </div>
-                  ) : null
+                  )
                 })()}
-                <div className="px-4 py-3 flex items-center gap-2 border-t border-white/5">
-                  <span className="text-xs bg-blue-500/20 text-blue-400 px-2.5 py-1 rounded-full font-medium">
+                <div className="flex items-center gap-2 border-t border-white/5 px-4 py-3">
+                  <span className="rounded-full bg-blue-500/20 px-2.5 py-1 text-xs font-medium text-blue-400">
                     {categoryLabels[selectedSeries.category] ?? selectedSeries.category}
                   </span>
-                  <span className="text-xs bg-[var(--bg-secondary)] text-[var(--text-secondary)] px-2.5 py-1 rounded-full">
+                  <span className="rounded-full bg-[var(--bg-secondary)] px-2.5 py-1 text-xs text-[var(--text-secondary)]">
                     {selectedSeries.episodeCount}편
                   </span>
                   {(() => {
                     const progress = getSeriesProgress(selectedSeries.id, selectedSeries.episodeCount)
-                    if (progress > 0) {
-                      return (
-                        <span className="text-xs bg-green-500/20 text-green-400 px-2.5 py-1 rounded-full">
-                          {progress}% 완료
-                        </span>
-                      )
-                    }
-                    return null
+                    return progress > 0 ? (
+                      <span className="rounded-full bg-green-500/20 px-2.5 py-1 text-xs text-green-400">
+                        {progress}% 완료
+                      </span>
+                    ) : null
                   })()}
                 </div>
               </div>
 
-              {/* Episode list */}
               <div className="flex flex-col gap-2.5">
                 {seriesEpisodes.map((video) => {
                   const watched = selectedSeries ? isWatched(selectedSeries.id, video.id) : false
                   const viewCount = getViewCount(video.id)
+
                   return (
                     <motion.button
                       key={video.id}
                       whileTap={{ scale: 0.98 }}
-                      onClick={() => { clearDeletedFlag(video.id); router.push(`/?v=${video.id}&series=${selectedSeries.id}`) }}
-                      className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-3.5 text-left flex items-center gap-3.5 group hover:bg-[var(--bg-secondary)]/50 transition-colors"
+                      onClick={() => {
+                        clearDeletedFlag(video.id)
+                        router.push(buildShortsUrl(video.id, selectedSeries.id), { scroll: false })
+                      }}
+                      className="group flex items-center gap-3.5 rounded-xl bg-[var(--bg-card)] p-3.5 text-left shadow-[var(--card-shadow)] transition-colors hover:bg-[var(--bg-secondary)]/60"
                     >
-                      {/* Thumbnail */}
-                      <div className="relative w-20 aspect-video rounded-lg overflow-hidden flex-shrink-0">
+                      <div className="relative aspect-video w-20 flex-shrink-0 overflow-hidden rounded-lg">
                         <img
                           src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
                           alt={video.title}
-                          className="w-full h-full object-cover"
+                          className="h-full w-full object-cover"
                           loading="lazy"
                         />
-                        <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                          <svg viewBox="0 0 24 24" fill="white" className="w-5 h-5">
+                        <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity group-hover:opacity-100">
+                          <svg viewBox="0 0 24 24" fill="white" className="h-5 w-5">
                             <path d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" />
                           </svg>
                         </div>
                         {watched && (
-                          <div className="absolute top-1 right-1 w-4 h-4 bg-green-500 rounded-full flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" className="w-2.5 h-2.5">
+                          <div className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-green-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" className="h-2.5 w-2.5">
                               <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                             </svg>
                           </div>
                         )}
                       </div>
 
-                      {/* Info */}
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center gap-2 mb-0.5">
-                          <span className={`w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0 ${
-                            watched
-                              ? 'bg-green-500/20 text-green-400'
-                              : 'bg-blue-500/20 text-blue-400'
+                      <div className="min-w-0 flex-1">
+                        <div className="mb-0.5 flex items-center gap-2">
+                          <span className={`flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full text-xs font-bold ${
+                            watched ? 'bg-green-500/20 text-green-400' : 'bg-blue-500/20 text-blue-400'
                           }`}>
                             {video.episodeNumber}
                           </span>
-                          <p className={`font-medium text-sm truncate ${
+                          <p className={`truncate text-sm font-medium ${
                             watched ? 'text-[var(--text-secondary)]' : 'text-[var(--text-primary)]'
                           }`}>
                             {video.title}
                           </p>
                         </div>
-                        <div className="flex items-center gap-2 ml-8">
-                          <span className="text-[var(--text-muted)] text-xs">
+                        <div className="ml-8 mt-1 flex items-center gap-2">
+                          <span className="text-xs text-[var(--text-muted)]">
                             난이도 {'★'.repeat(video.difficulty)}{'☆'.repeat(5 - video.difficulty)}
                           </span>
                           {viewCount > 0 && (
-                            <span className="text-[var(--text-muted)] text-xs">
-                              {viewCount}회 시청
-                            </span>
+                            <span className="text-xs text-[var(--text-muted)]">{viewCount}회 시청</span>
                           )}
                         </div>
                       </div>
 
-                      {/* Chevron */}
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-[var(--text-muted)] flex-shrink-0">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5 flex-shrink-0 text-[var(--text-muted)]">
                         <path fillRule="evenodd" d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z" clipRule="evenodd" />
                       </svg>
                     </motion.button>
                   )
                 })}
 
-                {/* Play / Continue button */}
                 {(() => {
-                  const allIds = seriesEpisodes.map((v) => v.id)
+                  const allIds = seriesEpisodes.map((video) => video.id)
                   const progress = selectedSeries
                     ? getSeriesProgress(selectedSeries.id, selectedSeries.episodeCount)
                     : 0
@@ -359,29 +421,20 @@ export default function ExplorePage() {
                     <motion.button
                       whileTap={{ scale: 0.98 }}
                       onClick={() => {
-                        if (isComplete) {
-                          if (seriesEpisodes[0]) {
-                            clearDeletedFlag(seriesEpisodes[0].id)
-                            router.push(`/?v=${seriesEpisodes[0].id}&series=${selectedSeries.id}`)
-                          }
-                        } else if (nextId) {
-                          clearDeletedFlag(nextId)
-                          router.push(`/?v=${nextId}&series=${selectedSeries.id}`)
-                        } else if (seriesEpisodes[0]) {
-                          clearDeletedFlag(seriesEpisodes[0].id)
-                          router.push(`/?v=${seriesEpisodes[0].id}&series=${selectedSeries.id}`)
-                        }
+                        const targetVideoId =
+                          isComplete ? seriesEpisodes[0]?.id : nextId ?? seriesEpisodes[0]?.id
+
+                        if (!targetVideoId || !selectedSeries) return
+
+                        clearDeletedFlag(targetVideoId)
+                        router.push(buildShortsUrl(targetVideoId, selectedSeries.id), { scroll: false })
                       }}
-                      className="w-full py-3.5 bg-blue-500 hover:bg-blue-400 text-white rounded-xl font-semibold mt-3 transition-colors flex items-center justify-center gap-2"
+                      className="mt-3 flex w-full items-center justify-center gap-2 rounded-xl bg-[var(--accent-primary)] py-3.5 font-semibold text-white"
                     >
-                      <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                      <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
                         <path d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" />
                       </svg>
-                      {isComplete
-                        ? '처음부터 다시보기'
-                        : hasProgress
-                          ? '이어보기'
-                          : '처음부터 재생'}
+                      {isComplete ? '처음부터 다시 보기' : hasProgress ? '이어보기' : '첫 에피소드 보기'}
                     </motion.button>
                   )
                 })()}
@@ -390,78 +443,73 @@ export default function ExplorePage() {
           )}
         </AnimatePresence>
 
-        {/* Series Grid (when no series selected) */}
         {!selectedSeries && (
           <>
-            <div className="flex items-center justify-between mb-4">
-              <h2 className="text-[var(--text-primary)] font-bold text-lg">
-                {activeCategory === 'all' ? '시리즈 모아보기' : `${categoryLabels[activeCategory as CategoryId] ?? ''} 시리즈`}
+            <div className="mb-4 flex items-center justify-between">
+              <h2 className="text-lg font-bold text-[var(--text-primary)]">
+                {activeCategory === 'all' ? '카테고리별 시리즈' : `${categoryLabels[activeCategory]} 시리즈`}
               </h2>
-              <span className="text-[var(--text-muted)] text-sm">{filteredSeries.length}개</span>
+              <span className="text-sm text-[var(--text-muted)]">{filteredSeries.length}개</span>
             </div>
 
             {filteredSeries.length > 0 ? (
               <LayoutGroup>
-                <motion.div
-                  className="grid grid-cols-2 gap-3"
-                  layout
-                >
+                <motion.div className="grid grid-cols-2 gap-3" layout>
                   <AnimatePresence mode="popLayout">
-                    {filteredSeries.map((s) => {
-                      const progress = getSeriesProgress(s.id, s.episodeCount)
-                      const firstVideo = getVideosBySeries(s.id)[0]
-                      const catLabel = categoryLabels[s.category] ?? s.category
+                    {filteredSeries.map((seriesItem) => {
+                      const progress = getSeriesProgress(seriesItem.id, seriesItem.episodeCount)
+                      const firstVideo = getVideosBySeries(seriesItem.id)[0]
+                      const catLabel = categoryLabels[seriesItem.category] ?? seriesItem.category
 
                       return (
                         <motion.button
-                          key={s.id}
+                          key={seriesItem.id}
                           layout
-                          initial={{ opacity: 0, scale: 0.9 }}
+                          initial={{ opacity: 0, scale: 0.94 }}
                           animate={{ opacity: 1, scale: 1 }}
-                          exit={{ opacity: 0, scale: 0.9 }}
+                          exit={{ opacity: 0, scale: 0.94 }}
                           transition={{
                             opacity: { duration: 0.2 },
                             layout: { duration: 0.3, type: 'spring', bounce: 0.15 },
                           }}
-                          whileTap={{ scale: 0.96 }}
-                          onClick={() => setSelectedSeries(s)}
-                          className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-2xl overflow-hidden text-left flex flex-col group"
+                          whileTap={{ scale: 0.97 }}
+                          onClick={() => setSelectedSeries(seriesItem)}
+                          className="group flex flex-col overflow-hidden rounded-2xl bg-[var(--bg-card)] text-left shadow-[var(--card-shadow)]"
                         >
-                          {/* Thumbnail */}
-                          <div className="w-full aspect-video relative overflow-hidden">
+                          <div className="relative aspect-video w-full overflow-hidden">
                             {firstVideo ? (
                               <img
                                 src={`https://img.youtube.com/vi/${firstVideo.youtubeId}/mqdefault.jpg`}
-                                alt={s.title}
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                alt={seriesItem.title}
+                                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                                 loading="lazy"
                               />
                             ) : (
-                              <div className="w-full h-full bg-[var(--bg-secondary)] flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-8 h-8 text-[var(--text-muted)]">
+                              <div className="flex h-full w-full items-center justify-center bg-[var(--bg-secondary)]">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="h-8 w-8 text-[var(--text-muted)]">
                                   <path strokeLinecap="round" strokeLinejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
                                 </svg>
                               </div>
                             )}
 
-                            {/* Gradient overlay at bottom */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                            <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent" />
 
-                            {/* Episode count badge */}
-                            <div className="absolute bottom-2 right-2 bg-black/70 backdrop-blur-sm text-white text-[11px] px-2 py-0.5 rounded-md font-medium flex items-center gap-1">
-                              <svg viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3">
+                            <div className="absolute bottom-2 right-2 flex items-center gap-1 rounded-md bg-black/70 px-2 py-0.5 text-[11px] font-medium text-white">
+                              <svg viewBox="0 0 24 24" fill="currentColor" className="h-3 w-3">
                                 <path d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" />
                               </svg>
-                              {s.episodeCount}편
+                              {seriesItem.episodeCount}편
                             </div>
 
-                            {/* Progress indicator if started */}
                             {progress > 0 && progress < 100 && (
-                              <div className="absolute top-2 right-2 w-7 h-7 flex items-center justify-center">
-                                <svg className="w-7 h-7 -rotate-90" viewBox="0 0 28 28">
+                              <div className="absolute right-2 top-2 flex h-7 w-7 items-center justify-center">
+                                <svg className="h-7 w-7 -rotate-90" viewBox="0 0 28 28">
                                   <circle cx="14" cy="14" r="11" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="2.5" />
                                   <circle
-                                    cx="14" cy="14" r="11" fill="none"
+                                    cx="14"
+                                    cy="14"
+                                    r="11"
+                                    fill="none"
                                     stroke="#22c55e"
                                     strokeWidth="2.5"
                                     strokeLinecap="round"
@@ -470,38 +518,32 @@ export default function ExplorePage() {
                                 </svg>
                               </div>
                             )}
+
                             {progress >= 100 && (
-                              <div className="absolute top-2 right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" className="w-3.5 h-3.5">
+                              <div className="absolute right-2 top-2 flex h-6 w-6 items-center justify-center rounded-full bg-green-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white" className="h-3.5 w-3.5">
                                   <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd" />
                                 </svg>
                               </div>
                             )}
                           </div>
 
-                          {/* Card content */}
-                          <div className="p-3 flex flex-col flex-1">
-                            <p className="text-[var(--text-primary)] font-semibold text-sm line-clamp-2 leading-snug mb-1.5">
-                              {s.title}
+                          <div className="flex flex-1 flex-col p-3">
+                            <p className="mb-1.5 line-clamp-2 text-sm font-semibold leading-snug text-[var(--text-primary)]">
+                              {seriesItem.title}
                             </p>
-                            <p className="text-[var(--text-muted)] text-xs line-clamp-1 mb-2.5">
-                              {s.description}
+                            <p className="mb-2.5 line-clamp-1 text-xs text-[var(--text-muted)]">
+                              {seriesItem.description}
                             </p>
-
-                            {/* Category tag - pushed to bottom */}
                             <div className="mt-auto">
-                              <span className="text-[10px] font-medium bg-blue-500/15 text-blue-400 px-2 py-0.5 rounded-full">
+                              <span className="rounded-full bg-blue-500/15 px-2 py-0.5 text-[10px] font-medium text-blue-400">
                                 {catLabel}
                               </span>
                             </div>
                           </div>
 
-                          {/* Progress bar at very bottom */}
                           <div className="h-1 bg-[var(--bg-secondary)]">
-                            <div
-                              className="h-full bg-green-500 transition-all duration-500"
-                              style={{ width: `${progress}%` }}
-                            />
+                            <div className="h-full bg-green-500 transition-all duration-500" style={{ width: `${progress}%` }} />
                           </div>
                         </motion.button>
                       )
@@ -511,14 +553,12 @@ export default function ExplorePage() {
               </LayoutGroup>
             ) : (
               <div className="flex flex-col items-center justify-center py-16">
-                <div className="w-16 h-16 rounded-2xl bg-[var(--bg-secondary)] flex items-center justify-center mb-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-8 h-8 text-[var(--text-muted)]">
+                <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-[var(--bg-secondary)]">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="h-8 w-8 text-[var(--text-muted)]">
                     <path strokeLinecap="round" strokeLinejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9a2.25 2.25 0 0 0-2.25-2.25h-9A2.25 2.25 0 0 0 2.25 7.5v9a2.25 2.25 0 0 0 2.25 2.25Z" />
                   </svg>
                 </div>
-                <p className="text-[var(--text-muted)] text-sm font-medium">
-                  이 카테고리에는 시리즈가 없습니다
-                </p>
+                <p className="text-sm font-medium text-[var(--text-muted)]">이 카테고리에는 아직 시리즈가 없습니다.</p>
               </div>
             )}
           </>

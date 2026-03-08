@@ -1,5 +1,6 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
+import { getCachedUserId, syncLike } from '@/lib/supabase/sync'
 
 interface LikeState {
   likes: Record<string, boolean> // videoId -> liked
@@ -22,6 +23,12 @@ export const useLikeStore = create<LikeState>()(
           set({ likes: rest })
         } else {
           set({ likes: { ...current, [videoId]: true } })
+        }
+
+        // Fire-and-forget sync
+        const userId = getCachedUserId()
+        if (userId) {
+          syncLike(userId, videoId, !isCurrentlyLiked).catch(() => {})
         }
       },
 

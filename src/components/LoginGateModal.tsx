@@ -38,7 +38,7 @@ export function LoginGateModal({ isOpen }: LoginGateModalProps) {
 
         <div className="space-y-3">
           <button
-            onClick={signInWithGoogle}
+            onClick={() => signInWithGoogle('/shorts')}
             className="w-full py-3.5 bg-white text-black rounded-xl font-medium flex items-center justify-center gap-2 text-base"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -51,7 +51,7 @@ export function LoginGateModal({ isOpen }: LoginGateModalProps) {
           </button>
 
           <button
-            onClick={signInWithKakao}
+            onClick={() => signInWithKakao('/shorts')}
             className="w-full py-3.5 bg-[#FEE500] text-[#191919] rounded-xl font-medium flex items-center justify-center gap-2 text-base"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24">

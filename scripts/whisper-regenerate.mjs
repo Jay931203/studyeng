@@ -20,6 +20,9 @@ import { fileURLToPath } from 'url'
 import { execSync } from 'child_process'
 import { tmpdir } from 'os'
 import { existsSync, statSync } from 'fs'
+import { loadEnv } from './lib/load-env.mjs'
+
+loadEnv()
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const TRANSCRIPTS_DIR = join(__dirname, '..', 'public', 'transcripts')

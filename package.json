@@ -9,6 +9,11 @@
     "lint": "eslint",
     "test": "vitest",
     "test:run": "vitest run",
+    "content:autodetect": "node scripts/content-autodetect.mjs",
+    "content:sync": "node scripts/content-system.mjs",
+    "content:queue": "node scripts/content-system.mjs",
+    "content:triage": "node scripts/content-triage.mjs",
+    "transcripts:translate:openai": "node scripts/translate-transcripts-openai.mjs",
     "transcripts:check": "node scripts/check-transcripts.mjs",
     "transcripts:generate": "node scripts/generate-transcripts.mjs",
     "transcripts:regenerate": "node scripts/generate-transcripts.mjs --all"

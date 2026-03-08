@@ -1,48 +1,34 @@
 'use client'
 
-import { Suspense, useMemo } from 'react'
-import { useSearchParams } from 'next/navigation'
-import { VideoFeed } from '@/components/VideoFeed'
-import { seedVideos } from '@/data/seed-videos'
-import { recommendVideos, seriesPlaylist } from '@/lib/recommend'
-import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
-import { useLikeStore } from '@/stores/useLikeStore'
-import { useOnboardingStore } from '@/stores/useOnboardingStore'
+import { useEffect } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
+import { ShortsFeedPage } from '@/components/ShortsFeedPage'
 
-function FeedContent() {
-  const searchParams = useSearchParams()
-  const videoId = searchParams.get('v')
-  const seriesId = searchParams.get('series')
-  const watchedEpisodes = useWatchHistoryStore((s) => s.watchedEpisodes)
-  const likes = useLikeStore((s) => s.likes)
-  const interests = useOnboardingStore((s) => s.interests)
-  const level = useOnboardingStore((s) => s.level)
-
-  const recommended = useMemo(() => {
-    const options = { watchedEpisodes, likes, interests, level }
-    // Series mode: play series episodes in order, then recommended
-    if (seriesId && videoId) {
-      return seriesPlaylist(seriesId, videoId, options)
-    }
-    // Deep link to a specific video: that video first, then recommended
-    if (videoId) {
-      const target = seedVideos.find(v => v.id === videoId)
-      if (target) {
-        const rest = seedVideos.filter(v => v.id !== videoId)
-        return [target, ...recommendVideos(rest, options)]
-      }
-    }
-    // Default: pure recommendation
-    return recommendVideos(seedVideos, options)
-  }, [videoId, seriesId, watchedEpisodes, likes, interests, level])
-
-  return <VideoFeed videos={recommended} />
+function LoadingScreen() {
+  return (
+    <div className="flex h-full items-center justify-center bg-black">
+      <div className="relative">
+        <div className="h-8 w-8 rounded-full border-[1.5px] border-white/10" />
+        <div className="absolute inset-0 h-8 w-8 animate-spin rounded-full border-[1.5px] border-transparent border-t-white/60" />
+      </div>
+    </div>
+  )
 }
 
-export default function FeedPage() {
-  return (
-    <Suspense fallback={<div className="h-full bg-black" />}>
-      <FeedContent />
-    </Suspense>
-  )
+export default function RootTabPage() {
+  const router = useRouter()
+  const searchParams = useSearchParams()
+  const hasVideoContext = Boolean(searchParams.get('v') || searchParams.get('series'))
+
+  useEffect(() => {
+    if (!hasVideoContext) {
+      router.replace('/explore')
+    }
+  }, [hasVideoContext, router])
+
+  if (!hasVideoContext) {
+    return <LoadingScreen />
+  }
+
+  return <ShortsFeedPage />
 }

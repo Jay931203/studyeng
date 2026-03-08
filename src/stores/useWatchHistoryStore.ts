@@ -1,5 +1,11 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
+import {
+  getCachedUserId,
+  syncWatchHistoryItem,
+  removeWatchHistoryItem,
+  clearWatchHistoryServer,
+} from '@/lib/supabase/sync'
 
 interface WatchRecord {
   videoId: string
@@ -49,17 +55,24 @@ export const useWatchHistoryStore = create<WatchHistoryState>()(
         if (get().deletedVideoIds.includes(videoId)) return
 
         const current = get().viewCounts[videoId] ?? 0
+        const newCount = current + 1
         const watchedList = get().watchedVideoIds
         const filtered = watchedList.filter((id) => id !== videoId)
         const records = get().watchRecords
         set({
           viewCounts: {
             ...get().viewCounts,
-            [videoId]: current + 1,
+            [videoId]: newCount,
           },
           watchedVideoIds: [videoId, ...filtered],
           watchRecords: [{ videoId, watchedAt: Date.now() }, ...records].slice(0, 200),
         })
+
+        // Fire-and-forget sync
+        const userId = getCachedUserId()
+        if (userId) {
+          syncWatchHistoryItem(userId, videoId, newCount).catch(() => {})
+        }
       },
 
       getViewCount: (videoId) => {
@@ -103,6 +116,12 @@ export const useWatchHistoryStore = create<WatchHistoryState>()(
             ? deletedVideoIds
             : [...deletedVideoIds, videoId],
         })
+
+        // Fire-and-forget sync
+        const userId = getCachedUserId()
+        if (userId) {
+          removeWatchHistoryItem(userId, videoId).catch(() => {})
+        }
       },
 
       // Call when user explicitly taps to watch a video (e.g., from Explore page)
@@ -122,6 +141,12 @@ export const useWatchHistoryStore = create<WatchHistoryState>()(
           watchedEpisodes: {},
           deletedVideoIds: [...new Set([...get().deletedVideoIds, ...allWatchedIds])],
         })
+
+        // Fire-and-forget sync
+        const userId = getCachedUserId()
+        if (userId) {
+          clearWatchHistoryServer(userId).catch(() => {})
+        }
       },
     }),
     { name: 'studyeng-watch-history' }

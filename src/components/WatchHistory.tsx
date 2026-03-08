@@ -129,7 +129,7 @@ export function WatchHistory() {
                       className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-2xl p-3 flex items-center gap-3 border border-white/[0.04]"
                     >
                       <button
-                        onClick={() => { clearDeletedFlag(video.id); router.push(`/?v=${video.id}`) }}
+                        onClick={() => { clearDeletedFlag(video.id); router.push(`/shorts?v=${video.id}`) }}
                         className="flex items-center gap-3 flex-1 min-w-0 text-left"
                       >
                         <div className="w-20 h-12 flex-shrink-0 rounded-xl overflow-hidden relative">

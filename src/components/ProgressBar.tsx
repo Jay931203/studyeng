@@ -92,6 +92,7 @@ export function ProgressBar({ className = '', style }: ProgressBarProps) {
 
         if (Math.abs(deltaY) > Math.abs(deltaX)) {
           gestureModeRef.current = 'swipe'
+          resetGesture()
           return
         }
 
@@ -108,7 +109,7 @@ export function ProgressBar({ className = '', style }: ProgressBarProps) {
       updateBarVisuals(pct)
       seekToPercent(pct)
     },
-    [clientXToPercent, updateBarVisuals, seekToPercent],
+    [clientXToPercent, resetGesture, updateBarVisuals, seekToPercent],
   )
 
   const handlePointerUp = useCallback(
@@ -153,7 +154,7 @@ export function ProgressBar({ className = '', style }: ProgressBarProps) {
       {/* Touch target: tall (24px) transparent area for easy tapping/dragging */}
       <div
         ref={containerRef}
-        className="relative flex items-end cursor-pointer touch-none"
+        className="relative flex items-end cursor-pointer touch-pan-y"
         style={{ height: '24px' }}
         onClick={(e) => e.stopPropagation()}
         onPointerDown={handlePointerDown}

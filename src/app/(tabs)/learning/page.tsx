@@ -51,7 +51,7 @@ export default function LearningPage() {
 
             <motion.button
               whileTap={{ scale: 0.97 }}
-              onClick={() => router.push('/')}
+              onClick={() => router.push('/shorts')}
               className="bg-[var(--text-primary)] text-[var(--bg-primary)] font-medium px-6 py-2.5 rounded-xl text-sm"
             >
               영상 보러 가기
@@ -101,7 +101,7 @@ export default function LearningPage() {
                         key={phrase.id}
                         phrase={phrase}
                         onDelete={() => removePhrase(phrase.id)}
-                        onPlay={() => { clearDeletedFlag(phrase.videoId); router.push(`/?v=${phrase.videoId}`) }}
+                        onPlay={() => { clearDeletedFlag(phrase.videoId); router.push(`/shorts?v=${phrase.videoId}`) }}
                       />
                     ))}
                   </AnimatePresence>

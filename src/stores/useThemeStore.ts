@@ -6,8 +6,21 @@ export type ThemeId = 'purple-dark' | 'blue-dark' | 'light' | 'light-blue'
 interface ThemeState {
   theme: ThemeId
   setTheme: (theme: ThemeId) => void
-  /** @deprecated Use setTheme instead */
   toggleTheme: () => void
+}
+
+function normalizeTheme(theme: unknown): ThemeId {
+  switch (theme) {
+    case 'blue-dark':
+    case 'light':
+    case 'light-blue':
+    case 'purple-dark':
+      return theme
+    case 'dark':
+      return 'purple-dark'
+    default:
+      return 'purple-dark'
+  }
 }
 
 export const useThemeStore = create<ThemeState>()(
@@ -17,24 +30,33 @@ export const useThemeStore = create<ThemeState>()(
       setTheme: (theme) => set({ theme }),
       toggleTheme: () => {
         const current = get().theme
-        if (current === 'purple-dark' || current === 'blue-dark') set({ theme: 'light' })
-        else set({ theme: 'purple-dark' })
+
+        switch (current) {
+          case 'purple-dark':
+            set({ theme: 'light' })
+            return
+          case 'blue-dark':
+            set({ theme: 'light-blue' })
+            return
+          case 'light':
+            set({ theme: 'purple-dark' })
+            return
+          case 'light-blue':
+            set({ theme: 'blue-dark' })
+            return
+        }
       },
     }),
     {
       name: 'studyeng-theme',
-      // Migrate old 'dark'/'light' values to new theme ids
+      version: 2,
       migrate: (persistedState: unknown) => {
-        const state = persistedState as Record<string, unknown>
-        if (state?.theme === 'dark') {
-          return { ...state, theme: 'purple-dark' as ThemeId }
-        }
-        if (state?.theme === 'light') {
-          return { ...state, theme: 'light' as ThemeId }
-        }
-        return state as unknown as ThemeState
+        const state = (persistedState ?? {}) as Record<string, unknown>
+        return {
+          ...state,
+          theme: normalizeTheme(state.theme),
+        } satisfies Partial<ThemeState>
       },
-      version: 1,
-    }
-  )
+    },
+  ),
 )

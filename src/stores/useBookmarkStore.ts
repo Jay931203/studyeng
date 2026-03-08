@@ -1,5 +1,6 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
+import { getCachedUserId, syncBookmark } from '@/lib/supabase/sync'
 
 interface BookmarkState {
   bookmarks: string[]
@@ -13,10 +14,18 @@ export const useBookmarkStore = create<BookmarkState>()(
       bookmarks: [],
       toggleBookmark: (videoId) => {
         const current = get().bookmarks
-        if (current.includes(videoId)) {
+        const isCurrentlyBookmarked = current.includes(videoId)
+
+        if (isCurrentlyBookmarked) {
           set({ bookmarks: current.filter((id) => id !== videoId) })
         } else {
           set({ bookmarks: [...current, videoId] })
+        }
+
+        // Fire-and-forget sync
+        const userId = getCachedUserId()
+        if (userId) {
+          syncBookmark(userId, videoId, !isCurrentlyBookmarked).catch(() => {})
         }
       },
       isBookmarked: (videoId) => get().bookmarks.includes(videoId),

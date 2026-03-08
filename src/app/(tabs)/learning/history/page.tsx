@@ -135,7 +135,7 @@ export default function WatchHistoryPage() {
                       <button
                         onClick={() => {
                           clearDeletedFlag(video.id)
-                          router.push(`/?v=${video.id}`)
+                          router.push(`/shorts?v=${video.id}`)
                         }}
                         className="flex min-w-0 flex-1 items-center gap-3 text-left"
                       >

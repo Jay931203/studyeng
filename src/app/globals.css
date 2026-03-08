@@ -72,10 +72,10 @@
   --text-primary: #111827;
   --text-secondary: #4b5563;
   --text-muted: #6b7280;
-  --bg-nav: rgba(255,255,255,0.95);
+  --bg-nav: rgba(255,255,255,0.98);
   --bg-search-dropdown: #ffffff;
   --nav-active: var(--accent-primary);
-  --nav-inactive: #6b7280;
+  --nav-inactive: #475569;
   --nav-indicator: var(--accent-primary);
 
   --accent-primary: #9333ea;
@@ -96,10 +96,10 @@
   --text-primary: #111827;
   --text-secondary: #475569;
   --text-muted: #64748b;
-  --bg-nav: rgba(255,255,255,0.95);
+  --bg-nav: rgba(255,255,255,0.98);
   --bg-search-dropdown: #ffffff;
   --nav-active: var(--accent-primary);
-  --nav-inactive: #64748b;
+  --nav-inactive: #334155;
   --nav-indicator: var(--accent-primary);
 
   --accent-primary: #2563eb;
@@ -166,5 +166,19 @@ body {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+}
+
+/* Landscape mode overrides */
+@media (orientation: landscape) {
+  /* Ensure body uses full viewport in landscape */
+  body {
+    overflow: hidden;
+  }
+
+  /* Safe area padding for notched devices (iPhone etc.) in landscape */
+  .safe-area-landscape {
+    padding-left: env(safe-area-inset-left, 0px);
+    padding-right: env(safe-area-inset-right, 0px);
   }
 }

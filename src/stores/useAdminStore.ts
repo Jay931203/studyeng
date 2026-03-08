@@ -32,13 +32,13 @@ interface AdminState {
   isFlagged: (videoId: string, entryIndex: number) => boolean
   clearFlags: () => void
   exportFlags: () => string
-
-  // Issue reporting
   issues: AdminIssue[]
   addIssue: (videoId: string, youtubeId: string, type: IssueType, description: string) => void
   resolveIssue: (id: string) => void
   clearResolved: () => void
   getUnresolvedCount: () => number
+  exportIssues: () => string
+  exportReportBundle: () => string
 }
 
 export const useAdminStore = create<AdminState>()(
@@ -57,15 +57,17 @@ export const useAdminStore = create<AdminState>()(
       toggleFlag: (videoId, entryIndex, en) =>
         set((state) => {
           const exists = state.flaggedSubtitles.some(
-            (f) => f.videoId === videoId && f.entryIndex === entryIndex
+            (flag) => flag.videoId === videoId && flag.entryIndex === entryIndex
           )
+
           if (exists) {
             return {
               flaggedSubtitles: state.flaggedSubtitles.filter(
-                (f) => !(f.videoId === videoId && f.entryIndex === entryIndex)
+                (flag) => !(flag.videoId === videoId && flag.entryIndex === entryIndex)
               ),
             }
           }
+
           return {
             flaggedSubtitles: [
               ...state.flaggedSubtitles,
@@ -81,14 +83,13 @@ export const useAdminStore = create<AdminState>()(
 
       isFlagged: (videoId, entryIndex) =>
         get().flaggedSubtitles.some(
-          (f) => f.videoId === videoId && f.entryIndex === entryIndex
+          (flag) => flag.videoId === videoId && flag.entryIndex === entryIndex
         ),
 
       clearFlags: () => set({ flaggedSubtitles: [] }),
 
       exportFlags: () => JSON.stringify(get().flaggedSubtitles, null, 2),
 
-      // Issue reporting
       issues: [],
 
       addIssue: (videoId, youtubeId, type, description) =>
@@ -119,8 +120,21 @@ export const useAdminStore = create<AdminState>()(
           issues: state.issues.filter((issue) => !issue.resolved),
         })),
 
-      getUnresolvedCount: () =>
-        get().issues.filter((issue) => !issue.resolved).length,
+      getUnresolvedCount: () => get().issues.filter((issue) => !issue.resolved).length,
+
+      exportIssues: () => JSON.stringify(get().issues, null, 2),
+
+      exportReportBundle: () =>
+        JSON.stringify(
+          {
+            exportedAt: new Date().toISOString(),
+            unresolvedIssues: get().issues.filter((issue) => !issue.resolved),
+            resolvedIssues: get().issues.filter((issue) => issue.resolved),
+            subtitleFlags: get().flaggedSubtitles,
+          },
+          null,
+          2
+        ),
     }),
     { name: 'studyeng-admin-issues' }
   )

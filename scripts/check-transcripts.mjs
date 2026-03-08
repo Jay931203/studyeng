@@ -15,11 +15,9 @@
 
 import { readdir, readFile, writeFile } from 'fs/promises'
 import { join } from 'path'
+import { TRANSCRIPT_RULES, checkTranscript as runTranscriptCheck } from './lib/transcript-quality.mjs'
 
 const TRANSCRIPTS_DIR = join(import.meta.dirname, '..', 'public', 'transcripts')
-const MAX_DURATION = 7
-const MAX_TEXT_LENGTH = 120
-const MAX_GAP = 2
 
 const args = process.argv.slice(2)
 const shouldFix = args.includes('--fix')
@@ -34,7 +32,7 @@ async function main() {
   for (const file of files.sort()) {
     const filePath = join(TRANSCRIPTS_DIR, file)
     const data = JSON.parse(await readFile(filePath, 'utf-8'))
-    const issues = checkTranscript(data, file)
+    const issues = runTranscriptCheck(data)
 
     if (issues.length === 0) {
       cleanFiles++
@@ -68,90 +66,13 @@ async function main() {
     console.log('\n\n=== Auto-fixing... ===\n')
     for (const { file, data } of results) {
       const fixed = autoFix(data)
-      const remaining = checkTranscript(fixed, file)
+      const remaining = runTranscriptCheck(fixed)
       const filePath = join(TRANSCRIPTS_DIR, file)
       await writeFile(filePath, JSON.stringify(fixed, null, 2) + '\n', 'utf-8')
       console.log(`  ${file}: ${data.length} -> ${fixed.length} entries (${remaining.length} remaining issues)`)
     }
     console.log('\nDone! Re-run without --fix to verify.')
   }
-}
-
-function checkTranscript(entries, filename) {
-  const issues = []
-
-  for (let i = 0; i < entries.length; i++) {
-    const entry = entries[i]
-    const duration = entry.end - entry.start
-    const enLen = (entry.en || '').length
-
-    if (duration > MAX_DURATION) {
-      issues.push({
-        type: 'DURATION_LONG',
-        idx: i,
-        start: entry.start,
-        end: entry.end,
-        duration,
-        chars: enLen,
-        text: entry.en || '',
-      })
-    }
-
-    if (enLen > MAX_TEXT_LENGTH) {
-      // Don't double-report if already caught by DURATION_LONG
-      if (duration <= MAX_DURATION) {
-        issues.push({
-          type: 'TEXT_LONG',
-          idx: i,
-          start: entry.start,
-          end: entry.end,
-          duration,
-          chars: enLen,
-          text: entry.en || '',
-        })
-      }
-    }
-
-    if (!entry.en || entry.en.trim().length === 0) {
-      issues.push({
-        type: 'EMPTY_EN',
-        idx: i,
-        start: entry.start,
-        end: entry.end,
-        duration,
-        chars: 0,
-        text: '',
-      })
-    }
-
-    if (i > 0) {
-      const prev = entries[i - 1]
-      if (entry.start < prev.end - 0.01) {
-        issues.push({
-          type: 'OVERLAP',
-          idx: i,
-          start: entry.start,
-          end: entry.end,
-          duration,
-          chars: enLen,
-          text: `overlaps with prev (ends ${prev.end})`,
-        })
-      }
-      if (entry.start - prev.end > MAX_GAP) {
-        issues.push({
-          type: 'GAP',
-          idx: i,
-          start: entry.start,
-          end: entry.end,
-          duration,
-          chars: enLen,
-          text: `gap of ${(entry.start - prev.end).toFixed(1)}s after prev`,
-        })
-      }
-    }
-  }
-
-  return issues
 }
 
 function autoFix(entries) {
@@ -162,7 +83,7 @@ function autoFix(entries) {
     const enLen = (entry.en || '').length
 
     // Short text with very long duration -> tighten end time
-    if (duration > MAX_DURATION && enLen < 40) {
+    if (duration > TRANSCRIPT_RULES.maxDurationSec && enLen < 40) {
       result.push({
         ...entry,
         end: Math.min(entry.end, entry.start + Math.max(3, duration * 0.4)),
@@ -171,7 +92,7 @@ function autoFix(entries) {
     }
 
     // Long duration or long text -> try to split
-    if (duration > MAX_DURATION || enLen > MAX_TEXT_LENGTH) {
+    if (duration > TRANSCRIPT_RULES.maxDurationSec || enLen > TRANSCRIPT_RULES.maxTextLength) {
       const splits = splitEntry(entry)
       result.push(...splits)
       continue
@@ -229,7 +150,7 @@ function splitText(text, targetParts) {
       return splitAtCommas(text, targetParts)
     }
     // Merge small parts back together if too many
-    return mergeParts(sentenceSplits, targetParts || Math.ceil(text.length / MAX_TEXT_LENGTH) + 1)
+    return mergeParts(sentenceSplits, targetParts || Math.ceil(text.length / TRANSCRIPT_RULES.maxTextLength) + 1)
   }
 
   // Try splitting at commas

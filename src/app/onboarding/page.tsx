@@ -1,59 +1,116 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
+import { useAuth } from '@/hooks/useAuth'
 
 const LEVELS = [
-  { id: 'beginner' as const, title: '초급', desc: '기본 인사, 간단한 문장 정도' },
-  { id: 'intermediate' as const, title: '중급', desc: '일상 대화는 가능해요' },
-  { id: 'advanced' as const, title: '고급', desc: '원어민 영상도 도전해볼래요' },
-]
+  {
+    id: 'beginner' as const,
+    title: '입문',
+    desc: '짧은 표현과 쉬운 대사를 중심으로 듣고 싶어요.',
+  },
+  {
+    id: 'intermediate' as const,
+    title: '중급',
+    desc: '일상 표현은 이해하고, 말하기도 조금 더 자연스럽게 하고 싶어요.',
+  },
+  {
+    id: 'advanced' as const,
+    title: '고급',
+    desc: '빠른 영상과 실제 대화도 큰 막힘 없이 따라가고 싶어요.',
+  },
+] as const
+
+function LoadingScreen() {
+  return (
+    <div className="flex h-dvh items-center justify-center bg-black">
+      <div className="relative">
+        <div className="h-8 w-8 rounded-full border-[1.5px] border-white/10" />
+        <div className="absolute inset-0 h-8 w-8 animate-spin rounded-full border-[1.5px] border-transparent border-t-white/60" />
+      </div>
+    </div>
+  )
+}
 
 export default function OnboardingPage() {
   const [step, setStep] = useState(0)
-  const [selectedLevel, setSelectedLevel] = useState<'beginner' | 'intermediate' | 'advanced'>('beginner')
-  const { completeOnboarding, setLevel } = useOnboardingStore()
+  const [selectedLevel, setSelectedLevel] =
+    useState<'beginner' | 'intermediate' | 'advanced'>('beginner')
+  const { user, loading } = useAuth()
+  const hasOnboarded = useOnboardingStore((state) => state.hasOnboarded)
+  const hydrated = useOnboardingStore((state) => state.hydrated)
+  const completeOnboarding = useOnboardingStore((state) => state.completeOnboarding)
+  const setLevel = useOnboardingStore((state) => state.setLevel)
   const router = useRouter()
+
+  useEffect(() => {
+    if (loading || !hydrated) return
+
+    if (!user) {
+      router.replace('/login?next=/onboarding')
+      return
+    }
+
+    if (hasOnboarded) {
+      router.replace('/explore')
+    }
+  }, [hasOnboarded, hydrated, loading, router, user])
 
   const finish = () => {
     setLevel(selectedLevel)
     completeOnboarding()
-    router.replace('/')
+    router.replace('/explore')
   }
 
-  const next = () => setStep((s) => s + 1)
+  if (loading || !hydrated || !user) {
+    return <LoadingScreen />
+  }
 
   return (
-    <div className="h-dvh bg-black flex flex-col">
-      {/* Progress dots */}
-      <div className="flex gap-1.5 justify-center pt-12 pb-4">
-        {[0, 1].map((i) => (
+    <div className="flex h-dvh flex-col bg-black">
+      <div className="flex justify-center gap-1.5 pb-4 pt-12">
+        {[0, 1].map((index) => (
           <div
-            key={i}
+            key={index}
             className={`h-1 rounded-full transition-all ${
-              i === step ? 'w-6 bg-blue-500' : i < step ? 'w-1.5 bg-blue-500/50' : 'w-1.5 bg-white/20'
+              index === step
+                ? 'w-6 bg-[var(--accent-primary)]'
+                : index < step
+                  ? 'w-1.5 bg-[var(--accent-primary)]/50'
+                  : 'w-1.5 bg-white/20'
             }`}
           />
         ))}
       </div>
 
-      <div className="flex-1 flex items-center justify-center px-8">
+      <div className="flex flex-1 items-center justify-center px-8">
         <AnimatePresence mode="wait">
           <motion.div
             key={step}
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
+            exit={{ opacity: 0, x: -40 }}
             transition={{ duration: 0.25 }}
             className="w-full max-w-sm"
           >
             {step === 0 && (
               <div className="text-center">
-                <h1 className="text-white text-3xl font-black mb-3">StudyEng</h1>
-                <p className="text-gray-400 text-lg mb-12">짧은 영상으로 영어가 재밌어져요</p>
-                <button onClick={next} className="w-full py-3.5 bg-blue-500 text-white rounded-xl font-medium text-base">
+                <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--accent-text)]">
+                  Welcome
+                </p>
+                <h1 className="mb-3 mt-4 text-3xl font-black text-white">StudyEng</h1>
+                <p className="mb-12 text-lg leading-relaxed text-gray-400">
+                  로그인 후 처음 한 번만 취향을 맞추면
+                  <br />
+                  바로 개인화된 홈과 쇼츠로 시작할 수 있습니다.
+                </p>
+                <button
+                  onClick={() => setStep(1)}
+                  className="w-full rounded-xl bg-[var(--accent-primary)] py-3.5 text-base font-medium text-white"
+                >
                   시작하기
                 </button>
               </div>
@@ -61,25 +118,33 @@ export default function OnboardingPage() {
 
             {step === 1 && (
               <div>
-                <h2 className="text-white text-xl font-bold mb-6">영어 실력은 어느 정도예요?</h2>
-                <div className="flex flex-col gap-3 mb-8">
-                  {LEVELS.map((lv) => (
+                <h2 className="mb-2 text-xl font-bold text-white">
+                  지금 영어 감각은 어느 정도인가요?
+                </h2>
+                <p className="mb-6 text-sm text-gray-400">
+                  선택한 난이도는 추천 영상과 학습 흐름에 반영됩니다.
+                </p>
+                <div className="mb-8 flex flex-col gap-3">
+                  {LEVELS.map((level) => (
                     <button
-                      key={lv.id}
-                      onClick={() => setSelectedLevel(lv.id)}
-                      className={`p-4 rounded-xl text-left transition-colors ${
-                        selectedLevel === lv.id
-                          ? 'bg-blue-500/20 border-2 border-blue-500'
-                          : 'bg-white/5 border border-white/10'
+                      key={level.id}
+                      onClick={() => setSelectedLevel(level.id)}
+                      className={`rounded-xl p-4 text-left transition-colors ${
+                        selectedLevel === level.id
+                          ? 'border-2 border-[var(--accent-primary)] bg-[var(--accent-primary)]/15'
+                          : 'border border-white/10 bg-white/5'
                       }`}
                     >
-                      <p className="text-white font-medium">{lv.title}</p>
-                      <p className="text-gray-400 text-sm mt-0.5">{lv.desc}</p>
+                      <p className="font-medium text-white">{level.title}</p>
+                      <p className="mt-0.5 text-sm text-gray-400">{level.desc}</p>
                     </button>
                   ))}
                 </div>
-                <button onClick={finish} className="w-full py-3.5 bg-blue-500 text-white rounded-xl font-medium">
-                  시작하기
+                <button
+                  onClick={finish}
+                  className="w-full rounded-xl bg-[var(--accent-primary)] py-3.5 font-medium text-white"
+                >
+                  맞춤 홈 시작
                 </button>
               </div>
             )}

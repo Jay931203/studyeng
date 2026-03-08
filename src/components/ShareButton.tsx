@@ -1,7 +1,8 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useCallback, useState } from 'react'
 import { motion } from 'framer-motion'
+import { buildShortsUrl } from '@/lib/videoRoutes'
 import { SaveToast } from './SaveToast'
 
 interface ShareButtonProps {
@@ -13,30 +14,30 @@ export function ShareButton({ videoId, videoTitle }: ShareButtonProps) {
   const [showToast, setShowToast] = useState(false)
 
   const handleShare = useCallback(
-    async (e: React.MouseEvent) => {
-      e.stopPropagation()
-      const shareUrl = `https://studyeng-nine.vercel.app/?v=${videoId}`
+    async (event: React.MouseEvent) => {
+      event.stopPropagation()
+
+      const shareUrl = `${window.location.origin}${buildShortsUrl(videoId)}`
+      const shareText = videoTitle
+        ? `${videoTitle} - StudyEng에서 영어 배우기`
+        : 'StudyEng에서 영어 배우기'
 
       if (typeof navigator !== 'undefined' && navigator.share) {
         try {
           await navigator.share({
             title: videoTitle ?? 'StudyEng',
-            text: videoTitle
-              ? `${videoTitle} - StudyEng에서 영어 배우기`
-              : 'StudyEng에서 영어 배우기',
+            text: shareText,
             url: shareUrl,
           })
           return
         } catch {
-          // User cancelled or share failed — fall through to clipboard
+          // Fall through to clipboard copy.
         }
       }
 
-      // Fallback: copy to clipboard
       try {
         await navigator.clipboard.writeText(shareUrl)
       } catch {
-        // Fallback for older browsers
         const textarea = document.createElement('textarea')
         textarea.value = shareUrl
         textarea.style.position = 'fixed'
@@ -46,10 +47,11 @@ export function ShareButton({ videoId, videoTitle }: ShareButtonProps) {
         document.execCommand('copy')
         document.body.removeChild(textarea)
       }
+
       setShowToast(true)
-      setTimeout(() => setShowToast(false), 2000)
+      window.setTimeout(() => setShowToast(false), 2000)
     },
-    [videoId, videoTitle]
+    [videoId, videoTitle],
   )
 
   return (
@@ -57,7 +59,7 @@ export function ShareButton({ videoId, videoTitle }: ShareButtonProps) {
       <motion.button
         whileTap={{ scale: 0.8 }}
         onClick={handleShare}
-        className="bg-black/50 backdrop-blur-sm w-10 h-10 rounded-full flex items-center justify-center"
+        className="flex h-10 w-10 items-center justify-center rounded-full bg-black/50 backdrop-blur-sm"
         aria-label="공유하기"
       >
         <svg
@@ -66,7 +68,7 @@ export function ShareButton({ videoId, videoTitle }: ShareButtonProps) {
           fill="none"
           stroke="white"
           strokeWidth={2}
-          className="w-5 h-5"
+          className="h-5 w-5"
         >
           <path
             strokeLinecap="round"
@@ -75,7 +77,7 @@ export function ShareButton({ videoId, videoTitle }: ShareButtonProps) {
           />
         </svg>
       </motion.button>
-      <SaveToast show={showToast} message="링크가 복사됐어요!" />
+      <SaveToast show={showToast} message="링크를 복사했어요" />
     </>
   )
 }

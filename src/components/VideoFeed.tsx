@@ -1,74 +1,156 @@
 'use client'
 
-import { useState, useRef, useCallback, useEffect } from 'react'
-import { motion, AnimatePresence, type PanInfo } from 'framer-motion'
-import { VideoPlayer } from './VideoPlayer'
-import { UnifiedControls } from './UnifiedControls'
-import { SaveToast } from './SaveToast'
-import { ProgressBar } from './ProgressBar'
-import { usePhraseStore } from '@/stores/usePhraseStore'
-import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
-import { usePremiumStore } from '@/stores/usePremiumStore'
-import { usePlayerStore } from '@/stores/usePlayerStore'
-import { useUserStore } from '@/stores/useUserStore'
-import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
-import { PremiumModal } from './PremiumModal'
-import { AdminReportButton } from './AdminReportButton'
+import { AnimatePresence, motion, type PanInfo } from 'framer-motion'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { series as allSeries, type VideoData } from '@/data/seed-videos'
+import { useOrientation } from '@/hooks/useOrientation'
+import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
+import { usePhraseStore } from '@/stores/usePhraseStore'
+import { usePlayerStore } from '@/stores/usePlayerStore'
+import { usePremiumStore } from '@/stores/usePremiumStore'
+import { useUserStore } from '@/stores/useUserStore'
+import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
+import { AdminReportButton } from './AdminReportButton'
+import { PremiumModal } from './PremiumModal'
+import { ProgressBar } from './ProgressBar'
+import { SaveToast } from './SaveToast'
+import { UnifiedControls } from './UnifiedControls'
+import { VideoPlayer } from './VideoPlayer'
 
 interface VideoFeedProps {
   videos: VideoData[]
+  initialVideoId?: string
+  navigationKey?: string
 }
 
 function buildExploreSeriesUrl(video: VideoData) {
   const params = new URLSearchParams()
-  if (video.seriesId) params.set('series', video.seriesId)
-  params.set('source', 'video')
+
+  if (video.seriesId) {
+    params.set('series', video.seriesId)
+    params.set('returnSeriesId', video.seriesId)
+  }
+
+  params.set('source', 'shorts')
   params.set('returnVideoId', video.id)
-  if (video.seriesId) params.set('returnSeriesId', video.seriesId)
+
   return `/explore?${params.toString()}`
 }
 
-export function VideoFeed({ videos }: VideoFeedProps) {
+export function VideoFeed({ videos, initialVideoId, navigationKey }: VideoFeedProps) {
   const router = useRouter()
+  const { isLandscape } = useOrientation()
   const [currentIndex, setCurrentIndex] = useState(0)
   const [direction, setDirection] = useState(0)
   const [showToast, setShowToast] = useState(false)
   const [showPremiumModal, setShowPremiumModal] = useState(false)
-  const [premiumTrigger, setPremiumTrigger] = useState<'video-limit' | 'phrase-limit'>('video-limit')
-  const constraintsRef = useRef(null)
-  const savePhrase = usePhraseStore((s) => s.savePhrase)
-  const markWatched = useWatchHistoryStore((s) => s.markWatched)
-  const incrementViewCount = useWatchHistoryStore((s) => s.incrementViewCount)
-  const getViewCount = useWatchHistoryStore((s) => s.getViewCount)
-  const incrementDailyView = usePremiumStore((s) => s.incrementDailyView)
-  const canSaveMorePhrases = usePremiumStore((s) => s.canSaveMorePhrases)
-  const incrementSavedPhrases = usePremiumStore((s) => s.incrementSavedPhrases)
-  const checkAndUpdateStreak = useUserStore((s) => s.checkAndUpdateStreak)
-  const incrementMission = useDailyMissionStore((s) => s.incrementMission)
-  const repeatMode = usePlayerStore((s) => s.repeatMode)
-  const currentRepeatCount = usePlayerStore((s) => s.currentRepeatCount)
-  const incrementRepeatCount = usePlayerStore((s) => s.incrementRepeatCount)
-  const resetRepeatCount = usePlayerStore((s) => s.resetRepeatCount)
-  const setIsSwiping = usePlayerStore((s) => s.setIsSwiping)
-
-  const awardedRef = useRef<Set<string>>(new Set())
+  const [premiumTrigger, setPremiumTrigger] = useState<'video-limit' | 'phrase-limit'>(
+    'video-limit',
+  )
   const [repeatIndicator, setRepeatIndicator] = useState<string | null>(null)
+
+  const saveToastTimerRef = useRef<number | null>(null)
   const repeatIndicatorTimerRef = useRef<number | null>(null)
+  const awardedRef = useRef<Set<string>>(new Set())
+
+  const savePhrase = usePhraseStore((state) => state.savePhrase)
+  const markWatched = useWatchHistoryStore((state) => state.markWatched)
+  const incrementViewCount = useWatchHistoryStore((state) => state.incrementViewCount)
+  const getViewCount = useWatchHistoryStore((state) => state.getViewCount)
+  const incrementDailyView = usePremiumStore((state) => state.incrementDailyView)
+  const canSaveMorePhrases = usePremiumStore((state) => state.canSaveMorePhrases)
+  const incrementSavedPhrases = usePremiumStore((state) => state.incrementSavedPhrases)
+  const checkAndUpdateStreak = useUserStore((state) => state.checkAndUpdateStreak)
+  const incrementMission = useDailyMissionStore((state) => state.incrementMission)
+  const repeatMode = usePlayerStore((state) => state.repeatMode)
+  const currentRepeatCount = usePlayerStore((state) => state.currentRepeatCount)
+  const incrementRepeatCount = usePlayerStore((state) => state.incrementRepeatCount)
+  const resetRepeatCount = usePlayerStore((state) => state.resetRepeatCount)
+  const setIsSwiping = usePlayerStore((state) => state.setIsSwiping)
+
+  useEffect(() => {
+    if (videos.length === 0) {
+      setCurrentIndex(0)
+      setDirection(0)
+      resetRepeatCount()
+      return
+    }
+
+    const targetIndex = initialVideoId
+      ? videos.findIndex((video) => video.id === initialVideoId)
+      : 0
+
+    setCurrentIndex(targetIndex >= 0 ? targetIndex : 0)
+    setDirection(0)
+    resetRepeatCount()
+  }, [initialVideoId, navigationKey, resetRepeatCount, videos.length])
+
+  useEffect(() => {
+    if (currentIndex <= videos.length - 1) return
+    setCurrentIndex(Math.max(videos.length - 1, 0))
+  }, [currentIndex, videos.length])
 
   useEffect(() => {
     const video = videos[currentIndex]
-    if (video) {
-      incrementViewCount(video.id)
-      if (video.seriesId) {
-        markWatched(video.seriesId, video.id)
+    if (!video) return
+
+    incrementViewCount(video.id)
+    if (video.seriesId) {
+      markWatched(video.seriesId, video.id)
+    }
+  }, [currentIndex, incrementViewCount, markWatched, videos])
+
+  useEffect(() => {
+    return () => {
+      if (saveToastTimerRef.current) {
+        clearTimeout(saveToastTimerRef.current)
+      }
+      if (repeatIndicatorTimerRef.current) {
+        clearTimeout(repeatIndicatorTimerRef.current)
       }
     }
-  }, [currentIndex, videos, markWatched, incrementViewCount])
+  }, [])
+
+  const showRepeatProgress = useCallback((count: number, targetCount: number) => {
+    setRepeatIndicator(`반복 ${count}/${targetCount}`)
+
+    if (repeatIndicatorTimerRef.current) {
+      clearTimeout(repeatIndicatorTimerRef.current)
+    }
+
+    repeatIndicatorTimerRef.current = window.setTimeout(() => {
+      setRepeatIndicator(null)
+    }, 1500)
+  }, [])
+
+  const moveToNextVideo = useCallback(() => {
+    if (currentIndex >= videos.length - 1) {
+      resetRepeatCount()
+      return false
+    }
+
+    const nextVideo = videos[currentIndex + 1]
+    const alreadyWatched = nextVideo ? getViewCount(nextVideo.id) > 0 : false
+
+    if (!alreadyWatched) {
+      const allowed = incrementDailyView()
+      if (!allowed) {
+        setPremiumTrigger('video-limit')
+        setShowPremiumModal(true)
+        return false
+      }
+    }
+
+    resetRepeatCount()
+    setDirection(1)
+    setCurrentIndex((prev) => prev + 1)
+    return true
+  }, [currentIndex, getViewCount, incrementDailyView, resetRepeatCount, videos])
 
   const handleClipComplete = useCallback(() => {
     const currentVideo = videos[currentIndex]
+
     if (currentVideo && !awardedRef.current.has(currentVideo.id)) {
       awardedRef.current.add(currentVideo.id)
       checkAndUpdateStreak()
@@ -82,73 +164,38 @@ export function VideoFeed({ videos }: VideoFeedProps) {
     incrementRepeatCount()
 
     if (newCount >= targetCount) {
-      if (currentIndex < videos.length - 1) {
-        const nextVideo = videos[currentIndex + 1]
-        const alreadyWatched = nextVideo && getViewCount(nextVideo.id) > 0
-        if (!alreadyWatched) {
-          const allowed = incrementDailyView()
-          if (!allowed) {
-            setPremiumTrigger('video-limit')
-            setShowPremiumModal(true)
-            resetRepeatCount()
-            return
-          }
-        }
-        resetRepeatCount()
-        setDirection(1)
-        setCurrentIndex((prev) => prev + 1)
-      } else {
-        resetRepeatCount()
-      }
-    } else {
-      const label = `${newCount}/${targetCount} 반복 중`
-      setRepeatIndicator(label)
-      if (repeatIndicatorTimerRef.current) clearTimeout(repeatIndicatorTimerRef.current)
-      repeatIndicatorTimerRef.current = window.setTimeout(() => {
-        setRepeatIndicator(null)
-      }, 1500)
+      moveToNextVideo()
+      return
     }
+
+    showRepeatProgress(newCount, targetCount)
   }, [
-    repeatMode,
-    currentRepeatCount,
-    currentIndex,
-    videos,
     checkAndUpdateStreak,
+    currentIndex,
+    currentRepeatCount,
     incrementMission,
     incrementRepeatCount,
-    resetRepeatCount,
-    incrementDailyView,
-    getViewCount,
+    moveToNextVideo,
+    repeatMode,
+    showRepeatProgress,
+    videos,
   ])
 
   const handleNextVideo = useCallback(() => {
-    if (currentIndex >= videos.length - 1) return
-    const nextVideo = videos[currentIndex + 1]
-    const alreadyWatched = nextVideo && getViewCount(nextVideo.id) > 0
-    if (!alreadyWatched) {
-      const allowed = incrementDailyView()
-      if (!allowed) {
-        setPremiumTrigger('video-limit')
-        setShowPremiumModal(true)
-        return
-      }
-    }
-    resetRepeatCount()
-    setDirection(1)
-    setCurrentIndex((prev) => prev + 1)
-  }, [currentIndex, videos, getViewCount, incrementDailyView, resetRepeatCount])
+    moveToNextVideo()
+  }, [moveToNextVideo])
 
   const handlePrevVideo = useCallback(() => {
     if (currentIndex <= 0) return
+
     resetRepeatCount()
     setDirection(-1)
     setCurrentIndex((prev) => prev - 1)
   }, [currentIndex, resetRepeatCount])
 
-  const swipeThreshold = 50
-
   const handleDragEnd = useCallback(
     (_: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+      const swipeThreshold = 50
       const { offset, velocity } = info
 
       if (offset.y < -swipeThreshold || velocity.y < -500) {
@@ -157,18 +204,18 @@ export function VideoFeed({ videos }: VideoFeedProps) {
         handlePrevVideo()
       }
     },
-    [handleNextVideo, handlePrevVideo]
+    [handleNextVideo, handlePrevVideo],
   )
 
   const currentVideo = videos[currentIndex]
   if (!currentVideo) return null
 
   const seriesInfo = currentVideo.seriesId
-    ? allSeries.find((s) => s.id === currentVideo.seriesId)
+    ? allSeries.find((series) => series.id === currentVideo.seriesId)
     : null
 
   return (
-    <div ref={constraintsRef} className="relative w-full h-full overflow-hidden bg-black">
+    <div className="relative h-full w-full overflow-hidden bg-black">
       <AnimatePresence custom={direction}>
         <motion.div
           key={currentVideo.id}
@@ -192,6 +239,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
             subtitles={currentVideo.subtitles}
             clipStart={currentVideo.clipStart}
             clipEnd={currentVideo.clipEnd}
+            isLandscape={isLandscape}
             onClipComplete={handleClipComplete}
             onSavePhrase={(phrase) => {
               if (!canSaveMorePhrases()) {
@@ -199,6 +247,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
                 setShowPremiumModal(true)
                 return
               }
+
               savePhrase({
                 videoId: currentVideo.id,
                 videoTitle: currentVideo.title,
@@ -207,90 +256,118 @@ export function VideoFeed({ videos }: VideoFeedProps) {
                 timestampStart: phrase.start,
                 timestampEnd: phrase.end,
               })
+
               incrementSavedPhrases()
               incrementMission('save-phrase')
               setShowToast(true)
-              setTimeout(() => setShowToast(false), 2000)
+
+              if (saveToastTimerRef.current) {
+                clearTimeout(saveToastTimerRef.current)
+              }
+
+              saveToastTimerRef.current = window.setTimeout(() => {
+                setShowToast(false)
+              }, 2000)
             }}
           >
-            <ProgressBar className="bottom-2 left-3 right-16" />
+            <ProgressBar className="bottom-2 left-3 right-[4.75rem]" />
 
             <div
-              className="absolute right-3 bottom-3 z-20 flex flex-col gap-3"
-              onPointerDownCapture={(e) => e.stopPropagation()}
-              onClick={(e) => e.stopPropagation()}
+              className="absolute bottom-3 right-3 z-20 flex flex-col gap-3"
+              onPointerDownCapture={(event) => event.stopPropagation()}
+              onClick={(event) => event.stopPropagation()}
             >
               {currentIndex > 0 && (
                 <button
                   onClick={handlePrevVideo}
-                  className="w-9 h-9 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full active:bg-white/20 transition-colors"
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-colors active:bg-white/20"
                   aria-label="이전 영상"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-white/80">
-                    <path fillRule="evenodd" d="M9.47 6.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 8.06l-3.72 3.72a.75.75 0 0 1-1.06-1.06l4.25-4.25Z" clipRule="evenodd" />
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5 text-white/80">
+                    <path
+                      fillRule="evenodd"
+                      d="M9.47 6.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 8.06l-3.72 3.72a.75.75 0 0 1-1.06-1.06l4.25-4.25Z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                 </button>
               )}
+
               {currentIndex < videos.length - 1 && (
                 <button
                   onClick={handleNextVideo}
-                  className="w-9 h-9 flex items-center justify-center bg-white/10 backdrop-blur-sm rounded-full active:bg-white/20 transition-colors"
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 backdrop-blur-sm transition-colors active:bg-white/20"
                   aria-label="다음 영상"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-white/80">
-                    <path fillRule="evenodd" d="M10.53 13.53a.75.75 0 0 1-1.06 0l-4.25-4.25a.75.75 0 0 1 1.06-1.06L10 11.94l3.72-3.72a.75.75 0 0 1 1.06 1.06l-4.25 4.25Z" clipRule="evenodd" />
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5 text-white/80">
+                    <path
+                      fillRule="evenodd"
+                      d="M10.53 13.53a.75.75 0 0 1-1.06 0l-4.25-4.25a.75.75 0 0 1 1.06-1.06L10 11.94l3.72-3.72a.75.75 0 0 1 1.06 1.06l-4.25 4.25Z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                 </button>
               )}
             </div>
           </VideoPlayer>
-          <UnifiedControls videoId={currentVideo.id} videoTitle={currentVideo.title} />
 
-          <div className="absolute top-0 left-0 right-0 h-[100px] bg-gradient-to-b from-black/50 via-black/20 to-transparent pointer-events-none z-[5]" />
+          {/* UnifiedControls: in landscape, constrain to the video area (left 62%) */}
+          <div className={isLandscape ? 'absolute top-0 left-0 z-10' : 'contents'} style={isLandscape ? { width: '62%' } : undefined}>
+            <UnifiedControls videoId={currentVideo.id} videoTitle={currentVideo.title} />
+          </div>
+          <div
+            className={`pointer-events-none absolute top-0 z-[5] h-[100px] bg-gradient-to-b from-black/50 via-black/20 to-transparent ${
+              isLandscape ? 'left-0' : 'left-0 right-0'
+            }`}
+            style={isLandscape ? { width: '62%' } : undefined}
+          />
         </motion.div>
       </AnimatePresence>
 
       {repeatIndicator && (
-        <div className="absolute top-14 left-0 right-0 flex justify-center z-20 pointer-events-none">
-          <div className="bg-white/10 backdrop-blur-md rounded-full px-4 py-1.5">
-            <span className="text-white/80 text-xs font-medium">{repeatIndicator}</span>
+        <div className="pointer-events-none absolute left-0 right-0 top-14 z-20 flex justify-center">
+          <div className="rounded-full bg-white/10 px-4 py-1.5 backdrop-blur-md">
+            <span className="text-xs font-medium text-white/80">{repeatIndicator}</span>
           </div>
         </div>
       )}
 
-      <div className="absolute top-3 left-3 z-10 max-w-[65%]">
+      <div className={`absolute left-3 top-3 z-10 ${isLandscape ? 'max-w-[40%]' : 'max-w-[65%]'}`}>
         {seriesInfo ? (
           <button
             onClick={() => router.push(buildExploreSeriesUrl(currentVideo), { scroll: false })}
-            className="text-white text-xs font-medium bg-black/40 backdrop-blur-sm rounded-lg px-2.5 py-1.5 truncate block max-w-full text-left"
+            className="block max-w-full truncate rounded-lg bg-black/40 px-2.5 py-1.5 text-left text-xs font-medium text-white backdrop-blur-sm"
           >
             {seriesInfo.title}
             {currentVideo.episodeNumber != null && ` Ep.${currentVideo.episodeNumber}`}
           </button>
         ) : (
-          <span className="text-white text-xs font-medium bg-black/40 backdrop-blur-sm rounded-lg px-2.5 py-1.5 truncate block max-w-full">
+          <span className="block max-w-full truncate rounded-lg bg-black/40 px-2.5 py-1.5 text-xs font-medium text-white backdrop-blur-sm">
             {currentVideo.title}
           </span>
         )}
       </div>
 
       {videos.length > 1 && videos.length <= 20 && (
-        <div className="absolute top-5 right-3 z-10 pointer-events-none flex flex-col gap-[3px]">
-          {videos.slice(0, Math.min(videos.length, 12)).map((_, idx) => (
+        <div
+          className="pointer-events-none absolute top-5 z-10 flex flex-col gap-[3px]"
+          style={isLandscape ? { left: 'calc(62% - 16px)' } : { right: '12px' }}
+        >
+          {videos.slice(0, Math.min(videos.length, 12)).map((_, index) => (
             <div
-              key={idx}
+              key={index}
               className={`rounded-full transition-all duration-300 ${
-                idx === currentIndex
-                  ? 'w-[4px] h-[4px] bg-white/80'
-                  : 'w-[3px] h-[3px] bg-white/20'
+                index === currentIndex
+                  ? 'h-[4px] w-[4px] bg-white/80'
+                  : 'h-[3px] w-[3px] bg-white/20'
               }`}
             />
           ))}
-          {videos.length > 12 && <div className="w-[3px] h-[3px] bg-white/10 rounded-full" />}
+          {videos.length > 12 && <div className="h-[3px] w-[3px] rounded-full bg-white/10" />}
         </div>
       )}
 
-      <SaveToast show={showToast} message="표현 저장됨" />
+      <SaveToast show={showToast} message="표현을 저장했어요" />
 
       <PremiumModal
         isOpen={showPremiumModal}

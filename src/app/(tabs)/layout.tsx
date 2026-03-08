@@ -7,8 +7,10 @@ import { LoginGateModal } from '@/components/LoginGateModal'
 import { AdminActivator } from '@/components/AdminActivator'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
-
+import { usePhraseStore } from '@/stores/usePhraseStore'
+import { useUserStore } from '@/stores/useUserStore'
 import { useAuth } from '@/hooks/useAuth'
+import { useOrientation } from '@/hooks/useOrientation'
 
 const GUEST_VIEW_LIMIT = 3
 
@@ -18,66 +20,99 @@ export default function TabsLayout({
   children: React.ReactNode
 }) {
   const router = useRouter()
-  const hasOnboarded = useOnboardingStore((s) => s.hasOnboarded)
+  const hasOnboarded = useOnboardingStore((state) => state.hasOnboarded)
+  const onboardingHydrated = useOnboardingStore((state) => state.hydrated)
+  const completeOnboarding = useOnboardingStore((state) => state.completeOnboarding)
+  const watchedVideoIds = useWatchHistoryStore((state) => state.watchedVideoIds)
+  const phraseCount = usePhraseStore((state) => state.phrases.length)
+  const streakDays = useUserStore((state) => state.streakDays)
+  const { user, loading: authLoading } = useAuth()
+  const { isLandscape } = useOrientation()
+
   const [checked, setChecked] = useState(false)
   const [showLoginGate, setShowLoginGate] = useState(false)
-  const { user, loading: authLoading } = useAuth()
-  const watchedVideoIds = useWatchHistoryStore((s) => s.watchedVideoIds)
 
   useEffect(() => {
+    if (authLoading || !onboardingHydrated) return
+
+    if (!user) {
+      setChecked(true)
+      return
+    }
+
+    const hasExistingActivity = watchedVideoIds.length > 0 || phraseCount > 0 || streakDays > 0
+
+    if (hasExistingActivity && !hasOnboarded) {
+      completeOnboarding()
+      setChecked(true)
+      return
+    }
+
     if (!hasOnboarded) {
       router.replace('/onboarding')
-    } else {
-      setChecked(true)
+      return
     }
-  }, [hasOnboarded, router])
 
-  // Track guest views: show login gate when limit exceeded
+    setChecked(true)
+  }, [
+    authLoading,
+    completeOnboarding,
+    hasOnboarded,
+    onboardingHydrated,
+    phraseCount,
+    router,
+    streakDays,
+    user,
+    watchedVideoIds.length,
+  ])
+
   useEffect(() => {
     if (authLoading) return
+
     if (user) {
       setShowLoginGate(false)
       return
     }
-    // Non-logged-in user: check unique video watch count
+
     if (watchedVideoIds.length > GUEST_VIEW_LIMIT) {
       setShowLoginGate(true)
-      // Also persist to localStorage for cross-session awareness
       try {
         localStorage.setItem('studyeng-guest-views', JSON.stringify(watchedVideoIds.length))
       } catch {}
     }
-  }, [watchedVideoIds.length, user, authLoading])
+  }, [authLoading, user, watchedVideoIds.length])
 
-  // On mount, check if guest was already over limit from a previous session
   useEffect(() => {
-    if (authLoading) return
-    if (user) return
+    if (authLoading || user) return
+
     try {
       const stored = localStorage.getItem('studyeng-guest-views')
       if (stored && JSON.parse(stored) > GUEST_VIEW_LIMIT) {
         setShowLoginGate(true)
       }
     } catch {}
-  }, [user, authLoading])
+  }, [authLoading, user])
 
-  // Show nothing until we confirm onboarding is complete.
-  // This prevents the feed from flashing before the redirect fires.
   if (!checked) {
     return (
-      <div className="h-dvh bg-black flex flex-col items-center justify-center">
+      <div className="flex h-dvh flex-col items-center justify-center bg-black">
         <div className="relative">
-          <div className="w-8 h-8 border-[1.5px] border-white/10 rounded-full" />
-          <div className="absolute inset-0 w-8 h-8 border-[1.5px] border-transparent border-t-white/60 rounded-full animate-spin" />
+          <div className="h-8 w-8 rounded-full border-[1.5px] border-white/10" />
+          <div className="absolute inset-0 h-8 w-8 animate-spin rounded-full border-[1.5px] border-transparent border-t-white/60" />
         </div>
       </div>
     )
   }
 
   return (
-    <div className="h-dvh flex flex-col max-w-lg mx-auto relative">
+    <div className={`relative mx-auto flex h-dvh flex-col ${isLandscape ? 'max-w-none' : 'max-w-lg'}`}
+      style={isLandscape ? {
+        paddingLeft: 'env(safe-area-inset-left, 0px)',
+        paddingRight: 'env(safe-area-inset-right, 0px)',
+      } : undefined}
+    >
       <main className="flex-1 overflow-hidden">{children}</main>
-      <BottomNav />
+      {!isLandscape && <BottomNav />}
       <LoginGateModal isOpen={showLoginGate} />
       <Suspense fallback={null}>
         <AdminActivator />

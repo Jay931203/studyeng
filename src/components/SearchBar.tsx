@@ -70,7 +70,7 @@ export function SearchBar() {
           {results.map((r) => (
             <button
               key={r.video.id}
-              onMouseDown={() => { clearDeletedFlag(r.video.id); router.push(`/?v=${r.video.id}`) }}
+              onMouseDown={() => { clearDeletedFlag(r.video.id); router.push(`/shorts?v=${r.video.id}`) }}
               className="w-full p-3 text-left hover:bg-[var(--bg-card)] border-b border-white/5 last:border-0"
             >
               <p className="text-[var(--text-primary)] text-sm font-medium truncate">{r.video.title}</p>
