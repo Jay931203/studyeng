@@ -8,15 +8,22 @@ import { loadSeedData } from './lib/load-seed-data.mjs'
 import {
   TRANSCRIPT_RULES,
   checkTranscript,
+  filterIssuesByReview,
   getSubtitleCoverage,
   summarizeIssues,
 } from './lib/transcript-quality.mjs'
+import {
+  getExternalPlaybackStatus,
+  readValidationCache,
+} from './lib/youtube-validation.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
 const SEED_VIDEOS_PATH = join(ROOT, 'src', 'data', 'seed-videos.ts')
 const TRANSCRIPTS_DIR = join(ROOT, 'public', 'transcripts')
 const WHISPER_MANIFEST_PATH = join(__dirname, 'whisper-manifest.json')
+const YOUTUBE_VALIDATION_PATH = join(ROOT, 'src', 'data', 'youtube-validation-cache.json')
+const REVIEW_REGISTRY_PATH = join(ROOT, 'src', 'data', 'content-review-registry.json')
 const CONTENT_MANIFEST_PATH = join(ROOT, 'src', 'data', 'content-manifest.json')
 const CONTENT_REPORT_PATH = join(ROOT, 'docs', 'reports', 'content-system-report.md')
 const TARGET_VIDEO_COUNT = 1000
@@ -30,13 +37,20 @@ const writeOutputs = !args.includes('--no-write')
 async function main() {
   const { categories, seedVideos, series } = await loadSeedData(SEED_VIDEOS_PATH)
   const whisperManifest = await readJson(WHISPER_MANIFEST_PATH, {})
+  const reviewRegistry = await readJson(REVIEW_REGISTRY_PATH, {
+    acceptedIssueOverrides: {},
+    archivedOrphanAssets: {},
+  })
+  const youtubeValidation = (await readValidationCache(YOUTUBE_VALIDATION_PATH)).videos
   const categoryIds = new Set(categories.map(category => category.id))
   const seriesMap = new Map(series.map(entry => [entry.id, entry]))
   const videosByYoutubeId = groupBy(seedVideos, video => video.youtubeId)
+  const archivedOrphanIds = new Set(Object.keys(reviewRegistry.archivedOrphanAssets ?? {}))
   const transcriptYoutubeIds = existsSync(TRANSCRIPTS_DIR)
     ? (await readdir(TRANSCRIPTS_DIR))
         .filter(file => file.endsWith('.json'))
         .map(file => file.replace(/\.json$/i, ''))
+        .filter(youtubeId => !archivedOrphanIds.has(youtubeId))
     : []
   const allYoutubeIds = unique([
     ...videosByYoutubeId.keys(),
@@ -51,13 +65,17 @@ async function main() {
     const transcript = await readJson(transcriptPath, null)
     const transcriptEntries = Array.isArray(transcript) ? transcript : []
     const coverage = getSubtitleCoverage(transcriptEntries)
-    const issues = checkTranscript(transcriptEntries)
+    const rawIssues = checkTranscript(transcriptEntries)
+    const issues = filterIssuesByReview(youtubeId, rawIssues, reviewRegistry)
     const issueCounts = summarizeIssues(issues)
     const whisperEntry = whisperManifest[youtubeId] ?? null
+    const validationEntry = youtubeValidation[youtubeId] ?? null
     const whisperStatus = whisperEntry ? 'done' : 'missing'
     const transcriptSource = whisperEntry ? 'whisper' : transcriptEntries.length > 0 ? 'static' : 'missing'
     const timingStatus = transcriptEntries.length === 0 ? 'missing' : issues.length > 0 ? 'needs_review' : 'pass'
+    const externalPlaybackStatus = getExternalPlaybackStatus(validationEntry)
     const workflowStatus = resolveAssetWorkflowStatus({
+      externalPlaybackStatus,
       whisperStatus,
       koreanStatus: coverage.koreanStatus,
       timingStatus,
@@ -72,6 +90,10 @@ async function main() {
       clipCount: videos.length,
       transcriptEntryCount: coverage.entryCount,
       transcriptSource,
+      externalPlaybackStatus,
+      externalPlaybackReason: validationEntry?.reason ?? null,
+      externalValidationCheckedAt: validationEntry?.checkedAt ?? null,
+      externalValidationStatus: validationEntry?.status ?? 'unchecked',
       englishSubtitleStatus: coverage.englishStatus,
       koreanSubtitleStatus: coverage.koreanStatus,
       timingStatus,
@@ -85,6 +107,7 @@ async function main() {
           }
         : null,
       qualityIssueCount: issues.length,
+      acceptedQualityIssueCount: rawIssues.length - issues.length,
       qualityIssueTypes: issueCounts,
       qualityIssues: issues.map(issue => ({
         type: issue.type,
@@ -121,6 +144,7 @@ async function main() {
       clipDurationSec,
       clipDurationStatus,
       metadataStatus,
+      externalPlaybackStatus: asset?.externalPlaybackStatus ?? 'unchecked',
       assetWorkflowStatus: asset?.workflowStatus ?? 'needs_whisper',
       workflowStatus,
       nextAction: resolveNextAction(workflowStatus),
@@ -132,6 +156,7 @@ async function main() {
     series,
     videos,
     assets,
+    reviewRegistry,
   })
 
   if (writeOutputs) {
@@ -144,7 +169,7 @@ async function main() {
   printSummary(manifest, queueName, scope, limit)
 }
 
-function buildManifest({ categories, series, videos, assets }) {
+function buildManifest({ categories, series, videos, assets, reviewRegistry }) {
   const summary = {
     targetVideoCount: TARGET_VIDEO_COUNT,
     currentVideoCount: videos.length,
@@ -152,15 +177,19 @@ function buildManifest({ categories, series, videos, assets }) {
     remainingToTarget: Math.max(0, TARGET_VIDEO_COUNT - videos.length),
     currentSeriesCount: series.length,
     orphanAssetCount: assets.filter(asset => asset.workflowStatus === 'orphaned').length,
+    archivedOrphanCount: Object.keys(reviewRegistry.archivedOrphanAssets ?? {}).length,
+    acceptedTimingIssueCount: assets.reduce((sum, asset) => sum + (asset.acceptedQualityIssueCount ?? 0), 0),
     categoryCounts: countBy(videos, video => video.category),
     videoWorkflowCounts: countBy(videos, video => video.workflowStatus),
     assetWorkflowCounts: countBy(assets, asset => asset.workflowStatus),
     clipDurationCounts: countBy(videos, video => video.clipDurationStatus),
     whisperCounts: countBy(assets, asset => asset.whisperStatus),
+    externalPlaybackCounts: countBy(assets, asset => asset.externalPlaybackStatus),
     koreanSubtitleCounts: countBy(assets, asset => asset.koreanSubtitleStatus),
     timingCounts: countBy(assets, asset => asset.timingStatus),
     seriesBalance: buildSeriesBalance(videos, series),
     queues: {
+      blockedExternal: assets.filter(asset => asset.workflowStatus === 'blocked_external').map(asset => asset.youtubeId),
       needsWhisper: assets.filter(asset => asset.workflowStatus === 'needs_whisper').map(asset => asset.youtubeId),
       needsTranslation: assets.filter(asset => asset.workflowStatus === 'needs_translation').map(asset => asset.youtubeId),
       needsTimingReview: assets.filter(asset => asset.workflowStatus === 'needs_timing_review').map(asset => asset.youtubeId),
@@ -228,6 +257,10 @@ function buildMarkdownReport(manifest) {
   const { summary } = manifest
   const underfilled = manifest.series.filter(series => series.balanceStatus === 'underfilled').slice(0, 10)
   const overfilled = manifest.series.filter(series => series.balanceStatus === 'overfilled').slice(-10).reverse()
+  const blockedExternal = manifest.assets
+    .filter(asset => asset.workflowStatus === 'blocked_external')
+    .sort((a, b) => a.youtubeId.localeCompare(b.youtubeId))
+    .slice(0, 20)
   const topTimingReview = manifest.assets
     .filter(asset => asset.workflowStatus === 'needs_timing_review')
     .sort((a, b) => b.qualityIssueCount - a.qualityIssueCount || a.youtubeId.localeCompare(b.youtubeId))
@@ -243,6 +276,7 @@ function buildMarkdownReport(manifest) {
     `- Videos: ${summary.currentVideoCount} / ${summary.targetVideoCount}`,
     `- Assets: ${summary.currentAssetCount}`,
     `- Orphan assets: ${summary.orphanAssetCount}`,
+    `- Archived orphan assets: ${summary.archivedOrphanCount}`,
     `- Series: ${summary.currentSeriesCount}`,
     `- Remaining to target: ${summary.remainingToTarget}`,
     '',
@@ -267,11 +301,22 @@ function buildMarkdownReport(manifest) {
       ? overfilled.map(entry => `- ${entry.id}: ${entry.videoCount} videos (${entry.deltaFromAverage} vs avg)`)
       : ['- none']),
     '',
+    '## Blocked External Videos',
+    '',
+    ...(blockedExternal.length > 0
+      ? blockedExternal.map(asset => `- ${asset.youtubeId}: ${asset.externalPlaybackReason ?? 'external_restricted'}`)
+      : ['- none']),
+    '',
     '## Timing Review Queue',
     '',
     ...(topTimingReview.length > 0
       ? topTimingReview.map(asset => `- ${asset.youtubeId}: ${asset.qualityIssueCount} issues`)
       : ['- none']),
+    '',
+    '## Reviewed Exceptions',
+    '',
+    `- Accepted timing issues: ${summary.acceptedTimingIssueCount}`,
+    `- Archived orphan assets: ${summary.archivedOrphanCount}`,
     '',
   ].join('\n')
 }
@@ -297,12 +342,14 @@ function printSummary(manifest, queueName, scope, limit) {
 
   if (!queueName) {
     console.log('\nQueues:')
+    console.log(`  blockedExternal: ${summary.queues.blockedExternal.length}`)
     console.log(`  needsWhisper: ${summary.queues.needsWhisper.length}`)
     console.log(`  needsTranslation: ${summary.queues.needsTranslation.length}`)
     console.log(`  needsTimingReview: ${summary.queues.needsTimingReview.length}`)
-    console.log(`  orphanedAssets: ${summary.queues.orphanedAssets.length}`)
     console.log(`  needsClipReview: ${summary.queues.needsClipReview.length}`)
     console.log(`  needsMetadata: ${summary.queues.needsMetadata.length}`)
+    console.log(`  orphanedAssets: ${summary.queues.orphanedAssets.length}`)
+    console.log(`  archivedOrphanAssets: ${summary.archivedOrphanCount}`)
     console.log(`  readyAssets: ${summary.queues.readyAssets.length}`)
     return
   }
@@ -331,8 +378,9 @@ function formatQueueItem(item, scope) {
   return `${item.youtubeId} | ${item.transcriptEntryCount} entries | ${item.nextAction}`
 }
 
-function resolveAssetWorkflowStatus({ whisperStatus, koreanStatus, timingStatus, linkedVideoCount }) {
+function resolveAssetWorkflowStatus({ externalPlaybackStatus, whisperStatus, koreanStatus, timingStatus, linkedVideoCount }) {
   if (linkedVideoCount === 0) return 'orphaned'
+  if (externalPlaybackStatus === 'blocked') return 'blocked_external'
   if (whisperStatus !== 'done') return 'needs_whisper'
   if (koreanStatus !== 'complete') return 'needs_translation'
   if (timingStatus !== 'pass') return 'needs_timing_review'
@@ -340,6 +388,7 @@ function resolveAssetWorkflowStatus({ whisperStatus, koreanStatus, timingStatus,
 }
 
 function resolveVideoWorkflowStatus({ metadataStatus, clipDurationStatus, assetWorkflowStatus }) {
+  if (assetWorkflowStatus === 'blocked_external') return 'blocked_external'
   if (metadataStatus !== 'complete') return 'needs_metadata'
   if (clipDurationStatus === 'too_short' || clipDurationStatus === 'too_long') return 'needs_clip_review'
   return assetWorkflowStatus
@@ -366,6 +415,8 @@ function resolveNextAction(workflowStatus) {
       return 'translate_korean'
     case 'needs_timing_review':
       return 'review_timing'
+    case 'blocked_external':
+      return 'delete_from_seed'
     case 'orphaned':
       return 'link_seed_video'
     case 'needs_clip_review':

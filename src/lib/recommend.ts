@@ -10,192 +10,273 @@ interface RecommendOptions {
   interests?: string[]
   /** User's English proficiency level from onboarding */
   level?: 'beginner' | 'intermediate' | 'advanced'
+  /** The video the user is currently watching, if any */
+  seedVideo?: VideoData
 }
 
-/**
- * Shuffle an array in place (Fisher-Yates).
- */
-function shuffle<T>(arr: T[]): T[] {
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[arr[i], arr[j]] = [arr[j], arr[i]]
-  }
-  return arr
+interface ScoreContext {
+  interestSet: Set<string>
+  likedCategoryCounts: Map<CategoryId, number>
+  likedSeriesCounts: Map<string, number>
+  watchedCategoryCounts: Map<CategoryId, number>
+  watchedSeriesCounts: Map<string, number>
+  watchedIds: Set<string>
+  level?: 'beginner' | 'intermediate' | 'advanced'
+  seedVideo?: VideoData
 }
 
-/**
- * Round-robin interleave from category queues for diversity.
- */
-function interleaveByCategory(videos: VideoData[]): VideoData[] {
-  const byCategory = new Map<string, VideoData[]>()
-  for (const v of videos) {
-    const list = byCategory.get(v.category) ?? []
-    list.push(v)
-    byCategory.set(v.category, list)
+interface ScoredVideo {
+  score: number
+  video: VideoData
+}
+
+const catalogById = new Map(seedVideos.map((video) => [video.id, video]))
+
+function stableHash(value: string): number {
+  let hash = 2166136261
+  for (let index = 0; index < value.length; index += 1) {
+    hash ^= value.charCodeAt(index)
+    hash = Math.imul(hash, 16777619)
+  }
+  return hash >>> 0
+}
+
+function tokenizeTitle(title: string) {
+  return title
+    .toLowerCase()
+    .split(/[^a-z0-9]+/)
+    .filter((token) => token.length >= 2)
+}
+
+function titleOverlapScore(leftTitle: string, rightTitle: string) {
+  const leftTokens = new Set(tokenizeTitle(leftTitle))
+  const rightTokens = [...new Set(tokenizeTitle(rightTitle))]
+
+  if (leftTokens.size === 0 || rightTokens.length === 0) {
+    return 0
   }
 
-  const result: VideoData[] = []
-  const categoryQueues = [...byCategory.values()]
-  let idx = 0
-  while (result.length < videos.length) {
-    const queue = categoryQueues[idx % categoryQueues.length]
-    if (queue.length > 0) {
-      result.push(queue.shift()!)
+  let matches = 0
+  for (const token of rightTokens) {
+    if (leftTokens.has(token)) {
+      matches += 1
     }
-    idx++
-    if (idx % categoryQueues.length === 0) {
-      for (let i = categoryQueues.length - 1; i >= 0; i--) {
-        if (categoryQueues[i].length === 0) categoryQueues.splice(i, 1)
-      }
-      if (categoryQueues.length === 0) break
-      idx = 0
-    }
   }
-  return result
+
+  return matches / Math.max(leftTokens.size, rightTokens.length)
 }
 
-/**
- * Map user level to preferred difficulty ranges.
- * Returns [min, max] inclusive.
- */
-function getDifficultyRange(level: 'beginner' | 'intermediate' | 'advanced'): [number, number] {
-  switch (level) {
-    case 'beginner': return [1, 2]
-    case 'intermediate': return [2, 3]
-    case 'advanced': return [3, 5]
-  }
-}
-
-/**
- * Score a video's difficulty fit for the user's level.
- * Returns 0 (perfect fit) to higher values (worse fit).
- */
-function difficultyScore(difficulty: number, level?: 'beginner' | 'intermediate' | 'advanced'): number {
-  if (!level) return 0
-  const [min, max] = getDifficultyRange(level)
-  if (difficulty >= min && difficulty <= max) return 0
-  // Distance from the preferred range
-  return difficulty < min ? min - difficulty : difficulty - max
-}
-
-/**
- * Sort videos by difficulty fit, preserving relative order among equally-fit videos.
- */
-function sortByDifficulty(videos: VideoData[], level?: 'beginner' | 'intermediate' | 'advanced'): VideoData[] {
-  if (!level) return videos
-  return [...videos].sort((a, b) => difficultyScore(a.difficulty, level) - difficultyScore(b.difficulty, level))
-}
-
-/**
- * Smart recommendation that considers watch history, likes, interests, and level.
- * - Prioritizes unwatched videos
- * - Strongly boosts onboarding interest categories (put them first)
- * - Boosts categories the user has liked
- * - Filters/sorts by difficulty based on user level
- * - Maintains category diversity via round-robin
- * - Falls back to simple diversity shuffle when no user data
- */
-export function recommendVideos(
-  videos: VideoData[],
-  options: RecommendOptions = {}
-): VideoData[] {
-  const { watchedEpisodes = {}, likes = {}, interests = [], level } = options
-
-  // Build a set of all watched video IDs across all series
+function buildWatchedIdSet(watchedEpisodes: Record<string, string[]>) {
   const watchedIds = new Set<string>()
   for (const ids of Object.values(watchedEpisodes)) {
     for (const id of ids) {
       watchedIds.add(id)
     }
   }
+  return watchedIds
+}
 
-  // Determine liked categories for boosting
-  const likedVideoIds = new Set(Object.keys(likes))
-  const likedCategories = new Map<CategoryId, number>()
-  for (const v of videos) {
-    if (likedVideoIds.has(v.id)) {
-      likedCategories.set(
-        v.category,
-        (likedCategories.get(v.category) ?? 0) + 1
-      )
+function accumulatePreferenceCounts(videoIds: Iterable<string>) {
+  const categoryCounts = new Map<CategoryId, number>()
+  const seriesCounts = new Map<string, number>()
+
+  for (const videoId of videoIds) {
+    const video = catalogById.get(videoId)
+    if (!video) continue
+
+    categoryCounts.set(video.category, (categoryCounts.get(video.category) ?? 0) + 1)
+
+    if (video.seriesId) {
+      seriesCounts.set(video.seriesId, (seriesCounts.get(video.seriesId) ?? 0) + 1)
     }
   }
 
-  // Build set of interest categories from onboarding
-  const interestSet = new Set<string>(interests)
+  return { categoryCounts, seriesCounts }
+}
 
-  // Split into unwatched and watched
-  const unwatched: VideoData[] = []
-  const watched: VideoData[] = []
-  for (const v of videos) {
-    if (watchedIds.has(v.id)) {
-      watched.push(v)
-    } else {
-      unwatched.push(v)
-    }
+/**
+ * Round user level to preferred difficulty ranges.
+ * Returns [min, max] inclusive.
+ */
+function getDifficultyRange(level: 'beginner' | 'intermediate' | 'advanced'): [number, number] {
+  switch (level) {
+    case 'beginner':
+      return [1, 2]
+    case 'intermediate':
+      return [2, 3]
+    case 'advanced':
+      return [3, 5]
+  }
+}
+
+function difficultyScore(
+  difficulty: number,
+  level?: 'beginner' | 'intermediate' | 'advanced',
+) {
+  if (!level) return 0
+  const [min, max] = getDifficultyRange(level)
+  if (difficulty >= min && difficulty <= max) return 0
+  return difficulty < min ? min - difficulty : difficulty - max
+}
+
+function buildScoreContext(options: RecommendOptions): ScoreContext {
+  const watchedEpisodes = options.watchedEpisodes ?? {}
+  const likes = options.likes ?? {}
+  const likedIds = Object.keys(likes).filter((videoId) => likes[videoId])
+  const watchedIds = buildWatchedIdSet(watchedEpisodes)
+
+  const likedCounts = accumulatePreferenceCounts(likedIds)
+  const watchedCounts = accumulatePreferenceCounts(watchedIds)
+
+  return {
+    interestSet: new Set(options.interests ?? []),
+    likedCategoryCounts: likedCounts.categoryCounts,
+    likedSeriesCounts: likedCounts.seriesCounts,
+    watchedCategoryCounts: watchedCounts.categoryCounts,
+    watchedSeriesCounts: watchedCounts.seriesCounts,
+    watchedIds,
+    level: options.level,
+    seedVideo: options.seedVideo,
+  }
+}
+
+function scoreVideo(video: VideoData, context: ScoreContext) {
+  let score = 0
+  const {
+    interestSet,
+    likedCategoryCounts,
+    likedSeriesCounts,
+    watchedCategoryCounts,
+    watchedSeriesCounts,
+    watchedIds,
+    level,
+    seedVideo,
+  } = context
+
+  if (!watchedIds.has(video.id)) {
+    score += 420
+  } else {
+    score -= 140
   }
 
-  // When interests are set, strongly boost those categories (put them first)
-  if (interestSet.size > 0) {
-    const interestVideos: VideoData[] = []
-    const otherVideos: VideoData[] = []
-    for (const v of unwatched) {
-      if (interestSet.has(v.category)) {
-        interestVideos.push(v)
-      } else {
-        otherVideos.push(v)
-      }
+  if (interestSet.has(video.category)) {
+    score += 120
+  }
+
+  score += (likedCategoryCounts.get(video.category) ?? 0) * 55
+  score += Math.min(watchedCategoryCounts.get(video.category) ?? 0, 4) * 18
+
+  if (video.seriesId) {
+    score += (likedSeriesCounts.get(video.seriesId) ?? 0) * 75
+    score += Math.min(watchedSeriesCounts.get(video.seriesId) ?? 0, 3) * 24
+  }
+
+  score -= difficultyScore(video.difficulty, level) * 28
+
+  if (seedVideo) {
+    if (video.category === seedVideo.category) {
+      score += 90
     }
 
-    // Within each group, further boost liked categories
-    const sortAndDiversify = (pool: VideoData[]): VideoData[] => {
-      if (likedCategories.size > 0) {
-        const boosted: VideoData[] = []
-        const normal: VideoData[] = []
-        for (const v of pool) {
-          if (likedCategories.has(v.category)) {
-            boosted.push(v)
-          } else {
-            normal.push(v)
-          }
+    score += Math.max(0, 48 - Math.abs(video.difficulty - seedVideo.difficulty) * 16)
+    score += titleOverlapScore(video.title, seedVideo.title) * 90
+
+    if (video.seriesId && seedVideo.seriesId && video.seriesId === seedVideo.seriesId) {
+      score += 240
+
+      if (video.episodeNumber != null && seedVideo.episodeNumber != null) {
+        const delta = video.episodeNumber - seedVideo.episodeNumber
+
+        if (delta === 1) {
+          score += 200
+        } else if (delta > 1) {
+          score += Math.max(60, 140 - delta * 18)
+        } else if (delta < 0) {
+          score -= Math.min(150, Math.abs(delta) * 20)
         }
-        return [
-          ...interleaveByCategory(sortByDifficulty(shuffle([...boosted]), level)),
-          ...interleaveByCategory(sortByDifficulty(shuffle([...normal]), level)),
-        ]
-      }
-      return interleaveByCategory(sortByDifficulty(shuffle([...pool]), level))
-    }
-
-    const diverseInterest = sortAndDiversify(interestVideos)
-    const diverseOther = sortAndDiversify(otherVideos)
-    const diverseWatched = interleaveByCategory(sortByDifficulty(shuffle([...watched]), level))
-    return [...diverseInterest, ...diverseOther, ...diverseWatched]
-  }
-
-  // Sort unwatched: boost liked categories to the front
-  if (likedCategories.size > 0) {
-    // Separate into boosted (from liked categories) and normal
-    const boosted: VideoData[] = []
-    const normal: VideoData[] = []
-    for (const v of unwatched) {
-      if (likedCategories.has(v.category)) {
-        boosted.push(v)
-      } else {
-        normal.push(v)
       }
     }
-    // Interleave each group with category diversity, then combine
-    const diverseBoosted = interleaveByCategory(sortByDifficulty(shuffle([...boosted]), level))
-    const diverseNormal = interleaveByCategory(sortByDifficulty(shuffle([...normal]), level))
-    const diverseWatched = interleaveByCategory(sortByDifficulty(shuffle([...watched]), level))
-    return [...diverseBoosted, ...diverseNormal, ...diverseWatched]
   }
 
-  // No like data or interests: simple diversity shuffle with difficulty sort, unwatched first
-  const diverseUnwatched = interleaveByCategory(sortByDifficulty(shuffle([...unwatched]), level))
-  const diverseWatched = interleaveByCategory(sortByDifficulty(shuffle([...watched]), level))
-  return [...diverseUnwatched, ...diverseWatched]
+  // Deterministic tie-breaker so equal scores do not reshuffle across renders.
+  score += (stableHash(video.id) % 1000) / 100000
+
+  return score
+}
+
+function diversifyVideos(scoredVideos: ScoredVideo[], seedVideo?: VideoData) {
+  const remaining = [...scoredVideos]
+  const result: VideoData[] = []
+  const recentCategories = seedVideo ? [seedVideo.category] : []
+  const recentSeriesIds = seedVideo?.seriesId ? [seedVideo.seriesId] : []
+
+  while (remaining.length > 0) {
+    const lookahead = Math.min(remaining.length, 24)
+    let bestIndex = 0
+    let bestAdjustedScore = Number.NEGATIVE_INFINITY
+
+    for (let index = 0; index < lookahead; index += 1) {
+      const candidate = remaining[index]
+      let adjustedScore = candidate.score
+
+      const recentCategoryMatches = recentCategories
+        .slice(-2)
+        .filter((category) => category === candidate.video.category).length
+      adjustedScore -= recentCategoryMatches * 35
+
+      if (candidate.video.seriesId) {
+        const recentSeriesMatches = recentSeriesIds
+          .slice(-2)
+          .filter((seriesId) => seriesId === candidate.video.seriesId).length
+
+        if (recentSeriesMatches > 0) {
+          adjustedScore -=
+            seedVideo?.seriesId === candidate.video.seriesId
+              ? recentSeriesMatches * 10
+              : recentSeriesMatches * 70
+        }
+      }
+
+      if (adjustedScore > bestAdjustedScore) {
+        bestAdjustedScore = adjustedScore
+        bestIndex = index
+      }
+    }
+
+    const [picked] = remaining.splice(bestIndex, 1)
+    result.push(picked.video)
+    recentCategories.push(picked.video.category)
+    if (picked.video.seriesId) {
+      recentSeriesIds.push(picked.video.seriesId)
+    }
+  }
+
+  return result
+}
+
+/**
+ * Stable recommendation that considers watch history, likes, interests, level,
+ * and the currently playing video context when present.
+ */
+export function recommendVideos(videos: VideoData[], options: RecommendOptions = {}) {
+  const context = buildScoreContext(options)
+  const seedVideo = options.seedVideo
+
+  const scoredVideos = videos
+    .filter((video) => video.id !== seedVideo?.id)
+    .map((video) => ({
+      score: scoreVideo(video, context),
+      video,
+    }))
+    .sort((left, right) => {
+      if (right.score !== left.score) {
+        return right.score - left.score
+      }
+
+      return left.video.id.localeCompare(right.video.id)
+    })
+
+  return diversifyVideos(scoredVideos, seedVideo)
 }
 
 /**
@@ -206,25 +287,26 @@ export function recommendVideos(
 export function seriesPlaylist(
   seriesId: string,
   startVideoId: string,
-  options: RecommendOptions = {}
-): VideoData[] {
+  options: RecommendOptions = {},
+) {
   const episodes = getVideosBySeries(seriesId)
-  const startIdx = episodes.findIndex(v => v.id === startVideoId)
-  // Rotate episodes so startVideoId is first, rest follow in order
-  const rotated = startIdx > 0
-    ? [...episodes.slice(startIdx), ...episodes.slice(0, startIdx)]
-    : episodes
-  // Append recommended videos (excluding series episodes) after
-  const seriesIds = new Set(episodes.map(v => v.id))
-  const others = seedVideos.filter(v => !seriesIds.has(v.id))
-  const recommended = recommendVideos(others, options)
+  const startIdx = episodes.findIndex((video) => video.id === startVideoId)
+  const rotated =
+    startIdx > 0 ? [...episodes.slice(startIdx), ...episodes.slice(0, startIdx)] : episodes
+  const seriesIds = new Set(episodes.map((video) => video.id))
+  const others = seedVideos.filter((video) => !seriesIds.has(video.id))
+  const recommended = recommendVideos(others, {
+    ...options,
+    seedVideo: rotated[0],
+  })
+
   return [...rotated, ...recommended]
 }
 
 /**
  * Find video index by ID, for deep linking (?v=videoId).
  */
-export function findVideoIndex(videos: VideoData[], videoId: string): number {
-  const idx = videos.findIndex(v => v.id === videoId)
+export function findVideoIndex(videos: VideoData[], videoId: string) {
+  const idx = videos.findIndex((video) => video.id === videoId)
   return idx >= 0 ? idx : 0
 }

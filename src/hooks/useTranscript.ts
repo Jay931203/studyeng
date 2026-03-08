@@ -1,8 +1,10 @@
 import { useState, useEffect, useRef } from 'react'
 import type { SubtitleEntry } from '@/data/seed-videos'
+import staticTranscriptManifest from '../../scripts/whisper-manifest.json'
 
 // Client-side cache to avoid re-fetching on component re-mount
 const clientCache = new Map<string, SubtitleEntry[]>()
+const availableStaticTranscripts = new Set<string>(Object.keys(staticTranscriptManifest))
 
 export function useTranscript(youtubeId: string) {
   const [subtitles, setSubtitles] = useState<SubtitleEntry[]>(() => {
@@ -63,24 +65,26 @@ async function fetchWithStaticFallback(
 ): Promise<SubtitleEntry[]> {
   // 1. Try pre-baked static JSON file (no API cost, instant)
   let staticData: SubtitleEntry[] | null = null
-  try {
-    const staticRes = await fetch(`/transcripts/${youtubeId}.json`, { signal })
-    if (staticRes.ok) {
-      const data = await staticRes.json()
-      if (Array.isArray(data) && data.length > 0) {
-        staticData = data
-        // If static data already has Korean translations, return it directly
-        const hasKorean = data.some((s: SubtitleEntry) => s.ko && s.ko.trim() !== '')
-        if (hasKorean) {
-          return data
+  if (availableStaticTranscripts.has(youtubeId)) {
+    try {
+      const staticRes = await fetch(`/transcripts/${youtubeId}.json`, { signal })
+      if (staticRes.ok) {
+        const data = await staticRes.json()
+        if (Array.isArray(data) && data.length > 0) {
+          staticData = data
+          // If static data already has Korean translations, return it directly
+          const hasKorean = data.some((s: SubtitleEntry) => s.ko && s.ko.trim() !== '')
+          if (hasKorean) {
+            return data
+          }
+          // Otherwise, static data exists but lacks Korean translations.
+          // Try API for a translated version, but use static as fallback.
         }
-        // Otherwise, static data exists but lacks Korean translations.
-        // Try API for a translated version, but use static as fallback.
       }
+    } catch (err: unknown) {
+      if (err instanceof Error && err.name === 'AbortError') throw err
+      // If the static file read fails unexpectedly, fall through to API.
     }
-  } catch (err: unknown) {
-    if (err instanceof Error && err.name === 'AbortError') throw err
-    // Static file not found, fall through to API
   }
 
   // 2. Fallback to API (fetches from YouTube + optional translation)

@@ -109,17 +109,17 @@ export function ListeningGame({ subtitle, allSubtitles, onComplete }: ListeningG
 
   return (
     <div className="flex flex-col items-center justify-center h-full px-6">
-      <p className="text-gray-500 text-xs uppercase tracking-wider mb-3">
+      <p className="mb-3 text-xs uppercase tracking-wider text-[var(--text-muted)]">
         다음에 올 대사는?
       </p>
 
       {/* Current sentence display */}
       <div className="w-full max-w-md mb-6">
-        <div className="bg-white/[0.06] rounded-2xl px-5 py-4 border border-white/[0.06]">
-          <p className="text-white text-base font-medium text-center leading-relaxed">
+        <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] px-5 py-4 shadow-[var(--card-shadow)]">
+          <p className="text-center text-base font-medium leading-relaxed text-[var(--text-primary)]">
             {currentSentence}
           </p>
-          <p className="text-gray-600 text-xs text-center mt-1.5">
+          <p className="mt-1.5 text-center text-xs text-[var(--text-muted)]">
             {subtitle.ko}
           </p>
         </div>
@@ -130,7 +130,7 @@ export function ListeningGame({ subtitle, allSubtitles, onComplete }: ListeningG
             fill="none"
             stroke="currentColor"
             strokeWidth={2}
-            className="w-4 h-4 text-gray-600"
+            className="h-4 w-4 text-[var(--accent-text)]"
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
           </svg>
@@ -148,7 +148,7 @@ export function ListeningGame({ subtitle, allSubtitles, onComplete }: ListeningG
           <p className="text-green-400/80 text-sm font-medium">
             {nextSubtitle.en}
           </p>
-          <p className="text-gray-600 text-xs mt-1">
+          <p className="mt-1 text-xs text-[var(--text-muted)]">
             {nextSubtitle.ko}
           </p>
         </motion.div>
@@ -157,18 +157,22 @@ export function ListeningGame({ subtitle, allSubtitles, onComplete }: ListeningG
       {/* 4 sentence choices */}
       <div className="flex flex-col gap-2.5 w-full max-w-md">
         {choices.map((choice, i) => {
-          let bg = 'bg-white/[0.06]'
-          let borderClass = 'border-white/[0.06]'
+          let backgroundColor = 'var(--bg-card)'
+          let borderColor = 'var(--border-card)'
+          let textColor = 'var(--text-primary)'
           if (selected) {
             if (choice === nextSubtitle.en) {
-              bg = 'bg-green-500/15'
-              borderClass = 'border-green-400/40'
+              backgroundColor = 'rgba(34, 197, 94, 0.15)'
+              borderColor = 'rgba(74, 222, 128, 0.4)'
+              textColor = '#ffffff'
             } else if (choice === selected && !isCorrect) {
-              bg = 'bg-red-500/15'
-              borderClass = 'border-red-400/40'
+              backgroundColor = 'rgba(239, 68, 68, 0.15)'
+              borderColor = 'rgba(248, 113, 113, 0.4)'
+              textColor = '#ffffff'
             } else {
-              bg = 'bg-white/[0.02]'
-              borderClass = 'border-white/[0.03]'
+              backgroundColor = 'var(--bg-secondary)'
+              borderColor = 'var(--border-card)'
+              textColor = 'var(--text-secondary)'
             }
           }
 
@@ -181,9 +185,10 @@ export function ListeningGame({ subtitle, allSubtitles, onComplete }: ListeningG
               whileTap={{ scale: 0.98 }}
               onClick={() => handleSelect(choice)}
               disabled={!!selected}
-              className={`w-full py-3.5 px-4 rounded-xl text-left text-white text-sm font-medium border transition-all ${bg} ${borderClass}`}
+              className="w-full rounded-xl border px-4 py-3.5 text-left text-sm font-medium transition-all"
+              style={{ backgroundColor, borderColor, color: textColor }}
             >
-              <span className="text-white/30 mr-2 text-xs font-bold">
+              <span className="mr-2 text-xs font-bold text-[var(--text-muted)]">
                 {String.fromCharCode(65 + i)}
               </span>
               {choice}

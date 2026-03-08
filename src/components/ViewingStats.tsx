@@ -1,6 +1,6 @@
 'use client'
 
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useUserStore } from '@/stores/useUserStore'
@@ -161,6 +161,7 @@ export function ViewingStats() {
   const watchedVideoIds = useWatchHistoryStore((s) => s.watchedVideoIds)
   const phrases = usePhraseStore((s) => s.phrases)
   const streakDays = useUserStore((s) => s.streakDays)
+  const [statsNow] = useState(() => Date.now())
 
   const totalWatched = watchedVideoIds.length
   const totalViews = useMemo(
@@ -251,10 +252,9 @@ export function ViewingStats() {
 
   // ── Weekly activity (last 7 days) ──
   const weeklyActivity = useMemo(() => {
-    const now = Date.now()
     const days = Array.from({ length: 7 }, (_, i) => {
       const daysAgo = 6 - i // index 0 = 6 days ago, index 6 = today
-      const dayStart = new Date(now)
+      const dayStart = new Date(statsNow)
       dayStart.setDate(dayStart.getDate() - daysAgo)
       dayStart.setHours(0, 0, 0, 0)
       const dayEnd = new Date(dayStart)
@@ -278,7 +278,7 @@ export function ViewingStats() {
 
     const maxCount = Math.max(...days.map((d) => d.count), 1)
     return { days, maxCount }
-  }, [watchRecords])
+  }, [statsNow, watchRecords])
 
   // ── Find preferred difficulty label ──
   const preferredDifficulty = useMemo(() => {

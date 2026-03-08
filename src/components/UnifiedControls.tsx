@@ -81,19 +81,26 @@ export function UnifiedControls({ videoId, videoTitle }: UnifiedControlsProps) {
 
   return (
     <>
-      <div className="absolute right-3 top-3 z-10 flex items-center gap-0.5 rounded-full bg-black/40 px-1.5 py-1 backdrop-blur-md">
+      <div
+        className="absolute right-3 top-3 z-10 flex items-center gap-0.5 rounded-full border px-1.5 py-1 backdrop-blur-md"
+        style={{
+          backgroundColor: 'var(--player-control-bg)',
+          borderColor: 'var(--player-control-border)',
+        }}
+      >
         <button
           onClick={(event) => {
             event.stopPropagation()
             toggleSubtitleMode()
           }}
-          className="flex h-8 min-w-[32px] items-center justify-center rounded-full px-2 text-[11px] font-semibold text-white transition-colors hover:bg-white/10"
+          className="flex h-8 min-w-[32px] items-center justify-center rounded-full px-2 text-[11px] font-semibold transition-colors"
+          style={{ color: 'var(--player-text)' }}
           aria-label="자막 모드"
         >
           {subtitleLabel}
         </button>
 
-        <div className="h-4 w-px shrink-0 bg-white/20" />
+        <div className="h-4 w-px shrink-0" style={{ backgroundColor: 'var(--player-divider)' }} />
 
         {videoId && (
           <motion.button
@@ -102,14 +109,14 @@ export function UnifiedControls({ videoId, videoTitle }: UnifiedControlsProps) {
               event.stopPropagation()
               toggleLike(videoId)
             }}
-            className="relative flex h-8 w-8 items-center justify-center rounded-full transition-colors hover:bg-white/10"
+            className="relative flex h-8 w-8 items-center justify-center rounded-full transition-colors"
             aria-label={liked ? '좋아요 취소' : '좋아요'}
           >
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill={liked ? '#EF4444' : 'none'}
-              stroke={liked ? '#EF4444' : 'white'}
+              stroke={liked ? '#EF4444' : 'var(--player-text)'}
               strokeWidth={2}
               className="h-4 w-4"
               animate={liked ? { scale: [1, 1.35, 0.9, 1.1, 1] } : { scale: 1 }}
@@ -153,9 +160,8 @@ export function UnifiedControls({ videoId, videoTitle }: UnifiedControlsProps) {
             const index = SPEEDS.indexOf(playbackRate)
             setPlaybackRate(SPEEDS[(index + 1) % SPEEDS.length])
           }}
-          className={`flex h-8 min-w-[32px] items-center justify-center rounded-full px-1.5 text-[11px] font-bold transition-colors hover:bg-white/10 ${
-            speedActive ? 'text-blue-400' : 'text-white'
-          }`}
+          className="flex h-8 min-w-[32px] items-center justify-center rounded-full px-1.5 text-[11px] font-bold transition-colors"
+          style={{ color: speedActive ? 'var(--accent-text)' : 'var(--player-text)' }}
           aria-label="재생 속도"
         >
           {speedLabel}
@@ -167,9 +173,8 @@ export function UnifiedControls({ videoId, videoTitle }: UnifiedControlsProps) {
             const index = REPEAT_CYCLE.indexOf(repeatMode)
             setRepeatMode(REPEAT_CYCLE[(index + 1) % REPEAT_CYCLE.length])
           }}
-          className={`flex h-8 w-8 items-center justify-center rounded-full transition-colors hover:bg-white/10 ${
-            repeatActive ? 'text-purple-400' : 'text-white'
-          }`}
+          className="flex h-8 w-8 items-center justify-center rounded-full transition-colors"
+          style={{ color: repeatActive ? 'var(--accent-text)' : 'var(--player-text)' }}
           aria-label="반복 재생"
           title="반복 재생"
         >
@@ -192,7 +197,8 @@ export function UnifiedControls({ videoId, videoTitle }: UnifiedControlsProps) {
               event.stopPropagation()
               clearLoop()
             }}
-            className="flex h-8 w-8 items-center justify-center rounded-full text-blue-400 transition-colors hover:bg-white/10"
+            className="flex h-8 w-8 items-center justify-center rounded-full transition-colors"
+            style={{ color: 'var(--accent-text)' }}
             aria-label="구간 반복 해제"
             title="구간 반복 해제"
           >
@@ -209,12 +215,13 @@ export function UnifiedControls({ videoId, videoTitle }: UnifiedControlsProps) {
           </button>
         )}
 
-        <div className="h-4 w-px shrink-0 bg-white/20" />
+        <div className="h-4 w-px shrink-0" style={{ backgroundColor: 'var(--player-divider)' }} />
 
         {videoId && (
           <button
             onClick={handleShare}
-            className="flex h-8 w-8 items-center justify-center rounded-full text-white transition-colors hover:bg-white/10"
+            className="flex h-8 w-8 items-center justify-center rounded-full transition-colors"
+            style={{ color: 'var(--player-text)' }}
             aria-label="공유하기"
           >
             <svg

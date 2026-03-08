@@ -21,6 +21,7 @@ async function main() {
     frozenAt: new Date().toISOString(),
     sourceManifestGeneratedAt: manifest.generatedAt,
     targetVideoCount: manifest.summary?.currentVideoCount ?? 0,
+    blocked_external: manifest.summary?.queues?.blockedExternal ?? [],
     needs_whisper: manifest.summary?.queues?.needsWhisper ?? [],
     needs_translation: manifest.summary?.queues?.needsTranslation ?? [],
     needs_timing_review: manifest.summary?.queues?.needsTimingReview ?? [],
@@ -31,6 +32,7 @@ async function main() {
   await writeFile(SNAPSHOT_PATH, JSON.stringify(snapshot, null, 2) + '\n', 'utf-8')
 
   console.log(`Snapshot written: ${SNAPSHOT_PATH}`)
+  console.log(`  blocked_external: ${snapshot.blocked_external.length}`)
   console.log(`  needs_whisper: ${snapshot.needs_whisper.length}`)
   console.log(`  needs_translation: ${snapshot.needs_translation.length}`)
   console.log(`  needs_timing_review: ${snapshot.needs_timing_review.length}`)

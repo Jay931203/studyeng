@@ -14,14 +14,15 @@ export function GameResult({ correct, xpEarned, onContinue }: GameResultProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.2 }}
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+      className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm"
+      style={{ backgroundColor: 'var(--game-overlay)' }}
       onClick={onContinue}
     >
       <motion.div
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.25, ease: 'easeOut' }}
-        className="text-center"
+        className="rounded-3xl border border-[var(--border-card)] bg-[var(--bg-card)] px-8 py-7 text-center shadow-[var(--card-shadow)]"
       >
         {/* Clean icon instead of emoji */}
         <div className="mb-5">
@@ -32,14 +33,14 @@ export function GameResult({ correct, xpEarned, onContinue }: GameResultProps) {
               </svg>
             </div>
           ) : (
-            <div className="w-16 h-16 mx-auto rounded-full bg-white/5 flex items-center justify-center">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-8 h-8 text-white/40">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="h-8 w-8" style={{ color: 'var(--text-secondary)' }}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </div>
           )}
         </div>
-        <p className="text-white text-2xl font-bold mb-2">
+        <p className="mb-2 text-2xl font-bold text-[var(--text-primary)]">
           {correct ? '맞았어' : '틀렸어'}
         </p>
         {correct && xpEarned > 0 && (
@@ -52,7 +53,7 @@ export function GameResult({ correct, xpEarned, onContinue }: GameResultProps) {
             +{xpEarned} XP
           </motion.p>
         )}
-        <p className="text-gray-500 text-sm mt-6">탭해서 계속</p>
+        <p className="mt-6 text-sm text-[var(--text-muted)]">탭해서 계속</p>
       </motion.div>
     </motion.div>
   )

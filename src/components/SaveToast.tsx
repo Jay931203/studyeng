@@ -15,7 +15,12 @@ export function SaveToast({ show, message }: SaveToastProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="fixed top-12 left-1/2 -translate-x-1/2 z-50 bg-white/10 backdrop-blur-md text-white/80 px-4 py-2 rounded-full text-xs font-medium border border-white/10"
+          className="fixed left-1/2 top-12 z-50 -translate-x-1/2 rounded-full border px-4 py-2 text-xs font-medium backdrop-blur-md"
+          style={{
+            backgroundColor: 'var(--player-chip-bg)',
+            borderColor: 'var(--player-chip-border)',
+            color: 'var(--player-text)',
+          }}
         >
           {message}
         </motion.div>

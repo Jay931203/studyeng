@@ -65,6 +65,25 @@ export function summarizeIssues(issues) {
   return counts
 }
 
+export function filterIssuesByReview(youtubeId, issues, reviewRegistry = {}) {
+  const accepted = reviewRegistry.acceptedIssueOverrides?.[youtubeId] ?? []
+  if (!Array.isArray(accepted) || accepted.length === 0) {
+    return issues
+  }
+
+  const acceptedSignatures = new Set(accepted.map(makeIssueSignature))
+  return issues.filter(issue => !acceptedSignatures.has(makeIssueSignature(issue)))
+}
+
+export function makeIssueSignature(issue) {
+  return [
+    issue.type,
+    issue.idx,
+    round2(issue.start),
+    round2(issue.end),
+  ].join(':')
+}
+
 export function getSubtitleCoverage(entries) {
   if (!Array.isArray(entries) || entries.length === 0) {
     return {
@@ -108,4 +127,8 @@ function makeIssue(type, idx, entry, duration, chars, text) {
     chars,
     text,
   }
+}
+
+function round2(value) {
+  return Math.round(value * 100) / 100
 }

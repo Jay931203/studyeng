@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useEffect, useCallback, useState } from 'react'
+import { useRef, useEffect, useCallback, useMemo, useState } from 'react'
 import { usePlayerStore } from '@/stores/usePlayerStore'
 import { useAdminStore } from '@/stores/useAdminStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
@@ -20,13 +20,26 @@ const LONG_PRESS_MOVE_THRESHOLD = 10
 const LONG_PRESS_DURATION = 500
 
 export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: LyricsSubtitlesProps) {
-  const { subtitleMode, activeSubIndex, freezeSubIndex, setFreezeSubIndex } = usePlayerStore()
-  const { isAdminActive, toggleFlag, isFlagged } = useAdminStore()
-  const phrases = usePhraseStore((s) => s.phrases)
+  const subtitleMode = usePlayerStore((state) => state.subtitleMode)
+  const activeSubIndex = usePlayerStore((state) => state.activeSubIndex)
+  const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
+  const setFreezeSubIndex = usePlayerStore((state) => state.setFreezeSubIndex)
+  const adminActive = useAdminStore((state) => state.isAdmin && state.adminEnabled)
+  const toggleFlag = useAdminStore((state) => state.toggleFlag)
+  const flaggedSubtitles = useAdminStore((state) => state.flaggedSubtitles)
+  const phrases = usePhraseStore((state) => state.phrases)
+  const removePhrase = usePhraseStore((state) => state.removePhrase)
   const containerRef = useRef<HTMLDivElement>(null)
   const lineRefs = useRef<(HTMLDivElement | null)[]>([])
   const prevActiveRef = useRef<number>(-1)
   const scrollRafRef = useRef<number | null>(null)
+  const savedPhraseMap = useMemo(() => {
+    const map = new Map<string, string>()
+    for (const phrase of phrases) {
+      map.set(`${phrase.videoId}::${phrase.en}`, phrase.id)
+    }
+    return map
+  }, [phrases])
 
   // User-scroll detection: distinguish manual scroll from programmatic scroll
   const [isUserScrolling, setIsUserScrolling] = useState(false)
@@ -53,20 +66,28 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
   const [showFreezeIndicator, setShowFreezeIndicator] = useState(false)
   const [freezeIndicatorText, setFreezeIndicatorText] = useState('프리즈 모드')
   const freezeIndicatorTimerRef = useRef<number | null>(null)
-  const prevFreezeSubIndexRef = useRef<number | null>(null)
 
   // First-time tooltip
-  const [showFreezeTip, setShowFreezeTip] = useState(false)
+  const [showFreezeTip, setShowFreezeTip] = useState(() => {
+    if (typeof window === 'undefined') return false
+    return !localStorage.getItem('studyeng-freeze-tip-shown')
+  })
   useEffect(() => {
-    if (typeof window === 'undefined') return
-    if (!localStorage.getItem('studyeng-freeze-tip-shown')) {
-      setShowFreezeTip(true)
-      const timer = window.setTimeout(() => {
-        setShowFreezeTip(false)
-        localStorage.setItem('studyeng-freeze-tip-shown', '1')
-      }, 4000)
-      return () => clearTimeout(timer)
-    }
+    if (!showFreezeTip) return
+
+    const timer = window.setTimeout(() => {
+      setShowFreezeTip(false)
+      localStorage.setItem('studyeng-freeze-tip-shown', '1')
+    }, 4000)
+
+    return () => clearTimeout(timer)
+  }, [showFreezeTip])
+
+  const showFreezeNotice = useCallback((text: string, duration: number) => {
+    setFreezeIndicatorText(text)
+    setShowFreezeIndicator(true)
+    if (freezeIndicatorTimerRef.current) clearTimeout(freezeIndicatorTimerRef.current)
+    freezeIndicatorTimerRef.current = window.setTimeout(() => setShowFreezeIndicator(false), duration)
   }, [])
 
   // Detect user-initiated scroll via touch events + onScroll
@@ -99,10 +120,22 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
     }, 2500)
   }, [])
 
+  const getSavedPhraseId = useCallback(
+    (sub: SubtitleEntry) => {
+      if (videoId) {
+        const exactMatch = savedPhraseMap.get(`${videoId}::${sub.en}`)
+        if (exactMatch) return exactMatch
+      }
+
+      return phrases.find((phrase) => phrase.en === sub.en)?.id ?? null
+    },
+    [phrases, savedPhraseMap, videoId],
+  )
+
   // Check if a subtitle is already saved
   const isSavedPhrase = useCallback(
-    (sub: SubtitleEntry) => phrases.some((p) => p.en === sub.en),
-    [phrases],
+    (sub: SubtitleEntry) => getSavedPhraseId(sub) !== null,
+    [getSavedPhraseId],
   )
 
   // Auto-scroll to keep the active subtitle centered — smoothed with rAF
@@ -156,41 +189,21 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
     }
   }, [activeSubIndex, isUserScrolling])
 
-  // Show freeze indicator only on freeze state transitions (enter/exit), not on subtitle changes
-  useEffect(() => {
-    const wasFrozen = prevFreezeSubIndexRef.current !== null
-    const isFrozenNow = freezeSubIndex !== null
-    prevFreezeSubIndexRef.current = freezeSubIndex
-
-    if (!wasFrozen && isFrozenNow) {
-      // Entered freeze mode (null → number)
-      setFreezeIndicatorText('프리즈 모드')
-      setShowFreezeIndicator(true)
-      if (freezeIndicatorTimerRef.current) clearTimeout(freezeIndicatorTimerRef.current)
-      freezeIndicatorTimerRef.current = window.setTimeout(() => setShowFreezeIndicator(false), 2500)
-    } else if (wasFrozen && !isFrozenNow) {
-      // Exited freeze mode (number → null)
-      setFreezeIndicatorText('프리즈 해제')
-      setShowFreezeIndicator(true)
-      if (freezeIndicatorTimerRef.current) clearTimeout(freezeIndicatorTimerRef.current)
-      freezeIndicatorTimerRef.current = window.setTimeout(() => setShowFreezeIndicator(false), 1500)
-    }
-    // If both were frozen (number → different number), do nothing — no indicator re-show
-  }, [freezeSubIndex])
-
   // Enter or move freeze mode to the given subtitle
   const enterFreeze = useCallback(
     (sub: SubtitleEntry, idx: number) => {
       setFreezeSubIndex(idx)
+      showFreezeNotice('프리즈 모드', 2500)
       onSeek?.(sub.start)
     },
-    [setFreezeSubIndex, onSeek],
+    [onSeek, setFreezeSubIndex, showFreezeNotice],
   )
 
   // Exit freeze mode
   const exitFreeze = useCallback(() => {
     setFreezeSubIndex(null)
-  }, [setFreezeSubIndex])
+    showFreezeNotice('프리즈 해제', 1500)
+  }, [setFreezeSubIndex, showFreezeNotice])
 
   const handleLineClick = useCallback(
     (sub: SubtitleEntry, idx: number, e: React.MouseEvent) => {
@@ -206,8 +219,12 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
       const last = lastTapRef.current
 
       if (last.idx === idx && now - last.time < 400) {
-        // Double tap → save phrase (unchanged)
-        if (onSavePhrase && !isSavedPhrase(sub)) {
+        const savedPhraseId = getSavedPhraseId(sub)
+
+        if (savedPhraseId) {
+          removePhrase(savedPhraseId)
+          setJustSavedIdx(null)
+        } else if (onSavePhrase) {
           onSavePhrase(sub)
           setJustSavedIdx(idx)
           if (savedFeedbackTimerRef.current) clearTimeout(savedFeedbackTimerRef.current)
@@ -230,7 +247,15 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
         lastTapRef.current = { idx, time: now }
       }
     },
-    [onSeek, onSavePhrase, isSavedPhrase, freezeSubIndex, enterFreeze, exitFreeze],
+    [
+      enterFreeze,
+      exitFreeze,
+      freezeSubIndex,
+      getSavedPhraseId,
+      onSavePhrase,
+      onSeek,
+      removePhrase,
+    ],
   )
 
   // Long-press: pointerdown starts timer, pointerup/move cancels
@@ -277,10 +302,11 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
     pointerStartRef.current = null
   }, [cancelLongPress])
 
-  // Clear freeze when subtitles change (e.g. navigating to different video)
+  // Clear freeze only when the actual video changes.
   useEffect(() => {
+    if (freezeSubIndex === null) return
     setFreezeSubIndex(null)
-  }, [subtitles, setFreezeSubIndex])
+  }, [freezeSubIndex, setFreezeSubIndex, videoId])
 
   // Cleanup timers on unmount
   useEffect(() => {
@@ -307,8 +333,11 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
       {/* Freeze mode indicator */}
       {showFreezeIndicator && (
         <div
-          className="absolute top-2 left-1/2 -translate-x-1/2 z-20 px-3 py-1 rounded-full bg-purple-500/30 backdrop-blur-sm text-purple-200 text-xs font-medium"
+          className="absolute left-1/2 top-2 z-20 -translate-x-1/2 rounded-full border px-3 py-1 text-xs font-medium backdrop-blur-sm"
           style={{
+            backgroundColor: 'var(--freeze-bg)',
+            borderColor: 'var(--freeze-border)',
+            color: 'var(--freeze-text)',
             animation: 'freezeFadeIn 300ms ease-out',
           }}
         >
@@ -319,8 +348,11 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
       {/* First-time long-press tooltip */}
       {showFreezeTip && (
         <div
-          className="absolute top-2 left-1/2 -translate-x-1/2 z-20 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm text-white/60 text-xs"
+          className="absolute left-1/2 top-2 z-20 -translate-x-1/2 rounded-full border px-3 py-1 text-xs backdrop-blur-sm"
           style={{
+            backgroundColor: 'var(--player-chip-bg)',
+            borderColor: 'var(--player-chip-border)',
+            color: 'var(--player-muted)',
             animation: 'freezeFadeIn 500ms ease-out',
           }}
         >
@@ -334,8 +366,8 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
           to { opacity: 1; transform: translateX(-50%) translateY(0); }
         }
         @keyframes freezePulse {
-          0%, 100% { box-shadow: 0 0 8px rgba(168, 85, 247, 0.3); }
-          50% { box-shadow: 0 0 16px rgba(168, 85, 247, 0.5); }
+          0%, 100% { box-shadow: 0 0 8px var(--freeze-shadow); }
+          50% { box-shadow: 0 0 16px var(--freeze-shadow); }
         }
       `}</style>
 
@@ -385,8 +417,11 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
               ? (isJustSaved || isActive || isFrozen ? 1 : 0.95)
               : isJustSaved || isActive || isFrozen ? 1 : distance === 1 ? 0.92 : 0.85
 
-            const adminActive = isAdminActive()
-            const flagged = adminActive && videoId ? isFlagged(videoId, idx) : false
+            const flagged = adminActive && videoId
+              ? flaggedSubtitles.some(
+                  (flag) => flag.videoId === videoId && flag.entryIndex === idx,
+                )
+              : false
 
             return (
               <div
@@ -406,11 +441,17 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
                         e.stopPropagation()
                         toggleFlag(videoId, idx, sub.en)
                       }}
-                      className={`flex-shrink-0 w-5 h-5 rounded flex items-center justify-center transition-all active:scale-90 ${
-                        flagged
-                          ? 'bg-red-500/30 text-red-400'
-                          : 'bg-white/5 text-white/15 hover:text-white/40'
+                      className={`flex h-5 w-5 flex-shrink-0 items-center justify-center rounded transition-all active:scale-90 ${
+                        flagged ? 'bg-red-500/30 text-red-400' : ''
                       }`}
+                      style={
+                        flagged
+                          ? undefined
+                          : {
+                              backgroundColor: 'var(--player-panel)',
+                              color: 'var(--player-faint)',
+                            }
+                      }
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3 h-3">
                         <path d="M3.5 2.75a.75.75 0 0 0-1.5 0v14.5a.75.75 0 0 0 1.5 0v-4.392l1.657-.348a6.449 6.449 0 0 1 4.271.572 7.948 7.948 0 0 0 5.965.524l2.078-.64A.75.75 0 0 0 18 11.75V3.885a.75.75 0 0 0-.975-.716l-2.296.707a6.449 6.449 0 0 1-4.848-.426 7.948 7.948 0 0 0-5.259-.704L3.5 3.99V2.75Z" />
@@ -420,7 +461,10 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
 
                   {/* Freeze repeat icon — absolutely positioned so it never shifts subtitle text */}
                   {isFrozen && (
-                    <span className="absolute -left-6 top-1/2 -translate-y-1/2 text-purple-400 select-none pointer-events-none">
+                    <span
+                      className="pointer-events-none absolute -left-6 top-1/2 -translate-y-1/2 select-none"
+                      style={{ color: 'var(--freeze-icon)' }}
+                    >
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
                         <path fillRule="evenodd" d="M15.312 11.424a5.5 5.5 0 0 1-9.201 2.466l-.312-.311h2.433a.75.75 0 0 0 0-1.5H4.647a.75.75 0 0 0-.75.75v3.585a.75.75 0 0 0 1.5 0v-2.19l.238.238a7 7 0 0 0 11.712-3.138.75.75 0 0 0-1.035-.1zm-2.623-7.26a7 7 0 0 0-11.712 3.138.75.75 0 0 0 1.035.1 5.5 5.5 0 0 1 9.201-2.466l.312.311H9.092a.75.75 0 0 0 0 1.5h3.585a.75.75 0 0 0 .75-.75V2.412a.75.75 0 0 0-1.5 0v2.19l-.238-.238z" clipRule="evenodd" />
                       </svg>
@@ -429,7 +473,10 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
 
                   {/* Saved phrase bookmark icon — absolutely positioned on the right, symmetrical with freeze icon */}
                   {(saved || isJustSaved) && (
-                    <span className={`absolute -right-6 top-1/2 -translate-y-1/2 select-none pointer-events-none ${isJustSaved ? 'text-blue-300' : 'text-blue-400/60'}`}>
+                    <span
+                      className="pointer-events-none absolute -right-6 top-1/2 -translate-y-1/2 select-none"
+                      style={{ color: isJustSaved ? 'var(--accent-text)' : 'var(--accent-primary)' }}
+                    >
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
                         <path fillRule="evenodd" d="M6.32 2.577a49.255 49.255 0 0 1 11.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 0 1-1.085.67L12 18.089l-7.165 3.583A.75.75 0 0 1 3.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93Z" clipRule="evenodd" />
                       </svg>
@@ -443,33 +490,42 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
                     onPointerUp={handlePointerUp}
                     onPointerCancel={handlePointerUp}
                     onContextMenu={(e) => e.preventDefault()}
-                    className={`text-center w-full ${isJustSaved || isActive || isFrozen ? 'text-base' : 'text-sm'} select-none px-3 py-1.5 touch-manipulation ${
-                      isFrozen
-                        ? 'text-white font-semibold drop-shadow-lg bg-purple-500/20 backdrop-blur-md rounded-lg ring-2 ring-purple-400/60'
-                        : isJustSaved
-                        ? 'text-white font-semibold drop-shadow-lg'
-                        : isActive
-                        ? 'text-white font-semibold drop-shadow-lg backdrop-blur-md rounded-lg bg-black/50'
-                        : distance === 1 || isUserScrolling
-                        ? 'text-white/50'
-                        : 'text-white/20'
-                    }`}
-                    /* NOTE: saved subtitles get NO box/ring — only the right-side icon */
+                    className={`w-full select-none px-3 py-1.5 text-center touch-manipulation ${
+                      isJustSaved || isActive || isFrozen ? 'text-base font-semibold' : 'text-sm'
+                    } ${isFrozen || isActive ? 'rounded-lg backdrop-blur-md' : ''}`}
                     style={{
                       transition: 'color 200ms ease-out, background-color 350ms ease-out, box-shadow 300ms ease-out',
-                      ...(isFrozen
-                        ? { textShadow: '0 1px 4px rgba(0,0,0,0.8)', animation: 'freezePulse 2s ease-in-out infinite' }
-                        : isJustSaved
-                        ? { textShadow: '0 1px 4px rgba(0,0,0,0.8)' }
+                      color: isFrozen
+                        ? 'var(--freeze-text)'
+                        : isJustSaved || isActive
+                          ? 'var(--player-text)'
+                          : distance === 1 || isUserScrolling
+                            ? 'var(--player-muted)'
+                            : 'var(--player-faint)',
+                      backgroundColor: isFrozen
+                        ? 'var(--freeze-bg)'
                         : isActive
-                        ? { textShadow: '0 1px 4px rgba(0,0,0,0.8)' }
+                          ? 'var(--player-active-subtitle-bg)'
+                          : 'transparent',
+                      boxShadow: isFrozen ? '0 0 0 2px var(--freeze-border)' : undefined,
+                      ...(isFrozen
+                        ? { textShadow: 'var(--player-shadow)', animation: 'freezePulse 2s ease-in-out infinite' }
+                        : isJustSaved
+                        ? { textShadow: 'var(--player-shadow)' }
+                        : isActive
+                        ? { textShadow: 'var(--player-shadow)' }
                         : {}),
                     }}
                   >
                     <>
                       <span>{sub.en}</span>
                       {(isActive || isFrozen) && showKo && sub.ko && (
-                        <p className={`${isFrozen ? 'text-purple-200/70' : 'text-purple-200/70'} text-xs mt-0.5`}>{sub.ko}</p>
+                        <p
+                          className="mt-0.5 text-xs"
+                          style={{ color: isFrozen ? 'var(--freeze-icon)' : 'var(--accent-text)' }}
+                        >
+                          {sub.ko}
+                        </p>
                       )}
                     </>
                   </button>

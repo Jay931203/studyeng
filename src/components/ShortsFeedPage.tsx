@@ -10,17 +10,37 @@ import { useLikeStore } from '@/stores/useLikeStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 
+function cloneWatchedEpisodes(watchedEpisodes: Record<string, string[]>) {
+  return Object.fromEntries(
+    Object.entries(watchedEpisodes).map(([seriesId, videoIds]) => [seriesId, [...videoIds]]),
+  )
+}
+
 function ShortsFeedContent() {
   const searchParams = useSearchParams()
   const videoId = searchParams.get('v')
   const seriesId = searchParams.get('series')
-  const watchedEpisodes = useWatchHistoryStore((state) => state.watchedEpisodes)
-  const likes = useLikeStore((state) => state.likes)
-  const interests = useOnboardingStore((state) => state.interests)
-  const level = useOnboardingStore((state) => state.level)
+  const navigationKey = buildShortsUrl(videoId, seriesId)
+
+  // Freeze the recommendation inputs for the current route so that
+  // watch-history or like updates inside the player do not reshuffle
+  // the active shorts feed mid-session.
+  const recommendationSnapshot = useMemo(() => {
+    void navigationKey
+    const { watchedEpisodes } = useWatchHistoryStore.getState()
+    const { likes } = useLikeStore.getState()
+    const { interests, level } = useOnboardingStore.getState()
+
+    return {
+      watchedEpisodes: cloneWatchedEpisodes(watchedEpisodes),
+      likes: { ...likes },
+      interests: [...interests],
+      level,
+    }
+  }, [navigationKey])
 
   const recommended = useMemo(() => {
-    const options = { watchedEpisodes, likes, interests, level }
+    const options = recommendationSnapshot
 
     if (seriesId && videoId) {
       return seriesPlaylist(seriesId, videoId, options)
@@ -30,25 +50,31 @@ function ShortsFeedContent() {
       const target = seedVideos.find((video) => video.id === videoId)
       if (target) {
         const rest = seedVideos.filter((video) => video.id !== videoId)
-        return [target, ...recommendVideos(rest, options)]
+        return [
+          target,
+          ...recommendVideos(rest, {
+            ...options,
+            seedVideo: target,
+          }),
+        ]
       }
     }
 
     return recommendVideos(seedVideos, options)
-  }, [videoId, seriesId, watchedEpisodes, likes, interests, level])
+  }, [videoId, seriesId, recommendationSnapshot])
 
   return (
     <VideoFeed
+      key={navigationKey}
       videos={recommended}
       initialVideoId={videoId ?? undefined}
-      navigationKey={buildShortsUrl(videoId, seriesId)}
     />
   )
 }
 
 export function ShortsFeedPage() {
   return (
-    <Suspense fallback={<div className="h-full bg-black" />}>
+    <Suspense fallback={<div className="h-full bg-[var(--player-surface)]" />}>
       <ShortsFeedContent />
     </Suspense>
   )

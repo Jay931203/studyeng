@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback, useMemo, useRef, useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import {
@@ -48,6 +48,7 @@ export default function ExplorePage() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const { user } = useAuth()
+  const seriesSectionRef = useRef<HTMLElement | null>(null)
   const likes = useLikeStore((state) => state.likes)
   const interests = useOnboardingStore((state) => state.interests)
   const level = useOnboardingStore((state) => state.level)
@@ -98,6 +99,10 @@ export default function ExplorePage() {
     },
     [clearDeletedFlag, router],
   )
+
+  const scrollToSeriesSection = useCallback(() => {
+    seriesSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  }, [])
 
   const continueSeries = useMemo<ContinueSeriesCard[]>(() => {
     const latestByVideo = new Map<string, number>()
@@ -180,142 +185,154 @@ export default function ExplorePage() {
           )}
         </div>
 
-        <section className="mb-6 overflow-hidden rounded-[28px] border border-[var(--border-card)] bg-[var(--bg-card)] shadow-[var(--card-shadow)]">
-          <div className="relative aspect-[1.2] w-full overflow-hidden sm:aspect-[1.8]">
-            <img
-              src={`https://img.youtube.com/vi/${spotlightVideo.youtubeId}/hqdefault.jpg`}
-              alt={spotlightVideo.title}
-              className="h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/10" />
-            <div
-              className="absolute inset-0"
-              style={{
-                background:
-                  'linear-gradient(135deg, rgba(var(--accent-primary-rgb), 0.18), transparent 55%)',
-              }}
-            />
-            <div className="absolute inset-x-0 bottom-0 p-5">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/70">
-                {continueSeries.length > 0 ? '계속 보고 있는 것' : '오늘 시작해볼 것'}
-              </p>
-              <h1 className="mt-2 max-w-[18rem] text-2xl font-black leading-tight text-white">
-                {userName ? `${userName}님, 오늘 볼 장면을 골라보세요.` : '오늘 볼 장면을 골라보세요.'}
-              </h1>
-              <p className="mt-2 max-w-[22rem] text-sm text-white/72">
-                {continueSeries.length > 0
-                  ? `${continueSeries[0].seriesItem.title} 다음 장면부터 바로 이어볼 수 있어요.`
-                  : '취향과 난이도에 맞춰 바로 보고 싶어질 영상부터 추천합니다.'}
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                <button
-                  onClick={() => openShorts(spotlightVideo.id, spotlightVideo.seriesId)}
-                  className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-black"
-                >
-                  바로 보기
-                </button>
-                <button
-                  onClick={() => router.push('/shorts', { scroll: false })}
-                  className="rounded-full bg-white/15 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm"
-                >
-                  랜덤 시작
-                </button>
+        {!selectedSeries && (
+          <>
+            <section className="mb-6 overflow-hidden rounded-[28px] border border-[var(--border-card)] bg-[var(--bg-card)] shadow-[var(--card-shadow)]">
+              <div className="relative aspect-[1.2] w-full overflow-hidden sm:aspect-[1.8]">
+                <img
+                  src={`https://img.youtube.com/vi/${spotlightVideo.youtubeId}/hqdefault.jpg`}
+                  alt={spotlightVideo.title}
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-black/10" />
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background:
+                      'linear-gradient(135deg, rgba(var(--accent-primary-rgb), 0.18), transparent 55%)',
+                  }}
+                />
+                <div className="absolute inset-x-0 bottom-0 p-5">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-white/70">
+                    {continueSeries.length > 0 ? '계속 보고 있는 것' : '오늘 시작해볼 것'}
+                  </p>
+                  <h1 className="mt-2 max-w-[18rem] text-2xl font-black leading-tight text-white">
+                    {userName ? `${userName}님, 오늘 볼 장면을 골라보세요.` : '오늘 볼 장면을 골라보세요.'}
+                  </h1>
+                  <p className="mt-2 max-w-[22rem] text-sm text-white/72">
+                    {continueSeries.length > 0
+                      ? `${continueSeries[0].seriesItem.title} 다음 장면부터 바로 이어볼 수 있어요.`
+                      : '취향과 난이도에 맞춰 바로 보고 싶어질 영상부터 추천합니다.'}
+                  </p>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    <button
+                      onClick={() => openShorts(spotlightVideo.id, spotlightVideo.seriesId)}
+                      className="rounded-full bg-white px-4 py-2 text-sm font-semibold text-black"
+                    >
+                      바로 보기
+                    </button>
+                    <button
+                      onClick={scrollToSeriesSection}
+                      className="rounded-full bg-white/15 px-4 py-2 text-sm font-medium text-white backdrop-blur-sm"
+                    >
+                      시리즈 보기
+                    </button>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-        </section>
+            </section>
 
-        <SearchBar />
+            <SearchBar />
 
-        <section className="mb-8">
-          <div className="mb-3 flex items-end justify-between gap-3">
-            <div>
-              <h2 className="text-lg font-bold text-[var(--text-primary)]">지금 보고 있는 것</h2>
-              <p className="mt-1 text-sm text-[var(--text-muted)]">
-                {continueSeries.length > 0
-                  ? '멈춘 지점에서 바로 이어서 볼 수 있어요.'
-                  : '아직 시작한 시리즈가 없어요. 아래 추천에서 바로 골라보세요.'}
-              </p>
-            </div>
-          </div>
+            <section className="mb-8">
+              <div className="mb-3 flex items-end justify-between gap-3">
+                <div>
+                  <h2 className="text-lg font-bold text-[var(--text-primary)]">지금 보고 있는 것</h2>
+                  <p className="mt-1 text-sm text-[var(--text-muted)]">
+                    {continueSeries.length > 0
+                      ? '멈춘 지점에서 바로 이어서 볼 수 있어요.'
+                      : '아직 시작한 시리즈가 없어요. 아래 추천에서 바로 골라보세요.'}
+                  </p>
+                </div>
+                {continueSeries.length > 0 && (
+                  <button
+                    onClick={() => router.push('/learning')}
+                    className="text-xs font-medium text-[var(--accent-text)]"
+                  >
+                    시청 기록 보기
+                  </button>
+                )}
+              </div>
 
-          {continueSeries.length > 0 ? (
-            <div className="-mx-4 flex gap-3 overflow-x-auto px-4 pb-1 no-scrollbar">
-              {continueSeries.map((item) => (
-                <motion.button
-                  key={item.seriesItem.id}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => openShorts(item.nextVideo.id, item.seriesItem.id)}
-                  className="w-[270px] flex-shrink-0 overflow-hidden rounded-3xl border border-[var(--border-card)] bg-[var(--bg-card)] text-left shadow-[var(--card-shadow)]"
-                >
-                  <div className="relative aspect-[1.35] overflow-hidden">
-                    <img
-                      src={`https://img.youtube.com/vi/${item.nextVideo.youtubeId}/hqdefault.jpg`}
-                      alt={item.nextVideo.title}
-                      className="h-full w-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent" />
-                    <div className="absolute left-4 right-4 top-4 flex items-start justify-between gap-2">
-                      <span className="rounded-full bg-white/14 px-2.5 py-1 text-[11px] font-medium text-white backdrop-blur-sm">
-                        {item.progress}% 완료
-                      </span>
-                      <span className="rounded-full bg-white/10 px-2.5 py-1 text-[11px] text-white/70 backdrop-blur-sm">
-                        {item.watchedCount}개 봄
-                      </span>
-                    </div>
-                    <div className="absolute inset-x-0 bottom-0 p-4">
-                      <p className="text-xs uppercase tracking-[0.2em] text-white/55">
-                        {categoryLabels[item.seriesItem.category]}
-                      </p>
-                      <p className="mt-2 line-clamp-2 text-lg font-bold text-white">
-                        {item.seriesItem.title}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="p-4">
-                    <p className="text-xs font-medium text-[var(--text-muted)]">다음으로 볼 장면</p>
-                    <p className="mt-1 line-clamp-2 text-sm font-semibold text-[var(--text-primary)]">
-                      {item.nextVideo.title}
-                    </p>
-                    {item.lastVideo && (
-                      <p className="mt-2 text-xs text-[var(--text-secondary)]">
-                        마지막으로 본 장면: {item.lastVideo.title}
-                      </p>
-                    )}
-                  </div>
-                </motion.button>
-              ))}
-            </div>
-          ) : (
-            <div className="rounded-3xl border border-[var(--border-card)] bg-[var(--bg-card)] p-5 shadow-[var(--card-shadow)]">
-              <p className="text-sm text-[var(--text-secondary)]">
-                시리즈를 하나 시작하면 여기에 다음 장면과 진행률이 바로 보입니다.
-              </p>
-            </div>
-          )}
-        </section>
+              {continueSeries.length > 0 ? (
+                <div className="-mx-4 flex gap-3 overflow-x-auto px-4 pb-1 no-scrollbar">
+                  {continueSeries.map((item) => (
+                    <motion.button
+                      key={item.seriesItem.id}
+                      whileTap={{ scale: 0.98 }}
+                      onClick={() => openShorts(item.nextVideo.id, item.seriesItem.id)}
+                      className="w-[270px] flex-shrink-0 overflow-hidden rounded-3xl border border-[var(--border-card)] bg-[var(--bg-card)] text-left shadow-[var(--card-shadow)]"
+                    >
+                      <div className="relative aspect-[1.35] overflow-hidden">
+                        <img
+                          src={`https://img.youtube.com/vi/${item.nextVideo.youtubeId}/hqdefault.jpg`}
+                          alt={item.nextVideo.title}
+                          className="h-full w-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/15 to-transparent" />
+                        <div className="absolute left-4 right-4 top-4 flex items-start justify-between gap-2">
+                          <span className="rounded-full bg-white/14 px-2.5 py-1 text-[11px] font-medium text-white backdrop-blur-sm">
+                            {item.progress}% 완료
+                          </span>
+                          <span className="rounded-full bg-white/10 px-2.5 py-1 text-[11px] text-white/70 backdrop-blur-sm">
+                            {item.watchedCount}개 봄
+                          </span>
+                        </div>
+                        <div className="absolute inset-x-0 bottom-0 p-4">
+                          <p className="text-xs uppercase tracking-[0.2em] text-white/55">
+                            {categoryLabels[item.seriesItem.category]}
+                          </p>
+                          <p className="mt-2 line-clamp-2 text-lg font-bold text-white">
+                            {item.seriesItem.title}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="p-4">
+                        <p className="text-xs font-medium text-[var(--text-muted)]">다음으로 볼 장면</p>
+                        <p className="mt-1 line-clamp-2 text-sm font-semibold text-[var(--text-primary)]">
+                          {item.nextVideo.title}
+                        </p>
+                        {item.lastVideo && (
+                          <p className="mt-2 text-xs text-[var(--text-secondary)]">
+                            마지막으로 본 장면: {item.lastVideo.title}
+                          </p>
+                        )}
+                      </div>
+                    </motion.button>
+                  ))}
+                </div>
+              ) : (
+                <div className="rounded-3xl border border-[var(--border-card)] bg-[var(--bg-card)] p-5 shadow-[var(--card-shadow)]">
+                  <p className="text-sm text-[var(--text-secondary)]">
+                    시리즈를 하나 시작하면 여기에 다음 장면과 진행률이 바로 보입니다.
+                  </p>
+                </div>
+              )}
+            </section>
 
-        <section className="mb-8">
-          <div className="mb-3 flex items-end justify-between gap-3">
-            <div>
-              <h2 className="text-lg font-bold text-[var(--text-primary)]">지금 보고 싶어질 추천</h2>
-              <p className="mt-1 text-sm text-[var(--text-muted)]">
-                {interests.length > 0
-                  ? '선택한 취향과 현재 레벨을 반영했어요.'
-                  : '가볍게 시작하기 좋은 영상부터 보여드려요.'}
-              </p>
-            </div>
-          </div>
-          <div className="grid grid-cols-2 gap-3">
-            {recommended.map((video) => (
-              <VideoCard
-                key={video.id}
-                video={video}
-                onClick={() => openShorts(video.id, video.seriesId)}
-              />
-            ))}
-          </div>
-        </section>
+            <section className="mb-8">
+              <div className="mb-3 flex items-end justify-between gap-3">
+                <div>
+                  <h2 className="text-lg font-bold text-[var(--text-primary)]">지금 보고 싶어질 추천</h2>
+                  <p className="mt-1 text-sm text-[var(--text-muted)]">
+                    {interests.length > 0
+                      ? '선택한 취향과 현재 레벨을 반영했어요.'
+                      : '가볍게 시작하기 좋은 영상부터 보여드려요.'}
+                  </p>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                {recommended.map((video) => (
+                  <VideoCard
+                    key={video.id}
+                    video={video}
+                    onClick={() => openShorts(video.id, video.seriesId)}
+                  />
+                ))}
+              </div>
+            </section>
+          </>
+        )}
 
         {selectedSeries ? (
           <section className="mb-8">
@@ -387,7 +404,7 @@ export default function ExplorePage() {
             </div>
           </section>
         ) : (
-          <section className="mb-8">
+          <section ref={seriesSectionRef} className="mb-8">
             <div className="mb-3">
               <h2 className="text-lg font-bold text-[var(--text-primary)]">더 보고 싶은 시리즈</h2>
               <p className="mt-1 text-sm text-[var(--text-muted)]">

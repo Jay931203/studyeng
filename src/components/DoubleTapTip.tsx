@@ -8,6 +8,15 @@ const STORAGE_KEY = 'studyeng-seen-tips'
 export function DoubleTapTip() {
   const [visible, setVisible] = useState(false)
 
+  const dismiss = () => {
+    setVisible(false)
+    try {
+      localStorage.setItem(STORAGE_KEY, '1')
+    } catch {
+      // ignore
+    }
+  }
+
   useEffect(() => {
     try {
       const seen = localStorage.getItem(STORAGE_KEY)
@@ -33,15 +42,6 @@ export function DoubleTapTip() {
     return () => clearTimeout(dismissTimer)
   }, [visible])
 
-  const dismiss = () => {
-    setVisible(false)
-    try {
-      localStorage.setItem(STORAGE_KEY, '1')
-    } catch {
-      // ignore
-    }
-  }
-
   return (
     <AnimatePresence>
       {visible && (
@@ -53,9 +53,18 @@ export function DoubleTapTip() {
           onClick={dismiss}
           className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 pointer-events-auto cursor-pointer"
         >
-          <div className="bg-white/8 backdrop-blur-md rounded-full px-3.5 py-1.5 flex items-center gap-1.5 border border-white/6">
-            <span className="text-white/50 text-[11px] font-medium whitespace-nowrap">
-              두 번 탭해서 문장 저장
+          <div
+            className="flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 backdrop-blur-md"
+            style={{
+              backgroundColor: 'var(--player-chip-bg)',
+              borderColor: 'var(--player-chip-border)',
+            }}
+          >
+            <span
+              className="whitespace-nowrap text-[11px] font-medium"
+              style={{ color: 'var(--player-muted)' }}
+            >
+              두 번 탭해서 저장 또는 해제
             </span>
           </div>
         </motion.div>

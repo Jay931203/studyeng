@@ -82,6 +82,12 @@ npm run transcripts:check
 - 모델 기본값은 `gpt-4o-mini`다. OpenAI 공식 문서 기준 이 모델은 `v1/chat/completions`와 `v1/responses`를 지원하고, 비용도 더 낮다.
 - 실행 전 `OPENAI_API_KEY`를 환경변수나 `.env` / `.env.local`에 넣어야 한다.
 
+## Reviewed Exceptions
+
+- `src/data/content-review-registry.json` stores audited exceptions that should not keep the backlog open.
+- `acceptedIssueOverrides` is for reviewed timing gaps that are acceptable because the clip has intentional silence, music, or visual beats.
+- `archivedOrphanAssets` is for transcript files kept on disk for reference but intentionally excluded from active asset queues.
+
 ## User Report Triage
 
 `useAdminStore.exportReportBundle()`로 나온 JSON을 `content:triage`에 넣으면 아래를 자동으로 묶는다.

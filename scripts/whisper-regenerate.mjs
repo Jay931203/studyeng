@@ -147,9 +147,9 @@ async function main() {
 
     try {
       // 1. Download audio. Prefer low enough bitrate to stay under OpenAI upload cap.
-      let audioPath = await downloadAudio(videoId, tempDir, 'bestaudio[ext=webm]/bestaudio', clipStart, clipEnd)
+      let audioDownload = await downloadAudio(videoId, tempDir, 'bestaudio[ext=webm]/bestaudio', clipStart, clipEnd)
 
-      if (!existsSync(audioPath)) {
+      if (!existsSync(audioDownload.audioPath)) {
         console.log('SKIP (no audio)')
         failed++
         continue
@@ -158,11 +158,11 @@ async function main() {
       // 2. Transcribe with OpenAI Whisper
       let whisperResult
       try {
-        whisperResult = await transcribeWithOpenAI(audioPath)
+        whisperResult = await transcribeWithOpenAI(audioDownload.audioPath)
       } catch (error) {
         if (String(error.message).includes('OpenAI API 413')) {
-          audioPath = await downloadAudio(videoId, tempDir, 'worstaudio[ext=webm]/worstaudio/worstaudio', clipStart, clipEnd)
-          whisperResult = await transcribeWithOpenAI(audioPath)
+          audioDownload = await downloadAudio(videoId, tempDir, 'worstaudio[ext=webm]/worstaudio/worstaudio', clipStart, clipEnd)
+          whisperResult = await transcribeWithOpenAI(audioDownload.audioPath)
         } else {
           throw error
         }
@@ -182,8 +182,8 @@ async function main() {
       const entries = whisperResult.segments
         .filter(s => s.text.trim().length > 0)
         .map(s => ({
-          start: round2(s.start),
-          end: round2(s.end),
+          start: round2(s.start + audioDownload.timeOffsetSec),
+          end: round2(s.end + audioDownload.timeOffsetSec),
           en: s.text.trim(),
           ko: ''
         }))
@@ -336,6 +336,7 @@ function sleep(ms) {
 async function downloadAudio(videoId, tempDir, format, clipStart, clipEnd) {
   const outTemplate = join(tempDir, `${videoId}.%(ext)s`)
   const args = ['-f', format, '--no-post-overwrites']
+  let timeOffsetSec = 0
 
   if (FFMPEG_LOCATION) {
     args.push('--ffmpeg-location', FFMPEG_LOCATION)
@@ -344,6 +345,7 @@ async function downloadAudio(videoId, tempDir, format, clipStart, clipEnd) {
   if (FFMPEG_LOCATION !== false) {
     const sectionStart = Math.max(0, round2(clipStart - 1))
     const sectionEnd = round2(clipEnd + 1)
+    timeOffsetSec = sectionStart
     args.push('--download-sections', `*${sectionStart}-${sectionEnd}`)
   }
 
@@ -360,7 +362,10 @@ async function downloadAudio(videoId, tempDir, format, clipStart, clipEnd) {
   }
 
   files.sort((a, b) => statSync(b).size - statSync(a).size)
-  return files[0]
+  return {
+    audioPath: files[0],
+    timeOffsetSec,
+  }
 }
 
 function dedupeVideos(videos) {

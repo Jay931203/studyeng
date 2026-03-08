@@ -81,33 +81,64 @@ export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
     set({ subtitleMode: next })
   },
 
-  setPlaybackRate: (rate) => set({ playbackRate: rate }),
+  setPlaybackRate: (rate) => {
+    if (get().playbackRate !== rate) set({ playbackRate: rate })
+  },
 
-  setLoop: (start, end) => set({ isLooping: true, loopStart: start, loopEnd: end }),
+  setLoop: (start, end) => {
+    const state = get()
+    if (state.isLooping && state.loopStart === start && state.loopEnd === end) return
+    set({ isLooping: true, loopStart: start, loopEnd: end })
+  },
 
-  clearLoop: () => set({ isLooping: false, loopStart: null, loopEnd: null }),
+  clearLoop: () => {
+    const state = get()
+    if (!state.isLooping && state.loopStart === null && state.loopEnd === null) return
+    set({ isLooping: false, loopStart: null, loopEnd: null })
+  },
 
-  setCurrentTime: (time) => set({ currentTime: time }),
+  setCurrentTime: (time) => {
+    if (get().currentTime !== time) set({ currentTime: time })
+  },
 
-  setDuration: (duration) => set({ duration }),
+  setDuration: (duration) => {
+    if (get().duration !== duration) set({ duration })
+  },
 
-  setIsPlaying: (playing) => set({ isPlaying: playing }),
+  setIsPlaying: (playing) => {
+    if (get().isPlaying !== playing) set({ isPlaying: playing })
+  },
 
-  setClipBounds: (clipStart, clipEnd) => set({ clipStart, clipEnd }),
+  setClipBounds: (clipStart, clipEnd) => {
+    const state = get()
+    if (state.clipStart !== clipStart || state.clipEnd !== clipEnd) {
+      set({ clipStart, clipEnd })
+    }
+  },
 
   setActiveSubIndex: (idx) => {
     if (get().activeSubIndex !== idx) set({ activeSubIndex: idx })
   },
 
-  setRepeatMode: (mode) => set({ repeatMode: mode, currentRepeatCount: 0 }),
+  setRepeatMode: (mode) => {
+    const state = get()
+    if (state.repeatMode === mode && state.currentRepeatCount === 0) return
+    set({ repeatMode: mode, currentRepeatCount: 0 })
+  },
 
   incrementRepeatCount: () => set((state) => ({ currentRepeatCount: state.currentRepeatCount + 1 })),
 
-  resetRepeatCount: () => set({ currentRepeatCount: 0 }),
+  resetRepeatCount: () => {
+    if (get().currentRepeatCount !== 0) set({ currentRepeatCount: 0 })
+  },
 
-  setIsSwiping: (swiping) => set({ isSwiping: swiping }),
+  setIsSwiping: (swiping) => {
+    if (get().isSwiping !== swiping) set({ isSwiping: swiping })
+  },
 
-  setFreezeSubIndex: (idx) => set({ freezeSubIndex: idx }),
+  setFreezeSubIndex: (idx) => {
+    if (get().freezeSubIndex !== idx) set({ freezeSubIndex: idx })
+  },
 }),
   {
     name: 'studyeng-player',

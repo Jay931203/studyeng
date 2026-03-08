@@ -15,15 +15,27 @@
 
 import { readdir, readFile, writeFile } from 'fs/promises'
 import { join } from 'path'
-import { TRANSCRIPT_RULES, checkTranscript as runTranscriptCheck } from './lib/transcript-quality.mjs'
+import {
+  TRANSCRIPT_RULES,
+  checkTranscript as runTranscriptCheck,
+  filterIssuesByReview,
+} from './lib/transcript-quality.mjs'
 
 const TRANSCRIPTS_DIR = join(import.meta.dirname, '..', 'public', 'transcripts')
+const REVIEW_REGISTRY_PATH = join(import.meta.dirname, '..', 'src', 'data', 'content-review-registry.json')
 
 const args = process.argv.slice(2)
 const shouldFix = args.includes('--fix')
 
 async function main() {
-  const files = (await readdir(TRANSCRIPTS_DIR)).filter(f => f.endsWith('.json'))
+  const reviewRegistry = await readJson(REVIEW_REGISTRY_PATH, {
+    acceptedIssueOverrides: {},
+    archivedOrphanAssets: {},
+  })
+  const archivedOrphanIds = new Set(Object.keys(reviewRegistry.archivedOrphanAssets ?? {}))
+  const files = (await readdir(TRANSCRIPTS_DIR))
+    .filter(f => f.endsWith('.json'))
+    .filter(f => !archivedOrphanIds.has(f.replace(/\.json$/i, '')))
 
   let totalIssues = 0
   let cleanFiles = 0
@@ -32,7 +44,8 @@ async function main() {
   for (const file of files.sort()) {
     const filePath = join(TRANSCRIPTS_DIR, file)
     const data = JSON.parse(await readFile(filePath, 'utf-8'))
-    const issues = runTranscriptCheck(data)
+    const youtubeId = file.replace(/\.json$/i, '')
+    const issues = filterIssuesByReview(youtubeId, runTranscriptCheck(data), reviewRegistry)
 
     if (issues.length === 0) {
       cleanFiles++
@@ -66,12 +79,22 @@ async function main() {
     console.log('\n\n=== Auto-fixing... ===\n')
     for (const { file, data } of results) {
       const fixed = autoFix(data)
-      const remaining = runTranscriptCheck(fixed)
+      const youtubeId = file.replace(/\.json$/i, '')
+      const remaining = filterIssuesByReview(youtubeId, runTranscriptCheck(fixed), reviewRegistry)
       const filePath = join(TRANSCRIPTS_DIR, file)
       await writeFile(filePath, JSON.stringify(fixed, null, 2) + '\n', 'utf-8')
       console.log(`  ${file}: ${data.length} -> ${fixed.length} entries (${remaining.length} remaining issues)`)
     }
     console.log('\nDone! Re-run without --fix to verify.')
+  }
+}
+
+async function readJson(filePath, fallback) {
+  try {
+    const raw = await readFile(filePath, 'utf-8')
+    return JSON.parse(raw.replace(/^\uFEFF/, ''))
+  } catch {
+    return fallback
   }
 }
 

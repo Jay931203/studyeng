@@ -131,7 +131,7 @@ export function SceneQuizGame({ subtitle, onComplete }: SceneQuizGameProps) {
     for (let i = 0; i < question.displayParts.length; i++) {
       if (question.displayParts[i]) {
         elements.push(
-          <span key={`text-${i}`} className="text-white">
+          <span key={`text-${i}`} className="text-[var(--text-primary)]">
             {question.displayParts[i]}
           </span>
         )
@@ -151,8 +151,17 @@ export function SceneQuizGame({ subtitle, onComplete }: SceneQuizGameProps) {
                   ? isCorrect
                     ? 'bg-green-500/30 text-green-300 border border-green-400/50'
                     : 'bg-red-500/30 text-red-300 border border-red-400/50'
-                  : 'bg-blue-500/20 text-blue-300 border border-blue-400/40 border-dashed'
+                  : 'border border-dashed'
               }`}
+              style={
+                !selected
+                  ? {
+                      backgroundColor: 'var(--accent-glow)',
+                      borderColor: 'rgba(var(--accent-primary-rgb), 0.35)',
+                      color: 'var(--accent-text)',
+                    }
+                  : undefined
+              }
             >
               {selected ? cleanWord : '?'}
             </span>
@@ -162,7 +171,11 @@ export function SceneQuizGame({ subtitle, onComplete }: SceneQuizGameProps) {
           elements.push(
             <span
               key={`blank-${i}`}
-              className="inline-block min-w-[40px] mx-1 border-b border-white/20 text-white/30 text-center"
+              className="inline-block min-w-[40px] mx-1 border-b text-center"
+              style={{
+                borderColor: 'var(--player-divider)',
+                color: 'var(--text-muted)',
+              }}
             >
               {cleanWord}
             </span>
@@ -179,7 +192,7 @@ export function SceneQuizGame({ subtitle, onComplete }: SceneQuizGameProps) {
 
   return (
     <div className="flex flex-col items-center justify-center h-full px-6">
-      <p className="text-gray-500 text-xs uppercase tracking-wider mb-8">
+      <p className="mb-8 text-xs uppercase tracking-wider text-[var(--text-muted)]">
         빈칸에 들어갈 단어는?
       </p>
 
@@ -194,7 +207,7 @@ export function SceneQuizGame({ subtitle, onComplete }: SceneQuizGameProps) {
           initial={{ opacity: 0, y: 4 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.2, ease: 'easeOut' }}
-          className="text-gray-500 text-sm mb-8 text-center"
+          className="mb-8 text-center text-sm text-[var(--text-muted)]"
         >
           {subtitle.ko}
         </motion.p>
@@ -205,10 +218,19 @@ export function SceneQuizGame({ subtitle, onComplete }: SceneQuizGameProps) {
       {/* 4 choices */}
       <div className="grid grid-cols-2 gap-3 w-full max-w-sm">
         {question.options.map((option) => {
-          let bg = 'bg-white/10'
+          let backgroundColor = 'var(--bg-card)'
+          let textColor = 'var(--text-primary)'
           if (selected) {
-            if (option === correctWord) bg = 'bg-green-500/80'
-            else if (option === selected) bg = 'bg-red-500/80'
+            if (option === correctWord) {
+              backgroundColor = 'rgba(34, 197, 94, 0.8)'
+              textColor = '#ffffff'
+            } else if (option === selected) {
+              backgroundColor = 'rgba(239, 68, 68, 0.8)'
+              textColor = '#ffffff'
+            } else {
+              backgroundColor = 'var(--bg-secondary)'
+              textColor = 'var(--text-secondary)'
+            }
           }
 
           return (
@@ -217,7 +239,8 @@ export function SceneQuizGame({ subtitle, onComplete }: SceneQuizGameProps) {
               whileTap={{ scale: 0.97 }}
               onClick={() => handleSelect(option)}
               disabled={selected !== null}
-              className={`${bg} text-white py-3 px-4 rounded-xl text-center font-medium transition-colors`}
+              className="rounded-xl px-4 py-3 text-center font-medium transition-colors"
+              style={{ backgroundColor, color: textColor }}
             >
               {option}
             </motion.button>

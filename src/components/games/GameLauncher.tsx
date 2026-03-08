@@ -41,20 +41,17 @@ async function loadTranscript(youtubeId: string): Promise<SubtitleEntry[]> {
   }
 }
 
-const GAME_TYPES: GameType[] = ['scene-quiz', 'listening']
-
 export function GameLauncher({ phrases }: GameLauncherProps) {
   const [activeGame, setActiveGame] = useState<GameType | null>(null)
   const [currentPhraseIdx, setCurrentPhraseIdx] = useState(0)
   const [transcriptPhrases, setTranscriptPhrases] = useState<{ en: string; ko: string }[]>([])
-  const [loadingTranscripts, setLoadingTranscripts] = useState(false)
+  const [loadingTranscripts, setLoadingTranscripts] = useState(true)
   const incrementMission = useDailyMissionStore((s) => s.incrementMission)
 
 
   // Load transcript data from seed videos so new users can also play
   useEffect(() => {
     let cancelled = false
-    setLoadingTranscripts(true)
 
     async function fetchTranscripts() {
       // Pick 3 random seed videos and load their transcripts
@@ -123,7 +120,7 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
   if (!hasPhrases && loadingTranscripts) {
     return (
       <div className="mb-8">
-        <div className="w-full bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-2xl border border-white/[0.04] p-6 text-center">
+        <div className="w-full rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-6 text-center shadow-[var(--card-shadow)]">
           <p className="text-[var(--text-muted)] text-sm animate-pulse">
             게임 준비 중...
           </p>
@@ -144,11 +141,14 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
           <motion.button
             whileTap={{ scale: 0.97 }}
             onClick={() => launchGame('scene-quiz')}
-            className="flex-1 bg-[var(--bg-card)] shadow-[var(--card-shadow)] border border-blue-500/10 rounded-2xl p-4 text-left"
+            className="flex-1 rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-4 text-left shadow-[var(--card-shadow)]"
           >
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-blue-500/10 flex items-center justify-center flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-blue-400">
+              <div
+                className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl"
+                style={{ backgroundColor: 'var(--accent-glow)' }}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" style={{ color: 'var(--accent-text)' }}>
                   <path fillRule="evenodd" d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 01-3.476.383.39.39 0 00-.297.17l-2.755 4.133a.75.75 0 01-1.248 0l-2.755-4.133a.39.39 0 00-.297-.17 48.9 48.9 0 01-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97zM6.75 8.25a.75.75 0 01.75-.75h9a.75.75 0 010 1.5h-9a.75.75 0 01-.75-.75zm.75 3.75a.75.75 0 000 1.5H12a.75.75 0 000-1.5H7.5z" clipRule="evenodd" />
                 </svg>
               </div>
@@ -162,11 +162,14 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
           <motion.button
             whileTap={{ scale: 0.97 }}
             onClick={() => launchGame('listening')}
-            className="flex-1 bg-[var(--bg-card)] shadow-[var(--card-shadow)] border border-green-500/10 rounded-2xl p-4 text-left"
+            className="flex-1 rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-4 text-left shadow-[var(--card-shadow)]"
           >
             <div className="flex items-center gap-3">
-              <div className="w-9 h-9 rounded-xl bg-green-500/10 flex items-center justify-center flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-green-400">
+              <div
+                className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl"
+                style={{ backgroundColor: 'var(--bg-secondary)' }}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" style={{ color: 'var(--text-secondary)' }}>
                   <path d="M8.25 4.5a3.75 3.75 0 117.5 0v8.25a3.75 3.75 0 11-7.5 0V4.5z" />
                   <path d="M6 10.5a.75.75 0 01.75.75v1.5a5.25 5.25 0 1010.5 0v-1.5a.75.75 0 011.5 0v1.5a6.751 6.751 0 01-6 6.709v2.291h3a.75.75 0 010 1.5h-7.5a.75.75 0 010-1.5h3v-2.291a6.751 6.751 0 01-6-6.709v-1.5A.75.75 0 016 10.5z" />
                 </svg>
@@ -187,11 +190,16 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-black"
+            className="fixed inset-0 z-40"
+            style={{ backgroundColor: 'var(--bg-primary)' }}
           >
             <button
               onClick={() => setActiveGame(null)}
-              className="absolute top-4 right-4 z-50 text-white/60 bg-white/10 w-8 h-8 rounded-full flex items-center justify-center"
+              className="absolute right-4 top-4 z-50 flex h-8 w-8 items-center justify-center rounded-full"
+              style={{
+                backgroundColor: 'var(--bg-secondary)',
+                color: 'var(--text-secondary)',
+              }}
             >
               {'\u2715'}
             </button>
