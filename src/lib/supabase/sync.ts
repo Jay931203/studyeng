@@ -64,12 +64,18 @@ export function debouncedSyncProfile() {
 }
 
 // ─── Watch history sync ───────────────────────────────────────────
-export async function syncWatchHistoryItem(userId: string, videoId: string, viewCount: number) {
+export async function syncWatchHistoryItem(
+  userId: string,
+  videoId: string,
+  viewCount: number,
+  completionCount?: number,
+) {
   const { error } = await supabase.from('watch_history').upsert(
     {
       user_id: userId,
       video_id: videoId,
       view_count: viewCount,
+      ...(typeof completionCount === 'number' ? { completion_count: completionCount } : {}),
       last_watched_at: new Date().toISOString(),
     },
     { onConflict: 'user_id,video_id' }
@@ -245,13 +251,14 @@ async function pullProfile(userId: string) {
 async function pullWatchHistory(userId: string) {
   const { data, error } = await supabase
     .from('watch_history')
-    .select('video_id, view_count, last_watched_at')
+    .select('video_id, view_count, completion_count, last_watched_at')
     .eq('user_id', userId)
 
   if (error || !data) return
 
   const store = useWatchHistoryStore.getState()
   const localCounts = { ...store.viewCounts }
+  const localCompletionCounts = { ...store.completionCounts }
   const localWatchedIds = [...store.watchedVideoIds]
   const localRecords = [...store.watchRecords]
   let changed = false
@@ -259,11 +266,18 @@ async function pullWatchHistory(userId: string) {
   for (const row of data) {
     const vid = row.video_id
     const serverCount = row.view_count ?? 1
+    const serverCompletionCount = row.completion_count ?? 0
     const localCount = localCounts[vid] ?? 0
+    const localCompletionCount = localCompletionCounts[vid] ?? 0
 
     // Take max view count
     if (serverCount > localCount) {
       localCounts[vid] = serverCount
+      changed = true
+    }
+
+    if (serverCompletionCount > localCompletionCount) {
+      localCompletionCounts[vid] = serverCompletionCount
       changed = true
     }
 
@@ -285,6 +299,7 @@ async function pullWatchHistory(userId: string) {
     const sortedIds = [...new Set(localRecords.map((r) => r.videoId))]
 
     useWatchHistoryStore.setState({
+      completionCounts: localCompletionCounts,
       viewCounts: localCounts,
       watchedVideoIds: sortedIds,
       watchRecords: localRecords.slice(0, 200),
@@ -401,7 +416,7 @@ async function pushProfile(userId: string) {
 }
 
 async function pushWatchHistory(userId: string) {
-  const { viewCounts } = useWatchHistoryStore.getState()
+  const { viewCounts, completionCounts } = useWatchHistoryStore.getState()
   const entries = Object.entries(viewCounts)
   if (entries.length === 0) return
 
@@ -410,6 +425,7 @@ async function pushWatchHistory(userId: string) {
     user_id: userId,
     video_id: videoId,
     view_count: count,
+    completion_count: completionCounts[videoId] ?? 0,
     last_watched_at: new Date().toISOString(),
   }))
 

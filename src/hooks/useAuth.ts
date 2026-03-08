@@ -2,7 +2,8 @@
 
 import { useEffect, useState, useRef } from 'react'
 import { createClient } from '@/lib/supabase/client'
-import { syncOnLogin, onLogout, setCachedUserId } from '@/lib/supabase/sync'
+import { syncOnLogin, onLogout } from '@/lib/supabase/sync'
+import { syncOpsOnLogin } from '@/lib/supabase/opsSync'
 import type { User } from '@supabase/supabase-js'
 
 const supabase = createClient()
@@ -33,7 +34,10 @@ export function useAuth() {
       // Trigger initial sync if user is already logged in
       if (user && syncedRef.current !== user.id) {
         syncedRef.current = user.id
-        syncOnLogin(user.id).catch((err) =>
+        Promise.all([
+          syncOnLogin(user.id),
+          syncOpsOnLogin(user.id, user.email ?? null),
+        ]).catch((err) =>
           console.warn('[auth] initial sync failed:', err)
         )
       }
@@ -50,7 +54,10 @@ export function useAuth() {
 
       if (event === 'SIGNED_IN' && newUser && syncedRef.current !== newUser.id) {
         syncedRef.current = newUser.id
-        syncOnLogin(newUser.id).catch((err) =>
+        Promise.all([
+          syncOnLogin(newUser.id),
+          syncOpsOnLogin(newUser.id, newUser.email ?? null),
+        ]).catch((err) =>
           console.warn('[auth] sync on sign-in failed:', err)
         )
       }

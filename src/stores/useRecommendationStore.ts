@@ -1,5 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
+import { syncRecommendationSignal } from '@/lib/supabase/opsSync'
+import { getCachedUserId } from '@/lib/supabase/sync'
 
 export interface VideoBehaviorSignal {
   impressions: number
@@ -54,16 +56,22 @@ export const useRecommendationStore = create<RecommendationState>()(
         set((state) => {
           const now = Date.now()
           const current = getVideoSignal(state.videoSignals, videoId)
+          const nextSignal = {
+            ...current,
+            impressions: current.impressions + 1,
+            lastInteractedAt: now,
+          }
+          const userId = getCachedUserId()
+
+          if (userId) {
+            syncRecommendationSignal(userId, videoId, nextSignal).catch(() => {})
+          }
 
           return {
             recentVideoIds: pushRecentVideoIds(state.recentVideoIds, videoId),
             videoSignals: {
               ...state.videoSignals,
-              [videoId]: {
-                ...current,
-                impressions: current.impressions + 1,
-                lastInteractedAt: now,
-              },
+              [videoId]: nextSignal,
             },
           }
         }),
@@ -72,17 +80,23 @@ export const useRecommendationStore = create<RecommendationState>()(
         set((state) => {
           const now = Date.now()
           const current = getVideoSignal(state.videoSignals, videoId)
+          const nextSignal = {
+            ...current,
+            completions: current.completions + 1,
+            totalCompletionRatio: current.totalCompletionRatio + 1,
+            lastInteractedAt: now,
+          }
+          const userId = getCachedUserId()
+
+          if (userId) {
+            syncRecommendationSignal(userId, videoId, nextSignal).catch(() => {})
+          }
 
           return {
             recentVideoIds: pushRecentVideoIds(state.recentVideoIds, videoId),
             videoSignals: {
               ...state.videoSignals,
-              [videoId]: {
-                ...current,
-                completions: current.completions + 1,
-                totalCompletionRatio: current.totalCompletionRatio + 1,
-                lastInteractedAt: now,
-              },
+              [videoId]: nextSignal,
             },
           }
         }),
@@ -92,32 +106,45 @@ export const useRecommendationStore = create<RecommendationState>()(
           const now = Date.now()
           const normalizedRatio = clampCompletionRatio(completionRatio)
           const current = getVideoSignal(state.videoSignals, videoId)
+          const userId = getCachedUserId()
 
           if (normalizedRatio >= 0.9) {
+            const nextSignal = {
+              ...current,
+              completions: current.completions + 1,
+              totalCompletionRatio: current.totalCompletionRatio + normalizedRatio,
+              lastInteractedAt: now,
+            }
+
+            if (userId) {
+              syncRecommendationSignal(userId, videoId, nextSignal).catch(() => {})
+            }
+
             return {
               recentVideoIds: pushRecentVideoIds(state.recentVideoIds, videoId),
               videoSignals: {
                 ...state.videoSignals,
-                [videoId]: {
-                  ...current,
-                  completions: current.completions + 1,
-                  totalCompletionRatio: current.totalCompletionRatio + normalizedRatio,
-                  lastInteractedAt: now,
-                },
+                [videoId]: nextSignal,
               },
             }
+          }
+
+          const nextSignal = {
+            ...current,
+            skips: current.skips + 1,
+            totalCompletionRatio: current.totalCompletionRatio + normalizedRatio,
+            lastInteractedAt: now,
+          }
+
+          if (userId) {
+            syncRecommendationSignal(userId, videoId, nextSignal).catch(() => {})
           }
 
           return {
             recentVideoIds: pushRecentVideoIds(state.recentVideoIds, videoId),
             videoSignals: {
               ...state.videoSignals,
-              [videoId]: {
-                ...current,
-                skips: current.skips + 1,
-                totalCompletionRatio: current.totalCompletionRatio + normalizedRatio,
-                lastInteractedAt: now,
-              },
+              [videoId]: nextSignal,
             },
           }
         }),

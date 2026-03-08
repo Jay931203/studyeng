@@ -74,7 +74,8 @@ export const useWatchHistoryStore = create<WatchHistoryState>()(
         // Fire-and-forget sync
         const userId = getCachedUserId()
         if (userId) {
-          syncWatchHistoryItem(userId, videoId, newCount).catch(() => {})
+          const completionCount = get().completionCounts[videoId] ?? 0
+          syncWatchHistoryItem(userId, videoId, newCount, completionCount).catch(() => {})
         }
       },
 
@@ -82,12 +83,19 @@ export const useWatchHistoryStore = create<WatchHistoryState>()(
         if (get().deletedVideoIds.includes(videoId)) return
 
         const current = get().completionCounts[videoId] ?? 0
+        const nextCount = current + 1
         set({
           completionCounts: {
             ...get().completionCounts,
-            [videoId]: current + 1,
+            [videoId]: nextCount,
           },
         })
+
+        const userId = getCachedUserId()
+        if (userId) {
+          const viewCount = get().viewCounts[videoId] ?? 0
+          syncWatchHistoryItem(userId, videoId, viewCount, nextCount).catch(() => {})
+        }
       },
 
       getViewCount: (videoId) => {
