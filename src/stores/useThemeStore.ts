@@ -1,9 +1,9 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
-export type ThemeId = 'teal-dark' | 'blue-dark' | 'light' | 'light-blue'
+export type ThemeId = 'teal-dark' | 'blue-dark' | 'purple-dark' | 'light' | 'light-blue' | 'light-purple'
 export type ThemeBackground = 'dark' | 'light'
-export type ThemeAccent = 'teal' | 'blue'
+export type ThemeAccent = 'teal' | 'blue' | 'purple'
 
 interface ThemeState {
   backgroundTheme: ThemeBackground
@@ -17,10 +17,14 @@ interface ThemeState {
 
 function resolveThemeId(backgroundTheme: ThemeBackground, colorTheme: ThemeAccent): ThemeId {
   if (backgroundTheme === 'dark') {
-    return colorTheme === 'blue' ? 'blue-dark' : 'teal-dark'
+    if (colorTheme === 'blue') return 'blue-dark'
+    if (colorTheme === 'purple') return 'purple-dark'
+    return 'teal-dark'
   }
 
-  return colorTheme === 'blue' ? 'light-blue' : 'light'
+  if (colorTheme === 'blue') return 'light-blue'
+  if (colorTheme === 'purple') return 'light-purple'
+  return 'light'
 }
 
 function normalizeLegacyTheme(theme: unknown): {
@@ -37,7 +41,7 @@ function normalizeLegacyTheme(theme: unknown): {
     case 'light-blue':
       return { backgroundTheme: 'light', colorTheme: 'blue' }
     case 'purple-dark':
-      return { backgroundTheme: 'dark', colorTheme: 'teal' }
+      return { backgroundTheme: 'dark', colorTheme: 'purple' }
     case 'dark':
       return { backgroundTheme: 'dark', colorTheme: 'teal' }
     default:
@@ -89,9 +93,11 @@ export const useThemeStore = create<ThemeState>()(
         const colorTheme =
           state.colorTheme === 'blue'
             ? 'blue'
-            : state.colorTheme === 'teal' || state.colorTheme === 'violet'
-              ? 'teal'
-              : normalizeLegacyTheme(state.theme).colorTheme
+            : state.colorTheme === 'purple' || state.colorTheme === 'violet'
+              ? 'purple'
+              : state.colorTheme === 'teal'
+                ? 'teal'
+                : normalizeLegacyTheme(state.theme).colorTheme
 
         return {
           ...state,

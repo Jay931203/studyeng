@@ -39,19 +39,14 @@ export default function LearningPage() {
 
   return (
     <AppPage>
-        <PageHeader
-          eyebrow="복습"
-          title="복습"
-          description="남겨둔 표현과 본 장면만 다시 꺼낼 수 있게 정리했습니다."
-          action={
-            <button
+        <div className="mb-6 flex items-center justify-end">
+          <button
             onClick={() => router.push('/shorts')}
             className="rounded-full bg-[var(--accent-primary)] px-5 py-2.5 text-sm font-semibold text-white"
           >
-            피드 열기
+            Feed
           </button>
-          }
-        />
+        </div>
 
         <section className="grid gap-4 lg:grid-cols-[1.02fr_0.98fr]">
           <SurfaceCard className="p-6">

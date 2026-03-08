@@ -293,24 +293,17 @@ export default function ExplorePage() {
 
   return (
     <AppPage>
-        <PageHeader
-          eyebrow="오늘"
-          title={userName ? `${userName}님, 오늘 볼 장면` : '오늘 볼 장면'}
-          description="먼저 볼 것, 바로 넘길 것, 다시 꺼낼 것을 한 화면에 모았습니다."
-          action={
-            <div className="flex items-center gap-3">
-            <LogoFull className="h-7 text-[var(--text-primary)]" />
-            {cameFromVideo && returnVideoId && (
-              <button
-                onClick={() => openShorts(returnVideoId, returnSeriesId)}
-                className="rounded-full border border-[var(--border-card)] bg-[var(--bg-card)] px-4 py-2 text-sm text-[var(--text-secondary)]"
-              >
-                보던 영상으로
-              </button>
-            )}
-          </div>
-          }
-        />
+        <div className="mb-6 flex items-center justify-between">
+          <LogoFull className="h-7 text-[var(--text-primary)]" />
+          {cameFromVideo && returnVideoId && (
+            <button
+              onClick={() => openShorts(returnVideoId, returnSeriesId)}
+              className="rounded-full border border-[var(--border-card)] bg-[var(--bg-card)] px-4 py-2 text-sm text-[var(--text-secondary)]"
+            >
+              Back
+            </button>
+          )}
+        </div>
 
         <section className="mb-8 grid gap-4 xl:grid-cols-[1.15fr_0.85fr]">
           <SurfaceCard className="overflow-hidden">

@@ -11,8 +11,7 @@
 
 /* Teal Dark (default) */
 :root,
-[data-theme="teal-dark"],
-[data-theme="purple-dark"] {
+[data-theme="teal-dark"] {
   --background: #0a0a0a;
   --foreground: #ffffff;
   --bg-primary: #0a0a0a;
@@ -106,6 +105,55 @@
   --freeze-text: #eff6ff;
   --freeze-icon: #60a5fa;
   --freeze-shadow: rgba(59, 130, 246, 0.34);
+  --game-overlay: rgba(0,0,0,0.88);
+}
+
+/* Purple Dark */
+[data-theme="purple-dark"] {
+  --background: #0a0a0a;
+  --foreground: #ffffff;
+  --bg-primary: #0a0a0a;
+  --bg-secondary: rgba(255,255,255,0.09);
+  --bg-card: rgba(255,255,255,0.06);
+  --border-card: rgba(255,255,255,0.1);
+  --card-shadow: 0 1px 3px rgba(0,0,0,0.4);
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --text-muted: #8b95a5;
+  --bg-nav: rgba(0,0,0,0.95);
+  --bg-search-dropdown: #111827;
+  --nav-active: var(--accent-primary);
+  --nav-inactive: rgba(255,255,255,0.38);
+  --nav-indicator: var(--accent-primary);
+
+  --accent-primary: #a855f7;
+  --accent-secondary: #7c3aed;
+  --accent-primary-rgb: 168, 85, 247;
+  --accent-glow: rgba(168, 85, 247, 0.2);
+  --accent-text: #c084fc;
+
+  --player-surface: #08060c;
+  --player-panel: rgba(255,255,255,0.08);
+  --player-control-bg: rgba(0,0,0,0.46);
+  --player-control-border: rgba(255,255,255,0.08);
+  --player-chip-bg: rgba(0,0,0,0.58);
+  --player-chip-border: rgba(255,255,255,0.08);
+  --player-text: #ffffff;
+  --player-muted: rgba(255,255,255,0.6);
+  --player-faint: rgba(255,255,255,0.26);
+  --player-divider: rgba(255,255,255,0.08);
+  --player-progress-track: rgba(255,255,255,0.28);
+  --player-progress-fill: #ffffff;
+  --player-progress-knob: #ffffff;
+  --player-shadow: 0 1px 4px rgba(0,0,0,0.8);
+  --player-gradient-strong: rgba(0,0,0,0.58);
+  --player-gradient-soft: rgba(0,0,0,0.16);
+  --player-active-subtitle-bg: rgba(0,0,0,0.45);
+  --freeze-bg: rgba(168, 85, 247, 0.18);
+  --freeze-border: rgba(192, 132, 252, 0.68);
+  --freeze-text: #f5f3ff;
+  --freeze-icon: #c084fc;
+  --freeze-shadow: rgba(168, 85, 247, 0.34);
   --game-overlay: rgba(0,0,0,0.88);
 }
 
@@ -203,6 +251,55 @@
   --freeze-text: #1e3a8a;
   --freeze-icon: #2563eb;
   --freeze-shadow: rgba(37, 99, 235, 0.18);
+  --game-overlay: rgba(241,245,249,0.92);
+}
+
+/* Light Purple */
+[data-theme="light-purple"] {
+  --background: #f8f5fb;
+  --foreground: #111827;
+  --bg-primary: #f8f5fb;
+  --bg-secondary: #ece5f3;
+  --bg-card: #ffffff;
+  --border-card: #e0d4ed;
+  --card-shadow: 0 1px 4px rgba(15,23,42,0.08), 0 0 0 0.5px rgba(15,23,42,0.04);
+  --text-primary: #111827;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --bg-nav: rgba(255,255,255,0.98);
+  --bg-search-dropdown: #ffffff;
+  --nav-active: var(--accent-primary);
+  --nav-inactive: #334155;
+  --nav-indicator: var(--accent-primary);
+
+  --accent-primary: #7c3aed;
+  --accent-secondary: #6d28d9;
+  --accent-primary-rgb: 124, 58, 237;
+  --accent-glow: rgba(124, 58, 237, 0.14);
+  --accent-text: #6d28d9;
+
+  --player-surface: #f8f5fb;
+  --player-panel: rgba(255,255,255,0.9);
+  --player-control-bg: rgba(255,255,255,0.92);
+  --player-control-border: rgba(15,23,42,0.08);
+  --player-chip-bg: rgba(255,255,255,0.94);
+  --player-chip-border: rgba(15,23,42,0.08);
+  --player-text: #0f172a;
+  --player-muted: rgba(15,23,42,0.58);
+  --player-faint: rgba(15,23,42,0.3);
+  --player-divider: rgba(15,23,42,0.08);
+  --player-progress-track: rgba(15,23,42,0.14);
+  --player-progress-fill: #7c3aed;
+  --player-progress-knob: #7c3aed;
+  --player-shadow: 0 1px 2px rgba(255,255,255,0.6);
+  --player-gradient-strong: rgba(255,255,255,0.88);
+  --player-gradient-soft: rgba(255,255,255,0.24);
+  --player-active-subtitle-bg: rgba(255,255,255,0.88);
+  --freeze-bg: rgba(124, 58, 237, 0.1);
+  --freeze-border: rgba(109, 40, 217, 0.34);
+  --freeze-text: #4c1d95;
+  --freeze-icon: #7c3aed;
+  --freeze-shadow: rgba(124, 58, 237, 0.18);
   --game-overlay: rgba(241,245,249,0.92);
 }
 

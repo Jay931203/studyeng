@@ -103,7 +103,7 @@ export default function TabsLayout({
 
       <div
         className={`relative flex min-h-dvh min-w-0 flex-col ${
-          isImmersiveRoute ? (isLandscape ? 'max-w-none' : 'mx-auto max-w-lg') : 'w-full'
+          isImmersiveRoute ? (isLandscape ? 'max-w-none' : 'w-full') : 'w-full'
         }`}
       >
         <main className="flex-1 overflow-hidden">{children}</main>
