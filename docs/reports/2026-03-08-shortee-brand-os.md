@@ -214,7 +214,6 @@ Shortee는 아래 방향으로 가야 한다.
 ### Brand hierarchy
 
 - Master Brand: `Shortee`
-- Product descriptor: `영어에 익숙해지는 쇼츠 피드`
 - Product descriptor: `자막, 저장, 반복으로 이어보는 영어 피드`
 - Core product nouns:
   - 피드
