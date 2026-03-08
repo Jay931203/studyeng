@@ -18,7 +18,7 @@ export default function LearningPage() {
   const router = useRouter()
   const { user } = useAuth()
   const streakDays = useUserStore((state) => state.streakDays)
-  const { phrases, removePhrase } = usePhraseStore()
+  const { phrases, removePhrase, incrementReview } = usePhraseStore()
   const totalWatched = useWatchHistoryStore((state) => state.watchedVideoIds.length)
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)
   const [showAllPhrases, setShowAllPhrases] = useState(false)
@@ -139,7 +139,8 @@ export default function LearningPage() {
                         onDelete={() => removePhrase(phrase.id)}
                         onPlay={() => {
                           clearDeletedFlag(phrase.videoId)
-                          router.push(`/shorts?v=${phrase.videoId}`)
+                          incrementReview(phrase.id)
+                          router.push(`/shorts?v=${phrase.videoId}&t=${phrase.timestampStart}`)
                         }}
                       />
                     ))}

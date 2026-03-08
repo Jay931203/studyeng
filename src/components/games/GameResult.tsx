@@ -14,7 +14,7 @@ export function GameResult({ correct, xpEarned, onContinue }: GameResultProps) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.2 }}
-      className="fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm"
+      className="fixed inset-0 z-[130] flex items-center justify-center backdrop-blur-sm"
       style={{ backgroundColor: 'var(--game-overlay)' }}
       onClick={onContinue}
     >
@@ -23,6 +23,7 @@ export function GameResult({ correct, xpEarned, onContinue }: GameResultProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.25, ease: 'easeOut' }}
         className="rounded-3xl border border-[var(--border-card)] bg-[var(--bg-card)] px-8 py-7 text-center shadow-[var(--card-shadow)]"
+        onClick={(event) => event.stopPropagation()}
       >
         {/* Clean icon instead of emoji */}
         <div className="mb-5">

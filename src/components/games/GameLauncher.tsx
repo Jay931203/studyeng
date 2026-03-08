@@ -107,12 +107,11 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
   const handleComplete = (correct: boolean) => {
     setCurrentPhraseIdx((prev) => prev + 1)
     setActiveGame(null)
-    if (correct) {
-      incrementMission('play-game')
-    }
+    void correct
   }
 
   const launchGame = (type: GameType) => {
+    incrementMission('play-game')
     setActiveGame(type)
   }
 
@@ -190,12 +189,12 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40"
+            className="fixed inset-0 z-[120]"
             style={{ backgroundColor: 'var(--bg-primary)' }}
           >
             <button
               onClick={() => setActiveGame(null)}
-              className="absolute right-4 top-4 z-50 flex h-8 w-8 items-center justify-center rounded-full"
+              className="absolute right-4 top-4 z-[130] flex h-8 w-8 items-center justify-center rounded-full"
               style={{
                 backgroundColor: 'var(--bg-secondary)',
                 color: 'var(--text-secondary)',

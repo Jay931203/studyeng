@@ -14,6 +14,8 @@ export function SearchBar() {
   const [results, setResults] = useState<SearchResult[]>([])
   const [focused, setFocused] = useState(false)
   const debounceRef = useRef<number | null>(null)
+  const blurTimerRef = useRef<number | null>(null)
+  const inputRef = useRef<HTMLInputElement | null>(null)
   const searchIdRef = useRef(0)
   const router = useRouter()
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)
@@ -45,6 +47,12 @@ export function SearchBar() {
     }
   }, [query])
 
+  useEffect(() => {
+    return () => {
+      if (blurTimerRef.current) clearTimeout(blurTimerRef.current)
+    }
+  }, [])
+
   const normalizedQuery = query.trim()
   const showDropdown = focused && normalizedQuery.length > 0
 
@@ -64,6 +72,7 @@ export function SearchBar() {
         </svg>
         <input
           id="video-search"
+          ref={inputRef}
           type="text"
           value={query}
           onChange={(event) => {
@@ -75,8 +84,14 @@ export function SearchBar() {
               setResults([])
             }
           }}
-          onFocus={() => setFocused(true)}
-          onBlur={() => setTimeout(() => setFocused(false), 200)}
+          onFocus={() => {
+            if (blurTimerRef.current) clearTimeout(blurTimerRef.current)
+            setFocused(true)
+          }}
+          onBlur={() => {
+            if (blurTimerRef.current) clearTimeout(blurTimerRef.current)
+            blurTimerRef.current = window.setTimeout(() => setFocused(false), 200)
+          }}
           placeholder="표현, 장면, 상황 검색"
           className="w-full rounded-2xl border border-[var(--border-card)] bg-[var(--bg-primary)]/55 py-3 pl-11 pr-11 text-sm text-[var(--text-primary)] outline-none transition focus:border-[var(--accent-primary)] focus:ring-2 focus:ring-[rgba(var(--accent-primary-rgb),0.18)]"
         />
@@ -106,7 +121,12 @@ export function SearchBar() {
           <button
             key={quickQuery}
             onMouseDown={(event) => event.preventDefault()}
-            onClick={() => setQuery(quickQuery)}
+            onClick={() => {
+              if (blurTimerRef.current) clearTimeout(blurTimerRef.current)
+              setFocused(true)
+              setQuery(quickQuery)
+              inputRef.current?.focus()
+            }}
             className="rounded-full border border-[var(--border-card)] bg-[var(--bg-secondary)]/35 px-3 py-1.5 text-xs font-medium text-[var(--text-secondary)] transition hover:border-[var(--accent-primary)]/35 hover:text-[var(--text-primary)]"
           >
             {quickQuery}
