@@ -26,25 +26,28 @@ function FeatureRow({
 
 function FlowNote() {
   return (
-    <div className="rounded-[28px] border border-[var(--border-card)] bg-[var(--bg-card)]/88 p-5 shadow-[var(--card-shadow)]">
-      <div className="flex flex-wrap gap-2">
-        <span className="rounded-full bg-[var(--accent-glow)] px-3 py-1 text-xs font-medium text-[var(--accent-text)]">
-          피드
-        </span>
-        <span className="rounded-full bg-[var(--bg-secondary)] px-3 py-1 text-xs font-medium text-[var(--text-secondary)]">
-          저장
-        </span>
-        <span className="rounded-full bg-[var(--bg-secondary)] px-3 py-1 text-xs font-medium text-[var(--text-secondary)]">
-          복습
-        </span>
+      <div className="rounded-[28px] border border-[var(--border-card)] bg-[var(--bg-card)]/88 p-5 shadow-[var(--card-shadow)]">
+        <div className="flex flex-wrap gap-2">
+          <span className="rounded-full bg-[var(--accent-glow)] px-3 py-1 text-xs font-medium text-[var(--accent-text)]">
+            피드
+          </span>
+          <span className="rounded-full bg-[var(--bg-secondary)] px-3 py-1 text-xs font-medium text-[var(--text-secondary)]">
+            자막
+          </span>
+          <span className="rounded-full bg-[var(--bg-secondary)] px-3 py-1 text-xs font-medium text-[var(--text-secondary)]">
+            저장
+          </span>
+          <span className="rounded-full bg-[var(--bg-secondary)] px-3 py-1 text-xs font-medium text-[var(--text-secondary)]">
+            반복
+          </span>
+        </div>
+        <p className="mt-4 text-xl font-bold text-[var(--text-primary)]">
+          피드에서 보고, 자막에서 멈추고, 필요한 표현만 남겨두세요.
+        </p>
+        <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
+          계정을 연결하면 이어보기와 저장 표현, 다시 볼 흐름이 끊기지 않게 묶입니다.
+        </p>
       </div>
-      <p className="mt-4 text-xl font-bold text-[var(--text-primary)]">
-        피드에서 보고, 필요한 표현만 남겨두세요.
-      </p>
-      <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-        계정을 연결하면 이어보기와 저장 표현이 끊기지 않게 같은 흐름으로 묶입니다.
-      </p>
-    </div>
   )
 }
 
@@ -69,12 +72,12 @@ function LoginPageContent() {
           </p>
           <Logo className="mt-4 h-12 text-[var(--text-primary)]" />
           <h1 className="mt-6 text-4xl font-bold leading-tight text-[var(--text-primary)]">
-            짧은 장면으로 보는 영어
+            짧은 장면을 넘기다 보면
             <br />
-            보고, 남기고, 다시 보기
+            귀가 먼저 익숙해집니다
           </h1>
           <p className="mt-4 max-w-xl text-base leading-relaxed text-[var(--text-secondary)]">
-            로그인하면 본 장면과 저장 표현, 이어보기가 한 계정에 정리됩니다.
+            로그인하면 본 장면, 저장 표현, 이어보기가 한 계정에 정리되어 다시 들어와도 흐름이 이어집니다.
           </p>
 
           <div className="mt-8 max-w-xl">
@@ -92,7 +95,7 @@ function LoginPageContent() {
             />
             <FeatureRow
               title="반응형 추천"
-              description="시청 반응이 다음 큐에 반영됩니다."
+              description="넘긴 장면들이 다음 피드에 바로 반영됩니다."
             />
             <FeatureRow
               title="가볍게 시작"

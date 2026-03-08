@@ -17,19 +17,19 @@ const tabs = [
     href: '/shorts',
     icon: 'play',
     label: '피드',
-    description: '바로 넘겨보기',
+    description: '자막과 반복',
   },
   {
     href: '/learning',
     icon: 'bookmark',
-    label: '복습',
+    label: '보관함',
     description: '저장 표현과 기록',
   },
   {
     href: '/profile',
-    icon: 'user',
-    label: '나',
-    description: '계정과 톤',
+    icon: 'settings',
+    label: '설정',
+    description: '계정과 앱 톤',
   },
 ] as const
 
@@ -71,22 +71,6 @@ const icons: Record<string, (active: boolean) => ReactNode> = {
         strokeLinecap="round"
         strokeLinejoin="round"
         d="M17.25 21 12 17.25 6.75 21V5.25A2.25 2.25 0 0 1 9 3h6a2.25 2.25 0 0 1 2.25 2.25V21Z"
-      />
-    </svg>
-  ),
-  user: (active) => (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
-      fill={active ? 'currentColor' : 'none'}
-      stroke="currentColor"
-      strokeWidth={active ? 0 : 1.7}
-      className="h-[21px] w-[21px]"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
       />
     </svg>
   ),
@@ -142,7 +126,7 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
           </p>
           <Logo className="mt-3 h-7 text-[var(--text-primary)]" />
           <p className="mt-3 text-sm leading-relaxed text-[var(--text-secondary)]">
-            짧은 장면에서 바로 이해하고, 남겨두고, 다시 꺼내보는 영어 루틴.
+            짧은 장면을 보고, 자막에서 멈추고, 남겨두고, 다시 꺼내보는 영어 피드.
           </p>
         </div>
 
@@ -187,10 +171,10 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
             오늘 흐름
           </p>
           <p className="mt-2 text-sm font-semibold text-[var(--text-primary)]">
-            오늘 → 피드 → 복습
+            오늘 → 피드 → 보관함
           </p>
           <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">
-            볼 장면을 받고, 바로 넘기고, 남겨둔 표현만 다시 꺼내는 흐름입니다.
+            볼 장면을 받고, 자막에서 멈추고, 남겨둔 표현과 기록만 다시 꺼내는 흐름입니다.
           </p>
         </div>
       </aside>
@@ -230,13 +214,6 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
               >
                 {icons[icon](active)}
               </motion.div>
-              <span
-                className={`text-[11px] font-medium ${
-                  active ? 'text-[var(--text-primary)]' : 'text-[var(--text-muted)]'
-                }`}
-              >
-                {label}
-              </span>
             </Link>
           )
         })}

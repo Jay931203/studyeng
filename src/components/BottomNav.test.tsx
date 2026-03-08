@@ -23,8 +23,8 @@ describe('BottomNav', () => {
 
     expect(screen.getByLabelText('오늘')).toBeInTheDocument()
     expect(screen.getByLabelText('피드')).toBeInTheDocument()
-    expect(screen.getByLabelText('복습')).toBeInTheDocument()
-    expect(screen.getByLabelText('나')).toBeInTheDocument()
+    expect(screen.getByLabelText('보관함')).toBeInTheDocument()
+    expect(screen.getByLabelText('설정')).toBeInTheDocument()
   })
 
   it('treats the legacy root video route as the shorts tab', () => {

@@ -4,12 +4,13 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { AdminIssuesList } from '@/components/AdminIssuesList'
+import { BillingManagementCard } from '@/components/BillingManagementCard'
 import { StreakDisplay } from '@/components/StreakDisplay'
 import { AppPage, MetricCard, PageHeader, SurfaceCard } from '@/components/ui/AppPage'
 import { useAuth } from '@/hooks/useAuth'
+import { isBillingEnabled } from '@/lib/billing'
 import { useAdminStore } from '@/stores/useAdminStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
-import { usePremiumStore } from '@/stores/usePremiumStore'
 import {
   useThemeStore,
   type ThemeAccent,
@@ -50,6 +51,12 @@ const COLOR_OPTIONS = [
     label: '블루',
     description: '차분하고 선명한 대체 색상입니다.',
     swatchClass: 'bg-blue-500',
+  },
+  {
+    id: 'purple' as const,
+    label: '퍼플',
+    description: '따뜻하고 감각적인 포인트 색상입니다.',
+    swatchClass: 'bg-purple-500',
   },
 ] satisfies Array<{
   id: ThemeAccent
@@ -100,8 +107,7 @@ export default function ProfilePage() {
   const totalViews = useWatchHistoryStore((state) =>
     Object.values(state.viewCounts).reduce((sum, count) => sum + count, 0),
   )
-  const isPremium = usePremiumStore((state) => state.isPremium)
-  const setPremiumEntitlement = usePremiumStore((state) => state.setPremiumEntitlement)
+  const billingEnabled = isBillingEnabled()
   const unresolvedCount = issues.filter((issue) => !issue.resolved).length
   const profileName =
     user?.user_metadata?.full_name ??
@@ -122,11 +128,6 @@ export default function ProfilePage() {
 
   return (
     <AppPage>
-        <PageHeader
-          eyebrow="나"
-          title="나"
-          description="계정, 앱 톤, 현재 루프를 한곳에 모았습니다."
-        />
 
         {!authAvailable && (
           <section className="mb-6 rounded-[28px] border border-amber-500/20 bg-amber-500/10 px-5 py-4">
@@ -322,20 +323,15 @@ export default function ProfilePage() {
                         프리미엄 기능 잠금을 점검할 때 사용합니다.
                       </p>
                     </div>
-                    <button
-                      onClick={() => setPremiumEntitlement(!isPremium)}
-                      className={`relative h-6 w-11 rounded-full ${
-                        isPremium ? 'bg-[var(--accent-primary)]' : 'bg-[var(--bg-secondary)]'
+                    <span
+                      className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
+                        billingEnabled
+                          ? 'bg-emerald-500/15 text-emerald-300'
+                          : 'bg-amber-500/15 text-amber-300'
                       }`}
-                      role="switch"
-                      aria-checked={isPremium}
                     >
-                      <span
-                        className={`absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white transition-transform ${
-                          isPremium ? 'translate-x-5' : ''
-                        }`}
-                      />
-                    </button>
+                      {billingEnabled ? '활성' : '비활성'}
+                    </span>
                   </div>
                 </div>
               </SurfaceCard>
@@ -346,7 +342,7 @@ export default function ProfilePage() {
             <SurfaceCard className="p-6">
               <SectionTitle
                 title="활동"
-                description="지금 쌓인 루틴과 활동량을 확인합니다."
+                description="지금 쌓인 상태와 활동량을 확인합니다."
               />
               <StreakDisplay days={streakDays} />
               <div className="mt-4 grid grid-cols-3 gap-3">
@@ -405,7 +401,8 @@ export default function ProfilePage() {
           </div>
         </div>
 
-        <div className="mt-6">
+        <div className="mt-6 space-y-6">
+          <BillingManagementCard />
           <AdminIssuesList />
         </div>
     </AppPage>
