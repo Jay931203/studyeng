@@ -19,8 +19,8 @@ export function ShareButton({ videoId, videoTitle }: ShareButtonProps) {
 
       const shareUrl = `${window.location.origin}${buildShortsUrl(videoId)}`
       const shareText = videoTitle
-        ? `${videoTitle} - Shortee에서 영어 배우기`
-        : 'Shortee에서 영어 배우기'
+        ? `${videoTitle} - Shortee에서 이 장면 다시 보기`
+        : 'Shortee에서 이 장면 다시 보기'
 
       if (typeof navigator !== 'undefined' && navigator.share) {
         try {

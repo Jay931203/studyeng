@@ -16,27 +16,67 @@ export function DailyMissions() {
   const missions = useDailyMissionStore((state) => state.missions)
   const allCompleteBonus = useDailyMissionStore((state) => state.allCompleteBonus)
   const checkAndResetDaily = useDailyMissionStore((state) => state.checkAndResetDaily)
+  const completedCount = missions.filter((mission) => mission.completed).length
+  const completionRate = missions.length > 0 ? (completedCount / missions.length) * 100 : 0
 
   useEffect(() => {
     checkAndResetDaily()
   }, [checkAndResetDaily])
 
   return (
-    <div className="mb-8 overflow-hidden rounded-2xl border border-white/[0.04] bg-[var(--bg-card)] shadow-[var(--card-shadow)]">
-      <div className="flex items-center justify-between px-4 pb-2 pt-4">
-        <span className="text-xs font-medium uppercase tracking-wide text-[var(--text-secondary)]">
-          오늘의 미션
-        </span>
-        <span
-          className={`rounded-full px-2 py-0.5 text-[10px] font-semibold ${
-            allCompleteBonus ? 'bg-green-500/15 text-green-400' : 'bg-white/[0.03] text-[var(--text-muted)]'
-          }`}
-        >
-          {allCompleteBonus ? '전체 완료' : '진행 중'}
-        </span>
+    <div className="mb-8 overflow-hidden rounded-[28px] border border-[var(--border-card)] bg-[var(--bg-card)] shadow-[var(--card-shadow)]">
+      <div className="border-b border-[var(--border-card)]/60 px-5 pb-4 pt-5">
+        <div className="flex items-start justify-between gap-4">
+          <div>
+            <span className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
+              루틴
+            </span>
+            <h2 className="mt-2 text-xl font-bold text-[var(--text-primary)]">
+              오늘 루틴
+            </h2>
+            <p className="mt-1 text-sm text-[var(--text-secondary)]">
+              크게 힘 주지 않고 한 바퀴만 돌 수 있게 묶어뒀습니다.
+            </p>
+          </div>
+          <span
+            className={`rounded-full px-3 py-1 text-[11px] font-semibold ${
+              allCompleteBonus ? 'bg-green-500/15 text-green-400' : 'bg-[var(--bg-secondary)] text-[var(--text-muted)]'
+            }`}
+          >
+            {allCompleteBonus ? '전체 완료' : `${completedCount}/${missions.length} 완료`}
+          </span>
+        </div>
+
+        <div className="mt-4">
+          <div className="mb-2 flex items-center justify-between text-xs text-[var(--text-muted)]">
+            <span>오늘 진행률</span>
+            <span>{Math.round(completionRate)}%</span>
+          </div>
+          <div className="h-2 overflow-hidden rounded-full bg-[var(--bg-secondary)]">
+            <motion.div
+              initial={{ width: 0 }}
+              animate={{ width: `${Math.min(completionRate, 100)}%` }}
+              className="h-full rounded-full bg-gradient-to-r from-[var(--accent-primary)] to-emerald-400"
+            />
+          </div>
+        </div>
       </div>
 
-      <div className="px-4 pb-2">
+      <div className="px-5 pb-2 pt-2">
+        <div className="mb-1 flex items-center justify-between">
+          <span className="text-xs font-medium uppercase tracking-wide text-[var(--text-secondary)]">
+            체크포인트
+          </span>
+          <span
+            className={`rounded-full px-2 py-0.5 text-[10px] font-semibold ${
+              allCompleteBonus
+                ? 'bg-green-500/15 text-green-400'
+                : 'bg-[var(--bg-secondary)] text-[var(--text-muted)]'
+            }`}
+          >
+            {allCompleteBonus ? '전체 완료' : '진행 중'}
+          </span>
+        </div>
         {missions.map((mission, index) => {
           const progress = mission.target > 0 ? (mission.current / mission.target) * 100 : 0
           return (
@@ -80,9 +120,9 @@ export function DailyMissions() {
       </div>
 
       {allCompleteBonus && (
-        <div className="px-4 pb-4">
-          <p className="text-center text-xs text-green-400/80">
-            오늘 미션 완료가 이번 달 구독 할인 진행률에 반영됐습니다.
+        <div className="px-5 pb-4">
+          <p className="rounded-2xl bg-green-500/10 px-4 py-3 text-center text-xs text-green-300/90">
+            오늘 루틴이 이번 달 할인 진행률에 반영됐습니다.
           </p>
         </div>
       )}
@@ -176,7 +216,7 @@ function DiscountProgress() {
               >
                 <div className="mb-4 flex items-start justify-between gap-4">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400">Discount</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400">혜택</p>
                     <h3 className="mt-2 text-lg font-semibold text-[var(--text-primary)]">이번 달 할인 진행 상황</h3>
                     <p className="mt-1 text-sm text-[var(--text-muted)]">
                       지금 달성한 정도와 다음 연간 결제 할인 쿠폰 예상 금액을 볼 수 있습니다.

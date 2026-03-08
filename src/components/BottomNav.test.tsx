@@ -21,10 +21,10 @@ describe('BottomNav', () => {
 
     render(<BottomNav />)
 
-    expect(screen.getByLabelText('홈')).toBeInTheDocument()
-    expect(screen.getByLabelText('쇼츠')).toBeInTheDocument()
-    expect(screen.getByLabelText('프로필')).toBeInTheDocument()
-    expect(screen.getByLabelText('설정')).toBeInTheDocument()
+    expect(screen.getByLabelText('오늘')).toBeInTheDocument()
+    expect(screen.getByLabelText('피드')).toBeInTheDocument()
+    expect(screen.getByLabelText('복습')).toBeInTheDocument()
+    expect(screen.getByLabelText('나')).toBeInTheDocument()
   })
 
   it('treats the legacy root video route as the shorts tab', () => {
@@ -33,7 +33,7 @@ describe('BottomNav', () => {
 
     render(<BottomNav />)
 
-    const shortsLink = screen.getByLabelText('쇼츠')
+    const shortsLink = screen.getByLabelText('피드')
     expect(shortsLink.className).toContain('text-[var(--nav-active)]')
   })
 })

@@ -1,10 +1,22 @@
 import type { Metadata, Viewport } from 'next'
+import { Noto_Sans_KR, Space_Grotesk } from 'next/font/google'
 import { ThemeProvider } from '@/components/ThemeProvider'
 import './globals.css'
 
+const uiFont = Noto_Sans_KR({
+  variable: '--font-ui',
+  weight: ['400', '500', '600', '700', '800'],
+})
+
+const displayFont = Space_Grotesk({
+  subsets: ['latin'],
+  variable: '--font-display',
+  weight: ['500', '700'],
+})
+
 export const metadata: Metadata = {
-  title: 'Shortee - Learn English with Shorts',
-  description: 'Learn English with Shorts',
+  title: 'Shortee - 영어는 장면으로 남는다',
+  description: '짧은 장면을 넘기다 보면 영어가 따라오는 숏폼 앱',
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
@@ -12,24 +24,22 @@ export const metadata: Metadata = {
     title: 'Shortee',
   },
   openGraph: {
-    title: 'Shortee - Learn English with Shorts',
-    description: 'Learn English with Shorts',
+    title: 'Shortee - 영어는 장면으로 남는다',
+    description: '짧은 장면을 넘기다 보면 영어가 따라오는 숏폼 앱',
     type: 'website',
     locale: 'ko_KR',
     siteName: 'Shortee',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Shortee - Learn English with Shorts',
-    description: 'Learn English with Shorts',
+    title: 'Shortee - 영어는 장면으로 남는다',
+    description: '짧은 장면을 넘기다 보면 영어가 따라오는 숏폼 앱',
   },
 }
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
-  userScalable: false,
   viewportFit: 'cover',
   themeColor: '#000000',
 }
@@ -42,8 +52,8 @@ export default function RootLayout({
   return (
     <html
       lang="ko"
-      className="dark"
-      data-theme="purple-dark"
+      className={`${uiFont.variable} ${displayFont.variable} dark`}
+      data-theme="teal-dark"
       suppressHydrationWarning
     >
       <head>
@@ -61,20 +71,24 @@ export default function RootLayout({
                 colorTheme = 'blue';
               } else if (legacyTheme === 'light') {
                 backgroundTheme = 'light';
-                colorTheme = 'violet';
+                colorTheme = 'teal';
               } else if (legacyTheme === 'light-blue') {
                 backgroundTheme = 'light';
                 colorTheme = 'blue';
               } else {
                 backgroundTheme = 'dark';
-                colorTheme = 'violet';
+                colorTheme = 'teal';
               }
+            }
+
+            if (colorTheme === 'violet') {
+              colorTheme = 'teal';
             }
 
             if (backgroundTheme && colorTheme) {
               var themeId;
               if (backgroundTheme === 'dark') {
-                themeId = colorTheme === 'blue' ? 'blue-dark' : 'purple-dark';
+                themeId = colorTheme === 'blue' ? 'blue-dark' : 'teal-dark';
               } else {
                 themeId = colorTheme === 'blue' ? 'light-blue' : 'light';
               }

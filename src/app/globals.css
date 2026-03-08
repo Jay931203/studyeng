@@ -1,23 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 @import "tailwindcss";
 
 /* =====================================================
    Theme System
    Three themes controlled via data-theme attribute on <html>
-   - purple-dark (default): Purple accent on black
+   - teal-dark (default, replaces legacy purple-dark): Jade accent on black
    - blue-dark: Blue accent on black
-   - light: Purple accent on white
+   - light: Jade accent on white
    - light-blue: Blue accent on white
    ===================================================== */
 
-/* Purple Dark (default) */
+/* Teal Dark (default) */
 :root,
+[data-theme="teal-dark"],
 [data-theme="purple-dark"] {
-  --background: #000000;
+  --background: #0a0a0a;
   --foreground: #ffffff;
-  --bg-primary: #000000;
-  --bg-secondary: rgba(255,255,255,0.1);
-  --bg-card: rgba(255,255,255,0.07);
+  --bg-primary: #0a0a0a;
+  --bg-secondary: rgba(255,255,255,0.09);
+  --bg-card: rgba(255,255,255,0.06);
   --border-card: rgba(255,255,255,0.1);
   --card-shadow: 0 1px 3px rgba(0,0,0,0.4);
   --text-primary: #ffffff;
@@ -29,13 +29,13 @@
   --nav-inactive: rgba(255,255,255,0.38);
   --nav-indicator: var(--accent-primary);
 
-  --accent-primary: #a855f7;
-  --accent-secondary: #7c3aed;
-  --accent-primary-rgb: 168, 85, 247;
-  --accent-glow: rgba(168, 85, 247, 0.2);
-  --accent-text: #c084fc;
+  --accent-primary: #14b8a6;
+  --accent-secondary: #0f766e;
+  --accent-primary-rgb: 20, 184, 166;
+  --accent-glow: rgba(20, 184, 166, 0.2);
+  --accent-text: #5eead4;
 
-  --player-surface: #020102;
+  --player-surface: #080c0c;
   --player-panel: rgba(255,255,255,0.08);
   --player-control-bg: rgba(0,0,0,0.46);
   --player-control-border: rgba(255,255,255,0.08);
@@ -52,21 +52,21 @@
   --player-gradient-strong: rgba(0,0,0,0.58);
   --player-gradient-soft: rgba(0,0,0,0.16);
   --player-active-subtitle-bg: rgba(0,0,0,0.45);
-  --freeze-bg: rgba(168, 85, 247, 0.2);
-  --freeze-border: rgba(192, 132, 252, 0.7);
-  --freeze-text: #f5edff;
-  --freeze-icon: #c084fc;
-  --freeze-shadow: rgba(168, 85, 247, 0.34);
+  --freeze-bg: rgba(20, 184, 166, 0.18);
+  --freeze-border: rgba(94, 234, 212, 0.68);
+  --freeze-text: #ecfeff;
+  --freeze-icon: #5eead4;
+  --freeze-shadow: rgba(20, 184, 166, 0.34);
   --game-overlay: rgba(0,0,0,0.88);
 }
 
 /* Blue Dark */
 [data-theme="blue-dark"] {
-  --background: #000000;
+  --background: #0a0a0a;
   --foreground: #ffffff;
-  --bg-primary: #000000;
-  --bg-secondary: rgba(255,255,255,0.1);
-  --bg-card: rgba(255,255,255,0.07);
+  --bg-primary: #0a0a0a;
+  --bg-secondary: rgba(255,255,255,0.09);
+  --bg-card: rgba(255,255,255,0.06);
   --border-card: rgba(255,255,255,0.1);
   --card-shadow: 0 1px 3px rgba(0,0,0,0.4);
   --text-primary: #ffffff;
@@ -127,11 +127,11 @@
   --nav-inactive: #475569;
   --nav-indicator: var(--accent-primary);
 
-  --accent-primary: #9333ea;
-  --accent-secondary: #7c3aed;
-  --accent-primary-rgb: 147, 51, 234;
-  --accent-glow: rgba(147, 51, 234, 0.15);
-  --accent-text: #7c3aed;
+  --accent-primary: #0f766e;
+  --accent-secondary: #115e59;
+  --accent-primary-rgb: 15, 118, 110;
+  --accent-glow: rgba(15, 118, 110, 0.14);
+  --accent-text: #115e59;
 
   --player-surface: #f5f5f5;
   --player-panel: rgba(255,255,255,0.88);
@@ -144,17 +144,17 @@
   --player-faint: rgba(15,23,42,0.3);
   --player-divider: rgba(15,23,42,0.08);
   --player-progress-track: rgba(15,23,42,0.14);
-  --player-progress-fill: #9333ea;
-  --player-progress-knob: #9333ea;
+  --player-progress-fill: #0f766e;
+  --player-progress-knob: #0f766e;
   --player-shadow: 0 1px 2px rgba(255,255,255,0.6);
   --player-gradient-strong: rgba(255,255,255,0.88);
   --player-gradient-soft: rgba(255,255,255,0.24);
   --player-active-subtitle-bg: rgba(255,255,255,0.88);
-  --freeze-bg: rgba(147, 51, 234, 0.1);
-  --freeze-border: rgba(124, 58, 237, 0.36);
-  --freeze-text: #581c87;
-  --freeze-icon: #7c3aed;
-  --freeze-shadow: rgba(147, 51, 234, 0.18);
+  --freeze-bg: rgba(15, 118, 110, 0.1);
+  --freeze-border: rgba(17, 94, 89, 0.34);
+  --freeze-text: #134e4a;
+  --freeze-icon: #0f766e;
+  --freeze-shadow: rgba(15, 118, 110, 0.18);
   --game-overlay: rgba(241,245,249,0.92);
 }
 
@@ -207,18 +207,32 @@
 }
 
 body {
+  min-height: 100dvh;
   background: var(--bg-primary);
+  background-image:
+    radial-gradient(circle at top left, rgba(var(--accent-primary-rgb), 0.16), transparent 30%),
+    radial-gradient(circle at 82% 14%, rgba(245, 158, 11, 0.08), transparent 16%),
+    radial-gradient(circle at bottom center, rgba(255, 255, 255, 0.03), transparent 24%),
+    linear-gradient(180deg, rgba(255,255,255,0.02), transparent 22%);
   color: var(--text-primary);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: var(--font-ui), 'Apple SD Gothic Neo', 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   overscroll-behavior: none;
-  overflow: hidden;
-  height: 100dvh;
+  overflow-x: hidden;
   max-width: 100vw;
 }
 
 * {
   -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: rgba(var(--accent-primary-rgb), 0.28);
+  color: var(--text-primary);
+}
+
+.font-display {
+  font-family: var(--font-display), var(--font-ui), sans-serif;
 }
 
 .safe-area-bottom {
@@ -278,7 +292,7 @@ body {
 @media (orientation: landscape) {
   /* Ensure body uses full viewport in landscape */
   body {
-    overflow: hidden;
+    overflow-x: hidden;
   }
 
   /* Safe area padding for notched devices (iPhone etc.) in landscape */

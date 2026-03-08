@@ -1,9 +1,9 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
-export type ThemeId = 'purple-dark' | 'blue-dark' | 'light' | 'light-blue'
+export type ThemeId = 'teal-dark' | 'blue-dark' | 'light' | 'light-blue'
 export type ThemeBackground = 'dark' | 'light'
-export type ThemeAccent = 'violet' | 'blue'
+export type ThemeAccent = 'teal' | 'blue'
 
 interface ThemeState {
   backgroundTheme: ThemeBackground
@@ -17,7 +17,7 @@ interface ThemeState {
 
 function resolveThemeId(backgroundTheme: ThemeBackground, colorTheme: ThemeAccent): ThemeId {
   if (backgroundTheme === 'dark') {
-    return colorTheme === 'blue' ? 'blue-dark' : 'purple-dark'
+    return colorTheme === 'blue' ? 'blue-dark' : 'teal-dark'
   }
 
   return colorTheme === 'blue' ? 'light-blue' : 'light'
@@ -28,18 +28,20 @@ function normalizeLegacyTheme(theme: unknown): {
   colorTheme: ThemeAccent
 } {
   switch (theme) {
+    case 'teal-dark':
+      return { backgroundTheme: 'dark', colorTheme: 'teal' }
     case 'blue-dark':
       return { backgroundTheme: 'dark', colorTheme: 'blue' }
     case 'light':
-      return { backgroundTheme: 'light', colorTheme: 'violet' }
+      return { backgroundTheme: 'light', colorTheme: 'teal' }
     case 'light-blue':
       return { backgroundTheme: 'light', colorTheme: 'blue' }
     case 'purple-dark':
-      return { backgroundTheme: 'dark', colorTheme: 'violet' }
+      return { backgroundTheme: 'dark', colorTheme: 'teal' }
     case 'dark':
-      return { backgroundTheme: 'dark', colorTheme: 'violet' }
+      return { backgroundTheme: 'dark', colorTheme: 'teal' }
     default:
-      return { backgroundTheme: 'dark', colorTheme: 'violet' }
+      return { backgroundTheme: 'dark', colorTheme: 'teal' }
   }
 }
 
@@ -47,8 +49,8 @@ export const useThemeStore = create<ThemeState>()(
   persist(
     (set, get) => ({
       backgroundTheme: 'dark',
-      colorTheme: 'violet',
-      themeId: 'purple-dark',
+      colorTheme: 'teal',
+      themeId: 'teal-dark',
       setBackgroundTheme: (backgroundTheme) =>
         set((state) => ({
           backgroundTheme,
@@ -85,9 +87,11 @@ export const useThemeStore = create<ThemeState>()(
             ? state.backgroundTheme
             : normalizeLegacyTheme(state.theme).backgroundTheme
         const colorTheme =
-          state.colorTheme === 'blue' || state.colorTheme === 'violet'
-            ? state.colorTheme
-            : normalizeLegacyTheme(state.theme).colorTheme
+          state.colorTheme === 'blue'
+            ? 'blue'
+            : state.colorTheme === 'teal' || state.colorTheme === 'violet'
+              ? 'teal'
+              : normalizeLegacyTheme(state.theme).colorTheme
 
         return {
           ...state,

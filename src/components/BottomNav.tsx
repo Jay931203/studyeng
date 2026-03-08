@@ -4,12 +4,33 @@ import type { ReactNode } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { usePathname, useSearchParams } from 'next/navigation'
+import { Logo } from './Logo'
 
 const tabs = [
-  { href: '/explore', icon: 'home', label: '홈' },
-  { href: '/shorts', icon: 'play', label: '쇼츠' },
-  { href: '/learning', icon: 'user', label: '프로필' },
-  { href: '/profile', icon: 'settings', label: '설정' },
+  {
+    href: '/explore',
+    icon: 'home',
+    label: '오늘',
+    description: '추천과 이어보기',
+  },
+  {
+    href: '/shorts',
+    icon: 'play',
+    label: '피드',
+    description: '바로 넘겨보기',
+  },
+  {
+    href: '/learning',
+    icon: 'bookmark',
+    label: '복습',
+    description: '저장 표현과 기록',
+  },
+  {
+    href: '/profile',
+    icon: 'user',
+    label: '나',
+    description: '계정과 톤',
+  },
 ] as const
 
 const icons: Record<string, (active: boolean) => ReactNode> = {
@@ -35,6 +56,22 @@ const icons: Record<string, (active: boolean) => ReactNode> = {
       className="h-[21px] w-[21px]"
     >
       <path d="M6.75 5.653c0-1.336 1.433-2.183 2.603-1.54l9.161 5.036c1.211.666 1.211 2.404 0 3.07l-9.16 5.036c-1.171.643-2.604-.204-2.604-1.54V5.653Z" />
+    </svg>
+  ),
+  bookmark: (active) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill={active ? 'currentColor' : 'none'}
+      stroke="currentColor"
+      strokeWidth={active ? 0 : 1.7}
+      className="h-[21px] w-[21px]"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M17.25 21 12 17.25 6.75 21V5.25A2.25 2.25 0 0 1 9 3h6a2.25 2.25 0 0 1 2.25 2.25V21Z"
+      />
     </svg>
   ),
   user: (active) => (
@@ -74,48 +111,132 @@ const icons: Record<string, (active: boolean) => ReactNode> = {
   ),
 }
 
-export function BottomNav() {
+interface BottomNavProps {
+  mode?: 'bottom' | 'sidebar'
+}
+
+function isTabActive(pathname: string, href: string, isLegacyShortsAlias: boolean) {
+  if (href === '/shorts') {
+    return pathname === '/shorts' || isLegacyShortsAlias
+  }
+
+  if (href === '/explore') {
+    return pathname === '/explore'
+  }
+
+  return pathname.startsWith(href)
+}
+
+export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const isLegacyShortsAlias =
     pathname === '/' && Boolean(searchParams.get('v') || searchParams.get('series'))
 
+  if (mode === 'sidebar') {
+    return (
+      <aside className="hidden h-full flex-col rounded-[32px] border border-[var(--border-card)] bg-[var(--bg-card)]/88 p-4 shadow-[var(--card-shadow)] backdrop-blur-xl lg:flex">
+        <div className="rounded-[28px] border border-[var(--border-card)] bg-black/20 px-4 py-5">
+          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[var(--accent-text)]">
+            Shortee
+          </p>
+          <Logo className="mt-3 h-7 text-[var(--text-primary)]" />
+          <p className="mt-3 text-sm leading-relaxed text-[var(--text-secondary)]">
+            짧은 장면에서 바로 이해하고, 남겨두고, 다시 꺼내보는 영어 루틴.
+          </p>
+        </div>
+
+        <nav className="mt-5 flex flex-1 flex-col gap-2">
+          {tabs.map(({ href, icon, label, description }) => {
+            const active = isTabActive(pathname, href, isLegacyShortsAlias)
+
+            return (
+              <Link
+                key={href}
+                href={href}
+                aria-label={label}
+                aria-current={active ? 'page' : undefined}
+                className={`rounded-2xl border px-4 py-3 transition-all ${
+                  active
+                    ? 'border-[var(--accent-primary)]/35 bg-[var(--accent-glow)]'
+                    : 'border-transparent hover:border-[var(--border-card)] hover:bg-[var(--bg-secondary)]/45'
+                }`}
+              >
+                <div className="flex items-center gap-3">
+                  <div
+                    className={`flex h-10 w-10 items-center justify-center rounded-2xl ${
+                      active
+                        ? 'bg-[var(--accent-primary)] text-white'
+                        : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
+                    }`}
+                  >
+                    {icons[icon](active)}
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-sm font-semibold text-[var(--text-primary)]">{label}</p>
+                    <p className="mt-0.5 text-xs text-[var(--text-muted)]">{description}</p>
+                  </div>
+                </div>
+              </Link>
+            )
+          })}
+        </nav>
+
+        <div className="rounded-[24px] border border-[var(--border-card)] bg-[var(--bg-secondary)]/40 p-4">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--text-muted)]">
+            Today stack
+          </p>
+          <p className="mt-2 text-sm font-semibold text-[var(--text-primary)]">
+            오늘 → 피드 → 복습
+          </p>
+          <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">
+            볼 장면을 받고, 바로 넘기고, 남겨둔 표현만 다시 꺼내는 흐름입니다.
+          </p>
+        </div>
+      </aside>
+    )
+  }
+
   return (
-    <nav className="safe-area-bottom sticky bottom-0 left-0 right-0 z-50 border-t border-[var(--border-card)] bg-[var(--bg-nav)] backdrop-blur-2xl">
-      <div className="grid h-[62px] grid-cols-4 px-2">
+    <nav className="safe-area-bottom sticky bottom-0 left-0 right-0 z-50 border-t border-[var(--border-card)] bg-[var(--bg-nav)]/92 backdrop-blur-2xl lg:hidden">
+      <div className="grid h-[74px] grid-cols-4 gap-1 px-2 pb-2 pt-1">
         {tabs.map(({ href, icon, label }) => {
-          const isActive =
-            href === '/shorts'
-              ? pathname === '/shorts' || isLegacyShortsAlias
-              : href === '/explore'
-                ? pathname === '/explore'
-                : pathname.startsWith(href)
+          const active = isTabActive(pathname, href, isLegacyShortsAlias)
 
           return (
             <Link
               key={href}
               href={href}
               aria-label={label}
-              className={`relative flex items-center justify-center rounded-2xl transition-all duration-200 active:scale-95 ${
-                isActive ? 'text-[var(--nav-active)]' : 'text-[var(--nav-inactive)]'
+              aria-current={active ? 'page' : undefined}
+              className={`relative flex flex-col items-center justify-center gap-1 rounded-[20px] px-1 py-2 transition-all duration-200 active:scale-95 ${
+                active
+                  ? 'bg-[var(--accent-glow)] text-[var(--nav-active)]'
+                  : 'text-[var(--nav-inactive)]'
               }`}
             >
-              {isActive && (
+              {active && (
                 <motion.div
                   layoutId="nav-active"
-                  className="absolute inset-x-5 top-0 h-[2px] rounded-full bg-[var(--nav-indicator)]"
+                  className="absolute inset-x-4 top-0 h-[2px] rounded-full bg-[var(--nav-indicator)]"
                   transition={{ type: 'spring', stiffness: 520, damping: 36 }}
                 />
               )}
 
               <motion.div
-                animate={{ scale: isActive ? 1 : 0.92, y: isActive ? -1 : 0 }}
+                animate={{ scale: active ? 1 : 0.92, y: active ? -1 : 0 }}
                 transition={{ type: 'spring', stiffness: 420, damping: 28 }}
                 className="relative z-10"
               >
-                {icons[icon](isActive)}
+                {icons[icon](active)}
               </motion.div>
-              <span className="sr-only">{label}</span>
+              <span
+                className={`text-[11px] font-medium ${
+                  active ? 'text-[var(--text-primary)]' : 'text-[var(--text-muted)]'
+                }`}
+              >
+                {label}
+              </span>
             </Link>
           )
         })}

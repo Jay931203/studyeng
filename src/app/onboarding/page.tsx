@@ -97,19 +97,19 @@ export default function OnboardingPage() {
             {step === 0 && (
               <div className="text-center">
                 <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--accent-text)]">
-                  Welcome
+                  Shortee 시작
                 </p>
                 <Logo className="h-8 mx-auto mt-4 mb-3 text-white" />
                 <p className="mb-12 text-lg leading-relaxed text-gray-400">
-                  로그인 후 처음 한 번만 취향을 맞추면
+                  처음 한 번만 감각을 맞추면
                   <br />
-                  바로 개인화된 홈과 쇼츠로 시작할 수 있습니다.
+                  오늘 볼 장면과 복습 흐름이 바로 정리됩니다.
                 </p>
                 <button
                   onClick={() => setStep(1)}
                   className="w-full rounded-xl bg-[var(--accent-primary)] py-3.5 text-base font-medium text-white"
                 >
-                  시작하기
+                  계속하기
                 </button>
               </div>
             )}
@@ -120,7 +120,7 @@ export default function OnboardingPage() {
                   지금 영어 감각은 어느 정도인가요?
                 </h2>
                 <p className="mb-6 text-sm text-gray-400">
-                  선택한 난이도는 추천 영상과 학습 흐름에 반영됩니다.
+                  선택한 난이도는 오늘 장면과 복습 순서에 반영됩니다.
                 </p>
                 <div className="mb-8 flex flex-col gap-3">
                   {LEVELS.map((level) => (
@@ -142,7 +142,7 @@ export default function OnboardingPage() {
                   onClick={finish}
                   className="w-full rounded-xl bg-[var(--accent-primary)] py-3.5 font-medium text-white"
                 >
-                  맞춤 홈 시작
+                  오늘 장면 받기
                 </button>
               </div>
             )}

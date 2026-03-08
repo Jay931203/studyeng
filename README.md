@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shortee
 
-## Getting Started
+Shortee is a short-form English learning app built around vertical video clips, lightweight review loops, and a mobile-first feed experience.
 
-First, run the development server:
+## Product
+
+- Brand: `Shortee`
+- Internal workspace/repo name: `studyeng` (migration not fully finished)
+- Stack: Next.js 16, React 19, TypeScript, Zustand, Supabase, Prisma
+- Core surfaces: shorts feed, explore, learning history, profile/settings, premium gating
+
+## Scripts
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run lint
+npm run test:run
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Key Docs
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- [Brand OS](./docs/reports/2026-03-08-shortee-brand-os.md)
+- [Brand UI handoff](./docs/reports/2026-03-08-shortee-brand-ui-handoff.md)
+- [OMX brand playbook](./docs/reports/2026-03-08-shortee-omx-brand-playbook.md)
+- [Brand and growth command center](./docs/reports/2026-03-08-shortee-brand-command-center.md)
+- [Brand and UX strategy draft](./docs/plans/brand-ux-strategy.md)
+- [Pricing strategy draft](./docs/plans/pricing-strategy.md)
+- [Competitor analysis](./docs/research/2026-03-07-competitor-analysis.md)
+- [UX improvement notes](./docs/plans/2026-03-08-ux-improvements.md)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Current Release Reality
 
-## Learn More
+As of March 8, 2026:
 
-To learn more about Next.js, take a look at the following resources:
+- `npm run test:run` passes
+- `npm run lint` passes with warnings
+- `npm run build` passes
+- branding is mostly aligned to `Shortee`, with some legacy internal `studyeng` naming still present
+- premium UI exists, but real payment infrastructure is not integrated yet
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+See the command center document above for the launch blockers, brand direction, acquisition plan, and automation roadmap.
