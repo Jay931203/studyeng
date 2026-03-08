@@ -92,7 +92,6 @@ export function buildRecommendationManifest({
     const signals = assetSignals.get(video.youtubeId) ?? emptyAssetSignals()
     const titleTokens = rankTokens(countTokens(tokenizeText(video.title)), 10)
     const topicTokens = unique([...titleTokens, ...signals.subtitleTokens]).slice(0, 24)
-    const recommendable = asset?.externalPlaybackStatus !== 'blocked'
     const qualityTier =
       asset?.workflowStatus === 'ready'
         ? 'ready'
@@ -101,6 +100,7 @@ export function buildRecommendationManifest({
         : video.workflowStatus === 'needs_clip_review'
         ? 'needs_clip_review'
         : 'candidate'
+    const recommendable = qualityTier === 'ready'
 
     return {
       id: video.id,

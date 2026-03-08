@@ -1,6 +1,6 @@
 # Content System Report
 
-Generated: 2026-03-08T11:49:23.020Z
+Generated: 2026-03-08T13:33:26.757Z
 
 ## Snapshot
 
@@ -14,15 +14,15 @@ Generated: 2026-03-08T11:49:23.020Z
 ## Workflow Counts
 
 - Assets blocked_external: 372
-- Assets needs_timing_review: 50
-- Assets needs_translation: 43
-- Assets needs_whisper: 182
-- Assets ready: 54
+- Assets needs_timing_review: 207
+- Assets needs_translation: 4
+- Assets needs_whisper: 1
+- Assets ready: 117
 - Videos blocked_external: 372
-- Videos needs_timing_review: 50
-- Videos needs_translation: 43
-- Videos needs_whisper: 182
-- Videos ready: 54
+- Videos needs_timing_review: 207
+- Videos needs_translation: 4
+- Videos needs_whisper: 1
+- Videos ready: 117
 
 ## Category Counts
 
@@ -84,21 +84,21 @@ Generated: 2026-03-08T11:49:23.020Z
 
 ## Timing Review Queue
 
+- aWIE0PX1uXk: 7 issues
+- Ds0R1eApo9w: 7 issues
+- -_zYn-HHcyA: 6 issues
+- e1KEC_3vygc: 6 issues
+- WNIPqafd4As: 6 issues
+- f_kgZFdt5B0: 5 issues
+- hA5ezR0Kh80: 5 issues
+- 3JWTaaS7LdU: 4 issues
+- a3lcGnMhvsA: 4 issues
+- eBS7QW9d100: 4 issues
 - hJCUJLMSEK0: 4 issues
+- mIABSdupWdI: 4 issues
+- PIb6AZdTr-A: 4 issues
+- pmGOE6yNA98: 4 issues
 - RESwG23_YGw: 4 issues
-- wsl5fS7KGZc: 4 issues
-- YQHsXMglC9A: 4 issues
-- k6C8SX0mWP0: 3 issues
-- Tjk68tpAdp8: 3 issues
-- vVPT0JT1dOw: 3 issues
-- -e5CtbbZL-k: 2 issues
-- 0u8KUgUqprw: 2 issues
-- cle4jJFoeQg: 2 issues
-- HlBYdiXdUa8: 2 issues
-- hSSxp_fsrJ0: 2 issues
-- JKJExBXRorA: 2 issues
-- JRfuAukYTKg: 2 issues
-- kE5IzU8KiJ4: 2 issues
 
 ## Reviewed Exceptions
 

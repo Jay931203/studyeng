@@ -223,7 +223,11 @@ function getFeature(video: VideoData) {
 }
 
 function isRecommendableFeature(feature: RecommendationFeature) {
-  return feature.recommendable !== false && feature.externalPlaybackStatus !== 'blocked'
+  return (
+    feature.qualityTier === 'ready' &&
+    feature.recommendable !== false &&
+    feature.externalPlaybackStatus !== 'blocked'
+  )
 }
 
 function buildWatchedIdSet(watchedEpisodes: Record<string, string[]>) {
