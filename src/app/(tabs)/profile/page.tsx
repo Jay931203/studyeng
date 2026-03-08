@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { AdminIssuesList } from '@/components/AdminIssuesList'
@@ -20,7 +21,7 @@ const BACKGROUND_OPTIONS = [
   {
     id: 'dark' as const,
     label: '다크',
-    description: '콘트라스트가 강한 몰입형 학습 화면입니다.',
+    description: '콘트라스트가 선명한 몰입형 화면입니다.',
     previewClass: 'border-white/10 bg-[#050505]',
   },
   {
@@ -124,7 +125,7 @@ export default function ProfilePage() {
         <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--accent-text)]">
-              Me
+              나
             </p>
             <h1 className="mt-2 text-3xl font-bold text-[var(--text-primary)]">나</h1>
             <p className="mt-2 max-w-2xl text-sm leading-relaxed text-[var(--text-secondary)]">
@@ -158,11 +159,15 @@ export default function ProfilePage() {
               <div className="flex items-center gap-4">
                 <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-[var(--accent-primary)] to-[var(--accent-secondary)] text-2xl font-bold text-white">
                   {user?.user_metadata?.avatar_url ? (
-                    <img
+                    <span className="relative block h-full w-full">
+                      <Image
                       src={user.user_metadata.avatar_url}
                       alt={profileName}
-                      className="h-full w-full object-cover"
-                    />
+                        fill
+                        sizes="64px"
+                        className="object-cover"
+                      />
+                    </span>
                   ) : (
                     <span>{profileName.slice(0, 1).toUpperCase()}</span>
                   )}
@@ -353,7 +358,7 @@ export default function ProfilePage() {
               <div className="mt-4 grid grid-cols-3 gap-3">
                 <div className="rounded-2xl bg-[var(--bg-primary)] p-4 text-center">
                   <p className="text-3xl font-bold text-[var(--text-primary)]">{totalViews}</p>
-                  <p className="mt-1 text-xs text-[var(--text-secondary)]">총 시청</p>
+                  <p className="mt-1 text-xs text-[var(--text-secondary)]">누적 재생</p>
                 </div>
                 <div className="rounded-2xl bg-[var(--bg-primary)] p-4 text-center">
                   <p className="text-3xl font-bold text-[var(--text-primary)]">{phraseCount}</p>
@@ -361,7 +366,7 @@ export default function ProfilePage() {
                 </div>
                 <div className="rounded-2xl bg-[var(--bg-primary)] p-4 text-center">
                   <p className="text-3xl font-bold text-[var(--text-primary)]">{totalWatched}</p>
-                  <p className="mt-1 text-xs text-[var(--text-secondary)]">본 영상</p>
+                  <p className="mt-1 text-xs text-[var(--text-secondary)]">본 장면</p>
                 </div>
               </div>
             </section>

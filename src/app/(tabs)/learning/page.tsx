@@ -39,7 +39,7 @@ export default function LearningPage() {
       user?.user_metadata?.full_name ??
       user?.user_metadata?.name ??
       user?.email?.split('@')[0] ??
-      '학습자'
+      '게스트'
     )
   }, [user])
 
@@ -51,7 +51,7 @@ export default function LearningPage() {
         <div className="mb-6 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
-              Review
+              복습
             </p>
             <h1 className="mt-2 text-3xl font-bold text-[var(--text-primary)]">
               복습

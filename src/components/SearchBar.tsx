@@ -53,7 +53,7 @@ export function SearchBar() {
       <div className="mb-3 flex items-center justify-between gap-3">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
-            Quick search
+            빠른 검색
           </p>
           <p className="mt-1 text-sm text-[var(--text-secondary)]">대사, 상황, 시리즈</p>
         </div>

@@ -71,7 +71,7 @@ export function StreakDisplay({ days }: StreakDisplayProps) {
 
         <div className="rounded-[22px] border border-[var(--border-card)] bg-black/15 px-4 py-3">
           <p className="text-[11px] uppercase tracking-[0.18em] text-[var(--text-muted)]">
-            This week
+            이번 주
           </p>
           <p className="mt-1 text-xl font-semibold text-[var(--text-primary)]">
             {activeCount}

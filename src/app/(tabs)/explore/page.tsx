@@ -246,7 +246,7 @@ export default function ExplorePage() {
           <div className="mb-6 flex items-start justify-between gap-4">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
-                Series
+                시리즈
               </p>
               <h1 className="mt-2 text-3xl font-bold text-[var(--text-primary)]">
                 시리즈 상세
@@ -336,7 +336,7 @@ export default function ExplorePage() {
         <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[var(--accent-text)]">
-              Today
+              오늘
             </p>
             <h1 className="mt-2 text-3xl font-bold text-[var(--text-primary)] sm:text-4xl">
               {userName ? `${userName}님, 오늘 볼 장면` : '오늘 볼 장면'}
@@ -363,7 +363,7 @@ export default function ExplorePage() {
             <div className="grid min-h-[360px] lg:grid-cols-[1.02fr_0.98fr]">
               <div className="order-2 p-6 sm:p-8 lg:order-1 lg:p-10">
                 <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
-                  {continueSeries.length > 0 ? 'Resume' : 'Fresh pick'}
+                  {continueSeries.length > 0 ? '이어보기' : '오늘 추천'}
                 </p>
                 <h2 className="mt-3 text-3xl font-bold leading-tight text-[var(--text-primary)]">
                   {continueSeries.length > 0
@@ -448,7 +448,7 @@ export default function ExplorePage() {
 
             <div className="rounded-[28px] border border-[var(--border-card)] bg-[var(--bg-card)] p-5 shadow-[var(--card-shadow)]">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
-                Today memo
+                오늘 메모
               </p>
               <h2 className="mt-2 text-xl font-bold text-[var(--text-primary)]">
                 지금 상태
@@ -468,7 +468,7 @@ export default function ExplorePage() {
 
         <section className="mb-8">
           <SectionHeading
-            eyebrow="Continue"
+            eyebrow="이어보기"
             title="이어보기"
             description={
               continueSeries.length > 0
@@ -545,7 +545,7 @@ export default function ExplorePage() {
 
         <section className="mb-8">
           <SectionHeading
-            eyebrow="Recommendations"
+            eyebrow="추천"
             title="지금 뜨는 장면"
             description={
               interests.length > 0
@@ -566,7 +566,7 @@ export default function ExplorePage() {
 
         <section ref={seriesSectionRef} className="mb-8">
           <SectionHeading
-            eyebrow="Series"
+            eyebrow="시리즈"
             title="시리즈"
             description="한 흐름으로 이어지는 장면만 따로 모았습니다."
           />

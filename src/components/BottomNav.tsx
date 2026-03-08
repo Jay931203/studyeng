@@ -184,7 +184,7 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
 
         <div className="rounded-[24px] border border-[var(--border-card)] bg-[var(--bg-secondary)]/40 p-4">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--text-muted)]">
-            Today stack
+            오늘 흐름
           </p>
           <p className="mt-2 text-sm font-semibold text-[var(--text-primary)]">
             오늘 → 피드 → 복습
