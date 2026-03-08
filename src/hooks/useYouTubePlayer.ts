@@ -277,6 +277,35 @@ export function useYouTubePlayer(
   }, [playbackRate, ready])
 
   useEffect(() => {
+    if (!ready || playbackStarted) return
+
+    const player = playerRef.current as
+      | (YT.Player & { getIframe?: () => HTMLIFrameElement; mute?: () => void })
+      | null
+    if (!player) return
+
+    const intervalId = window.setInterval(() => {
+      const iframe = typeof player.getIframe === 'function' ? player.getIframe() : null
+      if (!iframe || !iframe.isConnected) {
+        return
+      }
+
+      window.clearInterval(intervalId)
+
+      try {
+        player.mute?.()
+        player.playVideo()
+      } catch {
+        // Ignore autoplay failures.
+      }
+    }, 100)
+
+    return () => {
+      window.clearInterval(intervalId)
+    }
+  }, [playbackStarted, ready])
+
+  useEffect(() => {
     let disposed = false
 
     setIsPlaying(false)
