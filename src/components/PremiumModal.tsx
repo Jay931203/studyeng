@@ -1,9 +1,11 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useMemo, useState } from 'react'
+import { usePathname, useSearchParams } from 'next/navigation'
 import { getBillingConfig } from '@/lib/billing'
-import { useDiscountStore } from '@/stores/useDiscountStore'
+import { useAuth } from '@/hooks/useAuth'
 import { ModalFeatureList, ModalHeader, ModalShell } from '@/components/ui/ModalShell'
+import type { BillingPlan } from '@/lib/billingServer'
 
 interface PremiumModalProps {
   isOpen: boolean
@@ -16,11 +18,21 @@ const triggerMessages: Record<'video-limit' | 'phrase-limit', string> = {
   'phrase-limit': '무료 문장 저장 한도를 모두 사용했습니다.',
 }
 
-const MONTHLY_PRICE = 9900
-const YEARLY_PRICE = 79900
-
-function formatPrice(value: number) {
-  return `${value.toLocaleString('ko-KR')}원`
+const PLAN_DETAILS: Record<
+  BillingPlan,
+  { label: string; detail: string; price: string; highlight?: boolean }
+> = {
+  yearly: {
+    label: '연간 플랜',
+    detail: '1년 기준으로 가장 저렴한 옵션',
+    price: '79,900원 / 년',
+    highlight: true,
+  },
+  monthly: {
+    label: '월간 플랜',
+    detail: '가볍게 시작하는 월 구독',
+    price: '9,900원 / 월',
+  },
 }
 
 export function PremiumModal({
@@ -28,20 +40,60 @@ export function PremiumModal({
   onClose,
   trigger = 'video-limit',
 }: PremiumModalProps) {
-  const getCompletionRate = useDiscountStore((state) => state.getCompletionRate)
-  const getDiscountRate = useDiscountStore((state) => state.getDiscountRate)
-  const checkAndResetMonthly = useDiscountStore((state) => state.checkAndResetMonthly)
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+  const { enabled: billingEnabled } = getBillingConfig()
+  const { user } = useAuth()
+  const [selectedPlan, setSelectedPlan] = useState<BillingPlan>('yearly')
+  const [submitting, setSubmitting] = useState(false)
+  const [errorMessage, setErrorMessage] = useState<string | null>(null)
+  const nextPath = useMemo(() => {
+    const query = searchParams.toString()
+    return query ? `${pathname}?${query}` : pathname
+  }, [pathname, searchParams])
 
-  useEffect(() => {
-    if (isOpen) checkAndResetMonthly()
-  }, [checkAndResetMonthly, isOpen])
+  const handleCheckout = async () => {
+    if (!billingEnabled) {
+      return
+    }
 
-  const completionRate = getCompletionRate()
-  const discountRate = getDiscountRate()
-  const discountedMonthly = Math.round(MONTHLY_PRICE * (1 - discountRate / 100))
-  const discountedYearly = Math.round(YEARLY_PRICE * (1 - discountRate / 100))
-  const currentCoupon = Math.round((YEARLY_PRICE * discountRate) / 100)
-  const { checkoutUrl, enabled: billingEnabled } = getBillingConfig()
+    if (!user) {
+      window.location.assign(`/login?next=${encodeURIComponent(nextPath || '/profile')}`)
+      return
+    }
+
+    setSubmitting(true)
+    setErrorMessage(null)
+
+    try {
+      const response = await fetch('/api/billing/checkout', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ plan: selectedPlan }),
+      })
+
+      const payload = (await response.json().catch(() => null)) as { url?: string; error?: string } | null
+
+      if (response.status === 401) {
+        window.location.assign(`/login?next=${encodeURIComponent(nextPath || '/profile')}`)
+        return
+      }
+
+      if (!response.ok || !payload?.url) {
+        throw new Error(payload?.error ?? 'checkout-failed')
+      }
+
+      window.location.assign(payload.url)
+      onClose()
+    } catch (error) {
+      console.warn('[billing] checkout start failed:', error)
+      setErrorMessage('결제 세션을 시작하지 못했습니다. 잠시 후 다시 시도해 주세요.')
+    } finally {
+      setSubmitting(false)
+    }
+  }
 
   return (
     <ModalShell isOpen={isOpen} onClose={onClose} position="bottom">
@@ -49,99 +101,97 @@ export function PremiumModal({
         {triggerMessages[trigger]}
       </div>
       <ModalHeader
-        eyebrow="프리미엄"
+        eyebrow="Premium"
         title={billingEnabled ? '제한 없이 이어보기' : '결제 준비 중입니다'}
         description={
           billingEnabled
-            ? '이번 달 달성률은 구독 할인으로 바로 이어집니다.'
-            : '실결제 연동 전이라 현재는 프리미엄 판매를 열어두지 않았습니다.'
+            ? '실제 결제와 서버 entitlement 기준으로 프리미엄 권한을 부여합니다.'
+            : '실결제 연동이 끝나기 전까지는 프리미엄 판매와 강제 잠금을 열지 않습니다.'
         }
         onClose={onClose}
       />
 
+      <ModalFeatureList
+        items={[
+          '무제한 영상 시청',
+          '무제한 문장 저장',
+          '전체 복습 게임 이용',
+          '광고 없이 학습',
+        ]}
+      />
+
       {billingEnabled ? (
-        <div className="mb-6 rounded-2xl border border-emerald-500/20 bg-emerald-500/10 px-4 py-3">
-          <div className="flex items-center justify-between gap-3">
-            <div>
-              <p className="text-sm font-semibold text-emerald-400">이번 달 할인 진행률</p>
-              <p className="mt-1 text-xs text-[var(--text-secondary)]">
-                현재 달성률 {Math.round(completionRate)}%
-              </p>
-            </div>
-            <div className="text-right">
-              <p className="text-sm font-bold text-[var(--text-primary)]">
-                {discountRate > 0 ? `${discountRate}% 할인` : '할인 준비 중'}
-              </p>
-              <p className="mt-1 text-xs text-[var(--text-muted)]">
-                {discountRate > 0
-                  ? `연간 쿠폰 ${formatPrice(currentCoupon)}`
-                  : '미션 달성 시 적용'}
-              </p>
-            </div>
-          </div>
+        <div className="mb-5 grid gap-3">
+          {(['yearly', 'monthly'] as BillingPlan[]).map((plan) => {
+            const details = PLAN_DETAILS[plan]
+            const selected = selectedPlan === plan
+
+            return (
+              <button
+                key={plan}
+                onClick={() => setSelectedPlan(plan)}
+                className={`rounded-2xl border px-4 py-4 text-left transition-colors ${
+                  selected
+                    ? 'border-[var(--accent-primary)] bg-[var(--accent-glow)]'
+                    : 'border-[var(--border-card)] bg-[var(--bg-secondary)]/35'
+                }`}
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <p className="text-sm font-semibold text-[var(--text-primary)]">
+                      {details.label}
+                    </p>
+                    <p className="mt-1 text-xs text-[var(--text-secondary)]">{details.detail}</p>
+                  </div>
+                  {details.highlight && (
+                    <span className="rounded-full bg-emerald-500/15 px-2 py-1 text-[10px] font-semibold text-emerald-300">
+                      추천
+                    </span>
+                  )}
+                </div>
+                <p className="mt-3 text-lg font-bold text-[var(--text-primary)]">
+                  {details.price}
+                </p>
+              </button>
+            )
+          })}
         </div>
       ) : (
-        <div className="mb-6 rounded-2xl border border-amber-500/20 bg-amber-500/10 px-4 py-3">
+        <div className="mb-5 rounded-2xl border border-amber-500/20 bg-amber-500/10 px-4 py-3">
           <p className="text-sm font-semibold text-amber-300">현재는 무료 운영 중</p>
           <p className="mt-1 text-xs leading-relaxed text-amber-100/80">
-            실제 결제와 구독 검증이 준비되기 전까지는 프리미엄 판매와 강제 잠금을
-            비활성화합니다.
+            서버 결제, 웹훅, 권한 검증이 모두 준비될 때까지는 판매를 비활성화합니다.
           </p>
         </div>
       )}
 
-      <ModalFeatureList
-        items={['무제한 영상 시청', '무제한 문장 저장', '전체 복습 게임 이용', '광고 없이 학습']}
-      />
+      {billingEnabled && !user && (
+        <div className="mb-4 rounded-2xl border border-sky-500/20 bg-sky-500/10 px-4 py-3">
+          <p className="text-sm font-semibold text-sky-300">로그인 후 결제</p>
+          <p className="mt-1 text-xs leading-relaxed text-sky-100/80">
+            결제 권한과 구독 상태는 계정 단위로 관리됩니다.
+          </p>
+        </div>
+      )}
 
-      {billingEnabled && (
-        <div className="mb-8 space-y-3">
-          <div className="rounded-2xl bg-[var(--accent-glow)] px-5 py-4">
-            <div className="flex items-center justify-between gap-4">
-              <div>
-                <p className="font-bold text-[var(--text-primary)]">연간 플랜</p>
-                <p className="mt-0.5 text-sm text-[var(--accent-text)]">
-                  {discountRate > 0 ? `${discountRate}% 추가 쿠폰 적용` : '기본 할인 적용'}
-                </p>
-              </div>
-              <div className="text-right">
-                <p className="text-lg font-bold text-emerald-400">
-                  {formatPrice(discountedYearly)}
-                </p>
-                <p className="text-xs text-[var(--text-muted)]">/년</p>
-              </div>
-            </div>
-          </div>
-          <div className="rounded-2xl bg-[var(--bg-secondary)] px-5 py-4">
-            <div className="flex items-center justify-between gap-4">
-              <div>
-                <p className="font-medium text-[var(--text-primary)]">월간 플랜</p>
-                <p className="mt-0.5 text-sm text-[var(--text-muted)]">부담 없이 시작</p>
-              </div>
-              <div className="text-right">
-                <p className="text-lg font-bold text-[var(--text-primary)]">
-                  {formatPrice(discountedMonthly)}
-                </p>
-                <p className="text-xs text-[var(--text-muted)]">/월</p>
-              </div>
-            </div>
-          </div>
+      {errorMessage && (
+        <div className="mb-4 rounded-2xl border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">
+          {errorMessage}
         </div>
       )}
 
       <button
-        onClick={() => {
-          if (!billingEnabled || !checkoutUrl) {
-            return
-          }
-
-          window.location.assign(checkoutUrl)
-          onClose()
-        }}
-        disabled={!billingEnabled || !checkoutUrl}
+        onClick={handleCheckout}
+        disabled={!billingEnabled || submitting}
         className="w-full rounded-2xl bg-[var(--accent-primary)] py-4 text-base font-bold text-white disabled:cursor-not-allowed disabled:opacity-50"
       >
-        {billingEnabled ? '프리미엄 시작' : '출시 준비 중'}
+        {!billingEnabled
+          ? '출시 준비 중'
+          : submitting
+            ? '결제 연결 중...'
+            : user
+              ? '프리미엄 시작'
+              : '로그인 후 구독 시작'}
       </button>
       <button
         onClick={onClose}
