@@ -6,6 +6,7 @@
    - purple-dark (default): Purple accent on black
    - blue-dark: Blue accent on black
    - light: Purple accent on white
+   - light-blue: Blue accent on white
    ===================================================== */
 
 /* Purple Dark (default) */
@@ -23,6 +24,9 @@
   --text-muted: #8b95a5;
   --bg-nav: rgba(0,0,0,0.95);
   --bg-search-dropdown: #111827;
+  --nav-active: var(--accent-primary);
+  --nav-inactive: rgba(255,255,255,0.38);
+  --nav-indicator: var(--accent-primary);
 
   --accent-primary: #a855f7;
   --accent-secondary: #7c3aed;
@@ -45,6 +49,9 @@
   --text-muted: #8b95a5;
   --bg-nav: rgba(0,0,0,0.95);
   --bg-search-dropdown: #111827;
+  --nav-active: var(--accent-primary);
+  --nav-inactive: rgba(255,255,255,0.38);
+  --nav-indicator: var(--accent-primary);
 
   --accent-primary: #3b82f6;
   --accent-secondary: #2563eb;
@@ -67,12 +74,39 @@
   --text-muted: #6b7280;
   --bg-nav: rgba(255,255,255,0.95);
   --bg-search-dropdown: #ffffff;
+  --nav-active: var(--accent-primary);
+  --nav-inactive: #6b7280;
+  --nav-indicator: var(--accent-primary);
 
   --accent-primary: #9333ea;
   --accent-secondary: #7c3aed;
   --accent-primary-rgb: 147, 51, 234;
   --accent-glow: rgba(147, 51, 234, 0.15);
   --accent-text: #7c3aed;
+}
+
+[data-theme="light-blue"] {
+  --background: #f5f7fb;
+  --foreground: #111827;
+  --bg-primary: #f5f7fb;
+  --bg-secondary: #e6edf7;
+  --bg-card: #ffffff;
+  --border-card: #d9e3f0;
+  --card-shadow: 0 1px 4px rgba(15,23,42,0.08), 0 0 0 0.5px rgba(15,23,42,0.04);
+  --text-primary: #111827;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --bg-nav: rgba(255,255,255,0.95);
+  --bg-search-dropdown: #ffffff;
+  --nav-active: var(--accent-primary);
+  --nav-inactive: #64748b;
+  --nav-indicator: var(--accent-primary);
+
+  --accent-primary: #2563eb;
+  --accent-secondary: #1d4ed8;
+  --accent-primary-rgb: 37, 99, 235;
+  --accent-glow: rgba(37, 99, 235, 0.14);
+  --accent-text: #1d4ed8;
 }
 
 body {

@@ -83,22 +83,55 @@ export default function ExplorePage() {
   const searchParams = useSearchParams()
   const { getSeriesProgress, getNextEpisode, isWatched, getViewCount, clearDeletedFlag } = useWatchHistoryStore()
 
-  // Drive selected series from URL search params so browser back works
   const selectedSeriesId = searchParams.get('series')
+  const source = searchParams.get('source')
+  const returnVideoId = searchParams.get('returnVideoId')
+  const returnSeriesId = searchParams.get('returnSeriesId')
+  const cameFromVideo = source === 'video' && Boolean(returnVideoId)
   const selectedSeries = useMemo(
     () => (selectedSeriesId ? series.find((s) => s.id === selectedSeriesId) ?? null : null),
     [selectedSeriesId],
   )
 
+  const buildExploreUrl = useCallback(
+    (seriesId: string | null) => {
+      const params = new URLSearchParams()
+      if (seriesId) {
+        params.set('series', seriesId)
+      }
+      if (cameFromVideo && returnVideoId) {
+        params.set('source', 'video')
+        params.set('returnVideoId', returnVideoId)
+        if (returnSeriesId) {
+          params.set('returnSeriesId', returnSeriesId)
+        }
+      }
+      const query = params.toString()
+      return query ? `/explore?${query}` : '/explore'
+    },
+    [cameFromVideo, returnSeriesId, returnVideoId],
+  )
+
+  const returnToVideo = useCallback(() => {
+    if (!returnVideoId) {
+      router.push('/explore', { scroll: false })
+      return
+    }
+
+    clearDeletedFlag(returnVideoId)
+    const params = new URLSearchParams()
+    params.set('v', returnVideoId)
+    if (returnSeriesId) {
+      params.set('series', returnSeriesId)
+    }
+    router.push(`/?${params.toString()}`, { scroll: false })
+  }, [clearDeletedFlag, returnSeriesId, returnVideoId, router])
+
   const setSelectedSeries = useCallback(
     (s: SeriesType | null) => {
-      if (s) {
-        router.push(`/explore?series=${s.id}`, { scroll: false })
-      } else {
-        router.back()
-      }
+      router.push(buildExploreUrl(s?.id ?? null), { scroll: false })
     },
-    [router],
+    [buildExploreUrl, router],
   )
 
   const filteredSeries = useMemo(() => {
@@ -113,8 +146,18 @@ export default function ExplorePage() {
         {/* Header */}
         <div className="flex items-center justify-between mb-5">
           <h1 className="text-[var(--text-primary)] text-2xl font-bold">탐색</h1>
-          <div className="text-[var(--text-muted)] text-sm">
+          <div className="flex items-center gap-3">
+            <div className="text-[var(--text-muted)] text-sm">
             {series.length}개 시리즈 / {seedVideos.length}개 영상
+            </div>
+            {cameFromVideo && (
+              <button
+                onClick={returnToVideo}
+                className="text-sm text-[var(--text-secondary)] hover:text-[var(--text-primary)] transition-colors"
+              >
+                취소
+              </button>
+            )}
           </div>
         </div>
 
@@ -127,7 +170,7 @@ export default function ExplorePage() {
             whileTap={{ scale: 0.95 }}
             onClick={() => {
               setActiveCategory('all')
-              if (selectedSeriesId) router.push('/explore', { scroll: false })
+              if (selectedSeriesId) router.push(buildExploreUrl(null), { scroll: false })
             }}
             className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 flex-shrink-0 ${
               activeCategory === 'all'
@@ -150,7 +193,7 @@ export default function ExplorePage() {
                 whileTap={{ scale: 0.95 }}
                 onClick={() => {
                   setActiveCategory(cat.id)
-                  if (selectedSeriesId) router.push('/explore', { scroll: false })
+                  if (selectedSeriesId) router.push(buildExploreUrl(null), { scroll: false })
                 }}
                 className={`flex items-center gap-1.5 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 flex-shrink-0 ${
                   activeCategory === cat.id
@@ -180,7 +223,7 @@ export default function ExplorePage() {
             >
               {/* Back button */}
               <button
-                onClick={() => router.back()}
+                onClick={() => setSelectedSeries(null)}
                 className="text-blue-400 text-sm mb-4 flex items-center gap-1.5 hover:text-blue-300 transition-colors"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">

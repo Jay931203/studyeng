@@ -21,6 +21,15 @@ interface VideoFeedProps {
   videos: VideoData[]
 }
 
+function buildExploreSeriesUrl(video: VideoData) {
+  const params = new URLSearchParams()
+  if (video.seriesId) params.set('series', video.seriesId)
+  params.set('source', 'video')
+  params.set('returnVideoId', video.id)
+  if (video.seriesId) params.set('returnSeriesId', video.seriesId)
+  return `/explore?${params.toString()}`
+}
+
 export function VideoFeed({ videos }: VideoFeedProps) {
   const router = useRouter()
   const [currentIndex, setCurrentIndex] = useState(0)
@@ -114,7 +123,6 @@ export function VideoFeed({ videos }: VideoFeedProps) {
 
   const handleNextVideo = useCallback(() => {
     if (currentIndex >= videos.length - 1) return
-
     const nextVideo = videos[currentIndex + 1]
     const alreadyWatched = nextVideo && getViewCount(nextVideo.id) > 0
     if (!alreadyWatched) {
@@ -125,7 +133,6 @@ export function VideoFeed({ videos }: VideoFeedProps) {
         return
       }
     }
-
     resetRepeatCount()
     setDirection(1)
     setCurrentIndex((prev) => prev + 1)
@@ -138,13 +145,15 @@ export function VideoFeed({ videos }: VideoFeedProps) {
     setCurrentIndex((prev) => prev - 1)
   }, [currentIndex, resetRepeatCount])
 
+  const swipeThreshold = 50
+
   const handleDragEnd = useCallback(
     (_: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
       const { offset, velocity } = info
 
-      if (offset.y < -50 || velocity.y < -500) {
+      if (offset.y < -swipeThreshold || velocity.y < -500) {
         handleNextVideo()
-      } else if (offset.y > 50 || velocity.y > 500) {
+      } else if (offset.y > swipeThreshold || velocity.y > 500) {
         handlePrevVideo()
       }
     },
@@ -190,7 +199,6 @@ export function VideoFeed({ videos }: VideoFeedProps) {
                 setShowPremiumModal(true)
                 return
               }
-
               savePhrase({
                 videoId: currentVideo.id,
                 videoTitle: currentVideo.title,
@@ -205,10 +213,11 @@ export function VideoFeed({ videos }: VideoFeedProps) {
               setTimeout(() => setShowToast(false), 2000)
             }}
           >
-            <ProgressBar className="bottom-0 left-0 right-0" />
+            <ProgressBar className="bottom-2 left-3 right-16" />
 
             <div
-              className="absolute right-3 bottom-8 z-20 flex flex-col gap-3"
+              className="absolute right-3 bottom-3 z-20 flex flex-col gap-3"
+              onPointerDownCapture={(e) => e.stopPropagation()}
               onClick={(e) => e.stopPropagation()}
             >
               {currentIndex > 0 && (
@@ -218,11 +227,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
                   aria-label="이전 영상"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-white/80">
-                    <path
-                      fillRule="evenodd"
-                      d="M9.47 6.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 8.06l-3.72 3.72a.75.75 0 0 1-1.06-1.06l4.25-4.25Z"
-                      clipRule="evenodd"
-                    />
+                    <path fillRule="evenodd" d="M9.47 6.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 8.06l-3.72 3.72a.75.75 0 0 1-1.06-1.06l4.25-4.25Z" clipRule="evenodd" />
                   </svg>
                 </button>
               )}
@@ -233,17 +238,12 @@ export function VideoFeed({ videos }: VideoFeedProps) {
                   aria-label="다음 영상"
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5 text-white/80">
-                    <path
-                      fillRule="evenodd"
-                      d="M10.53 13.53a.75.75 0 0 1-1.06 0l-4.25-4.25a.75.75 0 0 1 1.06-1.06L10 11.94l3.72-3.72a.75.75 0 0 1 1.06 1.06l-4.25 4.25Z"
-                      clipRule="evenodd"
-                    />
+                    <path fillRule="evenodd" d="M10.53 13.53a.75.75 0 0 1-1.06 0l-4.25-4.25a.75.75 0 0 1 1.06-1.06L10 11.94l3.72-3.72a.75.75 0 0 1 1.06 1.06l-4.25 4.25Z" clipRule="evenodd" />
                   </svg>
                 </button>
               )}
             </div>
           </VideoPlayer>
-
           <UnifiedControls videoId={currentVideo.id} videoTitle={currentVideo.title} />
 
           <div className="absolute top-0 left-0 right-0 h-[100px] bg-gradient-to-b from-black/50 via-black/20 to-transparent pointer-events-none z-[5]" />
@@ -261,7 +261,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
       <div className="absolute top-3 left-3 z-10 max-w-[65%]">
         {seriesInfo ? (
           <button
-            onClick={() => router.push(`/explore?series=${currentVideo.seriesId}`)}
+            onClick={() => router.push(buildExploreSeriesUrl(currentVideo), { scroll: false })}
             className="text-white text-xs font-medium bg-black/40 backdrop-blur-sm rounded-lg px-2.5 py-1.5 truncate block max-w-full text-left"
           >
             {seriesInfo.title}

@@ -38,7 +38,7 @@ export function BottomNav() {
   const pathname = usePathname()
 
   return (
-    <nav className="sticky bottom-0 left-0 right-0 z-50 bg-[var(--bg-nav)]/85 backdrop-blur-2xl border-t border-white/[0.08] safe-area-bottom">
+    <nav className="sticky bottom-0 left-0 right-0 z-50 bg-[var(--bg-nav)]/85 backdrop-blur-2xl border-t border-[var(--border-card)] safe-area-bottom">
       <div className="flex justify-around items-center h-[56px]">
         {tabs.map(({ href, icon, label }) => {
           const isActive = href === '/' ? pathname === '/' : pathname.startsWith(href)
@@ -46,14 +46,15 @@ export function BottomNav() {
             <Link
               key={href}
               href={href}
+              aria-label={label}
               className={`relative flex items-center justify-center w-16 h-12 rounded-2xl transition-all duration-200 active:scale-90 ${
-                isActive ? 'text-white' : 'text-white/35'
+                isActive ? 'text-[var(--nav-active)]' : 'text-[var(--nav-inactive)]'
               }`}
             >
               {isActive && (
                 <motion.div
                   layoutId="nav-active"
-                  className="absolute -top-px left-1/2 -translate-x-1/2 w-5 h-[2px] bg-white rounded-full"
+                  className="absolute -top-px left-1/2 -translate-x-1/2 w-5 h-[2px] bg-[var(--nav-indicator)] rounded-full"
                   transition={{ type: 'spring', stiffness: 500, damping: 35 }}
                 />
               )}

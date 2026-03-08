@@ -49,9 +49,12 @@ export default function RootLayout({
               // Migrate old values
               if (theme === 'dark') theme = 'purple-dark';
               document.documentElement.setAttribute('data-theme', theme);
-              if (theme === 'light') {
+              if (theme.indexOf('light') === 0) {
                 document.documentElement.classList.remove('dark');
                 document.documentElement.style.colorScheme = 'light';
+              } else {
+                document.documentElement.classList.add('dark');
+                document.documentElement.style.colorScheme = 'dark';
               }
             }
           } catch(e) {}

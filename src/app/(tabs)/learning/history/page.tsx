@@ -24,19 +24,21 @@ function getDateKey(timestamp: number): string {
 
 export default function WatchHistoryPage() {
   const router = useRouter()
-  const { watchRecords, viewCounts, watchedVideoIds, removeRecord, clearAllHistory, clearDeletedFlag } = useWatchHistoryStore()
+  const { watchRecords, viewCounts, watchedVideoIds, removeRecord, clearAllHistory, clearDeletedFlag } =
+    useWatchHistoryStore()
   const [confirmClear, setConfirmClear] = useState(false)
 
   const groupedByDate = useMemo(() => {
-    const records = watchRecords.length > 0
-      ? watchRecords
-      : watchedVideoIds.map((id) => ({ videoId: id, watchedAt: 0 }))
+    const records =
+      watchRecords.length > 0
+        ? watchRecords
+        : watchedVideoIds.map((id) => ({ videoId: id, watchedAt: 0 }))
 
     const groups: { label: string; key: string; videos: typeof seedVideos }[] = []
     const seen = new Map<string, Set<string>>()
 
     for (const record of records) {
-      const video = seedVideos.find((v) => v.id === record.videoId)
+      const video = seedVideos.find((item) => item.id === record.videoId)
       if (!video) continue
 
       const dateKey = record.watchedAt > 0 ? getDateKey(record.watchedAt) : 'unknown'
@@ -48,141 +50,132 @@ export default function WatchHistoryPage() {
           videos: [],
         })
       }
-      const dateSet = seen.get(dateKey)!
-      if (!dateSet.has(video.id)) {
-        dateSet.add(video.id)
-        const group = groups.find((g) => g.key === dateKey)!
-        group.videos.push(video)
-      }
+
+      const dateSet = seen.get(dateKey)
+      if (!dateSet || dateSet.has(video.id)) continue
+
+      dateSet.add(video.id)
+      const group = groups.find((item) => item.key === dateKey)
+      group?.videos.push(video)
     }
 
     return groups
   }, [watchRecords, watchedVideoIds])
 
-  const totalWatched = groupedByDate.reduce((sum, g) => sum + g.videos.length, 0)
+  const totalWatched = groupedByDate.reduce((sum, group) => sum + group.videos.length, 0)
+
+  const handleCloseConfirm = () => {
+    setConfirmClear(false)
+  }
+
+  const handleClearAll = () => {
+    clearAllHistory()
+    handleCloseConfirm()
+  }
 
   return (
     <div className="h-full overflow-y-auto no-scrollbar pb-20 pt-12">
       <div className="px-4">
-        {/* Header */}
-        <div className="flex items-center justify-between mb-6">
+        <div className="mb-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <button
               onClick={() => router.back()}
-              className="text-[var(--text-secondary)] active:scale-90 transition-transform"
+              className="text-[var(--text-secondary)] transition-transform active:scale-90"
+              aria-label="뒤로 가기"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-5 h-5">
-                <path fillRule="evenodd" d="M17 10a.75.75 0 01-.75.75H5.612l4.158 3.96a.75.75 0 11-1.04 1.08l-5.5-5.25a.75.75 0 010-1.08l5.5-5.25a.75.75 0 111.04 1.08L5.612 9.25H16.25A.75.75 0 0117 10z" clipRule="evenodd" />
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
+                <path
+                  fillRule="evenodd"
+                  d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10z"
+                  clipRule="evenodd"
+                />
               </svg>
             </button>
             <div>
-              <h1 className="text-[var(--text-primary)] text-xl font-bold">시청 기록</h1>
-              <p className="text-[var(--text-muted)] text-xs">{totalWatched}개 영상</p>
+              <h1 className="text-xl font-bold text-[var(--text-primary)]">시청 기록</h1>
+              <p className="text-xs text-[var(--text-muted)]">{totalWatched}개 영상</p>
             </div>
           </div>
+
           {totalWatched > 0 && (
             <button
               onClick={() => setConfirmClear(true)}
-              className="text-red-400/70 text-xs active:scale-95 transition-transform"
+              className="text-xs text-red-400/80 transition-transform active:scale-95"
             >
               전체 삭제
             </button>
           )}
         </div>
 
-        {/* Clear confirmation */}
-        <AnimatePresence>
-          {confirmClear && (
-            <motion.div
-              initial={{ opacity: 0, y: -8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              className="bg-red-500/10 border border-red-500/20 rounded-xl p-4 mb-4"
-            >
-              <p className="text-[var(--text-primary)] text-sm mb-3">시청 기록을 전부 삭제할까?</p>
-              <div className="flex gap-2">
-                <button
-                  onClick={() => {
-                    clearAllHistory()
-                    setConfirmClear(false)
-                  }}
-                  className="flex-1 py-2 bg-red-500/20 text-red-400 rounded-lg text-sm font-medium active:scale-95 transition-transform"
-                >
-                  삭제
-                </button>
-                <button
-                  onClick={() => setConfirmClear(false)}
-                  className="flex-1 py-2 bg-[var(--bg-secondary)] text-[var(--text-secondary)] rounded-lg text-sm font-medium active:scale-95 transition-transform"
-                >
-                  취소
-                </button>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-
-        {/* Empty state */}
         {totalWatched === 0 && (
           <div className="flex flex-col items-center justify-center py-20">
-            <p className="text-[var(--text-muted)] text-sm">시청 기록 없음</p>
+            <p className="text-sm text-[var(--text-muted)]">시청 기록이 없습니다.</p>
           </div>
         )}
 
-        {/* History list */}
         {groupedByDate.map((group) => (
           <div key={group.key} className="mb-5 last:mb-0">
-            <p className="text-[var(--text-muted)] text-[11px] font-medium mb-2 tracking-wide uppercase">
+            <p className="mb-2 text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]">
               {group.label}
             </p>
             <div className="flex flex-col gap-2">
               <AnimatePresence>
                 {group.videos.map((video) => {
                   const count = viewCounts[video.id] ?? 0
-                  const categoryLabel = categories.find((c) => c.id === video.category)?.label ?? ''
+                  const categoryLabel =
+                    categories.find((category) => category.id === video.category)?.label ?? ''
 
                   return (
                     <motion.div
                       key={video.id}
                       layout
                       exit={{ opacity: 0, x: -100, transition: { duration: 0.2 } }}
-                      className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-2xl p-3 flex items-center gap-3 border border-white/[0.04]"
+                      className="flex items-center gap-3 rounded-2xl border border-white/[0.04] bg-[var(--bg-card)] p-3 shadow-[var(--card-shadow)]"
                     >
                       <button
-                        onClick={() => { clearDeletedFlag(video.id); router.push(`/?v=${video.id}`) }}
-                        className="flex items-center gap-3 flex-1 min-w-0 text-left"
+                        onClick={() => {
+                          clearDeletedFlag(video.id)
+                          router.push(`/?v=${video.id}`)
+                        }}
+                        className="flex min-w-0 flex-1 items-center gap-3 text-left"
                       >
-                        <div className="w-20 h-12 flex-shrink-0 rounded-xl overflow-hidden relative">
+                        <div className="relative h-12 w-20 flex-shrink-0 overflow-hidden rounded-xl">
                           <img
                             src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
                             alt={video.title}
-                            className="w-full h-full object-cover"
+                            className="h-full w-full object-cover"
                             loading="lazy"
                           />
                           {count > 1 && (
-                            <div className="absolute bottom-0.5 right-0.5 bg-black/70 text-white text-[9px] px-1 py-0.5 rounded font-bold">
+                            <div className="absolute bottom-0.5 right-0.5 rounded bg-black/70 px-1 py-0.5 text-[9px] font-bold text-white">
                               x{count > 99 ? '99+' : count}
                             </div>
                           )}
                         </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="text-[var(--text-primary)] font-medium text-sm truncate">
+
+                        <div className="min-w-0 flex-1">
+                          <p className="truncate text-sm font-medium text-[var(--text-primary)]">
                             {video.title}
                           </p>
-                          <div className="flex items-center gap-1.5 mt-1">
-                            <span className="text-[var(--text-muted)] text-xs">{categoryLabel}</span>
-                            <span className="text-[var(--text-muted)] text-[10px]">·</span>
-                            <span className="text-[var(--text-muted)] text-xs">Lv.{video.difficulty}</span>
+                          <div className="mt-1 flex items-center gap-1.5">
+                            <span className="text-xs text-[var(--text-muted)]">{categoryLabel}</span>
+                            <span className="text-[10px] text-[var(--text-muted)]">·</span>
+                            <span className="text-xs text-[var(--text-muted)]">Lv.{video.difficulty}</span>
                           </div>
                         </div>
                       </button>
 
-                      {/* Delete button */}
                       <button
                         onClick={() => removeRecord(video.id)}
-                        className="flex-shrink-0 w-8 h-8 flex items-center justify-center text-[var(--text-muted)] hover:text-red-400 active:scale-90 transition-all rounded-lg"
+                        className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg text-[var(--text-muted)] transition-all hover:text-red-400 active:scale-90"
+                        aria-label="기록 삭제"
                       >
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
-                          <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4">
+                          <path
+                            fillRule="evenodd"
+                            d="M4.293 4.293a1 1 0 0 1 1.414 0L10 8.586l4.293-4.293a1 1 0 1 1 1.414 1.414L11.414 10l4.293 4.293a1 1 0 0 1-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 0 1-1.414-1.414L8.586 10 4.293 5.707a1 1 0 0 1 0-1.414z"
+                            clipRule="evenodd"
+                          />
                         </svg>
                       </button>
                     </motion.div>
@@ -193,6 +186,55 @@ export default function WatchHistoryPage() {
           </div>
         ))}
       </div>
+
+      <AnimatePresence>
+        {confirmClear && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
+              onClick={handleCloseConfirm}
+            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.96, y: 12 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.96, y: 12 }}
+              transition={{ type: 'spring', stiffness: 320, damping: 28 }}
+              className="fixed inset-0 z-50 flex items-center justify-center px-4"
+              onClick={handleCloseConfirm}
+            >
+              <div
+                className="w-full max-w-sm rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-5 shadow-2xl"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <h2 className="text-base font-semibold text-[var(--text-primary)]">
+                  시청 기록을 전부 삭제할까요?
+                </h2>
+                <p className="mt-2 text-sm text-[var(--text-muted)]">
+                  삭제 후에는 되돌릴 수 없습니다.
+                </p>
+                <div className="mt-5 flex gap-2">
+                  <button
+                    onClick={handleCloseConfirm}
+                    className="flex-1 rounded-xl bg-[var(--bg-secondary)] py-3 text-sm font-medium text-[var(--text-secondary)]"
+                  >
+                    취소
+                  </button>
+                  <motion.button
+                    whileTap={{ scale: 0.98 }}
+                    onClick={handleClearAll}
+                    className="flex-1 rounded-xl bg-red-500 py-3 text-sm font-semibold text-white"
+                  >
+                    전체 삭제
+                  </motion.button>
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </div>
   )
 }

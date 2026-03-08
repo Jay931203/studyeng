@@ -7,7 +7,7 @@ function applyTheme(theme: ThemeId) {
   const root = document.documentElement
   root.setAttribute('data-theme', theme)
 
-  if (theme === 'light') {
+  if (theme.startsWith('light')) {
     root.classList.remove('dark')
     root.style.colorScheme = 'light'
   } else {

@@ -1,7 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
-export type ThemeId = 'purple-dark' | 'blue-dark' | 'light'
+export type ThemeId = 'purple-dark' | 'blue-dark' | 'light' | 'light-blue'
 
 interface ThemeState {
   theme: ThemeId
@@ -17,7 +17,7 @@ export const useThemeStore = create<ThemeState>()(
       setTheme: (theme) => set({ theme }),
       toggleTheme: () => {
         const current = get().theme
-        if (current === 'purple-dark') set({ theme: 'light' })
+        if (current === 'purple-dark' || current === 'blue-dark') set({ theme: 'light' })
         else set({ theme: 'purple-dark' })
       },
     }),
