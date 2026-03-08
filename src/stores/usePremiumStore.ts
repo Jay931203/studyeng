@@ -19,6 +19,7 @@ interface PremiumState {
   canViewMore: () => boolean
   canSaveMorePhrases: () => boolean
   setPremium: (value: boolean) => void
+  setPremiumEntitlement: (value: boolean) => void
   resetDailyCount: () => void
   incrementSavedPhrases: () => void
   getDailyViewsRemaining: () => number
@@ -69,6 +70,7 @@ export const usePremiumStore = create<PremiumState>()(
       },
 
       setPremium: (value) => set({ isPremium: value }),
+      setPremiumEntitlement: (value) => set({ isPremium: value }),
 
       resetDailyCount: () => set({ dailyViewCount: 0, lastViewDate: null }),
 
