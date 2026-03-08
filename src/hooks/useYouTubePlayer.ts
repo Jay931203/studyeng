@@ -1,80 +1,42 @@
 'use client'
 
-import { useCallback, useEffect, useEffectEvent, useRef, useState } from 'react'
+import { useEffect, useRef, useCallback, useState } from 'react'
 import { usePlayerStore, currentTimeRef } from '@/stores/usePlayerStore'
 import type { SubtitleEntry } from '@/data/seed-videos'
 
-const YOUTUBE_API_SRC = 'https://www.youtube.com/iframe_api'
-const YOUTUBE_API_TIMEOUT_MS = 10000
-
-let apiLoadPromise: Promise<void> | null = null
+let apiLoaded = false
+let apiLoading = false
+const apiCallbacks: Array<() => void> = []
 
 function loadYouTubeAPI(): Promise<void> {
   if (typeof window === 'undefined') {
     return Promise.reject(new Error('The YouTube player is only available in the browser.'))
   }
 
-  if (window.YT?.Player) {
-    return Promise.resolve()
-  }
+  if (apiLoaded || window.YT?.Player) return Promise.resolve()
 
-  if (apiLoadPromise) {
-    return apiLoadPromise
-  }
+  return new Promise((resolve) => {
+    if (apiLoading) {
+      apiCallbacks.push(resolve)
+      return
+    }
 
-  apiLoadPromise = new Promise<void>((resolve, reject) => {
-    const existingScript = document.querySelector<HTMLScriptElement>(`script[src="${YOUTUBE_API_SRC}"]`)
-    const script = existingScript ?? document.createElement('script')
-    const previousReadyHandler = window.onYouTubeIframeAPIReady
-    let settled = false
+    apiLoading = true
 
-    const finish = (error?: Error) => {
-      if (settled) return
-      settled = true
-      window.clearTimeout(timeoutId)
-      script.removeEventListener('error', handleError)
+    const existing = document.querySelector<HTMLScriptElement>('script[src="https://www.youtube.com/iframe_api"]')
+    const tag = existing ?? document.createElement('script')
+    if (!existing) {
+      tag.src = 'https://www.youtube.com/iframe_api'
+      document.head.appendChild(tag)
+    }
 
-      if (window.onYouTubeIframeAPIReady === handleReady) {
-        window.onYouTubeIframeAPIReady = previousReadyHandler
-      }
-
-      if (error) {
-        apiLoadPromise = null
-        reject(error)
-        return
-      }
-
+    window.onYouTubeIframeAPIReady = () => {
+      apiLoaded = true
+      apiLoading = false
       resolve()
-    }
-
-    const handleReady = () => {
-      previousReadyHandler?.()
-      finish()
-    }
-
-    const handleError = () => {
-      finish(new Error('Failed to load the YouTube iframe API.'))
-    }
-
-    const timeoutId = window.setTimeout(() => {
-      finish(new Error('Timed out while loading the YouTube iframe API.'))
-    }, YOUTUBE_API_TIMEOUT_MS)
-
-    window.onYouTubeIframeAPIReady = handleReady
-    script.addEventListener('error', handleError, { once: true })
-
-    if (!existingScript) {
-      script.src = YOUTUBE_API_SRC
-      script.async = true
-      document.head.appendChild(script)
-    }
-
-    if (window.YT?.Player) {
-      finish()
+      apiCallbacks.splice(0).forEach((callback) => callback())
     }
   })
-
-  return apiLoadPromise
 }
 
 function getVideoErrorMessage(code: number) {
@@ -91,18 +53,12 @@ function getVideoErrorMessage(code: number) {
   }
 }
 
-/**
- * Find the index of the subtitle that covers the given time.
- * When the current time falls in a gap between subtitle N and N+1,
- * subtitle N remains active until N+1 starts (no disappearing).
- */
 function findActiveSubIndex(subtitles: SubtitleEntry[], time: number): number {
   for (let i = 0; i < subtitles.length; i++) {
     const subtitle = subtitles[i]
     if (time >= subtitle.start && time < subtitle.end) {
       return i
     }
-
     if (
       time >= subtitle.end &&
       (i === subtitles.length - 1 || time < subtitles[i + 1].start)
@@ -110,25 +66,7 @@ function findActiveSubIndex(subtitles: SubtitleEntry[], time: number): number {
       return i
     }
   }
-
   return -1
-}
-
-function isYouTubePlayer(
-  player: YT.Player | null | undefined,
-): player is YT.Player & {
-  playVideo: () => void
-  pauseVideo: () => void
-  seekTo: (seconds: number, allowSeekAhead?: boolean) => void
-  getPlayerState: () => number
-  getIframe?: () => HTMLIFrameElement
-} {
-  return Boolean(
-    player &&
-      typeof player.playVideo === 'function' &&
-      typeof player.pauseVideo === 'function' &&
-      typeof player.seekTo === 'function',
-  )
 }
 
 export function useYouTubePlayer(
@@ -142,7 +80,6 @@ export function useYouTubePlayer(
   onEmbedBlocked?: () => void,
 ) {
   const playerRef = useRef<YT.Player | null>(null)
-  const playerMountRef = useRef<HTMLDivElement | null>(null)
   const intervalRef = useRef<number | null>(null)
   const wasPlayingBeforeHideRef = useRef(false)
   const prevSubIndexRef = useRef(-1)
@@ -150,94 +87,147 @@ export function useYouTubePlayer(
   const clipBoundaryCooldownRef = useRef(false)
   const effectiveClipStartRef = useRef(clipStart)
   const effectiveClipEndRef = useRef(clipEnd)
-  const playerSessionKey = `${containerId}:${videoId}:${clipStart}:${clipEnd}:${initialSeekTime ?? ''}`
+  const onClipCompleteRef = useRef(onClipComplete)
+  const onEmbedBlockedRef = useRef(onEmbedBlocked)
 
-  const [readySessionKey, setReadySessionKey] = useState<string | null>(null)
-  const [playbackStartedSessionKey, setPlaybackStartedSessionKey] = useState<string | null>(null)
-  const [videoErrorState, setVideoErrorState] = useState<{
-    message: string
-    sessionKey: string
-  } | null>(null)
-  const ready = readySessionKey === playerSessionKey
-  const playbackStarted = playbackStartedSessionKey === playerSessionKey
-  const videoError =
-    videoErrorState?.sessionKey === playerSessionKey ? videoErrorState.message : null
+  const [ready, setReady] = useState(false)
+  const [playbackStarted, setPlaybackStarted] = useState(false)
+  const [videoError, setVideoError] = useState<string | null>(null)
 
-  const playbackRate = usePlayerStore((state) => state.playbackRate)
-  const isLooping = usePlayerStore((state) => state.isLooping)
-  const loopStart = usePlayerStore((state) => state.loopStart)
-  const loopEnd = usePlayerStore((state) => state.loopEnd)
-  const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
-  const setCurrentTime = usePlayerStore((state) => state.setCurrentTime)
-  const setDuration = usePlayerStore((state) => state.setDuration)
-  const setIsPlaying = usePlayerStore((state) => state.setIsPlaying)
-  const setClipBounds = usePlayerStore((state) => state.setClipBounds)
-  const setActiveSubIndex = usePlayerStore((state) => state.setActiveSubIndex)
+  onClipCompleteRef.current = onClipComplete
+  onEmbedBlockedRef.current = onEmbedBlocked
 
-  const handleClipComplete = useEffectEvent(() => {
-    onClipComplete?.()
-  })
+  const {
+    playbackRate,
+    isLooping,
+    loopStart,
+    loopEnd,
+    freezeSubIndex,
+    setCurrentTime,
+    setDuration,
+    setIsPlaying,
+    setClipBounds,
+    setActiveSubIndex,
+  } = usePlayerStore()
 
-  const handleEmbedBlocked = useEffectEvent(() => {
-    onEmbedBlocked?.()
-  })
+  const initPlayer = useCallback(async () => {
+    await loadYouTubeAPI()
 
-  const handlePlayerTick = useEffectEvent(() => {
+    if (playerRef.current) {
+      playerRef.current.destroy()
+      playerRef.current = null
+    }
+
+    setReady(false)
+    setPlaybackStarted(false)
+    setVideoError(null)
+    setIsPlaying(false)
+    setCurrentTime(clipStart)
+    setDuration(0)
+    setClipBounds(clipStart, clipEnd)
+    setActiveSubIndex(-1)
+    prevSubIndexRef.current = -1
+    lastProgressWriteRef.current = 0
+    clipBoundaryCooldownRef.current = false
+    effectiveClipStartRef.current = clipStart
+    effectiveClipEndRef.current = clipEnd
+    currentTimeRef.current = clipStart
+
+    playerRef.current = new window.YT.Player(containerId, {
+      videoId,
+      playerVars: {
+        autoplay: 1,
+        controls: 0,
+        disablekb: 1,
+        fs: 0,
+        modestbranding: 1,
+        playsinline: 1,
+        rel: 0,
+        cc_load_policy: 0,
+        iv_load_policy: 3,
+        start: clipStart,
+        ...(clipEnd > 0 ? { end: Math.floor(clipEnd) } : {}),
+      },
+      events: {
+        onReady: (event) => {
+          try {
+            const player = event.target as unknown as Record<string, (moduleName: string) => void>
+            if (typeof player.unloadModule === 'function') {
+              player.unloadModule('captions')
+              player.unloadModule('cc')
+            }
+          } catch {
+            // Ignore unsupported caption module unloads.
+          }
+
+          event.target.setPlaybackRate(playbackRate)
+
+          const duration = event.target.getDuration()
+          const maxEnd = Math.max(duration - 0.5, 1)
+          const effectiveClipEnd = clipEnd > 0 ? Math.min(clipEnd, maxEnd) : maxEnd
+          const effectiveClipStart = Math.min(clipStart, Math.max(effectiveClipEnd - 5, 0))
+          effectiveClipStartRef.current = effectiveClipStart
+          effectiveClipEndRef.current = effectiveClipEnd
+
+          const clipDuration = effectiveClipEnd - effectiveClipStart
+          if (clipDuration > 0) setDuration(clipDuration)
+          setClipBounds(effectiveClipStart, effectiveClipEnd)
+
+          if (
+            initialSeekTime !== undefined &&
+            initialSeekTime >= effectiveClipStart &&
+            initialSeekTime < effectiveClipEnd
+          ) {
+            event.target.seekTo(initialSeekTime, true)
+          }
+
+          setReady(true)
+        },
+        onStateChange: (event) => {
+          if (event.data === 0) {
+            const effectiveClipStart = effectiveClipStartRef.current
+            event.target.seekTo(effectiveClipStart, true)
+            event.target.playVideo()
+            onClipCompleteRef.current?.()
+            return
+          }
+
+          const playing = event.data === 1
+          setIsPlaying(playing)
+          if (playing) {
+            setPlaybackStarted(true)
+          }
+        },
+        onError: (event) => {
+          const message = getVideoErrorMessage(event.data)
+          setVideoError(message)
+
+          if (event.data === 101 || event.data === 150) {
+            onEmbedBlockedRef.current?.()
+          }
+        },
+      },
+    })
+  }, [clipStart, clipEnd, containerId, initialSeekTime, playbackRate, setActiveSubIndex, setClipBounds, setCurrentTime, setDuration, setIsPlaying, videoId])
+
+  useEffect(() => {
+    if (!ready) return
+
     const player = playerRef.current
-    if (!isYouTubePlayer(player)) return
+    if (!player || typeof player.playVideo !== 'function') return
 
-    let time: number
-    try {
-      time = player.getCurrentTime()
-    } catch {
-      return
-    }
-
-    currentTimeRef.current = time
-
-    if (isLooping && loopStart !== null && loopEnd !== null && time >= loopEnd) {
-      player.seekTo(loopStart, true)
-      return
-    }
-
-    if (freezeSubIndex !== null && subtitles[freezeSubIndex]) {
-      const frozenSub = subtitles[freezeSubIndex]
-      if (time >= frozenSub.end - 0.05 || time < frozenSub.start - 0.3) {
-        player.seekTo(frozenSub.start, true)
-        return
+    const rafId = window.requestAnimationFrame(() => {
+      try {
+        player.playVideo()
+      } catch {
+        // Ignore autoplay failures.
       }
+    })
+
+    return () => {
+      window.cancelAnimationFrame(rafId)
     }
-
-    const newSubIndex = findActiveSubIndex(subtitles, time)
-    if (newSubIndex !== prevSubIndexRef.current) {
-      prevSubIndexRef.current = newSubIndex
-      setActiveSubIndex(newSubIndex)
-    }
-
-    const now = performance.now()
-    if (now - lastProgressWriteRef.current >= 500) {
-      lastProgressWriteRef.current = now
-      setCurrentTime(time)
-    }
-
-    const effectiveClipEnd = effectiveClipEndRef.current
-    const effectiveClipStart = effectiveClipStartRef.current
-    const earlyTrigger = effectiveClipEnd - 1.5
-
-    if (
-      effectiveClipEnd > effectiveClipStart &&
-      time >= earlyTrigger &&
-      !clipBoundaryCooldownRef.current
-    ) {
-      clipBoundaryCooldownRef.current = true
-      window.setTimeout(() => {
-        clipBoundaryCooldownRef.current = false
-      }, 1000)
-
-      handleClipComplete()
-      player.seekTo(effectiveClipStart, true)
-    }
-  })
+  }, [ready])
 
   useEffect(() => {
     if (!ready) return
@@ -253,7 +243,57 @@ export function useYouTubePlayer(
       if (intervalRef.current !== null || document.hidden) return
 
       intervalRef.current = window.setInterval(() => {
-        handlePlayerTick()
+        const player = playerRef.current
+        if (!player || typeof player.getCurrentTime !== 'function') return
+
+        let time: number
+        try {
+          time = player.getCurrentTime()
+        } catch {
+          return
+        }
+
+        currentTimeRef.current = time
+
+        if (isLooping && loopStart !== null && loopEnd !== null) {
+          if (time >= loopEnd) {
+            player.seekTo(loopStart, true)
+            return
+          }
+        }
+
+        if (freezeSubIndex !== null && subtitles[freezeSubIndex]) {
+          const frozenSub = subtitles[freezeSubIndex]
+          if (time >= frozenSub.end - 0.05 || time < frozenSub.start - 0.3) {
+            player.seekTo(frozenSub.start, true)
+            return
+          }
+        }
+
+        const newSubIndex = findActiveSubIndex(subtitles, time)
+        if (newSubIndex !== prevSubIndexRef.current) {
+          prevSubIndexRef.current = newSubIndex
+          setActiveSubIndex(newSubIndex)
+        }
+
+        const now = performance.now()
+        if (now - lastProgressWriteRef.current >= 500) {
+          lastProgressWriteRef.current = now
+          setCurrentTime(time)
+        }
+
+        const effectiveClipEnd = effectiveClipEndRef.current
+        const effectiveClipStart = effectiveClipStartRef.current
+        const earlyTrigger = effectiveClipEnd - 1.5
+        if (effectiveClipEnd > effectiveClipStart && time >= earlyTrigger && !clipBoundaryCooldownRef.current) {
+          clipBoundaryCooldownRef.current = true
+          window.setTimeout(() => {
+            clipBoundaryCooldownRef.current = false
+          }, 1000)
+
+          onClipCompleteRef.current?.()
+          player.seekTo(effectiveClipStart, true)
+        }
       }, 100)
     }
 
@@ -261,7 +301,7 @@ export function useYouTubePlayer(
 
     const handleVisibilityChange = () => {
       const player = playerRef.current
-      if (!isYouTubePlayer(player)) return
+      if (!player) return
 
       if (document.hidden) {
         try {
@@ -269,17 +309,14 @@ export function useYouTubePlayer(
         } catch {
           wasPlayingBeforeHideRef.current = false
         }
-
         player.pauseVideo()
         stopPolling()
-        return
+      } else {
+        if (wasPlayingBeforeHideRef.current) {
+          player.playVideo()
+        }
+        startPolling()
       }
-
-      if (wasPlayingBeforeHideRef.current) {
-        player.playVideo()
-      }
-
-      startPolling()
     }
 
     document.addEventListener('visibilitychange', handleVisibilityChange)
@@ -287,236 +324,28 @@ export function useYouTubePlayer(
       document.removeEventListener('visibilitychange', handleVisibilityChange)
       stopPolling()
     }
-  }, [ready])
+  }, [ready, isLooping, loopStart, loopEnd, freezeSubIndex, subtitles, setActiveSubIndex, setCurrentTime])
 
   useEffect(() => {
-    if (!ready || !playerRef.current || typeof playerRef.current.setPlaybackRate !== 'function') return
-    playerRef.current.setPlaybackRate(playbackRate)
+    if (playerRef.current && ready) {
+      playerRef.current.setPlaybackRate(playbackRate)
+    }
   }, [playbackRate, ready])
 
   useEffect(() => {
-    if (!ready || playbackStarted) return
-
-    const player = playerRef.current
-    if (!isYouTubePlayer(player)) return
-
-    const intervalId = window.setInterval(() => {
-      const iframe = typeof player.getIframe === 'function' ? player.getIframe() : null
-      if (!iframe || !iframe.isConnected) {
-        return
-      }
-
-      window.clearInterval(intervalId)
-
-      try {
-        player.playVideo()
-      } catch {
-        // Ignore initial autoplay failures.
-      }
-    }, 100)
-
+    void initPlayer()
     return () => {
-      window.clearInterval(intervalId)
-    }
-  }, [playbackStarted, ready])
-
-  useEffect(() => {
-    let disposed = false
-
-    setIsPlaying(false)
-    setCurrentTime(clipStart)
-    setDuration(0)
-    setClipBounds(clipStart, clipEnd)
-    setActiveSubIndex(-1)
-    prevSubIndexRef.current = -1
-    lastProgressWriteRef.current = 0
-    clipBoundaryCooldownRef.current = false
-    effectiveClipStartRef.current = clipStart
-    effectiveClipEndRef.current = clipEnd
-    currentTimeRef.current = clipStart
-
-    const createPlayer = async () => {
-      try {
-        await loadYouTubeAPI()
-      } catch (error) {
-        if (!disposed) {
-          console.error('[youtube-player] failed to load iframe API:', error)
-          setVideoErrorState({
-            sessionKey: playerSessionKey,
-            message: 'Unable to load the video player. Check your connection and try again.',
-          })
-        }
-        return
-      }
-
-      if (disposed) return
-
-      const containerEl = document.getElementById(containerId)
-      if (!containerEl) {
-        setVideoErrorState({
-          sessionKey: playerSessionKey,
-          message: 'Unable to find the video container.',
-        })
-        return
-      }
-
-      if (playerRef.current && typeof playerRef.current.destroy === 'function') {
-        playerRef.current.destroy()
-      }
-
-      containerEl.replaceChildren()
-      const mountEl = document.createElement('div')
-      mountEl.style.width = '100%'
-      mountEl.style.height = '100%'
-      containerEl.appendChild(mountEl)
-      playerMountRef.current = mountEl
-
-      playerRef.current = new window.YT.Player(mountEl, {
-        videoId,
-        playerVars: {
-          autoplay: 1,
-          controls: 0,
-          disablekb: 1,
-          fs: 0,
-          modestbranding: 1,
-          playsinline: 1,
-          rel: 0,
-          cc_load_policy: 0,
-          iv_load_policy: 3,
-          start: clipStart,
-          ...(clipEnd > 0 ? { end: Math.floor(clipEnd) } : {}),
-        },
-        events: {
-          onReady: (event) => {
-            if (disposed) return
-
-            try {
-              const player = event.target as unknown as Record<string, (moduleName: string) => void>
-              if (typeof player.unloadModule === 'function') {
-                player.unloadModule('captions')
-                player.unloadModule('cc')
-              }
-            } catch {
-              // Ignore caption-module failures on unsupported players.
-            }
-
-            event.target.setPlaybackRate(usePlayerStore.getState().playbackRate)
-
-            const duration = event.target.getDuration()
-            const maxEnd = Math.max(duration - 0.5, 1)
-            const effectiveClipEnd = clipEnd > 0 ? Math.min(clipEnd, maxEnd) : maxEnd
-            const effectiveClipStart = Math.min(clipStart, Math.max(effectiveClipEnd - 5, 0))
-
-            effectiveClipStartRef.current = effectiveClipStart
-            effectiveClipEndRef.current = effectiveClipEnd
-
-            const clipDuration = effectiveClipEnd - effectiveClipStart
-            if (clipDuration > 0) {
-              setDuration(clipDuration)
-            }
-
-            setClipBounds(effectiveClipStart, effectiveClipEnd)
-
-            if (
-              initialSeekTime !== undefined &&
-              initialSeekTime >= effectiveClipStart &&
-              initialSeekTime < effectiveClipEnd
-            ) {
-              event.target.seekTo(initialSeekTime, true)
-            }
-
-            setReadySessionKey(playerSessionKey)
-          },
-          onStateChange: (event) => {
-            if (disposed) return
-
-            if (event.data === 0) {
-              const effectiveClipStart = effectiveClipStartRef.current
-              event.target.seekTo(effectiveClipStart, true)
-              event.target.playVideo()
-              handleClipComplete()
-              return
-            }
-
-            const playing = event.data === 1
-            setIsPlaying(playing)
-
-            if (playing) {
-              setPlaybackStartedSessionKey(playerSessionKey)
-            }
-          },
-          onError: (event) => {
-            if (disposed) return
-            setVideoErrorState({
-              sessionKey: playerSessionKey,
-              message: getVideoErrorMessage(event.data),
-            })
-
-            if (event.data === 101 || event.data === 150) {
-              handleEmbedBlocked()
-            }
-          },
-        },
-      })
-    }
-
-    void createPlayer()
-
-    return () => {
-      disposed = true
-      if (intervalRef.current !== null) {
-        window.clearInterval(intervalRef.current)
-        intervalRef.current = null
-      }
+      if (intervalRef.current !== null) clearInterval(intervalRef.current)
       playerRef.current?.destroy()
       playerRef.current = null
-      playerMountRef.current?.remove()
-      playerMountRef.current = null
       setIsPlaying(false)
     }
-  }, [
-    clipEnd,
-    clipStart,
-    containerId,
-    initialSeekTime,
-    playerSessionKey,
-    setActiveSubIndex,
-    setClipBounds,
-    setCurrentTime,
-    setDuration,
-    setIsPlaying,
-    videoId,
-  ])
+  }, [initPlayer, setIsPlaying])
 
-  const play = useCallback(() => {
-    const player = playerRef.current
-    if (!isYouTubePlayer(player)) return
-    player.playVideo()
-  }, [])
-  const pause = useCallback(() => {
-    const player = playerRef.current
-    if (!isYouTubePlayer(player)) return
-    player.pauseVideo()
-  }, [])
-  const seekTo = useCallback((seconds: number) => {
-    const player = playerRef.current
-    if (!isYouTubePlayer(player)) return
-    player.seekTo(seconds, true)
-  }, [])
-  const clearVideoError = useCallback(() => {
-    setVideoErrorState((current) =>
-      current?.sessionKey === playerSessionKey ? null : current,
-    )
-  }, [playerSessionKey])
+  const play = useCallback(() => playerRef.current?.playVideo(), [])
+  const pause = useCallback(() => playerRef.current?.pauseVideo(), [])
+  const seekTo = useCallback((seconds: number) => playerRef.current?.seekTo(seconds, true), [])
+  const clearVideoError = useCallback(() => setVideoError(null), [])
 
-  return {
-    ready,
-    playbackStarted,
-    play,
-    pause,
-    seekTo,
-    player: playerRef,
-    videoError,
-    clearVideoError,
-  }
+  return { ready, playbackStarted, play, pause, seekTo, player: playerRef, videoError, clearVideoError }
 }
