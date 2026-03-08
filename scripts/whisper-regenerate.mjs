@@ -28,9 +28,9 @@ const COST_LOG_PATH = join(__dirname, '..', 'whisper-cost-log.json')
 const MANIFEST_PATH = join(__dirname, 'whisper-manifest.json')
 const FFMPEG_LOCATION = resolveFfmpegLocation()
 
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPEN_API_KEY
 if (!OPENAI_API_KEY) {
-  console.error('ERROR: OPENAI_API_KEY environment variable required')
+  console.error('ERROR: OPENAI_API_KEY (or OPEN_API_KEY) environment variable required')
   process.exit(1)
 }
 

@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-03-08T09:24:35.668Z",
+  "lastUpdated": "2026-03-08T12:57:17.346Z",
   "activeFeatures": [
     "studyeng",
     "test",
@@ -21,7 +21,8 @@
     "terms",
     "privacy",
     "history",
-    "video-research"
+    "video-research",
+    "ui"
   ],
   "primaryFeature": "studyeng",
   "features": {
@@ -34,9 +35,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:11:44.237Z",
-        "lastUpdated": "2026-03-08T09:23:50.680Z"
+        "lastUpdated": "2026-03-08T12:57:17.346Z"
       },
-      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\components\\Logo.tsx"
+      "lastFile": "C:\\Users\\박현재\\studyeng\\src\\components\\SavedPhraseCard.tsx"
     },
     "test": {
       "phase": "do",
@@ -86,9 +87,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:32:44.325Z",
-        "lastUpdated": "2026-03-08T09:24:09.849Z"
+        "lastUpdated": "2026-03-08T12:45:37.580Z"
       },
-      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\app\\(tabs)\\layout.tsx"
+      "lastFile": "C:\\Users\\박현재\\studyeng\\src\\app\\(tabs)\\layout.tsx"
     },
     "explore": {
       "phase": "do",
@@ -99,9 +100,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:32:46.500Z",
-        "lastUpdated": "2026-03-08T09:09:05.463Z"
+        "lastUpdated": "2026-03-08T12:57:13.132Z"
       },
-      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\app\\(tabs)\\explore\\page.tsx"
+      "lastFile": "C:\\Users\\박현재\\studyeng\\src\\app\\(tabs)\\explore\\page.tsx"
     },
     "learning": {
       "phase": "do",
@@ -112,9 +113,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:32:47.479Z",
-        "lastUpdated": "2026-03-08T08:14:58.666Z"
+        "lastUpdated": "2026-03-08T12:56:39.123Z"
       },
-      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\app\\(tabs)\\learning\\page.tsx"
+      "lastFile": "C:\\Users\\박현재\\studyeng\\src\\app\\(tabs)\\learning\\page.tsx"
     },
     "profile": {
       "phase": "do",
@@ -125,9 +126,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:32:48.262Z",
-        "lastUpdated": "2026-03-08T08:37:29.732Z"
+        "lastUpdated": "2026-03-08T12:56:40.952Z"
       },
-      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\app\\(tabs)\\profile\\page.tsx"
+      "lastFile": "C:\\Users\\박현재\\studyeng\\src\\app\\(tabs)\\profile\\page.tsx"
     },
     "stores": {
       "phase": "do",
@@ -138,9 +139,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:34:15.688Z",
-        "lastUpdated": "2026-03-08T06:16:19.147Z"
+        "lastUpdated": "2026-03-08T12:46:32.720Z"
       },
-      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\stores\\useLikeStore.ts"
+      "lastFile": "C:\\Users\\박현재\\studyeng\\src\\stores\\useThemeStore.ts"
     },
     "data": {
       "phase": "do",
@@ -284,6 +285,19 @@
         "lastUpdated": "2026-03-08T06:28:39.498Z"
       },
       "lastFile": "C:\\Users\\hyunj\\studyeng\\docs\\video-research\\entertainment-daily-expansion.ts"
+    },
+    "ui": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-03-08T12:55:28.608Z",
+        "lastUpdated": "2026-03-08T12:55:34.011Z"
+      },
+      "lastFile": "C:\\Users\\박현재\\studyeng\\src\\components\\ui\\AppPage.tsx"
     }
   },
   "pipeline": {
@@ -294,7 +308,7 @@
   "session": {
     "startedAt": "2026-03-06T12:21:45.757Z",
     "onboardingCompleted": false,
-    "lastActivity": "2026-03-08T09:24:35.668Z"
+    "lastActivity": "2026-03-08T12:57:17.346Z"
   },
   "history": [
     {
@@ -5958,6 +5972,348 @@
     {
       "timestamp": "2026-03-08T09:24:35.668Z",
       "feature": "login",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:45:19.480Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:45:25.843Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:45:29.015Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:45:30.889Z",
+      "feature": "profile",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:45:35.876Z",
+      "feature": "profile",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:45:37.580Z",
+      "feature": "(tabs)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:46:26.330Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:46:29.075Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:46:30.419Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:46:32.720Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:54:19.975Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:55:28.608Z",
+      "feature": "ui",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:55:30.439Z",
+      "feature": "ui",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:55:32.589Z",
+      "feature": "ui",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:55:34.011Z",
+      "feature": "ui",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:55:36.562Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:55:40.276Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:55:45.518Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:55:50.232Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:55:50.790Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:55:51.423Z",
+      "feature": "profile",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:55:52.684Z",
+      "feature": "profile",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:55:52.759Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:55:54.159Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:55:55.681Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:55:59.747Z",
+      "feature": "profile",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:01.364Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:02.783Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:03.302Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:07.028Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:07.790Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:08.757Z",
+      "feature": "profile",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:10.346Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:11.639Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:14.991Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:16.673Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:17.764Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:21.492Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:24.267Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:25.247Z",
+      "feature": "profile",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:28.354Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:29.781Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:36.361Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:39.123Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:40.154Z",
+      "feature": "profile",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:40.952Z",
+      "feature": "profile",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:41.239Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:44.020Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:45.108Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:56:59.213Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:57:00.588Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:57:04.158Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:57:09.233Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:57:10.586Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:57:11.608Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:57:13.132Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T12:57:17.346Z",
+      "feature": "studyeng",
       "phase": "do",
       "action": "updated"
     }

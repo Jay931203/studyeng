@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 /**
  * Pre-bake all seed video subtitles using yt-dlp (SRT format).
  * Downloads English subtitles, groups into natural sentence/phrase blocks,

@@ -68,8 +68,8 @@ async function main() {
   detection = await refreshDetection(config, shouldWrite)
 
   if (detection.snapshot.needs_whisper.length > 0) {
-    if (!process.env.OPENAI_API_KEY) {
-      console.log('\nSkipping whisper ingest because OPENAI_API_KEY is not set.')
+    if (!process.env.OPENAI_API_KEY && !process.env.OPEN_API_KEY) {
+      console.log('\nSkipping whisper ingest because OPENAI_API_KEY / OPEN_API_KEY is not set.')
     } else {
       runNodeScript('scripts/whisper-regenerate.mjs', [
         `--ids-file=${relativeToRoot(DETECTED_BATCH_PATH)}`,
@@ -82,8 +82,8 @@ async function main() {
   detection = await refreshDetection(config, shouldWrite)
 
   if (detection.snapshot.needs_translation.length > 0) {
-    if (!process.env.OPENAI_API_KEY) {
-      console.log('\nSkipping translation ingest because OPENAI_API_KEY is not set.')
+    if (!process.env.OPENAI_API_KEY && !process.env.OPEN_API_KEY) {
+      console.log('\nSkipping translation ingest because OPENAI_API_KEY / OPEN_API_KEY is not set.')
     } else {
       runNodeScript('scripts/translate-transcripts-openai.mjs', [
         `--ids-file=${relativeToRoot(DETECTED_BATCH_PATH)}`,

@@ -15,10 +15,10 @@ export async function loadSeedData(seedPath) {
     fileName: seedPath,
   }).outputText
 
-  const module = { exports: {} }
+  const moduleShim = { exports: {} }
   const sandbox = {
-    module,
-    exports: module.exports,
+    module: moduleShim,
+    exports: moduleShim.exports,
     require,
     console,
   }
@@ -26,8 +26,8 @@ export async function loadSeedData(seedPath) {
   vm.runInNewContext(transpiled, sandbox, { filename: seedPath })
 
   return {
-    categories: module.exports.categories ?? [],
-    seedVideos: module.exports.seedVideos ?? [],
-    series: module.exports.series ?? [],
+    categories: moduleShim.exports.categories ?? [],
+    seedVideos: moduleShim.exports.seedVideos ?? [],
+    series: moduleShim.exports.series ?? [],
   }
 }

@@ -13,9 +13,9 @@ const ROOT = join(__dirname, '..')
 const MANIFEST_PATH = join(ROOT, 'src', 'data', 'content-manifest.json')
 const TRANSCRIPTS_DIR = join(ROOT, 'public', 'transcripts')
 
-const OPENAI_API_KEY = process.env.OPENAI_API_KEY
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPEN_API_KEY
 if (!OPENAI_API_KEY) {
-  console.error('ERROR: OPENAI_API_KEY environment variable required')
+  console.error('ERROR: OPENAI_API_KEY (or OPEN_API_KEY) environment variable required')
   process.exit(1)
 }
 
