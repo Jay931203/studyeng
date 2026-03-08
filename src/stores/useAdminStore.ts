@@ -22,20 +22,13 @@ export interface AdminIssue {
   reporterEmail?: string
 }
 
-function syncAdminMutation(run: (userId: string) => Promise<void>) {
-  const userId = getCachedUserId()
-  if (!userId) {
-    return
-  }
-
-  void run(userId).catch(() => {})
-}
-
 interface AdminState {
   isAdmin: boolean
   adminEnabled: boolean
+  adminSyncError: string | null
   setAdmin: (val: boolean) => void
   setAdminEnabled: (val: boolean) => void
+  setAdminSyncError: (message: string | null) => void
   isAdminActive: () => boolean
   flaggedSubtitles: SubtitleFlag[]
   toggleFlag: (videoId: string, entryIndex: number, en: string) => void
@@ -56,9 +49,11 @@ export const useAdminStore = create<AdminState>()(
     (set, get) => ({
       isAdmin: false,
       adminEnabled: true,
+      adminSyncError: null,
 
       setAdmin: (val) => set({ isAdmin: val }),
       setAdminEnabled: (val) => set({ adminEnabled: val }),
+      setAdminSyncError: (message) => set({ adminSyncError: message }),
       isAdminActive: () => get().isAdmin && get().adminEnabled,
 
       flaggedSubtitles: [],
@@ -69,16 +64,31 @@ export const useAdminStore = create<AdminState>()(
         )
 
         if (existingFlag) {
+          const previousFlags = get().flaggedSubtitles
           set((state) => ({
+            adminSyncError: null,
             flaggedSubtitles: state.flaggedSubtitles.filter(
               (flag) => !(flag.videoId === videoId && flag.entryIndex === entryIndex),
             ),
           }))
 
-          syncAdminMutation(async (userId) => {
-            const { removeSubtitleFlagServer } = await import('@/lib/supabase/opsSync')
-            await removeSubtitleFlagServer(userId, videoId, entryIndex)
-          })
+          const userId = getCachedUserId()
+          if (!userId) {
+            set({ flaggedSubtitles: previousFlags, adminSyncError: '로그인 후 다시 시도해 주세요.' })
+            return
+          }
+
+          void (async () => {
+            try {
+              const { removeSubtitleFlagServer } = await import('@/lib/supabase/opsSync')
+              await removeSubtitleFlagServer(userId, videoId, entryIndex)
+            } catch {
+              set({
+                flaggedSubtitles: previousFlags,
+                adminSyncError: '플래그 해제가 서버에 반영되지 않았습니다. 다시 시도해 주세요.',
+              })
+            }
+          })()
           return
         }
 
@@ -89,14 +99,29 @@ export const useAdminStore = create<AdminState>()(
           flaggedAt: new Date().toISOString(),
         }
 
+        const previousFlags = get().flaggedSubtitles
         set((state) => ({
+          adminSyncError: null,
           flaggedSubtitles: [...state.flaggedSubtitles, nextFlag],
         }))
 
-        syncAdminMutation(async (userId) => {
-          const { syncSubtitleFlag } = await import('@/lib/supabase/opsSync')
-          await syncSubtitleFlag(userId, nextFlag)
-        })
+        const userId = getCachedUserId()
+        if (!userId) {
+          set({ flaggedSubtitles: previousFlags, adminSyncError: '로그인 후 다시 시도해 주세요.' })
+          return
+        }
+
+        void (async () => {
+          try {
+            const { syncSubtitleFlag } = await import('@/lib/supabase/opsSync')
+            await syncSubtitleFlag(userId, nextFlag)
+          } catch {
+            set({
+              flaggedSubtitles: previousFlags,
+              adminSyncError: '플래그 저장이 서버에 반영되지 않았습니다. 다시 시도해 주세요.',
+            })
+          }
+        })()
       },
 
       isFlagged: (videoId, entryIndex) =>
@@ -105,17 +130,31 @@ export const useAdminStore = create<AdminState>()(
         ),
 
       clearFlags: () => {
+        const previousFlags = get().flaggedSubtitles
         const hadFlags = get().flaggedSubtitles.length > 0
-        set({ flaggedSubtitles: [] })
+        set({ flaggedSubtitles: [], adminSyncError: null })
 
         if (!hadFlags) {
           return
         }
 
-        syncAdminMutation(async (userId) => {
-          const { clearSubtitleFlagsServer } = await import('@/lib/supabase/opsSync')
-          await clearSubtitleFlagsServer(userId)
-        })
+        const userId = getCachedUserId()
+        if (!userId) {
+          set({ flaggedSubtitles: previousFlags, adminSyncError: '로그인 후 다시 시도해 주세요.' })
+          return
+        }
+
+        void (async () => {
+          try {
+            const { clearSubtitleFlagsServer } = await import('@/lib/supabase/opsSync')
+            await clearSubtitleFlagsServer(userId)
+          } catch {
+            set({
+              flaggedSubtitles: previousFlags,
+              adminSyncError: '플래그 정리가 서버에 반영되지 않았습니다. 다시 시도해 주세요.',
+            })
+          }
+        })()
       },
 
       exportFlags: () => JSON.stringify(get().flaggedSubtitles, null, 2),
@@ -133,33 +172,64 @@ export const useAdminStore = create<AdminState>()(
           resolved: false,
         }
 
+        const previousIssues = get().issues
         set((state) => ({
+          adminSyncError: null,
           issues: [...state.issues, issue],
         }))
 
-        syncAdminMutation(async (userId) => {
-          const { syncIssueReport } = await import('@/lib/supabase/opsSync')
-          await syncIssueReport(userId, issue)
-        })
+        const userId = getCachedUserId()
+        if (!userId) {
+          set({ issues: previousIssues, adminSyncError: '로그인 후 다시 시도해 주세요.' })
+          return
+        }
+
+        void (async () => {
+          try {
+            const { syncIssueReport } = await import('@/lib/supabase/opsSync')
+            await syncIssueReport(userId, issue)
+          } catch {
+            set({
+              issues: previousIssues,
+              adminSyncError: '이슈 등록이 서버에 반영되지 않았습니다. 다시 시도해 주세요.',
+            })
+          }
+        })()
       },
 
       resolveIssue: (id) => {
+        const previousIssues = get().issues
         set((state) => ({
+          adminSyncError: null,
           issues: state.issues.map((issue) =>
             issue.id === id ? { ...issue, resolved: true } : issue,
           ),
         }))
 
-        syncAdminMutation(async (userId) => {
-          void userId
-          const { resolveIssueReportServer } = await import('@/lib/supabase/opsSync')
-          await resolveIssueReportServer(id)
-        })
+        const userId = getCachedUserId()
+        if (!userId) {
+          set({ issues: previousIssues, adminSyncError: '로그인 후 다시 시도해 주세요.' })
+          return
+        }
+
+        void (async () => {
+          try {
+            const { resolveIssueReportServer } = await import('@/lib/supabase/opsSync')
+            await resolveIssueReportServer(id)
+          } catch {
+            set({
+              issues: previousIssues,
+              adminSyncError: '이슈 해결 상태가 서버에 반영되지 않았습니다. 다시 시도해 주세요.',
+            })
+          }
+        })()
       },
 
       clearResolved: () => {
+        const previousIssues = get().issues
         const hadResolvedIssues = get().issues.some((issue) => issue.resolved)
         set((state) => ({
+          adminSyncError: null,
           issues: state.issues.filter((issue) => !issue.resolved),
         }))
 
@@ -167,11 +237,23 @@ export const useAdminStore = create<AdminState>()(
           return
         }
 
-        syncAdminMutation(async (userId) => {
-          void userId
-          const { clearResolvedIssueReportsServer } = await import('@/lib/supabase/opsSync')
-          await clearResolvedIssueReportsServer()
-        })
+        const userId = getCachedUserId()
+        if (!userId) {
+          set({ issues: previousIssues, adminSyncError: '로그인 후 다시 시도해 주세요.' })
+          return
+        }
+
+        void (async () => {
+          try {
+            const { clearResolvedIssueReportsServer } = await import('@/lib/supabase/opsSync')
+            await clearResolvedIssueReportsServer()
+          } catch {
+            set({
+              issues: previousIssues,
+              adminSyncError: '해결 이슈 정리가 서버에 반영되지 않았습니다. 다시 시도해 주세요.',
+            })
+          }
+        })()
       },
 
       getUnresolvedCount: () => get().issues.filter((issue) => !issue.resolved).length,

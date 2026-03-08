@@ -90,6 +90,8 @@ function IssueCard({ issue, onResolve }: { issue: AdminIssue; onResolve: () => v
 }
 
 export function AdminIssuesList() {
+  const adminSyncError = useAdminStore((state) => state.adminSyncError)
+  const setAdminSyncError = useAdminStore((state) => state.setAdminSyncError)
   const clearResolved = useAdminStore((state) => state.clearResolved)
   const exportReportBundle = useAdminStore((state) => state.exportReportBundle)
   const isAdminActive = useAdminStore((state) => state.isAdminActive)
@@ -157,6 +159,19 @@ export function AdminIssuesList() {
       </div>
 
       <div className="max-h-[320px] space-y-2 overflow-y-auto px-3 py-3 no-scrollbar">
+        {adminSyncError && (
+          <div className="rounded-xl border border-amber-500/20 bg-amber-500/10 px-3 py-2 text-xs text-amber-200">
+            <div className="flex items-start justify-between gap-3">
+              <span>{adminSyncError}</span>
+              <button
+                onClick={() => setAdminSyncError(null)}
+                className="text-[10px] font-semibold text-amber-300"
+              >
+                닫기
+              </button>
+            </div>
+          </div>
+        )}
         {unresolvedIssues.length === 0 ? (
           <p className="py-6 text-center text-xs text-[var(--text-muted)]">
             아직 저장된 미해결 리포트가 없습니다.

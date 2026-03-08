@@ -122,7 +122,7 @@ function deriveRecentVideoIds(videoSignals: Record<string, VideoBehaviorSignal>)
 }
 
 export async function resolveAdminAccess(userId: string, email?: string | null) {
-  if (!supabase) return false
+  if (!supabase) return null
 
   const { data, error } = await supabase
     .from('admin_accounts')
@@ -132,6 +132,7 @@ export async function resolveAdminAccess(userId: string, email?: string | null) 
 
   if (error) {
     console.warn('[ops-sync] admin_accounts lookup failed:', error.message)
+    return null
   }
 
   void email
@@ -245,8 +246,14 @@ export async function syncRecommendationSignal(
 }
 
 async function pullAdminState(userId: string, email?: string | null) {
-  if (!supabase) return
+  if (!supabase) return false
   const isAdmin = await resolveAdminAccess(userId, email)
+  if (isAdmin === null) {
+    useAdminStore.setState({
+      adminSyncError: '관리자 권한을 확인하지 못했습니다. 잠시 후 다시 시도해 주세요.',
+    })
+    return false
+  }
   const issueQuery = supabase.from('issue_reports').select('*').order('created_at', { ascending: false })
   const flagQuery = supabase.from('subtitle_flags').select('*').order('flagged_at', { ascending: false })
 
@@ -257,10 +264,18 @@ async function pullAdminState(userId: string, email?: string | null) {
 
   if (issueResponse.error) {
     console.warn('[ops-sync] issue reports pull failed:', issueResponse.error.message)
+    useAdminStore.setState({
+      adminSyncError: '운영 이슈를 서버에서 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.',
+    })
+    return false
   }
 
   if (flagResponse.error) {
     console.warn('[ops-sync] subtitle flags pull failed:', flagResponse.error.message)
+    useAdminStore.setState({
+      adminSyncError: '플래그 목록을 서버에서 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.',
+    })
+    return false
   }
 
   const remoteIssues: SyncedAdminIssue[] = ((issueResponse.data ?? []) as IssueReportRow[]).map((row) => ({
@@ -285,9 +300,12 @@ async function pullAdminState(userId: string, email?: string | null) {
 
   useAdminStore.setState({
     isAdmin,
+    adminSyncError: null,
     issues: mergeIssues(localIssues, remoteIssues),
     flaggedSubtitles: mergeFlags(localFlags, remoteFlags),
   })
+
+  return true
 }
 
 async function pushAdminState(userId: string) {
@@ -352,14 +370,22 @@ async function pushRecommendationSignals(userId: string) {
 
 export async function syncOpsOnLogin(userId: string, email?: string | null) {
   if (!supabase) return
+  let adminPullSucceeded = false
   try {
-    await Promise.all([pullAdminState(userId, email), pullRecommendationSignals(userId)])
+    const [adminPullResult] = await Promise.all([
+      pullAdminState(userId, email),
+      pullRecommendationSignals(userId),
+    ])
+    adminPullSucceeded = adminPullResult
   } catch (err) {
     console.warn('[ops-sync] initial pull failed:', err)
   }
 
   try {
-    await Promise.all([pushAdminState(userId), pushRecommendationSignals(userId)])
+    await Promise.all([
+      adminPullSucceeded ? pushAdminState(userId) : Promise.resolve(),
+      pushRecommendationSignals(userId),
+    ])
   } catch (err) {
     console.warn('[ops-sync] push-back failed:', err)
   }

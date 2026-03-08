@@ -197,13 +197,20 @@ export function useAuth() {
     signOut: async () => {
       if (!supabase) return
 
-      mergeAuthSnapshot({
-        user: null,
-        loading: false,
-      })
-      resetSignedOutState()
+      try {
+        const { error } = await supabase.auth.signOut()
+        if (error) {
+          throw error
+        }
 
-      await supabase.auth.signOut()
+        mergeAuthSnapshot({
+          user: null,
+          loading: false,
+        })
+        resetSignedOutState()
+      } catch (error) {
+        console.warn('[auth] sign out failed:', error)
+      }
     },
   }
 }
