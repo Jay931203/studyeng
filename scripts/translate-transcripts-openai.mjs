@@ -25,6 +25,7 @@ const overwriteKo = args.includes('--overwrite-ko')
 const dryRun = args.includes('--dry')
 const onlyQueue = getArgValue('--queue') || 'needs_translation'
 const idsFile = getArgValue('--ids-file')
+const queueSource = getArgValue('--queue-source') || 'snapshot'
 const model = getArgValue('--model') || 'gpt-4o-mini'
 const batchSize = Number.parseInt(getArgValue('--batch') || '40', 10)
 
@@ -39,8 +40,11 @@ async function main() {
 
   if (idsFile) {
     const manifestIds = await readJson(idsFile, null)
-    const ids = new Set(Array.isArray(manifestIds) ? manifestIds : manifestIds[onlyQueue] ?? manifestIds.ids ?? [])
+    const ids = new Set(resolveIdsFromFile(manifestIds, onlyQueue))
     assetQueue = assetQueue.filter(asset => ids.has(asset.youtubeId))
+    if (queueSource === 'current') {
+      assetQueue = assetQueue.filter(asset => asset.workflowStatus === onlyQueue)
+    }
   } else if (specificId) {
     assetQueue = assetQueue.filter(asset => asset.youtubeId === specificId)
   } else {
@@ -178,6 +182,18 @@ async function readJson(filePath, fallback) {
 function getArgValue(name) {
   const match = args.find(arg => arg.startsWith(`${name}=`))
   return match ? match.slice(name.length + 1) : null
+}
+
+function resolveIdsFromFile(manifestIds, queueName) {
+  if (Array.isArray(manifestIds)) {
+    return manifestIds
+  }
+
+  if (!manifestIds || typeof manifestIds !== 'object') {
+    return []
+  }
+
+  return manifestIds[queueName] ?? manifestIds.valid_ids ?? manifestIds.ids ?? []
 }
 
 function sleep(ms) {

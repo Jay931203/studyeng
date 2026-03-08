@@ -21,6 +21,10 @@ async function main() {
     frozenAt: new Date().toISOString(),
     sourceManifestGeneratedAt: manifest.generatedAt,
     targetVideoCount: manifest.summary?.currentVideoCount ?? 0,
+    all_ids: manifest.assets.map(asset => asset.youtubeId),
+    valid_ids: manifest.assets
+      .filter(asset => !['blocked_external', 'orphaned'].includes(asset.workflowStatus))
+      .map(asset => asset.youtubeId),
     blocked_external: manifest.summary?.queues?.blockedExternal ?? [],
     needs_whisper: manifest.summary?.queues?.needsWhisper ?? [],
     needs_translation: manifest.summary?.queues?.needsTranslation ?? [],
@@ -32,6 +36,7 @@ async function main() {
   await writeFile(SNAPSHOT_PATH, JSON.stringify(snapshot, null, 2) + '\n', 'utf-8')
 
   console.log(`Snapshot written: ${SNAPSHOT_PATH}`)
+  console.log(`  valid_ids: ${snapshot.valid_ids.length}`)
   console.log(`  blocked_external: ${snapshot.blocked_external.length}`)
   console.log(`  needs_whisper: ${snapshot.needs_whisper.length}`)
   console.log(`  needs_translation: ${snapshot.needs_translation.length}`)

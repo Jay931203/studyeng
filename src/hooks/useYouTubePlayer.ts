@@ -59,6 +59,7 @@ export function useYouTubePlayer(
   clipEnd = 0,
   subtitles: SubtitleEntry[] = [],
   onClipComplete?: () => void,
+  initialSeekTime?: number,
 ) {
   const playerRef = useRef<YT.Player | null>(null)
   const intervalRef = useRef<number | null>(null)
@@ -151,6 +152,9 @@ export function useYouTubePlayer(
           const clipDuration = effEnd - effStart
           if (clipDuration > 0) setDuration(clipDuration)
           setClipBounds(effStart, effEnd)
+          if (initialSeekTime !== undefined && initialSeekTime >= effStart && initialSeekTime < effEnd) {
+            event.target.seekTo(initialSeekTime, true)
+          }
           setReady(true)
         },
         onStateChange: (event) => {
@@ -188,7 +192,7 @@ export function useYouTubePlayer(
         },
       },
     })
-  }, [containerId, videoId, clipStart, clipEnd])
+  }, [containerId, videoId, clipStart, clipEnd, initialSeekTime])
 
   useEffect(() => {
     if (!ready) return

@@ -1,20 +1,16 @@
 #!/usr/bin/env node
 /**
- * Regenerate all transcripts using OpenAI Whisper API.
- * 1. Download audio via yt-dlp
- * 2. Transcribe with Whisper (accurate timing + text)
- * 3. Merge short segments, cap duration
- * 4. Save as JSON (ko will be translated separately by Claude)
+ * Regenerate transcripts using OpenAI Whisper.
  *
  * Usage:
- *   node scripts/whisper-regenerate.mjs           # Regenerate all
- *   node scripts/whisper-regenerate.mjs --id=ABC  # Specific video
- *   node scripts/whisper-regenerate.mjs --dry      # Dry run
- *   node scripts/whisper-regenerate.mjs --skip-done # Skip existing
- *   node scripts/whisper-regenerate.mjs --force    # Force re-process all
+ *   node scripts/whisper-regenerate.mjs
+ *   node scripts/whisper-regenerate.mjs --id=ABC
+ *   node scripts/whisper-regenerate.mjs --ids-file=path/to/ids.json
+ *   node scripts/whisper-regenerate.mjs --queue=needs_whisper --ids-file=src/data/content-existing-batch.json
+ *   node scripts/whisper-regenerate.mjs --concurrency=3
  */
 
-import { readFile, writeFile, mkdtemp, rm, appendFile, readdir } from 'fs/promises'
+import { readFile, writeFile, mkdtemp, rm, readdir } from 'fs/promises'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { execFileSync } from 'child_process'
@@ -49,11 +45,191 @@ const forceAll = args.includes('--force')
 const queueName = getArgValue('--queue')
 const idsFile = getArgValue('--ids-file')
 const limit = Number.parseInt(getArgValue('--limit') || '0', 10)
+const concurrency = Math.max(1, Number.parseInt(getArgValue('--concurrency') || '3', 10))
 
-// Manifest: tracks which videos have been Whisper-processed (prevents duplicate cost)
 let manifest = {}
 if (existsSync(MANIFEST_PATH)) {
-  try { manifest = JSON.parse(await readFile(MANIFEST_PATH, 'utf-8')) } catch { manifest = {} }
+  try {
+    manifest = JSON.parse(await readFile(MANIFEST_PATH, 'utf-8'))
+  } catch {
+    manifest = {}
+  }
+}
+
+let sessionCost = 0
+let sessionMinutes = 0
+
+async function main() {
+  const { seedVideos } = await loadSeedData(SEED_VIDEOS_PATH)
+  const allVideos = dedupeVideos(
+    seedVideos.map(video => ({
+      youtubeId: video.youtubeId,
+      clipStart: video.clipStart,
+      clipEnd: video.clipEnd,
+    }))
+  )
+
+  let toProcess = allVideos
+
+  if (queueName) {
+    const batch = await readBatchIds(idsFile)
+    const ids = new Set(batch[queueName] ?? [])
+    toProcess = allVideos.filter(video => ids.has(video.youtubeId))
+  } else if (idsFile) {
+    const batch = await readBatchIds(idsFile)
+    const ids = new Set(Array.isArray(batch) ? batch : batch.valid_ids ?? batch.ids ?? [])
+    toProcess = allVideos.filter(video => ids.has(video.youtubeId))
+  } else if (specificId) {
+    toProcess = allVideos.filter(video => video.youtubeId === specificId)
+  }
+
+  if (limit > 0) {
+    toProcess = toProcess.slice(0, limit)
+  }
+
+  console.log(`Processing ${toProcess.length} videos (OpenAI Whisper)\n`)
+
+  let success = 0
+  let failed = 0
+  let skipped = 0
+  let completed = 0
+  let nextIndex = 0
+  let persistQueue = Promise.resolve()
+
+  async function worker() {
+    while (true) {
+      const currentIndex = nextIndex++
+      if (currentIndex >= toProcess.length) {
+        return
+      }
+
+      const videoInfo = toProcess[currentIndex]
+      const videoId = videoInfo.youtubeId
+      const { clipStart, clipEnd } = videoInfo
+
+      if (dryRun) {
+        completed++
+        console.log(`  [${completed}/${toProcess.length}] ${videoId} [${clipStart}-${clipEnd}s]... WOULD PROCESS`)
+        continue
+      }
+
+      if (!forceAll && isProcessed(videoId)) {
+        skipped++
+        completed++
+        console.log(`  [${completed}/${toProcess.length}] ${videoId} [${clipStart}-${clipEnd}s]... SKIP (already whispered)`)
+        continue
+      }
+
+      const tempDir = await mkdtemp(join(tmpdir(), 'whisper-'))
+
+      try {
+        let audioDownload = await downloadAudio(videoId, tempDir, 'bestaudio[ext=webm]/bestaudio', clipStart, clipEnd)
+
+        if (!existsSync(audioDownload.audioPath)) {
+          failed++
+          completed++
+          console.log(`  [${completed}/${toProcess.length}] ${videoId} [${clipStart}-${clipEnd}s]... SKIP (no audio)`)
+          continue
+        }
+
+        let whisperResult
+        try {
+          whisperResult = await transcribeWithOpenAI(audioDownload.audioPath)
+        } catch (error) {
+          if (String(error.message).includes('OpenAI API 413')) {
+            audioDownload = await downloadAudio(videoId, tempDir, 'worstaudio[ext=webm]/worstaudio/worstaudio', clipStart, clipEnd)
+            whisperResult = await transcribeWithOpenAI(audioDownload.audioPath)
+          } else {
+            throw error
+          }
+        }
+
+        if (!whisperResult?.segments?.length) {
+          failed++
+          completed++
+          console.log(`  [${completed}/${toProcess.length}] ${videoId} [${clipStart}-${clipEnd}s]... SKIP (whisper returned no segments)`)
+          continue
+        }
+
+        const audioDurationMin = (whisperResult.duration || 60) / 60
+        const cost = audioDurationMin * 0.006
+
+        const entries = whisperResult.segments
+          .filter(segment => segment.text.trim().length > 0)
+          .map(segment => ({
+            start: round2(segment.start + audioDownload.timeOffsetSec),
+            end: round2(segment.end + audioDownload.timeOffsetSec),
+            en: segment.text.trim(),
+            ko: '',
+          }))
+          .filter(entry => entry.start >= clipStart - 1 && entry.start <= clipEnd + 1)
+
+        const merged = []
+        for (const entry of entries) {
+          const duration = entry.end - entry.start
+          if (merged.length > 0 && duration < 1.5 && entry.end - merged[merged.length - 1].start <= 7) {
+            merged[merged.length - 1].en += ' ' + entry.en
+            merged[merged.length - 1].end = entry.end
+          } else {
+            merged.push({ ...entry })
+          }
+        }
+
+        for (const entry of merged) {
+          if (entry.end - entry.start > 7) {
+            entry.end = round2(entry.start + 7)
+          }
+        }
+
+        const transcriptPath = join(TRANSCRIPTS_DIR, `${videoId}.json`)
+        let koMatched = 0
+        if (existsSync(transcriptPath)) {
+          try {
+            const existing = JSON.parse(await readFile(transcriptPath, 'utf-8'))
+            const koMap = buildKoMap(existing)
+            for (const entry of merged) {
+              const ko = findBestKoMatch(entry.en, koMap)
+              if (ko) {
+                entry.ko = ko
+                koMatched++
+              }
+            }
+          } catch {}
+        }
+
+        await writeFile(transcriptPath, JSON.stringify(merged, null, 2) + '\n', 'utf-8')
+
+        persistQueue = persistQueue.then(async () => {
+          await logCost(videoId, audioDurationMin, cost)
+          markProcessed(videoId, cost)
+          await saveManifest()
+        })
+        await persistQueue
+
+        success++
+        completed++
+        console.log(`  [${completed}/${toProcess.length}] ${videoId} [${clipStart}-${clipEnd}s]... OK - ${merged.length} entries (${koMatched} ko) $${round2(cost * 10000) / 10000}`)
+        await sleep(2000)
+      } catch (error) {
+        failed++
+        completed++
+        console.log(`  [${completed}/${toProcess.length}] ${videoId} [${clipStart}-${clipEnd}s]... FAILED: ${String(error.message || error).slice(0, 120)}`)
+      } finally {
+        await rm(tempDir, { recursive: true, force: true })
+      }
+    }
+  }
+
+  await Promise.all(
+    Array.from({ length: Math.min(concurrency, Math.max(toProcess.length, 1)) }, () => worker())
+  )
+
+  const totalProcessed = Object.keys(manifest).length
+  const totalManifestCost = Object.values(manifest).reduce((sum, entry) => sum + (entry.cost || 0), 0)
+
+  console.log(`\nDone: ${success} regenerated, ${failed} failed, ${skipped} skipped`)
+  console.log(`Session cost: $${round2(sessionCost * 10000) / 10000} (${round2(sessionMinutes)} min audio)`)
+  console.log(`Total whispered: ${totalProcessed} videos | Lifetime cost: $${round2(totalManifestCost * 100) / 100}`)
 }
 
 async function saveManifest() {
@@ -73,183 +249,27 @@ function markProcessed(videoId, cost) {
   }
 }
 
-// Cost tracking
-let sessionCost = 0
-let sessionMinutes = 0
-
 async function logCost(videoId, durationMinutes, cost) {
   sessionCost += cost
   sessionMinutes += durationMinutes
 
   let log = []
   if (existsSync(COST_LOG_PATH)) {
-    try { log = JSON.parse(await readFile(COST_LOG_PATH, 'utf-8')) } catch {}
+    try {
+      log = JSON.parse(await readFile(COST_LOG_PATH, 'utf-8'))
+    } catch {
+      log = []
+    }
   }
+
   log.push({
     videoId,
     durationMinutes: round2(durationMinutes),
     cost: round2(cost * 10000) / 10000,
     timestamp: new Date().toISOString(),
   })
+
   await writeFile(COST_LOG_PATH, JSON.stringify(log, null, 2) + '\n', 'utf-8')
-}
-
-async function main() {
-  const { seedVideos } = await loadSeedData(SEED_VIDEOS_PATH)
-  const allVideos = dedupeVideos(seedVideos.map(video => ({
-    youtubeId: video.youtubeId,
-    clipStart: video.clipStart,
-    clipEnd: video.clipEnd,
-  })))
-
-  let toProcess = allVideos
-
-  if (queueName) {
-    const manifest = await readBatchIds(idsFile)
-    const ids = new Set(manifest[queueName] ?? [])
-    toProcess = allVideos.filter(video => ids.has(video.youtubeId))
-  } else if (idsFile) {
-    const manifest = await readBatchIds(idsFile)
-    const ids = new Set(Array.isArray(manifest) ? manifest : manifest.ids ?? [])
-    toProcess = allVideos.filter(video => ids.has(video.youtubeId))
-  } else if (specificId) {
-    toProcess = allVideos.filter(video => video.youtubeId === specificId)
-  }
-
-  if (limit > 0) {
-    toProcess = toProcess.slice(0, limit)
-  }
-
-  console.log(`Processing ${toProcess.length} videos (OpenAI Whisper)\n`)
-
-  let success = 0
-  let failed = 0
-  let skipped = 0
-
-  for (const videoInfo of toProcess) {
-    const videoId = videoInfo.youtubeId
-    const { clipStart, clipEnd } = videoInfo
-    process.stdout.write(`  ${videoId} [${clipStart}-${clipEnd}s]... `)
-
-    if (dryRun) {
-      console.log('WOULD PROCESS')
-      continue
-    }
-
-    // Check manifest — never re-process unless --force
-    if (!forceAll && isProcessed(videoId)) {
-      console.log('SKIP (already whispered)')
-      skipped++
-      continue
-    }
-
-    const tempDir = await mkdtemp(join(tmpdir(), 'whisper-'))
-
-    try {
-      // 1. Download audio. Prefer low enough bitrate to stay under OpenAI upload cap.
-      let audioDownload = await downloadAudio(videoId, tempDir, 'bestaudio[ext=webm]/bestaudio', clipStart, clipEnd)
-
-      if (!existsSync(audioDownload.audioPath)) {
-        console.log('SKIP (no audio)')
-        failed++
-        continue
-      }
-
-      // 2. Transcribe with OpenAI Whisper
-      let whisperResult
-      try {
-        whisperResult = await transcribeWithOpenAI(audioDownload.audioPath)
-      } catch (error) {
-        if (String(error.message).includes('OpenAI API 413')) {
-          audioDownload = await downloadAudio(videoId, tempDir, 'worstaudio[ext=webm]/worstaudio/worstaudio', clipStart, clipEnd)
-          whisperResult = await transcribeWithOpenAI(audioDownload.audioPath)
-        } else {
-          throw error
-        }
-      }
-      if (!whisperResult || !whisperResult.segments || whisperResult.segments.length === 0) {
-        console.log('SKIP (whisper returned no segments)')
-        failed++
-        continue
-      }
-
-      // Track cost (duration from whisper response)
-      const audioDurationMin = (whisperResult.duration || 60) / 60
-      const cost = audioDurationMin * 0.006
-      await logCost(videoId, audioDurationMin, cost)
-
-      // 3. Build subtitle entries — filter to clip range only
-      const entries = whisperResult.segments
-        .filter(s => s.text.trim().length > 0)
-        .map(s => ({
-          start: round2(s.start + audioDownload.timeOffsetSec),
-          end: round2(s.end + audioDownload.timeOffsetSec),
-          en: s.text.trim(),
-          ko: ''
-        }))
-        .filter(s => s.start >= clipStart - 1 && s.start <= clipEnd + 1)
-
-      // Merge very short segments (<1.5s) into previous if combined <= 7s
-      const merged = []
-      for (const e of entries) {
-        const dur = e.end - e.start
-        if (merged.length > 0 && dur < 1.5 && (e.end - merged[merged.length - 1].start) <= 7) {
-          merged[merged.length - 1].en += ' ' + e.en
-          merged[merged.length - 1].end = e.end
-        } else {
-          merged.push({ ...e })
-        }
-      }
-
-      // Cap duration at 7s
-      for (const e of merged) {
-        if (e.end - e.start > 7) e.end = round2(e.start + 7)
-      }
-
-      // 4. Match existing Korean translations
-      const existingPath = join(TRANSCRIPTS_DIR, `${videoId}.json`)
-      let koMatched = 0
-      if (existsSync(existingPath)) {
-        try {
-          const existing = JSON.parse(await readFile(existingPath, 'utf-8'))
-          const koMap = buildKoMap(existing)
-          for (const entry of merged) {
-            const ko = findBestKoMatch(entry.en, koMap)
-            if (ko) {
-              entry.ko = ko
-              koMatched++
-            }
-          }
-        } catch {}
-      }
-
-      // 5. Save
-      await writeFile(existingPath, JSON.stringify(merged, null, 2) + '\n', 'utf-8')
-
-      // Mark as processed in manifest (prevents future duplicate cost)
-      markProcessed(videoId, cost)
-      await saveManifest()
-
-      console.log(`OK - ${merged.length} entries (${koMatched} ko) $${round2(cost * 10000) / 10000}`)
-      success++
-
-      // Rate limit (OpenAI is generous, 2s is enough)
-      await sleep(2000)
-    } catch (err) {
-      console.log(`FAILED: ${err.message.slice(0, 120)}`)
-      failed++
-    } finally {
-      await rm(tempDir, { recursive: true, force: true })
-    }
-  }
-
-  // Final manifest stats
-  const totalProcessed = Object.keys(manifest).length
-  const totalManifestCost = Object.values(manifest).reduce((s, e) => s + (e.cost || 0), 0)
-
-  console.log(`\nDone: ${success} regenerated, ${failed} failed, ${skipped} skipped`)
-  console.log(`Session cost: $${round2(sessionCost * 10000) / 10000} (${round2(sessionMinutes)} min audio)`)
-  console.log(`Total whispered: ${totalProcessed} videos | Lifetime cost: $${round2(totalManifestCost * 100) / 100}`)
 }
 
 async function transcribeWithOpenAI(audioPath, retries = 3) {
@@ -265,38 +285,43 @@ async function transcribeWithOpenAI(audioPath, retries = 3) {
     formData.append('timestamp_granularities[]', 'segment')
     formData.append('language', 'en')
 
-    const res = await fetch('https://api.openai.com/v1/audio/transcriptions', {
+    const response = await fetch('https://api.openai.com/v1/audio/transcriptions', {
       method: 'POST',
-      headers: { 'Authorization': `Bearer ${OPENAI_API_KEY}` },
+      headers: {
+        Authorization: `Bearer ${OPENAI_API_KEY}`,
+      },
       body: formData,
     })
 
-    if (res.ok) {
-      return await res.json()
+    if (response.ok) {
+      return await response.json()
     }
 
-    const text = await res.text()
-    if (res.status === 429 && attempt < retries) {
+    const text = await response.text()
+    if (response.status === 429 && attempt < retries) {
       const waitSec = 10 * attempt
       process.stdout.write(`RATE LIMITED, waiting ${waitSec}s... `)
       await sleep(waitSec * 1000)
       continue
     }
 
-    throw new Error(`OpenAI API ${res.status}: ${text.slice(0, 200)}`)
+    throw new Error(`OpenAI API ${response.status}: ${text.slice(0, 200)}`)
   }
 }
 
 function buildKoMap(entries) {
   const map = new Map()
   for (const entry of entries) {
-    if (entry.ko) map.set(normalize(entry.en), entry.ko)
+    if (entry.ko) {
+      map.set(normalize(entry.en), entry.ko)
+    }
   }
   return map
 }
 
 function findBestKoMatch(en, koMap) {
   if (koMap.size === 0) return ''
+
   const norm = normalize(en)
   if (koMap.has(norm)) return koMap.get(norm)
 
@@ -307,17 +332,19 @@ function findBestKoMatch(en, koMap) {
 
   const newWords = new Set(norm.split(/\s+/))
   if (newWords.size < 2) return ''
+
   let bestScore = 0
   let bestKo = ''
   for (const [key, ko] of koMap) {
     const oldWords = key.split(/\s+/)
-    const overlap = oldWords.filter(w => newWords.has(w)).length
+    const overlap = oldWords.filter(word => newWords.has(word)).length
     const score = overlap / Math.max(oldWords.length, newWords.size)
     if (score > 0.6 && score > bestScore) {
       bestScore = score
       bestKo = ko
     }
   }
+
   return bestKo
 }
 
@@ -325,8 +352,8 @@ function normalize(text) {
   return text.toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, ' ').trim()
 }
 
-function round2(n) {
-  return Math.round(n * 100) / 100
+function round2(value) {
+  return Math.round(value * 100) / 100
 }
 
 function sleep(ms) {
@@ -334,24 +361,19 @@ function sleep(ms) {
 }
 
 async function downloadAudio(videoId, tempDir, format, clipStart, clipEnd) {
-  const outTemplate = join(tempDir, `${videoId}.%(ext)s`)
-  const args = ['-f', format, '--no-post-overwrites']
-  let timeOffsetSec = 0
-
-  if (FFMPEG_LOCATION) {
-    args.push('--ffmpeg-location', FFMPEG_LOCATION)
-  }
-
   if (FFMPEG_LOCATION !== false) {
-    const sectionStart = Math.max(0, round2(clipStart - 1))
-    const sectionEnd = round2(clipEnd + 1)
-    timeOffsetSec = sectionStart
-    args.push('--download-sections', `*${sectionStart}-${sectionEnd}`)
+    return streamClipAudio(videoId, tempDir, format, clipStart, clipEnd)
   }
 
-  args.push('-o', outTemplate, `https://www.youtube.com/watch?v=${videoId}`)
-
-  execFileSync('yt-dlp', args, { stdio: 'pipe', timeout: 120000 })
+  const outTemplate = join(tempDir, `${videoId}.%(ext)s`)
+  execFileSync(
+    'yt-dlp',
+    ['--js-runtimes', 'node', '--extractor-retries', '3', '--retries', '3', '-f', format, '--no-post-overwrites', '-o', outTemplate, `https://www.youtube.com/watch?v=${videoId}`],
+    {
+      stdio: 'pipe',
+      timeout: 600000,
+    }
+  )
 
   const files = (await readdir(tempDir))
     .filter(file => file.startsWith(videoId))
@@ -364,7 +386,61 @@ async function downloadAudio(videoId, tempDir, format, clipStart, clipEnd) {
   files.sort((a, b) => statSync(b).size - statSync(a).size)
   return {
     audioPath: files[0],
-    timeOffsetSec,
+    timeOffsetSec: 0,
+  }
+}
+
+function streamClipAudio(videoId, tempDir, format, clipStart, clipEnd) {
+  const sectionStart = Math.max(0, round2(clipStart - 1))
+  const sectionDuration = Math.max(1, round2(clipEnd + 1 - sectionStart))
+  const audioUrl = execFileSync(
+    'yt-dlp',
+    ['--js-runtimes', 'node', '--extractor-retries', '3', '--retries', '3', '-f', format, '-g', `https://www.youtube.com/watch?v=${videoId}`],
+    {
+      encoding: 'utf8',
+      stdio: 'pipe',
+      timeout: 120000,
+    }
+  )
+    .split(/\r?\n/)
+    .find(Boolean)
+    ?.trim()
+
+  if (!audioUrl) {
+    throw new Error('yt-dlp returned no direct audio url')
+  }
+
+  const audioPath = join(tempDir, `${videoId}.mp3`)
+  execFileSync(
+    resolveFfmpegCommand(),
+    [
+      '-y',
+      '-ss',
+      String(sectionStart),
+      '-t',
+      String(sectionDuration),
+      '-i',
+      audioUrl,
+      '-vn',
+      '-ac',
+      '1',
+      '-ar',
+      '16000',
+      '-c:a',
+      'libmp3lame',
+      '-b:a',
+      '64k',
+      audioPath,
+    ],
+    {
+      stdio: 'pipe',
+      timeout: 600000,
+    }
+  )
+
+  return {
+    audioPath,
+    timeOffsetSec: sectionStart,
   }
 }
 
@@ -423,6 +499,13 @@ function commandExists(command) {
   } catch {
     return false
   }
+}
+
+function resolveFfmpegCommand() {
+  if (FFMPEG_LOCATION && FFMPEG_LOCATION !== false) {
+    return join(FFMPEG_LOCATION, 'ffmpeg.exe')
+  }
+  return 'ffmpeg'
 }
 
 function findFileRecursive(rootDir, targetName, maxDepth, depth = 0) {

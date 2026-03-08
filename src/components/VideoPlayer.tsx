@@ -17,6 +17,7 @@ interface VideoPlayerProps {
   onSavePhrase?: (phrase: SubtitleEntry) => void
   onClipComplete?: () => void
   isLandscape?: boolean
+  initialSeekTime?: number
   children?: ReactNode
 }
 
@@ -29,6 +30,7 @@ export function VideoPlayer({
   onSavePhrase,
   onClipComplete,
   isLandscape = false,
+  initialSeekTime,
   children,
 }: VideoPlayerProps) {
   const containerId = `yt-player-${useId().replace(/:/g, '')}`
@@ -44,7 +46,7 @@ export function VideoPlayer({
   }, [clipEnd, clipStart, fetchedSubtitles, propSubtitles])
 
   const { ready, playbackStarted, play, pause, seekTo, videoError, clearVideoError } =
-    useYouTubePlayer(containerId, youtubeId, clipStart, clipEnd, subtitles, onClipComplete)
+    useYouTubePlayer(containerId, youtubeId, clipStart, clipEnd, subtitles, onClipComplete, initialSeekTime)
   const isPlaying = usePlayerStore((state) => state.isPlaying)
 
   const [overlayVisible, setOverlayVisible] = useState(true)
@@ -116,7 +118,12 @@ export function VideoPlayer({
       onClick={handleTap}
       style={{ backgroundColor: 'var(--player-surface)' }}
     >
-      <div id={containerId} className="absolute inset-0 h-full w-full pointer-events-none" />
+      <div
+        className="pointer-events-none absolute inset-0"
+        dangerouslySetInnerHTML={{
+          __html: `<div id="${containerId}" class="h-full w-full"></div>`,
+        }}
+      />
 
       {showPauseIcon && (
         <div className="pointer-events-none absolute inset-0 z-20 flex items-center justify-center">

@@ -1,6 +1,6 @@
 import { existsSync } from 'fs'
 import { mkdir, readFile, writeFile } from 'fs/promises'
-import { execFileSync } from 'child_process'
+import { execFile } from 'child_process'
 import { dirname } from 'path'
 
 const ALLOWED_AVAILABILITY = new Set(['public', 'unlisted'])
@@ -52,16 +52,15 @@ export function normalizeValidationCache(raw) {
   }
 }
 
-export function validateYoutubeId(youtubeId) {
+export async function validateYoutubeId(youtubeId) {
   const checkedAt = new Date().toISOString()
 
   try {
-    const raw = execFileSync(
+    const raw = await execFileText(
       'yt-dlp',
-      ['-J', '--no-download', `https://www.youtube.com/watch?v=${youtubeId}`],
+      ['--js-runtimes', 'node', '-J', '--no-download', `https://www.youtube.com/watch?v=${youtubeId}`],
       {
         encoding: 'utf8',
-        stdio: ['ignore', 'pipe', 'pipe'],
         timeout: 60000,
         maxBuffer: 20 * 1024 * 1024,
       }
@@ -144,6 +143,9 @@ export function classifyPlayback({ availability, playableInEmbed, ageLimit }) {
 export function classifyValidationError(errorText) {
   const normalized = (errorText || '').toLowerCase()
 
+  if (normalized.includes('removed for violating youtube')) {
+    return { status: 'blocked', reason: 'removed_tos', blocked: true }
+  }
   if (normalized.includes('private video')) {
     return { status: 'blocked', reason: 'private', blocked: true }
   }
@@ -153,8 +155,14 @@ export function classifyValidationError(errorText) {
   if (normalized.includes('sign in to confirm your age') || normalized.includes('age-restricted')) {
     return { status: 'blocked', reason: 'age_restricted', blocked: true }
   }
+  if (normalized.includes('this video is not available')) {
+    return { status: 'blocked', reason: 'unavailable', blocked: true }
+  }
   if (normalized.includes('video unavailable') || normalized.includes('this video is unavailable')) {
     return { status: 'blocked', reason: 'unavailable', blocked: true }
+  }
+  if (normalized.includes('not made this video available in your country')) {
+    return { status: 'blocked', reason: 'geo_restricted', blocked: true }
   }
   if (normalized.includes('copyright') && normalized.includes('country')) {
     return { status: 'blocked', reason: 'geo_restricted', blocked: true }
@@ -185,4 +193,16 @@ function stringifyError(error) {
     : ''
 
   return [stderr, stdout, error.message].filter(Boolean).join('\n').trim()
+}
+
+function execFileText(command, args, options) {
+  return new Promise((resolve, reject) => {
+    execFile(command, args, options, (error, stdout) => {
+      if (error) {
+        reject(error)
+        return
+      }
+      resolve(stdout)
+    })
+  })
 }

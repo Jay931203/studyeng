@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import { execFileSync } from 'child_process'
 import { readFile } from 'fs/promises'
 import { dirname, join } from 'path'
 import { fileURLToPath } from 'url'
@@ -21,7 +22,9 @@ const specificId = getArgValue('--id')
 const idsFile = getArgValue('--ids-file')
 const queueName = getArgValue('--queue')
 const force = args.includes('--force')
+const shouldSyncManifest = !args.includes('--no-sync')
 const limit = Number.parseInt(getArgValue('--limit') || '0', 10)
+const concurrency = Math.max(1, Number.parseInt(getArgValue('--concurrency') || '8', 10))
 
 async function main() {
   const { seedVideos } = await loadSeedData(SEED_VIDEOS_PATH)
@@ -35,24 +38,40 @@ async function main() {
   let ok = 0
   let blocked = 0
   let errored = 0
+  let completed = 0
+  let persistQueue = Promise.resolve()
 
-  for (const youtubeId of idsToCheck) {
-    process.stdout.write(`  ${youtubeId}... `)
-    const result = validateYoutubeId(youtubeId)
-    cache.videos[youtubeId] = result
-    await writeValidationCache(VALIDATION_PATH, cache)
+  let nextIndex = 0
+  async function worker() {
+    while (true) {
+      const currentIndex = nextIndex++
+      if (currentIndex >= idsToCheck.length) {
+        return
+      }
 
-    if (result.blocked) {
-      console.log(`BLOCKED (${result.reason})`)
-      blocked++
-    } else if (result.status === 'ok') {
-      console.log('OK')
-      ok++
-    } else {
-      console.log(`ERROR (${result.reason})`)
-      errored++
+      const youtubeId = idsToCheck[currentIndex]
+      const result = await validateYoutubeId(youtubeId)
+      cache.videos[youtubeId] = result
+      persistQueue = persistQueue.then(() => writeValidationCache(VALIDATION_PATH, cache))
+      await persistQueue
+
+      completed++
+      if (result.blocked) {
+        console.log(`  [${completed}/${idsToCheck.length}] ${youtubeId}... BLOCKED (${result.reason})`)
+        blocked++
+      } else if (result.status === 'ok') {
+        console.log(`  [${completed}/${idsToCheck.length}] ${youtubeId}... OK`)
+        ok++
+      } else {
+        console.log(`  [${completed}/${idsToCheck.length}] ${youtubeId}... ERROR (${result.reason})`)
+        errored++
+      }
     }
   }
+
+  await Promise.all(
+    Array.from({ length: Math.min(concurrency, Math.max(idsToCheck.length, 1)) }, () => worker())
+  )
 
   const blockedIds = Object.values(cache.videos)
     .filter(entry => entry?.blocked)
@@ -72,6 +91,15 @@ async function main() {
     if (blockedIds.length > 50) {
       console.log(`  ... ${blockedIds.length - 50} more`)
     }
+  }
+
+  if (shouldSyncManifest) {
+    console.log('\nRefreshing content and recommendation manifests\n')
+    execFileSync(process.execPath, [join(ROOT, 'scripts', 'content-system.mjs')], {
+      cwd: ROOT,
+      env: process.env,
+      stdio: 'inherit',
+    })
   }
 }
 

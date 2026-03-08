@@ -26,6 +26,7 @@ const REVIEW_REGISTRY_PATH = join(import.meta.dirname, '..', 'src', 'data', 'con
 
 const args = process.argv.slice(2)
 const shouldFix = args.includes('--fix')
+const idsFile = getArgValue('--ids-file')
 
 async function main() {
   const reviewRegistry = await readJson(REVIEW_REGISTRY_PATH, {
@@ -33,9 +34,11 @@ async function main() {
     archivedOrphanAssets: {},
   })
   const archivedOrphanIds = new Set(Object.keys(reviewRegistry.archivedOrphanAssets ?? {}))
+  const selectedIds = idsFile ? new Set(resolveIdsFromFile(await readJson(idsFile, []))) : null
   const files = (await readdir(TRANSCRIPTS_DIR))
     .filter(f => f.endsWith('.json'))
     .filter(f => !archivedOrphanIds.has(f.replace(/\.json$/i, '')))
+    .filter(f => !selectedIds || selectedIds.has(f.replace(/\.json$/i, '')))
 
   let totalIssues = 0
   let cleanFiles = 0
@@ -96,6 +99,23 @@ async function readJson(filePath, fallback) {
   } catch {
     return fallback
   }
+}
+
+function getArgValue(name) {
+  const match = args.find(arg => arg.startsWith(`${name}=`))
+  return match ? match.slice(name.length + 1) : null
+}
+
+function resolveIdsFromFile(data) {
+  if (Array.isArray(data)) {
+    return data
+  }
+
+  if (!data || typeof data !== 'object') {
+    return []
+  }
+
+  return data.valid_ids ?? data.ids ?? []
 }
 
 function autoFix(entries) {
