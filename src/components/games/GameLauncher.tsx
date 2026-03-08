@@ -10,7 +10,11 @@ import { type SubtitleEntry } from '@/data/seed-videos'
 import { catalogVideos } from '@/lib/catalog'
 
 type GameType = 'scene-quiz' | 'listening'
-type PhrasePair = { current: { en: string; ko: string }; next: { en: string; ko: string } }
+type PhrasePair = {
+  sourceVideoId: string
+  current: { en: string; ko: string }
+  next: { en: string; ko: string }
+}
 
 interface GameLauncherProps {
   phrases: SavedPhrase[]
@@ -70,6 +74,7 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
           if (!current?.en || !next?.en) continue
 
           allRounds.push({
+            sourceVideoId: video.id,
             current: subtitleToGamePhrase(current),
             next: subtitleToGamePhrase(next),
           })
@@ -229,7 +234,11 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
               <ListeningGame
                 currentSubtitle={currentListeningRound.current}
                 nextSubtitle={currentListeningRound.next}
-                choicePool={listeningRounds.map((round) => round.next)}
+                choicePool={
+                  listeningRounds
+                    .filter((round) => round.sourceVideoId === currentListeningRound.sourceVideoId)
+                    .map((round) => round.next)
+                }
                 onComplete={handleComplete}
               />
             )}

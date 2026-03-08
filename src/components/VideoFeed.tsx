@@ -5,7 +5,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { series as allSeries, type VideoData } from '@/data/seed-videos'
 import { useOrientation } from '@/hooks/useOrientation'
-import { buildShortsUrl } from '@/lib/videoRoutes'
+import { readEmbedBlockedVideoIds, writeEmbedBlockedVideoIds } from '@/lib/embedBlocklist'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { usePlayerStore } from '@/stores/usePlayerStore'
@@ -24,9 +24,8 @@ interface VideoFeedProps {
   videos: VideoData[]
   initialVideoId?: string
   initialSeekTime?: number
+  initialReviewPhraseId?: string
 }
-
-const EMBED_BLOCKED_STORAGE_KEY = 'studyeng-embed-blocked-videos'
 
 function buildExploreSeriesUrl(video: VideoData) {
   const params = new URLSearchParams()
@@ -42,18 +41,16 @@ function buildExploreSeriesUrl(video: VideoData) {
   return `/explore?${params.toString()}`
 }
 
-export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeedProps) {
+export function VideoFeed({
+  videos,
+  initialVideoId,
+  initialSeekTime,
+  initialReviewPhraseId,
+}: VideoFeedProps) {
   const router = useRouter()
   const { isLandscape } = useOrientation()
   const [embedBlockedVideoIds, setEmbedBlockedVideoIds] = useState<string[]>(() => {
-    if (typeof window === 'undefined') return []
-
-    try {
-      const parsed = JSON.parse(window.localStorage.getItem(EMBED_BLOCKED_STORAGE_KEY) ?? '[]')
-      return Array.isArray(parsed) ? parsed.filter((value) => typeof value === 'string') : []
-    } catch {
-      return []
-    }
+    return readEmbedBlockedVideoIds()
   })
   const embedBlockedIdSet = useMemo(() => new Set(embedBlockedVideoIds), [embedBlockedVideoIds])
   const [currentIndex, setCurrentIndex] = useState(() => {
@@ -73,6 +70,7 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
 
   const saveToastTimerRef = useRef<number | null>(null)
   const repeatIndicatorTimerRef = useRef<number | null>(null)
+  const initialReviewMarkedRef = useRef(false)
   const awardedRef = useRef<Set<string>>(new Set())
   const playbackMetricsRef = useRef({ currentTime: 0, clipStart: 0, clipEnd: 0 })
   const engagementRef = useRef<{ finalized: boolean; videoId: string | null }>({
@@ -81,6 +79,7 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
   })
 
   const savePhrase = usePhraseStore((state) => state.savePhrase)
+  const incrementReview = usePhraseStore((state) => state.incrementReview)
   const markWatched = useWatchHistoryStore((state) => state.markWatched)
   const recordCompletion = useWatchHistoryStore((state) => state.recordCompletion)
   const incrementViewCount = useWatchHistoryStore((state) => state.incrementViewCount)
@@ -104,16 +103,7 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
   const currentVideo = videos[currentIndex]
 
   useEffect(() => {
-    if (typeof window === 'undefined') return
-
-    try {
-      window.localStorage.setItem(
-        EMBED_BLOCKED_STORAGE_KEY,
-        JSON.stringify(embedBlockedVideoIds.slice(-200)),
-      )
-    } catch {
-      // Ignore storage write failures.
-    }
+    writeEmbedBlockedVideoIds(embedBlockedVideoIds)
   }, [embedBlockedVideoIds])
 
   const findPlayableIndex = useCallback(
@@ -143,15 +133,20 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
 
     const forwardIndex = findPlayableIndex(currentIndex + 1, 1)
     if (forwardIndex >= 0) {
-      setDirection(1)
-      setCurrentIndex(forwardIndex)
-      return
+      const timer = window.setTimeout(() => {
+        setDirection(1)
+        setCurrentIndex(forwardIndex)
+      }, 0)
+      return () => clearTimeout(timer)
     }
 
     const backwardIndex = findPlayableIndex(currentIndex - 1, -1)
     if (backwardIndex >= 0) {
-      setDirection(-1)
-      setCurrentIndex(backwardIndex)
+      const timer = window.setTimeout(() => {
+        setDirection(-1)
+        setCurrentIndex(backwardIndex)
+      }, 0)
+      return () => clearTimeout(timer)
     }
   }, [currentIndex, currentVideo, embedBlockedIdSet, findPlayableIndex])
 
@@ -210,13 +205,29 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
   useEffect(() => {
     if (!currentVideo || typeof window === 'undefined') return
 
-    const nextUrl = buildShortsUrl(currentVideo.id, currentVideo.seriesId)
+    const params = new URLSearchParams()
+    params.set('v', currentVideo.id)
+    if (currentVideo.seriesId) {
+      params.set('series', currentVideo.seriesId)
+    }
+    if (
+      currentIndex === 0 &&
+      currentVideo.id === initialVideoId &&
+      initialSeekTime !== undefined &&
+      Number.isFinite(initialSeekTime)
+    ) {
+      params.set('t', String(initialSeekTime))
+      if (initialReviewPhraseId) {
+        params.set('phraseId', initialReviewPhraseId)
+      }
+    }
+    const nextUrl = `/shorts?${params.toString()}`
     const currentUrl = `${window.location.pathname}${window.location.search}`
 
     if (currentUrl !== nextUrl) {
       window.history.replaceState(window.history.state, '', nextUrl)
     }
-  }, [currentVideo])
+  }, [currentIndex, currentVideo, initialReviewPhraseId, initialSeekTime, initialVideoId])
 
   useEffect(() => {
     return () => {
@@ -404,6 +415,19 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
             onVideoErrorSkip={currentIndex < videos.length - 1 ? handleNextVideo : undefined}
             onEmbedBlocked={handleEmbedBlocked}
             initialSeekTime={currentIndex === 0 ? initialSeekTime : undefined}
+            onPlaybackStarted={() => {
+              if (
+                initialReviewMarkedRef.current ||
+                !initialReviewPhraseId ||
+                currentIndex !== 0 ||
+                currentVideo.id !== initialVideoId
+              ) {
+                return
+              }
+
+              initialReviewMarkedRef.current = true
+              incrementReview(initialReviewPhraseId)
+            }}
             onSavePhrase={(phrase) => {
               if (!canSaveMorePhrases()) {
                 setPremiumTrigger('phrase-limit')

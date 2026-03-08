@@ -31,7 +31,11 @@ function ShortsFeedContent() {
   const videoId = searchParams.get('v')
   const seriesId = searchParams.get('series')
   const seekTime = searchParams.get('t')
-  const navigationKey = buildShortsUrl(videoId, seriesId) + (seekTime ? `&t=${seekTime}` : '')
+  const reviewPhraseId = searchParams.get('phraseId')
+  const navigationKey =
+    buildShortsUrl(videoId, seriesId) +
+    (seekTime ? `&t=${seekTime}` : '') +
+    (reviewPhraseId ? `&phraseId=${reviewPhraseId}` : '')
 
   // Freeze the recommendation inputs for the current route so that
   // watch-history or like updates inside the player do not reshuffle
@@ -95,6 +99,7 @@ function ShortsFeedContent() {
       videos={recommended}
       initialVideoId={videoId ?? undefined}
       initialSeekTime={seekTime ? parseFloat(seekTime) : undefined}
+      initialReviewPhraseId={reviewPhraseId ?? undefined}
     />
   )
 }

@@ -19,7 +19,8 @@ export const useLikeStore = create<LikeState>()(
         const current = get().likes
         const isCurrentlyLiked = !!current[videoId]
         if (isCurrentlyLiked) {
-          const { [videoId]: _, ...rest } = current
+          const rest = { ...current }
+          delete rest[videoId]
           set({ likes: rest })
         } else {
           set({ likes: { ...current, [videoId]: true } })

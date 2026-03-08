@@ -97,7 +97,7 @@ export const useDiscountStore = create<DiscountState>()(
 
       recordDailyCompletion: () => {
         const today = getTodayDateString()
-        const { completedDays, checkAndResetMonthly } = get()
+        const { checkAndResetMonthly } = get()
 
         // 먼저 월 리셋 확인
         checkAndResetMonthly()

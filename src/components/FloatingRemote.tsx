@@ -21,7 +21,17 @@ export function FloatingRemote({
   onToggleFreeze,
   isLandscape,
 }: FloatingRemoteProps) {
-  const [expanded, setExpanded] = useState(false)
+  const [expanded, setExpanded] = useState(() => {
+    if (typeof window === 'undefined') return false
+
+    const shown = localStorage.getItem(STORAGE_KEY)
+    if (!shown) {
+      localStorage.setItem(STORAGE_KEY, '1')
+      return true
+    }
+
+    return false
+  })
   const collapseTimerRef = useRef<number | null>(null)
   const isPlaying = usePlayerStore((state) => state.isPlaying)
   const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
@@ -44,25 +54,10 @@ export function FloatingRemote({
     [clearCollapseTimer],
   )
 
-  // First-time auto-expand
-  useEffect(() => {
-    if (typeof window === 'undefined') return
-
-    const shown = localStorage.getItem(STORAGE_KEY)
-    if (!shown) {
-      localStorage.setItem(STORAGE_KEY, '1')
-      setExpanded(true)
-      const timer = window.setTimeout(() => {
-        setExpanded(false)
-      }, INTRO_DELAY)
-      return () => clearTimeout(timer)
-    }
-  }, [])
-
   // Auto-collapse when expanded
   useEffect(() => {
     if (expanded) {
-      startCollapseTimer()
+      startCollapseTimer(INTRO_DELAY)
     } else {
       clearCollapseTimer()
     }

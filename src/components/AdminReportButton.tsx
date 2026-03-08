@@ -17,6 +17,8 @@ const issueTypes: Array<{ value: IssueType; label: string }> = [
 
 export function AdminReportButton({ videoId, youtubeId }: AdminReportButtonProps) {
   const addIssue = useAdminStore((state) => state.addIssue)
+  const adminSyncError = useAdminStore((state) => state.adminSyncError)
+  const setAdminSyncError = useAdminStore((state) => state.setAdminSyncError)
   const isAdminActive = useAdminStore((state) => state.isAdminActive)
   const unresolvedCount = useAdminStore(
     (state) => state.issues.filter((issue) => !issue.resolved).length,
@@ -25,18 +27,34 @@ export function AdminReportButton({ videoId, youtubeId }: AdminReportButtonProps
   const [isOpen, setIsOpen] = useState(false)
   const [type, setType] = useState<IssueType>('subtitle')
   const [description, setDescription] = useState('')
+  const [submitting, setSubmitting] = useState(false)
 
-  const submitDisabled = useMemo(() => description.trim().length === 0, [description])
+  const submitDisabled = useMemo(
+    () => submitting || description.trim().length === 0,
+    [description, submitting],
+  )
 
   if (!isAdminActive()) return null
 
-  const closePanel = () => setIsOpen(false)
+  const closePanel = () => {
+    if (submitting) return
+    setIsOpen(false)
+  }
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     const trimmed = description.trim()
-    if (!trimmed) return
+    if (!trimmed || submitting) return
 
-    addIssue(videoId, youtubeId, type, trimmed)
+    setSubmitting(true)
+    setAdminSyncError(null)
+
+    const success = await addIssue(videoId, youtubeId, type, trimmed)
+    setSubmitting(false)
+
+    if (!success) {
+      return
+    }
+
     setDescription('')
     setType('subtitle')
     closePanel()
@@ -95,8 +113,7 @@ export function AdminReportButton({ videoId, youtubeId }: AdminReportButtonProps
                       이슈 리포트
                     </h3>
                     <p className="mt-1 text-xs leading-relaxed text-[var(--text-muted)]">
-                      자막이나 영상 문제를 적어두면 프로필의 관리자 패널에서 모아서
-                      내보낼 수 있습니다.
+                      자막이나 영상 문제를 운영 이슈로 남깁니다.
                     </p>
                   </div>
                   <button
@@ -117,8 +134,7 @@ export function AdminReportButton({ videoId, youtubeId }: AdminReportButtonProps
 
                 <div className="mb-3 rounded-2xl bg-[var(--bg-secondary)] px-3 py-2">
                   <p className="text-[11px] text-[var(--text-muted)]">
-                    Video ID{' '}
-                    <span className="text-[var(--text-secondary)]">{videoId}</span>
+                    Video ID <span className="text-[var(--text-secondary)]">{videoId}</span>
                   </p>
                 </div>
 
@@ -141,10 +157,16 @@ export function AdminReportButton({ videoId, youtubeId }: AdminReportButtonProps
                 <textarea
                   value={description}
                   onChange={(event) => setDescription(event.target.value)}
-                  placeholder="문제를 간단히 적어주세요"
+                  placeholder="문제를 간단히 적어 주세요."
                   rows={4}
                   className="w-full resize-none rounded-2xl border border-transparent bg-[var(--bg-secondary)] p-3 text-sm text-[var(--text-primary)] outline-none transition-colors placeholder:text-[var(--text-muted)] focus:border-red-500/30"
                 />
+
+                {adminSyncError && (
+                  <div className="mt-3 rounded-2xl border border-amber-500/20 bg-amber-500/10 px-3 py-2 text-xs text-amber-200">
+                    {adminSyncError}
+                  </div>
+                )}
 
                 <div className="mt-3 flex gap-2">
                   <button
@@ -159,7 +181,7 @@ export function AdminReportButton({ videoId, youtubeId }: AdminReportButtonProps
                     disabled={submitDisabled}
                     className="flex-1 rounded-2xl bg-red-500 py-3 text-sm font-semibold text-white transition-colors disabled:cursor-not-allowed disabled:opacity-30"
                   >
-                    저장
+                    {submitting ? '저장 중...' : '등록'}
                   </motion.button>
                 </div>
               </div>

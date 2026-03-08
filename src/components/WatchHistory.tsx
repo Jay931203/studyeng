@@ -1,12 +1,14 @@
 'use client'
 
+import Image from 'next/image'
 import { useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
+import { getCatalogVideoById } from '@/lib/catalog'
 import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
-import { seedVideos, categories } from '@/data/seed-videos'
+import { categories, type VideoData } from '@/data/seed-videos'
 
 function formatDateLabel(timestamp: number): string {
   const now = new Date()
@@ -34,11 +36,11 @@ export function WatchHistory() {
       ? watchRecords
       : watchedVideoIds.map((id) => ({ videoId: id, watchedAt: 0 }))
 
-    const groups: { label: string; key: string; videos: typeof seedVideos }[] = []
+    const groups: { label: string; key: string; videos: VideoData[] }[] = []
     const seen = new Map<string, Set<string>>()
 
     for (const record of records) {
-      const video = seedVideos.find((v) => v.id === record.videoId)
+      const video = getCatalogVideoById(record.videoId)
       if (!video) continue
 
       const dateKey = record.watchedAt > 0 ? getDateKey(record.watchedAt) : 'unknown'
@@ -69,7 +71,7 @@ export function WatchHistory() {
   )
   const displayItems = allItems.slice(0, 5)
 
-  const displayGroups: { label: string; videos: typeof seedVideos }[] = []
+  const displayGroups: { label: string; videos: VideoData[] }[] = []
   for (const item of displayItems) {
     const existing = displayGroups.find((g) => g.label === item.dateLabel)
     if (existing) {
@@ -137,11 +139,12 @@ export function WatchHistory() {
                         className="flex items-center gap-3 flex-1 min-w-0 text-left"
                       >
                         <div className="w-20 h-12 flex-shrink-0 rounded-xl overflow-hidden relative">
-                          <img
+                          <Image
                             src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
                             alt={video.title}
-                            className="w-full h-full object-cover"
-                            loading="lazy"
+                            fill
+                            sizes="80px"
+                            className="object-cover"
                           />
                           {count > 1 && (
                             <div className="absolute bottom-0.5 right-0.5 bg-black/70 text-white text-[9px] px-1 py-0.5 rounded font-bold">

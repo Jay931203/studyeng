@@ -28,7 +28,7 @@ interface PhraseState {
 
 export const usePhraseStore = create<PhraseState>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       phrases: [],
 
       savePhrase: (phrase) =>

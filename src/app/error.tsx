@@ -9,6 +9,7 @@ export default function GlobalError({
   error: Error & { digest?: string }
   reset: () => void
 }) {
+  void error
   return (
     <div className="h-dvh flex flex-col items-center justify-center bg-[var(--bg-primary)] px-8">
       <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">

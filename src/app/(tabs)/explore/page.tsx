@@ -12,8 +12,7 @@ import {
 import { LogoFull } from '@/components/Logo'
 import { SearchBar } from '@/components/SearchBar'
 import { VideoCard } from '@/components/VideoCard'
-import { AppPage, PageHeader, SectionHeader, SurfaceCard } from '@/components/ui/AppPage'
-import { useAuth } from '@/hooks/useAuth'
+import { AppPage, SectionHeader, SurfaceCard } from '@/components/ui/AppPage'
 import {
   catalogSeries,
   catalogVideos,
@@ -54,7 +53,6 @@ export default function ExplorePage() {
   const [activeCategory, setActiveCategory] = useState<'all' | CategoryId>('all')
   const router = useRouter()
   const searchParams = useSearchParams()
-  const { user } = useAuth()
   const seriesSectionRef = useRef<HTMLElement | null>(null)
   const likes = useLikeStore((state) => state.likes)
   const phrases = usePhraseStore((state) => state.phrases)
@@ -69,7 +67,6 @@ export default function ExplorePage() {
     watchRecords,
     getSeriesProgress,
     getNextEpisode,
-    isWatched,
     getViewCount,
     clearDeletedFlag,
   } = useWatchHistoryStore()
@@ -188,11 +185,6 @@ export default function ExplorePage() {
   ])
 
   const spotlightVideo = continueSeries[0]?.nextVideo ?? recommended[0] ?? catalogVideos[0]
-  const userName =
-    user?.user_metadata?.given_name ??
-    user?.user_metadata?.name?.split(' ')?.[0] ??
-    null
-
   if (!spotlightVideo) return null
 
   if (selectedSeries) {

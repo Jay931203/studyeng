@@ -7,6 +7,7 @@ export default function TabsError({
   error: Error & { digest?: string }
   reset: () => void
 }) {
+  void error
   return (
     <div className="h-full flex flex-col items-center justify-center px-8">
       <h2 className="text-xl font-bold text-[var(--text-primary)] mb-2">

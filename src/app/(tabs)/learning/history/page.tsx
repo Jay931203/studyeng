@@ -1,11 +1,13 @@
 'use client'
 
+import Image from 'next/image'
 import { useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
+import { getCatalogVideoById } from '@/lib/catalog'
 import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
-import { seedVideos, categories } from '@/data/seed-videos'
+import { categories, type VideoData } from '@/data/seed-videos'
 
 function formatDateLabel(timestamp: number): string {
   const now = new Date()
@@ -35,11 +37,11 @@ export default function WatchHistoryPage() {
         ? watchRecords
         : watchedVideoIds.map((id) => ({ videoId: id, watchedAt: 0 }))
 
-    const groups: { label: string; key: string; videos: typeof seedVideos }[] = []
+    const groups: { label: string; key: string; videos: VideoData[] }[] = []
     const seen = new Map<string, Set<string>>()
 
     for (const record of records) {
-      const video = seedVideos.find((item) => item.id === record.videoId)
+      const video = getCatalogVideoById(record.videoId)
       if (!video) continue
 
       const dateKey = record.watchedAt > 0 ? getDateKey(record.watchedAt) : 'unknown'
@@ -150,11 +152,12 @@ export default function WatchHistoryPage() {
                         className="flex min-w-0 flex-1 items-center gap-3 text-left"
                       >
                         <div className="relative h-12 w-20 flex-shrink-0 overflow-hidden rounded-xl">
-                          <img
+                          <Image
                             src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
                             alt={video.title}
-                            className="h-full w-full object-cover"
-                            loading="lazy"
+                            fill
+                            sizes="80px"
+                            className="object-cover"
                           />
                           {count > 1 && (
                             <div className="absolute bottom-0.5 right-0.5 rounded bg-black/70 px-1 py-0.5 text-[9px] font-bold text-white">

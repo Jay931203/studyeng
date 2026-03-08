@@ -48,7 +48,7 @@ function getVideoSignal(
 
 export const useRecommendationStore = create<RecommendationState>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       recentVideoIds: [],
       videoSignals: {},
 
