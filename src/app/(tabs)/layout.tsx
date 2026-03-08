@@ -1,7 +1,7 @@
 'use client'
 
 import { Suspense, useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { BottomNav } from '@/components/BottomNav'
 import { LogoFull } from '@/components/Logo'
 import { LoginGateModal } from '@/components/LoginGateModal'
@@ -21,18 +21,29 @@ export default function TabsLayout({
   children: React.ReactNode
 }) {
   const router = useRouter()
+  const pathname = usePathname()
   const hasOnboarded = useOnboardingStore((state) => state.hasOnboarded)
   const onboardingHydrated = useOnboardingStore((state) => state.hydrated)
   const completeOnboarding = useOnboardingStore((state) => state.completeOnboarding)
   const watchedVideoIds = useWatchHistoryStore((state) => state.watchedVideoIds)
   const phraseCount = usePhraseStore((state) => state.phrases.length)
   const streakDays = useUserStore((state) => state.streakDays)
-  const { user, loading: authLoading } = useAuth()
+  const { user, loading: authLoading, authAvailable } = useAuth()
   const { isLandscape } = useOrientation()
 
-  const [checked, setChecked] = useState(false)
   const [splashDone, setSplashDone] = useState(false)
-  const [showLoginGate, setShowLoginGate] = useState(false)
+  const [dismissedGuestGateVersion, setDismissedGuestGateVersion] = useState<number | null>(null)
+  const isImmersiveRoute = pathname === '/shorts' || pathname === '/'
+  const hasExistingActivity = watchedVideoIds.length > 0 || phraseCount > 0 || streakDays > 0
+  const shouldAutoCompleteOnboarding =
+    Boolean(user) && onboardingHydrated && !hasOnboarded && hasExistingActivity
+  const shouldRedirectToOnboarding =
+    Boolean(user) && onboardingHydrated && !hasOnboarded && !hasExistingActivity
+  const shellReady =
+    splashDone && !authLoading && onboardingHydrated && !shouldRedirectToOnboarding
+  const guestGateVersion = authAvailable && !authLoading && !user ? watchedVideoIds.length : 0
+  const showLoginGate =
+    guestGateVersion > GUEST_VIEW_LIMIT && dismissedGuestGateVersion !== guestGateVersion
 
   useEffect(() => {
     const timer = window.setTimeout(() => setSplashDone(true), 1500)
@@ -40,84 +51,70 @@ export default function TabsLayout({
   }, [])
 
   useEffect(() => {
-    if (authLoading || !onboardingHydrated) return
+    if (authLoading || !onboardingHydrated || !user) return
 
-    if (!user) {
-      setChecked(true)
-      return
-    }
-
-    const hasExistingActivity = watchedVideoIds.length > 0 || phraseCount > 0 || streakDays > 0
-
-    if (hasExistingActivity && !hasOnboarded) {
+    if (shouldAutoCompleteOnboarding) {
       completeOnboarding()
-      setChecked(true)
       return
     }
 
-    if (!hasOnboarded) {
+    if (shouldRedirectToOnboarding) {
       router.replace('/onboarding')
-      return
     }
-
-    setChecked(true)
   }, [
     authLoading,
     completeOnboarding,
-    hasOnboarded,
     onboardingHydrated,
-    phraseCount,
     router,
-    streakDays,
+    shouldAutoCompleteOnboarding,
+    shouldRedirectToOnboarding,
     user,
-    watchedVideoIds.length,
   ])
 
-  useEffect(() => {
-    if (authLoading) return
-
-    if (user) {
-      setShowLoginGate(false)
-      return
-    }
-
-    if (watchedVideoIds.length > GUEST_VIEW_LIMIT) {
-      setShowLoginGate(true)
-      try {
-        localStorage.setItem('studyeng-guest-views', JSON.stringify(watchedVideoIds.length))
-      } catch {}
-    }
-  }, [authLoading, user, watchedVideoIds.length])
-
-  useEffect(() => {
-    if (authLoading || user) return
-
-    try {
-      const stored = localStorage.getItem('studyeng-guest-views')
-      if (stored && JSON.parse(stored) > GUEST_VIEW_LIMIT) {
-        setShowLoginGate(true)
-      }
-    } catch {}
-  }, [authLoading, user])
-
-  if (!checked || !splashDone) {
+  if (!shellReady) {
     return (
-      <div className="flex h-dvh items-center justify-center bg-black">
+      <div className="flex h-dvh items-center justify-center bg-[var(--bg-primary)]">
         <LogoFull className="h-12 animate-fade-in" />
       </div>
     )
   }
 
   return (
-    <div className={`relative mx-auto flex h-dvh flex-col ${isLandscape ? 'max-w-none' : 'max-w-lg'}`}
-      style={isLandscape ? {
-        paddingLeft: 'env(safe-area-inset-left, 0px)',
-        paddingRight: 'env(safe-area-inset-right, 0px)',
-      } : undefined}
+    <div
+      className={`relative mx-auto w-full ${
+        isImmersiveRoute ? 'flex h-dvh flex-col' : 'min-h-dvh lg:grid lg:grid-cols-[280px_minmax(0,1fr)]'
+      }`}
+      style={
+        isImmersiveRoute && isLandscape
+          ? {
+              paddingLeft: 'env(safe-area-inset-left, 0px)',
+              paddingRight: 'env(safe-area-inset-right, 0px)',
+            }
+          : undefined
+      }
     >
-      <main className="flex-1 overflow-hidden">{children}</main>
-      {!isLandscape && <BottomNav />}
-      <LoginGateModal isOpen={showLoginGate} />
+      {!isImmersiveRoute && (
+        <div className="hidden border-r border-[var(--border-card)]/60 bg-black/15 px-5 py-6 lg:block">
+          <div className="sticky top-6 h-[calc(100dvh-3rem)]">
+            <BottomNav mode="sidebar" />
+          </div>
+        </div>
+      )}
+
+      <div
+        className={`relative flex min-h-dvh min-w-0 flex-col ${
+          isImmersiveRoute ? (isLandscape ? 'max-w-none' : 'mx-auto max-w-lg') : 'w-full'
+        }`}
+      >
+        <main className="flex-1 overflow-hidden">{children}</main>
+        {!isImmersiveRoute && <BottomNav />}
+        {isImmersiveRoute && !isLandscape && <BottomNav />}
+      </div>
+
+      <LoginGateModal
+        isOpen={showLoginGate}
+        onClose={() => setDismissedGuestGateVersion(guestGateVersion)}
+      />
       <Suspense fallback={null}>
         <AdminActivator />
       </Suspense>

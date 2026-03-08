@@ -1,12 +1,164 @@
 'use client'
 
-import { useEffect, useState, useRef } from 'react'
+import { useSyncExternalStore } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import { syncOnLogin, onLogout } from '@/lib/supabase/sync'
 import { syncOpsOnLogin } from '@/lib/supabase/opsSync'
-import type { User } from '@supabase/supabase-js'
+import { useAdminStore } from '@/stores/useAdminStore'
+import type { AuthChangeEvent, Session, User } from '@supabase/supabase-js'
 
 const supabase = createClient()
+
+interface AuthSnapshot {
+  user: User | null
+  loading: boolean
+  authAvailable: boolean
+}
+
+const authListeners = new Set<() => void>()
+
+let authSnapshot: AuthSnapshot = {
+  user: null,
+  loading: Boolean(supabase),
+  authAvailable: Boolean(supabase),
+}
+let authInitialized = false
+let authInitializationPromise: Promise<void> | null = null
+let syncedUserId: string | null = null
+
+function emitAuthChange() {
+  authListeners.forEach((listener) => listener())
+}
+
+function setAuthSnapshot(nextSnapshot: AuthSnapshot) {
+  const unchanged =
+    authSnapshot.user?.id === nextSnapshot.user?.id &&
+    authSnapshot.loading === nextSnapshot.loading &&
+    authSnapshot.authAvailable === nextSnapshot.authAvailable
+
+  if (unchanged) {
+    return
+  }
+
+  authSnapshot = nextSnapshot
+  emitAuthChange()
+}
+
+function mergeAuthSnapshot(partial: Partial<AuthSnapshot>) {
+  setAuthSnapshot({
+    ...authSnapshot,
+    ...partial,
+  })
+}
+
+function getSnapshot() {
+  return authSnapshot
+}
+
+function resetSignedOutState() {
+  const hadUser = authSnapshot.user !== null || syncedUserId !== null
+  syncedUserId = null
+  useAdminStore.setState({ isAdmin: false })
+
+  if (hadUser) {
+    onLogout()
+  }
+}
+
+async function syncSignedInUser(user: User) {
+  if (syncedUserId === user.id) {
+    return
+  }
+
+  useAdminStore.setState({ isAdmin: false })
+  syncedUserId = user.id
+
+  try {
+    await Promise.all([
+      syncOnLogin(user.id),
+      syncOpsOnLogin(user.id, user.email ?? null),
+    ])
+  } catch (error) {
+    console.warn('[auth] sync on sign-in failed:', error)
+  }
+}
+
+function handleAuthStateChange(event: AuthChangeEvent, session: Session | null) {
+  const user = session?.user ?? null
+
+  mergeAuthSnapshot({
+    user,
+    loading: false,
+  })
+
+  if (event === 'SIGNED_OUT') {
+    resetSignedOutState()
+    return
+  }
+
+  if (user) {
+    void syncSignedInUser(user)
+  }
+}
+
+function ensureAuthInitialized() {
+  if (!supabase) {
+    mergeAuthSnapshot({
+      loading: false,
+      authAvailable: false,
+      user: null,
+    })
+    return Promise.resolve()
+  }
+
+  if (authInitialized) {
+    return authInitializationPromise ?? Promise.resolve()
+  }
+
+  authInitialized = true
+
+  authInitializationPromise = (async () => {
+    const {
+      data: { subscription },
+    } = supabase.auth.onAuthStateChange(handleAuthStateChange)
+
+    try {
+      const {
+        data: { user },
+      } = await supabase.auth.getUser()
+
+      mergeAuthSnapshot({
+        user,
+        loading: false,
+      })
+
+      if (user) {
+        await syncSignedInUser(user)
+      }
+    } catch (error) {
+      console.warn('[auth] initial user load failed:', error)
+      mergeAuthSnapshot({
+        user: null,
+        loading: false,
+      })
+    }
+
+    void subscription
+  })().finally(() => {
+    authInitializationPromise = null
+  })
+
+  return authInitializationPromise
+}
+
+function subscribe(listener: () => void) {
+  authListeners.add(listener)
+  void ensureAuthInitialized()
+
+  return () => {
+    authListeners.delete(listener)
+  }
+}
 
 function buildAuthRedirect(nextPath = '/') {
   const redirectUrl = new URL('/auth/callback', window.location.origin)
@@ -18,82 +170,34 @@ function buildAuthRedirect(nextPath = '/') {
   return redirectUrl.toString()
 }
 
+async function signInWithProvider(provider: 'google' | 'kakao', nextPath = '/') {
+  if (!supabase) return
+
+  await supabase.auth.signInWithOAuth({
+    provider,
+    options: {
+      redirectTo: buildAuthRedirect(nextPath),
+    },
+  })
+}
+
 export function useAuth() {
-  const [user, setUser] = useState<User | null>(null)
-  const [loading, setLoading] = useState(true)
-  const syncedRef = useRef<string | null>(null)
+  const state = useSyncExternalStore(subscribe, getSnapshot, getSnapshot)
 
-  useEffect(() => {
-    const getUser = async () => {
-      const {
-        data: { user },
-      } = await supabase.auth.getUser()
-      setUser(user)
-      setLoading(false)
+  return {
+    ...state,
+    signInWithGoogle: (nextPath = '/') => signInWithProvider('google', nextPath),
+    signInWithKakao: (nextPath = '/') => signInWithProvider('kakao', nextPath),
+    signOut: async () => {
+      if (!supabase) return
 
-      // Trigger initial sync if user is already logged in
-      if (user && syncedRef.current !== user.id) {
-        syncedRef.current = user.id
-        Promise.all([
-          syncOnLogin(user.id),
-          syncOpsOnLogin(user.id, user.email ?? null),
-        ]).catch((err) =>
-          console.warn('[auth] initial sync failed:', err)
-        )
-      }
-    }
+      mergeAuthSnapshot({
+        user: null,
+        loading: false,
+      })
+      resetSignedOutState()
 
-    getUser()
-
-    const {
-      data: { subscription },
-    } = supabase.auth.onAuthStateChange((event, session) => {
-      const newUser = session?.user ?? null
-      setUser(newUser)
-      setLoading(false)
-
-      if (event === 'SIGNED_IN' && newUser && syncedRef.current !== newUser.id) {
-        syncedRef.current = newUser.id
-        Promise.all([
-          syncOnLogin(newUser.id),
-          syncOpsOnLogin(newUser.id, newUser.email ?? null),
-        ]).catch((err) =>
-          console.warn('[auth] sync on sign-in failed:', err)
-        )
-      }
-
-      if (event === 'SIGNED_OUT') {
-        syncedRef.current = null
-        onLogout()
-      }
-    })
-
-    return () => subscription.unsubscribe()
-  }, [])
-
-  const signInWithGoogle = async (nextPath = '/') => {
-    await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: {
-        redirectTo: buildAuthRedirect(nextPath),
-      },
-    })
+      await supabase.auth.signOut()
+    },
   }
-
-  const signInWithKakao = async (nextPath = '/') => {
-    await supabase.auth.signInWithOAuth({
-      provider: 'kakao',
-      options: {
-        redirectTo: buildAuthRedirect(nextPath),
-      },
-    })
-  }
-
-  const signOut = async () => {
-    onLogout()
-    await supabase.auth.signOut()
-    setUser(null)
-  }
-
-  return { user, loading, signInWithGoogle, signInWithKakao, signOut }
 }

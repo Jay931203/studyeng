@@ -11,6 +11,33 @@ type SyncedAdminIssue = AdminIssue & {
   reporterEmail?: string
 }
 
+interface IssueReportRow {
+  id: string
+  video_id: string
+  youtube_id: string
+  type: string
+  description: string
+  created_at: string
+  resolved: boolean | null
+  reporter_email: string | null
+}
+
+interface SubtitleFlagRow {
+  video_id: string
+  entry_index: number
+  en: string
+  flagged_at: string
+}
+
+interface RecommendationSignalRow {
+  video_id: string
+  impressions: number | null
+  completions: number | null
+  skips: number | null
+  total_completion_ratio: number | null
+  last_interacted_at: string
+}
+
 function buildFlagKey(flag: Pick<SubtitleFlag, 'videoId' | 'entryIndex'>) {
   return `${flag.videoId}::${flag.entryIndex}`
 }
@@ -95,7 +122,7 @@ function deriveRecentVideoIds(videoSignals: Record<string, VideoBehaviorSignal>)
 }
 
 export async function resolveAdminAccess(userId: string, email?: string | null) {
-  const fallbackAdminEmail = useAdminStore.getState().adminEmail
+  if (!supabase) return false
 
   const { data, error } = await supabase
     .from('admin_accounts')
@@ -107,7 +134,8 @@ export async function resolveAdminAccess(userId: string, email?: string | null) 
     console.warn('[ops-sync] admin_accounts lookup failed:', error.message)
   }
 
-  return Boolean(data) || Boolean(email && email === fallbackAdminEmail)
+  void email
+  return Boolean(data)
 }
 
 export async function syncIssueReport(
@@ -115,6 +143,7 @@ export async function syncIssueReport(
   issue: SyncedAdminIssue,
   reporterEmail?: string | null,
 ) {
+  if (!supabase) return
   const { error } = await supabase.from('issue_reports').upsert(
     {
       id: issue.id,
@@ -135,6 +164,7 @@ export async function syncIssueReport(
 }
 
 export async function resolveIssueReportServer(id: string) {
+  if (!supabase) return
   const { error } = await supabase
     .from('issue_reports')
     .update({
@@ -147,12 +177,14 @@ export async function resolveIssueReportServer(id: string) {
 }
 
 export async function clearResolvedIssueReportsServer() {
+  if (!supabase) return
   const { error } = await supabase.from('issue_reports').delete().eq('resolved', true)
 
   if (error) console.warn('[ops-sync] issue report prune failed:', error.message)
 }
 
 export async function syncSubtitleFlag(userId: string, flag: SubtitleFlag) {
+  if (!supabase) return
   const { error } = await supabase.from('subtitle_flags').upsert(
     {
       user_id: userId,
@@ -172,6 +204,7 @@ export async function removeSubtitleFlagServer(
   videoId: string,
   entryIndex: number,
 ) {
+  if (!supabase) return
   const { error } = await supabase
     .from('subtitle_flags')
     .delete()
@@ -183,6 +216,7 @@ export async function removeSubtitleFlagServer(
 }
 
 export async function clearSubtitleFlagsServer(userId: string) {
+  if (!supabase) return
   const { error } = await supabase.from('subtitle_flags').delete().eq('user_id', userId)
 
   if (error) console.warn('[ops-sync] subtitle flag clear failed:', error.message)
@@ -193,6 +227,7 @@ export async function syncRecommendationSignal(
   videoId: string,
   signal: VideoBehaviorSignal,
 ) {
+  if (!supabase) return
   const { error } = await supabase.from('recommendation_signals').upsert(
     {
       user_id: userId,
@@ -210,11 +245,14 @@ export async function syncRecommendationSignal(
 }
 
 async function pullAdminState(userId: string, email?: string | null) {
+  if (!supabase) return
   const isAdmin = await resolveAdminAccess(userId, email)
+  const issueQuery = supabase.from('issue_reports').select('*').order('created_at', { ascending: false })
+  const flagQuery = supabase.from('subtitle_flags').select('*').order('flagged_at', { ascending: false })
 
   const [issueResponse, flagResponse] = await Promise.all([
-    supabase.from('issue_reports').select('*').order('created_at', { ascending: false }),
-    supabase.from('subtitle_flags').select('*').order('flagged_at', { ascending: false }),
+    isAdmin ? issueQuery : issueQuery.eq('user_id', userId),
+    isAdmin ? flagQuery : flagQuery.eq('user_id', userId),
   ])
 
   if (issueResponse.error) {
@@ -225,18 +263,18 @@ async function pullAdminState(userId: string, email?: string | null) {
     console.warn('[ops-sync] subtitle flags pull failed:', flagResponse.error.message)
   }
 
-  const remoteIssues: SyncedAdminIssue[] = (issueResponse.data ?? []).map((row) => ({
+  const remoteIssues: SyncedAdminIssue[] = ((issueResponse.data ?? []) as IssueReportRow[]).map((row) => ({
     id: row.id,
     videoId: row.video_id,
     youtubeId: row.youtube_id,
-    type: row.type,
+    type: row.type as SyncedAdminIssue['type'],
     description: row.description,
     timestamp: new Date(row.created_at).getTime(),
     resolved: Boolean(row.resolved),
     reporterEmail: row.reporter_email ?? undefined,
   }))
 
-  const remoteFlags: SubtitleFlag[] = (flagResponse.data ?? []).map((row) => ({
+  const remoteFlags: SubtitleFlag[] = ((flagResponse.data ?? []) as SubtitleFlagRow[]).map((row) => ({
     videoId: row.video_id,
     entryIndex: row.entry_index,
     en: row.en,
@@ -269,6 +307,7 @@ async function pushAdminState(userId: string) {
 }
 
 async function pullRecommendationSignals(userId: string) {
+  if (!supabase) return
   const { data, error } = await supabase
     .from('recommendation_signals')
     .select('*')
@@ -281,7 +320,7 @@ async function pullRecommendationSignals(userId: string) {
 
   const remoteSignals: Record<string, VideoBehaviorSignal> = {}
 
-  for (const row of data ?? []) {
+  for (const row of (data ?? []) as RecommendationSignalRow[]) {
     remoteSignals[row.video_id] = {
       impressions: row.impressions ?? 0,
       completions: row.completions ?? 0,
@@ -301,6 +340,7 @@ async function pullRecommendationSignals(userId: string) {
 }
 
 async function pushRecommendationSignals(userId: string) {
+  if (!supabase) return
   const { videoSignals } = useRecommendationStore.getState()
   const entries = Object.entries(videoSignals)
 
@@ -310,6 +350,7 @@ async function pushRecommendationSignals(userId: string) {
 }
 
 export async function syncOpsOnLogin(userId: string, email?: string | null) {
+  if (!supabase) return
   try {
     await Promise.all([pullAdminState(userId, email), pullRecommendationSignals(userId)])
   } catch (err) {

@@ -5,9 +5,47 @@ import { useBookmarkStore } from '@/stores/useBookmarkStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useLikeStore } from '@/stores/useLikeStore'
+import { seedVideos } from '@/data/seed-videos'
 import type { SavedPhrase } from '@/stores/usePhraseStore'
 
 const supabase = createClient()
+const seriesIdByVideoId = new Map(
+  seedVideos
+    .filter((video) => video.seriesId)
+    .map((video) => [video.id, video.seriesId as string]),
+)
+
+function deriveWatchedEpisodes(videoIds: string[]) {
+  const watchedEpisodes: Record<string, string[]> = {}
+
+  for (const videoId of videoIds) {
+    const seriesId = seriesIdByVideoId.get(videoId)
+    if (!seriesId) continue
+
+    const current = watchedEpisodes[seriesId] ?? []
+    if (!current.includes(videoId)) {
+      current.push(videoId)
+      watchedEpisodes[seriesId] = current
+    }
+  }
+
+  return watchedEpisodes
+}
+
+function buildLatestWatchedAtMap(
+  records: ReturnType<typeof useWatchHistoryStore.getState>['watchRecords'],
+) {
+  const latestWatchedAtByVideoId = new Map<string, number>()
+
+  for (const record of records) {
+    const current = latestWatchedAtByVideoId.get(record.videoId) ?? 0
+    if (record.watchedAt > current) {
+      latestWatchedAtByVideoId.set(record.videoId, record.watchedAt)
+    }
+  }
+
+  return latestWatchedAtByVideoId
+}
 
 // ─── Debounce helper ──────────────────────────────────────────────
 const debounceTimers: Record<string, ReturnType<typeof setTimeout>> = {}
@@ -21,6 +59,7 @@ function debounced(key: string, fn: () => Promise<void>, ms = 1000) {
 
 // ─── Auth helper ──────────────────────────────────────────────────
 export async function getCurrentUserId(): Promise<string | null> {
+  if (!supabase) return null
   const { data: { user } } = await supabase.auth.getUser()
   return user?.id ?? null
 }
@@ -38,6 +77,7 @@ export function getCachedUserId(): string | null {
 
 // ─── Profile sync ─────────────────────────────────────────────────
 export async function syncProfileToServer(userId: string) {
+  if (!supabase) return
   const { level, xp, streakDays, lastActivityDate } = useUserStore.getState()
   const { hasOnboarded, interests, level: onboardingLevel, dailyGoal } = useOnboardingStore.getState()
 
@@ -70,6 +110,7 @@ export async function syncWatchHistoryItem(
   viewCount: number,
   completionCount?: number,
 ) {
+  if (!supabase) return
   const { error } = await supabase.from('watch_history').upsert(
     {
       user_id: userId,
@@ -85,6 +126,7 @@ export async function syncWatchHistoryItem(
 }
 
 export async function removeWatchHistoryItem(userId: string, videoId: string) {
+  if (!supabase) return
   const { error } = await supabase
     .from('watch_history')
     .delete()
@@ -95,6 +137,7 @@ export async function removeWatchHistoryItem(userId: string, videoId: string) {
 }
 
 export async function clearWatchHistoryServer(userId: string) {
+  if (!supabase) return
   const { error } = await supabase
     .from('watch_history')
     .delete()
@@ -105,6 +148,7 @@ export async function clearWatchHistoryServer(userId: string) {
 
 // ─── Phrase sync ──────────────────────────────────────────────────
 export async function syncSavedPhrase(userId: string, phrase: SavedPhrase) {
+  if (!supabase) return
   const { error } = await supabase.from('saved_phrases').upsert({
     id: phrase.id,
     user_id: userId,
@@ -122,6 +166,7 @@ export async function syncSavedPhrase(userId: string, phrase: SavedPhrase) {
 }
 
 export async function removeSavedPhraseServer(userId: string, phraseId: string) {
+  if (!supabase) return
   const { error } = await supabase
     .from('saved_phrases')
     .delete()
@@ -132,6 +177,7 @@ export async function removeSavedPhraseServer(userId: string, phraseId: string) 
 }
 
 export function debouncedSyncPhraseReview(phraseId: string, reviewCount: number) {
+  if (!supabase) return
   const userId = getCachedUserId()
   if (!userId) return
   debounced(`phrase-review-${phraseId}`, async () => {
@@ -147,6 +193,7 @@ export function debouncedSyncPhraseReview(phraseId: string, reviewCount: number)
 
 // ─── Bookmark sync ────────────────────────────────────────────────
 export async function syncBookmark(userId: string, videoId: string, isBookmarked: boolean) {
+  if (!supabase) return
   if (isBookmarked) {
     const { error } = await supabase.from('bookmarks').upsert(
       { user_id: userId, video_id: videoId },
@@ -165,6 +212,7 @@ export async function syncBookmark(userId: string, videoId: string, isBookmarked
 
 // ─── Like sync ────────────────────────────────────────────────────
 export async function syncLike(userId: string, videoId: string, isLiked: boolean) {
+  if (!supabase) return
   if (isLiked) {
     const { error } = await supabase.from('likes').upsert(
       { user_id: userId, video_id: videoId },
@@ -183,6 +231,7 @@ export async function syncLike(userId: string, videoId: string, isLiked: boolean
 
 // ─── Full sync on login (pull server → merge with local) ──────────
 export async function syncOnLogin(userId: string) {
+  if (!supabase) return
   setCachedUserId(userId)
 
   try {
@@ -214,6 +263,7 @@ export async function syncOnLogin(userId: string) {
 // ─── Pull functions (server → local, merge) ──────────────────────
 
 async function pullProfile(userId: string) {
+  if (!supabase) return
   const { data, error } = await supabase
     .from('profiles')
     .select('*')
@@ -249,6 +299,7 @@ async function pullProfile(userId: string) {
 }
 
 async function pullWatchHistory(userId: string) {
+  if (!supabase) return
   const { data, error } = await supabase
     .from('watch_history')
     .select('video_id, view_count, completion_count, last_watched_at')
@@ -261,6 +312,7 @@ async function pullWatchHistory(userId: string) {
   const localCompletionCounts = { ...store.completionCounts }
   const localWatchedIds = [...store.watchedVideoIds]
   const localRecords = [...store.watchRecords]
+  const localRecordIds = new Set(localRecords.map((record) => record.videoId))
   let changed = false
 
   for (const row of data) {
@@ -284,6 +336,11 @@ async function pullWatchHistory(userId: string) {
     // Add to watched list if not present
     if (!localWatchedIds.includes(vid)) {
       localWatchedIds.push(vid)
+      changed = true
+    }
+
+    if (!localRecordIds.has(vid)) {
+      localRecordIds.add(vid)
       localRecords.push({
         videoId: vid,
         watchedAt: new Date(row.last_watched_at).getTime(),
@@ -292,22 +349,29 @@ async function pullWatchHistory(userId: string) {
     }
   }
 
-  if (changed) {
-    // Sort records by most recent first
-    localRecords.sort((a, b) => b.watchedAt - a.watchedAt)
-    // Re-derive watchedVideoIds from sorted records
-    const sortedIds = [...new Set(localRecords.map((r) => r.videoId))]
+  // Sort records by most recent first
+  localRecords.sort((a, b) => b.watchedAt - a.watchedAt)
+  const sortedIds =
+    localRecords.length > 0
+      ? [...new Set(localRecords.map((record) => record.videoId))]
+      : [...new Set(localWatchedIds)]
+  const watchedEpisodes = deriveWatchedEpisodes(sortedIds)
+  const watchedEpisodesChanged =
+    JSON.stringify(store.watchedEpisodes) !== JSON.stringify(watchedEpisodes)
 
+  if (changed || watchedEpisodesChanged) {
     useWatchHistoryStore.setState({
       completionCounts: localCompletionCounts,
       viewCounts: localCounts,
       watchedVideoIds: sortedIds,
       watchRecords: localRecords.slice(0, 200),
+      watchedEpisodes,
     })
   }
 }
 
 async function pullSavedPhrases(userId: string) {
+  if (!supabase) return
   const { data, error } = await supabase
     .from('saved_phrases')
     .select('*')
@@ -362,6 +426,7 @@ async function pullSavedPhrases(userId: string) {
 }
 
 async function pullBookmarks(userId: string) {
+  if (!supabase) return
   const { data, error } = await supabase
     .from('bookmarks')
     .select('video_id')
@@ -386,6 +451,7 @@ async function pullBookmarks(userId: string) {
 }
 
 async function pullLikes(userId: string) {
+  if (!supabase) return
   const { data, error } = await supabase
     .from('likes')
     .select('video_id')
@@ -416,9 +482,11 @@ async function pushProfile(userId: string) {
 }
 
 async function pushWatchHistory(userId: string) {
-  const { viewCounts, completionCounts } = useWatchHistoryStore.getState()
+  if (!supabase) return
+  const { viewCounts, completionCounts, watchRecords } = useWatchHistoryStore.getState()
   const entries = Object.entries(viewCounts)
   if (entries.length === 0) return
+  const latestWatchedAtByVideoId = buildLatestWatchedAtMap(watchRecords)
 
   // Batch upsert: build rows
   const rows = entries.map(([videoId, count]) => ({
@@ -426,7 +494,9 @@ async function pushWatchHistory(userId: string) {
     video_id: videoId,
     view_count: count,
     completion_count: completionCounts[videoId] ?? 0,
-    last_watched_at: new Date().toISOString(),
+    last_watched_at: new Date(
+      latestWatchedAtByVideoId.get(videoId) ?? Date.now(),
+    ).toISOString(),
   }))
 
   // Upsert in chunks of 50
@@ -440,6 +510,7 @@ async function pushWatchHistory(userId: string) {
 }
 
 async function pushSavedPhrases(userId: string) {
+  if (!supabase) return
   const { phrases } = usePhraseStore.getState()
   if (phrases.length === 0) return
 
@@ -466,6 +537,7 @@ async function pushSavedPhrases(userId: string) {
 }
 
 async function pushBookmarks(userId: string) {
+  if (!supabase) return
   const { bookmarks } = useBookmarkStore.getState()
   if (bookmarks.length === 0) return
 
@@ -481,6 +553,7 @@ async function pushBookmarks(userId: string) {
 }
 
 async function pushLikes(userId: string) {
+  if (!supabase) return
   const { likes } = useLikeStore.getState()
   const likedIds = Object.keys(likes)
   if (likedIds.length === 0) return
