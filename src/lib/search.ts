@@ -1,4 +1,13 @@
-import { seedVideos, type VideoData, type SubtitleEntry } from '@/data/seed-videos'
+import { seedVideos, series, type VideoData, type SubtitleEntry } from '@/data/seed-videos'
+
+// Build series lookup for search: map youtubeId → Series
+const videoSeriesMap = new Map<string, typeof series[0]>()
+for (const video of seedVideos) {
+  if (video.seriesId) {
+    const s = series.find(sr => sr.id === video.seriesId)
+    if (s) videoSeriesMap.set(video.youtubeId, s)
+  }
+}
 
 export interface SearchResult {
   video: VideoData
@@ -62,13 +71,18 @@ export async function searchVideos(query: string): Promise<SearchResult[]> {
   const results: SearchResult[] = []
   const seen = new Set<string>()
 
-  // First pass: title matches (instant, no fetch needed)
+  // First pass: title, description, and series name matches (instant)
   for (const video of seedVideos) {
-    if (video.title.toLowerCase().includes(q)) {
-      if (!seen.has(video.id)) {
-        results.push({ video, matchType: 'title' })
-        seen.add(video.id)
-      }
+    if (seen.has(video.id)) continue
+    const s = videoSeriesMap.get(video.youtubeId)
+    const searchable = [
+      video.title.toLowerCase(),
+      s?.title.toLowerCase() ?? '',
+      s?.description.toLowerCase() ?? '',
+    ].join(' ')
+    if (searchable.includes(q)) {
+      results.push({ video, matchType: 'title' })
+      seen.add(video.id)
     }
   }
 

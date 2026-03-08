@@ -3,9 +3,6 @@
 import { Suspense, useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { BottomNav } from '@/components/BottomNav'
-import { LevelUpModal } from '@/components/LevelUpModal'
-import { XpGainToast } from '@/components/XpGainToast'
-
 import { LoginGateModal } from '@/components/LoginGateModal'
 import { AdminActivator } from '@/components/AdminActivator'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
@@ -81,9 +78,6 @@ export default function TabsLayout({
     <div className="h-dvh flex flex-col max-w-lg mx-auto relative">
       <main className="flex-1 overflow-hidden">{children}</main>
       <BottomNav />
-      <LevelUpModal />
-      <XpGainToast />
-
       <LoginGateModal isOpen={showLoginGate} />
       <Suspense fallback={null}>
         <AdminActivator />

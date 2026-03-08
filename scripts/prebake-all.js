@@ -5,9 +5,10 @@
  *
  * Prerequisites: pip install yt-dlp
  * Usage:
- *   node scripts/prebake-all.js           # Download + group + translate all
- *   node scripts/prebake-all.js --force   # Re-process even if exists
- *   node scripts/prebake-all.js --translate-only  # Only translate existing
+ *   node scripts/prebake-all.js                  # Download + group + translate all
+ *   node scripts/prebake-all.js --force          # Re-process even if exists
+ *   node scripts/prebake-all.js --translate-only # Only translate existing
+ *   node scripts/prebake-all.js --download-only  # Download + group only (no translation)
  */
 const { execSync } = require('child_process');
 const fs = require('fs');
@@ -16,14 +17,15 @@ const path = require('path');
 const OUT_DIR = path.join(__dirname, '..', 'public', 'transcripts');
 const TMP_DIR = path.join(__dirname, '..', 'tmp');
 
-const GROQ_API_KEY = process.env.GROQ_API_KEY;
-if (!GROQ_API_KEY) {
-  console.error('Error: GROQ_API_KEY environment variable is required');
-  process.exit(1);
-}
-
 const FORCE = process.argv.includes('--force');
 const TRANSLATE_ONLY = process.argv.includes('--translate-only');
+const DOWNLOAD_ONLY = process.argv.includes('--download-only');
+
+const GROQ_API_KEY = process.env.GROQ_API_KEY;
+if (!GROQ_API_KEY && !DOWNLOAD_ONLY) {
+  console.error('Error: GROQ_API_KEY environment variable is required (or use --download-only)');
+  process.exit(1);
+}
 
 // ============================================================
 // Video info extraction
@@ -211,17 +213,79 @@ function groupIntoSentences(srtEntries, clipStart, clipEnd) {
   }
 
   // Post-process: merge very short groups with neighbors
-  const result = [];
+  const merged = [];
   for (let i = 0; i < groups.length; i++) {
     const g = groups[i];
     const dur = g.end - g.start;
-    if (dur < 2 && result.length > 0) {
+    if (dur < 2 && merged.length > 0) {
       // Merge with previous group
-      const prev = result[result.length - 1];
+      const prev = merged[merged.length - 1];
       prev.en = prev.en + ' ' + g.en;
       prev.end = g.end;
     } else {
+      merged.push(g);
+    }
+  }
+
+  // Hard limit: split entries that exceed MAX_ENTRY_DURATION,
+  // but ONLY if they contain multiple sentences. A single long sentence stays intact.
+  const MAX_ENTRY_DURATION = 12;
+  const result = [];
+  for (const g of merged) {
+    const dur = g.end - g.start;
+    if (dur <= MAX_ENTRY_DURATION) {
       result.push(g);
+    } else {
+      // Check if text has sentence boundaries we can split on
+      const sentenceSplits = g.en.match(/[^.!?]+[.!?]+[\s]*/g);
+      if (!sentenceSplits || sentenceSplits.length <= 1) {
+        // Single sentence — keep intact even if long
+        result.push(g);
+      } else {
+        // Multiple sentences — split at sentence boundaries into groups under max duration
+        const totalWords = g.en.split(' ').length;
+        const wordsPerSec = totalWords / dur;
+        let currentSentences = [];
+        let currentWordCount = 0;
+        const groupStartTime = g.start;
+        let elapsed = 0;
+
+        for (let s = 0; s < sentenceSplits.length; s++) {
+          const sentence = sentenceSplits[s].trim();
+          const sentenceWords = sentence.split(' ').length;
+          const sentenceDur = sentenceWords / wordsPerSec;
+
+          if (currentSentences.length > 0 && elapsed + sentenceDur > MAX_ENTRY_DURATION) {
+            // Flush current group
+            let text = currentSentences.join(' ').trim();
+            text = text.charAt(0).toUpperCase() + text.slice(1);
+            const partStart = groupStartTime + (elapsed - currentWordCount / wordsPerSec);
+            result.push({
+              start: round2(groupStartTime + elapsed - currentWordCount / wordsPerSec),
+              end: round2(groupStartTime + elapsed),
+              en: text,
+              ko: '',
+            });
+            currentSentences = [];
+            currentWordCount = 0;
+          }
+          currentSentences.push(sentence);
+          currentWordCount += sentenceWords;
+          elapsed += sentenceDur;
+        }
+
+        // Flush remaining
+        if (currentSentences.length > 0) {
+          let text = currentSentences.join(' ').trim();
+          text = text.charAt(0).toUpperCase() + text.slice(1);
+          result.push({
+            start: round2(groupStartTime + elapsed - currentWordCount / wordsPerSec),
+            end: round2(g.end),
+            en: text,
+            ko: '',
+          });
+        }
+      }
     }
   }
 

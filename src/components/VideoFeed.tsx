@@ -37,7 +37,6 @@ export function VideoFeed({ videos }: VideoFeedProps) {
   const getDailyViewsRemaining = usePremiumStore((s) => s.getDailyViewsRemaining)
   const canSaveMorePhrases = usePremiumStore((s) => s.canSaveMorePhrases)
   const incrementSavedPhrases = usePremiumStore((s) => s.incrementSavedPhrases)
-  const gainXp = useUserStore((s) => s.gainXp)
   const checkAndUpdateStreak = useUserStore((s) => s.checkAndUpdateStreak)
   const incrementMission = useDailyMissionStore((s) => s.incrementMission)
   const repeatMode = usePlayerStore((s) => s.repeatMode)
@@ -46,8 +45,8 @@ export function VideoFeed({ videos }: VideoFeedProps) {
   const resetRepeatCount = usePlayerStore((s) => s.resetRepeatCount)
   const setIsSwiping = usePlayerStore((s) => s.setIsSwiping)
 
-  // Track which videos have already awarded XP this session (prevents re-awarding on re-watch)
-  const xpAwardedRef = useRef<Set<string>>(new Set())
+  // Track which videos have already counted streak/missions this session
+  const awardedRef = useRef<Set<string>>(new Set())
 
   // Brief overlay indicator for repeat progress
   const [repeatIndicator, setRepeatIndicator] = useState<string | null>(null)
@@ -76,13 +75,12 @@ export function VideoFeed({ videos }: VideoFeedProps) {
     }
   }, [currentIndex, videos, markWatched, incrementViewCount])
 
-  // Handle clip completion for repeat mode auto-advance + XP/streak rewards
+  // Handle clip completion for repeat mode auto-advance + streak rewards
   const handleClipComplete = useCallback(() => {
-    // Award XP and update streak on first completion of each video this session
+    // Update streak and missions on first completion of each video this session
     const currentVideo = videos[currentIndex]
-    if (currentVideo && !xpAwardedRef.current.has(currentVideo.id)) {
-      xpAwardedRef.current.add(currentVideo.id)
-      gainXp(5)
+    if (currentVideo && !awardedRef.current.has(currentVideo.id)) {
+      awardedRef.current.add(currentVideo.id)
       checkAndUpdateStreak()
       incrementMission('watch-videos')
     }
@@ -123,7 +121,7 @@ export function VideoFeed({ videos }: VideoFeedProps) {
         setRepeatIndicator(null)
       }, 1500)
     }
-  }, [repeatMode, currentRepeatCount, currentIndex, videos, gainXp, checkAndUpdateStreak, incrementMission, incrementRepeatCount, resetRepeatCount, incrementDailyView])
+  }, [repeatMode, currentRepeatCount, currentIndex, videos, checkAndUpdateStreak, incrementMission, incrementRepeatCount, resetRepeatCount, incrementDailyView])
 
   const swipeThreshold = 50
 

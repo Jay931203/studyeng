@@ -11,6 +11,7 @@ interface WatchHistoryState {
   viewCounts: Record<string, number> // videoId -> total view count
   watchedVideoIds: string[] // ordered list of watched videoIds (most recent first)
   watchRecords: WatchRecord[] // ordered by date (most recent first)
+  deletedVideoIds: string[] // videoIds explicitly deleted by user (prevents auto-re-add from feed)
   markWatched: (seriesId: string, videoId: string) => void
   incrementViewCount: (videoId: string) => void
   getViewCount: (videoId: string) => number
@@ -19,6 +20,7 @@ interface WatchHistoryState {
   isWatched: (seriesId: string, videoId: string) => boolean
   isVideoEverWatched: (videoId: string) => boolean
   removeRecord: (videoId: string) => void
+  clearDeletedFlag: (videoId: string) => void
   clearAllHistory: () => void
 }
 
@@ -29,6 +31,7 @@ export const useWatchHistoryStore = create<WatchHistoryState>()(
       viewCounts: {},
       watchedVideoIds: [],
       watchRecords: [],
+      deletedVideoIds: [],
 
       markWatched: (seriesId, videoId) => {
         const current = get().watchedEpisodes[seriesId] ?? []
@@ -42,6 +45,9 @@ export const useWatchHistoryStore = create<WatchHistoryState>()(
       },
 
       incrementViewCount: (videoId) => {
+        // Skip if user explicitly deleted this video from history
+        if (get().deletedVideoIds.includes(videoId)) return
+
         const current = get().viewCounts[videoId] ?? 0
         const watchedList = get().watchedVideoIds
         const filtered = watchedList.filter((id) => id !== videoId)
@@ -81,7 +87,7 @@ export const useWatchHistoryStore = create<WatchHistoryState>()(
       },
 
       removeRecord: (videoId) => {
-        const { viewCounts, watchedVideoIds, watchRecords, watchedEpisodes } = get()
+        const { viewCounts, watchedVideoIds, watchRecords, watchedEpisodes, deletedVideoIds } = get()
         const newCounts = { ...viewCounts }
         delete newCounts[videoId]
         const newEpisodes = { ...watchedEpisodes }
@@ -93,15 +99,28 @@ export const useWatchHistoryStore = create<WatchHistoryState>()(
           watchedVideoIds: watchedVideoIds.filter((id) => id !== videoId),
           watchRecords: watchRecords.filter((r) => r.videoId !== videoId),
           watchedEpisodes: newEpisodes,
+          deletedVideoIds: deletedVideoIds.includes(videoId)
+            ? deletedVideoIds
+            : [...deletedVideoIds, videoId],
+        })
+      },
+
+      // Call when user explicitly taps to watch a video (e.g., from Explore page)
+      // to allow it to re-appear in history
+      clearDeletedFlag: (videoId) => {
+        set({
+          deletedVideoIds: get().deletedVideoIds.filter((id) => id !== videoId),
         })
       },
 
       clearAllHistory: () => {
+        const allWatchedIds = get().watchedVideoIds
         set({
           viewCounts: {},
           watchedVideoIds: [],
           watchRecords: [],
           watchedEpisodes: {},
+          deletedVideoIds: [...new Set([...get().deletedVideoIds, ...allWatchedIds])],
         })
       },
     }),

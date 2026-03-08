@@ -14,8 +14,13 @@ interface LyricsSubtitlesProps {
   onSeek?: (time: number) => void
 }
 
+/** Threshold in px — if the pointer moves more than this, it's a scroll, not a long-press */
+const LONG_PRESS_MOVE_THRESHOLD = 10
+/** Duration in ms to trigger long-press */
+const LONG_PRESS_DURATION = 500
+
 export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: LyricsSubtitlesProps) {
-  const { subtitleMode, activeSubIndex } = usePlayerStore()
+  const { subtitleMode, activeSubIndex, freezeSubIndex, setFreezeSubIndex } = usePlayerStore()
   const { isAdmin, toggleFlag, isFlagged } = useAdminStore()
   const phrases = usePhraseStore((s) => s.phrases)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -33,6 +38,29 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
   // Temporary "saved!" feedback
   const [justSavedIdx, setJustSavedIdx] = useState<number | null>(null)
   const savedFeedbackTimerRef = useRef<number | null>(null)
+
+  // Long-press detection refs
+  const longPressTimerRef = useRef<number | null>(null)
+  const longPressFiredRef = useRef(false)
+  const pointerStartRef = useRef<{ x: number; y: number } | null>(null)
+
+  // Freeze mode indicator (shows briefly then fades)
+  const [showFreezeIndicator, setShowFreezeIndicator] = useState(false)
+  const freezeIndicatorTimerRef = useRef<number | null>(null)
+
+  // First-time tooltip
+  const [showFreezeTip, setShowFreezeTip] = useState(false)
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    if (!localStorage.getItem('studyeng-freeze-tip-shown')) {
+      setShowFreezeTip(true)
+      const timer = window.setTimeout(() => {
+        setShowFreezeTip(false)
+        localStorage.setItem('studyeng-freeze-tip-shown', '1')
+      }, 4000)
+      return () => clearTimeout(timer)
+    }
+  }, [])
 
   // Check if a subtitle is already saved
   const isSavedPhrase = useCallback(
@@ -81,14 +109,41 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
     }
   }, [activeSubIndex])
 
+  // Enter or move freeze mode to the given subtitle
+  const enterFreeze = useCallback(
+    (sub: SubtitleEntry, idx: number) => {
+      setFreezeSubIndex(idx)
+      onSeek?.(sub.start)
+      // Show the indicator briefly
+      setShowFreezeIndicator(true)
+      if (freezeIndicatorTimerRef.current) clearTimeout(freezeIndicatorTimerRef.current)
+      freezeIndicatorTimerRef.current = window.setTimeout(() => setShowFreezeIndicator(false), 2000)
+    },
+    [setFreezeSubIndex, onSeek],
+  )
+
+  // Exit freeze mode
+  const exitFreeze = useCallback(() => {
+    setFreezeSubIndex(null)
+    setShowFreezeIndicator(false)
+    if (freezeIndicatorTimerRef.current) clearTimeout(freezeIndicatorTimerRef.current)
+  }, [setFreezeSubIndex])
+
   const handleLineClick = useCallback(
     (sub: SubtitleEntry, idx: number, e: React.MouseEvent) => {
       e.stopPropagation()
+
+      // If long-press just fired, don't process the click
+      if (longPressFiredRef.current) {
+        longPressFiredRef.current = false
+        return
+      }
+
       const now = Date.now()
       const last = lastTapRef.current
 
       if (last.idx === idx && now - last.time < 400) {
-        // Double tap → save phrase
+        // Double tap → save phrase (unchanged)
         if (onSavePhrase && !isSavedPhrase(sub)) {
           onSavePhrase(sub)
           setJustSavedIdx(idx)
@@ -96,20 +151,81 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
           savedFeedbackTimerRef.current = window.setTimeout(() => setJustSavedIdx(null), 1200)
         }
         lastTapRef.current = { idx: -1, time: 0 }
+      } else if (freezeSubIndex !== null) {
+        // Freeze mode is active
+        if (freezeSubIndex === idx) {
+          // Tap frozen subtitle → exit freeze
+          exitFreeze()
+        } else {
+          // Tap different subtitle → move freeze to it
+          enterFreeze(sub, idx)
+        }
+        lastTapRef.current = { idx, time: now }
       } else {
-        // Single tap → seek
+        // Normal single tap → seek
         onSeek?.(sub.start)
         lastTapRef.current = { idx, time: now }
       }
     },
-    [onSeek, onSavePhrase, isSavedPhrase],
+    [onSeek, onSavePhrase, isSavedPhrase, freezeSubIndex, enterFreeze, exitFreeze],
   )
+
+  // Long-press: pointerdown starts timer, pointerup/move cancels
+  const handlePointerDown = useCallback(
+    (sub: SubtitleEntry, idx: number, e: React.PointerEvent) => {
+      longPressFiredRef.current = false
+      pointerStartRef.current = { x: e.clientX, y: e.clientY }
+
+      longPressTimerRef.current = window.setTimeout(() => {
+        longPressFiredRef.current = true
+        if (freezeSubIndex === idx) {
+          // Long-press on already-frozen subtitle → exit freeze
+          exitFreeze()
+        } else {
+          // Long-press → enter freeze on this subtitle
+          enterFreeze(sub, idx)
+        }
+      }, LONG_PRESS_DURATION)
+    },
+    [freezeSubIndex, enterFreeze, exitFreeze],
+  )
+
+  const cancelLongPress = useCallback(() => {
+    if (longPressTimerRef.current) {
+      clearTimeout(longPressTimerRef.current)
+      longPressTimerRef.current = null
+    }
+  }, [])
+
+  const handlePointerMove = useCallback(
+    (e: React.PointerEvent) => {
+      if (!pointerStartRef.current) return
+      const dx = e.clientX - pointerStartRef.current.x
+      const dy = e.clientY - pointerStartRef.current.y
+      if (Math.sqrt(dx * dx + dy * dy) > LONG_PRESS_MOVE_THRESHOLD) {
+        cancelLongPress()
+      }
+    },
+    [cancelLongPress],
+  )
+
+  const handlePointerUp = useCallback(() => {
+    cancelLongPress()
+    pointerStartRef.current = null
+  }, [cancelLongPress])
+
+  // Clear freeze when subtitles change (e.g. navigating to different video)
+  useEffect(() => {
+    setFreezeSubIndex(null)
+  }, [subtitles, setFreezeSubIndex])
 
   // Cleanup timers on unmount
   useEffect(() => {
     return () => {
       if (savedFeedbackTimerRef.current) clearTimeout(savedFeedbackTimerRef.current)
       if (scrollRafRef.current) cancelAnimationFrame(scrollRafRef.current)
+      if (longPressTimerRef.current) clearTimeout(longPressTimerRef.current)
+      if (freezeIndicatorTimerRef.current) clearTimeout(freezeIndicatorTimerRef.current)
     }
   }, [])
 
@@ -123,6 +239,42 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
       onClick={(e) => e.stopPropagation()}
     >
       <DoubleTapTip />
+
+      {/* Freeze mode indicator */}
+      {showFreezeIndicator && (
+        <div
+          className="absolute top-2 left-1/2 -translate-x-1/2 z-20 px-3 py-1 rounded-full bg-purple-500/30 backdrop-blur-sm text-purple-200 text-xs font-medium"
+          style={{
+            animation: 'freezeFadeIn 300ms ease-out',
+          }}
+        >
+          프리즈 모드
+        </div>
+      )}
+
+      {/* First-time long-press tooltip */}
+      {showFreezeTip && (
+        <div
+          className="absolute top-2 left-1/2 -translate-x-1/2 z-20 px-3 py-1 rounded-full bg-white/10 backdrop-blur-sm text-white/60 text-xs"
+          style={{
+            animation: 'freezeFadeIn 500ms ease-out',
+          }}
+        >
+          길게 눌러서 반복
+        </div>
+      )}
+
+      <style>{`
+        @keyframes freezeFadeIn {
+          from { opacity: 0; transform: translateX(-50%) translateY(-4px); }
+          to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+        @keyframes freezePulse {
+          0%, 100% { box-shadow: 0 0 8px rgba(168, 85, 247, 0.3); }
+          50% { box-shadow: 0 0 16px rgba(168, 85, 247, 0.5); }
+        }
+      `}</style>
+
       <div
         ref={containerRef}
         className="h-full overflow-y-auto no-scrollbar px-4 py-2"
@@ -137,20 +289,19 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
 
           {subtitles.map((sub, idx) => {
             const isActive = idx === activeSubIndex
+            const isFrozen = freezeSubIndex === idx
             const distance = activeSubIndex >= 0 ? Math.abs(idx - activeSubIndex) : 999
             const isJustSaved = justSavedIdx === idx
             const saved = isSavedPhrase(sub)
 
-            // 4-level gradation: active / distance=1 / distance=2 / rest
-            const opacityClass = isJustSaved || isActive
+            // Show only active + 1 before/after (frozen subtitle always visible)
+            const opacityClass = isJustSaved || isActive || isFrozen
               ? 'opacity-100'
               : distance === 1
-              ? 'opacity-50'
-              : distance === 2
-              ? 'opacity-30'
-              : 'opacity-15'
+              ? 'opacity-40'
+              : 'opacity-0 pointer-events-none'
 
-            const scaleValue = isJustSaved || isActive ? 1 : distance === 1 ? 0.95 : distance === 2 ? 0.9 : 0.85
+            const scaleValue = isJustSaved || isActive || isFrozen ? 1 : distance === 1 ? 0.92 : 0.85
 
             const flagged = isAdmin && videoId ? isFlagged(videoId, idx) : false
 
@@ -164,7 +315,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
                   transition: 'opacity 250ms ease-out, transform 350ms cubic-bezier(0.22, 1, 0.36, 1)',
                 }}
               >
-                <div className="flex items-center gap-1.5 max-w-[85%]">
+                <div className="flex items-center gap-1.5 max-w-[92%]">
                   {/* Admin flag — inline left of text */}
                   {isAdmin && videoId && (
                     <button
@@ -184,10 +335,26 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
                     </button>
                   )}
 
+                  {/* Freeze repeat icon */}
+                  {isFrozen && (
+                    <span className="flex-shrink-0 text-purple-400 text-xs font-bold select-none">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+                        <path fillRule="evenodd" d="M15.312 11.424a5.5 5.5 0 0 1-9.201 2.466l-.312-.311h2.433a.75.75 0 0 0 0-1.5H4.647a.75.75 0 0 0-.75.75v3.585a.75.75 0 0 0 1.5 0v-2.19l.238.238a7 7 0 0 0 11.712-3.138.75.75 0 0 0-1.035-.1zm-2.623-7.26a7 7 0 0 0-11.712 3.138.75.75 0 0 0 1.035.1 5.5 5.5 0 0 1 9.201-2.466l.312.311H9.092a.75.75 0 0 0 0 1.5h3.585a.75.75 0 0 0 .75-.75V2.412a.75.75 0 0 0-1.5 0v2.19l-.238-.238z" clipRule="evenodd" />
+                      </svg>
+                    </span>
+                  )}
+
                   <button
                     onClick={(e) => handleLineClick(sub, idx, e)}
-                    className={`text-center w-full text-sm select-none px-3 py-1.5 ${
-                      isJustSaved
+                    onPointerDown={(e) => handlePointerDown(sub, idx, e)}
+                    onPointerMove={handlePointerMove}
+                    onPointerUp={handlePointerUp}
+                    onPointerCancel={handlePointerUp}
+                    onContextMenu={(e) => e.preventDefault()}
+                    className={`text-center w-full ${isJustSaved || isActive || isFrozen ? 'text-base' : 'text-sm'} select-none px-3 py-1.5 touch-manipulation ${
+                      isFrozen
+                        ? 'text-white font-semibold drop-shadow-lg bg-purple-500/20 backdrop-blur-md rounded-lg ring-2 ring-purple-400/60'
+                        : isJustSaved
                         ? 'text-white font-semibold drop-shadow-lg bg-blue-500/40 backdrop-blur-md rounded-lg ring-2 ring-blue-400/60'
                         : isActive
                         ? `text-white font-semibold drop-shadow-lg backdrop-blur-md rounded-lg ${
@@ -195,33 +362,29 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
                               ? 'bg-blue-500/20 ring-1 ring-blue-400/40'
                               : 'bg-black/50'
                           }`
-                        : saved && distance <= 2
+                        : saved && distance <= 1
                         ? `text-white/60 rounded-lg ring-1 ring-blue-400/25`
                         : distance === 1
-                        ? 'text-white/60'
-                        : distance === 2
-                        ? 'text-white/35'
+                        ? 'text-white/50'
                         : 'text-white/20'
                     }`}
                     style={{
                       transition: 'color 200ms ease-out, background-color 350ms ease-out, box-shadow 300ms ease-out',
-                      ...(isJustSaved
+                      ...(isFrozen
+                        ? { textShadow: '0 1px 4px rgba(0,0,0,0.8)', animation: 'freezePulse 2s ease-in-out infinite' }
+                        : isJustSaved
                         ? { textShadow: '0 1px 4px rgba(0,0,0,0.8)', boxShadow: '0 0 16px rgba(59, 130, 246, 0.4)' }
                         : isActive
                         ? { textShadow: '0 1px 4px rgba(0,0,0,0.8)' }
                         : {}),
                     }}
                   >
-                    {isJustSaved ? (
-                      <span className="text-blue-200/80 font-medium text-sm">saved</span>
-                    ) : (
-                      <>
-                        <span className={isActive && showKo ? 'line-clamp-2' : undefined}>{sub.en}</span>
-                        {isActive && showKo && sub.ko && (
-                          <p className="text-blue-200/70 text-xs mt-0.5 line-clamp-1">{sub.ko}</p>
-                        )}
-                      </>
-                    )}
+                    <>
+                      <span>{sub.en}</span>
+                      {(isActive || isFrozen) && showKo && sub.ko && (
+                        <p className={`${isFrozen ? 'text-purple-200/70' : 'text-blue-200/70'} text-xs mt-0.5`}>{sub.ko}</p>
+                      )}
+                    </>
                   </button>
                 </div>
               </div>

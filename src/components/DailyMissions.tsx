@@ -75,9 +75,6 @@ export function DailyMissions() {
   }, [missions]) // eslint-disable-line react-hooks/exhaustive-deps
 
   const allDone = missions.every((m) => m.completed)
-  const totalXpEarned = missions
-    .filter((m) => m.completed)
-    .reduce((sum, m) => sum + m.xpReward, 0) + (allCompleteBonus ? 20 : 0)
 
   return (
     <motion.div
@@ -92,16 +89,6 @@ export function DailyMissions() {
           <span className="text-[var(--text-secondary)] text-xs font-medium tracking-wide uppercase">
             오늘의 미션
           </span>
-          {totalXpEarned > 0 && (
-            <motion.span
-              initial={{ scale: 0 }}
-              animate={{ scale: 1 }}
-              transition={{ duration: 0.2, ease: 'easeOut' }}
-              className="text-xs font-bold text-green-400 bg-green-500/10 px-2 py-0.5 rounded-full"
-            >
-              +{totalXpEarned} XP
-            </motion.span>
-          )}
         </div>
 
         {/* Mission rows */}
@@ -159,7 +146,7 @@ export function DailyMissions() {
                         <span className="text-xs text-[var(--text-muted)]">
                           {mission.current}/{mission.target}
                         </span>
-                        {mission.completed ? (
+                        {mission.completed && (
                           <motion.div
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
@@ -178,10 +165,6 @@ export function DailyMissions() {
                               />
                             </svg>
                           </motion.div>
-                        ) : (
-                          <span className="text-xs text-[var(--text-muted)]">
-                            +{mission.xpReward} XP
-                          </span>
                         )}
                       </div>
                     </div>
@@ -239,7 +222,7 @@ export function DailyMissions() {
                 : 'text-[var(--text-muted)] bg-white/[0.03]'
             }`}
           >
-            {allCompleteBonus ? '획득 완료' : '+20 XP'}
+            {allCompleteBonus ? '획득 완료' : '미완료'}
           </span>
         </motion.div>
 

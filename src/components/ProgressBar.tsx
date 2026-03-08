@@ -111,7 +111,7 @@ export function ProgressBar() {
   }, [clipStart, clipDuration, isPlaying])
 
   return (
-    <div className={`absolute bottom-[72px] left-0 right-0 z-20 transition-opacity duration-200 ${isSwiping ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
+    <div className={`absolute bottom-0 left-0 right-0 z-20 transition-opacity duration-200 ${isSwiping ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
       {/* Touch target: tall (24px) transparent area for easy tapping/dragging */}
       <div
         ref={containerRef}

@@ -90,6 +90,7 @@ export function useYouTubePlayer(
     isLooping,
     loopStart,
     loopEnd,
+    freezeSubIndex,
     setCurrentTime,
     setDuration,
     setIsPlaying,
@@ -195,6 +196,15 @@ export function useYouTubePlayer(
         }
       }
 
+      // --- Freeze mode: loop a single subtitle's segment ---
+      if (freezeSubIndex !== null && subtitles[freezeSubIndex]) {
+        const frozenSub = subtitles[freezeSubIndex]
+        if (time >= frozenSub.end - 0.05 || time < frozenSub.start - 0.3) {
+          playerRef.current.seekTo(frozenSub.start, true)
+          return
+        }
+      }
+
       // --- Active subtitle detection (updates only when subtitle changes ~every 3s) ---
       const newSubIndex = findActiveSubIndex(subtitles, time)
       if (newSubIndex !== prevSubIndexRef.current) {
@@ -229,7 +239,7 @@ export function useYouTubePlayer(
     return () => {
       if (intervalRef.current) clearInterval(intervalRef.current)
     }
-  }, [ready, isLooping, loopStart, loopEnd, subtitles])
+  }, [ready, isLooping, loopStart, loopEnd, freezeSubIndex, subtitles])
 
   // Pause player and stop polling when the browser tab becomes hidden,
   // resume when it becomes visible again.
@@ -287,6 +297,15 @@ export function useYouTubePlayer(
               }
             }
 
+            // Freeze mode loop (visibility handler copy)
+            if (freezeSubIndex !== null && subtitles[freezeSubIndex]) {
+              const frozenSub = subtitles[freezeSubIndex]
+              if (time >= frozenSub.end - 0.05 || time < frozenSub.start - 0.3) {
+                playerRef.current.seekTo(frozenSub.start, true)
+                return
+              }
+            }
+
             const newSubIndex = findActiveSubIndex(subtitles, time)
             if (newSubIndex !== prevSubIndexRef.current) {
               prevSubIndexRef.current = newSubIndex
@@ -319,7 +338,7 @@ export function useYouTubePlayer(
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange)
     }
-  }, [ready, isLooping, loopStart, loopEnd, subtitles, setActiveSubIndex, setCurrentTime])
+  }, [ready, isLooping, loopStart, loopEnd, freezeSubIndex, subtitles, setActiveSubIndex, setCurrentTime])
 
   useEffect(() => {
     if (playerRef.current && ready) {

@@ -13,6 +13,7 @@ import { WatchHistory } from '@/components/WatchHistory'
 export default function LearningPage() {
   const { phrases, removePhrase } = usePhraseStore()
   const totalWatched = useWatchHistoryStore((s) => s.watchedVideoIds.length)
+  const clearDeletedFlag = useWatchHistoryStore((s) => s.clearDeletedFlag)
   const router = useRouter()
   const [showAllPhrases, setShowAllPhrases] = useState(false)
 
@@ -100,7 +101,7 @@ export default function LearningPage() {
                         key={phrase.id}
                         phrase={phrase}
                         onDelete={() => removePhrase(phrase.id)}
-                        onPlay={() => router.push(`/?v=${phrase.videoId}`)}
+                        onPlay={() => { clearDeletedFlag(phrase.videoId); router.push(`/?v=${phrase.videoId}`) }}
                       />
                     ))}
                   </AnimatePresence>

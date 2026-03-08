@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useUserStore } from '@/stores/useUserStore'
@@ -8,9 +9,8 @@ import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { useAuth } from '@/hooks/useAuth'
 import { useThemeStore } from '@/stores/useThemeStore'
 import { useAdminStore } from '@/stores/useAdminStore'
+import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { StreakDisplay } from '@/components/StreakDisplay'
-
-import { calculateXpForLevel } from '@/lib/gamification'
 
 function AnimatedStat({ value, label }: { value: number; label: string }) {
   return (
@@ -35,7 +35,7 @@ function AnimatedStat({ value, label }: { value: number; label: string }) {
 }
 
 export default function ProfilePage() {
-  const { level, xp, streakDays } = useUserStore()
+  const { streakDays } = useUserStore()
   const phraseCount = usePhraseStore((s) => s.phrases.length)
   const totalWatched = useWatchHistoryStore((s) => s.watchedVideoIds.length)
   const totalViews = useWatchHistoryStore((s) =>
@@ -44,10 +44,15 @@ export default function ProfilePage() {
   const { user, signInWithGoogle, signInWithKakao, signOut, loading } = useAuth()
   const { theme, toggleTheme } = useThemeStore()
   const { isAdmin, setAdmin, flaggedSubtitles, exportFlags, clearFlags } = useAdminStore()
+  const { hasSeenWelcome, markWelcomeSeen } = useOnboardingStore()
 
-  const xpForNextLevel = calculateXpForLevel(level)
-  const xpProgress = (xp / xpForNextLevel) * 100
   const isNewUser = totalViews === 0 && phraseCount === 0 && streakDays === 0
+
+  useEffect(() => {
+    if (isNewUser && !hasSeenWelcome) {
+      markWelcomeSeen()
+    }
+  }, [isNewUser, hasSeenWelcome, markWelcomeSeen])
 
   return (
     <div className="h-full overflow-y-auto no-scrollbar pb-20 pt-12">
@@ -79,48 +84,19 @@ export default function ProfilePage() {
             <p className="text-[var(--text-primary)] font-bold text-lg">
               {user?.user_metadata?.full_name ?? '게스트'}
             </p>
-            <div className="flex items-center gap-2">
-              <span className="text-[var(--text-secondary)] text-sm">레벨 {level}</span>
-              {isNewUser && (
-                <span className="text-xs bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded-full font-medium">
-                  새로운 학습자
-                </span>
-              )}
-            </div>
+            {isNewUser && (
+              <span className="text-xs bg-blue-500/20 text-blue-400 px-2 py-0.5 rounded-full font-medium">
+                새로운 학습자
+              </span>
+            )}
           </div>
-        </motion.div>
-
-        {/* XP bar */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.1 }}
-          className="mb-6"
-        >
-          <div className="flex justify-between text-xs text-[var(--text-secondary)] mb-1">
-            <span>경험치</span>
-            <span>{xp} / {xpForNextLevel}</span>
-          </div>
-          <div className="h-2 bg-[var(--bg-secondary)] rounded-full overflow-hidden">
-            <motion.div
-              initial={{ width: 0 }}
-              animate={{ width: `${Math.max(xpProgress, isNewUser ? 0 : 2)}%` }}
-              transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-              className="h-full bg-gradient-to-r from-blue-500 via-purple-400 to-blue-500 rounded-full animate-shimmer"
-            />
-          </div>
-          {isNewUser && (
-            <p className="text-[var(--text-muted)] text-xs mt-2">
-              영상을 보면 경험치를 얻을 수 있어요
-            </p>
-          )}
         </motion.div>
 
         {/* Streak */}
         <StreakDisplay days={streakDays} />
 
-        {/* Welcome prompt for new users */}
-        {isNewUser && (
+        {/* Welcome prompt for new users — shown only once */}
+        {isNewUser && !hasSeenWelcome && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -128,10 +104,10 @@ export default function ProfilePage() {
             className="mt-4 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-5 border border-blue-500/10"
           >
             <p className="text-[var(--text-primary)] font-bold text-sm mb-1">
-              환영해요! 오늘부터 시작해볼까요?
+              영어, 재밌게 시작해보세요
             </p>
             <p className="text-[var(--text-muted)] text-xs leading-relaxed">
-              영상을 보고, 표현을 저장하고, 게임으로 복습하면 경험치와 연속 학습이 쌓여요.
+              영상을 보고, 표현을 저장하며 재밌게 영어를 배워보세요
             </p>
           </motion.div>
         )}

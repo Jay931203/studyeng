@@ -81,7 +81,7 @@ export default function ExplorePage() {
   const [activeCategory, setActiveCategory] = useState<'all' | CategoryId>('all')
   const router = useRouter()
   const searchParams = useSearchParams()
-  const { getSeriesProgress, getNextEpisode, isWatched, getViewCount } = useWatchHistoryStore()
+  const { getSeriesProgress, getNextEpisode, isWatched, getViewCount, clearDeletedFlag } = useWatchHistoryStore()
 
   // Drive selected series from URL search params so browser back works
   const selectedSeriesId = searchParams.get('series')
@@ -239,7 +239,7 @@ export default function ExplorePage() {
                     <motion.button
                       key={video.id}
                       whileTap={{ scale: 0.98 }}
-                      onClick={() => router.push(`/?v=${video.id}&series=${selectedSeries.id}`)}
+                      onClick={() => { clearDeletedFlag(video.id); router.push(`/?v=${video.id}&series=${selectedSeries.id}`) }}
                       className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl p-3.5 text-left flex items-center gap-3.5 group hover:bg-[var(--bg-secondary)]/50 transition-colors"
                     >
                       {/* Thumbnail */}
@@ -318,11 +318,14 @@ export default function ExplorePage() {
                       onClick={() => {
                         if (isComplete) {
                           if (seriesEpisodes[0]) {
+                            clearDeletedFlag(seriesEpisodes[0].id)
                             router.push(`/?v=${seriesEpisodes[0].id}&series=${selectedSeries.id}`)
                           }
                         } else if (nextId) {
+                          clearDeletedFlag(nextId)
                           router.push(`/?v=${nextId}&series=${selectedSeries.id}`)
                         } else if (seriesEpisodes[0]) {
+                          clearDeletedFlag(seriesEpisodes[0].id)
                           router.push(`/?v=${seriesEpisodes[0].id}&series=${selectedSeries.id}`)
                         }
                       }}
