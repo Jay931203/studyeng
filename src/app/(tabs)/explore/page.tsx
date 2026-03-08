@@ -12,7 +12,7 @@ import {
   type Series as SeriesType,
   type VideoData,
 } from '@/data/seed-videos'
-import { Logo } from '@/components/Logo'
+import { LogoFull } from '@/components/Logo'
 import { SearchBar } from '@/components/SearchBar'
 import { VideoCard } from '@/components/VideoCard'
 import { useAuth } from '@/hooks/useAuth'
@@ -195,7 +195,7 @@ export default function ExplorePage() {
     <div className="h-full overflow-y-auto no-scrollbar pb-20 pt-12">
       <div className="px-4">
         <div className="mb-5 flex items-start justify-between gap-4">
-          <Logo className="h-5 text-[var(--text-primary)]" />
+          <LogoFull className="h-6 text-[var(--text-primary)]" />
           {cameFromVideo && returnVideoId && (
             <button
               onClick={() => openShorts(returnVideoId, returnSeriesId)}
