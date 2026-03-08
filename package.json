@@ -10,6 +10,7 @@
     "test": "vitest",
     "test:run": "vitest run",
     "content:autodetect": "node scripts/content-autodetect.mjs",
+    "content:batch:snapshot": "node scripts/content-batch-snapshot.mjs",
     "content:sync": "node scripts/content-system.mjs",
     "content:queue": "node scripts/content-system.mjs",
     "content:triage": "node scripts/content-triage.mjs",

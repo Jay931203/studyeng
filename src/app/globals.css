@@ -33,6 +33,30 @@
   --accent-primary-rgb: 168, 85, 247;
   --accent-glow: rgba(168, 85, 247, 0.2);
   --accent-text: #c084fc;
+
+  --player-surface: #020102;
+  --player-panel: rgba(255,255,255,0.08);
+  --player-control-bg: rgba(0,0,0,0.46);
+  --player-control-border: rgba(255,255,255,0.08);
+  --player-chip-bg: rgba(0,0,0,0.58);
+  --player-chip-border: rgba(255,255,255,0.08);
+  --player-text: #ffffff;
+  --player-muted: rgba(255,255,255,0.6);
+  --player-faint: rgba(255,255,255,0.26);
+  --player-divider: rgba(255,255,255,0.08);
+  --player-progress-track: rgba(255,255,255,0.28);
+  --player-progress-fill: #ffffff;
+  --player-progress-knob: #ffffff;
+  --player-shadow: 0 1px 4px rgba(0,0,0,0.8);
+  --player-gradient-strong: rgba(0,0,0,0.58);
+  --player-gradient-soft: rgba(0,0,0,0.16);
+  --player-active-subtitle-bg: rgba(0,0,0,0.45);
+  --freeze-bg: rgba(168, 85, 247, 0.2);
+  --freeze-border: rgba(192, 132, 252, 0.7);
+  --freeze-text: #f5edff;
+  --freeze-icon: #c084fc;
+  --freeze-shadow: rgba(168, 85, 247, 0.34);
+  --game-overlay: rgba(0,0,0,0.88);
 }
 
 /* Blue Dark */
@@ -58,6 +82,30 @@
   --accent-primary-rgb: 59, 130, 246;
   --accent-glow: rgba(59, 130, 246, 0.2);
   --accent-text: #60a5fa;
+
+  --player-surface: #01050b;
+  --player-panel: rgba(255,255,255,0.08);
+  --player-control-bg: rgba(0,0,0,0.46);
+  --player-control-border: rgba(255,255,255,0.08);
+  --player-chip-bg: rgba(0,0,0,0.58);
+  --player-chip-border: rgba(255,255,255,0.08);
+  --player-text: #ffffff;
+  --player-muted: rgba(255,255,255,0.6);
+  --player-faint: rgba(255,255,255,0.26);
+  --player-divider: rgba(255,255,255,0.08);
+  --player-progress-track: rgba(255,255,255,0.28);
+  --player-progress-fill: #ffffff;
+  --player-progress-knob: #ffffff;
+  --player-shadow: 0 1px 4px rgba(0,0,0,0.8);
+  --player-gradient-strong: rgba(0,0,0,0.58);
+  --player-gradient-soft: rgba(0,0,0,0.16);
+  --player-active-subtitle-bg: rgba(0,0,0,0.45);
+  --freeze-bg: rgba(59, 130, 246, 0.2);
+  --freeze-border: rgba(96, 165, 250, 0.72);
+  --freeze-text: #eff6ff;
+  --freeze-icon: #60a5fa;
+  --freeze-shadow: rgba(59, 130, 246, 0.34);
+  --game-overlay: rgba(0,0,0,0.88);
 }
 
 /* Light */
@@ -83,6 +131,30 @@
   --accent-primary-rgb: 147, 51, 234;
   --accent-glow: rgba(147, 51, 234, 0.15);
   --accent-text: #7c3aed;
+
+  --player-surface: #f5f5f5;
+  --player-panel: rgba(255,255,255,0.88);
+  --player-control-bg: rgba(255,255,255,0.9);
+  --player-control-border: rgba(15,23,42,0.08);
+  --player-chip-bg: rgba(255,255,255,0.94);
+  --player-chip-border: rgba(15,23,42,0.08);
+  --player-text: #111827;
+  --player-muted: rgba(15,23,42,0.58);
+  --player-faint: rgba(15,23,42,0.3);
+  --player-divider: rgba(15,23,42,0.08);
+  --player-progress-track: rgba(15,23,42,0.14);
+  --player-progress-fill: #9333ea;
+  --player-progress-knob: #9333ea;
+  --player-shadow: 0 1px 2px rgba(255,255,255,0.6);
+  --player-gradient-strong: rgba(255,255,255,0.88);
+  --player-gradient-soft: rgba(255,255,255,0.24);
+  --player-active-subtitle-bg: rgba(255,255,255,0.88);
+  --freeze-bg: rgba(147, 51, 234, 0.1);
+  --freeze-border: rgba(124, 58, 237, 0.36);
+  --freeze-text: #581c87;
+  --freeze-icon: #7c3aed;
+  --freeze-shadow: rgba(147, 51, 234, 0.18);
+  --game-overlay: rgba(241,245,249,0.92);
 }
 
 [data-theme="light-blue"] {
@@ -107,6 +179,30 @@
   --accent-primary-rgb: 37, 99, 235;
   --accent-glow: rgba(37, 99, 235, 0.14);
   --accent-text: #1d4ed8;
+
+  --player-surface: #f5f7fb;
+  --player-panel: rgba(255,255,255,0.9);
+  --player-control-bg: rgba(255,255,255,0.92);
+  --player-control-border: rgba(15,23,42,0.08);
+  --player-chip-bg: rgba(255,255,255,0.94);
+  --player-chip-border: rgba(15,23,42,0.08);
+  --player-text: #0f172a;
+  --player-muted: rgba(15,23,42,0.58);
+  --player-faint: rgba(15,23,42,0.3);
+  --player-divider: rgba(15,23,42,0.08);
+  --player-progress-track: rgba(15,23,42,0.14);
+  --player-progress-fill: #2563eb;
+  --player-progress-knob: #2563eb;
+  --player-shadow: 0 1px 2px rgba(255,255,255,0.6);
+  --player-gradient-strong: rgba(255,255,255,0.88);
+  --player-gradient-soft: rgba(255,255,255,0.24);
+  --player-active-subtitle-bg: rgba(255,255,255,0.88);
+  --freeze-bg: rgba(37, 99, 235, 0.1);
+  --freeze-border: rgba(29, 78, 216, 0.34);
+  --freeze-text: #1e3a8a;
+  --freeze-icon: #2563eb;
+  --freeze-shadow: rgba(37, 99, 235, 0.18);
+  --game-overlay: rgba(241,245,249,0.92);
 }
 
 body {

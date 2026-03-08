@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-03-08T04:41:33.570Z",
+  "lastUpdated": "2026-03-08T06:28:39.499Z",
   "activeFeatures": [
     "studyeng",
     "test",
@@ -20,7 +20,8 @@
     "scripts",
     "terms",
     "privacy",
-    "history"
+    "history",
+    "video-research"
   ],
   "primaryFeature": "studyeng",
   "features": {
@@ -33,9 +34,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:11:44.237Z",
-        "lastUpdated": "2026-03-08T04:41:33.570Z"
+        "lastUpdated": "2026-03-08T06:15:41.656Z"
       },
-      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\hooks\\useYouTubePlayer.ts"
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\check-counts.js"
     },
     "test": {
       "phase": "do",
@@ -59,9 +60,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:25:45.494Z",
-        "lastUpdated": "2026-03-07T16:10:24.760Z"
+        "lastUpdated": "2026-03-08T06:14:47.452Z"
       },
-      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\lib\\supabase\\middleware.ts"
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\lib\\supabase\\sync.ts"
     },
     "callback": {
       "phase": "do",
@@ -85,7 +86,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:32:44.325Z",
-        "lastUpdated": "2026-03-08T02:33:59.535Z"
+        "lastUpdated": "2026-03-08T06:13:20.232Z"
       },
       "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\app\\(tabs)\\layout.tsx"
     },
@@ -137,9 +138,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:34:15.688Z",
-        "lastUpdated": "2026-03-08T04:30:25.046Z"
+        "lastUpdated": "2026-03-08T06:16:19.147Z"
       },
-      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\stores\\useThemeStore.ts"
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\stores\\useLikeStore.ts"
     },
     "data": {
       "phase": "do",
@@ -150,7 +151,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:38:25.445Z",
-        "lastUpdated": "2026-03-08T03:11:20.462Z"
+        "lastUpdated": "2026-03-08T06:13:04.281Z"
       },
       "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\data\\seed-videos.ts"
     },
@@ -270,6 +271,19 @@
         "lastUpdated": "2026-03-08T02:41:24.757Z"
       },
       "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\app\\(tabs)\\learning\\history\\page.tsx"
+    },
+    "video-research": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-03-08T06:20:41.362Z",
+        "lastUpdated": "2026-03-08T06:28:39.498Z"
+      },
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\docs\\video-research\\entertainment-daily-expansion.ts"
     }
   },
   "pipeline": {
@@ -280,7 +294,7 @@
   "session": {
     "startedAt": "2026-03-06T12:21:45.757Z",
     "onboardingCompleted": false,
-    "lastActivity": "2026-03-08T04:41:33.570Z"
+    "lastActivity": "2026-03-08T06:28:39.499Z"
   },
   "history": [
     {
@@ -5452,6 +5466,276 @@
     {
       "timestamp": "2026-03-08T04:41:33.570Z",
       "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:10:10.028Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:10:18.180Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:10:24.478Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:10:29.460Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:10:35.546Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:10:42.702Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:10:46.977Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:10:52.945Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:10:57.763Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:11:17.071Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:12:58.071Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:12:58.137Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:13:03.614Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:13:04.281Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:13:09.854Z",
+      "feature": "(tabs)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:13:13.828Z",
+      "feature": "(tabs)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:13:20.232Z",
+      "feature": "(tabs)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:13:25.778Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:13:34.431Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:14:20.216Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:14:34.365Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:14:39.916Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:14:45.319Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:14:47.452Z",
+      "feature": "supabase",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:14:55.310Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:15:00.040Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:15:00.556Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:15:11.487Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:15:26.258Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:15:38.219Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:15:41.656Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:15:45.661Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:15:59.860Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:16:08.799Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:16:19.147Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:20:41.362Z",
+      "feature": "video-research",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:20:41.584Z",
+      "feature": "video-research",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:23:38.809Z",
+      "feature": "video-research",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:23:49.432Z",
+      "feature": "video-research",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:23:58.457Z",
+      "feature": "video-research",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:24:35.843Z",
+      "feature": "video-research",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:24:51.138Z",
+      "feature": "video-research",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:24:51.397Z",
+      "feature": "video-research",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:27:10.383Z",
+      "feature": "video-research",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T06:28:39.499Z",
+      "feature": "video-research",
       "phase": "do",
       "action": "updated"
     }

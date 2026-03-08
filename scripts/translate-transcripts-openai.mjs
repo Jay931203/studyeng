@@ -24,6 +24,7 @@ const specificId = getArgValue('--id')
 const overwriteKo = args.includes('--overwrite-ko')
 const dryRun = args.includes('--dry')
 const onlyQueue = getArgValue('--queue') || 'needs_translation'
+const idsFile = getArgValue('--ids-file')
 const model = getArgValue('--model') || 'gpt-4o-mini'
 const batchSize = Number.parseInt(getArgValue('--batch') || '40', 10)
 
@@ -34,9 +35,17 @@ async function main() {
     process.exit(1)
   }
 
-  const assetQueue = specificId
-    ? manifest.assets.filter(asset => asset.youtubeId === specificId)
-    : manifest.assets.filter(asset => asset.workflowStatus === onlyQueue)
+  let assetQueue = manifest.assets
+
+  if (idsFile) {
+    const manifestIds = await readJson(idsFile, null)
+    const ids = new Set(Array.isArray(manifestIds) ? manifestIds : manifestIds[onlyQueue] ?? manifestIds.ids ?? [])
+    assetQueue = assetQueue.filter(asset => ids.has(asset.youtubeId))
+  } else if (specificId) {
+    assetQueue = assetQueue.filter(asset => asset.youtubeId === specificId)
+  } else {
+    assetQueue = assetQueue.filter(asset => asset.workflowStatus === onlyQueue)
+  }
 
   console.log(`Translating ${assetQueue.length} transcript assets with OpenAI (${model})\n`)
 

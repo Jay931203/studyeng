@@ -14,6 +14,7 @@ StudyEng의 핵심 운영 기준은 `영상 메타데이터`, `클립 타이밍`
 
 ```bash
 npm run content:autodetect
+npm run content:batch:snapshot
 npm run content:sync
 npm run content:queue -- --queue=needs_whisper
 npm run content:queue -- --queue=needs_translation
@@ -40,6 +41,11 @@ npm run transcripts:check
 - 기본값은 `autoDetectNewVideos: false`, `autoProcessNewVideos: false`
 - 즉, 새 영상 감지 기능은 구현돼 있지만 기본 비활성 상태다.
 - `npm run content:autodetect`를 실행하면 현재 시드 기준 미처리 후보만 보여준다.
+
+## Existing Batch Freeze
+
+- `npm run content:batch:snapshot`를 실행하면 현재 backlog를 `src/data/content-existing-batch.json`에 고정한다.
+- 이후 `whisper`나 `번역`을 돌릴 때 `--ids-file=src/data/content-existing-batch.json`를 쓰면, 그 시점 이후에 추가된 영상은 건드리지 않고 현재 backlog만 처리할 수 있다.
 
 ### Video workflow
 

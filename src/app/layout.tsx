@@ -45,12 +45,37 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: `
           try {
             var stored = JSON.parse(localStorage.getItem('studyeng-theme') || '{}');
-            var theme = stored.state && stored.state.theme;
-            if (theme) {
-              // Migrate old values
-              if (theme === 'dark') theme = 'purple-dark';
-              document.documentElement.setAttribute('data-theme', theme);
-              if (theme.indexOf('light') === 0) {
+            var state = stored.state || {};
+            var backgroundTheme = state.backgroundTheme;
+            var colorTheme = state.colorTheme;
+            var legacyTheme = state.theme;
+
+            if ((!backgroundTheme || !colorTheme) && legacyTheme) {
+              if (legacyTheme === 'blue-dark') {
+                backgroundTheme = 'dark';
+                colorTheme = 'blue';
+              } else if (legacyTheme === 'light') {
+                backgroundTheme = 'light';
+                colorTheme = 'violet';
+              } else if (legacyTheme === 'light-blue') {
+                backgroundTheme = 'light';
+                colorTheme = 'blue';
+              } else {
+                backgroundTheme = 'dark';
+                colorTheme = 'violet';
+              }
+            }
+
+            if (backgroundTheme && colorTheme) {
+              var themeId;
+              if (backgroundTheme === 'dark') {
+                themeId = colorTheme === 'blue' ? 'blue-dark' : 'purple-dark';
+              } else {
+                themeId = colorTheme === 'blue' ? 'light-blue' : 'light';
+              }
+
+              document.documentElement.setAttribute('data-theme', themeId);
+              if (backgroundTheme === 'light') {
                 document.documentElement.classList.remove('dark');
                 document.documentElement.style.colorScheme = 'light';
               } else {

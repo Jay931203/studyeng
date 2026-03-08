@@ -1,5 +1,6 @@
 'use client'
 
+import type { ReactNode } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { usePathname, useSearchParams } from 'next/navigation'
@@ -11,7 +12,7 @@ const tabs = [
   { href: '/profile', icon: 'user', label: 'MY' },
 ] as const
 
-const icons: Record<string, (active: boolean) => React.ReactNode> = {
+const icons: Record<string, (active: boolean) => ReactNode> = {
   home: (active) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"

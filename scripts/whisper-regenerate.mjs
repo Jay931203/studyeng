@@ -14,13 +14,14 @@
  *   node scripts/whisper-regenerate.mjs --force    # Force re-process all
  */
 
-import { readFile, writeFile, mkdtemp, rm, appendFile } from 'fs/promises'
+import { readFile, writeFile, mkdtemp, rm, appendFile, readdir } from 'fs/promises'
 import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { execSync } from 'child_process'
 import { tmpdir } from 'os'
 import { existsSync, statSync } from 'fs'
 import { loadEnv } from './lib/load-env.mjs'
+import { loadSeedData } from './lib/load-seed-data.mjs'
 
 loadEnv()
 
@@ -40,6 +41,9 @@ const args = process.argv.slice(2)
 const specificId = args.find(a => a.startsWith('--id='))?.split('=')[1]
 const dryRun = args.includes('--dry')
 const forceAll = args.includes('--force')
+const queueName = getArgValue('--queue')
+const idsFile = getArgValue('--ids-file')
+const limit = Number.parseInt(getArgValue('--limit') || '0', 10)
 
 // Manifest: tracks which videos have been Whisper-processed (prevents duplicate cost)
 let manifest = {}
@@ -64,25 +68,6 @@ function markProcessed(videoId, cost) {
   }
 }
 
-function extractVideoInfo(seedContent) {
-  const videos = []
-  const blocks = seedContent.split(/\{[^}]*youtubeId:/g).slice(1)
-  for (const block of blocks) {
-    const idMatch = block.match(/^\s*'([^']+)'/)
-    const startMatch = block.match(/clipStart:\s*(\d+)/)
-    const endMatch = block.match(/clipEnd:\s*(\d+)/)
-    if (idMatch) {
-      videos.push({
-        youtubeId: idMatch[1],
-        clipStart: startMatch ? parseInt(startMatch[1]) : 0,
-        clipEnd: endMatch ? parseInt(endMatch[1]) : 60,
-      })
-    }
-  }
-  const seen = new Set()
-  return videos.filter(v => { if (seen.has(v.youtubeId)) return false; seen.add(v.youtubeId); return true })
-}
-
 // Cost tracking
 let sessionCost = 0
 let sessionMinutes = 0
@@ -105,12 +90,30 @@ async function logCost(videoId, durationMinutes, cost) {
 }
 
 async function main() {
-  const seedContent = await readFile(SEED_VIDEOS_PATH, 'utf-8')
-  const allVideos = extractVideoInfo(seedContent)
+  const { seedVideos } = await loadSeedData(SEED_VIDEOS_PATH)
+  const allVideos = dedupeVideos(seedVideos.map(video => ({
+    youtubeId: video.youtubeId,
+    clipStart: video.clipStart,
+    clipEnd: video.clipEnd,
+  })))
 
-  const toProcess = specificId
-    ? allVideos.filter(v => v.youtubeId === specificId)
-    : allVideos
+  let toProcess = allVideos
+
+  if (queueName) {
+    const manifest = await readBatchIds(idsFile)
+    const ids = new Set(manifest[queueName] ?? [])
+    toProcess = allVideos.filter(video => ids.has(video.youtubeId))
+  } else if (idsFile) {
+    const manifest = await readBatchIds(idsFile)
+    const ids = new Set(Array.isArray(manifest) ? manifest : manifest.ids ?? [])
+    toProcess = allVideos.filter(video => ids.has(video.youtubeId))
+  } else if (specificId) {
+    toProcess = allVideos.filter(video => video.youtubeId === specificId)
+  }
+
+  if (limit > 0) {
+    toProcess = toProcess.slice(0, limit)
+  }
 
   console.log(`Processing ${toProcess.length} videos (OpenAI Whisper)\n`)
 
@@ -138,12 +141,8 @@ async function main() {
     const tempDir = await mkdtemp(join(tmpdir(), 'whisper-'))
 
     try {
-      // 1. Download full audio
-      const audioPath = join(tempDir, `${videoId}.webm`)
-      execSync(
-        `yt-dlp -f "bestaudio[ext=webm]/bestaudio" --no-post-overwrites -o "${audioPath}" "https://www.youtube.com/watch?v=${videoId}"`,
-        { stdio: 'pipe', timeout: 120000 }
-      )
+      // 1. Download audio. Prefer low enough bitrate to stay under OpenAI upload cap.
+      let audioPath = await downloadAudio(videoId, tempDir, 'bestaudio[ext=webm]/bestaudio')
 
       if (!existsSync(audioPath)) {
         console.log('SKIP (no audio)')
@@ -151,12 +150,18 @@ async function main() {
         continue
       }
 
-      // Get file size for cost estimation
-      const fileStat = statSync(audioPath)
-      const fileSizeMB = fileStat.size / (1024 * 1024)
-
       // 2. Transcribe with OpenAI Whisper
-      const whisperResult = await transcribeWithOpenAI(audioPath)
+      let whisperResult
+      try {
+        whisperResult = await transcribeWithOpenAI(audioPath)
+      } catch (error) {
+        if (String(error.message).includes('OpenAI API 413')) {
+          audioPath = await downloadAudio(videoId, tempDir, 'worstaudio[ext=webm]/worstaudio/worstaudio')
+          whisperResult = await transcribeWithOpenAI(audioPath)
+        } else {
+          throw error
+        }
+      }
       if (!whisperResult || !whisperResult.segments || whisperResult.segments.length === 0) {
         console.log('SKIP (whisper returned no segments)')
         failed++
@@ -321,6 +326,44 @@ function round2(n) {
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
+}
+
+async function downloadAudio(videoId, tempDir, format) {
+  const outTemplate = join(tempDir, `${videoId}.%(ext)s`)
+  execSync(
+    `yt-dlp -f "${format}" --no-post-overwrites -o "${outTemplate}" "https://www.youtube.com/watch?v=${videoId}"`,
+    { stdio: 'pipe', timeout: 120000 }
+  )
+
+  const files = (await readdir(tempDir))
+    .filter(file => file.startsWith(videoId))
+    .map(file => join(tempDir, file))
+
+  if (files.length === 0) {
+    throw new Error('audio download produced no files')
+  }
+
+  files.sort((a, b) => statSync(b).size - statSync(a).size)
+  return files[0]
+}
+
+function dedupeVideos(videos) {
+  const seen = new Set()
+  return videos.filter(video => {
+    if (seen.has(video.youtubeId)) return false
+    seen.add(video.youtubeId)
+    return true
+  })
+}
+
+async function readBatchIds(filePath) {
+  const raw = await readFile(filePath, 'utf-8')
+  return JSON.parse(raw.replace(/^\uFEFF/, ''))
+}
+
+function getArgValue(name) {
+  const arg = args.find(entry => entry.startsWith(`${name}=`))
+  return arg ? arg.slice(name.length + 1) : null
 }
 
 main().catch(console.error)

@@ -17,11 +17,11 @@ function applyTheme(theme: ThemeId) {
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const { theme } = useThemeStore()
+  const themeId = useThemeStore((state) => state.themeId)
 
   useEffect(() => {
-    applyTheme(theme)
-  }, [theme])
+    applyTheme(themeId)
+  }, [themeId])
 
   return <>{children}</>
 }
