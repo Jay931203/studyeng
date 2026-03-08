@@ -27,12 +27,12 @@ export default function LearningPage() {
       <div className="mt-6 space-y-6">
         {isEmpty ? (
           <SurfaceCard className="px-6 py-12 text-center">
-            <p className="text-lg font-semibold text-[var(--text-primary)]">아직 기록이 없습니다</p>
+            <p className="text-lg font-semibold text-[var(--text-primary)]">NO RECORDS</p>
             <button
               onClick={() => router.push('/shorts')}
               className="mt-6 rounded-full bg-[var(--accent-primary)] px-5 py-2.5 text-sm font-semibold text-white"
             >
-              쇼츠 보기
+              SHORTS
             </button>
           </SurfaceCard>
         ) : (
@@ -43,9 +43,8 @@ export default function LearningPage() {
           <div className="mb-4 flex items-end justify-between gap-4">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-                EXPRESSIONS
+                SAVED
               </p>
-              <h2 className="mt-2 text-2xl font-bold text-[var(--text-primary)]">다시 볼 표현</h2>
             </div>
             {phrases.length > 3 && (
               <button

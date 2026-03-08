@@ -190,21 +190,36 @@ export default function ExplorePage() {
     const radius = 40
     const circumference = 2 * Math.PI * radius
     const dashOffset = circumference - (progressPct / 100) * circumference
+    const handleCloseSeries = () => {
+      if (typeof window !== 'undefined' && window.history.length > 1) {
+        router.back()
+        return
+      }
+
+      router.replace(buildExploreUrl(null), { scroll: false })
+    }
 
     return (
       <AppPage>
         <div className="mb-6 flex items-start justify-between gap-4">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
-              시리즈
+              SERIES
             </p>
-            <h1 className="mt-2 text-3xl font-bold text-[var(--text-primary)]">시리즈 상세</h1>
+            <h1 className="mt-2 text-3xl font-bold text-[var(--text-primary)]">DETAIL</h1>
           </div>
           <button
-            onClick={() => router.replace(buildExploreUrl(null), { scroll: false })}
-            className="rounded-full border border-[var(--border-card)] bg-[var(--bg-card)] px-4 py-2 text-sm text-[var(--text-secondary)]"
+            onClick={handleCloseSeries}
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border-card)] bg-[var(--bg-card)] text-[var(--text-secondary)]"
+            aria-label="Back"
           >
-            목록으로
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
+              <path
+                fillRule="evenodd"
+                d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10z"
+                clipRule="evenodd"
+              />
+            </svg>
           </button>
         </div>
 
@@ -246,23 +261,23 @@ export default function ExplorePage() {
                 </text>
               </svg>
 
-              <div className="min-w-0 flex-1">
-                <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
-                  {categoryLabels[selectedSeries.category]}
-                </p>
-                <h2 className="mt-2 text-2xl font-bold text-[var(--text-primary)]">
-                  {selectedSeries.title}
-                </h2>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-                  {selectedSeries.description}
-                </p>
-                <p className="mt-3 text-xs text-[var(--text-muted)]">
-                  총 {selectedSeries.episodeCount}개 에피소드
-                </p>
+                <div className="min-w-0 flex-1">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
+                    {categoryLabels[selectedSeries.category]}
+                  </p>
+                  <h2 className="mt-2 text-2xl font-bold text-[var(--text-primary)]">
+                    {selectedSeries.title}
+                  </h2>
+                  <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
+                    {selectedSeries.description}
+                  </p>
+                  <p className="mt-3 text-xs text-[var(--text-muted)]">
+                    {selectedSeries.episodeCount} EPISODES
+                  </p>
+                </div>
               </div>
-            </div>
 
-            <button
+              <button
               onClick={() => {
                 const nextId =
                   getNextEpisode(
@@ -273,7 +288,7 @@ export default function ExplorePage() {
               }}
               className="mt-6 w-full rounded-2xl bg-[var(--accent-primary)] py-3.5 text-sm font-semibold text-white"
             >
-              이어 보기
+              WATCH NEXT
             </button>
           </SurfaceCard>
 

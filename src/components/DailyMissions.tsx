@@ -13,21 +13,9 @@ interface PaceMilestone {
 }
 
 const PACE_MILESTONES: PaceMilestone[] = [
-  {
-    label: '기초 페이스',
-    description: '월간 70%',
-    targetRate: 70,
-  },
-  {
-    label: '집중 구간',
-    description: '월간 90%',
-    targetRate: 90,
-  },
-  {
-    label: '최상위 구간',
-    description: '3개월 연속 90%',
-    targetRate: 90,
-  },
+  { label: 'BASE', description: '70%', targetRate: 70 },
+  { label: 'FOCUS', description: '90%', targetRate: 90 },
+  { label: 'TOP', description: '3 months 90%', targetRate: 90 },
 ]
 
 export function DailyMissions() {
@@ -47,9 +35,8 @@ export function DailyMissions() {
         <div className="flex items-start justify-between gap-4">
           <div>
             <span className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-              Rhythm
+              TODAY&apos;S ROUTINE
             </span>
-            <h2 className="mt-2 text-xl font-bold text-[var(--text-primary)]">오늘의 루틴</h2>
           </div>
           <span
             className={`rounded-full px-3 py-1 text-[11px] font-semibold ${
@@ -58,13 +45,13 @@ export function DailyMissions() {
                 : 'bg-[var(--bg-secondary)] text-[var(--text-muted)]'
             }`}
           >
-            {allCompleteBonus ? '완료' : `${completedCount}/${missions.length}`}
+            {allCompleteBonus ? 'DONE' : `${completedCount}/${missions.length}`}
           </span>
         </div>
 
         <div className="mt-4">
           <div className="mb-2 flex items-center justify-between text-xs text-[var(--text-muted)]">
-            <span>진행률</span>
+            <span>PROGRESS</span>
             <span>{Math.round(completionRate)}%</span>
           </div>
           <div className="h-2 overflow-hidden rounded-full bg-[var(--bg-secondary)]">
@@ -123,7 +110,7 @@ export function DailyMissions() {
       {allCompleteBonus && (
         <div className="px-5 pb-4">
           <p className="rounded-2xl bg-green-500/10 px-4 py-3 text-center text-xs text-green-300/90">
-            오늘 루틴 완료
+            DONE
           </p>
         </div>
       )}
@@ -159,20 +146,20 @@ function LearningPaceCard() {
   })
 
   const nextMilestoneText = hasTopTier
-    ? '최상위 유지 중'
+    ? 'TOP'
     : nextMilestone
-      ? `${nextMilestone.label}까지 ${Math.max(
+      ? `${nextMilestone.label} ${Math.max(
           0,
           Math.ceil((nextMilestone.targetRate / 100) * totalDays) - completedCount,
-        )}일`
-      : '완료'
+        )}`
+      : 'DONE'
 
   return (
     <>
       <div className="mx-4 mb-4">
         {!billingEnabled && (
           <div className="mb-3 rounded-xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-4 py-3">
-            <p className="text-sm font-semibold text-[var(--text-secondary)]">무료 운영 중</p>
+            <p className="text-sm font-semibold text-[var(--text-secondary)]">FREE</p>
           </div>
         )}
 
@@ -182,9 +169,9 @@ function LearningPaceCard() {
         >
           <div className="mb-2 flex items-center justify-between gap-3">
             <span className="min-w-0 truncate text-xs font-medium text-[var(--text-secondary)]">
-              이번 달 페이스
+              MONTHLY PACE
             </span>
-            <span className="shrink-0 text-[10px] text-[var(--text-muted)]">상세</span>
+            <span className="shrink-0 text-[10px] text-[var(--text-muted)]">DETAIL</span>
           </div>
           <div className="mb-2 h-1.5 overflow-hidden rounded-full bg-[var(--bg-secondary)]">
             <div
@@ -227,10 +214,10 @@ function LearningPaceCard() {
                 <div className="mb-4 flex items-start justify-between gap-4">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400">
-                      Pace
+                      PACE
                     </p>
                     <h3 className="mt-2 text-lg font-semibold text-[var(--text-primary)]">
-                      이번 달 페이스
+                      MONTHLY PACE
                     </h3>
                   </div>
                   <button
@@ -245,13 +232,13 @@ function LearningPaceCard() {
                 <div className="rounded-2xl bg-[var(--bg-secondary)] p-4">
                   <div className="flex items-end justify-between gap-3">
                     <div>
-                      <p className="text-xs text-[var(--text-muted)]">달성률</p>
+                      <p className="text-xs text-[var(--text-muted)]">RATE</p>
                       <p className="mt-1 text-2xl font-bold text-[var(--text-primary)]">
                         {Math.round(completionRate)}%
                       </p>
                     </div>
                     <div className="text-right">
-                      <p className="text-xs text-[var(--text-muted)]">완료 일수</p>
+                      <p className="text-xs text-[var(--text-muted)]">DAYS</p>
                       <p className="mt-1 text-lg font-semibold text-emerald-400">
                         {completedCount}/{totalDays}
                       </p>
@@ -262,7 +249,7 @@ function LearningPaceCard() {
                 <div className="mt-4 space-y-2">
                   {PACE_MILESTONES.map((milestone) => {
                     const reached =
-                      milestone.label === '최상위 구간'
+                      milestone.label === 'TOP'
                         ? hasTopTier
                         : completionRate >= milestone.targetRate
 
@@ -284,7 +271,7 @@ function LearningPaceCard() {
                             reached ? 'text-emerald-400' : 'text-[var(--text-secondary)]'
                           }`}
                         >
-                          {reached ? '달성' : '진행 중'}
+                          {reached ? 'YES' : 'NO'}
                         </p>
                       </div>
                     )

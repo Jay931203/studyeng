@@ -94,7 +94,7 @@ export default function ProfilePage() {
             animate={{ opacity: 1, y: 0 }}
             className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-6 shadow-[var(--card-shadow)]"
           >
-            <SectionTitle eyebrow="ACCOUNT" title="계정" />
+            <SectionTitle eyebrow="ACCOUNT" title="ACCOUNT" />
             <div className="flex items-center gap-4">
               <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-[var(--accent-primary)] to-[var(--accent-secondary)] text-2xl font-bold text-white">
                 {user?.user_metadata?.avatar_url ? (
@@ -151,12 +151,12 @@ export default function ProfilePage() {
           </motion.div>
 
           <SurfaceCard className="p-6">
-            <SectionTitle eyebrow="THEME" title="테마" />
+            <SectionTitle eyebrow="THEME" title="THEME" />
 
-            <div className="space-y-4">
+            <div className="flex flex-wrap items-center gap-6">
               <div className="flex items-center gap-4">
-                <p className="w-12 shrink-0 text-xs font-semibold text-[var(--text-muted)]">배경</p>
-                <div className="flex min-h-10 flex-wrap items-center gap-3">
+                <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">배경</p>
+                <div className="flex min-h-10 items-center gap-3">
                   {BACKGROUND_OPTIONS.map((option) => (
                     <button
                       key={option.id}
@@ -172,8 +172,8 @@ export default function ProfilePage() {
               </div>
 
               <div className="flex items-center gap-4">
-                <p className="w-12 shrink-0 text-xs font-semibold text-[var(--text-muted)]">컬러</p>
-                <div className="flex min-h-10 flex-wrap items-center gap-3">
+                <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">컬러</p>
+                <div className="flex min-h-10 items-center gap-3">
                   {COLOR_OPTIONS.map((option) => (
                     <button
                       key={option.id}
@@ -192,7 +192,7 @@ export default function ProfilePage() {
 
           {isAdmin && (
             <SurfaceCard className="p-6">
-              <SectionTitle eyebrow="ADMIN" title="운영 도구" />
+              <SectionTitle eyebrow="ADMIN" title="ADMIN" />
 
               <div className="space-y-3">
                 <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
@@ -238,7 +238,7 @@ export default function ProfilePage() {
         <div className="space-y-6">
           {isAdminActive() && (
             <SurfaceCard className="p-6">
-              <SectionTitle eyebrow="REPORTS" title="리포트 번들" />
+              <SectionTitle eyebrow="REPORTS" title="REPORTS" />
 
               <div className="rounded-2xl bg-[var(--bg-primary)] p-4">
                 <p className="text-sm font-semibold text-red-400">

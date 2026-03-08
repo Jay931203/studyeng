@@ -9,20 +9,24 @@ import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { categories, type VideoData } from '@/data/seed-videos'
 
+const categoryLabels = Object.fromEntries(
+  categories.map((category) => [category.id, category.label]),
+) as Record<string, string>
+
 function formatDateLabel(timestamp: number): string {
   const now = new Date()
   const date = new Date(timestamp)
   const diffDays = Math.floor((now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24))
 
-  if (diffDays === 0) return '오늘'
-  if (diffDays === 1) return '어제'
-  if (diffDays < 7) return `${diffDays}일 전`
+  if (diffDays === 0) return 'TODAY'
+  if (diffDays === 1) return 'YESTERDAY'
+  if (diffDays < 7) return `${diffDays} DAYS AGO`
   return `${date.getMonth() + 1}/${date.getDate()}`
 }
 
 function getDateKey(timestamp: number): string {
-  const d = new Date(timestamp)
-  return `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`
+  const date = new Date(timestamp)
+  return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
 }
 
 export default function WatchHistoryPage() {
@@ -48,7 +52,7 @@ export default function WatchHistoryPage() {
       if (!seen.has(dateKey)) {
         seen.set(dateKey, new Set())
         groups.push({
-          label: record.watchedAt > 0 ? formatDateLabel(record.watchedAt) : '이전',
+          label: record.watchedAt > 0 ? formatDateLabel(record.watchedAt) : 'EARLIER',
           key: dateKey,
           videos: [],
         })
@@ -86,42 +90,44 @@ export default function WatchHistoryPage() {
   }
 
   return (
-    <div className="h-full overflow-y-auto no-scrollbar pb-20 pt-12">
+    <div className="h-full overflow-y-auto pb-20 pt-12">
       <div className="px-4">
         <div className="mb-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <button
               onClick={handleBack}
               className="text-[var(--text-secondary)] transition-transform active:scale-90"
-              aria-label="뒤로 가기"
+              aria-label="Back"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
                 <path
                   fillRule="evenodd"
-                  d="M17 10a.75.75 0 0 1-.75.75H5.612l4.158 3.96a.75.75 0 1 1-1.04 1.08l-5.5-5.25a.75.75 0 0 1 0-1.08l5.5-5.25a.75.75 0 1 1 1.04 1.08L5.612 9.25H16.25A.75.75 0 0 1 17 10z"
+                  d="M17 10a.75.75 0 01-.75.75H5.612l4.158 3.96a.75.75 0 11-1.04 1.08l-5.5-5.25a.75.75 0 010-1.08l5.5-5.25a.75.75 0 111.04 1.08L5.612 9.25H16.25A.75.75 0 0117 10z"
                   clipRule="evenodd"
                 />
               </svg>
             </button>
             <div>
-              <h1 className="text-xl font-bold text-[var(--text-primary)]">시청 기록</h1>
-              <p className="text-xs text-[var(--text-muted)]">{totalWatched}개 영상</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+                HISTORY
+              </p>
+              <h1 className="mt-2 text-xl font-bold text-[var(--text-primary)]">WATCH HISTORY</h1>
             </div>
           </div>
 
           {totalWatched > 0 && (
             <button
               onClick={() => setConfirmClear(true)}
-              className="text-xs text-red-400/80 transition-transform active:scale-95"
+              className="text-xs font-medium text-red-400 transition-transform active:scale-95"
             >
-              전체 삭제
+              CLEAR ALL
             </button>
           )}
         </div>
 
         {totalWatched === 0 && (
           <div className="flex flex-col items-center justify-center py-20">
-            <p className="text-sm text-[var(--text-muted)]">시청 기록이 없습니다.</p>
+            <p className="text-sm text-[var(--text-muted)]">No watch history yet.</p>
           </div>
         )}
 
@@ -134,8 +140,7 @@ export default function WatchHistoryPage() {
               <AnimatePresence>
                 {group.videos.map((video) => {
                   const count = viewCounts[video.id] ?? 0
-                  const categoryLabel =
-                    categories.find((category) => category.id === video.category)?.label ?? ''
+                  const categoryLabel = categoryLabels[video.category] ?? ''
                   const seriesTitle = video.seriesId
                     ? getCatalogSeriesById(video.seriesId)?.title
                     : null
@@ -154,7 +159,7 @@ export default function WatchHistoryPage() {
                         }}
                         className="flex min-w-0 flex-1 items-center gap-3 text-left"
                       >
-                        <div className="relative h-12 w-20 flex-shrink-0 overflow-hidden rounded-xl">
+                        <div className="relative h-12 w-20 shrink-0 overflow-hidden rounded-xl">
                           <Image
                             src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
                             alt={video.title}
@@ -188,13 +193,13 @@ export default function WatchHistoryPage() {
 
                       <button
                         onClick={() => removeRecord(video.id)}
-                        className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-lg text-[var(--text-muted)] transition-all hover:text-red-400 active:scale-90"
-                        aria-label="기록 삭제"
+                        className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-[var(--text-muted)] transition-all hover:text-red-400 active:scale-90"
+                        aria-label="Remove history item"
                       >
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4">
                           <path
                             fillRule="evenodd"
-                            d="M4.293 4.293a1 1 0 0 1 1.414 0L10 8.586l4.293-4.293a1 1 0 1 1 1.414 1.414L11.414 10l4.293 4.293a1 1 0 0 1-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 0 1-1.414-1.414L8.586 10 4.293 5.707a1 1 0 0 1 0-1.414z"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
                             clipRule="evenodd"
                           />
                         </svg>
@@ -228,27 +233,24 @@ export default function WatchHistoryPage() {
             >
               <div
                 className="w-full max-w-sm rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-5 shadow-2xl"
-                onClick={(e) => e.stopPropagation()}
+                onClick={(event) => event.stopPropagation()}
               >
                 <h2 className="text-base font-semibold text-[var(--text-primary)]">
-                  시청 기록을 전부 삭제할까요?
+                  Clear watch history?
                 </h2>
-                <p className="mt-2 text-sm text-[var(--text-muted)]">
-                  삭제 후에는 되돌릴 수 없습니다.
-                </p>
                 <div className="mt-5 flex gap-2">
                   <button
                     onClick={handleCloseConfirm}
                     className="flex-1 rounded-xl bg-[var(--bg-secondary)] py-3 text-sm font-medium text-[var(--text-secondary)]"
                   >
-                    취소
+                    Cancel
                   </button>
                   <motion.button
                     whileTap={{ scale: 0.98 }}
                     onClick={handleClearAll}
                     className="flex-1 rounded-xl bg-red-500 py-3 text-sm font-semibold text-white"
                   >
-                    전체 삭제
+                    Clear
                   </motion.button>
                 </div>
               </div>
