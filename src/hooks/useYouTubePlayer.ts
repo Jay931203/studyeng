@@ -115,6 +115,22 @@ function findActiveSubIndex(subtitles: SubtitleEntry[], time: number): number {
   return -1
 }
 
+function isYouTubePlayer(
+  player: YT.Player | null | undefined,
+): player is YT.Player & {
+  playVideo: () => void
+  pauseVideo: () => void
+  seekTo: (seconds: number, allowSeekAhead?: boolean) => void
+  getPlayerState: () => number
+} {
+  return Boolean(
+    player &&
+      typeof player.playVideo === 'function' &&
+      typeof player.pauseVideo === 'function' &&
+      typeof player.seekTo === 'function',
+  )
+}
+
 export function useYouTubePlayer(
   containerId: string,
   videoId: string,
@@ -175,7 +191,7 @@ export function useYouTubePlayer(
 
   const handlePlayerTick = useEffectEvent(() => {
     const player = playerRef.current
-    if (!player) return
+    if (!isYouTubePlayer(player)) return
 
     let time: number
     try {
@@ -252,7 +268,7 @@ export function useYouTubePlayer(
 
     const handleVisibilityChange = () => {
       const player = playerRef.current
-      if (!player) return
+      if (!isYouTubePlayer(player)) return
 
       if (document.hidden) {
         try {
@@ -281,7 +297,7 @@ export function useYouTubePlayer(
   }, [ready])
 
   useEffect(() => {
-    if (!ready || !playerRef.current) return
+    if (!ready || !playerRef.current || typeof playerRef.current.setPlaybackRate !== 'function') return
     playerRef.current.setPlaybackRate(playbackRate)
   }, [playbackRate, ready])
 
@@ -316,7 +332,9 @@ export function useYouTubePlayer(
 
       if (disposed) return
 
-      playerRef.current?.destroy()
+      if (playerRef.current && typeof playerRef.current.destroy === 'function') {
+        playerRef.current.destroy()
+      }
       playerRef.current = new window.YT.Player(containerId, {
         videoId,
         playerVars: {
@@ -450,9 +468,21 @@ export function useYouTubePlayer(
     videoId,
   ])
 
-  const play = useCallback(() => playerRef.current?.playVideo(), [])
-  const pause = useCallback(() => playerRef.current?.pauseVideo(), [])
-  const seekTo = useCallback((seconds: number) => playerRef.current?.seekTo(seconds, true), [])
+  const play = useCallback(() => {
+    const player = playerRef.current
+    if (!isYouTubePlayer(player)) return
+    player.playVideo()
+  }, [])
+  const pause = useCallback(() => {
+    const player = playerRef.current
+    if (!isYouTubePlayer(player)) return
+    player.pauseVideo()
+  }, [])
+  const seekTo = useCallback((seconds: number) => {
+    const player = playerRef.current
+    if (!isYouTubePlayer(player)) return
+    player.seekTo(seconds, true)
+  }, [])
   const clearVideoError = useCallback(() => {
     setVideoErrorState((current) =>
       current?.sessionKey === playerSessionKey ? null : current,
