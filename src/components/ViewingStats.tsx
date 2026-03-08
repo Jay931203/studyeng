@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import { MetricCard, SectionHeader, SurfaceCard } from '@/components/ui/AppPage'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useUserStore } from '@/stores/useUserStore'
@@ -16,17 +17,6 @@ function getDayLabel(daysAgo: number): string {
   const d = new Date()
   d.setDate(d.getDate() - daysAgo)
   return ['일', '월', '화', '수', '목', '금', '토'][d.getDay()]
-}
-
-// ─── Sub-components ───────────────────────────────────────
-
-function StatCard({ value, label }: { value: string; label: string }) {
-  return (
-    <div className="flex flex-col items-center">
-      <p className="text-2xl font-bold text-[var(--text-primary)]">{value}</p>
-      <p className="mt-1 text-xs text-[var(--text-muted)]">{label}</p>
-    </div>
-  )
 }
 
 function CategoryBar({
@@ -293,26 +283,27 @@ export function ViewingStats() {
 
   return (
     <section className="mb-8">
-      <h2 className="mb-4 text-lg font-bold text-[var(--text-primary)]">
-        나의 학습 통계
-      </h2>
+      <SectionHeader
+        eyebrow="통계"
+        title="활동 통계"
+        description="시청 흐름과 선호 패턴을 한 번에 볼 수 있게 정리했습니다."
+      />
 
       <div className="flex flex-col gap-3">
-        {/* ── Summary stats ── */}
-        <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-4 shadow-[var(--card-shadow)]">
-          <div className="grid grid-cols-3 divide-x divide-[var(--border-card)]">
-            <StatCard value={`${totalWatched}개`} label="총 시청" />
-            <StatCard value={`${phrases.length}개`} label="저장 표현" />
-            <StatCard
+        <SurfaceCard className="rounded-[28px] p-4">
+          <div className="grid grid-cols-3 gap-3">
+            <MetricCard label="누적 시청" value={`${totalWatched}개`} className="text-center" />
+            <MetricCard label="저장 표현" value={`${phrases.length}개`} className="text-center" />
+            <MetricCard
+              label="연속 루프"
               value={`${Math.max(streakDays, totalViews > 0 ? 1 : 0)}일`}
-              label="연속 학습"
+              className="text-center"
             />
           </div>
-        </div>
+        </SurfaceCard>
 
-        {/* ── Category preference ── */}
         {categoryStats.length > 0 && (
-          <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-4 shadow-[var(--card-shadow)]">
+          <SurfaceCard className="rounded-[28px] p-4">
             <h3 className="mb-3 text-sm font-semibold text-[var(--text-primary)]">
               카테고리 선호도
             </h3>
@@ -326,12 +317,11 @@ export function ViewingStats() {
                 />
               ))}
             </div>
-          </div>
+          </SurfaceCard>
         )}
 
-        {/* ── Top series ── */}
         {topSeries.length > 0 && (
-          <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-4 shadow-[var(--card-shadow)]">
+          <SurfaceCard className="rounded-[28px] p-4">
             <h3 className="mb-2 text-sm font-semibold text-[var(--text-primary)]">
               많이 본 시리즈 Top {Math.min(topSeries.length, 5)}
             </h3>
@@ -345,11 +335,10 @@ export function ViewingStats() {
                 />
               ))}
             </div>
-          </div>
+          </SurfaceCard>
         )}
 
-        {/* ── Difficulty preference ── */}
-        <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-4 shadow-[var(--card-shadow)]">
+        <SurfaceCard className="rounded-[28px] p-4">
           <div className="mb-3 flex items-baseline justify-between">
             <h3 className="text-sm font-semibold text-[var(--text-primary)]">
               선호 난이도
@@ -375,10 +364,9 @@ export function ViewingStats() {
               isActive={preferredDifficulty === '어려움'}
             />
           </div>
-        </div>
+        </SurfaceCard>
 
-        {/* ── Weekly activity ── */}
-        <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-4 shadow-[var(--card-shadow)]">
+        <SurfaceCard className="rounded-[28px] p-4">
           <h3 className="mb-3 text-sm font-semibold text-[var(--text-primary)]">
             이번 주 활동
           </h3>
@@ -392,7 +380,7 @@ export function ViewingStats() {
               />
             ))}
           </div>
-        </div>
+        </SurfaceCard>
       </div>
     </section>
   )
