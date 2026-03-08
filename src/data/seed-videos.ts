@@ -213,14 +213,6 @@ export const series: Series[] = [
     episodeCount: 12,
   },
   {
-    id: 'bbc-6min',
-    title: 'BBC 6 Minute English',
-    category: 'daily',
-    description: 'BBC가 만든 6분 영어 레슨',
-    thumbnailEmoji: '',
-    episodeCount: 4,
-  },
-  {
     id: 'daily-english',
     title: 'Daily English',
     category: 'daily',
@@ -236,7 +228,7 @@ export const series: Series[] = [
     category: 'music',
     description: '인기 팝송으로 배우는 영어',
     thumbnailEmoji: '',
-    episodeCount: 10,
+    episodeCount: 8,
   },
   {
     id: 'rock-classics',
@@ -244,7 +236,7 @@ export const series: Series[] = [
     category: 'music',
     description: '록 명곡으로 배우는 영어',
     thumbnailEmoji: '',
-    episodeCount: 3,
+    episodeCount: 2,
   },
 
   // === Animation Series ===
@@ -254,7 +246,7 @@ export const series: Series[] = [
     category: 'animation',
     description: '픽사 애니메이션 베스트',
     thumbnailEmoji: '',
-    episodeCount: 5,
+    episodeCount: 4,
   },
 ]
 
@@ -1126,7 +1118,7 @@ export const seedVideos: VideoData[] = [
   },
 
   // ============================================================
-  // === MUSIC (15 videos) ======================================
+  // === MUSIC (10 videos) ======================================
   // ============================================================
 
   // --- Pop Hits 시리즈 ---
@@ -1203,30 +1195,6 @@ export const seedVideos: VideoData[] = [
     subtitles: [],
   },
   {
-    id: 'music-blank-space',
-    youtubeId: 'e-ORhEE9VVg',
-    title: 'Taylor Swift - Blank Space',
-    category: 'music',
-    difficulty: 3,
-    clipStart: 15,
-    clipEnd: 70,
-    seriesId: 'pop-hits',
-    episodeNumber: 7,
-    subtitles: [],
-  },
-  {
-    id: 'music-happy',
-    youtubeId: 'ZbZSe6N_BXs',
-    title: 'Pharrell Williams - Happy',
-    category: 'music',
-    difficulty: 2,
-    clipStart: 10,
-    clipEnd: 65,
-    seriesId: 'pop-hits',
-    episodeNumber: 8,
-    subtitles: [],
-  },
-  {
     id: 'music-titanium',
     youtubeId: 'JRfuAukYTKg',
     title: 'David Guetta ft. Sia - Titanium',
@@ -1235,7 +1203,7 @@ export const seedVideos: VideoData[] = [
     clipStart: 15,
     clipEnd: 70,
     seriesId: 'pop-hits',
-    episodeNumber: 9,
+    episodeNumber: 7,
     subtitles: [],
   },
   {
@@ -1247,23 +1215,11 @@ export const seedVideos: VideoData[] = [
     clipStart: 10,
     clipEnd: 65,
     seriesId: 'pop-hits',
-    episodeNumber: 10,
+    episodeNumber: 8,
     subtitles: [],
   },
 
   // --- Rock Classics 시리즈 ---
-  {
-    id: 'music-bohemian',
-    youtubeId: 'fJ9rUzIMcZQ',
-    title: 'Queen - Bohemian Rhapsody',
-    category: 'music',
-    difficulty: 4,
-    clipStart: 10,
-    clipEnd: 70,
-    seriesId: 'rock-classics',
-    episodeNumber: 1,
-    subtitles: [],
-  },
   {
     id: 'music-numb',
     youtubeId: 'kXYiU_JCYtU',
@@ -1273,7 +1229,7 @@ export const seedVideos: VideoData[] = [
     clipStart: 10,
     clipEnd: 65,
     seriesId: 'rock-classics',
-    episodeNumber: 2,
+    episodeNumber: 1,
     subtitles: [],
   },
   {
@@ -1285,12 +1241,12 @@ export const seedVideos: VideoData[] = [
     clipStart: 15,
     clipEnd: 70,
     seriesId: 'rock-classics',
-    episodeNumber: 3,
+    episodeNumber: 2,
     subtitles: [],
   },
 
   // ============================================================
-  // === ANIMATION (5 videos) ==================================
+  // === ANIMATION (4 videos) ==================================
   // ============================================================
 
   // --- Pixar Classics 시리즈 ---
@@ -1319,18 +1275,6 @@ export const seedVideos: VideoData[] = [
     subtitles: [],
   },
   {
-    id: 'anim-forthebirds',
-    youtubeId: '_nbVTUYVKxg',
-    title: '새들의 전쟁',
-    category: 'animation',
-    difficulty: 1,
-    clipStart: 10,
-    clipEnd: 70,
-    seriesId: 'pixar-moments',
-    episodeNumber: 3,
-    subtitles: [],
-  },
-  {
     id: 'anim-incredibles',
     youtubeId: 'sHBLVaIEwj4',
     title: '인크레더블 결혼식',
@@ -1339,7 +1283,7 @@ export const seedVideos: VideoData[] = [
     clipStart: 5,
     clipEnd: 65,
     seriesId: 'pixar-moments',
-    episodeNumber: 4,
+    episodeNumber: 3,
     subtitles: [],
   },
   {
@@ -1351,12 +1295,12 @@ export const seedVideos: VideoData[] = [
     clipStart: 5,
     clipEnd: 65,
     seriesId: 'pixar-moments',
-    episodeNumber: 5,
+    episodeNumber: 4,
     subtitles: [],
   },
 
   // ============================================================
-  // === DAILY (17 videos) ======================================
+  // === DAILY (13 videos) ======================================
   // ============================================================
 
   // --- TED Talks 시리즈 ---
@@ -1502,56 +1446,6 @@ export const seedVideos: VideoData[] = [
     clipEnd: 65,
     seriesId: 'ted-talks',
     episodeNumber: 12,
-    subtitles: [],
-  },
-
-  // --- BBC 6 Minute English 시리즈 ---
-  {
-    id: 'bbc-apples',
-    youtubeId: '_5siHrpPnmw',
-    title: '사과의 건강 효능',
-    category: 'daily',
-    difficulty: 3,
-    clipStart: 10,
-    clipEnd: 70,
-    seriesId: 'bbc-6min',
-    episodeNumber: 1,
-    subtitles: [],
-  },
-  {
-    id: 'bbc-doing-nothing',
-    youtubeId: 'Y681hXWwhQY',
-    title: '아무것도 안 하기의 장점',
-    category: 'daily',
-    difficulty: 3,
-    clipStart: 10,
-    clipEnd: 70,
-    seriesId: 'bbc-6min',
-    episodeNumber: 2,
-    subtitles: [],
-  },
-  {
-    id: 'bbc-smartphones',
-    youtubeId: 'af7VzZTzmlg',
-    title: '아이들 스마트폰 사용 제한',
-    category: 'daily',
-    difficulty: 3,
-    clipStart: 10,
-    clipEnd: 70,
-    seriesId: 'bbc-6min',
-    episodeNumber: 3,
-    subtitles: [],
-  },
-  {
-    id: 'bbc-sugar',
-    youtubeId: 'FjU9qyTZ_OU',
-    title: '설탕 중독의 비밀',
-    category: 'daily',
-    difficulty: 3,
-    clipStart: 10,
-    clipEnd: 70,
-    seriesId: 'bbc-6min',
-    episodeNumber: 4,
     subtitles: [],
   },
 

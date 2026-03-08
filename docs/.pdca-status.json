@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-03-08T02:20:45.598Z",
+  "lastUpdated": "2026-03-08T02:28:59.325Z",
   "activeFeatures": [
     "studyeng",
     "test",
@@ -19,7 +19,8 @@
     "transcript",
     "scripts",
     "terms",
-    "privacy"
+    "privacy",
+    "history"
   ],
   "primaryFeature": "studyeng",
   "features": {
@@ -32,9 +33,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:11:44.237Z",
-        "lastUpdated": "2026-03-08T02:20:45.598Z"
+        "lastUpdated": "2026-03-08T02:28:59.325Z"
       },
-      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\components\\BottomNav.tsx"
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\components\\WatchHistory.tsx"
     },
     "test": {
       "phase": "do",
@@ -97,7 +98,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:32:46.500Z",
-        "lastUpdated": "2026-03-08T01:15:18.101Z"
+        "lastUpdated": "2026-03-08T02:26:12.296Z"
       },
       "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\app\\(tabs)\\explore\\page.tsx"
     },
@@ -136,9 +137,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:34:15.688Z",
-        "lastUpdated": "2026-03-08T01:29:41.981Z"
+        "lastUpdated": "2026-03-08T02:27:37.225Z"
       },
-      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\stores\\useDiscountStore.ts"
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\stores\\useWatchHistoryStore.ts"
     },
     "data": {
       "phase": "do",
@@ -149,7 +150,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:38:25.445Z",
-        "lastUpdated": "2026-03-08T02:16:08.920Z"
+        "lastUpdated": "2026-03-08T02:25:20.834Z"
       },
       "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\data\\seed-videos.ts"
     },
@@ -256,6 +257,19 @@
         "lastUpdated": "2026-03-07T08:16:09.221Z"
       },
       "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\app\\privacy\\page.tsx"
+    },
+    "history": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-03-08T02:28:18.046Z",
+        "lastUpdated": "2026-03-08T02:28:18.046Z"
+      },
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\app\\(tabs)\\learning\\history\\page.tsx"
     }
   },
   "pipeline": {
@@ -266,7 +280,7 @@
   "session": {
     "startedAt": "2026-03-06T12:21:45.757Z",
     "onboardingCompleted": false,
-    "lastActivity": "2026-03-08T02:20:45.598Z"
+    "lastActivity": "2026-03-08T02:28:59.325Z"
   },
   "history": [
     {
@@ -4207,6 +4221,150 @@
     },
     {
       "timestamp": "2026-03-08T02:20:45.598Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:24:00.733Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:24:11.266Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:24:20.704Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:24:30.731Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:24:41.372Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:24:47.596Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:24:51.435Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:24:57.529Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:25:14.032Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:25:17.823Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:25:20.834Z",
+      "feature": "data",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:25:50.144Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:25:57.362Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:26:03.117Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:26:06.841Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:26:12.296Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:27:29.539Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:27:37.225Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:28:18.046Z",
+      "feature": "history",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:28:24.728Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:28:29.028Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:28:36.650Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:28:41.433Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-08T02:28:59.325Z",
       "feature": "studyeng",
       "phase": "do",
       "action": "updated"

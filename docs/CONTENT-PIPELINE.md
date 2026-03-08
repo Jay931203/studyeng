@@ -620,69 +620,50 @@ GROQ_API_KEY="..." node scripts/prebake-all.js --force
 
 | 항목 | 수치 |
 |------|------|
-| 총 영상 수 | 25개 |
-| 총 시리즈 수 | 13개 |
-| 총 자막 JSON 파일 | 25개 |
+| 총 영상 수 | 94개 |
+| 총 시리즈 수 | 24개 |
+| 총 자막 JSON 파일 | 94개 |
 | 자막 없는 영상 | 0개 (전부 정상) |
 
 ### 카테고리별 영상 수
 
 | 카테고리 | 영상 수 | 비율 |
 |----------|---------|------|
-| drama (드라마) | 10 | 40% |
-| movie (영화) | 7 | 28% |
-| entertainment (예능) | 4 | 16% |
-| music (음악) | 2 | 8% |
-| animation (애니) | 2 | 8% |
-| daily (일상) | 0 | 0% |
+| drama (드라마) | 36 | 38% |
+| entertainment (예능) | 20 | 21% |
+| daily (일상) | 13 | 14% |
+| movie (영화) | 11 | 12% |
+| music (음악) | 10 | 11% |
+| animation (애니) | 4 | 4% |
 
 ### 시리즈별 에피소드 수
 
 | 시리즈 ID | 시리즈 제목 | 카테고리 | 에피소드 수 |
 |-----------|-------------|----------|-------------|
-| `friends-s1` | Friends S1 | drama | 2 |
-| `the-office` | The Office | drama | 4 |
-| `brooklyn-99` | Brooklyn Nine-Nine | drama | 2 |
-| `modern-family` | Modern Family | drama | 2 |
+| `friends-s1` | Friends | drama | 4 |
+| `the-office` | The Office | drama | 8 |
+| `brooklyn-99` | Brooklyn Nine-Nine | drama | 6 |
+| `modern-family` | Modern Family | drama | 4 |
+| `parks-rec` | Parks and Recreation | drama | 5 |
+| `seinfeld` | Seinfeld | drama | 4 |
+| `big-bang-theory` | The Big Bang Theory | drama | 5 |
 | `devil-wears-prada` | 악마는 프라다를 입는다 | movie | 2 |
 | `forrest-gump` | Forrest Gump | movie | 3 |
 | `harry-potter` | Harry Potter | movie | 1 |
+| `marvel-mcu` | Marvel MCU | movie | 1 |
 | `mean-girls` | Mean Girls | movie | 1 |
-| `graham-norton` | Graham Norton Show | entertainment | 2 |
-| `mean-tweets` | Mean Tweets | entertainment | 1 |
-| `conan` | Conan | entertainment | 1 |
-| `pop-hits` | Pop Hits | music | 2 |
-| `pixar-moments` | Pixar Classics | animation | 2 |
-
-### 영상별 자막 항목 수
-
-| YouTube ID | 영상 제목 | 자막 항목 수 |
-|------------|-----------|-------------|
-| `RjpvuPAzJUw` | Friends - 최고 웃긴 장면 모음 | 14 |
-| `E6LpBIwGyA4` | Friends - 다들 챈들러 싫어해 | 18 |
-| `gO8N3L_aERg` | The Office - 드와이트의 화재 훈련 | 6 |
-| `WaaANll8h18` | The Office - 짐이 드와이트 흉내내기 | 16 |
-| `Xnk4seEHmgw` | The Office - 짐의 장난 모음 | 10 |
-| `8zfNfilNOIE` | The Office - 모스 부호 장난 | 13 |
-| `HlBYdiXdUa8` | B99 - I Want It That Way 라인업 | 19 |
-| `ffyKY3Dj5ZE` | B99 - 범인들이 노래 부르게 만든 제이크 | 24 |
-| `ajb-YbY3-rw` | Modern Family - 베트남 레스토랑 | 28 |
-| `0mapwWviBEM` | Modern Family - 월리 코스튬의 릴리 | 24 |
-| `2PjZAeiU7uM` | 악마는 프라다를 입는다 - 미란다 등장! | 8 |
-| `b2f2Kqt_KcE` | 악마는 프라다를 입는다 - 앤디의 면접 | 16 |
-| `x2-MCPa_3rU` | Forrest Gump - 달려라, 포레스트! | 8 |
-| `SqOnkiQRCUU` | Forrest Gump - 인생은 초콜릿 상자 | 12 |
-| `tvKzyYy6qvY` | Forrest Gump - 완두콩과 당근 | 18 |
-| `wsl5fS7KGZc` | Harry Potter - 매드아이 무디의 수업 | 13 |
-| `re5veV2F7eY` | Mean Girls - 퀸카로 살아남는 법 | 16 |
-| `ZwS14TiO7Pk` | Graham Norton - 윌 스미스 팀 랩 | 19 |
-| `yuXGpUR7fXA` | Graham Norton - 라이언 고슬링 웃음 참기 | 18 |
-| `RRBoPveyETc` | Mean Tweets - 셀럽 악플 읽기 #1 | 19 |
-| `wyDU93xVAJs` | Conan - 시즌4 하이라이트 | 6 |
-| `JGwWNGJdvx8` | Ed Sheeran - Shape of You | 16 |
-| `YQHsXMglC9A` | Adele - Hello | 4 |
-| `M7KelAaqsCg` | Inside Out 2 - 인사이드 아웃 2 | 21 |
-| `w7UGkviTIpY` | Toy Story 3 - 토이스토리 3 | 10 |
+| `notting-hill` | Notting Hill | movie | 2 |
+| `the-godfather` | The Godfather | movie | 1 |
+| `graham-norton` | Graham Norton Show | entertainment | 5 |
+| `jimmy-fallon` | The Tonight Show | entertainment | 6 |
+| `mean-tweets` | Mean Tweets | entertainment | 6 |
+| `conan` | Conan | entertainment | 2 |
+| `carpool-karaoke` | Carpool Karaoke | entertainment | 1 |
+| `ted-talks` | TED Talks | daily | 12 |
+| `daily-english` | Daily English | daily | 1 |
+| `pop-hits` | Pop Hits | music | 8 |
+| `rock-classics` | Rock Classics | music | 2 |
+| `pixar-moments` | Pixar Classics | animation | 4 |
 
 ### 알려진 이슈
 
@@ -691,7 +672,7 @@ GROQ_API_KEY="..." node scripts/prebake-all.js --force
 | `YQHsXMglC9A` (Adele - Hello) | 자막 항목 4개로 매우 적음. 음악 영상이라 대사 대신 가사 위주 | 낮음 |
 | `gO8N3L_aERg` (The Office 화재) | 자막 항목 6개로 적음. 대사보다 시각적 장면이 많은 구간 | 낮음 |
 | `wyDU93xVAJs` (Conan 하이라이트) | 자막 항목 6개로 적음 | 낮음 |
-| `daily` 카테고리 | 등록된 영상 0개 | 중간 (카테고리 존재하나 콘텐츠 없음) |
+| `JRfuAukYTKg` (Titanium) | 자막 항목 4개로 적음. 음악 영상 특성 | 낮음 |
 
 ---
 
