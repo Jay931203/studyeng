@@ -4,6 +4,7 @@ import { Suspense, useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { LogoFull } from '@/components/Logo'
+import { sanitizeAppPath } from '@/lib/navigation'
 import { usePremiumStore } from '@/stores/usePremiumStore'
 
 function BillingSuccessPageContent() {
@@ -11,6 +12,7 @@ function BillingSuccessPageContent() {
   const searchParams = useSearchParams()
   const setPremiumEntitlement = usePremiumStore((state) => state.setPremiumEntitlement)
   const sessionId = useMemo(() => searchParams.get('session_id'), [searchParams])
+  const nextPath = useMemo(() => sanitizeAppPath(searchParams.get('next'), '/profile'), [searchParams])
   const [status, setStatus] = useState<'syncing' | 'done' | 'error'>('syncing')
 
   useEffect(() => {
@@ -40,7 +42,7 @@ function BillingSuccessPageContent() {
         if (!cancelled) {
           setPremiumEntitlement(Boolean(payload.isPremium))
           setStatus('done')
-          window.setTimeout(() => router.replace('/profile'), 1200)
+          window.setTimeout(() => router.replace(nextPath), 1200)
         }
       } catch (error) {
         console.warn('[billing] success page sync failed:', error)
@@ -55,7 +57,7 @@ function BillingSuccessPageContent() {
     return () => {
       cancelled = true
     }
-  }, [router, sessionId, setPremiumEntitlement])
+  }, [nextPath, router, sessionId, setPremiumEntitlement])
 
   return (
     <div className="flex min-h-dvh items-center justify-center px-6 py-12">
@@ -74,7 +76,7 @@ function BillingSuccessPageContent() {
         </p>
         <div className="mt-6">
           <Link
-            href="/profile"
+            href={nextPath}
             className="inline-flex rounded-2xl bg-[var(--accent-primary)] px-5 py-3 text-sm font-semibold text-white"
           >
             프로필로 이동

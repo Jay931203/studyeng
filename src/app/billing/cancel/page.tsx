@@ -1,6 +1,14 @@
 import Link from 'next/link'
+import { sanitizeAppPath } from '@/lib/navigation'
 
-export default function BillingCancelPage() {
+export default async function BillingCancelPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ next?: string }>
+}) {
+  const resolvedSearchParams = await searchParams
+  const nextPath = sanitizeAppPath(resolvedSearchParams.next, '/profile')
+
   return (
     <div className="flex min-h-dvh items-center justify-center px-6 py-12">
       <div className="w-full max-w-md rounded-[32px] border border-[var(--border-card)] bg-[var(--bg-card)] p-8 text-center shadow-2xl">
@@ -10,10 +18,10 @@ export default function BillingCancelPage() {
         </p>
         <div className="mt-6 flex justify-center gap-3">
           <Link
-            href="/profile"
+            href={nextPath}
             className="rounded-2xl bg-[var(--accent-primary)] px-5 py-3 text-sm font-semibold text-white"
           >
-            프로필
+            돌아가기
           </Link>
           <Link
             href="/shorts"

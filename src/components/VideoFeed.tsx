@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { series as allSeries, type VideoData } from '@/data/seed-videos'
 import { useOrientation } from '@/hooks/useOrientation'
+import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { usePlayerStore } from '@/stores/usePlayerStore'
@@ -143,6 +144,17 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
     markWatched,
     registerImpression,
   ])
+
+  useEffect(() => {
+    if (!currentVideo || typeof window === 'undefined') return
+
+    const nextUrl = buildShortsUrl(currentVideo.id, currentVideo.seriesId)
+    const currentUrl = `${window.location.pathname}${window.location.search}`
+
+    if (currentUrl !== nextUrl) {
+      window.history.replaceState(window.history.state, '', nextUrl)
+    }
+  }, [currentVideo])
 
   useEffect(() => {
     return () => {
@@ -339,6 +351,14 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
               className="absolute bottom-3 right-3 z-20 flex flex-col gap-3"
               onPointerDownCapture={(event) => event.stopPropagation()}
               onClick={(event) => event.stopPropagation()}
+              style={
+                isLandscape
+                  ? {
+                      right: 'max(12px, env(safe-area-inset-right, 0px))',
+                      bottom: 'max(12px, env(safe-area-inset-bottom, 0px))',
+                    }
+                  : undefined
+              }
             >
               {currentIndex > 0 && (
                 <button
@@ -389,7 +409,14 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
             style={{
               backgroundColor: 'var(--player-control-bg)',
               borderColor: 'var(--player-control-border)',
-              ...(isLandscape ? { right: 'auto', width: 'calc(62% - 24px)' } : {}),
+              ...(isLandscape
+                ? {
+                    left: 'max(12px, env(safe-area-inset-left, 0px))',
+                    top: 'max(12px, env(safe-area-inset-top, 0px))',
+                    right: 'auto',
+                    width: 'calc(62% - 24px)',
+                  }
+                : {}),
             }}
           >
             <div
@@ -471,7 +498,14 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
       {videos.length > 1 && videos.length <= 20 && (
         <div
           className="pointer-events-none absolute top-5 z-10 flex flex-col gap-[3px]"
-          style={isLandscape ? { left: 'calc(62% - 16px)' } : { right: '12px' }}
+          style={
+            isLandscape
+              ? {
+                  left: 'calc(62% - 16px)',
+                  top: 'max(20px, env(safe-area-inset-top, 0px))',
+                }
+              : { right: '12px' }
+          }
         >
           {videos.slice(0, Math.min(videos.length, 12)).map((_, index) => (
             <div

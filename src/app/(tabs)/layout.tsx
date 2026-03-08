@@ -1,7 +1,7 @@
 'use client'
 
 import { Suspense, useEffect, useState } from 'react'
-import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { BottomNav } from '@/components/BottomNav'
 import { LogoFull } from '@/components/Logo'
 import { LoginGateModal } from '@/components/LoginGateModal'
@@ -23,7 +23,6 @@ export default function TabsLayout({
 }) {
   const router = useRouter()
   const pathname = usePathname()
-  const searchParams = useSearchParams()
   const hasOnboarded = useOnboardingStore((state) => state.hasOnboarded)
   const onboardingHydrated = useOnboardingStore((state) => state.hydrated)
   const completeOnboarding = useOnboardingStore((state) => state.completeOnboarding)
@@ -35,7 +34,6 @@ export default function TabsLayout({
 
   const [splashDone, setSplashDone] = useState(false)
   const [dismissedGuestGateVersion, setDismissedGuestGateVersion] = useState<number | null>(null)
-  const currentPath = `${pathname}${searchParams.toString() ? `?${searchParams.toString()}` : ''}`
   const isImmersiveRoute = pathname === '/shorts' || pathname === '/'
   const hasExistingActivity = watchedVideoIds.length > 0 || phraseCount > 0 || streakDays > 0
   const shouldAutoCompleteOnboarding =
@@ -62,13 +60,17 @@ export default function TabsLayout({
     }
 
     if (shouldRedirectToOnboarding) {
+      const currentPath =
+        typeof window === 'undefined'
+          ? pathname
+          : `${pathname}${window.location.search}`
       router.replace(buildPathWithNext('/onboarding', currentPath))
     }
   }, [
-    currentPath,
     authLoading,
     completeOnboarding,
     onboardingHydrated,
+    pathname,
     router,
     shouldAutoCompleteOnboarding,
     shouldRedirectToOnboarding,
@@ -86,7 +88,11 @@ export default function TabsLayout({
   return (
     <div
       className={`relative mx-auto w-full ${
-        isImmersiveRoute ? 'flex h-dvh flex-col' : 'min-h-dvh lg:grid lg:grid-cols-[280px_minmax(0,1fr)]'
+        isImmersiveRoute
+          ? isLandscape
+            ? 'grid h-dvh grid-cols-[76px_minmax(0,1fr)]'
+            : 'flex h-dvh flex-col'
+          : 'min-h-dvh lg:grid lg:grid-cols-[280px_minmax(0,1fr)]'
       }`}
       style={
         isImmersiveRoute && isLandscape
@@ -97,6 +103,14 @@ export default function TabsLayout({
           : undefined
       }
     >
+      {isImmersiveRoute && isLandscape && (
+        <div className="border-r border-[var(--border-card)]/60 bg-black/20 p-2">
+          <div className="sticky top-2 h-[calc(100dvh-1rem)]">
+            <BottomNav mode="rail" />
+          </div>
+        </div>
+      )}
+
       {!isImmersiveRoute && (
         <div className="hidden border-r border-[var(--border-card)]/60 bg-black/15 px-5 py-6 lg:block">
           <div className="sticky top-6 h-[calc(100dvh-3rem)]">
@@ -107,7 +121,7 @@ export default function TabsLayout({
 
       <div
         className={`relative flex min-h-dvh min-w-0 flex-col ${
-          isImmersiveRoute ? (isLandscape ? 'max-w-none' : 'w-full') : 'w-full'
+          isImmersiveRoute ? 'w-full' : 'w-full'
         }`}
       >
         <main className="flex-1 overflow-hidden">{children}</main>

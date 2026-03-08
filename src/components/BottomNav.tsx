@@ -96,7 +96,7 @@ const icons: Record<string, (active: boolean) => ReactNode> = {
 }
 
 interface BottomNavProps {
-  mode?: 'bottom' | 'sidebar'
+  mode?: 'bottom' | 'sidebar' | 'rail'
 }
 
 function isTabActive(pathname: string, href: string, isLegacyShortsAlias: boolean) {
@@ -116,6 +116,39 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
   const searchParams = useSearchParams()
   const isLegacyShortsAlias =
     pathname === '/' && Boolean(searchParams.get('v') || searchParams.get('series'))
+
+  if (mode === 'rail') {
+    return (
+      <aside className="flex h-full flex-col rounded-[28px] border border-[var(--border-card)] bg-[var(--bg-card)]/88 p-2 shadow-[var(--card-shadow)] backdrop-blur-xl">
+        <div className="mb-3 flex items-center justify-center rounded-[20px] bg-black/20 px-2 py-3">
+          <Logo className="h-5 text-[var(--text-primary)]" />
+        </div>
+
+        <nav className="flex flex-1 flex-col items-center gap-2">
+          {tabs.map(({ href, icon, label }) => {
+            const active = isTabActive(pathname, href, isLegacyShortsAlias)
+
+            return (
+              <Link
+                key={href}
+                href={href}
+                aria-label={label}
+                aria-current={active ? 'page' : undefined}
+                className={`flex w-full flex-col items-center justify-center gap-1 rounded-[20px] px-2 py-3 text-center transition-all ${
+                  active
+                    ? 'bg-[var(--accent-glow)] text-[var(--nav-active)]'
+                    : 'text-[var(--nav-inactive)] hover:bg-[var(--bg-secondary)]/45'
+                }`}
+              >
+                <div className="relative z-10">{icons[icon](active)}</div>
+                <span className="text-[10px] font-medium">{label}</span>
+              </Link>
+            )
+          })}
+        </nav>
+      </aside>
+    )
+  }
 
   if (mode === 'sidebar') {
     return (

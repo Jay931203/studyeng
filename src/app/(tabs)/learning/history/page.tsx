@@ -73,13 +73,22 @@ export default function WatchHistoryPage() {
     handleCloseConfirm()
   }
 
+  const handleBack = () => {
+    if (typeof window !== 'undefined' && window.history.length > 1) {
+      router.back()
+      return
+    }
+
+    router.replace('/learning')
+  }
+
   return (
     <div className="h-full overflow-y-auto no-scrollbar pb-20 pt-12">
       <div className="px-4">
         <div className="mb-6 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <button
-              onClick={() => router.back()}
+              onClick={handleBack}
               className="text-[var(--text-secondary)] transition-transform active:scale-90"
               aria-label="뒤로 가기"
             >

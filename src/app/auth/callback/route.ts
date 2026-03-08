@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
-import { sanitizeAppPath } from '@/lib/navigation'
+import { buildPathWithNext, sanitizeAppPath } from '@/lib/navigation'
 import { getSupabaseEnv } from '@/lib/supabase/config'
 
 export async function GET(request: Request) {
@@ -8,9 +8,10 @@ export async function GET(request: Request) {
   const code = searchParams.get('code')
   const next = sanitizeAppPath(searchParams.get('next'), '/')
   const { url, anonKey, configured } = getSupabaseEnv()
+  const loginRedirectBase = `${origin}${buildPathWithNext('/login', next)}`
 
   if (!configured || !url || !anonKey) {
-    return NextResponse.redirect(`${origin}/login?auth=unavailable`)
+    return NextResponse.redirect(`${loginRedirectBase}&auth=unavailable`)
   }
 
   if (code) {
@@ -50,5 +51,5 @@ export async function GET(request: Request) {
     }
   }
 
-  return NextResponse.redirect(`${origin}/auth/error`)
+  return NextResponse.redirect(`${loginRedirectBase}&auth=error`)
 }

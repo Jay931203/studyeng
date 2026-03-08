@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { Suspense, useEffect, useState } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Logo, LogoFull } from '@/components/Logo'
@@ -34,7 +34,7 @@ function LoadingScreen() {
   )
 }
 
-export default function OnboardingPage() {
+function OnboardingPageContent() {
   const [step, setStep] = useState(0)
   const [selectedLevel, setSelectedLevel] =
     useState<'beginner' | 'intermediate' | 'advanced'>('beginner')
@@ -154,5 +154,13 @@ export default function OnboardingPage() {
         </AnimatePresence>
       </div>
     </div>
+  )
+}
+
+export default function OnboardingPage() {
+  return (
+    <Suspense fallback={<LoadingScreen />}>
+      <OnboardingPageContent />
+    </Suspense>
   )
 }
