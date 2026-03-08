@@ -1,6 +1,6 @@
 # Shortee
 
-Shortee is a short-form English learning app built around vertical video clips, lightweight review loops, and a mobile-first feed experience.
+Shortee is a short-form English feed built around clips, subtitle interaction, saves, repeats, and quick return loops.
 
 ## Product
 
@@ -25,6 +25,7 @@ npm run build
 - [OMX brand playbook](./docs/reports/2026-03-08-shortee-omx-brand-playbook.md)
 - [Brand council review](./docs/reports/2026-03-08-shortee-brand-council-review.md)
 - [Brand and growth command center](./docs/reports/2026-03-08-shortee-brand-command-center.md)
+- [Market offer and moat](./docs/reports/2026-03-08-shortee-market-offer-and-moat.md)
 - [Store launch kit](./docs/reports/2026-03-08-shortee-store-launch-kit.md)
 - [Store screenshot system](./docs/reports/2026-03-08-shortee-store-screenshot-system.md)
 - [Channel growth playbook](./docs/reports/2026-03-08-shortee-channel-growth-playbook.md)
