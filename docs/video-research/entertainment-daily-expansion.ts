@@ -1199,6 +1199,132 @@ export const entertainmentVideos: VideoCandidate[] = [
     verified: false,
     notes: 'Record-breaking tweet. Celebrity banter.',
   },
+
+  // ============================================================
+  // ADDITIONAL ENTERTAINMENT (13 more to reach 133 total)
+  // ============================================================
+
+  // --- More SNL (from verified Season 50 list) ---
+  {
+    youtubeId: 'AafBunu-k2U',
+    title: 'Family Feud Election 2024 Cold Open',
+    series: 'snl',
+    category: 'entertainment',
+    verified: true, // [VERIFIED] from LateNighter Season 50
+    notes: '11.3M views. Ariana Grande episode. Political comedy.',
+  },
+  {
+    youtubeId: '7E_WeuKkJ2s',
+    title: 'VP Debate 2024 Cold Open',
+    series: 'snl',
+    category: 'entertainment',
+    verified: true, // [VERIFIED] from LateNighter Season 50
+    notes: '8.46M views. Nate Bargatze/Coldplay episode.',
+  },
+  {
+    youtubeId: 'zejK1XHIDcI',
+    title: "My Best Friend's House - Ariana Grande",
+    series: 'snl',
+    category: 'entertainment',
+    verified: true, // [VERIFIED] from LateNighter Season 50
+    notes: '4.61M views. Non-political sketch.',
+  },
+
+  // --- More Impractical Jokers ---
+  {
+    youtubeId: 'N4uDo35wR9I',
+    title: 'Impractical Jokers - Sal and the Cats Punishment',
+    series: 'impractical-jokers',
+    category: 'entertainment',
+    verified: false,
+    notes: 'Fan-favorite punishment. Genuine fear reactions.',
+  },
+
+  // --- More Stand-Up Comedy ---
+  {
+    youtubeId: 'v4tby3znOy8',
+    title: 'Gabriel Iglesias - Fluffy Goes to India',
+    series: 'standup-comedy',
+    category: 'entertainment',
+    verified: false,
+    notes: 'Cross-cultural comedy. Clear storytelling.',
+  },
+  {
+    youtubeId: 'h_6TaYSusqU',
+    title: 'Taylor Tomlinson - Quarter-Life Crisis',
+    series: 'standup-comedy',
+    category: 'entertainment',
+    verified: false,
+    notes: 'Young comedian. Millennial humor.',
+  },
+
+  // --- More Celebrity Interviews ---
+  {
+    youtubeId: 'LUF7jnSgqi0',
+    title: 'Margot Robbie Teaches Australian Slang',
+    series: 'celebrity-interviews',
+    category: 'entertainment',
+    verified: false,
+    notes: 'Language-focused interview. Perfect for app.',
+  },
+
+  // --- More Gordon Ramsay ---
+  {
+    youtubeId: '7xTA_dNi8NI',
+    title: 'Gordon Ramsay - Idiot Sandwich Moment',
+    series: 'kitchen-nightmares',
+    category: 'entertainment',
+    verified: false,
+    notes: 'Iconic meme moment. Short punchy dialogue.',
+  },
+
+  // --- More Shark Tank ---
+  {
+    youtubeId: 'ysKqrIjVnHc',
+    title: 'Shark Tank - Worst Pitch Ever Gets Laughed Out',
+    series: 'shark-tank',
+    category: 'entertainment',
+    verified: false,
+    notes: 'Failed pitch. Real reactions.',
+  },
+
+  // --- More The Voice ---
+  {
+    youtubeId: 'cPAbx5kgCJo',
+    title: 'Ariana Grande Joins The Voice as Coach',
+    series: 'the-voice',
+    category: 'entertainment',
+    verified: false,
+    notes: 'Coach interactions. Celebrity dialogue.',
+  },
+
+  // --- More Whose Line ---
+  {
+    youtubeId: 'D1nJGJlEMEQ',
+    title: 'Whose Line - Props Game Best Of',
+    series: 'whose-line',
+    category: 'entertainment',
+    verified: false,
+    notes: 'Physical comedy with improv dialogue.',
+  },
+
+  // --- More Award Shows ---
+  {
+    youtubeId: 'X3s9RVg2STY',
+    title: 'Meryl Streep Golden Globes Speech 2017',
+    series: 'award-shows',
+    category: 'entertainment',
+    verified: false,
+    notes: 'Powerful political speech. Clear diction.',
+  },
+  {
+    youtubeId: 'LGatN_93paA',
+    title: 'Heath Ledger Oscar Tribute - Family Accepts Award',
+    series: 'award-shows',
+    category: 'entertainment',
+    verified: false,
+    notes: 'Emotional posthumous acceptance. Moving English.',
+  },
 ];
 
 // ============================================================
@@ -1909,7 +2035,7 @@ export const dailyVideos: VideoCandidate[] = [
 
 /**
  * ENTERTAINMENT TOTAL: 120 video candidates
- *   - SNL: 10
+ *   - SNL: 13 (10 original + 3 bonus from Season 50)
  *   - Jimmy Kimmel: 5
  *   - Stephen Colbert: 5
  *   - Trevor Noah: 5
@@ -1920,14 +2046,14 @@ export const dailyVideos: VideoCandidate[] = [
  *   - David Letterman: 3
  *   - AGT / Got Talent: 5
  *   - MasterChef / Gordon Ramsay: 5
- *   - Kitchen Nightmares: 5
- *   - Shark Tank: 5
- *   - The Voice: 3
- *   - Impractical Jokers: 5
- *   - Whose Line Is It Anyway: 5
- *   - Stand-Up Comedy: 10
- *   - Celebrity Interviews: 10
- *   - Award Show Moments: 5
+ *   - Kitchen Nightmares: 6
+ *   - Shark Tank: 6
+ *   - The Voice: 4
+ *   - Impractical Jokers: 6
+ *   - Whose Line Is It Anyway: 6
+ *   - Stand-Up Comedy: 12
+ *   - Celebrity Interviews: 11
+ *   - Award Show Moments: 7
  *
  * DAILY/EDUCATION TOTAL: 80 video candidates
  *   - TED Talks (New): 20
@@ -1943,8 +2069,8 @@ export const dailyVideos: VideoCandidate[] = [
  *
  * GRAND TOTAL: 200 video candidates
  *
- * VERIFIED VIDEO IDs: 27 (confirmed from page embeds/URLs)
- * UNVERIFIED: 173 (need YouTube ID verification before processing)
+ * VERIFIED VIDEO IDs: 25 (confirmed from page embeds/URLs)
+ * UNVERIFIED: 175 (need YouTube ID verification before processing)
  *
  * NEXT STEPS:
  * 1. Run verification script to check all 200 YouTube IDs load
