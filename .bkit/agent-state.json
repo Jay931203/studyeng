@@ -1,55 +1,14 @@
 {
   "version": "1.0",
-  "enabled": true,
+  "enabled": false,
   "teamName": "",
   "feature": "studyeng",
   "pdcaPhase": "do",
   "orchestrationPattern": "leader",
   "ctoAgent": "opus",
-  "startedAt": "2026-03-07T01:05:57.061Z",
-  "lastUpdated": "2026-03-07T01:54:06.265Z",
-  "teammates": [
-    {
-      "name": "a67121cd6286a658d",
-      "role": "general-purpose",
-      "model": "sonnet",
-      "status": "completed",
-      "currentTask": null,
-      "taskId": null,
-      "startedAt": "2026-03-07T01:05:57.063Z",
-      "lastActivityAt": "2026-03-07T01:41:49.427Z"
-    },
-    {
-      "name": "a74c01436e5ac2844",
-      "role": "frontend-developer",
-      "model": "sonnet",
-      "status": "completed",
-      "currentTask": null,
-      "taskId": null,
-      "startedAt": "2026-03-07T01:06:15.402Z",
-      "lastActivityAt": "2026-03-07T01:09:39.864Z"
-    },
-    {
-      "name": "a3481046915f8fead",
-      "role": "frontend-developer",
-      "model": "sonnet",
-      "status": "completed",
-      "currentTask": null,
-      "taskId": null,
-      "startedAt": "2026-03-07T01:43:54.828Z",
-      "lastActivityAt": "2026-03-07T01:54:06.257Z"
-    },
-    {
-      "name": "a5d288970177f84d1",
-      "role": "frontend-developer",
-      "model": "sonnet",
-      "status": "completed",
-      "currentTask": null,
-      "taskId": null,
-      "startedAt": "2026-03-07T01:44:09.629Z",
-      "lastActivityAt": "2026-03-07T01:46:18.405Z"
-    }
-  ],
+  "startedAt": "2026-03-08T01:12:07.898Z",
+  "lastUpdated": "2026-03-08T01:12:56.237Z",
+  "teammates": [],
   "progress": {
     "totalTasks": 0,
     "completedTasks": 0,

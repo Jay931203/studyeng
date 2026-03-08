@@ -196,9 +196,8 @@ export function VideoFeed({ videos }: VideoFeedProps) {
           />
           <UnifiedControls videoId={currentVideo.id} videoTitle={currentVideo.title} />
 
-          {/* Gradient overlays for text readability */}
+          {/* Gradient overlay for top text readability */}
           <div className="absolute top-0 left-0 right-0 h-[120px] bg-gradient-to-b from-black/60 to-transparent pointer-events-none z-[5]" />
-          <div className="absolute bottom-0 left-0 right-0 h-[200px] bg-gradient-to-t from-black/60 to-transparent pointer-events-none z-[5]" />
         </motion.div>
       </AnimatePresence>
 

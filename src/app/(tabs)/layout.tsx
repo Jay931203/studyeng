@@ -5,12 +5,12 @@ import { useRouter } from 'next/navigation'
 import { BottomNav } from '@/components/BottomNav'
 import { LevelUpModal } from '@/components/LevelUpModal'
 import { XpGainToast } from '@/components/XpGainToast'
-import { BadgeUnlock } from '@/components/BadgeUnlock'
+
 import { LoginGateModal } from '@/components/LoginGateModal'
 import { AdminActivator } from '@/components/AdminActivator'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
-import { useBadgeChecker } from '@/hooks/useBadgeChecker'
+
 import { useAuth } from '@/hooks/useAuth'
 
 const GUEST_VIEW_LIMIT = 3
@@ -26,9 +26,6 @@ export default function TabsLayout({
   const [showLoginGate, setShowLoginGate] = useState(false)
   const { user, loading: authLoading } = useAuth()
   const watchedVideoIds = useWatchHistoryStore((s) => s.watchedVideoIds)
-
-  // Reactively check badge conditions whenever relevant stats change
-  useBadgeChecker()
 
   useEffect(() => {
     if (!hasOnboarded) {
@@ -83,7 +80,7 @@ export default function TabsLayout({
       <BottomNav />
       <LevelUpModal />
       <XpGainToast />
-      <BadgeUnlock />
+
       <LoginGateModal isOpen={showLoginGate} />
       <Suspense fallback={null}>
         <AdminActivator />

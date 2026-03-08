@@ -34,17 +34,20 @@ function loadYouTubeAPI(): Promise<void> {
 
 /**
  * Find the index of the subtitle that covers the given time.
- * Uses a small buffer on end time to prevent flickering between subtitles,
- * and fills gaps by extending the previous subtitle until the next one starts.
+ * When the current time falls in a gap between subtitle N and N+1,
+ * subtitle N remains active until N+1 starts (no disappearing).
  */
 function findActiveSubIndex(subtitles: SubtitleEntry[], time: number): number {
   for (let i = 0; i < subtitles.length; i++) {
     const sub = subtitles[i]
-    const nextStart = i < subtitles.length - 1 ? subtitles[i + 1].start : sub.end + 1
-    // Extend end time: use the later of (original end + 0.3s buffer) or next subtitle start
-    // This fills gaps between subtitles so there's no flicker
-    const effectiveEnd = Math.min(sub.end + 0.3, nextStart)
-    if (time >= sub.start - 0.1 && time <= Math.max(sub.end, effectiveEnd)) return i
+    // Currently within this subtitle's time range
+    if (time >= sub.start && time < sub.end) {
+      return i
+    }
+    // In the gap after this subtitle, before the next one starts (or after the last subtitle)
+    if (time >= sub.end && (i === subtitles.length - 1 || time < subtitles[i + 1].start)) {
+      return i
+    }
   }
   return -1
 }

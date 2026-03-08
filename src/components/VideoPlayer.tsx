@@ -72,90 +72,94 @@ export function VideoPlayer({ youtubeId, subtitles: propSubtitles, clipStart = 0
   }, [isPlaying, play, pause])
 
   return (
-    <div className="relative w-full h-full bg-black" onClick={handleTap}>
-      {/* YouTube player container — controls:0 and iv_load_policy:3 already
-          hide most YouTube UI. Allow pointer events so the user can dismiss
-          any YouTube-forced overlays (e.g. "more info" X button). */}
-      <div
-        id={containerId}
-        className="absolute inset-0 w-full h-full"
-      />
+    <div className="flex flex-col w-full h-full bg-black">
+      {/* Video area — top 55% */}
+      <div className="relative flex-shrink-0" style={{ height: '55%' }} onClick={handleTap}>
+        {/* YouTube player container — pointer-events-none so swipe gestures
+            pass through to the parent drag handler. YouTube UI is already
+            suppressed via controls:0 and iv_load_policy:3. */}
+        <div
+          id={containerId}
+          className="absolute inset-0 w-full h-full pointer-events-none"
+        />
 
-      {/* Play/Pause icon overlay */}
-      {showPauseIcon && (
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
-          <div className="bg-black/50 rounded-full w-16 h-16 flex items-center justify-center animate-fade-out">
-            {pauseIconType === 'pause' ? (
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-8 h-8">
-                <path fillRule="evenodd" d="M6.75 5.25a.75.75 0 01.75-.75H9a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H7.5a.75.75 0 01-.75-.75V5.25zm7.5 0A.75.75 0 0115 4.5h1.5a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H15a.75.75 0 01-.75-.75V5.25z" clipRule="evenodd" />
-              </svg>
-            ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-8 h-8">
-                <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
-              </svg>
-            )}
+        {/* Play/Pause icon overlay */}
+        {showPauseIcon && (
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-20">
+            <div className="bg-black/50 rounded-full w-16 h-16 flex items-center justify-center animate-fade-out">
+              {pauseIconType === 'pause' ? (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-8 h-8">
+                  <path fillRule="evenodd" d="M6.75 5.25a.75.75 0 01.75-.75H9a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H7.5a.75.75 0 01-.75-.75V5.25zm7.5 0A.75.75 0 0115 4.5h1.5a.75.75 0 01.75.75v13.5a.75.75 0 01-.75.75H15a.75.75 0 01-.75-.75V5.25z" clipRule="evenodd" />
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-8 h-8">
+                  <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
+                </svg>
+              )}
+            </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {/* Scrollable lyrics-style subtitles */}
-      <LyricsSubtitles
-        subtitles={subtitles}
-        videoId={youtubeId}
-        onSavePhrase={onSavePhrase}
-        onSeek={(time) => seekTo(time)}
-      />
-
-      {/* Transcript loading indicator */}
-      {transcriptLoading && (
-        <div className="absolute bottom-[160px] left-0 right-0 flex justify-center z-10 pointer-events-none">
-          <div className="bg-black/60 backdrop-blur-sm rounded-full px-3 py-1.5 flex items-center gap-2">
-            <div className="w-3 h-3 border border-white/30 border-t-white rounded-full animate-spin" />
-            <span className="text-white/60 text-xs">Loading subtitles...</span>
-          </div>
-        </div>
-      )}
-
-
-      {/* Video error overlay */}
-      {videoError && (
-        <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/90 z-30 gap-4 px-8">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-12 h-12 text-red-400">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
-          </svg>
-          <p className="text-white text-center text-base font-medium">{videoError}</p>
-          <div className="flex gap-3 mt-2">
-            <button
-              onClick={(e) => {
-                e.stopPropagation()
-                clearVideoError()
-                window.location.reload()
-              }}
-              className="px-5 py-2.5 bg-white/10 text-white rounded-xl text-sm font-medium"
-            >
-              다시 시도
-            </button>
-            {onClipComplete && (
+        {/* Video error overlay */}
+        {videoError && (
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/90 z-30 gap-4 px-8">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-12 h-12 text-red-400">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+            </svg>
+            <p className="text-white text-center text-base font-medium">{videoError}</p>
+            <div className="flex gap-3 mt-2">
               <button
                 onClick={(e) => {
                   e.stopPropagation()
                   clearVideoError()
-                  onClipComplete()
+                  window.location.reload()
                 }}
-                className="px-5 py-2.5 bg-blue-500 text-white rounded-xl text-sm font-medium"
+                className="px-5 py-2.5 bg-white/10 text-white rounded-xl text-sm font-medium"
               >
-                다음 영상
+                다시 시도
               </button>
-            )}
+              {onClipComplete && (
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    clearVideoError()
+                    onClipComplete()
+                  }}
+                  className="px-5 py-2.5 bg-blue-500 text-white rounded-xl text-sm font-medium"
+                >
+                  다음 영상
+                </button>
+              )}
+            </div>
           </div>
-        </div>
-      )}
+        )}
 
-      {!ready && !videoError && (
-        <div className="absolute inset-0 flex items-center justify-center bg-black">
-          <div className="w-8 h-8 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-        </div>
-      )}
+        {!ready && !videoError && (
+          <div className="absolute inset-0 flex items-center justify-center bg-black">
+            <div className="w-8 h-8 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+          </div>
+        )}
+
+        {/* Transcript loading indicator */}
+        {transcriptLoading && (
+          <div className="absolute bottom-4 left-0 right-0 flex justify-center z-10 pointer-events-none">
+            <div className="bg-black/60 backdrop-blur-sm rounded-full px-3 py-1.5 flex items-center gap-2">
+              <div className="w-3 h-3 border border-white/30 border-t-white rounded-full animate-spin" />
+              <span className="text-white/60 text-xs">Loading subtitles...</span>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Subtitles area — bottom 45% */}
+      <div className="flex-1 min-h-0 bg-black">
+        <LyricsSubtitles
+          subtitles={subtitles}
+          videoId={youtubeId}
+          onSavePhrase={onSavePhrase}
+          onSeek={(time) => seekTo(time)}
+        />
+      </div>
 
       <PremiumModal
         isOpen={showSubtitleGate}

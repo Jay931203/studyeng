@@ -3,6 +3,8 @@
 import { useRef, useEffect, useCallback, useState } from 'react'
 import { usePlayerStore } from '@/stores/usePlayerStore'
 import { useAdminStore } from '@/stores/useAdminStore'
+import { usePhraseStore } from '@/stores/usePhraseStore'
+import { DoubleTapTip } from './DoubleTapTip'
 import type { SubtitleEntry } from '@/data/seed-videos'
 
 interface LyricsSubtitlesProps {
@@ -15,6 +17,7 @@ interface LyricsSubtitlesProps {
 export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: LyricsSubtitlesProps) {
   const { subtitleMode, activeSubIndex } = usePlayerStore()
   const { isAdmin, toggleFlag, isFlagged } = useAdminStore()
+  const phrases = usePhraseStore((s) => s.phrases)
   const containerRef = useRef<HTMLDivElement>(null)
   const lineRefs = useRef<(HTMLDivElement | null)[]>([])
   const prevActiveRef = useRef<number>(-1)
@@ -25,10 +28,17 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
     lineRefs.current = lineRefs.current.slice(0, subtitles.length)
   }, [subtitles])
 
-  // Long-press state
-  const longPressTimerRef = useRef<number | null>(null)
-  const [savedIdx, setSavedIdx] = useState<number | null>(null)
+  // Double-tap detection
+  const lastTapRef = useRef<{ idx: number; time: number }>({ idx: -1, time: 0 })
+  // Temporary "saved!" feedback
+  const [justSavedIdx, setJustSavedIdx] = useState<number | null>(null)
   const savedFeedbackTimerRef = useRef<number | null>(null)
+
+  // Check if a subtitle is already saved
+  const isSavedPhrase = useCallback(
+    (sub: SubtitleEntry) => phrases.some((p) => p.en === sub.en),
+    [phrases],
+  )
 
   // Auto-scroll to keep the active subtitle centered — smoothed with rAF
   useEffect(() => {
@@ -47,12 +57,11 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
     prevActiveRef.current = activeSubIndex
 
     if (isConsecutive) {
-      // Cancel any pending animation frame
       if (scrollRafRef.current) cancelAnimationFrame(scrollRafRef.current)
 
       const startTop = container.scrollTop
       const diff = targetTop - startTop
-      const duration = 400 // ms
+      const duration = 400
       let startTime: number | null = null
 
       const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3)
@@ -73,60 +82,32 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
   }, [activeSubIndex])
 
   const handleLineClick = useCallback(
-    (sub: SubtitleEntry, e: React.MouseEvent) => {
+    (sub: SubtitleEntry, idx: number, e: React.MouseEvent) => {
       e.stopPropagation()
-      onSeek?.(sub.start)
-    },
-    [onSeek],
-  )
+      const now = Date.now()
+      const last = lastTapRef.current
 
-  // Long-press handlers for saving phrases
-  const handlePointerDown = useCallback(
-    (sub: SubtitleEntry, idx: number) => {
-      if (!onSavePhrase) return
-
-      // Clear any existing timer
-      if (longPressTimerRef.current) {
-        clearTimeout(longPressTimerRef.current)
-      }
-
-      longPressTimerRef.current = window.setTimeout(() => {
-        // Long-press triggered - save phrase
-        onSavePhrase(sub)
-
-        // Show visual feedback
-        setSavedIdx(idx)
-        if (savedFeedbackTimerRef.current) {
-          clearTimeout(savedFeedbackTimerRef.current)
+      if (last.idx === idx && now - last.time < 400) {
+        // Double tap → save phrase
+        if (onSavePhrase && !isSavedPhrase(sub)) {
+          onSavePhrase(sub)
+          setJustSavedIdx(idx)
+          if (savedFeedbackTimerRef.current) clearTimeout(savedFeedbackTimerRef.current)
+          savedFeedbackTimerRef.current = window.setTimeout(() => setJustSavedIdx(null), 1200)
         }
-        savedFeedbackTimerRef.current = window.setTimeout(() => {
-          setSavedIdx(null)
-        }, 1200)
-
-        longPressTimerRef.current = null
-      }, 500)
+        lastTapRef.current = { idx: -1, time: 0 }
+      } else {
+        // Single tap → seek
+        onSeek?.(sub.start)
+        lastTapRef.current = { idx, time: now }
+      }
     },
-    [onSavePhrase],
+    [onSeek, onSavePhrase, isSavedPhrase],
   )
-
-  const handlePointerUp = useCallback(() => {
-    if (longPressTimerRef.current) {
-      clearTimeout(longPressTimerRef.current)
-      longPressTimerRef.current = null
-    }
-  }, [])
-
-  const handlePointerCancel = useCallback(() => {
-    if (longPressTimerRef.current) {
-      clearTimeout(longPressTimerRef.current)
-      longPressTimerRef.current = null
-    }
-  }, [])
 
   // Cleanup timers on unmount
   useEffect(() => {
     return () => {
-      if (longPressTimerRef.current) clearTimeout(longPressTimerRef.current)
       if (savedFeedbackTimerRef.current) clearTimeout(savedFeedbackTimerRef.current)
       if (scrollRafRef.current) cancelAnimationFrame(scrollRafRef.current)
     }
@@ -138,15 +119,16 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
 
   return (
     <div
-      className="absolute bottom-[90px] left-0 right-0 z-10 pointer-events-auto"
+      className="w-full h-full z-10 pointer-events-auto relative"
       onClick={(e) => e.stopPropagation()}
     >
+      <DoubleTapTip />
       <div
         ref={containerRef}
-        className="max-h-[180px] overflow-y-auto no-scrollbar px-4 py-2"
+        className="h-full overflow-y-auto no-scrollbar px-4 py-2"
         style={{
-          maskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
-          WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 15%, black 85%, transparent 100%)',
+          maskImage: 'linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%)',
+          WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%)',
         }}
       >
         <div className="flex flex-col items-center gap-2">
@@ -156,12 +138,11 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
           {subtitles.map((sub, idx) => {
             const isActive = idx === activeSubIndex
             const distance = activeSubIndex >= 0 ? Math.abs(idx - activeSubIndex) : 999
-            const isSaved = savedIdx === idx
+            const isJustSaved = justSavedIdx === idx
+            const saved = isSavedPhrase(sub)
 
             // 4-level gradation: active / distance=1 / distance=2 / rest
-            const opacityClass = isSaved
-              ? 'opacity-100'
-              : isActive
+            const opacityClass = isJustSaved || isActive
               ? 'opacity-100'
               : distance === 1
               ? 'opacity-50'
@@ -169,7 +150,9 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
               ? 'opacity-30'
               : 'opacity-15'
 
-            const scaleValue = isSaved ? 1 : isActive ? 1 : distance === 1 ? 0.95 : distance === 2 ? 0.9 : 0.85
+            const scaleValue = isJustSaved || isActive ? 1 : distance === 1 ? 0.95 : distance === 2 ? 0.9 : 0.85
+
+            const flagged = isAdmin && videoId ? isFlagged(videoId, idx) : false
 
             return (
               <div
@@ -181,36 +164,56 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
                   transition: 'opacity 250ms ease-out, transform 350ms cubic-bezier(0.22, 1, 0.36, 1)',
                 }}
               >
-                <div className="relative max-w-[85%]">
+                <div className="flex items-center gap-1.5 max-w-[85%]">
+                  {/* Admin flag — inline left of text */}
+                  {isAdmin && videoId && (
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        toggleFlag(videoId, idx, sub.en)
+                      }}
+                      className={`flex-shrink-0 w-5 h-5 rounded flex items-center justify-center transition-all active:scale-90 ${
+                        flagged
+                          ? 'bg-red-500/30 text-red-400'
+                          : 'bg-white/5 text-white/15 hover:text-white/40'
+                      }`}
+                    >
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3 h-3">
+                        <path d="M3.5 2.75a.75.75 0 0 0-1.5 0v14.5a.75.75 0 0 0 1.5 0v-4.392l1.657-.348a6.449 6.449 0 0 1 4.271.572 7.948 7.948 0 0 0 5.965.524l2.078-.64A.75.75 0 0 0 18 11.75V3.885a.75.75 0 0 0-.975-.716l-2.296.707a6.449 6.449 0 0 1-4.848-.426 7.948 7.948 0 0 0-5.259-.704L3.5 3.99V2.75Z" />
+                      </svg>
+                    </button>
+                  )}
+
                   <button
-                    onClick={(e) => handleLineClick(sub, e)}
-                    onPointerDown={() => handlePointerDown(sub, idx)}
-                    onPointerUp={handlePointerUp}
-                    onPointerCancel={handlePointerCancel}
-                    onPointerLeave={handlePointerUp}
-                    onContextMenu={(e) => e.preventDefault()}
-                    className={`text-center w-full select-none will-change-[font-size,color,background-color,padding] ${
-                      isSaved
-                        ? 'text-white text-sm font-semibold drop-shadow-lg bg-blue-500/40 backdrop-blur-md rounded-lg px-3 py-1.5 ring-2 ring-blue-400/60'
+                    onClick={(e) => handleLineClick(sub, idx, e)}
+                    className={`text-center w-full text-sm select-none px-3 py-1.5 ${
+                      isJustSaved
+                        ? 'text-white font-semibold drop-shadow-lg bg-blue-500/40 backdrop-blur-md rounded-lg ring-2 ring-blue-400/60'
                         : isActive
-                        ? `text-white font-semibold drop-shadow-lg bg-black/50 backdrop-blur-md rounded-lg ${showKo ? 'text-sm px-3 py-1.5' : 'text-base px-4 py-2'}`
+                        ? `text-white font-semibold drop-shadow-lg backdrop-blur-md rounded-lg ${
+                            saved
+                              ? 'bg-blue-500/20 ring-1 ring-blue-400/40'
+                              : 'bg-black/50'
+                          }`
+                        : saved && distance <= 2
+                        ? `text-white/60 rounded-lg ring-1 ring-blue-400/25`
                         : distance === 1
-                        ? 'text-white/60 text-sm'
+                        ? 'text-white/60'
                         : distance === 2
-                        ? 'text-white/35 text-xs'
-                        : 'text-white/20 text-xs'
+                        ? 'text-white/35'
+                        : 'text-white/20'
                     }`}
                     style={{
-                      transition: 'font-size 300ms cubic-bezier(0.22, 1, 0.36, 1), color 200ms ease-out, background-color 350ms ease-out, padding 300ms ease-out, box-shadow 300ms ease-out',
-                      ...(isSaved
+                      transition: 'color 200ms ease-out, background-color 350ms ease-out, box-shadow 300ms ease-out',
+                      ...(isJustSaved
                         ? { textShadow: '0 1px 4px rgba(0,0,0,0.8)', boxShadow: '0 0 16px rgba(59, 130, 246, 0.4)' }
                         : isActive
                         ? { textShadow: '0 1px 4px rgba(0,0,0,0.8)' }
                         : {}),
                     }}
                   >
-                    {isSaved ? (
-                      <span className="text-blue-200 font-semibold text-sm">저장됨!</span>
+                    {isJustSaved ? (
+                      <span className="text-blue-200 font-semibold text-sm">Saved!</span>
                     ) : (
                       <>
                         <span className={isActive && showKo ? 'line-clamp-2' : undefined}>{sub.en}</span>
@@ -220,39 +223,6 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
                       </>
                     )}
                   </button>
-
-                  {/* + button for saving phrase - inside box, top-right corner */}
-                  {isActive && onSavePhrase && !isSaved && (
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation()
-                        onSavePhrase(sub)
-                      }}
-                      className="absolute -top-1.5 -right-1.5 w-5 h-5 rounded bg-white/10 text-white/40 flex items-center justify-center text-xs font-medium hover:text-white/70 hover:bg-white/20 active:scale-90 transition-all"
-                    >
-                      +
-                    </button>
-                  )}
-
-                  {/* Admin flag button - top-left corner, only visible to admin */}
-                  {isAdmin && videoId && (
-                    <button
-                      onClick={(e) => {
-                        e.stopPropagation()
-                        toggleFlag(videoId, idx, sub.en)
-                      }}
-                      className={`absolute -top-1.5 -left-1.5 w-5 h-5 rounded flex items-center justify-center transition-all active:scale-90 ${
-                        isFlagged(videoId, idx)
-                          ? 'bg-red-500/30 text-red-400'
-                          : 'bg-white/10 text-white/20 hover:text-white/50 hover:bg-white/20'
-                      }`}
-                      title="Flag subtitle error"
-                    >
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3 h-3">
-                        <path d="M3.5 2.75a.75.75 0 0 0-1.5 0v14.5a.75.75 0 0 0 1.5 0v-4.392l1.657-.348a6.449 6.449 0 0 1 4.271.572 7.948 7.948 0 0 0 5.965.524l2.078-.64A.75.75 0 0 0 18 11.75V3.885a.75.75 0 0 0-.975-.716l-2.296.707a6.449 6.449 0 0 1-4.848-.426 7.948 7.948 0 0 0-5.259-.704L3.5 3.99V2.75Z" />
-                      </svg>
-                    </button>
-                  )}
                 </div>
               </div>
             )

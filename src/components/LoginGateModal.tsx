@@ -10,7 +10,7 @@ interface LoginGateModalProps {
 }
 
 export function LoginGateModal({ isOpen }: LoginGateModalProps) {
-  const { signInWithGoogle } = useAuth()
+  const { signInWithGoogle, signInWithKakao } = useAuth()
 
   if (!isOpen) return null
 
@@ -50,15 +50,14 @@ export function LoginGateModal({ isOpen }: LoginGateModalProps) {
             Google로 계속하기
           </button>
 
-          {/* Kakao login - placeholder, Supabase Kakao provider 설정 후 활성화 */}
           <button
-            onClick={signInWithGoogle}
+            onClick={signInWithKakao}
             className="w-full py-3.5 bg-[#FEE500] text-[#191919] rounded-xl font-medium flex items-center justify-center gap-2 text-base"
           >
             <svg className="w-5 h-5" viewBox="0 0 24 24">
               <path fill="#191919" d="M12 3C6.48 3 2 6.36 2 10.5c0 2.67 1.74 5.01 4.36 6.36l-1.1 4.07c-.08.31.27.55.54.38l4.73-3.12c.48.05.97.08 1.47.08 5.52 0 10-3.36 10-7.5S17.52 3 12 3z" />
             </svg>
-            Kakao로 계속하기
+            카카오로 계속하기
           </button>
         </div>
       </motion.div>
