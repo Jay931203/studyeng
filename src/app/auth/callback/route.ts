@@ -1,11 +1,12 @@
 import { NextResponse } from 'next/server'
 import { createServerClient } from '@supabase/ssr'
+import { sanitizeAppPath } from '@/lib/navigation'
 import { getSupabaseEnv } from '@/lib/supabase/config'
 
 export async function GET(request: Request) {
   const { searchParams, origin } = new URL(request.url)
   const code = searchParams.get('code')
-  const next = searchParams.get('next') ?? '/'
+  const next = sanitizeAppPath(searchParams.get('next'), '/')
   const { url, anonKey, configured } = getSupabaseEnv()
 
   if (!configured || !url || !anonKey) {

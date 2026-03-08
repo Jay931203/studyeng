@@ -32,6 +32,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
   const containerRef = useRef<HTMLDivElement>(null)
   const lineRefs = useRef<(HTMLDivElement | null)[]>([])
   const prevActiveRef = useRef<number>(-1)
+  const previousVideoIdRef = useRef(videoId)
   const scrollRafRef = useRef<number | null>(null)
   const savedPhraseMap = useMemo(() => {
     const map = new Map<string, string>()
@@ -304,9 +305,13 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
 
   // Clear freeze only when the actual video changes.
   useEffect(() => {
-    if (freezeSubIndex === null) return
+    if (previousVideoIdRef.current === videoId) {
+      return
+    }
+
+    previousVideoIdRef.current = videoId
     setFreezeSubIndex(null)
-  }, [freezeSubIndex, setFreezeSubIndex, videoId])
+  }, [setFreezeSubIndex, videoId])
 
   // Cleanup timers on unmount
   useEffect(() => {

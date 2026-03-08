@@ -66,13 +66,13 @@ export function PremiumModal({
     setErrorMessage(null)
 
     try {
-      const response = await fetch('/api/billing/checkout', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ plan: selectedPlan }),
-      })
+        const response = await fetch('/api/billing/checkout', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ plan: selectedPlan, returnPath: nextPath }),
+        })
 
       const payload = (await response.json().catch(() => null)) as { url?: string; error?: string } | null
 

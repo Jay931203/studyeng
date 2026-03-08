@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-08T09:34:42.074Z",
+  "generatedAt": "2026-03-08T11:49:23.020Z",
   "rules": {
     "transcript": {
       "maxDurationSec": 7,
@@ -62,9 +62,9 @@
       "partial": 3
     },
     "timingCounts": {
-      "missing": 552,
-      "needs_review": 79,
-      "pass": 70
+      "missing": 554,
+      "needs_review": 78,
+      "pass": 69
     },
     "seriesBalance": [
       {
@@ -3491,7 +3491,7 @@
     },
     {
       "youtubeId": "_Yhyp-_hX2s",
-      "transcriptPath": "public/transcripts/_Yhyp-_hX2s.json",
+      "transcriptPath": null,
       "linkedVideoIds": [
         "hip-hop-classics-01"
       ],
@@ -3499,15 +3499,15 @@
         "hip-hop-classics"
       ],
       "clipCount": 1,
-      "transcriptEntryCount": 4,
+      "transcriptEntryCount": 0,
       "transcriptSource": "whisper",
       "externalPlaybackStatus": "pass",
       "externalPlaybackReason": "ok",
       "externalValidationCheckedAt": "2026-03-08T08:38:47.086Z",
       "externalValidationStatus": "ok",
-      "englishSubtitleStatus": "complete",
+      "englishSubtitleStatus": "missing",
       "koreanSubtitleStatus": "missing",
-      "timingStatus": "needs_review",
+      "timingStatus": "missing",
       "whisperStatus": "done",
       "whisper": {
         "provider": "openai",
@@ -3515,19 +3515,10 @@
         "processedAt": "2026-03-08T09:33:09.974Z",
         "cost": 0.006097
       },
-      "qualityIssueCount": 1,
+      "qualityIssueCount": 0,
       "acceptedQualityIssueCount": 0,
-      "qualityIssueTypes": {
-        "GAP": 1
-      },
-      "qualityIssues": [
-        {
-          "type": "GAP",
-          "idx": 1,
-          "start": 47,
-          "end": 53
-        }
-      ],
+      "qualityIssueTypes": {},
+      "qualityIssues": [],
       "workflowStatus": "needs_translation",
       "nextAction": "translate_korean"
     },
@@ -17450,7 +17441,7 @@
     },
     {
       "youtubeId": "qFLw26BjDZs",
-      "transcriptPath": "public/transcripts/qFLw26BjDZs.json",
+      "transcriptPath": null,
       "linkedVideoIds": [
         "shawshank-01"
       ],
@@ -17458,15 +17449,15 @@
         "shawshank"
       ],
       "clipCount": 1,
-      "transcriptEntryCount": 15,
+      "transcriptEntryCount": 0,
       "transcriptSource": "whisper",
       "externalPlaybackStatus": "pass",
       "externalPlaybackReason": "ok",
       "externalValidationCheckedAt": "2026-03-08T07:46:29.221Z",
       "externalValidationStatus": "ok",
-      "englishSubtitleStatus": "complete",
+      "englishSubtitleStatus": "missing",
       "koreanSubtitleStatus": "missing",
-      "timingStatus": "pass",
+      "timingStatus": "missing",
       "whisperStatus": "done",
       "whisper": {
         "provider": "openai",

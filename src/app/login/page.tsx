@@ -6,6 +6,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import { Suspense, useEffect, useMemo } from 'react'
 import { Logo, LogoFull } from '@/components/Logo'
 import { useAuth } from '@/hooks/useAuth'
+import { getGuestContinuePath, sanitizeAppPath } from '@/lib/navigation'
 
 function FeatureRow({
   title,
@@ -55,7 +56,11 @@ function LoginPageContent() {
   const { user, loading, authAvailable, signInWithGoogle, signInWithKakao } = useAuth()
   const router = useRouter()
   const searchParams = useSearchParams()
-  const nextPath = useMemo(() => searchParams.get('next') || '/explore', [searchParams])
+  const nextPath = useMemo(
+    () => sanitizeAppPath(searchParams.get('next'), '/explore'),
+    [searchParams],
+  )
+  const guestContinuePath = useMemo(() => getGuestContinuePath(nextPath), [nextPath])
 
   useEffect(() => {
     if (!loading && user) {
@@ -183,7 +188,7 @@ function LoginPageContent() {
             </button>
 
             <button
-              onClick={() => router.push('/explore')}
+              onClick={() => router.push(guestContinuePath)}
               className="w-full rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] py-4 text-base text-[var(--text-secondary)]"
             >
               먼저 둘러보기

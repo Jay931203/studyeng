@@ -1,30 +1,43 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useSyncExternalStore } from 'react'
+
+const ORIENTATION_QUERY = '(orientation: landscape)'
+
+function subscribe(listener: () => void) {
+  if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') {
+    return () => {}
+  }
+
+  const mediaQuery = window.matchMedia(ORIENTATION_QUERY)
+  const handleChange = () => listener()
+
+  if (typeof mediaQuery.addEventListener === 'function') {
+    mediaQuery.addEventListener('change', handleChange)
+    return () => mediaQuery.removeEventListener('change', handleChange)
+  }
+
+  mediaQuery.addListener(handleChange)
+  return () => mediaQuery.removeListener(handleChange)
+}
+
+function getSnapshot() {
+  if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') {
+    return false
+  }
+
+  return window.matchMedia(ORIENTATION_QUERY).matches
+}
 
 /**
  * Detects device orientation using matchMedia.
  * Returns { isLandscape: boolean }.
  *
- * On SSR / initial render, defaults to portrait (false) to avoid
- * hydration mismatch since the server cannot know the orientation.
+ * On SSR, defaults to portrait because the server cannot know
+ * the client's current orientation.
  */
 export function useOrientation() {
-  const [isLandscape, setIsLandscape] = useState(false)
-
-  useEffect(() => {
-    const mql = window.matchMedia('(orientation: landscape)')
-
-    // Set initial value on mount (client-side only)
-    setIsLandscape(mql.matches)
-
-    const handler = (e: MediaQueryListEvent) => {
-      setIsLandscape(e.matches)
-    }
-
-    mql.addEventListener('change', handler)
-    return () => mql.removeEventListener('change', handler)
-  }, [])
+  const isLandscape = useSyncExternalStore(subscribe, getSnapshot, () => false)
 
   return { isLandscape }
 }

@@ -1,10 +1,11 @@
-import { seedVideos, series, type VideoData, type SubtitleEntry } from '@/data/seed-videos'
+import { series, type VideoData, type SubtitleEntry } from '@/data/seed-videos'
+import { catalogVideos, getCatalogSeriesById } from '@/lib/catalog'
 
 // Build series lookup for search: map youtubeId → Series
 const videoSeriesMap = new Map<string, typeof series[0]>()
-for (const video of seedVideos) {
+for (const video of catalogVideos) {
   if (video.seriesId) {
-    const s = series.find(sr => sr.id === video.seriesId)
+    const s = getCatalogSeriesById(video.seriesId)
     if (s) videoSeriesMap.set(video.youtubeId, s)
   }
 }
@@ -15,9 +16,8 @@ export interface SearchResult {
   matchType: 'title' | 'subtitle'
 }
 
-// Module-level cache for fetched transcripts (persists across searches)
 const transcriptCache = new Map<string, SubtitleEntry[]>()
-let allTranscriptsFetched = false
+const TRANSCRIPT_FETCH_BATCH_SIZE = 6
 
 /**
  * Fetch a single transcript JSON file for a given youtubeId.
@@ -47,22 +47,17 @@ async function fetchTranscript(youtubeId: string): Promise<SubtitleEntry[]> {
   }
 }
 
-/**
- * Fetch all transcripts in parallel for all seed videos.
- * After the first call, subsequent calls return immediately from cache.
- */
-async function ensureAllTranscripts(): Promise<void> {
-  if (allTranscriptsFetched) return
-
-  await Promise.all(
-    seedVideos.map((video) => fetchTranscript(video.youtubeId))
+function findTranscriptMatch(transcript: SubtitleEntry[], query: string) {
+  return transcript.find(
+    (subtitle) => subtitle.en.toLowerCase().includes(query) || subtitle.ko.includes(query)
   )
-  allTranscriptsFetched = true
 }
 
 /**
  * Search through video titles and transcript subtitles.
- * Fetches transcript JSON files and caches them for fast subsequent searches.
+ * Keeps network usage bounded by checking local data and cached transcripts first,
+ * then loading the remaining transcript files in small batches until enough
+ * matches are found.
  */
 export async function searchVideos(query: string): Promise<SearchResult[]> {
   if (!query.trim()) return []
@@ -72,7 +67,7 @@ export async function searchVideos(query: string): Promise<SearchResult[]> {
   const seen = new Set<string>()
 
   // First pass: title, description, and series name matches (instant)
-  for (const video of seedVideos) {
+  for (const video of catalogVideos) {
     if (seen.has(video.id)) continue
     const s = videoSeriesMap.get(video.youtubeId)
     const searchable = [
@@ -86,22 +81,62 @@ export async function searchVideos(query: string): Promise<SearchResult[]> {
     }
   }
 
-  // Second pass: subtitle/transcript matches
-  await ensureAllTranscripts()
-
-  for (const video of seedVideos) {
+  // Second pass: in-memory subtitles already bundled with the catalog
+  for (const video of catalogVideos) {
     if (seen.has(video.id)) continue
 
-    const transcript = transcriptCache.get(video.youtubeId) ?? []
+    const matchedPhrase = findTranscriptMatch(video.subtitles, q)
+    if (!matchedPhrase) continue
 
-    for (const sub of transcript) {
-      if (sub.en.toLowerCase().includes(q) || sub.ko.includes(q)) {
-        results.push({
-          video,
-          matchedPhrase: { en: sub.en, ko: sub.ko },
-          matchType: 'subtitle',
-        })
-        seen.add(video.id)
+    results.push({
+      video,
+      matchedPhrase: { en: matchedPhrase.en, ko: matchedPhrase.ko },
+      matchType: 'subtitle',
+    })
+    seen.add(video.id)
+  }
+
+  // Third pass: cached transcript JSON files
+  for (const video of catalogVideos) {
+    if (seen.has(video.id) || !transcriptCache.has(video.youtubeId)) continue
+
+    const matchedPhrase = findTranscriptMatch(transcriptCache.get(video.youtubeId) ?? [], q)
+    if (!matchedPhrase) continue
+
+    results.push({
+      video,
+      matchedPhrase: { en: matchedPhrase.en, ko: matchedPhrase.ko },
+      matchType: 'subtitle',
+    })
+    seen.add(video.id)
+  }
+
+  // Final pass: fetch uncached transcript files in bounded batches.
+  const uncachedVideos = catalogVideos.filter(
+    (video) => !seen.has(video.id) && !transcriptCache.has(video.youtubeId)
+  )
+
+  for (let index = 0; index < uncachedVideos.length && results.length < 10; index += TRANSCRIPT_FETCH_BATCH_SIZE) {
+    const batch = uncachedVideos.slice(index, index + TRANSCRIPT_FETCH_BATCH_SIZE)
+    const transcripts = await Promise.all(
+      batch.map(async (video) => ({
+        video,
+        transcript: await fetchTranscript(video.youtubeId),
+      }))
+    )
+
+    for (const { video, transcript } of transcripts) {
+      const matchedPhrase = findTranscriptMatch(transcript, q)
+      if (!matchedPhrase) continue
+
+      results.push({
+        video,
+        matchedPhrase: { en: matchedPhrase.en, ko: matchedPhrase.ko },
+        matchType: 'subtitle',
+      })
+      seen.add(video.id)
+
+      if (results.length >= 10) {
         break
       }
     }

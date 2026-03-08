@@ -222,6 +222,10 @@ function getFeature(video: VideoData) {
   }
 }
 
+function isRecommendableFeature(feature: RecommendationFeature) {
+  return feature.recommendable !== false && feature.externalPlaybackStatus !== 'blocked'
+}
+
 function buildWatchedIdSet(watchedEpisodes: Record<string, string[]>) {
   const watchedIds = new Set<string>()
   for (const ids of Object.values(watchedEpisodes)) {
@@ -447,7 +451,7 @@ function weightedTokenOverlap(tokens: string[] = [], weights: Map<string, number
 }
 
 function isExternallyPlayable(feature: RecommendationFeature) {
-  return feature.externalPlaybackStatus !== 'blocked'
+  return isRecommendableFeature(feature)
 }
 
 function freshnessBonus(feature: RecommendationFeature) {
@@ -595,6 +599,7 @@ export function recommendVideos(videos: VideoData[], options: RecommendOptions =
 
   const scoredVideos = videos
     .filter((video) => video.id !== seedVideo?.id)
+    .filter((video) => isRecommendableFeature(getFeature(video)))
     .map((video) => ({
       score: scoreVideo(video, context),
       video,
@@ -615,12 +620,16 @@ export function seriesPlaylist(
   startVideoId: string,
   options: RecommendOptions = {},
 ) {
-  const episodes = getVideosBySeries(seriesId)
+  const episodes = getVideosBySeries(seriesId).filter((video) =>
+    isRecommendableFeature(getFeature(video)),
+  )
   const startIdx = episodes.findIndex((video) => video.id === startVideoId)
   const rotated =
     startIdx > 0 ? [...episodes.slice(startIdx), ...episodes.slice(0, startIdx)] : episodes
   const seriesIds = new Set(episodes.map((video) => video.id))
-  const others = seedVideos.filter((video) => !seriesIds.has(video.id))
+  const others = seedVideos.filter(
+    (video) => !seriesIds.has(video.id) && isRecommendableFeature(getFeature(video)),
+  )
 
   return [
     ...rotated,

@@ -21,6 +21,7 @@ interface DailyMissionState {
   checkAndResetDaily: () => void
   incrementMission: (id: string, amount?: number) => void
   getMissions: () => DailyMission[]
+  resetState: () => void
 }
 
 function getDefaultMissions(): DailyMission[] {
@@ -111,6 +112,14 @@ export const useDailyMissionStore = create<DailyMissionState>()(
 
       getMissions: () => {
         return get().missions
+      },
+
+      resetState: () => {
+        set({
+          missions: getDefaultMissions(),
+          lastResetDate: null,
+          allCompleteBonus: false,
+        })
       },
     }),
     { name: 'studyeng-daily-missions' }

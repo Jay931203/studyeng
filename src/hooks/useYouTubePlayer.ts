@@ -1,35 +1,94 @@
 'use client'
 
-import { useEffect, useRef, useCallback, useState } from 'react'
+import { useCallback, useEffect, useEffectEvent, useRef, useState } from 'react'
 import { usePlayerStore, currentTimeRef } from '@/stores/usePlayerStore'
 import type { SubtitleEntry } from '@/data/seed-videos'
 
-let apiLoaded = false
-let apiLoading = false
-const apiCallbacks: (() => void)[] = []
+const YOUTUBE_API_SRC = 'https://www.youtube.com/iframe_api'
+const YOUTUBE_API_TIMEOUT_MS = 10000
+
+let apiLoadPromise: Promise<void> | null = null
 
 function loadYouTubeAPI(): Promise<void> {
-  if (apiLoaded) return Promise.resolve()
+  if (typeof window === 'undefined') {
+    return Promise.reject(new Error('The YouTube player is only available in the browser.'))
+  }
 
-  return new Promise((resolve) => {
-    if (apiLoading) {
-      apiCallbacks.push(resolve)
-      return
-    }
-    apiLoading = true
+  if (window.YT?.Player) {
+    return Promise.resolve()
+  }
 
-    const tag = document.createElement('script')
-    tag.src = 'https://www.youtube.com/iframe_api'
-    document.head.appendChild(tag)
+  if (apiLoadPromise) {
+    return apiLoadPromise
+  }
 
-    window.onYouTubeIframeAPIReady = () => {
-      apiLoaded = true
-      apiLoading = false
+  apiLoadPromise = new Promise<void>((resolve, reject) => {
+    const existingScript = document.querySelector<HTMLScriptElement>(`script[src="${YOUTUBE_API_SRC}"]`)
+    const script = existingScript ?? document.createElement('script')
+    const previousReadyHandler = window.onYouTubeIframeAPIReady
+    let settled = false
+
+    const finish = (error?: Error) => {
+      if (settled) return
+      settled = true
+      window.clearTimeout(timeoutId)
+      script.removeEventListener('error', handleError)
+
+      if (window.onYouTubeIframeAPIReady === handleReady) {
+        window.onYouTubeIframeAPIReady = previousReadyHandler
+      }
+
+      if (error) {
+        apiLoadPromise = null
+        reject(error)
+        return
+      }
+
       resolve()
-      apiCallbacks.forEach((cb) => cb())
-      apiCallbacks.length = 0
+    }
+
+    const handleReady = () => {
+      previousReadyHandler?.()
+      finish()
+    }
+
+    const handleError = () => {
+      finish(new Error('Failed to load the YouTube iframe API.'))
+    }
+
+    const timeoutId = window.setTimeout(() => {
+      finish(new Error('Timed out while loading the YouTube iframe API.'))
+    }, YOUTUBE_API_TIMEOUT_MS)
+
+    window.onYouTubeIframeAPIReady = handleReady
+    script.addEventListener('error', handleError, { once: true })
+
+    if (!existingScript) {
+      script.src = YOUTUBE_API_SRC
+      script.async = true
+      document.head.appendChild(script)
+    }
+
+    if (window.YT?.Player) {
+      finish()
     }
   })
+
+  return apiLoadPromise
+}
+
+function getVideoErrorMessage(code: number) {
+  switch (code) {
+    case 100:
+      return 'This video is unavailable or has been removed.'
+    case 101:
+    case 150:
+      return 'This video cannot be played inside the app.'
+    case 5:
+      return 'The video player hit an internal playback error.'
+    default:
+      return 'The video could not be loaded.'
+  }
 }
 
 /**
@@ -39,16 +98,19 @@ function loadYouTubeAPI(): Promise<void> {
  */
 function findActiveSubIndex(subtitles: SubtitleEntry[], time: number): number {
   for (let i = 0; i < subtitles.length; i++) {
-    const sub = subtitles[i]
-    // Currently within this subtitle's time range
-    if (time >= sub.start && time < sub.end) {
+    const subtitle = subtitles[i]
+    if (time >= subtitle.start && time < subtitle.end) {
       return i
     }
-    // In the gap after this subtitle, before the next one starts (or after the last subtitle)
-    if (time >= sub.end && (i === subtitles.length - 1 || time < subtitles[i + 1].start)) {
+
+    if (
+      time >= subtitle.end &&
+      (i === subtitles.length - 1 || time < subtitles[i + 1].start)
+    ) {
       return i
     }
   }
+
   return -1
 }
 
@@ -63,323 +125,313 @@ export function useYouTubePlayer(
 ) {
   const playerRef = useRef<YT.Player | null>(null)
   const intervalRef = useRef<number | null>(null)
-  const [ready, setReady] = useState(false)
-  // True once the video has actually started playing (first PLAYING state)
-  const [playbackStarted, setPlaybackStarted] = useState(false)
-  const [videoError, setVideoError] = useState<string | null>(null)
-
-  // Track whether the tab/page is currently visible
-  const visibleRef = useRef(true)
-  // Remember if the player was playing when the tab became hidden
   const wasPlayingBeforeHideRef = useRef(false)
-
-  // Refs to track previous values and avoid unnecessary Zustand writes
   const prevSubIndexRef = useRef(-1)
   const lastProgressWriteRef = useRef(0)
-
-  // Keep onClipComplete in a ref so the polling interval always sees the latest callback
-  const onClipCompleteRef = useRef(onClipComplete)
-  onClipCompleteRef.current = onClipComplete
-
-  // Guard against rapid-fire clip boundary triggers
   const clipBoundaryCooldownRef = useRef(false)
-
-  // Effective clip bounds, capped to actual video duration
   const effectiveClipStartRef = useRef(clipStart)
   const effectiveClipEndRef = useRef(clipEnd)
+  const playerSessionKey = `${containerId}:${videoId}:${clipStart}:${clipEnd}:${initialSeekTime ?? ''}`
 
-  const {
-    playbackRate,
-    isLooping,
-    loopStart,
-    loopEnd,
-    freezeSubIndex,
-    setCurrentTime,
-    setDuration,
-    setIsPlaying,
-    setClipBounds,
-    setActiveSubIndex,
-  } = usePlayerStore()
+  const [readySessionKey, setReadySessionKey] = useState<string | null>(null)
+  const [playbackStartedSessionKey, setPlaybackStartedSessionKey] = useState<string | null>(null)
+  const [videoErrorState, setVideoErrorState] = useState<{
+    message: string
+    sessionKey: string
+  } | null>(null)
+  const ready = readySessionKey === playerSessionKey
+  const playbackStarted = playbackStartedSessionKey === playerSessionKey
+  const videoError =
+    videoErrorState?.sessionKey === playerSessionKey ? videoErrorState.message : null
 
-  const initPlayer = useCallback(async () => {
-    await loadYouTubeAPI()
+  const playbackRate = usePlayerStore((state) => state.playbackRate)
+  const isLooping = usePlayerStore((state) => state.isLooping)
+  const loopStart = usePlayerStore((state) => state.loopStart)
+  const loopEnd = usePlayerStore((state) => state.loopEnd)
+  const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
+  const setCurrentTime = usePlayerStore((state) => state.setCurrentTime)
+  const setDuration = usePlayerStore((state) => state.setDuration)
+  const setIsPlaying = usePlayerStore((state) => state.setIsPlaying)
+  const setClipBounds = usePlayerStore((state) => state.setClipBounds)
+  const setActiveSubIndex = usePlayerStore((state) => state.setActiveSubIndex)
 
-    if (playerRef.current) {
-      playerRef.current.destroy()
+  const handleClipComplete = useEffectEvent(() => {
+    onClipComplete?.()
+  })
+
+  const handlePlayerTick = useEffectEvent(() => {
+    const player = playerRef.current
+    if (!player) return
+
+    let time: number
+    try {
+      time = player.getCurrentTime()
+    } catch {
+      return
     }
 
-    playerRef.current = new window.YT.Player(containerId, {
-      videoId,
-      playerVars: {
-        autoplay: 1,
-        controls: 0,
-        disablekb: 1,
-        fs: 0,
-        modestbranding: 1,
-        playsinline: 1,
-        rel: 0,
-        cc_load_policy: 0,
-        iv_load_policy: 3,
-        start: clipStart,
-        // Prevent YouTube endscreen by stopping playback before video's true end
-        ...(clipEnd > 0 ? { end: Math.floor(clipEnd) } : {}),
-      },
-      events: {
-        onReady: (event) => {
-          // Disable YouTube's built-in captions/subtitles
-          // unloadModule is part of the YouTube IFrame API but not in @types/youtube
-          try {
-            const p = event.target as unknown as Record<string, (m: string) => void>
-            if (typeof p.unloadModule === 'function') {
-              p.unloadModule('captions')
-              p.unloadModule('cc')
-            }
-          } catch {
-            // Some environments may not support unloadModule
-          }
-          event.target.setPlaybackRate(playbackRate)
-          event.target.playVideo()
-          const dur = event.target.getDuration()
-          // Cap clipEnd to actual video duration minus a small buffer so we
-          // never try to seek past the real end of the video.  When clipEnd
-          // is 0 (unset) or exceeds the video length, fall back to the
-          // actual duration.
-          const maxEnd = Math.max(dur - 0.5, 1)
-          const effEnd = clipEnd > 0 ? Math.min(clipEnd, maxEnd) : maxEnd
-          const effStart = Math.min(clipStart, Math.max(effEnd - 5, 0))
-          effectiveClipStartRef.current = effStart
-          effectiveClipEndRef.current = effEnd
-          const clipDuration = effEnd - effStart
-          if (clipDuration > 0) setDuration(clipDuration)
-          setClipBounds(effStart, effEnd)
-          if (initialSeekTime !== undefined && initialSeekTime >= effStart && initialSeekTime < effEnd) {
-            event.target.seekTo(initialSeekTime, true)
-          }
-          setReady(true)
-        },
-        onStateChange: (event) => {
-          // Intercept ENDED state to prevent YouTube endscreen overlay
-          if (event.data === 0) {
-            const effStart = effectiveClipStartRef.current
-            event.target.seekTo(effStart, true)
-            event.target.playVideo()
-            if (onClipCompleteRef.current) {
-              onClipCompleteRef.current()
-            }
-            return
-          }
-          const isPlaying = event.data === 1
-          setIsPlaying(isPlaying)
-          // Signal that the video has actually started rendering frames
-          if (isPlaying) {
-            setPlaybackStarted(true)
-          }
-        },
-        onError: (event) => {
-          // YouTube IFrame API error codes:
-          // 2 = invalid parameter, 5 = HTML5 player error,
-          // 100 = not found / removed, 101/150 = embedding disallowed
-          const code = event.data
-          if (code === 100) {
-            setVideoError('삭제되었거나 존재하지 않는 영상이에요')
-          } else if (code === 101 || code === 150) {
-            setVideoError('이 영상은 외부 재생이 제한되어 있어요')
-          } else if (code === 5) {
-            setVideoError('영상 재생 중 오류가 발생했어요')
-          } else {
-            setVideoError('영상을 불러올 수 없습니다')
-          }
-        },
-      },
-    })
-  }, [containerId, videoId, clipStart, clipEnd, initialSeekTime])
+    currentTimeRef.current = time
+
+    if (isLooping && loopStart !== null && loopEnd !== null && time >= loopEnd) {
+      player.seekTo(loopStart, true)
+      return
+    }
+
+    if (freezeSubIndex !== null && subtitles[freezeSubIndex]) {
+      const frozenSub = subtitles[freezeSubIndex]
+      if (time >= frozenSub.end - 0.05 || time < frozenSub.start - 0.3) {
+        player.seekTo(frozenSub.start, true)
+        return
+      }
+    }
+
+    const newSubIndex = findActiveSubIndex(subtitles, time)
+    if (newSubIndex !== prevSubIndexRef.current) {
+      prevSubIndexRef.current = newSubIndex
+      setActiveSubIndex(newSubIndex)
+    }
+
+    const now = performance.now()
+    if (now - lastProgressWriteRef.current >= 500) {
+      lastProgressWriteRef.current = now
+      setCurrentTime(time)
+    }
+
+    const effectiveClipEnd = effectiveClipEndRef.current
+    const effectiveClipStart = effectiveClipStartRef.current
+    const earlyTrigger = effectiveClipEnd - 1.5
+
+    if (
+      effectiveClipEnd > effectiveClipStart &&
+      time >= earlyTrigger &&
+      !clipBoundaryCooldownRef.current
+    ) {
+      clipBoundaryCooldownRef.current = true
+      window.setTimeout(() => {
+        clipBoundaryCooldownRef.current = false
+      }, 1000)
+
+      handleClipComplete()
+      player.seekTo(effectiveClipStart, true)
+    }
+  })
 
   useEffect(() => {
     if (!ready) return
 
-    intervalRef.current = window.setInterval(() => {
-      if (!playerRef.current) return
-
-      let time: number
-      try {
-        time = playerRef.current.getCurrentTime()
-      } catch {
-        return // Player not ready
+    const stopPolling = () => {
+      if (intervalRef.current !== null) {
+        window.clearInterval(intervalRef.current)
+        intervalRef.current = null
       }
-
-      // Always update the shared mutable ref (no React re-render cost)
-      currentTimeRef.current = time
-
-      // --- Subtitle loop (user-triggered A-B repeat) takes highest priority ---
-      if (isLooping && loopStart !== null && loopEnd !== null) {
-        if (time >= loopEnd) {
-          playerRef.current.seekTo(loopStart, true)
-          return // Don't process clip boundary when in subtitle loop
-        }
-      }
-
-      // --- Freeze mode: loop a single subtitle's segment ---
-      if (freezeSubIndex !== null && subtitles[freezeSubIndex]) {
-        const frozenSub = subtitles[freezeSubIndex]
-        if (time >= frozenSub.end - 0.05 || time < frozenSub.start - 0.3) {
-          playerRef.current.seekTo(frozenSub.start, true)
-          return
-        }
-      }
-
-      // --- Active subtitle detection (updates only when subtitle changes ~every 3s) ---
-      const newSubIndex = findActiveSubIndex(subtitles, time)
-      if (newSubIndex !== prevSubIndexRef.current) {
-        prevSubIndexRef.current = newSubIndex
-        setActiveSubIndex(newSubIndex)
-      }
-
-      // --- Throttled Zustand currentTime for ProgressBar (every 500ms max) ---
-      const now = performance.now()
-      if (now - lastProgressWriteRef.current >= 500) {
-        lastProgressWriteRef.current = now
-        setCurrentTime(time)
-      }
-
-      // --- Clip boundary looping (use effective refs capped to real duration) ---
-      // Trigger 1.5s early to preempt YouTube endscreen
-      const effEnd = effectiveClipEndRef.current
-      const effStart = effectiveClipStartRef.current
-      const earlyTrigger = effEnd - 1.5
-      if (effEnd > effStart && time >= earlyTrigger && !clipBoundaryCooldownRef.current) {
-        // Set cooldown to prevent rapid-fire triggers while seek is in progress
-        clipBoundaryCooldownRef.current = true
-        setTimeout(() => { clipBoundaryCooldownRef.current = false }, 1000)
-
-        if (onClipCompleteRef.current) {
-          onClipCompleteRef.current()
-        }
-        playerRef.current.seekTo(effStart, true)
-      }
-    }, 100)
-
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current)
     }
-  }, [ready, isLooping, loopStart, loopEnd, freezeSubIndex, subtitles])
 
-  // Pause player and stop polling when the browser tab becomes hidden,
-  // resume when it becomes visible again.
-  useEffect(() => {
-    if (!ready) return
+    const startPolling = () => {
+      if (intervalRef.current !== null || document.hidden) return
+
+      intervalRef.current = window.setInterval(() => {
+        handlePlayerTick()
+      }, 100)
+    }
+
+    startPolling()
 
     const handleVisibilityChange = () => {
-      if (document.hidden) {
-        visibleRef.current = false
+      const player = playerRef.current
+      if (!player) return
 
-        // Remember whether the player was playing so we can resume later
+      if (document.hidden) {
         try {
-          const state = playerRef.current?.getPlayerState()
-          wasPlayingBeforeHideRef.current = state === 1 // YT.PlayerState.PLAYING
+          wasPlayingBeforeHideRef.current = player.getPlayerState() === 1
         } catch {
           wasPlayingBeforeHideRef.current = false
         }
 
-        // Pause the player
-        playerRef.current?.pauseVideo()
-
-        // Stop the polling interval to save CPU/battery
-        if (intervalRef.current) {
-          clearInterval(intervalRef.current)
-          intervalRef.current = null
-        }
-      } else {
-        visibleRef.current = true
-
-        // Resume playback if it was playing before the tab was hidden
-        if (wasPlayingBeforeHideRef.current) {
-          playerRef.current?.playVideo()
-        }
-
-        // The polling interval will be restarted by the polling useEffect
-        // because this visibility change does not trigger that effect directly.
-        // We need to manually restart it here.
-        if (!intervalRef.current) {
-          intervalRef.current = window.setInterval(() => {
-            if (!playerRef.current) return
-
-            let time: number
-            try {
-              time = playerRef.current.getCurrentTime()
-            } catch {
-              return
-            }
-
-            currentTimeRef.current = time
-
-            if (isLooping && loopStart !== null && loopEnd !== null) {
-              if (time >= loopEnd) {
-                playerRef.current.seekTo(loopStart, true)
-                return
-              }
-            }
-
-            // Freeze mode loop (visibility handler copy)
-            if (freezeSubIndex !== null && subtitles[freezeSubIndex]) {
-              const frozenSub = subtitles[freezeSubIndex]
-              if (time >= frozenSub.end - 0.05 || time < frozenSub.start - 0.3) {
-                playerRef.current.seekTo(frozenSub.start, true)
-                return
-              }
-            }
-
-            const newSubIndex = findActiveSubIndex(subtitles, time)
-            if (newSubIndex !== prevSubIndexRef.current) {
-              prevSubIndexRef.current = newSubIndex
-              setActiveSubIndex(newSubIndex)
-            }
-
-            const now = performance.now()
-            if (now - lastProgressWriteRef.current >= 500) {
-              lastProgressWriteRef.current = now
-              setCurrentTime(time)
-            }
-
-            const effEnd = effectiveClipEndRef.current
-            const effStart = effectiveClipStartRef.current
-            const earlyTrigger = effEnd - 1.5
-            if (effEnd > effStart && time >= earlyTrigger && !clipBoundaryCooldownRef.current) {
-              clipBoundaryCooldownRef.current = true
-              setTimeout(() => { clipBoundaryCooldownRef.current = false }, 1000)
-              if (onClipCompleteRef.current) {
-                onClipCompleteRef.current()
-              }
-              playerRef.current.seekTo(effStart, true)
-            }
-          }, 100)
-        }
+        player.pauseVideo()
+        stopPolling()
+        return
       }
+
+      if (wasPlayingBeforeHideRef.current) {
+        player.playVideo()
+      }
+
+      startPolling()
     }
 
     document.addEventListener('visibilitychange', handleVisibilityChange)
     return () => {
       document.removeEventListener('visibilitychange', handleVisibilityChange)
+      stopPolling()
     }
-  }, [ready, isLooping, loopStart, loopEnd, freezeSubIndex, subtitles, setActiveSubIndex, setCurrentTime])
+  }, [ready])
 
   useEffect(() => {
-    if (playerRef.current && ready) {
-      playerRef.current.setPlaybackRate(playbackRate)
-    }
+    if (!ready || !playerRef.current) return
+    playerRef.current.setPlaybackRate(playbackRate)
   }, [playbackRate, ready])
 
   useEffect(() => {
-    initPlayer()
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current)
+    let disposed = false
+
+    setIsPlaying(false)
+    setCurrentTime(clipStart)
+    setDuration(0)
+    setClipBounds(clipStart, clipEnd)
+    setActiveSubIndex(-1)
+    prevSubIndexRef.current = -1
+    lastProgressWriteRef.current = 0
+    clipBoundaryCooldownRef.current = false
+    effectiveClipStartRef.current = clipStart
+    effectiveClipEndRef.current = clipEnd
+    currentTimeRef.current = clipStart
+
+    const createPlayer = async () => {
+      try {
+        await loadYouTubeAPI()
+      } catch (error) {
+        if (!disposed) {
+          console.error('[youtube-player] failed to load iframe API:', error)
+          setVideoErrorState({
+            sessionKey: playerSessionKey,
+            message: 'Unable to load the video player. Check your connection and try again.',
+          })
+        }
+        return
+      }
+
+      if (disposed) return
+
       playerRef.current?.destroy()
+      playerRef.current = new window.YT.Player(containerId, {
+        videoId,
+        playerVars: {
+          autoplay: 1,
+          controls: 0,
+          disablekb: 1,
+          fs: 0,
+          modestbranding: 1,
+          playsinline: 1,
+          rel: 0,
+          cc_load_policy: 0,
+          iv_load_policy: 3,
+          start: clipStart,
+          ...(clipEnd > 0 ? { end: Math.floor(clipEnd) } : {}),
+        },
+        events: {
+          onReady: (event) => {
+            if (disposed) return
+
+            try {
+              const player = event.target as unknown as Record<string, (moduleName: string) => void>
+              if (typeof player.unloadModule === 'function') {
+                player.unloadModule('captions')
+                player.unloadModule('cc')
+              }
+            } catch {
+              // Ignore caption-module failures on unsupported players.
+            }
+
+            event.target.setPlaybackRate(usePlayerStore.getState().playbackRate)
+            event.target.playVideo()
+
+            const duration = event.target.getDuration()
+            const maxEnd = Math.max(duration - 0.5, 1)
+            const effectiveClipEnd = clipEnd > 0 ? Math.min(clipEnd, maxEnd) : maxEnd
+            const effectiveClipStart = Math.min(clipStart, Math.max(effectiveClipEnd - 5, 0))
+
+            effectiveClipStartRef.current = effectiveClipStart
+            effectiveClipEndRef.current = effectiveClipEnd
+
+            const clipDuration = effectiveClipEnd - effectiveClipStart
+            if (clipDuration > 0) {
+              setDuration(clipDuration)
+            }
+
+            setClipBounds(effectiveClipStart, effectiveClipEnd)
+
+            if (
+              initialSeekTime !== undefined &&
+              initialSeekTime >= effectiveClipStart &&
+              initialSeekTime < effectiveClipEnd
+            ) {
+              event.target.seekTo(initialSeekTime, true)
+            }
+
+            setReadySessionKey(playerSessionKey)
+          },
+          onStateChange: (event) => {
+            if (disposed) return
+
+            if (event.data === 0) {
+              const effectiveClipStart = effectiveClipStartRef.current
+              event.target.seekTo(effectiveClipStart, true)
+              event.target.playVideo()
+              handleClipComplete()
+              return
+            }
+
+            const playing = event.data === 1
+            setIsPlaying(playing)
+
+            if (playing) {
+              setPlaybackStartedSessionKey(playerSessionKey)
+            }
+          },
+          onError: (event) => {
+            if (disposed) return
+            setVideoErrorState({
+              sessionKey: playerSessionKey,
+              message: getVideoErrorMessage(event.data),
+            })
+          },
+        },
+      })
     }
-  }, [initPlayer])
+
+    void createPlayer()
+
+    return () => {
+      disposed = true
+      if (intervalRef.current !== null) {
+        window.clearInterval(intervalRef.current)
+        intervalRef.current = null
+      }
+      playerRef.current?.destroy()
+      playerRef.current = null
+      setIsPlaying(false)
+    }
+  }, [
+    clipEnd,
+    clipStart,
+    containerId,
+    initialSeekTime,
+    playerSessionKey,
+    setActiveSubIndex,
+    setClipBounds,
+    setCurrentTime,
+    setDuration,
+    setIsPlaying,
+    videoId,
+  ])
 
   const play = useCallback(() => playerRef.current?.playVideo(), [])
   const pause = useCallback(() => playerRef.current?.pauseVideo(), [])
   const seekTo = useCallback((seconds: number) => playerRef.current?.seekTo(seconds, true), [])
-  const clearVideoError = useCallback(() => setVideoError(null), [])
+  const clearVideoError = useCallback(() => {
+    setVideoErrorState((current) =>
+      current?.sessionKey === playerSessionKey ? null : current,
+    )
+  }, [playerSessionKey])
 
-  return { ready, playbackStarted, play, pause, seekTo, player: playerRef, videoError, clearVideoError }
+  return {
+    ready,
+    playbackStarted,
+    play,
+    pause,
+    seekTo,
+    player: playerRef,
+    videoError,
+    clearVideoError,
+  }
 }

@@ -1,11 +1,12 @@
 'use client'
 
 import { Suspense, useEffect, useState } from 'react'
-import { usePathname, useRouter } from 'next/navigation'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { BottomNav } from '@/components/BottomNav'
 import { LogoFull } from '@/components/Logo'
 import { LoginGateModal } from '@/components/LoginGateModal'
 import { AdminActivator } from '@/components/AdminActivator'
+import { buildPathWithNext } from '@/lib/navigation'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
@@ -22,6 +23,7 @@ export default function TabsLayout({
 }) {
   const router = useRouter()
   const pathname = usePathname()
+  const searchParams = useSearchParams()
   const hasOnboarded = useOnboardingStore((state) => state.hasOnboarded)
   const onboardingHydrated = useOnboardingStore((state) => state.hydrated)
   const completeOnboarding = useOnboardingStore((state) => state.completeOnboarding)
@@ -33,6 +35,7 @@ export default function TabsLayout({
 
   const [splashDone, setSplashDone] = useState(false)
   const [dismissedGuestGateVersion, setDismissedGuestGateVersion] = useState<number | null>(null)
+  const currentPath = `${pathname}${searchParams.toString() ? `?${searchParams.toString()}` : ''}`
   const isImmersiveRoute = pathname === '/shorts' || pathname === '/'
   const hasExistingActivity = watchedVideoIds.length > 0 || phraseCount > 0 || streakDays > 0
   const shouldAutoCompleteOnboarding =
@@ -59,9 +62,10 @@ export default function TabsLayout({
     }
 
     if (shouldRedirectToOnboarding) {
-      router.replace('/onboarding')
+      router.replace(buildPathWithNext('/onboarding', currentPath))
     }
   }, [
+    currentPath,
     authLoading,
     completeOnboarding,
     onboardingHydrated,

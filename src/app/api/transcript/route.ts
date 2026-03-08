@@ -2,12 +2,17 @@ import { NextRequest, NextResponse } from 'next/server'
 import { YoutubeTranscript } from 'youtube-transcript'
 import Anthropic from '@anthropic-ai/sdk'
 
+const YOUTUBE_ID_PATTERN = /^[A-Za-z0-9_-]{11}$/
+const TRANSCRIPT_FETCH_TIMEOUT_MS = 8000
+
 export interface TranscriptSubtitle {
   start: number
   end: number
   en: string
   ko: string
 }
+
+export const runtime = 'nodejs'
 
 // In-memory cache to avoid re-fetching transcripts
 const transcriptCache = new Map<string, TranscriptSubtitle[]>()
@@ -173,6 +178,13 @@ export async function GET(request: NextRequest) {
     )
   }
 
+  if (!YOUTUBE_ID_PATTERN.test(videoId)) {
+    return NextResponse.json(
+      { error: 'Invalid video ID parameter "v"' },
+      { status: 400 }
+    )
+  }
+
   // Check cache first
   if (transcriptCache.has(videoId)) {
     return NextResponse.json(
@@ -236,9 +248,20 @@ async function fetchTranscript(
   videoId: string,
   lang?: string
 ): Promise<{ text: string; offset: number; duration: number }[] | null> {
+  let timeoutId: ReturnType<typeof setTimeout> | undefined
+
   try {
     const config = lang ? { lang } : undefined
-    const transcript = await YoutubeTranscript.fetchTranscript(videoId, config)
+    const timeoutPromise = new Promise<never>((_, reject) => {
+      timeoutId = setTimeout(() => {
+        reject(new Error('Transcript fetch timed out'))
+      }, TRANSCRIPT_FETCH_TIMEOUT_MS)
+    })
+
+    const transcript = await Promise.race([
+      YoutubeTranscript.fetchTranscript(videoId, config),
+      timeoutPromise,
+    ])
     return transcript.map((entry) => ({
       text: entry.text,
       offset: entry.offset,
@@ -246,5 +269,9 @@ async function fetchTranscript(
     }))
   } catch {
     return null
+  } finally {
+    if (timeoutId) {
+      clearTimeout(timeoutId)
+    }
   }
 }

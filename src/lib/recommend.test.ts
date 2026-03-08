@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import { getVideosBySeries, seedVideos } from '@/data/seed-videos'
+import { catalogVideos } from '@/lib/catalog'
 import { recommendVideos } from './recommend'
 
 describe('recommendVideos', () => {
@@ -99,5 +100,17 @@ describe('recommendVideos', () => {
     const second = recommendVideos(sample, options).map((video) => video.id)
 
     expect(second).toEqual(first)
+  })
+
+  it('filters out blocked clips even when they are passed explicitly', () => {
+    const blocked = seedVideos.find((video) => video.youtubeId === '_Zdd5zhPK1Q')
+    const available = catalogVideos[0]
+
+    expect(blocked).toBeDefined()
+    expect(available).toBeDefined()
+
+    const ranked = recommendVideos([blocked!, available!])
+
+    expect(ranked.map((video) => video.id)).toEqual([available!.id])
   })
 })

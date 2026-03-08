@@ -6,8 +6,8 @@ import { SceneQuizGame } from './SceneQuizGame'
 import { ListeningGame } from './ListeningGame'
 import type { SavedPhrase } from '@/stores/usePhraseStore'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
-
-import { seedVideos, type SubtitleEntry } from '@/data/seed-videos'
+import { type SubtitleEntry } from '@/data/seed-videos'
+import { catalogVideos } from '@/lib/catalog'
 
 type GameType = 'scene-quiz' | 'listening'
 
@@ -55,7 +55,7 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
 
     async function fetchTranscripts() {
       // Pick 3 random seed videos and load their transcripts
-      const randomVideos = shuffle(seedVideos).slice(0, 3)
+      const randomVideos = shuffle(catalogVideos).slice(0, 3)
       const allEntries: SubtitleEntry[] = []
 
       for (const video of randomVideos) {

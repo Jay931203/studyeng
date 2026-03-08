@@ -3,7 +3,7 @@
 import { Suspense, useMemo } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { VideoFeed } from '@/components/VideoFeed'
-import { seedVideos } from '@/data/seed-videos'
+import { catalogVideos } from '@/lib/catalog'
 import { recommendVideos, seriesPlaylist } from '@/lib/recommend'
 import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useLikeStore } from '@/stores/useLikeStore'
@@ -73,9 +73,9 @@ function ShortsFeedContent() {
     }
 
     if (videoId) {
-      const target = seedVideos.find((video) => video.id === videoId)
+      const target = catalogVideos.find((video) => video.id === videoId)
       if (target) {
-        const rest = seedVideos.filter((video) => video.id !== videoId)
+        const rest = catalogVideos.filter((video) => video.id !== videoId)
         return [
           target,
           ...recommendVideos(rest, {
@@ -86,7 +86,7 @@ function ShortsFeedContent() {
       }
     }
 
-    return recommendVideos(seedVideos, options)
+    return recommendVideos(catalogVideos, options)
   }, [videoId, seriesId, recommendationSnapshot])
 
   return (

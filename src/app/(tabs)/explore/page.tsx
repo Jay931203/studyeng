@@ -502,7 +502,7 @@ export default function ExplorePage() {
               <motion.button
                 key={seriesItem.id}
                 whileTap={{ scale: 0.99 }}
-                onClick={() => router.replace(buildExploreUrl(seriesItem.id), { scroll: false })}
+                onClick={() => router.push(buildExploreUrl(seriesItem.id), { scroll: false })}
                 className="rounded-[28px] border border-[var(--border-card)] bg-[var(--bg-card)] p-5 text-left shadow-[var(--card-shadow)]"
               >
                 <p className="text-xs uppercase tracking-[0.22em] text-[var(--accent-text)]">

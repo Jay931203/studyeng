@@ -1,6 +1,9 @@
 'use client'
 
 import { useSyncExternalStore } from 'react'
+import { clearAccountScopedState, prepareAccountScopedStateForUser } from '@/lib/accountScope'
+import { sanitizeAppPath } from '@/lib/navigation'
+import { syncBillingOnLogin } from '@/lib/supabase/billingSync'
 import { createClient } from '@/lib/supabase/client'
 import { syncOnLogin, onLogout } from '@/lib/supabase/sync'
 import { syncOpsOnLogin } from '@/lib/supabase/opsSync'
@@ -58,7 +61,7 @@ function getSnapshot() {
 function resetSignedOutState() {
   const hadUser = authSnapshot.user !== null || syncedUserId !== null
   syncedUserId = null
-  useAdminStore.setState({ isAdmin: false })
+  clearAccountScopedState()
 
   if (hadUser) {
     onLogout()
@@ -70,6 +73,7 @@ async function syncSignedInUser(user: User) {
     return
   }
 
+  prepareAccountScopedStateForUser(user.id)
   useAdminStore.setState({ isAdmin: false })
   syncedUserId = user.id
 
@@ -77,6 +81,7 @@ async function syncSignedInUser(user: User) {
     await Promise.all([
       syncOnLogin(user.id),
       syncOpsOnLogin(user.id, user.email ?? null),
+      syncBillingOnLogin(user.id),
     ])
   } catch (error) {
     console.warn('[auth] sync on sign-in failed:', error)
@@ -162,9 +167,10 @@ function subscribe(listener: () => void) {
 
 function buildAuthRedirect(nextPath = '/') {
   const redirectUrl = new URL('/auth/callback', window.location.origin)
+  const safeNextPath = sanitizeAppPath(nextPath, '/')
 
-  if (nextPath && nextPath !== '/') {
-    redirectUrl.searchParams.set('next', nextPath)
+  if (safeNextPath !== '/') {
+    redirectUrl.searchParams.set('next', safeNextPath)
   }
 
   return redirectUrl.toString()

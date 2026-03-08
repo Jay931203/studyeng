@@ -1,113 +1,156 @@
-import { useState, useEffect, useRef } from 'react'
+import { useEffect, useSyncExternalStore } from 'react'
 import type { SubtitleEntry } from '@/data/seed-videos'
 import staticTranscriptManifest from '../../scripts/whisper-manifest.json'
 
-// Client-side cache to avoid re-fetching on component re-mount
-const clientCache = new Map<string, SubtitleEntry[]>()
-const availableStaticTranscripts = new Set<string>(Object.keys(staticTranscriptManifest))
-
-export function useTranscript(youtubeId: string) {
-  const [subtitles, setSubtitles] = useState<SubtitleEntry[]>(() => {
-    // Return cached value immediately if available
-    return clientCache.get(youtubeId) ?? []
-  })
-  const [loading, setLoading] = useState(() => !clientCache.has(youtubeId))
-  const [error, setError] = useState<string | null>(null)
-
-  // Track the current youtubeId to handle race conditions
-  const activeIdRef = useRef(youtubeId)
-
-  useEffect(() => {
-    activeIdRef.current = youtubeId
-
-    // Already cached on client side
-    if (clientCache.has(youtubeId)) {
-      setSubtitles(clientCache.get(youtubeId)!)
-      setLoading(false)
-      setError(null)
-      return
-    }
-
-    setLoading(true)
-    setError(null)
-
-    const controller = new AbortController()
-
-    // Try static JSON first (pre-baked transcripts), then fallback to API
-    fetchWithStaticFallback(youtubeId, controller.signal)
-      .then((subs) => {
-        if (activeIdRef.current !== youtubeId) return
-        clientCache.set(youtubeId, subs)
-        setSubtitles(subs)
-        setLoading(false)
-      })
-      .catch((err) => {
-        if (err.name === 'AbortError') return
-        if (activeIdRef.current !== youtubeId) return
-
-        console.error('[useTranscript] fetch failed:', err)
-        setSubtitles([])
-        setLoading(false)
-        setError(err.message ?? 'Failed to load transcript')
-      })
-
-    return () => {
-      controller.abort()
-    }
-  }, [youtubeId])
-
-  return { subtitles, loading, error }
+interface TranscriptState {
+  subtitles: SubtitleEntry[]
+  loading: boolean
+  error: string | null
 }
 
-async function fetchWithStaticFallback(
-  youtubeId: string,
-  signal: AbortSignal
-): Promise<SubtitleEntry[]> {
-  // 1. Try pre-baked static JSON file (no API cost, instant)
-  let staticData: SubtitleEntry[] | null = null
-  if (availableStaticTranscripts.has(youtubeId)) {
-    try {
-      const staticRes = await fetch(`/transcripts/${youtubeId}.json`, { signal })
-      if (staticRes.ok) {
-        const data = await staticRes.json()
-        if (Array.isArray(data) && data.length > 0) {
-          staticData = data
-          // If static data already has Korean translations, return it directly
-          const hasKorean = data.some((s: SubtitleEntry) => s.ko && s.ko.trim() !== '')
-          if (hasKorean) {
-            return data
-          }
-          // Otherwise, static data exists but lacks Korean translations.
-          // Try API for a translated version, but use static as fallback.
-        }
-      }
-    } catch (err: unknown) {
-      if (err instanceof Error && err.name === 'AbortError') throw err
-      // If the static file read fails unexpectedly, fall through to API.
+const clientCache = new Map<string, SubtitleEntry[]>()
+const transcriptStateCache = new Map<string, TranscriptState>()
+const transcriptListeners = new Map<string, Set<() => void>>()
+const inFlightRequests = new Map<string, Promise<void>>()
+const availableStaticTranscripts = new Set<string>(Object.keys(staticTranscriptManifest))
+const LOADING_STATE: TranscriptState = Object.freeze({
+  subtitles: [],
+  loading: true,
+  error: null,
+})
+
+function subscribeToTranscript(youtubeId: string, listener: () => void) {
+  const listeners = transcriptListeners.get(youtubeId) ?? new Set<() => void>()
+  listeners.add(listener)
+  transcriptListeners.set(youtubeId, listeners)
+
+  return () => {
+    const currentListeners = transcriptListeners.get(youtubeId)
+    if (!currentListeners) return
+
+    currentListeners.delete(listener)
+    if (currentListeners.size === 0) {
+      transcriptListeners.delete(youtubeId)
+    }
+  }
+}
+
+function emitTranscriptChange(youtubeId: string) {
+  transcriptListeners.get(youtubeId)?.forEach((listener) => listener())
+}
+
+function setTranscriptState(youtubeId: string, state: TranscriptState) {
+  transcriptStateCache.set(youtubeId, state)
+  emitTranscriptChange(youtubeId)
+}
+
+function getTranscriptState(youtubeId: string) {
+  if (transcriptStateCache.has(youtubeId)) {
+    return transcriptStateCache.get(youtubeId)!
+  }
+
+  if (clientCache.has(youtubeId)) {
+    return {
+      subtitles: clientCache.get(youtubeId)!,
+      loading: false,
+      error: null,
     }
   }
 
-  // 2. Fallback to API (fetches from YouTube + optional translation)
-  try {
-    const apiRes = await fetch(
-      `/api/transcript?v=${encodeURIComponent(youtubeId)}`,
-      { signal }
-    )
-    if (!apiRes.ok) {
-      // If API fails but we have static data, use it without Korean
-      if (staticData) return staticData
-      throw new Error(`HTTP ${apiRes.status}`)
+  return LOADING_STATE
+}
+
+async function ensureTranscript(youtubeId: string) {
+  if (clientCache.has(youtubeId)) {
+    setTranscriptState(youtubeId, {
+      subtitles: clientCache.get(youtubeId)!,
+      loading: false,
+      error: null,
+    })
+    return
+  }
+
+  if (inFlightRequests.has(youtubeId)) {
+    return inFlightRequests.get(youtubeId)
+  }
+
+  setTranscriptState(youtubeId, LOADING_STATE)
+
+  const request = fetchWithStaticFallback(youtubeId)
+    .then((subtitles) => {
+      clientCache.set(youtubeId, subtitles)
+      setTranscriptState(youtubeId, {
+        subtitles,
+        loading: false,
+        error: null,
+      })
+    })
+    .catch((err: unknown) => {
+      console.error('[useTranscript] fetch failed:', err)
+      setTranscriptState(youtubeId, {
+        subtitles: [],
+        loading: false,
+        error: err instanceof Error ? err.message : 'Failed to load transcript',
+      })
+    })
+    .finally(() => {
+      inFlightRequests.delete(youtubeId)
+    })
+
+  inFlightRequests.set(youtubeId, request)
+  await request
+}
+
+export function useTranscript(youtubeId: string) {
+  const state = useSyncExternalStore(
+    (listener) => subscribeToTranscript(youtubeId, listener),
+    () => getTranscriptState(youtubeId),
+    () => LOADING_STATE,
+  )
+
+  useEffect(() => {
+    void ensureTranscript(youtubeId)
+  }, [youtubeId])
+
+  return state
+}
+
+async function fetchWithStaticFallback(youtubeId: string): Promise<SubtitleEntry[]> {
+  let staticData: SubtitleEntry[] | null = null
+
+  if (availableStaticTranscripts.has(youtubeId)) {
+    try {
+      const staticResponse = await fetch(`/transcripts/${youtubeId}.json`)
+      if (staticResponse.ok) {
+        const data: unknown = await staticResponse.json()
+        if (Array.isArray(data) && data.length > 0) {
+          staticData = data as SubtitleEntry[]
+          const hasKorean = staticData.some((entry) => entry.ko && entry.ko.trim() !== '')
+          if (hasKorean) {
+            return staticData
+          }
+        }
+      }
+    } catch {
+      // Fall back to the API below if the static asset is missing or unreadable.
     }
-    const data: { subtitles: SubtitleEntry[]; error?: string } = await apiRes.json()
-    const apiSubs = data.subtitles ?? []
-    // If API returned subtitles, use them (they may have Korean translations)
-    if (apiSubs.length > 0) return apiSubs
-    // If API returned empty but we have static data, use static
+  }
+
+  try {
+    const apiResponse = await fetch(`/api/transcript?v=${encodeURIComponent(youtubeId)}`)
+    if (!apiResponse.ok) {
+      if (staticData) return staticData
+      throw new Error(`HTTP ${apiResponse.status}`)
+    }
+
+    const data: { subtitles?: SubtitleEntry[] } = await apiResponse.json()
+    const apiSubtitles = data.subtitles ?? []
+
+    if (apiSubtitles.length > 0) return apiSubtitles
     if (staticData) return staticData
+
     return []
-  } catch (err: unknown) {
-    if (err instanceof Error && err.name === 'AbortError') throw err
-    // If API fails but we have static data, use it without Korean
+  } catch (err) {
     if (staticData) return staticData
     throw err
   }

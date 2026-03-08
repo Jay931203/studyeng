@@ -1,11 +1,12 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Logo, LogoFull } from '@/components/Logo'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useAuth } from '@/hooks/useAuth'
+import { buildPathWithNext, sanitizeAppPath } from '@/lib/navigation'
 
 const LEVELS = [
   {
@@ -43,24 +44,27 @@ export default function OnboardingPage() {
   const completeOnboarding = useOnboardingStore((state) => state.completeOnboarding)
   const setLevel = useOnboardingStore((state) => state.setLevel)
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const nextPath = sanitizeAppPath(searchParams.get('next'), '/explore')
+  const onboardingReturnPath = nextPath === '/explore' ? '/onboarding' : buildPathWithNext('/onboarding', nextPath)
 
   useEffect(() => {
     if (loading || !hydrated) return
 
     if (!user) {
-      router.replace('/login?next=/onboarding')
+      router.replace(buildPathWithNext('/login', onboardingReturnPath))
       return
     }
 
     if (hasOnboarded) {
-      router.replace('/explore')
+      router.replace(nextPath)
     }
-  }, [hasOnboarded, hydrated, loading, router, user])
+  }, [hasOnboarded, hydrated, loading, nextPath, onboardingReturnPath, router, user])
 
   const finish = () => {
     setLevel(selectedLevel)
     completeOnboarding()
-    router.replace('/explore')
+    router.replace(nextPath)
   }
 
   if (loading || !hydrated || !user) {

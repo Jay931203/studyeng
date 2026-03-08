@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-03-08T09:34:42.083Z",
-  "sourceManifestGeneratedAt": "2026-03-08T09:34:42.074Z",
+  "generatedAt": "2026-03-08T11:49:23.022Z",
+  "sourceManifestGeneratedAt": "2026-03-08T11:49:23.020Z",
   "summary": {
     "blockedVideos": 372,
     "recommendableVideos": 329,
@@ -7843,24 +7843,16 @@
       "workflowStatus": "needs_translation",
       "assetWorkflowStatus": "needs_translation",
       "externalPlaybackStatus": "pass",
-      "englishSubtitleStatus": "complete",
+      "englishSubtitleStatus": "missing",
       "koreanSubtitleStatus": "missing",
-      "transcriptEntryCount": 15,
-      "subtitleKeywordCount": 3,
+      "transcriptEntryCount": 0,
+      "subtitleKeywordCount": 0,
       "recommendable": true,
       "qualityTier": "candidate",
       "titleTokens": [],
-      "subtitleTokens": [
-        "don",
-        "going",
-        "know"
-      ],
-      "topicTokens": [
-        "don",
-        "going",
-        "know"
-      ],
-      "keywordFingerprint": "don|going|know"
+      "subtitleTokens": [],
+      "topicTokens": [],
+      "keywordFingerprint": ""
     },
     {
       "id": "shawshank-02",
@@ -22499,63 +22491,22 @@
       "workflowStatus": "needs_translation",
       "assetWorkflowStatus": "needs_translation",
       "externalPlaybackStatus": "pass",
-      "englishSubtitleStatus": "complete",
+      "englishSubtitleStatus": "missing",
       "koreanSubtitleStatus": "missing",
-      "transcriptEntryCount": 4,
-      "subtitleKeywordCount": 26,
+      "transcriptEntryCount": 0,
+      "subtitleKeywordCount": 0,
       "recommendable": true,
       "qualityTier": "candidate",
       "titleTokens": [
         "lose",
         "yourself"
       ],
-      "subtitleTokens": [
-        "one",
-        "already",
-        "arms",
-        "capture",
-        "ever",
-        "everything",
-        "heavy",
-        "knees",
-        "let",
-        "look",
-        "mom",
-        "moment",
-        "nervous",
-        "opportunity",
-        "palms",
-        "seize",
-        "shot",
-        "slip",
-        "spaghetti",
-        "surface"
-      ],
+      "subtitleTokens": [],
       "topicTokens": [
         "lose",
-        "yourself",
-        "one",
-        "already",
-        "arms",
-        "capture",
-        "ever",
-        "everything",
-        "heavy",
-        "knees",
-        "let",
-        "look",
-        "mom",
-        "moment",
-        "nervous",
-        "opportunity",
-        "palms",
-        "seize",
-        "shot",
-        "slip",
-        "spaghetti",
-        "surface"
+        "yourself"
       ],
-      "keywordFingerprint": "lose|yourself|one|already|arms|capture|ever|everything"
+      "keywordFingerprint": "lose|yourself"
     },
     {
       "id": "hip-hop-classics-02",

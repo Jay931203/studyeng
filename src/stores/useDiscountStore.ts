@@ -40,6 +40,7 @@ interface DiscountState {
   checkAndResetMonthly: () => void
   /** 3개월 연속 90%+ 달성 여부 */
   hasConsecutiveBonus: () => boolean
+  resetState: () => void
 }
 
 function getCurrentMonthString(): string {
@@ -133,6 +134,14 @@ export const useDiscountStore = create<DiscountState>()(
 
       hasConsecutiveBonus: () => {
         return get().consecutiveHighMonths >= 3
+      },
+
+      resetState: () => {
+        set({
+          completedDays: [],
+          currentMonth: getCurrentMonthString(),
+          consecutiveHighMonths: 0,
+        })
       },
 
       getNextTierInfo: () => {
