@@ -142,7 +142,7 @@ export function useYouTubePlayer(
   onEmbedBlocked?: () => void,
 ) {
   const playerRef = useRef<YT.Player | null>(null)
-  const containerParentRef = useRef<HTMLElement | null>(null)
+  const playerMountRef = useRef<HTMLDivElement | null>(null)
   const intervalRef = useRef<number | null>(null)
   const wasPlayingBeforeHideRef = useRef(false)
   const prevSubIndexRef = useRef(-1)
@@ -351,24 +351,27 @@ export function useYouTubePlayer(
 
       if (disposed) return
 
-      // Save parent reference before first destroy
-      const existingEl = document.getElementById(containerId)
-      if (existingEl?.parentElement) {
-        containerParentRef.current = existingEl.parentElement
+      const containerEl = document.getElementById(containerId)
+      if (!containerEl) {
+        setVideoErrorState({
+          sessionKey: playerSessionKey,
+          message: 'Unable to find the video container.',
+        })
+        return
       }
 
       if (playerRef.current && typeof playerRef.current.destroy === 'function') {
         playerRef.current.destroy()
       }
 
-      // destroy() removes the iframe from the DOM.
-      // Recreate the target div so the new player can attach.
-      if (!document.getElementById(containerId) && containerParentRef.current) {
-        containerParentRef.current.innerHTML =
-          `<div id="${containerId}" class="h-full w-full"></div>`
-      }
+      containerEl.replaceChildren()
+      const mountEl = document.createElement('div')
+      mountEl.style.width = '100%'
+      mountEl.style.height = '100%'
+      containerEl.appendChild(mountEl)
+      playerMountRef.current = mountEl
 
-      playerRef.current = new window.YT.Player(containerId, {
+      playerRef.current = new window.YT.Player(mountEl, {
         videoId,
         playerVars: {
           autoplay: 1,
@@ -467,6 +470,8 @@ export function useYouTubePlayer(
       }
       playerRef.current?.destroy()
       playerRef.current = null
+      playerMountRef.current?.remove()
+      playerMountRef.current = null
       setIsPlaying(false)
     }
   }, [

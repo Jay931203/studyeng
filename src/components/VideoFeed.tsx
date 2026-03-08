@@ -369,6 +369,15 @@ export function VideoFeed({
           }}
           className="absolute inset-0"
         >
+          {showSeriesEpisodes && (
+            <button
+              type="button"
+              aria-label="시리즈 목록 닫기"
+              onClick={() => setShowSeriesEpisodes(false)}
+              className="absolute inset-0 z-[9] cursor-default"
+            />
+          )}
+
           <VideoPlayer
             videoId={currentVideo.id}
             youtubeId={currentVideo.youtubeId}
@@ -516,6 +525,7 @@ export function VideoFeed({
                     <button
                       key={episode.id}
                       onClick={() => {
+                        setShowSeriesEpisodes(false)
                         const nextIndex = videos.findIndex((video) => video.id === episode.id)
                         if (nextIndex >= 0) {
                           setDirection(nextIndex > currentIndex ? 1 : -1)
