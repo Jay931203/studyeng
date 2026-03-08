@@ -121,6 +121,7 @@ function isYouTubePlayer(
   pauseVideo: () => void
   seekTo: (seconds: number, allowSeekAhead?: boolean) => void
   getPlayerState: () => number
+  getIframe?: () => HTMLIFrameElement
 } {
   return Boolean(
     player &&
@@ -299,16 +300,23 @@ export function useYouTubePlayer(
     const player = playerRef.current
     if (!isYouTubePlayer(player)) return
 
-    const rafId = window.requestAnimationFrame(() => {
+    const intervalId = window.setInterval(() => {
+      const iframe = typeof player.getIframe === 'function' ? player.getIframe() : null
+      if (!iframe || !iframe.isConnected) {
+        return
+      }
+
+      window.clearInterval(intervalId)
+
       try {
         player.playVideo()
       } catch {
         // Ignore initial autoplay failures.
       }
-    })
+    }, 100)
 
     return () => {
-      window.cancelAnimationFrame(rafId)
+      window.clearInterval(intervalId)
     }
   }, [playbackStarted, ready])
 
