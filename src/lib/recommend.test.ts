@@ -21,11 +21,11 @@ describe('recommendVideos', () => {
   })
 
   it('uses saved phrase affinity to boost related categories', () => {
-    const source = seedVideos.find((video) => video.category === 'music')
-    const sameCategory = seedVideos.find(
+    const source = catalogVideos.find((video) => video.category === 'music')
+    const sameCategory = catalogVideos.find(
       (video) => video.category === 'music' && video.id !== source?.id,
     )
-    const differentCategory = seedVideos.find(
+    const differentCategory = catalogVideos.find(
       (video) => video.category === 'drama' && video.id !== source?.id,
     )
 
@@ -48,11 +48,11 @@ describe('recommendVideos', () => {
   })
 
   it('uses completion-heavy behavior signals to favor similar clips', () => {
-    const source = seedVideos.find((video) => video.category === 'daily')
-    const sameCategory = seedVideos.find(
+    const source = catalogVideos.find((video) => video.category === 'daily')
+    const sameCategory = catalogVideos.find(
       (video) => video.category === 'daily' && video.id !== source?.id,
     )
-    const differentCategory = seedVideos.find(
+    const differentCategory = catalogVideos.find(
       (video) => video.category === 'movie' && video.id !== source?.id,
     )
 

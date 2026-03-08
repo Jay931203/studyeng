@@ -10,6 +10,7 @@ import { type SubtitleEntry } from '@/data/seed-videos'
 import { catalogVideos } from '@/lib/catalog'
 
 type GameType = 'scene-quiz' | 'listening'
+type PhrasePair = { current: { en: string; ko: string }; next: { en: string; ko: string } }
 
 interface GameLauncherProps {
   phrases: SavedPhrase[]
@@ -45,6 +46,7 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
   const [activeGame, setActiveGame] = useState<GameType | null>(null)
   const [currentPhraseIdx, setCurrentPhraseIdx] = useState(0)
   const [transcriptPhrases, setTranscriptPhrases] = useState<{ en: string; ko: string }[]>([])
+  const [listeningRounds, setListeningRounds] = useState<PhrasePair[]>([])
   const [loadingTranscripts, setLoadingTranscripts] = useState(true)
   const incrementMission = useDailyMissionStore((s) => s.incrementMission)
 
@@ -57,10 +59,21 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
       // Pick 3 random seed videos and load their transcripts
       const randomVideos = shuffle(catalogVideos).slice(0, 3)
       const allEntries: SubtitleEntry[] = []
+      const allRounds: PhrasePair[] = []
 
       for (const video of randomVideos) {
         const entries = await loadTranscript(video.youtubeId)
         allEntries.push(...entries)
+        for (let index = 0; index < entries.length - 1; index += 1) {
+          const current = entries[index]
+          const next = entries[index + 1]
+          if (!current?.en || !next?.en) continue
+
+          allRounds.push({
+            current: subtitleToGamePhrase(current),
+            next: subtitleToGamePhrase(next),
+          })
+        }
         if (allEntries.length >= 20) break
       }
 
@@ -70,6 +83,7 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
             .slice(0, 30)
             .map(subtitleToGamePhrase)
         )
+        setListeningRounds(shuffle(allRounds).slice(0, 20))
         setLoadingTranscripts(false)
       }
     }
@@ -103,6 +117,10 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
   const currentPhrase = hasPhrases
     ? gamePhrases[currentPhraseIdx % gamePhrases.length]
     : null
+  const currentListeningRound =
+    listeningRounds.length > 0
+      ? listeningRounds[currentPhraseIdx % listeningRounds.length]
+      : null
 
   const handleComplete = (correct: boolean) => {
     setCurrentPhraseIdx((prev) => prev + 1)
@@ -161,6 +179,7 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
           <motion.button
             whileTap={{ scale: 0.97 }}
             onClick={() => launchGame('listening')}
+            disabled={listeningRounds.length === 0}
             className="flex-1 rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-4 text-left shadow-[var(--card-shadow)]"
           >
             <div className="flex items-center gap-3">
@@ -183,7 +202,7 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
       </div>
 
       <AnimatePresence>
-        {activeGame && currentPhrase && (
+        {activeGame && ((activeGame === 'scene-quiz' && currentPhrase) || (activeGame === 'listening' && currentListeningRound)) && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -203,13 +222,14 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
               {'\u2715'}
             </button>
 
-            {activeGame === 'scene-quiz' && (
+            {activeGame === 'scene-quiz' && currentPhrase && (
               <SceneQuizGame subtitle={currentPhrase} onComplete={handleComplete} />
             )}
-            {activeGame === 'listening' && (
+            {activeGame === 'listening' && currentListeningRound && (
               <ListeningGame
-                subtitle={currentPhrase}
-                allSubtitles={gamePhrases}
+                currentSubtitle={currentListeningRound.current}
+                nextSubtitle={currentListeningRound.next}
+                choicePool={listeningRounds.map((round) => round.next)}
                 onComplete={handleComplete}
               />
             )}

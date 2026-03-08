@@ -26,7 +26,10 @@ function getSnapshot() {
     return false
   }
 
-  return window.matchMedia(ORIENTATION_QUERY).matches
+  const matches = window.matchMedia(ORIENTATION_QUERY).matches
+  const compactViewport = window.innerWidth <= 1180 || window.innerHeight <= 900
+
+  return matches && compactViewport
 }
 
 /**

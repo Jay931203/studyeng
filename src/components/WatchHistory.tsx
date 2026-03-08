@@ -4,6 +4,7 @@ import { useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
+import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { seedVideos, categories } from '@/data/seed-videos'
 
@@ -129,7 +130,10 @@ export function WatchHistory() {
                       className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-2xl p-3 flex items-center gap-3 border border-[var(--border-card)]"
                     >
                       <button
-                        onClick={() => { clearDeletedFlag(video.id); router.push(`/shorts?v=${video.id}`) }}
+                        onClick={() => {
+                          clearDeletedFlag(video.id)
+                          router.push(buildShortsUrl(video.id, video.seriesId))
+                        }}
                         className="flex items-center gap-3 flex-1 min-w-0 text-left"
                       >
                         <div className="w-20 h-12 flex-shrink-0 rounded-xl overflow-hidden relative">

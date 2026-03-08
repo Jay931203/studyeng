@@ -50,8 +50,7 @@ export function DoubleTapTip() {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 8 }}
           transition={{ duration: 0.3, ease: 'easeOut' }}
-          onClick={dismiss}
-          className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 pointer-events-auto cursor-pointer"
+          className="pointer-events-none absolute bottom-4 left-1/2 z-20 -translate-x-1/2"
         >
           <div
             className="flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 backdrop-blur-md"

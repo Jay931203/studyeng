@@ -10,6 +10,8 @@ import { ViewingStats } from '@/components/ViewingStats'
 import { WatchHistory } from '@/components/WatchHistory'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import { useAuth } from '@/hooks/useAuth'
+import { getCatalogVideoById } from '@/lib/catalog'
+import { buildShortsUrl } from '@/lib/videoRoutes'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
@@ -140,7 +142,11 @@ export default function LearningPage() {
                         onPlay={() => {
                           clearDeletedFlag(phrase.videoId)
                           incrementReview(phrase.id)
-                          router.push(`/shorts?v=${phrase.videoId}&t=${phrase.timestampStart}`)
+                          const seriesId = getCatalogVideoById(phrase.videoId)?.seriesId
+                          const baseUrl = buildShortsUrl(phrase.videoId, seriesId)
+                          const separator = baseUrl.includes('?') ? '&' : '?'
+                          const url = `${baseUrl}${separator}t=${phrase.timestampStart}`
+                          router.push(url)
                         }}
                       />
                     ))}

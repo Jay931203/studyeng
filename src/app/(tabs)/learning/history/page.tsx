@@ -3,6 +3,7 @@
 import { useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
+import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { seedVideos, categories } from '@/data/seed-videos'
 
@@ -144,7 +145,7 @@ export default function WatchHistoryPage() {
                       <button
                         onClick={() => {
                           clearDeletedFlag(video.id)
-                          router.push(`/shorts?v=${video.id}`)
+                          router.push(buildShortsUrl(video.id, video.seriesId))
                         }}
                         className="flex min-w-0 flex-1 items-center gap-3 text-left"
                       >

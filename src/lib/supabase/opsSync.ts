@@ -38,50 +38,6 @@ interface RecommendationSignalRow {
   last_interacted_at: string
 }
 
-function buildFlagKey(flag: Pick<SubtitleFlag, 'videoId' | 'entryIndex'>) {
-  return `${flag.videoId}::${flag.entryIndex}`
-}
-
-function mergeIssues(localIssues: SyncedAdminIssue[], remoteIssues: SyncedAdminIssue[]) {
-  const byId = new Map<string, SyncedAdminIssue>()
-
-  for (const issue of [...localIssues, ...remoteIssues]) {
-    const existing = byId.get(issue.id)
-    if (!existing) {
-      byId.set(issue.id, issue)
-      continue
-    }
-
-    byId.set(issue.id, {
-      ...existing,
-      ...issue,
-      reporterEmail: issue.reporterEmail ?? existing.reporterEmail,
-      resolved: existing.resolved || issue.resolved,
-      timestamp: Math.max(existing.timestamp, issue.timestamp),
-    })
-  }
-
-  return [...byId.values()].sort((left, right) => right.timestamp - left.timestamp)
-}
-
-function mergeFlags(localFlags: SubtitleFlag[], remoteFlags: SubtitleFlag[]) {
-  const byKey = new Map<string, SubtitleFlag>()
-
-  for (const flag of [...localFlags, ...remoteFlags]) {
-    const key = buildFlagKey(flag)
-    const existing = byKey.get(key)
-
-    if (!existing) {
-      byKey.set(key, flag)
-      continue
-    }
-
-    byKey.set(key, existing.flaggedAt >= flag.flaggedAt ? existing : flag)
-  }
-
-  return [...byKey.values()].sort((left, right) => right.flaggedAt.localeCompare(left.flaggedAt))
-}
-
 function mergeSignals(
   localSignals: Record<string, VideoBehaviorSignal>,
   remoteSignals: Record<string, VideoBehaviorSignal>,
@@ -296,33 +252,16 @@ async function pullAdminState(userId: string, email?: string | null) {
     flaggedAt: row.flagged_at,
   }))
 
-  const { issues: localIssues, flaggedSubtitles: localFlags } = useAdminStore.getState()
-
   useAdminStore.setState({
     isAdmin,
     adminSyncError: null,
-    issues: mergeIssues(localIssues, remoteIssues),
-    flaggedSubtitles: mergeFlags(localFlags, remoteFlags),
+    issues: remoteIssues.sort((left, right) => right.timestamp - left.timestamp),
+    flaggedSubtitles: remoteFlags.sort((left, right) =>
+      right.flaggedAt.localeCompare(left.flaggedAt),
+    ),
   })
 
   return true
-}
-
-async function pushAdminState(userId: string) {
-  const { issues, flaggedSubtitles } = useAdminStore.getState()
-
-  if (issues.length > 0) {
-    for (const issue of issues) {
-      const syncedIssue = issue as SyncedAdminIssue
-      await syncIssueReport(userId, syncedIssue, syncedIssue.reporterEmail ?? null)
-    }
-  }
-
-  if (flaggedSubtitles.length > 0) {
-    for (const flag of flaggedSubtitles) {
-      await syncSubtitleFlag(userId, flag)
-    }
-  }
 }
 
 async function pullRecommendationSignals(userId: string) {
@@ -370,22 +309,17 @@ async function pushRecommendationSignals(userId: string) {
 
 export async function syncOpsOnLogin(userId: string, email?: string | null) {
   if (!supabase) return
-  let adminPullSucceeded = false
   try {
-    const [adminPullResult] = await Promise.all([
+    await Promise.all([
       pullAdminState(userId, email),
       pullRecommendationSignals(userId),
     ])
-    adminPullSucceeded = adminPullResult
   } catch (err) {
     console.warn('[ops-sync] initial pull failed:', err)
   }
 
   try {
-    await Promise.all([
-      adminPullSucceeded ? pushAdminState(userId) : Promise.resolve(),
-      pushRecommendationSignals(userId),
-    ])
+    await pushRecommendationSignals(userId)
   } catch (err) {
     console.warn('[ops-sync] push-back failed:', err)
   }

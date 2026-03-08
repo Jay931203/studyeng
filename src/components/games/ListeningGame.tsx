@@ -6,8 +6,9 @@ import { GameResult } from './GameResult'
 import { useUserStore } from '@/stores/useUserStore'
 
 interface ListeningGameProps {
-  subtitle: { en: string; ko: string }
-  allSubtitles: { en: string; ko: string }[]
+  currentSubtitle: { en: string; ko: string }
+  nextSubtitle: { en: string; ko: string }
+  choicePool: { en: string; ko: string }[]
   onComplete: (correct: boolean) => void
 }
 
@@ -67,29 +68,21 @@ function generateDecoys(
   return shuffle(candidates).slice(0, 3)
 }
 
-export function ListeningGame({ subtitle, allSubtitles, onComplete }: ListeningGameProps) {
-  // Find current subtitle index and determine the next subtitle (the answer)
-  const { currentSentence, nextSubtitle, choices } = useMemo(() => {
-    const currentIndex = allSubtitles.findIndex((s) => s.en === subtitle.en)
-
-    // If current subtitle is the last one or not found, wrap around
-    let nextIdx: number
-    if (currentIndex === -1 || currentIndex >= allSubtitles.length - 1) {
-      nextIdx = 0
-    } else {
-      nextIdx = currentIndex + 1
-    }
-
-    const next = allSubtitles[nextIdx]
-    const decoys = generateDecoys(next.en, subtitle.en, allSubtitles)
-    const shuffledChoices = shuffle([next.en, ...decoys])
+export function ListeningGame({
+  currentSubtitle,
+  nextSubtitle,
+  choicePool,
+  onComplete,
+}: ListeningGameProps) {
+  const { currentSentence, choices } = useMemo(() => {
+    const decoys = generateDecoys(nextSubtitle.en, currentSubtitle.en, choicePool)
+    const shuffledChoices = shuffle([nextSubtitle.en, ...decoys])
 
     return {
-      currentSentence: subtitle.en,
-      nextSubtitle: next,
+      currentSentence: currentSubtitle.en,
       choices: shuffledChoices,
     }
-  }, [subtitle, allSubtitles])
+  }, [choicePool, currentSubtitle.en, nextSubtitle.en])
 
   const [selected, setSelected] = useState<string | null>(null)
   const [showResult, setShowResult] = useState(false)
@@ -120,7 +113,7 @@ export function ListeningGame({ subtitle, allSubtitles, onComplete }: ListeningG
             {currentSentence}
           </p>
           <p className="mt-1.5 text-center text-xs text-[var(--text-muted)]">
-            {subtitle.ko}
+            {currentSubtitle.ko}
           </p>
         </div>
         <div className="flex justify-center mt-2">

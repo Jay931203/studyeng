@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { categories } from '@/data/seed-videos'
 import { searchVideos, type SearchResult } from '@/lib/search'
+import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 
 const quickQueries = ['일상 표현', '드라마', '면접 영어', '비즈니스']
@@ -145,7 +146,7 @@ export function SearchBar() {
                 key={result.video.id}
                 onMouseDown={() => {
                   clearDeletedFlag(result.video.id)
-                  router.push(`/shorts?v=${result.video.id}`)
+                  router.push(buildShortsUrl(result.video.id, result.video.seriesId))
                 }}
                 className="w-full rounded-2xl px-3 py-3 text-left transition hover:bg-[var(--bg-card)]"
               >
