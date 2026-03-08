@@ -1,6 +1,6 @@
 import { createClient } from './client'
 import { usePremiumStore } from '@/stores/usePremiumStore'
-import { isEntitlementActive } from '@/lib/billingServer'
+import { isEntitlementActive } from '@/lib/billing'
 
 const supabase = createClient()
 

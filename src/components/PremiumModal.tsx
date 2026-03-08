@@ -2,10 +2,9 @@
 
 import { useMemo, useState } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
-import { getBillingConfig } from '@/lib/billing'
+import { getBillingConfig, type BillingPlan } from '@/lib/billing'
 import { useAuth } from '@/hooks/useAuth'
 import { ModalFeatureList, ModalHeader, ModalShell } from '@/components/ui/ModalShell'
-import type { BillingPlan } from '@/lib/billingServer'
 
 interface PremiumModalProps {
   isOpen: boolean

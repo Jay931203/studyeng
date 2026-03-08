@@ -1,5 +1,6 @@
 import { afterEach, describe, expect, it } from 'vitest'
-import { getPlanKeyForPriceId, isEntitlementActive } from '@/lib/billingServer'
+import { isEntitlementActive } from '@/lib/billing'
+import { getPlanKeyForPriceId } from '@/lib/billingServer'
 
 const originalBillingEnabled = process.env.NEXT_PUBLIC_BILLING_ENABLED
 const originalMonthlyPriceId = process.env.STRIPE_PREMIUM_MONTHLY_PRICE_ID

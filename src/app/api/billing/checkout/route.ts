@@ -1,9 +1,9 @@
 import { NextResponse } from 'next/server'
+import type { BillingPlan } from '@/lib/billing'
 import { createClient } from '@/lib/supabase/server'
 import {
   createCheckoutSession,
   getBillingServerConfig,
-  type BillingPlan,
 } from '@/lib/billingServer'
 
 export const runtime = 'nodejs'

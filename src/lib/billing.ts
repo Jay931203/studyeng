@@ -1,4 +1,8 @@
 const PLACEHOLDER_PREFIXES = ['your_', 'YOUR_']
+const ACTIVE_ENTITLEMENT_STATUSES = new Set(['active', 'trialing'])
+
+export type BillingPlan = 'monthly' | 'yearly'
+export type PremiumPlanKey = 'premium_monthly' | 'premium_yearly'
 
 export function hasPlaceholderValue(value: string | undefined) {
   if (!value) return true
@@ -42,4 +46,19 @@ export function isPremiumEnforcementEnabled() {
 
 export function canUseDevPremiumOverride() {
   return getBillingConfig().devPremiumOverrideEnabled
+}
+
+export function isEntitlementActive(
+  status: string | null | undefined,
+  currentPeriodEnd: string | null | undefined,
+) {
+  if (!status || !ACTIVE_ENTITLEMENT_STATUSES.has(status)) {
+    return false
+  }
+
+  if (!currentPeriodEnd) {
+    return true
+  }
+
+  return new Date(currentPeriodEnd).getTime() > Date.now()
 }

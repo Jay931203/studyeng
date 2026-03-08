@@ -1,12 +1,13 @@
 import Stripe from 'stripe'
-import { hasPlaceholderValue, isBillingEnabled } from '@/lib/billing'
+import {
+  hasPlaceholderValue,
+  isBillingEnabled,
+  isEntitlementActive,
+  type BillingPlan,
+  type PremiumPlanKey,
+} from '@/lib/billing'
 import { sanitizeAppPath } from '@/lib/navigation'
 import { createAdminClient } from '@/lib/supabase/admin'
-
-const ACTIVE_ENTITLEMENT_STATUSES = new Set(['active', 'trialing'])
-
-export type BillingPlan = 'monthly' | 'yearly'
-export type PremiumPlanKey = 'premium_monthly' | 'premium_yearly'
 
 interface BillingCustomerRow {
   user_id: string
@@ -67,21 +68,6 @@ export function getStripeClient() {
   }
 
   return stripeClient
-}
-
-export function isEntitlementActive(
-  status: string | null | undefined,
-  currentPeriodEnd: string | null | undefined,
-) {
-  if (!status || !ACTIVE_ENTITLEMENT_STATUSES.has(status)) {
-    return false
-  }
-
-  if (!currentPeriodEnd) {
-    return true
-  }
-
-  return new Date(currentPeriodEnd).getTime() > Date.now()
 }
 
 export function getPriceIdForPlan(plan: BillingPlan) {
