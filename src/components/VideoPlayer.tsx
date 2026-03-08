@@ -16,6 +16,7 @@ interface VideoPlayerProps {
   clipEnd?: number
   onSavePhrase?: (phrase: SubtitleEntry) => void
   onClipComplete?: () => void
+  onVideoErrorSkip?: () => void
   isLandscape?: boolean
   initialSeekTime?: number
   children?: ReactNode
@@ -29,6 +30,7 @@ export function VideoPlayer({
   clipEnd = 0,
   onSavePhrase,
   onClipComplete,
+  onVideoErrorSkip,
   isLandscape = false,
   initialSeekTime,
   children,
@@ -172,12 +174,12 @@ export function VideoPlayer({
             >
               다시 시도
             </button>
-            {onClipComplete && (
+            {onVideoErrorSkip && (
               <button
                 onClick={(event) => {
                   event.stopPropagation()
                   clearVideoError()
-                  onClipComplete()
+                  onVideoErrorSkip()
                 }}
                 className="rounded-lg px-4 py-2 text-xs font-medium text-white"
                 style={{ backgroundColor: 'var(--accent-primary)' }}
