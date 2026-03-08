@@ -18,6 +18,8 @@ interface WatchHistoryState {
   getNextEpisode: (seriesId: string, allVideoIds: string[]) => string | null
   isWatched: (seriesId: string, videoId: string) => boolean
   isVideoEverWatched: (videoId: string) => boolean
+  removeRecord: (videoId: string) => void
+  clearAllHistory: () => void
 }
 
 export const useWatchHistoryStore = create<WatchHistoryState>()(
@@ -76,6 +78,31 @@ export const useWatchHistoryStore = create<WatchHistoryState>()(
 
       isVideoEverWatched: (videoId) => {
         return (get().viewCounts[videoId] ?? 0) > 0
+      },
+
+      removeRecord: (videoId) => {
+        const { viewCounts, watchedVideoIds, watchRecords, watchedEpisodes } = get()
+        const newCounts = { ...viewCounts }
+        delete newCounts[videoId]
+        const newEpisodes = { ...watchedEpisodes }
+        for (const seriesId of Object.keys(newEpisodes)) {
+          newEpisodes[seriesId] = newEpisodes[seriesId].filter((id) => id !== videoId)
+        }
+        set({
+          viewCounts: newCounts,
+          watchedVideoIds: watchedVideoIds.filter((id) => id !== videoId),
+          watchRecords: watchRecords.filter((r) => r.videoId !== videoId),
+          watchedEpisodes: newEpisodes,
+        })
+      },
+
+      clearAllHistory: () => {
+        set({
+          viewCounts: {},
+          watchedVideoIds: [],
+          watchRecords: [],
+          watchedEpisodes: {},
+        })
       },
     }),
     { name: 'studyeng-watch-history' }

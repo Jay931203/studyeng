@@ -1,7 +1,8 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useMemo } from 'react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { seedVideos, categories } from '@/data/seed-videos'
@@ -24,8 +25,7 @@ function getDateKey(timestamp: number): string {
 
 export function WatchHistory() {
   const router = useRouter()
-  const { watchRecords, viewCounts, watchedVideoIds } = useWatchHistoryStore()
-  const [showAll, setShowAll] = useState(false)
+  const { watchRecords, viewCounts, watchedVideoIds, removeRecord } = useWatchHistoryStore()
 
   // Group by date (descending), deduplicate per date
   const groupedByDate = useMemo(() => {
@@ -63,13 +63,12 @@ export function WatchHistory() {
   const totalWatched = groupedByDate.reduce((sum, g) => sum + g.videos.length, 0)
   if (totalWatched === 0) return null
 
-  // Flatten for showAll/collapse logic
+  // Show only first 3 items in compact view
   const allItems = groupedByDate.flatMap((g) =>
     g.videos.map((v) => ({ ...v, dateLabel: g.label, dateKey: g.key }))
   )
-  const displayItems = showAll ? allItems : allItems.slice(0, 3)
+  const displayItems = allItems.slice(0, 3)
 
-  // Group displayed items by date for rendering
   const displayGroups: { label: string; videos: typeof seedVideos }[] = []
   for (const item of displayItems) {
     const existing = displayGroups.find((g) => g.label === item.dateLabel)
@@ -92,12 +91,12 @@ export function WatchHistory() {
           </span>
         </div>
         {totalWatched > 3 && (
-          <button
-            onClick={() => setShowAll(!showAll)}
+          <Link
+            href="/learning/history"
             className="text-[var(--text-secondary)] text-xs"
           >
-            {showAll ? '접기' : '전체보기'}
-          </button>
+            전체보기
+          </Link>
         )}
       </div>
 
@@ -113,54 +112,48 @@ export function WatchHistory() {
                 categories.find((c) => c.id === video.category)?.label ?? ''
 
               return (
-                <motion.button
+                <motion.div
                   key={video.id}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => router.push(`/?v=${video.id}`)}
-                  className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-2xl p-3 text-left flex items-center gap-3 border border-white/[0.04]"
+                  layout
+                  className="bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-2xl p-3 flex items-center gap-3 border border-white/[0.04]"
                 >
-                  <div className="w-20 h-12 flex-shrink-0 rounded-xl overflow-hidden relative">
-                    <img
-                      src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
-                      alt={video.title}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
-                    {count > 1 && (
-                      <div className="absolute bottom-0.5 right-0.5 bg-black/70 text-white text-[9px] px-1 py-0.5 rounded font-bold">
-                        x{count > 99 ? '99+' : count}
-                      </div>
-                    )}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-[var(--text-primary)] font-medium text-sm truncate">
-                      {video.title}
-                    </p>
-                    <div className="flex items-center gap-1.5 mt-1">
-                      <span className="text-[var(--text-muted)] text-xs">
-                        {categoryLabel}
-                      </span>
-                      <span className="text-[var(--text-muted)] text-[10px]">
-                        {'·'}
-                      </span>
-                      <span className="text-[var(--text-muted)] text-xs">
-                        Lv.{video.difficulty}
-                      </span>
-                    </div>
-                  </div>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    className="w-4 h-4 text-[var(--text-muted)] flex-shrink-0"
+                  <button
+                    onClick={() => router.push(`/?v=${video.id}`)}
+                    className="flex items-center gap-3 flex-1 min-w-0 text-left"
                   >
-                    <path
-                      fillRule="evenodd"
-                      d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </motion.button>
+                    <div className="w-20 h-12 flex-shrink-0 rounded-xl overflow-hidden relative">
+                      <img
+                        src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
+                        alt={video.title}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                      {count > 1 && (
+                        <div className="absolute bottom-0.5 right-0.5 bg-black/70 text-white text-[9px] px-1 py-0.5 rounded font-bold">
+                          x{count > 99 ? '99+' : count}
+                        </div>
+                      )}
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-[var(--text-primary)] font-medium text-sm truncate">
+                        {video.title}
+                      </p>
+                      <div className="flex items-center gap-1.5 mt-1">
+                        <span className="text-[var(--text-muted)] text-xs">{categoryLabel}</span>
+                        <span className="text-[var(--text-muted)] text-[10px]">·</span>
+                        <span className="text-[var(--text-muted)] text-xs">Lv.{video.difficulty}</span>
+                      </div>
+                    </div>
+                  </button>
+                  <button
+                    onClick={() => removeRecord(video.id)}
+                    className="flex-shrink-0 w-7 h-7 flex items-center justify-center text-[var(--text-muted)] hover:text-red-400 active:scale-90 transition-all rounded-lg"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-3.5 h-3.5">
+                      <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+                </motion.div>
               )
             })}
           </div>
