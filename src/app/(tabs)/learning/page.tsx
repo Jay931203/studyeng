@@ -5,28 +5,15 @@ import { useRouter } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
 import { DailyMissions } from '@/components/DailyMissions'
 import { SavedPhraseCard } from '@/components/SavedPhraseCard'
+import { ViewingStats } from '@/components/ViewingStats'
 import { WatchHistory } from '@/components/WatchHistory'
 import { GameLauncher } from '@/components/games/GameLauncher'
 import { usePhraseStore } from '@/stores/usePhraseStore'
-import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
-
-function ProgressStat({ value, label }: { value: number; label: string }) {
-  return (
-    <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-4 shadow-[var(--card-shadow)]">
-      <p className="text-2xl font-black text-[var(--text-primary)]">{value}</p>
-      <p className="mt-1 text-xs text-[var(--text-secondary)]">{label}</p>
-    </div>
-  )
-}
 
 export default function LearningPage() {
   const { phrases, removePhrase } = usePhraseStore()
-  const streakDays = useUserStore((state) => state.streakDays)
   const totalWatched = useWatchHistoryStore((state) => state.watchedVideoIds.length)
-  const totalViews = useWatchHistoryStore((state) =>
-    Object.values(state.viewCounts).reduce((sum, count) => sum + count, 0),
-  )
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)
   const router = useRouter()
   const [showAllPhrases, setShowAllPhrases] = useState(false)
@@ -45,6 +32,8 @@ export default function LearningPage() {
             어디까지 봤는지, 어떤 표현을 모았는지, 오늘 복습할 게 무엇인지 여기서 바로 확인하세요.
           </p>
         </div>
+
+        <DailyMissions />
 
         {isCompletelyEmpty ? (
           <motion.div
@@ -66,13 +55,7 @@ export default function LearningPage() {
           </motion.div>
         ) : (
           <>
-            <section className="mb-8 grid grid-cols-3 gap-3">
-              <ProgressStat value={totalWatched} label="본 영상" />
-              <ProgressStat value={phrases.length} label="저장 표현" />
-              <ProgressStat value={Math.max(streakDays, totalViews > 0 ? 1 : 0)} label="연속 학습" />
-            </section>
-
-            <DailyMissions />
+            <ViewingStats />
 
             <WatchHistory />
 
