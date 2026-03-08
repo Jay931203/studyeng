@@ -30,32 +30,59 @@ const specificId = args.find(a => a.startsWith('--id='))?.split('=')[1]
 const dryRun = args.includes('--dry')
 const skipExisting = args.includes('--skip-done')
 
+function extractVideoInfo(seedContent) {
+  const videos = []
+  const blocks = seedContent.split(/\{[^}]*youtubeId:/g).slice(1)
+  for (const block of blocks) {
+    const idMatch = block.match(/^\s*'([^']+)'/)
+    const startMatch = block.match(/clipStart:\s*(\d+)/)
+    const endMatch = block.match(/clipEnd:\s*(\d+)/)
+    if (idMatch) {
+      videos.push({
+        youtubeId: idMatch[1],
+        clipStart: startMatch ? parseInt(startMatch[1]) : 0,
+        clipEnd: endMatch ? parseInt(endMatch[1]) : 60,
+      })
+    }
+  }
+  // Deduplicate by youtubeId
+  const seen = new Set()
+  return videos.filter(v => { if (seen.has(v.youtubeId)) return false; seen.add(v.youtubeId); return true })
+}
+
 async function main() {
   const seedContent = await readFile(SEED_VIDEOS_PATH, 'utf-8')
-  const youtubeIds = [...seedContent.matchAll(/youtubeId:\s*'([^']+)'/g)].map(m => m[1])
+  const allVideos = extractVideoInfo(seedContent)
+  const videoMap = new Map(allVideos.map(v => [v.youtubeId, v]))
 
-  // Already done with Whisper (wyDU93xVAJs)
-  const alreadyDone = new Set(['wyDU93xVAJs'])
-
-  const toProcess = specificId ? [specificId] : youtubeIds.filter(id => !alreadyDone.has(id))
+  const toProcess = specificId
+    ? allVideos.filter(v => v.youtubeId === specificId)
+    : allVideos
 
   console.log(`Processing ${toProcess.length} videos\n`)
 
   let success = 0
   let failed = 0
 
-  for (const videoId of toProcess) {
-    process.stdout.write(`  ${videoId}... `)
+  for (const videoInfo of toProcess) {
+    const videoId = videoInfo.youtubeId
+    const { clipStart, clipEnd } = videoInfo
+    process.stdout.write(`  ${videoId} [${clipStart}-${clipEnd}s]... `)
 
     if (dryRun) {
       console.log('WOULD PROCESS')
       continue
     }
 
+    if (skipExisting && existsSync(join(TRANSCRIPTS_DIR, `${videoId}.json`))) {
+      console.log('SKIP (exists)')
+      continue
+    }
+
     const tempDir = await mkdtemp(join(tmpdir(), 'whisper-'))
 
     try {
-      // 1. Download audio
+      // 1. Download full audio
       const audioPath = join(tempDir, `${videoId}.webm`)
       execSync(
         `yt-dlp -f "bestaudio[ext=webm]/bestaudio" --no-post-overwrites -o "${audioPath}" "https://www.youtube.com/watch?v=${videoId}"`,
@@ -76,7 +103,7 @@ async function main() {
         continue
       }
 
-      // 3. Build subtitle entries
+      // 3. Build subtitle entries — filter to clip range only
       const entries = whisperResult.segments
         .filter(s => s.text.trim().length > 0)
         .map(s => ({
@@ -85,6 +112,8 @@ async function main() {
           en: s.text.trim(),
           ko: ''
         }))
+        // Filter to clip range (with 1s buffer)
+        .filter(s => s.start >= clipStart - 1 && s.start <= clipEnd + 1)
 
       // Merge very short segments (<1.5s) into previous if combined <= 7s
       const merged = []
