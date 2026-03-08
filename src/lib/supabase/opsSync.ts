@@ -295,7 +295,8 @@ async function pushAdminState(userId: string) {
 
   if (issues.length > 0) {
     for (const issue of issues) {
-      await syncIssueReport(userId, issue as SyncedAdminIssue, issue.reporterEmail ?? null)
+      const syncedIssue = issue as SyncedAdminIssue
+      await syncIssueReport(userId, syncedIssue, syncedIssue.reporterEmail ?? null)
     }
   }
 
