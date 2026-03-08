@@ -24,6 +24,30 @@ function FeatureRow({
   )
 }
 
+function BrandNote() {
+  return (
+    <div className="rounded-[28px] border border-[var(--border-card)] bg-[var(--bg-card)]/88 p-5 shadow-[var(--card-shadow)]">
+      <div className="flex flex-wrap gap-2">
+        <span className="rounded-full bg-[var(--accent-glow)] px-3 py-1 text-xs font-medium text-[var(--accent-text)]">
+          피드
+        </span>
+        <span className="rounded-full bg-[var(--bg-secondary)] px-3 py-1 text-xs font-medium text-[var(--text-secondary)]">
+          저장
+        </span>
+        <span className="rounded-full bg-[var(--bg-secondary)] px-3 py-1 text-xs font-medium text-[var(--text-secondary)]">
+          복습
+        </span>
+      </div>
+      <p className="mt-4 text-xl font-bold text-[var(--text-primary)]">
+        공부처럼 보이면 실패입니다.
+      </p>
+      <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
+        설명보다 장면, 퀴즈보다 리듬에 더 가까운 흐름으로 설계했습니다.
+      </p>
+    </div>
+  )
+}
+
 function LoginPageContent() {
   const { user, loading, authAvailable, signInWithGoogle, signInWithKakao } = useAuth()
   const router = useRouter()
@@ -52,6 +76,10 @@ function LoginPageContent() {
           <p className="mt-4 max-w-xl text-base leading-relaxed text-[var(--text-secondary)]">
             로그인하면 오늘 본 장면과 저장 표현, 이어보기 흐름이 한 계정에 붙습니다.
           </p>
+
+          <div className="mt-8 max-w-xl">
+            <BrandNote />
+          </div>
 
           <div className="mt-8 grid gap-3 sm:grid-cols-2">
             <FeatureRow
@@ -87,6 +115,17 @@ function LoginPageContent() {
           <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
             한 번 로그인하면 오늘 장면과 저장 표현, 이어보기가 같은 흐름으로 붙습니다.
           </p>
+          <div className="mt-5 flex flex-wrap gap-2">
+            <span className="rounded-full bg-[var(--accent-glow)] px-3 py-1 text-xs font-medium text-[var(--accent-text)]">
+              이어보기 동기화
+            </span>
+            <span className="rounded-full bg-[var(--bg-secondary)] px-3 py-1 text-xs font-medium text-[var(--text-secondary)]">
+              저장 표현 유지
+            </span>
+            <span className="rounded-full bg-[var(--bg-secondary)] px-3 py-1 text-xs font-medium text-[var(--text-secondary)]">
+              추천 반영
+            </span>
+          </div>
 
           {!authAvailable && (
             <div className="mt-5 rounded-2xl border border-amber-500/20 bg-amber-500/10 px-4 py-3">

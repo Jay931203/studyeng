@@ -45,7 +45,7 @@ export function VideoCard({ video, onClick }: VideoCardProps) {
         <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-3">
           <div className="min-w-0">
             <p className="text-xs font-medium uppercase tracking-[0.18em] text-white/60">
-              Feed pick
+              지금 추천
             </p>
             <p className="mt-1 line-clamp-2 text-base font-semibold leading-tight text-white">
               {video.title}
