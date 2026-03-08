@@ -26,20 +26,11 @@ const COLOR_OPTIONS = [
   { id: 'purple' as const, swatchClass: 'bg-[#a855f7]' },
 ] satisfies Array<{ id: ThemeAccent; swatchClass: string }>
 
-function SectionTitle({
-  eyebrow,
-  title,
-}: {
-  eyebrow: string
-  title: string
-}) {
+function SectionLabel({ label }: { label: string }) {
   return (
-    <div className="mb-4">
-      <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-        {eyebrow}
-      </p>
-      <h2 className="mt-2 text-xl font-bold text-[var(--text-primary)]">{title}</h2>
-    </div>
+    <p className="mb-4 text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+      {label}
+    </p>
   )
 }
 
@@ -73,9 +64,9 @@ export default function ProfilePage() {
 
     try {
       await navigator.clipboard.writeText(json)
-      window.alert('리포트 번들을 복사했습니다.')
+      window.alert('Copied report bundle.')
     } catch {
-      window.prompt('리포트 번들 JSON', json)
+      window.prompt('Report bundle JSON', json)
     }
   }
 
@@ -83,7 +74,7 @@ export default function ProfilePage() {
     <AppPage>
       {!authAvailable && (
         <section className="mb-6 rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-5 py-4">
-          <p className="text-sm font-semibold text-[var(--text-secondary)]">로그인 연결 비활성</p>
+          <p className="text-sm font-semibold text-[var(--text-secondary)]">LOGIN DISABLED</p>
         </section>
       )}
 
@@ -94,7 +85,7 @@ export default function ProfilePage() {
             animate={{ opacity: 1, y: 0 }}
             className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-6 shadow-[var(--card-shadow)]"
           >
-            <SectionTitle eyebrow="ACCOUNT" title="ACCOUNT" />
+            <SectionLabel label="ACCOUNT" />
             <div className="flex items-center gap-4">
               <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-[var(--accent-primary)] to-[var(--accent-secondary)] text-2xl font-bold text-white">
                 {user?.user_metadata?.avatar_url ? (
@@ -127,7 +118,7 @@ export default function ProfilePage() {
                   onClick={signOut}
                   className="w-full rounded-2xl bg-[var(--bg-secondary)] py-3 text-sm font-medium text-[var(--text-primary)]"
                 >
-                  로그아웃
+                  LOG OUT
                 </button>
               ) : (
                 <div className="grid gap-3">
@@ -136,14 +127,14 @@ export default function ProfilePage() {
                     disabled={!authAvailable}
                     className="w-full rounded-2xl bg-white py-3 text-sm font-medium text-black disabled:cursor-not-allowed disabled:opacity-50"
                   >
-                    Google로 로그인
+                    GOOGLE
                   </button>
                   <button
                     onClick={() => signInWithKakao('/profile')}
                     disabled={!authAvailable}
                     className="w-full rounded-2xl bg-[#FEE500] py-3 text-sm font-medium text-[#191919] disabled:cursor-not-allowed disabled:opacity-50"
                   >
-                    Kakao로 로그인
+                    KAKAO
                   </button>
                 </div>
               )}
@@ -151,11 +142,11 @@ export default function ProfilePage() {
           </motion.div>
 
           <SurfaceCard className="p-6">
-            <SectionTitle eyebrow="THEME" title="THEME" />
+            <SectionLabel label="THEME" />
 
             <div className="flex flex-wrap items-center gap-6">
               <div className="flex items-center gap-4">
-                <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">배경</p>
+                <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">BACKGROUND</p>
                 <div className="flex min-h-10 items-center gap-3">
                   {BACKGROUND_OPTIONS.map((option) => (
                     <button
@@ -172,7 +163,7 @@ export default function ProfilePage() {
               </div>
 
               <div className="flex items-center gap-4">
-                <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">컬러</p>
+                <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">COLOR</p>
                 <div className="flex min-h-10 items-center gap-3">
                   {COLOR_OPTIONS.map((option) => (
                     <button
@@ -192,13 +183,12 @@ export default function ProfilePage() {
 
           {isAdmin && (
             <SurfaceCard className="p-6">
-              <SectionTitle eyebrow="ADMIN" title="ADMIN" />
+              <SectionLabel label="ADMIN" />
 
               <div className="space-y-3">
                 <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
                   <div>
-                    <p className="text-sm font-medium text-[var(--text-primary)]">관리자 모드</p>
-                    <p className="text-xs text-[var(--text-muted)]">리포트와 플래그 정리</p>
+                    <p className="text-sm font-medium text-[var(--text-primary)]">ADMIN MODE</p>
                   </div>
                   <button
                     onClick={() => setAdminEnabled(!adminEnabled)}
@@ -218,7 +208,7 @@ export default function ProfilePage() {
 
                 <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
                   <div>
-                    <p className="text-sm font-medium text-[var(--text-primary)]">프리미엄 모드</p>
+                    <p className="text-sm font-medium text-[var(--text-primary)]">PREMIUM</p>
                   </div>
                   <span
                     className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
@@ -227,7 +217,7 @@ export default function ProfilePage() {
                         : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
                     }`}
                   >
-                    {billingEnabled ? '활성' : '비활성'}
+                    {billingEnabled ? 'ON' : 'OFF'}
                   </span>
                 </div>
               </div>
@@ -238,25 +228,25 @@ export default function ProfilePage() {
         <div className="space-y-6">
           {isAdminActive() && (
             <SurfaceCard className="p-6">
-              <SectionTitle eyebrow="REPORTS" title="REPORTS" />
+              <SectionLabel label="REPORTS" />
 
               <div className="rounded-2xl bg-[var(--bg-primary)] p-4">
                 <p className="text-sm font-semibold text-red-400">
-                  미해결 {unresolvedCount}건 · 플래그 {flaggedSubtitles.length}건
+                  OPEN {unresolvedCount} · FLAGS {flaggedSubtitles.length}
                 </p>
                 <div className="mt-3 flex gap-2">
                   <button
                     onClick={copyBundle}
                     className="flex-1 rounded-xl bg-red-500/10 py-2 text-xs font-medium text-red-400"
                   >
-                    JSON 복사
+                    COPY JSON
                   </button>
                   <button
                     onClick={clearFlags}
                     disabled={flaggedSubtitles.length === 0}
                     className="rounded-xl bg-[var(--bg-secondary)] px-4 py-2 text-xs text-[var(--text-muted)] disabled:opacity-30"
                   >
-                    플래그 비우기
+                    CLEAR
                   </button>
                 </div>
               </div>
@@ -268,14 +258,14 @@ export default function ProfilePage() {
               href="/terms"
               className="flex items-center justify-between border-b border-[var(--border-card)] px-5 py-4 text-sm text-[var(--text-secondary)]"
             >
-              <span>이용약관</span>
+              <span>TERMS</span>
               <span aria-hidden>→</span>
             </Link>
             <Link
               href="/privacy"
               className="flex items-center justify-between px-5 py-4 text-sm text-[var(--text-secondary)]"
             >
-              <span>개인정보처리방침</span>
+              <span>PRIVACY</span>
               <span aria-hidden>→</span>
             </Link>
           </SurfaceCard>
