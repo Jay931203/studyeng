@@ -196,8 +196,6 @@ export function useYouTubePlayer(
       playerRef.current = null
     }
 
-    // Use Record cast to pass `origin` and `host` which are valid YouTube params
-    // but missing from the @types/youtube type definitions
     playerRef.current = new window.YT.Player(containerId, {
       videoId,
       playerVars: {
@@ -205,16 +203,16 @@ export function useYouTubePlayer(
         controls: 0,
         disablekb: 1,
         fs: 0,
+        modestbranding: 1,
         playsinline: 1,
         rel: 0,
         cc_load_policy: 0,
         iv_load_policy: 3,
-        origin: typeof window !== 'undefined' ? window.location.origin : undefined,
         start: clipStart,
         ...(clipEnd > 0 ? { end: Math.floor(clipEnd) } : {}),
-      } as YT.PlayerVars,
+      },
       events: {
-        onReady: (event: YT.PlayerEvent) => {
+        onReady: (event) => {
           clearReadyTimeout()
 
           try {
