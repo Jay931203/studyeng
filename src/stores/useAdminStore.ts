@@ -8,20 +8,41 @@ export interface SubtitleFlag {
   flaggedAt: string
 }
 
+export type IssueType = 'subtitle' | 'video' | 'other'
+
+export interface AdminIssue {
+  id: string
+  videoId: string
+  youtubeId: string
+  type: IssueType
+  description: string
+  timestamp: number
+  resolved: boolean
+}
+
 interface AdminState {
   isAdmin: boolean
+  adminEmail: string
   setAdmin: (val: boolean) => void
   flaggedSubtitles: SubtitleFlag[]
   toggleFlag: (videoId: string, entryIndex: number, en: string) => void
   isFlagged: (videoId: string, entryIndex: number) => boolean
   clearFlags: () => void
   exportFlags: () => string
+
+  // Issue reporting
+  issues: AdminIssue[]
+  addIssue: (videoId: string, youtubeId: string, type: IssueType, description: string) => void
+  resolveIssue: (id: string) => void
+  clearResolved: () => void
+  getUnresolvedCount: () => number
 }
 
 export const useAdminStore = create<AdminState>()(
   persist(
     (set, get) => ({
       isAdmin: false,
+      adminEmail: 'hyunjae.park93@gmail.com',
 
       setAdmin: (val) => set({ isAdmin: val }),
 
@@ -60,7 +81,41 @@ export const useAdminStore = create<AdminState>()(
       clearFlags: () => set({ flaggedSubtitles: [] }),
 
       exportFlags: () => JSON.stringify(get().flaggedSubtitles, null, 2),
+
+      // Issue reporting
+      issues: [],
+
+      addIssue: (videoId, youtubeId, type, description) =>
+        set((state) => ({
+          issues: [
+            ...state.issues,
+            {
+              id: `issue-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+              videoId,
+              youtubeId,
+              type,
+              description,
+              timestamp: Date.now(),
+              resolved: false,
+            },
+          ],
+        })),
+
+      resolveIssue: (id) =>
+        set((state) => ({
+          issues: state.issues.map((issue) =>
+            issue.id === id ? { ...issue, resolved: true } : issue
+          ),
+        })),
+
+      clearResolved: () =>
+        set((state) => ({
+          issues: state.issues.filter((issue) => !issue.resolved),
+        })),
+
+      getUnresolvedCount: () =>
+        get().issues.filter((issue) => !issue.resolved).length,
     }),
-    { name: 'admin-store' }
+    { name: 'studyeng-admin-issues' }
   )
 )

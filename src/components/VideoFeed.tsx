@@ -13,6 +13,7 @@ import { usePlayerStore } from '@/stores/usePlayerStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { PremiumModal } from './PremiumModal'
+import { AdminReportButton } from './AdminReportButton'
 import { categories, series as allSeries, type VideoData } from '@/data/seed-videos'
 
 interface VideoFeedProps {
@@ -297,6 +298,8 @@ export function VideoFeed({ videos }: VideoFeedProps) {
         onClose={() => setShowPremiumModal(false)}
         trigger={premiumTrigger}
       />
+
+      <AdminReportButton videoId={currentVideo.id} youtubeId={currentVideo.youtubeId} />
     </div>
   )
 }

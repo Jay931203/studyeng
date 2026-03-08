@@ -11,6 +11,7 @@ import { useThemeStore } from '@/stores/useThemeStore'
 import { useAdminStore } from '@/stores/useAdminStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { StreakDisplay } from '@/components/StreakDisplay'
+import { AdminIssuesList } from '@/components/AdminIssuesList'
 
 function AnimatedStat({ value, label }: { value: number; label: string }) {
   return (
@@ -181,6 +182,9 @@ export default function ProfilePage() {
             </div>
           </div>
         )}
+
+        {/* Admin issues list */}
+        <AdminIssuesList />
 
         {/* Legal links */}
         <div className="mt-3 bg-[var(--bg-card)] shadow-[var(--card-shadow)] rounded-xl overflow-hidden">
