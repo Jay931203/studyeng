@@ -30,6 +30,8 @@ npm run build
 - [Channel growth playbook](./docs/reports/2026-03-08-shortee-channel-growth-playbook.md)
 - [Ad copy bank](./docs/reports/2026-03-08-shortee-ad-copy-bank.md)
 - [Creator brief](./docs/reports/2026-03-08-shortee-creator-brief.md)
+- [Short-form script pack](./docs/reports/2026-03-08-shortee-shortform-script-pack.md)
+- [Weekly brand review template](./docs/reports/2026-03-08-shortee-weekly-brand-review-template.md)
 - [Brand and UX strategy draft](./docs/plans/brand-ux-strategy.md)
 - [Pricing strategy draft](./docs/plans/pricing-strategy.md)
 - [Competitor analysis](./docs/research/2026-03-07-competitor-analysis.md)
