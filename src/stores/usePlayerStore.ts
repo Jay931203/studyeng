@@ -58,6 +58,14 @@ export const currentTimeRef = { current: 0 }
  */
 export const seekToRef: { current: ((seconds: number) => void) | null } = { current: null }
 
+/**
+ * Shared mutable refs for play/pause functions.
+ * Registered by the active VideoPlayer so that sibling components
+ * (e.g. FloatingRemote) can control playback without prop drilling.
+ */
+export const playRef: { current: (() => void) | null } = { current: null }
+export const pauseRef: { current: (() => void) | null } = { current: null }
+
 export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
   subtitleMode: 'en',
   playbackRate: 1,

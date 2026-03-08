@@ -5,35 +5,30 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { AdminIssuesList } from '@/components/AdminIssuesList'
 import { BillingManagementCard } from '@/components/BillingManagementCard'
-import { AppPage, MetricCard, SurfaceCard } from '@/components/ui/AppPage'
+import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import { useAuth } from '@/hooks/useAuth'
 import { isBillingEnabled } from '@/lib/billing'
 import { useAdminStore } from '@/stores/useAdminStore'
-import { usePhraseStore } from '@/stores/usePhraseStore'
 import {
   useThemeStore,
   type ThemeAccent,
   type ThemeBackground,
 } from '@/stores/useThemeStore'
-import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 
 const BACKGROUND_OPTIONS = [
   {
     id: 'dark' as const,
     label: '다크',
-    description: '콘트라스트가 선명한 몰입형 화면입니다.',
     previewClass: 'border-white/10 bg-[#050505]',
   },
   {
     id: 'light' as const,
     label: '라이트',
-    description: '밝은 배경에서 정보 구조를 또렷하게 보여줍니다.',
     previewClass: 'border-slate-300 bg-[#f8fafc]',
   },
 ] satisfies Array<{
   id: ThemeBackground
   label: string
-  description: string
   previewClass: string
 }>
 
@@ -41,43 +36,28 @@ const COLOR_OPTIONS = [
   {
     id: 'teal' as const,
     label: '제이드',
-    description: 'Shortee 기본 포인트 색상입니다.',
     swatchClass: 'bg-teal-500',
   },
   {
     id: 'blue' as const,
     label: '블루',
-    description: '차분하고 선명한 대체 색상입니다.',
     swatchClass: 'bg-blue-500',
   },
   {
     id: 'purple' as const,
     label: '퍼플',
-    description: '따뜻하고 감각적인 포인트 색상입니다.',
     swatchClass: 'bg-purple-500',
   },
 ] satisfies Array<{
   id: ThemeAccent
   label: string
-  description: string
   swatchClass: string
 }>
 
-function SectionTitle({
-  title,
-  description,
-}: {
-  title: string
-  description?: string
-}) {
+function SectionTitle({ title }: { title: string }) {
   return (
     <div className="mb-4">
       <h2 className="text-xl font-bold text-[var(--text-primary)]">{title}</h2>
-      {description && (
-        <p className="mt-1 text-sm leading-relaxed text-[var(--text-secondary)]">
-          {description}
-        </p>
-      )}
     </div>
   )
 }
@@ -99,11 +79,6 @@ export default function ProfilePage() {
     setAdminEnabled,
   } = useAdminStore()
 
-  const phraseCount = usePhraseStore((state) => state.phrases.length)
-  const totalWatched = useWatchHistoryStore((state) => state.watchedVideoIds.length)
-  const totalViews = useWatchHistoryStore((state) =>
-    Object.values(state.viewCounts).reduce((sum, count) => sum + count, 0),
-  )
   const billingEnabled = isBillingEnabled()
   const unresolvedCount = issues.filter((issue) => !issue.resolved).length
   const profileName =
@@ -144,10 +119,7 @@ export default function ProfilePage() {
               animate={{ opacity: 1, y: 0 }}
               className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-6 shadow-[var(--card-shadow)]"
             >
-              <SectionTitle
-                title="계정"
-                description="로그인 상태와 기본 계정 작업을 관리합니다."
-              />
+              <SectionTitle title="계정" />
               <div className="flex items-center gap-4">
                 <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-[var(--accent-primary)] to-[var(--accent-secondary)] text-2xl font-bold text-white">
                   {user?.user_metadata?.avatar_url ? (
@@ -169,7 +141,7 @@ export default function ProfilePage() {
                     {profileName}
                   </p>
                   <p className="mt-1 truncate text-sm text-[var(--text-secondary)]">
-                    {user?.email ?? '로그인하면 이어보기와 저장 표현이 함께 보관됩니다.'}
+                    {user?.email ?? '게스트'}
                   </p>
                 </div>
               </div>
@@ -204,10 +176,7 @@ export default function ProfilePage() {
             </motion.div>
 
             <SurfaceCard className="p-6">
-              <SectionTitle
-                title="앱 톤"
-                description="배경과 포인트 색을 바로 바꿔볼 수 있습니다."
-              />
+              <SectionTitle title="앱 톤" />
 
               <div className="mb-5">
                 <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--text-muted)]">
@@ -229,14 +198,9 @@ export default function ProfilePage() {
                       >
                         <div className="flex items-center gap-3">
                           <div className={`h-11 w-11 rounded-2xl border ${option.previewClass}`} />
-                          <div className="min-w-0">
-                            <p className="text-sm font-medium text-[var(--text-primary)]">
-                              {option.label}
-                            </p>
-                            <p className="mt-1 text-xs text-[var(--text-muted)]">
-                              {option.description}
-                            </p>
-                          </div>
+                          <p className="text-sm font-medium text-[var(--text-primary)]">
+                            {option.label}
+                          </p>
                         </div>
                       </button>
                     )
@@ -266,14 +230,9 @@ export default function ProfilePage() {
                           <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)]">
                             <div className={`h-5 w-5 rounded-full ${option.swatchClass}`} />
                           </div>
-                          <div className="min-w-0">
-                            <p className="text-sm font-medium text-[var(--text-primary)]">
-                              {option.label}
-                            </p>
-                            <p className="mt-1 text-xs text-[var(--text-muted)]">
-                              {option.description}
-                            </p>
-                          </div>
+                          <p className="text-sm font-medium text-[var(--text-primary)]">
+                            {option.label}
+                          </p>
                         </div>
                       </button>
                     )
@@ -284,10 +243,7 @@ export default function ProfilePage() {
 
             {isAdmin && (
               <SurfaceCard className="p-6">
-                <SectionTitle
-                  title="운영 도구"
-                  description="검수에 필요한 모드와 플래그를 빠르게 제어합니다."
-                />
+                <SectionTitle title="운영 도구" />
 
                 <div className="space-y-3">
                   <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
@@ -324,7 +280,7 @@ export default function ProfilePage() {
                       className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
                         billingEnabled
                           ? 'bg-emerald-500/15 text-emerald-300'
-                          : 'bg-amber-500/15 text-amber-300'
+                          : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
                       }`}
                     >
                       {billingEnabled ? '활성' : '비활성'}
@@ -336,24 +292,9 @@ export default function ProfilePage() {
           </div>
 
           <div className="space-y-6">
-            <SurfaceCard className="p-6">
-              <SectionTitle
-                title="활동"
-                description="지금 쌓인 상태와 활동량을 확인합니다."
-              />
-              <div className="grid grid-cols-3 gap-3">
-                <MetricCard label="누적 재생" value={totalViews} className="text-center" />
-                <MetricCard label="저장 표현" value={phraseCount} className="text-center" />
-                <MetricCard label="본 장면" value={totalWatched} className="text-center" />
-              </div>
-            </SurfaceCard>
-
             {isAdminActive() && (
               <SurfaceCard className="p-6">
-                <SectionTitle
-                  title="리포트 번들"
-                  description="리포트와 플래그 데이터를 복사하거나 정리할 수 있습니다."
-                />
+                <SectionTitle title="리포트 번들" />
 
                 <div className="rounded-2xl bg-[var(--bg-primary)] p-4">
                   <p className="text-sm font-semibold text-red-400">

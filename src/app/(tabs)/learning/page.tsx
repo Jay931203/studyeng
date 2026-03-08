@@ -38,15 +38,6 @@ export default function LearningPage() {
 
   return (
     <AppPage>
-        <div className="mb-6 flex items-center justify-end">
-          <button
-            onClick={() => router.push('/shorts')}
-            className="rounded-full bg-[var(--accent-primary)] px-5 py-2.5 text-sm font-semibold text-white"
-          >
-            Feed
-          </button>
-        </div>
-
         <section className="grid gap-4 lg:grid-cols-[1.02fr_0.98fr]">
           <SurfaceCard className="p-6">
             <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">

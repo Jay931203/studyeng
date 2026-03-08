@@ -196,6 +196,11 @@ export default function ExplorePage() {
   if (!spotlightVideo) return null
 
   if (selectedSeries) {
+    const progressPct = getSeriesProgress(selectedSeries.id, selectedSeries.episodeCount)
+    const radius = 40
+    const circumference = 2 * Math.PI * radius
+    const dashOffset = circumference - (progressPct / 100) * circumference
+
     return (
       <AppPage>
           <div className="mb-6 flex items-start justify-between gap-4">
@@ -215,25 +220,58 @@ export default function ExplorePage() {
             </button>
           </div>
 
-          <section className="grid gap-4 xl:grid-cols-[0.92fr_1.08fr]">
+          <section className="grid gap-6 xl:grid-cols-[0.92fr_1.08fr]">
             <SurfaceCard className="p-6">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
-                {categoryLabels[selectedSeries.category]}
-              </p>
-              <h2 className="mt-3 text-3xl font-bold text-[var(--text-primary)]">
-                {selectedSeries.title}
-              </h2>
-              <p className="mt-3 text-sm leading-relaxed text-[var(--text-secondary)]">
-                {selectedSeries.description}
-              </p>
+              <div className="flex items-start gap-5">
+                <svg width="100" height="100" viewBox="0 0 100 100" className="shrink-0">
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r={radius}
+                    fill="none"
+                    stroke="var(--bg-secondary)"
+                    strokeWidth="8"
+                  />
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r={radius}
+                    fill="none"
+                    stroke="var(--accent-primary)"
+                    strokeWidth="8"
+                    strokeLinecap="round"
+                    strokeDasharray={circumference}
+                    strokeDashoffset={dashOffset}
+                    transform="rotate(-90 50 50)"
+                    style={{ transition: 'stroke-dashoffset 0.5s ease' }}
+                  />
+                  <text
+                    x="50"
+                    y="50"
+                    textAnchor="middle"
+                    dominantBaseline="central"
+                    fill="var(--text-primary)"
+                    fontSize="18"
+                    fontWeight="700"
+                  >
+                    {progressPct}%
+                  </text>
+                </svg>
 
-              <div className="mt-5 flex flex-wrap gap-2 text-xs">
-                <span className="rounded-full bg-[var(--bg-secondary)] px-3 py-1.5 text-[var(--text-secondary)]">
-                  총 {selectedSeries.episodeCount}개 에피소드
-                </span>
-                <span className="rounded-full bg-[var(--accent-glow)] px-3 py-1.5 text-[var(--accent-text)]">
-                  진행률 {getSeriesProgress(selectedSeries.id, selectedSeries.episodeCount)}%
-                </span>
+                <div className="min-w-0 flex-1">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
+                    {categoryLabels[selectedSeries.category]}
+                  </p>
+                  <h2 className="mt-2 text-2xl font-bold text-[var(--text-primary)]">
+                    {selectedSeries.title}
+                  </h2>
+                  <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
+                    {selectedSeries.description}
+                  </p>
+                  <p className="mt-3 text-xs text-[var(--text-muted)]">
+                    총 {selectedSeries.episodeCount}개 에피소드
+                  </p>
+                </div>
               </div>
 
               <button
@@ -252,32 +290,37 @@ export default function ExplorePage() {
             </SurfaceCard>
 
             <div className="space-y-3">
-              {seriesEpisodes.map((video) => (
-                <motion.button
-                  key={video.id}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => openShorts(video.id, selectedSeries.id)}
-                  className="flex w-full items-center justify-between rounded-[24px] border border-[var(--border-card)] bg-[var(--bg-card)] p-4 text-left shadow-[var(--card-shadow)]"
-                >
-                  <div className="min-w-0 flex-1">
-                    <p className="truncate text-sm font-semibold text-[var(--text-primary)]">
-                      {video.episodeNumber}. {video.title}
-                    </p>
-                    <p className="mt-1 text-xs text-[var(--text-muted)]">
-                      Lv.{video.difficulty} · 시청 {getViewCount(video.id)}회
-                    </p>
-                  </div>
-                  <span
-                    className={`rounded-full px-3 py-1 text-xs font-medium ${
-                      isWatched(selectedSeries.id, video.id)
-                        ? 'bg-green-500/15 text-green-400'
-                        : 'bg-[var(--accent-glow)] text-[var(--accent-text)]'
-                    }`}
+              {seriesEpisodes.map((video) => {
+                const views = getViewCount(video.id)
+                return (
+                  <motion.button
+                    key={video.id}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={() => openShorts(video.id, selectedSeries.id)}
+                    className="flex w-full items-center gap-3 rounded-[20px] border border-[var(--border-card)] bg-[var(--bg-card)] p-3 text-left shadow-[var(--card-shadow)]"
                   >
-                    {isWatched(selectedSeries.id, video.id) ? '완료' : '보기'}
-                  </span>
-                </motion.button>
-              ))}
+                    <div className="relative h-[56px] w-[100px] shrink-0 overflow-hidden rounded-xl">
+                      <Image
+                        src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
+                        alt={video.title}
+                        fill
+                        sizes="100px"
+                        className="object-cover"
+                      />
+                    </div>
+
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate text-sm font-semibold text-[var(--text-primary)]">
+                        {video.episodeNumber}. {video.title}
+                      </p>
+                      <p className="mt-1 flex items-center gap-2 text-xs text-[var(--text-muted)]">
+                        <span>Lv.{video.difficulty}</span>
+                        <span className="font-mono text-[var(--text-secondary)]">&times;{views}</span>
+                      </p>
+                    </div>
+                  </motion.button>
+                )
+              })}
             </div>
           </section>
       </AppPage>
@@ -310,11 +353,6 @@ export default function ExplorePage() {
                     ? `${continueSeries[0].seriesItem.title} 이어서 보기`
                     : '오늘 먼저 볼 장면'}
                 </h2>
-                <p className="mt-3 text-sm leading-relaxed text-[var(--text-secondary)]">
-                  {continueSeries.length > 0
-                    ? `${continueSeries[0].lastVideo?.title ?? '방금 보던 장면'} 다음 흐름부터 바로 붙습니다.`
-                    : '취향과 최근 반응을 기준으로 지금 보기 좋은 클립을 먼저 올려뒀습니다.'}
-                </p>
 
                 <div className="mt-6 flex flex-wrap gap-2">
                   <button
@@ -355,9 +393,6 @@ export default function ExplorePage() {
                   <p className="mt-3 line-clamp-2 text-xl font-semibold text-white">
                     {spotlightVideo.title}
                   </p>
-                  <p className="mt-2 text-sm text-white/72">
-                    짧게 보고 남겨두기 좋은 장면입니다.
-                  </p>
                 </div>
               </div>
             </div>
@@ -368,92 +403,47 @@ export default function ExplorePage() {
           </div>
         </section>
 
-        <section className="mb-8">
-          <SectionHeader
-            title="이어보기"
-            description={
-              continueSeries.length > 0
-                ? '끊긴 지점에서 바로 다시 붙습니다.'
-                : '아직 이어볼 흐름이 없습니다. 아래 추천에서 하나 고르면 여기 쌓입니다.'
-            }
-            action={
-              continueSeries.length > 0 ? (
-                <button
-                  onClick={() => router.push('/learning')}
-                  className="text-sm font-medium text-[var(--accent-text)]"
-                >
-                  복습 보기
-                </button>
-              ) : undefined
-            }
-          />
+        {continueSeries.length > 0 && (
+          <section className="mb-8">
+            <SectionHeader title="이어보기" />
 
-          {continueSeries.length > 0 ? (
-            <div className="grid gap-3 lg:grid-cols-2">
+            <div className="flex gap-3 overflow-x-auto pb-2 no-scrollbar">
               {continueSeries.map((item) => (
                 <motion.button
                   key={item.seriesItem.id}
                   whileTap={{ scale: 0.99 }}
                   onClick={() => openShorts(item.nextVideo.id, item.seriesItem.id)}
-                  className="overflow-hidden rounded-[28px] border border-[var(--border-card)] bg-[var(--bg-card)] text-left shadow-[var(--card-shadow)]"
+                  className="w-[260px] shrink-0 overflow-hidden rounded-xl border border-[var(--border-card)] bg-[var(--bg-card)] text-left shadow-[var(--card-shadow)]"
                 >
-                  <div className="relative aspect-video overflow-hidden">
+                  <div className="relative aspect-[2] overflow-hidden">
                     <Image
                       src={`https://img.youtube.com/vi/${item.nextVideo.youtubeId}/hqdefault.jpg`}
                       alt={item.nextVideo.title}
                       fill
-                      sizes="(min-width: 1024px) 42vw, 100vw"
+                      sizes="260px"
                       className="object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
-                    <div className="absolute left-4 right-4 top-4 flex items-center justify-between gap-2">
-                      <span className="rounded-full bg-white/14 px-2.5 py-1 text-[11px] font-medium text-white backdrop-blur-sm">
-                        {item.progress}% 완료
-                      </span>
-                      <span className="rounded-full bg-white/10 px-2.5 py-1 text-[11px] text-white/70 backdrop-blur-sm">
-                        {item.watchedCount}개 시청
-                      </span>
-                    </div>
-                    <div className="absolute inset-x-0 bottom-0 p-4">
-                      <p className="text-xs uppercase tracking-[0.2em] text-white/55">
-                        {categoryLabels[item.seriesItem.category]}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
+                    <div className="absolute inset-x-0 bottom-0 p-3">
+                      <p className="text-sm font-bold text-white">{item.seriesItem.title}</p>
+                      <p className="mt-1 text-[11px] text-white/70">
+                        {item.progress}% · {item.watchedCount}/{item.seriesItem.episodeCount}편
                       </p>
-                      <p className="mt-2 text-xl font-bold text-white">{item.seriesItem.title}</p>
                     </div>
                   </div>
-                  <div className="p-4">
-                    <p className="text-xs font-medium text-[var(--text-muted)]">다음 장면</p>
-                    <p className="mt-1 line-clamp-2 text-sm font-semibold text-[var(--text-primary)]">
-                      {item.nextVideo.title}
+                  <div className="px-3 py-2.5">
+                    <p className="truncate text-xs font-medium text-[var(--text-primary)]">
+                      다음: {item.nextVideo.title}
                     </p>
-                    {item.lastVideo && (
-                      <p className="mt-2 text-xs text-[var(--text-secondary)]">
-                        마지막 시청: {item.lastVideo.title}
-                      </p>
-                    )}
                   </div>
                 </motion.button>
               ))}
             </div>
-          ) : (
-            <div className="rounded-[28px] border border-[var(--border-card)] bg-[var(--bg-card)] p-6 shadow-[var(--card-shadow)]">
-              <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
-                시리즈를 하나 시작하면 다음 장면과 진행률이 이 영역에 자동으로 정리됩니다.
-              </p>
-            </div>
-          )}
-        </section>
+          </section>
+        )}
 
         <section className="mb-8">
-          <SectionHeader
-            eyebrow="추천"
-            title="지금 뜨는 장면"
-            description={
-              interests.length > 0
-                ? '선택한 취향과 최근 반응을 기준으로 순서를 조정했습니다.'
-                : '가볍게 시작하기 좋은 클립부터 올려뒀습니다.'
-            }
-          />
+          <SectionHeader title="추천" />
           <div className="grid grid-cols-2 gap-3 xl:grid-cols-4">
             {recommended.map((video) => (
               <VideoCard
@@ -466,10 +456,7 @@ export default function ExplorePage() {
         </section>
 
         <section ref={seriesSectionRef} className="mb-8">
-          <SectionHeader
-            title="시리즈"
-            description="한 흐름으로 이어지는 장면만 따로 모았습니다."
-          />
+          <SectionHeader title="시리즈" />
 
           <div className="mb-4 flex gap-2 overflow-x-auto pb-1">
             <button
@@ -498,32 +485,48 @@ export default function ExplorePage() {
           </div>
 
           <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-            {filteredSeries.map((seriesItem) => (
-              <motion.button
-                key={seriesItem.id}
-                whileTap={{ scale: 0.99 }}
-                onClick={() => router.push(buildExploreUrl(seriesItem.id), { scroll: false })}
-                className="rounded-[28px] border border-[var(--border-card)] bg-[var(--bg-card)] p-5 text-left shadow-[var(--card-shadow)]"
-              >
-                <p className="text-xs uppercase tracking-[0.22em] text-[var(--accent-text)]">
-                  {categoryLabels[seriesItem.category]}
-                </p>
-                <p className="mt-3 text-lg font-semibold text-[var(--text-primary)]">
-                  {seriesItem.title}
-                </p>
-                <p className="mt-2 line-clamp-2 text-sm text-[var(--text-secondary)]">
-                  {getSeriesSubtitle(seriesItem)}
-                </p>
-                <div className="mt-4 flex items-center justify-between text-xs">
-                  <span className="text-[var(--text-secondary)]">
-                    진행률 {getSeriesProgress(seriesItem.id, seriesItem.episodeCount)}%
-                  </span>
-                  <span className="rounded-full bg-[var(--bg-secondary)] px-2.5 py-1 text-[var(--text-secondary)]">
-                    상세 보기
-                  </span>
-                </div>
-              </motion.button>
-            ))}
+            {filteredSeries.map((seriesItem) => {
+              const episodes = getCatalogVideosBySeries(seriesItem.id)
+              const thumbVideo = episodes[0]
+
+              return (
+                <motion.button
+                  key={seriesItem.id}
+                  whileTap={{ scale: 0.99 }}
+                  onClick={() => router.push(buildExploreUrl(seriesItem.id), { scroll: false })}
+                  className="overflow-hidden rounded-xl border border-[var(--border-card)] bg-[var(--bg-card)] text-left shadow-[var(--card-shadow)]"
+                >
+                  {thumbVideo && (
+                    <div className="relative aspect-[2.2] overflow-hidden">
+                      <Image
+                        src={`https://img.youtube.com/vi/${thumbVideo.youtubeId}/hqdefault.jpg`}
+                        alt={seriesItem.title}
+                        fill
+                        sizes="(min-width: 1280px) 30vw, (min-width: 640px) 45vw, 100vw"
+                        className="object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                      <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between">
+                        <span className="text-xs font-medium text-white/80">
+                          {categoryLabels[seriesItem.category]}
+                        </span>
+                        <span className="rounded-full bg-black/40 px-2 py-0.5 text-[11px] text-white/80 backdrop-blur-sm">
+                          {seriesItem.episodeCount}편
+                        </span>
+                      </div>
+                    </div>
+                  )}
+                  <div className="p-4">
+                    <p className="text-[15px] font-semibold text-[var(--text-primary)]">
+                      {seriesItem.title}
+                    </p>
+                    <div className="mt-2 flex items-center gap-2 text-xs text-[var(--text-secondary)]">
+                      <span>진행률 {getSeriesProgress(seriesItem.id, seriesItem.episodeCount)}%</span>
+                    </div>
+                  </div>
+                </motion.button>
+              )
+            })}
           </div>
         </section>
     </AppPage>

@@ -57,7 +57,6 @@
   --freeze-icon: #5eead4;
   --freeze-shadow: rgba(20, 184, 166, 0.34);
   --game-overlay: rgba(0,0,0,0.88);
-  --logo-filter: invert(1);
 }
 
 /* Blue Dark */
@@ -107,7 +106,6 @@
   --freeze-icon: #60a5fa;
   --freeze-shadow: rgba(59, 130, 246, 0.34);
   --game-overlay: rgba(0,0,0,0.88);
-  --logo-filter: invert(1);
 }
 
 /* Purple Dark */
@@ -157,7 +155,6 @@
   --freeze-icon: #c084fc;
   --freeze-shadow: rgba(168, 85, 247, 0.34);
   --game-overlay: rgba(0,0,0,0.88);
-  --logo-filter: invert(1);
 }
 
 /* Light */
@@ -207,7 +204,6 @@
   --freeze-icon: #0f766e;
   --freeze-shadow: rgba(15, 118, 110, 0.18);
   --game-overlay: rgba(241,245,249,0.92);
-  --logo-filter: none;
 }
 
 [data-theme="light-blue"] {
@@ -256,7 +252,6 @@
   --freeze-icon: #2563eb;
   --freeze-shadow: rgba(37, 99, 235, 0.18);
   --game-overlay: rgba(241,245,249,0.92);
-  --logo-filter: none;
 }
 
 /* Light Purple */
@@ -306,7 +301,6 @@
   --freeze-icon: #7c3aed;
   --freeze-shadow: rgba(124, 58, 237, 0.18);
   --game-overlay: rgba(241,245,249,0.92);
-  --logo-filter: none;
 }
 
 body {

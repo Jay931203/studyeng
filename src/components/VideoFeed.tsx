@@ -14,6 +14,7 @@ import { useRecommendationStore } from '@/stores/useRecommendationStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { AdminReportButton } from './AdminReportButton'
+import { FloatingRemote } from './FloatingRemote'
 import { PremiumModal } from './PremiumModal'
 import { SaveToast } from './SaveToast'
 import { UnifiedControls } from './UnifiedControls'
@@ -329,6 +330,15 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
     setCurrentIndex(previousPlayableIndex)
   }, [currentIndex, currentVideo, finalizeVideoSession, findPlayableIndex, resetRepeatCount])
 
+  const onToggleFreeze = useCallback(() => {
+    const store = usePlayerStore.getState()
+    if (store.freezeSubIndex !== null) {
+      store.setFreezeSubIndex(null)
+    } else if (store.activeSubIndex >= 0) {
+      store.setFreezeSubIndex(store.activeSubIndex)
+    }
+  }, [])
+
   const handleEmbedBlocked = useCallback(() => {
     if (!currentVideo) return
 
@@ -423,61 +433,12 @@ export function VideoFeed({ videos, initialVideoId, initialSeekTime }: VideoFeed
               }, 2000)
             }}
           >
-            <div
-              className="absolute bottom-3 right-3 z-20 flex flex-col gap-3"
-              onPointerDownCapture={(event) => event.stopPropagation()}
-              onClick={(event) => event.stopPropagation()}
-              style={
-                isLandscape
-                  ? {
-                      right: 'max(12px, env(safe-area-inset-right, 0px))',
-                      bottom: 'max(12px, env(safe-area-inset-bottom, 0px))',
-                    }
-                  : undefined
-              }
-            >
-              {currentIndex > 0 && (
-                <button
-                  onClick={handlePrevVideo}
-                  className="flex h-10 w-10 items-center justify-center rounded-2xl border backdrop-blur-sm transition-colors"
-                  style={{
-                    backgroundColor: 'var(--player-control-bg)',
-                    borderColor: 'var(--player-control-border)',
-                    color: 'var(--player-text)',
-                  }}
-                  aria-label="이전 영상"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
-                    <path
-                      fillRule="evenodd"
-                      d="M9.47 6.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 8.06l-3.72 3.72a.75.75 0 0 1-1.06-1.06l4.25-4.25Z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </button>
-              )}
-
-              {currentIndex < videos.length - 1 && (
-                <button
-                  onClick={handleNextVideo}
-                  className="flex h-10 w-10 items-center justify-center rounded-2xl border backdrop-blur-sm transition-colors"
-                  style={{
-                    backgroundColor: 'var(--player-control-bg)',
-                    borderColor: 'var(--player-control-border)',
-                    color: 'var(--player-text)',
-                  }}
-                  aria-label="다음 영상"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
-                    <path
-                      fillRule="evenodd"
-                      d="M10.53 13.53a.75.75 0 0 1-1.06 0l-4.25-4.25a.75.75 0 0 1 1.06-1.06L10 11.94l3.72-3.72a.75.75 0 0 1 1.06 1.06l-4.25 4.25Z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </button>
-              )}
-            </div>
+            <FloatingRemote
+              onPrevVideo={currentIndex > 0 ? handlePrevVideo : undefined}
+              onNextVideo={currentIndex < videos.length - 1 ? handleNextVideo : undefined}
+              onToggleFreeze={onToggleFreeze}
+              isLandscape={isLandscape}
+            />
           </VideoPlayer>
 
           <div

@@ -51,7 +51,7 @@ export function SectionHeader({
 }: {
   eyebrow?: string
   title: string
-  description: string
+  description?: string
   action?: ReactNode
 }) {
   return (
@@ -63,9 +63,11 @@ export function SectionHeader({
           </p>
         )}
         <h2 className="mt-2 text-2xl font-bold text-[var(--text-primary)]">{title}</h2>
-        <p className="mt-1 text-sm leading-relaxed text-[var(--text-secondary)]">
-          {description}
-        </p>
+        {description && (
+          <p className="mt-1 text-sm leading-relaxed text-[var(--text-secondary)]">
+            {description}
+          </p>
+        )}
       </div>
       {action}
     </div>

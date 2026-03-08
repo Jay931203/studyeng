@@ -106,7 +106,7 @@ export function DailyMissions() {
                       {mission.current}/{mission.target}
                     </span>
                   </div>
-                  <div className="h-1 overflow-hidden rounded-full bg-white/[0.04]">
+                  <div className="h-1 overflow-hidden rounded-full bg-[var(--bg-secondary)]">
                     <motion.div
                       initial={{ width: 0 }}
                       animate={{ width: `${Math.min(progress, 100)}%` }}
@@ -118,7 +118,7 @@ export function DailyMissions() {
                 </div>
               </div>
               {index < missions.length - 1 && (
-                <div className="absolute bottom-0 left-11 right-0 h-px bg-white/[0.04]" />
+                <div className="absolute bottom-0 left-11 right-0 h-px bg-[var(--border-card)]" />
               )}
             </div>
           )
@@ -176,9 +176,9 @@ function LearningPaceCard() {
     <>
       <div className="mx-4 mb-4">
         {!billingEnabled && (
-          <div className="mb-3 rounded-xl border border-amber-500/20 bg-amber-500/10 px-4 py-3">
-            <p className="text-sm font-semibold text-amber-300">현재는 무료 운영 중</p>
-            <p className="mt-1 text-xs leading-relaxed text-amber-100/80">
+          <div className="mb-3 rounded-xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-4 py-3">
+            <p className="text-sm font-semibold text-[var(--text-secondary)]">현재는 무료 운영 중</p>
+            <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">
               학습 페이스는 계속 기록되지만, 결제와 직접 연결된 혜택 문구는 노출하지 않습니다.
             </p>
           </div>
@@ -186,7 +186,7 @@ function LearningPaceCard() {
 
         <button
           onClick={() => setOpen(true)}
-          className="w-full rounded-xl border border-white/[0.03] bg-white/[0.02] px-3 py-3 text-left transition-colors hover:bg-white/[0.04]"
+          className="w-full rounded-xl border border-[var(--border-card)] bg-[var(--bg-secondary)]/40 px-3 py-3 text-left transition-colors hover:bg-[var(--bg-secondary)]"
         >
           <div className="mb-2 flex items-center justify-between gap-3">
             <span className="text-xs font-medium text-[var(--text-secondary)]">
@@ -194,7 +194,7 @@ function LearningPaceCard() {
             </span>
             <span className="text-[10px] text-[var(--text-muted)]">상세 보기</span>
           </div>
-          <div className="mb-2 h-1.5 overflow-hidden rounded-full bg-white/[0.04]">
+          <div className="mb-2 h-1.5 overflow-hidden rounded-full bg-[var(--bg-secondary)]">
             <div
               className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-green-400"
               style={{ width: `${Math.min(completionRate, 100)}%` }}
