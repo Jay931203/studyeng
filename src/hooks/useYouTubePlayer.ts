@@ -141,6 +141,7 @@ export function useYouTubePlayer(
   onEmbedBlocked?: () => void,
 ) {
   const playerRef = useRef<YT.Player | null>(null)
+  const containerParentRef = useRef<HTMLElement | null>(null)
   const intervalRef = useRef<number | null>(null)
   const wasPlayingBeforeHideRef = useRef(false)
   const prevSubIndexRef = useRef(-1)
@@ -323,9 +324,23 @@ export function useYouTubePlayer(
 
       if (disposed) return
 
+      // Save parent reference before first destroy
+      const existingEl = document.getElementById(containerId)
+      if (existingEl?.parentElement) {
+        containerParentRef.current = existingEl.parentElement
+      }
+
       if (playerRef.current && typeof playerRef.current.destroy === 'function') {
         playerRef.current.destroy()
       }
+
+      // destroy() removes the iframe from the DOM.
+      // Recreate the target div so the new player can attach.
+      if (!document.getElementById(containerId) && containerParentRef.current) {
+        containerParentRef.current.innerHTML =
+          `<div id="${containerId}" class="h-full w-full"></div>`
+      }
+
       playerRef.current = new window.YT.Player(containerId, {
         videoId,
         playerVars: {
@@ -433,7 +448,6 @@ export function useYouTubePlayer(
     clipStart,
     containerId,
     initialSeekTime,
-    onEmbedBlocked,
     playerSessionKey,
     setActiveSubIndex,
     setClipBounds,

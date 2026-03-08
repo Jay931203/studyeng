@@ -1,6 +1,6 @@
 'use client'
 
-import { useId, useState, useRef, useCallback, useEffect, useMemo, type CSSProperties, type ReactNode } from 'react'
+import { useId, useState, useRef, useEffect, useMemo, type CSSProperties, type ReactNode } from 'react'
 import { useYouTubePlayer } from '@/hooks/useYouTubePlayer'
 import { useTranscript } from '@/hooks/useTranscript'
 import { usePlayerStore, seekToRef, playRef, pauseRef } from '@/stores/usePlayerStore'
@@ -113,7 +113,7 @@ export function VideoPlayer({
     }
   }, [])
 
-  const handleTap = useCallback(() => {
+  const handleTap = () => {
     const ytPlayer = player.current as
       | (YT.Player & { isMuted?: () => boolean; unMute?: () => void })
       | null
@@ -146,7 +146,7 @@ export function VideoPlayer({
     iconTimerRef.current = window.setTimeout(() => {
       setShowPauseIcon(false)
     }, 600)
-  }, [isPlaying, pause, play, player])
+  }
 
   const subtitleArea = (
     <LyricsSubtitles
