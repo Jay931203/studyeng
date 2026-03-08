@@ -18,6 +18,7 @@ interface VideoPlayerProps {
   onClipComplete?: () => void
   onVideoErrorSkip?: () => void
   onEmbedBlocked?: () => void
+  onPlaybackStarted?: () => void
   isLandscape?: boolean
   initialSeekTime?: number
   children?: ReactNode
@@ -33,6 +34,7 @@ export function VideoPlayer({
   onClipComplete,
   onVideoErrorSkip,
   onEmbedBlocked,
+  onPlaybackStarted,
   isLandscape = false,
   initialSeekTime,
   children,
@@ -49,7 +51,7 @@ export function VideoPlayer({
     return raw
   }, [clipEnd, clipStart, fetchedSubtitles, propSubtitles])
 
-  const { ready, playbackStarted, play, pause, seekTo, videoError, clearVideoError } =
+  const { ready, playbackStarted, play, pause, seekTo, player, videoError, clearVideoError } =
     useYouTubePlayer(
       containerId,
       youtubeId,
@@ -66,6 +68,7 @@ export function VideoPlayer({
   const [showPauseIcon, setShowPauseIcon] = useState(false)
   const [pauseIconType, setPauseIconType] = useState<'play' | 'pause'>('pause')
   const iconTimerRef = useRef<number | null>(null)
+  const playbackStartedNotifiedRef = useRef(false)
 
   useEffect(() => {
     if (playbackStarted) {
@@ -75,6 +78,16 @@ export function VideoPlayer({
       return () => clearTimeout(timer)
     }
   }, [playbackStarted])
+
+  useEffect(() => {
+    if (!playbackStarted || playbackStartedNotifiedRef.current) return
+    playbackStartedNotifiedRef.current = true
+    onPlaybackStarted?.()
+  }, [onPlaybackStarted, playbackStarted])
+
+  useEffect(() => {
+    playbackStartedNotifiedRef.current = false
+  }, [videoId, youtubeId, initialSeekTime])
 
   useEffect(() => {
     seekToRef.current = seekTo
@@ -101,6 +114,25 @@ export function VideoPlayer({
   }, [])
 
   const handleTap = useCallback(() => {
+    const ytPlayer = player.current as
+      | (YT.Player & { isMuted?: () => boolean; unMute?: () => void })
+      | null
+    if (ytPlayer && typeof ytPlayer.isMuted === 'function' && ytPlayer.isMuted()) {
+      try {
+        ytPlayer.unMute?.()
+        ytPlayer.playVideo()
+      } catch {
+        // Ignore unmute failures and fall through to the regular toggle.
+      }
+      setPauseIconType('play')
+      setShowPauseIcon(true)
+      if (iconTimerRef.current) clearTimeout(iconTimerRef.current)
+      iconTimerRef.current = window.setTimeout(() => {
+        setShowPauseIcon(false)
+      }, 600)
+      return
+    }
+
     if (isPlaying) {
       pause()
       setPauseIconType('pause')
@@ -114,7 +146,7 @@ export function VideoPlayer({
     iconTimerRef.current = window.setTimeout(() => {
       setShowPauseIcon(false)
     }, 600)
-  }, [isPlaying, pause, play])
+  }, [isPlaying, pause, play, player])
 
   const subtitleArea = (
     <LyricsSubtitles
