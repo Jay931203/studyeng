@@ -27,6 +27,11 @@ interface VideoFeedProps {
   initialReviewPhraseId?: string
 }
 
+interface ShuffleNavigationState {
+  history: number[]
+  pointer: number
+}
+
 export function VideoFeed({
   videos,
   initialVideoId,
@@ -73,6 +78,10 @@ export function VideoFeed({
     'video-limit',
   )
   const [repeatIndicator, setRepeatIndicator] = useState<string | null>(null)
+  const [shuffleNavigation, setShuffleNavigation] = useState<ShuffleNavigationState>(() => ({
+    history: [currentIndex],
+    pointer: 0,
+  }))
 
   const repeatIndicatorTimerRef = useRef<number | null>(null)
   const initialReviewMarkedRef = useRef(false)
@@ -101,6 +110,7 @@ export function VideoFeed({
   const currentRepeatCount = usePlayerStore((state) => state.currentRepeatCount)
   const incrementRepeatCount = usePlayerStore((state) => state.incrementRepeatCount)
   const resetRepeatCount = usePlayerStore((state) => state.resetRepeatCount)
+  const playbackOrderMode = usePlayerStore((state) => state.playbackOrderMode)
   const setIsSwiping = usePlayerStore((state) => state.setIsSwiping)
   const currentTime = usePlayerStore((state) => state.currentTime)
   const clipStart = usePlayerStore((state) => state.clipStart)
@@ -132,6 +142,81 @@ export function VideoFeed({
     [embedBlockedIdSet, videos],
   )
 
+  const getRandomPlayableIndex = useCallback(
+    (excludeIndex: number) => {
+      const candidates: number[] = []
+
+      for (let index = 0; index < videos.length; index += 1) {
+        if (index === excludeIndex) continue
+        if (embedBlockedIdSet.has(videos[index].id)) continue
+        candidates.push(index)
+      }
+
+      if (candidates.length === 0) {
+        return -1
+      }
+
+      return candidates[Math.floor(Math.random() * candidates.length)]
+    },
+    [embedBlockedIdSet, videos],
+  )
+
+  const activeShuffleNavigation = useMemo<ShuffleNavigationState>(() => {
+    if (shuffleNavigation.history.length === 0) {
+      return { history: [currentIndex], pointer: 0 }
+    }
+
+    if (shuffleNavigation.history[shuffleNavigation.pointer] === currentIndex) {
+      return shuffleNavigation
+    }
+
+    const history = shuffleNavigation.history.slice(0, shuffleNavigation.pointer + 1)
+    history.push(currentIndex)
+    return {
+      history,
+      pointer: history.length - 1,
+    }
+  }, [currentIndex, shuffleNavigation])
+
+  const findPlayableHistoryEntry = useCallback(
+    (startPointer: number, step: 1 | -1) => {
+      for (
+        let pointer = startPointer;
+        pointer >= 0 && pointer < activeShuffleNavigation.history.length;
+        pointer += step
+      ) {
+        const index = activeShuffleNavigation.history[pointer]
+        const video = videos[index]
+        if (video && !embedBlockedIdSet.has(video.id)) {
+          return { historyPointer: pointer, videoIndex: index }
+        }
+      }
+
+      return null
+    },
+    [activeShuffleNavigation.history, embedBlockedIdSet, videos],
+  )
+
+  const canOpenVideoAtIndex = useCallback(
+    (nextIndex: number) => {
+      const nextVideo = videos[nextIndex]
+      if (!nextVideo) return false
+
+      const alreadyWatched = getViewCount(nextVideo.id) > 0
+      if (alreadyWatched) return true
+
+      const allowed = incrementDailyView()
+      if (!allowed) {
+        setPremiumTrigger('video-limit')
+        setShowPremiumModal(true)
+        return false
+      }
+
+      return true
+    },
+    [getViewCount, incrementDailyView, videos],
+  )
+
   useEffect(() => {
     playbackMetricsRef.current = { currentTime, clipStart, clipEnd }
   }, [clipEnd, clipStart, currentTime])
@@ -143,6 +228,17 @@ export function VideoFeed({
     const forwardIndex = findPlayableIndex(currentIndex + 1, 1)
     if (forwardIndex >= 0) {
       const timer = window.setTimeout(() => {
+        if (playbackOrderMode === 'shuffle') {
+          const nextHistory = activeShuffleNavigation.history.slice(
+            0,
+            activeShuffleNavigation.pointer + 1,
+          )
+          nextHistory.push(forwardIndex)
+          setShuffleNavigation({
+            history: nextHistory,
+            pointer: nextHistory.length - 1,
+          })
+        }
         setDirection(1)
         setCurrentIndex(forwardIndex)
       }, 0)
@@ -152,12 +248,31 @@ export function VideoFeed({
     const backwardIndex = findPlayableIndex(currentIndex - 1, -1)
     if (backwardIndex >= 0) {
       const timer = window.setTimeout(() => {
+        if (playbackOrderMode === 'shuffle') {
+          const nextHistory = activeShuffleNavigation.history.slice(
+            0,
+            activeShuffleNavigation.pointer + 1,
+          )
+          nextHistory.push(backwardIndex)
+          setShuffleNavigation({
+            history: nextHistory,
+            pointer: nextHistory.length - 1,
+          })
+        }
         setDirection(-1)
         setCurrentIndex(backwardIndex)
       }, 0)
       return () => clearTimeout(timer)
     }
-  }, [currentIndex, currentVideo, embedBlockedIdSet, findPlayableIndex])
+  }, [
+    activeShuffleNavigation.history,
+    activeShuffleNavigation.pointer,
+    currentIndex,
+    currentVideo,
+    embedBlockedIdSet,
+    findPlayableIndex,
+    playbackOrderMode,
+  ])
 
   const finalizeVideoSession = useCallback(
     (videoId: string, completed: boolean) => {
@@ -232,26 +347,53 @@ export function VideoFeed({
   }, [])
 
   const moveToNextVideo = useCallback(() => {
-    const nextPlayableIndex = findPlayableIndex(currentIndex + 1, 1)
+    let nextPlayableIndex = -1
+    let nextHistoryPointer: number | null = null
+    let shouldCheckViewLimit = true
+
+    if (playbackOrderMode === 'shuffle') {
+      const forwardHistoryEntry = findPlayableHistoryEntry(activeShuffleNavigation.pointer + 1, 1)
+      if (forwardHistoryEntry) {
+        nextPlayableIndex = forwardHistoryEntry.videoIndex
+        nextHistoryPointer = forwardHistoryEntry.historyPointer
+        shouldCheckViewLimit = false
+      } else {
+        nextPlayableIndex = getRandomPlayableIndex(currentIndex)
+      }
+    } else {
+      nextPlayableIndex = findPlayableIndex(currentIndex + 1, 1)
+    }
+
     if (nextPlayableIndex < 0) {
       resetRepeatCount()
       return false
     }
 
-    const nextVideo = videos[nextPlayableIndex]
-    const alreadyWatched = nextVideo ? getViewCount(nextVideo.id) > 0 : false
-
-    if (!alreadyWatched) {
-      const allowed = incrementDailyView()
-      if (!allowed) {
-        setPremiumTrigger('video-limit')
-        setShowPremiumModal(true)
-        return false
-      }
+    if (shouldCheckViewLimit && !canOpenVideoAtIndex(nextPlayableIndex)) {
+      return false
     }
 
     if (currentVideo) {
       finalizeVideoSession(currentVideo.id, false)
+    }
+
+    if (playbackOrderMode === 'shuffle') {
+      if (typeof nextHistoryPointer === 'number') {
+        setShuffleNavigation({
+          history: activeShuffleNavigation.history,
+          pointer: nextHistoryPointer,
+        })
+      } else {
+        const nextHistory = activeShuffleNavigation.history.slice(
+          0,
+          activeShuffleNavigation.pointer + 1,
+        )
+        nextHistory.push(nextPlayableIndex)
+        setShuffleNavigation({
+          history: nextHistory,
+          pointer: nextHistory.length - 1,
+        })
+      }
     }
 
     resetRepeatCount()
@@ -259,14 +401,17 @@ export function VideoFeed({
     setCurrentIndex(nextPlayableIndex)
     return true
   }, [
+    activeShuffleNavigation.history,
+    activeShuffleNavigation.pointer,
+    canOpenVideoAtIndex,
     currentIndex,
     currentVideo,
+    findPlayableHistoryEntry,
     findPlayableIndex,
     finalizeVideoSession,
-    getViewCount,
-    incrementDailyView,
+    getRandomPlayableIndex,
+    playbackOrderMode,
     resetRepeatCount,
-    videos,
   ])
 
   const handleClipComplete = useCallback(() => {
@@ -308,17 +453,44 @@ export function VideoFeed({
   }, [moveToNextVideo])
 
   const handlePrevVideo = useCallback(() => {
-    const previousPlayableIndex = findPlayableIndex(currentIndex - 1, -1)
-    if (previousPlayableIndex < 0) return
+    let previousPlayableIndex = -1
+    let previousHistoryPointer: number | null = null
+
+    if (playbackOrderMode === 'shuffle') {
+      const previousHistoryEntry = findPlayableHistoryEntry(activeShuffleNavigation.pointer - 1, -1)
+      if (!previousHistoryEntry) return
+      previousPlayableIndex = previousHistoryEntry.videoIndex
+      previousHistoryPointer = previousHistoryEntry.historyPointer
+    } else {
+      previousPlayableIndex = findPlayableIndex(currentIndex - 1, -1)
+      if (previousPlayableIndex < 0) return
+    }
 
     if (currentVideo) {
       finalizeVideoSession(currentVideo.id, false)
     }
 
+    if (typeof previousHistoryPointer === 'number') {
+      setShuffleNavigation({
+        history: activeShuffleNavigation.history,
+        pointer: previousHistoryPointer,
+      })
+    }
+
     resetRepeatCount()
     setDirection(-1)
     setCurrentIndex(previousPlayableIndex)
-  }, [currentIndex, currentVideo, finalizeVideoSession, findPlayableIndex, resetRepeatCount])
+  }, [
+    activeShuffleNavigation.history,
+    activeShuffleNavigation.pointer,
+    currentIndex,
+    currentVideo,
+    findPlayableHistoryEntry,
+    finalizeVideoSession,
+    findPlayableIndex,
+    playbackOrderMode,
+    resetRepeatCount,
+  ])
 
   const onToggleFreeze = useCallback(() => {
     const store = usePlayerStore.getState()
@@ -355,6 +527,19 @@ export function VideoFeed({
   )
 
   if (!currentVideo) return null
+
+  const hasAlternativePlayableVideo = videos.some(
+    (video, index) => index !== currentIndex && !embedBlockedIdSet.has(video.id),
+  )
+  const canGoPrev =
+    playbackOrderMode === 'shuffle'
+      ? findPlayableHistoryEntry(activeShuffleNavigation.pointer - 1, -1) !== null
+      : findPlayableIndex(currentIndex - 1, -1) >= 0
+  const canGoNext =
+    playbackOrderMode === 'shuffle'
+      ? findPlayableHistoryEntry(activeShuffleNavigation.pointer + 1, 1) !== null ||
+        hasAlternativePlayableVideo
+      : findPlayableIndex(currentIndex + 1, 1) >= 0
 
   const seriesInfo = currentVideo.seriesId
     ? allSeries.find((series) => series.id === currentVideo.seriesId)
@@ -402,7 +587,7 @@ export function VideoFeed({
             useLandscapeSplitLayout={useLandscapeSplitPlayer}
             landscapeVideoPaneWidth={landscapeVideoPaneWidth}
             onClipComplete={handleClipComplete}
-            onVideoErrorSkip={currentIndex < videos.length - 1 ? handleNextVideo : undefined}
+            onVideoErrorSkip={canGoNext ? handleNextVideo : undefined}
             onEmbedBlocked={handleEmbedBlocked}
             initialSeekTime={currentIndex === 0 ? initialSeekTime : undefined}
             onPlaybackStarted={() => {
@@ -439,8 +624,8 @@ export function VideoFeed({
             }}
           >
             <FloatingRemote
-              onPrevVideo={currentIndex > 0 ? handlePrevVideo : undefined}
-              onNextVideo={currentIndex < videos.length - 1 ? handleNextVideo : undefined}
+              onPrevVideo={canGoPrev ? handlePrevVideo : undefined}
+              onNextVideo={canGoNext ? handleNextVideo : undefined}
               onToggleFreeze={onToggleFreeze}
             />
           </VideoPlayer>
@@ -522,7 +707,7 @@ export function VideoFeed({
               style={{ backgroundColor: 'var(--player-divider)' }}
             />
 
-            <div className="min-w-0 max-w-full flex-shrink overflow-x-auto no-scrollbar">
+            <div className="min-w-0 max-w-full flex-shrink overflow-x-auto overflow-y-visible no-scrollbar">
               <UnifiedControls
                 videoId={currentVideo.id}
                 videoTitle={currentVideo.title}
@@ -558,6 +743,17 @@ export function VideoFeed({
                         setShowSeriesEpisodes(false)
                         const nextIndex = videos.findIndex((video) => video.id === episode.id)
                         if (nextIndex >= 0) {
+                          if (playbackOrderMode === 'shuffle') {
+                            const nextHistory = activeShuffleNavigation.history.slice(
+                              0,
+                              activeShuffleNavigation.pointer + 1,
+                            )
+                            nextHistory.push(nextIndex)
+                            setShuffleNavigation({
+                              history: nextHistory,
+                              pointer: nextHistory.length - 1,
+                            })
+                          }
                           setDirection(nextIndex > currentIndex ? 1 : -1)
                           setCurrentIndex(nextIndex)
                         } else {

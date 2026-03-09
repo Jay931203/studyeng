@@ -3,12 +3,14 @@ import { persist } from 'zustand/middleware'
 
 type SubtitleMode = 'none' | 'en' | 'en-ko'
 type LandscapeSubtitleLayout = 'auto' | 'side' | 'bottom'
+type PlaybackOrderMode = 'sequence' | 'shuffle'
 
 type RepeatMode = 'off' | 'x2' | 'x3'
 
 interface PlayerState {
   subtitleMode: SubtitleMode
   landscapeSubtitleLayout: LandscapeSubtitleLayout
+  playbackOrderMode: PlaybackOrderMode
   playbackRate: number
   isLooping: boolean
   loopStart: number | null
@@ -30,6 +32,7 @@ interface PlayerState {
 
   toggleSubtitleMode: () => void
   cycleLandscapeSubtitleLayout: () => void
+  setPlaybackOrderMode: (mode: PlaybackOrderMode) => void
   setPlaybackRate: (rate: number) => void
   setLoop: (start: number, end: number) => void
   clearLoop: () => void
@@ -73,6 +76,7 @@ export const pauseRef: { current: (() => void) | null } = { current: null }
 export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
   subtitleMode: 'en',
   landscapeSubtitleLayout: 'auto',
+  playbackOrderMode: 'sequence',
   playbackRate: 1,
   isLooping: false,
   loopStart: null,
@@ -99,6 +103,10 @@ export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
     const next =
       landscapeSubtitleLayoutCycle[(current + 1) % landscapeSubtitleLayoutCycle.length]
     set({ landscapeSubtitleLayout: next })
+  },
+
+  setPlaybackOrderMode: (mode) => {
+    if (get().playbackOrderMode !== mode) set({ playbackOrderMode: mode })
   },
 
   setPlaybackRate: (rate) => {
@@ -165,6 +173,7 @@ export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
     partialize: (state) => ({
       subtitleMode: state.subtitleMode,
       landscapeSubtitleLayout: state.landscapeSubtitleLayout,
+      playbackOrderMode: state.playbackOrderMode,
       playbackRate: state.playbackRate,
     }),
   }
