@@ -4,6 +4,7 @@ import { useRef, useEffect, useCallback, useMemo, useState } from 'react'
 import { usePlayerStore } from '@/stores/usePlayerStore'
 import { useAdminStore } from '@/stores/useAdminStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
+import { useSettingsStore } from '@/stores/useSettingsStore'
 import { DoubleTapTip } from './DoubleTapTip'
 import { SaveToast } from './SaveToast'
 import type { SubtitleEntry } from '@/data/seed-videos'
@@ -22,8 +23,30 @@ const LONG_PRESS_DURATION = 500
 /** Window in ms for double-tap detection */
 const DOUBLE_TAP_WINDOW = 550
 
-/** Trigger a short haptic vibration when supported */
+// Stopwords to exclude from key-token matching (common words with no learning value)
+const STOPWORDS = new Set([
+  'i', 'me', 'my', 'you', 'your', 'he', 'him', 'his', 'she', 'her', 'it', 'its',
+  'we', 'us', 'our', 'they', 'them', 'their', 'the', 'a', 'an', 'and', 'but', 'or',
+  'so', 'if', 'is', 'am', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has',
+  'had', 'do', 'does', 'did', 'will', 'would', 'can', 'could', 'should', 'may', 'might',
+  'shall', 'must', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'from', 'up',
+  'out', 'off', 'no', 'not', 'nor', 'as', 'than', 'too', 'very', 'just', 'about',
+  'this', 'that', 'what', 'which', 'who', 'whom', 'how', 'when', 'where', 'why',
+  "it's", "he's", "she's", "i'm", "we're", "they're", "you're", "that's", "there's",
+  "what's", "here's", "let's", "who's", "how's", "where's", "when's",
+  'then', 'now', 'here', 'there', 'all', 'some', 'any', 'each', 'every',
+  'oh', 'yeah', 'yes', 'no', 'okay', 'ok', 'well', 'like', 'right',
+])
+
+/** Tokenize text into meaningful words for matching */
+function extractKeyTokens(text: string): string[] {
+  return text.toLowerCase().replace(/[^a-z' ]/g, '').split(/\s+/)
+    .filter((w) => w.length > 2 && !STOPWORDS.has(w))
+}
+
+/** Trigger a short haptic vibration when supported and enabled */
 function haptic(ms = 10) {
+  if (!useSettingsStore.getState().hapticEnabled) return
   try { navigator.vibrate?.(ms) } catch { /* unsupported */ }
 }
 
@@ -49,6 +72,42 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
     }
     return map
   }, [phrases])
+
+  // Key token inverted index for similar-phrase vibration
+  const keyTokenIndex = useMemo(() => {
+    const index = new Map<string, string>() // token → phraseId (first match is enough)
+    for (const phrase of phrases) {
+      for (const token of extractKeyTokens(phrase.en)) {
+        if (!index.has(token)) index.set(token, phrase.id)
+      }
+    }
+    return index
+  }, [phrases])
+
+  // Similar-phrase vibration on subtitle change
+  const lastSimilarVibrateRef = useRef<{ token: string; time: number }>({ token: '', time: 0 })
+
+  useEffect(() => {
+    if (activeSubIndex < 0 || keyTokenIndex.size === 0) return
+    const sub = subtitles[activeSubIndex]
+    if (!sub) return
+
+    // Skip if this exact subtitle is already saved (no need to vibrate)
+    if (videoId && savedPhraseMap.has(`${videoId}::${sub.en}`)) return
+
+    const words = sub.en.toLowerCase().replace(/[^a-z' ]/g, '').split(/\s+/)
+    for (const word of words) {
+      if (keyTokenIndex.has(word)) {
+        const now = Date.now()
+        const last = lastSimilarVibrateRef.current
+        // 10s cooldown per matched token to avoid spamming
+        if (last.token === word && now - last.time < 10_000) break
+        lastSimilarVibrateRef.current = { token: word, time: now }
+        haptic(50)
+        break
+      }
+    }
+  }, [activeSubIndex, keyTokenIndex, savedPhraseMap, subtitles, videoId])
 
   // User-scroll detection: distinguish manual scroll from programmatic scroll
   const [isUserScrolling, setIsUserScrolling] = useState(false)

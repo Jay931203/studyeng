@@ -5,10 +5,12 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { AdminIssuesList } from '@/components/AdminIssuesList'
 import { BillingManagementCard } from '@/components/BillingManagementCard'
+import { RedeemCodeCard } from '@/components/RedeemCodeCard'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import { useAuth } from '@/hooks/useAuth'
 import { isBillingEnabled } from '@/lib/billing'
 import { useAdminStore } from '@/stores/useAdminStore'
+import { useSettingsStore } from '@/stores/useSettingsStore'
 import {
   useThemeStore,
   type ThemeAccent,
@@ -60,6 +62,8 @@ function LegalLink({ href, label }: { href: string; label: string }) {
 
 export default function ProfilePage() {
   const { user, loading, authAvailable, signInWithGoogle, signInWithKakao, signOut } = useAuth()
+  const hapticEnabled = useSettingsStore((state) => state.hapticEnabled)
+  const setHapticEnabled = useSettingsStore((state) => state.setHapticEnabled)
   const backgroundTheme = useThemeStore((state) => state.backgroundTheme)
   const colorTheme = useThemeStore((state) => state.colorTheme)
   const setBackgroundTheme = useThemeStore((state) => state.setBackgroundTheme)
@@ -166,6 +170,7 @@ export default function ProfilePage() {
           </motion.div>
 
           <BillingManagementCard />
+          <RedeemCodeCard />
 
           <SurfaceCard className="p-6">
             <SectionLabel label="THEME" />
@@ -203,6 +208,33 @@ export default function ProfilePage() {
                     />
                   ))}
                 </div>
+              </div>
+            </div>
+          </SurfaceCard>
+
+          <SurfaceCard className="p-6">
+            <SectionLabel label="SETTINGS" />
+
+            <div className="space-y-3">
+              <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
+                <div>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">HAPTIC</p>
+                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">저장, 프리즈, 유사 표현 진동</p>
+                </div>
+                <button
+                  onClick={() => setHapticEnabled(!hapticEnabled)}
+                  className={`relative h-6 w-11 rounded-full ${
+                    hapticEnabled ? 'bg-[var(--accent-primary)]' : 'bg-[var(--bg-secondary)]'
+                  }`}
+                  role="switch"
+                  aria-checked={hapticEnabled}
+                >
+                  <span
+                    className={`absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white transition-transform ${
+                      hapticEnabled ? 'translate-x-5' : ''
+                    }`}
+                  />
+                </button>
               </div>
             </div>
           </SurfaceCard>
