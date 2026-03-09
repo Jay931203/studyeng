@@ -1,8 +1,11 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import { isBillingEnabled } from '@/lib/billing'
-import { isNative } from '@/lib/platform'
+import Link from 'next/link'
+import { useEffect, useMemo, useState } from 'react'
+import { usePathname } from 'next/navigation'
+import type { PurchasesPackage } from '@revenuecat/purchases-typescript-internal-esm'
+import { getBillingConfig, type BillingPlan } from '@/lib/billing'
+import { getPlatform, isNative } from '@/lib/platform'
 import { useAuth } from '@/hooks/useAuth'
 import { usePremiumStore } from '@/stores/usePremiumStore'
 import { SurfaceCard } from '@/components/ui/AppPage'
@@ -18,6 +21,32 @@ interface BillingStatusPayload {
   } | null
 }
 
+interface PlanOption {
+  id: BillingPlan
+  label: string
+  detail: string
+  price: string
+  highlight?: string
+}
+
+const ANDROID_APP_ID = 'com.studyeng.app'
+
+const WEB_PLAN_OPTIONS: Record<BillingPlan, PlanOption> = {
+  yearly: {
+    id: 'yearly',
+    label: 'YEARLY',
+    detail: 'Best value for regular learners',
+    price: 'KRW 79,900 / year',
+    highlight: 'BEST VALUE',
+  },
+  monthly: {
+    id: 'monthly',
+    label: 'MONTHLY',
+    detail: 'Flexible month-to-month access',
+    price: 'KRW 9,900 / month',
+  },
+}
+
 function formatDate(value: string | null) {
   if (!value) return 'Unavailable'
 
@@ -28,21 +57,104 @@ function formatDate(value: string | null) {
   }).format(new Date(value))
 }
 
+function getPlanLabel(planKey: string | null | undefined) {
+  switch (planKey) {
+    case 'premium_yearly':
+      return 'Yearly membership'
+    case 'premium_monthly':
+      return 'Monthly membership'
+    case 'premium':
+      return 'Premium membership'
+    default:
+      return 'Free plan'
+  }
+}
+
+function getStoreLabel() {
+  switch (getPlatform()) {
+    case 'android':
+      return 'Play Store'
+    case 'ios':
+      return 'App Store'
+    default:
+      return 'store'
+  }
+}
+
+function getStoreManagementUrl() {
+  switch (getPlatform()) {
+    case 'android':
+      return `https://play.google.com/store/account/subscriptions?package=${ANDROID_APP_ID}`
+    case 'ios':
+      return 'https://apps.apple.com/account/subscriptions'
+    default:
+      return null
+  }
+}
+
+function PlanTile({
+  option,
+  selected,
+  current,
+  onClick,
+}: {
+  option: PlanOption
+  selected: boolean
+  current: boolean
+  onClick: () => void
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`rounded-2xl border px-4 py-4 text-left transition-colors ${
+        selected
+          ? 'border-[var(--accent-primary)] bg-[var(--accent-glow)]'
+          : 'border-[var(--border-card)] bg-[var(--bg-primary)]'
+      }`}
+    >
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <p className="text-sm font-semibold text-[var(--text-primary)]">{option.label}</p>
+          <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">
+            {option.detail}
+          </p>
+        </div>
+        {(current || option.highlight) && (
+          <span
+            className={`rounded-full px-2 py-1 text-[10px] font-semibold ${
+              current
+                ? 'bg-[var(--accent-primary)] text-white'
+                : 'bg-emerald-500/15 text-emerald-300'
+            }`}
+          >
+            {current ? 'CURRENT' : option.highlight}
+          </span>
+        )}
+      </div>
+      <p className="mt-3 text-base font-bold text-[var(--text-primary)]">{option.price}</p>
+    </button>
+  )
+}
+
 export function BillingManagementCard() {
-  const { user } = useAuth()
-  const billingEnabled = isBillingEnabled()
+  const pathname = usePathname()
+  const { enabled: billingEnabled } = getBillingConfig()
   const native = isNative()
+  const { user } = useAuth()
   const isPremium = usePremiumStore((s) => s.isPremium)
   const setPremiumEntitlement = usePremiumStore((s) => s.setPremiumEntitlement)
+  const [selectedPlan, setSelectedPlan] = useState<BillingPlan>('yearly')
   const [loading, setLoading] = useState(false)
   const [managing, setManaging] = useState(false)
   const [restoring, setRestoring] = useState(false)
+  const [submitting, setSubmitting] = useState(false)
   const [status, setStatus] = useState<BillingStatusPayload | null>(null)
+  const [nativePackages, setNativePackages] = useState<PurchasesPackage[]>([])
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
   useEffect(() => {
     if (native) {
-      // On native, premium status comes from RevenueCat via the store
       setStatus({
         enabled: true,
         isPremium,
@@ -76,7 +188,7 @@ export function BillingManagementCard() {
       } catch (error) {
         console.warn('[billing] status fetch failed:', error)
         if (!cancelled) {
-          setErrorMessage('Failed to load subscription status.')
+          setErrorMessage('Failed to load membership status.')
         }
       } finally {
         if (!cancelled) {
@@ -91,6 +203,71 @@ export function BillingManagementCard() {
       cancelled = true
     }
   }, [billingEnabled, native, isPremium, user])
+
+  useEffect(() => {
+    if (!native) return
+
+    let cancelled = false
+
+    const loadOfferings = async () => {
+      try {
+        const { getOfferings } = await import('@/lib/nativeBilling')
+        const offerings = await getOfferings()
+        if (!cancelled && offerings?.current) {
+          setNativePackages(offerings.current.availablePackages)
+        }
+      } catch (error) {
+        console.warn('[billing] failed to load native offerings:', error)
+      }
+    }
+
+    void loadOfferings()
+
+    return () => {
+      cancelled = true
+    }
+  }, [native])
+
+  useEffect(() => {
+    const planKey = status?.entitlement?.planKey
+    if (planKey === 'premium_monthly') {
+      setSelectedPlan('monthly')
+    } else if (planKey === 'premium_yearly') {
+      setSelectedPlan('yearly')
+    }
+  }, [status?.entitlement?.planKey])
+
+  const currentPremium = native ? isPremium : status?.isPremium ?? false
+  const planKey = status?.entitlement?.planKey ?? (currentPremium ? 'premium' : 'free')
+  const currentPlanLabel = loading ? 'Checking membership' : getPlanLabel(planKey)
+  const isReady = native ? currentPremium || nativePackages.length > 0 : billingEnabled
+  const currentPlan = planKey === 'premium_monthly' ? 'monthly' : planKey === 'premium_yearly' ? 'yearly' : null
+
+  const planOptions = useMemo(() => {
+    if (native && nativePackages.length > 0) {
+      const preferred = nativePackages
+        .filter((pkg) => pkg.packageType === 'ANNUAL' || pkg.packageType === 'MONTHLY')
+        .sort((a, b) => {
+          const order = (pkg: PurchasesPackage) => (pkg.packageType === 'ANNUAL' ? 0 : 1)
+          return order(a) - order(b)
+        })
+
+      const source = preferred.length > 0 ? preferred : nativePackages.slice(0, 2)
+
+      return source.map((pkg) => {
+        const yearly = pkg.packageType === 'ANNUAL'
+        return {
+          id: yearly ? 'yearly' : 'monthly',
+          label: yearly ? 'YEARLY' : 'MONTHLY',
+          detail: pkg.product.description || (yearly ? 'Annual access via store billing' : 'Monthly access via store billing'),
+          price: pkg.product.priceString,
+          highlight: yearly ? 'BEST VALUE' : undefined,
+        } satisfies PlanOption
+      })
+    }
+
+    return [WEB_PLAN_OPTIONS.yearly, WEB_PLAN_OPTIONS.monthly]
+  }, [native, nativePackages])
 
   const handlePortal = async () => {
     setManaging(true)
@@ -107,7 +284,7 @@ export function BillingManagementCard() {
       window.location.assign(payload.url)
     } catch (error) {
       console.warn('[billing] portal launch failed:', error)
-      setErrorMessage('Failed to open subscription management.')
+      setErrorMessage('Failed to open membership management.')
       setManaging(false)
     }
   }
@@ -123,98 +300,240 @@ export function BillingManagementCard() {
       setPremiumEntitlement(restored)
 
       if (!restored) {
-        setErrorMessage('복원할 구매 내역이 없습니다.')
+        setErrorMessage('No purchases were found to restore.')
       }
     } catch (error) {
       console.warn('[billing] restore failed:', error)
-      setErrorMessage('구매 복원에 실패했습니다.')
+      setErrorMessage('Failed to restore purchases.')
     } finally {
       setRestoring(false)
     }
   }
 
-  const isEnabled = native || billingEnabled
-  const currentPremium = native ? isPremium : status?.isPremium
-  const planLabel = loading ? 'CHECKING' : currentPremium ? 'PRO' : 'FREE'
+  const handleNativePurchase = async (plan: BillingPlan) => {
+    const pkg =
+      nativePackages.find((entry) => (plan === 'yearly' ? entry.packageType === 'ANNUAL' : entry.packageType === 'MONTHLY')) ??
+      nativePackages[0]
+
+    if (!pkg) {
+      setErrorMessage('Membership plans are still loading.')
+      return
+    }
+
+    setSubmitting(true)
+    setErrorMessage(null)
+
+    try {
+      const { purchasePackage, isPremiumFromCustomerInfo } = await import('@/lib/nativeBilling')
+      const customerInfo = await purchasePackage(pkg.identifier)
+      const nextPremium = isPremiumFromCustomerInfo(customerInfo)
+      setPremiumEntitlement(nextPremium)
+    } catch (error: unknown) {
+      const purchaseError = error as { code?: string; userCancelled?: boolean }
+      if (!purchaseError.userCancelled && purchaseError.code !== 'PURCHASE_CANCELLED') {
+        console.warn('[billing] checkout failed:', error)
+        setErrorMessage('Failed to start the store purchase flow.')
+      }
+    } finally {
+      setSubmitting(false)
+    }
+  }
+
+  const handleWebCheckout = async () => {
+    if (!billingEnabled) return
+
+    if (!user) {
+      window.location.assign(`/login?next=${encodeURIComponent(pathname || '/profile')}`)
+      return
+    }
+
+    setSubmitting(true)
+    setErrorMessage(null)
+
+    try {
+      const response = await fetch('/api/billing/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ plan: selectedPlan, returnPath: pathname || '/profile' }),
+      })
+
+      const payload = (await response.json().catch(() => null)) as { url?: string; error?: string } | null
+
+      if (response.status === 401) {
+        window.location.assign(`/login?next=${encodeURIComponent(pathname || '/profile')}`)
+        return
+      }
+
+      if (!response.ok || !payload?.url) {
+        throw new Error(payload?.error ?? 'checkout-failed')
+      }
+
+      window.location.assign(payload.url)
+    } catch (error) {
+      console.warn('[billing] checkout start failed:', error)
+      setErrorMessage('Failed to start checkout.')
+    } finally {
+      setSubmitting(false)
+    }
+  }
+
+  const handleOpenStore = () => {
+    const url = getStoreManagementUrl()
+    if (!url) {
+      setErrorMessage('Store management is unavailable on this device.')
+      return
+    }
+
+    window.location.assign(url)
+  }
+
+  const handlePrimaryAction = () => {
+    if (currentPremium) {
+      if (native) {
+        handleOpenStore()
+      } else {
+        void handlePortal()
+      }
+      return
+    }
+
+    if (native) {
+      void handleNativePurchase(selectedPlan)
+      return
+    }
+
+    void handleWebCheckout()
+  }
+
+  const primaryLabel = (() => {
+    if (!isReady) return 'CHECKOUT SOON'
+    if (submitting) return 'CONNECTING...'
+    if (managing) return 'OPENING...'
+    if (currentPremium) return native ? `OPEN ${getStoreLabel().toUpperCase()}` : 'MANAGE MEMBERSHIP'
+    if (!native && !user) return 'LOG IN TO SUBSCRIBE'
+    return 'START MEMBERSHIP'
+  })()
 
   return (
     <SurfaceCard className="p-6">
       <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-        SUBSCRIPTION
+        MEMBERSHIP
       </p>
 
-      <div className="mb-3 flex items-center gap-3 rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
-        <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">PLAN</p>
-        <p className="text-sm font-semibold text-[var(--text-primary)]">{planLabel}</p>
-      </div>
-
-      {!isEnabled && (
-        <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-4 py-3">
-          <p className="text-sm font-semibold text-[var(--text-secondary)]">결제 비활성</p>
-        </div>
-      )}
-
-      {isEnabled && !native && !user && (
-        <div className="rounded-2xl border border-sky-500/20 bg-sky-500/10 px-4 py-3">
-          <p className="text-sm font-semibold text-sky-300">Login required</p>
-        </div>
-      )}
-
-      {isEnabled && (native || user) && (
-        <div className="space-y-3">
-          <div className="rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
-            <p className="text-xs text-[var(--text-muted)]">STATUS</p>
-            <p className="mt-1 text-lg font-semibold text-[var(--text-primary)]">
-              {loading ? 'Checking' : currentPremium ? 'Premium active' : 'Free plan'}
-            </p>
-            {!native && status?.entitlement?.currentPeriodEnd && (
-              <p className="mt-2 text-xs text-[var(--text-secondary)]">
-                Renews {formatDate(status.entitlement.currentPeriodEnd)}
+      <div className="space-y-4">
+        <div className="rounded-2xl bg-[var(--bg-primary)] px-4 py-4">
+          <div className="flex items-start justify-between gap-3">
+            <div>
+              <p className="text-xs font-semibold text-[var(--text-muted)]">CURRENT STATUS</p>
+              <p className="mt-1 text-lg font-semibold text-[var(--text-primary)]">
+                {loading ? 'Checking membership' : currentPremium ? 'Premium active' : 'Free plan'}
               </p>
-            )}
-            {!native && status?.entitlement?.cancelAtPeriodEnd && (
-              <p className="mt-1 text-xs text-[var(--text-secondary)]">Cancels at period end</p>
+              <p className="mt-1 text-sm text-[var(--text-secondary)]">{currentPlanLabel}</p>
+            </div>
+            <span
+              className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
+                currentPremium
+                  ? 'bg-emerald-500/15 text-emerald-300'
+                  : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
+              }`}
+            >
+              {currentPremium ? 'PRO' : 'FREE'}
+            </span>
+          </div>
+
+          {!native && status?.entitlement?.currentPeriodEnd && (
+            <p className="mt-3 text-xs text-[var(--text-secondary)]">
+              {status.entitlement.cancelAtPeriodEnd ? 'Access ends' : 'Renews'} {formatDate(status.entitlement.currentPeriodEnd)}
+            </p>
+          )}
+
+          {!native && !user && billingEnabled && (
+            <p className="mt-3 text-xs text-[var(--text-secondary)]">
+              Log in to keep billing, status, and premium access synced to your account.
+            </p>
+          )}
+
+          {native && currentPremium && (
+            <p className="mt-3 text-xs text-[var(--text-secondary)]">
+              Change or cancel your membership in the {getStoreLabel()}.
+            </p>
+          )}
+
+          {!native && !billingEnabled && (
+            <p className="mt-3 text-xs text-[var(--text-secondary)]">
+              Checkout is being configured. Membership codes still work as soon as they are issued.
+            </p>
+          )}
+        </div>
+
+        <div className="space-y-3">
+          <div className="flex items-center justify-between gap-3">
+            <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--text-muted)]">
+              Plans
+            </p>
+            {currentPlan && (
+              <p className="text-xs text-[var(--text-secondary)]">
+                Current: {currentPlan === 'yearly' ? 'Yearly' : 'Monthly'}
+              </p>
             )}
           </div>
 
-          {/* Web: Stripe portal for managing subscription */}
-          {!native && currentPremium && (
-            <button
-              onClick={handlePortal}
-              disabled={managing}
-              className="w-full rounded-2xl bg-[var(--accent-primary)] py-3 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50"
-            >
-              {managing ? 'Connecting...' : 'Manage subscription'}
-            </button>
-          )}
+          <div className="grid gap-3">
+            {planOptions.map((option) => (
+              <PlanTile
+                key={option.id}
+                option={option}
+                selected={selectedPlan === option.id}
+                current={currentPlan === option.id}
+                onClick={() => setSelectedPlan(option.id)}
+              />
+            ))}
+          </div>
 
-          {/* Native: Restore purchases button */}
-          {native && !currentPremium && (
+          {currentPremium && (
+            <p className="text-xs text-[var(--text-secondary)]">
+              {native
+                ? 'Plan changes are handled in the store settings for your device.'
+                : 'Use Manage membership to change billing cycle, cancel, or update payment details.'}
+            </p>
+          )}
+        </div>
+
+        <button
+          type="button"
+          onClick={handlePrimaryAction}
+          disabled={!isReady || submitting || managing}
+          className="w-full rounded-2xl bg-[var(--accent-primary)] py-3.5 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50"
+        >
+          {primaryLabel}
+        </button>
+
+        <div className={`grid gap-2 ${native ? 'sm:grid-cols-2' : ''}`}>
+          <Link
+            href="/profile/redeem"
+            className="rounded-2xl bg-[var(--bg-secondary)] px-4 py-3 text-center text-sm font-semibold text-[var(--text-primary)]"
+          >
+            ENTER CODE
+          </Link>
+
+          {native && (
             <button
+              type="button"
               onClick={handleRestore}
               disabled={restoring}
-              className="w-full rounded-2xl bg-[var(--bg-secondary)] py-3 text-sm font-semibold text-[var(--text-primary)] disabled:cursor-not-allowed disabled:opacity-50"
+              className="rounded-2xl bg-[var(--bg-secondary)] px-4 py-3 text-sm font-semibold text-[var(--text-primary)] disabled:cursor-not-allowed disabled:opacity-50"
             >
-              {restoring ? '복원 중...' : '구매 복원'}
+              {restoring ? 'RESTORING...' : 'RESTORE PURCHASE'}
             </button>
           )}
-
-          {/* Native: Guide to manage via store */}
-          {native && currentPremium && (
-            <div className="rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
-              <p className="text-xs text-[var(--text-secondary)]">
-                구독 관리는 기기의 앱스토어 설정에서 변경할 수 있습니다.
-              </p>
-            </div>
-          )}
         </div>
-      )}
 
-      {errorMessage && (
-        <div className="mt-4 rounded-2xl border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">
-          {errorMessage}
-        </div>
-      )}
+        {errorMessage && (
+          <div className="rounded-2xl border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">
+            {errorMessage}
+          </div>
+        )}
+      </div>
     </SurfaceCard>
   )
 }

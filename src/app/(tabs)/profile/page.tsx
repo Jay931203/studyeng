@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { AdminIssuesList } from '@/components/AdminIssuesList'
 import { BillingManagementCard } from '@/components/BillingManagementCard'
-import { RedeemCodeCard } from '@/components/RedeemCodeCard'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import { useAuth } from '@/hooks/useAuth'
 import { isBillingEnabled } from '@/lib/billing'
@@ -170,54 +169,60 @@ export default function ProfilePage() {
           </motion.div>
 
           <BillingManagementCard />
-          <RedeemCodeCard />
-
-          <SurfaceCard className="p-6">
-            <SectionLabel label="THEME" />
-
-            <div className="flex flex-wrap items-center gap-6">
-              <div className="flex items-center gap-4">
-                <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">BACKGROUND</p>
-                <div className="flex min-h-10 items-center gap-3">
-                  {BACKGROUND_OPTIONS.map((option) => (
-                    <button
-                      key={option.id}
-                      onClick={() => setBackgroundTheme(option.id)}
-                      className={`h-10 w-10 rounded-full ${option.swatchClass} ${
-                        backgroundTheme === option.id
-                          ? 'ring-2 ring-[var(--accent-primary)] ring-offset-2 ring-offset-[var(--bg-card)]'
-                          : ''
-                      }`}
-                      aria-label={`Set background theme to ${option.id}`}
-                    />
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">COLOR</p>
-                <div className="flex min-h-10 items-center gap-3">
-                  {COLOR_OPTIONS.map((option) => (
-                    <button
-                      key={option.id}
-                      onClick={() => setColorTheme(option.id)}
-                      className={`h-10 w-10 rounded-full ${option.swatchClass} ${
-                        colorTheme === option.id
-                          ? 'ring-2 ring-[var(--accent-primary)] ring-offset-2 ring-offset-[var(--bg-card)]'
-                          : ''
-                      }`}
-                      aria-label={`Set color theme to ${option.id}`}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </SurfaceCard>
 
           <SurfaceCard className="p-6">
             <SectionLabel label="SETTINGS" />
 
-            <div className="space-y-3">
+            <div className="space-y-4">
+              <div className="rounded-2xl bg-[var(--bg-primary)] px-4 py-4">
+                <div className="mb-4">
+                  <p className="text-sm font-medium text-[var(--text-primary)]">THEME</p>
+                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">
+                    Background and accent color
+                  </p>
+                </div>
+
+                <div className="flex flex-wrap items-center gap-6">
+                  <div className="flex items-center gap-4">
+                    <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">
+                      BACKGROUND
+                    </p>
+                    <div className="flex min-h-10 items-center gap-3">
+                      {BACKGROUND_OPTIONS.map((option) => (
+                        <button
+                          key={option.id}
+                          onClick={() => setBackgroundTheme(option.id)}
+                          className={`h-10 w-10 rounded-full ${option.swatchClass} ${
+                            backgroundTheme === option.id
+                              ? 'ring-2 ring-[var(--accent-primary)] ring-offset-2 ring-offset-[var(--bg-primary)]'
+                              : ''
+                          }`}
+                          aria-label={`Set background theme to ${option.id}`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-4">
+                    <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">COLOR</p>
+                    <div className="flex min-h-10 items-center gap-3">
+                      {COLOR_OPTIONS.map((option) => (
+                        <button
+                          key={option.id}
+                          onClick={() => setColorTheme(option.id)}
+                          className={`h-10 w-10 rounded-full ${option.swatchClass} ${
+                            colorTheme === option.id
+                              ? 'ring-2 ring-[var(--accent-primary)] ring-offset-2 ring-offset-[var(--bg-primary)]'
+                              : ''
+                          }`}
+                          aria-label={`Set color theme to ${option.id}`}
+                        />
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
                 <div>
                   <p className="text-sm font-medium text-[var(--text-primary)]">HAPTIC</p>
