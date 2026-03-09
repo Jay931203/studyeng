@@ -337,7 +337,7 @@ export default function ExplorePage() {
   return (
     <AppPage>
       <div className="mb-6 flex items-center justify-between gap-4">
-        <LogoFull className="h-8 sm:h-9 text-[var(--text-primary)]" />
+        <LogoFull className="h-10 sm:h-11 text-[var(--text-primary)]" />
         {cameFromVideo && returnVideoId && (
           <button
             onClick={() => openShorts(returnVideoId, returnSeriesId)}
