@@ -151,7 +151,7 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
   if (mode === 'sidebar') {
     return (
       <aside className="hidden h-full flex-col rounded-[32px] border border-[var(--border-card)] bg-[var(--bg-card)]/88 p-4 shadow-[var(--card-shadow)] backdrop-blur-xl lg:flex">
-        <div className="flex items-center justify-center rounded-[28px] border border-[var(--border-card)] bg-black/20 px-4 py-5 text-center">
+        <div className="flex items-center justify-start rounded-[28px] border border-[var(--border-card)] bg-black/20 px-4 py-5 text-left">
           <Logo className="h-10 text-[var(--text-primary)]" />
         </div>
 
