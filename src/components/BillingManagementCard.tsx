@@ -35,20 +35,20 @@ const WEB_PLAN_OPTIONS: Record<BillingPlan, PlanOption> = {
   yearly: {
     id: 'yearly',
     label: 'YEARLY',
-    detail: 'Best value for regular learners',
-    price: 'KRW 79,900 / year',
+    detail: '꾸준히 쓰는 분들에게 가장 유리한 플랜',
+    price: '연 79,900원',
     highlight: 'BEST VALUE',
   },
   monthly: {
     id: 'monthly',
     label: 'MONTHLY',
-    detail: 'Flexible month-to-month access',
-    price: 'KRW 9,900 / month',
+    detail: '부담 없이 시작할 수 있는 월간 플랜',
+    price: '월 9,900원',
   },
 }
 
 function formatDate(value: string | null) {
-  if (!value) return 'Unavailable'
+  if (!value) return '확인 불가'
 
   return new Intl.DateTimeFormat('ko-KR', {
     year: 'numeric',
@@ -60,13 +60,13 @@ function formatDate(value: string | null) {
 function getPlanLabel(planKey: string | null | undefined) {
   switch (planKey) {
     case 'premium_yearly':
-      return 'Yearly membership'
+      return '연간 멤버십'
     case 'premium_monthly':
-      return 'Monthly membership'
+      return '월간 멤버십'
     case 'premium':
-      return 'Premium membership'
+      return '프리미엄 멤버십'
     default:
-      return 'Free plan'
+      return '무료 플랜'
   }
 }
 
@@ -188,7 +188,7 @@ export function BillingManagementCard() {
       } catch (error) {
         console.warn('[billing] status fetch failed:', error)
         if (!cancelled) {
-          setErrorMessage('Failed to load membership status.')
+          setErrorMessage('멤버십 상태를 불러오지 못했습니다.')
         }
       } finally {
         if (!cancelled) {
@@ -259,7 +259,8 @@ export function BillingManagementCard() {
         return {
           id: yearly ? 'yearly' : 'monthly',
           label: yearly ? 'YEARLY' : 'MONTHLY',
-          detail: pkg.product.description || (yearly ? 'Annual access via store billing' : 'Monthly access via store billing'),
+          detail:
+            pkg.product.description || (yearly ? '스토어 결제로 연간 이용' : '스토어 결제로 월간 이용'),
           price: pkg.product.priceString,
           highlight: yearly ? 'BEST VALUE' : undefined,
         } satisfies PlanOption
@@ -284,7 +285,7 @@ export function BillingManagementCard() {
       window.location.assign(payload.url)
     } catch (error) {
       console.warn('[billing] portal launch failed:', error)
-      setErrorMessage('Failed to open membership management.')
+      setErrorMessage('멤버십 관리 페이지를 열지 못했습니다.')
       setManaging(false)
     }
   }
@@ -300,11 +301,11 @@ export function BillingManagementCard() {
       setPremiumEntitlement(restored)
 
       if (!restored) {
-        setErrorMessage('No purchases were found to restore.')
+        setErrorMessage('복원할 구매 내역이 없습니다.')
       }
     } catch (error) {
       console.warn('[billing] restore failed:', error)
-      setErrorMessage('Failed to restore purchases.')
+      setErrorMessage('구매 복원에 실패했습니다.')
     } finally {
       setRestoring(false)
     }
@@ -316,7 +317,7 @@ export function BillingManagementCard() {
       nativePackages[0]
 
     if (!pkg) {
-      setErrorMessage('Membership plans are still loading.')
+      setErrorMessage('멤버십 플랜을 아직 불러오는 중입니다.')
       return
     }
 
@@ -332,7 +333,7 @@ export function BillingManagementCard() {
       const purchaseError = error as { code?: string; userCancelled?: boolean }
       if (!purchaseError.userCancelled && purchaseError.code !== 'PURCHASE_CANCELLED') {
         console.warn('[billing] checkout failed:', error)
-        setErrorMessage('Failed to start the store purchase flow.')
+        setErrorMessage('스토어 결제를 시작하지 못했습니다.')
       }
     } finally {
       setSubmitting(false)
@@ -371,7 +372,7 @@ export function BillingManagementCard() {
       window.location.assign(payload.url)
     } catch (error) {
       console.warn('[billing] checkout start failed:', error)
-      setErrorMessage('Failed to start checkout.')
+      setErrorMessage('결제를 시작하지 못했습니다.')
     } finally {
       setSubmitting(false)
     }
@@ -380,7 +381,7 @@ export function BillingManagementCard() {
   const handleOpenStore = () => {
     const url = getStoreManagementUrl()
     if (!url) {
-      setErrorMessage('Store management is unavailable on this device.')
+      setErrorMessage('이 기기에서는 스토어 관리 페이지를 열 수 없습니다.')
       return
     }
 
@@ -426,7 +427,7 @@ export function BillingManagementCard() {
             <div>
               <p className="text-xs font-semibold text-[var(--text-muted)]">CURRENT STATUS</p>
               <p className="mt-1 text-lg font-semibold text-[var(--text-primary)]">
-                {loading ? 'Checking membership' : currentPremium ? 'Premium active' : 'Free plan'}
+                {loading ? '멤버십 확인 중' : currentPremium ? '프리미엄 이용 중' : '무료 플랜'}
               </p>
               <p className="mt-1 text-sm text-[var(--text-secondary)]">{currentPlanLabel}</p>
             </div>
@@ -443,25 +444,26 @@ export function BillingManagementCard() {
 
           {!native && status?.entitlement?.currentPeriodEnd && (
             <p className="mt-3 text-xs text-[var(--text-secondary)]">
-              {status.entitlement.cancelAtPeriodEnd ? 'Access ends' : 'Renews'} {formatDate(status.entitlement.currentPeriodEnd)}
+              {status.entitlement.cancelAtPeriodEnd ? '이용 종료일' : '다음 결제일'}{' '}
+              {formatDate(status.entitlement.currentPeriodEnd)}
             </p>
           )}
 
           {!native && !user && billingEnabled && (
             <p className="mt-3 text-xs text-[var(--text-secondary)]">
-              Log in to keep billing, status, and premium access synced to your account.
+              로그인하면 결제 상태와 프리미엄 권한을 계정 기준으로 안정적으로 관리할 수 있습니다.
             </p>
           )}
 
           {native && currentPremium && (
             <p className="mt-3 text-xs text-[var(--text-secondary)]">
-              Change or cancel your membership in the {getStoreLabel()}.
+              멤버십 변경이나 해지는 {getStoreLabel()}에서 진행할 수 있습니다.
             </p>
           )}
 
           {!native && !billingEnabled && (
             <p className="mt-3 text-xs text-[var(--text-secondary)]">
-              Checkout is being configured. Membership codes still work as soon as they are issued.
+              결제 연동은 아직 준비 중입니다. 코드가 발급되면 멤버십 코드는 바로 사용할 수 있습니다.
             </p>
           )}
         </div>
@@ -493,8 +495,8 @@ export function BillingManagementCard() {
           {currentPremium && (
             <p className="text-xs text-[var(--text-secondary)]">
               {native
-                ? 'Plan changes are handled in the store settings for your device.'
-                : 'Use Manage membership to change billing cycle, cancel, or update payment details.'}
+                ? '플랜 변경은 기기 스토어 설정에서 진행됩니다.'
+                : '멤버십 관리에서 결제 주기 변경, 해지, 결제 수단 수정까지 확인할 수 있습니다.'}
             </p>
           )}
         </div>
