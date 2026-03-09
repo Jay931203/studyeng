@@ -41,7 +41,7 @@ export function SaveToast({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className={`rounded-full border px-4 py-2 text-xs font-medium backdrop-blur-md ${
+          className={`inline-flex min-w-[156px] items-center justify-center rounded-full border px-4 py-2 text-center text-xs font-medium backdrop-blur-md ${
             placement === 'fixed'
               ? 'fixed left-1/2 top-12 z-50 -translate-x-1/2'
               : 'z-20'
