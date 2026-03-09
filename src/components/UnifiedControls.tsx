@@ -265,9 +265,6 @@ export function UnifiedControls({
   const subtitleLabel = subtitleMode === 'none' ? 'Off' : subtitleMode === 'en' ? 'En' : 'En/Ko'
   const speedLabel = playbackRate === 1 ? '1x' : `${playbackRate}x`
   const speedActive = playbackRate !== 1
-  const repeatLabel = repeatMode === 'off' ? '1x' : repeatMode === 'x2' ? '2x' : '3x'
-  const playbackOrderLabel = playbackOrderMode === 'shuffle' ? '랜덤' : '순차'
-  const playbackSummaryLabel = `${repeatLabel} · ${playbackOrderLabel}`
   const playbackOptionsActive = repeatMode !== 'off' || playbackOrderMode !== 'sequence'
   const canSubmitReport =
     Boolean(videoId && youtubeId) && reportDescription.trim().length > 0 && !reportSubmitting
@@ -316,10 +313,6 @@ export function UnifiedControls({
               >
                 Playback
               </p>
-              <p className="mt-1 text-xs font-semibold" style={{ color: 'var(--player-text)' }}>
-                {playbackSummaryLabel}
-              </p>
-
               <div className="mt-3">
                 <p className="text-[11px] font-semibold" style={{ color: 'var(--player-text)' }}>
                   반복
@@ -716,7 +709,7 @@ export function UnifiedControls({
             >
               <path d="M4.755 10.059a7.5 7.5 0 0112.548-3.364l1.903 1.903H14.25a.75.75 0 000 1.5h6a.75.75 0 00.75-.75v-6a.75.75 0 00-1.5 0v3.068l-1.903-1.903A9 9 0 003.306 9.67a.75.75 0 101.45.388zm14.49 3.882a7.5 7.5 0 01-12.548 3.364l-1.903-1.903H9.75a.75.75 0 000-1.5h-6a.75.75 0 00-.75.75v6a.75.75 0 001.5 0v-3.068l1.903 1.903A9 9 0 0020.694 14.33a.75.75 0 10-1.45-.388z" />
             </svg>
-            <span>{playbackSummaryLabel}</span>
+            <span>Playback</span>
           </button>
 
           {isLooping && (
