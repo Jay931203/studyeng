@@ -449,7 +449,7 @@ export default function ExplorePage() {
                 className="absolute inset-0"
                 style={{
                   background:
-                    'linear-gradient(135deg, rgba(var(--accent-primary-rgb), 0.24), transparent 55%)',
+                    'var(--accent-rainbow-soft, linear-gradient(135deg, rgba(var(--accent-primary-rgb), 0.24), transparent 55%))',
                 }}
               />
               <div className="absolute inset-x-0 bottom-0 p-6">
