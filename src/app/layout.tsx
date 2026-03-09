@@ -19,8 +19,12 @@ export const metadata: Metadata = {
   description: '짧은 장면과 반복으로 영어가 덜 낯설어지는 쇼츠 피드',
   manifest: '/manifest.json',
   icons: {
-    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
-    shortcut: ['/icon.svg'],
+    icon: [
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+    ],
+    shortcut: ['/favicon-32x32.png'],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
   },
   appleWebApp: {
     capable: true,
