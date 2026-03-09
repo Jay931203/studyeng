@@ -628,7 +628,11 @@ export function UnifiedControls({
               whileTap={{ scale: 0.75 }}
               onClick={(event) => {
                 event.stopPropagation()
+                const nextLiked = !liked
                 toggleLike(videoId)
+                if (nextLiked) {
+                  showToast('Liked')
+                }
               }}
               className={iconButtonClassName}
               aria-label={liked ? '좋아요 취소' : '좋아요'}
@@ -746,18 +750,12 @@ export function UnifiedControls({
             whileTap={{ scale: 0.75 }}
             onClick={(event) => {
               event.stopPropagation()
-              setGameModeEnabled(!gameModeEnabled)
+              const nextGameModeEnabled = !gameModeEnabled
+              setGameModeEnabled(nextGameModeEnabled)
+              showToast(nextGameModeEnabled ? 'Game On' : 'Game Off')
             }}
             className={iconButtonClassName}
-            style={{
-              color: gameModeEnabled ? 'var(--accent-primary)' : 'var(--player-text)',
-              backgroundColor: gameModeEnabled
-                ? 'color-mix(in srgb, var(--accent-primary) 18%, transparent)'
-                : 'transparent',
-              boxShadow: gameModeEnabled
-                ? '0 0 0 1px color-mix(in srgb, var(--accent-primary) 30%, transparent), 0 0 18px color-mix(in srgb, var(--accent-primary) 18%, transparent)'
-                : 'none',
-            }}
+            style={{ color: gameModeEnabled ? 'var(--accent-primary)' : 'var(--player-text)' }}
             aria-label={gameModeEnabled ? '게임 모드 끄기' : '게임 모드 켜기'}
             title={gameModeEnabled ? '게임 모드 ON' : '게임 모드 OFF'}
           >
@@ -775,17 +773,12 @@ export function UnifiedControls({
                   : { duration: 0.15 }
               }
             >
-              <circle cx="12" cy="12" r="7" />
-              <circle cx="12" cy="12" r="2.25" />
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 3.5v2.5" />
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v2.5" />
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3.5 12H6" />
-              <path strokeLinecap="round" strokeLinejoin="round" d="M18 12h2.5" />
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M16.95 7.05l-1.8 1.8"
-              />
+              <rect x="5.25" y="5.25" width="13.5" height="13.5" rx="3.2" />
+              <circle cx="9.15" cy="9.15" r="1.1" fill="currentColor" stroke="none" />
+              <circle cx="14.85" cy="9.15" r="1.1" fill="currentColor" stroke="none" />
+              <circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none" />
+              <circle cx="9.15" cy="14.85" r="1.1" fill="currentColor" stroke="none" />
+              <circle cx="14.85" cy="14.85" r="1.1" fill="currentColor" stroke="none" />
             </motion.svg>
 
             <AnimatePresence>
