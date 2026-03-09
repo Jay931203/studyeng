@@ -5,6 +5,7 @@ import { useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
+import { SurfaceCard } from '@/components/ui/AppPage'
 import { getCatalogSeriesById, getCatalogVideoById } from '@/lib/catalog'
 import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
@@ -86,7 +87,7 @@ export function WatchHistory() {
   }
 
   return (
-    <div className="mb-8">
+    <SurfaceCard className="mb-8 p-5">
       <div className="mb-4 flex items-center justify-between">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
@@ -188,6 +189,6 @@ export function WatchHistory() {
           </div>
         ))
       )}
-    </div>
+    </SurfaceCard>
   )
 }
