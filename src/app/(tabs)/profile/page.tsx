@@ -177,9 +177,6 @@ export default function ProfilePage() {
               <div className="rounded-2xl bg-[var(--bg-primary)] px-4 py-4">
                 <div className="mb-4">
                   <p className="text-sm font-medium text-[var(--text-primary)]">THEME</p>
-                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">
-                    Background and accent color
-                  </p>
                 </div>
 
                 <div className="flex flex-wrap items-center gap-6">
