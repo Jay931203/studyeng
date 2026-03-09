@@ -517,19 +517,19 @@ export function BillingManagementCard({
 
   return (
     <SurfaceCard className="p-6">
-      <div className="mb-4 flex items-center justify-between gap-3">
-        <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-          MEMBERSHIP
-        </p>
-        {!isDetail && (
+      {!isDetail && (
+        <div className="mb-4 flex items-center justify-between gap-3">
+          <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+            MEMBERSHIP
+          </p>
           <Link
             href="/profile/membership"
             className="rounded-full bg-[var(--bg-secondary)] px-3 py-1.5 text-xs font-semibold text-[var(--text-primary)]"
           >
             DETAIL
           </Link>
-        )}
-      </div>
+        </div>
+      )}
 
       <div className="space-y-4">
         <div className="rounded-2xl bg-[var(--bg-primary)] px-4 py-4">

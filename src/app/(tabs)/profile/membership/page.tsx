@@ -41,9 +41,6 @@ export default function ProfileMembershipPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
               MEMBERSHIP
             </p>
-            <p className="mt-1 text-sm text-[var(--text-secondary)]">
-              Subscription options, billing management, and code entry live here.
-            </p>
           </div>
         </div>
 

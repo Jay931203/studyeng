@@ -123,8 +123,7 @@ export default function ProfilePage() {
         </section>
       )}
 
-      <div className="grid gap-6 xl:grid-cols-[1.08fr_0.92fr]">
-        <div className="space-y-6">
+      <div className="space-y-6">
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -379,44 +378,41 @@ export default function ProfilePage() {
               </div>
             </SurfaceCard>
           )}
-        </div>
 
-        <div className="space-y-6">
-          {isAdminActive() && (
-            <SurfaceCard className="p-6">
-              <SectionLabel label="REPORTS" />
+        {isAdminActive() && (
+          <SurfaceCard className="p-6">
+            <SectionLabel label="REPORTS" />
 
-              <div className="rounded-2xl bg-[var(--bg-primary)] p-4">
-                <p className="text-sm font-semibold text-red-400">
-                  OPEN {unresolvedCount} 쨌 FLAGS {flaggedSubtitles.length}
-                </p>
-                <div className="mt-3 flex gap-2">
-                  <button
-                    onClick={copyBundle}
-                    className="flex-1 rounded-xl bg-red-500/10 py-2 text-xs font-medium text-red-400"
-                  >
-                    COPY JSON
-                  </button>
-                  <button
-                    onClick={clearFlags}
-                    disabled={flaggedSubtitles.length === 0}
-                    className="rounded-xl bg-[var(--bg-secondary)] px-4 py-2 text-xs text-[var(--text-muted)] disabled:opacity-30"
-                  >
-                    CLEAR
-                  </button>
-                </div>
+            <div className="rounded-2xl bg-[var(--bg-primary)] p-4">
+              <p className="text-sm font-semibold text-red-400">
+                OPEN {unresolvedCount} 쨌 FLAGS {flaggedSubtitles.length}
+              </p>
+              <div className="mt-3 flex gap-2">
+                <button
+                  onClick={copyBundle}
+                  className="flex-1 rounded-xl bg-red-500/10 py-2 text-xs font-medium text-red-400"
+                >
+                  COPY JSON
+                </button>
+                <button
+                  onClick={clearFlags}
+                  disabled={flaggedSubtitles.length === 0}
+                  className="rounded-xl bg-[var(--bg-secondary)] px-4 py-2 text-xs text-[var(--text-muted)] disabled:opacity-30"
+                >
+                  CLEAR
+                </button>
               </div>
-            </SurfaceCard>
-          )}
-
-          <SurfaceCard className="overflow-hidden p-6">
-            <SectionLabel label="LEGAL" />
-            <div className="-mx-6 -mb-6 overflow-hidden">
-              <LegalLink href="/terms" label="TERMS" />
-              <LegalLink href="/privacy" label="PRIVACY" />
             </div>
           </SurfaceCard>
-        </div>
+        )}
+
+        <SurfaceCard className="overflow-hidden p-6">
+          <SectionLabel label="LEGAL" />
+          <div className="-mx-6 -mb-6 overflow-hidden">
+            <LegalLink href="/terms" label="TERMS" />
+            <LegalLink href="/privacy" label="PRIVACY" />
+          </div>
+        </SurfaceCard>
       </div>
 
       <div className="mt-6">
