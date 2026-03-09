@@ -744,8 +744,9 @@ export function UnifiedControls({
             </button>
           )}
 
-          <button
+          <motion.button
             type="button"
+            whileTap={{ scale: 0.75 }}
             onClick={(event) => {
               event.stopPropagation()
               setGameModeEnabled(!gameModeEnabled)
@@ -760,12 +761,20 @@ export function UnifiedControls({
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill="currentColor"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className={iconSizeClassName}
             >
-              <path d="M11.25 5.337c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.036 1.007-1.875 2.25-1.875S15 2.34 15 3.375c0 .369-.128.713-.349 1.003-.215.283-.401.604-.401.959 0 .332.278.598.61.578 7.69-.442 7.69 10.27 0 9.828a.592.592 0 01-.61.578c0 .355.186.677.401.96.221.29.349.634.349 1.003 0 1.035-1.007 1.874-2.25 1.874s-2.25-.84-2.25-1.874c0-.37.128-.714.349-1.004.215-.282.401-.604.401-.959a.592.592 0 00-.61-.578c-7.69.442-7.69-10.27 0-9.828a.592.592 0 00.61-.578z" />
+              <rect x="2" y="6" width="20" height="12" rx="3" />
+              <line x1="6" y1="10" x2="6" y2="10.01" />
+              <line x1="10" y1="10" x2="10" y2="10.01" />
+              <line x1="15" y1="12" x2="15" y2="12.01" />
+              <line x1="18" y1="10" x2="18" y2="10.01" />
             </svg>
-          </button>
+          </motion.button>
 
           <div className={dividerClassName} style={{ backgroundColor: 'var(--player-divider)' }} />
 
