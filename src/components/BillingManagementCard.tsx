@@ -581,11 +581,6 @@ export function BillingManagementCard({
             </p>
           )}
 
-          {!native && !billingEnabled && (
-            <p className="mt-3 text-xs text-[var(--text-secondary)]">
-              Billing is not enabled yet. If you have a code, use it inside detail.
-            </p>
-          )}
         </div>
 
         {isDetail && (

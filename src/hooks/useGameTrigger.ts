@@ -208,6 +208,9 @@ export function useGameTrigger(
     setFreezeSubIndex(triggerAt)
     pauseRef.current?.()
 
+    // Haptic feedback for game trigger
+    try { navigator.vibrate?.([20, 50, 20]) } catch { /* unsupported */ }
+
     // Generate choices
     const correctAnswer = subtitles[gameSentenceIndex].en
     const wrongAnswers = pickWrongAnswers(gameSentenceIndex, subtitles)
