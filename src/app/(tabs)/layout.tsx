@@ -12,7 +12,7 @@ import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useAuth } from '@/hooks/useAuth'
-import { useOrientation } from '@/hooks/useOrientation'
+import { useViewportLayout } from '@/hooks/useOrientation'
 
 const GUEST_VIEW_LIMIT = 3
 
@@ -30,7 +30,7 @@ export default function TabsLayout({
   const phraseCount = usePhraseStore((state) => state.phrases.length)
   const streakDays = useUserStore((state) => state.streakDays)
   const { user, loading: authLoading, authAvailable } = useAuth()
-  const { isLandscape } = useOrientation()
+  const { showLandscapeRail } = useViewportLayout()
 
   const [splashDone, setSplashDone] = useState(() => {
     if (typeof window === 'undefined') return false
@@ -97,13 +97,13 @@ export default function TabsLayout({
     <div
       className={`relative mx-auto w-full ${
         isImmersiveRoute
-          ? isLandscape
+          ? showLandscapeRail
             ? 'grid h-dvh grid-cols-[76px_minmax(0,1fr)]'
             : 'flex h-dvh flex-col'
           : 'min-h-dvh lg:grid lg:grid-cols-[280px_minmax(0,1fr)]'
       }`}
       style={
-        isImmersiveRoute && isLandscape
+        isImmersiveRoute && showLandscapeRail
           ? {
               paddingLeft: 'env(safe-area-inset-left, 0px)',
               paddingRight: 'env(safe-area-inset-right, 0px)',
@@ -111,7 +111,7 @@ export default function TabsLayout({
           : undefined
       }
     >
-      {isImmersiveRoute && isLandscape && (
+      {isImmersiveRoute && showLandscapeRail && (
         <div className="border-r border-[var(--border-card)]/60 bg-black/20 p-2">
           <div className="sticky top-2 h-[calc(100dvh-1rem)]">
             <BottomNav mode="rail" />
@@ -134,7 +134,7 @@ export default function TabsLayout({
       >
         <main className="flex-1 overflow-hidden">{children}</main>
         {!isImmersiveRoute && <BottomNav />}
-        {isImmersiveRoute && !isLandscape && <BottomNav />}
+        {isImmersiveRoute && !showLandscapeRail && <BottomNav />}
       </div>
 
       <LoginGateModal

@@ -4,7 +4,7 @@ import { AnimatePresence, motion, type PanInfo } from 'framer-motion'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { series as allSeries, type VideoData } from '@/data/seed-videos'
-import { useOrientation } from '@/hooks/useOrientation'
+import { useViewportLayout } from '@/hooks/useOrientation'
 import { getCatalogVideosBySeries } from '@/lib/catalog'
 import { readEmbedBlockedVideoIds, writeEmbedBlockedVideoIds } from '@/lib/embedBlocklist'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
@@ -34,7 +34,14 @@ export function VideoFeed({
   initialReviewPhraseId,
 }: VideoFeedProps) {
   const router = useRouter()
-  const { isLandscape } = useOrientation()
+  const {
+    isLandscapeViewport,
+    useLandscapeSplitPlayer,
+    landscapeVideoPaneWidthPercent,
+  } = useViewportLayout()
+  const landscapeVideoPaneWidth = `${landscapeVideoPaneWidthPercent}%`
+  const landscapeOverlayWidth = `calc(${landscapeVideoPaneWidth} - 24px)`
+  const landscapeProgressMarkerOffset = `calc(${landscapeVideoPaneWidth} - 16px)`
   const [embedBlockedVideoIds, setEmbedBlockedVideoIds] = useState<string[]>(() => {
     return readEmbedBlockedVideoIds()
   })
@@ -378,7 +385,9 @@ export function VideoFeed({
             subtitles={currentVideo.subtitles}
             clipStart={currentVideo.clipStart}
             clipEnd={currentVideo.clipEnd}
-            isLandscape={isLandscape}
+            isLandscapeViewport={isLandscapeViewport}
+            useLandscapeSplitLayout={useLandscapeSplitPlayer}
+            landscapeVideoPaneWidth={landscapeVideoPaneWidth}
             onClipComplete={handleClipComplete}
             onVideoErrorSkip={currentIndex < videos.length - 1 ? handleNextVideo : undefined}
             onEmbedBlocked={handleEmbedBlocked}
@@ -420,7 +429,7 @@ export function VideoFeed({
               onPrevVideo={currentIndex > 0 ? handlePrevVideo : undefined}
               onNextVideo={currentIndex < videos.length - 1 ? handleNextVideo : undefined}
               onToggleFreeze={onToggleFreeze}
-              isLandscape={isLandscape}
+              isLandscapeViewport={isLandscapeViewport}
             />
           </VideoPlayer>
 
@@ -429,12 +438,12 @@ export function VideoFeed({
             style={{
               backgroundColor: 'var(--player-control-bg)',
               borderColor: 'var(--player-control-border)',
-              ...(isLandscape
+              ...(useLandscapeSplitPlayer
                 ? {
                     left: 'max(12px, env(safe-area-inset-left, 0px))',
                     top: 'max(12px, env(safe-area-inset-top, 0px))',
                     right: 'auto',
-                    width: 'calc(62% - 24px)',
+                    width: landscapeOverlayWidth,
                   }
                 : {}),
             }}
@@ -477,11 +486,11 @@ export function VideoFeed({
               style={{
                 backgroundColor: 'var(--player-control-bg)',
                 borderColor: 'var(--player-control-border)',
-                ...(isLandscape
+                ...(useLandscapeSplitPlayer
                   ? {
                       left: 'max(12px, env(safe-area-inset-left, 0px))',
                       right: 'auto',
-                      width: 'calc(62% - 24px)',
+                      width: landscapeOverlayWidth,
                     }
                   : {}),
               }}
@@ -528,10 +537,10 @@ export function VideoFeed({
           )}
           <div
             className={`pointer-events-none absolute top-0 z-[5] h-[100px] ${
-              isLandscape ? 'left-0' : 'left-0 right-0'
+              useLandscapeSplitPlayer ? 'left-0' : 'left-0 right-0'
             }`}
             style={{
-              ...(isLandscape ? { width: '62%' } : {}),
+              ...(useLandscapeSplitPlayer ? { width: landscapeVideoPaneWidth } : {}),
               background:
                 'linear-gradient(to bottom, var(--player-gradient-strong), var(--player-gradient-soft), transparent)',
             }}
@@ -559,9 +568,9 @@ export function VideoFeed({
         <div
           className="pointer-events-none absolute top-5 z-10 flex flex-col gap-[3px]"
           style={
-            isLandscape
+            useLandscapeSplitPlayer
               ? {
-                  left: 'calc(62% - 16px)',
+                  left: landscapeProgressMarkerOffset,
                   top: 'max(20px, env(safe-area-inset-top, 0px))',
                 }
               : { right: '12px' }

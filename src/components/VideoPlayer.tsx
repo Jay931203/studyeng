@@ -28,7 +28,9 @@ interface VideoPlayerProps {
   onVideoErrorSkip?: () => void
   onEmbedBlocked?: () => void
   onPlaybackStarted?: () => void
-  isLandscape?: boolean
+  isLandscapeViewport?: boolean
+  useLandscapeSplitLayout?: boolean
+  landscapeVideoPaneWidth?: string
   initialSeekTime?: number
   children?: ReactNode
 }
@@ -48,7 +50,9 @@ export function VideoPlayer({
   onVideoErrorSkip,
   onEmbedBlocked,
   onPlaybackStarted,
-  isLandscape = false,
+  isLandscapeViewport = false,
+  useLandscapeSplitLayout = false,
+  landscapeVideoPaneWidth = '62%',
   initialSeekTime,
   children,
 }: VideoPlayerProps) {
@@ -178,7 +182,7 @@ export function VideoPlayer({
 
   const videoArea = (
     <div
-      className={`relative ${isLandscape ? 'h-full w-full' : 'flex-1 min-h-0'}`}
+      className={`relative ${useLandscapeSplitLayout ? 'h-full w-full' : 'flex-1 min-h-0'}`}
       onClick={handleTap}
       style={{ backgroundColor: 'var(--player-surface)' }}
     >
@@ -304,10 +308,10 @@ export function VideoPlayer({
     </div>
   )
 
-  if (isLandscape) {
+  if (useLandscapeSplitLayout) {
     return (
       <div className="flex h-full w-full flex-row" style={{ backgroundColor: 'var(--player-surface)' }}>
-        <div className="relative h-full" style={{ width: '62%' }}>
+        <div className="relative h-full flex-shrink-0" style={{ width: landscapeVideoPaneWidth }}>
           {videoArea}
         </div>
 
@@ -325,7 +329,7 @@ export function VideoPlayer({
     <div className="flex h-full w-full flex-col" style={{ backgroundColor: 'var(--player-surface)' }}>
       {videoArea}
       <div
-        className="relative h-[176px] flex-shrink-0"
+        className={`relative flex-shrink-0 ${isLandscapeViewport ? 'h-[208px]' : 'h-[176px]'}`}
         style={{ backgroundColor: 'var(--player-surface)' }}
       >
         {subtitleArea}
