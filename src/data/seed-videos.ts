@@ -1751,7 +1751,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-office-ep9',
     youtubeId: '1QQBB3cwNM0',
-    title: '\'OUR PRICES HAVE NEVER BEEN LOWER!\' - The Office US',
+    title: '\'OUR PRICES HAVE NEVER BEEN LOWER!\'',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -1763,7 +1763,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-office-ep10',
     youtubeId: '9Ht_GI2zOxo',
-    title: 'Dwight\'s Fire Drill - The Office',
+    title: 'Dwight\'s Fire Drill',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -1775,7 +1775,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-office-ep11',
     youtubeId: 'lC5lsemxaJo',
-    title: 'Michael\'s Pyramid Scheme - The Office US',
+    title: 'Michael\'s Pyramid Scheme',
     category: 'drama',
     difficulty: 2,
     clipStart: 10,
@@ -1787,7 +1787,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'friends-s1-ep5',
     youtubeId: '7dVyEbHRTlU',
-    title: 'Friends: Chandler Quits His Job',
+    title: 'Chandler Quits His Job',
     category: 'drama',
     difficulty: 2,
     clipStart: 21,
@@ -1799,7 +1799,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'friends-s1-ep6',
     youtubeId: 'ky3KiiUK_D0',
-    title: 'Friends: The Friends Pretend To Like Rachel’s English Trifle',
+    title: 'The Friends Pretend To Like Rachel’s English Trifle',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -1823,7 +1823,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'friends-s1-ep8',
     youtubeId: 'L_PWbnHABsM',
-    title: 'Friends - Ross\' New Couch Pivot',
+    title: 'Ross\' New Couch Pivot',
     category: 'drama',
     difficulty: 2,
     clipStart: 24,
@@ -1847,7 +1847,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'friends-s1-ep10',
     youtubeId: 'uYM1uQ7QrTc',
-    title: 'Friends: Lightning Round',
+    title: 'Lightning Round',
     category: 'drama',
     difficulty: 2,
     clipStart: 19,
@@ -2195,7 +2195,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'big-bang-theory-ep9',
     youtubeId: '_rW-RHdqy9E',
-    title: 'The Big Bang Theory - best scene ever!',
+    title: 'best scene ever!',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -2351,7 +2351,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'modern-family-ep13',
     youtubeId: 'DdjWGbPUmrg',
-    title: 'Modern Family - Alex Has to Take Over Teaching When Cam Tries to Substitute',
+    title: 'Alex Has to Take Over Teaching When Cam Tries to Substitute',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -2375,7 +2375,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'good-place-ep3',
     youtubeId: 'etJ6RmMPGko',
-    title: 'The Good Place - Chidi Kills Janet!',
+    title: 'Chidi Kills Janet!',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -2387,7 +2387,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'good-place-ep4',
     youtubeId: '5v-Na8Xpwzg',
-    title: 'The Good Place - Welcome to The Medium Place',
+    title: 'Welcome to The Medium Place',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -2411,7 +2411,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'good-place-ep6',
     youtubeId: 'hY-Rzou38k4',
-    title: 'How Afterlife Points are Assigned - The Good Place',
+    title: 'How Afterlife Points are Assigned',
     category: 'drama',
     difficulty: 2,
     clipStart: 21,
@@ -2423,7 +2423,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'good-place-ep7',
     youtubeId: 'IA6NaOfwswo',
-    title: 'Chidi Thinks He\'s Being Punished - The Good Place',
+    title: 'Chidi Thinks He\'s Being Punished',
     category: 'drama',
     difficulty: 2,
     clipStart: 4,
@@ -2435,7 +2435,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'good-place-ep8',
     youtubeId: '2swCX5-GE9E',
-    title: 'Only Eleanor Can Save Humanity - The Good Place',
+    title: 'Only Eleanor Can Save Humanity',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -2447,7 +2447,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'good-place-ep9',
     youtubeId: 'mhII8J_4Y1g',
-    title: 'Chidi\'s Mind Is Blown by the Time-Knife - The Good Place',
+    title: 'Chidi\'s Mind Is Blown by the Time-Knife',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -2459,7 +2459,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'ted-lasso-ep2',
     youtubeId: 'emGzPmmMA3o',
-    title: 'Ted Lasso - Roy Kent gives Jamie the signal',
+    title: 'Roy Kent gives Jamie the signal',
     category: 'drama',
     difficulty: 2,
     clipStart: 28,
@@ -2471,7 +2471,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'ted-lasso-ep3',
     youtubeId: 'DeITUPgQiyY',
-    title: 'Ted Lasso (Season 3 Episode 7) - Team flips off Jamie & Richmond scores against',
+    title: 'Team flips off Jamie & Richmond scores against',
     category: 'drama',
     difficulty: 2,
     clipStart: 28,
@@ -2507,7 +2507,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'ted-lasso-ep6',
     youtubeId: 'WDt_k3ovjFo',
-    title: 'Ted Lasso - Jamie punches his dad (Roy Kent hugs Jamie)',
+    title: 'Jamie punches his dad (Roy Kent hugs Jamie)',
     category: 'drama',
     difficulty: 2,
     clipStart: 23,
@@ -2591,7 +2591,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'ted-lasso-ep13',
     youtubeId: 'ZPGBceVfV60',
-    title: 'Believe - Ted Lasso',
+    title: 'Believe',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -2639,7 +2639,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'ted-lasso-ep17',
     youtubeId: 'USfeEKLOD0w',
-    title: 'Ted Lasso - Red String Training',
+    title: 'Red String Training',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -2711,7 +2711,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'community-ep7',
     youtubeId: 'otwYnQ5TOh0',
-    title: 'Look At His Shadow! - Community',
+    title: 'Look At His Shadow!',
     category: 'drama',
     difficulty: 2,
     clipStart: 9,
@@ -2759,7 +2759,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'parks-rec-ep9',
     youtubeId: '4yAQcKhv_5k',
-    title: 'Parks and Recreation - April Accidentally Schedules 93 Meetings For Ron On One D',
+    title: 'April Accidentally Schedules 93 Meetings For Ron On One D',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -2795,7 +2795,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'himym-ep2',
     youtubeId: '6W7yhe1i-sQ',
-    title: 'How I Met Your Mother - Rabbit Vs Duck',
+    title: 'Rabbit Vs Duck',
     category: 'drama',
     difficulty: 2,
     clipStart: 27,
@@ -2807,7 +2807,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'himym-ep3',
     youtubeId: 'knobmUd-r5E',
-    title: 'How I Met Your Mother - Beaver Hand Puppets',
+    title: 'Beaver Hand Puppets',
     category: 'drama',
     difficulty: 2,
     clipStart: 2,
@@ -2891,7 +2891,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'seinfeld-ep7',
     youtubeId: 'KLOyChP2AWA',
-    title: 'Seinfeld: Double Dipped',
+    title: 'Double Dipped',
     category: 'drama',
     difficulty: 2,
     clipStart: 8,
@@ -2939,7 +2939,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'arrested-dev-ep5',
     youtubeId: 'DbCM6WvB57c',
-    title: 'Arrested Development - Hello, Who\'s on this phone?',
+    title: 'Hello, Who\'s on this phone?',
     category: 'drama',
     difficulty: 2,
     clipStart: 0,
@@ -2963,7 +2963,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'arrested-dev-ep7',
     youtubeId: '1WDW8XKEGgU',
-    title: 'NEVER Touch "The Cornballer" - Arrested Development',
+    title: 'NEVER Touch "The Cornballer"',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -2975,7 +2975,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'arrested-dev-ep8',
     youtubeId: '9GYtgFdXCGE',
-    title: '"I Just Blue Myself" - Arrested Development',
+    title: '"I Just Blue Myself"',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -3035,7 +3035,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'arrested-dev-ep13',
     youtubeId: 'bbQh_S2g6CI',
-    title: 'A Very Literal Doctor - Arrested Development',
+    title: 'A Very Literal Doctor',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -3059,7 +3059,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'curb-ep3',
     youtubeId: 'tMhxJ45wslk',
-    title: 'Curb Your Enthusiasm: Driving Mr. Larry',
+    title: 'Driving Mr. Larry',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -3071,7 +3071,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'curb-ep4',
     youtubeId: 'MfZEDMsOrCk',
-    title: 'Curb Your Enthusiasm - Larry at a dinner party (Stabbing range)',
+    title: 'Larry at a dinner party (Stabbing range)',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -3083,7 +3083,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'curb-ep5',
     youtubeId: 'GOfv3rAVOPA',
-    title: 'Curb Your Enthusiasm: Just a Grape',
+    title: 'Just a Grape',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -3095,7 +3095,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'curb-ep6',
     youtubeId: 'LPquarz16wQ',
-    title: 'Curb Your Enthusiasm - Thank you for your service',
+    title: 'Thank you for your service',
     category: 'drama',
     difficulty: 2,
     clipStart: 4,
@@ -3107,7 +3107,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'curb-ep7',
     youtubeId: 'SZeyrb8SdSA',
-    title: 'Curb Your Enthusiasm: A Portrait of Susie',
+    title: 'A Portrait of Susie',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -3119,7 +3119,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'curb-ep8',
     youtubeId: 'RkP4TJ5jj94',
-    title: 'Curb Your Enthusiasm: We\'re Overweight',
+    title: 'We\'re Overweight',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -3131,7 +3131,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'curb-ep9',
     youtubeId: 'UXlihHEMu_U',
-    title: 'Curb Your Enthusiasm: A Hypothetical',
+    title: 'A Hypothetical',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -3143,7 +3143,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'curb-ep10',
     youtubeId: '7Y01uy-Q1d8',
-    title: 'Curb Your Enthusiasm: Larry walks into a Jeff & Susie argument',
+    title: 'Larry walks into a Jeff & Susie argument',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -3155,7 +3155,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'curb-ep11',
     youtubeId: 'dx5jTXNnCZw',
-    title: 'Curb Your Enthusiasm - You\'re a Jew from the Bronx!',
+    title: 'You\'re a Jew from the Bronx!',
     category: 'drama',
     difficulty: 2,
     clipStart: 14,
@@ -3167,7 +3167,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'curb-ep12',
     youtubeId: 'ZEobUCTpV1M',
-    title: 'Curb Your Enthusiasm: All You Can Eat',
+    title: 'All You Can Eat',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -3179,7 +3179,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'curb-ep13',
     youtubeId: 'BHbksPYwdf8',
-    title: 'Curb Your Enthusiasm: Chair Issues',
+    title: 'Chair Issues',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -3191,7 +3191,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'curb-ep14',
     youtubeId: 'qq6icvSJq9g',
-    title: 'Curb Your Enthusiasm - Cashews & Raisins',
+    title: 'Cashews & Raisins',
     category: 'drama',
     difficulty: 2,
     clipStart: 10,
@@ -3203,7 +3203,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'curb-ep15',
     youtubeId: 'FQ_gVYpwI68',
-    title: 'Curb Your Enthusiasm - Larry has to take the bus',
+    title: 'Larry has to take the bus',
     category: 'drama',
     difficulty: 2,
     clipStart: 4,
@@ -3215,7 +3215,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'curb-ep16',
     youtubeId: 'UM8m0d31GpA',
-    title: 'Curb Your Enthusiasm: First Come, First Serve',
+    title: 'First Come, First Serve',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -3335,7 +3335,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'frasier-ep11',
     youtubeId: 'kwUNMdallSU',
-    title: 'Niles\' Top 15 Puns & Wordplay - Frasier',
+    title: 'Niles\' Top 15 Puns & Wordplay',
     category: 'drama',
     difficulty: 2,
     clipStart: 21,
@@ -3347,7 +3347,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'frasier-ep12',
     youtubeId: 'lV8ocbooymE',
-    title: 'Frasier - Niles\' doppelganger',
+    title: 'Niles\' doppelganger',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -3371,7 +3371,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fresh-prince-ep5',
     youtubeId: 'ovQshs4Yp7A',
-    title: 'Fresh Prince of Bel Air - Barbecue Sauce',
+    title: 'Barbecue Sauce',
     category: 'drama',
     difficulty: 2,
     clipStart: 0,
@@ -3383,7 +3383,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fresh-prince-ep6',
     youtubeId: 'YGViIjOCAoY',
-    title: 'Fresh Prince of Bel-Air - White Boyfriend',
+    title: 'White Boyfriend',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -3395,7 +3395,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fresh-prince-ep7',
     youtubeId: 'AJzgI6v5wXQ',
-    title: 'Fresh Prince - It Worked For The Beave',
+    title: 'It Worked For The Beave',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -3407,7 +3407,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fresh-prince-ep8',
     youtubeId: 'mR6xnrY7rXI',
-    title: 'The Fresh Prince of Bel-Air - Hilary Spends Too Much',
+    title: 'Hilary Spends Too Much',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -3455,7 +3455,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fresh-prince-ep12',
     youtubeId: '4RaWAQIBZ2I',
-    title: 'Fresh Prince of Bel-Air - Uncle Phil Hustles the Hustler',
+    title: 'Uncle Phil Hustles the Hustler',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -3503,7 +3503,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'gilmore-girls-ep3',
     youtubeId: '436h_1wuAd4',
-    title: 'Gilmore Girls - Rory decides to go to Yale',
+    title: 'Rory decides to go to Yale',
     category: 'drama',
     difficulty: 2,
     clipStart: 7,
@@ -3563,7 +3563,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fleabag-ep4',
     youtubeId: 'V_rcq49o__I',
-    title: 'Fleabag: He\'s a bit annoying, actually',
+    title: 'He\'s a bit annoying, actually',
     category: 'drama',
     difficulty: 2,
     clipStart: 0,
@@ -3875,7 +3875,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'sherlock-ep22',
     youtubeId: 'IwREUYN4UtQ',
-    title: 'Figuring out a Fake Painting in just 10 Seconds - Sherlock',
+    title: 'Figuring out a Fake Painting in just 10 Seconds',
     category: 'drama',
     difficulty: 2,
     clipStart: 21,
@@ -3935,7 +3935,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'sherlock-ep27',
     youtubeId: 'xBTQqSNA3oQ',
-    title: 'The universe is rarely so lazy - Sherlock',
+    title: 'The universe is rarely so lazy',
     category: 'drama',
     difficulty: 2,
     clipStart: 0,
@@ -3959,7 +3959,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-crown-ep3',
     youtubeId: '7ysdRn5YLTw',
-    title: 'The Crown: Queen scolds/burns/shouts at prince Charles for wanting to divorce pr',
+    title: 'Queen scolds/burns/shouts at prince Charles for wanting to divorce pr',
     category: 'drama',
     difficulty: 2,
     clipStart: 18,
@@ -4043,7 +4043,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-crown-ep10',
     youtubeId: 'fDKTi-jjGCc',
-    title: 'The Crown - The Queen Challenges Margaret Thatcher',
+    title: 'The Queen Challenges Margaret Thatcher',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -4067,7 +4067,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-crown-ep12',
     youtubeId: 'FnBjb5imPLY',
-    title: 'The Crown - The Crown must always win',
+    title: 'The Crown must always win',
     category: 'drama',
     difficulty: 2,
     clipStart: 14,
@@ -4091,7 +4091,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-crown-ep14',
     youtubeId: '_21fDo5s0BU',
-    title: 'Edward VIII argues with his mother about his allowance - The Crown Season 1',
+    title: 'Edward VIII argues with his mother about his allowance',
     category: 'drama',
     difficulty: 2,
     clipStart: 14,
@@ -4139,7 +4139,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-crown-ep18',
     youtubeId: 'hrXJe_T6VS4',
-    title: 'The Crown - Diana Chooses Her Engagement Ring',
+    title: 'Diana Chooses Her Engagement Ring',
     category: 'drama',
     difficulty: 2,
     clipStart: 27,
@@ -4151,7 +4151,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-crown-ep19',
     youtubeId: 'QV43QwvMigU',
-    title: 'The Crown - 2x10 Mystery Man Ending. Take the Photo!',
+    title: '2x10 Mystery Man Ending. Take the Photo!',
     category: 'drama',
     difficulty: 2,
     clipStart: 0,
@@ -4187,7 +4187,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-crown-ep22',
     youtubeId: 'a4Bgv4Bvf5s',
-    title: 'THE CROWN: SEASON 1 Clip - "Whose Is It" Now on Blu-ray & DVD!',
+    title: 'SEASON 1 Clip - "Whose Is It" Now on Blu-ray & DVD!',
     category: 'drama',
     difficulty: 2,
     clipStart: 13,
@@ -4211,7 +4211,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-crown-ep24',
     youtubeId: 'teT2x1a6hL8',
-    title: 'The Crown - Charles Knows That Diana Is Unhappy',
+    title: 'Charles Knows That Diana Is Unhappy',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -4223,7 +4223,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'downton-abbey-ep2',
     youtubeId: 'iVwXw7gaEzo',
-    title: 'Downton Abbey - Edith could be a Marchioness!',
+    title: 'Edith could be a Marchioness!',
     category: 'drama',
     difficulty: 2,
     clipStart: 10,
@@ -4235,7 +4235,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'downton-abbey-ep3',
     youtubeId: 'sAnsGZCahlU',
-    title: 'Downton Abbey - The Dowager proposes Tom as the new Agent',
+    title: 'The Dowager proposes Tom as the new Agent',
     category: 'drama',
     difficulty: 2,
     clipStart: 8,
@@ -4271,7 +4271,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'downton-abbey-ep6',
     youtubeId: 'StZ2f-h6PqQ',
-    title: 'Downton Abbey - The Dowager & Daisy having a sweet moment 😊',
+    title: 'The Dowager & Daisy having a sweet moment 😊',
     category: 'drama',
     difficulty: 2,
     clipStart: 0,
@@ -4763,7 +4763,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'succession-ep4',
     youtubeId: 'qMLkgWqibLc',
-    title: 'Succession - How much is a gallon of milk? (S02e03)',
+    title: 'How much is a gallon of milk? (S02e03)',
     category: 'drama',
     difficulty: 2,
     clipStart: 26,
@@ -4799,7 +4799,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'succession-ep7',
     youtubeId: 'RZvXi8W9o_U',
-    title: 'Succession - Kendall vs Roman on Vaulter (S02e02)',
+    title: 'Kendall vs Roman on Vaulter (S02e02)',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -4847,7 +4847,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'succession-ep11',
     youtubeId: 'fwM3wzWEz80',
-    title: 'Succession: Meeting Rhea Jarrell (Season 2 Episode 4 Clip)',
+    title: 'Meeting Rhea Jarrell (Season 2 Episode 4 Clip)',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -4859,7 +4859,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'succession-ep12',
     youtubeId: '-c7kOHThKHY',
-    title: 'Succession - Tom\'s Congressional hearing aftermath',
+    title: 'Tom\'s Congressional hearing aftermath',
     category: 'drama',
     difficulty: 2,
     clipStart: 12,
@@ -4871,7 +4871,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'succession-ep13',
     youtubeId: '90Y92lQOmEI',
-    title: 'Succession - Season 4 - Greg Roasts Logan (Where are your kids?)',
+    title: 'Season 4 - Greg Roasts Logan (Where are your kids?)',
     category: 'drama',
     difficulty: 2,
     clipStart: 8,
@@ -4895,7 +4895,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'succession-ep15',
     youtubeId: 'J6gNJ49IKCA',
-    title: 'Succession - Tom As New CEO & Greg Forgiven - S04EP10 - Series Finale',
+    title: 'Tom As New CEO & Greg Forgiven - S04EP10 - Series Finale',
     category: 'drama',
     difficulty: 2,
     clipStart: 20,
@@ -5291,7 +5291,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'breaking-bad-ep10',
     youtubeId: 'eLbE_05rS1A',
-    title: 'Breaking Bad - Clearing the Air Scene (S3E9)',
+    title: 'Clearing the Air Scene (S3E9)',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -5327,7 +5327,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'breaking-bad-ep13',
     youtubeId: 'T3x1tzOuXbQ',
-    title: 'Breaking Bad - This Is Not Meth (S1E6)',
+    title: 'This Is Not Meth (S1E6)',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -5351,7 +5351,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'breaking-bad-ep15',
     youtubeId: 'njtfNPB-YKg',
-    title: 'Breaking Bad - Dealing With Tuco Scene (S1E7)',
+    title: 'Dealing With Tuco Scene (S1E7)',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -5375,7 +5375,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'will-grace-ep1',
     youtubeId: 'mfqC28HcNjk',
-    title: 'Jack Meets Cher - Will & Grace',
+    title: 'Jack Meets Cher',
     category: 'drama',
     difficulty: 2,
     clipStart: 29,
@@ -5399,7 +5399,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'sex-city-ep2',
     youtubeId: 'a6738DN4I3s',
-    title: 'Sex and the City - Season 3 - Episode 7 - Drama queens',
+    title: 'Season 3 - Episode 7 - Drama queens',
     category: 'drama',
     difficulty: 2,
     clipStart: 21,
@@ -5423,7 +5423,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'sex-city-ep4',
     youtubeId: 'PWHfx30U4jk',
-    title: 'SATC - Carrie Irritates Everyone',
+    title: 'Carrie Irritates Everyone',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -5471,7 +5471,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'sex-city-ep8',
     youtubeId: 'DGbIzSq4eWA',
-    title: 'Sex and the city - Miranda funny sarcastic scenes',
+    title: 'Miranda funny sarcastic scenes',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -5495,7 +5495,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'good-wife-ep2',
     youtubeId: 'RZ8Eq_EA4i8',
-    title: 'The Good Wife - Alicia Florrick owns judge',
+    title: 'Alicia Florrick owns judge',
     category: 'drama',
     difficulty: 2,
     clipStart: 12,
@@ -5615,7 +5615,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'good-wife-ep13',
     youtubeId: 'nCrjHPBQg9I',
-    title: 'The Good Wife - Derrick Bond Voted Out',
+    title: 'Derrick Bond Voted Out',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -5651,7 +5651,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'good-wife-ep16',
     youtubeId: '61UL0bKRzhI',
-    title: 'The Good Wife - S05E17 - Empirical Materialism',
+    title: 'S05E17 - Empirical Materialism',
     category: 'drama',
     difficulty: 2,
     clipStart: 18,
@@ -6095,7 +6095,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'forrest-gump-ep9',
     youtubeId: 'ITGEGE9v0d0',
-    title: 'Forrest Gump: Named after his dad (HD CLIP)',
+    title: 'Named after his dad (HD CLIP)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -6107,7 +6107,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'forrest-gump-ep10',
     youtubeId: 'KnpnYAId6dU',
-    title: 'Forrest Gump - Black Panther party',
+    title: 'Black Panther party',
     category: 'movie',
     difficulty: 2,
     clipStart: 18,
@@ -6179,7 +6179,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'lord-of-rings-ep4',
     youtubeId: 'ruRRcSrLnF0',
-    title: 'Lord of the Rings: The Fellowship of the Ring (2001) - Arwen Rescues Frodo Scene',
+    title: 'The Fellowship of the Ring (2001) - Arwen Rescues Frodo Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -6227,7 +6227,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'lord-of-rings-ep8',
     youtubeId: 'EApCLbgAE5E',
-    title: 'The Lord of the Rings: The Two Towers (2002) - "Forth Eorlingas" scene',
+    title: 'The Two Towers (2002) - "Forth Eorlingas" scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -6239,7 +6239,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'lord-of-rings-ep9',
     youtubeId: '3bReJswiMGM',
-    title: 'Lord of the Rings: The Fellowship of the Ring (2001) - You Shall Not Pass! Scene',
+    title: 'The Fellowship of the Ring (2001) - You Shall Not Pass! Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 24,
@@ -6251,7 +6251,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'lord-of-rings-ep10',
     youtubeId: 'b9gQ-gqVWp4',
-    title: 'Lord of the Rings: The Return of the King (2003) - Legolas Slays the Oliphaunt S',
+    title: 'The Return of the King (2003) - Legolas Slays the Oliphaunt S',
     category: 'movie',
     difficulty: 2,
     clipStart: 12,
@@ -6263,7 +6263,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'lord-of-rings-ep11',
     youtubeId: 'oCwsZavV0mM',
-    title: 'The Lord of the Rings - The Riders of Rohan',
+    title: 'The Riders of Rohan',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -6275,7 +6275,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'lord-of-rings-ep12',
     youtubeId: 'W7_c-R7i8F4',
-    title: 'Lord of the Rings: The Return of the King (2003) - I Am No Man Scene',
+    title: 'The Return of the King (2003) - I Am No Man Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -6287,7 +6287,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'lord-of-rings-ep13',
     youtubeId: 'whF2na8AIbw',
-    title: 'LOTR - The Followship of the Ring - The Account of Isildur',
+    title: 'The Followship of the Ring - The Account of Isildur',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -6323,7 +6323,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'titanic-ep3',
     youtubeId: '_qTZRD1_ybQ',
-    title: 'TITANIC - "You Jump, I Jump" Clip - Paramount Movies',
+    title: '"You Jump, I Jump" Clip - Paramount Movies',
     category: 'movie',
     difficulty: 2,
     clipStart: 9,
@@ -6371,7 +6371,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'titanic-ep7',
     youtubeId: 'Phm9wbFAbp0',
-    title: 'Titanic 3D - "You Going to Cut Her Meat too Call" - Official Clip',
+    title: '"You Going to Cut Her Meat too Call" - Official Clip',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -6383,7 +6383,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'titanic-ep8',
     youtubeId: '_gg4Eb5Lve8',
-    title: 'Titanic - Jack sees Rose for the First Time',
+    title: 'Jack sees Rose for the First Time',
     category: 'movie',
     difficulty: 2,
     clipStart: 13,
@@ -6419,7 +6419,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'titanic-ep11',
     youtubeId: 'it-jZnbmRzI',
-    title: 'Titanic - The ship will sink',
+    title: 'The ship will sink',
     category: 'movie',
     difficulty: 2,
     clipStart: 7,
@@ -6443,7 +6443,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'titanic-ep13',
     youtubeId: 'KMw7BXd9npk',
-    title: 'Titanic - Stern Sinking Scene',
+    title: 'Stern Sinking Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -6455,7 +6455,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'titanic-ep14',
     youtubeId: 'S9Tj4WPCplI',
-    title: 'Titanic - Jack & Rose Romantic Scene!',
+    title: 'Jack & Rose Romantic Scene!',
     category: 'movie',
     difficulty: 2,
     clipStart: 12,
@@ -6491,7 +6491,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'titanic-ep17',
     youtubeId: 'oklPl95DC8c',
-    title: 'Titanic 3D - "First Class Dinner" - Official Clip',
+    title: '"First Class Dinner" - Official Clip',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -6503,7 +6503,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'titanic-ep18',
     youtubeId: 'TrBejFsg7zw',
-    title: 'Titanic - Rose presents Jack',
+    title: 'Rose presents Jack',
     category: 'movie',
     difficulty: 2,
     clipStart: 14,
@@ -6683,7 +6683,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-matrix-ep18',
     youtubeId: 'uAXtO5dMqEI',
-    title: 'The Matrix: There is No Spoon',
+    title: 'There is No Spoon',
     category: 'movie',
     difficulty: 2,
     clipStart: 1,
@@ -6695,7 +6695,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inception-ep4',
     youtubeId: 'V9uX_WamuYA',
-    title: 'Inception - Planning scene (HQ)',
+    title: 'Planning scene (HQ)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -6719,7 +6719,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inception-ep6',
     youtubeId: 'ZszlJQhj4aA',
-    title: 'Inception - Ariadne Learns How To Build Dreams (HDR - 4K - 5.1)',
+    title: 'Ariadne Learns How To Build Dreams (HDR - 4K - 5.1)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -6743,7 +6743,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inception-ep8',
     youtubeId: 'XQPy88-E2zo',
-    title: 'Inception - Ending',
+    title: 'Ending',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -6755,7 +6755,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inception-ep9',
     youtubeId: 'y5-Srk_RT0w',
-    title: 'Inception - Mombasa Chase (HDR - 4K - 5.1)',
+    title: 'Mombasa Chase (HDR - 4K - 5.1)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -6779,7 +6779,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inception-ep11',
     youtubeId: '2G89nIGH53g',
-    title: 'Inception - The Dream Is Collapsing - ClipZone: High Octane Hits',
+    title: 'The Dream Is Collapsing - ClipZone: High Octane Hits',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -6791,7 +6791,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inception-ep12',
     youtubeId: '-LWJFwyy9Nw',
-    title: 'Inception - Best Scene (I’d need a guarantee)',
+    title: 'Best Scene (I’d need a guarantee)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -6827,7 +6827,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inception-ep15',
     youtubeId: 'wdIUzxWYl8c',
-    title: 'Inception - Infinite Staircase Scene (Penrose Steps)',
+    title: 'Infinite Staircase Scene (Penrose Steps)',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -6839,7 +6839,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inception-ep16',
     youtubeId: '1U6-eyq04Zg',
-    title: 'Inception - Saito\'s Dream',
+    title: 'Saito\'s Dream',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -6875,7 +6875,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'interstellar-ep4',
     youtubeId: 'onVhbeY7nLM',
-    title: 'Interstellar - Docking Scene (HDR - 4K - 5.1)',
+    title: 'Docking Scene (HDR - 4K - 5.1)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -6911,7 +6911,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'interstellar-ep7',
     youtubeId: 'ECjYsWLgy3I',
-    title: 'Interstellar - Ending Scene 1080p',
+    title: 'Ending Scene 1080p',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -6947,7 +6947,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'interstellar-ep10',
     youtubeId: 'mprGwBFrdrk',
-    title: 'Interstellar: The Lazarus mission',
+    title: 'The Lazarus mission',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -6959,7 +6959,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'interstellar-ep11',
     youtubeId: '_GdEsdEfZvc',
-    title: 'Interstellar - Gargantua/Detach Scene 1080p',
+    title: 'Gargantua/Detach Scene 1080p',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -6971,7 +6971,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'interstellar-ep12',
     youtubeId: 'bmz9lMP6aQU',
-    title: 'Interstellar - Christopher Nolan - Cornfield Drone Chase Scene [1080P HD]',
+    title: 'Christopher Nolan - Cornfield Drone Chase Scene [1080P HD]',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -6983,7 +6983,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'interstellar-ep13',
     youtubeId: 'RUpmfqSLhbs',
-    title: 'Cooper vs Dr. Mann Full Scene Part 2 - Brand Saves Cooper - Interstellar',
+    title: 'Cooper vs Dr. Mann Full Scene Part 2 - Brand Saves Cooper',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -7007,7 +7007,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'dark-knight-ep4',
     youtubeId: 'votcOf5cYCM',
-    title: 'Joker\'s Pencil Trick Scene - The Dark Knight',
+    title: 'Joker\'s Pencil Trick Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -7067,7 +7067,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'dark-knight-ep9',
     youtubeId: 'pVz0k5AzM6A',
-    title: 'Joker Hospital Scene - The Dark Knight',
+    title: 'Joker Hospital Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 4,
@@ -7079,7 +7079,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'dark-knight-ep10',
     youtubeId: 'jeb5UmOrvmM',
-    title: 'The Dark Knight: TV scene',
+    title: 'TV scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -7175,7 +7175,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'pulp-fiction-ep2',
     youtubeId: 'LBBni_-tMNs',
-    title: 'I Shot Marvin in the Face - Pulp Fiction',
+    title: 'I Shot Marvin in the Face',
     category: 'movie',
     difficulty: 2,
     clipStart: 24,
@@ -7199,7 +7199,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'pulp-fiction-ep4',
     youtubeId: '6Pkq_eBHXJ4',
-    title: 'Royale With Cheese - Pulp Fiction',
+    title: 'Royale With Cheese',
     category: 'movie',
     difficulty: 2,
     clipStart: 26,
@@ -7235,7 +7235,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'pulp-fiction-ep7',
     youtubeId: 'MWkN3akP3cU',
-    title: 'Pulp Fiction - Uncomfortable Silence',
+    title: 'Uncomfortable Silence',
     category: 'movie',
     difficulty: 2,
     clipStart: 29,
@@ -7439,7 +7439,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'social-network-ep16',
     youtubeId: 'kjAYxfAwZP4',
-    title: 'Right and Wrong Scene - The Social Network',
+    title: 'Right and Wrong Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -7451,7 +7451,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'social-network-ep17',
     youtubeId: 'VKnNUYknsuQ',
-    title: 'The Social Network - Courtroom Scene',
+    title: 'Courtroom Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 12,
@@ -7487,7 +7487,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'good-will-hunting-ep6',
     youtubeId: '8gfipuaIA68',
-    title: 'Good Will Hunting - "The Best Part of My Day"',
+    title: '"The Best Part of My Day"',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -7523,7 +7523,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'good-will-hunting-ep9',
     youtubeId: 'ssnlHPFc6qk',
-    title: 'Good Will Hunting: Imperfections (HD CLIP)',
+    title: 'Imperfections (HD CLIP)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -7535,7 +7535,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'good-will-hunting-ep10',
     youtubeId: '6tqPK8nJL2U',
-    title: 'Good Will Hunting: It’s not your fault (HD CLIP)',
+    title: 'It’s not your fault (HD CLIP)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -7559,7 +7559,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'good-will-hunting-ep12',
     youtubeId: 'zKQBHkzOYvw',
-    title: 'Good Will Hunting - "What Do You Wanna Do?"',
+    title: '"What Do You Wanna Do?"',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -7571,7 +7571,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'good-will-hunting-ep13',
     youtubeId: '2XKg3lsfxGU',
-    title: 'Good Will Hunting: Giving him directions (HD CLIP)',
+    title: 'Giving him directions (HD CLIP)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -7583,7 +7583,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'good-will-hunting-ep14',
     youtubeId: 'S4DumJQbcoE',
-    title: 'Good Will Hunting - Word Of Advice',
+    title: 'Word Of Advice',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -7607,7 +7607,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'good-will-hunting-ep16',
     youtubeId: 'tH0bTpwQL7U',
-    title: 'NSA job interview – Good Will Hunting',
+    title: 'NSA job interview',
     category: 'movie',
     difficulty: 2,
     clipStart: 28,
@@ -7631,7 +7631,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'dead-poets-ep6',
     youtubeId: 'nJ_htuCMCqM',
-    title: 'Dead Poets Society - Conformity Scene w/ Subtitles',
+    title: 'Conformity Scene w/ Subtitles',
     category: 'movie',
     difficulty: 2,
     clipStart: 20,
@@ -7655,7 +7655,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'dead-poets-ep8',
     youtubeId: 'vi0Lbjs5ECI',
-    title: '"Carpe diem. Seize the day." - Dead Poets Society',
+    title: '"Carpe diem. Seize the day."',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -7667,7 +7667,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'dead-poets-ep9',
     youtubeId: 'Jpjq3P47eww',
-    title: 'Dead Poets Society - Todd right after Neil\'s death',
+    title: 'Todd right after Neil\'s death',
     category: 'movie',
     difficulty: 2,
     clipStart: 27,
@@ -7703,7 +7703,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'dead-poets-ep12',
     youtubeId: '2dh8C_HHE2g',
-    title: 'Dead Poets Society - Language and Poetry',
+    title: 'Language and Poetry',
     category: 'movie',
     difficulty: 2,
     clipStart: 9,
@@ -7787,7 +7787,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'pursuit-happyness-ep5',
     youtubeId: 'S_6vjb1cJkE',
-    title: 'The Pursuit of Happyness: Chris is hired',
+    title: 'Chris is hired',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -7799,7 +7799,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'pursuit-happyness-ep6',
     youtubeId: 'hKi3-5gO4uE',
-    title: 'The Pursuit of Happyness: Chris is Hired (WILL SMITH EMOTIONAL ENDING SCENE)',
+    title: 'Chris is Hired (WILL SMITH EMOTIONAL ENDING SCENE)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -7823,7 +7823,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'pursuit-happyness-ep8',
     youtubeId: 'xPBBnS4br9w',
-    title: 'The Pursuit of Happyness - Cold Calling',
+    title: 'Cold Calling',
     category: 'movie',
     difficulty: 2,
     clipStart: 24,
@@ -7847,7 +7847,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'pursuit-happyness-ep10',
     youtubeId: 'ep-ieEG06qg',
-    title: 'The Pursuit of Happyness - First Impression',
+    title: 'First Impression',
     category: 'movie',
     difficulty: 2,
     clipStart: 27,
@@ -7871,7 +7871,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'pursuit-happyness-ep12',
     youtubeId: '_-jXE-VvZqw',
-    title: 'The Pursuit of Happyness - No Y in Happiness',
+    title: 'No Y in Happiness',
     category: 'movie',
     difficulty: 2,
     clipStart: 12,
@@ -7883,7 +7883,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'pursuit-happyness-ep13',
     youtubeId: '56fngopihOo',
-    title: 'The Pursuit of Happyness - Final Scene: Chris is Hired (2006) H',
+    title: 'Final Scene: Chris is Hired (2006) H',
     category: 'movie',
     difficulty: 2,
     clipStart: 28,
@@ -7907,7 +7907,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'pursuit-happyness-ep15',
     youtubeId: '9BJUGcy22mY',
-    title: 'The Pursuit of Happyness - Full emotional final scene',
+    title: 'Full emotional final scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -7931,7 +7931,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'pursuit-happyness-ep17',
     youtubeId: '4zTCd-k--7A',
-    title: 'The Pursuit of Happyness: Life lessons HD CLIP',
+    title: 'Life lessons HD CLIP',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -7943,7 +7943,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'pursuit-happyness-ep18',
     youtubeId: 'jZda2mqH3_c',
-    title: 'The Pursuit Of Happyness - God loves me, God will save me',
+    title: 'God loves me, God will save me',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -8003,7 +8003,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'la-la-land-ep7',
     youtubeId: 'Gu08f15KnMI',
-    title: 'La La Land - I\'m Always Gonna Love You',
+    title: 'I\'m Always Gonna Love You',
     category: 'movie',
     difficulty: 2,
     clipStart: 22,
@@ -8051,7 +8051,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'la-la-land-ep11',
     youtubeId: 'VFUos9sYbHs',
-    title: 'La La Land - "City of stars" piano scene',
+    title: '"City of stars" piano scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -8087,7 +8087,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'la-la-land-ep14',
     youtubeId: 'fbcUl7GhCTg',
-    title: 'La La Land - Clip "City of Stars" - In Cinemas Now',
+    title: 'Clip "City of Stars" - In Cinemas Now',
     category: 'movie',
     difficulty: 2,
     clipStart: 15,
@@ -8135,7 +8135,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'la-la-land-ep18',
     youtubeId: 'rGa-cKqXGmk',
-    title: 'It\'s Over Scene - La La Land',
+    title: 'It\'s Over Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 10,
@@ -8207,7 +8207,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'whiplash-ep9',
     youtubeId: 'MsWlktW0kj4',
-    title: 'Whiplash - Break Up clip',
+    title: 'Break Up clip',
     category: 'movie',
     difficulty: 2,
     clipStart: 13,
@@ -8231,7 +8231,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'whiplash-ep11',
     youtubeId: 'RSDmo-gJ8XY',
-    title: 'Whiplash - Family Dinner',
+    title: 'Family Dinner',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -8243,7 +8243,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'whiplash-ep12',
     youtubeId: 'vSukWUG4Amc',
-    title: 'Whiplash - Crack At It clip',
+    title: 'Crack At It clip',
     category: 'movie',
     difficulty: 2,
     clipStart: 15,
@@ -8255,7 +8255,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'wolf-wall-street-ep2',
     youtubeId: 'g6o3rEInTII',
-    title: 'The Wolf of Wall Street - Best scene',
+    title: 'Best scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 22,
@@ -8267,7 +8267,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'wolf-wall-street-ep3',
     youtubeId: 'ndTbiDQjbiE',
-    title: 'The Wolf of Wall Street - Swiss Bank scene',
+    title: 'Swiss Bank scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -8339,7 +8339,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'wolf-wall-street-ep9',
     youtubeId: 'CyOmCdtRrgo',
-    title: 'Wolf of Wall Street - Donnie: "Cleaning Your Fishbowl?" 2013',
+    title: 'Donnie: "Cleaning Your Fishbowl?" 2013',
     category: 'movie',
     difficulty: 2,
     clipStart: 9,
@@ -8387,7 +8387,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'wolf-wall-street-ep13',
     youtubeId: 'NxoW7MEWFEY',
-    title: 'The Wolf Of Wall Street - Date Night',
+    title: 'Date Night',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -8399,7 +8399,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'wolf-wall-street-ep14',
     youtubeId: 'MAioK8ZJhJE',
-    title: 'The wolf of Wall Street - Arrest scene and Benihana scene',
+    title: 'Arrest scene and Benihana scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 10,
@@ -8411,7 +8411,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'shawshank-ep2',
     youtubeId: 'njJ41irPjTc',
-    title: 'Shawshank Redemption - Rooftop Scene',
+    title: 'Rooftop Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -8423,7 +8423,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'shawshank-ep3',
     youtubeId: 'o0SV9cBcNVQ',
-    title: 'The Shawshank Redemption - Andy does taxes scene',
+    title: 'Andy does taxes scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -8435,7 +8435,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'shawshank-ep4',
     youtubeId: 'FizqEuhUiB8',
-    title: 'The Warden Sizes Andy Up - The Shawshank Redemption',
+    title: 'The Warden Sizes Andy Up',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -8459,7 +8459,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'shawshank-ep6',
     youtubeId: 'Uw2evtnTm2c',
-    title: 'The Shawshank Redemption - Boggs\' Beating',
+    title: 'Boggs\' Beating',
     category: 'movie',
     difficulty: 2,
     clipStart: 5,
@@ -8471,7 +8471,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'shawshank-ep7',
     youtubeId: 'FCmMs10JLw4',
-    title: 'The Shawshank Redemption - Heywood reads book titles(Funny)',
+    title: 'Heywood reads book titles(Funny)',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -8483,7 +8483,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'shawshank-ep8',
     youtubeId: 'mBlJ9N7Ehgk',
-    title: 'The Shawshank Redemption - I read',
+    title: 'I read',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -8495,7 +8495,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'shawshank-ep9',
     youtubeId: 'RQSmfzfg2MY',
-    title: 'The Shawshank Redemption - Escape Andy Dufrense',
+    title: 'Escape Andy Dufrense',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -8555,7 +8555,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'shawshank-ep14',
     youtubeId: 'PA5dMT6AC7A',
-    title: 'Shawshank Redemption - Building Library Scene',
+    title: 'Building Library Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 12,
@@ -8591,7 +8591,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'shawshank-ep17',
     youtubeId: 'Gt75VjvRW34',
-    title: 'The Shawshank Redemption: "Red Meets Andy"',
+    title: '"Red Meets Andy"',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -8603,7 +8603,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'shawshank-ep18',
     youtubeId: 'n45R0eF1ctc',
-    title: '"I guess I just miss my friend" - The Shawshank Redemption',
+    title: '"I guess I just miss my friend"',
     category: 'movie',
     difficulty: 2,
     clipStart: 3,
@@ -8699,7 +8699,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-intern-ep8',
     youtubeId: 'E1xEVZ99_S0',
-    title: 'The Intern - Better Late Than Never - Warner Bros. UK',
+    title: 'Better Late Than Never - Warner Bros. UK',
     category: 'movie',
     difficulty: 2,
     clipStart: 1,
@@ -8723,7 +8723,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-intern-ep10',
     youtubeId: 'VHZI9_we5GQ',
-    title: 'The Intern - Becky\'s Breakdown - ClipZone: Comedy Callbacks',
+    title: 'Becky\'s Breakdown - ClipZone: Comedy Callbacks',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -8735,7 +8735,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-intern-ep11',
     youtubeId: 'Sgaaj9hFAfc',
-    title: 'The Intern - Do You Remember? - Warner Bros UK',
+    title: 'Do You Remember? - Warner Bros UK',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -8747,7 +8747,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-intern-ep12',
     youtubeId: '1bH4sagx8tI',
-    title: 'The Intern - Jules Rescue Scene',
+    title: 'Jules Rescue Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -8759,7 +8759,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-intern-ep13',
     youtubeId: 'Pyr2HB-jlw4',
-    title: 'The Intern - I\'ll Be Here - Warner Bros. UK',
+    title: 'I\'ll Be Here - Warner Bros. UK',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -8771,7 +8771,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-intern-ep14',
     youtubeId: 'uZrk0st4_x0',
-    title: 'Robert De Niro & Anne Hathaway - The Intern',
+    title: 'Robert De Niro & Anne Hathaway',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -8795,7 +8795,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-intern-ep16',
     youtubeId: 'fOh8YVlObf4',
-    title: 'The Intern - Ben Joins Facebook',
+    title: 'Ben Joins Facebook',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -8843,7 +8843,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-intern-ep20',
     youtubeId: '3bQXPUQqn9Y',
-    title: 'The Intern - Jules Visits Ben',
+    title: 'Jules Visits Ben',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -8915,7 +8915,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'devil-wears-prada-ep8',
     youtubeId: 'tjA3DZAyCgI',
-    title: 'The Devil Wears Prada - You eat CARBS, for Christ\'s sake!',
+    title: 'You eat CARBS, for Christ\'s sake!',
     category: 'movie',
     difficulty: 2,
     clipStart: 3,
@@ -8939,7 +8939,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'devil-wears-prada-ep10',
     youtubeId: 'vYn4DtIOKFg',
-    title: 'The Devil Wears Prada - all scenes with Emily 1/4 (4K)',
+    title: 'all scenes with Emily 1/4 (4K)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -8963,7 +8963,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'devil-wears-prada-ep12',
     youtubeId: 'HSPYgwP9R84',
-    title: 'The Devil Wears Prada - Andy Gets a Makeover',
+    title: 'Andy Gets a Makeover',
     category: 'movie',
     difficulty: 2,
     clipStart: 28,
@@ -9023,7 +9023,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'legally-blonde-ep1',
     youtubeId: 'xs3_hNYAVRw',
-    title: 'Legally Blonde - Impressing Professor Callahan',
+    title: 'Impressing Professor Callahan',
     category: 'movie',
     difficulty: 2,
     clipStart: 25,
@@ -9035,7 +9035,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'legally-blonde-ep2',
     youtubeId: 'yfy4and2vPg',
-    title: 'Legally Blonde - Warner Breaks Up With Elle',
+    title: 'Warner Breaks Up With Elle',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -9095,7 +9095,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'legally-blonde-ep7',
     youtubeId: 'I6uGId-a758',
-    title: 'Legally Blonde - He\'s Gay!',
+    title: 'He\'s Gay!',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -9107,7 +9107,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'legally-blonde-ep8',
     youtubeId: 'WIGz4I56Lc8',
-    title: '"I\'ll show you how valuable Elle Woods can be" - Legally Blonde',
+    title: '"I\'ll show you how valuable Elle Woods can be"',
     category: 'movie',
     difficulty: 2,
     clipStart: 29,
@@ -9119,7 +9119,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'legally-blonde-ep9',
     youtubeId: 'cILfj2YkKng',
-    title: 'Legally Blonde - Elle Meets Emmett',
+    title: 'Elle Meets Emmett',
     category: 'movie',
     difficulty: 2,
     clipStart: 11,
@@ -9131,7 +9131,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'legally-blonde-ep10',
     youtubeId: 'rLcAQVgMTSY',
-    title: 'Legally Blonde - First Day of School',
+    title: 'First Day of School',
     category: 'movie',
     difficulty: 2,
     clipStart: 16,
@@ -9143,7 +9143,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'legally-blonde-ep11',
     youtubeId: 'EVmLV7swH2k',
-    title: 'Legally Blonde - I\'m Going to Harvard',
+    title: 'I\'m Going to Harvard',
     category: 'movie',
     difficulty: 2,
     clipStart: 28,
@@ -9155,7 +9155,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'legally-blonde-ep12',
     youtubeId: '18-LLjQBGko',
-    title: 'Legally Blonde - Girls Like Me Don\'t Go Out With Losers Like You',
+    title: 'Girls Like Me Don\'t Go Out With Losers Like You',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -9215,7 +9215,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fight-club-ep2',
     youtubeId: 'CR5Jp_ag2M8',
-    title: 'Fight Club - I Want You to Hit Me',
+    title: 'I Want You to Hit Me',
     category: 'movie',
     difficulty: 2,
     clipStart: 21,
@@ -9227,7 +9227,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fight-club-ep3',
     youtubeId: 'zvtUrjfnSnA',
-    title: 'Fight Club - Chemical Burn',
+    title: 'Chemical Burn',
     category: 'movie',
     difficulty: 2,
     clipStart: 28,
@@ -9275,7 +9275,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fight-club-ep7',
     youtubeId: 'CWRTqMGvdpc',
-    title: 'Tyler Durden Philosophy Of Life - Fight Club',
+    title: 'Tyler Durden Philosophy Of Life',
     category: 'movie',
     difficulty: 2,
     clipStart: 20,
@@ -9287,7 +9287,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fight-club-ep8',
     youtubeId: '6pJC0FLA3Sk',
-    title: 'Fight Club - Jack\'s Smirking Revenge',
+    title: 'Jack\'s Smirking Revenge',
     category: 'movie',
     difficulty: 2,
     clipStart: 28,
@@ -9323,7 +9323,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fight-club-ep11',
     youtubeId: '38FMDG7tiA4',
-    title: 'Fight Club - Let Go Scene',
+    title: 'Let Go Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -9347,7 +9347,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fight-club-ep13',
     youtubeId: 'leeoJLBtLIw',
-    title: 'Fight Club - Get Off My Porch',
+    title: 'Get Off My Porch',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -9359,7 +9359,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fight-club-ep14',
     youtubeId: 'NHXXqlcCxPs',
-    title: 'Fight Club - Basement',
+    title: 'Basement',
     category: 'movie',
     difficulty: 2,
     clipStart: 16,
@@ -9383,7 +9383,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fight-club-ep16',
     youtubeId: 'chyRpj-971o',
-    title: 'Fight Club - Tyler Durden speech',
+    title: 'Tyler Durden speech',
     category: 'movie',
     difficulty: 2,
     clipStart: 6,
@@ -9395,7 +9395,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fight-club-ep17',
     youtubeId: 'eCKRI2wEw7I',
-    title: 'Fight Club - Letting Yourself Become Tyler Durden',
+    title: 'Letting Yourself Become Tyler Durden',
     category: 'movie',
     difficulty: 2,
     clipStart: 27,
@@ -9443,7 +9443,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'breakfast-club-ep2',
     youtubeId: 'u3mupIlFIYQ',
-    title: 'The Breakfast Club - Lunchtime',
+    title: 'Lunchtime',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -9455,7 +9455,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'breakfast-club-ep3',
     youtubeId: 'Tm0oAv2moOw',
-    title: 'The Breakfast Club - Getting to Know Each Other',
+    title: 'Getting to Know Each Other',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -9467,7 +9467,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'breakfast-club-ep4',
     youtubeId: 'Z2WZrxuwDhs',
-    title: 'Don\'t Mess With the Bull - The Breakfast Club',
+    title: 'Don\'t Mess With the Bull',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -9479,7 +9479,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'breakfast-club-ep5',
     youtubeId: 'rnbDA4wKrg0',
-    title: 'The Breakfast Club - Social Clubs',
+    title: 'Social Clubs',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -9491,7 +9491,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'breakfast-club-ep6',
     youtubeId: 'bTeYncx1xmI',
-    title: 'Eat My Shorts - The Breakfast Club',
+    title: 'Eat My Shorts',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -9503,7 +9503,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'breakfast-club-ep7',
     youtubeId: 'VG78fq6KAPA',
-    title: 'The Breakfast Club - Detention Dance',
+    title: 'Detention Dance',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -9515,7 +9515,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'breakfast-club-ep8',
     youtubeId: '7OFROViP0J0',
-    title: 'The Breakfast Club - Covering for Bender',
+    title: 'Covering for Bender',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -9527,7 +9527,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'breakfast-club-ep9',
     youtubeId: 'jsZkkqLDFmg',
-    title: 'The Breakfast Club - Bender Mocks Claire',
+    title: 'Bender Mocks Claire',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -9587,7 +9587,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'breakfast-club-ep14',
     youtubeId: 'QL69yWD8UOY',
-    title: 'The Breakfast Club - What Happens on Monday?',
+    title: 'What Happens on Monday?',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -9623,7 +9623,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-notebook-ep1',
     youtubeId: 'dGIGG6QLjLg',
-    title: 'The Notebook - Fight Scene',
+    title: 'Fight Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -9647,7 +9647,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-notebook-ep3',
     youtubeId: 'cdWHFPDUcSk',
-    title: 'The Notebook - Why Didn\'t You Write Me? - Warner Bros. Entertainment',
+    title: 'Why Didn\'t You Write Me? - Warner Bros. Entertainment',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -9659,7 +9659,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-notebook-ep4',
     youtubeId: 'xlK3FkdUv78',
-    title: 'The Notebook - Drawn To Ya - Warner Bros. Entertainment',
+    title: 'Drawn To Ya - Warner Bros. Entertainment',
     category: 'movie',
     difficulty: 2,
     clipStart: 15,
@@ -9671,7 +9671,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-notebook-ep5',
     youtubeId: 'E1I0hAxGFXw',
-    title: 'What Do You Want? - The Notebook',
+    title: 'What Do You Want?',
     category: 'movie',
     difficulty: 2,
     clipStart: 27,
@@ -9683,7 +9683,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-notebook-ep6',
     youtubeId: 'oUiJ8GcRpxk',
-    title: 'The Notebook - Say I\'m A Bird! - Warner Bros. Entertainment',
+    title: 'Say I\'m A Bird! - Warner Bros. Entertainment',
     category: 'movie',
     difficulty: 2,
     clipStart: 4,
@@ -9695,7 +9695,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-notebook-ep7',
     youtubeId: 'Tv8ISJxiQKk',
-    title: 'Allie\'s Mother\'s Ex (Rachel McAdams & Joan Allen) - The Notebook',
+    title: 'Allie\'s Mother\'s Ex (Rachel McAdams & Joan Allen)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -9707,7 +9707,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-notebook-ep8',
     youtubeId: 'LK_gkFXhOJI',
-    title: 'The Notebook - Saw Your Picture In The Paper - Warner Bros. Rewind',
+    title: 'Saw Your Picture In The Paper - Warner Bros. Rewind',
     category: 'movie',
     difficulty: 2,
     clipStart: 17,
@@ -9731,7 +9731,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-notebook-ep10',
     youtubeId: 'PCNlMKSwWbQ',
-    title: 'The Notebook - Nicholas Sparks Collection "Back Into His Heart" - Warner Bros. E',
+    title: 'Nicholas Sparks Collection "Back Into His Heart" - Warner Bros. E',
     category: 'movie',
     difficulty: 2,
     clipStart: 25,
@@ -9743,7 +9743,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-notebook-ep11',
     youtubeId: '3nc6Tf26afI',
-    title: 'The Notebook - The Best Love',
+    title: 'The Best Love',
     category: 'movie',
     difficulty: 2,
     clipStart: 9,
@@ -9755,7 +9755,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-notebook-ep12',
     youtubeId: 'nQJRDIXCcRs',
-    title: 'The Notebook - Breaking up. HD VERSION!',
+    title: 'Breaking up. HD VERSION!',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -9803,7 +9803,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'about-time-ep3',
     youtubeId: 'DNXGUn0Yrb8',
-    title: 'About Time - Clip - Mary meets the family',
+    title: 'Clip - Mary meets the family',
     category: 'movie',
     difficulty: 2,
     clipStart: 6,
@@ -9815,7 +9815,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'about-time-ep4',
     youtubeId: 'bvjZSqRu41k',
-    title: 'Meeting the Parents - About Time',
+    title: 'Meeting the Parents',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -9839,7 +9839,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'about-time-ep6',
     youtubeId: '5ZeiL-WqZIA',
-    title: 'About Time - London Underground Scene',
+    title: 'London Underground Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 9,
@@ -9875,7 +9875,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'about-time-ep9',
     youtubeId: '4Jg_1qn5YiI',
-    title: ': About Time - Mary Meets the Family in Cornwall',
+    title: 'About Time - Mary Meets the Family in Cornwall',
     category: 'movie',
     difficulty: 2,
     clipStart: 6,
@@ -9899,7 +9899,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'about-time-ep11',
     youtubeId: 'o9rvhmUhPnA',
-    title: 'About Time - Last Scene',
+    title: 'Last Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -9923,7 +9923,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'about-time-ep13',
     youtubeId: 'MDJvZ-zfKyA',
-    title: 'About Time - Dresses try on scene',
+    title: 'Dresses try on scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 15,
@@ -9935,7 +9935,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'about-time-ep14',
     youtubeId: '2JkTrIVESVc',
-    title: 'A Sleepy Proposal - About Time',
+    title: 'A Sleepy Proposal',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -9947,7 +9947,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'truman-show-ep3',
     youtubeId: '6U4-KZSoe6g',
-    title: 'The Truman Show - Do Something!',
+    title: 'Do Something!',
     category: 'movie',
     difficulty: 2,
     clipStart: 21,
@@ -9959,7 +9959,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'truman-show-ep4',
     youtubeId: 'u-ApxFOpl28',
-    title: 'The Truman Show - Thar She Blows',
+    title: 'Thar She Blows',
     category: 'movie',
     difficulty: 2,
     clipStart: 28,
@@ -9983,7 +9983,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'truman-show-ep6',
     youtubeId: 'z9lBvg5clr0',
-    title: 'The Truman Show - Being Spontaneous',
+    title: 'Being Spontaneous',
     category: 'movie',
     difficulty: 2,
     clipStart: 29,
@@ -10007,7 +10007,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'truman-show-ep8',
     youtubeId: 'U0wgVq8THDk',
-    title: 'The Truman Show - Hospital Scene',
+    title: 'Hospital Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10031,7 +10031,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'truman-show-ep10',
     youtubeId: 'n2UsRWerBlM',
-    title: 'The Truman Show - Radio',
+    title: 'Radio',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -10043,7 +10043,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'truman-show-ep11',
     youtubeId: 'wIrUoTYd9hA',
-    title: 'The Truman Show - When It Rains, It Pours on Truman',
+    title: 'When It Rains, It Pours on Truman',
     category: 'movie',
     difficulty: 2,
     clipStart: 21,
@@ -10067,7 +10067,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'truman-show-ep13',
     youtubeId: 'xxFj4iNmsJE',
-    title: '"Last thing I would ever do is lie to you." - The Truman Show',
+    title: '"Last thing I would ever do is lie to you."',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10079,7 +10079,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'catch-me-ep4',
     youtubeId: 'gFr0_ywVdhY',
-    title: 'Catch Me If You Can: Outsmarting the FBI (HD CLIP)',
+    title: 'Outsmarting the FBI (HD CLIP)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10103,7 +10103,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'catch-me-ep6',
     youtubeId: 'ppunAo8ckBc',
-    title: 'Catch me if you can: Pretending to be a substitute teacher (HD CLIP)',
+    title: 'Pretending to be a substitute teacher (HD CLIP)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10175,7 +10175,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'catch-me-ep12',
     youtubeId: 'UzWkmAXNVgc',
-    title: 'Catch Me If You Can: Merry Christmas! You\'re under arrest. (HD CLIP)',
+    title: 'Merry Christmas! You\'re under arrest. (HD CLIP)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10187,7 +10187,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'catch-me-ep13',
     youtubeId: 'kThPuEy8V5M',
-    title: 'Catch Me If You Can: Leaving the country (HD CLIP)',
+    title: 'Leaving the country (HD CLIP)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10211,7 +10211,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'catch-me-ep15',
     youtubeId: 'Qb_zvWFNCD8',
-    title: 'Catch Me If You Can - Tracking Barry Allen',
+    title: 'Tracking Barry Allen',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10247,7 +10247,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'catch-me-ep18',
     youtubeId: 'ylSho5GHXao',
-    title: 'Airport Scene - Catch Me if You Can',
+    title: 'Airport Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 12,
@@ -10283,7 +10283,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'hidden-figures-ep3',
     youtubeId: 'sQLYZ0Uxxvg',
-    title: 'Hidden Figures - "You Are The Boss" Clip - 20th Century FOX',
+    title: '"You Are The Boss" Clip - 20th Century FOX',
     category: 'movie',
     difficulty: 2,
     clipStart: 1,
@@ -10295,7 +10295,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'hidden-figures-ep4',
     youtubeId: 'eEJWtAMnAlA',
-    title: 'Hidden Figures - "Russian Spy" Clip - 20th Century FOX',
+    title: '"Russian Spy" Clip - 20th Century FOX',
     category: 'movie',
     difficulty: 2,
     clipStart: 4,
@@ -10307,7 +10307,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'hidden-figures-ep5',
     youtubeId: 'JAEnv1PvBvw',
-    title: 'Hidden Figures - "Give or Take" Clip - 20th Century FOX',
+    title: '"Give or Take" Clip - 20th Century FOX',
     category: 'movie',
     difficulty: 2,
     clipStart: 7,
@@ -10319,7 +10319,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'hidden-figures-ep6',
     youtubeId: 'zVb1S977b9Q',
-    title: 'Hidden Figures - "Slice of Pie" Clip - 20th Century FOX',
+    title: '"Slice of Pie" Clip - 20th Century FOX',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -10331,7 +10331,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'hidden-figures-ep7',
     youtubeId: 'tQxYKxeDCg4',
-    title: 'Hidden Figures - Mary Jackson only the night classes - Court Room Scene',
+    title: 'Mary Jackson only the night classes - Court Room Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10367,7 +10367,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'hidden-figures-ep10',
     youtubeId: 'Crt5pspN8II',
-    title: 'Hidden Figures - Ending Scene',
+    title: 'Ending Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10379,7 +10379,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'hidden-figures-ep11',
     youtubeId: 'HFNakraGHYk',
-    title: 'Hidden Figures - What You Ladies do for NASA - sub esp',
+    title: 'What You Ladies do for NASA - sub esp',
     category: 'movie',
     difficulty: 2,
     clipStart: 11,
@@ -10391,7 +10391,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'hidden-figures-ep12',
     youtubeId: 'g7J_RrBcchQ',
-    title: 'Hidden Figures - "Give Or Take" - Official HD Clip 2017',
+    title: '"Give Or Take" - Official HD Clip 2017',
     category: 'movie',
     difficulty: 2,
     clipStart: 6,
@@ -10403,7 +10403,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'hidden-figures-ep13',
     youtubeId: 'tGMPlHdNatc',
-    title: 'Hidden Figures - Marriage Purposal',
+    title: 'Marriage Purposal',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10427,7 +10427,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bohemian-rhapsody-ep1',
     youtubeId: 'tSOO0PKz6Pc',
-    title: 'Bohemian Rhapsody - Another One Bites The Dust Scene (Rami Malek Freddie Mercury',
+    title: 'Another One Bites The Dust Scene (Rami Malek Freddie Mercury',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10451,7 +10451,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bohemian-rhapsody-ep3',
     youtubeId: 'UaW2U2fqFys',
-    title: 'Bohemian Rhapsody - Recording The Operatic Section Scene (Rami Malek Freddie Mer',
+    title: 'Recording The Operatic Section Scene (Rami Malek Freddie Mer',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10463,7 +10463,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bohemian-rhapsody-ep4',
     youtubeId: 'XgadSkH_JgM',
-    title: 'Bohemian Rhapsody - Freddie tells Queen that he\'s got AIDS',
+    title: 'Freddie tells Queen that he\'s got AIDS',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10499,7 +10499,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bohemian-rhapsody-ep7',
     youtubeId: 'JNctAdr7jy4',
-    title: 'Bohemian Rhapsody - Queen Meet\'s John Reid Scene (Rami Malek Freddie Mercury)',
+    title: 'Queen Meet\'s John Reid Scene (Rami Malek Freddie Mercury)',
     category: 'movie',
     difficulty: 2,
     clipStart: 12,
@@ -10523,7 +10523,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bohemian-rhapsody-ep9',
     youtubeId: 'jDnX_WnPMWM',
-    title: 'Bohemian Rhapsody - Interview scene',
+    title: 'Interview scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 29,
@@ -10535,7 +10535,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bohemian-rhapsody-ep10',
     youtubeId: 'aFt9C9brQY8',
-    title: 'Bohemian Rhapsody - I\'m In Love With My Car Scene (Rami Malek/Freddie Mercury)',
+    title: 'I\'m In Love With My Car Scene (Rami Malek/Freddie Mercury)',
     category: 'movie',
     difficulty: 2,
     clipStart: 3,
@@ -10547,7 +10547,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bohemian-rhapsody-ep11',
     youtubeId: '4WfIbTfpGGc',
-    title: 'Bohemian Rhapsody - Seven Seas of Rhye Recording Scene',
+    title: 'Seven Seas of Rhye Recording Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 10,
@@ -10571,7 +10571,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bohemian-rhapsody-ep13',
     youtubeId: 'ZFoLxzVw1Js',
-    title: 'Bohemian Rhapsody - Keep Yourself Alive Scene',
+    title: 'Keep Yourself Alive Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 24,
@@ -10583,7 +10583,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-girls-ep2',
     youtubeId: 'W8_POt2KlfQ',
-    title: 'Mean Girls - Sweatpants on Monday',
+    title: 'Sweatpants on Monday',
     category: 'movie',
     difficulty: 2,
     clipStart: 5,
@@ -10595,7 +10595,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-girls-ep3',
     youtubeId: 'LORyEX_5czg',
-    title: 'Mean Girls - Regina Bashes Janis',
+    title: 'Regina Bashes Janis',
     category: 'movie',
     difficulty: 2,
     clipStart: 8,
@@ -10607,7 +10607,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-girls-ep4',
     youtubeId: 'D1JZBseDjfU',
-    title: 'Mean Girls - Cady\'s instincts',
+    title: 'Cady\'s instincts',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10619,7 +10619,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-girls-ep5',
     youtubeId: 'jjt9Qx9MBPk',
-    title: 'Mean Girls - That\'s So Fetch! - Paramount Movies',
+    title: 'That\'s So Fetch! - Paramount Movies',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -10631,7 +10631,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-girls-ep6',
     youtubeId: 'fWiVN4mtYxo',
-    title: 'Mean Girls: The Burn Book (HD CLIP)',
+    title: 'The Burn Book (HD CLIP)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10643,7 +10643,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-girls-ep7',
     youtubeId: '6ovOboVwB7g',
-    title: 'Mean Girls - Such a Good Friend',
+    title: 'Such a Good Friend',
     category: 'movie',
     difficulty: 2,
     clipStart: 18,
@@ -10655,7 +10655,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-girls-ep8',
     youtubeId: 'JcP-yeailEM',
-    title: 'Mean Girls - Making Things Right',
+    title: 'Making Things Right',
     category: 'movie',
     difficulty: 2,
     clipStart: 23,
@@ -10667,7 +10667,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-girls-ep9',
     youtubeId: 'hEWsqLKlEr4',
-    title: 'Mean Girls - The Rules',
+    title: 'The Rules',
     category: 'movie',
     difficulty: 2,
     clipStart: 25,
@@ -10703,7 +10703,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-girls-ep12',
     youtubeId: 'fjoO5927p80',
-    title: 'Mean Girls: The Plastics (HD CLIP)',
+    title: 'The Plastics (HD CLIP)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10715,7 +10715,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-girls-ep13',
     youtubeId: 'eKUlOEHu7Uc',
-    title: 'Mean Girls: Get in Loser, we\'re going shopping (HD CLIP)',
+    title: 'Get in Loser, we\'re going shopping (HD CLIP)',
     category: 'movie',
     difficulty: 2,
     clipStart: 21,
@@ -10763,7 +10763,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-godfather-ep3',
     youtubeId: 'Rtbw8s1MJGo',
-    title: 'THE GODFATHER - "Moe Greene" Clip - Paramount Movies',
+    title: '"Moe Greene" Clip - Paramount Movies',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10775,7 +10775,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-godfather-ep4',
     youtubeId: 'Z9DHU1toJcU',
-    title: 'The Godfather - Marlon Brando and Al Pacino (Vito and Michael)',
+    title: 'Marlon Brando and Al Pacino (Vito and Michael)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10799,7 +10799,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-godfather-ep6',
     youtubeId: 'CECCNFXmv5c',
-    title: 'Moe Greene argues against the Corleone Family - The Godfather',
+    title: 'Moe Greene argues against the Corleone Family',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10823,7 +10823,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-godfather-ep8',
     youtubeId: 'vmAuKm4OGW8',
-    title: 'The Godfather - "Moe Green argues with Michael Corleone" Scene',
+    title: '"Moe Green argues with Michael Corleone" Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10859,7 +10859,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'clueless-ep1',
     youtubeId: 'fzqXbdlnaEg',
-    title: 'Clueless: Dress by Calvin Klein (HD CLIP)',
+    title: 'Dress by Calvin Klein (HD CLIP)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10871,7 +10871,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'clueless-ep2',
     youtubeId: '5ufGLwOPv5M',
-    title: 'Clueless: I love Josh (HD CLIP)',
+    title: 'I love Josh (HD CLIP)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10883,7 +10883,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'clueless-ep3',
     youtubeId: 'IbUmdRx0Wm4',
-    title: 'Clueless: Robbed in a parking lot (HD CLIP)',
+    title: 'Robbed in a parking lot (HD CLIP)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10895,7 +10895,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'clueless-ep4',
     youtubeId: 'Yf7MT1p1VNI',
-    title: 'R.S.V.P. - Clueless',
+    title: 'R.S.V.P.',
     category: 'movie',
     difficulty: 2,
     clipStart: 19,
@@ -10919,7 +10919,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'clueless-ep6',
     youtubeId: '6wZuNj9J4H8',
-    title: 'Clueless: He Does Dress Better Than I Do (HD CLIP)',
+    title: 'He Does Dress Better Than I Do (HD CLIP)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10931,7 +10931,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'clueless-ep7',
     youtubeId: 'Z5jNVoQIcFQ',
-    title: 'Clueless: Love at first sight (HD CLIP)',
+    title: 'Love at first sight (HD CLIP)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10943,7 +10943,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'clueless-ep8',
     youtubeId: 'oweYva96e2g',
-    title: 'Clueless: You’re a Virgin Who Can’t Drive (HD CLIP)',
+    title: 'You’re a Virgin Who Can’t Drive (HD CLIP)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10955,7 +10955,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'clueless-ep9',
     youtubeId: '4v54LRmRpZA',
-    title: 'CLUELESS - "Date" Clip - Paramount Movies',
+    title: '"Date" Clip - Paramount Movies',
     category: 'movie',
     difficulty: 2,
     clipStart: 15,
@@ -10979,7 +10979,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'clueless-ep11',
     youtubeId: 'BEG66-Lro7U',
-    title: 'Clueless - Not a Mexican',
+    title: 'Not a Mexican',
     category: 'movie',
     difficulty: 2,
     clipStart: 21,
@@ -11003,7 +11003,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'clueless-ep13',
     youtubeId: 'vso2nP4edrk',
-    title: 'Clueless - Cher\'s new project',
+    title: 'Cher\'s new project',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -11015,7 +11015,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'clueless-ep14',
     youtubeId: 'TDrGHP9Z8vw',
-    title: 'Clueless - Physical Education',
+    title: 'Physical Education',
     category: 'movie',
     difficulty: 2,
     clipStart: 24,
@@ -11027,7 +11027,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'jerry-maguire-ep2',
     youtubeId: 'itcSAT_SX9s',
-    title: 'Jerry Maguire - Ray And Jerry\'s Late Night Chat - Love Love',
+    title: 'Ray And Jerry\'s Late Night Chat - Love Love',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -11063,7 +11063,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'jerry-maguire-ep5',
     youtubeId: 'niZKrt4XAZE',
-    title: 'Jerry Maguire - Jerry Dumps Avery',
+    title: 'Jerry Dumps Avery',
     category: 'movie',
     difficulty: 2,
     clipStart: 28,
@@ -11075,7 +11075,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'jerry-maguire-ep6',
     youtubeId: 'ASVUj89hyg0',
-    title: 'Jerry Maguire - Play With Heart',
+    title: 'Play With Heart',
     category: 'movie',
     difficulty: 2,
     clipStart: 17,
@@ -11099,7 +11099,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'jerry-maguire-ep8',
     youtubeId: 'Of73UiXUvjA',
-    title: 'Jerry Maguire - Not Gonna Cry',
+    title: 'Not Gonna Cry',
     category: 'movie',
     difficulty: 2,
     clipStart: 26,
@@ -11123,7 +11123,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'jerry-maguire-ep10',
     youtubeId: '6ZZI6-zh0GM',
-    title: 'Jerry Maguire - Who\'s Coming With Me?',
+    title: 'Who\'s Coming With Me?',
     category: 'movie',
     difficulty: 2,
     clipStart: 29,
@@ -11147,7 +11147,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'jerry-maguire-ep12',
     youtubeId: 'l1B1_jQnlFk',
-    title: 'Help Me Help You - Jerry Maguire',
+    title: 'Help Me Help You',
     category: 'movie',
     difficulty: 2,
     clipStart: 29,
@@ -11159,7 +11159,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'jerry-maguire-ep13',
     youtubeId: '3MP5qHvuHE0',
-    title: 'Jerry Maguire - You Complete Me',
+    title: 'You Complete Me',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -11171,7 +11171,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'few-good-men-ep2',
     youtubeId: 'ljzkCBZuHM4',
-    title: 'A Few Good Men - Galloway Confronts Kaffee',
+    title: 'Galloway Confronts Kaffee',
     category: 'movie',
     difficulty: 2,
     clipStart: 25,
@@ -11195,7 +11195,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'few-good-men-ep4',
     youtubeId: 'vyMggFe9WRQ',
-    title: 'A Few Good Men - Ask Me Nicely',
+    title: 'Ask Me Nicely',
     category: 'movie',
     difficulty: 2,
     clipStart: 19,
@@ -11207,7 +11207,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'few-good-men-ep5',
     youtubeId: 'N16YkjFVAyE',
-    title: 'A Few Good Men - Corporal Barnes',
+    title: 'Corporal Barnes',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -11267,7 +11267,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'moneyball-ep6',
     youtubeId: 'vyvu1nWjOlI',
-    title: 'Moneyball - Signing Scott Hatteberg',
+    title: 'Signing Scott Hatteberg',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -11291,7 +11291,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'moneyball-ep8',
     youtubeId: 'nK1jtVhimPA',
-    title: 'Moneyball - The Streak [1080p HD]',
+    title: 'The Streak [1080p HD]',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -11303,7 +11303,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'moneyball-ep9',
     youtubeId: '0h19anH4MdE',
-    title: 'Moneyball: An Unfair Game (HD CLIP)',
+    title: 'An Unfair Game (HD CLIP)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -11315,7 +11315,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'moneyball-ep10',
     youtubeId: 'jH6JcaCClrE',
-    title: 'Moneyball: Explaining the numbers HD CLIP',
+    title: 'Explaining the numbers HD CLIP',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -11363,7 +11363,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'moneyball-ep14',
     youtubeId: 'aPnuxi4S9JQ',
-    title: 'Moneyball - Billy\'s New Unbeatable Team (ft. Brad Pitt & Jonah Hill) - CineCli',
+    title: 'Billy\'s New Unbeatable Team (ft. Brad Pitt & Jonah Hill) - CineCli',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -11387,7 +11387,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'notting-hill-ep3',
     youtubeId: 'ArlsU2_cUbg',
-    title: 'Notting Hill - Can I Have Your Autograph?',
+    title: 'Can I Have Your Autograph?',
     category: 'movie',
     difficulty: 2,
     clipStart: 29,
@@ -11399,7 +11399,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'notting-hill-ep4',
     youtubeId: 'uJPI1qu9bE4',
-    title: 'Notting Hill - The Wrong Decision',
+    title: 'The Wrong Decision',
     category: 'movie',
     difficulty: 2,
     clipStart: 29,
@@ -11435,7 +11435,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'notting-hill-ep7',
     youtubeId: 'JexO-N39Nzg',
-    title: 'Notting Hill - What Do You Do?',
+    title: 'What Do You Do?',
     category: 'movie',
     difficulty: 2,
     clipStart: 24,
@@ -11447,7 +11447,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'notting-hill-ep8',
     youtubeId: '3F8oJh3J1T0',
-    title: 'Notting Hill - Friendly Banter',
+    title: 'Friendly Banter',
     category: 'movie',
     difficulty: 2,
     clipStart: 29,
@@ -11459,7 +11459,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'when-harry-met-sally-ep1',
     youtubeId: 'Z5wLdCM0NOg',
-    title: 'When Harry Met Sally - Best Scene',
+    title: 'Best Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -11531,7 +11531,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'when-harry-met-sally-ep7',
     youtubeId: 'UnierMA90D4',
-    title: 'When Harry Met Sally - Joe\'s Getting Married',
+    title: 'Joe\'s Getting Married',
     category: 'movie',
     difficulty: 2,
     clipStart: 24,
@@ -11555,7 +11555,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'when-harry-met-sally-ep9',
     youtubeId: 'Y9CKhEZCNS8',
-    title: 'When Harry Met Sally: Attraction Theory',
+    title: 'Attraction Theory',
     category: 'movie',
     difficulty: 2,
     clipStart: 18,
@@ -11603,7 +11603,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'back-to-future-ep4',
     youtubeId: 'uERAggbYGT0',
-    title: 'Back to the Future: Two McFly HD CLIP',
+    title: 'Two McFly HD CLIP',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -11675,7 +11675,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'back-to-future-ep10',
     youtubeId: 'KUnA9jb-NpE',
-    title: 'Back to the Future: Doc asks who\'s president in 1985 HD CLIP',
+    title: 'Doc asks who\'s president in 1985 HD CLIP',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -11699,7 +11699,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'back-to-future-ep12',
     youtubeId: 'RcpEeWgIVjw',
-    title: 'Back to the Future: The skateboard chase',
+    title: 'The skateboard chase',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -11795,7 +11795,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'home-alone-ep8',
     youtubeId: 'yurPmymbW8o',
-    title: 'Home Alone - Airport Scenes',
+    title: 'Airport Scenes',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -11807,7 +11807,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'home-alone-ep9',
     youtubeId: 'yRadWIDAtRI',
-    title: 'Home Alone - The Family Orders Pizza',
+    title: 'The Family Orders Pizza',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -11915,7 +11915,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'jurassic-park-ep4',
     youtubeId: '8hjB6UJ2kMU',
-    title: 'T-Rex Ambush Scene - Jurassic Park',
+    title: 'T-Rex Ambush Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 18,
@@ -11927,7 +11927,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'jurassic-park-ep5',
     youtubeId: '0Nz8YrCC9X8',
-    title: 'Jurassic Park - Lunch - Great Scenes',
+    title: 'Lunch - Great Scenes',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -11951,7 +11951,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'jurassic-park-ep7',
     youtubeId: 'LYN9USd9Gpg',
-    title: 'Jurassic Park - The Kitchen Chase',
+    title: 'The Kitchen Chase',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -12059,7 +12059,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'groundhog-day-ep4',
     youtubeId: '7NjNOAncIlI',
-    title: 'Groundhog Day - all scenes with the old homeless man',
+    title: 'all scenes with the old homeless man',
     category: 'movie',
     difficulty: 2,
     clipStart: 27,
@@ -12071,7 +12071,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'groundhog-day-ep5',
     youtubeId: 'h7amSrgtINI',
-    title: 'Groundhog Day - Your Weather Forecast',
+    title: 'Your Weather Forecast',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -12083,7 +12083,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'groundhog-day-ep6',
     youtubeId: 'LYOcO4kLbVw',
-    title: 'Groundhog Day: The groundhog drives (HD CLIP)',
+    title: 'The groundhog drives (HD CLIP)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -12119,7 +12119,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'groundhog-day-ep9',
     youtubeId: 'muBWLTBLk30',
-    title: 'Groundhog day - Every morning awakening',
+    title: 'Every morning awakening',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -12179,7 +12179,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'groundhog-day-ep14',
     youtubeId: 'Wo7wjX51JHs',
-    title: 'Groundhog Day - Phil Eats Like A King (ft. Bill Murray) - CineStream',
+    title: 'Phil Eats Like A King (ft. Bill Murray) - CineStream',
     category: 'movie',
     difficulty: 2,
     clipStart: 23,
@@ -12203,7 +12203,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'princess-bride-ep3',
     youtubeId: 'rMz7JBRbmNo',
-    title: 'The Princess Bride - The Battle of Wits',
+    title: 'The Battle of Wits',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -12215,7 +12215,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'princess-bride-ep4',
     youtubeId: 'XCHKYNFH9Lk',
-    title: 'The Princess Bride - Anybody Want a Peanut?',
+    title: 'Anybody Want a Peanut?',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -12227,7 +12227,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'princess-bride-ep5',
     youtubeId: 'd4ftmOI5NnI',
-    title: 'The Princess Bride - Miracle Max',
+    title: 'Miracle Max',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -12239,7 +12239,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'princess-bride-ep6',
     youtubeId: 'rUczpTPATyU',
-    title: 'The Princess Bride - I Am Not Left-Handed',
+    title: 'I Am Not Left-Handed',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -12251,7 +12251,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'princess-bride-ep7',
     youtubeId: 'niul8Hy-3wk',
-    title: 'The Princess Bride - As You Wish',
+    title: 'As You Wish',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -12263,7 +12263,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'princess-bride-ep8',
     youtubeId: 'wUJccK4lV74',
-    title: 'The Princess Bride - To the Pain!',
+    title: 'To the Pain!',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -12275,7 +12275,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'princess-bride-ep9',
     youtubeId: 'XeO3jMZphhs',
-    title: 'The Princess Bride - If We Only Had a Wheelbarrow',
+    title: 'If We Only Had a Wheelbarrow',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -12287,7 +12287,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'princess-bride-ep10',
     youtubeId: 'O6qpa-mRLnI',
-    title: 'Princess Bride - As you wish',
+    title: 'As You Wish - Westley\'s Return',
     category: 'movie',
     difficulty: 2,
     clipStart: 18,
@@ -12299,7 +12299,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'princess-bride-ep11',
     youtubeId: 'D9MS2y2YU_o',
-    title: 'The Princess Bride - Inconceivable!',
+    title: 'Inconceivable!',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -12311,7 +12311,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'princess-bride-ep12',
     youtubeId: 'lISBP_fPg1s',
-    title: 'The Princess Bride - Dream of Large Women',
+    title: 'Dream of Large Women',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -12323,7 +12323,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'princess-bride-ep13',
     youtubeId: 'XK-aL4H01b0',
-    title: 'The Princess Bride - Fezzik and Inigo Rhyming',
+    title: 'Fezzik and Inigo Rhyming',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -12335,7 +12335,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'princess-bride-ep14',
     youtubeId: 'JFo6iLDNzX0',
-    title: 'The Princess Bride - The Torture Machine',
+    title: 'The Torture Machine',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -12347,7 +12347,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: '10-things-ep2',
     youtubeId: '31N_HM2f9Ks',
-    title: '10 Things I Hate About You - Full Poem Scene',
+    title: 'Full Poem Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 12,
@@ -12359,7 +12359,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: '10-things-ep3',
     youtubeId: 'k_zin9OQNXU',
-    title: '10 Things I Hate About You - Ending Scene - Romance Clips',
+    title: 'Ending Scene - Romance Clips',
     category: 'movie',
     difficulty: 2,
     clipStart: 9,
@@ -12383,7 +12383,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: '10-things-ep5',
     youtubeId: '4MRU8QBdipg',
-    title: '10 Things I Hate About You - You deserve what you want',
+    title: 'You deserve what you want',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -12407,7 +12407,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: '10-things-ep7',
     youtubeId: 'HqTBW90w0_0',
-    title: '10 Things I Hate About You - Paintball Scene - Romance Clips',
+    title: 'Paintball Scene - Romance Clips',
     category: 'movie',
     difficulty: 2,
     clipStart: 5,
@@ -12419,7 +12419,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: '10-things-ep8',
     youtubeId: 'uzSrfimePfA',
-    title: '10 Things I Hate About You - Poem Scene - Romance Clips',
+    title: 'Poem Scene - Romance Clips',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -12443,7 +12443,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: '10-things-ep10',
     youtubeId: 'OHE8TUfo7MU',
-    title: '10 Things I Hate About You - “Whops!” Scene - Romance Clips',
+    title: '“Whops!” Scene - Romance Clips',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -12467,7 +12467,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: '10-things-ep12',
     youtubeId: 'V7VTDQYTe-U',
-    title: '10 Things i Hate About You - Rock bar scene',
+    title: 'Rock bar scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 28,
@@ -12635,7 +12635,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'juno-ep12',
     youtubeId: 'Cf2Gec_2fMY',
-    title: 'Juno - The kind of person that\'s worth sticking with!',
+    title: 'The kind of person that\'s worth sticking with!',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -12707,7 +12707,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'juno-ep18',
     youtubeId: 'WLDTT9KaSTo',
-    title: 'Juno - "Doodle That Can\'t Be Undid" Between the Lines - 20th Century FOX',
+    title: '"Doodle That Can\'t Be Undid" Between the Lines - 20th Century FOX',
     category: 'movie',
     difficulty: 2,
     clipStart: 14,
@@ -12839,7 +12839,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'little-women-ep12',
     youtubeId: 'ampLJDK6lYs',
-    title: 'Little Women - I\'m Sick of People Saying That Love Is All a Woman Is Fit For (',
+    title: 'I\'m Sick of People Saying That Love Is All a Woman Is Fit For (',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -13127,7 +13127,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'snl-ep31',
     youtubeId: 'b-2fnZfK9Lg',
-    title: 'Disney Housewives - Saturday Night Live',
+    title: 'Disney Housewives',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 30,
@@ -13163,7 +13163,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'snl-ep34',
     youtubeId: 'dMbnfxwus0s',
-    title: 'Rude Buddha - Saturday Night Live',
+    title: 'Rude Buddha',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 30,
@@ -13487,7 +13487,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'john-oliver-ep4',
     youtubeId: 'f36vIp_d2C0',
-    title: 'Last Week Tonight - And Now This: Some Clips That Have, To Put It Mildly, Not Ag',
+    title: 'And Now This: Some Clips That Have, To Put It Mildly, Not Ag',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 7,
@@ -13559,7 +13559,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'graham-norton-ep9',
     youtubeId: 'CkbHGH-NnkU',
-    title: 'Hilarious Restaurant Menu Fails - The Graham Norton Show',
+    title: 'Hilarious Restaurant Menu Fails',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 30,
@@ -13739,7 +13739,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'carpool-karaoke-ep4',
     youtubeId: 'Mhux3FqDQBs',
-    title: 'Carpool Karaoke: The Series - Snoop Dogg & Matthew McConaughey - Apple TV app',
+    title: 'The Series - Snoop Dogg & Matthew McConaughey - Apple TV app',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 0,
@@ -13751,7 +13751,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'carpool-karaoke-ep5',
     youtubeId: 'xLdizYZYH14',
-    title: 'Carpool Karaoke: The Series — Deschanel Sisters & The Property Brothers — Apple',
+    title: 'The Series — Deschanel Sisters & The Property Brothers — Apple',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 0,
@@ -13823,7 +13823,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-tweets-ep10',
     youtubeId: 'ahSKGi_21xg',
-    title: 'Mean Tweets – Music Edition',
+    title: 'Music Edition #1',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 29,
@@ -13871,7 +13871,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-tweets-ep14',
     youtubeId: 'OrnpSe4OChM',
-    title: 'Mean Tweets – Avengers Edition',
+    title: 'Avengers Edition',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 29,
@@ -13883,7 +13883,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-tweets-ep15',
     youtubeId: 'Xr6uNyo8Qgg',
-    title: 'Mean Tweets - Movie Edition',
+    title: 'Movie Edition',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 30,
@@ -13895,7 +13895,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-tweets-ep16',
     youtubeId: '5M1ZKPCLb4I',
-    title: 'Mean Tweets - Music Edition',
+    title: 'Music Edition #2',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 30,
@@ -13919,7 +13919,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-tweets-ep18',
     youtubeId: 'VsYmwBOYfW8',
-    title: 'Mean Tweets – Jimmy Kimmel Edition',
+    title: 'Jimmy Kimmel Edition',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 30,
@@ -13931,7 +13931,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-tweets-ep19',
     youtubeId: 'b8nT5qx_Rbo',
-    title: 'Mean Tweets - Robert De Niro Edition',
+    title: 'Robert De Niro Edition',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 14,
@@ -13943,7 +13943,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-tweets-ep20',
     youtubeId: 'RDocnbkHjhI',
-    title: 'Mean Tweets - President Obama Edition',
+    title: 'President Obama Edition',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 21,
@@ -14015,7 +14015,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'shark-tank-ep2',
     youtubeId: '1mlFdXpcf9c',
-    title: 'One Shark Calls This the \'Best Pitch Ever\' - Shark Tank',
+    title: 'One Shark Calls This the \'Best Pitch Ever\'',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 30,
@@ -14027,7 +14027,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'shark-tank-ep3',
     youtubeId: 'i7jX9SR0bfw',
-    title: 'Jack\'s Stand Pitch - Shark Tank',
+    title: 'Jack\'s Stand Pitch',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 9,
@@ -14039,7 +14039,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'impractical-jokers-ep1',
     youtubeId: 'a3iIERXZeJE',
-    title: 'Impractical Jokers: Inside Jokes - Joe and Murr\'s Education Innovations Mortif',
+    title: 'Inside Jokes - Joe and Murr\'s Education Innovations Mortif',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 30,
@@ -14063,7 +14063,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'impractical-jokers-ep3',
     youtubeId: 'YEFYYHvm7SM',
-    title: 'Impractical Jokers - Joe & Q Plan A Party',
+    title: 'Joe & Q Plan A Party',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 30,
@@ -14087,7 +14087,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'impractical-jokers-ep5',
     youtubeId: 'ZxTVQ8oEAVM',
-    title: 'Impractical Jokers - Sal Can\'t Stop Laughing',
+    title: 'Sal Can\'t Stop Laughing',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 30,
@@ -14099,7 +14099,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'impractical-jokers-ep6',
     youtubeId: '5dkxJVljyaA',
-    title: 'Impractical Jokers - Creepy Stepfather Murr',
+    title: 'Creepy Stepfather Murr',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 30,
@@ -14135,7 +14135,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'impractical-jokers-ep9',
     youtubeId: 'nnp46b6D74Y',
-    title: 'Impractical Jokers - Professional Noisemakers Disturb The Peace',
+    title: 'Professional Noisemakers Disturb The Peace',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 30,
@@ -14147,7 +14147,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'impractical-jokers-ep10',
     youtubeId: 'JQVBfcjx6d4',
-    title: 'Impractical Jokers - Beautiful Model Turned Brainiac (Punishment)',
+    title: 'Beautiful Model Turned Brainiac (Punishment)',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 30,
@@ -14159,7 +14159,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'impractical-jokers-ep11',
     youtubeId: '2Szzj6XN6pA',
-    title: 'Impractical Jokers - Best Man Speech Goes Horribly Wrong (Punishment)',
+    title: 'Best Man Speech Goes Horribly Wrong (Punishment)',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 30,
@@ -14171,7 +14171,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'whose-line-ep3',
     youtubeId: '3cX8KLOb0w8',
-    title: 'Whose Line Is It Anyway? - Questions Only - Frankenstein\'s Castle',
+    title: 'Questions Only - Frankenstein\'s Castle',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 30,
@@ -14183,7 +14183,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'whose-line-ep4',
     youtubeId: 'Nc_Tny40JPU',
-    title: 'Whose Line Is It Anyway? - Two Line Vocabulary',
+    title: 'Two Line Vocabulary',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 30,
@@ -15551,7 +15551,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bbc-learning-english-ep3',
     youtubeId: 'nGUfj2taniA',
-    title: 'BBC Learning English: Video Words in the News: Every dog has its day',
+    title: 'Video Words in the News: Every dog has its day',
     category: 'daily',
     difficulty: 2,
     clipStart: 26,
@@ -15563,7 +15563,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bbc-learning-english-ep4',
     youtubeId: 'kN-q8yX0loc',
-    title: 'BBC Learning English: Video Words in the News: Meet Bao Bao the panda (4th Decem',
+    title: 'Video Words in the News: Meet Bao Bao the panda (4th Decem',
     category: 'daily',
     difficulty: 2,
     clipStart: 23,
@@ -15599,7 +15599,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bbc-learning-english-ep7',
     youtubeId: '__E9smvuAis',
-    title: 'BBC Learning English: Video Words in the News: Teapot tower (12th March 2014)',
+    title: 'Video Words in the News: Teapot tower (12th March 2014)',
     category: 'daily',
     difficulty: 2,
     clipStart: 19,
@@ -18983,7 +18983,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'toy-story-ep4',
     youtubeId: 'D68Jvv3BfCQ',
-    title: 'Toy Story - Woody & Buzz Fight',
+    title: 'Woody & Buzz Fight',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -19091,7 +19091,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'toy-story-ep13',
     youtubeId: 'j54YUj4G0ug',
-    title: 'Toy Story - Teaching Sid A Lesson And Saving Buzz',
+    title: 'Teaching Sid A Lesson And Saving Buzz',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -19715,7 +19715,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'frozen-ep3',
     youtubeId: 'UDSTgx1jgzY',
-    title: 'Frozen - Olaf vs. Sven (Funny Scene)',
+    title: 'Olaf vs. Sven (Funny Scene)',
     category: 'animation',
     difficulty: 1,
     clipStart: 8,
@@ -19895,7 +19895,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'shrek-ep7',
     youtubeId: '9OfSzje7e1w',
-    title: 'Shrek - The Gingerbread Man',
+    title: 'The Gingerbread Man',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -19919,7 +19919,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'shrek-ep9',
     youtubeId: 'ZTYyhTfkl1E',
-    title: 'Shrek - Princess Fiona vs. the Merry Men',
+    title: 'Princess Fiona vs. the Merry Men',
     category: 'animation',
     difficulty: 1,
     clipStart: 24,
@@ -19967,7 +19967,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'shrek-ep13',
     youtubeId: '-FtCTW2rVFM',
-    title: 'Shrek - Ogres are like Onions (Blu-Ray 1080p) English [scene]',
+    title: 'Ogres are like Onions (Blu-Ray 1080p) English [scene]',
     category: 'animation',
     difficulty: 1,
     clipStart: 18,
@@ -20087,7 +20087,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inside-out-ep3',
     youtubeId: 'qansfxOYFg8',
-    title: 'Inside Out 2 - Plan For the Future',
+    title: 'Plan For the Future',
     category: 'animation',
     difficulty: 1,
     clipStart: 0,
@@ -20123,7 +20123,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inside-out-ep6',
     youtubeId: '6YGmxhc5-0w',
-    title: 'Inside Out 2 - Anxiety Takes Over',
+    title: 'Anxiety Takes Over',
     category: 'animation',
     difficulty: 1,
     clipStart: 0,
@@ -20147,7 +20147,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inside-out-ep8',
     youtubeId: 'y2CJ46XkwxA',
-    title: 'Inside Out - Sadness Saves Riley - Ending Scene',
+    title: 'Sadness Saves Riley - Ending Scene',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -20207,7 +20207,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inside-out-ep13',
     youtubeId: 'RPQRHemfk9E',
-    title: 'Inside Out - Bing Bong Scene',
+    title: 'Bing Bong Scene',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -20243,7 +20243,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inside-out-ep16',
     youtubeId: 'nm35CQL3yms',
-    title: 'Inside Out 2 - Moments',
+    title: 'Moments',
     category: 'animation',
     difficulty: 1,
     clipStart: 0,
@@ -20279,7 +20279,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-incredibles-ep1',
     youtubeId: 'Egzz5L1ZUZ0',
-    title: 'The Incredibles - Am I Fired? (HDR - 4K - 5.1)',
+    title: 'Am I Fired? (HDR - 4K - 5.1)',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -20291,7 +20291,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-incredibles-ep2',
     youtubeId: '3renCSTki-0',
-    title: 'The Incredibles - After School (HDR - 4K - 5.1)',
+    title: 'After School (HDR - 4K - 5.1)',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -20303,7 +20303,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-incredibles-ep3',
     youtubeId: 'yL-owHxF2lc',
-    title: 'The Incredibles - Family Dinner (HDR - 4K - 5.1)',
+    title: 'Family Dinner (HDR - 4K - 5.1)',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -20339,7 +20339,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-incredibles-ep6',
     youtubeId: 'lYxx-8wQSO0',
-    title: 'The Incredibles - Family Argument (HDR - 4K - 5.1)',
+    title: 'Family Argument (HDR - 4K - 5.1)',
     category: 'animation',
     difficulty: 1,
     clipStart: 27,
@@ -20351,7 +20351,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-incredibles-ep7',
     youtubeId: 't5v2qBBD-gE',
-    title: 'The Incredibles - 100 Mile Dash',
+    title: '100 Mile Dash',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -20363,7 +20363,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-incredibles-ep8',
     youtubeId: 'UWt0-dy3s4E',
-    title: 'The Incredibles - Life\'s Incredible Again',
+    title: 'Life\'s Incredible Again',
     category: 'animation',
     difficulty: 1,
     clipStart: 4,
@@ -20387,7 +20387,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-incredibles-ep10',
     youtubeId: 'Zh2-rVsXWUU',
-    title: 'The Incredibles: "I\'m thirsty"',
+    title: '"I\'m thirsty"',
     category: 'animation',
     difficulty: 1,
     clipStart: 12,
@@ -20399,7 +20399,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-incredibles-ep11',
     youtubeId: '1z_GF0KAAkg',
-    title: 'The Incredibles - No Capes',
+    title: 'No Capes',
     category: 'animation',
     difficulty: 1,
     clipStart: 0,
@@ -20423,7 +20423,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-incredibles-ep13',
     youtubeId: 't-XbDgXvNhI',
-    title: 'The Incredibles: Kronos Unveiled - (HDR - 4K - 5.1)',
+    title: 'Kronos Unveiled - (HDR - 4K - 5.1)',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -20447,7 +20447,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-incredibles-ep15',
     youtubeId: 'NGeUix7VXAg',
-    title: 'The Incredibles: Syndrome\'s Death (2004) (BBC iPlayer)',
+    title: 'Syndrome\'s Death (2004) (BBC iPlayer)',
     category: 'animation',
     difficulty: 1,
     clipStart: 25,
@@ -20507,7 +20507,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'up-ep3',
     youtubeId: '9SzPApTK33g',
-    title: 'Carl Tries To Get Away From Kevin And Dug Scene - UP',
+    title: 'Carl Tries To Get Away From Kevin And Dug Scene',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -20747,7 +20747,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'how-to-train-your-dragon-ep3',
     youtubeId: 'StXi5F3lW7o',
-    title: 'How to Train Your Dragon - Dragons Aren\'t Fireproof',
+    title: 'Dragons Aren\'t Fireproof',
     category: 'animation',
     difficulty: 1,
     clipStart: 0,
@@ -20795,7 +20795,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'how-to-train-your-dragon-ep7',
     youtubeId: '_PbmR4L3W2U',
-    title: 'How to Train Your Dragon - Flying Toothless Scene',
+    title: 'Flying Toothless Scene',
     category: 'animation',
     difficulty: 1,
     clipStart: 27,
@@ -20831,7 +20831,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'how-to-train-your-dragon-ep10',
     youtubeId: 'dSjylGyrstk',
-    title: 'How to Train Your Dragon - Dragon School Scene',
+    title: 'Dragon School Scene',
     category: 'animation',
     difficulty: 1,
     clipStart: 18,
@@ -20975,7 +20975,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'kung-fu-panda-ep6',
     youtubeId: 'KtsOkdO3wTw',
-    title: 'Kung Fu Panda - Kung Fu Training',
+    title: 'Kung Fu Training',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -20987,7 +20987,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'kung-fu-panda-ep7',
     youtubeId: 'Xx_p2yDkgOQ',
-    title: 'Kung Fu Panda - Silly Dinner',
+    title: 'Silly Dinner',
     category: 'animation',
     difficulty: 1,
     clipStart: 26,
@@ -21095,7 +21095,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'madagascar-ep3',
     youtubeId: 'agDoeiqTuYs',
-    title: 'DreamWorks Madagascar - Operation Tourists Trap - Clip - Madagascar: Escape 2 Af',
+    title: 'Operation Tourists Trap - Clip - Madagascar: Escape 2 Af',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -21107,7 +21107,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'madagascar-ep4',
     youtubeId: 'r62vl9TO_dY',
-    title: 'DreamWorks Madagascar - Captain Dubois is On a Hunt - Madagascar 3: Europe\'s',
+    title: 'Captain Dubois is On a Hunt - Madagascar 3: Europe\'s',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -21119,7 +21119,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'madagascar-ep5',
     youtubeId: 'IzTrmO-L2EA',
-    title: 'Madagascar - On The Beach Scene - - Dreamworks Madagascar - Kids Movi',
+    title: 'On The Beach Scene - - Dreamworks Madagascar - Kids Movi',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -21131,7 +21131,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'madagascar-ep6',
     youtubeId: 'he4Gir1OXQc',
-    title: 'Madagascar - I Like to Move It Move It Scene',
+    title: 'I Like to Move It Move It Scene',
     category: 'animation',
     difficulty: 1,
     clipStart: 29,
@@ -21167,7 +21167,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'madagascar-ep9',
     youtubeId: 'txjvoZ5me2g',
-    title: 'DreamWorks Madagascar - The Fun Side Of The Island - Madagascar',
+    title: 'The Fun Side Of The Island',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -21179,7 +21179,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'madagascar-ep10',
     youtubeId: '7g-x3yGiHRs',
-    title: 'Madagascar - Penguin Boat Takeover Scene',
+    title: 'Penguin Boat Takeover Scene',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -21275,7 +21275,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'monsters-inc-ep8',
     youtubeId: '86yFyYJiPds',
-    title: 'Monsters Inc - 2319 CDA Entry scene.',
+    title: '2319 CDA Entry scene.',
     category: 'animation',
     difficulty: 1,
     clipStart: 13,
@@ -21299,7 +21299,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'monsters-inc-ep10',
     youtubeId: 'dJWm0TWH7d0',
-    title: 'Monsters Inc - All Roz Scenes!',
+    title: 'All Roz Scenes!',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -21635,7 +21635,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'puss-in-boots-2-ep11',
     youtubeId: 'TbG7lp_Nf98',
-    title: 'Puss In Boots 2: The Last Wish Clip - Goldilocks Searches for Puss In Boots (202',
+    title: 'The Last Wish Clip - Goldilocks Searches for Puss In Boots (202',
     category: 'animation',
     difficulty: 1,
     clipStart: 23,
@@ -21695,7 +21695,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'puss-in-boots-2-ep16',
     youtubeId: 'kVViHOmkg-k',
-    title: 'PUSS IN BOOTS 2: The Last Wish- The Magic Map',
+    title: 'The Last Wish- The Magic Map',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -21743,7 +21743,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'moana-ep6',
     youtubeId: 'KGqBfyQFG_g',
-    title: 'Moana - Moana Meets the Ocean',
+    title: 'Moana Meets the Ocean',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -21839,7 +21839,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'moana-ep14',
     youtubeId: 'PxX6GFm3e9s',
-    title: 'Moana - How Far I\'ll Go (Reprise)',
+    title: 'How Far I\'ll Go (Reprise)',
     category: 'animation',
     difficulty: 1,
     clipStart: 9,
@@ -21875,7 +21875,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'coco-ep3',
     youtubeId: 'YqrcFH_w3vc',
-    title: 'Coco - Ernesto de la Cruz gets exposed and defeated (1080p)',
+    title: 'Ernesto de la Cruz gets exposed and defeated (1080p)',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -22055,7 +22055,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'encanto-ep7',
     youtubeId: 'FS1Wts11oX0',
-    title: 'Encanto - Miracle Dying',
+    title: 'Miracle Dying',
     category: 'animation',
     difficulty: 1,
     clipStart: 8,
@@ -22079,7 +22079,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'encanto-ep9',
     youtubeId: 'YRpvIiz9G8A',
-    title: 'Encanto - Cast - We Don\'t Talk About Bruno (From "Encanto"/Sing-Along)',
+    title: 'Cast - We Don\'t Talk About Bruno (From "Encanto"/Sing-Along)',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -22151,7 +22151,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'encanto-ep15',
     youtubeId: 'ta31VGaVHrY',
-    title: 'Encanto - Mirabel and Abuela Fight (BluRay-HD)',
+    title: 'Mirabel and Abuela Fight (BluRay-HD)',
     category: 'animation',
     difficulty: 1,
     clipStart: 13,
@@ -22163,7 +22163,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'encanto-ep16',
     youtubeId: '7-MfQB2jqJs',
-    title: 'Encanto - Mirabel and Bruno scene',
+    title: 'Mirabel and Bruno scene',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -22187,7 +22187,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-lion-king-ep3',
     youtubeId: '25QyCxVkXwQ',
-    title: 'The Lion King - Can You Feel The Love Tonight',
+    title: 'Can You Feel The Love Tonight',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -22247,7 +22247,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-lion-king-ep8',
     youtubeId: 'US3Z0o6DVgg',
-    title: 'The Lion King - Scar and Mufasa',
+    title: 'Scar and Mufasa',
     category: 'animation',
     difficulty: 1,
     clipStart: 28,
@@ -22259,7 +22259,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-lion-king-ep9',
     youtubeId: 'rB2FfXL2GHo',
-    title: 'The Lion King - Simba and Mufasa scene',
+    title: 'Simba and Mufasa scene',
     category: 'animation',
     difficulty: 1,
     clipStart: 28,
@@ -22303,7 +22303,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'office-fire',
     youtubeId: 'gO8N3L_aERg',
-    title: 'Dwight\'s Fire Drill',
+    title: 'Dwight\'s Fire Safety Drill',
     category: 'drama',
     difficulty: 3,
     clipStart: 10,
@@ -24717,7 +24717,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: '10-things-01',
     youtubeId: 'w6XGUhzfutc',
-    title: '10 Things I Hate About You - Kat\'s Poem',
+    title: 'Kat\'s Poem',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -25299,7 +25299,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'john-oliver-02',
     youtubeId: 'LdA46CTeaYo',
-    title: 'Last Week Tonight - Televangelists',
+    title: 'Televangelists',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 0,
@@ -25311,7 +25311,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'john-oliver-04',
     youtubeId: 'XGYxLWUKwWo',
-    title: 'Last Week Tonight - Mental Health',
+    title: 'Mental Health',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 0,
@@ -25397,7 +25397,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'kitchen-nightmares-01',
     youtubeId: 'Qp57UjkkR2k',
-    title: 'Kitchen Nightmares - Best Arguments',
+    title: 'Best Arguments',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 0,
@@ -25847,7 +25847,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'casey-neistat-01',
     youtubeId: 'gnHCw87Enq4',
-    title: 'Casey Neistat - Vlog',
+    title: 'Vlog #001',
     category: 'daily',
     difficulty: 3,
     clipStart: 0,
@@ -25859,7 +25859,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'casey-neistat-02',
     youtubeId: 'cmLFCfNrHlo',
-    title: 'Casey Neistat - NYC Daily Life',
+    title: 'NYC Daily Life',
     category: 'daily',
     difficulty: 3,
     clipStart: 0,
@@ -25871,7 +25871,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'casey-neistat-03',
     youtubeId: 'pmGOE6yNA98',
-    title: 'Casey Neistat - Weekend Adventures',
+    title: 'Weekend Adventures',
     category: 'daily',
     difficulty: 3,
     clipStart: 0,
@@ -25895,7 +25895,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'casey-neistat-05',
     youtubeId: 'bzE-IMaegzQ',
-    title: 'Casey Neistat - Bike Lanes',
+    title: 'Bike Lanes',
     category: 'daily',
     difficulty: 3,
     clipStart: 0,
@@ -25911,7 +25911,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bbc-learning-english-05',
     youtubeId: 'YltHGKX80Y8',
-    title: 'BBC Learning English - Pronunciation Tips',
+    title: 'Pronunciation Tips',
     category: 'daily',
     difficulty: 3,
     clipStart: 0,
