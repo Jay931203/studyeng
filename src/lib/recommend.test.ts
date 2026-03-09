@@ -1,17 +1,19 @@
 import { describe, expect, it } from 'vitest'
-import { getVideosBySeries, seedVideos } from '@/data/seed-videos'
-import { catalogVideos } from '@/lib/catalog'
+import { seedVideos } from '@/data/seed-videos'
+import { catalogVideos, catalogSeries, getCatalogVideosBySeries } from '@/lib/catalog'
 import { recommendVideos } from './recommend'
 
 describe('recommendVideos', () => {
   it('keeps next episodes near the top for the active series', () => {
-    const episodes = getVideosBySeries('the-office')
+    const seriesItem = catalogSeries.find((series) => series.episodeCount >= 2)
+    const episodes = seriesItem ? getCatalogVideosBySeries(seriesItem.id) : []
     const seedVideo = episodes[0]
-    const candidateNext = episodes.find((video) => video.episodeNumber === (seedVideo.episodeNumber ?? 0) + 1)
-    const otherVideo = seedVideos.find(
-      (video) => video.seriesId !== 'the-office' && video.category !== seedVideo.category,
+    const candidateNext = episodes[1]
+    const otherVideo = catalogVideos.find(
+      (video) => video.seriesId !== seriesItem?.id && video.category !== seedVideo.category,
     )
 
+    expect(seriesItem).toBeDefined()
     expect(seedVideo).toBeDefined()
     expect(candidateNext).toBeDefined()
     expect(otherVideo).toBeDefined()
@@ -103,7 +105,7 @@ describe('recommendVideos', () => {
   })
 
   it('filters out blocked clips even when they are passed explicitly', () => {
-    const blocked = seedVideos.find((video) => video.youtubeId === '_Zdd5zhPK1Q')
+    const blocked = seedVideos.find((video) => !catalogVideos.some((catalogVideo) => catalogVideo.id === video.id))
     const available = catalogVideos[0]
 
     expect(blocked).toBeDefined()

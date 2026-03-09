@@ -49,6 +49,10 @@ declare namespace YT {
     getCurrentTime(): number
     getDuration(): number
     setPlaybackRate(rate: number): void
+    setVolume?(volume: number): void
+    mute?(): void
+    unMute?(): void
+    isMuted?(): boolean
     getPlayerState(): number
     destroy(): void
   }

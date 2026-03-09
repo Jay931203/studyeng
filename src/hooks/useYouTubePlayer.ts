@@ -277,35 +277,6 @@ export function useYouTubePlayer(
   }, [playbackRate, ready])
 
   useEffect(() => {
-    if (!ready || playbackStarted) return
-
-    const player = playerRef.current as
-      | (YT.Player & { getIframe?: () => HTMLIFrameElement; mute?: () => void })
-      | null
-    if (!player) return
-
-    const intervalId = window.setInterval(() => {
-      const iframe = typeof player.getIframe === 'function' ? player.getIframe() : null
-      if (!iframe || !iframe.isConnected) {
-        return
-      }
-
-      window.clearInterval(intervalId)
-
-      try {
-        player.mute?.()
-        player.playVideo()
-      } catch {
-        // Ignore autoplay failures.
-      }
-    }, 100)
-
-    return () => {
-      window.clearInterval(intervalId)
-    }
-  }, [playbackStarted, ready])
-
-  useEffect(() => {
     let disposed = false
 
     setIsPlaying(false)
@@ -366,10 +337,17 @@ export function useYouTubePlayer(
               // Ignore caption-module failures on unsupported players.
             }
 
-            event.target.setPlaybackRate(usePlayerStore.getState().playbackRate)
-            event.target.playVideo()
+            const readyPlayer = event.target as YT.Player
+            readyPlayer.setPlaybackRate(usePlayerStore.getState().playbackRate)
+            try {
+              readyPlayer.unMute?.()
+              readyPlayer.setVolume?.(100)
+            } catch {
+              // Ignore volume API failures on unsupported players.
+            }
+            readyPlayer.playVideo()
 
-            const duration = event.target.getDuration()
+            const duration = readyPlayer.getDuration()
             const maxEnd = Math.max(duration - 0.5, 1)
             const effectiveClipEnd = clipEnd > 0 ? Math.min(clipEnd, maxEnd) : maxEnd
             const effectiveClipStart = Math.min(clipStart, Math.max(effectiveClipEnd - 5, 0))
@@ -389,7 +367,7 @@ export function useYouTubePlayer(
               initialSeekTime >= effectiveClipStart &&
               initialSeekTime < effectiveClipEnd
             ) {
-              event.target.seekTo(initialSeekTime, true)
+              readyPlayer.seekTo(initialSeekTime, true)
             }
 
             setReadySessionKey(playerSessionKey)
