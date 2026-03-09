@@ -264,7 +264,7 @@ export function VideoPlayer({
 
   const videoArea = (
     <div
-      className={`relative ${useLandscapeSplitLayout ? 'h-full w-full' : 'flex-1 min-h-0'}`}
+      className="relative h-full w-full"
       onClick={handleTap}
       style={{ backgroundColor: 'var(--player-surface)' }}
     >
