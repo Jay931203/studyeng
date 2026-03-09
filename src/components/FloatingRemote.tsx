@@ -33,8 +33,10 @@ export function FloatingRemote({
 
   const isPlaying = usePlayerStore((state) => state.isPlaying)
   const setIsPlaying = usePlayerStore((state) => state.setIsPlaying)
+  const activeSubIndex = usePlayerStore((state) => state.activeSubIndex)
   const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
   const isFrozen = freezeSubIndex !== null
+  const canEnableFreeze = activeSubIndex >= 0
 
   const handleButtonClick = useCallback((action: () => void) => {
     action()
@@ -180,9 +182,16 @@ export function FloatingRemote({
               <>
                 <button
                   onClick={() => handleButtonClick(onToggleFreeze)}
+                  disabled={!isFrozen && !canEnableFreeze}
                   className="flex h-11 w-11 items-center justify-center"
-                  style={{ color: isFrozen ? 'var(--accent-text)' : 'var(--text-muted)' }}
-                  aria-label={isFrozen ? 'Freeze on' : 'Freeze off'}
+                  style={{
+                    color: isFrozen
+                      ? 'var(--accent-text)'
+                      : canEnableFreeze
+                        ? 'var(--text-muted)'
+                        : 'var(--player-faint)',
+                  }}
+                  aria-label={isFrozen ? 'Disable freeze' : 'Enable freeze'}
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
