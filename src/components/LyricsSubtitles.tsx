@@ -17,6 +17,7 @@ interface LyricsSubtitlesProps {
   videoId?: string
   onSavePhrase?: (phrase: SubtitleEntry) => void
   onSeek?: (time: number) => void
+  visibleLineCount?: number
 }
 
 /** Threshold in px ??if the pointer moves more than this, it's a scroll, not a long-press */
@@ -53,7 +54,13 @@ function haptic(ms = 10) {
   try { navigator.vibrate?.(ms) } catch { /* unsupported */ }
 }
 
-export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: LyricsSubtitlesProps) {
+export function LyricsSubtitles({
+  subtitles,
+  videoId,
+  onSavePhrase,
+  onSeek,
+  visibleLineCount = 3,
+}: LyricsSubtitlesProps) {
   const subtitleMode = usePlayerStore((state) => state.subtitleMode)
   const activeSubIndex = usePlayerStore((state) => state.activeSubIndex)
   const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
@@ -444,6 +451,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
   }, [])
 
   const showKo = subtitleMode === 'en-ko'
+  const visibilityRadius = Math.max(1, Math.floor(visibleLineCount / 2))
   const activeNotice =
     justSavedIdx !== null
       ? { message: 'SAVED', tone: 'default' as const }
@@ -515,28 +523,39 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
             // IMPORTANT: Never use pointer-events-none on individual items —
             // it blocks touch events and prevents scroll initiation.
             const opacityClass = isUserScrolling
-              ? (isJustSaved || isActive || isFrozen
+              ? isJustSaved || isActive || isFrozen
                 ? 'opacity-100'
                 : distance === 1
-                ? 'opacity-70'
-                : 'opacity-50')
+                  ? 'opacity-75'
+                  : distance === 2
+                    ? 'opacity-60'
+                    : 'opacity-45'
               : isJustSaved || isActive || isFrozen
-              ? 'opacity-100'
-              : distance === 1
-              ? 'opacity-45'
-              : distance === 2
-              ? 'opacity-25'
-              : distance === 3
-              ? 'opacity-[0.12]'
-              : 'opacity-0'
+                ? 'opacity-100'
+                : distance === 1
+                  ? 'opacity-45'
+                  : distance === 2 && visibilityRadius >= 2
+                    ? 'opacity-22'
+                    : 'opacity-0'
 
             // Whether this subtitle is fully hidden (not visible, not interactable)
             // Wrapper div stays pointer-events-auto for scroll, but inner button is disabled
-            const isHidden = !isUserScrolling && !isJustSaved && !isActive && !isFrozen && distance > 3
+            const isHidden =
+              !isUserScrolling &&
+              !isJustSaved &&
+              !isActive &&
+              !isFrozen &&
+              distance > visibilityRadius
 
             const scaleValue = isUserScrolling
               ? (isJustSaved || isActive || isFrozen ? 1 : 0.95)
-              : isJustSaved || isActive || isFrozen ? 1 : distance === 1 ? 0.94 : distance === 2 ? 0.90 : 0.87
+              : isJustSaved || isActive || isFrozen
+                ? 1
+                : distance === 1
+                  ? 0.94
+                  : distance === 2 && visibilityRadius >= 2
+                    ? 0.9
+                    : 0.87
 
             const flagged = adminActive && videoId
               ? flaggedSubtitles.some(

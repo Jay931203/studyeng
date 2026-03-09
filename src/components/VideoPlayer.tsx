@@ -180,6 +180,7 @@ export function VideoPlayer({
       videoId={videoId ?? youtubeId}
       onSavePhrase={onSavePhrase}
       onSeek={(time) => seekTo(time)}
+      visibleLineCount={useLandscapeSplitLayout ? 5 : 3}
     />
   )
 
@@ -389,33 +390,44 @@ export function VideoPlayer({
     </div>
   )
 
-  if (useLandscapeSplitLayout) {
-    return (
-      <div className="flex h-full w-full flex-row" style={{ backgroundColor: 'var(--player-surface)' }}>
-        <div className="relative h-full flex-shrink-0" style={{ width: landscapeVideoPaneWidth }}>
-          {videoArea}
-        </div>
-
-        <div className="h-full w-px flex-shrink-0" style={{ backgroundColor: 'var(--player-divider)' }} />
-
-        <div className="relative flex min-w-0 flex-1 flex-col" style={{ backgroundColor: 'var(--player-surface)' }}>
-          <div className="min-h-0 flex-1">{subtitlePanel}</div>
-          {progressArea}
-        </div>
-      </div>
-    )
-  }
-
   return (
-    <div className="flex h-full w-full flex-col" style={{ backgroundColor: 'var(--player-surface)' }}>
-      {videoArea}
+    <div
+      className={`flex h-full w-full ${useLandscapeSplitLayout ? 'flex-row' : 'flex-col'}`}
+      style={{ backgroundColor: 'var(--player-surface)' }}
+    >
       <div
-        className={`relative flex-shrink-0 ${isLandscapeViewport ? 'h-[208px]' : 'h-[176px]'}`}
+        className={`relative ${useLandscapeSplitLayout ? 'h-full flex-shrink-0' : 'flex-1 min-h-0'}`}
+        style={useLandscapeSplitLayout ? { width: landscapeVideoPaneWidth } : undefined}
+      >
+        {videoArea}
+      </div>
+
+      {useLandscapeSplitLayout && (
+        <div
+          className="h-full w-px flex-shrink-0"
+          style={{ backgroundColor: 'var(--player-divider)' }}
+        />
+      )}
+
+      <div
+        className={
+          useLandscapeSplitLayout
+            ? 'relative flex min-w-0 flex-1 flex-col'
+            : `relative flex-shrink-0 ${isLandscapeViewport ? 'h-[208px]' : 'h-[176px]'}`
+        }
         style={{ backgroundColor: 'var(--player-surface)' }}
       >
-        {subtitlePanel}
+        {useLandscapeSplitLayout ? (
+          <>
+            <div className="min-h-0 flex-1">{subtitlePanel}</div>
+            {progressArea}
+          </>
+        ) : (
+          subtitlePanel
+        )}
       </div>
-      {progressArea}
+
+      {!useLandscapeSplitLayout && progressArea}
     </div>
   )
 }
