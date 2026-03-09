@@ -280,7 +280,7 @@ export function UnifiedControls({
     : 'relative flex h-8 w-8 items-center justify-center rounded-full transition-colors'
   const dividerClassName = compact ? 'h-3.5 w-px shrink-0' : 'h-4 w-px shrink-0'
   const iconSizeClassName = compact ? 'h-3.5 w-3.5' : 'h-4 w-4'
-  const gameModeIconSizeClassName = compact ? 'h-4 w-4' : 'h-[18px] w-[18px]'
+  const gameModeIconSizeClassName = compact ? 'h-[18px] w-[18px]' : 'h-5 w-5'
   const repeatIconSizeClassName = compact ? 'h-3 w-3' : 'h-3.5 w-3.5'
   const playbackTriggerClassName = compact
     ? 'flex h-7 items-center gap-1 rounded-full px-1.5 text-[10px] font-semibold transition-colors'
