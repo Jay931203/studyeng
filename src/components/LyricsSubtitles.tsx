@@ -454,7 +454,7 @@ export function LyricsSubtitles({
   const visibilityRadius = Math.max(1, Math.floor(visibleLineCount / 2))
   const activeNotice =
     justSavedIdx !== null
-      ? { message: 'SAVED', tone: 'default' as const }
+      ? { message: 'SAVED', tone: 'accent' as const }
       : showFreezeIndicator
         ? { message: freezeIndicatorText, tone: 'freeze' as const }
         : showFreezeTip

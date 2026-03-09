@@ -53,11 +53,11 @@
   --player-gradient-strong: rgba(0,0,0,0.58);
   --player-gradient-soft: rgba(0,0,0,0.16);
   --player-active-subtitle-bg: rgba(0,0,0,0.68);
-  --freeze-bg: rgba(20, 184, 166, 0.18);
-  --freeze-border: rgba(94, 234, 212, 0.68);
-  --freeze-text: #ecfeff;
-  --freeze-icon: #5eead4;
-  --freeze-shadow: rgba(20, 184, 166, 0.34);
+  --freeze-bg: rgba(var(--accent-primary-rgb), 0.18);
+  --freeze-border: rgba(var(--accent-primary-rgb), 0.42);
+  --freeze-text: var(--accent-text);
+  --freeze-icon: var(--accent-primary);
+  --freeze-shadow: rgba(var(--accent-primary-rgb), 0.32);
   --game-overlay: rgba(0,0,0,0.88);
 }
 
@@ -102,11 +102,11 @@
   --player-gradient-strong: rgba(0,0,0,0.58);
   --player-gradient-soft: rgba(0,0,0,0.16);
   --player-active-subtitle-bg: rgba(0,0,0,0.68);
-  --freeze-bg: rgba(59, 130, 246, 0.2);
-  --freeze-border: rgba(96, 165, 250, 0.72);
-  --freeze-text: #eff6ff;
-  --freeze-icon: #60a5fa;
-  --freeze-shadow: rgba(59, 130, 246, 0.34);
+  --freeze-bg: rgba(var(--accent-primary-rgb), 0.18);
+  --freeze-border: rgba(var(--accent-primary-rgb), 0.42);
+  --freeze-text: var(--accent-text);
+  --freeze-icon: var(--accent-primary);
+  --freeze-shadow: rgba(var(--accent-primary-rgb), 0.32);
   --game-overlay: rgba(0,0,0,0.88);
 }
 
@@ -151,11 +151,11 @@
   --player-gradient-strong: rgba(0,0,0,0.58);
   --player-gradient-soft: rgba(0,0,0,0.16);
   --player-active-subtitle-bg: rgba(0,0,0,0.68);
-  --freeze-bg: rgba(168, 85, 247, 0.18);
-  --freeze-border: rgba(192, 132, 252, 0.68);
-  --freeze-text: #f5f3ff;
-  --freeze-icon: #c084fc;
-  --freeze-shadow: rgba(168, 85, 247, 0.34);
+  --freeze-bg: rgba(var(--accent-primary-rgb), 0.18);
+  --freeze-border: rgba(var(--accent-primary-rgb), 0.42);
+  --freeze-text: var(--accent-text);
+  --freeze-icon: var(--accent-primary);
+  --freeze-shadow: rgba(var(--accent-primary-rgb), 0.32);
   --game-overlay: rgba(0,0,0,0.88);
 }
 
@@ -200,11 +200,11 @@
   --player-gradient-strong: rgba(0,0,0,0.58);
   --player-gradient-soft: rgba(0,0,0,0.16);
   --player-active-subtitle-bg: rgba(0,0,0,0.68);
-  --freeze-bg: rgba(124, 77, 255, 0.18);
-  --freeze-border: rgba(255, 255, 255, 0.58);
-  --freeze-text: #ffffff;
-  --freeze-icon: #7c4dff;
-  --freeze-shadow: rgba(124, 77, 255, 0.26);
+  --freeze-bg: rgba(var(--accent-primary-rgb), 0.18);
+  --freeze-border: rgba(var(--accent-primary-rgb), 0.42);
+  --freeze-text: var(--accent-text);
+  --freeze-icon: var(--accent-primary);
+  --freeze-shadow: rgba(var(--accent-primary-rgb), 0.32);
   --game-overlay: rgba(0,0,0,0.88);
   --accent-rainbow: linear-gradient(135deg, #ff5ac8 0%, #ff9538 24%, #ffd84a 50%, #53d7ff 76%, #7c4dff 100%);
   --accent-rainbow-soft: linear-gradient(
@@ -258,11 +258,11 @@
   --player-gradient-strong: rgba(255,255,255,0.88);
   --player-gradient-soft: rgba(255,255,255,0.24);
   --player-active-subtitle-bg: rgba(255,255,255,0.88);
-  --freeze-bg: rgba(15, 118, 110, 0.1);
-  --freeze-border: rgba(17, 94, 89, 0.34);
-  --freeze-text: #134e4a;
-  --freeze-icon: #0f766e;
-  --freeze-shadow: rgba(15, 118, 110, 0.18);
+  --freeze-bg: rgba(var(--accent-primary-rgb), 0.1);
+  --freeze-border: rgba(var(--accent-primary-rgb), 0.28);
+  --freeze-text: var(--accent-text);
+  --freeze-icon: var(--accent-primary);
+  --freeze-shadow: rgba(var(--accent-primary-rgb), 0.18);
   --game-overlay: rgba(241,245,249,0.92);
 }
 
@@ -306,11 +306,11 @@
   --player-gradient-strong: rgba(255,255,255,0.88);
   --player-gradient-soft: rgba(255,255,255,0.24);
   --player-active-subtitle-bg: rgba(255,255,255,0.88);
-  --freeze-bg: rgba(37, 99, 235, 0.1);
-  --freeze-border: rgba(29, 78, 216, 0.34);
-  --freeze-text: #1e3a8a;
-  --freeze-icon: #2563eb;
-  --freeze-shadow: rgba(37, 99, 235, 0.18);
+  --freeze-bg: rgba(var(--accent-primary-rgb), 0.1);
+  --freeze-border: rgba(var(--accent-primary-rgb), 0.28);
+  --freeze-text: var(--accent-text);
+  --freeze-icon: var(--accent-primary);
+  --freeze-shadow: rgba(var(--accent-primary-rgb), 0.18);
   --game-overlay: rgba(241,245,249,0.92);
 }
 
@@ -355,11 +355,11 @@
   --player-gradient-strong: rgba(255,255,255,0.88);
   --player-gradient-soft: rgba(255,255,255,0.24);
   --player-active-subtitle-bg: rgba(255,255,255,0.88);
-  --freeze-bg: rgba(124, 58, 237, 0.1);
-  --freeze-border: rgba(109, 40, 217, 0.34);
-  --freeze-text: #4c1d95;
-  --freeze-icon: #7c3aed;
-  --freeze-shadow: rgba(124, 58, 237, 0.18);
+  --freeze-bg: rgba(var(--accent-primary-rgb), 0.1);
+  --freeze-border: rgba(var(--accent-primary-rgb), 0.28);
+  --freeze-text: var(--accent-text);
+  --freeze-icon: var(--accent-primary);
+  --freeze-shadow: rgba(var(--accent-primary-rgb), 0.18);
   --game-overlay: rgba(241,245,249,0.92);
 }
 
@@ -403,11 +403,11 @@
   --player-gradient-strong: rgba(255,255,255,0.88);
   --player-gradient-soft: rgba(255,255,255,0.24);
   --player-active-subtitle-bg: rgba(255,255,255,0.88);
-  --freeze-bg: rgba(124, 77, 255, 0.1);
-  --freeze-border: rgba(79, 124, 255, 0.24);
-  --freeze-text: #4c1d95;
-  --freeze-icon: #7c4dff;
-  --freeze-shadow: rgba(124, 77, 255, 0.18);
+  --freeze-bg: rgba(var(--accent-primary-rgb), 0.1);
+  --freeze-border: rgba(var(--accent-primary-rgb), 0.28);
+  --freeze-text: var(--accent-text);
+  --freeze-icon: var(--accent-primary);
+  --freeze-shadow: rgba(var(--accent-primary-rgb), 0.18);
   --game-overlay: rgba(241,245,249,0.92);
   --accent-rainbow: linear-gradient(135deg, #ff5ac8 0%, #ff8a3d 24%, #ffd84a 50%, #53d7ff 76%, #7c4dff 100%);
   --accent-rainbow-soft: linear-gradient(

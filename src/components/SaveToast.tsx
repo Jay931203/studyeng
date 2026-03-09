@@ -6,7 +6,7 @@ interface SaveToastProps {
   show: boolean
   message: string
   placement?: 'fixed' | 'inline'
-  tone?: 'default' | 'freeze' | 'muted'
+  tone?: 'default' | 'freeze' | 'muted' | 'accent'
 }
 
 export function SaveToast({
@@ -22,6 +22,12 @@ export function SaveToast({
           borderColor: 'var(--freeze-border)',
           color: 'var(--freeze-text)',
         }
+      : tone === 'accent'
+        ? {
+            backgroundColor: 'rgba(var(--accent-primary-rgb), 0.18)',
+            borderColor: 'rgba(var(--accent-primary-rgb), 0.36)',
+            color: 'var(--accent-text)',
+          }
       : tone === 'muted'
         ? {
             backgroundColor: 'var(--player-chip-bg)',
