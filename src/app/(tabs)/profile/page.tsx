@@ -141,6 +141,8 @@ export default function ProfilePage() {
             </div>
           </motion.div>
 
+          <BillingManagementCard />
+
           <SurfaceCard className="p-6">
             <SectionLabel label="THEME" />
 
@@ -272,8 +274,7 @@ export default function ProfilePage() {
         </div>
       </div>
 
-      <div className="mt-6 space-y-6">
-        <BillingManagementCard />
+      <div className="mt-6">
         <AdminIssuesList />
       </div>
     </AppPage>
