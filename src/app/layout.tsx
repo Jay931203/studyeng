@@ -69,12 +69,18 @@ export default function RootLayout({
               if (legacyTheme === 'blue-dark') {
                 backgroundTheme = 'dark';
                 colorTheme = 'blue';
+              } else if (legacyTheme === 'purple-dark') {
+                backgroundTheme = 'dark';
+                colorTheme = 'purple';
               } else if (legacyTheme === 'light') {
                 backgroundTheme = 'light';
                 colorTheme = 'teal';
               } else if (legacyTheme === 'light-blue') {
                 backgroundTheme = 'light';
                 colorTheme = 'blue';
+              } else if (legacyTheme === 'light-purple') {
+                backgroundTheme = 'light';
+                colorTheme = 'purple';
               } else {
                 backgroundTheme = 'dark';
                 colorTheme = 'teal';
@@ -82,15 +88,27 @@ export default function RootLayout({
             }
 
             if (colorTheme === 'violet') {
-              colorTheme = 'teal';
+              colorTheme = 'purple';
             }
 
             if (backgroundTheme && colorTheme) {
               var themeId;
               if (backgroundTheme === 'dark') {
-                themeId = colorTheme === 'blue' ? 'blue-dark' : 'teal-dark';
+                if (colorTheme === 'blue') {
+                  themeId = 'blue-dark';
+                } else if (colorTheme === 'purple') {
+                  themeId = 'purple-dark';
+                } else {
+                  themeId = 'teal-dark';
+                }
               } else {
-                themeId = colorTheme === 'blue' ? 'light-blue' : 'light';
+                if (colorTheme === 'blue') {
+                  themeId = 'light-blue';
+                } else if (colorTheme === 'purple') {
+                  themeId = 'light-purple';
+                } else {
+                  themeId = 'light';
+                }
               }
 
               document.documentElement.setAttribute('data-theme', themeId);
