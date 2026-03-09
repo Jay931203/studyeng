@@ -238,8 +238,8 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
       } else if (freezeSubIndex !== null) {
         // Freeze mode is active
         if (freezeSubIndex === idx) {
-          // Tap frozen subtitle ??exit freeze
-          exitFreeze()
+          // Keep freeze active on single tap. Long-press handles freeze off.
+          onSeek?.(sub.start)
         } else {
           // Tap different subtitle ??move freeze to it
           enterFreeze(sub, idx)
@@ -253,7 +253,6 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
     },
     [
       enterFreeze,
-      exitFreeze,
       freezeSubIndex,
       getSavedPhraseId,
       onSavePhrase,
