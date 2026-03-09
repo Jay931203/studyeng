@@ -1,12 +1,13 @@
 'use client'
 
 import { AnimatePresence, motion } from 'framer-motion'
-import { useCallback, useEffect, useRef, useState, type MouseEvent } from 'react'
+import { useCallback, useEffect, useId, useRef, useState, type MouseEvent } from 'react'
 import { createPortal } from 'react-dom'
 import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useAdminStore, type IssueType } from '@/stores/useAdminStore'
 import { useLikeStore } from '@/stores/useLikeStore'
 import { usePlayerStore } from '@/stores/usePlayerStore'
+import { useThemeStore } from '@/stores/useThemeStore'
 import { SaveToast } from './SaveToast'
 
 const SPEEDS = [0.75, 1.0, 1.25, 1.5]
@@ -67,6 +68,7 @@ export function UnifiedControls({
   className,
   compact = false,
 }: UnifiedControlsProps) {
+  const isRainbowTheme = useThemeStore((state) => state.colorTheme === 'rainbow')
   const {
     subtitleMode,
     toggleSubtitleMode,
@@ -102,6 +104,7 @@ export function UnifiedControls({
   const menuTriggerRef = useRef<HTMLButtonElement | null>(null)
   const menuPanelRef = useRef<HTMLDivElement | null>(null)
   const toastTimerRef = useRef<number | null>(null)
+  const gameGradientId = `${useId().replace(/:/g, '')}-game`
 
   const showToast = useCallback((message: string) => {
     setToastMessage(message)
@@ -763,7 +766,7 @@ export function UnifiedControls({
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="currentColor"
+              stroke={isRainbowTheme && gameModeEnabled ? `url(#${gameGradientId})` : 'currentColor'}
               strokeWidth={1.9}
               className={gameModeIconSizeClassName}
               animate={gameModeEnabled ? { scale: [1, 1.35, 0.9, 1.1, 1] } : { scale: 1 }}
@@ -773,17 +776,58 @@ export function UnifiedControls({
                   : { duration: 0.15 }
               }
             >
+              {isRainbowTheme && gameModeEnabled && (
+                <defs>
+                  <linearGradient id={gameGradientId} x1="4" y1="4" x2="20" y2="20" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" stopColor="#ff5ac8" />
+                    <stop offset="24%" stopColor="#ff9538" />
+                    <stop offset="50%" stopColor="#ffd84a" />
+                    <stop offset="76%" stopColor="#53d7ff" />
+                    <stop offset="100%" stopColor="#7c4dff" />
+                  </linearGradient>
+                </defs>
+              )}
               <rect x="5.25" y="5.25" width="13.5" height="13.5" rx="3.2" />
-              <circle cx="9.15" cy="9.15" r="1.1" fill="currentColor" stroke="none" />
-              <circle cx="14.85" cy="9.15" r="1.1" fill="currentColor" stroke="none" />
-              <circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none" />
-              <circle cx="9.15" cy="14.85" r="1.1" fill="currentColor" stroke="none" />
-              <circle cx="14.85" cy="14.85" r="1.1" fill="currentColor" stroke="none" />
+              <circle
+                cx="9.15"
+                cy="9.15"
+                r="1.1"
+                fill={isRainbowTheme && gameModeEnabled ? `url(#${gameGradientId})` : 'currentColor'}
+                stroke="none"
+              />
+              <circle
+                cx="14.85"
+                cy="9.15"
+                r="1.1"
+                fill={isRainbowTheme && gameModeEnabled ? `url(#${gameGradientId})` : 'currentColor'}
+                stroke="none"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="1.1"
+                fill={isRainbowTheme && gameModeEnabled ? `url(#${gameGradientId})` : 'currentColor'}
+                stroke="none"
+              />
+              <circle
+                cx="9.15"
+                cy="14.85"
+                r="1.1"
+                fill={isRainbowTheme && gameModeEnabled ? `url(#${gameGradientId})` : 'currentColor'}
+                stroke="none"
+              />
+              <circle
+                cx="14.85"
+                cy="14.85"
+                r="1.1"
+                fill={isRainbowTheme && gameModeEnabled ? `url(#${gameGradientId})` : 'currentColor'}
+                stroke="none"
+              />
             </motion.svg>
 
             <AnimatePresence>
               {gameModeEnabled &&
-                [0, 60, 120, 180, 240, 300].map((angle) => (
+                [0, 60, 120, 180, 240, 300].map((angle, index) => (
                   <motion.div
                     key={angle}
                     initial={{ opacity: 1, scale: 0, x: 0, y: 0 }}
@@ -796,7 +840,11 @@ export function UnifiedControls({
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.45, ease: 'easeOut' }}
                     className="absolute h-1 w-1 rounded-full"
-                    style={{ backgroundColor: 'var(--freeze-icon)' }}
+                    style={{
+                      backgroundColor: isRainbowTheme
+                        ? ['#ff5ac8', '#ff9538', '#ffd84a', '#53d7ff', '#7c4dff', '#ff5ac8'][index]
+                        : 'var(--freeze-icon)',
+                    }}
                   />
                 ))}
             </AnimatePresence>
