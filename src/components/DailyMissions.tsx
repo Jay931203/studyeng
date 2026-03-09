@@ -41,7 +41,7 @@ export function DailyMissions() {
           <span
             className={`rounded-full px-3 py-1 text-[11px] font-semibold ${
               allCompleteBonus
-                ? 'bg-green-500/15 text-green-400'
+                ? 'bg-[var(--accent-glow)] text-[var(--accent-text)]'
                 : 'bg-[var(--bg-secondary)] text-[var(--text-muted)]'
             }`}
           >
@@ -58,7 +58,7 @@ export function DailyMissions() {
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: `${Math.min(completionRate, 100)}%` }}
-              className="h-full rounded-full bg-gradient-to-r from-[var(--accent-primary)] to-emerald-400"
+              className="h-full rounded-full bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)]"
             />
           </div>
         </div>
@@ -93,7 +93,7 @@ export function DailyMissions() {
                       initial={{ width: 0 }}
                       animate={{ width: `${Math.min(progress, 100)}%` }}
                       className={`h-full rounded-full ${
-                        mission.completed ? 'bg-green-500' : 'bg-[var(--accent-primary)]'
+                        mission.completed ? 'bg-[var(--accent-primary)]' : 'bg-[var(--accent-primary)]'
                       }`}
                     />
                   </div>
@@ -109,7 +109,7 @@ export function DailyMissions() {
 
       {allCompleteBonus && (
         <div className="px-5 pb-4">
-          <p className="rounded-2xl bg-green-500/10 px-4 py-3 text-center text-xs text-green-300/90">
+          <p className="rounded-2xl bg-[var(--accent-glow)] px-4 py-3 text-center text-xs text-[var(--accent-text)]">
             DONE
           </p>
         </div>
@@ -175,7 +175,7 @@ function LearningPaceCard() {
           </div>
           <div className="mb-2 h-1.5 overflow-hidden rounded-full bg-[var(--bg-secondary)]">
             <div
-              className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-green-400"
+              className="h-full rounded-full bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)]"
               style={{ width: `${Math.min(completionRate, 100)}%` }}
             />
           </div>
@@ -183,7 +183,7 @@ function LearningPaceCard() {
             <span className="shrink-0 text-[var(--text-muted)]">
               {completedCount}/{totalDays} ({Math.round(completionRate)}%)
             </span>
-            <span className="min-w-0 truncate font-medium text-emerald-400">
+            <span className="min-w-0 truncate font-medium text-[var(--accent-text)]">
               {nextMilestoneText}
             </span>
           </div>
@@ -213,7 +213,7 @@ function LearningPaceCard() {
               >
                 <div className="mb-4 flex items-start justify-between gap-4">
                   <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400">
+                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent-text)]">
                       PACE
                     </p>
                     <h3 className="mt-2 text-lg font-semibold text-[var(--text-primary)]">
@@ -239,7 +239,7 @@ function LearningPaceCard() {
                     </div>
                     <div className="text-right">
                       <p className="text-xs text-[var(--text-muted)]">DAYS</p>
-                      <p className="mt-1 text-lg font-semibold text-emerald-400">
+                      <p className="mt-1 text-lg font-semibold text-[var(--accent-text)]">
                         {completedCount}/{totalDays}
                       </p>
                     </div>
@@ -268,7 +268,7 @@ function LearningPaceCard() {
                         </div>
                         <p
                           className={`text-sm font-semibold ${
-                            reached ? 'text-emerald-400' : 'text-[var(--text-secondary)]'
+                            reached ? 'text-[var(--accent-text)]' : 'text-[var(--text-secondary)]'
                           }`}
                         >
                           {reached ? 'YES' : 'NO'}
