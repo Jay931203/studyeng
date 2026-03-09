@@ -9,6 +9,8 @@ import {
   type Series as SeriesType,
   type VideoData,
 } from '@/data/seed-videos'
+import { CollectionBrowser } from '@/components/CollectionBrowser'
+import { CollectionDetailView } from '@/components/CollectionDetail'
 import { LogoFull } from '@/components/Logo'
 import { SearchBar } from '@/components/SearchBar'
 import { VideoCard } from '@/components/VideoCard'
@@ -70,6 +72,7 @@ export default function ExplorePage() {
   } = useWatchHistoryStore()
 
   const selectedSeriesId = searchParams.get('series')
+  const selectedCollectionId = searchParams.get('collection')
   const source = searchParams.get('source')
   const returnVideoId = searchParams.get('returnVideoId')
   const returnSeriesId = searchParams.get('returnSeriesId')
@@ -160,8 +163,8 @@ export default function ExplorePage() {
       .slice(0, 4)
   }, [getNextEpisode, getSeriesProgress, watchRecords, watchedEpisodes])
 
-  const recommended = useMemo(() => {
-    const ranked = recommendVideos(catalogVideos, {
+  const rankedRecommendations = useMemo(() => {
+    return recommendVideos(catalogVideos, {
       watchedEpisodes,
       completionCounts,
       watchRecords,
@@ -173,8 +176,6 @@ export default function ExplorePage() {
       recentVideoIds,
       videoSignals,
     })
-
-    return ranked.slice(0, 8)
   }, [
     completionCounts,
     interests,
@@ -188,9 +189,37 @@ export default function ExplorePage() {
     watchedEpisodes,
   ])
 
-  const spotlightVideo = continueSeries[0]?.nextVideo ?? recommended[0] ?? catalogVideos[0]
+  const spotlightVideo = rankedRecommendations[0] ?? catalogVideos[0]
+  const spotlightSeries = spotlightVideo?.seriesId
+    ? catalogSeries.find((item) => item.id === spotlightVideo.seriesId) ?? null
+    : null
+  const recommended = useMemo(() => {
+    if (!spotlightVideo) return []
+
+    const seen = new Set([spotlightVideo.id])
+    const cards = rankedRecommendations.filter((video) => {
+      if (seen.has(video.id)) return false
+      seen.add(video.id)
+      return true
+    })
+
+    if (cards.length >= 4) return cards.slice(0, 4)
+
+    for (const video of catalogVideos) {
+      if (seen.has(video.id)) continue
+      seen.add(video.id)
+      cards.push(video)
+      if (cards.length === 4) break
+    }
+
+    return cards
+  }, [rankedRecommendations, spotlightVideo])
 
   if (!spotlightVideo) return null
+
+  if (selectedCollectionId) {
+    return <CollectionDetailView collectionId={selectedCollectionId} />
+  }
 
   if (selectedSeries) {
     const progressPct = getSeriesProgress(selectedSeries.id, selectedSeries.episodeCount)
@@ -383,9 +412,9 @@ export default function ExplorePage() {
               <h2 className="mt-3 text-3xl font-bold leading-tight text-[var(--text-primary)]">
                 지금 볼 영상
               </h2>
-              {continueSeries.length > 0 && (
+              {spotlightSeries && (
                 <p className="mt-2 text-sm text-[var(--text-secondary)]">
-                  {continueSeries[0].seriesItem.title}
+                  {spotlightSeries.title}
                 </p>
               )}
 
@@ -476,6 +505,8 @@ export default function ExplorePage() {
           </div>
         </section>
       )}
+
+      <CollectionBrowser />
 
       <section className="mb-8">
         <SectionHeader title="추천" />
