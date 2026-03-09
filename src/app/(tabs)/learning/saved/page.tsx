@@ -1,18 +1,59 @@
 'use client'
 
 import { AnimatePresence } from 'framer-motion'
+import { useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import { SavedPhraseCard } from '@/components/SavedPhraseCard'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import { getCatalogVideoById } from '@/lib/catalog'
 import { buildShortsUrl } from '@/lib/videoRoutes'
+import type { SavedPhrase } from '@/stores/usePhraseStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
+
+function formatDateLabel(timestamp: number): string {
+  const now = new Date()
+  const date = new Date(timestamp)
+  const diffDays = Math.floor((now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24))
+
+  if (diffDays === 0) return 'TODAY'
+  if (diffDays === 1) return 'YESTERDAY'
+  if (diffDays < 7) return `${diffDays} DAYS AGO`
+  return `${date.getMonth() + 1}/${date.getDate()}`
+}
+
+function getDateKey(timestamp: number): string {
+  const date = new Date(timestamp)
+  return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
+}
 
 export default function SavedPhrasesPage() {
   const router = useRouter()
   const { phrases, removePhrase } = usePhraseStore()
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)
+
+  const groupedPhrases = useMemo(() => {
+    const groups: { label: string; key: string; phrases: SavedPhrase[] }[] = []
+    const seen = new Set<string>()
+
+    for (const phrase of phrases) {
+      const dateKey = getDateKey(phrase.savedAt)
+
+      if (!seen.has(dateKey)) {
+        seen.add(dateKey)
+        groups.push({
+          label: formatDateLabel(phrase.savedAt),
+          key: dateKey,
+          phrases: [],
+        })
+      }
+
+      const group = groups.find((item) => item.key === dateKey)
+      group?.phrases.push(phrase)
+    }
+
+    return groups
+  }, [phrases])
 
   const handleBack = () => {
     if (typeof window !== 'undefined' && window.history.length > 1) {
@@ -51,25 +92,32 @@ export default function SavedPhrasesPage() {
               <p className="text-sm text-[var(--text-secondary)]">No saved items yet.</p>
             </div>
           ) : (
-            <div className="flex flex-col gap-3">
-              <AnimatePresence>
-                {phrases.map((phrase) => (
-                  <SavedPhraseCard
-                    key={phrase.id}
-                    phrase={phrase}
-                    onDelete={() => removePhrase(phrase.id)}
-                    onPlay={() => {
-                      clearDeletedFlag(phrase.videoId)
-                      const seriesId = getCatalogVideoById(phrase.videoId)?.seriesId
-                      const baseUrl = buildShortsUrl(phrase.videoId, seriesId)
-                      const separator = baseUrl.includes('?') ? '&' : '?'
-                      const url = `${baseUrl}${separator}t=${phrase.timestampStart}&phraseId=${phrase.id}`
-                      router.push(url)
-                    }}
-                  />
-                ))}
-              </AnimatePresence>
-            </div>
+            groupedPhrases.map((group) => (
+              <div key={group.key} className="mb-5 last:mb-0">
+                <p className="mb-2 text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]">
+                  {group.label}
+                </p>
+                <div className="flex flex-col gap-3">
+                  <AnimatePresence>
+                    {group.phrases.map((phrase) => (
+                      <SavedPhraseCard
+                        key={phrase.id}
+                        phrase={phrase}
+                        onDelete={() => removePhrase(phrase.id)}
+                        onPlay={() => {
+                          clearDeletedFlag(phrase.videoId)
+                          const seriesId = getCatalogVideoById(phrase.videoId)?.seriesId
+                          const baseUrl = buildShortsUrl(phrase.videoId, seriesId)
+                          const separator = baseUrl.includes('?') ? '&' : '?'
+                          const url = `${baseUrl}${separator}t=${phrase.timestampStart}&phraseId=${phrase.id}`
+                          router.push(url)
+                        }}
+                      />
+                    ))}
+                  </AnimatePresence>
+                </div>
+              </div>
+            ))
           )}
         </SurfaceCard>
       </div>
