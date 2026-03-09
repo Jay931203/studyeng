@@ -749,6 +749,15 @@ export function UnifiedControls({
               setGameModeEnabled(!gameModeEnabled)
             }}
             className={iconButtonClassName}
+            style={{
+              color: gameModeEnabled ? 'var(--accent-primary)' : 'var(--player-text)',
+              backgroundColor: gameModeEnabled
+                ? 'color-mix(in srgb, var(--accent-primary) 18%, transparent)'
+                : 'transparent',
+              boxShadow: gameModeEnabled
+                ? '0 0 0 1px color-mix(in srgb, var(--accent-primary) 30%, transparent), 0 0 18px color-mix(in srgb, var(--accent-primary) 18%, transparent)'
+                : 'none',
+            }}
             aria-label={gameModeEnabled ? '게임 모드 끄기' : '게임 모드 켜기'}
             title={gameModeEnabled ? '게임 모드 ON' : '게임 모드 OFF'}
           >
@@ -756,7 +765,7 @@ export function UnifiedControls({
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="none"
-              stroke={gameModeEnabled ? 'var(--accent-text)' : 'var(--player-text)'}
+              stroke="currentColor"
               strokeWidth={1.9}
               className={gameModeIconSizeClassName}
               animate={gameModeEnabled ? { scale: [1, 1.35, 0.9, 1.1, 1] } : { scale: 1 }}
@@ -766,26 +775,16 @@ export function UnifiedControls({
                   : { duration: 0.15 }
               }
             >
+              <circle cx="12" cy="12" r="7" />
+              <circle cx="12" cy="12" r="2.25" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 3.5v2.5" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v2.5" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3.5 12H6" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M18 12h2.5" />
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                d="M7.5 9.75h9a3.75 3.75 0 013.66 4.569l-.63 2.624a1.5 1.5 0 01-2.766.385l-.72-1.2a1.5 1.5 0 00-1.287-.728H9.243a1.5 1.5 0 00-1.286.729l-.72 1.198a1.5 1.5 0 01-2.766-.385l-.63-2.624A3.75 3.75 0 017.5 9.75Z"
-              />
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 12.375h3" />
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 10.875v3" />
-              <circle
-                cx="15.75"
-                cy="12.375"
-                r="0.8"
-                fill={gameModeEnabled ? 'var(--accent-text)' : 'var(--player-text)'}
-                stroke="none"
-              />
-              <circle
-                cx="17.25"
-                cy="10.875"
-                r="0.8"
-                fill={gameModeEnabled ? 'var(--accent-text)' : 'var(--player-text)'}
-                stroke="none"
+                d="M16.95 7.05l-1.8 1.8"
               />
             </motion.svg>
 
@@ -804,7 +803,7 @@ export function UnifiedControls({
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.45, ease: 'easeOut' }}
                     className="absolute h-1 w-1 rounded-full"
-                    style={{ backgroundColor: 'var(--accent-text)' }}
+                    style={{ backgroundColor: 'var(--accent-primary)' }}
                   />
                 ))}
             </AnimatePresence>
