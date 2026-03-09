@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { getCatalogSeriesById, getCatalogVideoById } from '@/lib/catalog'
 import type { SavedPhrase } from '@/stores/usePhraseStore'
 
 interface SavedPhraseCardProps {
@@ -10,6 +11,9 @@ interface SavedPhraseCardProps {
 }
 
 export function SavedPhraseCard({ phrase, onDelete, onPlay }: SavedPhraseCardProps) {
+  const seriesId = getCatalogVideoById(phrase.videoId)?.seriesId
+  const seriesTitle = seriesId ? getCatalogSeriesById(seriesId)?.title : null
+
   return (
     <motion.div
       layout
@@ -25,10 +29,15 @@ export function SavedPhraseCard({ phrase, onDelete, onPlay }: SavedPhraseCardPro
         <p className="mt-1.5 text-sm text-[var(--text-muted)]">{phrase.ko}</p>
       </div>
 
-      <div className="mt-3 flex items-center justify-between border-t border-[var(--border-card)] pt-3">
-        <span className="text-xs text-[var(--text-muted)]">
-          {phrase.videoTitle} · {phrase.reviewCount} reviews
-        </span>
+      <div className="mt-3 flex items-center justify-between gap-3 border-t border-[var(--border-card)] pt-3">
+        <div className="min-w-0">
+          {seriesTitle && (
+            <p className="truncate text-xs text-[var(--text-secondary)]">{seriesTitle}</p>
+          )}
+          <p className="truncate text-xs text-[var(--text-muted)]">
+            {phrase.videoTitle} · {phrase.reviewCount} reviews
+          </p>
+        </div>
         <button
           onClick={(event) => {
             event.stopPropagation()
