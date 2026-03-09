@@ -7,6 +7,7 @@ import { series as allSeries, type VideoData } from '@/data/seed-videos'
 import { useViewportLayout } from '@/hooks/useOrientation'
 import { getCatalogVideosBySeries } from '@/lib/catalog'
 import { readEmbedBlockedVideoIds, writeEmbedBlockedVideoIds } from '@/lib/embedBlocklist'
+import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { usePlayerStore } from '@/stores/usePlayerStore'
@@ -30,6 +31,11 @@ interface VideoFeedProps {
 interface ShuffleNavigationState {
   history: number[]
   pointer: number
+}
+
+interface SequenceNavigationTarget {
+  feedIndex: number
+  video: VideoData
 }
 
 export function VideoFeed({
@@ -201,9 +207,8 @@ export function VideoFeed({
     [activeShuffleNavigation.history, embedBlockedIdSet, videos],
   )
 
-  const canOpenVideoAtIndex = useCallback(
-    (nextIndex: number) => {
-      const nextVideo = videos[nextIndex]
+  const canOpenVideo = useCallback(
+    (nextVideo: VideoData | undefined) => {
       if (!nextVideo) return false
 
       const alreadyWatched = getViewCount(nextVideo.id) > 0
@@ -218,7 +223,33 @@ export function VideoFeed({
 
       return true
     },
-    [getViewCount, incrementDailyView, videos],
+    [getViewCount, incrementDailyView],
+  )
+
+  const findSeriesNavigationTarget = useCallback(
+    (step: 1 | -1): SequenceNavigationTarget | null => {
+      if (!currentVideo?.seriesId) return null
+
+      const currentSeriesIndex = seriesEpisodes.findIndex((video) => video.id === currentVideo.id)
+      if (currentSeriesIndex < 0) return null
+
+      for (
+        let seriesIndex = currentSeriesIndex + step;
+        seriesIndex >= 0 && seriesIndex < seriesEpisodes.length;
+        seriesIndex += step
+      ) {
+        const candidate = seriesEpisodes[seriesIndex]
+        if (embedBlockedIdSet.has(candidate.id)) continue
+
+        return {
+          feedIndex: videos.findIndex((video) => video.id === candidate.id),
+          video: candidate,
+        }
+      }
+
+      return null
+    },
+    [currentVideo, embedBlockedIdSet, seriesEpisodes, videos],
   )
 
   useEffect(() => {
@@ -353,6 +384,7 @@ export function VideoFeed({
   const moveToNextVideo = useCallback(() => {
     let nextPlayableIndex = -1
     let nextHistoryPointer: number | null = null
+    let nextRouteVideo: VideoData | null = null
     let shouldCheckViewLimit = true
 
     if (playbackOrderMode === 'shuffle') {
@@ -365,15 +397,21 @@ export function VideoFeed({
         nextPlayableIndex = getRandomPlayableIndex(currentIndex)
       }
     } else {
-      nextPlayableIndex = findPlayableIndex(currentIndex + 1, 1)
+      const seriesTarget = findSeriesNavigationTarget(1)
+      if (seriesTarget) {
+        nextPlayableIndex = seriesTarget.feedIndex
+        nextRouteVideo = seriesTarget.feedIndex >= 0 ? null : seriesTarget.video
+      } else {
+        nextPlayableIndex = findPlayableIndex(currentIndex + 1, 1)
+      }
     }
 
-    if (nextPlayableIndex < 0) {
+    if (nextPlayableIndex < 0 && !nextRouteVideo) {
       resetRepeatCount()
       return false
     }
 
-    if (shouldCheckViewLimit && !canOpenVideoAtIndex(nextPlayableIndex)) {
+    if (shouldCheckViewLimit && !canOpenVideo(nextRouteVideo ?? videos[nextPlayableIndex])) {
       return false
     }
 
@@ -401,21 +439,30 @@ export function VideoFeed({
     }
 
     resetRepeatCount()
+
+    if (nextRouteVideo) {
+      router.push(buildShortsUrl(nextRouteVideo.id, nextRouteVideo.seriesId), { scroll: false })
+      return true
+    }
+
     setDirection(1)
     setCurrentIndex(nextPlayableIndex)
     return true
   }, [
     activeShuffleNavigation.history,
     activeShuffleNavigation.pointer,
-    canOpenVideoAtIndex,
+    canOpenVideo,
     currentIndex,
     currentVideo,
     findPlayableHistoryEntry,
     findPlayableIndex,
+    findSeriesNavigationTarget,
     finalizeVideoSession,
     getRandomPlayableIndex,
     playbackOrderMode,
     resetRepeatCount,
+    router,
+    videos,
   ])
 
   const handleClipComplete = useCallback(() => {
@@ -459,6 +506,7 @@ export function VideoFeed({
   const handlePrevVideo = useCallback(() => {
     let previousPlayableIndex = -1
     let previousHistoryPointer: number | null = null
+    let previousRouteVideo: VideoData | null = null
 
     if (playbackOrderMode === 'shuffle') {
       const previousHistoryEntry = findPlayableHistoryEntry(activeShuffleNavigation.pointer - 1, -1)
@@ -466,8 +514,14 @@ export function VideoFeed({
       previousPlayableIndex = previousHistoryEntry.videoIndex
       previousHistoryPointer = previousHistoryEntry.historyPointer
     } else {
-      previousPlayableIndex = findPlayableIndex(currentIndex - 1, -1)
-      if (previousPlayableIndex < 0) return
+      const seriesTarget = findSeriesNavigationTarget(-1)
+      if (seriesTarget) {
+        previousPlayableIndex = seriesTarget.feedIndex
+        previousRouteVideo = seriesTarget.feedIndex >= 0 ? null : seriesTarget.video
+      } else {
+        previousPlayableIndex = findPlayableIndex(currentIndex - 1, -1)
+        if (previousPlayableIndex < 0) return
+      }
     }
 
     if (currentVideo) {
@@ -482,6 +536,14 @@ export function VideoFeed({
     }
 
     resetRepeatCount()
+
+    if (previousRouteVideo) {
+      router.push(buildShortsUrl(previousRouteVideo.id, previousRouteVideo.seriesId), {
+        scroll: false,
+      })
+      return
+    }
+
     setDirection(-1)
     setCurrentIndex(previousPlayableIndex)
   }, [
@@ -492,8 +554,10 @@ export function VideoFeed({
     findPlayableHistoryEntry,
     finalizeVideoSession,
     findPlayableIndex,
+    findSeriesNavigationTarget,
     playbackOrderMode,
     resetRepeatCount,
+    router,
   ])
 
   const onToggleFreeze = useCallback(() => {
@@ -538,12 +602,12 @@ export function VideoFeed({
   const canGoPrev =
     playbackOrderMode === 'shuffle'
       ? findPlayableHistoryEntry(activeShuffleNavigation.pointer - 1, -1) !== null
-      : findPlayableIndex(currentIndex - 1, -1) >= 0
+      : findSeriesNavigationTarget(-1) !== null || findPlayableIndex(currentIndex - 1, -1) >= 0
   const canGoNext =
     playbackOrderMode === 'shuffle'
       ? findPlayableHistoryEntry(activeShuffleNavigation.pointer + 1, 1) !== null ||
         hasAlternativePlayableVideo
-      : findPlayableIndex(currentIndex + 1, 1) >= 0
+      : findSeriesNavigationTarget(1) !== null || findPlayableIndex(currentIndex + 1, 1) >= 0
 
   const seriesInfo = currentVideo.seriesId
     ? allSeries.find((series) => series.id === currentVideo.seriesId)
@@ -770,9 +834,7 @@ export function VideoFeed({
                           setDirection(nextIndex > currentIndex ? 1 : -1)
                           setCurrentIndex(nextIndex)
                         } else {
-                          router.push(`/shorts?v=${episode.id}&series=${seriesInfo.id}`, {
-                            scroll: false,
-                          })
+                          router.push(buildShortsUrl(episode.id, seriesInfo.id), { scroll: false })
                         }
                       }}
                       className={`min-w-[88px] rounded-2xl px-3 py-2 text-left ${
