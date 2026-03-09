@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
 import { getBillingConfig } from '@/lib/billing'
-import { getEntitlementSnapshot } from '@/lib/billingServer'
+import { getEntitlementSnapshot, getPaymentMethodSummary } from '@/lib/billingServer'
 import { createClient } from '@/lib/supabase/server'
 
 export const runtime = 'nodejs'
@@ -30,10 +30,17 @@ export async function GET() {
   }
 
   const entitlement = await getEntitlementSnapshot(user.id)
+  const paymentMethod = entitlement
+    ? await getPaymentMethodSummary(
+        entitlement.stripeCustomerId,
+        entitlement.stripeSubscriptionId,
+      )
+    : null
 
   return NextResponse.json({
     enabled: billingConfig.enabled,
     isPremium: entitlement?.isPremium ?? false,
     entitlement,
+    paymentMethod,
   })
 }

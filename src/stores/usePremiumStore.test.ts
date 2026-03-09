@@ -57,6 +57,8 @@ describe('usePremiumStore', () => {
   it('resets premium state back to the safe default', () => {
     usePremiumStore.setState({
       isPremium: true,
+      entitlementPremium: true,
+      premiumOverride: 'premium',
       dailyViewCount: 4,
       lastViewDate: '2026-03-08',
       savedPhrasesUsed: 12,
@@ -68,5 +70,23 @@ describe('usePremiumStore', () => {
     expect(usePremiumStore.getState().dailyViewCount).toBe(0)
     expect(usePremiumStore.getState().lastViewDate).toBeNull()
     expect(usePremiumStore.getState().savedPhrasesUsed).toBe(0)
+  })
+
+  it('lets admin override premium access without losing the real entitlement', () => {
+    usePremiumStore.getState().setPremiumEntitlement(false)
+    usePremiumStore.getState().setPremiumOverride('premium')
+
+    expect(usePremiumStore.getState().isPremium).toBe(true)
+    expect(usePremiumStore.getState().entitlementPremium).toBe(false)
+
+    usePremiumStore.getState().setPremiumEntitlement(true)
+    usePremiumStore.getState().setPremiumOverride('free')
+
+    expect(usePremiumStore.getState().isPremium).toBe(false)
+    expect(usePremiumStore.getState().entitlementPremium).toBe(true)
+
+    usePremiumStore.getState().setPremiumOverride('inherit')
+
+    expect(usePremiumStore.getState().isPremium).toBe(true)
   })
 })

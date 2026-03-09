@@ -7,8 +7,8 @@ import { AdminIssuesList } from '@/components/AdminIssuesList'
 import { BillingManagementCard } from '@/components/BillingManagementCard'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import { useAuth } from '@/hooks/useAuth'
-import { isBillingEnabled } from '@/lib/billing'
 import { useAdminStore } from '@/stores/useAdminStore'
+import { usePremiumStore } from '@/stores/usePremiumStore'
 import { useSettingsStore } from '@/stores/useSettingsStore'
 import {
   useThemeStore,
@@ -63,6 +63,10 @@ export default function ProfilePage() {
   const { user, loading, authAvailable, signInWithGoogle, signInWithKakao, signOut } = useAuth()
   const hapticEnabled = useSettingsStore((state) => state.hapticEnabled)
   const setHapticEnabled = useSettingsStore((state) => state.setHapticEnabled)
+  const appliedPremium = usePremiumStore((state) => state.isPremium)
+  const entitlementPremium = usePremiumStore((state) => state.entitlementPremium)
+  const premiumOverride = usePremiumStore((state) => state.premiumOverride)
+  const setPremiumOverride = usePremiumStore((state) => state.setPremiumOverride)
   const backgroundTheme = useThemeStore((state) => state.backgroundTheme)
   const colorTheme = useThemeStore((state) => state.colorTheme)
   const setBackgroundTheme = useThemeStore((state) => state.setBackgroundTheme)
@@ -78,7 +82,6 @@ export default function ProfilePage() {
     setAdminEnabled,
   } = useAdminStore()
 
-  const billingEnabled = isBillingEnabled()
   const unresolvedCount = issues.filter((issue) => !issue.resolved).length
   const profileName =
     user?.user_metadata?.full_name ??
@@ -245,7 +248,7 @@ export default function ProfilePage() {
 
           {isAdmin && (
             <SurfaceCard className="p-6">
-              <SectionLabel label="ADMIN" />
+              <SectionLabel label="ADMIN SETTINGS" />
 
               <div className="space-y-3">
                 <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
@@ -268,19 +271,69 @@ export default function ProfilePage() {
                   </button>
                 </div>
 
-                <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
+                <div className="rounded-2xl bg-[var(--bg-primary)] px-4 py-4">
                   <div>
-                    <p className="text-sm font-medium text-[var(--text-primary)]">PREMIUM</p>
+                    <div className="flex items-start justify-between gap-3">
+                      <div>
+                        <p className="text-sm font-medium text-[var(--text-primary)]">
+                          PRO ACCESS TEST
+                        </p>
+                        <p className="mt-1 text-xs text-[var(--text-muted)]">
+                          로컬 테스트 전용입니다. 실제 결제 상태는 바뀌지 않습니다.
+                        </p>
+                      </div>
+                      <span
+                        className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
+                          appliedPremium
+                            ? 'bg-emerald-500/15 text-emerald-300'
+                            : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
+                        }`}
+                      >
+                        {appliedPremium ? 'APP PRO' : 'APP FREE'}
+                      </span>
+                    </div>
+
+                    <div className="mt-4 grid grid-cols-3 gap-2">
+                      <button
+                        type="button"
+                        onClick={() => setPremiumOverride('inherit')}
+                        className={`rounded-xl px-3 py-2 text-xs font-semibold ${
+                          premiumOverride === 'inherit'
+                            ? 'bg-[var(--accent-primary)] text-white'
+                            : 'bg-[var(--bg-card)] text-[var(--text-secondary)]'
+                        }`}
+                      >
+                        실제 상태
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setPremiumOverride('premium')}
+                        className={`rounded-xl px-3 py-2 text-xs font-semibold ${
+                          premiumOverride === 'premium'
+                            ? 'bg-emerald-500 text-white'
+                            : 'bg-[var(--bg-card)] text-[var(--text-secondary)]'
+                        }`}
+                      >
+                        PRO ON
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setPremiumOverride('free')}
+                        className={`rounded-xl px-3 py-2 text-xs font-semibold ${
+                          premiumOverride === 'free'
+                            ? 'bg-slate-600 text-white'
+                            : 'bg-[var(--bg-card)] text-[var(--text-secondary)]'
+                        }`}
+                      >
+                        PRO OFF
+                      </button>
+                    </div>
+
+                    <p className="mt-3 text-xs text-[var(--text-muted)]">
+                      실제 구독 {entitlementPremium ? 'PRO' : 'FREE'} · 현재 앱 적용{' '}
+                      {appliedPremium ? 'PRO' : 'FREE'}
+                    </p>
                   </div>
-                  <span
-                    className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
-                      billingEnabled
-                        ? 'bg-emerald-500/15 text-emerald-300'
-                        : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
-                    }`}
-                  >
-                    {billingEnabled ? 'ON' : 'OFF'}
-                  </span>
                 </div>
               </div>
             </SurfaceCard>

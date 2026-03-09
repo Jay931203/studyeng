@@ -18,6 +18,12 @@ import { ModalShell } from '@/components/ui/ModalShell'
 interface BillingStatusPayload {
   enabled: boolean
   isPremium: boolean
+  paymentMethod: {
+    brand: string | null
+    last4: string | null
+    expMonth: number | null
+    expYear: number | null
+  } | null
   entitlement: {
     planKey: string
     status: string
@@ -94,6 +100,19 @@ function getStoreManagementUrl() {
       return 'https://apps.apple.com/account/subscriptions'
     default:
       return null
+  }
+}
+
+function formatCardBrand(brand: string | null | undefined) {
+  if (!brand) return 'CARD'
+
+  switch (brand) {
+    case 'amex':
+      return 'AMEX'
+    case 'mastercard':
+      return 'MASTERCARD'
+    default:
+      return brand.replace(/_/g, ' ').toUpperCase()
   }
 }
 
@@ -182,7 +201,7 @@ export function BillingManagementCard() {
   const { enabled: billingEnabled } = getBillingConfig()
   const native = isNative()
   const { user } = useAuth()
-  const isPremium = usePremiumStore((s) => s.isPremium)
+  const entitlementPremium = usePremiumStore((s) => s.entitlementPremium)
   const setPremiumEntitlement = usePremiumStore((s) => s.setPremiumEntitlement)
   const [selectedPlan, setSelectedPlan] = useState<BillingPlan>('yearly')
   const [loading, setLoading] = useState(false)
@@ -198,8 +217,9 @@ export function BillingManagementCard() {
     if (native) {
       setStatus({
         enabled: true,
-        isPremium,
-        entitlement: isPremium
+        isPremium: entitlementPremium,
+        paymentMethod: null,
+        entitlement: entitlementPremium
           ? { planKey: 'premium', status: 'active', currentPeriodEnd: null, cancelAtPeriodEnd: false }
           : null,
       })
@@ -243,7 +263,7 @@ export function BillingManagementCard() {
     return () => {
       cancelled = true
     }
-  }, [billingEnabled, native, isPremium, user])
+  }, [billingEnabled, entitlementPremium, native, user])
 
   useEffect(() => {
     if (!native) return
@@ -278,14 +298,14 @@ export function BillingManagementCard() {
     }
   }, [status?.entitlement?.planKey])
 
-  const currentPremium = native ? isPremium : status?.isPremium ?? false
+  const currentPremium = native ? entitlementPremium : status?.isPremium ?? false
   const planKey = status?.entitlement?.planKey ?? (currentPremium ? 'premium' : 'free')
   const currentPlanLabel = loading ? '멤버십 확인 중' : getPlanLabel(planKey)
   const currentStatusLabel = loading ? '멤버십 확인 중' : currentPremium ? '프리미엄 이용 중' : '무료 플랜'
   const isReady = native ? currentPremium || nativePackages.length > 0 : billingEnabled
   const currentPlan =
     planKey === 'premium_monthly' ? 'monthly' : planKey === 'premium_yearly' ? 'yearly' : null
-  const shouldShowPlanLabel = currentPlanLabel !== currentStatusLabel
+  const shouldShowPlanLabel = currentPremium && currentPlanLabel !== currentStatusLabel
   const managementLabel =
     !native && !billingEnabled
       ? '결제 연동 준비 중'
@@ -297,15 +317,44 @@ export function BillingManagementCard() {
             ? '웹 결제로 시작 가능'
             : '로그인 후 결제 가능'
   const scheduleLabel =
-    !native && status?.entitlement?.currentPeriodEnd
+    native && currentPremium
+      ? '갱신 일정'
+      : !native && status?.entitlement?.currentPeriodEnd
       ? status.entitlement.cancelAtPeriodEnd
         ? '이용 종료일'
         : '다음 결제일'
       : '결제 일정'
   const scheduleValue =
-    !native && status?.entitlement?.currentPeriodEnd
+    native && currentPremium
+      ? `${getStoreLabel()}에서 확인`
+      : !native && status?.entitlement?.currentPeriodEnd
       ? formatDate(status.entitlement.currentPeriodEnd)
       : '해당 없음'
+  const paymentMethodLabel = currentPremium
+    ? native
+      ? `${getStoreLabel()} 결제`
+      : status?.paymentMethod?.last4
+        ? `${formatCardBrand(status.paymentMethod.brand)} •••• ${status.paymentMethod.last4}`
+        : '결제 수단 확인 불가'
+    : '미등록'
+  const paymentMethodDetail =
+    !native &&
+    currentPremium &&
+    status?.paymentMethod?.expMonth &&
+    status?.paymentMethod?.expYear
+      ? `만료 ${String(status.paymentMethod.expMonth).padStart(2, '0')}/${String(status.paymentMethod.expYear).slice(-2)}`
+      : null
+  const membershipSummaryItems = [
+    { label: '상태', value: currentStatusLabel, detail: null as string | null },
+    ...(currentPremium
+      ? [{ label: '플랜', value: currentPlanLabel, detail: null as string | null }]
+      : []),
+    ...(currentPremium
+      ? [{ label: '결제 수단', value: paymentMethodLabel, detail: paymentMethodDetail }]
+      : []),
+    { label: '관리', value: managementLabel, detail: null as string | null },
+    { label: scheduleLabel, value: scheduleValue, detail: null as string | null },
+  ]
 
   const planOptions = useMemo(() => {
     if (native && nativePackages.length > 0) {
@@ -475,12 +524,12 @@ export function BillingManagementCard() {
   }
 
   const primaryLabel = (() => {
-    if (!isReady) return 'CHECKOUT SOON'
-    if (submitting) return 'CONNECTING...'
-    if (managing) return 'OPENING...'
-    if (currentPremium) return native ? `OPEN ${getStoreLabel().toUpperCase()}` : 'MANAGE MEMBERSHIP'
-    if (!native && !user) return 'LOG IN TO SUBSCRIBE'
-    return 'START MEMBERSHIP'
+    if (!isReady) return '결제 준비 중'
+    if (submitting) return '연결 중...'
+    if (managing) return '여는 중...'
+    if (currentPremium) return native ? `${getStoreLabel()}에서 관리` : '구독 관리'
+    if (!native && !user) return '로그인 후 구독 시작'
+    return '구독 시작'
   })()
 
   return (
@@ -530,6 +579,13 @@ export function BillingManagementCard() {
               </p>
             )}
 
+            {currentPremium && (
+              <p className="mt-3 text-xs text-[var(--text-secondary)]">
+                결제 수단 {paymentMethodLabel}
+                {paymentMethodDetail ? ` · ${paymentMethodDetail}` : ''}
+              </p>
+            )}
+
             {!native && !user && billingEnabled && (
               <p className="mt-3 text-xs text-[var(--text-secondary)]">
                 로그인하면 결제 상태와 프리미엄 권한을 계정 기준으로 안정적으로 관리할 수 있습니다.
@@ -549,17 +605,17 @@ export function BillingManagementCard() {
             )}
           </div>
 
-          <div className="space-y-3">
-            <div className="flex items-center justify-between gap-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--text-muted)]">
-                Plans
-              </p>
-              {currentPlan && (
-                <p className="text-xs text-[var(--text-secondary)]">
-                  Current: {currentPlan === 'yearly' ? 'Yearly' : 'Monthly'}
+            <div className="space-y-3">
+              <div className="flex items-center justify-between gap-3">
+                <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--text-muted)]">
+                  구독 옵션
                 </p>
-              )}
-            </div>
+                {currentPlan && (
+                  <p className="text-xs text-[var(--text-secondary)]">
+                    현재 {currentPlan === 'yearly' ? '연간' : '월간'}
+                  </p>
+                )}
+              </div>
 
             <div className="grid gap-3">
               {planOptions.map((option) => (
@@ -653,30 +709,17 @@ export function BillingManagementCard() {
               내 멤버십
             </p>
             <div className="mt-3 grid gap-3 sm:grid-cols-2">
-              <div className="rounded-2xl bg-[var(--bg-card)] px-4 py-3">
-                <p className="text-[11px] font-semibold text-[var(--text-muted)]">상태</p>
-                <p className="mt-1 text-sm font-semibold text-[var(--text-primary)]">
-                  {currentStatusLabel}
-                </p>
-              </div>
-              <div className="rounded-2xl bg-[var(--bg-card)] px-4 py-3">
-                <p className="text-[11px] font-semibold text-[var(--text-muted)]">플랜</p>
-                <p className="mt-1 text-sm font-semibold text-[var(--text-primary)]">
-                  {currentPremium ? currentPlanLabel : '무료 플랜'}
-                </p>
-              </div>
-              <div className="rounded-2xl bg-[var(--bg-card)] px-4 py-3">
-                <p className="text-[11px] font-semibold text-[var(--text-muted)]">관리</p>
-                <p className="mt-1 text-sm font-semibold text-[var(--text-primary)]">
-                  {managementLabel}
-                </p>
-              </div>
-              <div className="rounded-2xl bg-[var(--bg-card)] px-4 py-3">
-                <p className="text-[11px] font-semibold text-[var(--text-muted)]">{scheduleLabel}</p>
-                <p className="mt-1 text-sm font-semibold text-[var(--text-primary)]">
-                  {scheduleValue}
-                </p>
-              </div>
+              {membershipSummaryItems.map((item) => (
+                <div key={item.label} className="rounded-2xl bg-[var(--bg-card)] px-4 py-3">
+                  <p className="text-[11px] font-semibold text-[var(--text-muted)]">{item.label}</p>
+                  <p className="mt-1 text-sm font-semibold text-[var(--text-primary)]">
+                    {item.value}
+                  </p>
+                  {item.detail && (
+                    <p className="mt-1 text-xs text-[var(--text-secondary)]">{item.detail}</p>
+                  )}
+                </div>
+              ))}
             </div>
           </div>
 

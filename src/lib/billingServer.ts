@@ -35,6 +35,13 @@ interface EntitlementSnapshot {
   stripeSubscriptionId: string | null
 }
 
+export interface PaymentMethodSummary {
+  brand: string | null
+  last4: string | null
+  expMonth: number | null
+  expYear: number | null
+}
+
 let stripeClient: Stripe | null = null
 
 export function getBillingServerConfig() {
@@ -116,6 +123,20 @@ function getCustomerEmail(
   }
 
   return customer.email ?? null
+}
+
+function summarizePaymentMethod(
+  paymentMethod: Stripe.PaymentMethod | null | undefined,
+): PaymentMethodSummary | null {
+  const card = paymentMethod?.card
+  if (!card?.last4) return null
+
+  return {
+    brand: card.brand ?? null,
+    last4: card.last4 ?? null,
+    expMonth: card.exp_month ?? null,
+    expYear: card.exp_year ?? null,
+  }
 }
 
 async function getBillingCustomerByUserId(userId: string) {
@@ -373,6 +394,52 @@ export async function getEntitlementSnapshot(userId: string) {
     stripeCustomerId: data.stripe_customer_id ?? null,
     stripeSubscriptionId: data.stripe_subscription_id ?? null,
   } satisfies EntitlementSnapshot
+}
+
+export async function getPaymentMethodSummary(
+  stripeCustomerId: string | null,
+  stripeSubscriptionId: string | null,
+) {
+  const stripe = getStripeClient()
+  if (!stripe || !stripeCustomerId) return null
+
+  try {
+    if (stripeSubscriptionId) {
+      const subscription = await stripe.subscriptions.retrieve(stripeSubscriptionId, {
+        expand: ['default_payment_method'],
+      })
+      const subscriptionPaymentMethod = subscription.default_payment_method
+
+      if (subscriptionPaymentMethod && typeof subscriptionPaymentMethod !== 'string') {
+        const summary = summarizePaymentMethod(subscriptionPaymentMethod)
+        if (summary) return summary
+      }
+    }
+
+    const customer = await stripe.customers.retrieve(stripeCustomerId, {
+      expand: ['invoice_settings.default_payment_method'],
+    })
+
+    if (typeof customer !== 'string' && !('deleted' in customer && customer.deleted)) {
+      const customerPaymentMethod = customer.invoice_settings.default_payment_method
+
+      if (customerPaymentMethod && typeof customerPaymentMethod !== 'string') {
+        const summary = summarizePaymentMethod(customerPaymentMethod)
+        if (summary) return summary
+      }
+    }
+
+    const paymentMethods = await stripe.paymentMethods.list({
+      customer: stripeCustomerId,
+      type: 'card',
+      limit: 1,
+    })
+
+    return summarizePaymentMethod(paymentMethods.data[0] ?? null)
+  } catch (error) {
+    console.warn('[billing] payment method summary lookup failed:', error)
+    return null
+  }
 }
 
 export async function createCheckoutSession(
