@@ -5,9 +5,9 @@ const config: CapacitorConfig = {
   appName: 'StudyEng',
   webDir: 'out',
   server: {
-    // In production, load from deployed URL so API routes & SSR work
+    // In production, load from the deployed web origin so API routes & SSR work.
     // Set CAPACITOR_SERVER_URL in your build environment
-    // e.g. https://studyeng.vercel.app
+    // e.g. https://your-app.example.com
     url: process.env.CAPACITOR_SERVER_URL || undefined,
     cleartext: true,
   },

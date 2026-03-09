@@ -1,0 +1,3 @@
+# Keep application secrets in .env.local / .env.
+# Wrangler-specific local preview flags can live here.
+NEXTJS_ENV=development

@@ -16,7 +16,19 @@ npm run dev
 npm run lint
 npm run test:run
 npm run build
+npm run cf:build
+npm run cf:preview
+npm run cf:deploy
 ```
+
+## Deployment
+
+- `Vercel` remains supported as the current deployment target.
+- `Cloudflare Workers` is now scaffolded as a parallel target through OpenNext.
+- Cloudflare config lives in `wrangler.jsonc`.
+- Local Cloudflare preview should be run from `WSL/Linux` on this machine because `workerd` does not install cleanly on the current Windows ARM setup.
+- `src/middleware.ts` is intentionally kept for Cloudflare compatibility because the current OpenNext adapter does not support Node-style `proxy.ts` yet.
+- Keep app secrets in `.env.local`; use `.dev.vars` only for Wrangler-specific flags such as `NEXTJS_ENV=development`.
 
 ## Key Docs
 
