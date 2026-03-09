@@ -289,7 +289,7 @@ export function BillingManagementCard({
   const shouldShowPlanLabel = currentPremium && currentPlanLabel !== currentStatusLabel
   const managementLabel =
     !native && !billingEnabled
-      ? 'Billing is not enabled yet'
+      ? 'Not available'
       : native
         ? `Manage in ${getStoreLabel()}`
         : currentPremium
