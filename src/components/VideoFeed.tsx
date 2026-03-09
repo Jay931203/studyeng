@@ -36,12 +36,25 @@ export function VideoFeed({
   const router = useRouter()
   const {
     isLandscapeViewport,
-    useLandscapeSplitPlayer,
+    isCompactViewport,
+    useLandscapeSplitPlayer: autoLandscapeSplitPlayer,
     landscapeVideoPaneWidthPercent,
   } = useViewportLayout()
+  const landscapeSubtitleLayout = usePlayerStore((state) => state.landscapeSubtitleLayout)
+  const useLandscapeSplitPlayer =
+    landscapeSubtitleLayout === 'side'
+      ? isLandscapeViewport
+      : landscapeSubtitleLayout === 'bottom'
+        ? false
+        : autoLandscapeSplitPlayer
   const landscapeVideoPaneWidth = `${landscapeVideoPaneWidthPercent}%`
   const landscapeOverlayWidth = `calc(${landscapeVideoPaneWidth} - 24px)`
   const landscapeProgressMarkerOffset = `calc(${landscapeVideoPaneWidth} - 16px)`
+  const overlayInsetLeft = 'max(12px, calc(env(safe-area-inset-left, 0px) + 8px))'
+  const overlayInsetRight = 'max(12px, calc(env(safe-area-inset-right, 0px) + 8px))'
+  const overlayInsetTop = 'max(12px, calc(env(safe-area-inset-top, 0px) + 8px))'
+  const repeatIndicatorTop = `calc(${overlayInsetTop} + 44px)`
+  const seriesPanelTop = `calc(${overlayInsetTop} + 56px)`
   const [embedBlockedVideoIds, setEmbedBlockedVideoIds] = useState<string[]>(() => {
     return readEmbedBlockedVideoIds()
   })
@@ -429,66 +442,106 @@ export function VideoFeed({
               onPrevVideo={currentIndex > 0 ? handlePrevVideo : undefined}
               onNextVideo={currentIndex < videos.length - 1 ? handleNextVideo : undefined}
               onToggleFreeze={onToggleFreeze}
-              isLandscapeViewport={isLandscapeViewport}
             />
           </VideoPlayer>
 
           <div
-            className="absolute left-3 right-3 top-3 z-10 flex items-center gap-3 rounded-[22px] border px-3 py-2 backdrop-blur-md"
+            className="absolute z-10 flex min-w-0 items-center gap-2 rounded-[22px] border px-2.5 py-2 backdrop-blur-md sm:gap-3 sm:px-3"
             style={{
               backgroundColor: 'var(--player-control-bg)',
               borderColor: 'var(--player-control-border)',
+              left: overlayInsetLeft,
+              right: overlayInsetRight,
+              top: overlayInsetTop,
               ...(useLandscapeSplitPlayer
                 ? {
-                    left: 'max(12px, env(safe-area-inset-left, 0px))',
-                    top: 'max(12px, env(safe-area-inset-top, 0px))',
                     right: 'auto',
                     width: landscapeOverlayWidth,
                   }
                 : {}),
             }}
           >
+            <>
+              <button
+                type="button"
+                onClick={(event) => {
+                  event.stopPropagation()
+                  router.push('/explore')
+                }}
+                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors sm:h-9 sm:w-9"
+                style={{
+                  backgroundColor: 'var(--player-panel)',
+                  color: 'var(--player-text)',
+                }}
+                aria-label="Go home"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-3.5 w-3.5 sm:h-4 sm:w-4"
+                >
+                  <path d="M12 3.845a1.5 1.5 0 0 1 2.121 0l6.034 6.034a1.5 1.5 0 0 1-2.121 2.121l-.534-.533V18.75A2.25 2.25 0 0 1 15.25 21h-6.5A2.25 2.25 0 0 1 6.5 18.75v-7.283l-.533.533A1.5 1.5 0 0 1 3.845 9.88l6.034-6.034A1.5 1.5 0 0 1 12 3.845Z" />
+                </svg>
+              </button>
+              <div
+                className="h-3.5 w-px shrink-0 sm:h-4"
+                style={{ backgroundColor: 'var(--player-divider)' }}
+              />
+            </>
+
             <div className="min-w-0 flex-1">
               {seriesInfo ? (
                 <button
                   onClick={() => setShowSeriesEpisodes((current) => !current)}
-                  className="block w-full truncate text-left text-sm font-semibold"
+                  className="block w-full truncate text-left text-[13px] font-semibold sm:text-sm"
                   style={{ color: 'var(--player-text)' }}
                 >
                   {seriesInfo.title}
                 </button>
               ) : (
                 <span
-                  className="block w-full truncate text-sm font-semibold"
+                  className="block w-full truncate text-[13px] font-semibold sm:text-sm"
                   style={{ color: 'var(--player-text)' }}
                 >
                   {currentVideo.title}
                 </span>
               )}
-              <p className="mt-0.5 truncate text-[11px]" style={{ color: 'var(--player-muted)' }}>
+              <p
+                className="mt-0.5 truncate text-[10px] sm:text-[11px]"
+                style={{ color: 'var(--player-muted)' }}
+              >
                 {seriesInfo && currentVideo.episodeNumber != null
                   ? `EPISODE ${currentVideo.episodeNumber}`
                   : 'NOW PLAYING'}
               </p>
             </div>
 
-            <div className="h-4 w-px shrink-0" style={{ backgroundColor: 'var(--player-divider)' }} />
-
-            <UnifiedControls
-              videoId={currentVideo.id}
-              videoTitle={currentVideo.title}
-              className="inline-flex shrink-0 items-center gap-0.5"
+            <div
+              className="h-3.5 w-px shrink-0 sm:h-4"
+              style={{ backgroundColor: 'var(--player-divider)' }}
             />
+
+            <div className="min-w-0 max-w-full flex-shrink overflow-x-auto no-scrollbar">
+              <UnifiedControls
+                videoId={currentVideo.id}
+                videoTitle={currentVideo.title}
+                compact={isCompactViewport}
+                className="inline-flex min-w-max items-center gap-0.5"
+              />
+            </div>
           </div>
           {seriesInfo && showSeriesEpisodes && seriesEpisodes.length > 0 && (
             <div
-              className="absolute left-3 right-3 top-[68px] z-10 overflow-x-auto rounded-[22px] border px-3 py-3 backdrop-blur-md"
+              className="absolute z-10 overflow-x-auto rounded-[22px] border px-3 py-3 backdrop-blur-md"
               style={{
                 backgroundColor: 'var(--player-control-bg)',
                 borderColor: 'var(--player-control-border)',
+                left: overlayInsetLeft,
+                right: overlayInsetRight,
+                top: seriesPanelTop,
                 ...(useLandscapeSplitPlayer
                   ? {
-                      left: 'max(12px, env(safe-area-inset-left, 0px))',
                       right: 'auto',
                       width: landscapeOverlayWidth,
                     }
@@ -549,7 +602,10 @@ export function VideoFeed({
       </AnimatePresence>
 
       {repeatIndicator && (
-        <div className="pointer-events-none absolute left-0 right-0 top-14 z-20 flex justify-center">
+        <div
+          className="pointer-events-none absolute left-0 right-0 z-20 flex justify-center"
+          style={{ top: repeatIndicatorTop }}
+        >
           <div
             className="rounded-full border px-4 py-1.5 backdrop-blur-md"
             style={{
@@ -566,14 +622,17 @@ export function VideoFeed({
 
       {videos.length > 1 && videos.length <= 20 && (
         <div
-          className="pointer-events-none absolute top-5 z-10 flex flex-col gap-[3px]"
+          className="pointer-events-none absolute z-10 flex flex-col gap-[3px]"
           style={
             useLandscapeSplitPlayer
               ? {
                   left: landscapeProgressMarkerOffset,
-                  top: 'max(20px, env(safe-area-inset-top, 0px))',
+                  top: `calc(${overlayInsetTop} + 8px)`,
                 }
-              : { right: '12px' }
+              : {
+                  right: overlayInsetRight,
+                  top: `calc(${overlayInsetTop} + 8px)`,
+                }
           }
         >
           {videos.slice(0, Math.min(videos.length, 12)).map((_, index) => (

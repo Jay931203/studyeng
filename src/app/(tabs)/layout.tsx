@@ -30,7 +30,7 @@ export default function TabsLayout({
   const phraseCount = usePhraseStore((state) => state.phrases.length)
   const streakDays = useUserStore((state) => state.streakDays)
   const { user, loading: authLoading, authAvailable } = useAuth()
-  const { showLandscapeRail } = useViewportLayout()
+  const { isLandscapeViewport } = useViewportLayout()
 
   const [splashDone, setSplashDone] = useState(() => {
     if (typeof window === 'undefined') return false
@@ -97,28 +97,10 @@ export default function TabsLayout({
     <div
       className={`relative mx-auto w-full ${
         isImmersiveRoute
-          ? showLandscapeRail
-            ? 'grid h-dvh grid-cols-[76px_minmax(0,1fr)]'
-            : 'flex h-dvh flex-col'
+          ? 'flex h-dvh flex-col'
           : 'min-h-dvh lg:grid lg:grid-cols-[280px_minmax(0,1fr)]'
       }`}
-      style={
-        isImmersiveRoute && showLandscapeRail
-          ? {
-              paddingLeft: 'env(safe-area-inset-left, 0px)',
-              paddingRight: 'env(safe-area-inset-right, 0px)',
-            }
-          : undefined
-      }
     >
-      {isImmersiveRoute && showLandscapeRail && (
-        <div className="border-r border-[var(--border-card)]/60 bg-black/20 p-2">
-          <div className="sticky top-2 h-[calc(100dvh-1rem)]">
-            <BottomNav mode="rail" />
-          </div>
-        </div>
-      )}
-
       {!isImmersiveRoute && (
         <div className="hidden border-r border-[var(--border-card)]/60 bg-black/15 px-5 py-6 lg:block">
           <div className="sticky top-6 h-[calc(100dvh-3rem)]">
@@ -134,7 +116,7 @@ export default function TabsLayout({
       >
         <main className="flex-1 overflow-hidden">{children}</main>
         {!isImmersiveRoute && <BottomNav />}
-        {isImmersiveRoute && !showLandscapeRail && <BottomNav />}
+        {isImmersiveRoute && !isLandscapeViewport && <BottomNav />}
       </div>
 
       <LoginGateModal

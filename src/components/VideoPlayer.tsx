@@ -80,6 +80,11 @@ export function VideoPlayer({
       onEmbedBlocked,
     )
   const isPlaying = usePlayerStore((state) => state.isPlaying)
+  const subtitleMode = usePlayerStore((state) => state.subtitleMode)
+  const landscapeSubtitleLayout = usePlayerStore((state) => state.landscapeSubtitleLayout)
+  const cycleLandscapeSubtitleLayout = usePlayerStore(
+    (state) => state.cycleLandscapeSubtitleLayout,
+  )
 
   const [overlayVisible, setOverlayVisible] = useState(true)
   const [showPauseIcon, setShowPauseIcon] = useState(false)
@@ -172,6 +177,78 @@ export function VideoPlayer({
       onSavePhrase={onSavePhrase}
       onSeek={(time) => seekTo(time)}
     />
+  )
+
+  const landscapeSubtitleLayoutLabel =
+    landscapeSubtitleLayout === 'side'
+      ? '우측'
+      : landscapeSubtitleLayout === 'bottom'
+        ? '하단'
+        : '자동'
+  const showLandscapeSubtitleLayoutToggle =
+    isLandscapeViewport && subtitleMode !== 'none' && subtitles.length > 0
+  const subtitleToggleInsetTop = isLandscapeViewport
+    ? 'max(12px, calc(env(safe-area-inset-top, 0px) + 8px))'
+    : '12px'
+  const subtitleToggleInsetRight = isLandscapeViewport
+    ? 'max(12px, calc(env(safe-area-inset-right, 0px) + 8px))'
+    : '12px'
+
+  const subtitlePanel = (
+    <div className="relative h-full">
+      {showLandscapeSubtitleLayoutToggle && (
+        <div
+          className="absolute z-30"
+          style={{ right: subtitleToggleInsetRight, top: subtitleToggleInsetTop }}
+        >
+          <button
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation()
+              cycleLandscapeSubtitleLayout()
+            }}
+            className="flex h-7 items-center gap-1.5 rounded-full border px-2.5 text-[10px] font-semibold backdrop-blur-md transition-colors sm:h-8 sm:text-[11px]"
+            style={{
+              backgroundColor: 'var(--player-control-bg)',
+              borderColor: 'var(--player-control-border)',
+              color: 'var(--player-text)',
+            }}
+            aria-label={`Landscape subtitle layout: ${landscapeSubtitleLayoutLabel}`}
+            title={`Landscape subtitle layout: ${landscapeSubtitleLayoutLabel}`}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1.8}
+              className="h-3 w-3 sm:h-3.5 sm:w-3.5"
+            >
+              {landscapeSubtitleLayout === 'side' ? (
+                <>
+                  <rect x="3.5" y="5" width="11" height="14" rx="2" />
+                  <rect x="16.5" y="5" width="4" height="14" rx="1.5" />
+                </>
+              ) : landscapeSubtitleLayout === 'bottom' ? (
+                <>
+                  <rect x="3.5" y="5" width="17" height="10" rx="2" />
+                  <rect x="3.5" y="17" width="17" height="2.5" rx="1.25" />
+                </>
+              ) : (
+                <>
+                  <path d="M3.5 7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3.5a2 2 0 0 1-2 2h-11a2 2 0 0 1-2-2V7Z" />
+                  <path d="M3.5 17.5h10" />
+                  <path d="M18 5h2.5a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H18" />
+                  <path d="M15.5 17.5h5.5" />
+                </>
+              )}
+            </svg>
+            <span>{landscapeSubtitleLayoutLabel}</span>
+          </button>
+        </div>
+      )}
+      {subtitleArea}
+    </div>
   )
 
   const progressArea = (
@@ -318,7 +395,7 @@ export function VideoPlayer({
         <div className="h-full w-px flex-shrink-0" style={{ backgroundColor: 'var(--player-divider)' }} />
 
         <div className="relative flex min-w-0 flex-1 flex-col" style={{ backgroundColor: 'var(--player-surface)' }}>
-          <div className="min-h-0 flex-1">{subtitleArea}</div>
+          <div className="min-h-0 flex-1">{subtitlePanel}</div>
           {progressArea}
         </div>
       </div>
@@ -332,7 +409,7 @@ export function VideoPlayer({
         className={`relative flex-shrink-0 ${isLandscapeViewport ? 'h-[208px]' : 'h-[176px]'}`}
         style={{ backgroundColor: 'var(--player-surface)' }}
       >
-        {subtitleArea}
+        {subtitlePanel}
       </div>
       {progressArea}
     </div>

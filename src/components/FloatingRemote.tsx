@@ -8,7 +8,6 @@ interface FloatingRemoteProps {
   onPrevVideo?: () => void
   onNextVideo?: () => void
   onToggleFreeze?: () => void
-  isLandscapeViewport?: boolean
 }
 
 const STORAGE_KEY = 'shortee-remote-intro-shown'
@@ -17,7 +16,6 @@ export function FloatingRemote({
   onPrevVideo,
   onNextVideo,
   onToggleFreeze,
-  isLandscapeViewport,
 }: FloatingRemoteProps) {
   const [expanded, setExpanded] = useState(() => {
     if (typeof window === 'undefined') return false
@@ -60,12 +58,10 @@ export function FloatingRemote({
     }
   }, [isPlaying, setIsPlaying])
 
-  const positionStyle = isLandscapeViewport
-    ? {
-        right: 'max(12px, env(safe-area-inset-right, 0px))',
-        bottom: 'max(12px, env(safe-area-inset-bottom, 0px))',
-      }
-    : { right: '12px', bottom: '12px' }
+  const positionStyle = {
+    right: 'max(12px, calc(env(safe-area-inset-right, 0px) + 8px))',
+    bottom: 'max(12px, calc(env(safe-area-inset-bottom, 0px) + 8px))',
+  }
 
   return (
     <div

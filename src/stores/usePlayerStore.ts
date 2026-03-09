@@ -2,11 +2,13 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
 type SubtitleMode = 'none' | 'en' | 'en-ko'
+type LandscapeSubtitleLayout = 'auto' | 'side' | 'bottom'
 
 type RepeatMode = 'off' | 'x2' | 'x3'
 
 interface PlayerState {
   subtitleMode: SubtitleMode
+  landscapeSubtitleLayout: LandscapeSubtitleLayout
   playbackRate: number
   isLooping: boolean
   loopStart: number | null
@@ -27,6 +29,7 @@ interface PlayerState {
   freezeSubIndex: number | null
 
   toggleSubtitleMode: () => void
+  cycleLandscapeSubtitleLayout: () => void
   setPlaybackRate: (rate: number) => void
   setLoop: (start: number, end: number) => void
   clearLoop: () => void
@@ -43,6 +46,7 @@ interface PlayerState {
 }
 
 const subtitleCycle: SubtitleMode[] = ['none', 'en', 'en-ko']
+const landscapeSubtitleLayoutCycle: LandscapeSubtitleLayout[] = ['auto', 'side', 'bottom']
 
 /**
  * Shared mutable ref for high-frequency currentTime updates.
@@ -68,6 +72,7 @@ export const pauseRef: { current: (() => void) | null } = { current: null }
 
 export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
   subtitleMode: 'en',
+  landscapeSubtitleLayout: 'auto',
   playbackRate: 1,
   isLooping: false,
   loopStart: null,
@@ -87,6 +92,13 @@ export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
     const current = subtitleCycle.indexOf(get().subtitleMode)
     const next = subtitleCycle[(current + 1) % subtitleCycle.length]
     set({ subtitleMode: next })
+  },
+
+  cycleLandscapeSubtitleLayout: () => {
+    const current = landscapeSubtitleLayoutCycle.indexOf(get().landscapeSubtitleLayout)
+    const next =
+      landscapeSubtitleLayoutCycle[(current + 1) % landscapeSubtitleLayoutCycle.length]
+    set({ landscapeSubtitleLayout: next })
   },
 
   setPlaybackRate: (rate) => {
@@ -152,6 +164,7 @@ export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
     name: 'studyeng-player',
     partialize: (state) => ({
       subtitleMode: state.subtitleMode,
+      landscapeSubtitleLayout: state.landscapeSubtitleLayout,
       playbackRate: state.playbackRate,
     }),
   }

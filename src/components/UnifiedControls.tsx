@@ -14,9 +14,15 @@ interface UnifiedControlsProps {
   videoId?: string
   videoTitle?: string
   className?: string
+  compact?: boolean
 }
 
-export function UnifiedControls({ videoId, videoTitle, className }: UnifiedControlsProps) {
+export function UnifiedControls({
+  videoId,
+  videoTitle,
+  className,
+  compact = false,
+}: UnifiedControlsProps) {
   const {
     subtitleMode,
     toggleSubtitleMode,
@@ -79,13 +85,24 @@ export function UnifiedControls({ videoId, videoTitle, className }: UnifiedContr
   const speedActive = playbackRate !== 1
   const repeatActive = repeatMode !== 'off'
   const repeatLabel = repeatMode === 'off' ? '1x' : repeatMode === 'x2' ? '2x' : '3x'
+  const controlClassName = compact
+    ? 'flex h-7 min-w-[28px] items-center justify-center rounded-full text-[10px] transition-colors'
+    : 'flex h-8 min-w-[32px] items-center justify-center rounded-full text-[11px] transition-colors'
+  const iconButtonClassName = compact
+    ? 'relative flex h-7 w-7 items-center justify-center rounded-full transition-colors'
+    : 'relative flex h-8 w-8 items-center justify-center rounded-full transition-colors'
+  const dividerClassName = compact ? 'h-3.5 w-px shrink-0' : 'h-4 w-px shrink-0'
+  const iconSizeClassName = compact ? 'h-3.5 w-3.5' : 'h-4 w-4'
+  const repeatIconSizeClassName = compact ? 'h-3 w-3' : 'h-3.5 w-3.5'
 
   return (
     <>
       <div
         className={
           className ??
-          'inline-flex items-center gap-0.5 rounded-full border px-1.5 py-1 backdrop-blur-md'
+          (compact
+            ? 'inline-flex min-w-max items-center gap-0 rounded-full border px-1 py-0.5 backdrop-blur-md'
+            : 'inline-flex min-w-max items-center gap-0.5 rounded-full border px-1.5 py-1 backdrop-blur-md')
         }
         style={{
           backgroundColor: 'var(--player-control-bg)',
@@ -97,14 +114,14 @@ export function UnifiedControls({ videoId, videoTitle, className }: UnifiedContr
             event.stopPropagation()
             toggleSubtitleMode()
           }}
-          className="flex h-8 min-w-[32px] items-center justify-center rounded-full px-2 text-[11px] font-semibold transition-colors"
+          className={`${controlClassName} ${compact ? 'px-1.5 font-semibold' : 'px-2 font-semibold'}`}
           style={{ color: 'var(--player-text)' }}
           aria-label="자막 모드"
         >
           {subtitleLabel}
         </button>
 
-        <div className="h-4 w-px shrink-0" style={{ backgroundColor: 'var(--player-divider)' }} />
+        <div className={dividerClassName} style={{ backgroundColor: 'var(--player-divider)' }} />
 
         {videoId && (
           <motion.button
@@ -113,7 +130,7 @@ export function UnifiedControls({ videoId, videoTitle, className }: UnifiedContr
               event.stopPropagation()
               toggleLike(videoId)
             }}
-            className="relative flex h-8 w-8 items-center justify-center rounded-full transition-colors"
+            className={iconButtonClassName}
             aria-label={liked ? '좋아요 취소' : '좋아요'}
           >
             <motion.svg
@@ -122,7 +139,7 @@ export function UnifiedControls({ videoId, videoTitle, className }: UnifiedContr
               fill={liked ? '#EF4444' : 'none'}
               stroke={liked ? '#EF4444' : 'var(--player-text)'}
               strokeWidth={2}
-              className="h-4 w-4"
+              className={iconSizeClassName}
               animate={liked ? { scale: [1, 1.35, 0.9, 1.1, 1] } : { scale: 1 }}
               transition={
                 liked
@@ -164,7 +181,7 @@ export function UnifiedControls({ videoId, videoTitle, className }: UnifiedContr
             const index = SPEEDS.indexOf(playbackRate)
             setPlaybackRate(SPEEDS[(index + 1) % SPEEDS.length])
           }}
-          className="flex h-8 min-w-[32px] items-center justify-center rounded-full px-1.5 text-[11px] font-bold transition-colors"
+          className={`${controlClassName} ${compact ? 'px-1 font-bold' : 'px-1.5 font-bold'}`}
           style={{ color: speedActive ? 'var(--accent-text)' : 'var(--player-text)' }}
           aria-label="재생 속도"
         >
@@ -177,7 +194,7 @@ export function UnifiedControls({ videoId, videoTitle, className }: UnifiedContr
             const index = REPEAT_CYCLE.indexOf(repeatMode)
             setRepeatMode(REPEAT_CYCLE[(index + 1) % REPEAT_CYCLE.length])
           }}
-          className="flex h-8 w-8 items-center justify-center rounded-full transition-colors"
+          className={iconButtonClassName}
           style={{ color: repeatActive ? 'var(--accent-text)' : 'var(--player-text)' }}
           aria-label="반복 재생"
           title="반복 재생"
@@ -187,11 +204,13 @@ export function UnifiedControls({ videoId, videoTitle, className }: UnifiedContr
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              className="h-3.5 w-3.5"
+              className={repeatIconSizeClassName}
             >
               <path d="M4.755 10.059a7.5 7.5 0 0112.548-3.364l1.903 1.903H14.25a.75.75 0 000 1.5h6a.75.75 0 00.75-.75v-6a.75.75 0 00-1.5 0v3.068l-1.903-1.903A9 9 0 003.306 9.67a.75.75 0 101.45.388zm14.49 3.882a7.5 7.5 0 01-12.548 3.364l-1.903-1.903H9.75a.75.75 0 000-1.5h-6a.75.75 0 00-.75.75v6a.75.75 0 001.5 0v-3.068l1.903 1.903A9 9 0 0020.694 14.33a.75.75 0 10-1.45-.388z" />
             </svg>
-            <span className="mt-px text-[8px] font-bold">{repeatLabel}</span>
+            <span className={compact ? 'mt-px text-[7px] font-bold' : 'mt-px text-[8px] font-bold'}>
+              {repeatLabel}
+            </span>
           </div>
         </button>
 
@@ -201,7 +220,7 @@ export function UnifiedControls({ videoId, videoTitle, className }: UnifiedContr
               event.stopPropagation()
               clearLoop()
             }}
-            className="flex h-8 w-8 items-center justify-center rounded-full transition-colors"
+            className={iconButtonClassName}
             style={{ color: 'var(--accent-text)' }}
             aria-label="구간 반복 해제"
             title="구간 반복 해제"
@@ -212,19 +231,19 @@ export function UnifiedControls({ videoId, videoTitle, className }: UnifiedContr
               fill="none"
               stroke="currentColor"
               strokeWidth={2}
-              className="h-3.5 w-3.5"
+              className={repeatIconSizeClassName}
             >
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
         )}
 
-        <div className="h-4 w-px shrink-0" style={{ backgroundColor: 'var(--player-divider)' }} />
+        <div className={dividerClassName} style={{ backgroundColor: 'var(--player-divider)' }} />
 
         {videoId && (
           <button
             onClick={handleShare}
-            className="flex h-8 w-8 items-center justify-center rounded-full transition-colors"
+            className={iconButtonClassName}
             style={{ color: 'var(--player-text)' }}
             aria-label="공유하기"
           >
@@ -234,7 +253,7 @@ export function UnifiedControls({ videoId, videoTitle, className }: UnifiedContr
               fill="none"
               stroke="currentColor"
               strokeWidth={2}
-              className="h-4 w-4"
+              className={iconSizeClassName}
             >
               <path
                 strokeLinecap="round"
