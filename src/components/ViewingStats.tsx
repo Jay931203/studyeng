@@ -1,7 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-import { MetricCard, SectionHeader, SurfaceCard } from '@/components/ui/AppPage'
+import { MetricCard, SurfaceCard } from '@/components/ui/AppPage'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useUserStore } from '@/stores/useUserStore'
@@ -283,12 +283,6 @@ export function ViewingStats() {
 
   return (
     <section className="mb-8">
-      <SectionHeader
-        eyebrow="통계"
-        title="활동 통계"
-        description="시청 흐름과 선호 패턴을 한 번에 볼 수 있게 정리했습니다."
-      />
-
       <div className="flex flex-col gap-3">
         <SurfaceCard className="rounded-[28px] p-4">
           <div className="grid grid-cols-3 gap-3">
