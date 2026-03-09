@@ -12,13 +12,11 @@ interface VideoCardProps {
 export function VideoCard({ video, onClick }: VideoCardProps) {
   const categoryLabel =
     categories.find((category) => category.id === video.category)?.label ?? video.category
-  const difficultyLabel =
-    video.difficulty <= 2 ? '가볍게' : video.difficulty === 3 ? '적당히' : '집중해서'
   const metaLabel = video.seriesId
     ? video.episodeNumber
       ? `EP ${video.episodeNumber}`
-      : '시리즈'
-    : '클립'
+      : 'SERIES'
+    : 'SINGLE'
 
   return (
     <motion.button
@@ -46,14 +44,6 @@ export function VideoCard({ video, onClick }: VideoCardProps) {
           <p className="line-clamp-2 text-base font-semibold leading-tight text-white">
             {video.title}
           </p>
-        </div>
-      </div>
-
-      <div className="p-3">
-        <div className="flex flex-wrap gap-2">
-          <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-1 text-[11px] font-medium text-[var(--accent-text)]">
-            {difficultyLabel}
-          </span>
         </div>
       </div>
     </motion.button>
