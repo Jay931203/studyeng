@@ -9,6 +9,7 @@ import {
   type TouchEvent as ReactTouchEvent,
 } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { useSettingsStore } from '@/stores/useSettingsStore'
 import { usePlayerStore, pauseRef, playRef } from '@/stores/usePlayerStore'
 
 interface FloatingRemoteProps {
@@ -91,6 +92,7 @@ export function FloatingRemote({
   })
   const [dragBlocked, setDragBlocked] = useState(false)
   const [remoteOffset, setRemoteOffset] = useState<RemoteOffset>(() => readStoredOffset())
+  const remoteEnabled = useSettingsStore((state) => state.remoteEnabled)
 
   const isPlaying = usePlayerStore((state) => state.isPlaying)
   const setIsPlaying = usePlayerStore((state) => state.setIsPlaying)
@@ -280,6 +282,10 @@ export function FloatingRemote({
   const positionStyle = {
     right: 'max(12px, calc(env(safe-area-inset-right, 0px) + 8px))',
     bottom: 'max(12px, calc(env(safe-area-inset-bottom, 0px) + 8px))',
+  }
+
+  if (!remoteEnabled) {
+    return null
   }
 
   return (

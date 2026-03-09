@@ -272,6 +272,8 @@ export function UnifiedControls({
   const playbackOrderLabel = playbackOrderMode === 'shuffle' ? '랜덤' : '순차'
   const playbackSummaryLabel = `${repeatLabel} · ${playbackOrderLabel}`
   const playbackOptionsActive = repeatMode !== 'off' || playbackOrderMode !== 'sequence'
+  const playbackOrderBadgeLabel = playbackOrderMode === 'shuffle' ? 'R' : 'S'
+  const playbackBadgeSummaryLabel = `${repeatLabel}/${playbackOrderBadgeLabel}`
   const canSubmitReport =
     Boolean(videoId && youtubeId) && reportDescription.trim().length > 0 && !reportSubmitting
 
@@ -286,8 +288,11 @@ export function UnifiedControls({
   const gameModeIconSizeClassName = compact ? 'h-[18px] w-[18px]' : 'h-5 w-5'
   const repeatIconSizeClassName = compact ? 'h-3 w-3' : 'h-3.5 w-3.5'
   const playbackTriggerClassName = compact
-    ? 'flex h-7 items-center gap-1 rounded-full px-1.5 text-[10px] font-semibold transition-colors'
-    : 'flex h-8 items-center gap-1.5 rounded-full px-2 text-[11px] font-semibold transition-colors'
+    ? 'relative flex h-7 w-7 items-center justify-center rounded-full transition-colors'
+    : 'relative flex h-8 w-8 items-center justify-center rounded-full transition-colors'
+  const playbackBadgeClassName = compact
+    ? 'pointer-events-none absolute -bottom-1 -right-1 min-w-[22px] rounded-full px-1 py-[1px] text-[8px] font-bold leading-none'
+    : 'pointer-events-none absolute -bottom-1 -right-1 min-w-[24px] rounded-full px-1.5 py-[2px] text-[9px] font-bold leading-none'
   const playbackChipClassName = compact
     ? 'h-7 rounded-full px-2.5 text-[10px] font-semibold transition-colors'
     : 'h-8 rounded-full px-3 text-[11px] font-semibold transition-colors'
@@ -369,7 +374,7 @@ export function UnifiedControls({
                           color: active ? 'var(--accent-text)' : 'var(--player-text)',
                         }}
                       >
-                        {option.label}
+                        {option.value === 'sequence' ? 'Series' : 'Random'}
                       </button>
                     )
                   })}
@@ -711,6 +716,8 @@ export function UnifiedControls({
             aria-label="재생 옵션"
             aria-expanded={showPlaybackOptions}
             aria-haspopup="dialog"
+            title={playbackBadgeSummaryLabel}
+            data-playback-summary={playbackSummaryLabel}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -720,7 +727,16 @@ export function UnifiedControls({
             >
               <path d="M4.755 10.059a7.5 7.5 0 0112.548-3.364l1.903 1.903H14.25a.75.75 0 000 1.5h6a.75.75 0 00.75-.75v-6a.75.75 0 00-1.5 0v3.068l-1.903-1.903A9 9 0 003.306 9.67a.75.75 0 101.45.388zm14.49 3.882a7.5 7.5 0 01-12.548 3.364l-1.903-1.903H9.75a.75.75 0 000-1.5h-6a.75.75 0 00-.75.75v6a.75.75 0 001.5 0v-3.068l1.903 1.903A9 9 0 0020.694 14.33a.75.75 0 10-1.45-.388z" />
             </svg>
-            <span>{playbackSummaryLabel}</span>
+            <span
+              className={playbackBadgeClassName}
+              style={{
+                backgroundColor: playbackOptionsActive ? 'var(--accent-glow)' : 'var(--player-panel)',
+                color: playbackOptionsActive ? 'var(--accent-text)' : 'var(--player-text)',
+                border: '1px solid var(--player-control-border)',
+              }}
+            >
+              {playbackBadgeSummaryLabel}
+            </span>
           </button>
 
           {isLooping && (

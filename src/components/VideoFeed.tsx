@@ -608,6 +608,7 @@ export function VideoFeed({
       ? findPlayableHistoryEntry(activeShuffleNavigation.pointer + 1, 1) !== null ||
         hasAlternativePlayableVideo
       : findSeriesNavigationTarget(1) !== null || findPlayableIndex(currentIndex + 1, 1) >= 0
+  const showHeaderHomeButton = isLandscapeViewport
 
   const seriesInfo = currentVideo.seriesId
     ? allSeries.find((series) => series.id === currentVideo.seriesId)
@@ -712,34 +713,36 @@ export function VideoFeed({
                 : {}),
             }}
           >
-            <>
-              <button
-                type="button"
-                onClick={(event) => {
-                  event.stopPropagation()
-                  router.push('/explore')
-                }}
-                className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors sm:h-9 sm:w-9"
-                style={{
-                  backgroundColor: 'var(--player-panel)',
-                  color: 'var(--player-text)',
-                }}
-                aria-label="Go home"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="h-3.5 w-3.5 sm:h-4 sm:w-4"
+            {showHeaderHomeButton && (
+              <>
+                <button
+                  type="button"
+                  onClick={(event) => {
+                    event.stopPropagation()
+                    router.push('/explore')
+                  }}
+                  className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors sm:h-9 sm:w-9"
+                  style={{
+                    backgroundColor: 'var(--player-panel)',
+                    color: 'var(--player-text)',
+                  }}
+                  aria-label="Go home"
                 >
-                  <path d="M12 3.845a1.5 1.5 0 0 1 2.121 0l6.034 6.034a1.5 1.5 0 0 1-2.121 2.121l-.534-.533V18.75A2.25 2.25 0 0 1 15.25 21h-6.5A2.25 2.25 0 0 1 6.5 18.75v-7.283l-.533.533A1.5 1.5 0 0 1 3.845 9.88l6.034-6.034A1.5 1.5 0 0 1 12 3.845Z" />
-                </svg>
-              </button>
-              <div
-                className="h-3.5 w-px shrink-0 sm:h-4"
-                style={{ backgroundColor: 'var(--player-divider)' }}
-              />
-            </>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-3.5 w-3.5 sm:h-4 sm:w-4"
+                  >
+                    <path d="M12 3.845a1.5 1.5 0 0 1 2.121 0l6.034 6.034a1.5 1.5 0 0 1-2.121 2.121l-.534-.533V18.75A2.25 2.25 0 0 1 15.25 21h-6.5A2.25 2.25 0 0 1 6.5 18.75v-7.283l-.533.533A1.5 1.5 0 0 1 3.845 9.88l6.034-6.034A1.5 1.5 0 0 1 12 3.845Z" />
+                  </svg>
+                </button>
+                <div
+                  className="h-3.5 w-px shrink-0 sm:h-4"
+                  style={{ backgroundColor: 'var(--player-divider)' }}
+                />
+              </>
+            )}
 
             <div className="min-w-0 flex-1">
               {seriesInfo ? (
