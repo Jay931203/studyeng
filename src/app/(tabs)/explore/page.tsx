@@ -493,10 +493,10 @@ export default function ExplorePage() {
       <section ref={seriesSectionRef} className="mb-8">
         <SectionHeader title="시리즈" />
 
-        <div className="mb-4 flex gap-2 overflow-x-auto pb-1">
+        <div className="mb-4 flex gap-2 overflow-x-auto pb-1 no-scrollbar">
           <button
             onClick={() => setActiveCategory('all')}
-            className={`rounded-full px-4 py-2 text-sm ${
+            className={`shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-sm ${
               activeCategory === 'all'
                 ? 'bg-[var(--accent-primary)] text-white'
                 : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
@@ -508,7 +508,7 @@ export default function ExplorePage() {
             <button
               key={categoryId}
               onClick={() => setActiveCategory(categoryId)}
-              className={`rounded-full px-4 py-2 text-sm ${
+              className={`shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-sm ${
                 activeCategory === categoryId
                   ? 'bg-[var(--accent-primary)] text-white'
                   : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
