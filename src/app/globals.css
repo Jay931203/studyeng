@@ -200,11 +200,11 @@
   --player-gradient-strong: rgba(0,0,0,0.58);
   --player-gradient-soft: rgba(0,0,0,0.16);
   --player-active-subtitle-bg: rgba(0,0,0,0.68);
-  --freeze-bg: rgba(var(--accent-primary-rgb), 0.18);
-  --freeze-border: rgba(var(--accent-primary-rgb), 0.42);
-  --freeze-text: var(--accent-text);
-  --freeze-icon: var(--accent-primary);
-  --freeze-shadow: rgba(var(--accent-primary-rgb), 0.32);
+  --freeze-bg: rgba(255, 90, 200, 0.18);
+  --freeze-border: rgba(255, 90, 200, 0.42);
+  --freeze-text: #fff5fb;
+  --freeze-icon: #ff5ac8;
+  --freeze-shadow: rgba(255, 90, 200, 0.28);
   --game-overlay: rgba(0,0,0,0.88);
   --accent-rainbow: linear-gradient(135deg, #ff5ac8 0%, #ff9538 24%, #ffd84a 50%, #53d7ff 76%, #7c4dff 100%);
   --accent-rainbow-soft: linear-gradient(
@@ -403,11 +403,11 @@
   --player-gradient-strong: rgba(255,255,255,0.88);
   --player-gradient-soft: rgba(255,255,255,0.24);
   --player-active-subtitle-bg: rgba(255,255,255,0.88);
-  --freeze-bg: rgba(var(--accent-primary-rgb), 0.1);
-  --freeze-border: rgba(var(--accent-primary-rgb), 0.28);
-  --freeze-text: var(--accent-text);
-  --freeze-icon: var(--accent-primary);
-  --freeze-shadow: rgba(var(--accent-primary-rgb), 0.18);
+  --freeze-bg: rgba(255, 138, 61, 0.12);
+  --freeze-border: rgba(255, 138, 61, 0.28);
+  --freeze-text: #c2410c;
+  --freeze-icon: #ff8a3d;
+  --freeze-shadow: rgba(255, 138, 61, 0.18);
   --game-overlay: rgba(241,245,249,0.92);
   --accent-rainbow: linear-gradient(135deg, #ff5ac8 0%, #ff8a3d 24%, #ffd84a 50%, #53d7ff 76%, #7c4dff 100%);
   --accent-rainbow-soft: linear-gradient(

@@ -755,7 +755,7 @@ export function UnifiedControls({
               showToast(nextGameModeEnabled ? 'Game On' : 'Game Off')
             }}
             className={iconButtonClassName}
-            style={{ color: gameModeEnabled ? 'var(--accent-primary)' : 'var(--player-text)' }}
+            style={{ color: gameModeEnabled ? 'var(--freeze-icon)' : 'var(--player-text)' }}
             aria-label={gameModeEnabled ? '게임 모드 끄기' : '게임 모드 켜기'}
             title={gameModeEnabled ? '게임 모드 ON' : '게임 모드 OFF'}
           >
@@ -796,7 +796,7 @@ export function UnifiedControls({
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.45, ease: 'easeOut' }}
                     className="absolute h-1 w-1 rounded-full"
-                    style={{ backgroundColor: 'var(--accent-primary)' }}
+                    style={{ backgroundColor: 'var(--freeze-icon)' }}
                   />
                 ))}
             </AnimatePresence>
