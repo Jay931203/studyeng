@@ -98,7 +98,7 @@ export function BillingManagementCard() {
 
   return (
     <SurfaceCard className="p-6">
-      <p className="mb-4 text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+      <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
         SUBSCRIPTION
       </p>
 

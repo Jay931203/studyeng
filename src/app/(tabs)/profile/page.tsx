@@ -28,7 +28,7 @@ const COLOR_OPTIONS = [
 
 function SectionLabel({ label }: { label: string }) {
   return (
-    <p className="mb-4 text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+    <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
       {label}
     </p>
   )

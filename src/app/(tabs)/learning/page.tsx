@@ -25,7 +25,7 @@ export default function LearningPage() {
 
         <SurfaceCard className="p-5">
           <div className="mb-4 flex items-center justify-between gap-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
               SAVED
             </p>
             {phrases.length > 0 && (

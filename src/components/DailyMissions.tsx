@@ -34,7 +34,7 @@ export function DailyMissions() {
       <div className="border-b border-[var(--border-card)]/60 px-5 pb-4 pt-5">
         <div className="flex items-start justify-between gap-4">
           <div>
-            <span className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+            <span className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
               TODAY&apos;S ROUTINE
             </span>
           </div>
