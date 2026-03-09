@@ -28,7 +28,7 @@ export default function LearningPage() {
   const watchedVideoIds = useWatchHistoryStore((s) => s.watchedVideoIds)
   const viewCounts = useWatchHistoryStore((s) => s.viewCounts)
   const streakDays = useUserStore((s) => s.streakDays)
-  const likedVideoIds = useLikeStore((s) => s.getLikedVideoIds())
+  const likes = useLikeStore((s) => s.likes)
 
   const totalWatched = watchedVideoIds.length
   const totalViews = useMemo(
@@ -38,10 +38,10 @@ export default function LearningPage() {
 
   const likedVideos = useMemo(
     () =>
-      likedVideoIds
+      Object.keys(likes)
         .map((id) => getCatalogVideoById(id))
         .filter(Boolean) as NonNullable<ReturnType<typeof getCatalogVideoById>>[],
-    [likedVideoIds],
+    [likes],
   )
 
   return (

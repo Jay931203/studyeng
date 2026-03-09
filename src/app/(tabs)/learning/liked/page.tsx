@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import { useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
@@ -16,13 +17,17 @@ const categoryLabels = Object.fromEntries(
 
 export default function LikedPage() {
   const router = useRouter()
-  const likedVideoIds = useLikeStore((s) => s.getLikedVideoIds())
+  const likes = useLikeStore((s) => s.likes)
   const toggleLike = useLikeStore((s) => s.toggleLike)
   const clearDeletedFlag = useWatchHistoryStore((s) => s.clearDeletedFlag)
 
-  const likedVideos = likedVideoIds
-    .map((id) => getCatalogVideoById(id))
-    .filter(Boolean) as NonNullable<ReturnType<typeof getCatalogVideoById>>[]
+  const likedVideos = useMemo(
+    () =>
+      Object.keys(likes)
+        .map((id) => getCatalogVideoById(id))
+        .filter(Boolean) as NonNullable<ReturnType<typeof getCatalogVideoById>>[],
+    [likes],
+  )
 
   const handleBack = () => {
     if (typeof window !== 'undefined' && window.history.length > 1) {
