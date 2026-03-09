@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useEffect, useCallback, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { usePlayerStore, playRef, pauseRef } from '@/stores/usePlayerStore'
+import { useCallback, useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
+import { usePlayerStore, pauseRef, playRef } from '@/stores/usePlayerStore'
 
 interface FloatingRemoteProps {
   onPrevVideo?: () => void
@@ -11,8 +11,6 @@ interface FloatingRemoteProps {
   isLandscape?: boolean
 }
 
-const COLLAPSE_DELAY = 5000
-const INTRO_DELAY = 3000
 const STORAGE_KEY = 'shortee-remote-intro-shown'
 
 export function FloatingRemote({
@@ -32,61 +30,22 @@ export function FloatingRemote({
 
     return false
   })
-  const collapseTimerRef = useRef<number | null>(null)
+
   const isPlaying = usePlayerStore((state) => state.isPlaying)
   const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
   const isFrozen = freezeSubIndex !== null
 
-  const clearCollapseTimer = useCallback(() => {
-    if (collapseTimerRef.current) {
-      clearTimeout(collapseTimerRef.current)
-      collapseTimerRef.current = null
-    }
+  const handleButtonClick = useCallback((action: () => void) => {
+    action()
   }, [])
-
-  const startCollapseTimer = useCallback(
-    (delay = COLLAPSE_DELAY) => {
-      clearCollapseTimer()
-      collapseTimerRef.current = window.setTimeout(() => {
-        setExpanded(false)
-      }, delay)
-    },
-    [clearCollapseTimer],
-  )
-
-  // Auto-collapse when expanded
-  useEffect(() => {
-    if (expanded) {
-      startCollapseTimer(INTRO_DELAY)
-    } else {
-      clearCollapseTimer()
-    }
-    return clearCollapseTimer
-  }, [expanded, startCollapseTimer, clearCollapseTimer])
-
-  // Cleanup on unmount
-  useEffect(() => {
-    return () => {
-      if (collapseTimerRef.current) clearTimeout(collapseTimerRef.current)
-    }
-  }, [])
-
-  const handleButtonClick = useCallback(
-    (action: () => void) => {
-      action()
-      startCollapseTimer()
-    },
-    [startCollapseTimer],
-  )
 
   const handleExpand = useCallback(() => {
     setExpanded(true)
   }, [])
 
   const handleCollapse = useCallback(() => {
-    clearCollapseTimer()
     setExpanded(false)
-  }, [clearCollapseTimer])
+  }, [])
 
   const handlePlayPause = useCallback(() => {
     if (isPlaying) {
@@ -107,8 +66,8 @@ export function FloatingRemote({
     <div
       className="absolute z-20"
       style={positionStyle}
-      onPointerDownCapture={(e) => e.stopPropagation()}
-      onClick={(e) => e.stopPropagation()}
+      onPointerDownCapture={(event) => event.stopPropagation()}
+      onClick={(event) => event.stopPropagation()}
     >
       <AnimatePresence mode="wait">
         {!expanded ? (
@@ -125,9 +84,8 @@ export function FloatingRemote({
               borderColor: 'var(--player-control-border)',
               color: 'var(--player-text)',
             }}
-            aria-label="리모컨 열기"
+            aria-label="Open remote"
           >
-            {/* 2x2 grid dots icon */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -153,12 +111,11 @@ export function FloatingRemote({
               borderColor: 'var(--player-control-border)',
             }}
           >
-            {/* Close button */}
             <button
               onClick={handleCollapse}
               className="flex h-9 w-full items-center justify-center"
               style={{ color: 'var(--player-muted)' }}
-              aria-label="리모컨 닫기"
+              aria-label="Close remote"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -170,19 +127,15 @@ export function FloatingRemote({
               </svg>
             </button>
 
-            <div
-              className="h-px w-7"
-              style={{ backgroundColor: 'var(--player-divider)' }}
-            />
+            <div className="h-px w-7" style={{ backgroundColor: 'var(--player-divider)' }} />
 
-            {/* Previous video */}
             {onPrevVideo && (
               <>
                 <button
                   onClick={() => handleButtonClick(onPrevVideo)}
                   className="flex h-11 w-11 items-center justify-center"
                   style={{ color: 'var(--player-text)' }}
-                  aria-label="이전 영상"
+                  aria-label="Previous video"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -197,22 +150,17 @@ export function FloatingRemote({
                     />
                   </svg>
                 </button>
-                <div
-                  className="h-px w-7"
-                  style={{ backgroundColor: 'var(--player-divider)' }}
-                />
+                <div className="h-px w-7" style={{ backgroundColor: 'var(--player-divider)' }} />
               </>
             )}
 
-            {/* Play/Pause */}
             <button
               onClick={() => handleButtonClick(handlePlayPause)}
               className="flex h-11 w-11 items-center justify-center"
               style={{ color: 'var(--player-text)' }}
-              aria-label={isPlaying ? '일시정지' : '재생'}
+              aria-label={isPlaying ? 'Pause' : 'Play'}
             >
               {isPlaying ? (
-                /* Pause icon: two vertical bars */
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -226,7 +174,6 @@ export function FloatingRemote({
                   />
                 </svg>
               ) : (
-                /* Play icon: triangle pointing right */
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
@@ -242,66 +189,35 @@ export function FloatingRemote({
               )}
             </button>
 
-            <div
-              className="h-px w-7"
-              style={{ backgroundColor: 'var(--player-divider)' }}
-            />
+            <div className="h-px w-7" style={{ backgroundColor: 'var(--player-divider)' }} />
 
-            {/* Freeze toggle */}
             {onToggleFreeze && (
               <>
                 <button
                   onClick={() => handleButtonClick(onToggleFreeze)}
                   className="flex h-11 w-11 items-center justify-center"
-                  style={{
-                    color: isFrozen
-                      ? 'var(--freeze-text, var(--accent-primary))'
-                      : 'var(--player-text)',
-                  }}
-                  aria-label={isFrozen ? '프리즈 해제' : '프리즈'}
+                  style={{ color: isFrozen ? 'var(--freeze-text)' : 'var(--player-muted)' }}
+                  aria-label={isFrozen ? 'Freeze on' : 'Freeze off'}
                 >
-                  {isFrozen ? (
-                    /* Filled snowflake */
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      className="h-5 w-5"
-                    >
-                      <path d="M12 2a.75.75 0 0 1 .75.75v2.69l1.72-1.72a.75.75 0 1 1 1.06 1.06L12.75 7.56V11h3.44l2.78-2.78a.75.75 0 1 1 1.06 1.06l-1.72 1.72h2.69a.75.75 0 0 1 0 1.5h-2.69l1.72 1.72a.75.75 0 1 1-1.06 1.06L16.19 12.5H12.75v3.44l2.78 2.78a.75.75 0 1 1-1.06 1.06l-1.72-1.72v2.69a.75.75 0 0 1-1.5 0v-2.69l-1.72 1.72a.75.75 0 0 1-1.06-1.06l2.78-2.78V12.5H7.81l-2.78 2.78a.75.75 0 0 1-1.06-1.06l1.72-1.72H3a.75.75 0 0 1 0-1.5h2.69L3.97 9.28a.75.75 0 0 1 1.06-1.06L7.81 11h3.44V7.56L8.47 4.78a.75.75 0 0 1 1.06-1.06l1.72 1.72V2.75A.75.75 0 0 1 12 2Z" />
-                    </svg>
-                  ) : (
-                    /* Outline snowflake */
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth={1.5}
-                      className="h-5 w-5"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M12 2.75v18.5M12 2.75l-2.5 2.5M12 2.75l2.5 2.5M12 21.25l-2.5-2.5M12 21.25l2.5-2.5M2.75 12h18.5M2.75 12l2.5-2.5M2.75 12l2.5 2.5M21.25 12l-2.5-2.5M21.25 12l-2.5 2.5"
-                      />
-                    </svg>
-                  )}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="h-5 w-5"
+                  >
+                    <path d="M12 2a.75.75 0 0 1 .75.75v2.69l1.72-1.72a.75.75 0 1 1 1.06 1.06L12.75 7.56V11h3.44l2.78-2.78a.75.75 0 1 1 1.06 1.06l-1.72 1.72h2.69a.75.75 0 0 1 0 1.5h-2.69l1.72 1.72a.75.75 0 1 1-1.06 1.06L16.19 12.5H12.75v3.44l2.78 2.78a.75.75 0 1 1-1.06 1.06l-1.72-1.72v2.69a.75.75 0 0 1-1.5 0v-2.69l-1.72 1.72a.75.75 0 0 1-1.06-1.06l2.78-2.78V12.5H7.81l-2.78 2.78a.75.75 0 0 1-1.06-1.06l1.72-1.72H3a.75.75 0 0 1 0-1.5h2.69L3.97 9.28a.75.75 0 0 1 1.06-1.06L7.81 11h3.44V7.56L8.47 4.78a.75.75 0 0 1 1.06-1.06l1.72 1.72V2.75A.75.75 0 0 1 12 2Z" />
+                  </svg>
                 </button>
-                <div
-                  className="h-px w-7"
-                  style={{ backgroundColor: 'var(--player-divider)' }}
-                />
+                <div className="h-px w-7" style={{ backgroundColor: 'var(--player-divider)' }} />
               </>
             )}
 
-            {/* Next video */}
             {onNextVideo && (
               <button
                 onClick={() => handleButtonClick(onNextVideo)}
                 className="flex h-11 w-11 items-center justify-center"
                 style={{ color: 'var(--player-text)' }}
-                aria-label="다음 영상"
+                aria-label="Next video"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -318,7 +234,6 @@ export function FloatingRemote({
               </button>
             )}
 
-            {/* Bottom padding when no next button */}
             {!onNextVideo && <div className="h-1" />}
           </motion.div>
         )}
