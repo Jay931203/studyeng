@@ -32,6 +32,7 @@ interface VideoPlayerProps {
   isLandscapeViewport?: boolean
   useLandscapeSplitLayout?: boolean
   landscapeVideoPaneWidth?: string
+  landscapeBottomSubtitleHeight?: number
   initialSeekTime?: number
   children?: ReactNode
 }
@@ -54,6 +55,7 @@ export function VideoPlayer({
   isLandscapeViewport = false,
   useLandscapeSplitLayout = false,
   landscapeVideoPaneWidth = '62%',
+  landscapeBottomSubtitleHeight = 184,
   initialSeekTime,
   children,
 }: VideoPlayerProps) {
@@ -414,9 +416,12 @@ export function VideoPlayer({
         className={
           useLandscapeSplitLayout
             ? 'relative flex min-w-0 flex-1 flex-col'
-            : `relative flex-shrink-0 ${isLandscapeViewport ? 'h-[208px]' : 'h-[176px]'}`
+            : 'relative flex-shrink-0'
         }
-        style={{ backgroundColor: 'var(--player-surface)' }}
+        style={{
+          backgroundColor: 'var(--player-surface)',
+          height: isLandscapeViewport ? `${landscapeBottomSubtitleHeight}px` : '176px',
+        }}
       >
         {useLandscapeSplitLayout ? (
           <>

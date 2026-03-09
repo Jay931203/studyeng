@@ -50,6 +50,7 @@ export function VideoFeed({
     isCompactViewport,
     useLandscapeSplitPlayer: autoLandscapeSplitPlayer,
     landscapeVideoPaneWidthPercent,
+    landscapeBottomSubtitleHeight,
   } = useViewportLayout()
   const landscapeSubtitleLayout = usePlayerStore((state) => state.landscapeSubtitleLayout)
   const useLandscapeSplitPlayer =
@@ -659,6 +660,7 @@ export function VideoFeed({
             isLandscapeViewport={isLandscapeViewport}
             useLandscapeSplitLayout={useLandscapeSplitPlayer}
             landscapeVideoPaneWidth={landscapeVideoPaneWidth}
+            landscapeBottomSubtitleHeight={landscapeBottomSubtitleHeight}
             onClipComplete={handleClipComplete}
             onVideoErrorSkip={canGoNext ? handleNextVideo : undefined}
             onEmbedBlocked={handleEmbedBlocked}

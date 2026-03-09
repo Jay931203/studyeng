@@ -7,9 +7,10 @@ const EMPTY_SNAPSHOT = '0:0:0:0'
 const COMPACT_VIEWPORT_MAX_WIDTH = 1180
 const COMPACT_VIEWPORT_MAX_HEIGHT = 900
 const SHORT_LANDSCAPE_MAX_HEIGHT = 560
-const COMPACT_LANDSCAPE_VIDEO_PANE_WIDTH = 62
+const COMPACT_LANDSCAPE_VIDEO_PANE_WIDTH = 70
 const WIDE_LANDSCAPE_VIDEO_PANE_WIDTH = 66
-const LANDSCAPE_BOTTOM_SUBTITLE_HEIGHT = 208
+const SHORT_LANDSCAPE_BOTTOM_SUBTITLE_HEIGHT = 152
+const LANDSCAPE_BOTTOM_SUBTITLE_HEIGHT = 184
 const PLAYER_PROGRESS_AREA_HEIGHT = 52
 const SPLIT_DIVIDER_WIDTH = 1
 const MIN_SPLIT_SUBTITLE_WIDTH = 360
@@ -136,6 +137,9 @@ export function useViewportLayout() {
   const landscapeVideoPaneWidthPercent = isShortLandscapeViewport
     ? COMPACT_LANDSCAPE_VIDEO_PANE_WIDTH
     : WIDE_LANDSCAPE_VIDEO_PANE_WIDTH
+  const landscapeBottomSubtitleHeight = isShortLandscapeViewport
+    ? SHORT_LANDSCAPE_BOTTOM_SUBTITLE_HEIGHT
+    : LANDSCAPE_BOTTOM_SUBTITLE_HEIGHT
   const splitVideoPaneWidth = viewportWidth * (landscapeVideoPaneWidthPercent / 100)
   const splitSubtitlePaneWidth = Math.max(
     viewportWidth - splitVideoPaneWidth - SPLIT_DIVIDER_WIDTH,
@@ -143,7 +147,7 @@ export function useViewportLayout() {
   )
   const splitVideoArea = getContainedVideoArea(splitVideoPaneWidth, viewportHeight)
   const stackedVideoHeight = Math.max(
-    viewportHeight - LANDSCAPE_BOTTOM_SUBTITLE_HEIGHT - PLAYER_PROGRESS_AREA_HEIGHT,
+    viewportHeight - landscapeBottomSubtitleHeight - PLAYER_PROGRESS_AREA_HEIGHT,
     0,
   )
   const stackedVideoArea = getContainedVideoArea(viewportWidth, stackedVideoHeight)
@@ -159,5 +163,6 @@ export function useViewportLayout() {
     useLandscapeSplitPlayer,
     showLandscapeRail: isShortLandscapeViewport && isCompactViewport,
     landscapeVideoPaneWidthPercent,
+    landscapeBottomSubtitleHeight,
   }
 }
