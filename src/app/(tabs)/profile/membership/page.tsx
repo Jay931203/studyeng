@@ -21,7 +21,7 @@ export default function ProfileMembershipPage() {
 
   return (
     <AppPage>
-      <div className="mx-auto max-w-2xl space-y-6">
+      <div className="space-y-6">
         <div className="flex items-center gap-3">
           <button
             type="button"

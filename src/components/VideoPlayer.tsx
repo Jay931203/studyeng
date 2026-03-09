@@ -180,7 +180,7 @@ export function VideoPlayer({
       videoId={videoId ?? youtubeId}
       onSavePhrase={onSavePhrase}
       onSeek={(time) => seekTo(time)}
-      visibleLineCount={useLandscapeSplitLayout ? 5 : 3}
+      visibleLineCount={useLandscapeSplitLayout ? 5 : isLandscapeViewport ? 3 : 7}
     />
   )
 
