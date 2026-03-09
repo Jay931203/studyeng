@@ -4,23 +4,31 @@
   "title": "You deserve what you want",
   "seriesId": "10-things",
   "sentenceCount": 1,
-  "taggedCount": 0,
+  "taggedCount": 1,
   "sentences": [
     {
       "id": "4MRU8QBdipg-0",
       "en": "Oh",
       "ko": "오",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
   ]

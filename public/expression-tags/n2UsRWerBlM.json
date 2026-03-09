@@ -4,23 +4,31 @@
   "title": "Radio",
   "seriesId": "truman-show",
   "sentenceCount": 1,
-  "taggedCount": 0,
+  "taggedCount": 1,
   "sentences": [
     {
       "id": "n2UsRWerBlM-0",
       "en": "Don't forget to",
       "ko": "잊지 마세요.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F34"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
   ]

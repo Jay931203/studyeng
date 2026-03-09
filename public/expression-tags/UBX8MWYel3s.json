@@ -4,23 +4,31 @@
   "title": "Violet's Best Zingers",
   "seriesId": "downton-abbey",
   "sentenceCount": 1,
-  "taggedCount": 0,
+  "taggedCount": 1,
   "sentences": [
     {
       "id": "UBX8MWYel3s-0",
       "en": "Nice.",
       "ko": "좋아요.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F09"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
   ]

@@ -4,23 +4,31 @@
   "title": "Tyrion's Trial Speech",
   "seriesId": "game-of-thrones",
   "sentenceCount": 1,
-  "taggedCount": 0,
+  "taggedCount": 1,
   "sentences": [
     {
       "id": "TbwroS0YP54-0",
       "en": "[\"This is How We Do It\"]",
       "ko": "[\"이렇게 하는 거예요\"]",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F04"
+        ],
+        "situation": "S36",
+        "cefr": "B1",
+        "register": "R2",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
   ]

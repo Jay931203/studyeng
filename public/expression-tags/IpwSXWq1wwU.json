@@ -4,20 +4,26 @@
   "title": "\"Show Me The Money\"",
   "seriesId": "jerry-maguire",
   "sentenceCount": 20,
-  "taggedCount": 0,
+  "taggedCount": 20,
   "sentences": [
     {
       "id": "IpwSXWq1wwU-0",
       "en": "Are you ready, Jerry? I'm ready.",
       "ko": "준비됐어, 제리? 난 준비됐어.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F06"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -28,13 +34,19 @@
       "en": "I just want to make sure you're ready, brother.",
       "ko": "네가 준비됐는지 확인하고 싶어, 형.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F50"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -45,13 +57,19 @@
       "en": "Here it is.",
       "ko": "여기 있어.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -62,14 +80,22 @@
       "en": "Show me the money.",
       "ko": "돈을 보여줘.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
+        "functions": [
+          "F09"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -79,16 +105,24 @@
       "en": "Oh!",
       "ko": "오!",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F18"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -96,16 +130,24 @@
       "en": "Yo!",
       "ko": "요!",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F25"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -113,16 +155,24 @@
       "en": "Hey!",
       "ko": "헤이!",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F25"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -130,16 +180,24 @@
       "en": "Hey!",
       "ko": "헤이!",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F25"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -147,13 +205,19 @@
       "en": "Money! Oh, Jerry!",
       "ko": "돈! 오, 제리!",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F09"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -164,13 +228,19 @@
       "en": "Does that make you feel good just to say that?",
       "ko": "그걸 말하는 게 기분 좋니?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F06"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -181,13 +251,19 @@
       "en": "Say it with me one time, Jerry. Show you the money. Oh, no, no. You can do better than that, Jerry.",
       "ko": "나와 함께 한 번 말해봐, 제리. 돈을 보여줘. 오, 아니, 아니. 더 잘할 수 있어, 제리.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F34"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,13 +274,19 @@
       "en": "I want you to say it with me then, brother.",
       "ko": "그럼 나와 함께 말해줘, 형.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F34"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -215,13 +297,19 @@
       "en": "Hey, I got Bob Sugar on the other line. I better hear you say it. Yeah, yeah. No, no, no. Show you the money. Not show you.",
       "ko": "이봐, 다른 전화에 밥 슈거가 있어. 네가 그걸 말하는 걸 들어야 해. 그래, 그래. 아니, 아니, 아니. 돈을 보여줘. 보여주지 마.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F06"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -232,16 +320,24 @@
       "en": "Show me the money. Show me the money. Yeah! Louder! Show me the money. That's it, brother, but you got to yell that shit. Show me the money.",
       "ko": "돈을 보여줘. 돈을 보여줘. 그래! 더 크게! 돈을 보여줘. 그거야, 형, 하지만 그걸 소리쳐야 해. 돈을 보여줘.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F09"
+        ],
+        "situation": "S50",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -249,13 +345,19 @@
       "en": "I need to feel you, Jerry. Show me the money! Jerry, you better yell.",
       "ko": "네가 느껴져야 해, 제리. 돈을 보여줘! 제리, 소리쳐야 해.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F31"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -266,13 +368,19 @@
       "en": "Show me the money!",
       "ko": "돈을 보여줘!",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F34"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -283,13 +391,19 @@
       "en": "Show me the money! Do you love this black man?",
       "ko": "돈을 보여줘! 이 흑인 남자를 사랑하니?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F34"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -300,13 +414,19 @@
       "en": "I love the black man!",
       "ko": "나는 흑인 남자를 사랑해!",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F22"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E11"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -317,13 +437,19 @@
       "en": "Show me the money!",
       "ko": "돈을 보여줘!",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F34"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,13 +460,19 @@
       "en": "I love black people!",
       "ko": "나는 흑인들을 사랑해!",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F22"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E11"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []

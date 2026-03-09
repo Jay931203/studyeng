@@ -4,23 +4,31 @@
   "title": "Frasier Clips: Killed after mating",
   "seriesId": "frasier",
   "sentenceCount": 1,
-  "taggedCount": 0,
+  "taggedCount": 1,
   "sentences": [
     {
       "id": "sXhK_sxxEuQ-0",
       "en": "Coffee.",
       "ko": "커피.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
   ]

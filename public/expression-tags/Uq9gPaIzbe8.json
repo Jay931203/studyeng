@@ -4,23 +4,31 @@
   "title": "Sam Smith, Kim Petras - Unholy",
   "seriesId": "pop-hits",
   "sentenceCount": 2,
-  "taggedCount": 0,
+  "taggedCount": 2,
   "sentences": [
     {
       "id": "Uq9gPaIzbe8-0",
       "en": "But we don't know that he's getting hot, at the body shop, doing something unholy.",
       "ko": "하지만 우리는 그가 바디샵에서 뭔가 불경스러운 일을 하며 뜨거워지고 있다는 걸 몰라.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_lyrics"
+        ]
       }
     },
     {
@@ -28,16 +36,24 @@
       "en": "Lucky, lucky.",
       "ko": "행운이야, 행운이야.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_lyrics"
+        ]
       }
     }
   ]

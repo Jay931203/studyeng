@@ -4,20 +4,26 @@
   "title": "Whiplash Finale (Caravan) (Part 2)",
   "seriesId": "whiplash",
   "sentenceCount": 3,
-  "taggedCount": 0,
+  "taggedCount": 3,
   "sentences": [
     {
       "id": "2TAfvMn8_EQ-0",
       "en": "Andrew, what are you doing, man?",
       "ko": "앤드류, 뭐 하고 있어?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F06"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -28,13 +34,19 @@
       "en": "Andrew! Andrew! Andrew!",
       "ko": "앤드류! 앤드류! 앤드류!",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F25"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -45,16 +57,24 @@
       "en": "Andrew!",
       "ko": "앤드류!",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F25"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
   ]

@@ -4,23 +4,31 @@
   "title": "Yellow",
   "seriesId": "rock-anthems",
   "sentenceCount": 3,
-  "taggedCount": 0,
+  "taggedCount": 3,
   "sentences": [
     {
       "id": "yKNxeF4KMsY-0",
       "en": "Thank you for joining us on this ride.",
       "ko": "이 여행에 함께해 주셔서 감사합니다.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F27"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_lyrics"
+        ]
       }
     },
     {
@@ -28,16 +36,24 @@
       "en": "We hope you are enjoying the ride.",
       "ko": "여행을 즐기고 계시길 바랍니다.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F09"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_lyrics"
+        ]
       }
     },
     {
@@ -45,16 +61,24 @@
       "en": "Thank you for joining us on this ride.",
       "ko": "이 여행에 함께해 주셔서 감사합니다.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F27"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_lyrics"
+        ]
       }
     }
   ]

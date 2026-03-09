@@ -4,20 +4,26 @@
   "title": "The ship will sink",
   "seriesId": "titanic",
   "sentenceCount": 15,
-  "taggedCount": 0,
+  "taggedCount": 15,
   "sentences": [
     {
       "id": "it-jZnbmRzI-0",
       "en": "I'm sorry, ma'am. Let me go and find out.",
       "ko": "죄송합니다, 마님. 가서 알아보겠습니다.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F34"
+        ],
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R3",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -28,16 +34,24 @@
       "en": "I don't think anybody knows what the hell's going on around here.",
       "ko": "여기서 무슨 일이 일어나고 있는지 아는 사람은 없는 것 같아요.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F09"
+        ],
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -45,13 +59,19 @@
       "en": "Goddamn English, doing everything by the book.",
       "ko": "제기랄, 영국식대로 모든 걸 처리하네요.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F17"
+        ],
+        "situation": "S44",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -62,13 +82,19 @@
       "en": "There's no need for language, Mr. Hockley.",
       "ko": "언어는 필요 없습니다, 호클리 씨.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F09"
+        ],
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R2",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -79,13 +105,19 @@
       "en": "Go back and turn the heaters on in our rooms.",
       "ko": "돌아가서 우리 방의 히터를 켜 주세요.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F35"
+        ],
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R3",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -96,13 +128,19 @@
       "en": "I'd like a cup of tea when I return.",
       "ko": "돌아올 때 차 한 잔 주시면 좋겠어요.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F34"
+        ],
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -113,13 +151,19 @@
       "en": "Yes, ma'am.",
       "ko": "네, 마님.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F07"
+        ],
+        "situation": "S44",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -130,13 +174,19 @@
       "en": "Mr. Andrews?",
       "ko": "앤드류스 씨?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F06"
+        ],
+        "situation": "S44",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -147,13 +197,19 @@
       "en": "I saw the iceberg, and I see it in your eyes.",
       "ko": "빙산을 봤고, 당신의 눈에서도 보입니다.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F09"
+        ],
+        "situation": "S44",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E04"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -164,13 +220,19 @@
       "en": "Please tell me the truth.",
       "ko": "제발 진실을 말해 주세요.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F06"
+        ],
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R3",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -181,13 +243,20 @@
       "en": "The ship will sink. Are you certain?",
       "ko": "배가 침몰할 겁니다. 확실합니까?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01",
+          "F04"
+        ],
+        "situation": "S44",
+        "cefr": "B2",
+        "register": "R2",
+        "emotions": [
+          "E04"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,13 +267,19 @@
       "en": "Yes. In an hour or so.",
       "ko": "네. 한 시간 정도 후에요.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F07"
+        ],
+        "situation": "S44",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -215,13 +290,19 @@
       "en": "All this will be at the bottom of the Atlantic. What?",
       "ko": "이 모든 것이 대서양 바닥에 있을 겁니다. 뭐라고요?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F09"
+        ],
+        "situation": "S44",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E04"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -232,13 +313,19 @@
       "en": "Please, tell only who you must.",
       "ko": "제발, 꼭 필요한 사람에게만 말해 주세요.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F34"
+        ],
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R3",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -249,13 +336,19 @@
       "en": "I don't want to be responsible for a panic. Now get to work.",
       "ko": "패닉에 대한 책임을 지고 싶지 않아요. 이제 일하세요.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F12"
+        ],
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R3",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []

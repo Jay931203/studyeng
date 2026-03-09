@@ -4,20 +4,26 @@
   "title": "Docking Scene (HDR - 4K - 5.1)",
   "seriesId": "interstellar",
   "sentenceCount": 8,
-  "taggedCount": 0,
+  "taggedCount": 8,
   "sentences": [
     {
       "id": "onVhbeY7nLM-0",
       "en": "Cooper, there's no point in using our fuel to chase them.",
       "ko": "쿠퍼, 그들을 쫓기 위해 연료를 쓰는 건 의미가 없어.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F04"
+        ],
+        "situation": "S44",
+        "cefr": "B2",
+        "register": "R3",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -28,13 +34,19 @@
       "en": "We need to stabilize the endurance's spin.",
       "ko": "인내호의 회전을 안정시켜야 해.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F04"
+        ],
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R3",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -45,13 +57,19 @@
       "en": "Cooper, what are you doing?",
       "ko": "쿠퍼, 뭐 하고 있어?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F06"
+        ],
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -62,16 +80,24 @@
       "en": "Docking.",
       "ko": "도킹 중이야.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S44",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -79,13 +105,19 @@
       "en": "Endurance rotation is 67, 68 RPM.",
       "ko": "인내호의 회전 속도는 67, 68 RPM이야.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F02"
+        ],
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R3",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -96,13 +128,19 @@
       "en": "Okay, get ready to match our spin with the retro thrusters. It's not possible.",
       "ko": "좋아, 레트로 스러스터로 우리의 회전을 맞출 준비해. 불가능해.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F36"
+        ],
+        "situation": "S44",
+        "cefr": "B2",
+        "register": "R3",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -113,13 +151,19 @@
       "en": "No, it's necessary.",
       "ko": "아니, 필요해.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F09"
+        ],
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -130,13 +174,19 @@
       "en": "Endurance is hitting stratosphere.",
       "ko": "인내호가 성층권에 접어들고 있어.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F02"
+        ],
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R3",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []

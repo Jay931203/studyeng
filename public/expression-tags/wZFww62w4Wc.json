@@ -4,20 +4,27 @@
   "title": "Anxiety Attack",
   "seriesId": "inside-out",
   "sentenceCount": 3,
-  "taggedCount": 0,
+  "taggedCount": 3,
   "sentences": [
     {
       "id": "wZFww62w4Wc-0",
       "en": "Okay, I'm hungry! Sadness! Joy! Help!",
       "ko": "좋아, 나 배고파! 슬퍼! 기뻐! 도와줘!",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F15"
+        ],
+        "situation": "S45",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E01",
+          "E02"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V04",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -28,13 +35,19 @@
       "en": "It's not working! It's anxiety!",
       "ko": "안 먹혀! 불안이야!",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F09"
+        ],
+        "situation": "S45",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E04"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -45,13 +58,19 @@
       "en": "Anxiety, stop!",
       "ko": "불안아, 멈춰!",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F40"
+        ],
+        "situation": "S45",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E04"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []

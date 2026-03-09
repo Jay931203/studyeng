@@ -4,20 +4,26 @@
   "title": "The Incredibles Dash & Violet Vs Syndrome’s Guards",
   "seriesId": "the-incredibles",
   "sentenceCount": 6,
-  "taggedCount": 0,
+  "taggedCount": 6,
   "sentences": [
     {
       "id": "0Hrnnt7Mxc0-0",
       "en": "Intruder alert! Intruder alert! Intruder alert!",
       "ko": "침입자 경보! 침입자 경보! 침입자 경보!",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F62"
+        ],
+        "situation": "S45",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -28,13 +34,19 @@
       "en": "You think they're supers?",
       "ko": "저 사람들 슈퍼인 것 같아?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F06"
+        ],
+        "situation": "S45",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -45,13 +57,19 @@
       "en": "Yeah, I should remember what Mom said. Hey, stop talking.",
       "ko": "응, 엄마가 뭐라고 했는지 기억해야 해. 야, 그만 말해.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F09"
+        ],
+        "situation": "S10",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -62,13 +80,19 @@
       "en": "Hold it! Freeze! Dad, run! What? Run!",
       "ko": "거기 서! 움직이지 마! 아빠, 도망쳐! 뭐? 도망쳐!",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F35"
+        ],
+        "situation": "S10",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -79,13 +103,19 @@
       "en": "What the? They're supers! Get the boy! Show yourself!",
       "ko": "뭐야? 그들은 슈퍼야! 그 아이를 잡아! 나와!",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F09"
+        ],
+        "situation": "S45",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -96,16 +126,24 @@
       "en": "To be continued...",
       "ko": "계속됩니다...",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F62"
+        ],
+        "situation": "S45",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     }
   ]

@@ -4,20 +4,26 @@
   "title": "JAPAN",
   "seriesId": "travel-vlogs",
   "sentenceCount": 2,
-  "taggedCount": 0,
+  "taggedCount": 2,
   "sentences": [
     {
       "id": "NQ6_Sqt_w3Y-0",
       "en": "Tell me what you think in the deep comments.",
       "ko": "깊은 댓글로 네 생각을 말해 줘.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F06"
+        ],
+        "situation": "S35",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -28,16 +34,24 @@
       "en": "I'm not sure. I'm not sure. I'm not sure.",
       "ko": "잘 모르겠어. 잘 모르겠어. 잘 모르겠어.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F09"
+        ],
+        "situation": "S35",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
   ]

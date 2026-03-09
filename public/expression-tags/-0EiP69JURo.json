@@ -4,23 +4,23 @@
   "title": "The baby is here - Clip 17 of 19 - JUNO film",
   "seriesId": "juno",
   "sentenceCount": 17,
-  "taggedCount": 0,
+  "taggedCount": 17,
   "sentences": [
     {
       "id": "-0EiP69JURo-0",
       "en": "to break your heart.",
       "ko": "네 마음을 아프게 하려고.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
+        "functions": ["F42"],
+        "situation": "S46",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": ["E02"],
+        "expression_types": ["X02"],
+        "vibe": "V09",
+        "power": ["P10"],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["is_lyrics", "is_fragment"]
       }
     },
     {
@@ -28,16 +28,16 @@
       "en": "I'll tell you that I love you",
       "ko": "사랑한다고 말할게.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": ["F22", "F41"],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R5",
+        "emotions": ["E11"],
+        "expression_types": ["X08"],
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": ["G22"],
+        "flags": ["is_lyrics"]
       }
     },
     {
@@ -45,16 +45,16 @@
       "en": "and I'll tear you apart.",
       "ko": "그리고 널 찢어놓을 거야.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": ["F42"],
+        "situation": "S46",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": ["E03"],
+        "expression_types": ["X01"],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["is_lyrics"]
       }
     },
     {
@@ -62,16 +62,16 @@
       "en": "Just pretend I didn't tear you apart.",
       "ko": "내가 널 찢어놓지 않았다고 생각해줘.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": ["F34"],
+        "situation": "S46",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": ["E02"],
+        "expression_types": ["X01"],
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": ["G02"],
+        "flags": ["is_lyrics"]
       }
     },
     {
@@ -79,14 +79,14 @@
       "en": "Breathe out of the way! Out of the way! Hold it! Stop it! Stop it! Don't do that. What?",
       "ko": "비켜! 비켜! 잠깐! 멈춰! 멈춰! 그러지 마. 뭐?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
+        "functions": ["F35", "F43"],
+        "situation": "S28",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": ["E04", "E06"],
+        "expression_types": ["X04", "X08"],
+        "vibe": "V17",
+        "power": ["P03"],
         "grammar_intent": [],
         "flags": []
       }
@@ -96,13 +96,13 @@
       "en": "Don't. You're making a mess. But it's fine.",
       "ko": "하지 마. 엉망이 되고 있어. 하지만 괜찮아.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": ["F35", "F19"],
+        "situation": "S28",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": ["E06"],
+        "expression_types": ["X03", "X08"],
+        "vibe": "V17",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -113,16 +113,16 @@
       "en": "Ow! Ow! Fuckity ow! Ah, Bryn, when do I get that friggin' spinal tap thing?",
       "ko": "아! 아! 아프다! 아, 브린, 그 척추 천자 언제 해줘?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
+        "functions": ["F06", "F21"],
+        "situation": "S28",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": ["E15", "E03"],
+        "expression_types": ["X05", "X08"],
+        "vibe": "V10",
+        "power": ["P01"],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["contains_profanity"]
       }
     },
     {
@@ -130,15 +130,15 @@
       "en": "It's called a spinal block and you can't have it yet, honey.",
       "ko": "척추 차단이라고 하고, 아직 할 수 없어, 자기야.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": ["F08", "F04"],
+        "situation": "S28",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": ["E07"],
+        "expression_types": ["X08"],
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": ["G18"],
         "flags": []
       }
     },
@@ -147,15 +147,15 @@
       "en": "The doctor said you're not dilated enough. Oh, come on! I mean, it's like...",
       "ko": "의사가 너의 경관이 충분히 열리지 않았다고 했어. 아, 제발! 그러니까...",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": ["F05", "F21"],
+        "situation": "S28",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": ["E03", "E15"],
+        "expression_types": ["X06", "X08"],
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": ["G19"],
         "flags": []
       }
     },
@@ -164,15 +164,15 @@
       "en": "Why do I have to wait for it to get worse?",
       "ko": "왜 더 나빠질 때까지 기다려야 해?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": ["F06", "F21"],
+        "situation": "S28",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": ["E03"],
+        "expression_types": ["X08"],
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": ["G19"],
         "flags": []
       }
     },
@@ -181,15 +181,15 @@
       "en": "Why can't I just have the friggin' thing now? Honey, doctors are sadists who like to play God",
       "ko": "왜 지금 당장 그걸 받을 수 없는 거야? 자기야, 의사들은 신처럼 놀고 싶어하는 가학자들이야.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
+        "functions": ["F21", "F59", "F09"],
+        "situation": "S28",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": ["E10", "E03"],
+        "expression_types": ["X05", "X08"],
+        "vibe": "V10",
+        "power": ["P01"],
+        "grammar_intent": ["G19"],
         "flags": []
       }
     },
@@ -198,16 +198,16 @@
       "en": "and watch lesser people scream. Ah! Shit. Excuse me. Hey, can we get my kid",
       "ko": "그리고 덜 중요한 사람들이 비명을 지르는 걸 지켜보는 걸 좋아해. 아! 젠장. 실례합니다. 저희 아이에게",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": ["F59", "F34", "F28"],
+        "situation": "S28",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": ["E10", "E03"],
+        "expression_types": ["X05", "X08"],
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": ["G02"],
+        "flags": ["contains_profanity"]
       }
     },
     {
@@ -215,16 +215,16 @@
       "en": "the damn spinal tap already? Bryn, that's good. That's good. Keep pushing. Come on, Jim. Keep pushing.",
       "ko": "그 척추 천자 좀 해줄 수 있을까요? 브린, 잘하고 있어. 잘하고 있어. 계속 밀어. 자, 짐. 계속 밀어.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "functions": ["F34", "F30", "F35"],
+        "situation": "S28",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": ["E06", "E07"],
+        "expression_types": ["X08"],
+        "vibe": "V12",
+        "power": ["P03"],
+        "grammar_intent": ["G23"],
+        "flags": ["contains_profanity"]
       }
     },
     {
@@ -232,16 +232,16 @@
       "en": "Keep pushing.",
       "ko": "계속 밀어.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "functions": ["F35"],
+        "situation": "S28",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": ["E06"],
+        "expression_types": ["X08"],
+        "vibe": "V12",
+        "power": ["P03"],
+        "grammar_intent": ["G23"],
+        "flags": ["is_fragment"]
       }
     },
     {
@@ -249,16 +249,16 @@
       "en": "You're a part-time lover",
       "ko": "너는 파트타임 연인",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": ["F02"],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": ["E14"],
+        "expression_types": ["X03"],
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["is_lyrics", "is_fragment"]
       }
     },
     {
@@ -266,16 +266,16 @@
       "en": "and a full-time friend. The monkey on your back",
       "ko": "그리고 풀타임 친구야. 네 어깨의 원숭이는",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
+        "functions": ["F02"],
+        "situation": "S46",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": ["E14"],
+        "expression_types": ["X02"],
+        "vibe": "V14",
+        "power": ["P06"],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["is_lyrics"]
       }
     },
     {
@@ -283,16 +283,16 @@
       "en": "is the latest trend. I don't see what it is.",
       "ko": "최신 유행이야. 뭐가 문제인지 모르겠어.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": ["F01", "F09"],
+        "situation": "S46",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": ["E14"],
+        "expression_types": ["X03", "X08"],
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["is_lyrics"]
       }
     }
   ]

@@ -4,23 +4,32 @@
   "title": "MIKA Popular Song ft Ariana Grande Official Music Video",
   "seriesId": "pop-hits",
   "sentenceCount": 1,
-  "taggedCount": 0,
+  "taggedCount": 1,
   "sentences": [
     {
       "id": "AIUaYqSUVps-0",
       "en": "You",
       "ko": "너",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_lyrics",
+          "is_fragment"
+        ]
       }
     }
   ]

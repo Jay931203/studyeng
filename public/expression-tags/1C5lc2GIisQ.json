@@ -4,23 +4,31 @@
   "title": "Hidden Figures Scene: Dorothy fixes the IBM",
   "seriesId": "hidden-figures",
   "sentenceCount": 1,
-  "taggedCount": 0,
+  "taggedCount": 1,
   "sentences": [
     {
       "id": "1C5lc2GIisQ-0",
       "en": "Thank you for watching, and I'll see you in the next one. Bye!",
       "ko": "시청해 주셔서 감사합니다. 다음 영상에서 만나요. 안녕!",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F25"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
   ]

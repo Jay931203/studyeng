@@ -4,23 +4,31 @@
   "title": "Jack's TV Show Pitch",
   "seriesId": "30-rock",
   "sentenceCount": 4,
-  "taggedCount": 0,
+  "taggedCount": 4,
   "sentences": [
     {
       "id": "i9IA4XFPEnk-0",
       "en": "The moms? What moms?",
       "ko": "엄마들? 어떤 엄마들?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F06"
+        ],
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -28,13 +36,19 @@
       "en": "The staff moms that are going to be on the Mother's Day show",
       "ko": "어버이날 쇼에 나올 스태프 엄마들 말이야.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -45,16 +59,24 @@
       "en": "that NBC is making us do after their ill-fated decision to re-air the pilot of Bitch Hunter?",
       "ko": "NBC가 'Bitch Hunter' 파일럿을 재방송하기로 한 잘못된 결정 이후에 우리에게 강요하는 거야?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F04"
+        ],
+        "situation": "S14",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -62,16 +84,24 @@
       "en": "Put the mimosas down, bitch!",
       "ko": "미모사를 내려놔, 이 자식아!",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F35"
+        ],
+        "situation": "S14",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V03",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     }
   ]

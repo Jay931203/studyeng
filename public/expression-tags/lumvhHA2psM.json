@@ -4,23 +4,32 @@
   "title": "Royel Otis - who's your boyfriend",
   "seriesId": "acousticindie",
   "sentenceCount": 4,
-  "taggedCount": 0,
+  "taggedCount": 4,
   "sentences": [
     {
       "id": "lumvhHA2psM-0",
       "en": "Usual?",
       "ko": "평소처럼?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F06"
+        ],
+        "situation": "S46",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_lyrics",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -28,16 +37,24 @@
       "en": "Oh, you know, I don't want to try something new. Feeling adventurous, are we?",
       "ko": "아, 있잖아, 새로운 걸 시도하고 싶지 않아. 모험심이 생겼나 봐?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F09"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_lyrics"
+        ]
       }
     },
     {
@@ -45,16 +62,24 @@
       "en": "I mean, maybe. I could take it back. No.",
       "ko": "그러니까, 어쩌면. 취소할 수도 있어. 안 돼.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F50"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_lyrics"
+        ]
       }
     },
     {
@@ -62,16 +87,24 @@
       "en": "No. No. No.",
       "ko": "아니. 아니. 아니.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F12"
+        ],
+        "situation": "S46",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_lyrics"
+        ]
       }
     }
   ]

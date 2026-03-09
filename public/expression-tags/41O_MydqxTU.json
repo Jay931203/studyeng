@@ -4,23 +4,32 @@
   "title": "Jack Black - Steve's Lava Chicken",
   "seriesId": "movie-soundtracks",
   "sentenceCount": 1,
-  "taggedCount": 0,
+  "taggedCount": 1,
   "sentences": [
     {
       "id": "41O_MydqxTU-0",
       "en": "You ever wonder what hap-",
       "ko": "혹시 무슨 일이 일어나는지 궁금해?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F06"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_lyrics",
+          "is_fragment"
+        ]
       }
     }
   ]

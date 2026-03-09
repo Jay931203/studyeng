@@ -4,23 +4,31 @@
   "title": "Andy's Network Connectivity Problems",
   "seriesId": "parks-rec",
   "sentenceCount": 6,
-  "taggedCount": 0,
+  "taggedCount": 6,
   "sentences": [
     {
       "id": "LinpRhB4aWU-0",
       "en": "Leslie, go home. No, I can't. I can't go home. I have to get ready for the Chamber of Secrets. Commerce.",
       "ko": "레슬리, 집에 가. 아니, 안 돼. 집에 갈 수 없어. 비밀의 방을 준비해야 해. 상업.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F35"
+        ],
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -28,13 +36,19 @@
       "en": "If this meeting does not go perfectly, then the Harvest Festival is going to be over before it began. I cannot go home.",
       "ko": "이 회의가 완벽하게 진행되지 않으면, 수확 축제는 시작도 하기 전에 끝날 거야. 집에 갈 수 없어.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F09"
+        ],
+        "situation": "S14",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E04"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -45,13 +59,19 @@
       "en": "Okay, then who's your doctor? Anne's my doctor.",
       "ko": "그럼, 너의 의사는 누구야? 앤이 내 의사야.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F06"
+        ],
+        "situation": "S14",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -62,13 +82,20 @@
       "en": "And she's the most beautiful nurse in the world. Come on. Oh, God. Now I'm hot. Now it's really hot in here.",
       "ko": "그리고 그녀는 세상에서 가장 아름다운 간호사야. 어서 와. 오, 신이시여. 이제 더워. 여기 정말 덥네.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F30"
+        ],
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01",
+          "E05"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -79,13 +106,19 @@
       "en": "Okay. Well, that's your fever.",
       "ko": "좋아. 그게 너의 열이야.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F04"
+        ],
+        "situation": "S14",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -96,13 +129,19 @@
       "en": "Leslie, I typed your symptoms into the thing up here, and it says you could have network connectivity problems.",
       "ko": "레슬리, 네 증상을 여기 입력했더니, 네트워크 연결 문제일 수 있다고 나와.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F05"
+        ],
+        "situation": "S14",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []

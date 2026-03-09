@@ -4,20 +4,26 @@
   "title": "Larry walks into a Jeff & Susie argument",
   "seriesId": "curb",
   "sentenceCount": 18,
-  "taggedCount": 0,
+  "taggedCount": 18,
   "sentences": [
     {
       "id": "7Y01uy-Q1d8-0",
       "en": "I've had it with you! I've just had it with you! Hey! Hello?",
       "ko": "너한테 진절머리가 나! 진짜 진절머리가 나! 이봐! 여보세요?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F17"
+        ],
+        "situation": "S10",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -28,13 +34,19 @@
       "en": "Oh, this is great. This is all we need, Mr. Wake-me-up-in-the-middle-of-the-night.",
       "ko": "아, 이거 정말 좋네. 우리가 필요한 건 이거야, 한밤중에 깨우는 미스터.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F09"
+        ],
+        "situation": "S10",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -45,16 +57,26 @@
       "en": "What the fuck are you doing here?",
       "ko": "여기서 뭐하는 거야?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
+        "functions": [
+          "F17"
+        ],
+        "situation": "S10",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -62,13 +84,19 @@
       "en": "Jeff and I were gonna play a new computer golf game. Oh, were you really?",
       "ko": "제프랑 새 컴퓨터 골프 게임 하려고 했어. 정말 그랬어?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F03"
+        ],
+        "situation": "S10",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -79,13 +107,19 @@
       "en": "Well, let me tell you something, Larry.",
       "ko": "자, 하나 말해줄게, 래리.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F04"
+        ],
+        "situation": "S10",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -96,13 +130,19 @@
       "en": "Jeff's computer golf game is gone.",
       "ko": "제프의 컴퓨터 골프 게임이 없어.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -113,13 +153,19 @@
       "en": "The computer's gone. The TV's gone.",
       "ko": "컴퓨터도 없어. TV도 없어.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -130,13 +176,19 @@
       "en": "The new DVD player's gone. Everything's gone.",
       "ko": "새 DVD 플레이어도 없어. 모든 게 없어.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -147,16 +199,26 @@
       "en": "My wedding video is gone because your fat fuck manager over here",
       "ko": "내 결혼 비디오도 없어. 네 뚱뚱한 매니저가 여기서",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
+        "functions": [
+          "F17"
+        ],
+        "situation": "S10",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -164,16 +226,24 @@
       "en": "let an asshole kid into our house, okay? You happy?",
       "ko": "바보 같은 애를 우리 집에 들여보냈거든, 알겠어? 기분 좋니?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F17"
+        ],
+        "situation": "S10",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -181,13 +251,19 @@
       "en": "All gone. It's not his fault.",
       "ko": "다 없어. 그의 잘못이 아니야.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,13 +274,19 @@
       "en": "Whose fault is it, Jeffrey? I know it's not Larry's fault. It's the kid's fault! No, no, no. I don't think it's the kid's fault. I think it's the kid's fault. No, I'm gonna get him.",
       "ko": "그게 누구 잘못인데, 제프리? 래리 잘못은 아니란 걸 알아. 애 잘못이야! 아니, 아니, 아니. 애 잘못이 아니라고 생각해. 애 잘못이야. 아니, 내가 그 애를 잡으러 갈 거야.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F10"
+        ],
+        "situation": "S10",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -215,13 +297,19 @@
       "en": "Oh, you're gonna get him. Look at you, you pathetic.",
       "ko": "아, 너 그 애를 잡으러 간다고? 너 참 한심하네.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F58"
+        ],
+        "situation": "S10",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -232,13 +320,19 @@
       "en": "And Larry, by the way,",
       "ko": "그리고 래리,",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -249,16 +343,24 @@
       "en": "what the fuck was that about calling a 10-20 at night the other day, huh?",
       "ko": "저번에 밤 10시에 10-20 부른 건 대체 뭐야?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F06"
+        ],
+        "situation": "S10",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -266,13 +368,19 @@
       "en": "I thought the cutoff was 10-30.",
       "ko": "나는 마감 시간이 10시 30분인 줄 알았어.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S10",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -283,13 +391,19 @@
       "en": "You know I have trouble sleeping? No. Yes, you do. I don't know that.",
       "ko": "나 잠 잘 자는 데 문제가 있다는 거 알지? 아니. 응, 너 알잖아. 나는 몰라.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F06"
+        ],
+        "situation": "S10",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E02"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -300,16 +414,24 @@
       "en": "Jeff, you never told him about my trouble sleeping? I...",
       "ko": "제프, 너 나의 잠 문제에 대해 그에게 말하지 않았어? 나...",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F06"
+        ],
+        "situation": "S10",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
   ]

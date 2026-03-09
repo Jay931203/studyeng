@@ -4,23 +4,31 @@
   "title": "Ed Sheeran - Thinking Out Loud",
   "seriesId": "pop-hits",
   "sentenceCount": 2,
-  "taggedCount": 0,
+  "taggedCount": 2,
   "sentences": [
     {
       "id": "lp-EO5I60KA-0",
       "en": "Are you still there? If so, we'd like to thank you for joining us in today's drive.",
       "ko": "아직 계신가요? 그렇다면 오늘 드라이브에 함께해 주셔서 감사합니다.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F34"
+        ],
+        "situation": "S06",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_lyrics"
+        ]
       }
     },
     {
@@ -28,16 +36,24 @@
       "en": "We are now at Upper Session Road",
       "ko": "지금 우리는 어퍼 세션 로드에 있습니다.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S06",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_lyrics"
+        ]
       }
     }
   ]

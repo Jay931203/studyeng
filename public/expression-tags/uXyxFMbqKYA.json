@@ -4,23 +4,31 @@
   "title": "Luke Combs - When It Rains It Pours",
   "seriesId": "country-hits",
   "sentenceCount": 5,
-  "taggedCount": 0,
+  "taggedCount": 5,
   "sentences": [
     {
       "id": "uXyxFMbqKYA-0",
       "en": "Come on, we gotta go.",
       "ko": "어서, 가야 해.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F35"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_lyrics"
+        ]
       }
     },
     {
@@ -28,16 +36,27 @@
       "en": "Piece of shit, I can't believe this shit. I'm done. I'm done with you. I'm not dealing with you anymore.",
       "ko": "젠장, 이게 말이 돼? 난 끝이야. 너한테 질렸어. 더 이상 상대 안 해.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F17",
+          "F20"
+        ],
+        "situation": "S50",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E03",
+          "E02"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V04",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_lyrics",
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -45,16 +64,24 @@
       "en": "I'm done.",
       "ko": "난 끝이야.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F20"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E02"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_lyrics"
+        ]
       }
     },
     {
@@ -62,16 +89,24 @@
       "en": "Can I get twenty on pump seven and one of those number nines?",
       "ko": "7번 주유기에 20달러어치랑 9번 하나 주세요.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F34"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_lyrics"
+        ]
       }
     },
     {
@@ -79,16 +114,24 @@
       "en": "Oh, a hundred bucks on a scratch.",
       "ko": "아, 복권 100달러어치요.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F34"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_lyrics"
+        ]
       }
     }
   ]
