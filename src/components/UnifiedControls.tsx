@@ -752,28 +752,49 @@ export function UnifiedControls({
               setGameModeEnabled(!gameModeEnabled)
             }}
             className={iconButtonClassName}
-            style={{
-              color: gameModeEnabled ? 'var(--accent-text)' : 'var(--player-text)',
-            }}
             aria-label={gameModeEnabled ? '게임 모드 끄기' : '게임 모드 켜기'}
             title={gameModeEnabled ? '게임 모드 ON' : '게임 모드 OFF'}
           >
-            <svg
+            <motion.svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
+              fill={gameModeEnabled ? 'var(--accent-text)' : 'none'}
+              stroke={gameModeEnabled ? 'var(--accent-text)' : 'var(--player-text)'}
               strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
               className={iconSizeClassName}
+              animate={gameModeEnabled ? { scale: [1, 1.35, 0.9, 1.1, 1] } : { scale: 1 }}
+              transition={
+                gameModeEnabled
+                  ? { duration: 0.5, ease: 'easeOut', times: [0, 0.2, 0.4, 0.6, 1] }
+                  : { duration: 0.15 }
+              }
             >
-              <rect x="2" y="6" width="20" height="12" rx="3" />
-              <line x1="6" y1="10" x2="6" y2="10.01" />
-              <line x1="10" y1="10" x2="10" y2="10.01" />
-              <line x1="15" y1="12" x2="15" y2="12.01" />
-              <line x1="18" y1="10" x2="18" y2="10.01" />
-            </svg>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
+              />
+            </motion.svg>
+
+            <AnimatePresence>
+              {gameModeEnabled &&
+                [0, 60, 120, 180, 240, 300].map((angle) => (
+                  <motion.div
+                    key={angle}
+                    initial={{ opacity: 1, scale: 0, x: 0, y: 0 }}
+                    animate={{
+                      opacity: 0,
+                      scale: 1,
+                      x: Math.cos((angle * Math.PI) / 180) * 14,
+                      y: Math.sin((angle * Math.PI) / 180) * 14,
+                    }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.45, ease: 'easeOut' }}
+                    className="absolute h-1 w-1 rounded-full"
+                    style={{ backgroundColor: 'var(--accent-text)' }}
+                  />
+                ))}
+            </AnimatePresence>
           </motion.button>
 
           <div className={dividerClassName} style={{ backgroundColor: 'var(--player-divider)' }} />
