@@ -95,7 +95,7 @@ export function WatchHistory() {
         {totalWatched > 5 && (
           <Link
             href="/learning/history"
-            className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]"
+            className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
           >
             VIEW ALL
           </Link>
@@ -109,9 +109,6 @@ export function WatchHistory() {
       ) : (
         displayGroups.map((group) => (
           <div key={group.label} className="mb-4 last:mb-0">
-            <p className="mb-2 text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]">
-              {group.label}
-            </p>
             <div className="flex flex-col gap-2">
               <AnimatePresence mode="popLayout">
                 {group.videos.map((video) => {
