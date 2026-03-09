@@ -48,50 +48,32 @@ export default function LearningPage() {
     <AppPage>
       <DailyMissions />
       <div className="mt-6 space-y-6">
-        <WatchHistory />
-
-        {/* Saved */}
-        <SurfaceCard className="p-5">
-          <div className="mb-4 flex items-center justify-between gap-4">
-            <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-              SAVED
-            </p>
-            {phrases.length > 0 && (
+        {/* Stats */}
+        {totalWatched > 0 && (
+          <SurfaceCard className="p-5">
+            <div className="mb-4 flex items-center justify-between gap-4">
+              <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+                STATS
+              </p>
               <Link
-                href="/learning/saved"
+                href="/learning/stats"
                 className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
               >
                 VIEW ALL
               </Link>
-            )}
-          </div>
+            </div>
 
-          {phrases.length === 0 ? (
-            <div className="rounded-[24px] border border-dashed border-[var(--border-card)] px-5 py-8 text-center">
-              <p className="text-sm text-[var(--text-secondary)]">No saved items yet.</p>
+            <div className="grid grid-cols-3 gap-3">
+              <MetricCard label="누적 시청" value={`${totalWatched}개`} className="text-center" />
+              <MetricCard label="저장 표현" value={`${phrases.length}개`} className="text-center" />
+              <MetricCard
+                label="연속 루프"
+                value={`${Math.max(streakDays, totalViews > 0 ? 1 : 0)}일`}
+                className="text-center"
+              />
             </div>
-          ) : (
-            <div className="flex flex-col gap-3">
-              <AnimatePresence>
-                {phrases.slice(0, 3).map((phrase) => (
-                  <SavedPhraseCard
-                    key={phrase.id}
-                    phrase={phrase}
-                    onDelete={() => removePhrase(phrase.id)}
-                    onPlay={() => {
-                      clearDeletedFlag(phrase.videoId)
-                      const seriesId = getCatalogVideoById(phrase.videoId)?.seriesId
-                      const baseUrl = buildShortsUrl(phrase.videoId, seriesId)
-                      const separator = baseUrl.includes('?') ? '&' : '?'
-                      const url = `${baseUrl}${separator}t=${phrase.timestampStart}&phraseId=${phrase.id}`
-                      router.push(url)
-                    }}
-                  />
-                ))}
-              </AnimatePresence>
-            </div>
-          )}
-        </SurfaceCard>
+          </SurfaceCard>
+        )}
 
         {/* Liked */}
         <SurfaceCard className="p-5">
@@ -162,32 +144,50 @@ export default function LearningPage() {
           )}
         </SurfaceCard>
 
-        {/* Stats */}
-        {totalWatched > 0 && (
-          <SurfaceCard className="p-5">
-            <div className="mb-4 flex items-center justify-between gap-4">
-              <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-                STATS
-              </p>
+        {/* Saved */}
+        <SurfaceCard className="p-5">
+          <div className="mb-4 flex items-center justify-between gap-4">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+              SAVED
+            </p>
+            {phrases.length > 0 && (
               <Link
-                href="/learning/stats"
+                href="/learning/saved"
                 className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
               >
                 VIEW ALL
               </Link>
-            </div>
+            )}
+          </div>
 
-            <div className="grid grid-cols-3 gap-3">
-              <MetricCard label="누적 시청" value={`${totalWatched}개`} className="text-center" />
-              <MetricCard label="저장 표현" value={`${phrases.length}개`} className="text-center" />
-              <MetricCard
-                label="연속 루프"
-                value={`${Math.max(streakDays, totalViews > 0 ? 1 : 0)}일`}
-                className="text-center"
-              />
+          {phrases.length === 0 ? (
+            <div className="rounded-[24px] border border-dashed border-[var(--border-card)] px-5 py-8 text-center">
+              <p className="text-sm text-[var(--text-secondary)]">No saved items yet.</p>
             </div>
-          </SurfaceCard>
-        )}
+          ) : (
+            <div className="flex flex-col gap-3">
+              <AnimatePresence>
+                {phrases.slice(0, 3).map((phrase) => (
+                  <SavedPhraseCard
+                    key={phrase.id}
+                    phrase={phrase}
+                    onDelete={() => removePhrase(phrase.id)}
+                    onPlay={() => {
+                      clearDeletedFlag(phrase.videoId)
+                      const seriesId = getCatalogVideoById(phrase.videoId)?.seriesId
+                      const baseUrl = buildShortsUrl(phrase.videoId, seriesId)
+                      const separator = baseUrl.includes('?') ? '&' : '?'
+                      const url = `${baseUrl}${separator}t=${phrase.timestampStart}&phraseId=${phrase.id}`
+                      router.push(url)
+                    }}
+                  />
+                ))}
+              </AnimatePresence>
+            </div>
+          )}
+        </SurfaceCard>
+
+        <WatchHistory />
       </div>
     </AppPage>
   )
