@@ -34,6 +34,30 @@ function SectionLabel({ label }: { label: string }) {
   )
 }
 
+function LegalLink({ href, label }: { href: string; label: string }) {
+  return (
+    <Link
+      href={href}
+      className="flex items-center justify-between border-t border-[var(--border-card)] px-5 py-4 text-sm text-[var(--text-secondary)]"
+    >
+      <span>{label}</span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        className="h-4 w-4"
+        aria-hidden="true"
+      >
+        <path
+          fillRule="evenodd"
+          d="M7.22 4.22a.75.75 0 011.06 0l5.25 5.25a.75.75 0 010 1.06l-5.25 5.25a.75.75 0 01-1.06-1.06L11.94 10 7.22 5.28a.75.75 0 010-1.06z"
+          clipRule="evenodd"
+        />
+      </svg>
+    </Link>
+  )
+}
+
 export default function ProfilePage() {
   const { user, loading, authAvailable, signInWithGoogle, signInWithKakao, signOut } = useAuth()
   const backgroundTheme = useThemeStore((state) => state.backgroundTheme)
@@ -234,7 +258,7 @@ export default function ProfilePage() {
 
               <div className="rounded-2xl bg-[var(--bg-primary)] p-4">
                 <p className="text-sm font-semibold text-red-400">
-                  OPEN {unresolvedCount} · FLAGS {flaggedSubtitles.length}
+                  OPEN {unresolvedCount} 쨌 FLAGS {flaggedSubtitles.length}
                 </p>
                 <div className="mt-3 flex gap-2">
                   <button
@@ -255,21 +279,12 @@ export default function ProfilePage() {
             </SurfaceCard>
           )}
 
-          <SurfaceCard className="overflow-hidden">
-            <Link
-              href="/terms"
-              className="flex items-center justify-between border-b border-[var(--border-card)] px-5 py-4 text-sm text-[var(--text-secondary)]"
-            >
-              <span>TERMS</span>
-              <span aria-hidden>→</span>
-            </Link>
-            <Link
-              href="/privacy"
-              className="flex items-center justify-between px-5 py-4 text-sm text-[var(--text-secondary)]"
-            >
-              <span>PRIVACY</span>
-              <span aria-hidden>→</span>
-            </Link>
+          <SurfaceCard className="overflow-hidden p-6">
+            <SectionLabel label="LEGAL" />
+            <div className="-mx-6 -mb-6 overflow-hidden">
+              <LegalLink href="/terms" label="TERMS" />
+              <LegalLink href="/privacy" label="PRIVACY" />
+            </div>
           </SurfaceCard>
         </div>
       </div>
