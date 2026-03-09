@@ -9,6 +9,7 @@ import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import { useAuth } from '@/hooks/useAuth'
 import { useAdminStore } from '@/stores/useAdminStore'
 import { usePremiumStore } from '@/stores/usePremiumStore'
+import { usePlayerStore } from '@/stores/usePlayerStore'
 import { useSettingsStore } from '@/stores/useSettingsStore'
 import {
   useThemeStore,
@@ -68,6 +69,8 @@ export default function ProfilePage() {
   const { user, loading, authAvailable, signInWithGoogle, signInWithKakao, signOut } = useAuth()
   const hapticEnabled = useSettingsStore((state) => state.hapticEnabled)
   const setHapticEnabled = useSettingsStore((state) => state.setHapticEnabled)
+  const gameModeEnabled = usePlayerStore((state) => state.gameModeEnabled)
+  const setGameModeEnabled = usePlayerStore((state) => state.setGameModeEnabled)
   const appliedPremium = usePremiumStore((state) => state.isPremium)
   const entitlementPremium = usePremiumStore((state) => state.entitlementPremium)
   const premiumOverride = usePremiumStore((state) => state.premiumOverride)
@@ -233,6 +236,27 @@ export default function ProfilePage() {
                     </div>
                   </div>
                 </div>
+              </div>
+
+              <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
+                <div>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">GAME MODE</p>
+                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">영상 시청 중 Next Line 퀴즈</p>
+                </div>
+                <button
+                  onClick={() => setGameModeEnabled(!gameModeEnabled)}
+                  className={`relative h-6 w-11 rounded-full ${
+                    gameModeEnabled ? 'bg-[var(--accent-primary)]' : 'bg-[var(--bg-secondary)]'
+                  }`}
+                  role="switch"
+                  aria-checked={gameModeEnabled}
+                >
+                  <span
+                    className={`absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white transition-transform ${
+                      gameModeEnabled ? 'translate-x-5' : ''
+                    }`}
+                  />
+                </button>
               </div>
 
               <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
