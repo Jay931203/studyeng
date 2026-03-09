@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { AnimatePresence } from 'framer-motion'
 import { DailyMissions } from '@/components/DailyMissions'
@@ -12,14 +12,25 @@ import { buildShortsUrl } from '@/lib/videoRoutes'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 
+function formatDateLabel(timestamp: number): string {
+  const now = new Date()
+  const date = new Date(timestamp)
+  const diffDays = Math.floor((now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24))
+
+  if (diffDays === 0) return 'TODAY'
+  if (diffDays === 1) return 'YESTERDAY'
+  if (diffDays < 7) return `${diffDays} DAYS AGO`
+  return `${date.getMonth() + 1}/${date.getDate()}`
+}
+
 export default function LearningPage() {
   const router = useRouter()
   const { phrases, removePhrase } = usePhraseStore()
   const totalWatched = useWatchHistoryStore((state) => state.watchedVideoIds.length)
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)
-  const [showAllPhrases, setShowAllPhrases] = useState(false)
 
   const isEmpty = phrases.length === 0 && totalWatched === 0
+  const latestSavedLabel = phrases[0] ? formatDateLabel(phrases[0].savedAt) : null
 
   return (
     <AppPage>
@@ -40,30 +51,34 @@ export default function LearningPage() {
         )}
 
         <SurfaceCard className="p-5">
-          <div className="mb-4 flex items-end justify-between gap-4">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-                SAVED
-              </p>
-            </div>
-            {phrases.length > 3 && (
-              <button
-                onClick={() => setShowAllPhrases((current) => !current)}
-                className="text-sm font-medium text-[var(--accent-text)]"
-              >
-                {showAllPhrases ? '접기' : '전체 보기'}
-              </button>
+          <div className="mb-4 flex items-center justify-between gap-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+              SAVED
+            </p>
+            {(latestSavedLabel || phrases.length > 3) && (
+              <div className="flex items-center gap-3">
+                {latestSavedLabel && (
+                  <span className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]">
+                    {latestSavedLabel}
+                  </span>
+                )}
+                {phrases.length > 3 && (
+                  <Link href="/learning/saved" className="text-sm font-medium text-[var(--accent-text)]">
+                    VIEW ALL
+                  </Link>
+                )}
+              </div>
             )}
           </div>
 
           {phrases.length === 0 ? (
             <div className="rounded-[24px] border border-dashed border-[var(--border-card)] px-5 py-8 text-center">
-              <p className="text-sm text-[var(--text-secondary)]">저장한 표현이 없습니다.</p>
+              <p className="text-sm text-[var(--text-secondary)]">No saved items yet.</p>
             </div>
           ) : (
             <div className="flex flex-col gap-3">
               <AnimatePresence>
-                {(showAllPhrases ? phrases : phrases.slice(0, 3)).map((phrase) => (
+                {phrases.slice(0, 3).map((phrase) => (
                   <SavedPhraseCard
                     key={phrase.id}
                     phrase={phrase}

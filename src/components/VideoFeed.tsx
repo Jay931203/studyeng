@@ -206,7 +206,7 @@ export function VideoFeed({
   }, [])
 
   const showRepeatProgress = useCallback((count: number, targetCount: number) => {
-    setRepeatIndicator(`반복 ${count}/${targetCount}`)
+    setRepeatIndicator(`REPEAT ${count}/${targetCount}`)
 
     if (repeatIndicatorTimerRef.current) {
       clearTimeout(repeatIndicatorTimerRef.current)
@@ -372,7 +372,7 @@ export function VideoFeed({
           {showSeriesEpisodes && (
             <button
               type="button"
-              aria-label="시리즈 목록 닫기"
+              aria-label="Close series list"
               onClick={() => setShowSeriesEpisodes(false)}
               className="absolute inset-0 z-[9] cursor-default"
             />
@@ -454,23 +454,12 @@ export function VideoFeed({
                 : {}),
             }}
           >
-            <button
-              onClick={() => router.push('/explore')}
-              className="flex h-10 w-10 items-center justify-center rounded-2xl"
-              style={{
-                backgroundColor: 'var(--player-panel)',
-                color: 'var(--accent-text)',
-              }}
-              aria-label="홈으로"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
-                <path d="M11.47 3.84a.75.75 0 0 1 1.06 0l7 7a.75.75 0 1 1-1.06 1.06L18 11.44V19.5a.75.75 0 0 1-.75.75h-3.5a.75.75 0 0 1-.75-.75v-4h-2v4a.75.75 0 0 1-.75.75h-3.5A.75.75 0 0 1 6 19.5v-8.06l-.47.46a.75.75 0 0 1-1.06-1.06l7-7Z" />
-              </svg>
-            </button>
-
             <div className="min-w-0 flex-1">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.18em]" style={{ color: 'var(--player-muted)' }}>
-                피드
+              <p
+                className="text-[10px] font-semibold uppercase tracking-[0.18em]"
+                style={{ color: 'var(--player-muted)' }}
+              >
+                SERIES
               </p>
               {seriesInfo ? (
                 <button
@@ -490,8 +479,8 @@ export function VideoFeed({
               )}
               <p className="mt-0.5 truncate text-[11px]" style={{ color: 'var(--player-muted)' }}>
                 {seriesInfo && currentVideo.episodeNumber != null
-                  ? `에피소드 ${currentVideo.episodeNumber}`
-                  : '지금 재생 중'}
+                  ? `EPISODE ${currentVideo.episodeNumber}`
+                  : 'NOW PLAYING'}
               </p>
             </div>
 
@@ -622,7 +611,7 @@ export function VideoFeed({
         </div>
       )}
 
-      <SaveToast show={showToast} message="표현을 저장했어요" />
+      <SaveToast show={showToast} message="SAVED" />
 
       <PremiumModal
         isOpen={showPremiumModal}

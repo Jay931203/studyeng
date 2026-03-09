@@ -1,15 +1,15 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { useMemo } from 'react'
 import { useRouter } from 'next/navigation'
-import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { SurfaceCard } from '@/components/ui/AppPage'
+import { categories, type VideoData } from '@/data/seed-videos'
 import { getCatalogSeriesById, getCatalogVideoById } from '@/lib/catalog'
 import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
-import { categories, type VideoData } from '@/data/seed-videos'
 
 const categoryLabels = Object.fromEntries(
   categories.map((category) => [category.id, category.label]),
@@ -86,21 +86,27 @@ export function WatchHistory() {
     }
   }
 
+  const latestLabel = displayGroups[0]?.label ?? null
+
   return (
-    <SurfaceCard className="mb-8 p-5">
-      <div className="mb-4 flex items-center justify-between">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-            HISTORY
-          </p>
-          <p className="mt-2 text-sm font-semibold text-[var(--text-primary)]">
-            {totalWatched} ITEMS
-          </p>
-        </div>
-        {totalWatched > 5 && (
-          <Link href="/learning/history" className="text-sm font-medium text-[var(--accent-text)]">
-            VIEW ALL
-          </Link>
+    <SurfaceCard className="p-5">
+      <div className="mb-4 flex items-center justify-between gap-4">
+        <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+          HISTORY
+        </p>
+        {(latestLabel || totalWatched > 5) && (
+          <div className="flex items-center gap-3">
+            {latestLabel && (
+              <span className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]">
+                {latestLabel}
+              </span>
+            )}
+            {totalWatched > 5 && (
+              <Link href="/learning/history" className="text-sm font-medium text-[var(--accent-text)]">
+                VIEW ALL
+              </Link>
+            )}
+          </div>
         )}
       </div>
 
@@ -177,8 +183,17 @@ export function WatchHistory() {
                         className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-[var(--text-muted)] transition-all hover:text-red-400 active:scale-90"
                         aria-label="Remove history item"
                       >
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5">
-                          <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 20 20"
+                          fill="currentColor"
+                          className="h-3.5 w-3.5"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clipRule="evenodd"
+                          />
                         </svg>
                       </button>
                     </motion.div>
