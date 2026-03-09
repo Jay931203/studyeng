@@ -19,6 +19,13 @@ interface LyricsSubtitlesProps {
 const LONG_PRESS_MOVE_THRESHOLD = 10
 /** Duration in ms to trigger long-press */
 const LONG_PRESS_DURATION = 500
+/** Window in ms for double-tap detection */
+const DOUBLE_TAP_WINDOW = 550
+
+/** Trigger a short haptic vibration when supported */
+function haptic(ms = 10) {
+  try { navigator.vibrate?.(ms) } catch { /* unsupported */ }
+}
 
 export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: LyricsSubtitlesProps) {
   const subtitleMode = usePlayerStore((state) => state.subtitleMode)
@@ -196,6 +203,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
     (sub: SubtitleEntry, idx: number) => {
       setFreezeSubIndex(idx)
       showFreezeNotice('FREEZE ON', 2500)
+      haptic(15)
       onSeek?.(sub.start)
     },
     [onSeek, setFreezeSubIndex, showFreezeNotice],
@@ -205,6 +213,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
   const exitFreeze = useCallback(() => {
     setFreezeSubIndex(null)
     showFreezeNotice('FREEZE OFF', 1500)
+    haptic(10)
   }, [setFreezeSubIndex, showFreezeNotice])
 
   const handleLineClick = useCallback(
@@ -220,14 +229,16 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
       const now = Date.now()
       const last = lastTapRef.current
 
-      if (last.idx === idx && now - last.time < 400) {
+      if (last.idx === idx && now - last.time < DOUBLE_TAP_WINDOW) {
         const savedPhraseId = getSavedPhraseId(sub)
 
         if (savedPhraseId) {
           removePhrase(savedPhraseId)
           setJustSavedIdx(null)
+          haptic(8)
         } else if (onSavePhrase) {
           onSavePhrase(sub)
+          haptic(12)
           setShowFreezeIndicator(false)
           setShowFreezeTip(false)
           setJustSavedIdx(idx)
@@ -387,9 +398,9 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
             const isJustSaved = justSavedIdx === idx
             const saved = isSavedPhrase(sub)
 
-            // Show only active + 1 before/after (frozen subtitle always visible)
+            // Show active + nearby subtitles with gradual fade (lyrics-view feel)
             // When user is manually scrolling, reveal all subtitles
-            // IMPORTANT: Never use pointer-events-none on individual items ??
+            // IMPORTANT: Never use pointer-events-none on individual items —
             // it blocks touch events and prevents scroll initiation.
             const opacityClass = isUserScrolling
               ? (isJustSaved || isActive || isFrozen
@@ -400,16 +411,20 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
               : isJustSaved || isActive || isFrozen
               ? 'opacity-100'
               : distance === 1
-              ? 'opacity-40'
+              ? 'opacity-45'
+              : distance === 2
+              ? 'opacity-25'
+              : distance === 3
+              ? 'opacity-[0.12]'
               : 'opacity-0'
 
             // Whether this subtitle is fully hidden (not visible, not interactable)
             // Wrapper div stays pointer-events-auto for scroll, but inner button is disabled
-            const isHidden = !isUserScrolling && !isJustSaved && !isActive && !isFrozen && distance > 1
+            const isHidden = !isUserScrolling && !isJustSaved && !isActive && !isFrozen && distance > 3
 
             const scaleValue = isUserScrolling
               ? (isJustSaved || isActive || isFrozen ? 1 : 0.95)
-              : isJustSaved || isActive || isFrozen ? 1 : distance === 1 ? 0.92 : 0.85
+              : isJustSaved || isActive || isFrozen ? 1 : distance === 1 ? 0.94 : distance === 2 ? 0.90 : 0.87
 
             const flagged = adminActive && videoId
               ? flaggedSubtitles.some(
