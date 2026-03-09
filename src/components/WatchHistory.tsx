@@ -16,14 +16,19 @@ const categoryLabels = Object.fromEntries(
 ) as Record<string, string>
 
 function formatDateLabel(timestamp: number): string {
-  const now = new Date()
   const date = new Date(timestamp)
-  const diffDays = Math.floor((now.getTime() - date.getTime()) / (1000 * 60 * 60 * 24))
+  const now = new Date()
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+  const targetDay = new Date(date.getFullYear(), date.getMonth(), date.getDate())
+  const diffDays = Math.round((today.getTime() - targetDay.getTime()) / (1000 * 60 * 60 * 24))
+  const calendarLabel =
+    date.getFullYear() === now.getFullYear()
+      ? `${date.getMonth() + 1}/${date.getDate()}`
+      : `${date.getFullYear()}/${date.getMonth() + 1}/${date.getDate()}`
 
-  if (diffDays === 0) return 'TODAY'
-  if (diffDays === 1) return 'YESTERDAY'
-  if (diffDays < 7) return `${diffDays} DAYS AGO`
-  return `${date.getMonth() + 1}/${date.getDate()}`
+  if (diffDays === 0) return `TODAY · ${calendarLabel}`
+  if (diffDays === 1) return `YESTERDAY · ${calendarLabel}`
+  return calendarLabel
 }
 
 function getDateKey(timestamp: number): string {

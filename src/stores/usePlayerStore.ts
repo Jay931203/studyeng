@@ -93,7 +93,7 @@ export const pauseRef: { current: (() => void) | null } = { current: null }
 export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
   subtitleMode: 'en',
   landscapeSubtitleLayout: 'auto',
-  playbackOrderMode: 'sequence',
+  playbackOrderMode: 'shuffle',
   playbackRate: 1,
   isLooping: false,
   loopStart: null,

@@ -1,10 +1,11 @@
 'use client'
 
-import { useRef, useEffect, useCallback, useMemo, useState } from 'react'
+import { useRef, useEffect, useCallback, useId, useMemo, useState } from 'react'
 import { usePlayerStore, playRef } from '@/stores/usePlayerStore'
 import { useAdminStore } from '@/stores/useAdminStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useSettingsStore } from '@/stores/useSettingsStore'
+import { useThemeStore } from '@/stores/useThemeStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { DoubleTapTip } from './DoubleTapTip'
@@ -61,6 +62,7 @@ export function LyricsSubtitles({
   onSeek,
   visibleLineCount = 3,
 }: LyricsSubtitlesProps) {
+  const isRainbowTheme = useThemeStore((state) => state.colorTheme === 'rainbow')
   const subtitleMode = usePlayerStore((state) => state.subtitleMode)
   const activeSubIndex = usePlayerStore((state) => state.activeSubIndex)
   const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
@@ -81,6 +83,7 @@ export function LyricsSubtitles({
   const lineRefs = useRef<(HTMLDivElement | null)[]>([])
   const prevActiveRef = useRef<number>(-1)
   const previousVideoIdRef = useRef(videoId)
+  const iconGradientBaseId = useId().replace(/:/g, '')
   const scrollRafRef = useRef<number | null>(null)
   const savedPhraseMap = useMemo(() => {
     const map = new Map<string, string>()
@@ -583,6 +586,8 @@ export function LyricsSubtitles({
                   (flag) => flag.videoId === videoId && flag.entryIndex === idx,
                 )
               : false
+            const freezeGradientId = `${iconGradientBaseId}-freeze-${idx}`
+            const savedGradientId = `${iconGradientBaseId}-saved-${idx}`
 
             return (
               <div
@@ -627,7 +632,30 @@ export function LyricsSubtitles({
                       className="pointer-events-none absolute -left-6 top-1/2 -translate-y-1/2 select-none"
                       style={{ color: 'var(--freeze-icon)' }}
                     >
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-4 h-4">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill={isRainbowTheme ? `url(#${freezeGradientId})` : 'currentColor'}
+                        className="w-4 h-4"
+                      >
+                        {isRainbowTheme && (
+                          <defs>
+                            <linearGradient
+                              id={freezeGradientId}
+                              x1="2"
+                              y1="2"
+                              x2="18"
+                              y2="18"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop offset="0%" stopColor="#ff5ac8" />
+                              <stop offset="24%" stopColor="#ff9538" />
+                              <stop offset="50%" stopColor="#ffd84a" />
+                              <stop offset="76%" stopColor="#53d7ff" />
+                              <stop offset="100%" stopColor="#7c4dff" />
+                            </linearGradient>
+                          </defs>
+                        )}
                         <path fillRule="evenodd" d="M15.312 11.424a5.5 5.5 0 0 1-9.201 2.466l-.312-.311h2.433a.75.75 0 0 0 0-1.5H4.647a.75.75 0 0 0-.75.75v3.585a.75.75 0 0 0 1.5 0v-2.19l.238.238a7 7 0 0 0 11.712-3.138.75.75 0 0 0-1.035-.1zm-2.623-7.26a7 7 0 0 0-11.712 3.138.75.75 0 0 0 1.035.1 5.5 5.5 0 0 1 9.201-2.466l.312.311H9.092a.75.75 0 0 0 0 1.5h3.585a.75.75 0 0 0 .75-.75V2.412a.75.75 0 0 0-1.5 0v2.19l-.238-.238z" clipRule="evenodd" />
                       </svg>
                     </span>
@@ -639,7 +667,30 @@ export function LyricsSubtitles({
                       className="pointer-events-none absolute -right-6 top-1/2 -translate-y-1/2 select-none"
                       style={{ color: isJustSaved ? 'var(--accent-text)' : 'var(--accent-primary)' }}
                     >
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill={isRainbowTheme ? `url(#${savedGradientId})` : 'currentColor'}
+                        className="w-4 h-4"
+                      >
+                        {isRainbowTheme && (
+                          <defs>
+                            <linearGradient
+                              id={savedGradientId}
+                              x1="3"
+                              y1="3"
+                              x2="21"
+                              y2="21"
+                              gradientUnits="userSpaceOnUse"
+                            >
+                              <stop offset="0%" stopColor="#ff5ac8" />
+                              <stop offset="24%" stopColor="#ff9538" />
+                              <stop offset="50%" stopColor="#ffd84a" />
+                              <stop offset="76%" stopColor="#53d7ff" />
+                              <stop offset="100%" stopColor="#7c4dff" />
+                            </linearGradient>
+                          </defs>
+                        )}
                         <path fillRule="evenodd" d="M6.32 2.577a49.255 49.255 0 0 1 11.36 0c1.497.174 2.57 1.46 2.57 2.93V21a.75.75 0 0 1-1.085.67L12 18.089l-7.165 3.583A.75.75 0 0 1 3.75 21V5.507c0-1.47 1.073-2.756 2.57-2.93Z" clipRule="evenodd" />
                       </svg>
                     </span>

@@ -1,6 +1,6 @@
 'use client'
 
-import { Suspense, useMemo } from 'react'
+import { Suspense, useEffect, useMemo } from 'react'
 import { useSearchParams } from 'next/navigation'
 import { VideoFeed } from '@/components/VideoFeed'
 import { catalogVideos } from '@/lib/catalog'
@@ -8,6 +8,7 @@ import { recommendVideos, seriesPlaylist } from '@/lib/recommend'
 import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useLikeStore } from '@/stores/useLikeStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
+import { usePlayerStore } from '@/stores/usePlayerStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useRecommendationStore } from '@/stores/useRecommendationStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
@@ -32,10 +33,16 @@ function ShortsFeedContent() {
   const seriesId = searchParams.get('series')
   const seekTime = searchParams.get('t')
   const reviewPhraseId = searchParams.get('phraseId')
+  const setPlaybackOrderMode = usePlayerStore((state) => state.setPlaybackOrderMode)
+  const entryPlaybackOrderMode = seriesId && videoId ? 'sequence' : 'shuffle'
   const navigationKey =
     buildShortsUrl(videoId, seriesId) +
     (seekTime ? `&t=${seekTime}` : '') +
     (reviewPhraseId ? `&phraseId=${reviewPhraseId}` : '')
+
+  useEffect(() => {
+    setPlaybackOrderMode(entryPlaybackOrderMode)
+  }, [entryPlaybackOrderMode, setPlaybackOrderMode, seriesId, videoId])
 
   // Freeze the recommendation inputs for the current route so that
   // watch-history or like updates inside the player do not reshuffle
