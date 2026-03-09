@@ -72,7 +72,7 @@ export function RedeemCodeCard() {
         REDEEM CODE
       </p>
 
-      <div className="flex gap-2">
+      <div className="flex flex-col gap-2 sm:flex-row">
         <input
           type="text"
           value={code}
@@ -80,13 +80,13 @@ export function RedeemCodeCard() {
           onKeyDown={(e) => e.key === 'Enter' && handleRedeem()}
           placeholder="코드 입력"
           disabled={!user || submitting}
-          className="flex-1 rounded-2xl bg-[var(--bg-primary)] px-4 py-3 text-sm font-medium text-[var(--text-primary)] placeholder-[var(--text-muted)] outline-none disabled:opacity-50"
+          className="min-w-0 flex-1 rounded-2xl bg-[var(--bg-primary)] px-4 py-3 text-sm font-medium text-[var(--text-primary)] placeholder-[var(--text-muted)] outline-none disabled:opacity-50"
           maxLength={20}
         />
         <button
           onClick={handleRedeem}
           disabled={!user || !code.trim() || submitting}
-          className="shrink-0 rounded-2xl bg-[var(--accent-primary)] px-5 py-3 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50"
+          className="w-full shrink-0 rounded-2xl bg-[var(--accent-primary)] px-5 py-3 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
         >
           {submitting ? '확인 중...' : '등록'}
         </button>
