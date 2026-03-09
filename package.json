@@ -21,12 +21,21 @@
     "transcripts:translate:openai": "node scripts/translate-transcripts-openai.mjs",
     "transcripts:check": "node scripts/check-transcripts.mjs",
     "transcripts:generate": "node scripts/generate-transcripts.mjs",
-    "transcripts:regenerate": "node scripts/generate-transcripts.mjs --all"
+    "transcripts:regenerate": "node scripts/generate-transcripts.mjs --all",
+    "cap:sync": "npx cap sync",
+    "cap:android": "npx cap open android",
+    "cap:ios": "npx cap open ios"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",
+    "@capacitor/app": "^8.0.1",
+    "@capacitor/cli": "^8.2.0",
+    "@capacitor/core": "^8.2.0",
+    "@capacitor/haptics": "^8.0.1",
+    "@capacitor/status-bar": "^8.0.1",
     "@prisma/adapter-pg": "^7.4.2",
     "@prisma/client": "^7.4.2",
+    "@revenuecat/purchases-capacitor": "^12.2.2",
     "@supabase/ssr": "^0.9.0",
     "@supabase/supabase-js": "^2.98.0",
     "dotenv": "^17.3.1",
