@@ -289,7 +289,7 @@ export function BillingManagementCard({
   const shouldShowPlanLabel = currentPremium && currentPlanLabel !== currentStatusLabel
   const managementLabel =
     !native && !billingEnabled
-      ? 'Not available'
+      ? ''
       : native
         ? `Manage in ${getStoreLabel()}`
         : currentPremium
@@ -310,7 +310,7 @@ export function BillingManagementCard({
       ? `Check in ${getStoreLabel()}`
       : !native && status?.entitlement?.currentPeriodEnd
         ? formatDate(status.entitlement.currentPeriodEnd)
-        : 'Not available'
+        : ''
   const paymentMethodLabel = currentPremium
     ? native
       ? `${getStoreLabel()} billing`
@@ -325,9 +325,6 @@ export function BillingManagementCard({
     status?.paymentMethod?.expYear
       ? `Exp ${String(status.paymentMethod.expMonth).padStart(2, '0')}/${String(status.paymentMethod.expYear).slice(-2)}`
       : null
-  const showManageSummary = native || billingEnabled
-  const showScheduleSummary = native ? currentPremium : Boolean(status?.entitlement?.currentPeriodEnd)
-
   const membershipSummaryItems = [
     { label: 'Status', value: currentStatusLabel, detail: null as string | null },
     ...(currentPremium
@@ -336,12 +333,8 @@ export function BillingManagementCard({
     ...(currentPremium
       ? [{ label: 'Payment', value: paymentMethodLabel, detail: paymentMethodDetail }]
       : []),
-    ...(showManageSummary
-      ? [{ label: 'Manage', value: managementLabel, detail: null as string | null }]
-      : []),
-    ...(showScheduleSummary
-      ? [{ label: scheduleLabel, value: scheduleValue, detail: null as string | null }]
-      : []),
+    { label: 'Manage', value: managementLabel, detail: null as string | null },
+    { label: scheduleLabel, value: scheduleValue, detail: null as string | null },
   ]
 
   const planOptions = useMemo(() => {
