@@ -1,9 +1,17 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
-export type ThemeId = 'teal-dark' | 'blue-dark' | 'purple-dark' | 'light' | 'light-blue' | 'light-purple'
+export type ThemeId =
+  | 'teal-dark'
+  | 'blue-dark'
+  | 'purple-dark'
+  | 'rainbow-dark'
+  | 'light'
+  | 'light-blue'
+  | 'light-purple'
+  | 'light-rainbow'
 export type ThemeBackground = 'dark' | 'light'
-export type ThemeAccent = 'teal' | 'blue' | 'purple'
+export type ThemeAccent = 'teal' | 'blue' | 'purple' | 'rainbow'
 
 interface ThemeState {
   backgroundTheme: ThemeBackground
@@ -19,11 +27,13 @@ function resolveThemeId(backgroundTheme: ThemeBackground, colorTheme: ThemeAccen
   if (backgroundTheme === 'dark') {
     if (colorTheme === 'blue') return 'blue-dark'
     if (colorTheme === 'purple') return 'purple-dark'
+    if (colorTheme === 'rainbow') return 'rainbow-dark'
     return 'teal-dark'
   }
 
   if (colorTheme === 'blue') return 'light-blue'
   if (colorTheme === 'purple') return 'light-purple'
+  if (colorTheme === 'rainbow') return 'light-rainbow'
   return 'light'
 }
 
@@ -42,6 +52,10 @@ function normalizeLegacyTheme(theme: unknown): {
       return { backgroundTheme: 'light', colorTheme: 'blue' }
     case 'purple-dark':
       return { backgroundTheme: 'dark', colorTheme: 'purple' }
+    case 'rainbow-dark':
+      return { backgroundTheme: 'dark', colorTheme: 'rainbow' }
+    case 'light-rainbow':
+      return { backgroundTheme: 'light', colorTheme: 'rainbow' }
     case 'dark':
       return { backgroundTheme: 'dark', colorTheme: 'teal' }
     default:
@@ -95,6 +109,8 @@ export const useThemeStore = create<ThemeState>()(
             ? 'blue'
             : state.colorTheme === 'purple' || state.colorTheme === 'violet'
               ? 'purple'
+              : state.colorTheme === 'rainbow'
+                ? 'rainbow'
               : state.colorTheme === 'teal'
                 ? 'teal'
                 : normalizeLegacyTheme(state.theme).colorTheme

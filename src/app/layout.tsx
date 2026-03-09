@@ -18,6 +18,10 @@ export const metadata: Metadata = {
   title: 'Shortee - 보다 보면 귀가 먼저 익숙해집니다',
   description: '짧은 장면과 반복으로 영어가 덜 낯설어지는 쇼츠 피드',
   manifest: '/manifest.json',
+  icons: {
+    icon: [{ url: '/icon.svg', type: 'image/svg+xml' }],
+    shortcut: ['/icon.svg'],
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: 'black-translucent',
@@ -81,6 +85,12 @@ export default function RootLayout({
               } else if (legacyTheme === 'light-purple') {
                 backgroundTheme = 'light';
                 colorTheme = 'purple';
+              } else if (legacyTheme === 'rainbow-dark') {
+                backgroundTheme = 'dark';
+                colorTheme = 'rainbow';
+              } else if (legacyTheme === 'light-rainbow') {
+                backgroundTheme = 'light';
+                colorTheme = 'rainbow';
               } else {
                 backgroundTheme = 'dark';
                 colorTheme = 'teal';
@@ -98,6 +108,8 @@ export default function RootLayout({
                   themeId = 'blue-dark';
                 } else if (colorTheme === 'purple') {
                   themeId = 'purple-dark';
+                } else if (colorTheme === 'rainbow') {
+                  themeId = 'rainbow-dark';
                 } else {
                   themeId = 'teal-dark';
                 }
@@ -106,6 +118,8 @@ export default function RootLayout({
                   themeId = 'light-blue';
                 } else if (colorTheme === 'purple') {
                   themeId = 'light-purple';
+                } else if (colorTheme === 'rainbow') {
+                  themeId = 'light-rainbow';
                 } else {
                   themeId = 'light';
                 }
