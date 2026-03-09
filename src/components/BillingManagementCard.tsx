@@ -96,7 +96,9 @@ export function BillingManagementCard() {
 
   return (
     <SurfaceCard className="p-6">
-      <h2 className="mb-4 text-xl font-bold text-[var(--text-primary)]">구독 상태</h2>
+      <p className="mb-4 text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+        SUBSCRIPTION
+      </p>
 
       {!billingEnabled && (
         <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-4 py-3">
