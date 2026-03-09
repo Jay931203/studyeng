@@ -201,16 +201,10 @@ export default function ExplorePage() {
 
     return (
       <AppPage>
-        <div className="mb-6 flex items-start justify-between gap-4">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
-              SERIES
-            </p>
-            <h1 className="mt-2 text-3xl font-bold text-[var(--text-primary)]">DETAIL</h1>
-          </div>
+        <div className="mb-6 flex items-center gap-3">
           <button
             onClick={handleCloseSeries}
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-[var(--border-card)] bg-[var(--bg-card)] text-[var(--text-secondary)]"
+            className="text-[var(--text-secondary)] transition-transform active:scale-90"
             aria-label="Back"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
@@ -221,6 +215,9 @@ export default function ExplorePage() {
               />
             </svg>
           </button>
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
+            SERIES
+          </p>
         </div>
 
         <section className="grid gap-6 xl:grid-cols-[0.92fr_1.08fr]">
