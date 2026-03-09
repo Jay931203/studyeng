@@ -6,17 +6,17 @@ import { usePremiumStore } from '@/stores/usePremiumStore'
 import { SurfaceCard } from '@/components/ui/AppPage'
 
 const ERROR_MESSAGES: Record<string, string> = {
-  'invalid-code': '유효하지 않은 코드입니다.',
-  'already-redeemed': '이미 사용된 코드입니다.',
-  'code-expired': '만료된 코드입니다.',
-  'unauthorized': '로그인이 필요합니다.',
-  'redeem-failed': '코드 등록에 실패했습니다.',
-  'entitlement-failed': '권한 부여에 실패했습니다.',
+  'invalid-code': 'This code is not valid.',
+  'already-redeemed': 'This code has already been used.',
+  'code-expired': 'This code has expired.',
+  unauthorized: 'Log in before redeeming a code.',
+  'redeem-failed': 'Could not redeem the code.',
+  'entitlement-failed': 'Could not apply premium access.',
 }
 
-export function RedeemCodeCard() {
+export function RedeemCodeCard({ onRedeemed }: { onRedeemed?: () => void }) {
   const { user } = useAuth()
-  const setPremiumEntitlement = usePremiumStore((s) => s.setPremiumEntitlement)
+  const setPremiumEntitlement = usePremiumStore((state) => state.setPremiumEntitlement)
   const [code, setCode] = useState('')
   const [submitting, setSubmitting] = useState(false)
   const [result, setResult] = useState<{ success: boolean; message: string } | null>(null)
@@ -45,7 +45,7 @@ export function RedeemCodeCard() {
         const errorKey = payload?.error ?? 'redeem-failed'
         setResult({
           success: false,
-          message: ERROR_MESSAGES[errorKey] ?? '알 수 없는 오류가 발생했습니다.',
+          message: ERROR_MESSAGES[errorKey] ?? 'An unknown error occurred.',
         })
         return
       }
@@ -54,12 +54,13 @@ export function RedeemCodeCard() {
       setCode('')
       setResult({
         success: true,
-        message: `프리미엄이 활성화되었습니다! (${payload.durationDays}일)`,
+        message: `Premium is active now. (${payload.durationDays} days)`,
       })
+      onRedeemed?.()
     } catch {
       setResult({
         success: false,
-        message: '네트워크 오류가 발생했습니다.',
+        message: 'A network error occurred.',
       })
     } finally {
       setSubmitting(false)
@@ -76,9 +77,9 @@ export function RedeemCodeCard() {
         <input
           type="text"
           value={code}
-          onChange={(e) => setCode(e.target.value.toUpperCase())}
-          onKeyDown={(e) => e.key === 'Enter' && handleRedeem()}
-          placeholder="코드 입력"
+          onChange={(event) => setCode(event.target.value.toUpperCase())}
+          onKeyDown={(event) => event.key === 'Enter' && handleRedeem()}
+          placeholder="Enter code"
           disabled={!user || submitting}
           className="min-w-0 flex-1 rounded-2xl bg-[var(--bg-primary)] px-4 py-3 text-sm font-medium text-[var(--text-primary)] placeholder-[var(--text-muted)] outline-none disabled:opacity-50"
           maxLength={20}
@@ -88,13 +89,13 @@ export function RedeemCodeCard() {
           disabled={!user || !code.trim() || submitting}
           className="w-full shrink-0 rounded-2xl bg-[var(--accent-primary)] px-5 py-3 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
         >
-          {submitting ? '확인 중...' : '등록'}
+          {submitting ? 'APPLYING...' : 'APPLY'}
         </button>
       </div>
 
       {!user && (
         <p className="mt-3 text-xs text-[var(--text-muted)]">
-          로그인 후 코드를 등록할 수 있습니다.
+          Log in before redeeming a membership code.
         </p>
       )}
 

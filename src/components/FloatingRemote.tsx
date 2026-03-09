@@ -1,7 +1,14 @@
 'use client'
 
-import { useCallback, useEffect, useRef, useState } from 'react'
-import { AnimatePresence, motion, type PanInfo } from 'framer-motion'
+import {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  type MouseEvent as ReactMouseEvent,
+  type TouchEvent as ReactTouchEvent,
+} from 'react'
+import { AnimatePresence, motion } from 'framer-motion'
 import { usePlayerStore, pauseRef, playRef } from '@/stores/usePlayerStore'
 
 interface FloatingRemoteProps {
@@ -13,10 +20,19 @@ interface FloatingRemoteProps {
 const STORAGE_KEY = 'shortee-remote-intro-shown'
 const POSITION_STORAGE_KEY = 'shortee-remote-position'
 const EDGE_MARGIN = 12
+const DRAG_THRESHOLD = 6
 
 interface RemoteOffset {
   x: number
   y: number
+}
+
+interface DragState {
+  startX: number
+  startY: number
+  originX: number
+  originY: number
+  moved: boolean
 }
 
 function readStoredOffset(): RemoteOffset {
@@ -61,6 +77,7 @@ export function FloatingRemote({
 }: FloatingRemoteProps) {
   const remoteRef = useRef<HTMLDivElement | null>(null)
   const dragResetTimerRef = useRef<number | null>(null)
+  const dragStateRef = useRef<DragState | null>(null)
   const [expanded, setExpanded] = useState(() => {
     if (typeof window === 'undefined') return false
 
@@ -115,10 +132,13 @@ export function FloatingRemote({
     }
   }, [])
 
-  const handleButtonClick = useCallback((action: () => void) => {
-    if (dragBlocked) return
-    action()
-  }, [dragBlocked])
+  const handleButtonClick = useCallback(
+    (action: () => void) => {
+      if (dragBlocked) return
+      action()
+    },
+    [dragBlocked],
+  )
 
   const handleExpand = useCallback(() => {
     if (dragBlocked) return
@@ -140,31 +160,9 @@ export function FloatingRemote({
     }
   }, [isPlaying, setIsPlaying])
 
-  const positionStyle = {
-    right: 'max(12px, calc(env(safe-area-inset-right, 0px) + 8px))',
-    bottom: 'max(12px, calc(env(safe-area-inset-bottom, 0px) + 8px))',
-  }
-
-  const handleDragStart = useCallback(() => {
+  const finishDragBlock = useCallback(() => {
     if (dragResetTimerRef.current) {
       window.clearTimeout(dragResetTimerRef.current)
-    }
-    setDragBlocked(true)
-  }, [])
-
-  const handleDragEnd = useCallback((_: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
-    const rect = remoteRef.current?.getBoundingClientRect()
-    if (rect) {
-      setRemoteOffset((current) =>
-        clampOffset(
-          {
-            x: current.x + info.offset.x,
-            y: current.y + info.offset.y,
-          },
-          rect.width,
-          rect.height,
-        ),
-      )
     }
 
     dragResetTimerRef.current = window.setTimeout(() => {
@@ -173,22 +171,129 @@ export function FloatingRemote({
     }, 140)
   }, [])
 
+  const endDrag = useCallback(() => {
+    const dragState = dragStateRef.current
+    dragStateRef.current = null
+
+    if (!dragState?.moved) {
+      return
+    }
+
+    finishDragBlock()
+  }, [finishDragBlock])
+
+  useEffect(() => {
+    const handleMove = (clientX: number, clientY: number) => {
+      const dragState = dragStateRef.current
+      const rect = remoteRef.current?.getBoundingClientRect()
+      if (!dragState || !rect) return
+
+      const deltaX = clientX - dragState.startX
+      const deltaY = clientY - dragState.startY
+      const moved = Math.abs(deltaX) > DRAG_THRESHOLD || Math.abs(deltaY) > DRAG_THRESHOLD
+
+      if (moved && !dragState.moved) {
+        dragState.moved = true
+      }
+
+      if (!dragState.moved) {
+        return
+      }
+
+      setRemoteOffset(
+        clampOffset(
+          {
+            x: dragState.originX + deltaX,
+            y: dragState.originY + deltaY,
+          },
+          rect.width,
+          rect.height,
+        ),
+      )
+    }
+
+    const handleMouseMove = (event: MouseEvent) => {
+      handleMove(event.clientX, event.clientY)
+    }
+
+    const handleTouchMove = (event: TouchEvent) => {
+      const touch = event.touches[0]
+      if (!touch) return
+      event.preventDefault()
+      handleMove(touch.clientX, touch.clientY)
+    }
+
+    const handleEnd = () => {
+      endDrag()
+    }
+
+    window.addEventListener('mousemove', handleMouseMove)
+    window.addEventListener('mouseup', handleEnd)
+    window.addEventListener('touchmove', handleTouchMove, { passive: false })
+    window.addEventListener('touchend', handleEnd)
+    window.addEventListener('touchcancel', handleEnd)
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove)
+      window.removeEventListener('mouseup', handleEnd)
+      window.removeEventListener('touchmove', handleTouchMove)
+      window.removeEventListener('touchend', handleEnd)
+      window.removeEventListener('touchcancel', handleEnd)
+    }
+  }, [endDrag])
+
+  const beginDrag = useCallback((clientX: number, clientY: number) => {
+    if (dragResetTimerRef.current) {
+      window.clearTimeout(dragResetTimerRef.current)
+      dragResetTimerRef.current = null
+    }
+
+    dragStateRef.current = {
+      startX: clientX,
+      startY: clientY,
+      originX: remoteOffset.x,
+      originY: remoteOffset.y,
+      moved: false,
+    }
+
+    setDragBlocked(false)
+  }, [remoteOffset.x, remoteOffset.y])
+
+  const handleDragMouseDown = useCallback(
+    (event: ReactMouseEvent<HTMLElement>) => {
+      event.stopPropagation()
+      beginDrag(event.clientX, event.clientY)
+    },
+    [beginDrag],
+  )
+
+  const handleDragTouchStart = useCallback(
+    (event: ReactTouchEvent<HTMLElement>) => {
+      const touch = event.touches[0]
+      if (!touch) return
+      event.stopPropagation()
+      beginDrag(touch.clientX, touch.clientY)
+    },
+    [beginDrag],
+  )
+
+  const positionStyle = {
+    right: 'max(12px, calc(env(safe-area-inset-right, 0px) + 8px))',
+    bottom: 'max(12px, calc(env(safe-area-inset-bottom, 0px) + 8px))',
+  }
+
   return (
     <motion.div
       ref={remoteRef}
-      drag
-      dragMomentum={false}
-      dragElastic={0.04}
-      onDragStart={handleDragStart}
-      onDragEnd={handleDragEnd}
-      className="absolute z-20"
+      className="fixed z-30"
       style={{
         ...positionStyle,
         x: remoteOffset.x,
         y: remoteOffset.y,
         touchAction: 'none',
       }}
-      onPointerDownCapture={(event) => event.stopPropagation()}
+      onMouseDown={(event) => event.stopPropagation()}
+      onTouchStart={(event) => event.stopPropagation()}
       onClick={(event) => event.stopPropagation()}
     >
       <AnimatePresence mode="wait">
@@ -200,6 +305,8 @@ export function FloatingRemote({
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.2, ease: 'easeOut' }}
             onClick={handleExpand}
+            onMouseDown={handleDragMouseDown}
+            onTouchStart={handleDragTouchStart}
             className="flex h-12 w-12 cursor-grab items-center justify-center rounded-full border backdrop-blur-md active:cursor-grabbing"
             style={{
               backgroundColor: 'var(--player-control-bg)',
@@ -227,12 +334,30 @@ export function FloatingRemote({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="flex w-[52px] cursor-grab flex-col items-center overflow-hidden rounded-[26px] border backdrop-blur-md active:cursor-grabbing"
+            className="flex w-[52px] flex-col items-center overflow-hidden rounded-[26px] border backdrop-blur-md"
             style={{
               backgroundColor: 'var(--player-control-bg)',
               borderColor: 'var(--player-control-border)',
             }}
           >
+            <div
+              onMouseDown={handleDragMouseDown}
+              onTouchStart={handleDragTouchStart}
+              className="flex h-8 w-full cursor-grab items-center justify-center active:cursor-grabbing"
+              style={{ color: 'var(--player-muted)' }}
+              aria-label="Move remote"
+              role="button"
+              tabIndex={-1}
+            >
+              <div className="flex items-center gap-1.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-current opacity-70" />
+                <span className="h-1.5 w-1.5 rounded-full bg-current opacity-70" />
+                <span className="h-1.5 w-1.5 rounded-full bg-current opacity-70" />
+              </div>
+            </div>
+
+            <div className="h-px w-7" style={{ backgroundColor: 'var(--player-divider)' }} />
+
             {onPrevVideo && (
               <>
                 <button

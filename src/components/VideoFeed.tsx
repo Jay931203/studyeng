@@ -622,13 +622,7 @@ export function VideoFeed({
               incrementSavedPhrases()
               incrementMission('save-phrase')
             }}
-          >
-            <FloatingRemote
-              onPrevVideo={canGoPrev ? handlePrevVideo : undefined}
-              onNextVideo={canGoNext ? handleNextVideo : undefined}
-              onToggleFreeze={onToggleFreeze}
-            />
-          </VideoPlayer>
+          />
 
           <div
             className="absolute z-10 flex min-w-0 items-center gap-2 rounded-[22px] border px-2.5 py-2 backdrop-blur-md sm:gap-3 sm:px-3"
@@ -797,6 +791,12 @@ export function VideoFeed({
           />
         </motion.div>
       </AnimatePresence>
+
+      <FloatingRemote
+        onPrevVideo={canGoPrev ? handlePrevVideo : undefined}
+        onNextVideo={canGoNext ? handleNextVideo : undefined}
+        onToggleFreeze={onToggleFreeze}
+      />
 
       {repeatIndicator && (
         <div
