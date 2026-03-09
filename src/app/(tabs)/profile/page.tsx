@@ -240,7 +240,7 @@ export default function ProfilePage() {
               <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
                 <div>
                   <p className="text-sm font-medium text-[var(--text-primary)]">GAME MODE</p>
-                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">시청 중 퀴즈</p>
+                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">시청 중 게임 등장</p>
                 </div>
                 <button
                   onClick={() => setGameModeEnabled(!gameModeEnabled)}
@@ -261,7 +261,7 @@ export default function ProfilePage() {
               <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
                 <div>
                   <p className="text-sm font-medium text-[var(--text-primary)]">HAPTIC</p>
-                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">저장된 표현과 유사 표현 등장 시 진동</p>
+                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">Freeze, 저장, 유사 표현 등장 시 진동</p>
                 </div>
                 <button
                   onClick={() => setHapticEnabled(!hapticEnabled)}
