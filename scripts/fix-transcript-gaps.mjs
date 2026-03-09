@@ -9,6 +9,7 @@
  * Usage:
  *   node scripts/fix-transcript-gaps.mjs           # Regenerate all
  *   node scripts/fix-transcript-gaps.mjs --id=ABC  # Regenerate specific video
+ *   node scripts/fix-transcript-gaps.mjs --ids-file=path/to/ids.json
  *   node scripts/fix-transcript-gaps.mjs --dry      # Dry run, show stats only
  */
 
@@ -29,6 +30,7 @@ const MAX_TEXT_LENGTH = 120
 
 const args = process.argv.slice(2)
 const specificId = args.find(a => a.startsWith('--id='))?.split('=')[1]
+const idsFile = args.find(a => a.startsWith('--ids-file='))?.split('=')[1]
 const dryRun = args.includes('--dry')
 
 async function main() {
@@ -38,7 +40,12 @@ async function main() {
 
   console.log(`Found ${youtubeIds.length} seed videos\n`)
 
-  const toProcess = specificId ? [specificId] : youtubeIds
+  let toProcess = specificId ? [specificId] : youtubeIds
+  if (idsFile) {
+    const batch = JSON.parse((await readFile(resolve(idsFile), 'utf-8')).replace(/^\uFEFF/, ''))
+    const ids = Array.isArray(batch) ? batch : batch.ids ?? batch.valid_ids ?? []
+    toProcess = ids.filter(Boolean)
+  }
   let success = 0
   let failed = 0
 
@@ -65,7 +72,7 @@ async function main() {
       const deduped = deduplicateEvents(ytEvents)
 
       // 4. Segment into subtitle entries
-      const entries = groupIntoSubtitles(deduped)
+      const entries = postProcessSubtitles(groupIntoSubtitles(deduped))
 
       if (entries.length === 0) {
         console.log('SKIP (no text after filtering)')
@@ -75,9 +82,10 @@ async function main() {
 
       // 5. Match Korean translations from existing file
       const koMap = buildKoMap(existing)
+      const existingKoEntries = existing.filter(entry => entry.ko)
       let koMatched = 0
       for (const entry of entries) {
-        const ko = findBestKoMatch(entry.en, koMap)
+        const ko = findBestKoMatch(entry, koMap, existingKoEntries)
         if (ko) {
           entry.ko = ko
           koMatched++
@@ -166,21 +174,16 @@ async function fetchYtDlpEvents(videoId) {
 function deduplicateEvents(events) {
   if (events.length === 0) return []
 
-  // Sort by start time
-  events.sort((a, b) => a.startSec - b.startSec)
+  const sorted = [...events].sort((a, b) => a.startSec - b.startSec || a.endSec - b.endSec)
 
   const result = []
-  let current = events[0]
+  let current = sorted[0]
 
-  for (let i = 1; i < events.length; i++) {
-    const next = events[i]
+  for (let i = 1; i < sorted.length; i++) {
+    const next = sorted[i]
 
-    // If next event overlaps significantly with current (within 1s of start)
-    if (Math.abs(next.startSec - current.startSec) < 1.0) {
-      // Keep the one with more text (it's the more complete version)
-      if (next.text.length > current.text.length) {
-        current = next
-      }
+    if (isLikelyProgressiveDuplicate(current, next, 'text')) {
+      current = pickMoreCompleteTimedEntry(current, next, 'text')
     } else {
       result.push(current)
       current = next
@@ -236,7 +239,7 @@ function groupIntoSubtitles(events) {
     subtitles.push(makeEntry(segStart, segEnd, currentTexts))
   }
 
-  return subtitles
+  return normalizeGeneratedEntries(subtitles)
 }
 
 function makeEntry(start, end, texts) {
@@ -253,12 +256,95 @@ function makeEntry(start, end, texts) {
   }
 }
 
+function postProcessSubtitles(entries) {
+  if (entries.length === 0) return entries
+
+  const result = []
+
+  for (const entry of entries.sort((a, b) => a.start - b.start)) {
+    const normalized = normalize(entry.en)
+    if (!normalized) continue
+
+    const previous = result[result.length - 1]
+    if (previous) {
+      if (isLikelyProgressiveDuplicate(previous, entry, 'en')) {
+        result[result.length - 1] = pickMoreCompleteTimedEntry(previous, entry, 'en', {
+          start: Math.min(previous.start, entry.start),
+          end: Math.max(previous.end, entry.end),
+        })
+        continue
+      }
+
+      if (entry.start < previous.end) {
+        entry.start = round2(previous.end)
+      }
+
+      if (entry.end <= entry.start + 0.3) {
+        continue
+      }
+    }
+
+    result.push({
+      ...entry,
+      start: round2(entry.start),
+      end: round2(Math.max(entry.end, entry.start + 0.8)),
+    })
+  }
+
+  return result.filter((entry) => entry.end > entry.start)
+}
+
 function countGaps(entries, threshold) {
   let count = 0
   for (let i = 1; i < entries.length; i++) {
     if (entries[i].start - entries[i - 1].end > threshold) count++
   }
   return count
+}
+
+/**
+ * Ensure generated subtitles stay time-ordered and non-overlapping.
+ * Also drops adjacent progressive duplicates that survive event-level dedupe.
+ */
+function normalizeGeneratedEntries(entries) {
+  if (entries.length === 0) return []
+
+  const normalized = []
+  const sorted = [...entries].sort((a, b) => a.start - b.start || a.end - b.end)
+
+  for (const raw of sorted) {
+    const entry = {
+      ...raw,
+      start: round2(Math.max(0, raw.start)),
+      end: round2(Math.max(raw.end, raw.start + 0.2)),
+    }
+
+    const prev = normalized[normalized.length - 1]
+    if (!prev) {
+      normalized.push(entry)
+      continue
+    }
+
+    if (isLikelyProgressiveDuplicate(prev, entry, 'en')) {
+      normalized[normalized.length - 1] = pickMoreCompleteTimedEntry(prev, entry, 'en', {
+        start: Math.min(prev.start, entry.start),
+        end: Math.max(prev.end, entry.end),
+      })
+      continue
+    }
+
+    if (entry.start < prev.end) {
+      entry.start = round2(prev.end)
+    }
+
+    if (entry.end <= entry.start) {
+      entry.end = round2(entry.start + 0.2)
+    }
+
+    normalized.push(entry)
+  }
+
+  return normalized
 }
 
 /**
@@ -277,9 +363,9 @@ function buildKoMap(entries) {
 /**
  * Find best Korean translation match via exact, substring, and word overlap.
  */
-function findBestKoMatch(en, koMap) {
+function findBestKoMatch(entry, koMap, existingEntries) {
   if (koMap.size === 0) return ''
-  const norm = normalize(en)
+  const norm = normalize(entry.en)
 
   // Exact match
   if (koMap.has(norm)) return koMap.get(norm)
@@ -289,6 +375,9 @@ function findBestKoMatch(en, koMap) {
     if (norm.includes(key) && key.length > 10) return ko
     if (key.includes(norm) && norm.length > 10) return ko
   }
+
+  const timeMatched = findTimeAlignedKo(entry, existingEntries)
+  if (timeMatched) return timeMatched
 
   // Word overlap: >60% match
   const newWords = new Set(norm.split(/\s+/))
@@ -309,8 +398,87 @@ function findBestKoMatch(en, koMap) {
   return bestKo
 }
 
+function findTimeAlignedKo(entry, existingEntries) {
+  const targetCenter = (entry.start + entry.end) / 2
+  let bestDistance = Number.POSITIVE_INFINITY
+  let bestKo = ''
+
+  for (const existing of existingEntries) {
+    if (!existing.ko) continue
+
+    const existingCenter = (existing.start + existing.end) / 2
+    const distance = Math.abs(targetCenter - existingCenter)
+    if (distance > 1.5) continue
+
+    const similarity = overlapSimilarity(entry.en, existing.en)
+    if (similarity < 0.25) continue
+
+    if (distance < bestDistance) {
+      bestDistance = distance
+      bestKo = existing.ko
+    }
+  }
+
+  return bestKo
+}
+
+function overlapSimilarity(left, right) {
+  const leftWords = new Set(normalize(left).split(/\s+/).filter(Boolean))
+  const rightWords = new Set(normalize(right).split(/\s+/).filter(Boolean))
+  if (leftWords.size === 0 || rightWords.size === 0) return 0
+
+  let matches = 0
+  for (const word of leftWords) {
+    if (rightWords.has(word)) matches++
+  }
+
+  return matches / Math.max(leftWords.size, rightWords.size)
+}
+
 function normalize(text) {
   return text.toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, ' ').trim()
+}
+
+function normalizeCaptionText(text) {
+  return normalize(text || '')
+}
+
+function getEntryStart(entry) {
+  return entry.startSec ?? entry.start ?? 0
+}
+
+function getEntryEnd(entry) {
+  return entry.endSec ?? entry.end ?? getEntryStart(entry)
+}
+
+function isLikelyProgressiveDuplicate(a, b, textKey) {
+  const aText = normalizeCaptionText(a[textKey])
+  const bText = normalizeCaptionText(b[textKey])
+  if (!aText || !bText) return false
+
+  const startsClose = Math.abs(getEntryStart(a) - getEntryStart(b)) <= 1.0
+  const overlaps = (Math.min(getEntryEnd(a), getEntryEnd(b)) - Math.max(getEntryStart(a), getEntryStart(b))) >= -0.1
+
+  if (!startsClose || !overlaps) return false
+  if (aText === bText) return true
+
+  const [shorter, longer] = aText.length <= bText.length ? [aText, bText] : [bText, aText]
+  if (shorter.length < 12) return false
+
+  return longer.startsWith(shorter)
+}
+
+function pickMoreCompleteTimedEntry(a, b, textKey, overrides = {}) {
+  const aText = normalizeCaptionText(a[textKey])
+  const bText = normalizeCaptionText(b[textKey])
+  const preferred = bText.length > aText.length || (bText.length === aText.length && getEntryEnd(b) > getEntryEnd(a))
+    ? b
+    : a
+
+  return {
+    ...preferred,
+    ...overrides,
+  }
 }
 
 function capitalizeFirst(text) {

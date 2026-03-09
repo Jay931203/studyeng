@@ -31,7 +31,7 @@ const REVIEW_REGISTRY_PATH = join(ROOT, 'src', 'data', 'content-review-registry.
 const CONTENT_MANIFEST_PATH = join(ROOT, 'src', 'data', 'content-manifest.json')
 const RECOMMENDATION_MANIFEST_PATH = join(ROOT, 'src', 'data', 'recommendation-manifest.json')
 const CONTENT_REPORT_PATH = join(ROOT, 'docs', 'reports', 'content-system-report.md')
-const TARGET_VIDEO_COUNT = 1000
+const TARGET_VIDEO_COUNT = 2000
 
 const args = process.argv.slice(2)
 const queueName = getArgValue('--queue')
