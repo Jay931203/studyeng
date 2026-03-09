@@ -1,7 +1,7 @@
 'use client'
 
-import { useCallback, useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { useCallback, useEffect, useRef, useState } from 'react'
+import { AnimatePresence, motion, type PanInfo } from 'framer-motion'
 import { usePlayerStore, pauseRef, playRef } from '@/stores/usePlayerStore'
 
 interface FloatingRemoteProps {
@@ -11,12 +11,56 @@ interface FloatingRemoteProps {
 }
 
 const STORAGE_KEY = 'shortee-remote-intro-shown'
+const POSITION_STORAGE_KEY = 'shortee-remote-position'
+const EDGE_MARGIN = 12
+
+interface RemoteOffset {
+  x: number
+  y: number
+}
+
+function readStoredOffset(): RemoteOffset {
+  if (typeof window === 'undefined') {
+    return { x: 0, y: 0 }
+  }
+
+  const stored = window.localStorage.getItem(POSITION_STORAGE_KEY)
+  if (!stored) {
+    return { x: 0, y: 0 }
+  }
+
+  try {
+    const parsed = JSON.parse(stored) as Partial<RemoteOffset>
+    return {
+      x: Number.isFinite(parsed.x) ? parsed.x ?? 0 : 0,
+      y: Number.isFinite(parsed.y) ? parsed.y ?? 0 : 0,
+    }
+  } catch {
+    return { x: 0, y: 0 }
+  }
+}
+
+function clampOffset(offset: RemoteOffset, width: number, height: number): RemoteOffset {
+  if (typeof window === 'undefined') {
+    return offset
+  }
+
+  const minX = Math.min(0, -(window.innerWidth - width - EDGE_MARGIN * 2))
+  const minY = Math.min(0, -(window.innerHeight - height - EDGE_MARGIN * 2))
+
+  return {
+    x: Math.max(minX, Math.min(0, offset.x)),
+    y: Math.max(minY, Math.min(0, offset.y)),
+  }
+}
 
 export function FloatingRemote({
   onPrevVideo,
   onNextVideo,
   onToggleFreeze,
 }: FloatingRemoteProps) {
+  const remoteRef = useRef<HTMLDivElement | null>(null)
+  const dragResetTimerRef = useRef<number | null>(null)
   const [expanded, setExpanded] = useState(() => {
     if (typeof window === 'undefined') return false
 
@@ -28,6 +72,8 @@ export function FloatingRemote({
 
     return false
   })
+  const [dragBlocked, setDragBlocked] = useState(false)
+  const [remoteOffset, setRemoteOffset] = useState<RemoteOffset>(() => readStoredOffset())
 
   const isPlaying = usePlayerStore((state) => state.isPlaying)
   const setIsPlaying = usePlayerStore((state) => state.setIsPlaying)
@@ -36,17 +82,53 @@ export function FloatingRemote({
   const isFrozen = freezeSubIndex !== null
   const canEnableFreeze = activeSubIndex >= 0
 
-  const handleButtonClick = useCallback((action: () => void) => {
-    action()
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+
+    window.localStorage.setItem(POSITION_STORAGE_KEY, JSON.stringify(remoteOffset))
+  }, [remoteOffset])
+
+  useEffect(() => {
+    const clampToViewport = () => {
+      const rect = remoteRef.current?.getBoundingClientRect()
+      if (!rect) return
+
+      setRemoteOffset((current) => {
+        const next = clampOffset(current, rect.width, rect.height)
+        return next.x === current.x && next.y === current.y ? current : next
+      })
+    }
+
+    const frame = window.requestAnimationFrame(clampToViewport)
+    window.addEventListener('resize', clampToViewport)
+    return () => {
+      window.cancelAnimationFrame(frame)
+      window.removeEventListener('resize', clampToViewport)
+    }
+  }, [expanded])
+
+  useEffect(() => {
+    return () => {
+      if (dragResetTimerRef.current) {
+        window.clearTimeout(dragResetTimerRef.current)
+      }
+    }
   }, [])
+
+  const handleButtonClick = useCallback((action: () => void) => {
+    if (dragBlocked) return
+    action()
+  }, [dragBlocked])
 
   const handleExpand = useCallback(() => {
+    if (dragBlocked) return
     setExpanded(true)
-  }, [])
+  }, [dragBlocked])
 
   const handleCollapse = useCallback(() => {
+    if (dragBlocked) return
     setExpanded(false)
-  }, [])
+  }, [dragBlocked])
 
   const handlePlayPause = useCallback(() => {
     if (isPlaying) {
@@ -63,10 +145,49 @@ export function FloatingRemote({
     bottom: 'max(12px, calc(env(safe-area-inset-bottom, 0px) + 8px))',
   }
 
+  const handleDragStart = useCallback(() => {
+    if (dragResetTimerRef.current) {
+      window.clearTimeout(dragResetTimerRef.current)
+    }
+    setDragBlocked(true)
+  }, [])
+
+  const handleDragEnd = useCallback((_: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+    const rect = remoteRef.current?.getBoundingClientRect()
+    if (rect) {
+      setRemoteOffset((current) =>
+        clampOffset(
+          {
+            x: current.x + info.offset.x,
+            y: current.y + info.offset.y,
+          },
+          rect.width,
+          rect.height,
+        ),
+      )
+    }
+
+    dragResetTimerRef.current = window.setTimeout(() => {
+      setDragBlocked(false)
+      dragResetTimerRef.current = null
+    }, 140)
+  }, [])
+
   return (
-    <div
+    <motion.div
+      ref={remoteRef}
+      drag
+      dragMomentum={false}
+      dragElastic={0.04}
+      onDragStart={handleDragStart}
+      onDragEnd={handleDragEnd}
       className="absolute z-20"
-      style={positionStyle}
+      style={{
+        ...positionStyle,
+        x: remoteOffset.x,
+        y: remoteOffset.y,
+        touchAction: 'none',
+      }}
       onPointerDownCapture={(event) => event.stopPropagation()}
       onClick={(event) => event.stopPropagation()}
     >
@@ -79,7 +200,7 @@ export function FloatingRemote({
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.2, ease: 'easeOut' }}
             onClick={handleExpand}
-            className="flex h-12 w-12 items-center justify-center rounded-full border backdrop-blur-md"
+            className="flex h-12 w-12 cursor-grab items-center justify-center rounded-full border backdrop-blur-md active:cursor-grabbing"
             style={{
               backgroundColor: 'var(--player-control-bg)',
               borderColor: 'var(--player-control-border)',
@@ -106,7 +227,7 @@ export function FloatingRemote({
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.8, y: 20 }}
             transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
-            className="flex w-[52px] flex-col items-center overflow-hidden rounded-[26px] border backdrop-blur-md"
+            className="flex w-[52px] cursor-grab flex-col items-center overflow-hidden rounded-[26px] border backdrop-blur-md active:cursor-grabbing"
             style={{
               backgroundColor: 'var(--player-control-bg)',
               borderColor: 'var(--player-control-border)',
@@ -249,6 +370,6 @@ export function FloatingRemote({
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+    </motion.div>
   )
 }
