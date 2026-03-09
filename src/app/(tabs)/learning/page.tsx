@@ -43,10 +43,10 @@ export default function LearningPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
               SAVED
             </p>
-            {phrases.length > 3 && (
+            {phrases.length > 0 && (
               <Link
                 href="/learning/saved"
-                className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]"
+                className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
               >
                 VIEW ALL
               </Link>
