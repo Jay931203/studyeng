@@ -30,6 +30,16 @@ interface PlayerState {
   /** Index of the subtitle currently frozen for looping, or null */
   freezeSubIndex: number | null
 
+  // Game state (NOT persisted)
+  gameActive: boolean
+  gameSentenceIndex: number | null
+  gameChoices: string[]
+  gameCorrectIndex: number
+  gameResult: 'correct' | 'wrong' | null
+
+  // Persisted game setting
+  gameModeEnabled: boolean
+
   toggleSubtitleMode: () => void
   cycleLandscapeSubtitleLayout: () => void
   setPlaybackOrderMode: (mode: PlaybackOrderMode) => void
@@ -46,6 +56,13 @@ interface PlayerState {
   resetRepeatCount: () => void
   setIsSwiping: (swiping: boolean) => void
   setFreezeSubIndex: (idx: number | null) => void
+
+  // Game actions
+  setGameSentenceIndex: (idx: number | null) => void
+  triggerGame: (choices: string[], correctIndex: number) => void
+  answerGame: (choiceIndex: number) => void
+  clearGame: () => void
+  setGameModeEnabled: (v: boolean) => void
 }
 
 const subtitleCycle: SubtitleMode[] = ['none', 'en', 'en-ko']
@@ -91,6 +108,14 @@ export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
   currentRepeatCount: 0,
   isSwiping: false,
   freezeSubIndex: null,
+
+  // Game state defaults
+  gameActive: false,
+  gameSentenceIndex: null,
+  gameChoices: [],
+  gameCorrectIndex: 0,
+  gameResult: null,
+  gameModeEnabled: false,
 
   toggleSubtitleMode: () => {
     const current = subtitleCycle.indexOf(get().subtitleMode)
@@ -167,6 +192,39 @@ export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
   setFreezeSubIndex: (idx) => {
     if (get().freezeSubIndex !== idx) set({ freezeSubIndex: idx })
   },
+
+  // Game actions
+  setGameSentenceIndex: (idx) => {
+    if (get().gameSentenceIndex !== idx) set({ gameSentenceIndex: idx })
+  },
+
+  triggerGame: (choices, correctIndex) => {
+    set({
+      gameActive: true,
+      gameChoices: choices,
+      gameCorrectIndex: correctIndex,
+      gameResult: null,
+    })
+  },
+
+  answerGame: (choiceIndex) => {
+    const { gameCorrectIndex } = get()
+    set({ gameResult: choiceIndex === gameCorrectIndex ? 'correct' : 'wrong' })
+  },
+
+  clearGame: () => {
+    set({
+      gameActive: false,
+      gameSentenceIndex: null,
+      gameChoices: [],
+      gameCorrectIndex: 0,
+      gameResult: null,
+    })
+  },
+
+  setGameModeEnabled: (v) => {
+    if (get().gameModeEnabled !== v) set({ gameModeEnabled: v })
+  },
 }),
   {
     name: 'studyeng-player',
@@ -175,6 +233,7 @@ export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
       landscapeSubtitleLayout: state.landscapeSubtitleLayout,
       playbackOrderMode: state.playbackOrderMode,
       playbackRate: state.playbackRate,
+      gameModeEnabled: state.gameModeEnabled,
     }),
   }
 ))

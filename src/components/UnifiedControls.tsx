@@ -78,6 +78,8 @@ export function UnifiedControls({
     setRepeatMode,
     isLooping,
     clearLoop,
+    gameModeEnabled,
+    setGameModeEnabled,
   } = usePlayerStore()
   const { toggleLike, isLiked } = useLikeStore()
   const addIssue = useAdminStore((state) => state.addIssue)
@@ -741,6 +743,29 @@ export function UnifiedControls({
               </svg>
             </button>
           )}
+
+          <button
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation()
+              setGameModeEnabled(!gameModeEnabled)
+            }}
+            className={iconButtonClassName}
+            style={{
+              color: gameModeEnabled ? 'var(--accent-text)' : 'var(--player-text)',
+            }}
+            aria-label={gameModeEnabled ? '게임 모드 끄기' : '게임 모드 켜기'}
+            title={gameModeEnabled ? '게임 모드 ON' : '게임 모드 OFF'}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className={iconSizeClassName}
+            >
+              <path d="M11.25 5.337c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.036 1.007-1.875 2.25-1.875S15 2.34 15 3.375c0 .369-.128.713-.349 1.003-.215.283-.401.604-.401.959 0 .332.278.598.61.578 7.69-.442 7.69 10.27 0 9.828a.592.592 0 01-.61.578c0 .355.186.677.401.96.221.29.349.634.349 1.003 0 1.035-1.007 1.874-2.25 1.874s-2.25-.84-2.25-1.874c0-.37.128-.714.349-1.004.215-.282.401-.604.401-.959a.592.592 0 00-.61-.578c-7.69.442-7.69-10.27 0-9.828a.592.592 0 00.61-.578z" />
+            </svg>
+          </button>
 
           <div className={dividerClassName} style={{ backgroundColor: 'var(--player-divider)' }} />
 

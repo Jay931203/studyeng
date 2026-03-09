@@ -12,6 +12,7 @@ import {
 } from 'react'
 import { useYouTubePlayer } from '@/hooks/useYouTubePlayer'
 import { useTranscript } from '@/hooks/useTranscript'
+import { useGameTrigger } from '@/hooks/useGameTrigger'
 import { usePlayerStore, seekToRef, playRef, pauseRef } from '@/stores/usePlayerStore'
 import { LyricsSubtitles } from './LyricsSubtitles'
 import { ProgressBar } from './ProgressBar'
@@ -85,6 +86,9 @@ export function VideoPlayer({
   const cycleLandscapeSubtitleLayout = usePlayerStore(
     (state) => state.cycleLandscapeSubtitleLayout,
   )
+
+  // Game trigger: watches subtitles and triggers "next line" quiz
+  useGameTrigger(youtubeId, subtitles)
 
   const [overlayVisible, setOverlayVisible] = useState(true)
   const [showPauseIcon, setShowPauseIcon] = useState(false)
