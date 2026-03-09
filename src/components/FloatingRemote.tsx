@@ -32,6 +32,7 @@ export function FloatingRemote({
   })
 
   const isPlaying = usePlayerStore((state) => state.isPlaying)
+  const setIsPlaying = usePlayerStore((state) => state.setIsPlaying)
   const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
   const isFrozen = freezeSubIndex !== null
 
@@ -50,10 +51,12 @@ export function FloatingRemote({
   const handlePlayPause = useCallback(() => {
     if (isPlaying) {
       pauseRef.current?.()
+      setIsPlaying(false)
     } else {
       playRef.current?.()
+      setIsPlaying(true)
     }
-  }, [isPlaying])
+  }, [isPlaying, setIsPlaying])
 
   const positionStyle = isLandscape
     ? {
@@ -111,24 +114,6 @@ export function FloatingRemote({
               borderColor: 'var(--player-control-border)',
             }}
           >
-            <button
-              onClick={handleCollapse}
-              className="flex h-9 w-full items-center justify-center"
-              style={{ color: 'var(--player-muted)' }}
-              aria-label="Close remote"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                className="h-3.5 w-3.5"
-              >
-                <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
-              </svg>
-            </button>
-
-            <div className="h-px w-7" style={{ backgroundColor: 'var(--player-divider)' }} />
-
             {onPrevVideo && (
               <>
                 <button
@@ -196,7 +181,7 @@ export function FloatingRemote({
                 <button
                   onClick={() => handleButtonClick(onToggleFreeze)}
                   className="flex h-11 w-11 items-center justify-center"
-                  style={{ color: isFrozen ? 'var(--freeze-text)' : 'var(--player-muted)' }}
+                  style={{ color: isFrozen ? 'var(--accent-text)' : 'var(--text-muted)' }}
                   aria-label={isFrozen ? 'Freeze on' : 'Freeze off'}
                 >
                   <svg
@@ -213,28 +198,49 @@ export function FloatingRemote({
             )}
 
             {onNextVideo && (
-              <button
-                onClick={() => handleButtonClick(onNextVideo)}
-                className="flex h-11 w-11 items-center justify-center"
-                style={{ color: 'var(--player-text)' }}
-                aria-label="Next video"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="h-5 w-5"
+              <>
+                <button
+                  onClick={() => handleButtonClick(onNextVideo)}
+                  className="flex h-11 w-11 items-center justify-center"
+                  style={{ color: 'var(--player-text)' }}
+                  aria-label="Next video"
                 >
-                  <path
-                    fillRule="evenodd"
-                    d="M10.53 13.53a.75.75 0 0 1-1.06 0l-4.25-4.25a.75.75 0 0 1 1.06-1.06L10 11.94l3.72-3.72a.75.75 0 0 1 1.06 1.06l-4.25 4.25Z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="h-5 w-5"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M10.53 13.53a.75.75 0 0 1-1.06 0l-4.25-4.25a.75.75 0 0 1 1.06-1.06L10 11.94l3.72-3.72a.75.75 0 0 1 1.06 1.06l-4.25 4.25Z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </button>
+                <div className="h-px w-7" style={{ backgroundColor: 'var(--player-divider)' }} />
+              </>
             )}
 
-            {!onNextVideo && <div className="h-1" />}
+            {!onNextVideo && (
+              <div className="h-px w-7" style={{ backgroundColor: 'var(--player-divider)' }} />
+            )}
+
+            <button
+              onClick={handleCollapse}
+              className="flex h-11 w-11 items-center justify-center"
+              style={{ color: 'var(--player-muted)' }}
+              aria-label="Close remote"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="h-3.5 w-3.5"
+              >
+                <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
+              </svg>
+            </button>
           </motion.div>
         )}
       </AnimatePresence>
