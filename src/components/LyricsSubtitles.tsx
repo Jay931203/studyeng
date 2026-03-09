@@ -66,7 +66,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
 
   // Freeze mode indicator (shows briefly then fades)
   const [showFreezeIndicator, setShowFreezeIndicator] = useState(false)
-  const [freezeIndicatorText, setFreezeIndicatorText] = useState('?꾨━利?紐⑤뱶')
+  const [freezeIndicatorText, setFreezeIndicatorText] = useState('FREEZE ON')
   const freezeIndicatorTimerRef = useRef<number | null>(null)
 
   // First-time tooltip
@@ -195,7 +195,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
   const enterFreeze = useCallback(
     (sub: SubtitleEntry, idx: number) => {
       setFreezeSubIndex(idx)
-      showFreezeNotice('?꾨━利?紐⑤뱶', 2500)
+      showFreezeNotice('FREEZE ON', 2500)
       onSeek?.(sub.start)
     },
     [onSeek, setFreezeSubIndex, showFreezeNotice],
@@ -204,7 +204,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
   // Exit freeze mode
   const exitFreeze = useCallback(() => {
     setFreezeSubIndex(null)
-    showFreezeNotice('?꾨━利??댁젣', 1500)
+    showFreezeNotice('FREEZE OFF', 1500)
   }, [setFreezeSubIndex, showFreezeNotice])
 
   const handleLineClick = useCallback(
