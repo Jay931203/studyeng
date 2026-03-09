@@ -9,8 +9,6 @@ import {
   type Series as SeriesType,
   type VideoData,
 } from '@/data/seed-videos'
-import { CollectionBrowser } from '@/components/CollectionBrowser'
-import { CollectionDetailView } from '@/components/CollectionDetail'
 import { LogoFull } from '@/components/Logo'
 import { SearchBar } from '@/components/SearchBar'
 import { VideoCard } from '@/components/VideoCard'
@@ -72,7 +70,6 @@ export default function ExplorePage() {
   } = useWatchHistoryStore()
 
   const selectedSeriesId = searchParams.get('series')
-  const selectedCollectionId = searchParams.get('collection')
   const source = searchParams.get('source')
   const returnVideoId = searchParams.get('returnVideoId')
   const returnSeriesId = searchParams.get('returnSeriesId')
@@ -216,10 +213,6 @@ export default function ExplorePage() {
   }, [rankedRecommendations, spotlightVideo])
 
   if (!spotlightVideo) return null
-
-  if (selectedCollectionId) {
-    return <CollectionDetailView collectionId={selectedCollectionId} />
-  }
 
   if (selectedSeries) {
     const progressPct = getSeriesProgress(selectedSeries.id, selectedSeries.episodeCount)
@@ -505,8 +498,6 @@ export default function ExplorePage() {
           </div>
         </section>
       )}
-
-      <CollectionBrowser />
 
       <section className="mb-8">
         <SectionHeader title="추천" />
