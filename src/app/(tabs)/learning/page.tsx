@@ -15,28 +15,13 @@ import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 export default function LearningPage() {
   const router = useRouter()
   const { phrases, removePhrase } = usePhraseStore()
-  const totalWatched = useWatchHistoryStore((state) => state.watchedVideoIds.length)
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)
-
-  const isEmpty = phrases.length === 0 && totalWatched === 0
 
   return (
     <AppPage>
       <DailyMissions />
       <div className="mt-6 space-y-6">
-        {isEmpty ? (
-          <SurfaceCard className="px-6 py-12 text-center">
-            <p className="text-lg font-semibold text-[var(--text-primary)]">NO RECORDS</p>
-            <button
-              onClick={() => router.push('/shorts')}
-              className="mt-6 rounded-full bg-[var(--accent-primary)] px-5 py-2.5 text-sm font-semibold text-white"
-            >
-              SHORTS
-            </button>
-          </SurfaceCard>
-        ) : (
-          <WatchHistory />
-        )}
+        <WatchHistory />
 
         <SurfaceCard className="p-5">
           <div className="mb-4 flex items-center justify-between gap-4">
