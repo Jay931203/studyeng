@@ -119,7 +119,7 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
     return (
       <aside className="flex h-full flex-col rounded-[28px] border border-[var(--border-card)] bg-[var(--bg-card)]/88 p-2 shadow-[var(--card-shadow)] backdrop-blur-xl">
         <div className="mb-3 flex items-center justify-center rounded-[20px] bg-black/20 px-2 py-3">
-          <Logo className="h-5 text-[var(--text-primary)]" />
+          <Logo className="h-6 text-[var(--text-primary)]" />
         </div>
 
         <nav className="flex flex-1 flex-col items-center gap-2">
@@ -152,7 +152,7 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
     return (
       <aside className="hidden h-full flex-col rounded-[32px] border border-[var(--border-card)] bg-[var(--bg-card)]/88 p-4 shadow-[var(--card-shadow)] backdrop-blur-xl lg:flex">
         <div className="rounded-[28px] border border-[var(--border-card)] bg-black/20 px-4 py-5">
-          <Logo className="h-7 text-[var(--text-primary)]" />
+          <Logo className="h-8 text-[var(--text-primary)]" />
         </div>
 
         <nav className="mt-5 flex flex-1 flex-col gap-2">
