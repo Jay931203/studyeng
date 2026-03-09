@@ -710,6 +710,7 @@ export function VideoFeed({
             <div className="min-w-0 max-w-full flex-shrink overflow-x-auto overflow-y-visible no-scrollbar">
               <UnifiedControls
                 videoId={currentVideo.id}
+                youtubeId={currentVideo.youtubeId}
                 videoTitle={currentVideo.title}
                 compact={isCompactViewport}
                 className="inline-flex min-w-max items-center gap-0.5"

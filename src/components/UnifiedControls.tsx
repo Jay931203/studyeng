@@ -2,7 +2,9 @@
 
 import { AnimatePresence, motion } from 'framer-motion'
 import { useCallback, useEffect, useRef, useState, type MouseEvent } from 'react'
+import { createPortal } from 'react-dom'
 import { buildShortsUrl } from '@/lib/videoRoutes'
+import { useAdminStore, type IssueType } from '@/stores/useAdminStore'
 import { useLikeStore } from '@/stores/useLikeStore'
 import { usePlayerStore } from '@/stores/usePlayerStore'
 import { SaveToast } from './SaveToast'
@@ -17,16 +19,50 @@ const PLAYBACK_ORDER_OPTIONS = [
   { value: 'sequence', label: '순차' },
   { value: 'shuffle', label: '랜덤' },
 ] as const
+const REPORT_TYPE_OPTIONS: Array<{ value: IssueType; label: string }> = [
+  { value: 'subtitle', label: '자막' },
+  { value: 'video', label: '영상' },
+  { value: 'other', label: '기타' },
+]
+
+const VIEWPORT_MARGIN = 16
+const POPUP_GAP = 10
+const PLAYBACK_POPOVER_WIDTH = 240
+const MENU_POPOVER_WIDTH = 196
+
+interface PopoverPosition {
+  top: number
+  left: number
+  width: number
+}
 
 interface UnifiedControlsProps {
   videoId?: string
+  youtubeId?: string
   videoTitle?: string
   className?: string
   compact?: boolean
 }
 
+function getPopoverPosition(trigger: HTMLElement | null, width: number): PopoverPosition | null {
+  if (!trigger || typeof window === 'undefined') return null
+
+  const rect = trigger.getBoundingClientRect()
+  const left = Math.max(
+    VIEWPORT_MARGIN,
+    Math.min(rect.right - width, window.innerWidth - VIEWPORT_MARGIN - width),
+  )
+
+  return {
+    top: rect.bottom + POPUP_GAP,
+    left,
+    width,
+  }
+}
+
 export function UnifiedControls({
   videoId,
+  youtubeId,
   videoTitle,
   className,
   compact = false,
@@ -44,24 +80,102 @@ export function UnifiedControls({
     clearLoop,
   } = usePlayerStore()
   const { toggleLike, isLiked } = useLikeStore()
+  const addIssue = useAdminStore((state) => state.addIssue)
+  const adminSyncError = useAdminStore((state) => state.adminSyncError)
+  const setAdminSyncError = useAdminStore((state) => state.setAdminSyncError)
 
-  const [showToast, setShowToast] = useState(false)
+  const [toastMessage, setToastMessage] = useState<string | null>(null)
   const [showPlaybackOptions, setShowPlaybackOptions] = useState(false)
-  const playbackOptionsRef = useRef<HTMLDivElement | null>(null)
+  const [showMenu, setShowMenu] = useState(false)
+  const [showReportDialog, setShowReportDialog] = useState(false)
+  const [reportType, setReportType] = useState<IssueType>('subtitle')
+  const [reportDescription, setReportDescription] = useState('')
+  const [reportSubmitting, setReportSubmitting] = useState(false)
+  const [playbackPosition, setPlaybackPosition] = useState<PopoverPosition | null>(null)
+  const [menuPosition, setMenuPosition] = useState<PopoverPosition | null>(null)
+
   const liked = videoId ? isLiked(videoId) : false
+  const playbackTriggerRef = useRef<HTMLButtonElement | null>(null)
+  const playbackPanelRef = useRef<HTMLDivElement | null>(null)
+  const menuTriggerRef = useRef<HTMLButtonElement | null>(null)
+  const menuPanelRef = useRef<HTMLDivElement | null>(null)
+  const toastTimerRef = useRef<number | null>(null)
+
+  const showToast = useCallback((message: string) => {
+    setToastMessage(message)
+    if (toastTimerRef.current) {
+      window.clearTimeout(toastTimerRef.current)
+    }
+    toastTimerRef.current = window.setTimeout(() => {
+      setToastMessage(null)
+      toastTimerRef.current = null
+    }, 2000)
+  }, [])
+
+  useEffect(() => {
+    return () => {
+      if (toastTimerRef.current) {
+        window.clearTimeout(toastTimerRef.current)
+      }
+    }
+  }, [])
 
   useEffect(() => {
     if (!showPlaybackOptions) return
 
+    const updatePosition = () => {
+      setPlaybackPosition(getPopoverPosition(playbackTriggerRef.current, PLAYBACK_POPOVER_WIDTH))
+    }
+
+    updatePosition()
+    window.addEventListener('resize', updatePosition)
+    window.addEventListener('scroll', updatePosition, true)
+    return () => {
+      window.removeEventListener('resize', updatePosition)
+      window.removeEventListener('scroll', updatePosition, true)
+    }
+  }, [showPlaybackOptions])
+
+  useEffect(() => {
+    if (!showMenu) return
+
+    const updatePosition = () => {
+      setMenuPosition(getPopoverPosition(menuTriggerRef.current, MENU_POPOVER_WIDTH))
+    }
+
+    updatePosition()
+    window.addEventListener('resize', updatePosition)
+    window.addEventListener('scroll', updatePosition, true)
+    return () => {
+      window.removeEventListener('resize', updatePosition)
+      window.removeEventListener('scroll', updatePosition, true)
+    }
+  }, [showMenu])
+
+  useEffect(() => {
+    if (!showPlaybackOptions && !showMenu) return
+
     const handlePointerDown = (event: PointerEvent) => {
-      if (!playbackOptionsRef.current?.contains(event.target as Node)) {
+      const target = event.target as Node
+
+      const insidePlayback =
+        playbackTriggerRef.current?.contains(target) ||
+        playbackPanelRef.current?.contains(target)
+      const insideMenu = menuTriggerRef.current?.contains(target) || menuPanelRef.current?.contains(target)
+
+      if (!insidePlayback) {
         setShowPlaybackOptions(false)
+      }
+
+      if (!insideMenu) {
+        setShowMenu(false)
       }
     }
 
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         setShowPlaybackOptions(false)
+        setShowMenu(false)
       }
     }
 
@@ -71,11 +185,11 @@ export function UnifiedControls({
       window.removeEventListener('pointerdown', handlePointerDown)
       window.removeEventListener('keydown', handleKeyDown)
     }
-  }, [showPlaybackOptions])
+  }, [showMenu, showPlaybackOptions])
 
   const handleShare = useCallback(
-    async (event: MouseEvent) => {
-      event.stopPropagation()
+    async (event?: MouseEvent) => {
+      event?.stopPropagation()
       if (!videoId) return
 
       const shareUrl = `${window.location.origin}${buildShortsUrl(videoId)}`
@@ -90,6 +204,7 @@ export function UnifiedControls({
             text: shareText,
             url: shareUrl,
           })
+          showToast('공유 시트를 열었어요')
           return
         } catch {
           // Fall through to clipboard copy.
@@ -109,11 +224,41 @@ export function UnifiedControls({
         document.body.removeChild(textarea)
       }
 
-      setShowToast(true)
-      window.setTimeout(() => setShowToast(false), 2000)
+      showToast('링크를 복사했어요')
     },
-    [videoId, videoTitle],
+    [showToast, videoId, videoTitle],
   )
+
+  const handleSubmitReport = useCallback(async () => {
+    if (!videoId || !youtubeId) return
+
+    const trimmed = reportDescription.trim()
+    if (!trimmed || reportSubmitting) return
+
+    setReportSubmitting(true)
+    setAdminSyncError(null)
+
+    const success = await addIssue(videoId, youtubeId, reportType, trimmed)
+    setReportSubmitting(false)
+
+    if (!success) {
+      return
+    }
+
+    setReportDescription('')
+    setReportType('subtitle')
+    setShowReportDialog(false)
+    showToast('신고가 접수됐어요')
+  }, [
+    addIssue,
+    reportDescription,
+    reportSubmitting,
+    reportType,
+    setAdminSyncError,
+    showToast,
+    videoId,
+    youtubeId,
+  ])
 
   const subtitleLabel = subtitleMode === 'none' ? 'Off' : subtitleMode === 'en' ? 'En' : 'En/Ko'
   const speedLabel = playbackRate === 1 ? '1x' : `${playbackRate}x`
@@ -122,6 +267,9 @@ export function UnifiedControls({
   const playbackOrderLabel = playbackOrderMode === 'shuffle' ? '랜덤' : '순차'
   const playbackSummaryLabel = `${repeatLabel} · ${playbackOrderLabel}`
   const playbackOptionsActive = repeatMode !== 'off' || playbackOrderMode !== 'sequence'
+  const canSubmitReport =
+    Boolean(videoId && youtubeId) && reportDescription.trim().length > 0 && !reportSubmitting
+
   const controlClassName = compact
     ? 'flex h-7 min-w-[28px] items-center justify-center rounded-full text-[10px] transition-colors'
     : 'flex h-8 min-w-[32px] items-center justify-center rounded-full text-[11px] transition-colors'
@@ -138,9 +286,316 @@ export function UnifiedControls({
     ? 'h-7 rounded-full px-2.5 text-[10px] font-semibold transition-colors'
     : 'h-8 rounded-full px-3 text-[11px] font-semibold transition-colors'
 
+  const playbackPopover =
+    showPlaybackOptions && playbackPosition && typeof document !== 'undefined'
+      ? createPortal(
+          <AnimatePresence>
+            <motion.div
+              ref={playbackPanelRef}
+              initial={{ opacity: 0, y: -6, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -6, scale: 0.98 }}
+              transition={{ duration: 0.16, ease: 'easeOut' }}
+              className="fixed z-[130] rounded-3xl border p-3 shadow-2xl backdrop-blur-xl"
+              style={{
+                top: playbackPosition.top,
+                left: playbackPosition.left,
+                width: playbackPosition.width,
+                backgroundColor: 'var(--player-control-bg)',
+                borderColor: 'var(--player-control-border)',
+              }}
+              onPointerDownCapture={(event) => event.stopPropagation()}
+              role="dialog"
+              aria-label="재생 옵션"
+            >
+              <p
+                className="text-[10px] font-semibold uppercase tracking-[0.18em]"
+                style={{ color: 'var(--player-muted)' }}
+              >
+                Playback
+              </p>
+              <p className="mt-1 text-xs font-semibold" style={{ color: 'var(--player-text)' }}>
+                {playbackSummaryLabel}
+              </p>
+
+              <div className="mt-3">
+                <p className="text-[11px] font-semibold" style={{ color: 'var(--player-text)' }}>
+                  반복
+                </p>
+                <div className="mt-2 grid grid-cols-3 gap-1.5">
+                  {REPEAT_OPTIONS.map((option) => {
+                    const active = repeatMode === option.value
+                    return (
+                      <button
+                        key={option.value}
+                        type="button"
+                        onClick={(event) => {
+                          event.stopPropagation()
+                          setRepeatMode(option.value)
+                        }}
+                        className={playbackChipClassName}
+                        style={{
+                          backgroundColor: active ? 'var(--accent-glow)' : 'var(--player-panel)',
+                          color: active ? 'var(--accent-text)' : 'var(--player-text)',
+                        }}
+                      >
+                        {option.label}
+                      </button>
+                    )
+                  })}
+                </div>
+              </div>
+
+              <div className="mt-3">
+                <p className="text-[11px] font-semibold" style={{ color: 'var(--player-text)' }}>
+                  다음 재생
+                </p>
+                <div className="mt-2 grid grid-cols-2 gap-1.5">
+                  {PLAYBACK_ORDER_OPTIONS.map((option) => {
+                    const active = playbackOrderMode === option.value
+                    return (
+                      <button
+                        key={option.value}
+                        type="button"
+                        onClick={(event) => {
+                          event.stopPropagation()
+                          setPlaybackOrderMode(option.value)
+                        }}
+                        className={playbackChipClassName}
+                        style={{
+                          backgroundColor: active ? 'var(--accent-glow)' : 'var(--player-panel)',
+                          color: active ? 'var(--accent-text)' : 'var(--player-text)',
+                        }}
+                      >
+                        {option.label}
+                      </button>
+                    )
+                  })}
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>,
+          document.body,
+        )
+      : null
+
+  const moreMenuPopover =
+    showMenu && menuPosition && typeof document !== 'undefined'
+      ? createPortal(
+          <AnimatePresence>
+            <motion.div
+              ref={menuPanelRef}
+              initial={{ opacity: 0, y: -6, scale: 0.98 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: -6, scale: 0.98 }}
+              transition={{ duration: 0.16, ease: 'easeOut' }}
+              className="fixed z-[130] rounded-3xl border p-2 shadow-2xl backdrop-blur-xl"
+              style={{
+                top: menuPosition.top,
+                left: menuPosition.left,
+                width: menuPosition.width,
+                backgroundColor: 'var(--player-control-bg)',
+                borderColor: 'var(--player-control-border)',
+              }}
+              onPointerDownCapture={(event) => event.stopPropagation()}
+              role="dialog"
+              aria-label="더보기 메뉴"
+            >
+              <button
+                type="button"
+                onClick={async (event) => {
+                  event.stopPropagation()
+                  setShowMenu(false)
+                  await handleShare(event)
+                }}
+                className="flex w-full items-center gap-3 rounded-2xl px-3 py-3 text-left text-sm font-medium transition-colors"
+                style={{ color: 'var(--player-text)' }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  className="h-4 w-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15m0-3l-3-3m0 0l-3 3m3-3v12"
+                  />
+                </svg>
+                <span>공유하기</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={(event) => {
+                  event.stopPropagation()
+                  setAdminSyncError(null)
+                  setShowMenu(false)
+                  setShowReportDialog(true)
+                }}
+                className="mt-1 flex w-full items-center gap-3 rounded-2xl px-3 py-3 text-left text-sm font-medium transition-colors"
+                style={{ color: 'var(--player-text)' }}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-4 w-4"
+                >
+                  <path d="M3.5 2.75a.75.75 0 0 0-1.5 0v14.5a.75.75 0 0 0 1.5 0v-4.392l1.657-.348a6.449 6.449 0 0 1 4.271.572 7.948 7.948 0 0 0 5.965.524l2.078-.64A.75.75 0 0 0 18 11.75V3.885a.75.75 0 0 0-.975-.716l-2.296.707a6.449 6.449 0 0 1-4.848-.426 7.948 7.948 0 0 0-5.259-.704L3.5 3.99V2.75Z" />
+                </svg>
+                <span>이상 신고</span>
+              </button>
+            </motion.div>
+          </AnimatePresence>,
+          document.body,
+        )
+      : null
+
+  const reportDialog =
+    showReportDialog && typeof document !== 'undefined'
+      ? createPortal(
+          <AnimatePresence>
+            <>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="fixed inset-0 z-[140] bg-black/60 backdrop-blur-sm"
+                onClick={() => {
+                  if (reportSubmitting) return
+                  setShowReportDialog(false)
+                }}
+              />
+              <motion.div
+                initial={{ opacity: 0, y: 16, scale: 0.98 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={{ opacity: 0, y: 16, scale: 0.98 }}
+                className="fixed inset-x-4 bottom-4 z-[150] mx-auto w-auto max-w-md rounded-3xl border p-5 shadow-2xl"
+                style={{
+                  backgroundColor: 'var(--player-control-bg)',
+                  borderColor: 'var(--player-control-border)',
+                }}
+                onClick={(event) => event.stopPropagation()}
+                onPointerDownCapture={(event) => event.stopPropagation()}
+              >
+                <div className="mb-4 flex items-start justify-between gap-4">
+                  <div>
+                    <p
+                      className="text-[10px] font-semibold uppercase tracking-[0.18em]"
+                      style={{ color: 'var(--player-muted)' }}
+                    >
+                      Report
+                    </p>
+                    <h3 className="mt-2 text-base font-semibold" style={{ color: 'var(--player-text)' }}>
+                      현재 영상 문제 신고
+                    </h3>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (reportSubmitting) return
+                      setShowReportDialog(false)
+                    }}
+                    className="flex h-8 w-8 items-center justify-center rounded-full"
+                    style={{ backgroundColor: 'var(--player-panel)', color: 'var(--player-muted)' }}
+                    aria-label="신고 닫기"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      className="h-4 w-4"
+                    >
+                      <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
+                    </svg>
+                  </button>
+                </div>
+
+                <div
+                  className="mb-3 rounded-2xl px-3 py-2 text-[11px]"
+                  style={{ backgroundColor: 'var(--player-panel)', color: 'var(--player-muted)' }}
+                >
+                  Video ID <span style={{ color: 'var(--player-text)' }}>{videoId ?? '-'}</span>
+                </div>
+
+                <div className="mb-3 flex gap-2">
+                  {REPORT_TYPE_OPTIONS.map((option) => {
+                    const active = reportType === option.value
+                    return (
+                      <button
+                        key={option.value}
+                        type="button"
+                        onClick={() => setReportType(option.value)}
+                        className="flex-1 rounded-2xl px-3 py-2 text-xs font-semibold transition-colors"
+                        style={{
+                          backgroundColor: active ? 'var(--accent-glow)' : 'var(--player-panel)',
+                          color: active ? 'var(--accent-text)' : 'var(--player-muted)',
+                        }}
+                      >
+                        {option.label}
+                      </button>
+                    )
+                  })}
+                </div>
+
+                <textarea
+                  value={reportDescription}
+                  onChange={(event) => setReportDescription(event.target.value)}
+                  placeholder="문제를 간단히 적어주세요"
+                  rows={4}
+                  className="w-full resize-none rounded-2xl border p-3 text-sm outline-none transition-colors"
+                  style={{
+                    backgroundColor: 'var(--player-panel)',
+                    borderColor: 'var(--player-control-border)',
+                    color: 'var(--player-text)',
+                  }}
+                />
+
+                {adminSyncError && (
+                  <div className="mt-3 rounded-2xl border border-amber-500/20 bg-amber-500/10 px-3 py-2 text-xs text-amber-200">
+                    {adminSyncError}
+                  </div>
+                )}
+
+                <div className="mt-3 flex gap-2">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      if (reportSubmitting) return
+                      setShowReportDialog(false)
+                    }}
+                    className="flex-1 rounded-2xl py-3 text-sm font-medium"
+                    style={{ backgroundColor: 'var(--player-panel)', color: 'var(--player-muted)' }}
+                  >
+                    닫기
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => void handleSubmitReport()}
+                    disabled={!canSubmitReport}
+                    className="flex-1 rounded-2xl py-3 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-40"
+                    style={{ backgroundColor: 'var(--accent-primary)' }}
+                  >
+                    {reportSubmitting ? '접수 중...' : '신고하기'}
+                  </button>
+                </div>
+              </motion.div>
+            </>
+          </AnimatePresence>,
+          document.body,
+        )
+      : null
+
   return (
     <>
-      <div ref={playbackOptionsRef} className="relative inline-flex min-w-0">
+      <div
+        className="relative inline-flex min-w-0"
+        onPointerDownCapture={(event) => event.stopPropagation()}
+      >
         <div
           className={
             className ??
@@ -236,9 +691,11 @@ export function UnifiedControls({
           </button>
 
           <button
+            ref={playbackTriggerRef}
             type="button"
             onClick={(event) => {
               event.stopPropagation()
+              setShowMenu(false)
               setShowPlaybackOptions((current) => !current)
             }}
             className={playbackTriggerClassName}
@@ -287,112 +744,36 @@ export function UnifiedControls({
 
           <div className={dividerClassName} style={{ backgroundColor: 'var(--player-divider)' }} />
 
-          {videoId && (
-            <button
-              type="button"
-              onClick={handleShare}
-              className={iconButtonClassName}
-              style={{ color: 'var(--player-text)' }}
-              aria-label="공유하기"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth={2}
-                className={iconSizeClassName}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15m0-3l-3-3m0 0l-3 3m3-3v12"
-                />
-              </svg>
-            </button>
-          )}
-        </div>
-
-        {showPlaybackOptions && (
-          <div
-            className="absolute right-0 top-[calc(100%+10px)] z-30 w-[min(240px,calc(100vw-32px))] rounded-3xl border p-3 shadow-2xl backdrop-blur-xl"
-            style={{
-              backgroundColor: 'var(--player-control-bg)',
-              borderColor: 'var(--player-control-border)',
+          <button
+            ref={menuTriggerRef}
+            type="button"
+            onClick={(event) => {
+              event.stopPropagation()
+              setShowPlaybackOptions(false)
+              setShowMenu((current) => !current)
             }}
-            role="dialog"
-            aria-label="재생 옵션"
+            className={iconButtonClassName}
+            style={{ color: 'var(--player-text)' }}
+            aria-label="더보기 메뉴"
+            aria-expanded={showMenu}
+            aria-haspopup="dialog"
           >
-            <p
-              className="text-[10px] font-semibold uppercase tracking-[0.18em]"
-              style={{ color: 'var(--player-muted)' }}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              className={iconSizeClassName}
             >
-              Playback
-            </p>
-            <p className="mt-1 text-xs font-semibold" style={{ color: 'var(--player-text)' }}>
-              {playbackSummaryLabel}
-            </p>
-
-            <div className="mt-3">
-              <p className="text-[11px] font-semibold" style={{ color: 'var(--player-text)' }}>
-                반복
-              </p>
-              <div className="mt-2 grid grid-cols-3 gap-1.5">
-                {REPEAT_OPTIONS.map((option) => {
-                  const active = repeatMode === option.value
-                  return (
-                    <button
-                      key={option.value}
-                      type="button"
-                      onClick={(event) => {
-                        event.stopPropagation()
-                        setRepeatMode(option.value)
-                      }}
-                      className={playbackChipClassName}
-                      style={{
-                        backgroundColor: active ? 'var(--accent-glow)' : 'var(--player-panel)',
-                        color: active ? 'var(--accent-text)' : 'var(--player-text)',
-                      }}
-                    >
-                      {option.label}
-                    </button>
-                  )
-                })}
-              </div>
-            </div>
-
-            <div className="mt-3">
-              <p className="text-[11px] font-semibold" style={{ color: 'var(--player-text)' }}>
-                다음 재생
-              </p>
-              <div className="mt-2 grid grid-cols-2 gap-1.5">
-                {PLAYBACK_ORDER_OPTIONS.map((option) => {
-                  const active = playbackOrderMode === option.value
-                  return (
-                    <button
-                      key={option.value}
-                      type="button"
-                      onClick={(event) => {
-                        event.stopPropagation()
-                        setPlaybackOrderMode(option.value)
-                      }}
-                      className={playbackChipClassName}
-                      style={{
-                        backgroundColor: active ? 'var(--accent-glow)' : 'var(--player-panel)',
-                        color: active ? 'var(--accent-text)' : 'var(--player-text)',
-                      }}
-                    >
-                      {option.label}
-                    </button>
-                  )
-                })}
-              </div>
-            </div>
-          </div>
-        )}
+              <path d="M12 7.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm0 6a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm0 6a1.5 1.5 0 110-3 1.5 1.5 0 010 3z" />
+            </svg>
+          </button>
+        </div>
       </div>
 
-      <SaveToast show={showToast} message="링크를 복사했어요" />
+      {playbackPopover}
+      {moreMenuPopover}
+      {reportDialog}
+      <SaveToast show={Boolean(toastMessage)} message={toastMessage ?? ''} />
     </>
   )
 }
