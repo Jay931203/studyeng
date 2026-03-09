@@ -389,6 +389,7 @@ export function VideoFeed({
             onVideoErrorSkip={currentIndex < videos.length - 1 ? handleNextVideo : undefined}
             onEmbedBlocked={handleEmbedBlocked}
             initialSeekTime={currentIndex === 0 ? initialSeekTime : undefined}
+            subtitleToast={<SaveToast show={showToast} message="SAVED" placement="inline" />}
             onPlaybackStarted={() => {
               if (
                 initialReviewMarkedRef.current ||
@@ -604,8 +605,6 @@ export function VideoFeed({
           )}
         </div>
       )}
-
-      <SaveToast show={showToast} message="SAVED" />
 
       <PremiumModal
         isOpen={showPremiumModal}

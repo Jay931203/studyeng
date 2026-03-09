@@ -30,6 +30,7 @@ interface VideoPlayerProps {
   onPlaybackStarted?: () => void
   isLandscape?: boolean
   initialSeekTime?: number
+  subtitleToast?: ReactNode
   children?: ReactNode
 }
 
@@ -50,6 +51,7 @@ export function VideoPlayer({
   onPlaybackStarted,
   isLandscape = false,
   initialSeekTime,
+  subtitleToast,
   children,
 }: VideoPlayerProps) {
   const containerId = `yt-player-${useId().replace(/:/g, '')}`
@@ -313,7 +315,12 @@ export function VideoPlayer({
 
         <div className="h-full w-px flex-shrink-0" style={{ backgroundColor: 'var(--player-divider)' }} />
 
-        <div className="flex min-w-0 flex-1 flex-col" style={{ backgroundColor: 'var(--player-surface)' }}>
+        <div className="relative flex min-w-0 flex-1 flex-col" style={{ backgroundColor: 'var(--player-surface)' }}>
+          {subtitleToast && (
+            <div className="pointer-events-none absolute left-[62%] right-0 top-3 z-20 flex justify-center px-4">
+              {subtitleToast}
+            </div>
+          )}
           <div className="min-h-0 flex-1">{subtitleArea}</div>
           {progressArea}
         </div>
@@ -324,7 +331,15 @@ export function VideoPlayer({
   return (
     <div className="flex h-full w-full flex-col" style={{ backgroundColor: 'var(--player-surface)' }}>
       {videoArea}
-      <div className="h-[176px] flex-shrink-0" style={{ backgroundColor: 'var(--player-surface)' }}>
+      <div
+        className="relative h-[176px] flex-shrink-0"
+        style={{ backgroundColor: 'var(--player-surface)' }}
+      >
+        {subtitleToast && (
+          <div className="pointer-events-none absolute inset-x-0 top-3 z-20 flex justify-center px-4">
+            {subtitleToast}
+          </div>
+        )}
         {subtitleArea}
       </div>
       {progressArea}

@@ -338,7 +338,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
       {/* Freeze mode indicator */}
       {showFreezeIndicator && (
         <div
-          className="absolute left-1/2 top-2 z-20 -translate-x-1/2 rounded-full border px-3 py-1 text-xs font-medium backdrop-blur-sm"
+          className="absolute left-1/2 top-3 z-20 -translate-x-1/2 rounded-full border px-3 py-1 text-xs font-medium backdrop-blur-sm"
           style={{
             backgroundColor: 'var(--freeze-bg)',
             borderColor: 'var(--freeze-border)',
@@ -353,7 +353,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
       {/* First-time long-press tooltip */}
       {showFreezeTip && (
         <div
-          className="absolute left-1/2 top-2 z-20 -translate-x-1/2 rounded-full border px-3 py-1 text-xs backdrop-blur-sm"
+          className="absolute left-1/2 top-3 z-20 -translate-x-1/2 rounded-full border px-3 py-1 text-xs backdrop-blur-sm"
           style={{
             backgroundColor: 'var(--player-chip-bg)',
             borderColor: 'var(--player-chip-border)',

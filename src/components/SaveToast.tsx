@@ -5,9 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 interface SaveToastProps {
   show: boolean
   message: string
+  placement?: 'fixed' | 'inline'
 }
 
-export function SaveToast({ show, message }: SaveToastProps) {
+export function SaveToast({ show, message, placement = 'fixed' }: SaveToastProps) {
   return (
     <AnimatePresence>
       {show && (
@@ -15,7 +16,11 @@ export function SaveToast({ show, message }: SaveToastProps) {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="fixed left-1/2 top-12 z-50 -translate-x-1/2 rounded-full border px-4 py-2 text-xs font-medium backdrop-blur-md"
+          className={`rounded-full border px-4 py-2 text-xs font-medium backdrop-blur-md ${
+            placement === 'fixed'
+              ? 'fixed left-1/2 top-12 z-50 -translate-x-1/2'
+              : 'z-20'
+          }`}
           style={{
             backgroundColor: 'var(--player-chip-bg)',
             borderColor: 'var(--player-chip-border)',
