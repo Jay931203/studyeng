@@ -11,22 +11,6 @@ import { useAuth } from '@/hooks/useAuth'
 import { isBillingEnabled } from '@/lib/billing'
 import { useAdminStore } from '@/stores/useAdminStore'
 import { useSettingsStore } from '@/stores/useSettingsStore'
-import {
-  useThemeStore,
-  type ThemeAccent,
-  type ThemeBackground,
-} from '@/stores/useThemeStore'
-
-const BACKGROUND_OPTIONS = [
-  { id: 'dark' as const, swatchClass: 'bg-[#050505] border border-white/10' },
-  { id: 'light' as const, swatchClass: 'bg-[#f8fafc] border border-slate-300' },
-] satisfies Array<{ id: ThemeBackground; swatchClass: string }>
-
-const COLOR_OPTIONS = [
-  { id: 'teal' as const, swatchClass: 'bg-[#14b8a6]' },
-  { id: 'blue' as const, swatchClass: 'bg-[#3b82f6]' },
-  { id: 'purple' as const, swatchClass: 'bg-[#a855f7]' },
-] satisfies Array<{ id: ThemeAccent; swatchClass: string }>
 
 function SectionLabel({ label }: { label: string }) {
   return (
@@ -64,10 +48,6 @@ export default function ProfilePage() {
   const { user, loading, authAvailable, signInWithGoogle, signInWithKakao, signOut } = useAuth()
   const hapticEnabled = useSettingsStore((state) => state.hapticEnabled)
   const setHapticEnabled = useSettingsStore((state) => state.setHapticEnabled)
-  const backgroundTheme = useThemeStore((state) => state.backgroundTheme)
-  const colorTheme = useThemeStore((state) => state.colorTheme)
-  const setBackgroundTheme = useThemeStore((state) => state.setBackgroundTheme)
-  const setColorTheme = useThemeStore((state) => state.setColorTheme)
   const {
     adminEnabled,
     clearFlags,
@@ -171,46 +151,6 @@ export default function ProfilePage() {
 
           <BillingManagementCard />
           <RedeemCodeCard />
-
-          <SurfaceCard className="p-6">
-            <SectionLabel label="THEME" />
-
-            <div className="flex flex-wrap items-center gap-6">
-              <div className="flex items-center gap-4">
-                <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">BACKGROUND</p>
-                <div className="flex min-h-10 items-center gap-3">
-                  {BACKGROUND_OPTIONS.map((option) => (
-                    <button
-                      key={option.id}
-                      onClick={() => setBackgroundTheme(option.id)}
-                      className={`h-10 w-10 rounded-full ${option.swatchClass} ${
-                        backgroundTheme === option.id
-                          ? 'ring-2 ring-[var(--accent-primary)] ring-offset-2 ring-offset-[var(--bg-card)]'
-                          : ''
-                      }`}
-                    />
-                  ))}
-                </div>
-              </div>
-
-              <div className="flex items-center gap-4">
-                <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">COLOR</p>
-                <div className="flex min-h-10 items-center gap-3">
-                  {COLOR_OPTIONS.map((option) => (
-                    <button
-                      key={option.id}
-                      onClick={() => setColorTheme(option.id)}
-                      className={`h-10 w-10 rounded-full ${option.swatchClass} ${
-                        colorTheme === option.id
-                          ? 'ring-2 ring-[var(--accent-primary)] ring-offset-2 ring-offset-[var(--bg-card)]'
-                          : ''
-                      }`}
-                    />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </SurfaceCard>
 
           <SurfaceCard className="p-6">
             <SectionLabel label="SETTINGS" />

@@ -23,7 +23,7 @@ describe('BottomNav', () => {
 
     expect(screen.getByLabelText('오늘')).toBeInTheDocument()
     expect(screen.getByLabelText('피드')).toBeInTheDocument()
-    expect(screen.getByLabelText('보관함')).toBeInTheDocument()
+    expect(screen.getByLabelText('학습')).toBeInTheDocument()
     expect(screen.getByLabelText('설정')).toBeInTheDocument()
   })
 

@@ -30,7 +30,7 @@ function FlowNote() {
       <div className="rounded-[28px] border border-[var(--border-card)] bg-[var(--bg-card)]/88 p-5 shadow-[var(--card-shadow)]">
         <div className="flex flex-wrap gap-2">
           <span className="rounded-full bg-[var(--accent-glow)] px-3 py-1 text-xs font-medium text-[var(--accent-text)]">
-            피드
+            쇼츠
           </span>
           <span className="rounded-full bg-[var(--bg-secondary)] px-3 py-1 text-xs font-medium text-[var(--text-secondary)]">
             자막
@@ -38,12 +38,9 @@ function FlowNote() {
           <span className="rounded-full bg-[var(--bg-secondary)] px-3 py-1 text-xs font-medium text-[var(--text-secondary)]">
             저장
           </span>
-          <span className="rounded-full bg-[var(--bg-secondary)] px-3 py-1 text-xs font-medium text-[var(--text-secondary)]">
-            반복
-          </span>
         </div>
         <p className="mt-4 text-xl font-bold text-[var(--text-primary)]">
-          피드에서 보고, 자막에서 멈추고, 필요한 표현만 남겨두세요.
+          쇼츠에서 보고, 자막에서 멈추고, 필요한 표현만 남겨두세요.
         </p>
         <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
           계정을 연결하면 이어보기와 저장 표현, 다시 볼 흐름이 끊기지 않게 묶입니다.

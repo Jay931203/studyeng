@@ -17,19 +17,19 @@ const tabs = [
     href: '/shorts',
     icon: 'play',
     label: '피드',
-    description: '자막과 반복',
+    description: '쇼츠와 자막',
   },
   {
     href: '/learning',
     icon: 'bookmark',
-    label: '보관함',
-    description: '저장 표현과 기록',
+    label: '학습',
+    description: '좋아요, 저장, 기록',
   },
   {
     href: '/profile',
     icon: 'settings',
     label: '설정',
-    description: '계정과 앱 톤',
+    description: '계정',
   },
 ] as const
 
