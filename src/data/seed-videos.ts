@@ -1823,7 +1823,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'friends-s1-ep8',
     youtubeId: 'L_PWbnHABsM',
-    title: 'Friends',
+    title: 'Friends - Ross\' New Couch Pivot',
     category: 'drama',
     difficulty: 2,
     clipStart: 24,
@@ -2351,7 +2351,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'modern-family-ep13',
     youtubeId: 'DdjWGbPUmrg',
-    title: 'Modern Family',
+    title: 'Modern Family - Alex Has to Take Over Teaching When Cam Tries to Substitute',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -2759,7 +2759,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'parks-rec-ep9',
     youtubeId: '4yAQcKhv_5k',
-    title: 'Parks and Recreation',
+    title: 'Parks and Recreation - April Accidentally Schedules 93 Meetings For Ron On One D',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -3263,7 +3263,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'frasier-ep5',
     youtubeId: '1xnJQ96juX8',
-    title: 'Frasier',
+    title: 'Frasier (1993) - Niles Settles Into His New Life At The Shangri-La (S6, E7) - Pa',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -3636,7 +3636,7 @@ export const seedVideos: VideoData[] = ([
     id: 'simpsons-ep3',
     youtubeId: '-doMNIdooe8',
     title: 'The Simpsons Funniest Scene',
-    category: 'drama',
+    category: 'animation',
     difficulty: 2,
     clipStart: 0,
     clipEnd: 0,
@@ -4043,7 +4043,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-crown-ep10',
     youtubeId: 'fDKTi-jjGCc',
-    title: 'The Crown',
+    title: 'The Crown - The Queen Challenges Margaret Thatcher',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -4139,7 +4139,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-crown-ep18',
     youtubeId: 'hrXJe_T6VS4',
-    title: 'The Crown',
+    title: 'The Crown - Diana Chooses Her Engagement Ring',
     category: 'drama',
     difficulty: 2,
     clipStart: 27,
@@ -4211,7 +4211,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-crown-ep24',
     youtubeId: 'teT2x1a6hL8',
-    title: 'The Crown',
+    title: 'The Crown - Charles Knows That Diana Is Unhappy',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -4331,7 +4331,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'stranger-things-ep3',
     youtubeId: 'HWOYqgrToyk',
-    title: 'Stranger Things 5',
+    title: 'Stranger Things 5 - EAT YOUR DAMN PIE (official clip)',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -4343,7 +4343,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'stranger-things-ep4',
     youtubeId: 'yXnk3n-qNrI',
-    title: 'Stranger Things 4',
+    title: 'Stranger Things 4 - Eddie Munson\'s Upside Down Guitar Scene',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -4367,7 +4367,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'stranger-things-ep6',
     youtubeId: 'hAhDBHNwJYQ',
-    title: 'Stranger Things 5',
+    title: 'Stranger Things 5 - Sorcerer (official clip)',
     category: 'drama',
     difficulty: 2,
     clipStart: 14,
@@ -4427,7 +4427,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'stranger-things-ep11',
     youtubeId: 'dmIFhpQe9Zk',
-    title: 'Stranger Things 4',
+    title: 'Stranger Things 4 - Eddie Munson\'s Upside Down Guitar Scene - Netflix India',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -4463,7 +4463,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'stranger-things-ep14',
     youtubeId: 'AnDZaIKIXtI',
-    title: 'Stranger Things 5',
+    title: 'Stranger Things 5 - Dustin Explains Everything',
     category: 'drama',
     difficulty: 2,
     clipStart: 27,
@@ -5423,7 +5423,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'sex-city-ep4',
     youtubeId: 'PWHfx30U4jk',
-    title: 'SATC',
+    title: 'SATC - Carrie Irritates Everyone',
     category: 'drama',
     difficulty: 2,
     clipStart: 30,
@@ -6119,7 +6119,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'forrest-gump-ep11',
     youtubeId: 'Nxe8-9YOnnk',
-    title: 'Forrest Gump',
+    title: 'Forrest Gump (1994) - Forrest meets Lieutenant Dan - They gave you the congressi',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -6323,7 +6323,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'titanic-ep3',
     youtubeId: '_qTZRD1_ybQ',
-    title: 'TITANIC',
+    title: 'TITANIC - "You Jump, I Jump" Clip - Paramount Movies',
     category: 'movie',
     difficulty: 2,
     clipStart: 9,
@@ -6371,7 +6371,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'titanic-ep7',
     youtubeId: 'Phm9wbFAbp0',
-    title: 'Titanic 3D',
+    title: 'Titanic 3D - "You Going to Cut Her Meat too Call" - Official Clip',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -6491,7 +6491,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'titanic-ep17',
     youtubeId: 'oklPl95DC8c',
-    title: 'Titanic 3D',
+    title: 'Titanic 3D - "First Class Dinner" - Official Clip',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -6779,7 +6779,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inception-ep11',
     youtubeId: '2G89nIGH53g',
-    title: 'Inception',
+    title: 'Inception - The Dream Is Collapsing - ClipZone: High Octane Hits',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -6791,7 +6791,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inception-ep12',
     youtubeId: '-LWJFwyy9Nw',
-    title: 'Inception',
+    title: 'Inception - Best Scene (I’d need a guarantee)',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -7415,7 +7415,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'social-network-ep14',
     youtubeId: '7ZH0oeDv4Es',
-    title: 'The Social Network',
+    title: 'The Social Network (2010) - The Winklevosses vs. Harvard President - Armie Hamme',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -7487,7 +7487,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'good-will-hunting-ep6',
     youtubeId: '8gfipuaIA68',
-    title: 'Good Will Hunting',
+    title: 'Good Will Hunting - "The Best Part of My Day"',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -7907,7 +7907,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'pursuit-happyness-ep15',
     youtubeId: '9BJUGcy22mY',
-    title: 'The Pursuit of Happyness',
+    title: 'The Pursuit of Happyness - Full emotional final scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -8723,7 +8723,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-intern-ep10',
     youtubeId: 'VHZI9_we5GQ',
-    title: 'The Intern',
+    title: 'The Intern - Becky\'s Breakdown - ClipZone: Comedy Callbacks',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -8975,7 +8975,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'devil-wears-prada-ep13',
     youtubeId: 'e9HXmMnUEdE',
-    title: 'The Devil Wears Prada 2',
+    title: 'The Devil Wears Prada 2 - Official Trailer',
     category: 'movie',
     difficulty: 2,
     clipStart: 10,
@@ -9071,7 +9071,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'legally-blonde-ep5',
     youtubeId: 'ZbZndWCq6Gs',
-    title: 'Legally Blonde',
+    title: 'Legally Blonde (2001) - Elle Woods\' Harvard Video Essay - MGM Studios',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -9083,7 +9083,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'legally-blonde-ep6',
     youtubeId: '0cgbqOq6tZw',
-    title: 'Legally Blonde',
+    title: 'LEGALLY BLONDE (2001) - Elle Outsmarts the Sales Lady - MGM',
     category: 'movie',
     difficulty: 2,
     clipStart: 5,
@@ -9119,7 +9119,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'legally-blonde-ep9',
     youtubeId: 'cILfj2YkKng',
-    title: 'Legally Blonde',
+    title: 'Legally Blonde - Elle Meets Emmett',
     category: 'movie',
     difficulty: 2,
     clipStart: 11,
@@ -9191,7 +9191,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'legally-blonde-ep15',
     youtubeId: 'PlOx9obQ2yg',
-    title: 'Legally Blonde',
+    title: 'Legally Blonde (2001) - Elle Introduces Herself (Scene) - MGM Studios',
     category: 'movie',
     difficulty: 2,
     clipStart: 24,
@@ -9503,7 +9503,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'breakfast-club-ep7',
     youtubeId: 'VG78fq6KAPA',
-    title: 'The Breakfast Club',
+    title: 'The Breakfast Club - Detention Dance',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -9647,7 +9647,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-notebook-ep3',
     youtubeId: 'cdWHFPDUcSk',
-    title: 'The Notebook',
+    title: 'The Notebook - Why Didn\'t You Write Me? - Warner Bros. Entertainment',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -9659,7 +9659,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-notebook-ep4',
     youtubeId: 'xlK3FkdUv78',
-    title: 'The Notebook',
+    title: 'The Notebook - Drawn To Ya - Warner Bros. Entertainment',
     category: 'movie',
     difficulty: 2,
     clipStart: 15,
@@ -9683,7 +9683,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-notebook-ep6',
     youtubeId: 'oUiJ8GcRpxk',
-    title: 'The Notebook',
+    title: 'The Notebook - Say I\'m A Bird! - Warner Bros. Entertainment',
     category: 'movie',
     difficulty: 2,
     clipStart: 4,
@@ -9707,7 +9707,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-notebook-ep8',
     youtubeId: 'LK_gkFXhOJI',
-    title: 'The Notebook',
+    title: 'The Notebook - Saw Your Picture In The Paper - Warner Bros. Rewind',
     category: 'movie',
     difficulty: 2,
     clipStart: 17,
@@ -9731,7 +9731,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-notebook-ep10',
     youtubeId: 'PCNlMKSwWbQ',
-    title: 'The Notebook',
+    title: 'The Notebook - Nicholas Sparks Collection "Back Into His Heart" - Warner Bros. E',
     category: 'movie',
     difficulty: 2,
     clipStart: 25,
@@ -9803,7 +9803,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'about-time-ep3',
     youtubeId: 'DNXGUn0Yrb8',
-    title: 'About Time',
+    title: 'About Time - Clip - Mary meets the family',
     category: 'movie',
     difficulty: 2,
     clipStart: 6,
@@ -10211,7 +10211,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'catch-me-ep15',
     youtubeId: 'Qb_zvWFNCD8',
-    title: 'Catch Me If You Can',
+    title: 'Catch Me If You Can - Tracking Barry Allen',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10283,7 +10283,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'hidden-figures-ep3',
     youtubeId: 'sQLYZ0Uxxvg',
-    title: 'Hidden Figures',
+    title: 'Hidden Figures - "You Are The Boss" Clip - 20th Century FOX',
     category: 'movie',
     difficulty: 2,
     clipStart: 1,
@@ -10295,7 +10295,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'hidden-figures-ep4',
     youtubeId: 'eEJWtAMnAlA',
-    title: 'Hidden Figures',
+    title: 'Hidden Figures - "Russian Spy" Clip - 20th Century FOX',
     category: 'movie',
     difficulty: 2,
     clipStart: 4,
@@ -10307,7 +10307,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'hidden-figures-ep5',
     youtubeId: 'JAEnv1PvBvw',
-    title: 'Hidden Figures',
+    title: 'Hidden Figures - "Give or Take" Clip - 20th Century FOX',
     category: 'movie',
     difficulty: 2,
     clipStart: 7,
@@ -10319,7 +10319,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'hidden-figures-ep6',
     youtubeId: 'zVb1S977b9Q',
-    title: 'Hidden Figures',
+    title: 'Hidden Figures - "Slice of Pie" Clip - 20th Century FOX',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -10391,7 +10391,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'hidden-figures-ep12',
     youtubeId: 'g7J_RrBcchQ',
-    title: 'Hidden Figures',
+    title: 'Hidden Figures - "Give Or Take" - Official HD Clip 2017',
     category: 'movie',
     difficulty: 2,
     clipStart: 6,
@@ -10403,7 +10403,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'hidden-figures-ep13',
     youtubeId: 'tGMPlHdNatc',
-    title: 'Hidden Figures',
+    title: 'Hidden Figures - Marriage Purposal',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10547,7 +10547,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bohemian-rhapsody-ep11',
     youtubeId: '4WfIbTfpGGc',
-    title: 'Bohemian Rhapsody',
+    title: 'Bohemian Rhapsody - Seven Seas of Rhye Recording Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 10,
@@ -10571,7 +10571,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bohemian-rhapsody-ep13',
     youtubeId: 'ZFoLxzVw1Js',
-    title: 'Bohemian Rhapsody',
+    title: 'Bohemian Rhapsody - Keep Yourself Alive Scene',
     category: 'movie',
     difficulty: 2,
     clipStart: 24,
@@ -10619,7 +10619,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-girls-ep5',
     youtubeId: 'jjt9Qx9MBPk',
-    title: 'Mean Girls',
+    title: 'Mean Girls - That\'s So Fetch! - Paramount Movies',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -10763,7 +10763,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-godfather-ep3',
     youtubeId: 'Rtbw8s1MJGo',
-    title: 'The Godfather',
+    title: 'THE GODFATHER - "Moe Greene" Clip - Paramount Movies',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -10955,7 +10955,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'clueless-ep9',
     youtubeId: '4v54LRmRpZA',
-    title: 'CLUELESS',
+    title: 'CLUELESS - "Date" Clip - Paramount Movies',
     category: 'movie',
     difficulty: 2,
     clipStart: 15,
@@ -11027,7 +11027,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'jerry-maguire-ep2',
     youtubeId: 'itcSAT_SX9s',
-    title: 'Jerry Maguire',
+    title: 'Jerry Maguire - Ray And Jerry\'s Late Night Chat - Love Love',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -11159,7 +11159,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'jerry-maguire-ep13',
     youtubeId: '3MP5qHvuHE0',
-    title: 'Jerry Maguire',
+    title: 'Jerry Maguire - You Complete Me',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -11363,7 +11363,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'moneyball-ep14',
     youtubeId: 'aPnuxi4S9JQ',
-    title: 'Moneyball',
+    title: 'Moneyball - Billy\'s New Unbeatable Team (ft. Brad Pitt & Jonah Hill) - CineCli',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -11543,7 +11543,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'when-harry-met-sally-ep8',
     youtubeId: 'J_lEs4FYkhs',
-    title: 'When Harry Met Sally',
+    title: 'Harry and Sally at the Diner',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -11579,7 +11579,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'when-harry-met-sally-ep11',
     youtubeId: '5Ww5v_CYXBw',
-    title: 'When Harry Met Sally',
+    title: 'New Year\'s Eve Confession',
     category: 'movie',
     difficulty: 2,
     clipStart: 25,
@@ -11783,7 +11783,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'home-alone-ep7',
     youtubeId: 'LaP28N1xtqY',
-    title: 'Home Alone',
+    title: 'Home Alone (1990) - Church- Kevin & Old Man Marley - with Subtitl',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -11951,7 +11951,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'jurassic-park-ep7',
     youtubeId: 'LYN9USd9Gpg',
-    title: 'Jurassic Park',
+    title: 'Jurassic Park - The Kitchen Chase',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -12179,7 +12179,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'groundhog-day-ep14',
     youtubeId: 'Wo7wjX51JHs',
-    title: 'Groundhog Day',
+    title: 'Groundhog Day - Phil Eats Like A King (ft. Bill Murray) - CineStream',
     category: 'movie',
     difficulty: 2,
     clipStart: 23,
@@ -12359,7 +12359,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: '10-things-ep3',
     youtubeId: 'k_zin9OQNXU',
-    title: '10 Things I Hate About You',
+    title: '10 Things I Hate About You - Ending Scene - Romance Clips',
     category: 'movie',
     difficulty: 2,
     clipStart: 9,
@@ -12407,7 +12407,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: '10-things-ep7',
     youtubeId: 'HqTBW90w0_0',
-    title: '10 Things I Hate About You',
+    title: '10 Things I Hate About You - Paintball Scene - Romance Clips',
     category: 'movie',
     difficulty: 2,
     clipStart: 5,
@@ -12419,7 +12419,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: '10-things-ep8',
     youtubeId: 'uzSrfimePfA',
-    title: '10 Things I Hate About You',
+    title: '10 Things I Hate About You - Poem Scene - Romance Clips',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -12443,7 +12443,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: '10-things-ep10',
     youtubeId: 'OHE8TUfo7MU',
-    title: '10 Things I Hate About You',
+    title: '10 Things I Hate About You - “Whops!” Scene - Romance Clips',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -12707,7 +12707,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'juno-ep18',
     youtubeId: 'WLDTT9KaSTo',
-    title: 'Juno',
+    title: 'Juno - "Doodle That Can\'t Be Undid" Between the Lines - 20th Century FOX',
     category: 'movie',
     difficulty: 2,
     clipStart: 14,
@@ -12839,7 +12839,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'little-women-ep12',
     youtubeId: 'ampLJDK6lYs',
-    title: 'Little Women',
+    title: 'Little Women - I\'m Sick of People Saying That Love Is All a Woman Is Fit For (',
     category: 'movie',
     difficulty: 2,
     clipStart: 30,
@@ -13787,7 +13787,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-tweets-ep7',
     youtubeId: '6f4oKjlLYK0',
-    title: 'Celebrities Read Mean Tweets',
+    title: 'Celebrities Read Mean Tweets #13',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 28,
@@ -13799,7 +13799,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-tweets-ep8',
     youtubeId: 'imW392e6XR0',
-    title: 'Celebrities Read Mean Tweets',
+    title: 'Celebrities Read Mean Tweets #7',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 30,
@@ -13811,7 +13811,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-tweets-ep9',
     youtubeId: 'JgQVj4iMm8Y',
-    title: 'Celebrities Read Mean Tweets',
+    title: 'Celebrities Read Mean Tweets #10',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 30,
@@ -13835,7 +13835,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-tweets-ep11',
     youtubeId: '4Y1iErgBrDQ',
-    title: 'Celebrities Read Mean Tweets',
+    title: 'Celebrities Read Mean Tweets #6',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 29,
@@ -13847,7 +13847,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-tweets-ep12',
     youtubeId: 'w1AhrEhQ0mg',
-    title: 'Celebrities Read Mean Tweets',
+    title: 'Celebrities Read Mean Tweets #9',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 30,
@@ -13859,7 +13859,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-tweets-ep13',
     youtubeId: 'cpOEO2gUekE',
-    title: 'Celebrities Read Mean Tweets',
+    title: 'Celebrities Read Mean Tweets #5',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 25,
@@ -13907,7 +13907,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-tweets-ep17',
     youtubeId: 't2oVUxTV4WA',
-    title: 'Celebrities Read Mean Tweets',
+    title: 'Celebrities Read Mean Tweets #11',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 30,
@@ -15815,7 +15815,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'pop-hits-ep27',
     youtubeId: '6ZUIwj3FgUY',
-    title: 'Ive 아이브 \'I Am\' Mv',
+    title: 'Ive \'I Am\' Mv',
     category: 'music',
     difficulty: 1,
     clipStart: 30,
@@ -19091,7 +19091,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'toy-story-ep13',
     youtubeId: 'j54YUj4G0ug',
-    title: 'Toy Story',
+    title: 'Toy Story - Teaching Sid A Lesson And Saving Buzz',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -20087,7 +20087,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inside-out-ep3',
     youtubeId: 'qansfxOYFg8',
-    title: 'Inside Out 2- Plan For the Future',
+    title: 'Inside Out 2 - Plan For the Future',
     category: 'animation',
     difficulty: 1,
     clipStart: 0,
@@ -20123,7 +20123,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inside-out-ep6',
     youtubeId: '6YGmxhc5-0w',
-    title: 'Inside Out 2- Plan For the Future',
+    title: 'Inside Out 2 - Anxiety Takes Over',
     category: 'animation',
     difficulty: 1,
     clipStart: 0,
@@ -20231,7 +20231,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inside-out-ep15',
     youtubeId: 'Zdh7QGEQAPc',
-    title: 'Inside Out 2',
+    title: 'Inside Out 2 (2024) - "So Riley, How was camp?" Scene - EPILOGUE SCENE',
     category: 'animation',
     difficulty: 1,
     clipStart: 0,
@@ -20243,7 +20243,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inside-out-ep16',
     youtubeId: 'nm35CQL3yms',
-    title: 'Inside Out 2',
+    title: 'Inside Out 2 - Moments',
     category: 'animation',
     difficulty: 1,
     clipStart: 0,
@@ -21095,7 +21095,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'madagascar-ep3',
     youtubeId: 'agDoeiqTuYs',
-    title: 'DreamWorks Madagascar',
+    title: 'DreamWorks Madagascar - Operation Tourists Trap - Clip - Madagascar: Escape 2 Af',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -21107,7 +21107,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'madagascar-ep4',
     youtubeId: 'r62vl9TO_dY',
-    title: 'DreamWorks Madagascar',
+    title: 'DreamWorks Madagascar - Captain Dubois is On a Hunt - Madagascar 3: Europe\'s',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -21119,7 +21119,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'madagascar-ep5',
     youtubeId: 'IzTrmO-L2EA',
-    title: 'Madagascar',
+    title: 'Madagascar - On The Beach Scene - - Dreamworks Madagascar - Kids Movi',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -21167,7 +21167,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'madagascar-ep9',
     youtubeId: 'txjvoZ5me2g',
-    title: 'DreamWorks Madagascar',
+    title: 'DreamWorks Madagascar - The Fun Side Of The Island - Madagascar',
     category: 'animation',
     difficulty: 1,
     clipStart: 30,
@@ -21407,7 +21407,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'spider-verse-ep7',
     youtubeId: 'QJLg2cS-Zsw',
-    title: 'Spider-Man: Across the Spider-Verse',
+    title: 'Spider-Man: Across the Spider-Verse - Official Clip - "Missing Class"',
     category: 'animation',
     difficulty: 1,
     clipStart: 0,
@@ -21431,7 +21431,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'spider-verse-ep9',
     youtubeId: '3PmmZwuPObQ',
-    title: 'Spider-Man: Across the Spider-Verse',
+    title: 'Spider-Man: Across the Spider-Verse - Official Clip - "Gwen and Miles"',
     category: 'animation',
     difficulty: 1,
     clipStart: 0,
@@ -21443,7 +21443,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'spider-verse-ep10',
     youtubeId: 'mzW4IKb5ZjM',
-    title: 'Spider-Man: Across the Spider-Verse',
+    title: 'Spider-Man: Across the Spider-Verse - Official Clip - "Stop Spider-Man"',
     category: 'animation',
     difficulty: 1,
     clipStart: 0,
@@ -22277,7 +22277,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'friends-1',
     youtubeId: 'RjpvuPAzJUw',
-    title: '최고 웃긴 장면 모음',
+    title: 'Best Funny Moments Compilation',
     category: 'drama',
     difficulty: 2,
     clipStart: 4,
@@ -22289,7 +22289,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'friends-3',
     youtubeId: 'E6LpBIwGyA4',
-    title: '다들 챈들러 싫어해',
+    title: 'Everyone Hates Chandler',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -22303,7 +22303,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'office-fire',
     youtubeId: 'gO8N3L_aERg',
-    title: '드와이트의 화재 훈련',
+    title: 'Dwight\'s Fire Drill',
     category: 'drama',
     difficulty: 3,
     clipStart: 10,
@@ -22315,7 +22315,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'office-jim-dwight',
     youtubeId: 'WaaANll8h18',
-    title: '짐이 드와이트 흉내내기',
+    title: 'Jim Impersonates Dwight',
     category: 'drama',
     difficulty: 2,
     clipStart: 12,
@@ -22327,7 +22327,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'office-pranks',
     youtubeId: 'Xnk4seEHmgw',
-    title: '짐의 장난 모음',
+    title: 'Jim\'s Best Pranks',
     category: 'drama',
     difficulty: 3,
     clipStart: 6,
@@ -22339,7 +22339,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'office-morse',
     youtubeId: '8zfNfilNOIE',
-    title: '모스 부호 장난',
+    title: 'The Morse Code Prank',
     category: 'drama',
     difficulty: 3,
     clipStart: 11,
@@ -22351,7 +22351,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'office-kevin-chili',
     youtubeId: 'WcYG-5b7448',
-    title: '케빈의 칠리 대참사',
+    title: 'Kevin\'s Famous Chili Disaster',
     category: 'drama',
     difficulty: 2,
     clipStart: 0,
@@ -22365,7 +22365,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'b99-want-it',
     youtubeId: 'HlBYdiXdUa8',
-    title: 'I Want It That Way 라인업',
+    title: 'I Want It That Way Lineup',
     category: 'drama',
     difficulty: 2,
     clipStart: 0,
@@ -22379,7 +22379,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bbt-02',
     youtubeId: 'AEIn3T6nDAo',
-    title: '물리학이란 무엇인가',
+    title: 'What Is Physics?',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -22391,7 +22391,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bbt-05',
     youtubeId: '-e5CtbbZL-k',
-    title: '레이저로 달까지 거리 재기',
+    title: 'Measuring the Moon with a Laser',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -22405,7 +22405,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'seinfeld-01',
     youtubeId: '0u8KUgUqprw',
-    title: '조지의 해양학자 연설',
+    title: 'George\'s Marine Biologist Speech',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -22417,7 +22417,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'seinfeld-02',
     youtubeId: 'QRh1CMC3OVw',
-    title: '텔레마케터 역관광',
+    title: 'Reverse-Prank on Telemarketer',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -22431,7 +22431,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'parks-01',
     youtubeId: 'HrIeP798hiQ',
-    title: '론의 베이컨과 달걀 전부',
+    title: 'Ron\'s Give Me All the Bacon and Eggs',
     category: 'drama',
     difficulty: 2,
     clipStart: 0,
@@ -22443,7 +22443,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'parks-02',
     youtubeId: 'LinpRhB4aWU',
-    title: '앤디의 네트워크 연결 문제 진단',
+    title: 'Andy\'s Network Connectivity Problems',
     category: 'drama',
     difficulty: 2,
     clipStart: 0,
@@ -22457,7 +22457,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'restaurant-modern',
     youtubeId: 'ajb-YbY3-rw',
-    title: '베트남 레스토랑',
+    title: 'The Vietnamese Restaurant',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -22469,7 +22469,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'daily-modernfamily',
     youtubeId: '0mapwWviBEM',
-    title: '월리 코스튬의 릴리',
+    title: 'Lily\'s Waldo Costume',
     category: 'drama',
     difficulty: 2,
     clipStart: 0,
@@ -22481,7 +22481,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mf-hilarious',
     youtubeId: 'JcHICoySTZM',
-    title: '캠과 미첼의 일상 폭주',
+    title: 'Cam and Mitchell\'s Chaotic Day',
     category: 'drama',
     difficulty: 3,
     clipStart: 10,
@@ -22493,7 +22493,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mf-thanksgiving',
     youtubeId: 'YJfyPYLxUDo',
-    title: '추수감사절 대혼란',
+    title: 'Thanksgiving Chaos',
     category: 'drama',
     difficulty: 3,
     clipStart: 5,
@@ -22507,7 +22507,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'friends-joey-birthday',
     youtubeId: '221F55VPp2M',
-    title: '조이의 생일 선물 대참사',
+    title: 'Joey\'s Birthday Gift Disaster',
     category: 'drama',
     difficulty: 2,
     clipStart: 5,
@@ -22519,7 +22519,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'friends-joey-finds-out',
     youtubeId: 'XZVHmRvfDHM',
-    title: '조이가 알아버린 비밀',
+    title: 'Joey Finds Out the Secret',
     category: 'drama',
     difficulty: 3,
     clipStart: 10,
@@ -22533,7 +22533,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'office-parkour',
     youtubeId: '0Kvw2BPKjz0',
-    title: '파쿠르! 파쿠르!',
+    title: 'Parkour! Parkour!',
     category: 'drama',
     difficulty: 2,
     clipStart: 0,
@@ -22545,7 +22545,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'office-laugh-moments',
     youtubeId: 'TVQgSIlN4no',
-    title: '미치도록 웃긴 순간들',
+    title: 'Hilariously Funny Moments',
     category: 'drama',
     difficulty: 3,
     clipStart: 10,
@@ -22557,7 +22557,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'office-iconic',
     youtubeId: 'y5jchMm0Ae8',
-    title: '팬들이 뽑은 레전드 장면',
+    title: 'Fan-Picked Legendary Scenes',
     category: 'drama',
     difficulty: 3,
     clipStart: 5,
@@ -22571,7 +22571,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'b99-funny',
     youtubeId: 'L7wCy1IOwOw',
-    title: '왜 이렇게 웃기냐고',
+    title: 'Why Is This So Funny',
     category: 'drama',
     difficulty: 2,
     clipStart: 10,
@@ -22583,7 +22583,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'b99-iconic',
     youtubeId: 'wrXKBR2JUPE',
-    title: '99분서를 대표하는 장면들',
+    title: 'Iconic Nine-Nine Precinct Moments',
     category: 'drama',
     difficulty: 3,
     clipStart: 5,
@@ -22595,7 +22595,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'b99-cold-opens',
     youtubeId: 'D3tYM5zVvJU',
-    title: '역대급 오프닝 모음',
+    title: 'Best Cold Opens Compilation',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -22607,7 +22607,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'b99-jake-best',
     youtubeId: 'u7Uh2tvEBx8',
-    title: '제이크 페랄타 베스트',
+    title: 'Jake Peralta Best Moments',
     category: 'drama',
     difficulty: 3,
     clipStart: 10,
@@ -22621,7 +22621,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'seinfeld-04',
     youtubeId: 'ZI_hOP_K6MY',
-    title: '조지의 건축가 사칭',
+    title: 'George Pretends to Be an Architect',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -22635,7 +22635,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bbt-top10',
     youtubeId: 'dVmOvmH4dL4',
-    title: '역대 웃긴 장면 Top 10',
+    title: 'Top 10 Funniest Scenes Ever',
     category: 'drama',
     difficulty: 3,
     clipStart: 10,
@@ -22647,7 +22647,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bbt-most-viewed',
     youtubeId: 'hFyLq6qNRew',
-    title: '2024 최다 조회수 장면',
+    title: 'Most Viewed Scenes of 2024',
     category: 'drama',
     difficulty: 3,
     clipStart: 5,
@@ -22661,7 +22661,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'parks-03',
     youtubeId: 'Gbsw-XxPREA',
-    title: '머릿속에서 떠나지 않는 장면들',
+    title: 'Scenes You Can\'t Get Out of Your Head',
     category: 'drama',
     difficulty: 2,
     clipStart: 10,
@@ -22673,7 +22673,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'parks-04',
     youtubeId: 'hSSxp_fsrJ0',
-    title: '대사 퀄리티가 미쳤다',
+    title: 'Insanely Good Writing',
     category: 'drama',
     difficulty: 3,
     clipStart: 5,
@@ -22685,7 +22685,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'parks-05',
     youtubeId: 'R-BnCN5MGk0',
-    title: '과소평가된 레전드 장면',
+    title: 'Underrated Legendary Scenes',
     category: 'drama',
     difficulty: 3,
     clipStart: 10,
@@ -22703,7 +22703,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'prada-1',
     youtubeId: '2PjZAeiU7uM',
-    title: '미란다 등장!',
+    title: 'Miranda Arrives!',
     category: 'movie',
     difficulty: 3,
     clipStart: 4,
@@ -22715,7 +22715,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'prada-2',
     youtubeId: 'b2f2Kqt_KcE',
-    title: '앤디의 면접',
+    title: 'Andy\'s Job Interview',
     category: 'movie',
     difficulty: 3,
     clipStart: 4,
@@ -22729,7 +22729,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'forrest-run',
     youtubeId: 'x2-MCPa_3rU',
-    title: '달려라, 포레스트!',
+    title: 'Run, Forrest, Run!',
     category: 'movie',
     difficulty: 2,
     clipStart: 2,
@@ -22741,7 +22741,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'forrest-chocolates',
     youtubeId: 'SqOnkiQRCUU',
-    title: '인생은 초콜릿 상자',
+    title: 'Life Is Like a Box of Chocolates',
     category: 'movie',
     difficulty: 2,
     clipStart: 4,
@@ -22753,7 +22753,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'forrest-peas',
     youtubeId: 'tvKzyYy6qvY',
-    title: '완두콩과 당근',
+    title: 'Peas and Carrots',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -22767,7 +22767,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'hp-moody',
     youtubeId: 'wsl5fS7KGZc',
-    title: '매드아이 무디의 수업',
+    title: 'Mad-Eye Moody\'s Lesson',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -22781,7 +22781,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'marvel-avengers',
     youtubeId: 'udKE1ksKWDE',
-    title: '어벤져스 뉴욕 전투',
+    title: 'The Avengers Battle of New York',
     category: 'movie',
     difficulty: 3,
     clipStart: 10,
@@ -22795,7 +22795,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'meangirls-plastics',
     youtubeId: 're5veV2F7eY',
-    title: '퀸카로 살아남는 법: 플라스틱들',
+    title: 'How to Survive: The Plastics',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -22809,7 +22809,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'nottinghill-01',
     youtubeId: 'RESwG23_YGw',
-    title: '그냥 한 소녀의 고백',
+    title: 'Just a Girl Standing in Front of a Boy',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -22821,7 +22821,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'nottinghill-02',
     youtubeId: 'kE5IzU8KiJ4',
-    title: '기자회견에서의 재회',
+    title: 'The Press Conference Reunion',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -22835,7 +22835,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'godfather-scenes',
     youtubeId: 'Tjk68tpAdp8',
-    title: '역대 최고 영화의 전설적 장면들',
+    title: 'Legendary Scenes from the Greatest Film',
     category: 'movie',
     difficulty: 3,
     clipStart: 10,
@@ -22853,7 +22853,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'norton-1',
     youtubeId: 'ZwS14TiO7Pk',
-    title: '윌 스미스 팀 랩',
+    title: 'Will Smith Team Rap',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 0,
@@ -22865,7 +22865,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'norton-2',
     youtubeId: 'yuXGpUR7fXA',
-    title: '라이언 고슬링 웃음 참기',
+    title: 'Ryan Gosling Try Not to Laugh',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 0,
@@ -22877,7 +22877,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'norton-redchair-top5',
     youtubeId: 'XXQaTJsr_xA',
-    title: '레드체어 레전드 Top 5',
+    title: 'Red Chair Legends Top 5',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 10,
@@ -22889,7 +22889,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'norton-redchair-stories',
     youtubeId: 'ZL_kpirn61I',
-    title: '최근 레드체어 베스트 스토리',
+    title: 'Recent Best Red Chair Stories',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 5,
@@ -22901,7 +22901,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'norton-australian',
     youtubeId: 'cle4jJFoeQg',
-    title: '호주 남자의 레드체어 레전드',
+    title: 'Australian Guy\'s Red Chair Legend',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 0,
@@ -22915,7 +22915,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-tweets-1',
     youtubeId: 'RRBoPveyETc',
-    title: '셀럽 악플 읽기',
+    title: 'Celebrities Read Mean Tweets #1',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 0,
@@ -22927,7 +22927,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-tweets-8',
     youtubeId: 'LABGimhsEys',
-    title: '셀럽 악플 읽기',
+    title: 'Celebrities Read Mean Tweets #8',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 5,
@@ -22939,7 +22939,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-tweets-12',
     youtubeId: 'FLTOiQ8gXp4',
-    title: '셀럽 악플 읽기',
+    title: 'Celebrities Read Mean Tweets #12',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 10,
@@ -22951,7 +22951,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-tweets-14',
     youtubeId: 'bhKCGlubXa4',
-    title: '셀럽 악플 읽기',
+    title: 'Celebrities Read Mean Tweets #14',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 5,
@@ -22963,7 +22963,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-tweets-obama',
     youtubeId: 'XvgnOqcCYCM',
-    title: '오바마 대통령 악플 읽기',
+    title: 'President Obama Reads Mean Tweets',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 0,
@@ -22975,7 +22975,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'mean-tweets-oscars',
     youtubeId: 'hJCUJLMSEK0',
-    title: '오스카 배우들의 악플 읽기',
+    title: 'Oscar Winners Read Mean Tweets',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 0,
@@ -22989,7 +22989,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fallon-01',
     youtubeId: 'sMKoNBRZM1M',
-    title: '히스토리 오브 랩 with JT',
+    title: 'History of Rap with JT',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 10,
@@ -23001,7 +23001,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fallon-03',
     youtubeId: 'gJ_cx3AmCuI',
-    title: '해리슨 포드가 귀를 뚫어준 날',
+    title: 'The Day Harrison Ford Pierced His Ear',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 0,
@@ -23013,7 +23013,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fallon-cumberbatch',
     youtubeId: 'WWEGWathsPc',
-    title: '베네딕트 컴버배치와 웃음 참기',
+    title: 'Try Not to Laugh with Benedict Cumberbatch',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 10,
@@ -23025,7 +23025,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fallon-madlib-cruise',
     youtubeId: '6iClgRjmTvc',
-    title: '톰 크루즈와 매드 립 극장',
+    title: 'Mad Lib Theater with Tom Cruise',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 15,
@@ -23037,7 +23037,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fallon-kevin-rock',
     youtubeId: 'MlPd6zWjd_0',
-    title: '케빈 하트가 더 록에게 영상 통화',
+    title: 'Kevin Hart Video Calls The Rock',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 10,
@@ -23049,7 +23049,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fallon-jack-black',
     youtubeId: 'cLmCJKT5ssw',
-    title: '잭 블랙의 색소폰 연주',
+    title: 'Jack Black\'s Saxophone Performance',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 5,
@@ -23063,7 +23063,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'carpool-01',
     youtubeId: 'JKJExBXRorA',
-    title: '아델과 카풀 노래방',
+    title: 'Carpool Karaoke with Adele',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 30,
@@ -23077,7 +23077,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'conan-supercut',
     youtubeId: 'wyDU93xVAJs',
-    title: '시즌4 하이라이트',
+    title: 'Season 4 Highlights',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 0,
@@ -23089,7 +23089,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'conan-korea',
     youtubeId: 'k70xBg8en-4',
-    title: '코난의 한국 찜질방 체험',
+    title: 'Conan Visits a Korean Spa',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 10,
@@ -23235,7 +23235,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'anim-insideout',
     youtubeId: 'M7KelAaqsCg',
-    title: '인사이드 아웃 2',
+    title: 'Inside Out 2',
     category: 'animation',
     difficulty: 2,
     clipStart: 0,
@@ -23247,7 +23247,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'anim-toystory',
     youtubeId: 'w7UGkviTIpY',
-    title: '토이스토리 3',
+    title: 'Toy Story 3',
     category: 'animation',
     difficulty: 2,
     clipStart: 11,
@@ -23259,7 +23259,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'anim-incredibles',
     youtubeId: 'sHBLVaIEwj4',
-    title: '인크레더블 결혼식',
+    title: 'The Incredibles Wedding',
     category: 'animation',
     difficulty: 2,
     clipStart: 5,
@@ -23271,7 +23271,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'anim-pixar-quotes',
     youtubeId: 'B9G71qT5eu4',
-    title: '픽사 인생 명언 모음',
+    title: 'Best Pixar Life Quotes',
     category: 'animation',
     difficulty: 2,
     clipStart: 5,
@@ -23289,7 +23289,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'ted-procrastinator',
     youtubeId: 'arj7oStGLkU',
-    title: '미루기 달인의 머릿속',
+    title: 'Inside the Mind of a Procrastinator',
     category: 'daily',
     difficulty: 3,
     clipStart: 15,
@@ -23301,7 +23301,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'ted-schools',
     youtubeId: 'iG9CE55wbtY',
-    title: '학교가 창의력을 죽이는가',
+    title: 'Do Schools Kill Creativity?',
     category: 'daily',
     difficulty: 3,
     clipStart: 20,
@@ -23313,7 +23313,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'ted-start-with-why',
     youtubeId: 'qp0HIF3SfI4',
-    title: '위대한 리더의 소통법',
+    title: 'How Great Leaders Communicate',
     category: 'daily',
     difficulty: 3,
     clipStart: 10,
@@ -23325,7 +23325,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'ted-vulnerability',
     youtubeId: 'iCvmsMzlF7o',
-    title: '취약함의 힘',
+    title: 'The Power of Vulnerability',
     category: 'daily',
     difficulty: 3,
     clipStart: 15,
@@ -23337,7 +23337,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'ted-grit',
     youtubeId: 'H14bBuluwB8',
-    title: '끈기와 열정의 힘',
+    title: 'The Power of Grit and Passion',
     category: 'daily',
     difficulty: 3,
     clipStart: 10,
@@ -23349,7 +23349,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'ted-how-to-speak',
     youtubeId: 'eIho2S0ZahI',
-    title: '사람들이 귀 기울이는 말하기',
+    title: 'How to Speak So People Listen',
     category: 'daily',
     difficulty: 3,
     clipStart: 10,
@@ -23361,7 +23361,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'ted-steve-jobs',
     youtubeId: 'UF8uR6Z6KLc',
-    title: '스티브 잡스 스탠퍼드 연설',
+    title: 'Steve Jobs Stanford Commencement Speech',
     category: 'daily',
     difficulty: 3,
     clipStart: 20,
@@ -23373,7 +23373,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'ted-body-language',
     youtubeId: 'Ks-_Mh1QhMc',
-    title: '보디 랭귀지가 당신을 바꾼다',
+    title: 'Your Body Language Shapes Who You Are',
     category: 'daily',
     difficulty: 3,
     clipStart: 15,
@@ -23385,7 +23385,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'ted-sound-smart',
     youtubeId: '8S0FDjFBj8o',
-    title: 'TEDx에서 똑똑해 보이는 법',
+    title: 'How to Sound Smart at TEDx',
     category: 'daily',
     difficulty: 3,
     clipStart: 10,
@@ -23397,7 +23397,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'ted-8-secrets',
     youtubeId: 'Y6bbMQXQ180',
-    title: '성공의 8가지 비밀 3분 요약',
+    title: '8 Secrets of Success in 3 Minutes',
     category: 'daily',
     difficulty: 2,
     clipStart: 5,
@@ -23409,7 +23409,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'ted-keep-goals',
     youtubeId: 'NHopJHSlVo4',
-    title: '목표는 비밀로 해라',
+    title: 'Keep Your Goals to Yourself',
     category: 'daily',
     difficulty: 2,
     clipStart: 5,
@@ -23421,7 +23421,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'ted-30-days',
     youtubeId: 'UNP03fDSj1U',
-    title: '30일 동안 새로운 것 도전하기',
+    title: 'Try Something New for 30 Days',
     category: 'daily',
     difficulty: 2,
     clipStart: 5,
@@ -23435,7 +23435,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'daily-routine',
     youtubeId: 'ecF1y2bI2T4',
-    title: '영어로 말하는 하루 일과',
+    title: 'My Daily Routine in English',
     category: 'daily',
     difficulty: 2,
     clipStart: 10,
@@ -23447,7 +23447,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bb-i-am-danger',
     youtubeId: 'vVPT0JT1dOw',
-    title: '나는 위험 그 자체다',
+    title: 'I Am the Danger',
     category: 'drama',
     difficulty: 3,
     clipStart: 5,
@@ -23465,7 +23465,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'hotones-gordon',
     youtubeId: 'U9DyHthJ6LA',
-    title: '고든 램지 매운 소스 도전',
+    title: 'Gordon Ramsay Hot Sauce Challenge',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 30,
@@ -23477,7 +23477,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'hotones-scarjo',
     youtubeId: 'SR5kfWXfxto',
-    title: '스칼렛 요한슨 매운맛 인터뷰',
+    title: 'Scarlett Johansson Spicy Interview',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 20,
@@ -23489,7 +23489,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'hotones-paul-rudd',
     youtubeId: 'gWVHses2GCY',
-    title: '폴 러드의 쿨한 매운맛 대응',
+    title: 'Paul Rudd\'s Cool Response to Hot Sauce',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 25,
@@ -23501,7 +23501,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'lotr-my-precious',
     youtubeId: 'Iz-8CSa9xj8',
-    title: '골룸의 나의 보물',
+    title: 'Gollum\'s My Precious',
     category: 'movie',
     difficulty: 3,
     clipStart: 5,
@@ -23513,7 +23513,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'lotr-aragorn-speech',
     youtubeId: 'EXGUNvIFTQw',
-    title: '아라곤의 전투 전 연설',
+    title: 'Aragorn\'s Pre-Battle Speech',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -23525,7 +23525,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'lotr-sam-speech',
     youtubeId: 'k6C8SX0mWP0',
-    title: '샘와이즈의 희망 연설',
+    title: 'Samwise\'s Speech About Hope',
     category: 'movie',
     difficulty: 3,
     clipStart: 10,
@@ -23543,7 +23543,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'teded-sleep',
     youtubeId: 'dqONk48l5vY',
-    title: '잠을 자야 하는 과학적 이유',
+    title: 'The Science of Why You Need Sleep',
     category: 'daily',
     difficulty: 3,
     clipStart: 10,
@@ -23555,7 +23555,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'teded-black-holes',
     youtubeId: 'e-P5IFTqB98',
-    title: '블랙홀이 뭔지 쉽게 설명',
+    title: 'Black Holes Explained Simply',
     category: 'daily',
     difficulty: 3,
     clipStart: 5,
@@ -23567,7 +23567,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'teded-procrastination',
     youtubeId: 'FWTNMzK9vG4',
-    title: '미루기의 심리학',
+    title: 'The Psychology of Procrastination',
     category: 'daily',
     difficulty: 3,
     clipStart: 10,
@@ -23579,7 +23579,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'teded-sugar',
     youtubeId: 'lEXBxijQREo',
-    title: '설탕이 뇌에 미치는 영향',
+    title: 'How Sugar Affects the Brain',
     category: 'daily',
     difficulty: 3,
     clipStart: 5,
@@ -23591,7 +23591,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'teded-languages',
     youtubeId: 'VQRjouwKDlU',
-    title: '새 언어를 배우는 뇌의 이점',
+    title: 'Benefits of Learning a New Language',
     category: 'daily',
     difficulty: 3,
     clipStart: 10,
@@ -23603,7 +23603,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'eng-pronunciation',
     youtubeId: 'n4NVPg2kHv4',
-    title: '한국인이 틀리기 쉬운 발음',
+    title: 'Common Pronunciation Mistakes',
     category: 'daily',
     difficulty: 2,
     clipStart: 5,
@@ -23617,7 +23617,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'ted-happiness',
     youtubeId: 'fLJsdqxnZb0',
-    title: '행복의 비밀을 찾은 75년 연구',
+    title: 'The 75-Year Study on Happiness',
     category: 'daily',
     difficulty: 3,
     clipStart: 15,
@@ -23629,7 +23629,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'ted-introverts',
     youtubeId: 'c0KYU2j0TM4',
-    title: '내향적인 사람의 힘',
+    title: 'The Power of Introverts',
     category: 'daily',
     difficulty: 3,
     clipStart: 20,
@@ -23659,7 +23659,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'conan-remote-japan',
     youtubeId: 'knro0i2JH44',
-    title: '코난의 일본 방문기',
+    title: 'Conan Visits Japan',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 15,
@@ -23671,7 +23671,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'carpool-bieber',
     youtubeId: 'Dx06c0ZEBMk',
-    title: '저스틴 비버와 카풀 노래방',
+    title: 'Carpool Karaoke with Justin Bieber',
     category: 'entertainment',
     difficulty: 2,
     clipStart: 20,
@@ -23689,7 +23689,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'himym-01',
     youtubeId: 'RhMn0GBPKq8',
-    title: '바니의 슬랩벳 이야기',
+    title: 'Barney\'s Slap Bet Story',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -23719,7 +23719,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'intern-01',
     youtubeId: 'ZU3Xban0Y6A',
-    title: '70세 인턴의 첫 출근',
+    title: 'The 70-Year-Old Intern\'s First Day',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -23733,7 +23733,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'shawshank-01',
     youtubeId: 'qFLw26BjDZs',
-    title: '앤디의 오페라 방송',
+    title: 'Andy Plays the Opera',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -23749,7 +23749,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fallon-02',
     youtubeId: 'qtsNbxgPngA',
-    title: '니콜 키드먼의 충격 고백',
+    title: 'Nicole Kidman\'s Shocking Confession',
     category: 'entertainment',
     difficulty: 3,
     clipStart: 0,
@@ -23843,7 +23843,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'good-place-ep02',
     youtubeId: 'l1IchzbtNj0',
-    title: '치디의 파도 비유',
+    title: 'Chidi\'s Wave Analogy',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -23857,7 +23857,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'schitts-ep01',
     youtubeId: 'jHPOzQzk9Qo',
-    title: '치즈를 접어 넣으라고',
+    title: 'Fold In the Cheese',
     category: 'drama',
     difficulty: 2,
     clipStart: 0,
@@ -23871,7 +23871,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'ted-lasso-ep01',
     youtubeId: '3S16b-x5mRA',
-    title: '테드의 다트 대결',
+    title: 'Ted\'s Dart Match',
     category: 'drama',
     difficulty: 3,
     clipStart: 211,
@@ -23885,7 +23885,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'community-ep03',
     youtubeId: 'qZzMcRYX44M',
-    title: '페인트볼 전쟁의 시작',
+    title: 'The Paintball War Begins',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -23897,7 +23897,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'community-ep04',
     youtubeId: 'qvzE64A28NI',
-    title: '딘의 기묘한 복장',
+    title: 'The Dean\'s Bizarre Outfits',
     category: 'drama',
     difficulty: 2,
     clipStart: 0,
@@ -23911,7 +23911,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: '30rock-ep01',
     youtubeId: 'G-vp0AprzrA',
-    title: '트레이시 조던의 토크쇼 출연',
+    title: 'Tracy Jordan\'s Talk Show Appearance',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -23923,7 +23923,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: '30rock-ep02',
     youtubeId: 'i9IA4XFPEnk',
-    title: '잭의 TV 쇼 제안',
+    title: 'Jack\'s TV Show Pitch',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -23935,7 +23935,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: '30rock-ep03',
     youtubeId: 'Kb_AHBGF5i8',
-    title: '리즈 레몬의 딜브레이커',
+    title: 'Liz Lemon\'s Dealbreakers',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -23947,7 +23947,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: '30rock-ep04',
     youtubeId: 'AyMs2xox_hE',
-    title: '그린조의 환경 운동',
+    title: 'Greenzo\'s Environmental Campaign',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -23961,7 +23961,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'arrested-ep01',
     youtubeId: 'tO1k2Y3o-iM',
-    title: '곱의 마술쇼와 파이널 카운트다운',
+    title: 'Gob\'s Magic Show and The Final Countdown',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -23973,7 +23973,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'arrested-ep02',
     youtubeId: 'kKXkfLhn6pA',
-    title: '버스터의 폭주',
+    title: 'Buster\'s Meltdown',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -23985,7 +23985,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'arrested-ep03',
     youtubeId: 'I1O5m-R-sdQ',
-    title: '진 파르메산의 변장 들통',
+    title: 'Gene Parmesan\'s Disguise Revealed',
     category: 'drama',
     difficulty: 2,
     clipStart: 0,
@@ -23997,7 +23997,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'arrested-ep04',
     youtubeId: 'X1WSH0VzoaM',
-    title: '바나나 스탠드에 항상 돈이 있어',
+    title: 'There\'s Always Money in the Banana Stand',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -24013,7 +24013,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'sherlock-ep01',
     youtubeId: 'whCJ4NLUSB8',
-    title: '셜록의 관찰 추리력',
+    title: 'Sherlock\'s Deductive Reasoning',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -24025,7 +24025,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'sherlock-ep02',
     youtubeId: 'VaT7IYQgyqo',
-    title: '셜록과 왓슨의 첫 만남',
+    title: 'Sherlock and Watson\'s First Meeting',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -24039,7 +24039,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'crown-ep01',
     youtubeId: 'JWtnJjn6ng0',
-    title: '여왕의 대관식',
+    title: 'The Queen\'s Coronation',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -24053,7 +24053,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'stranger-ep01',
     youtubeId: 'KldYH188V_U',
-    title: '일레븐의 첫 등장',
+    title: 'Eleven\'s First Appearance',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -24065,7 +24065,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'stranger-ep02',
     youtubeId: 'Ds0R1eApo9w',
-    title: '데모고르곤과의 대결',
+    title: 'The Battle with the Demogorgon',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -24079,7 +24079,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bcs-ep03',
     youtubeId: 'oB5dctpeI0o',
-    title: '랄로의 등장',
+    title: 'Lalo\'s Grand Entrance',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -24091,7 +24091,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bcs-ep04',
     youtubeId: 'f_kgZFdt5B0',
-    title: '마이크의 명장면',
+    title: 'Mike\'s Best Scene',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -24103,7 +24103,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'bcs-ep05',
     youtubeId: 'eBS7QW9d100',
-    title: '킴의 선택',
+    title: 'Kim\'s Choice',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -24117,7 +24117,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'succession-ep01',
     youtubeId: 'LZTaXjt2Ggk',
-    title: '당신들은 진지한 사람들이 아니야',
+    title: 'You Are Not Serious People',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -24131,7 +24131,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'curb-ep03',
     youtubeId: 'e1KEC_3vygc',
-    title: '래리의 사회적 실수',
+    title: 'Larry\'s Social Blunder',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -24143,7 +24143,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'curb-ep05',
     youtubeId: 'RC7hZY3sVxE',
-    title: '카풀 레인 소동',
+    title: 'The Carpool Lane Incident',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -24157,7 +24157,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'frasier-ep02',
     youtubeId: 'wk4d7JWn4oA',
-    title: '나일스의 다림질 사건',
+    title: 'Niles\'s Ironing Incident',
     category: 'drama',
     difficulty: 2,
     clipStart: 0,
@@ -24171,7 +24171,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'sunny-ep01',
     youtubeId: '_nTpsv9PNqo',
-    title: '찰리의 페페 실비아 음모론',
+    title: 'Charlie\'s Pepe Silvia Conspiracy',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -24183,7 +24183,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'sunny-ep02',
     youtubeId: 'S_JUlXh7sP8',
-    title: '나이트맨 뮤지컬',
+    title: 'The Nightman Cometh Musical',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -24195,7 +24195,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'sunny-ep04',
     youtubeId: 'MYtjpIwamos',
-    title: '찰디 맥데니스 보드게임',
+    title: 'Chardee MacDennis Board Game',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -24217,7 +24217,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'satc-ep03',
     youtubeId: 'IXXxciRUMzE',
-    title: '사만다의 유쾌한 조언',
+    title: 'Samantha\'s Hilarious Advice',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -24231,7 +24231,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fresh-prince-ep01',
     youtubeId: 'zqZFzzp0IR8',
-    title: '아빠는 왜 날 원하지 않는 거야',
+    title: 'Why Doesn\'t My Dad Want Me?',
     category: 'drama',
     difficulty: 2,
     clipStart: 0,
@@ -24243,7 +24243,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fresh-prince-ep03',
     youtubeId: 'qvJeATp31dw',
-    title: '윌의 당구 사기',
+    title: 'Will\'s Pool Hustle',
     category: 'drama',
     difficulty: 2,
     clipStart: 0,
@@ -24255,7 +24255,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fresh-prince-ep05',
     youtubeId: 'ye5BuYf8q4o',
-    title: '벨에어에서 생긴 일',
+    title: 'What Happened in Bel-Air',
     category: 'drama',
     difficulty: 2,
     clipStart: 0,
@@ -24271,7 +24271,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'downton-ep01',
     youtubeId: 'UBX8MWYel3s',
-    title: '바이올렛의 독설 모음',
+    title: 'Violet\'s Best Zingers',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -24285,7 +24285,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'got-ep02',
     youtubeId: 'PW6wfXPeJTw',
-    title: '네드 스타크의 명예',
+    title: 'Ned Stark\'s Honor',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -24297,7 +24297,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'got-ep04',
     youtubeId: 'TbwroS0YP54',
-    title: '티리온의 재판 연설',
+    title: 'Tyrion\'s Trial Speech',
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -24311,8 +24311,8 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'simpsons-ep01',
     youtubeId: 'aRsOBFhNjVM',
-    title: '찐 햄인가 햄버거인가',
-    category: 'drama',
+    title: 'Steamed Hams or Hamburgers?',
+    category: 'animation',
     difficulty: 2,
     clipStart: 0,
     clipEnd: 60,
@@ -24323,8 +24323,8 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'simpsons-ep02',
     youtubeId: 'cnaeIAEp2pU',
-    title: '호머의 도 모음',
-    category: 'drama',
+    title: 'Homer\'s D\'oh Compilation',
+    category: 'animation',
     difficulty: 2,
     clipStart: 0,
     clipEnd: 60,
@@ -24341,7 +24341,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'titanic-01',
     youtubeId: 'zSRvmHSgaBg',
-    title: '절대 놓지 않을게 - 잭과 로즈의 약속',
+    title: 'I\'ll Never Let Go - Jack and Rose\'s Promise',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24353,7 +24353,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'titanic-02',
     youtubeId: 'saalGKY7ifU',
-    title: '나는 날고 있어 - 뱃머리의 명장면',
+    title: 'I\'m Flying - The Bow of the Ship',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -24367,7 +24367,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'social-network-01',
     youtubeId: 'k5fJmkv02is',
-    title: '10억 달러가 쿨하지 - 숀 파커의 야망',
+    title: 'A Billion Dollars Is Cool - Sean Parker\'s Ambition',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24379,7 +24379,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'social-network-02',
     youtubeId: '2RB3edZyeYw',
-    title: '이별 통보 - 마크의 분노',
+    title: 'The Breakup - Mark\'s Fury',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24393,7 +24393,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inception-01',
     youtubeId: 'i9zjvUywVG8',
-    title: '꿈이 무너진다 - 말의 배신',
+    title: 'The Dream Collapses - Mal\'s Betrayal',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24405,7 +24405,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inception-02',
     youtubeId: 'i3-jlhJgU9U',
-    title: '지금 꿈속이야 - 아리아드네에게 설명',
+    title: 'You\'re in a Dream - Explaining to Ariadne',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24417,7 +24417,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'inception-03',
     youtubeId: '0b-H8oQUs1A',
-    title: '꿈 훈련 - 공유된 꿈의 힘',
+    title: 'Dream Training - The Power of Shared Dreams',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24431,7 +24431,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'dark-knight-01',
     youtubeId: 'jane6C4rIwc',
-    title: '조커 심문 - 배트맨 vs 조커',
+    title: 'Joker Interrogation - Batman vs Joker',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24443,7 +24443,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'dark-knight-02',
     youtubeId: 'ppOVLojanC8',
-    title: '조커의 마술 - 연필을 사라지게 하는 법',
+    title: 'Joker\'s Magic Trick - The Disappearing Pencil',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24455,7 +24455,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'dark-knight-03',
     youtubeId: 'SIYkhb2NjfE',
-    title: '세상이 불타는 걸 보고 싶은 자들',
+    title: 'Some Men Just Want to Watch the World Burn',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24469,7 +24469,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'good-will-hunting-01',
     youtubeId: 'yzb726TP-OM',
-    title: '네 잘못이 아니야 - 감동의 치유 장면',
+    title: 'It\'s Not Your Fault - The Healing Scene',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24481,7 +24481,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'good-will-hunting-02',
     youtubeId: 'ouppQFx3v-I',
-    title: '천재의 고백 - 윌의 진심',
+    title: 'A Genius Confesses - Will\'s True Feelings',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24493,7 +24493,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'good-will-hunting-03',
     youtubeId: 'ifkYHEoe6_k',
-    title: '스카일러와의 만남 - 바에서의 유머',
+    title: 'Meeting Skylar - Humor at the Bar',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24507,7 +24507,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'dead-poets-01',
     youtubeId: 'veYR3ZC9wMQ',
-    title: 'Carpe Diem - 오늘을 살아라',
+    title: 'Carpe Diem - Seize the Day',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24519,7 +24519,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'dead-poets-02',
     youtubeId: 'aS1esgRV4Rc',
-    title: 'O Captain My Captain - 선생님을 위한 경례',
+    title: 'O Captain My Captain - Standing on Desks',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24533,7 +24533,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'pursuit-happyness-01',
     youtubeId: 'lP4lH8D07Fc',
-    title: '크리스 합격 - 꿈이 이루어지는 순간',
+    title: 'Chris Gets the Job - A Dream Comes True',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24545,7 +24545,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'pursuit-happyness-02',
     youtubeId: 'UZb2NOHPA2A',
-    title: '절대 포기하지 마 - 아들에게 하는 말',
+    title: 'Don\'t Ever Let Anyone Tell You - Speech to Son',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24557,7 +24557,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'pursuit-happyness-03',
     youtubeId: 'b8o1ZkWBxMk',
-    title: '딘 위터 면접 - 첫인상의 중요성',
+    title: 'Dean Witter Interview - First Impressions',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24571,7 +24571,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'pulp-fiction-02',
     youtubeId: 'gCKjctTWIsw',
-    title: '에스겔 25장 17절 - 줄스의 명연설',
+    title: 'Ezekiel 25:17 - Jules\'s Famous Speech',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24585,7 +24585,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'fight-club-01',
     youtubeId: 'dC1yHLp9bWA',
-    title: '나를 때려봐 - 타일러 더든과의 만남',
+    title: 'Hit Me - Meeting Tyler Durden',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24599,7 +24599,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-matrix-01',
     youtubeId: 'zE7PKRjrid4',
-    title: '빨간약 파란약 - 네오의 선택',
+    title: 'Red Pill Blue Pill - Neo\'s Choice',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24611,7 +24611,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-matrix-02',
     youtubeId: 'AGZiLMGdCE0',
-    title: '쿵푸를 안다 - 네오의 훈련',
+    title: 'I Know Kung Fu - Neo\'s Training',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24623,7 +24623,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'the-matrix-03',
     youtubeId: 'aTL4qIIxg8A',
-    title: '숟가락은 없다 - 진실의 깨달음',
+    title: 'There Is No Spoon - Realizing the Truth',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24637,7 +24637,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'interstellar-01',
     youtubeId: 'GIUhpzv47YQ',
-    title: '날 떠나게 하지 마 - 쿠퍼의 절규',
+    title: 'Don\'t Let Me Leave - Cooper\'s Plea',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24649,7 +24649,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'interstellar-02',
     youtubeId: 'MoLkabPK3YU',
-    title: '23년치 메시지 - 쿠퍼의 눈물',
+    title: '23 Years of Messages - Cooper\'s Tears',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24661,7 +24661,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'interstellar-03',
     youtubeId: 'a3lcGnMhvsA',
-    title: '도킹 시퀀스 - 불가능에 도전하다',
+    title: 'Docking Sequence - Attempting the Impossible',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24675,7 +24675,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'la-la-land-01',
     youtubeId: '7CVfTd-_qbc',
-    title: '또 하루의 태양 - 고속도로 오프닝',
+    title: 'Another Day of Sun - Highway Opening',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24687,7 +24687,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'la-la-land-02',
     youtubeId: 'cmkZeTX5fq0',
-    title: '군중 속 누군가 - 꿈을 좇는 밤',
+    title: 'Someone in the Crowd - A Night of Chasing Dreams',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24701,7 +24701,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'breakfast-club-01',
     youtubeId: 'u44D3qKKGPU',
-    title: '우리 모두 이상해 - 토요일의 고백',
+    title: 'We\'re All Pretty Bizarre - Saturday Confession',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24717,7 +24717,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: '10-things-01',
     youtubeId: 'w6XGUhzfutc',
-    title: '네가 싫은 10가지 - 캣의 눈물',
+    title: '10 Things I Hate About You - Kat\'s Poem',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24733,7 +24733,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'little-women-01',
     youtubeId: 'AST2-4db4ic',
-    title: '여성도 생각이 있다 - 조의 연설',
+    title: 'Women Have Minds - Jo\'s Speech',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24747,7 +24747,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'princess-bride-01',
     youtubeId: 'I73sP93-0xA',
-    title: '내 이름은 이니고 몬토야 - 복수의 맹세',
+    title: 'My Name Is Inigo Montoya - Vow of Revenge',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -24759,7 +24759,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'princess-bride-02',
     youtubeId: 'D9tAKLTktY0',
-    title: '당신이 원하는 대로 - 웨슬리의 사랑',
+    title: 'As You Wish - Westley\'s Love',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -24773,7 +24773,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'back-to-future-01',
     youtubeId: 'QzklMXES1BU',
-    title: '그녀에게서 떨어져 - 마티의 분노',
+    title: 'Get Away from Her - Marty\'s Rage',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24785,7 +24785,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'back-to-future-02',
     youtubeId: 'qvsgGtivCgs',
-    title: '1.21 기가와트 - 번개로 시간여행을',
+    title: '1.21 Gigawatts - Time Travel by Lightning',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24797,7 +24797,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'back-to-future-03',
     youtubeId: '1g7z6Aw4X1M',
-    title: '도로가 필요 없어 - 미래로의 출발',
+    title: 'Where We\'re Going We Don\'t Need Roads',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24811,7 +24811,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'jurassic-park-01',
     youtubeId: 'PJlmYh27MHg',
-    title: '쥬라기 공원에 오신 걸 환영합니다',
+    title: 'Welcome to Jurassic Park',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24823,7 +24823,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'jurassic-park-02',
     youtubeId: 'dnRxQ3dcaQk',
-    title: '주방의 랩터 - 숨바꼭질 공포',
+    title: 'Raptors in the Kitchen - Hide and Seek',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24837,7 +24837,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'home-alone-01',
     youtubeId: 'S7OWoc-j8qQ',
-    title: '더 마시고 싶어? - 케빈의 함정',
+    title: 'Want Some More? - Kevin\'s Trap',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -24851,7 +24851,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'truman-show-01',
     youtubeId: '-_zYn-HHcyA',
-    title: '좋은 오후, 좋은 저녁 - 트루먼의 마지막 인사',
+    title: 'Good Afternoon, Good Evening - Truman\'s Last Words',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24863,7 +24863,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'truman-show-02',
     youtubeId: 'ikVIGjzncDs',
-    title: '현실 자각 - 트루먼이 눈치챈 순간',
+    title: 'Reality Check - Truman Catches On',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24877,7 +24877,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'groundhog-day-01',
     youtubeId: 'tSVeDx9fk60',
-    title: '또 같은 아침 - 끝나지 않는 하루',
+    title: 'Same Morning Again - The Endless Day',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -24897,7 +24897,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'jerry-maguire-02',
     youtubeId: 'zCHOdyX5HGo',
-    title: 'You Had Me at Hello - 첫마디에 반했어',
+    title: 'You Had Me at Hello',
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -24911,7 +24911,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'few-good-men-01',
     youtubeId: '9FnO3igOkOk',
-    title: '진실을 감당 못 해 - 법정의 폭발',
+    title: 'You Can\'t Handle the Truth - Courtroom Explosion',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24925,7 +24925,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'moneyball-01',
     youtubeId: 'pWgyy_rlmag',
-    title: '출루한다 - 야구의 새로운 공식',
+    title: 'He Gets on Base - A New Formula for Baseball',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24937,7 +24937,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'moneyball-02',
     youtubeId: 'PlKDQqKh03Y',
-    title: '야구가 로맨틱하지 않나 - 빌리의 감동',
+    title: 'How Can You Not Be Romantic About Baseball',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24951,7 +24951,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'kings-speech-01',
     youtubeId: 'DAhFW_auT20',
-    title: '전쟁 선포 연설 - 왕의 목소리',
+    title: 'Declaration of War Speech - The King\'s Voice',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24967,7 +24967,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'whiplash-01',
     youtubeId: 'ZQ_6VUs2VCk',
-    title: '빨라지고 있나 느려지고 있나 - 플레처의 광기',
+    title: 'Rushing or Dragging - Fletcher\'s Madness',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24979,7 +24979,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'whiplash-02',
     youtubeId: 'mIABSdupWdI',
-    title: '내 템포가 아니야 - 공포의 수업',
+    title: 'Not My Tempo - Terrifying Lesson',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -24993,7 +24993,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'hidden-figures-01',
     youtubeId: 'v-pbGAts_Fg',
-    title: '화장실이 없어요 - 캐서린의 분노',
+    title: 'No Bathroom - Katherine\'s Outburst',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -25007,7 +25007,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'wolf-wall-street-01',
     youtubeId: 'bCQNOdflWbQ',
-    title: '이 펜을 팔아봐 - 세일즈의 정석',
+    title: 'Sell Me This Pen - The Art of Sales',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -25021,7 +25021,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'catch-me-01',
     youtubeId: 'i5j1wWY-qus',
-    title: '동의하시나요? - 가짜 의사 프랭크',
+    title: 'Do You Concur? - Frank the Fake Doctor',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -25033,7 +25033,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'catch-me-02',
     youtubeId: 'HYOjY7JJDBI',
-    title: '프랑스에서 체포 - 프랭크의 최후',
+    title: 'Arrested in France - Frank\'s Downfall',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -25045,7 +25045,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'catch-me-03',
     youtubeId: 'sFW15hEqZQk',
-    title: '아무도 쫓지 않아 - 새 출발의 제안',
+    title: 'Nobody\'s Chasing You - An Offer to Start Over',
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -25981,7 +25981,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'pop-hits-2020s-05',
     youtubeId: 'kTJczUoc26U',
-    title: 'STAY',
+    title: 'The Kid LAROI & Justin Bieber - STAY',
     category: 'music',
     difficulty: 2,
     clipStart: 0,
@@ -26239,7 +26239,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'rb-soul-02',
     youtubeId: 'bnVUHWCynig',
-    title: 'Halo',
+    title: 'Beyonce - Halo',
     category: 'music',
     difficulty: 2,
     clipStart: 30,
@@ -26525,7 +26525,7 @@ export const seedVideos: VideoData[] = ([
   {
     id: 'acousticindie-09',
     youtubeId: 'AEB6ibtdPZc',
-    title: 'Home',
+    title: 'Edward Sharpe & The Magnetic Zeros - Home',
     category: 'music',
     difficulty: 2,
     clipStart: 30,
