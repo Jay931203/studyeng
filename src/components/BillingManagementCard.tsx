@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { isBillingEnabled } from '@/lib/billing'
 import { useAuth } from '@/hooks/useAuth'
 import { SurfaceCard } from '@/components/ui/AppPage'
@@ -17,7 +17,7 @@ interface BillingStatusPayload {
 }
 
 function formatDate(value: string | null) {
-  if (!value) return '미확인'
+  if (!value) return 'Unavailable'
 
   return new Intl.DateTimeFormat('ko-KR', {
     year: 'numeric',
@@ -58,7 +58,7 @@ export function BillingManagementCard() {
       } catch (error) {
         console.warn('[billing] status fetch failed:', error)
         if (!cancelled) {
-          setErrorMessage('구독 상태를 불러오지 못했습니다.')
+          setErrorMessage('Failed to load subscription status.')
         }
       } finally {
         if (!cancelled) {
@@ -89,10 +89,15 @@ export function BillingManagementCard() {
       window.location.assign(payload.url)
     } catch (error) {
       console.warn('[billing] portal launch failed:', error)
-      setErrorMessage('구독 관리 페이지를 열지 못했습니다.')
+      setErrorMessage('Failed to open subscription management.')
       setManaging(false)
     }
   }
+
+  const planLabel = useMemo(() => {
+    if (loading) return 'CHECKING'
+    return status?.isPremium ? 'PRO' : 'FREE'
+  }, [loading, status?.isPremium])
 
   return (
     <SurfaceCard className="p-6">
@@ -100,32 +105,37 @@ export function BillingManagementCard() {
         SUBSCRIPTION
       </p>
 
+      <div className="mb-3 rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
+        <p className="text-xs text-[var(--text-muted)]">PLAN</p>
+        <p className="mt-1 text-lg font-semibold text-[var(--text-primary)]">{planLabel}</p>
+      </div>
+
       {!billingEnabled && (
         <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-4 py-3">
-          <p className="text-sm font-semibold text-[var(--text-secondary)]">결제 비활성</p>
+          <p className="text-sm font-semibold text-[var(--text-secondary)]">Billing disabled</p>
         </div>
       )}
 
       {billingEnabled && !user && (
         <div className="rounded-2xl border border-sky-500/20 bg-sky-500/10 px-4 py-3">
-          <p className="text-sm font-semibold text-sky-300">로그인 필요</p>
+          <p className="text-sm font-semibold text-sky-300">Login required</p>
         </div>
       )}
 
       {billingEnabled && user && (
         <div className="space-y-3">
           <div className="rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
-            <p className="text-xs text-[var(--text-muted)]">현재 권한</p>
+            <p className="text-xs text-[var(--text-muted)]">STATUS</p>
             <p className="mt-1 text-lg font-semibold text-[var(--text-primary)]">
-              {loading ? '확인 중...' : status?.isPremium ? '프리미엄 활성' : '무료 플랜'}
+              {loading ? 'Checking' : status?.isPremium ? 'Premium active' : 'Free plan'}
             </p>
             {status?.entitlement?.currentPeriodEnd && (
               <p className="mt-2 text-xs text-[var(--text-secondary)]">
-                갱신일 {formatDate(status.entitlement.currentPeriodEnd)}
+                Renews {formatDate(status.entitlement.currentPeriodEnd)}
               </p>
             )}
             {status?.entitlement?.cancelAtPeriodEnd && (
-              <p className="mt-1 text-xs text-[var(--text-secondary)]">자동 갱신 중지 예정</p>
+              <p className="mt-1 text-xs text-[var(--text-secondary)]">Cancels at period end</p>
             )}
           </div>
 
@@ -135,7 +145,7 @@ export function BillingManagementCard() {
               disabled={managing}
               className="w-full rounded-2xl bg-[var(--accent-primary)] py-3 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50"
             >
-              {managing ? '연결 중...' : '구독 관리'}
+              {managing ? 'Connecting...' : 'Manage subscription'}
             </button>
           )}
         </div>

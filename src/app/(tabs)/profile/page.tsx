@@ -38,14 +38,14 @@ function LegalLink({ href, label }: { href: string; label: string }) {
   return (
     <Link
       href={href}
-      className="flex items-center justify-between border-t border-[var(--border-card)] px-5 py-4 text-sm text-[var(--text-secondary)]"
+      className="flex items-center justify-between border-t border-[var(--border-card)] px-5 py-4 text-xs font-semibold text-[var(--text-muted)]"
     >
       <span>{label}</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
-        className="h-4 w-4"
+        className="h-4 w-4 text-[var(--text-muted)]"
         aria-hidden="true"
       >
         <path
