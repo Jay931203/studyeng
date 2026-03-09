@@ -22,24 +22,66 @@ function subscribe(listener: () => void) {
   }
 
   const mediaQuery = window.matchMedia(LANDSCAPE_MEDIA_QUERY)
+  const screenOrientation = window.screen?.orientation
+  const visualViewport = window.visualViewport
   const handleChange = () => listener()
   const handleResize = () => listener()
 
   window.addEventListener('resize', handleResize)
+  window.addEventListener('orientationchange', handleChange)
+  visualViewport?.addEventListener('resize', handleResize)
+
+  if (typeof screenOrientation?.addEventListener === 'function') {
+    screenOrientation.addEventListener('change', handleChange)
+  }
 
   if (typeof mediaQuery.addEventListener === 'function') {
     mediaQuery.addEventListener('change', handleChange)
     return () => {
+      if (typeof screenOrientation?.removeEventListener === 'function') {
+        screenOrientation.removeEventListener('change', handleChange)
+      }
       mediaQuery.removeEventListener('change', handleChange)
       window.removeEventListener('resize', handleResize)
+      window.removeEventListener('orientationchange', handleChange)
+      visualViewport?.removeEventListener('resize', handleResize)
     }
   }
 
   mediaQuery.addListener(handleChange)
   return () => {
+    if (typeof screenOrientation?.removeEventListener === 'function') {
+      screenOrientation.removeEventListener('change', handleChange)
+    }
     mediaQuery.removeListener(handleChange)
     window.removeEventListener('resize', handleResize)
+    window.removeEventListener('orientationchange', handleChange)
+    visualViewport?.removeEventListener('resize', handleResize)
   }
+}
+
+function getIsLandscapeViewport() {
+  if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') {
+    return false
+  }
+
+  const viewportWidth = window.innerWidth
+  const viewportHeight = window.innerHeight
+
+  if (viewportWidth > 0 && viewportHeight > 0 && viewportWidth !== viewportHeight) {
+    return viewportWidth > viewportHeight
+  }
+
+  const screenOrientationType = window.screen?.orientation?.type
+  if (screenOrientationType?.startsWith('landscape')) {
+    return true
+  }
+
+  if (screenOrientationType?.startsWith('portrait')) {
+    return false
+  }
+
+  return window.matchMedia(LANDSCAPE_MEDIA_QUERY).matches
 }
 
 function getSnapshot() {
@@ -49,7 +91,7 @@ function getSnapshot() {
 
   const viewportWidth = window.innerWidth
   const viewportHeight = window.innerHeight
-  const isLandscapeViewport = window.matchMedia(LANDSCAPE_MEDIA_QUERY).matches
+  const isLandscapeViewport = getIsLandscapeViewport()
   const isCompactViewport =
     viewportWidth <= COMPACT_VIEWPORT_MAX_WIDTH ||
     viewportHeight <= COMPACT_VIEWPORT_MAX_HEIGHT
