@@ -49,10 +49,10 @@ export function ModalShell({
               transition={{ type: 'spring', stiffness: 320, damping: 28 }}
               onClick={(event) => event.stopPropagation()}
               className={joinClassNames(
-                'w-full border border-[var(--border-card)] bg-[var(--bg-card)] shadow-2xl',
+                'w-full overflow-y-auto overscroll-contain border border-[var(--border-card)] bg-[var(--bg-card)] shadow-2xl',
                 center
-                  ? 'rounded-[32px] px-6 py-6'
-                  : 'safe-area-bottom rounded-t-[32px] px-6 pb-10 pt-5 sm:rounded-[32px]',
+                  ? 'max-h-[min(88vh,calc(100dvh-2rem))] rounded-[32px] px-6 py-6'
+                  : 'safe-area-bottom max-h-[min(88vh,calc(100dvh-1rem))] rounded-t-[32px] px-6 pb-10 pt-5 sm:rounded-[32px]',
                 maxWidthClassName,
               )}
             >

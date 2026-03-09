@@ -679,9 +679,9 @@ export function BillingManagementCard() {
         isOpen={isInfoOpen}
         onClose={() => setIsInfoOpen(false)}
         position="bottom"
-        maxWidthClassName="max-w-lg"
+        maxWidthClassName="max-w-md"
       >
-        <div className="mb-5 flex items-start justify-between gap-4">
+        <div className="sticky top-0 z-10 -mx-6 -mt-5 mb-5 flex items-start justify-between gap-4 border-b border-[var(--border-card)] bg-[var(--bg-card)] px-6 pb-4 pt-5">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--accent-text)]">
               MEMBERSHIP INFO
@@ -739,24 +739,15 @@ export function BillingManagementCard() {
                 badge={!currentPremium ? '현재 이용 중' : undefined}
               />
               <MembershipInfoCard
-                title="월간"
-                summary="부담 없이 시작하는 프리미엄"
+                title="프리미엄"
+                summary="월간과 연간은 기능이 같고 결제 주기만 다릅니다."
                 points={[
                   '영상 시청 제한 없음',
                   '저장 문장 제한 없음',
-                  '월 단위로 유연하게 이용 가능',
+                  '월간·연간 모두 동일한 멤버십 기능 제공',
+                  '결제 주기는 구독 관리에서 변경 가능',
                 ]}
-                badge={currentPlan === 'monthly' ? '현재 이용 중' : undefined}
-              />
-              <MembershipInfoCard
-                title="연간"
-                summary="장기 이용에 가장 유리한 프리미엄"
-                points={[
-                  '영상 시청 제한 없음',
-                  '저장 문장 제한 없음',
-                  '오래 사용할수록 더 유리한 선택',
-                ]}
-                badge={currentPlan === 'yearly' ? '현재 이용 중' : '추천'}
+                badge={currentPremium ? '현재 이용 중' : '추천'}
               />
             </div>
           </div>
