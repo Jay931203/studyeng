@@ -1,8 +1,8 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import { isBillingEnabled } from '@/lib/billing'
+import { useRouter } from 'next/navigation'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { useDiscountStore } from '@/stores/useDiscountStore'
 
@@ -10,12 +10,13 @@ interface PaceMilestone {
   label: string
   description: string
   targetRate: number
+  discount: number
 }
 
 const PACE_MILESTONES: PaceMilestone[] = [
-  { label: 'BASE', description: '70%', targetRate: 70 },
-  { label: 'FOCUS', description: '90%', targetRate: 90 },
-  { label: 'TOP', description: '3 months 90%', targetRate: 90 },
+  { label: 'BASE', description: '70%', targetRate: 70, discount: 10 },
+  { label: 'FOCUS', description: '90%', targetRate: 90, discount: 15 },
+  { label: 'TOP', description: '3 months 90%', targetRate: 90, discount: 20 },
 ]
 
 export function DailyMissions() {
@@ -121,13 +122,14 @@ export function DailyMissions() {
 }
 
 function LearningPaceCard() {
-  const billingEnabled = isBillingEnabled()
+  const router = useRouter()
   const checkAndResetMonthly = useDiscountStore((state) => state.checkAndResetMonthly)
   const completedDays = useDiscountStore((state) => state.completedDays)
   const getCompletionRate = useDiscountStore((state) => state.getCompletionRate)
   const getDaysInCurrentMonth = useDiscountStore((state) => state.getDaysInCurrentMonth)
   const hasConsecutiveBonus = useDiscountStore((state) => state.hasConsecutiveBonus)
   const [open, setOpen] = useState(false)
+  const [selectedMilestone, setSelectedMilestone] = useState<string | null>(null)
 
   useEffect(() => {
     checkAndResetMonthly()
@@ -137,6 +139,14 @@ function LearningPaceCard() {
   const totalDays = getDaysInCurrentMonth()
   const completedCount = completedDays.length
   const hasTopTier = hasConsecutiveBonus()
+  const milestoneStatus = useMemo(
+    () =>
+      PACE_MILESTONES.map((milestone) => ({
+        ...milestone,
+        reached: milestone.label === 'TOP' ? hasTopTier : completionRate >= milestone.targetRate,
+      })),
+    [completionRate, hasTopTier],
+  )
   const nextMilestone = PACE_MILESTONES.find((milestone, index) => {
     if (index === PACE_MILESTONES.length - 1) {
       return !hasTopTier
@@ -153,16 +163,17 @@ function LearningPaceCard() {
           Math.ceil((nextMilestone.targetRate / 100) * totalDays) - completedCount,
         )}`
       : 'DONE'
+  const highestReachedMilestone =
+    [...milestoneStatus].reverse().find((milestone) => milestone.reached) ?? null
+  const selectedMilestoneInfo =
+    milestoneStatus.find(
+      (milestone) => milestone.label === selectedMilestone && milestone.reached,
+    ) ?? highestReachedMilestone
+  const selectedMilestoneLabel = selectedMilestoneInfo?.label ?? null
 
   return (
     <>
       <div className="mx-4 mb-4">
-        {!billingEnabled && (
-          <div className="mb-3 rounded-xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-4 py-3">
-            <p className="text-sm font-semibold text-[var(--text-secondary)]">FREE</p>
-          </div>
-        )}
-
         <button
           onClick={() => setOpen(true)}
           className="w-full rounded-xl border border-[var(--border-card)] bg-[var(--bg-secondary)]/40 px-3 py-3 text-left transition-colors hover:bg-[var(--bg-secondary)]"
@@ -247,35 +258,64 @@ function LearningPaceCard() {
                 </div>
 
                 <div className="mt-4 space-y-2">
-                  {PACE_MILESTONES.map((milestone) => {
-                    const reached =
-                      milestone.label === 'TOP'
-                        ? hasTopTier
-                        : completionRate >= milestone.targetRate
+                  {milestoneStatus.map((milestone) => {
+                    const selected = selectedMilestoneLabel === milestone.label
 
                     return (
                       <div
                         key={milestone.label}
-                        className="flex items-center justify-between rounded-2xl bg-[var(--bg-secondary)] px-4 py-3"
+                        className="flex items-center justify-between gap-3 rounded-2xl bg-[var(--bg-secondary)] px-4 py-3"
                       >
                         <div>
                           <p className="text-sm font-medium text-[var(--text-primary)]">
                             {milestone.label}
                           </p>
                           <p className="mt-1 text-xs text-[var(--text-muted)]">
-                            {milestone.description}
+                            {milestone.description} · {milestone.discount}% OFF
                           </p>
                         </div>
-                        <p
-                          className={`text-sm font-semibold ${
-                            reached ? 'text-[var(--accent-text)]' : 'text-[var(--text-secondary)]'
+                        <button
+                          type="button"
+                          onClick={() => setSelectedMilestone(milestone.label)}
+                          disabled={!milestone.reached}
+                          className={`rounded-full px-3 py-1.5 text-xs font-semibold transition-colors ${
+                            milestone.reached
+                              ? selected
+                                ? 'bg-[var(--accent-primary)] text-white'
+                                : 'bg-[var(--accent-glow)] text-[var(--accent-text)]'
+                              : 'bg-[var(--bg-card)] text-[var(--text-muted)] opacity-60'
                           }`}
                         >
-                          {reached ? 'YES' : 'NO'}
-                        </p>
+                          {!milestone.reached ? 'LOCKED' : selected ? 'SELECTED' : 'SELECT'}
+                        </button>
                       </div>
                     )
                   })}
+                </div>
+
+                <div className="mt-4 rounded-2xl bg-[var(--bg-secondary)] p-4">
+                  <div className="flex items-center justify-between gap-3">
+                    <div>
+                      <p className="text-xs text-[var(--text-muted)]">SUBSCRIPTION DISCOUNT</p>
+                      <p className="mt-1 text-sm font-semibold text-[var(--text-primary)]">
+                        {selectedMilestoneInfo
+                          ? `${selectedMilestoneInfo.label} · ${selectedMilestoneInfo.discount}% OFF`
+                          : '달성한 목표를 선택하면 활성화됩니다'}
+                      </p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        if (!selectedMilestoneInfo) return
+                        setOpen(false)
+                        router.push('/profile')
+                      }}
+                      disabled={!selectedMilestoneInfo}
+                      className="rounded-full bg-[var(--accent-primary)] px-4 py-2 text-xs font-semibold text-white disabled:cursor-not-allowed disabled:opacity-45"
+                    >
+                      구독 할인 받기
+                    </button>
+                  </div>
                 </div>
               </div>
             </motion.div>

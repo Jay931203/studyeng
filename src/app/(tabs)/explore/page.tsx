@@ -88,6 +88,15 @@ export default function ExplorePage() {
     () => (activeCategory === 'all' ? catalogSeries : getCatalogSeriesByCategory(activeCategory)),
     [activeCategory],
   )
+  const filteredSeriesVideoCount = useMemo(
+    () =>
+      filteredSeries.reduce(
+        (total, seriesItem) => total + getCatalogVideosBySeries(seriesItem.id).length,
+        0,
+      ),
+    [filteredSeries],
+  )
+  const seriesSectionDescription = `${filteredSeries.length}개 시리즈 · ${filteredSeriesVideoCount}개 영상`
 
   const buildExploreUrl = useCallback(
     (seriesId: string | null) => {
@@ -513,7 +522,7 @@ export default function ExplorePage() {
       </section>
 
       <section ref={seriesSectionRef} className="mb-8">
-        <SectionHeader title="시리즈" />
+        <SectionHeader title="시리즈" description={seriesSectionDescription} />
 
         <div className="mb-4 flex gap-2 overflow-x-auto pb-1 no-scrollbar">
           <button
