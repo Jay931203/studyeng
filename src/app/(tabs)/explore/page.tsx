@@ -349,16 +349,16 @@ export default function ExplorePage() {
         {!cameFromVideo && (
           <button
             onClick={() => router.push('/profile')}
-            className="flex min-w-0 items-center gap-3 rounded-full border border-[var(--border-card)] bg-[var(--bg-card)] px-3 py-2 text-left"
+            className="flex min-w-0 items-center gap-2 rounded-full border border-[var(--border-card)] bg-[var(--bg-card)] px-2.5 py-1.5 text-left"
           >
-            <div className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-[var(--accent-primary)] to-[var(--accent-secondary)] text-sm font-bold text-white">
+            <div className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-[var(--accent-primary)] to-[var(--accent-secondary)] text-xs font-bold text-white">
               {user?.user_metadata?.avatar_url ? (
                 <span className="relative block h-full w-full">
                   <Image
                     src={user.user_metadata.avatar_url}
                     alt={profileName}
                     fill
-                    sizes="36px"
+                    sizes="32px"
                     className="object-cover"
                   />
                 </span>
@@ -366,7 +366,7 @@ export default function ExplorePage() {
                 <span>{profileName.slice(0, 1).toUpperCase()}</span>
               )}
             </div>
-            <span className="truncate text-sm font-medium text-[var(--text-primary)]">
+            <span className="truncate text-xs font-medium text-[var(--text-primary)]">
               {user ? `${profileName}님` : 'PROFILE'}
             </span>
           </button>
