@@ -69,10 +69,7 @@ function LoginPageContent() {
     <div className="min-h-dvh px-6 py-10 lg:px-8">
       <div className="mx-auto grid min-h-[calc(100dvh-5rem)] max-w-6xl items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
         <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[var(--accent-text)]">
-            Shortee
-          </p>
-          <Logo className="mt-4 h-12 text-[var(--text-primary)]" />
+          <Logo className="h-12 text-[var(--text-primary)]" />
           <h1 className="mt-6 text-4xl font-bold leading-tight text-[var(--text-primary)]">
             짧은 장면을 넘기다 보면
             <br />

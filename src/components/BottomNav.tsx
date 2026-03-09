@@ -6,7 +6,16 @@ import { motion } from 'framer-motion'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { Logo } from './Logo'
 
-const tabs = [
+type NavTab = {
+  href: string
+  icon: NavTabIcon
+  label: string
+  description?: string
+}
+
+type NavTabIcon = 'home' | 'play' | 'bookmark' | 'settings'
+
+const tabs: readonly NavTab[] = [
   {
     href: '/explore',
     icon: 'home',
@@ -23,15 +32,14 @@ const tabs = [
     href: '/learning',
     icon: 'bookmark',
     label: '학습',
-    description: '좋아요, 저장, 기록',
+    description: '기록과 복습',
   },
   {
     href: '/profile',
     icon: 'settings',
     label: '설정',
-    description: '계정',
   },
-] as const
+]
 
 const icons: Record<string, (active: boolean) => ReactNode> = {
   home: (active) => (
@@ -144,10 +152,7 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
     return (
       <aside className="hidden h-full flex-col rounded-[32px] border border-[var(--border-card)] bg-[var(--bg-card)]/88 p-4 shadow-[var(--card-shadow)] backdrop-blur-xl lg:flex">
         <div className="rounded-[28px] border border-[var(--border-card)] bg-black/20 px-4 py-5">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-[var(--accent-text)]">
-            Shortee
-          </p>
-          <Logo className="mt-3 h-7 text-[var(--text-primary)]" />
+          <Logo className="h-7 text-[var(--text-primary)]" />
         </div>
 
         <nav className="mt-5 flex flex-1 flex-col gap-2">
@@ -178,7 +183,9 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
                   </div>
                   <div className="min-w-0">
                     <p className="text-sm font-semibold text-[var(--text-primary)]">{label}</p>
-                    <p className="mt-0.5 text-xs text-[var(--text-muted)]">{description}</p>
+                    {description ? (
+                      <p className="mt-0.5 text-xs text-[var(--text-muted)]">{description}</p>
+                    ) : null}
                   </div>
                 </div>
               </Link>
