@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { isBillingEnabled } from '@/lib/billing'
 import { useAuth } from '@/hooks/useAuth'
 import { SurfaceCard } from '@/components/ui/AppPage'
@@ -94,10 +94,7 @@ export function BillingManagementCard() {
     }
   }
 
-  const planLabel = useMemo(() => {
-    if (loading) return 'CHECKING'
-    return status?.isPremium ? 'PRO' : 'FREE'
-  }, [loading, status?.isPremium])
+  const planLabel = loading ? 'CHECKING' : status?.isPremium ? 'PRO' : 'FREE'
 
   return (
     <SurfaceCard className="p-6">
@@ -105,14 +102,14 @@ export function BillingManagementCard() {
         SUBSCRIPTION
       </p>
 
-      <div className="mb-3 rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
-        <p className="text-xs text-[var(--text-muted)]">PLAN</p>
-        <p className="mt-1 text-lg font-semibold text-[var(--text-primary)]">{planLabel}</p>
+      <div className="mb-3 flex items-center gap-3 rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
+        <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">PLAN</p>
+        <p className="text-sm font-semibold text-[var(--text-primary)]">{planLabel}</p>
       </div>
 
       {!billingEnabled && (
         <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-4 py-3">
-          <p className="text-sm font-semibold text-[var(--text-secondary)]">Billing disabled</p>
+          <p className="text-sm font-semibold text-[var(--text-secondary)]">결제 비활성</p>
         </div>
       )}
 
