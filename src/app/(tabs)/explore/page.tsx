@@ -13,6 +13,7 @@ import { LogoFull } from '@/components/Logo'
 import { SearchBar } from '@/components/SearchBar'
 import { VideoCard } from '@/components/VideoCard'
 import { AppPage, SectionHeader, SurfaceCard } from '@/components/ui/AppPage'
+import { useAuth } from '@/hooks/useAuth'
 import {
   catalogSeries,
   catalogVideos,
@@ -50,6 +51,7 @@ export default function ExplorePage() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const seriesSectionRef = useRef<HTMLElement | null>(null)
+  const { user } = useAuth()
   const likes = useLikeStore((state) => state.likes)
   const phrases = usePhraseStore((state) => state.phrases)
   const interests = useOnboardingStore((state) => state.interests)
@@ -76,6 +78,11 @@ export default function ExplorePage() {
     ? catalogSeries.find((item) => item.id === selectedSeriesId) ?? null
     : null
   const seriesEpisodes = selectedSeries ? getCatalogVideosBySeries(selectedSeries.id) : []
+  const profileName =
+    user?.user_metadata?.full_name ??
+    user?.user_metadata?.name ??
+    user?.email?.split('@')[0] ??
+    'PROFILE'
 
   const filteredSeries = useMemo(
     () => (activeCategory === 'all' ? catalogSeries : getCatalogSeriesByCategory(activeCategory)),
@@ -220,9 +227,9 @@ export default function ExplorePage() {
           </p>
         </div>
 
-        <section className="grid gap-6 xl:grid-cols-[0.92fr_1.08fr]">
-          <SurfaceCard className="p-6">
-            <div className="flex items-start gap-5">
+        <section className="grid min-w-0 items-start gap-6 xl:grid-cols-[0.92fr_1.08fr]">
+          <SurfaceCard className="min-w-0 p-6">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-5">
               <svg width="100" height="100" viewBox="0 0 100 100" className="shrink-0">
                 <circle
                   cx="50"
@@ -289,7 +296,7 @@ export default function ExplorePage() {
             </button>
           </SurfaceCard>
 
-          <div className="space-y-3">
+          <div className="min-w-0 space-y-3">
             {seriesEpisodes.map((video) => {
               const views = getViewCount(video.id)
               return (
@@ -329,7 +336,7 @@ export default function ExplorePage() {
 
   return (
     <AppPage>
-      <div className="mb-6 flex items-center justify-between">
+      <div className="mb-6 flex items-center justify-between gap-4">
         <LogoFull className="h-7 text-[var(--text-primary)]" />
         {cameFromVideo && returnVideoId && (
           <button
@@ -337,6 +344,31 @@ export default function ExplorePage() {
             className="rounded-full border border-[var(--border-card)] bg-[var(--bg-card)] px-4 py-2 text-sm text-[var(--text-secondary)]"
           >
             Back
+          </button>
+        )}
+        {!cameFromVideo && (
+          <button
+            onClick={() => router.push('/profile')}
+            className="flex min-w-0 items-center gap-3 rounded-full border border-[var(--border-card)] bg-[var(--bg-card)] px-3 py-2 text-left"
+          >
+            <div className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-[var(--accent-primary)] to-[var(--accent-secondary)] text-sm font-bold text-white">
+              {user?.user_metadata?.avatar_url ? (
+                <span className="relative block h-full w-full">
+                  <Image
+                    src={user.user_metadata.avatar_url}
+                    alt={profileName}
+                    fill
+                    sizes="36px"
+                    className="object-cover"
+                  />
+                </span>
+              ) : (
+                <span>{profileName.slice(0, 1).toUpperCase()}</span>
+              )}
+            </div>
+            <span className="truncate text-sm font-medium text-[var(--text-primary)]">
+              {user ? `${profileName}님` : 'PROFILE'}
+            </span>
           </button>
         )}
       </div>
