@@ -86,27 +86,19 @@ export function WatchHistory() {
     }
   }
 
-  const latestLabel = displayGroups[0]?.label ?? null
-
   return (
     <SurfaceCard className="p-5">
       <div className="mb-4 flex items-center justify-between gap-4">
         <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
           HISTORY
         </p>
-        {(latestLabel || totalWatched > 5) && (
-          <div className="flex items-center gap-3">
-            {latestLabel && (
-              <span className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]">
-                {latestLabel}
-              </span>
-            )}
-            {totalWatched > 5 && (
-              <Link href="/learning/history" className="text-sm font-medium text-[var(--accent-text)]">
-                VIEW ALL
-              </Link>
-            )}
-          </div>
+        {totalWatched > 5 && (
+          <Link
+            href="/learning/history"
+            className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]"
+          >
+            VIEW ALL
+          </Link>
         )}
       </div>
 

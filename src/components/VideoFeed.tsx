@@ -455,23 +455,17 @@ export function VideoFeed({
             }}
           >
             <div className="min-w-0 flex-1">
-              <p
-                className="text-[10px] font-semibold uppercase tracking-[0.18em]"
-                style={{ color: 'var(--player-muted)' }}
-              >
-                SERIES
-              </p>
               {seriesInfo ? (
                 <button
                   onClick={() => setShowSeriesEpisodes((current) => !current)}
-                  className="mt-1 block w-full truncate text-left text-sm font-semibold"
+                  className="block w-full truncate text-left text-sm font-semibold"
                   style={{ color: 'var(--player-text)' }}
                 >
                   {seriesInfo.title}
                 </button>
               ) : (
                 <span
-                  className="mt-1 block w-full truncate text-sm font-semibold"
+                  className="block w-full truncate text-sm font-semibold"
                   style={{ color: 'var(--player-text)' }}
                 >
                   {currentVideo.title}
