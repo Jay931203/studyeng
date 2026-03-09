@@ -1,14 +1,39 @@
 'use client'
 
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 
 interface SaveToastProps {
   show: boolean
   message: string
   placement?: 'fixed' | 'inline'
+  tone?: 'default' | 'freeze' | 'muted'
 }
 
-export function SaveToast({ show, message, placement = 'fixed' }: SaveToastProps) {
+export function SaveToast({
+  show,
+  message,
+  placement = 'fixed',
+  tone = 'default',
+}: SaveToastProps) {
+  const palette =
+    tone === 'freeze'
+      ? {
+          backgroundColor: 'var(--freeze-bg)',
+          borderColor: 'var(--freeze-border)',
+          color: 'var(--freeze-text)',
+        }
+      : tone === 'muted'
+        ? {
+            backgroundColor: 'var(--player-chip-bg)',
+            borderColor: 'var(--player-chip-border)',
+            color: 'var(--player-muted)',
+          }
+        : {
+            backgroundColor: 'var(--player-chip-bg)',
+            borderColor: 'var(--player-chip-border)',
+            color: 'var(--player-text)',
+          }
+
   return (
     <AnimatePresence>
       {show && (
@@ -21,11 +46,7 @@ export function SaveToast({ show, message, placement = 'fixed' }: SaveToastProps
               ? 'fixed left-1/2 top-12 z-50 -translate-x-1/2'
               : 'z-20'
           }`}
-          style={{
-            backgroundColor: 'var(--player-chip-bg)',
-            borderColor: 'var(--player-chip-border)',
-            color: 'var(--player-text)',
-          }}
+          style={palette}
         >
           {message}
         </motion.div>

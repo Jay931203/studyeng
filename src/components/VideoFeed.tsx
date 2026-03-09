@@ -17,7 +17,6 @@ import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { AdminReportButton } from './AdminReportButton'
 import { FloatingRemote } from './FloatingRemote'
 import { PremiumModal } from './PremiumModal'
-import { SaveToast } from './SaveToast'
 import { UnifiedControls } from './UnifiedControls'
 import { VideoPlayer } from './VideoPlayer'
 
@@ -48,7 +47,6 @@ export function VideoFeed({
     return targetIndex >= 0 ? targetIndex : 0
   })
   const [direction, setDirection] = useState(0)
-  const [showToast, setShowToast] = useState(false)
   const [showPremiumModal, setShowPremiumModal] = useState(false)
   const [showSeriesEpisodes, setShowSeriesEpisodes] = useState(false)
   const [premiumTrigger, setPremiumTrigger] = useState<'video-limit' | 'phrase-limit'>(
@@ -56,7 +54,6 @@ export function VideoFeed({
   )
   const [repeatIndicator, setRepeatIndicator] = useState<string | null>(null)
 
-  const saveToastTimerRef = useRef<number | null>(null)
   const repeatIndicatorTimerRef = useRef<number | null>(null)
   const initialReviewMarkedRef = useRef(false)
   const awardedRef = useRef<Set<string>>(new Set())
@@ -196,9 +193,6 @@ export function VideoFeed({
 
   useEffect(() => {
     return () => {
-      if (saveToastTimerRef.current) {
-        clearTimeout(saveToastTimerRef.current)
-      }
       if (repeatIndicatorTimerRef.current) {
         clearTimeout(repeatIndicatorTimerRef.current)
       }
@@ -389,7 +383,6 @@ export function VideoFeed({
             onVideoErrorSkip={currentIndex < videos.length - 1 ? handleNextVideo : undefined}
             onEmbedBlocked={handleEmbedBlocked}
             initialSeekTime={currentIndex === 0 ? initialSeekTime : undefined}
-            subtitleToast={<SaveToast show={showToast} message="SAVED" placement="inline" />}
             onPlaybackStarted={() => {
               if (
                 initialReviewMarkedRef.current ||
@@ -421,15 +414,6 @@ export function VideoFeed({
 
               incrementSavedPhrases()
               incrementMission('save-phrase')
-              setShowToast(true)
-
-              if (saveToastTimerRef.current) {
-                clearTimeout(saveToastTimerRef.current)
-              }
-
-              saveToastTimerRef.current = window.setTimeout(() => {
-                setShowToast(false)
-              }, 2000)
             }}
           >
             <FloatingRemote

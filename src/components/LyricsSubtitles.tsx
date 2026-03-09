@@ -5,6 +5,7 @@ import { usePlayerStore } from '@/stores/usePlayerStore'
 import { useAdminStore } from '@/stores/useAdminStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { DoubleTapTip } from './DoubleTapTip'
+import { SaveToast } from './SaveToast'
 import type { SubtitleEntry } from '@/data/seed-videos'
 
 interface LyricsSubtitlesProps {
@@ -14,7 +15,7 @@ interface LyricsSubtitlesProps {
   onSeek?: (time: number) => void
 }
 
-/** Threshold in px — if the pointer moves more than this, it's a scroll, not a long-press */
+/** Threshold in px ??if the pointer moves more than this, it's a scroll, not a long-press */
 const LONG_PRESS_MOVE_THRESHOLD = 10
 /** Duration in ms to trigger long-press */
 const LONG_PRESS_DURATION = 500
@@ -65,7 +66,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
 
   // Freeze mode indicator (shows briefly then fades)
   const [showFreezeIndicator, setShowFreezeIndicator] = useState(false)
-  const [freezeIndicatorText, setFreezeIndicatorText] = useState('프리즈 모드')
+  const [freezeIndicatorText, setFreezeIndicatorText] = useState('?꾨━利?紐⑤뱶')
   const freezeIndicatorTimerRef = useRef<number | null>(null)
 
   // First-time tooltip
@@ -93,7 +94,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
 
   // Detect user-initiated scroll via touch events + onScroll
   const handleTouchStart = useCallback(() => {
-    // User is touching the scroll area — any scroll events during touch are user-initiated
+    // User is touching the scroll area ??any scroll events during touch are user-initiated
     isProgrammaticScrollRef.current = false
   }, [])
 
@@ -111,7 +112,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
     // If the scroll was triggered programmatically (auto-scroll), ignore it
     if (isProgrammaticScrollRef.current) return
 
-    // User is manually scrolling — reveal all subtitles
+    // User is manually scrolling ??reveal all subtitles
     setIsUserScrolling(true)
 
     // Reset the timer on every scroll event
@@ -139,7 +140,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
     [getSavedPhraseId],
   )
 
-  // Auto-scroll to keep the active subtitle centered — smoothed with rAF
+  // Auto-scroll to keep the active subtitle centered ??smoothed with rAF
   // Skip auto-scroll while user is manually scrolling to avoid fighting with their input
   useEffect(() => {
     if (activeSubIndex < 0 || !containerRef.current) return
@@ -194,7 +195,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
   const enterFreeze = useCallback(
     (sub: SubtitleEntry, idx: number) => {
       setFreezeSubIndex(idx)
-      showFreezeNotice('프리즈 모드', 2500)
+      showFreezeNotice('?꾨━利?紐⑤뱶', 2500)
       onSeek?.(sub.start)
     },
     [onSeek, setFreezeSubIndex, showFreezeNotice],
@@ -203,7 +204,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
   // Exit freeze mode
   const exitFreeze = useCallback(() => {
     setFreezeSubIndex(null)
-    showFreezeNotice('프리즈 해제', 1500)
+    showFreezeNotice('?꾨━利??댁젣', 1500)
   }, [setFreezeSubIndex, showFreezeNotice])
 
   const handleLineClick = useCallback(
@@ -227,6 +228,8 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
           setJustSavedIdx(null)
         } else if (onSavePhrase) {
           onSavePhrase(sub)
+          setShowFreezeIndicator(false)
+          setShowFreezeTip(false)
           setJustSavedIdx(idx)
           if (savedFeedbackTimerRef.current) clearTimeout(savedFeedbackTimerRef.current)
           savedFeedbackTimerRef.current = window.setTimeout(() => setJustSavedIdx(null), 1200)
@@ -235,15 +238,15 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
       } else if (freezeSubIndex !== null) {
         // Freeze mode is active
         if (freezeSubIndex === idx) {
-          // Tap frozen subtitle → exit freeze
+          // Tap frozen subtitle ??exit freeze
           exitFreeze()
         } else {
-          // Tap different subtitle → move freeze to it
+          // Tap different subtitle ??move freeze to it
           enterFreeze(sub, idx)
         }
         lastTapRef.current = { idx, time: now }
       } else {
-        // Normal single tap → seek
+        // Normal single tap ??seek
         onSeek?.(sub.start)
         lastTapRef.current = { idx, time: now }
       }
@@ -268,10 +271,10 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
       longPressTimerRef.current = window.setTimeout(() => {
         longPressFiredRef.current = true
         if (freezeSubIndex === idx) {
-          // Long-press on already-frozen subtitle → exit freeze
+          // Long-press on already-frozen subtitle ??exit freeze
           exitFreeze()
         } else {
-          // Long-press → enter freeze on this subtitle
+          // Long-press ??enter freeze on this subtitle
           enterFreeze(sub, idx)
         }
       }, LONG_PRESS_DURATION)
@@ -335,35 +338,21 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
     >
       <DoubleTapTip />
 
-      {/* Freeze mode indicator */}
-      {showFreezeIndicator && (
-        <div
-          className="absolute left-1/2 top-3 z-20 -translate-x-1/2 rounded-full border px-3 py-1 text-xs font-medium backdrop-blur-sm"
-          style={{
-            backgroundColor: 'var(--freeze-bg)',
-            borderColor: 'var(--freeze-border)',
-            color: 'var(--freeze-text)',
-            animation: 'freezeFadeIn 300ms ease-out',
-          }}
-        >
-          {freezeIndicatorText}
-        </div>
-      )}
-
-      {/* First-time long-press tooltip */}
-      {showFreezeTip && (
-        <div
-          className="absolute left-1/2 top-3 z-20 -translate-x-1/2 rounded-full border px-3 py-1 text-xs backdrop-blur-sm"
-          style={{
-            backgroundColor: 'var(--player-chip-bg)',
-            borderColor: 'var(--player-chip-border)',
-            color: 'var(--player-muted)',
-            animation: 'freezeFadeIn 500ms ease-out',
-          }}
-        >
-          길게 눌러서 반복
-        </div>
-      )}
+      <div className="pointer-events-none absolute inset-x-0 top-3 z-20 flex justify-center px-4">
+        <SaveToast show={justSavedIdx !== null} message="SAVED" placement="inline" />
+        <SaveToast
+          show={justSavedIdx === null && showFreezeIndicator}
+          message={freezeIndicatorText}
+          placement="inline"
+          tone="freeze"
+        />
+        <SaveToast
+          show={justSavedIdx === null && !showFreezeIndicator && showFreezeTip}
+          message="HOLD TO FREEZE"
+          placement="inline"
+          tone="muted"
+        />
+      </div>
 
       <style>{`
         @keyframes freezeFadeIn {
@@ -400,7 +389,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
 
             // Show only active + 1 before/after (frozen subtitle always visible)
             // When user is manually scrolling, reveal all subtitles
-            // IMPORTANT: Never use pointer-events-none on individual items —
+            // IMPORTANT: Never use pointer-events-none on individual items ??
             // it blocks touch events and prevents scroll initiation.
             const opacityClass = isUserScrolling
               ? (isJustSaved || isActive || isFrozen
@@ -439,7 +428,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
                 }}
               >
                 <div className="relative flex items-center gap-1.5 max-w-[92%]">
-                  {/* Admin flag — inline left of text */}
+                  {/* Admin flag ??inline left of text */}
                   {adminActive && videoId && (
                     <button
                       onClick={(e) => {
@@ -464,7 +453,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
                     </button>
                   )}
 
-                  {/* Freeze repeat icon — absolutely positioned so it never shifts subtitle text */}
+                  {/* Freeze repeat icon ??absolutely positioned so it never shifts subtitle text */}
                   {isFrozen && (
                     <span
                       className="pointer-events-none absolute -left-6 top-1/2 -translate-y-1/2 select-none"
@@ -476,7 +465,7 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
                     </span>
                   )}
 
-                  {/* Saved phrase bookmark icon — absolutely positioned on the right, symmetrical with freeze icon */}
+                  {/* Saved phrase bookmark icon ??absolutely positioned on the right, symmetrical with freeze icon */}
                   {(saved || isJustSaved) && (
                     <span
                       className="pointer-events-none absolute -right-6 top-1/2 -translate-y-1/2 select-none"
