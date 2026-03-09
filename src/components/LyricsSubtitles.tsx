@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useEffect, useCallback, useId, useMemo, useState } from 'react'
+import { useRef, useEffect, useCallback, useId, useMemo, useState, type SyntheticEvent } from 'react'
 import { usePlayerStore, playRef } from '@/stores/usePlayerStore'
 import { useAdminStore } from '@/stores/useAdminStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
@@ -206,6 +206,10 @@ export function LyricsSubtitles({
     userScrollTimerRef.current = window.setTimeout(() => {
       setIsUserScrolling(false)
     }, 2500)
+  }, [])
+
+  const stopGesturePropagation = useCallback((event: SyntheticEvent) => {
+    event.stopPropagation()
   }, [])
 
   const getSavedPhraseId = useCallback(
@@ -496,12 +500,20 @@ export function LyricsSubtitles({
       <div
         ref={containerRef}
         className="h-full overflow-y-auto no-scrollbar px-4 py-2"
+        onPointerDown={stopGesturePropagation}
+        onPointerMove={stopGesturePropagation}
+        onPointerUp={stopGesturePropagation}
         onTouchStart={handleTouchStart}
+        onTouchMove={stopGesturePropagation}
         onWheel={handleWheel}
+        onWheelCapture={stopGesturePropagation}
         onScroll={handleScroll}
         style={{
           maskImage: 'linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%)',
           WebkitMaskImage: 'linear-gradient(to bottom, transparent 0%, black 12%, black 88%, transparent 100%)',
+          WebkitOverflowScrolling: 'touch',
+          overscrollBehaviorY: 'contain',
+          touchAction: 'pan-y',
         }}
       >
         <div className="flex flex-col items-center gap-2">
