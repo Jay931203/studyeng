@@ -62,12 +62,13 @@ export function VideoPlayer({
   const { subtitles: fetchedSubtitles, loading: transcriptLoading } = useTranscript(youtubeId)
 
   const subtitles = useMemo(() => {
-    const raw = fetchedSubtitles.length > 0 ? fetchedSubtitles : propSubtitles
+    const raw =
+      transcriptLoading && fetchedSubtitles.length === 0 ? propSubtitles : fetchedSubtitles
     if (clipEnd > clipStart) {
       return raw.filter((subtitle) => subtitle.end > clipStart && subtitle.start < clipEnd)
     }
     return raw
-  }, [clipEnd, clipStart, fetchedSubtitles, propSubtitles])
+  }, [clipEnd, clipStart, fetchedSubtitles, propSubtitles, transcriptLoading])
 
   const { ready, playbackStarted, play, pause, seekTo, player, videoError, clearVideoError } =
     useYouTubePlayer(

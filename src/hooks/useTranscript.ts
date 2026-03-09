@@ -123,7 +123,11 @@ async function fetchWithStaticFallback(youtubeId: string): Promise<SubtitleEntry
       const staticResponse = await fetch(`/transcripts/${youtubeId}.json`)
       if (staticResponse.ok) {
         const data: unknown = await staticResponse.json()
-        if (Array.isArray(data) && data.length > 0) {
+        if (Array.isArray(data)) {
+          if (data.length === 0) {
+            return []
+          }
+
           staticData = data as SubtitleEntry[]
           const hasKorean = staticData.some((entry) => entry.ko && entry.ko.trim() !== '')
           if (hasKorean) {
