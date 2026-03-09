@@ -265,6 +265,9 @@ export function UnifiedControls({
   const subtitleLabel = subtitleMode === 'none' ? 'Off' : subtitleMode === 'en' ? 'En' : 'En/Ko'
   const speedLabel = playbackRate === 1 ? '1x' : `${playbackRate}x`
   const speedActive = playbackRate !== 1
+  const repeatLabel = repeatMode === 'off' ? '1x' : repeatMode === 'x2' ? '2x' : '3x'
+  const playbackOrderLabel = playbackOrderMode === 'shuffle' ? '랜덤' : '순차'
+  const playbackSummaryLabel = `${repeatLabel} · ${playbackOrderLabel}`
   const playbackOptionsActive = repeatMode !== 'off' || playbackOrderMode !== 'sequence'
   const canSubmitReport =
     Boolean(videoId && youtubeId) && reportDescription.trim().length > 0 && !reportSubmitting
@@ -277,6 +280,7 @@ export function UnifiedControls({
     : 'relative flex h-8 w-8 items-center justify-center rounded-full transition-colors'
   const dividerClassName = compact ? 'h-3.5 w-px shrink-0' : 'h-4 w-px shrink-0'
   const iconSizeClassName = compact ? 'h-3.5 w-3.5' : 'h-4 w-4'
+  const gameModeIconSizeClassName = compact ? 'h-4 w-4' : 'h-[18px] w-[18px]'
   const repeatIconSizeClassName = compact ? 'h-3 w-3' : 'h-3.5 w-3.5'
   const playbackTriggerClassName = compact
     ? 'flex h-7 items-center gap-1 rounded-full px-1.5 text-[10px] font-semibold transition-colors'
@@ -709,7 +713,7 @@ export function UnifiedControls({
             >
               <path d="M4.755 10.059a7.5 7.5 0 0112.548-3.364l1.903 1.903H14.25a.75.75 0 000 1.5h6a.75.75 0 00.75-.75v-6a.75.75 0 00-1.5 0v3.068l-1.903-1.903A9 9 0 003.306 9.67a.75.75 0 101.45.388zm14.49 3.882a7.5 7.5 0 01-12.548 3.364l-1.903-1.903H9.75a.75.75 0 000-1.5h-6a.75.75 0 00-.75.75v6a.75.75 0 001.5 0v-3.068l1.903 1.903A9 9 0 0020.694 14.33a.75.75 0 10-1.45-.388z" />
             </svg>
-            <span>Playback</span>
+            <span>{playbackSummaryLabel}</span>
           </button>
 
           {isLooping && (
@@ -754,7 +758,7 @@ export function UnifiedControls({
               fill="none"
               stroke={gameModeEnabled ? 'var(--accent-text)' : 'var(--player-text)'}
               strokeWidth={1.9}
-              className={iconSizeClassName}
+              className={gameModeIconSizeClassName}
               animate={gameModeEnabled ? { scale: [1, 1.35, 0.9, 1.1, 1] } : { scale: 1 }}
               transition={
                 gameModeEnabled

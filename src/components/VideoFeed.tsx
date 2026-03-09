@@ -91,6 +91,7 @@ export function VideoFeed({
     finalized: false,
     videoId: null,
   })
+  const currentVideoId = videos[currentIndex]?.id
 
   const savePhrase = usePhraseStore((state) => state.savePhrase)
   const incrementReview = usePhraseStore((state) => state.incrementReview)
@@ -98,6 +99,9 @@ export function VideoFeed({
   const recordCompletion = useWatchHistoryStore((state) => state.recordCompletion)
   const incrementViewCount = useWatchHistoryStore((state) => state.incrementViewCount)
   const getViewCount = useWatchHistoryStore((state) => state.getViewCount)
+  const currentVideoViewCount = useWatchHistoryStore((state) =>
+    currentVideoId ? (state.viewCounts[currentVideoId] ?? 0) : 0,
+  )
   const registerImpression = useRecommendationStore((state) => state.registerImpression)
   const recordBehaviorCompletion = useRecommendationStore((state) => state.recordCompletion)
   const recordSkip = useRecommendationStore((state) => state.recordSkip)
@@ -544,6 +548,10 @@ export function VideoFeed({
   const seriesInfo = currentVideo.seriesId
     ? allSeries.find((series) => series.id === currentVideo.seriesId)
     : null
+  const currentVideoMetaLabel =
+    seriesInfo && currentVideo.episodeNumber != null
+      ? `EPISODE ${currentVideo.episodeNumber}`
+      : 'NOW PLAYING'
 
   return (
     <div
@@ -686,14 +694,24 @@ export function VideoFeed({
                   {currentVideo.title}
                 </span>
               )}
-              <p
-                className="mt-0.5 truncate text-[10px] sm:text-[11px]"
+              <div
+                className="mt-0.5 flex min-w-0 items-center gap-1 text-[10px] sm:text-[11px]"
                 style={{ color: 'var(--player-muted)' }}
               >
-                {seriesInfo && currentVideo.episodeNumber != null
-                  ? `EPISODE ${currentVideo.episodeNumber}`
-                  : 'NOW PLAYING'}
-              </p>
+                <span className="truncate">{currentVideoMetaLabel}</span>
+                {currentVideoViewCount > 0 && (
+                  <span
+                    className="shrink-0 rounded-full border px-1.5 py-0.5 text-[9px] font-semibold leading-none sm:text-[10px]"
+                    style={{
+                      backgroundColor: 'var(--player-panel)',
+                      borderColor: 'var(--player-control-border)',
+                      color: 'var(--player-text)',
+                    }}
+                  >
+                    x{currentVideoViewCount}
+                  </span>
+                )}
+              </div>
             </div>
 
             <div

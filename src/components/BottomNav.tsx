@@ -139,7 +139,9 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
                 }`}
               >
                 <div className="relative z-10">{icons[icon](active)}</div>
-                <span className="text-[10px] font-medium">{label}</span>
+                <span className="whitespace-nowrap text-[10px] font-medium leading-none">
+                  {label}
+                </span>
               </Link>
             )
           })}
