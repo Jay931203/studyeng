@@ -328,6 +328,14 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
   }, [])
 
   const showKo = subtitleMode === 'en-ko'
+  const activeNotice =
+    justSavedIdx !== null
+      ? { message: 'SAVED', tone: 'default' as const }
+      : showFreezeIndicator
+        ? { message: freezeIndicatorText, tone: 'freeze' as const }
+        : showFreezeTip
+          ? { message: 'HOLD TO FREEZE', tone: 'muted' as const }
+          : null
 
   if (subtitleMode === 'none' || subtitles.length === 0) return null
 
@@ -339,18 +347,11 @@ export function LyricsSubtitles({ subtitles, videoId, onSavePhrase, onSeek }: Ly
       <DoubleTapTip />
 
       <div className="pointer-events-none absolute inset-x-0 top-3 z-20 flex justify-center px-4">
-        <SaveToast show={justSavedIdx !== null} message="SAVED" placement="inline" />
         <SaveToast
-          show={justSavedIdx === null && showFreezeIndicator}
-          message={freezeIndicatorText}
+          show={Boolean(activeNotice)}
+          message={activeNotice?.message ?? ''}
           placement="inline"
-          tone="freeze"
-        />
-        <SaveToast
-          show={justSavedIdx === null && !showFreezeIndicator && showFreezeTip}
-          message="HOLD TO FREEZE"
-          placement="inline"
-          tone="muted"
+          tone={activeNotice?.tone ?? 'default'}
         />
       </div>
 
