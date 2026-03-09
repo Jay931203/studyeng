@@ -9,10 +9,10 @@
     {
       "id": "L_PWbnHABsM-0",
       "en": "Oh, ooh, what's, what's that?",
-      "ko": "오, 어, 그게, 그게 뭐야?",
+      "ko": "오, 어, 그게 뭐야?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "A1",
@@ -23,12 +23,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -48,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,7 +58,7 @@
       "ko": "와.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "A1",
@@ -71,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -85,18 +83,18 @@
       "ko": "너 자신을 정말 높게 평가하네.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -108,7 +106,7 @@
       "ko": "아니, 그건 내 팔이야.",
       "tags": {
         "functions": [
-          "F08"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "A1",
@@ -119,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -128,13 +126,13 @@
     {
       "id": "L_PWbnHABsM-5",
       "en": "Oh, I see, I thought you just really, really liked your new couch.",
-      "ko": "아, 알겠어, 네가 새 소파를 정말, 정말 좋아한다고 생각했어.",
+      "ko": "아, 알겠어. 네가 새 소파를 정말, 정말 좋아한다고 생각했어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -142,7 +140,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -154,7 +152,7 @@
       "ko": "알겠어, 그냥 내 뒤를 따라와.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "A2",
@@ -163,9 +161,10 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -188,10 +187,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -200,7 +203,7 @@
       "ko": "자, 찰리.",
       "tags": {
         "functions": [
-          "F25"
+          "F35"
         ],
         "situation": "S09",
         "cefr": "A1",
@@ -209,9 +212,10 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -223,18 +227,18 @@
       "ko": "좋아, 자, 시작하자.",
       "tags": {
         "functions": [
-          "F52"
+          "F01"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -252,12 +256,12 @@
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -269,7 +273,7 @@
       "ko": "돌려, 돌려, 돌려.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "A1",
@@ -280,7 +284,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -292,18 +296,19 @@
       "ko": "더 이상 돌릴 수 없을 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F11",
+          "F40"
         ],
         "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -315,18 +320,18 @@
       "ko": "맞지 않을 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
         "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -338,7 +343,7 @@
       "ko": "아, 괜찮아, 자, 위로, 위로, 위로.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "A2",
@@ -347,9 +352,10 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -361,18 +367,18 @@
       "ko": "그래, 시작하자, 회전.",
       "tags": {
         "functions": [
-          "F35"
+          "F07"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -384,7 +390,7 @@
       "ko": "회전.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "A1",
@@ -395,7 +401,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -409,7 +415,7 @@
       "ko": "회전.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "A1",
@@ -420,7 +426,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -428,5 +434,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "fe3ce7ac12b31e8d"
 }

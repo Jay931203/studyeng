@@ -9,44 +9,46 @@
     {
       "id": "w-oGpGf03Ag-0",
       "en": "I'm hurt I'm actually hurt that you",
-      "ko": "난 상처받았어, 정말 상처받았어 네가",
+      "ko": "정말 아파, 네가 그렇게 생각하다니",
       "tags": {
         "functions": [
-          "F20"
+          "F11"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S28",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
     {
       "id": "w-oGpGf03Ag-1",
       "en": "Would think I would send you any of",
-      "ko": "내가 그런 것들을 사랑이 아닌 다른 이유로 보낼 거라고 생각하다니",
+      "ko": "내가 너에게 그런 걸 보낼 거라고 생각하다니",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -55,44 +57,46 @@
     {
       "id": "w-oGpGf03Ag-2",
       "en": "Those things out of anything other than",
-      "ko": "너에게 보낼 거라고 생각하다니",
+      "ko": "그런 것들을 다른 이유로 보낼 거라고",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
       "id": "w-oGpGf03Ag-3",
       "en": "Love heart can't can't a guy send a",
-      "ko": "남자가 여자친구의 사무실에",
+      "ko": "사랑의 마음, 남자가 보낼 수 없는 걸?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -101,21 +105,21 @@
     {
       "id": "w-oGpGf03Ag-4",
       "en": "Barbershop quartet to his girlfriend's",
-      "ko": "바버샵 콰르텟을 보낼 수 없는 건가?",
+      "ko": "여자친구에게 바버샵 콰르텟을?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -124,21 +128,21 @@
     {
       "id": "w-oGpGf03Ag-5",
       "en": "Office anymore like you were marking",
-      "ko": "마치 네 영역을 표시하는 것처럼",
+      "ko": "더 이상 사무실에서 네 영역을 표시하듯이",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -147,21 +151,21 @@
     {
       "id": "w-oGpGf03Ag-6",
       "en": "Your territory I mean you might as well",
-      "ko": "들어와서 그렇게 할 수도 있었겠지",
+      "ko": "네 영역이니까, 그냥 들어와도 돼.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,33 +177,36 @@
       "ko": "난 절대 그렇게 하지 않아",
       "tags": {
         "functions": [
-          "F11"
+          "F43"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
     {
       "id": "w-oGpGf03Ag-8",
       "en": "I know what's going on here okay mark",
-      "ko": "여기서 무슨 일이 일어나고 있는지 알아, 마크",
+      "ko": "여기서 무슨 일이 일어나고 있는지 알아, 마크.",
       "tags": {
         "functions": [
-          "F06"
+          "F02"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -207,7 +214,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -216,13 +223,13 @@
     {
       "id": "w-oGpGf03Ag-9",
       "en": "Explained it all to me he said this is",
-      "ko": "마크가 모든 걸 설명해줬어, 그가 이게",
+      "ko": "여기서 무슨 일이 일어나고 있는지 알아, 마크.",
       "tags": {
         "functions": [
           "F05"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,7 +237,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -239,21 +246,21 @@
     {
       "id": "w-oGpGf03Ag-10",
       "en": "What you guys do yeah well if if Mark",
-      "ko": "너희가 하는 일이라고 했어, 그래, 만약 마크가",
+      "ko": "너희가 하는 일이라고 했어, 그래, 만약 마크가.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -262,21 +269,21 @@
     {
       "id": "w-oGpGf03Ag-11",
       "en": "Said that that marks an idiot",
-      "ko": "그렇게 말했다면 그는 바보야",
+      "ko": "마크는 바보라고 했어.",
       "tags": {
         "functions": [
-          "F12"
+          "F05"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,10 +295,10 @@
       "ko": "마크는 천재야, 여기서 무슨 일이 일어나고 있는지 못 보겠어?",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -299,7 +306,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -308,13 +315,13 @@
     {
       "id": "w-oGpGf03Ag-13",
       "en": "Happening here instead of hitting on her right away he's becoming her confidant",
-      "ko": "그는 바로 그녀에게 접근하는 대신, 그녀의 신뢰를 얻고 있어",
+      "ko": "그는 바로 그녀에게 접근하는 대신, 그녀의 신뢰를 얻고 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -322,7 +329,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -331,22 +338,24 @@
     {
       "id": "w-oGpGf03Ag-14",
       "en": "Now he's gonna be the guy that she goes",
-      "ko": "이제 그녀는 너에 대해 불평할 때 그에게 가게 될 거야",
+      "ko": "이제 그녀가 찾아갈 남자가 될 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -357,43 +366,46 @@
       "ko": "난 어떻게 해야 하지? 그럼 그녀에게 뮤지컬을 보내는 건 어때?",
       "tags": {
         "functions": [
-          "F06"
+          "F36"
         ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G09",
+          "G19"
+        ],
+        "flags": []
       }
     },
     {
       "id": "w-oGpGf03Ag-16",
-      "en": "Oh no you already did that",
+      "en": "Bug oh no you already did that",
       "ko": "아, 아니, 이미 그걸 했구나",
       "tags": {
         "functions": [
-          "F07"
+          "F19"
         ],
-        "situation": "S08",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E04"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -405,19 +417,21 @@
       "ko": "자, 이제 너가 직접 가야 해",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -425,23 +439,25 @@
     {
       "id": "w-oGpGf03Ag-18",
       "en": "There yourself now okay make a few surprise visits I don't know you guys",
-      "ko": "몇 번 놀라운 방문을 해봐, 난 너희가 어떻게 할지 모르겠어",
+      "ko": "몇 번 놀라운 방문을 해봐, 난 너희가 어떻게 할지 모르겠어.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -451,10 +467,10 @@
       "ko": "자, 좋아, 아무것도 하지 말고 여기 앉아서 이야기해.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -462,7 +478,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -474,9 +490,9 @@
       "ko": "그동안 그녀는 너에 대해 그와 이야기하고 있고 그는 아주 감성적이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S08",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -485,7 +501,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -494,44 +510,47 @@
     {
       "id": "w-oGpGf03Ag-21",
       "en": "Sensitive and she starts thinking maybe this is the guy for me because he",
-      "ko": "그가 나를 이해하니까, 그녀는 아마도 이 남자가 나에게 맞는 사람인가 생각할 거야.",
+      "ko": "그가 나를 이해해주니까, 아마 이 남자가 나한테 맞는 사람일지도 몰라.",
       "tags": {
         "functions": [
           "F14"
         ],
-        "situation": "S08",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17",
+          "G18"
+        ],
         "flags": []
       }
     },
     {
       "id": "w-oGpGf03Ag-22",
       "en": "Understands me and before you know it",
-      "ko": "모르겠어, 그러다 보면.",
+      "ko": "너도 모르는 사이에",
       "tags": {
         "functions": [
-          "F09"
+          "F03"
         ],
-        "situation": "S08",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -540,21 +559,21 @@
     {
       "id": "w-oGpGf03Ag-23",
       "en": "She's with him and you'll be all oh man",
-      "ko": "그와 함께하게 될 거고, 너는 \"아, 맙소사\"라고 할 거야.",
+      "ko": "그녀는 그와 함께 있고, 너는 아, 맙소사 하고 있을 거야.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -563,12 +582,12 @@
     {
       "id": "w-oGpGf03Ag-24",
       "en": "And he'll be all yes",
-      "ko": "그리고 그는 \"그래\"라고 할 거고.",
+      "ko": "그는 응, 맞아.",
       "tags": {
         "functions": [
-          "F09"
+          "F44"
         ],
-        "situation": "S08",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -577,7 +596,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -586,12 +605,37 @@
     {
       "id": "w-oGpGf03Ag-25",
       "en": "And us will be like oh dude and pretty",
-      "ko": "우리는 \"야, 친구\"라고 할 거야.",
+      "ko": "우리는 아, 친구야, 멋지다 하고 있을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "w-oGpGf03Ag-26",
+      "en": "Soon you'll be like I can't go Rachel",
+      "ko": "곧 너는 '나는 못 가, 레이첼'이라고 할 거야.",
+      "tags": {
+        "functions": [
+          "F43"
+        ],
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -600,53 +644,32 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "w-oGpGf03Ag-26",
-      "en": "Soon you'll be like I can't go Rachel",
-      "ko": "너는 \"나는 레이첼과 함께할 수 없어\"라고 할 거야.",
-      "tags": {
-        "functions": [
-          "F09"
+        "grammar_intent": [
+          "G01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
         "flags": []
       }
     },
     {
       "id": "w-oGpGf03Ag-27",
       "en": "And Mark there will be like man get over",
-      "ko": "그리고 마크는 \"이제 그만해\"라고 할 거야.",
+      "ko": "그리고 마크는 '이제 그만 잊어'라고 할 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -655,12 +678,12 @@
     {
       "id": "w-oGpGf03Ag-28",
       "en": "It it's been four years he paints quite",
-      "ko": "4년이 지났고 그는 꽤 잘 그려.",
+      "ko": "4년이 지났고, 그는 꽤 잘 그려.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -669,21 +692,23 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
       "id": "w-oGpGf03Ag-29",
       "en": "A picture doesn't mean",
-      "ko": "그림이 의미하는 것은 아니다.",
+      "ko": "그림이 의미하는 건 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -692,11 +717,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "cae50f284df20e9a"
 }

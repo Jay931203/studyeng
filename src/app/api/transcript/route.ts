@@ -85,7 +85,7 @@ function groupTranscriptEntries(
     })
   }
 
-  return subtitles
+  return normalizeGeneratedEntries(subtitles)
 }
 
 function endsWithSentenceBoundary(text: string): boolean {
@@ -105,6 +105,84 @@ function decodeHTMLEntities(text: string): string {
     .replace(/&#39;/g, "'")
     .replace(/&apos;/g, "'")
     .replace(/\n/g, ' ')
+}
+
+function normalizeGeneratedEntries(entries: TranscriptSubtitle[]): TranscriptSubtitle[] {
+  if (entries.length === 0) return []
+
+  const normalized: TranscriptSubtitle[] = []
+  const sorted = [...entries].sort((a, b) => a.start - b.start || a.end - b.end)
+
+  for (const raw of sorted) {
+    const entry: TranscriptSubtitle = {
+      ...raw,
+      start: round2(Math.max(0, raw.start)),
+      end: round2(Math.max(raw.end, raw.start + 0.25)),
+    }
+
+    const prev = normalized[normalized.length - 1]
+    if (!prev) {
+      normalized.push(entry)
+      continue
+    }
+
+    if (isLikelyProgressiveDuplicate(prev, entry)) {
+      normalized[normalized.length - 1] = pickMoreCompleteTimedEntry(prev, entry)
+      continue
+    }
+
+    if (entry.start < prev.end) {
+      const boundary = round2((prev.end + entry.start) / 2)
+      prev.end = round2(Math.max(prev.start + 0.25, boundary))
+      entry.start = prev.end
+    }
+
+    if (entry.end <= entry.start) {
+      entry.end = round2(entry.start + 0.25)
+    }
+
+    normalized.push(entry)
+  }
+
+  return normalized
+}
+
+function isLikelyProgressiveDuplicate(
+  previous: TranscriptSubtitle,
+  next: TranscriptSubtitle,
+): boolean {
+  const prevText = normalizeComparableText(previous.en)
+  const nextText = normalizeComparableText(next.en)
+  if (!prevText || !nextText) return false
+  if (next.start > previous.end + 0.15) return false
+  if (prevText === nextText) return true
+
+  const shorter = prevText.length <= nextText.length ? prevText : nextText
+  const longer = prevText.length <= nextText.length ? nextText : prevText
+  return shorter.length >= 12 && longer.includes(shorter)
+}
+
+function pickMoreCompleteTimedEntry(
+  previous: TranscriptSubtitle,
+  next: TranscriptSubtitle,
+): TranscriptSubtitle {
+  const prevText = normalizeComparableText(previous.en)
+  const nextText = normalizeComparableText(next.en)
+  const keepNext = nextText.length >= prevText.length
+  const chosen = keepNext ? next : previous
+
+  return {
+    ...chosen,
+    start: round2(Math.min(previous.start, next.start)),
+    end: round2(Math.max(previous.end, next.end)),
+  }
+}
+
+function normalizeComparableText(value: string): string {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim()
 }
 
 /**

@@ -9,21 +9,21 @@
     {
       "id": "7dVyEbHRTlU-0",
       "en": "Chandler's coming and he says he has",
-      "ko": "챈들러가 온대, 엄청난 소식이 있다고 해.",
+      "ko": "챈들러가 온다고 하고, 대단한 소식이 있다고 해.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -32,45 +32,49 @@
     {
       "id": "7dVyEbHRTlU-1",
       "en": "Like this incredible news so when he",
-      "ko": "그래서 그가 오면 다들 알잖아,",
+      "ko": "이런 대단한 소식이니까 그가 올 때.",
       "tags": {
         "functions": [
-          "F01"
+          "F18"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
     {
       "id": "7dVyEbHRTlU-2",
       "en": "Gets here it's all like you know hey",
-      "ko": "아, 신경 쓰지 마, 하지만 정말 좋은 소식이었어.",
+      "ko": "그가 오면, 다들 아는 척 하겠지.",
       "tags": {
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -78,45 +82,52 @@
     {
       "id": "7dVyEbHRTlU-3",
       "en": "Never mind but it was gonna be really",
-      "ko": "그래서 직장에서의 평범한 하루야.",
+      "ko": "아무튼, 정말 대단할 거였어.",
       "tags": {
         "functions": [
-          "F01"
+          "F43"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
     {
       "id": "7dVyEbHRTlU-4",
       "en": "Good so it's a typical day at work come",
-      "ko": "들어가서 숫자를 입력하고 있는데 빅 알이",
+      "ko": "좋아, 그래서 평범한 하루가 될 거야.",
       "tags": {
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -124,30 +135,32 @@
     {
       "id": "7dVyEbHRTlU-5",
       "en": "In putting my numbers and Big Al calls",
-      "ko": "나를 사무실로 부르더니",
+      "ko": "내 숫자를 정리하고 있는데, 빅 알이 전화해.",
       "tags": {
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
       "id": "7dVyEbHRTlU-6",
       "en": "Me into his office and tells me he wants",
-      "ko": "프로세싱 슈퍼바이저로 승진시키고 싶다고 해.",
+      "ko": "내 사무실로 불러서 승진시키고 싶다고 해.",
       "tags": {
         "functions": [
           "F01"
@@ -156,12 +169,12 @@
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -170,21 +183,21 @@
     {
       "id": "7dVyEbHRTlU-7",
       "en": "To make me processing supervisor so I",
-      "ko": "그래서 나는 그만두기로 했어.",
+      "ko": "프로세싱 슈퍼바이저로 승진시키고 싶다고 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +209,18 @@
       "ko": "왜냐면 이건 임시직이었거든.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -215,22 +228,22 @@
     },
     {
       "id": "7dVyEbHRTlU-9",
-      "en": "Chandler you've been here for five years",
+      "en": "Job Chandler you've been here for five years",
       "ko": "챈들러, 너 여기서 5년이나 있었잖아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -239,22 +252,24 @@
     {
       "id": "7dVyEbHRTlU-10",
       "en": "If I took this promotion he'll be like",
-      "ko": "만약 내가 이 승진을 받으면",
+      "ko": "만약 내가 이 승진을 받으면.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -265,20 +280,22 @@
       "ko": "내가 실제로 하는 일이 이거라는 걸 인정하는 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F11"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S04",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -288,19 +305,21 @@
       "ko": "그래서 돈이 더 많이 들어?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -308,21 +327,21 @@
     {
       "id": "7dVyEbHRTlU-13",
       "en": "Twelve o'clock at night worrying about",
-      "ko": "상관없어, 그냥 그런 사람 되고 싶지 않아.",
+      "ko": "밤 12시까지 사무실에 앉아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -331,44 +350,46 @@
     {
       "id": "7dVyEbHRTlU-14",
       "en": "The weenus the the weenus weekly",
-      "ko": "밤 12시까지 사무실에 앉아",
+      "ko": "위너스 위클리.",
       "tags": {
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
       "id": "7dVyEbHRTlU-15",
       "en": "Estimated net usage systems processing",
-      "ko": "위너스, 위너스 주간 추정 순 사용량 시스템 처리",
+      "ko": "예상 순 사용 시스템 처리.",
       "tags": {
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -380,19 +401,21 @@
       "ko": "그럼 너 뭐 할 건데?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -403,41 +426,47 @@
       "ko": "모르겠어, 그게 문제야. 내가 뭘 하고 싶은지 모르겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X04",
+          "X05"
         ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G15",
+          "G17"
+        ],
         "flags": []
       }
     },
     {
       "id": "7dVyEbHRTlU-18",
       "en": "Figure it out working there oh I have",
-      "ko": "그냥 거기서 일하면서는 해결할 수 없다는 것만 알아.",
+      "ko": "거기서 해결해야 해, 아, 나는.",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -446,44 +475,46 @@
     {
       "id": "7dVyEbHRTlU-19",
       "en": "Something you can do I have this new",
-      "ko": "뭘 할 수 있는지 모르겠어.",
+      "ko": "새 마사지 고객 스티브가 있는데,",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S48",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G23"
+        ],
         "flags": []
       }
     },
     {
       "id": "7dVyEbHRTlU-20",
       "en": "Massage client Steve anyway he's opening",
-      "ko": "마사지 고객 스티브가 있는데, 그는 레스토랑을 열고 있어.",
+      "ko": "새 마사지 고객 스티브가 있는데,",
       "tags": {
         "functions": [
-          "F01"
+          "F48"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -492,214 +523,7 @@
     {
       "id": "7dVyEbHRTlU-21",
       "en": "Up a restaurant and he's looking for a head chef",
-      "ko": "주방장을 찾고 있어.",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "7dVyEbHRTlU-22",
-      "en": "Hi there oh yeah no I know your chef I",
-      "ko": "안녕하세요. 아, 네, 당신의 셰프를 알아요.",
-      "tags": {
-        "functions": [
-          "F10"
-        ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "7dVyEbHRTlU-23",
-      "en": "Know and I thought of you first but um",
-      "ko": "먼저 당신을 생각했지만,",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "7dVyEbHRTlU-24",
-      "en": "Chandler's the one who needs a job right",
-      "ko": "챈들러가 지금 일자리가 필요하잖아.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "7dVyEbHRTlU-25",
-      "en": "Now so yeah I just don't have a lot of",
-      "ko": "그래서 나는 요리 경험이 별로 없어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "7dVyEbHRTlU-26",
-      "en": "Cheffing experience unless it's an all",
-      "ko": "만약 모든 게 토스트로만 이루어진 레스토랑이라면 모르겠지만.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "7dVyEbHRTlU-27",
-      "en": "Toast restaurant yeah yeah well what",
-      "ko": "어떤 음식을 원해?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "7dVyEbHRTlU-28",
-      "en": "Kind of food is he looking for well he wants to do something eclectic so he's",
-      "ko": "그는 다양한 음식을 하고 싶어 해서",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "7dVyEbHRTlU-29",
-      "en": "Looking for someone who can you know",
-      "ko": "전체 메뉴를 만들 수 있는 사람을 찾고 있어.",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "7dVyEbHRTlU-30",
-      "en": "Create the entire menu oh my god I know",
-      "ko": "오 마이 갓, 알아.",
+      "ko": "레스토랑을 열고, 그는 주방장을 찾고 있어.",
       "tags": {
         "functions": [
           "F02"
@@ -708,36 +532,254 @@
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "7dVyEbHRTlU-31",
-      "en": "So what do you think thanks Pheebs I",
-      "ko": "그래서 너는 어떻게 생각해? 고마워, 피브스.",
+      "id": "7dVyEbHRTlU-22",
+      "en": "Hi there oh yeah no I know your chef I",
+      "ko": "안녕하세요, 아 네, 당신의 셰프를 알아요.",
       "tags": {
         "functions": [
-          "F06"
+          "F25"
+        ],
+        "situation": "S05",
+        "cefr": "A2",
+        "register": "R5",
+        "emotions": [
+          "E07"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "7dVyEbHRTlU-23",
+      "en": "Know and I thought of you first but um",
+      "ko": "알고 있고, 당신이 먼저 떠올랐어요, 하지만 음.",
+      "tags": {
+        "functions": [
+          "F03"
         ],
         "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "7dVyEbHRTlU-24",
+      "en": "Chandler's the one who needs a job right",
+      "ko": "챈들러가 지금 일자리가 필요하죠?",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E14"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "7dVyEbHRTlU-25",
+      "en": "Now so yeah I just don't have a lot of",
+      "ko": "그래서 네, 저는 요리 경험이 별로 없어요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R5",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "7dVyEbHRTlU-26",
+      "en": "Cheffing experience unless it's an all",
+      "ko": "만약 모든 것이 토스트인 레스토랑이라면요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S15",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "7dVyEbHRTlU-27",
+      "en": "Toast restaurant yeah yeah well what",
+      "ko": "네, 네, 그럼 어떤 음식을 원하나요?",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S05",
+        "cefr": "A2",
+        "register": "R5",
+        "emotions": [
+          "E14"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V10",
         "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "7dVyEbHRTlU-28",
+      "en": "Kind of food is he looking for well he wants to do something eclectic so he's",
+      "ko": "그는 다양한 음식을 하고 싶어 해서,",
+      "tags": {
+        "functions": [
+          "F02"
+        ],
+        "situation": "S09",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E14"
+        ],
+        "expression_types": [
+          "X06",
+          "X07"
+        ],
+        "vibe": "V02",
+        "power": [],
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "7dVyEbHRTlU-29",
+      "en": "Looking for someone who can you know",
+      "ko": "그런 걸 할 수 있는 사람을 찾고 있어요.",
+      "tags": {
+        "functions": [
+          "F34"
+        ],
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E14"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G02"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "7dVyEbHRTlU-30",
+      "en": "Create the entire menu oh my god I know",
+      "ko": "메뉴를 다 만들어야 해, 세상에! 나 알아.",
+      "tags": {
+        "functions": [
+          "F18"
+        ],
+        "situation": "S05",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E05"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [
+          "G07"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "7dVyEbHRTlU-31",
+      "en": "So what do you think thanks Pheebs I",
+      "ko": "그래서 어떻게 생각해? 고마워, 피브스.",
+      "tags": {
+        "functions": [
+          "F27"
+        ],
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E14"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -745,21 +787,21 @@
     {
       "id": "7dVyEbHRTlU-32",
       "en": "Just don't really see myself in a big",
-      "ko": "나는 그냥 큰 흰색 모자 쓴 모습이 잘 안 떠올라.",
+      "ko": "그냥 큰... 내 모습이 잘 안 보이네.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -768,25 +810,26 @@
     {
       "id": "7dVyEbHRTlU-33",
       "en": "White hat okay Oh Monica guess what",
-      "ko": "오, 모니카, 뭐가 생겼어!",
+      "ko": "화이트햇, 알겠어? 오, 모니카, 뭐냐면!",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "0b3b3b30b27d0b43"
 }

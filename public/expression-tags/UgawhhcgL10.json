@@ -9,44 +9,46 @@
     {
       "id": "UgawhhcgL10-0",
       "en": "Some of you may have seen last week there were stories about me being banned from a",
-      "ko": "여러분 중 일부는 지난주에 제가 한 식당에서 금지당했다는 이야기를 들었을 수도 있습니다.",
+      "ko": "지난주에 제가 한 식당에서 출입 금지를 당했다는",
       "tags": {
         "functions": [
-          "F01"
+          "F47"
         ],
         "situation": "S34",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
     {
       "id": "UgawhhcgL10-1",
       "en": "restaurant and at the time I considered, you know, like tweeting about it or Instagramming",
-      "ko": "그때 저는 트위터나 인스타그램에 올릴까 고민했어요.",
+      "ko": "기사를 보신 분도 있을 텐데요. 그때 저는 그 일을 트윗하거나",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -55,56 +57,60 @@
     {
       "id": "UgawhhcgL10-2",
       "en": "about it.",
-      "ko": "이런 순간이 오면 저는 영국식 태도를 취하는 편이에요.",
+      "ko": "인스타그램에 올릴까 고민했어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "A1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
       "id": "UgawhhcgL10-3",
       "en": "Like, whenever these sorts of moments come my way, I like to adopt, you know, quite a",
-      "ko": "즉, 침착하게 계속 나아가자는 거죠.",
+      "ko": "이런 일이 생기면 저는 대체로",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
         "situation": "S34",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
     {
       "id": "UgawhhcgL10-4",
       "en": "British attitude of sort of, you know, keep calm and carry on.",
-      "ko": "저에 대한 이야기가 쓰일 것이고, 불평하지 않고 설명하지 않겠다는 게 제 모토입니다.",
+      "ko": "영국식으로 '침착하게 그냥 넘기자'는 태도를 취하는 편이에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "B1",
@@ -113,9 +119,10 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -124,240 +131,35 @@
     {
       "id": "UgawhhcgL10-5",
       "en": "Things are going to get written about me. Never complain. Never explain.",
-      "ko": "하지만 아버지가 토요일에 저에게 지적하셨죠. 아들, 너는 불평했으니 설명할 필요가 있을 것 같다고요.",
+      "ko": "어차피 저에 대한 기사는 써질 테니, 불평하지도 말고 해명하지도 말자.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
         "situation": "S34",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
     {
       "id": "UgawhhcgL10-6",
       "en": "It's very much my motto.",
-      "ko": "실수를 하면 책임을 져야 합니다.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "UgawhhcgL10-7",
-      "en": "But as my dad pointed out to me on Saturday, he said, son, well, you did complain so you",
-      "ko": "그래서 괜찮다면 제가 무슨 일이 있었는지 공유하고 싶어요.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "UgawhhcgL10-8",
-      "en": "might need to explain.",
-      "ko": "몇 주 전, 저는 친구들과 뉴욕에 있었고, 제가 가장 좋아하는 식당 중 하나에서 아침을 먹으러 갔습니다.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "UgawhhcgL10-9",
-      "en": "Look, when you make a mistake, you've got to take responsibility.",
-      "ko": "그곳은 발타자르라는 곳이고, 정말 사랑하는 곳이에요.",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "UgawhhcgL10-10",
-      "en": "So I thought I would, if it's okay, I would share with you what happened.",
-      "ko": "음식, 분위기, 서비스 모두 좋아요.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "UgawhhcgL10-11",
-      "en": "So a couple of weeks ago, I was in New York with some friends and we went for breakfast",
-      "ko": "뉴욕에 살았다면 매일 가고 싶을 정도입니다.",
-      "tags": {
-        "functions": [
-          "F03"
-        ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "UgawhhcgL10-12",
-      "en": "at one of my absolute favorite restaurants.",
-      "ko": "제가 정말 좋아하는 레스토랑 중 하나에서요.",
+      "ko": "그게 거의 제 좌우명이에요.",
       "tags": {
         "functions": [
           "F01"
-        ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "UgawhhcgL10-13",
-      "en": "It's a place called Balthazar and I genuinely, I love it there.",
-      "ko": "발타자르라는 곳인데 저는 진심으로 거기를 좋아해요.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "UgawhhcgL10-14",
-      "en": "I love the food, the vibe, the service.",
-      "ko": "음식, 분위기, 서비스 모두 좋아해요.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "UgawhhcgL10-15",
-      "en": "If I lived in New York, I'd go every day on the provider.",
-      "ko": "뉴욕에 살면 매일 갈 거예요.",
-      "tags": {
-        "functions": [
-          "F09"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -373,6 +175,219 @@
         "grammar_intent": [],
         "flags": []
       }
+    },
+    {
+      "id": "UgawhhcgL10-7",
+      "en": "But as my dad pointed out to me on Saturday, he said, son, well, you did complain so you",
+      "ko": "그런데 토요일에 아버지가 그러시더군요. '얘야, 넌 이미 불평했으니",
+      "tags": {
+        "functions": [
+          "F55"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "UgawhhcgL10-8",
+      "en": "might need to explain.",
+      "ko": "이제는 설명도 좀 해야겠다.'",
+      "tags": {
+        "functions": [
+          "F14"
+        ],
+        "situation": "S34",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "UgawhhcgL10-9",
+      "en": "Look, when you make a mistake, you've got to take responsibility.",
+      "ko": "실수했으면 책임을 져야 하잖아요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X03"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "UgawhhcgL10-10",
+      "en": "So I thought I would, if it's okay, I would share with you what happened.",
+      "ko": "그래서 괜찮다면 무슨 일이 있었는지 말씀드리려고 합니다.",
+      "tags": {
+        "functions": [
+          "F21",
+          "F61",
+          "F31"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G05"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "UgawhhcgL10-11",
+      "en": "So a couple of weeks ago, I was in New York with some friends and we went for breakfast",
+      "ko": "몇 주 전 저는 친구들과 뉴욕에 있었고 아침을 먹으러",
+      "tags": {
+        "functions": [
+          "F23"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E08"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "UgawhhcgL10-12",
+      "en": "at one of my absolute favorite restaurants.",
+      "ko": "제가 정말 좋아하는 식당 중 한 곳에 갔어요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "UgawhhcgL10-13",
+      "en": "It's a place called Balthazar and I genuinely, I love it there.",
+      "ko": "그곳 이름은 발타자르인데, 저는 거길 정말 좋아해요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01",
+          "E11"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V02",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "UgawhhcgL10-14",
+      "en": "I love the food, the vibe, the service.",
+      "ko": "음식도 좋고, 분위기도 좋고, 서비스도 좋아요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E11"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V02",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "UgawhhcgL10-15",
+      "en": "If I lived in New York, I'd go every day on the provider.",
+      "ko": "뉴욕에 살았다면 아마 매일 갔을 거예요.",
+      "tags": {
+        "functions": [
+          "F23"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E08"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
     }
-  ]
+  ],
+  "transcriptHash": "8136337399082756"
 }

@@ -91,23 +91,32 @@ function getVideoErrorMessage(code: number) {
   }
 }
 
+const MAX_SUBTITLE_GAP_HOLD_SEC = 0.35
+const MAX_TRAILING_SUBTITLE_HOLD_SEC = 0.5
+
 /**
- * Find the index of the subtitle that covers the given time.
- * When the current time falls in a gap between subtitle N and N+1,
- * subtitle N remains active until N+1 starts (no disappearing).
+ * Prefer the newest subtitle when timings overlap, and only hold the
+ * previous subtitle across tiny gaps. Large silent gaps should clear the line.
  */
 function findActiveSubIndex(subtitles: SubtitleEntry[], time: number): number {
-  for (let i = 0; i < subtitles.length; i++) {
+  for (let i = subtitles.length - 1; i >= 0; i -= 1) {
     const subtitle = subtitles[i]
     if (time >= subtitle.start && time < subtitle.end) {
       return i
     }
+  }
 
-    if (
-      time >= subtitle.end &&
-      (i === subtitles.length - 1 || time < subtitles[i + 1].start)
-    ) {
-      return i
+  for (let i = 0; i < subtitles.length; i += 1) {
+    const subtitle = subtitles[i]
+    if (time < subtitle.end) continue
+
+    const next = subtitles[i + 1]
+    if (!next) {
+      return time - subtitle.end <= MAX_TRAILING_SUBTITLE_HOLD_SEC ? i : -1
+    }
+
+    if (time < next.start) {
+      return next.start - subtitle.end <= MAX_SUBTITLE_GAP_HOLD_SEC ? i : -1
     }
   }
 

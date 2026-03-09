@@ -8,6 +8,14 @@ export const TRANSCRIPT_RULES = {
   suspiciousKoAbsoluteLength: 55,
 }
 
+const NON_OVERRIDABLE_ISSUE_TYPES = new Set([
+  'OVERLAP',
+  'GAP',
+  'DURATION_LONG',
+  'EMPTY_EN',
+  'EMPTY_KO',
+])
+
 export function checkTranscript(entries, rules = TRANSCRIPT_RULES) {
   const issues = []
 
@@ -150,7 +158,13 @@ export function filterIssuesByReview(youtubeId, issues, reviewRegistry = {}) {
   }
 
   const acceptedSignatures = new Set(accepted.map(makeIssueSignature))
-  return issues.filter((issue) => !acceptedSignatures.has(makeIssueSignature(issue)))
+  return issues.filter((issue) => {
+    if (NON_OVERRIDABLE_ISSUE_TYPES.has(issue.type)) {
+      return true
+    }
+
+    return !acceptedSignatures.has(makeIssueSignature(issue))
+  })
 }
 
 export function makeIssueSignature(issue) {

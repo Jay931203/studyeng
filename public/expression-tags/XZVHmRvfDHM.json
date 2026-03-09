@@ -12,18 +12,18 @@
       "ko": "나는 동료들과 내내 싸웠어.",
       "tags": {
         "functions": [
-          "F10"
+          "F02"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -37,11 +37,11 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -58,18 +58,18 @@
       "ko": "주말이 완전 망쳤다는 거야?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,21 +81,23 @@
       "ko": "어, 아니.",
       "tags": {
         "functions": [
-          "F07"
+          "F52"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -106,16 +108,16 @@
         "functions": [
           "F02"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,21 +129,23 @@
       "ko": "안녕.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,18 +154,18 @@
       "ko": "안녕, 너도 돌아왔구나.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,21 +177,23 @@
       "ko": "응.",
       "tags": {
         "functions": [
-          "F07"
+          "F53"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -196,20 +202,22 @@
       "ko": "음, 제너, 잠깐 밖에서 이야기할 수 있을까?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -221,16 +229,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S05",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,18 +250,18 @@
       "ko": "아, 끔찍했어.",
       "tags": {
         "functions": [
-          "F16"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,20 +273,22 @@
       "ko": "어떤 사람들은 정말 좋은 음식을 알아보지 못하는 것 같아.",
       "tags": {
         "functions": [
-          "F12"
+          "F27"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -288,20 +298,24 @@
       "ko": "아마 처음에는 맛있게 느껴지는 음식이었겠지만,",
       "tags": {
         "functions": [
-          "F04"
+          "F14"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X03",
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -311,18 +325,18 @@
       "ko": "결국 모두 구토하고 설사하게 만든 음식일 수도 있어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,21 +348,23 @@
       "ko": "안녕, 핸들러.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -359,16 +375,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -382,21 +398,23 @@
       "ko": "안녕.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -405,21 +423,23 @@
       "ko": "안녕, 빙 씨.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -428,18 +448,18 @@
       "ko": "그, 음, 네가 묵었던 호텔에서 전화했어.",
       "tags": {
         "functions": [
-          "F06"
+          "F05"
         ],
-        "situation": "S10",
+        "situation": "S23",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -451,102 +471,10 @@
       "ko": "누군가 네 방에 속눈썹 컬러를 두고 갔다고 해.",
       "tags": {
         "functions": [
-          "F01"
+          "F05"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "XZVHmRvfDHM-20",
-      "en": "Yes, that was mine.",
-      "ko": "응, 그건 내 거야.",
-      "tags": {
-        "functions": [
-          "F07"
-        ],
-        "situation": "S10",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "XZVHmRvfDHM-21",
-      "en": "Because I figured you hooked up with some girl and she left it there.",
-      "ko": "네가 어떤 여자와 잘 지냈고, 그녀가 거기 두고 간 줄 알았어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "XZVHmRvfDHM-22",
-      "en": "Yes, that would have made more sense.",
-      "ko": "응, 그게 더 말이 되겠네.",
-      "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "XZVHmRvfDHM-23",
-      "en": "You know, I don't even feel like I know you anymore, man.",
-      "ko": "너를 더 이상 잘 아는 것 같지 않아, 친구.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
-        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E02"
@@ -559,6 +487,101 @@
         "grammar_intent": [],
         "flags": []
       }
+    },
+    {
+      "id": "XZVHmRvfDHM-20",
+      "en": "Yes, that was mine.",
+      "ko": "응, 그건 내 거야.",
+      "tags": {
+        "functions": [
+          "F44"
+        ],
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E14"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "XZVHmRvfDHM-21",
+      "en": "Because I figured you hooked up with some girl and she left it there.",
+      "ko": "네가 어떤 여자와 잘 지냈고, 그녀가 거기 두고 간 줄 알았어.",
+      "tags": {
+        "functions": [
+          "F04"
+        ],
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E02"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "XZVHmRvfDHM-22",
+      "en": "Yes, that would have made more sense.",
+      "ko": "응, 그게 더 말이 되겠네.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S09",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E14"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "XZVHmRvfDHM-23",
+      "en": "You know, I don't even feel like I know you anymore, man.",
+      "ko": "너를 더 이상 잘 아는 것 같지 않아, 친구.",
+      "tags": {
+        "functions": [
+          "F12"
+        ],
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
     }
-  ]
+  ],
+  "transcriptHash": "960824470ec51af3"
 }

@@ -12,19 +12,21 @@
       "ko": "열대 크리스마스에 오신 것을 환영합니다.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -32,21 +34,21 @@
     {
       "id": "3S517s7E4wk-1",
       "en": "Party you put your coats and sweaters",
-      "ko": "파티에 코트와 스웨터를 두세요.",
+      "ko": "파티에 코트와 스웨터를 걸어두세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -55,22 +57,24 @@
     {
       "id": "3S517s7E4wk-2",
       "en": "And pants and shirts to the bedroom it's",
-      "ko": "바지와 셔츠도요.",
+      "ko": "바지와 셔츠는 침실에 두세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -81,64 +85,72 @@
       "ko": "땀을 흘리고 있어서 잘 모르겠어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S31",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
     {
       "id": "3S517s7E4wk-4",
       "en": "But I use exactly what the gel bottle",
-      "ko": "하지만 젤 용기에 적힌 대로 정확히 사용해요.",
+      "ko": "하지만 젤 병에 적힌 대로 사용해요.",
       "tags": {
         "functions": [
-          "F04"
+          "F17",
+          "F10"
         ],
-        "situation": "S31",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06",
+          "G20"
+        ],
         "flags": []
       }
     },
     {
       "id": "3S517s7E4wk-5",
       "en": "Says an amount about the size of the",
-      "ko": "양은 약간의 크기만큼이에요.",
+      "ko": "양은 대략 이 정도라고 하네요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -147,21 +159,21 @@
     {
       "id": "3S517s7E4wk-6",
       "en": "Peak how can that be too much Monica",
-      "ko": "그게 어떻게 너무 많을 수 있죠, 모니카?",
+      "ko": "이게 너무 많을 수가 있나요, 모니카?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,18 +185,18 @@
       "ko": "손님들이 육포로 변하고 있어요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,17 +210,19 @@
         "functions": [
           "F25"
         ],
-        "situation": "S31",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -219,18 +233,18 @@
       "ko": "파티가 있다고 하셨죠?",
       "tags": {
         "functions": [
-          "F06"
+          "F03"
         ],
         "situation": "S31",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,17 +258,19 @@
         "functions": [
           "F25"
         ],
-        "situation": "S31",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -265,20 +281,22 @@
       "ko": "제 몸은 항상 시원해요.",
       "tags": {
         "functions": [
-          "F09"
+          "F25"
         ],
-        "situation": "S31",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -288,44 +306,48 @@
       "ko": "아마도 피부가 많아서 그럴 거예요.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S31",
+        "situation": "S09",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
     {
       "id": "3S517s7E4wk-13",
       "en": "Jeez",
-      "ko": "제기랄.",
+      "ko": "어머.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -334,19 +356,21 @@
       "ko": "좋아요, 모니카, 기회가 왔어요.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -357,18 +381,18 @@
       "ko": "현금을 줘요, 레이첼, 귀걸이를 줘요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S04",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -377,22 +401,24 @@
     {
       "id": "3S517s7E4wk-16",
       "en": "Earrings it's something now anything no",
-      "ko": "뭔가라도, 이제 아무것도 아니에요.",
+      "ko": "귀걸이는 뭔가예요, 아무것도 아니에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -400,21 +426,21 @@
     {
       "id": "3S517s7E4wk-17",
       "en": "I will not cave yeah I'm with mom alright alright you know how you say I",
-      "ko": "절대 양보하지 않을 거예요.",
+      "ko": "맞아요, 엄마와 함께해요.",
       "tags": {
         "functions": [
-          "F12"
+          "F63"
         ],
         "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E06"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -423,44 +449,47 @@
     {
       "id": "3S517s7E4wk-18",
       "en": "Never seize the day",
-      "ko": "맞아요, 엄마와 함께해요.",
+      "ko": "오늘을 즐기라.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
     {
       "id": "3S517s7E4wk-19",
       "en": "Well alright even though he's your super",
-      "ko": "당신이 '오늘을 즐기라'고 말하는 것처럼요.",
+      "ko": "그래도 당신의 관리인이에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -469,21 +498,21 @@
     {
       "id": "3S517s7E4wk-20",
       "en": "I'm seizing mr. treeger huh here is 50",
-      "ko": "그래요, 그는 당신의 슈퍼예요.",
+      "ko": "트리거 씨를 잡을 거예요, 여기 50달러예요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -492,22 +521,24 @@
     {
       "id": "3S517s7E4wk-21",
       "en": "Bucks Merry Christmas",
-      "ko": "저는 트리거 씨를 잡을 거예요. 여기 50달러예요.",
+      "ko": "달러, 메리 크리스마스.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -515,45 +546,49 @@
     {
       "id": "3S517s7E4wk-22",
       "en": "Oh wow I didn't get you anything",
-      "ko": "오, 와우, 저는 당신에게 아무것도 안 줬어요.",
+      "ko": "오, 와! 아무것도 준비하지 못했어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F56"
         ],
         "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
     {
       "id": "3S517s7E4wk-23",
       "en": "It's five back no well that's that's",
-      "ko": "그건 5달러예요.",
+      "ko": "5달러를 돌려줘요, 그건 그렇고.",
       "tags": {
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -561,21 +596,21 @@
     {
       "id": "3S517s7E4wk-24",
       "en": "Your Christmas tip all right oh hey do",
-      "ko": "그건 당신의 크리스마스 팁이에요.",
+      "ko": "크리스마스 팁이에요, 아, 잠깐만요.",
       "tags": {
         "functions": [
-          "F01"
+          "F25"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -584,22 +619,24 @@
     {
       "id": "3S517s7E4wk-25",
       "en": "You think there's a chance you can fix that radiator now all right no can do",
-      "ko": "아, 그 라디에이터를 지금 고칠 수 있을까요?",
+      "ko": "그 라디에이터를 고칠 수 있을까요? 안 돼요.",
       "tags": {
         "functions": [
-          "F06"
+          "F12"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -607,22 +644,24 @@
     {
       "id": "3S517s7E4wk-26",
       "en": "Like I told the girl I gotta get a new",
-      "ko": "아, 그건 안 돼요.",
+      "ko": "그 여자에게 말했듯이, 새 걸로 바꿔야 해요.",
       "tags": {
         "functions": [
-          "F04"
+          "F05"
         ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -630,21 +669,21 @@
     {
       "id": "3S517s7E4wk-27",
       "en": "Knob until Tuesday right yeah looks like",
-      "ko": "제가 소녀에게 말했듯이, 화요일까지 새 노브를 사야 해요.",
+      "ko": "화요일까지는 안 돼요, 맞아요.",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -653,21 +692,21 @@
     {
       "id": "3S517s7E4wk-28",
       "en": "He's playing baseball do you mean",
-      "ko": "맞아요, 야구를 하는 것 같아요.",
+      "ko": "그가 야구를 하고 있다는 거예요?",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -676,22 +715,24 @@
     {
       "id": "3S517s7E4wk-29",
       "en": "Hardball whatever what you gonna do",
-      "ko": "하드볼이요. 뭐 할 건데요?",
+      "ko": "하드볼, 어쨌든, 어떻게 할 건가요?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V13",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -699,45 +740,51 @@
     {
       "id": "3S517s7E4wk-30",
       "en": "Excuse me I'm seizing mr. Trager",
-      "ko": "실례합니다, 트리거 씨를 잡을 거예요.",
+      "ko": "실례합니다, 트레이거 씨를 압수하고 있습니다.",
       "tags": {
         "functions": [
-          "F03"
+          "F28"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
     {
       "id": "3S517s7E4wk-31",
       "en": "Here's another fifty Happy Hanukkah",
-      "ko": "여기 또 50달러, 해피 하누카!",
+      "ko": "여기 또 50달러, 해피 한누카!",
       "tags": {
         "functions": [
-          "F27"
+          "F02"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -745,21 +792,21 @@
     {
       "id": "3S517s7E4wk-32",
       "en": "Will uh will this help with the knob",
-      "ko": "이게 노브에 도움이 될까요?",
+      "ko": "이게 손잡이에 도움이 될까요?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -768,21 +815,21 @@
     {
       "id": "3S517s7E4wk-33",
       "en": "Getting no the place is not open till",
-      "ko": "아니요, 그곳은 화요일까지 열지 않아요.",
+      "ko": "아니요, 그곳은 열리지 않아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -791,21 +838,21 @@
     {
       "id": "3S517s7E4wk-34",
       "en": "Tuesday am I not saying it right so you",
-      "ko": "제가 제대로 말하고 있나요?",
+      "ko": "화요일, 제가 제대로 말하고 있나요?",
       "tags": {
         "functions": [
-          "F06"
+          "F02"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -814,21 +861,21 @@
     {
       "id": "3S517s7E4wk-35",
       "en": "Really did like my cookies oh yeah",
-      "ko": "정말 제 쿠키를 좋아했어요?",
+      "ko": "정말 제 쿠키를 좋아하셨군요, 오 예!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V02",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -837,21 +884,21 @@
     {
       "id": "3S517s7E4wk-36",
       "en": "It was so personal really showed you cared",
-      "ko": "아, 네! 정말 개인적이었고, 당신이 신경 썼다는 걸 보여줬어요.",
+      "ko": "정말 개인적이었고, 당신이 신경 썼다는 게 느껴졌어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V02",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -860,25 +907,26 @@
     {
       "id": "3S517s7E4wk-37",
       "en": "Nice easing gel boy",
-      "ko": "좋은 젤이에요.",
+      "ko": "좋은 완화 젤이네요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "e655c7e5fef7e26b"
 }

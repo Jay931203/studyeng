@@ -12,18 +12,18 @@
       "ko": "이란에 대한 대규모 공습.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S31",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -32,21 +32,21 @@
     {
       "id": "Vu9gzndeCLM-1",
       "en": "President Trump ordered the attack overnight from his Mar-a-Lago home.",
-      "ko": "트럼프 대통령이 마라라고 자택에서 공격을 명령했습니다.",
+      "ko": "트럼프 대통령이 마러라고 자택에서 밤사이 그 공격을 명령했습니다.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -55,44 +55,46 @@
     {
       "id": "Vu9gzndeCLM-2",
       "en": "The president briefly dropping in on a charity gala held in the ballroom, then huddling with",
-      "ko": "대통령은 잠시 무도회장에서 열린 자선 갈라에 참석한 후,",
+      "ko": "대통령은 잠시 무도회장에서 열린 자선 갈라에 들렀다가,",
       "tags": {
         "functions": [
           "F03"
         ],
-        "situation": "S47",
+        "situation": "S31",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
       "id": "Vu9gzndeCLM-3",
       "en": "advisers to monitor strikes in a makeshift command center seen in these White House photos.",
-      "ko": "백악관 사진에서 보이는 임시 지휘소에서 고문들과 함께 공습을 모니터링했습니다.",
+      "ko": "백악관 사진에 보이는 임시 지휘소에서 참모들과 함께 공습을 지켜봤습니다.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,16 +108,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -124,21 +126,21 @@
     {
       "id": "Vu9gzndeCLM-5",
       "en": "He's in a makeshift, um, skiff made out of, you know, drapes.",
-      "ko": "그는 커튼으로 만든 임시 보트에 있습니다.",
+      "ko": "그는 커튼으로 대충 둘러친 임시 지휘실에 있습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,16 +154,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S47",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -170,21 +172,21 @@
     {
       "id": "Vu9gzndeCLM-7",
       "en": "Come to beautiful Mar-a-Lago.",
-      "ko": "아름다운 마라라고로 오세요.",
+      "ko": "아름다운 마러라고로 오세요.",
       "tags": {
         "functions": [
-          "F38"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +198,18 @@
       "ko": "벤자민을 성년으로 맞이하든, 중동에 미사일을 발사하든,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -216,21 +218,21 @@
     {
       "id": "Vu9gzndeCLM-9",
       "en": "Mar-a-Lago has all the amenities.",
-      "ko": "마라라고는 모든 편의시설을 갖추고 있습니다.",
+      "ko": "마러라고는 모든 편의시설을 갖추고 있습니다.",
       "tags": {
         "functions": [
           "F01"
         ],
-        "situation": "S47",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -239,22 +241,24 @@
     {
       "id": "Vu9gzndeCLM-10",
       "en": "With our sumptuous buffet, you can begin epic fury while dining on epic curry.",
-      "ko": "호화로운 뷔페와 함께 서사시적인 카레를 즐기며 전투를 시작하세요.",
+      "ko": "호화로운 뷔페에서 근사한 커리를 즐기며 장대한 분노를 터뜨리세요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -265,18 +269,18 @@
       "ko": "배고픔에 죽음을. 보안이 필요하신가요?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S47",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,16 +294,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,19 +317,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
-        "cefr": "B1",
+        "situation": "S42",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -336,16 +342,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -354,23 +360,25 @@
     {
       "id": "Vu9gzndeCLM-15",
       "en": "So book Mar-a-Lago today, where war is hell of a good time.",
-      "ko": "오늘 마라라고를 예약하세요. 전쟁이 즐거운 시간입니다.",
+      "ko": "오늘 마러라고를 예약하세요. 전쟁조차 기막히게 즐길 수 있는 곳입니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S42",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -379,21 +387,21 @@
     {
       "id": "Vu9gzndeCLM-16",
       "en": "Mar-a-Lago.",
-      "ko": "마라라고.",
+      "ko": "마러라고.",
       "tags": {
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -401,5 +409,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "be9b34ddf8d91ba2"
 }

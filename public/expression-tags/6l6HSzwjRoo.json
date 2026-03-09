@@ -8,59 +8,65 @@
   "sentences": [
     {
       "id": "6l6HSzwjRoo-0",
-      "en": "Oh oh honey don't get up what do you",
-      "ko": "오, 자기야, 일어나지 마. 뭐 하고 있어?",
+      "en": "Oh oh honey don't get up what do you need",
+      "ko": "아, 자기야, 일어나지 마. 뭐 필요해?",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S09",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "6l6HSzwjRoo-1",
-      "en": "Um no oh nothing come on i'm here to take care of you what do you need",
-      "ko": "음, 아니, 아무것도 아니야. 자, 내가 널 돌봐줄게. 뭐 필요해?",
-      "tags": {
-        "functions": [
-          "F31"
-        ],
-        "situation": "S09",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "6l6HSzwjRoo-2",
-      "en": "Anything okay i have a wedgie",
-      "ko": "뭐든지 괜찮아. 나 지금 속옷이 끼었어.",
+      "id": "6l6HSzwjRoo-1",
+      "en": "Um no oh nothing come on i'm here to take care of you what do you need",
+      "ko": "음, 아니, 아무것도 아니야. 자, 내가 너를 돌보러 왔어. 뭐 필요해?",
       "tags": {
         "functions": [
-          "F09"
+          "F32",
+          "F45",
+          "F52"
+        ],
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01",
+          "X03",
+          "X06"
+        ],
+        "vibe": "V02",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G25"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "6l6HSzwjRoo-2",
+      "en": "Anything okay i have a wedgie",
+      "ko": "뭐든 괜찮아. 나 속옷이 끼었어.",
+      "tags": {
+        "functions": [
+          "F01"
         ],
         "situation": "S09",
         "cefr": "A2",
@@ -80,13 +86,13 @@
     {
       "id": "6l6HSzwjRoo-3",
       "en": "Okay that is all you",
-      "ko": "그건 네 문제야.",
+      "ko": "좋아, 그건 네 몫이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -106,10 +112,10 @@
       "ko": "그럼, 점심으로 뭐 먹고 싶어?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,20 +135,24 @@
       "ko": "잘 모르겠어. 어쨌든 먹어야겠지.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -152,7 +162,7 @@
       "ko": "응, 나도. 상관없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S09",
         "cefr": "A2",
@@ -172,67 +182,72 @@
     {
       "id": "6l6HSzwjRoo-7",
       "en": "Just bummed the way i left things with ross i wish i didn't lie to him about",
-      "ko": "로스와의 일이 이렇게 된 게 좀 찝찝해. 그에게 거짓말하지 않았으면 좋았을 텐데.",
+      "ko": "로스와의 관계를 이렇게 끝내서 기분이 안 좋아. 그에게 거짓말하지 않았으면 좋겠어.",
       "tags": {
         "functions": [
-          "F20"
+          "F24",
+          "F56"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
     {
       "id": "6l6HSzwjRoo-8",
-      "en": "Work he seemed so mad at me don't be so hard on yourself",
-      "ko": "그가 나한테 정말 화난 것 같았어. 너무 자책하지 마.",
+      "en": "Having to work he seemed so mad at me don't be so",
+      "ko": "일 때문에 그가 나한테 정말 화난 것 같았어. 너무 자책하지 마.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
     {
       "id": "6l6HSzwjRoo-9",
-      "en": "Someone i was still in love with was",
+      "en": "Hard on yourself someone i was still in love with was",
       "ko": "내가 여전히 사랑했던 사람이 결혼하고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -241,21 +256,21 @@
     {
       "id": "6l6HSzwjRoo-10",
       "en": "Getting married still in love with",
-      "ko": "여전히 사랑하고 있어.",
+      "ko": "내가 여전히 사랑했던 사람이 결혼하고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,18 +282,18 @@
       "ko": "응, 나는 로스를 사랑하지 않아.",
       "tags": {
         "functions": [
-          "F17"
+          "F07"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,10 +305,10 @@
       "ko": "아니, 아니, 좋네. 나도 그래.",
       "tags": {
         "functions": [
-          "F10"
+          "F07"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -310,12 +325,12 @@
     {
       "id": "6l6HSzwjRoo-13",
       "en": "Phoebe i'm not going to ross's wedding",
-      "ko": "피비, 나는 로스의 결혼식에 가지 않을 거야.",
+      "ko": "피비, 나는 로스의 결혼식에 안 갈 거야.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -336,10 +351,10 @@
       "ko": "왜냐하면 그는 내 전 남자친구니까.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -349,20 +364,22 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
     {
       "id": "6l6HSzwjRoo-15",
       "en": "Would be really uncomfortable",
-      "ko": "정말 불편할 거야.",
+      "ko": "왜냐하면 그는 내 전 남자친구니까.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -370,12 +387,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -384,33 +399,61 @@
       "ko": "왜냐하면 나는 여전히 그를 사랑하고 있으니까. 음, 너도 알다시피, 나는 로스를 좋아해.",
       "tags": {
         "functions": [
-          "F22"
+          "F04",
+          "F50"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
     {
       "id": "6l6HSzwjRoo-17",
-      "en": "You know clearly i have feelings for him but feelings don't mean love",
+      "en": "The next guy you know clearly i have feelings for him",
       "ko": "분명히 나는 그에게 감정이 있어. 하지만 감정이 사랑을 의미하는 건 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E11"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V02",
+        "power": [],
+        "grammar_intent": [
+          "G22"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "6l6HSzwjRoo-18",
+      "en": "But feelings don't mean love",
+      "ko": "그게 내가 여전히 그를 사랑한다는 뜻은 아니야.",
+      "tags": {
+        "functions": [
+          "F50"
+        ],
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -420,42 +463,21 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "6l6HSzwjRoo-18",
-      "en": "You know i mean i still have loving",
-      "ko": "알지? 나는 여전히 로스에 대한 사랑스러운 감정을 가지고 있어.",
-      "tags": {
-        "functions": [
-          "F22"
+        "grammar_intent": [
+          "G18"
         ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
         "flags": []
       }
     },
     {
       "id": "6l6HSzwjRoo-19",
-      "en": "Feelings for ross you know",
-      "ko": "로스에 대한 감정 말이야.",
+      "en": "You know i mean i still have loving",
+      "ko": "알지? 나는 여전히 로스에 대한 사랑스러운 감정을 가지고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -472,22 +494,22 @@
     },
     {
       "id": "6l6HSzwjRoo-20",
-      "en": "Yeah but i have continuing feelings of love but",
-      "ko": "응, 하지만 나는 계속 사랑하는 감정을 가지고 있어.",
+      "en": "Feelings for ross you know",
+      "ko": "로스에 대한 감정이야.",
       "tags": {
         "functions": [
-          "F22"
+          "F07"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -495,45 +517,47 @@
     },
     {
       "id": "6l6HSzwjRoo-21",
-      "en": "That doesn't mean that that i'm still in love with him you know i mean i have",
-      "ko": "그게 내가 여전히 그를 사랑한다는 뜻은 아니야. 알지? 나는",
+      "en": "Yeah but i have continuing feelings of love but",
+      "ko": "응, 하지만 나는 계속 사랑하는 감정을 가지고 있어. 하지만",
       "tags": {
         "functions": [
-          "F09"
+          "F50"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
     {
       "id": "6l6HSzwjRoo-22",
-      "en": "I have sexual feelings for him but i do love him",
-      "ko": "나는 그에 대한 성적인 감정도 있어. 하지만 나는 그를 사랑해.",
+      "en": "That doesn't mean that that i'm still in love with him you know i mean i have",
+      "ko": "그게 내가 여전히 그를 사랑한다는 뜻은 아니야. 알지? 나는",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -541,13 +565,13 @@
     },
     {
       "id": "6l6HSzwjRoo-23",
-      "en": "Oh my god why didn't you tell me",
-      "ko": "오 세상에, 왜 나한테 말하지 않았어?",
+      "en": "I have sexual feelings for him but i do love him",
+      "ko": "그에게 성적인 감정이 있지만, 나는 그를 사랑해.",
       "tags": {
         "functions": [
           "F18"
         ],
-        "situation": "S08",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -556,25 +580,29 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
     {
       "id": "6l6HSzwjRoo-24",
-      "en": "We thought you knew we yeah we all know",
-      "ko": "우리는 네가 알고 있다고 생각했어. 우리 모두 알고 있었어.",
+      "en": "Oh my god why didn't you tell me",
+      "ko": "세상에, 왜 나한테 말하지 않았어?",
       "tags": {
         "functions": [
-          "F09"
+          "F20",
+          "F21",
+          "F23"
         ],
-        "situation": "S08",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -587,15 +615,15 @@
     },
     {
       "id": "6l6HSzwjRoo-25",
-      "en": "We talked about it all the time",
-      "ko": "우리는 항상 그에 대해 이야기했어.",
+      "en": "We thought you knew we yeah we all know",
+      "ko": "우리는 네가 알고 있다고 생각했어. 응, 우리 모두 알아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S09",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -611,13 +639,13 @@
     {
       "id": "6l6HSzwjRoo-26",
       "en": "You all know does ross know oh no ross",
-      "ko": "너희 모두 알고 있어? 로스는 알아? 오, 아니, 로스는",
+      "ko": "너희 모두 알고 있지? 로스는 알아? 아, 안 돼.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -634,12 +662,12 @@
     {
       "id": "6l6HSzwjRoo-27",
       "en": "Doesn't know anything",
-      "ko": "아무것도 몰라.",
+      "ko": "아무것도 모르고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -651,27 +679,31 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
       "id": "6l6HSzwjRoo-28",
       "en": "Oh i cannot believe you didn't tell me because we thought you knew it's so",
-      "ko": "오, 네가 말 안 했다는 게 믿기지 않아. 우리는 네가 알고 있다고 생각했어. 너무 뻔한데.",
+      "ko": "세상에, 네가 말하지 않았다는 게 믿기지 않아. 우리는 네가 알고 있다고 생각했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F20",
+          "F21",
+          "F23"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -680,13 +712,13 @@
     {
       "id": "6l6HSzwjRoo-29",
       "en": "Obvious god it would be like you know telling",
-      "ko": "세상에, 마치 모니카에게",
+      "ko": "너에게 말하는 것처럼 너무 뻔해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -703,10 +735,10 @@
     {
       "id": "6l6HSzwjRoo-30",
       "en": "Monica hey",
-      "ko": "모니카, 야",
+      "ko": "모니카, 안녕.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "A1",
@@ -728,10 +760,10 @@
     {
       "id": "6l6HSzwjRoo-31",
       "en": "You know you like things clean",
-      "ko": "너는 깨끗한 걸 좋아하지? 라고 말하는 것 같아.",
+      "ko": "너는 깨끗한 걸 좋아하는 거 알잖아.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "A2",
@@ -748,5 +780,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "8556130155ce7e84"
 }
