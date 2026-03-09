@@ -522,21 +522,22 @@ export function LyricsSubtitles({
             // When user is manually scrolling, reveal all subtitles
             // IMPORTANT: Never use pointer-events-none on individual items —
             // it blocks touch events and prevents scroll initiation.
-            const opacityClass = isUserScrolling
-              ? isJustSaved || isActive || isFrozen
-                ? 'opacity-100'
-                : distance === 1
-                  ? 'opacity-75'
-                  : distance === 2
-                    ? 'opacity-60'
-                    : 'opacity-45'
-              : isJustSaved || isActive || isFrozen
-                ? 'opacity-100'
-                : distance === 1
-                  ? 'opacity-45'
-                  : distance === 2 && visibilityRadius >= 2
-                    ? 'opacity-22'
-                    : 'opacity-0'
+            const opacityValue = (() => {
+              if (isJustSaved || isActive || isFrozen) return 1
+
+              if (isUserScrolling) {
+                if (distance === 1) return 0.75
+                if (distance === 2) return 0.6
+                if (distance === 3) return 0.5
+                return 0.45
+              }
+
+              if (distance > visibilityRadius) return 0
+              if (distance === 1) return 0.45
+              if (distance === 2) return 0.22
+              if (distance === 3) return 0.14
+              return 0.1
+            })()
 
             // Whether this subtitle is fully hidden (not visible, not interactable)
             // Wrapper div stays pointer-events-auto for scroll, but inner button is disabled
@@ -548,14 +549,24 @@ export function LyricsSubtitles({
               distance > visibilityRadius
 
             const scaleValue = isUserScrolling
-              ? (isJustSaved || isActive || isFrozen ? 1 : 0.95)
+              ? (isJustSaved || isActive || isFrozen
+                  ? 1
+                  : distance === 1
+                    ? 0.95
+                    : distance === 2
+                      ? 0.93
+                      : distance === 3
+                        ? 0.91
+                        : 0.89)
               : isJustSaved || isActive || isFrozen
                 ? 1
                 : distance === 1
                   ? 0.94
-                  : distance === 2 && visibilityRadius >= 2
+                  : distance === 2
                     ? 0.9
-                    : 0.87
+                    : distance === 3
+                      ? 0.87
+                      : 0.85
 
             const flagged = adminActive && videoId
               ? flaggedSubtitles.some(
@@ -567,8 +578,9 @@ export function LyricsSubtitles({
               <div
                 key={idx}
                 ref={(el) => { lineRefs.current[idx] = el }}
-                className={`w-full flex items-center justify-center relative will-change-[transform,opacity] ${opacityClass}`}
+                className="relative flex w-full items-center justify-center will-change-[transform,opacity]"
                 style={{
+                  opacity: opacityValue,
                   transform: `scale(${scaleValue})`,
                   transition: 'opacity 250ms ease-out, transform 350ms cubic-bezier(0.22, 1, 0.36, 1)',
                 }}
