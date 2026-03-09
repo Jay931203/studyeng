@@ -3,6 +3,7 @@
 import { useSyncExternalStore } from 'react'
 import { clearAccountScopedState, prepareAccountScopedStateForUser } from '@/lib/accountScope'
 import { sanitizeAppPath } from '@/lib/navigation'
+import { isNative } from '@/lib/platform'
 import { syncBillingOnLogin } from '@/lib/supabase/billingSync'
 import { createClient } from '@/lib/supabase/client'
 import { syncOnLogin, onLogout } from '@/lib/supabase/sync'
@@ -62,6 +63,14 @@ function resetSignedOutState() {
   const hadUser = authSnapshot.user !== null || syncedUserId !== null
   syncedUserId = null
   clearAccountScopedState()
+
+  if (isNative()) {
+    void import('@/lib/nativeBilling')
+      .then(({ logoutRevenueCat }) => logoutRevenueCat())
+      .catch((error) => {
+        console.warn('[auth] RevenueCat logout failed:', error)
+      })
+  }
 
   if (hadUser) {
     onLogout()

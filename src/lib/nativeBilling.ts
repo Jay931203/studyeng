@@ -14,24 +14,35 @@
 
 import { Purchases } from '@revenuecat/purchases-capacitor'
 import type { CustomerInfo, PurchasesOfferings } from '@revenuecat/purchases-typescript-internal-esm'
+import { hasPlaceholderValue } from '@/lib/billing'
 import { getPlatform } from '@/lib/platform'
 
 const ENTITLEMENT_ID = 'premium'
 
 let initialized = false
 
-export async function initRevenueCat(userId?: string) {
-  if (initialized) return
-
+function getRevenueCatApiKey() {
   const platform = getPlatform()
-  const apiKey =
+  return (
     platform === 'ios'
       ? process.env.NEXT_PUBLIC_REVENUECAT_API_KEY_APPLE
       : process.env.NEXT_PUBLIC_REVENUECAT_API_KEY_GOOGLE
+  )
+}
 
-  if (!apiKey) {
+export function isNativeBillingConfigured() {
+  return !hasPlaceholderValue(getRevenueCatApiKey())
+}
+
+export async function initRevenueCat(userId?: string) {
+  if (initialized) return true
+
+  const platform = getPlatform()
+  const apiKey = getRevenueCatApiKey()
+
+  if (!apiKey || hasPlaceholderValue(apiKey)) {
     console.warn('[billing] RevenueCat API key not configured for', platform)
-    return
+    return false
   }
 
   await Purchases.configure({
@@ -40,18 +51,27 @@ export async function initRevenueCat(userId?: string) {
   })
 
   initialized = true
+  return true
 }
 
 export async function loginRevenueCat(userId: string) {
+  const ready = await initRevenueCat(userId)
+  if (!ready) return
   await Purchases.logIn({ appUserID: userId })
 }
 
 export async function logoutRevenueCat() {
+  if (!initialized) return
   await Purchases.logOut()
 }
 
 export async function getOfferings(): Promise<PurchasesOfferings | null> {
   try {
+    const ready = await initRevenueCat()
+    if (!ready) {
+      return null
+    }
+
     const offerings = await Purchases.getOfferings()
     return offerings
   } catch (error) {
@@ -62,6 +82,11 @@ export async function getOfferings(): Promise<PurchasesOfferings | null> {
 
 export async function purchasePackage(packageId: string): Promise<CustomerInfo | null> {
   try {
+    const ready = await initRevenueCat()
+    if (!ready) {
+      throw new Error('billing-not-configured')
+    }
+
     const offerings = await getOfferings()
     const currentOffering = offerings?.current
     if (!currentOffering) {
@@ -83,6 +108,11 @@ export async function purchasePackage(packageId: string): Promise<CustomerInfo |
 
 export async function restorePurchases(): Promise<CustomerInfo | null> {
   try {
+    const ready = await initRevenueCat()
+    if (!ready) {
+      return null
+    }
+
     const { customerInfo } = await Purchases.restorePurchases()
     return customerInfo
   } catch (error) {
@@ -93,6 +123,11 @@ export async function restorePurchases(): Promise<CustomerInfo | null> {
 
 export async function getCustomerInfo(): Promise<CustomerInfo | null> {
   try {
+    const ready = await initRevenueCat()
+    if (!ready) {
+      return null
+    }
+
     const { customerInfo } = await Purchases.getCustomerInfo()
     return customerInfo
   } catch (error) {

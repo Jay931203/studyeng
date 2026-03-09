@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useEffect, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import type { PurchasesPackage } from '@revenuecat/purchases-typescript-internal-esm'
 import { getBillingConfig, type BillingPlan } from '@/lib/billing'
@@ -22,6 +22,7 @@ interface BillingStatusPayload {
   entitlement: {
     planKey: string
     status: string
+    source: string
     currentPeriodEnd: string | null
     cancelAtPeriodEnd: boolean
   } | null
@@ -181,30 +182,80 @@ export function BillingManagementCard({
   const [nativePackages, setNativePackages] = useState<PurchasesPackage[]>([])
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
 
-  useEffect(() => {
-    if (native) {
-      setLoading(false)
-      setErrorMessage(null)
+  const updateNativeStatus = useCallback(
+    (nextPremium: boolean, packageCount = nativePackages.length) => {
       setStatus({
-        enabled: true,
-        isPremium: entitlementPremium,
+        enabled: nextPremium || packageCount > 0,
+        isPremium: nextPremium,
         paymentMethod: null,
-        entitlement: entitlementPremium
+        entitlement: nextPremium
           ? {
               planKey: 'premium',
               status: 'active',
+              source: 'revenuecat',
               currentPeriodEnd: null,
               cancelAtPeriodEnd: false,
             }
           : null,
       })
-      return
+    },
+    [nativePackages.length]
+  )
+
+  useEffect(() => {
+    if (!native) return
+
+    let cancelled = false
+    setLoading(true)
+    setErrorMessage(null)
+
+    const loadNativeStatus = async () => {
+      try {
+        const { getCustomerInfo, getOfferings, isPremiumFromCustomerInfo } = await import(
+          '@/lib/nativeBilling'
+        )
+        const [customerInfo, offerings] = await Promise.all([getCustomerInfo(), getOfferings()])
+
+        if (cancelled) return
+
+        const nextPremium = isPremiumFromCustomerInfo(customerInfo)
+        const packages = offerings?.current?.availablePackages ?? []
+
+        setPremiumEntitlement(nextPremium)
+        setNativePackages(packages)
+        updateNativeStatus(nextPremium, packages.length)
+      } catch (error) {
+        console.warn('[billing] failed to load native billing state:', error)
+        if (!cancelled) {
+          setNativePackages([])
+          updateNativeStatus(false, 0)
+        }
+      } finally {
+        if (!cancelled) {
+          setLoading(false)
+        }
+      }
     }
 
-    if (!billingEnabled || !user) {
+    void loadNativeStatus()
+
+    return () => {
+      cancelled = true
+    }
+  }, [native, refreshKey, setPremiumEntitlement, updateNativeStatus])
+
+  useEffect(() => {
+    if (native) return
+
+    if (!billingEnabled) {
       setLoading(false)
       setErrorMessage(null)
-      setStatus(null)
+      setStatus({
+        enabled: false,
+        isPremium: false,
+        paymentMethod: null,
+        entitlement: null,
+      })
       return
     }
 
@@ -240,31 +291,7 @@ export function BillingManagementCard({
     return () => {
       cancelled = true
     }
-  }, [billingEnabled, entitlementPremium, native, refreshKey, user])
-
-  useEffect(() => {
-    if (!native || !isDetail) return
-
-    let cancelled = false
-
-    const loadOfferings = async () => {
-      try {
-        const { getOfferings } = await import('@/lib/nativeBilling')
-        const offerings = await getOfferings()
-        if (!cancelled && offerings?.current) {
-          setNativePackages(offerings.current.availablePackages)
-        }
-      } catch (error) {
-        console.warn('[billing] failed to load native offerings:', error)
-      }
-    }
-
-    void loadOfferings()
-
-    return () => {
-      cancelled = true
-    }
-  }, [isDetail, native])
+  }, [billingEnabled, native, refreshKey, user])
 
   useEffect(() => {
     const planKey = status?.entitlement?.planKey
@@ -276,6 +303,13 @@ export function BillingManagementCard({
   }, [status?.entitlement?.planKey])
 
   const currentPremium = native ? entitlementPremium : status?.isPremium ?? false
+  const entitlementSource = native ? (currentPremium ? 'revenuecat' : 'free') : status?.entitlement?.source ?? 'free'
+  const webBillingReady = status?.enabled ?? false
+  const hasManagedSubscription =
+    native ? currentPremium : currentPremium && entitlementSource === 'stripe'
+  const hasBillingPaymentMethod =
+    native ? currentPremium : currentPremium && entitlementSource === 'stripe'
+  const hasCodeAccess = currentPremium && entitlementSource === 'code'
   const planKey = status?.entitlement?.planKey ?? (currentPremium ? 'premium' : 'free')
   const currentPlanLabel = loading ? 'Checking membership...' : getPlanLabel(planKey)
   const currentStatusLabel = loading
@@ -283,17 +317,19 @@ export function BillingManagementCard({
     : currentPremium
       ? 'Premium active'
       : 'Free plan'
-  const isReady = native ? currentPremium || nativePackages.length > 0 : billingEnabled
+  const isReady = native ? currentPremium || nativePackages.length > 0 : webBillingReady
   const currentPlan =
     planKey === 'premium_monthly' ? 'monthly' : planKey === 'premium_yearly' ? 'yearly' : null
   const shouldShowPlanLabel = currentPremium && currentPlanLabel !== currentStatusLabel
   const managementLabel =
-    !native && !billingEnabled
+    !native && !webBillingReady
       ? ''
-      : native
-        ? `Manage in ${getStoreLabel()}`
-        : currentPremium
-          ? 'Manage in subscription portal'
+      : hasManagedSubscription
+        ? native
+          ? `Manage in ${getStoreLabel()}`
+          : 'Manage in subscription portal'
+        : hasCodeAccess
+          ? 'Code access only'
           : user
             ? 'Ready to subscribe'
             : 'Log in to subscribe'
@@ -311,16 +347,16 @@ export function BillingManagementCard({
       : !native && status?.entitlement?.currentPeriodEnd
         ? formatDate(status.entitlement.currentPeriodEnd)
         : ''
-  const paymentMethodLabel = currentPremium
+  const paymentMethodLabel = hasBillingPaymentMethod
     ? native
       ? `${getStoreLabel()} billing`
       : status?.paymentMethod?.last4
         ? `${formatCardBrand(status.paymentMethod.brand)} •••• ${status.paymentMethod.last4}`
         : 'Payment method unavailable'
-    : 'Not subscribed'
+    : ''
   const paymentMethodDetail =
     !native &&
-    currentPremium &&
+    hasBillingPaymentMethod &&
     status?.paymentMethod?.expMonth &&
     status?.paymentMethod?.expYear
       ? `Exp ${String(status.paymentMethod.expMonth).padStart(2, '0')}/${String(status.paymentMethod.expYear).slice(-2)}`
@@ -330,8 +366,17 @@ export function BillingManagementCard({
     ...(currentPremium
       ? [{ label: 'Plan', value: currentPlanLabel, detail: null as string | null }]
       : []),
-    ...(currentPremium
+    ...(hasBillingPaymentMethod
       ? [{ label: 'Payment', value: paymentMethodLabel, detail: paymentMethodDetail }]
+      : []),
+    ...(hasCodeAccess
+      ? [
+          {
+            label: 'Access',
+            value: 'Redeemed code',
+            detail: 'Billing starts only when you subscribe.',
+          },
+        ]
       : []),
     { label: 'Manage', value: managementLabel, detail: null as string | null },
     { label: scheduleLabel, value: scheduleValue, detail: null as string | null },
@@ -396,6 +441,7 @@ export function BillingManagementCard({
       const customerInfo = await restorePurchases()
       const restored = isPremiumFromCustomerInfo(customerInfo)
       setPremiumEntitlement(restored)
+      updateNativeStatus(restored)
 
       if (!restored) {
         setErrorMessage('No restorable purchase was found.')
@@ -427,6 +473,7 @@ export function BillingManagementCard({
       const customerInfo = await purchasePackage(pkg.identifier)
       const nextPremium = isPremiumFromCustomerInfo(customerInfo)
       setPremiumEntitlement(nextPremium)
+      updateNativeStatus(nextPremium)
     } catch (error: unknown) {
       const purchaseError = error as { code?: string; userCancelled?: boolean }
       if (!purchaseError.userCancelled && purchaseError.code !== 'PURCHASE_CANCELLED') {
@@ -439,7 +486,7 @@ export function BillingManagementCard({
   }
 
   const handleWebCheckout = async () => {
-    if (!billingEnabled) return
+    if (!webBillingReady) return
 
     if (!user) {
       window.location.assign(`/login?next=${encodeURIComponent(pathname || '/profile')}`)
@@ -489,12 +536,17 @@ export function BillingManagementCard({
   }
 
   const handlePrimaryAction = () => {
-    if (currentPremium) {
+    if (hasManagedSubscription) {
       if (native) {
         handleOpenStore()
       } else {
         void handlePortal()
       }
+      return
+    }
+
+    if (!user) {
+      window.location.assign(`/login?next=${encodeURIComponent(pathname || '/profile')}`)
       return
     }
 
@@ -510,8 +562,10 @@ export function BillingManagementCard({
     if (!isReady) return 'BILLING SOON'
     if (submitting) return 'PROCESSING...'
     if (managing) return 'OPENING...'
-    if (currentPremium) return native ? `MANAGE IN ${getStoreLabel().toUpperCase()}` : 'MANAGE SUBSCRIPTION'
-    if (!native && !user) return 'LOG IN TO SUBSCRIBE'
+    if (hasManagedSubscription) {
+      return native ? `MANAGE IN ${getStoreLabel().toUpperCase()}` : 'MANAGE SUBSCRIPTION'
+    }
+    if (!user) return 'LOG IN TO SUBSCRIBE'
     return 'START SUBSCRIPTION'
   })()
 
@@ -561,16 +615,28 @@ export function BillingManagementCard({
             </p>
           )}
 
-          {currentPremium && (
+          {hasBillingPaymentMethod && (
             <p className="mt-3 text-xs text-[var(--text-secondary)]">
               Payment {paymentMethodLabel}
               {paymentMethodDetail ? ` · ${paymentMethodDetail}` : ''}
             </p>
           )}
 
-          {!native && !user && billingEnabled && (
+          {!native && hasCodeAccess && (
+            <p className="mt-3 text-xs text-[var(--text-secondary)]">
+              Premium is active from a redeemed code. Billing starts only when you subscribe.
+            </p>
+          )}
+
+          {!native && !user && webBillingReady && (
             <p className="mt-3 text-xs text-[var(--text-secondary)]">
               Log in to manage billing and attach premium access to your account.
+            </p>
+          )}
+
+          {!native && billingEnabled && !webBillingReady && (
+            <p className="mt-3 text-xs text-[var(--text-secondary)]">
+              Billing is still being finalized on the server.
             </p>
           )}
 
@@ -629,9 +695,11 @@ export function BillingManagementCard({
                 ))}
               </div>
 
-              {currentPremium && (
+              {(hasManagedSubscription || hasCodeAccess) && (
                 <p className="text-xs text-[var(--text-secondary)]">
-                  {native
+                  {hasCodeAccess
+                    ? 'Your current access comes from a code. Start a subscription whenever you want billing to continue automatically.'
+                    : native
                     ? `Change plans in ${getStoreLabel()}.`
                     : 'Billing cycle changes and payment method updates happen in the subscription portal.'}
                 </p>

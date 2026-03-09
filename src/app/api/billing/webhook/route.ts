@@ -5,6 +5,7 @@ import {
   getStripeClient,
   recordProcessedBillingEvent,
   syncCheckoutSession,
+  syncSubscriptionById,
   syncSubscriptionFromWebhook,
   wasBillingEventProcessed,
 } from '@/lib/billingServer'
@@ -48,9 +49,24 @@ export async function POST(request: Request) {
       }
       case 'customer.subscription.created':
       case 'customer.subscription.updated':
-      case 'customer.subscription.deleted': {
+      case 'customer.subscription.deleted':
+      case 'customer.subscription.paused':
+      case 'customer.subscription.resumed': {
         const subscription = event.data.object as Stripe.Subscription
         await syncSubscriptionFromWebhook(subscription)
+        break
+      }
+      case 'invoice.paid':
+      case 'invoice.payment_failed': {
+        const invoice = event.data.object as Stripe.Invoice & {
+          subscription?: string | Stripe.Subscription | null
+        }
+        const subscriptionId =
+          typeof invoice.subscription === 'string' ? invoice.subscription : invoice.subscription?.id
+
+        if (subscriptionId) {
+          await syncSubscriptionById(subscriptionId)
+        }
         break
       }
       default:

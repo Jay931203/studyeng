@@ -1,12 +1,15 @@
 import { NextResponse } from 'next/server'
-import { getBillingConfig } from '@/lib/billing'
-import { getEntitlementSnapshot, getPaymentMethodSummary } from '@/lib/billingServer'
+import {
+  getBillingServerConfig,
+  getEntitlementSnapshot,
+  getPaymentMethodSummary,
+} from '@/lib/billingServer'
 import { createClient } from '@/lib/supabase/server'
 
 export const runtime = 'nodejs'
 
 export async function GET() {
-  const billingConfig = getBillingConfig()
+  const billingConfig = getBillingServerConfig()
   const supabase = await createClient()
 
   if (!supabase) {

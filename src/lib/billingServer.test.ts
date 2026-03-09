@@ -1,13 +1,23 @@
 import { afterEach, describe, expect, it } from 'vitest'
 import { isEntitlementActive } from '@/lib/billing'
-import { getPlanKeyForPriceId } from '@/lib/billingServer'
+import { getBillingServerConfig, getPlanKeyForPriceId } from '@/lib/billingServer'
 
 const originalBillingEnabled = process.env.NEXT_PUBLIC_BILLING_ENABLED
+const originalSupabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+const originalSupabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+const originalServiceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY
+const originalStripeSecretKey = process.env.STRIPE_SECRET_KEY
+const originalStripeWebhookSecret = process.env.STRIPE_WEBHOOK_SECRET
 const originalMonthlyPriceId = process.env.STRIPE_PREMIUM_MONTHLY_PRICE_ID
 const originalYearlyPriceId = process.env.STRIPE_PREMIUM_YEARLY_PRICE_ID
 
 afterEach(() => {
   process.env.NEXT_PUBLIC_BILLING_ENABLED = originalBillingEnabled
+  process.env.NEXT_PUBLIC_SUPABASE_URL = originalSupabaseUrl
+  process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = originalSupabaseAnonKey
+  process.env.SUPABASE_SERVICE_ROLE_KEY = originalServiceRoleKey
+  process.env.STRIPE_SECRET_KEY = originalStripeSecretKey
+  process.env.STRIPE_WEBHOOK_SECRET = originalStripeWebhookSecret
   process.env.STRIPE_PREMIUM_MONTHLY_PRICE_ID = originalMonthlyPriceId
   process.env.STRIPE_PREMIUM_YEARLY_PRICE_ID = originalYearlyPriceId
 })
@@ -32,5 +42,25 @@ describe('billingServer', () => {
     expect(isEntitlementActive('active', past)).toBe(false)
     expect(isEntitlementActive('canceled', future)).toBe(false)
     expect(isEntitlementActive(null, future)).toBe(false)
+  })
+
+  it('requires Stripe, webhook, and Supabase admin config before enabling checkout', () => {
+    process.env.NEXT_PUBLIC_BILLING_ENABLED = 'true'
+    process.env.NEXT_PUBLIC_SUPABASE_URL = 'https://example.supabase.co'
+    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY = 'anon-key'
+    process.env.SUPABASE_SERVICE_ROLE_KEY = 'service-role-key'
+    process.env.STRIPE_SECRET_KEY = 'sk_test_123'
+    process.env.STRIPE_WEBHOOK_SECRET = 'whsec_123'
+    process.env.STRIPE_PREMIUM_MONTHLY_PRICE_ID = 'price_monthly'
+    process.env.STRIPE_PREMIUM_YEARLY_PRICE_ID = 'price_yearly'
+
+    expect(getBillingServerConfig().enabled).toBe(true)
+
+    delete process.env.STRIPE_WEBHOOK_SECRET
+    expect(getBillingServerConfig().enabled).toBe(false)
+
+    process.env.STRIPE_WEBHOOK_SECRET = 'whsec_123'
+    delete process.env.SUPABASE_SERVICE_ROLE_KEY
+    expect(getBillingServerConfig().enabled).toBe(false)
   })
 })

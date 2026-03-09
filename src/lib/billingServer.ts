@@ -7,7 +7,7 @@ import {
   type PremiumPlanKey,
 } from '@/lib/billing'
 import { sanitizeAppPath } from '@/lib/navigation'
-import { createAdminClient } from '@/lib/supabase/admin'
+import { createAdminClient, getSupabaseAdminConfig } from '@/lib/supabase/admin'
 
 interface BillingCustomerRow {
   user_id: string
@@ -25,10 +25,13 @@ interface BillingSubscriptionRow {
   cancel_at_period_end: boolean | null
 }
 
-interface EntitlementSnapshot {
+export type BillingEntitlementSource = 'free' | 'stripe' | 'code' | 'revenuecat'
+
+export interface EntitlementSnapshot {
   isPremium: boolean
   planKey: PremiumPlanKey | 'free'
   status: string
+  source: BillingEntitlementSource
   currentPeriodEnd: string | null
   cancelAtPeriodEnd: boolean
   stripeCustomerId: string | null
@@ -49,17 +52,22 @@ export function getBillingServerConfig() {
   const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET?.trim()
   const monthlyPriceId = process.env.STRIPE_PREMIUM_MONTHLY_PRICE_ID?.trim()
   const yearlyPriceId = process.env.STRIPE_PREMIUM_YEARLY_PRICE_ID?.trim()
+  const { enabled: adminEnabled } = getSupabaseAdminConfig()
+  const stripeConfigured =
+    !hasPlaceholderValue(secretKey) &&
+    !hasPlaceholderValue(monthlyPriceId) &&
+    !hasPlaceholderValue(yearlyPriceId)
+  const webhookConfigured = !hasPlaceholderValue(webhookSecret)
 
   return {
     secretKey,
     webhookSecret,
     monthlyPriceId,
     yearlyPriceId,
-    enabled:
-      isBillingEnabled() &&
-      !hasPlaceholderValue(secretKey) &&
-      !hasPlaceholderValue(monthlyPriceId) &&
-      !hasPlaceholderValue(yearlyPriceId),
+    adminEnabled,
+    stripeConfigured,
+    webhookConfigured,
+    enabled: isBillingEnabled() && adminEnabled && stripeConfigured && webhookConfigured,
   }
 }
 
@@ -123,6 +131,22 @@ function getCustomerEmail(
   }
 
   return customer.email ?? null
+}
+
+function normalizeEntitlementSource(
+  source: string | null | undefined,
+  stripeCustomerId: string | null | undefined,
+  stripeSubscriptionId: string | null | undefined,
+): BillingEntitlementSource {
+  if (source === 'stripe' || source === 'code' || source === 'revenuecat') {
+    return source
+  }
+
+  if (stripeCustomerId || stripeSubscriptionId) {
+    return 'stripe'
+  }
+
+  return 'free'
 }
 
 function summarizePaymentMethod(
@@ -280,6 +304,7 @@ async function reconcileEntitlement(userId: string) {
       isPremium: false,
       planKey: 'free',
       status: 'inactive',
+      source: 'free',
       currentPeriodEnd: null,
       cancelAtPeriodEnd: false,
       stripeCustomerId: null,
@@ -309,6 +334,7 @@ async function reconcileEntitlement(userId: string) {
         isPremium: true,
         planKey: activeSubscription.plan_key,
         status: activeSubscription.status,
+        source: 'stripe',
         currentPeriodEnd: activeSubscription.current_period_end,
         cancelAtPeriodEnd: Boolean(activeSubscription.cancel_at_period_end),
         stripeCustomerId: activeSubscription.stripe_customer_id,
@@ -318,6 +344,7 @@ async function reconcileEntitlement(userId: string) {
         isPremium: false,
         planKey: 'free',
         status: 'inactive',
+        source: 'free',
         currentPeriodEnd: null,
         cancelAtPeriodEnd: false,
         stripeCustomerId: null,
@@ -328,7 +355,7 @@ async function reconcileEntitlement(userId: string) {
       user_id: userId,
       plan_key: entitlement.planKey,
       status: entitlement.status,
-      source: 'stripe',
+      source: entitlement.source,
       stripe_customer_id: entitlement.stripeCustomerId,
       stripe_subscription_id: entitlement.stripeSubscriptionId,
       current_period_end: entitlement.currentPeriodEnd,
@@ -354,7 +381,7 @@ export async function getEntitlementSnapshot(userId: string) {
   const { data: rawData, error } = await admin
     .from('subscription_entitlements')
     .select(
-      'plan_key, status, current_period_end, cancel_at_period_end, stripe_customer_id, stripe_subscription_id',
+      'plan_key, status, source, current_period_end, cancel_at_period_end, stripe_customer_id, stripe_subscription_id',
     )
     .eq('user_id', userId)
     .maybeSingle()
@@ -367,6 +394,7 @@ export async function getEntitlementSnapshot(userId: string) {
   const data = (rawData as {
     plan_key: string | null
     status: string | null
+    source: string | null
     current_period_end: string | null
     cancel_at_period_end: boolean | null
     stripe_customer_id: string | null
@@ -378,6 +406,7 @@ export async function getEntitlementSnapshot(userId: string) {
       isPremium: false,
       planKey: 'free',
       status: 'inactive',
+      source: 'free',
       currentPeriodEnd: null,
       cancelAtPeriodEnd: false,
       stripeCustomerId: null,
@@ -389,6 +418,11 @@ export async function getEntitlementSnapshot(userId: string) {
     isPremium: isEntitlementActive(data.status, data.current_period_end),
     planKey: (data.plan_key as PremiumPlanKey | 'free') ?? 'free',
     status: data.status ?? 'inactive',
+    source: normalizeEntitlementSource(
+      data.source,
+      data.stripe_customer_id,
+      data.stripe_subscription_id,
+    ),
     currentPeriodEnd: data.current_period_end ?? null,
     cancelAtPeriodEnd: Boolean(data.cancel_at_period_end),
     stripeCustomerId: data.stripe_customer_id ?? null,
@@ -459,6 +493,11 @@ export async function createCheckoutSession(
     throw new Error('billing-plan-missing')
   }
 
+  const entitlement = await getEntitlementSnapshot(userId)
+  if (entitlement?.isPremium && entitlement.source === 'stripe') {
+    return createPortalSession(userId, origin)
+  }
+
   const customer = await ensureStripeCustomer(userId, email)
   if (!customer) {
     throw new Error('billing-customer-failed')
@@ -469,6 +508,12 @@ export async function createCheckoutSession(
     mode: 'subscription',
     customer: customer.stripe_customer_id,
     client_reference_id: userId,
+    allow_promotion_codes: true,
+    billing_address_collection: 'auto',
+    customer_update: {
+      address: 'auto',
+      name: 'auto',
+    },
     line_items: [
       {
         price: priceId,
@@ -570,6 +615,16 @@ export async function syncSubscriptionFromWebhook(subscription: Stripe.Subscript
     userId,
     entitlement: await reconcileEntitlement(userId),
   }
+}
+
+export async function syncSubscriptionById(subscriptionId: string) {
+  const stripe = getStripeClient()
+  if (!stripe) {
+    throw new Error('billing-disabled')
+  }
+
+  const subscription = await stripe.subscriptions.retrieve(subscriptionId)
+  return syncSubscriptionFromWebhook(subscription)
 }
 
 export async function wasBillingEventProcessed(eventId: string) {

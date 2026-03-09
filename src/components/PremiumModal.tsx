@@ -15,6 +15,10 @@ interface PremiumModalProps {
   trigger?: 'video-limit' | 'phrase-limit'
 }
 
+interface BillingReadinessPayload {
+  enabled: boolean
+}
+
 const triggerMessages: Record<'video-limit' | 'phrase-limit', string> = {
   'video-limit': '오늘 무료 영상 시청 한도를 모두 사용했습니다.',
   'phrase-limit': '무료 문장 저장 한도를 모두 사용했습니다.',
@@ -51,6 +55,7 @@ export function PremiumModal({
   const [submitting, setSubmitting] = useState(false)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const [nativePackages, setNativePackages] = useState<PurchasesPackage[]>([])
+  const [webBillingReady, setWebBillingReady] = useState(false)
   const native = isNative()
   const nextPath = useMemo(() => {
     const query = searchParams.toString()
@@ -65,10 +70,14 @@ export function PremiumModal({
 
     const loadOfferings = async () => {
       try {
-        const { getOfferings } = await import('@/lib/nativeBilling')
-        const offerings = await getOfferings()
-        if (!cancelled && offerings?.current) {
-          setNativePackages(offerings.current.availablePackages)
+        const { getCustomerInfo, getOfferings, isPremiumFromCustomerInfo } = await import(
+          '@/lib/nativeBilling'
+        )
+        const [customerInfo, offerings] = await Promise.all([getCustomerInfo(), getOfferings()])
+
+        if (!cancelled) {
+          setPremiumEntitlement(isPremiumFromCustomerInfo(customerInfo))
+          setNativePackages(offerings?.current?.availablePackages ?? [])
         }
       } catch (error) {
         console.warn('[billing] failed to load native offerings:', error)
@@ -77,7 +86,43 @@ export function PremiumModal({
 
     void loadOfferings()
     return () => { cancelled = true }
-  }, [native, isOpen])
+  }, [isOpen, native, setPremiumEntitlement])
+
+  useEffect(() => {
+    if (native || !isOpen) return
+
+    if (!billingEnabled) {
+      setWebBillingReady(false)
+      return
+    }
+
+    let cancelled = false
+
+    const loadBillingReady = async () => {
+      try {
+        const response = await fetch('/api/billing/status', { cache: 'no-store' })
+        if (!response.ok) {
+          throw new Error('billing-status-failed')
+        }
+
+        const payload = (await response.json()) as BillingReadinessPayload
+        if (!cancelled) {
+          setWebBillingReady(Boolean(payload.enabled))
+        }
+      } catch (error) {
+        console.warn('[billing] billing readiness fetch failed:', error)
+        if (!cancelled) {
+          setWebBillingReady(false)
+        }
+      }
+    }
+
+    void loadBillingReady()
+
+    return () => {
+      cancelled = true
+    }
+  }, [billingEnabled, isOpen, native])
 
   const handleNativePurchase = async (pkg: PurchasesPackage) => {
     setSubmitting(true)
@@ -105,7 +150,7 @@ export function PremiumModal({
   }
 
   const handleWebCheckout = async () => {
-    if (!billingEnabled) return
+    if (!webBillingReady) return
 
     if (!user) {
       window.location.assign(`/login?next=${encodeURIComponent(nextPath || '/profile')}`)
@@ -144,6 +189,13 @@ export function PremiumModal({
   }
 
   const handleCheckout = () => {
+    if (!isReady) return
+
+    if (!user) {
+      window.location.assign(`/login?next=${encodeURIComponent(nextPath || '/profile')}`)
+      return
+    }
+
     if (native && nativePackages.length > 0) {
       const pkg = nativePackages.find((p) =>
         selectedPlan === 'yearly'
@@ -156,7 +208,7 @@ export function PremiumModal({
     }
   }
 
-  const isReady = native ? nativePackages.length > 0 : billingEnabled
+  const isReady = native ? nativePackages.length > 0 : webBillingReady
 
   return (
     <ModalShell isOpen={isOpen} onClose={onClose} position="bottom">
