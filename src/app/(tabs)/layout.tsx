@@ -32,10 +32,6 @@ export default function TabsLayout({
   const { user, loading: authLoading, authAvailable } = useAuth()
   const { isLandscapeViewport } = useViewportLayout()
 
-  const [splashDone, setSplashDone] = useState(() => {
-    if (typeof window === 'undefined') return false
-    return sessionStorage.getItem('shortee-splash-shown') === '1'
-  })
   const [dismissedGuestGateVersion, setDismissedGuestGateVersion] = useState<number | null>(null)
   const isImmersiveRoute = pathname === '/shorts' || pathname === '/'
   const hasExistingActivity = watchedVideoIds.length > 0 || phraseCount > 0 || streakDays > 0
@@ -44,20 +40,10 @@ export default function TabsLayout({
   const shouldRedirectToOnboarding =
     Boolean(user) && onboardingHydrated && !hasOnboarded && !hasExistingActivity
   const onboardingGateReady = user ? onboardingHydrated : true
-  const shellReady =
-    splashDone && !authLoading && onboardingGateReady && !shouldRedirectToOnboarding
+  const shellReady = !authLoading && onboardingGateReady && !shouldRedirectToOnboarding
   const guestGateVersion = authAvailable && !authLoading && !user ? watchedVideoIds.length : 0
   const showLoginGate =
     guestGateVersion > GUEST_VIEW_LIMIT && dismissedGuestGateVersion !== guestGateVersion
-
-  useEffect(() => {
-    if (splashDone) return
-    const timer = window.setTimeout(() => {
-      setSplashDone(true)
-      sessionStorage.setItem('shortee-splash-shown', '1')
-    }, 1500)
-    return () => clearTimeout(timer)
-  }, [splashDone])
 
   useEffect(() => {
     if (authLoading || !onboardingHydrated || !user) return

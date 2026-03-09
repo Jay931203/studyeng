@@ -22,14 +22,14 @@ const BACKGROUND_OPTIONS = [
 ] satisfies Array<{ id: ThemeBackground; swatchClass: string }>
 
 const COLOR_OPTIONS = [
-  { id: 'teal' as const, swatchClass: 'bg-[#14b8a6]' },
-  { id: 'blue' as const, swatchClass: 'bg-[#3b82f6]' },
-  { id: 'purple' as const, swatchClass: 'bg-[#a855f7]' },
   {
     id: 'rainbow' as const,
     swatchClass:
-      'bg-[conic-gradient(from_210deg,_#ff4fd8,_#7c4dff,_#53d7ff,_#ffd64a,_#ff4fd8)]',
+      'bg-[conic-gradient(from_220deg,_#53d7ff,_#7c4dff,_#ff5ac8,_#ff9538,_#ffd84a,_#53d7ff)]',
   },
+  { id: 'teal' as const, swatchClass: 'bg-[#14b8a6]' },
+  { id: 'blue' as const, swatchClass: 'bg-[#3b82f6]' },
+  { id: 'purple' as const, swatchClass: 'bg-[#a855f7]' },
 ] satisfies Array<{ id: ThemeAccent; swatchClass: string }>
 
 function SectionLabel({ label }: { label: string }) {
