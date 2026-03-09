@@ -404,24 +404,10 @@ export default function ExplorePage() {
         )}
       </div>
 
-      <section className="relative mb-8 grid gap-4 xl:grid-cols-[1.15fr_0.85fr]">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-6 -top-6 h-28 rounded-[32px] blur-3xl"
-          style={{ background: 'var(--accent-rainbow-soft, transparent)' }}
-        />
-        <SurfaceCard className="relative overflow-hidden">
+      <section className="mb-8 grid gap-4 xl:grid-cols-[1.15fr_0.85fr]">
+        <SurfaceCard className="overflow-hidden">
           <div className="grid min-h-[240px] lg:grid-cols-[1.02fr_0.98fr]">
-            <div className="relative order-2 overflow-hidden p-6 sm:p-8 lg:order-1 lg:p-10">
-              <div
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-0 z-0"
-                style={{
-                  background:
-                    'radial-gradient(circle at top left, rgba(255,255,255,0.08), transparent 44%), var(--accent-rainbow-soft, transparent)',
-                }}
-              />
-              <div className="relative z-10">
+            <div className="order-2 p-6 sm:p-8 lg:order-1 lg:p-10">
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
                 오늘의 추천
               </p>
@@ -447,7 +433,6 @@ export default function ExplorePage() {
                 >
                   시리즈
                 </button>
-              </div>
               </div>
             </div>
 
