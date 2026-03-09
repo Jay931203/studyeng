@@ -586,7 +586,7 @@ export function BillingManagementCard({
           <>
             <div className="rounded-2xl bg-[var(--bg-primary)] px-4 py-4">
               <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--text-muted)]">
-                ACCOUNT DETAIL
+                DETAILS
               </p>
               <div className="mt-3 grid gap-3 sm:grid-cols-2">
                 {membershipSummaryItems.map((item) => (
