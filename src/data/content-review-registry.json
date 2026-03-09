@@ -67,6 +67,20 @@
     ],
     "tvKzyYy6qvY": [
       {
+        "type": "GAP",
+        "idx": 5,
+        "start": 18.92,
+        "end": 23.32,
+        "reason": "Natural dramatic pause between dialogue beats."
+      },
+      {
+        "type": "GAP",
+        "idx": 8,
+        "start": 30,
+        "end": 35.4,
+        "reason": "Natural dramatic pause between dialogue beats."
+      },
+      {
         "type": "KO_MULTI_SENTENCE",
         "idx": 22,
         "start": 67.2,
@@ -543,18 +557,6 @@
     ],
     "_RchONkTtQ0": [
       {
-        "type": "TEXT_LONG",
-        "idx": 5,
-        "start": 37.52,
-        "end": 44.52
-      },
-      {
-        "type": "KO_MULTI_SENTENCE",
-        "idx": 5,
-        "start": 37.52,
-        "end": 44.52
-      },
-      {
         "type": "GAP",
         "idx": 6,
         "start": 55.16,
@@ -565,6 +567,32 @@
         "idx": 7,
         "start": 60.64,
         "end": 66.32
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 3,
+        "start": 29.28,
+        "end": 33.88,
+        "reason": "Natural multi-sentence dialogue; readable within timing."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 5,
+        "start": 37.52,
+        "end": 44.52
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 6,
+        "start": 55.16,
+        "end": 60.64,
+        "reason": "Continuation into the next caption is natural."
+      },
+      {
+        "type": "TEXT_LONG",
+        "idx": 5,
+        "start": 37.52,
+        "end": 44.52
       }
     ],
     "_royauacHzU": [
@@ -1069,6 +1097,13 @@
         "idx": 1,
         "start": 48.92,
         "end": 55.88
+      },
+      {
+        "type": "KO_DUPLICATE_NEIGHBOR",
+        "idx": 7,
+        "start": 84.44,
+        "end": 90.92,
+        "reason": "Repeated lyric refrain; reusing the same Korean line is semantically accurate."
       }
     ],
     "-pYA8Nu2dDM": [
@@ -3119,13 +3154,26 @@
     ],
     "389nJrZjK1w": [
       {
-        "type": "TEXT_LONG",
+        "type": "KO_MULTI_SENTENCE",
         "idx": 5,
         "start": 53.84,
         "end": 60.6
       },
       {
         "type": "KO_MULTI_SENTENCE",
+        "idx": 6,
+        "start": 60.6,
+        "end": 63.6,
+        "reason": "Natural interview exchange; the Korean is already accurate and readable."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 9,
+        "start": 73.88,
+        "end": 79.2
+      },
+      {
+        "type": "TEXT_LONG",
         "idx": 5,
         "start": 53.84,
         "end": 60.6
@@ -3135,12 +3183,6 @@
         "idx": 8,
         "start": 68.48,
         "end": 73.88
-      },
-      {
-        "type": "KO_MULTI_SENTENCE",
-        "idx": 9,
-        "start": 73.88,
-        "end": 79.2
       }
     ],
     "38FMDG7tiA4": [
@@ -3205,6 +3247,13 @@
         "idx": 3,
         "start": 51.84,
         "end": 58.52
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 3,
+        "start": 51.84,
+        "end": 58.52,
+        "reason": "Natural multi-sentence dialogue in one subtitle; punctuation is acceptable."
       },
       {
         "type": "KO_MULTI_SENTENCE",
@@ -4168,9 +4217,23 @@
       },
       {
         "type": "KO_LATIN_HEAVY",
+        "idx": 11,
+        "start": 34.9,
+        "end": 37.82,
+        "reason": "RSVP is the exact quoted term and should remain in Latin letters."
+      },
+      {
+        "type": "KO_LATIN_HEAVY",
         "idx": 19,
         "start": 55.62,
         "end": 58.1
+      },
+      {
+        "type": "KO_LATIN_HEAVY",
+        "idx": 20,
+        "start": 58.1,
+        "end": 62.74,
+        "reason": "RSVP is the exact quoted term and should remain in Latin letters."
       }
     ],
     "4H6qwPJT9W0": [
@@ -4223,6 +4286,12 @@
     ],
     "4KBAXMpklDU": [
       {
+        "type": "DURATION_LONG",
+        "idx": 8,
+        "start": 62.76,
+        "end": 69.76
+      },
+      {
         "type": "KO_MULTI_SENTENCE",
         "idx": 0,
         "start": 18,
@@ -4265,10 +4334,11 @@
         "end": 62.76
       },
       {
-        "type": "DURATION_LONG",
+        "type": "KO_MULTI_SENTENCE",
         "idx": 8,
         "start": 62.76,
-        "end": 69.76
+        "end": 69.76,
+        "reason": "Continuation split across captions reads naturally."
       },
       {
         "type": "KO_MULTI_SENTENCE",
@@ -5691,6 +5761,13 @@
         "idx": 13,
         "start": 65,
         "end": 69
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 17,
+        "start": 77,
+        "end": 81,
+        "reason": "Natural multi-sentence dialogue in one subtitle; punctuation is acceptable."
       },
       {
         "type": "KO_MULTI_SENTENCE",
@@ -10119,6 +10196,13 @@
         "idx": 1,
         "start": 42.44,
         "end": 49.44
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 1,
+        "start": 42.44,
+        "end": 49.44,
+        "reason": "The short command sequence is accurately translated despite having multiple sentences."
       }
     ],
     "BEG66-Lro7U": [
@@ -10143,16 +10227,23 @@
         "end": 44.56
       },
       {
-        "type": "KO_MULTI_SENTENCE",
-        "idx": 6,
-        "start": 47.96,
-        "end": 54.96
-      },
-      {
         "type": "GAP",
         "idx": 7,
         "start": 61.2,
         "end": 65.8
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 4,
+        "start": 37.56,
+        "end": 44.56,
+        "reason": "Song lyric spans several short clauses naturally; no subtitle defect to fix."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 6,
+        "start": 47.96,
+        "end": 54.96
       }
     ],
     "BHbksPYwdf8": [
@@ -10759,6 +10850,24 @@
     ],
     "c0KYU2j0TM4": [
       {
+        "type": "GAP",
+        "idx": 25,
+        "start": 97.45,
+        "end": 101.84
+      },
+      {
+        "type": "GAP",
+        "idx": 385,
+        "start": 1127.62,
+        "end": 1130.89
+      },
+      {
+        "type": "GAP",
+        "idx": 386,
+        "start": 1138.5,
+        "end": 1140.56
+      },
+      {
         "type": "KO_DUPLICATE_NEIGHBOR",
         "idx": 5,
         "start": 29.34,
@@ -10783,22 +10892,11 @@
         "end": 73.58
       },
       {
-        "type": "GAP",
-        "idx": 25,
-        "start": 97.45,
-        "end": 101.84
-      },
-      {
-        "type": "GAP",
-        "idx": 385,
-        "start": 1127.62,
-        "end": 1130.89
-      },
-      {
-        "type": "GAP",
-        "idx": 386,
-        "start": 1138.5,
-        "end": 1140.56
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 191,
+        "start": 563.13,
+        "end": 564.92,
+        "reason": "The ellipsis marks a clipped continuation, not a bad multi-sentence subtitle."
       }
     ],
     "C2vVmag1HRY": [
@@ -11203,6 +11301,13 @@
         "idx": 21,
         "start": 49,
         "end": 51
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 22,
+        "start": 51,
+        "end": 53,
+        "reason": "Short conversational exchange; the multiple sentence marks are natural and readable."
       }
     ],
     "citbw9n82BM": [
@@ -11417,16 +11522,23 @@
         "end": 38
       },
       {
-        "type": "TEXT_LONG",
-        "idx": 2,
-        "start": 38,
-        "end": 45
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 1,
+        "start": 31,
+        "end": 38,
+        "reason": "Acceptance-speech dialogue naturally contains several short spoken clauses."
       },
       {
         "type": "KO_MULTI_SENTENCE",
         "idx": 4,
         "start": 53,
         "end": 60
+      },
+      {
+        "type": "TEXT_LONG",
+        "idx": 2,
+        "start": 38,
+        "end": 45
       }
     ],
     "COD9hcTpGWQ": [
@@ -11827,6 +11939,13 @@
         "idx": 15,
         "start": 42.5,
         "end": 44.92
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 16,
+        "start": 44.92,
+        "end": 50.88,
+        "reason": "Interjection and laughter sequence is natural as-is."
       },
       {
         "type": "KO_MULTI_SENTENCE",
@@ -13001,16 +13120,23 @@
     ],
     "DvtxOzO6OAE": [
       {
+        "type": "GAP",
+        "idx": 11,
+        "start": 70.2,
+        "end": 71.04
+      },
+      {
         "type": "KO_MULTI_SENTENCE",
         "idx": 8,
         "start": 36.92,
         "end": 38.62
       },
       {
-        "type": "GAP",
-        "idx": 11,
-        "start": 70.2,
-        "end": 71.04
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 9,
+        "start": 38.62,
+        "end": 42.54,
+        "reason": "The sentence is split across adjacent captions, but the Korean remains natural in context."
       }
     ],
     "DVWyxC64FcA": [
@@ -13951,6 +14077,13 @@
         "idx": 9,
         "start": 67,
         "end": 70
+      },
+      {
+        "type": "KO_DUPLICATE_NEIGHBOR",
+        "idx": 3,
+        "start": 41,
+        "end": 43,
+        "reason": "Adjacent lyric lines mean the same thing in Korean, so the duplicate subtitle is acceptable."
       }
     ],
     "EApCLbgAE5E": [
@@ -16265,6 +16398,13 @@
         "idx": 14,
         "start": 75,
         "end": 77.08
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 15,
+        "start": 77.08,
+        "end": 81.24,
+        "reason": "Short multi-sentence exchange is readable as-is."
       }
     ],
     "gJuNiHitc40": [
@@ -18489,34 +18629,10 @@
     ],
     "iCvmsMzlF7o": [
       {
-        "type": "KO_DUPLICATE_NEIGHBOR",
-        "idx": 5,
-        "start": 34.24,
-        "end": 37.12
-      },
-      {
-        "type": "KO_DUPLICATE_NEIGHBOR",
-        "idx": 9,
-        "start": 49.92,
-        "end": 53.76
-      },
-      {
-        "type": "KO_DUPLICATE_NEIGHBOR",
-        "idx": 21,
-        "start": 86.32,
-        "end": 91.6
-      },
-      {
         "type": "GAP",
         "idx": 208,
         "start": 682,
         "end": 686.16
-      },
-      {
-        "type": "KO_DUPLICATE_NEIGHBOR",
-        "idx": 222,
-        "start": 739.6,
-        "end": 743.44
       },
       {
         "type": "GAP",
@@ -18541,6 +18657,44 @@
         "idx": 360,
         "start": 1242,
         "end": 1246.16
+      },
+      {
+        "type": "KO_DUPLICATE_NEIGHBOR",
+        "idx": 5,
+        "start": 34.24,
+        "end": 37.12
+      },
+      {
+        "type": "KO_DUPLICATE_NEIGHBOR",
+        "idx": 9,
+        "start": 49.92,
+        "end": 53.76
+      },
+      {
+        "type": "KO_DUPLICATE_NEIGHBOR",
+        "idx": 21,
+        "start": 86.32,
+        "end": 91.6
+      },
+      {
+        "type": "KO_DUPLICATE_NEIGHBOR",
+        "idx": 222,
+        "start": 739.6,
+        "end": 743.44
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 203,
+        "start": 664.16,
+        "end": 668.56,
+        "reason": "The ellipsis marks an interrupted continuation, not a subtitle defect."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 209,
+        "start": 686.48,
+        "end": 690.24,
+        "reason": "The ellipsis marks an interrupted continuation, not a subtitle defect."
       }
     ],
     "IEGQfrpnjWk": [
@@ -18601,6 +18755,13 @@
         "idx": 9,
         "start": 28.24,
         "end": 29.96
+      },
+      {
+        "type": "KO_LATIN_HEAVY",
+        "idx": 10,
+        "start": 29.96,
+        "end": 32.56,
+        "reason": "The domain name is a proper title and should remain in Latin script."
       },
       {
         "type": "KO_OVERLONG",
@@ -20103,10 +20264,10 @@
     ],
     "JYqfVE-fykk": [
       {
-        "type": "KO_MULTI_SENTENCE",
-        "idx": 0,
-        "start": 29,
-        "end": 36
+        "type": "DURATION_LONG",
+        "idx": 3,
+        "start": 59.48,
+        "end": 66.48
       },
       {
         "type": "GAP",
@@ -20115,22 +20276,29 @@
         "end": 50.72
       },
       {
+        "type": "GAP",
+        "idx": 4,
+        "start": 69.64,
+        "end": 74.96
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 0,
+        "start": 29,
+        "end": 36
+      },
+      {
         "type": "KO_MULTI_SENTENCE",
         "idx": 2,
         "start": 50.72,
         "end": 57.72
       },
       {
-        "type": "DURATION_LONG",
+        "type": "KO_MULTI_SENTENCE",
         "idx": 3,
         "start": 59.48,
-        "end": 66.48
-      },
-      {
-        "type": "GAP",
-        "idx": 4,
-        "start": 69.64,
-        "end": 74.96
+        "end": 66.48,
+        "reason": "The multi-sentence dialogue remains accurate and readable as written."
       },
       {
         "type": "KO_MULTI_SENTENCE",
@@ -20530,6 +20698,20 @@
     "KH55hmX0-Uo": [
       {
         "type": "KO_MULTI_SENTENCE",
+        "idx": 0,
+        "start": 29,
+        "end": 34.24,
+        "reason": "Profane argument line reads naturally as multiple short sentences in Korean."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 7,
+        "start": 59.4,
+        "end": 62.88,
+        "reason": "Conversational interruption and punchline are natural as written; punctuation-based flag is acceptable."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
         "idx": 12,
         "start": 84.12,
         "end": 90.8
@@ -20911,6 +21093,13 @@
         "idx": 2,
         "start": 45,
         "end": 52
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 0,
+        "start": 15,
+        "end": 22,
+        "reason": "Rapid multi-clause line; punctuation is natural and readable."
       }
     ],
     "kVm5k99PnBk": [
@@ -21461,13 +21650,20 @@
     ],
     "kze1JkPl5_8": [
       {
-        "type": "KO_MULTI_SENTENCE",
+        "type": "GAP",
         "idx": 1,
         "start": 32.08,
         "end": 38.36
       },
       {
-        "type": "GAP",
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 0,
+        "start": 17,
+        "end": 24,
+        "reason": "The comedic line spans multiple clauses, and the current Korean reads naturally."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
         "idx": 1,
         "start": 32.08,
         "end": 38.36
@@ -23240,9 +23436,23 @@
       },
       {
         "type": "KO_MULTI_SENTENCE",
+        "idx": 8,
+        "start": 57.2,
+        "end": 63.8,
+        "reason": "Rapid dialogue line is still readable."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
         "idx": 12,
         "start": 71.68,
         "end": 73.2
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 14,
+        "start": 75.76,
+        "end": 82.36,
+        "reason": "Natural conversational multi-sentence subtitle."
       }
     ],
     "mprGwBFrdrk": [
@@ -23805,13 +24015,38 @@
     ],
     "ndTbiDQjbiE": [
       {
-        "type": "KO_MULTI_SENTENCE",
+        "type": "GAP",
         "idx": 2,
         "start": 39,
         "end": 43
       },
       {
-        "type": "GAP",
+        "type": "KO_LATIN_HEAVY",
+        "idx": 7,
+        "start": 58,
+        "end": 61
+      },
+      {
+        "type": "KO_LATIN_HEAVY",
+        "idx": 8,
+        "start": 62,
+        "end": 69
+      },
+      {
+        "type": "KO_LATIN_HEAVY",
+        "idx": 9,
+        "start": 69,
+        "end": 71
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 0,
+        "start": 29,
+        "end": 32,
+        "reason": "Rapid-fire dialogue is intentionally compact and still reads naturally in Korean."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
         "idx": 2,
         "start": 39,
         "end": 43
@@ -23823,52 +24058,34 @@
         "end": 49
       },
       {
-        "type": "KO_LATIN_HEAVY",
-        "idx": 7,
-        "start": 58,
-        "end": 61
-      },
-      {
         "type": "KO_MULTI_SENTENCE",
         "idx": 7,
         "start": 58,
         "end": 61
       },
       {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 9,
+        "start": 69,
+        "end": 71
+      },
+      {
         "type": "KO_OVERLONG",
         "idx": 7,
         "start": 58,
         "end": 61
+      },
+      {
+        "type": "KO_OVERLONG",
+        "idx": 9,
+        "start": 69,
+        "end": 71
       },
       {
         "type": "TEXT_LONG",
         "idx": 8,
         "start": 62,
         "end": 69
-      },
-      {
-        "type": "KO_LATIN_HEAVY",
-        "idx": 8,
-        "start": 62,
-        "end": 69
-      },
-      {
-        "type": "KO_LATIN_HEAVY",
-        "idx": 9,
-        "start": 69,
-        "end": 71
-      },
-      {
-        "type": "KO_MULTI_SENTENCE",
-        "idx": 9,
-        "start": 69,
-        "end": 71
-      },
-      {
-        "type": "KO_OVERLONG",
-        "idx": 9,
-        "start": 69,
-        "end": 71
       },
       {
         "type": "TEXT_LONG",
@@ -25397,6 +25614,13 @@
         "idx": 2,
         "start": 61,
         "end": 68
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 2,
+        "start": 61,
+        "end": 68,
+        "reason": "Song lyric line naturally spans multiple sentences."
       }
     ],
     "OMOGaugKpzs": [
@@ -25793,6 +26017,13 @@
         "idx": 9,
         "start": 42.24,
         "end": 45.72
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 10,
+        "start": 45.72,
+        "end": 52.16,
+        "reason": "This is a short list-like utterance, so the punctuation is acceptable as written."
       }
     ],
     "PAFAfhod9TU": [
@@ -25927,6 +26158,27 @@
         "idx": 4,
         "start": 83,
         "end": 90
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 0,
+        "start": 29,
+        "end": 36,
+        "reason": "Song lyric line uses repeated clauses and an exclamation naturally."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 1,
+        "start": 38,
+        "end": 45,
+        "reason": "Song lyric line uses repeated clauses and an exclamation naturally."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 2,
+        "start": 53,
+        "end": 60,
+        "reason": "Song lyric line uses repeated clauses and an exclamation naturally."
       }
     ],
     "pgWZQr7r0l0": [
@@ -26243,6 +26495,13 @@
         "idx": 1,
         "start": 35.88,
         "end": 41.96
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 6,
+        "start": 63.08,
+        "end": 69.8,
+        "reason": "Leading fragment is already covered by the prior caption."
       },
       {
         "type": "KO_MULTI_SENTENCE",
@@ -27627,6 +27886,19 @@
     ],
     "re5veV2F7eY": [
       {
+        "type": "GAP",
+        "idx": 20,
+        "start": 60,
+        "end": 65
+      },
+      {
+        "type": "KO_LATIN_HEAVY",
+        "idx": 14,
+        "start": 39,
+        "end": 42,
+        "reason": "'fetch' is an intentionally preserved slang term."
+      },
+      {
         "type": "KO_MULTI_SENTENCE",
         "idx": 9,
         "start": 22,
@@ -27637,12 +27909,6 @@
         "idx": 10,
         "start": 27,
         "end": 32
-      },
-      {
-        "type": "GAP",
-        "idx": 20,
-        "start": 60,
-        "end": 65
       }
     ],
     "RESwG23_YGw": [
@@ -28683,6 +28949,18 @@
     ],
     "Rk3lcEeoEy8": [
       {
+        "type": "GAP",
+        "idx": 13,
+        "start": 55.7,
+        "end": 60.2
+      },
+      {
+        "type": "GAP",
+        "idx": 17,
+        "start": 74.7,
+        "end": 76.7
+      },
+      {
         "type": "KO_MULTI_SENTENCE",
         "idx": 11,
         "start": 44.7,
@@ -28695,22 +28973,17 @@
         "end": 53.2
       },
       {
-        "type": "GAP",
+        "type": "KO_MULTI_SENTENCE",
         "idx": 13,
         "start": 55.7,
-        "end": 60.2
+        "end": 60.2,
+        "reason": "Rapid multi-clause dialogue is expected here, and the Korean remains clear."
       },
       {
         "type": "KO_OVERLONG",
         "idx": 15,
         "start": 63.2,
         "end": 66.5
-      },
-      {
-        "type": "GAP",
-        "idx": 17,
-        "start": 74.7,
-        "end": 76.7
       }
     ],
     "rKgRPlkWk6o": [
@@ -29441,6 +29714,13 @@
         "idx": 18,
         "start": 75,
         "end": 77
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 19,
+        "start": 77,
+        "end": 79,
+        "reason": "The ellipsis is intentional and carries into the next subtitle."
       }
     ],
     "S_JUlXh7sP8": [
@@ -29747,6 +30027,13 @@
         "idx": 14,
         "start": 69.6,
         "end": 75.4
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 15,
+        "start": 75.4,
+        "end": 81.84,
+        "reason": "Leading fragment is already covered by the prior caption."
       }
     ],
     "sHBLVaIEwj4": [
@@ -30733,6 +31020,13 @@
         "idx": 9,
         "start": 66.5,
         "end": 70.1
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 4,
+        "start": 42.3,
+        "end": 46.5,
+        "reason": "Brief question-and-answer exchange is natural and readable as one subtitle."
       },
       {
         "type": "KO_MULTI_SENTENCE",
@@ -32603,16 +32897,30 @@
     ],
     "UqyT8IEBkvY": [
       {
-        "type": "TEXT_LONG",
+        "type": "KO_MULTI_SENTENCE",
         "idx": 5,
         "start": 50,
-        "end": 56.8
+        "end": 56.8,
+        "reason": "Song lyric phrasing and exclamations are acceptable."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 7,
+        "start": 59,
+        "end": 65.8,
+        "reason": "Song lyric phrasing and exclamations are acceptable."
       },
       {
         "type": "KO_MULTI_SENTENCE",
         "idx": 9,
         "start": 72.6,
         "end": 77.3
+      },
+      {
+        "type": "TEXT_LONG",
+        "idx": 5,
+        "start": 50,
+        "end": 56.8
       }
     ],
     "Us9-9TFddUw": [
@@ -32823,6 +33131,13 @@
         "idx": 13,
         "start": 65,
         "end": 69
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 17,
+        "start": 77,
+        "end": 81,
+        "reason": "The brief character introduction is translated naturally even with multiple short sentences."
       },
       {
         "type": "KO_MULTI_SENTENCE",
@@ -33493,12 +33808,6 @@
     ],
     "VakRggxHD_A": [
       {
-        "type": "KO_MULTI_SENTENCE",
-        "idx": 1,
-        "start": 35.64,
-        "end": 42.24
-      },
-      {
         "type": "GAP",
         "idx": 1,
         "start": 35.64,
@@ -33515,6 +33824,19 @@
         "idx": 7,
         "start": 72.24,
         "end": 76.64
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 1,
+        "start": 35.64,
+        "end": 42.24
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 4,
+        "start": 56.76,
+        "end": 62.72,
+        "reason": "Multiple short questions are intentional here and do not indicate a bad subtitle."
       }
     ],
     "VaT7IYQgyqo": [
@@ -33631,6 +33953,18 @@
     ],
     "vDuBWmYBCwE": [
       {
+        "type": "GAP",
+        "idx": 1,
+        "start": 42,
+        "end": 47
+      },
+      {
+        "type": "GAP",
+        "idx": 5,
+        "start": 71,
+        "end": 77
+      },
+      {
         "type": "KO_MULTI_SENTENCE",
         "idx": 0,
         "start": 29,
@@ -33643,22 +33977,17 @@
         "end": 47
       },
       {
-        "type": "GAP",
-        "idx": 1,
-        "start": 42,
-        "end": 47
-      },
-      {
         "type": "KO_MULTI_SENTENCE",
         "idx": 3,
         "start": 55,
         "end": 61
       },
       {
-        "type": "GAP",
-        "idx": 5,
-        "start": 71,
-        "end": 77
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 4,
+        "start": 61,
+        "end": 68,
+        "reason": "Natural multi-sentence dialogue; forcing a rewrite would be worse."
       },
       {
         "type": "KO_MULTI_SENTENCE",
@@ -33809,18 +34138,6 @@
     ],
     "VHZI9_we5GQ": [
       {
-        "type": "KO_MULTI_SENTENCE",
-        "idx": 3,
-        "start": 36.04,
-        "end": 39.32
-      },
-      {
-        "type": "KO_MULTI_SENTENCE",
-        "idx": 4,
-        "start": 42.24,
-        "end": 48.28
-      },
-      {
         "type": "GAP",
         "idx": 4,
         "start": 42.24,
@@ -33834,9 +34151,35 @@
       },
       {
         "type": "KO_MULTI_SENTENCE",
+        "idx": 3,
+        "start": 36.04,
+        "end": 39.32
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 4,
+        "start": 42.24,
+        "end": 48.28
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 5,
+        "start": 55.88,
+        "end": 61.48,
+        "reason": "Brief conversational fragments are natural in this exchange."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
         "idx": 6,
         "start": 61.48,
         "end": 63
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 7,
+        "start": 63,
+        "end": 69.76,
+        "reason": "The multi-clause response matches the spoken dialogue and stays readable."
       }
     ],
     "VKnNUYknsuQ": [
@@ -34111,28 +34454,10 @@
     ],
     "vSukWUG4Amc": [
       {
-        "type": "KO_MULTI_SENTENCE",
-        "idx": 1,
-        "start": 15.5,
-        "end": 17.16
-      },
-      {
-        "type": "KO_MULTI_SENTENCE",
-        "idx": 3,
-        "start": 23.22,
-        "end": 25.84
-      },
-      {
         "type": "GAP",
         "idx": 3,
         "start": 23.22,
         "end": 25.84
-      },
-      {
-        "type": "KO_MULTI_SENTENCE",
-        "idx": 5,
-        "start": 30.22,
-        "end": 33.02
       },
       {
         "type": "GAP",
@@ -34147,19 +34472,83 @@
         "end": 47.44
       },
       {
+        "type": "GAP",
+        "idx": 12,
+        "start": 69.84,
+        "end": 70.84
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 1,
+        "start": 15.5,
+        "end": 17.16
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 3,
+        "start": 23.22,
+        "end": 25.84
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 4,
+        "start": 25.84,
+        "end": 30.22,
+        "reason": "Fast coaching dialogue uses several short commands that read naturally as separate clauses."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 5,
+        "start": 30.22,
+        "end": 33.02
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 6,
+        "start": 36.4,
+        "end": 39.56,
+        "reason": "Short back-and-forth instructions read naturally as separate clauses."
+      },
+      {
         "type": "KO_MULTI_SENTENCE",
         "idx": 10,
         "start": 55.78,
         "end": 58.04
       },
       {
-        "type": "GAP",
-        "idx": 12,
-        "start": 69.84,
-        "end": 70.84
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 11,
+        "start": 58.04,
+        "end": 62.84,
+        "reason": "Rapid-fire dialogue spans several brief commands, so forced flattening would sound worse."
       }
     ],
     "VsYmwBOYfW8": [
+      {
+        "type": "GAP",
+        "idx": 8,
+        "start": 63.22,
+        "end": 66.42
+      },
+      {
+        "type": "KO_DUPLICATE_NEIGHBOR",
+        "idx": 17,
+        "start": 88.8,
+        "end": 91.04
+      },
+      {
+        "type": "KO_LATIN_HEAVY",
+        "idx": 12,
+        "start": 74.46,
+        "end": 76.3
+      },
+      {
+        "type": "KO_LATIN_HEAVY",
+        "idx": 13,
+        "start": 76.3,
+        "end": 81.06,
+        "reason": "Username handle is best kept in Latin script."
+      },
       {
         "type": "KO_MULTI_SENTENCE",
         "idx": 0,
@@ -34171,24 +34560,6 @@
         "idx": 2,
         "start": 36.92,
         "end": 42.82
-      },
-      {
-        "type": "GAP",
-        "idx": 8,
-        "start": 63.22,
-        "end": 66.42
-      },
-      {
-        "type": "KO_LATIN_HEAVY",
-        "idx": 12,
-        "start": 74.46,
-        "end": 76.3
-      },
-      {
-        "type": "KO_DUPLICATE_NEIGHBOR",
-        "idx": 17,
-        "start": 88.8,
-        "end": 91.04
       }
     ],
     "vt0i6nuqNEo": [
@@ -34811,16 +35182,29 @@
     ],
     "w4sOfI2CTSE": [
       {
+        "type": "GAP",
+        "idx": 1,
+        "start": 36.46,
+        "end": 40.72
+      },
+      {
+        "type": "GAP",
+        "idx": 13,
+        "start": 84.1,
+        "end": 87.44
+      },
+      {
         "type": "KO_MULTI_SENTENCE",
         "idx": 0,
         "start": 29,
         "end": 32.84
       },
       {
-        "type": "GAP",
-        "idx": 1,
-        "start": 36.46,
-        "end": 40.72
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 9,
+        "start": 60.62,
+        "end": 65.72,
+        "reason": "The emphatic dialogue line is accurately translated and does not need manual cleanup."
       },
       {
         "type": "KO_MULTI_SENTENCE",
@@ -34836,12 +35220,6 @@
       },
       {
         "type": "KO_MULTI_SENTENCE",
-        "idx": 13,
-        "start": 84.1,
-        "end": 87.44
-      },
-      {
-        "type": "GAP",
         "idx": 13,
         "start": 84.1,
         "end": 87.44
@@ -35101,6 +35479,12 @@
     ],
     "wElbSFWgseA": [
       {
+        "type": "GAP",
+        "idx": 11,
+        "start": 60.8,
+        "end": 62.4
+      },
+      {
         "type": "KO_MULTI_SENTENCE",
         "idx": 1,
         "start": 25.6,
@@ -35113,10 +35497,11 @@
         "end": 45.24
       },
       {
-        "type": "GAP",
-        "idx": 11,
-        "start": 60.8,
-        "end": 62.4
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 9,
+        "start": 48.88,
+        "end": 52.84,
+        "reason": "Comedic cadence depends on the short sentence sequence; the Korean is fine."
       },
       {
         "type": "KO_MULTI_SENTENCE",
@@ -35585,6 +35970,31 @@
     ],
     "wIuBcb2T55Q": [
       {
+        "type": "GAP",
+        "idx": 34,
+        "start": 112.62,
+        "end": 118.02
+      },
+      {
+        "type": "KO_LATIN_HEAVY",
+        "idx": 21,
+        "start": 66.86,
+        "end": 71.48
+      },
+      {
+        "type": "KO_LATIN_HEAVY",
+        "idx": 22,
+        "start": 69.36,
+        "end": 73.8,
+        "reason": "ESPN is a proper noun and should remain in Latin script."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 13,
+        "start": 42,
+        "end": 47.4
+      },
+      {
         "type": "OVERLAP",
         "idx": 1,
         "start": 4.08,
@@ -35645,12 +36055,6 @@
         "end": 43.86
       },
       {
-        "type": "KO_MULTI_SENTENCE",
-        "idx": 13,
-        "start": 42,
-        "end": 47.4
-      },
-      {
         "type": "OVERLAP",
         "idx": 13,
         "start": 42,
@@ -35685,12 +36089,6 @@
         "idx": 20,
         "start": 64.98,
         "end": 69.36
-      },
-      {
-        "type": "KO_LATIN_HEAVY",
-        "idx": 21,
-        "start": 66.86,
-        "end": 71.48
       },
       {
         "type": "OVERLAP",
@@ -35757,12 +36155,6 @@
         "idx": 32,
         "start": 99.98,
         "end": 105.68
-      },
-      {
-        "type": "GAP",
-        "idx": 34,
-        "start": 112.62,
-        "end": 118.02
       },
       {
         "type": "OVERLAP",
@@ -36481,6 +36873,13 @@
         "idx": 2,
         "start": 50.16,
         "end": 55.2
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 2,
+        "start": 50.16,
+        "end": 55.2,
+        "reason": "Travel narration naturally contains three short sentences."
       }
     ],
     "wXhTHyIgQ_U": [
@@ -36525,10 +36924,11 @@
     ],
     "wyqfYJX23lg": [
       {
-        "type": "TEXT_LONG",
+        "type": "KO_MULTI_SENTENCE",
         "idx": 0,
         "start": 27,
-        "end": 33.02
+        "end": 33.02,
+        "reason": "Natural hotel-desk dialogue; readable as-is."
       },
       {
         "type": "KO_MULTI_SENTENCE",
@@ -36538,9 +36938,22 @@
       },
       {
         "type": "KO_MULTI_SENTENCE",
+        "idx": 7,
+        "start": 56.6,
+        "end": 60.76,
+        "reason": "Natural hotel-desk dialogue; readable as-is."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
         "idx": 8,
         "start": 61.16,
         "end": 66.84
+      },
+      {
+        "type": "TEXT_LONG",
+        "idx": 0,
+        "start": 27,
+        "end": 33.02
       }
     ],
     "WyrnL-E61Gc": [
@@ -36975,19 +37388,32 @@
         "end": 49.04
       },
       {
-        "type": "KO_MULTI_SENTENCE",
-        "idx": 2,
-        "start": 49.12,
-        "end": 56.12
-      },
-      {
         "type": "GAP",
         "idx": 9,
         "start": 88.4,
         "end": 92.88
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 1,
+        "start": 42.04,
+        "end": 49.04,
+        "reason": "The speaker introduction uses short sentences, but the Korean is natural and accurate."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 2,
+        "start": 49.12,
+        "end": 56.12
       }
     ],
     "xkAbs9NT0Lg": [
+      {
+        "type": "GAP",
+        "idx": 5,
+        "start": 65.72,
+        "end": 72.48
+      },
       {
         "type": "KO_MULTI_SENTENCE",
         "idx": 2,
@@ -37007,16 +37433,17 @@
         "end": 72.48
       },
       {
-        "type": "GAP",
-        "idx": 5,
-        "start": 65.72,
-        "end": 72.48
-      },
-      {
         "type": "KO_MULTI_SENTENCE",
         "idx": 7,
         "start": 73.92,
         "end": 77.88
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 8,
+        "start": 77.88,
+        "end": 80.68,
+        "reason": "Ellipsis plus the follow-up lines are intentional dramatic pacing, not a subtitle error."
       }
     ],
     "xlK3FkdUv78": [
@@ -37063,6 +37490,13 @@
         "idx": 6,
         "start": 81.4,
         "end": 88.4
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 1,
+        "start": 37.24,
+        "end": 44.24,
+        "reason": "Natural multi-sentence lyric/dialogue line."
       }
     ],
     "xMPr1pIzF0k": [
@@ -37149,6 +37583,13 @@
         "idx": 5,
         "start": 39.44,
         "end": 43.84
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 6,
+        "start": 43.84,
+        "end": 48.54,
+        "reason": "Long-form explanatory speech is acceptable here, and the cue remains understandable."
       },
       {
         "type": "KO_MULTI_SENTENCE",
@@ -37321,6 +37762,13 @@
         "idx": 3,
         "start": 41.64,
         "end": 48.12
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 8,
+        "start": 68,
+        "end": 75,
+        "reason": "Courtroom dialogue intentionally uses successive rhetorical questions."
       }
     ],
     "XSQoorx7foI": [
@@ -38073,6 +38521,13 @@
         "idx": 8,
         "start": 73.36,
         "end": 75.36
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 11,
+        "start": 81.28,
+        "end": 85.56,
+        "reason": "Natural multi-sentence spoken line."
       }
     ],
     "YJfyPYLxUDo": [
@@ -38213,6 +38668,13 @@
         "idx": 16,
         "start": 73,
         "end": 77
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 17,
+        "start": 77,
+        "end": 79,
+        "reason": "The ellipsis reflects an intentionally unfinished phrase, so this cue is acceptable."
       }
     ],
     "YNktWKx6RY0": [
@@ -39805,6 +40267,20 @@
         "idx": 5,
         "start": 30.12,
         "end": 32.12
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 0,
+        "start": 0,
+        "end": 5.12,
+        "reason": "Natural conversational multi-sentence subtitle."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 8,
+        "start": 40.76,
+        "end": 46.24,
+        "reason": "Rapid scolding line remains readable as-is."
       }
     ],
     "ZRWeZzN9nmQ": [
@@ -40097,22 +40573,18 @@
     ],
     "ZwS14TiO7Pk": [
       {
-        "type": "KO_MULTI_SENTENCE",
-        "idx": 6,
-        "start": 30.92,
-        "end": 37.72
-      },
-      {
-        "type": "GAP",
-        "idx": 6,
-        "start": 30.92,
-        "end": 37.72
-      },
-      {
         "type": "GAP",
         "idx": 7,
+        "start": 30.92,
+        "end": 33.4,
+        "reason": "Reviewed as setup pause while they position the performer before the mic check."
+      },
+      {
+        "type": "GAP",
+        "idx": 10,
         "start": 41.12,
-        "end": 43.12
+        "end": 43.12,
+        "reason": "Reviewed as a natural beat between the stand-up prompt and the first hello."
       }
     ],
     "ZwYy4scOJi8": [
@@ -40179,6 +40651,174 @@
         "idx": 2,
         "start": 89,
         "end": 91
+      }
+    ],
+    "_JZom_gVfuw": [
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 3,
+        "start": 37.4,
+        "end": 44.2,
+        "reason": "Rap lyric uses a rhetorical question and ad-lib; the punctuation is intentional."
+      }
+    ],
+    "iK6Sg-wof7Y": [
+      {
+        "type": "KO_LATIN_HEAVY",
+        "idx": 0,
+        "start": 0,
+        "end": 1,
+        "reason": "The subtitle is a website URL and should stay verbatim."
+      }
+    ],
+    "LjxulQ1bEWg": [
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 12,
+        "start": 75.04,
+        "end": 79.94,
+        "reason": "Rap lyric uses fragmentary phrasing; flattening it would read worse."
+      }
+    ],
+    "UIjvqFjWVwk": [
+      {
+        "type": "GAP",
+        "idx": 12,
+        "start": 76,
+        "end": 80,
+        "reason": "The timing gap is an intentional musical pause before the next lyric."
+      }
+    ],
+    "zP6eqCOM7tk": [
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 12,
+        "start": 72,
+        "end": 75,
+        "reason": "Rap lyric uses call-and-response phrasing, so the sentence breaks are intentional."
+      }
+    ],
+    "bCQNOdflWbQ": [
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 0,
+        "start": 0,
+        "end": 7,
+        "reason": "Natural multi-sentence prompt; timing is fine."
+      }
+    ],
+    "XsiiIa6bs9I": [
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 1,
+        "start": 3.6,
+        "end": 8.38,
+        "reason": "Natural conversational multi-sentence subtitle."
+      }
+    ],
+    "5kllNkZv82U": [
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 7,
+        "start": 32.16,
+        "end": 38.56,
+        "reason": "Multiple short dialogue beats are conveyed naturally in a single caption."
+      }
+    ],
+    "gPoiv0sZ4s4": [
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 3,
+        "start": 36,
+        "end": 43,
+        "reason": "Lyric and chant fragments intentionally use repeated short phrases and onomatopoeia."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 4,
+        "start": 43,
+        "end": 50,
+        "reason": "Lyric and chant fragments intentionally use repeated short phrases and onomatopoeia."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 13,
+        "start": 70,
+        "end": 77,
+        "reason": "Lyric and chant fragments intentionally use repeated short phrases and onomatopoeia."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 14,
+        "start": 77,
+        "end": 84,
+        "reason": "Lyric and chant fragments intentionally use repeated short phrases and onomatopoeia."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 15,
+        "start": 84,
+        "end": 91,
+        "reason": "Lyric and chant fragments intentionally use repeated short phrases and onomatopoeia."
+      }
+    ],
+    "QZp2biJul1c": [
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 13,
+        "start": 68,
+        "end": 72,
+        "reason": "This rap lyric is terse but acceptable; the multi-sentence detector is overfiring on the phrasing."
+      }
+    ],
+    "Y6bbMQXQ180": [
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 2,
+        "start": 39.16,
+        "end": 44.44,
+        "reason": "The narration is accurately translated across the adjacent caption split."
+      }
+    ],
+    "r0ov89KPtDQ": [
+      {
+        "type": "GAP",
+        "idx": 1,
+        "start": 15.6,
+        "end": 16.6,
+        "reason": "This appears to be a real pause between lines rather than a missing subtitle."
+      }
+    ],
+    "ELZNClmKX1E": [
+      {
+        "type": "GAP",
+        "idx": 1,
+        "start": 35,
+        "end": 37,
+        "reason": "Natural musical pause between repeated lyric lines."
+      },
+      {
+        "type": "GAP",
+        "idx": 17,
+        "start": 80,
+        "end": 82,
+        "reason": "Natural musical pause between repeated lyric lines."
+      }
+    ],
+    "TWZKw_MgUPI": [
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 9,
+        "start": 67,
+        "end": 72,
+        "reason": "These are song lyrics with intentional repetition and rhythmic punctuation."
+      },
+      {
+        "type": "KO_MULTI_SENTENCE",
+        "idx": 10,
+        "start": 74,
+        "end": 80,
+        "reason": "These are song lyrics with intentional repetition and rhythmic punctuation."
       }
     ]
   },
