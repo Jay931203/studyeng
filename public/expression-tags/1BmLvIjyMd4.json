@@ -14,16 +14,16 @@
         "functions": [
           "F09"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,10 +35,10 @@
       "ko": "피해가 심각해. 탈출 시퀀스 시작.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,7 +60,7 @@
         "functions": [
           "F32"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -69,10 +69,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G25"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,18 +85,18 @@
       "ko": "준비 완료. 그들에게 똑같이 갚아줄 준비가 됐어.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,18 +108,18 @@
       "ko": "바로 그거야. 케어 택시.",
       "tags": {
         "functions": [
-          "F09"
+          "F50"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,10 +131,10 @@
       "ko": "좋아, 정리해. 정리해, 정리해, 정리해.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,11 +142,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "555232fbbca5b1ea"
 }

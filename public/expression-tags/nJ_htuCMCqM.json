@@ -12,35 +12,10 @@
       "ko": "왼쪽, 왼쪽, 왼쪽, 오른쪽, 왼쪽, 왼쪽, 왼쪽, 왼쪽, 오른쪽, 왼쪽, 왼쪽, 정지!",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "nJ_htuCMCqM-1",
-      "en": "Thank you, gentlemen.",
-      "ko": "감사합니다, 여러분.",
-      "tags": {
-        "functions": [
-          "F27"
-        ],
-        "situation": "S44",
-        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -55,14 +30,39 @@
       }
     },
     {
+      "id": "nJ_htuCMCqM-1",
+      "en": "Thank you, gentlemen.",
+      "ko": "감사합니다, 여러분.",
+      "tags": {
+        "functions": [
+          "F27"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "nJ_htuCMCqM-2",
       "en": "As you notice, everyone started off with their own stride, their own pace.",
       "ko": "보시다시피, 모두 각자의 보폭과 속도로 시작했습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -83,10 +83,10 @@
       "ko": "피츠 씨는 천천히 걸었습니다. 언젠가 도착할 것이라는 걸 알았죠.",
       "tags": {
         "functions": [
-          "F02"
+          "F03"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -106,16 +106,16 @@
       "ko": "카메론 씨는 생각하는 모습이 보입니다. 이게 맞나? 맞을 수도 있고, 맞을 수도 있죠.",
       "tags": {
         "functions": [
-          "F02"
+          "F51"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -129,16 +129,16 @@
       "ko": "이건 아는 거예요. 아닐 수도 있어요. 잘 모르겠어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -152,10 +152,10 @@
       "ko": "오버스트리트 씨는 더 깊은 힘에 이끌리고 있습니다. 맞아요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -177,14 +177,14 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -198,10 +198,10 @@
       "ko": "제가 그들을 여기로 데려온 이유는 조롱하기 위해서가 아닙니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -221,10 +221,10 @@
       "ko": "저는 그들을 여기로 데려와서 순응의 개념을 설명하려고 했습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -244,10 +244,10 @@
       "ko": "타인의 시선 속에서 자신의 신념을 유지하는 어려움입니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -267,16 +267,16 @@
       "ko": "여러분 중 일부는 제가 다르게 걸었을 것이라는 표정을 하고 있습니다.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -290,16 +290,16 @@
       "ko": "자, 여러분 스스로에게 왜 박수를 치고 있는지 물어보세요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -315,11 +315,11 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
@@ -330,5 +330,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d5c41188cf2ce047"
 }

@@ -12,22 +12,26 @@
       "ko": "그들이 놀게 해, 돈을 쌓아, 내가 원하는 걸 사줘, 친구야",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06",
+          "G15"
+        ],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "contains_profanity"
         ]
       }
     },
@@ -37,22 +41,25 @@
       "ko": "체인에 3점슛, 새 J's, AMG 차선 변경, 친구야",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "contains_profanity"
         ]
       }
     },
@@ -62,22 +69,26 @@
       "ko": "난 절대 호구나 바보가 아니야, 절대 내 팀을 배신하지 않아, 친구야",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "contains_profanity"
         ]
       }
     },
@@ -87,22 +98,25 @@
       "ko": "거리 신뢰도 항상 좋지, 친구야, 네 얼굴에 이걸 올려줄게, 친구야",
       "tags": {
         "functions": [
-          "F09"
+          "F39"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G19"
+        ],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "contains_profanity"
         ]
       }
     },
@@ -112,22 +126,27 @@
       "ko": "난 네 일에 간섭하지 않고, 너도 내 일에 간섭하지 마, 친구야",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V14",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "contains_profanity"
         ]
       }
     },
@@ -137,18 +156,18 @@
       "ko": "그래, 우리 둘 다 밖에 있어, 그게 내가 좋아하는 스타일이야",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,7 +181,7 @@
       "ko": "그게 내가 좋아하는 스타일이야",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -173,7 +192,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,7 +206,7 @@
       "ko": "그게 내가 좋아하는 스타일이야",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -198,7 +217,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -212,7 +231,7 @@
       "ko": "그게 내가 좋아하는 스타일이야",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -223,7 +242,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -237,10 +256,10 @@
       "ko": "시청해 주셔서 감사합니다!",
       "tags": {
         "functions": [
-          "F09"
+          "F27"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -248,7 +267,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -256,5 +275,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "3593da3d9c7d0bc7"
 }

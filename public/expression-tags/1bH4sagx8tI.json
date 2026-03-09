@@ -12,9 +12,9 @@
       "ko": "아, 안 돼.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,9 +37,9 @@
       "ko": "아, 지금까지는 좋은 계획이야. 오, 세상에.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -48,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,10 +60,10 @@
       "ko": "루이, 베키를 불러.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,10 +71,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -83,18 +85,18 @@
       "ko": "코드가 없으면 60초 후에 알람이 울릴 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S03",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,9 +108,9 @@
       "ko": "베키, 줄스를 바꿔줘.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -117,7 +119,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -131,16 +133,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,18 +154,18 @@
       "ko": "이건 정말 안 좋아. 우리는 어떻게 해야 해, 벤?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,18 +177,18 @@
       "ko": "먹는 거 그만해. 컴퓨터를 찾아봐.",
       "tags": {
         "functions": [
-          "F35"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,10 +200,10 @@
       "ko": "지금 당장. 가, 가, 가.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,7 +211,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,9 +223,9 @@
       "ko": "가. 따로따로. 따로따로.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -232,10 +234,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -246,7 +250,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -255,7 +259,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,23 +271,21 @@
       "ko": "베키, 장난치지 마. 줄스를 바꿔줘. 긴급 상황이야.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S28",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -292,9 +294,9 @@
       "ko": "그녀가 먹고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -303,10 +305,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -315,10 +319,10 @@
       "ko": "방해해.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -326,10 +330,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -338,10 +344,10 @@
       "ko": "벤, 무슨 일이야?",
       "tags": {
         "functions": [
-          "F06"
+          "F25"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -349,7 +355,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -363,7 +369,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -372,7 +378,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -384,9 +390,9 @@
       "ko": "아니, 울리지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -395,7 +401,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -407,18 +413,18 @@
       "ko": "응, 울리고 있어. 나는 그녀의 주방에 있어. 곧 울릴 거야. 코드가 뭐야?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S02",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -430,9 +436,9 @@
       "ko": "전혀 몰라. 벤, 내 말을 들어.",
       "tags": {
         "functions": [
-          "F06"
+          "F35"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -441,7 +447,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -453,10 +459,10 @@
       "ko": "나는 이 여자를 알아. 그건 가짜 알람이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S03",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -464,7 +470,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -476,10 +482,10 @@
       "ko": "어떤 인포머셜에서 산 거야, 알겠어?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -487,7 +493,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -499,9 +505,9 @@
       "ko": "진짜가 아니야. 연결되어 있지 않아. 그냥 도둑을 쫓아내는 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -510,7 +516,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -522,9 +528,9 @@
       "ko": "그녀가 가짜라고 해. 그냥 도둑을 쫓아내는 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -533,10 +539,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -547,18 +555,20 @@
         "functions": [
           "F30"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -568,9 +578,9 @@
       "ko": "들어봐, 내 부모님은 절대 알람에 돈을 쓰지 않아, 알겠어?",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S50",
+        "situation": "S03",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -579,9 +589,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -591,10 +604,10 @@
       "ko": "그들은 미국에서 가장 인색한 사람들이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -602,7 +615,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -614,9 +627,9 @@
       "ko": "알겠어, 아직 알람으로 바뀌진 않았어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S03",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -625,7 +638,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -637,9 +650,9 @@
       "ko": "여전히 삐삐거리고 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -648,10 +661,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -660,20 +675,22 @@
       "ko": "그건 가짜라서 그래. 나를 믿어.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E07"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -685,7 +702,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -694,7 +711,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -708,7 +725,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -717,11 +734,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "f375e61f7f92f863"
 }

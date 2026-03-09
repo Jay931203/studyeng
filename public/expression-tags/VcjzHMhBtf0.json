@@ -23,11 +23,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -48,7 +49,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -65,7 +66,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -73,7 +74,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -98,7 +99,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -123,11 +124,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -148,7 +150,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -173,7 +175,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -190,7 +192,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -198,7 +200,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -215,15 +217,16 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -248,11 +251,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -262,10 +266,10 @@
       "ko": "바를 내려다보며 그들의 그림자를 찾아",
       "tags": {
         "functions": [
-          "F01"
+          "F35"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -273,7 +277,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -298,7 +302,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -306,5 +310,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "971033dfaefa1d58"
 }

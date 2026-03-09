@@ -12,7 +12,7 @@
       "ko": "말하지 마, 말하지 마, 지금은 조용히 해. 기부금.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,7 +35,7 @@
       "ko": "나한테 기부를 원해?",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -106,13 +104,13 @@
       "ko": "이제 1985년으로 돌아가려면 네 도움이 필요해.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
@@ -129,7 +127,7 @@
       "ko": "세상에.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -143,7 +141,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -152,7 +152,7 @@
       "ko": "이게 무슨 뜻인지 알아?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -161,7 +161,8 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -175,18 +176,19 @@
       "ko": "이 빌어먹을 게 전혀 작동하지 않는다는 뜻이야. 닥터, 제발 도와줘.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E03",
+          "E13"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V03",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -203,7 +205,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -223,10 +225,10 @@
       "ko": "나는 타임머신을 발명한 적이 없어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -246,16 +248,16 @@
       "ko": "좋아, 알겠어, 증명해줄게. 내 운전면허증을 봐.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -275,7 +277,7 @@
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
           "X08"
@@ -295,7 +297,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -309,5 +311,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "e5947c119d41f0ba"
 }

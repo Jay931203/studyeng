@@ -12,13 +12,13 @@
       "ko": "당신의 집이 남편이 몸과 마음을 재충전할 수 있는 평화롭고 정돈된 장소가 되도록 하세요.",
       "tags": {
         "functions": [
-          "F01"
+          "F23"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -35,10 +35,10 @@
       "ko": "자신을 준비하세요. 15분 동안 휴식을 취해 그가 도착했을 때 상쾌하게 맞이하세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,10 +58,10 @@
       "ko": "화장을 고치세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,10 +81,10 @@
       "ko": "머리에 리본이나 꽃 같은 장식품을 달아보세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,20 +104,23 @@
       "ko": "그를 반갑게 맞이하세요. 따뜻한 미소로 그를 맞이하고 그를 기쁘게 하고 싶다는 진심을 보여주세요.",
       "tags": {
         "functions": [
-          "F25"
+          "F34"
         ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
-          "E01"
+          "E01",
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -127,16 +130,16 @@
       "ko": "낮고 부드럽고 기분 좋은 목소리로 이야기하세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -150,10 +153,10 @@
       "ko": "저녁 시간을 그의 것으로 만들어 주세요. 그가 늦게 돌아오거나 당신 없이 저녁을 먹으러 나가도 불평하지 마세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F43"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -163,7 +166,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -173,10 +178,10 @@
       "ko": "대신, 그의 스트레스와 압박감, 그리고 휴식이 필요한 세계를 이해하려고 노력하세요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,7 +189,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,11 +201,11 @@
       "ko": "그의 행동에 대해 질문하거나 그의 판단이나 성실성을 의심하지 마세요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -221,8 +226,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -236,5 +241,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "50f3d50f91eba640"
 }

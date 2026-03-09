@@ -12,18 +12,18 @@
       "ko": "4월, 그건 좋은 태도가 아니야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,9 +35,9 @@
       "ko": "나는 너를 주의 깊게 지켜볼 거야.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -58,10 +58,10 @@
       "ko": "내가 모든 것을 볼 수 있는 원형 책상에서, 작은 회전 의자.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -83,7 +83,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -104,11 +104,11 @@
       "ko": "내 사무실과 많은 벽은 어쩌고?",
       "tags": {
         "functions": [
-          "F09"
+          "F36"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -117,7 +117,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -127,13 +129,13 @@
       "ko": "그건 새로운 대기실이 될 거야. 그리고 너의 문 앞에 있던 거대한 기둥을 없앴어.",
       "tags": {
         "functions": [
-          "F04"
+          "F23"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -150,18 +152,18 @@
       "ko": "그 기둥이 정말 마음에 들었어.",
       "tags": {
         "functions": [
-          "F16"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,20 +175,22 @@
       "ko": "내 문 앞에 서 있는 게 정말 귀찮았거든.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -196,20 +200,23 @@
       "ko": "뭐, 그건 잊어버려, 이제 없어졌으니까.",
       "tags": {
         "functions": [
-          "F09"
+          "F04",
+          "F52"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -219,9 +226,9 @@
       "ko": "너는 그 어느 때보다 더 접근하기 쉬울 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -242,9 +249,9 @@
       "ko": "실례합니다.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -254,9 +261,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -267,7 +278,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -288,9 +299,9 @@
       "ko": "물뿌리개 물을 마시지 말라는 거야.",
       "tags": {
         "functions": [
-          "F01"
+          "F35"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -311,20 +322,22 @@
       "ko": "그래서 그걸로 선차를 만들었고, 지금 감염이 생겼어.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -334,11 +347,11 @@
       "ko": "선생님?",
       "tags": {
         "functions": [
-          "F25"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -348,7 +361,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -359,9 +374,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -382,9 +397,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -403,11 +418,11 @@
       "ko": "이건 잘 안 될 것 같아.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -426,11 +441,11 @@
       "ko": "알겠어요, 내가 당신과 이야기하는 동안 당신이 그냥 회전하지는 않았겠죠.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -449,11 +464,11 @@
       "ko": "이 우주선 케이블...",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -472,11 +487,11 @@
       "ko": "알겠어, 내가 너와 이야기하는 동안 너가 그냥 돌아서지 않았어.",
       "tags": {
         "functions": [
-          "F09"
+          "F55"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -495,11 +510,11 @@
       "ko": "이 우주선 케이블...",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -509,8 +524,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "a335794a49127d3a"
 }

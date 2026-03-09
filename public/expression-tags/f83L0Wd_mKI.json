@@ -14,7 +14,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -23,10 +23,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -37,8 +39,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,10 +60,10 @@
       "ko": "오늘이 네가 4개월 전에 하기로 한 일에 대한 무서운 이야기가 온다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +71,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,9 +83,9 @@
       "ko": "어떻게 이런 일이 일어날 수 있지? 생각해볼게.",
       "tags": {
         "functions": [
-          "F06"
+          "F39"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -92,7 +94,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,30 +108,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "f83L0Wd_mKI-5",
-      "en": "She said she wanted to come to the city in the fall.",
-      "ko": "그녀는 가을에 도시로 오고 싶다고 했어.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S34",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -138,10 +117,37 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "f83L0Wd_mKI-5",
+      "en": "She said she wanted to come to the city in the fall.",
+      "ko": "그녀는 가을에 도시로 오고 싶다고 했어.",
+      "tags": {
+        "functions": [
+          "F05"
+        ],
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X03"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -150,20 +156,23 @@
       "ko": "오 마이 갓, 우리가 너를 방문해야 해. 날짜를 정했을 거야.",
       "tags": {
         "functions": [
-          "F34"
+          "F36"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07",
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -175,7 +184,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -184,7 +193,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,9 +205,9 @@
       "ko": "어느 사촌이지?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -207,7 +216,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,7 +230,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -230,10 +239,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -242,10 +253,10 @@
       "ko": "도쿄에서 5시간 15분 28초로 뛰었는데, 훈련은 안 했어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -253,7 +264,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,16 +278,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,20 +299,22 @@
       "ko": "내 생각엔, 발톱이 빠지는 건 명예의 배지야. 괜찮아, 이건 괜찮아. 크리스. 너희는 놀고, 나는 내 할 일을 할게. 크리스.",
       "tags": {
         "functions": [
-          "F09"
+          "F61"
         ],
-        "situation": "S34",
+        "situation": "S37",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G05"
+        ],
         "flags": []
       }
     },
@@ -311,20 +324,22 @@
       "ko": "그녀는 내 사촌이 아니니까 괜찮아. 크리스!",
       "tags": {
         "functions": [
-          "F09"
+          "F61"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G05"
+        ],
         "flags": []
       }
     },
@@ -334,9 +349,9 @@
       "ko": "그녀의 남편도 온대.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -345,10 +360,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -357,9 +374,9 @@
       "ko": "항상 유튜브 영상을 보여주는 그 남자?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -368,12 +385,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G19"
+        ],
+        "flags": []
       }
     },
     {
@@ -382,19 +399,21 @@
       "ko": "이거 꼭 봐야 해.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -405,22 +424,26 @@
       "ko": "네가 이걸 안 봤다니 믿을 수 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V05",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G07"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "0853b168d0967b30"
 }

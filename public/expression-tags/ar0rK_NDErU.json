@@ -26,7 +26,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -44,7 +46,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
         "vibe": "V18",
         "power": [],
@@ -127,7 +129,8 @@
       "ko": "응. 응, 세탁된 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F53"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -153,7 +156,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -164,7 +167,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -173,7 +178,7 @@
       "ko": "하지만 완벽해, 칼. 내 말은...",
       "tags": {
         "functions": [
-          "F09"
+          "F50"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -186,8 +191,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -196,53 +205,7 @@
       "ko": "이건 염산이나 표백제가 아니야.",
       "tags": {
         "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "ar0rK_NDErU-9",
-      "en": "No. Something new.",
-      "ko": "아니. 뭔가 새로워.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "ar0rK_NDErU-10",
-      "en": "Maybe a nail polish remover where the acetone removes the ink that's not been printed.",
-      "ko": "아세톤이 인쇄되지 않은 잉크를 제거하는 네일 폴리시 리무버일 수도 있어.",
-      "tags": {
-        "functions": [
-          "F14"
+          "F50"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -255,7 +218,60 @@
         ],
         "vibe": "V18",
         "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "ar0rK_NDErU-9",
+      "en": "No. Something new.",
+      "ko": "아니. 뭔가 새로워.",
+      "tags": {
+        "functions": [
+          "F23"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E08"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
         "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "ar0rK_NDErU-10",
+      "en": "Maybe a nail polish remover where the acetone removes the ink that's not been printed.",
+      "ko": "아세톤이 인쇄되지 않은 잉크를 제거하는 네일 폴리시 리무버일 수도 있어.",
+      "tags": {
+        "functions": [
+          "F08",
+          "F14"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -291,7 +307,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -311,10 +327,10 @@
       "ko": "속이지 않았어.",
       "tags": {
         "functions": [
-          "F11"
+          "F56"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -325,7 +341,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -334,10 +352,10 @@
       "ko": "2주 동안 공부했고 합격했어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -351,5 +369,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "ed803436d519e3f9"
 }

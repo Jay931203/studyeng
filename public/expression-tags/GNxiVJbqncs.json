@@ -12,10 +12,10 @@
       "ko": "아리아나는 어제 새벽 3시까지 촬영하고 머리를 염색해야 했어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,10 +37,10 @@
       "ko": "검은색으로. 오늘 아침 7시 45분에.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,18 +62,18 @@
       "ko": "형광 빨강에서, 기본적으로 그랬어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,18 +87,18 @@
       "ko": "나는 런던에서 막 왔어. 너는 시차 적응 중이야. 아니, 네가 시차 적응 중이야.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,10 +112,10 @@
       "ko": "나는 시차 적응 중이고, 너는 머리에 있는 화학물질 때문에 얼어붙었어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -123,7 +123,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -137,7 +137,7 @@
       "ko": "기본적으로.",
       "tags": {
         "functions": [
-          "F03"
+          "F52"
         ],
         "situation": "S46",
         "cefr": "A1",
@@ -146,13 +146,14 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -162,18 +163,18 @@
       "ko": "방 안의 다른 점은 우리가 함께 학교에 있어야 한다는 건데,",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,24 +188,27 @@
       "ko": "전기. 전기. 그리고 어떻게 해야 할지 모르겠어. 나는 들었어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": [
           "is_lyrics"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "d0cf1d6ce6d7abe3"
 }

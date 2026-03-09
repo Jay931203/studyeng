@@ -12,10 +12,10 @@
       "ko": "그의 공격력을 부정할 수는 없어. 그는 잘해.",
       "tags": {
         "functions": [
-          "F01"
+          "F12"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -37,8 +37,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,8 +60,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,8 +83,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,7 +92,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -108,8 +108,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -117,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,10 +129,10 @@
       "ko": "친구들, 우리는 아직 지암비를 대체하려고 하고 있어.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -140,7 +140,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,9 +152,9 @@
       "ko": "내가 말했잖아, 우리는 그걸 할 수 없다고. 그리고 우리는 할 수 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F05"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -163,7 +163,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,20 +175,22 @@
       "ko": "이제 우리가 할 수 있는 것은 그를 재창조하는 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F14"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -198,10 +200,10 @@
       "ko": "총합으로 그를 재창조하는 거지. 뭐라고?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,7 +211,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -223,8 +225,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -232,7 +234,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -246,8 +248,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -255,10 +257,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -269,8 +273,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -278,7 +282,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -292,8 +296,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -301,11 +305,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "8944d6f17c70f124"
 }

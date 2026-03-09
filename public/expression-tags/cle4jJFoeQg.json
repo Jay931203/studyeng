@@ -14,8 +14,8 @@
         "functions": [
           "F25"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,18 @@
       "ko": "큰 기대는 없어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,8 +60,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,10 +81,10 @@
       "ko": "네, 살고 있어요. 서리에서 살고 있군요. 멋진 곳이에요. 서리에서 뭐 하세요, 데이비드?",
       "tags": {
         "functions": [
-          "F06"
+          "F28"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,9 +92,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -106,7 +108,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -115,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,9 +129,9 @@
       "ko": "사실 전시회 전문가예요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -150,10 +152,11 @@
       "ko": "고마워요, 좋네요. 아니, 아니, 저는 괜찮아요. 좋습니다. 죄송해요.",
       "tags": {
         "functions": [
-          "F27"
+          "F27",
+          "F28"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -161,9 +164,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -173,82 +180,13 @@
       "ko": "좋아요, 데이비드. 이 이야기로 갈게요. 처음 영국에 왔을 때",
       "tags": {
         "functions": [
-          "F03"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "cle4jJFoeQg-8",
-      "en": "I had a a couple of interesting moments with the English accent and I had a blocked ear",
-      "ko": "영어 억양 때문에 몇 가지 흥미로운 순간이 있었고 귀가 막혔어요.",
-      "tags": {
-        "functions": [
           "F02"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "cle4jJFoeQg-9",
-      "en": "So I had to go to the walkabout center to get to get it unblocked",
-      "ko": "그래서 귀를 뚫으러 워크어바웃 센터에 가야 했어요.",
-      "tags": {
-        "functions": [
-          "F03"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "cle4jJFoeQg-10",
-      "en": "And after she flushed my ear out the nurse said to me now I want you to oil your ear and your willy",
-      "ko": "간호사가 제 귀를 씻어준 후에 이렇게 말했어요. 이제 귀와 남자기를 기름칠하라고요.",
-      "tags": {
-        "functions": [
-          "F03"
-        ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E05"
         ],
         "expression_types": [
           "X08"
@@ -260,14 +198,86 @@
       }
     },
     {
+      "id": "cle4jJFoeQg-8",
+      "en": "I had a a couple of interesting moments with the English accent and I had a blocked ear",
+      "ko": "영어 억양 때문에 몇 가지 흥미로운 순간이 있었고 귀가 막혔어요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S31",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "cle4jJFoeQg-9",
+      "en": "So I had to go to the walkabout center to get to get it unblocked",
+      "ko": "그래서 귀를 뚫으러 워크어바웃 센터에 가야 했어요.",
+      "tags": {
+        "functions": [
+          "F57"
+        ],
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "cle4jJFoeQg-10",
+      "en": "And after she flushed my ear out the nurse said to me now I want you to oil your ear and your willy",
+      "ko": "간호사가 제 귀를 씻어준 후에 이렇게 말했어요. 이제 귀와 남자기를 기름칠하라고요.",
+      "tags": {
+        "functions": [
+          "F34"
+        ],
+        "situation": "S27",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G02",
+          "G15"
+        ],
+        "flags": []
+      }
+    },
+    {
       "id": "cle4jJFoeQg-11",
       "en": "And I said to her am I willy",
       "ko": "그래서 제가 물었어요. 제 남자기요?",
       "tags": {
         "functions": [
-          "F06"
+          "F05"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -276,7 +286,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,9 +298,9 @@
       "ko": "그녀가 아니라고 했어요. 당신의 남자기라고요.",
       "tags": {
         "functions": [
-          "F06"
+          "F05"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -299,11 +309,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "2daa6deeff67b80b"
 }

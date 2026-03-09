@@ -15,7 +15,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,18 +37,19 @@
       "ko": "네가 던지지 않게 키스해야 해. 하지만 넌 괴로울 때 미쳐버려.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11",
+          "E15"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -65,15 +66,15 @@
           "F09"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,20 +88,23 @@
       "ko": "네 머릿속에서 만들어진 그 모든 바보 같은 문제들. 돈으로는 네 시간을 살 수 없지만 그건 사랑이 아니야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03",
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -112,18 +116,18 @@
       "ko": "그리고 사랑은 내가 너에게 사준 것들을 대신할 수 없어.",
       "tags": {
         "functions": [
-          "F12"
+          "F21"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -138,10 +142,10 @@
       "ko": "맹세코, 너를 위해 오래 떠나야 할 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -149,7 +153,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -163,10 +167,10 @@
       "ko": "너와 너의 모든 문제와 함께 있는 게 더 좋아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -174,7 +178,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -188,10 +192,10 @@
       "ko": "너와 너의 모든 문제와 함께 있는 게 더 좋아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -199,7 +203,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -207,5 +211,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "1fb4c87b02024d56"
 }

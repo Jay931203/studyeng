@@ -12,11 +12,11 @@
       "ko": "알겠어요, 당신의 양식을 다시 확인할게요.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S27",
-        "cefr": "A2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -35,11 +35,11 @@
       "ko": "론, 당신은 모든 정보를 삭제했어요. 나는 일부에 답했어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S27",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -58,11 +58,11 @@
       "ko": "생년월일에 봄이라고 적었네요. 맞아요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S27",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -83,14 +83,14 @@
         "functions": [
           "F01"
         ],
-        "situation": "S27",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -104,11 +104,11 @@
       "ko": "우리는 당신이 진짜 답변을 해주길 원해요. 좋아요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S27",
-        "cefr": "A2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -129,9 +129,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S27",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -152,9 +152,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S27",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -173,18 +173,18 @@
       "ko": "네, 사랑하고 목공예를 해요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S27",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,16 +198,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S27",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,11 +219,11 @@
       "ko": "요가를 하는 삼촌이 있어요. 알레르기는요?",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S27",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -242,11 +242,11 @@
       "ko": "비겁함과 의지가 약한 남자들. 그리고 헤이즐넛. 성적 이력은요?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S27",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -265,11 +265,11 @@
       "ko": "서사적이고 사적인.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S27",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -279,7 +279,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -288,11 +290,11 @@
       "ko": "알겠어요, 의사를 데려올게요. 그는 무례하고 거친 녀석이에요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S27",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -311,21 +313,23 @@
       "ko": "당신은 그를 좋아할 거예요.",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
-        "situation": "S27",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -334,9 +338,9 @@
       "ko": "토미 T, 당신은 가장 미친 상황을 놓쳤어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S27",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -357,10 +361,10 @@
       "ko": "클럽, 여자들, 춤, 나체, 엄마, 논쟁, 경찰,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -371,9 +375,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -382,10 +384,10 @@
       "ko": "현장에서 도망치고, 쓰레기통에 숨고,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -396,9 +398,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -407,10 +407,10 @@
       "ko": "여기로 와서 일주일 동안 당신의 소파에서 자고 있어요.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -430,9 +430,9 @@
       "ko": "왜냐하면 사실상 나는 노숙자거든요. 안녕, 콧수염.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -443,9 +443,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a33b1ef1208416c0"
 }

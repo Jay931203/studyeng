@@ -18,12 +18,12 @@
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,18 @@
       "ko": "글쎄, 샐리가 마지막 좋은 남자를 잡았네. 조와 나는 헤어졌어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,16 +60,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +81,18 @@
       "ko": "그리고 조는 지금 한가해? 제발, 마리, 이 일에 대해 아무 감정이 없니? 그녀는",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S29",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,19 +104,21 @@
       "ko": "분명히 속상해. 난 그렇게 속상하지 않아. 우리는 꽤 오랫동안 멀어졌어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V07",
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -127,18 +129,18 @@
       "ko": "하지만 너희는 커플이었잖아. 함께 갈 사람이 있었고. 공휴일에 데이트도 했잖아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,20 +152,22 @@
       "ko": "나는 스스로에게, 너는 이보다 더 나은 걸 받을 자격이 있다고 말했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -173,18 +177,18 @@
       "ko": "너는 31살이야. 그리고 시간은 흘러가고 있어. 아니, 36세가 되어야 진짜로 시작돼.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +200,18 @@
       "ko": "세상에, 너 정말 좋은 몸매야.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,18 +223,18 @@
       "ko": "글쎄, 며칠 동안 적응할 시간이 있었고, 괜찮아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,18 +246,18 @@
       "ko": "좋네. 그럼 준비됐구나.",
       "tags": {
         "functions": [
-          "F07"
+          "F03"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,17 +271,19 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -288,20 +294,22 @@
       "ko": "완벽한 남자가 있어. 나는 그를 매력적으로 생각하지 않지만, 너는 그럴 수도 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -311,18 +319,18 @@
       "ko": "그녀는 턱에 대해 문제를 느끼지 않아. 마리, 난 아직 준비가 안 됐어.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,9 +342,9 @@
       "ko": "너 방금 그를 잊었다고 했잖아. 나는 그를 잊었지만, 지금은 애도 기간이야.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S41",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -345,11 +353,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "4662169cd61ca77c"
 }

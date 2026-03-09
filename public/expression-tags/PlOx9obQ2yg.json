@@ -35,7 +35,7 @@
       "ko": "자, 워너 헌팅턴 3세는 체크인했나요? 음, 아니요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S36",
         "cefr": "A2",
@@ -44,7 +44,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -58,16 +58,17 @@
       "ko": "음, 리도 갑판의 크루즈 디렉터에게 확인해보는 게 좋겠어요.",
       "tags": {
         "functions": [
-          "F36"
+          "F37"
         ],
         "situation": "S36",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -81,7 +82,7 @@
       "ko": "리도 갑판의 크루즈 디렉터와 확인해보세요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S36",
         "cefr": "A2",
@@ -104,18 +105,18 @@
       "ko": "자, 법대에 오신 것을 환영합니다.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S36",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,7 +128,7 @@
       "ko": "이제 원을 그리며 돌아가면서",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S36",
         "cefr": "A2",
@@ -150,7 +151,7 @@
       "ko": "각자 자신에 대해 조금씩 이야기하는 시간이에요.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S36",
         "cefr": "A2",
@@ -173,10 +174,10 @@
       "ko": "당신부터 시작해볼까요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S36",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -222,7 +223,7 @@
           "F01"
         ],
         "situation": "S36",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -245,7 +246,7 @@
           "F01"
         ],
         "situation": "S36",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -268,15 +269,15 @@
           "F01"
         ],
         "situation": "S36",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,7 +289,7 @@
       "ko": "저는 에니드 웩슬러입니다. 버클리에서 여성학 박사학위를 받았고,",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S36",
         "cefr": "A2",
@@ -299,7 +300,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -314,7 +315,7 @@
           "F01"
         ],
         "situation": "S36",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -334,10 +335,10 @@
       "ko": "전투 역사에서의 강조.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S36",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -360,7 +361,7 @@
           "F01"
         ],
         "situation": "S36",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -380,10 +381,10 @@
       "ko": "음주 운전 반대 레즈비언 행진을 조직했어요. 대박. 고마워요, 즐거운 시간이에요.",
       "tags": {
         "functions": [
-          "F01"
+          "F27"
         ],
         "situation": "S36",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -397,5 +398,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "cbcc77a1d10561a1"
 }

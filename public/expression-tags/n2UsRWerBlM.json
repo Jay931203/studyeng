@@ -12,7 +12,8 @@
       "ko": "잊지 마세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F35",
+          "F40"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -25,11 +26,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G24"
+        ],
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "f86bd676cdf32020"
 }

@@ -12,20 +12,22 @@
       "ko": "그는 나보다 옷을 더 잘 입어.",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -35,18 +37,18 @@
       "ko": "내가 관계에 가져올 것은 뭐지?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,19 +60,21 @@
       "ko": "올바른 차선으로 돌아가. 제일 먼저 뭐해?",
       "tags": {
         "functions": [
-          "F35"
+          "F06"
         ],
-        "situation": "S06",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -81,18 +85,18 @@
       "ko": "제일 먼저 방향지시등을 켜. 아, 잠깐.",
       "tags": {
         "functions": [
-          "F50"
+          "F49"
         ],
-        "situation": "S06",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,10 +108,10 @@
       "ko": "도로를 봐! 도로를 봐!",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S06",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E03"
@@ -115,7 +119,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,21 +131,23 @@
       "ko": "좋아. 멈춰.",
       "tags": {
         "functions": [
-          "F35"
+          "F53"
         ],
-        "situation": "S06",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,18 +156,18 @@
       "ko": "그 다음 내 거울을 봐. 좋아.",
       "tags": {
         "functions": [
-          "F50"
+          "F03"
         ],
-        "situation": "S06",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,18 +179,18 @@
       "ko": "그리고 사각지대를 확인해.",
       "tags": {
         "functions": [
-          "F50"
+          "F03"
         ],
-        "situation": "S06",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,20 +202,22 @@
       "ko": "머리로 확인해야지, 차 전체로는 안 돼. 맹세코. 맹세코, 여자야.",
       "tags": {
         "functions": [
-          "F50"
+          "F41"
         ],
-        "situation": "S06",
+        "situation": "S20",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G08"
+        ],
         "flags": []
       }
     },
@@ -219,23 +227,21 @@
       "ko": "너 운전 못해. 그 소리 듣고 싶지 않아. 내 말 들어. 안 돼.",
       "tags": {
         "functions": [
-          "F56"
+          "F02"
         ],
         "situation": "S06",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -244,20 +250,24 @@
       "ko": "사실, 모든 걸 다 하는 건 정말 큰 결정이야.",
       "tags": {
         "functions": [
-          "F04"
+          "F11"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P06"
+        ],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -267,20 +277,23 @@
       "ko": "내가 그렇게 변덕스러웠다니 믿을 수 없어.",
       "tags": {
         "functions": [
-          "F16"
+          "F43"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -290,18 +303,18 @@
       "ko": "D, 나 그와 거의 섹스할 뻔했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -315,16 +328,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -338,19 +351,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S08",
+        "situation": "S20",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -359,18 +374,18 @@
       "ko": "뭐? 야, 봐봐.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -384,23 +399,21 @@
       "ko": "너 혹시 눈이 멀었어?",
       "tags": {
         "functions": [
-          "F17"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -409,18 +422,18 @@
       "ko": "네 남자 크리스찬은 케이크 보이야. 뭐라고?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -432,18 +445,18 @@
       "ko": "그는 디스코 댄서고, 오스카 와일드를 읽고,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -457,16 +470,16 @@
         "functions": [
           "F02"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -478,22 +491,28 @@
       "ko": "무슨 말인지 알겠어? 절대 안 돼. 그는 게이야. 아니야. 응, 맞아. 그는 게이처럼 보여.",
       "tags": {
         "functions": [
-          "F09"
+          "F43",
+          "F50",
+          "F11"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G07"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "e2ffaa1305c2a4bf"
 }

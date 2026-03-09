@@ -12,11 +12,11 @@
       "ko": "쿠퍼, 그들을 쫓기 위해 연료를 쓰는 건 의미가 없어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -35,11 +35,11 @@
       "ko": "인내호의 회전을 안정시켜야 해.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -58,10 +58,10 @@
       "ko": "쿠퍼, 뭐 하고 있어?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -83,7 +83,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -106,11 +106,11 @@
       "ko": "인내호의 회전 속도는 67, 68 RPM이야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -129,13 +129,13 @@
       "ko": "좋아, 레트로 스러스터로 우리의 회전을 맞출 준비해. 불가능해.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
           "X08"
@@ -152,10 +152,35 @@
       "ko": "아니, 필요해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "onVhbeY7nLM-7",
+      "en": "Endurance is hitting stratosphere.",
+      "ko": "인내호가 성층권에 접어들고 있어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -168,29 +193,7 @@
         "grammar_intent": [],
         "flags": []
       }
-    },
-    {
-      "id": "onVhbeY7nLM-7",
-      "en": "Endurance is hitting stratosphere.",
-      "ko": "인내호가 성층권에 접어들고 있어.",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S44",
-        "cefr": "B1",
-        "register": "R3",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
     }
-  ]
+  ],
+  "transcriptHash": "d0a12fa633cda862"
 }

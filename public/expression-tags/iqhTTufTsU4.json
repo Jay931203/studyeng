@@ -15,7 +15,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,18 +37,18 @@
       "ko": "네가 온 날부터, 나에게 새로운 시각을 줬어",
       "tags": {
         "functions": [
-          "F02"
+          "F23"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,7 +62,7 @@
       "ko": "나는 천사의 감동을 받았어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -73,7 +73,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,7 +87,7 @@
       "ko": "불가능하지만 사실이야",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -98,7 +98,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -115,17 +115,22 @@
           "F09"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V05",
+        "power": [
+          "P02",
+          "P10"
+        ],
+        "grammar_intent": [
+          "G23"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -148,9 +153,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G08"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -162,10 +169,10 @@
       "ko": "누구도 너의 자리를 대신할 수 없어",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,7 +180,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -190,17 +197,22 @@
           "F09"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V05",
+        "power": [
+          "P02",
+          "P10"
+        ],
+        "grammar_intent": [
+          "G23"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -215,16 +227,18 @@
           "F09"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V02",
+        "power": [
+          "P02"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -237,7 +251,8 @@
       "ko": "나는 동화 같은 이야기를 믿지 않았어",
       "tags": {
         "functions": [
-          "F09"
+          "F43",
+          "F56"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -248,9 +263,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -262,7 +279,8 @@
       "ko": "가끔은 그럴 수 있기를 바랐지만",
       "tags": {
         "functions": [
-          "F20"
+          "F21",
+          "F24"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -273,13 +291,16 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": [
           "is_lyrics"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "5ca47d81466e0666"
 }

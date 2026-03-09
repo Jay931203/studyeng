@@ -12,19 +12,21 @@
       "ko": "울지 마세요, 허드슨 부인. 총알의 비행을 막는 데는 아무 소용이 없어요. 그런 세상이라면 얼마나 부드러울까요.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S22",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -35,20 +37,23 @@
       "ko": "당신이 원하는 것을 우리가 가지고 있다고 믿습니다, 홈즈 씨. 왜 요청하지 않으세요?",
       "tags": {
         "functions": [
-          "F06"
+          "F36"
         ],
-        "situation": "S10",
+        "situation": "S37",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -58,18 +63,18 @@
       "ko": "이 사람에게 물어봤지만, 그녀는 아무것도 모르는 것 같아요. 하지만 당신은 제가 무엇을 요청하는지 알고 있죠, 홈즈 씨?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S37",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,18 +88,21 @@
         "functions": [
           "F09"
         ],
-        "situation": "S10",
+        "situation": "S37",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -104,22 +112,23 @@
       "ko": "사람 수가 많아지는 게 싫어요, 방 안에 너무 많은 바보가 생기거든요. 당신 둘, 차로 가세요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S37",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d7dd7e13e5d6a5af"
 }

@@ -14,16 +14,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -37,16 +37,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,18 +60,22 @@
         "functions": [
           "F27"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -81,22 +85,23 @@
       "ko": "오늘 밤 모든 후보자들에게 축하드리고 싶습니다.",
       "tags": {
         "functions": [
-          "F27"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "3987d641df80ee88"
 }

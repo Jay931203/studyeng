@@ -14,18 +14,20 @@
         "functions": [
           "F04"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -37,8 +39,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,16 +60,17 @@
       "ko": "너희들이 말하듯, 아주 금지된 종류의...",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -81,10 +84,10 @@
       "ko": "왜 떠났으면서도 떠나지 않았는지 이해가 안 돼.",
       "tags": {
         "functions": [
-          "F06"
+          "F40"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,16 +107,16 @@
       "ko": "아, 그건, 그러니까,",
       "tags": {
         "functions": [
-          "F08"
+          "F04"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -127,9 +130,9 @@
       "ko": "엔칸토 주변의 산들이 꽤 높거든,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -150,16 +153,16 @@
       "ko": "그리고, 말했듯이, 공짜 음식도 있고.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -173,13 +176,15 @@
       "ko": "그래, 너희들, 공짜 음식 정말 좋아하지?",
       "tags": {
         "functions": [
-          "F09"
+          "F51",
+          "F40",
+          "F07"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
@@ -196,10 +201,10 @@
       "ko": "항상 배고프고, 절대 만족하지 못해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -221,7 +226,7 @@
         "functions": [
           "F32"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -242,13 +247,13 @@
       "ko": "응, 내 능력은 가족에게 도움이 되지 않았어,",
       "tags": {
         "functions": [
-          "F20"
+          "F07"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -267,14 +272,14 @@
         "functions": [
           "F22"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -288,10 +293,10 @@
       "ko": "그냥 어떻게 해야 할지 모르겠어...",
       "tags": {
         "functions": [
-          "F06"
+          "F40"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -311,10 +316,10 @@
       "ko": "그냥 어떻게 해야 할지 모르겠어...",
       "tags": {
         "functions": [
-          "F06"
+          "F40"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -334,16 +339,17 @@
       "ko": "어쨌든, 나는 네가 가야 한다고 생각해,",
       "tags": {
         "functions": [
-          "F36"
+          "F09",
+          "F37"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -357,9 +363,10 @@
       "ko": "왜냐하면 나한테 딱히 좋은...",
       "tags": {
         "functions": [
-          "F09"
+          "F40",
+          "F04"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -371,10 +378,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "99ac7fce6c12c1af"
 }

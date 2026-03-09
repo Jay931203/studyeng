@@ -12,10 +12,10 @@
       "ko": "그렇게 나쁘지 않다고, 그렇게 나쁘지 않다고. 어젯밤에 너무 많이 마셨어, 신은 보답하지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,20 +37,22 @@
       "ko": "머리가 아파. 버스를 놓쳤고 오늘은 지옥일 거야. 또 지각이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "is_lyrics",
           "contains_profanity"
@@ -63,10 +65,10 @@
       "ko": "출근해도 다들 내가 오래 못 버틸 거라고 암시하겠지.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -74,7 +76,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -88,10 +90,10 @@
       "ko": "하루를. 그때 네가 전화해주면 그렇게 나쁘지 않아, 그렇게 나쁘지 않아. 그리고 나는",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -99,9 +101,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -116,7 +120,7 @@
           "F27"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E01"
@@ -124,8 +128,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -138,10 +144,10 @@
       "ko": "그저 너와 함께 있는 것만으로도 내 인생 최고의 날이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F15"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E01"
@@ -149,7 +155,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -163,18 +169,18 @@
       "ko": "문을 밀어, 드디어 집이야. 온몸이 흠뻑 젖었어. 그때 네가 나에게",
       "tags": {
         "functions": [
-          "F09"
+          "F03"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -188,10 +194,10 @@
       "ko": "키스를 해줬어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -199,13 +205,15 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "d6f95964ac6d9605"
 }

@@ -12,18 +12,18 @@
       "ko": "좋아, 그만해, 이 작은 녀석, 이번엔 안 돼, 이 작은 쥐야.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,18 @@
       "ko": "아아아아!",
       "tags": {
         "functions": [
-          "F17"
+          "F15"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S01",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -60,23 +60,21 @@
       "ko": "휙, 휙, 휙, 휙, 휙, 아아!",
       "tags": {
         "functions": [
-          "F17"
+          "F23"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S01",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -85,24 +83,23 @@
       "ko": "아야, 아야, 아야, 아야!",
       "tags": {
         "functions": [
-          "F17"
+          "F15"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S01",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "138e2666c24d5b28"
 }

@@ -14,8 +14,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -37,8 +37,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,10 +58,10 @@
       "ko": "프랭크 테일러, 팬암. 태워줘서 고마워, 친구들.",
       "tags": {
         "functions": [
-          "F01"
+          "F27"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,20 +81,23 @@
       "ko": "앉아도 좋아, 프랭크. 이제 이륙할 거야.",
       "tags": {
         "functions": [
-          "F35"
+          "F35",
+          "F47"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -106,16 +109,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,8 +132,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -141,7 +144,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -152,8 +157,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,13 +178,13 @@
       "ko": "나는 앞으로 몇 달 동안 작은 비행을 할 거야,",
       "tags": {
         "functions": [
-          "F09"
+          "F23"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -196,10 +201,10 @@
       "ko": "약한 사람들을 위해 점프 비행을 하며 생계를 유지하려고.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -219,10 +224,10 @@
       "ko": "부끄러운 일 없어. 우리 모두 그랬어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,10 +247,10 @@
       "ko": "앉아. 고마워.",
       "tags": {
         "functions": [
-          "F25"
+          "F27"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -254,7 +259,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -267,8 +274,8 @@
         "functions": [
           "F34"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -278,7 +285,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -290,8 +299,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -302,7 +311,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -311,10 +322,10 @@
       "ko": "80 노트. 확인.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -325,7 +336,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -334,10 +347,10 @@
       "ko": "V1. 회전.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -348,7 +361,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -371,7 +386,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -380,7 +397,7 @@
       "ko": "기어 올려.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -394,7 +411,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -403,18 +422,18 @@
       "ko": "사랑하는 아빠, 오늘 졸업식이었어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R2",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -429,7 +448,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -443,5 +462,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "fdc735677d964441"
 }

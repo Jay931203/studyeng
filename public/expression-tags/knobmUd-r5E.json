@@ -12,10 +12,10 @@
       "ko": "안녕, 제시카. 비버는 어때? 좋아.",
       "tags": {
         "functions": [
-          "F25"
+          "F06"
         ],
-        "situation": "S09",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -37,8 +37,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S09",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,9 +58,9 @@
       "ko": "여전히 바쁘지.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -72,7 +72,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -83,7 +85,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -107,7 +109,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,7 +152,7 @@
       "ko": "고귀한 생물이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -176,7 +178,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,11 +198,11 @@
       "ko": "3일간의 우주 여행을 위해 충분히 가져왔기를 바래.",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
         "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -219,7 +221,7 @@
       "ko": "그럼 계산해보자.",
       "tags": {
         "functions": [
-          "F50"
+          "F36"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -232,7 +234,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -242,7 +246,7 @@
       "ko": "로빈의 비버가 30분마다 6인치의 나무를 먹고,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -265,7 +269,7 @@
       "ko": "제시카의 비버가 45분마다 8인치의 나무를 먹는다면,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -301,7 +305,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -315,7 +321,7 @@
         ],
         "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -324,7 +330,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -334,7 +342,7 @@
       "ko": "헤이! 헤이!",
       "tags": {
         "functions": [
-          "F53"
+          "F15"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -348,9 +356,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -359,10 +365,10 @@
       "ko": "아니, 비버 노래는 들을 수 없어. 정말 좋은 노래야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -370,11 +376,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "0d687537af9b2e1f"
 }

@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,8 +37,7 @@
       "ko": "안녕하세요, 저는 조세핀 마치입니다. 저... 조세핀, 당신 맞나요?",
       "tags": {
         "functions": [
-          "F26",
-          "F34"
+          "F25"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -49,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -61,7 +60,7 @@
       "ko": "환영합니다! 환영합니다!",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -72,10 +71,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -87,7 +88,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -95,16 +96,41 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
       "id": "g3kE0xpO1y8-4",
       "en": "I see that you have already met our professor.",
       "ko": "교수님을 이미 만나신 것 같군요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S19",
+        "cefr": "A2",
+        "register": "R2",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "g3kE0xpO1y8-5",
+      "en": "He's a very accomplished man.",
+      "ko": "그는 매우 뛰어난 분입니다.",
       "tags": {
         "functions": [
           "F01"
@@ -118,30 +144,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "g3kE0xpO1y8-5",
-      "en": "He's a very accomplished man.",
-      "ko": "그는 매우 뛰어난 분입니다.",
-      "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -153,9 +156,9 @@
       "ko": "그리고 당신의 어머니가 당신은 작가라고 하셨어요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -164,7 +167,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -176,7 +179,7 @@
       "ko": "저도 일기를 쓰고 있어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -185,9 +188,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -210,7 +213,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -225,7 +228,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -233,10 +236,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -245,20 +250,22 @@
       "ko": "조, 괜찮길 바래요.",
       "tags": {
         "functions": [
-          "F09"
+          "F19"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -266,150 +273,6 @@
       "id": "g3kE0xpO1y8-11",
       "en": "I got your address from Miss Kirk.",
       "ko": "미스 커크에게서 당신의 주소를 받았어요.",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "g3kE0xpO1y8-12",
-      "en": "Who is this? Who are you? I'm so sorry to intrude.",
-      "ko": "이분은 누구신가요? 죄송합니다, 방해가 되어서.",
-      "tags": {
-        "functions": [
-          "F06",
-          "F25"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "g3kE0xpO1y8-13",
-      "en": "I was close by and I thought I...",
-      "ko": "근처에 있어서 들렀어요.",
-      "tags": {
-        "functions": [
-          "F03"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "g3kE0xpO1y8-14",
-      "en": "But I'll be going. No! No, please stay.",
-      "ko": "하지만 이제 가야겠어요. 아니! 제발 계세요.",
-      "tags": {
-        "functions": [
-          "F43",
-          "F32"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "g3kE0xpO1y8-15",
-      "en": "We have more than enough room. Someone tell me who this man is.",
-      "ko": "공간은 충분해요. 누가 이분이 누구인지 말해줘요.",
-      "tags": {
-        "functions": [
-          "F01",
-          "F06"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "g3kE0xpO1y8-16",
-      "en": "I don't want to be a burden. Oh, you're not a burden at all. Yes, of course. Please. I'm Laurie. Who are you? I'm Frederic Baer.",
-      "ko": "저는 폐가 되고 싶지 않아요. 아, 전혀 폐가 아니에요. 네, 물론이죠. 제발요. 저는 로리예요. 당신은 누구신가요? 저는 프레드릭 베어입니다.",
-      "tags": {
-        "functions": [
-          "F20",
-          "F31",
-          "F25"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E02",
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "g3kE0xpO1y8-17",
-      "en": "We were at the same boarding house together in New York.",
-      "ko": "우리는 뉴욕의 같은 하숙집에 있었어요.",
       "tags": {
         "functions": [
           "F01"
@@ -423,7 +286,150 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "g3kE0xpO1y8-12",
+      "en": "Who is this? Who are you? I'm so sorry to intrude.",
+      "ko": "이분은 누구신가요? 죄송합니다, 방해가 되어서.",
+      "tags": {
+        "functions": [
+          "F28"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "g3kE0xpO1y8-13",
+      "en": "I was close by and I thought I...",
+      "ko": "근처에 있어서 들렀어요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "g3kE0xpO1y8-14",
+      "en": "But I'll be going. No! No, please stay.",
+      "ko": "하지만 이제 가야겠어요. 아니! 제발 계세요.",
+      "tags": {
+        "functions": [
+          "F02"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "g3kE0xpO1y8-15",
+      "en": "We have more than enough room. Someone tell me who this man is.",
+      "ko": "공간은 충분해요. 누가 이분이 누구인지 말해줘요.",
+      "tags": {
+        "functions": [
+          "F21",
+          "F13"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [
+          "G10"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "g3kE0xpO1y8-16",
+      "en": "I don't want to be a burden. Oh, you're not a burden at all. Yes, of course. Please. I'm Laurie. Who are you? I'm Frederic Baer.",
+      "ko": "저는 폐가 되고 싶지 않아요. 아, 전혀 폐가 아니에요. 네, 물론이죠. 제발요. 저는 로리예요. 당신은 누구신가요? 저는 프레드릭 베어입니다.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "g3kE0xpO1y8-17",
+      "en": "We were at the same boarding house together in New York.",
+      "ko": "우리는 뉴욕의 같은 하숙집에 있었어요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S22",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -435,18 +441,18 @@
       "ko": "오, 조, 그는 정말 잘생겼어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -461,7 +467,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -469,11 +475,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d4782acf59b9a595"
 }

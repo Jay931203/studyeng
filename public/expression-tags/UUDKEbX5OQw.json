@@ -12,7 +12,7 @@
       "ko": "지난 반 시간 동안 여기 있는 이유를 설명할 이야기를 생각해봤어요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S15",
         "cefr": "B1",
@@ -21,7 +21,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -35,7 +35,7 @@
       "ko": "이렇게 차려입고 말이죠. 그리고 제가 여러분이 여기서 존경할 만한",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S15",
         "cefr": "B1",
@@ -44,7 +44,8 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -58,7 +59,7 @@
       "ko": "진지함이나 근면함, 팀워크 같은 자질을 보여줄 이야기를 만들고 싶었어요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S15",
         "cefr": "B1",
@@ -67,7 +68,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -81,7 +82,7 @@
       "ko": "하지만 아무것도 생각나지 않아서 사실은 주차 위반으로 체포됐어요.",
       "tags": {
         "functions": [
-          "F01"
+          "F64"
         ],
         "situation": "S15",
         "cefr": "B1",
@@ -106,7 +107,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S15",
+        "situation": "S37",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -127,7 +128,7 @@
       "ko": "체포되기 전에는 뭐하고 있었나요? 아, 제 아파트를 칠하고 있었어요. 지금 마른 건가요?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S15",
         "cefr": "B1",
@@ -136,7 +137,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -150,7 +151,7 @@
       "ko": "그랬으면 좋겠어요. 제이는 당신이 꽤 결단력이 있다고 하더군요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S15",
         "cefr": "B1",
@@ -182,7 +183,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -196,11 +197,11 @@
       "ko": "그리고 이 사업을 배우고 싶다고요? 네, 저는 이 사업을 배우고 싶어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S15",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -219,10 +220,10 @@
       "ko": "네, 저는 이미 혼자서 배우기 시작했어요. 절대적으로요.",
       "tags": {
         "functions": [
-          "F09"
+          "F10"
         ],
         "situation": "S15",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -232,9 +233,13 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16",
+          "G20"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "5b484abbda98427f"
 }

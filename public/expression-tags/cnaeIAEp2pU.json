@@ -14,7 +14,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -37,7 +37,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -58,16 +58,16 @@
       "ko": "마눈을 겁주기 위해서 그는 원래 죽어 있어.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -81,21 +81,23 @@
       "ko": "즐거운 공포.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,9 +106,9 @@
       "ko": "첫 번째 팬게임 후에 폭발할 것으로 예상돼. 더 나아질 것 같아. 계속 가속 중.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -127,9 +129,9 @@
       "ko": "그 무거운 토크가 느껴지기 시작해.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -152,7 +154,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -175,8 +177,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -187,7 +189,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -196,32 +200,9 @@
       "ko": "적절한 때에 와서 운이 좋네.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "cnaeIAEp2pU-9",
-      "en": "Might as well chip away at you.",
-      "ko": "너를 조금씩 깎아내릴 수도 있어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -237,18 +218,41 @@
       }
     },
     {
+      "id": "cnaeIAEp2pU-9",
+      "en": "Might as well chip away at you.",
+      "ko": "너를 조금씩 깎아내릴 수도 있어.",
+      "tags": {
+        "functions": [
+          "F14"
+        ],
+        "situation": "S45",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "cnaeIAEp2pU-10",
       "en": "How funny.",
       "ko": "정말 웃기네.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -256,7 +260,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,9 +271,9 @@
       "ko": "이건 일반 모드보다 훨씬 시끄러워.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -288,9 +294,9 @@
       "ko": "음이 높아지면서 메모를 해.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -313,7 +319,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -334,33 +340,10 @@
       "ko": "적절한 때에 와서 운이 좋네.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "cnaeIAEp2pU-15",
-      "en": "Might as well chip away at you.",
-      "ko": "너를 조금씩 깎아내릴 수도 있어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -373,6 +356,30 @@
         "grammar_intent": [],
         "flags": []
       }
+    },
+    {
+      "id": "cnaeIAEp2pU-15",
+      "en": "Might as well chip away at you.",
+      "ko": "너를 조금씩 깎아내릴 수도 있어.",
+      "tags": {
+        "functions": [
+          "F14"
+        ],
+        "situation": "S45",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
     }
-  ]
+  ],
+  "transcriptHash": "205734624f9f42fd"
 }

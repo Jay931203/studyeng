@@ -12,21 +12,25 @@
       "ko": "내가 원하는 건, 괜찮게 일어나는 거야. 괜찮다고 말해줘, 내가 죽지 않을 거라고.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E02",
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05"
         ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -38,20 +42,24 @@
       "ko": "내가 원하는 건, 땅속의 구멍이야. 언제 나와도 괜찮은지 말해줘.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -63,20 +71,21 @@
       "ko": "힘든 시절, 왜 시도하는지 궁금하게 만들 거야. 힘든 시절, 널 끌어내리고 네가 울 때 웃을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E02",
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V09",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -89,19 +98,21 @@
       "ko": "힘든 시절, 어떻게 살아남는지 아직도 모르겠어. 힘든 시절, 힘든 시절, 바닥까지 끌어내릴 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V09",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -114,10 +125,10 @@
       "ko": "힘든 시절, 힘든 시절, 힘든 시절.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -125,7 +136,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -139,19 +150,21 @@
       "ko": "작은 비구름을 안고 돌아다녀. 머리 위에 걸려있고, 내리지 않을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E02"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V09",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -164,24 +177,30 @@
       "ko": "어디로 가야 할까, 어떤 신호라도 줘. 번개로 나를 쳐줘, 그러면 살아날지도 몰라.",
       "tags": {
         "functions": [
-          "F06"
+          "F14"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": [
           "is_lyrics"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "ff67afd1bccab7dd"
 }

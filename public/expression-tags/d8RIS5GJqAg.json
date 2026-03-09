@@ -14,16 +14,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -37,19 +37,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -60,16 +62,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,19 +85,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -104,17 +108,16 @@
       "ko": "저는 맷에게 말했어요, 지면 정말 싫을 거고 이기면 정말 무서울 거라고,",
       "tags": {
         "functions": [
-          "F09"
+          "F05"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03",
-          "E05"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V10",
         "power": [],
@@ -128,19 +131,21 @@
       "ko": "그리고 정말, 정말 무서워요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -151,18 +156,18 @@
       "ko": "저희는 그저 많은 훌륭한 분들과 함께할 수 있었던 행운의 두 젊은이일 뿐이에요.",
       "tags": {
         "functions": [
-          "F01"
+          "F21"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -174,19 +179,21 @@
       "ko": "그분들에게 감사를 전해야 하는...",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -197,20 +204,27 @@
       "ko": "이걸 20초 안에 끝내는 건 절대 불가능해요.",
       "tags": {
         "functions": [
-          "F09"
+          "F43",
+          "F11",
+          "F13"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -222,17 +236,19 @@
         "functions": [
           "F27"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -243,18 +259,18 @@
       "ko": "훌륭한 연출을 해주신 거스 반 산트.",
       "tags": {
         "functions": [
-          "F27"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -266,18 +282,18 @@
       "ko": "멋진 대사를 전달해 주신 로빈 윌리엄스.",
       "tags": {
         "functions": [
-          "F27"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -289,22 +305,25 @@
       "ko": "훌륭한 연기를 보여준 미니 드라이버. 멋진 연기를 한 스텔란 스카르스가르드. 그리고 형.",
       "tags": {
         "functions": [
-          "F27"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S10",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "db5fa4d07e5b05ff"
 }

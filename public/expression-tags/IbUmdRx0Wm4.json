@@ -12,18 +12,18 @@
       "ko": "넘겨줘. 전화기 줘.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S24",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,9 +35,9 @@
       "ko": "알겠어. 알겠어.",
       "tags": {
         "functions": [
-          "F07"
+          "F53"
         ],
-        "situation": "S39",
+        "situation": "S20",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -46,10 +46,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,21 +60,23 @@
       "ko": "가방도 줘. 어서!",
       "tags": {
         "functions": [
-          "F35"
+          "F38"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V12",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -81,18 +85,18 @@
       "ko": "좋아. 이제, 땅에 엎드려. 얼굴을 아래로.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V12",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,18 +108,18 @@
       "ko": "어서!",
       "tags": {
         "functions": [
-          "F35"
+          "F38"
         ],
-        "situation": "S39",
-        "cefr": "A1",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,18 +131,18 @@
       "ko": "안 돼. 이해 못 해? 이건 알라이아야.",
       "tags": {
         "functions": [
-          "F09"
+          "F57"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,8 +156,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -161,10 +165,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -173,10 +179,10 @@
       "ko": "완전 중요한 디자이너야.",
       "tags": {
         "functions": [
-          "F02"
+          "F10"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,9 +190,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -196,20 +204,22 @@
       "ko": "그럼 머리에 총 쏠 거야.",
       "tags": {
         "functions": [
-          "F42"
+          "F10"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V01",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -221,16 +231,16 @@
         "functions": [
           "F35"
         ],
-        "situation": "S39",
-        "cefr": "A1",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,21 +252,23 @@
       "ko": "좋아. 좋아. 응.",
       "tags": {
         "functions": [
-          "F07"
+          "F53"
         ],
-        "situation": "S39",
+        "situation": "S20",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,19 +277,21 @@
       "ko": "좋아. 음, 100까지 세. 고마워.",
       "tags": {
         "functions": [
-          "F34"
+          "F27"
         ],
-        "situation": "S39",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V01",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -290,7 +304,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S39",
+        "situation": "S20",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -299,7 +313,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -313,10 +327,10 @@
       "ko": "저녁이 엉망이 되어버렸어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -324,10 +338,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -336,21 +352,23 @@
       "ko": "성추행당하고, 강도당하고.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -359,9 +377,9 @@
       "ko": "파티 번호를 몰라서 디온에게 전화할 수 없었고,",
       "tags": {
         "functions": [
-          "F06"
+          "F56"
         ],
-        "situation": "S50",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -370,7 +388,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -382,18 +400,18 @@
       "ko": "아빠가 내가 어디 있는지 알면 나를 죽일 거야.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -405,10 +423,10 @@
       "ko": "전화할 사람은 한 명밖에 없었고,",
       "tags": {
         "functions": [
-          "F06"
+          "F03"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S24",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -416,10 +434,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -428,10 +448,10 @@
       "ko": "정말, 정말 그에게 전화하고 싶지 않았어.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S24",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -439,7 +459,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -451,22 +471,25 @@
       "ko": "어서.",
       "tags": {
         "functions": [
-          "F25"
+          "F38"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "5a117af0db624dcb"
 }

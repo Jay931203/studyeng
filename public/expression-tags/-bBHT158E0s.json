@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,9 +35,10 @@
       "ko": "그는 그냥 문제를 일으키는 걸 좋아하는 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F09",
+          "F13"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -48,7 +49,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -58,18 +61,18 @@
       "ko": "그게 내가 좋아하는 남자 스타일이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,7 +86,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -104,11 +107,11 @@
       "ko": "한 나라를 무릎 꿇게 한 지배자.",
       "tags": {
         "functions": [
-          "F02"
+          "F21"
         ],
-        "situation": "S39",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -127,13 +130,13 @@
       "ko": "잘했어.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -141,7 +144,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,9 +155,9 @@
       "ko": "아니.",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -164,7 +169,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -173,9 +180,9 @@
       "ko": "뭐라고?",
       "tags": {
         "functions": [
-          "F06"
+          "F28"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -186,7 +193,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -196,10 +205,10 @@
       "ko": "아니라고 했어.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -210,7 +219,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -219,10 +230,10 @@
       "ko": "아주, 아주 가까웠지만, 아니야.",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,9 +253,9 @@
       "ko": "흥분했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -256,7 +267,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,10 +278,10 @@
       "ko": "게임이 너무 복잡했어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,18 +301,18 @@
       "ko": "너 너무 즐기고 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,10 +324,10 @@
       "ko": "너무 즐기는 건 없어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -334,18 +347,18 @@
       "ko": "추격의 스릴을 즐기는 건 괜찮아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -357,10 +370,10 @@
       "ko": "게임의 방해를 갈망하는 건, 전적으로 공감해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -380,10 +393,10 @@
       "ko": "하지만 감정은.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -394,7 +407,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -403,10 +418,10 @@
       "ko": "감정은 패배한 쪽에서 발견되는 화학적 결함이야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "C1",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -428,7 +443,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -440,7 +455,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -451,9 +468,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -472,9 +489,9 @@
       "ko": "너.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -497,11 +514,11 @@
       "ko": "오, 신이시여.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -511,7 +528,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -520,9 +539,9 @@
       "ko": "불쌍한 남자를 봐.",
       "tags": {
         "functions": [
-          "F02"
+          "F35"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -543,13 +562,13 @@
       "ko": "내가 너에게 관심이 있다고 생각하지는 않겠지.",
       "tags": {
         "functions": [
-          "F12"
+          "F08"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -568,7 +587,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -580,7 +599,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -589,10 +610,11 @@
       "ko": "너가 위대한 셜록 홈즈라서?",
       "tags": {
         "functions": [
-          "F09"
+          "F06",
+          "F04"
         ],
-        "situation": "S40",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -602,9 +624,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "7bb1a00fc93f4c38"
 }

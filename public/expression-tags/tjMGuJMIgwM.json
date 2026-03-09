@@ -12,38 +12,11 @@
       "ko": "사브 씨, 마크! 마크!",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "tjMGuJMIgwM-1",
-      "en": "He's wired in. Sorry? He's wired in. Is he? Yes. How about now? You're still wired in? False security.",
-      "ko": "그는 연결되어 있어. 뭐라고? 그는 연결되어 있어. 그래? 지금은 어때? 여전히 연결되어 있어? 잘못된 안심이야.",
-      "tags": {
-        "functions": [
-          "F06",
-          "F09",
-          "F50"
-        ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -57,18 +30,45 @@
       }
     },
     {
+      "id": "tjMGuJMIgwM-1",
+      "en": "He's wired in. Sorry? He's wired in. Is he? Yes. How about now? You're still wired in? False security.",
+      "ko": "그는 연결되어 있어. 뭐라고? 그는 연결되어 있어. 그래? 지금은 어때? 여전히 연결되어 있어? 잘못된 안심이야.",
+      "tags": {
+        "functions": [
+          "F28",
+          "F36"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G04",
+          "G09"
+        ],
+        "flags": []
+      }
+    },
+    {
       "id": "tjMGuJMIgwM-2",
       "en": "You issued 24 million new shares of stock.",
       "ko": "2400만 주의 신주를 발행했어.",
       "tags": {
         "functions": [
-          "F01"
+          "F23"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -85,13 +85,13 @@
       "ko": "새로운 투자자가 나타나면 그렇게 하라고 했잖아...",
       "tags": {
         "functions": [
-          "F04"
+          "F23"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -99,7 +99,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -110,8 +112,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -133,9 +135,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -154,9 +156,9 @@
       "ko": "희석되지 않았어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -168,7 +170,10 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -177,12 +182,11 @@
       "ko": "모스코위츠 씨의 소유 지분은 얼마나 희석되었어? 희석되지 않았어.",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F06"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -203,8 +207,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -224,9 +228,9 @@
       "ko": "희석되지 않았어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -238,7 +242,10 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -247,11 +254,10 @@
       "ko": "피터 틸의 소유 지분은 얼마나 희석되었어? 희석되지 않았어.",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F06"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -273,8 +279,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -296,8 +302,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -308,7 +314,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -319,7 +327,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -334,5 +342,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "c5fffafb570a7ad3"
 }

@@ -12,10 +12,10 @@
       "ko": "모두 앞으로, 폴.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,10 +23,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,10 +37,10 @@
       "ko": "모두 앞으로, 폴!",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +60,18 @@
       "ko": "자, 친구들. 내 옆으로 와.",
       "tags": {
         "functions": [
-          "F35"
+          "F38"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +83,18 @@
       "ko": "자, 친구들. 내 옆으로 와.",
       "tags": {
         "functions": [
-          "F35"
+          "F38"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,9 +106,9 @@
       "ko": "좋아, 친구들. 천천히 앞으로 와.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -115,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,9 +129,9 @@
       "ko": "전속력으로 나아갑니다.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -138,7 +140,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,21 +152,23 @@
       "ko": "자, 빨리.",
       "tags": {
         "functions": [
-          "F35"
+          "F38"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -173,22 +177,25 @@
       "ko": "자, 빨리.",
       "tags": {
         "functions": [
-          "F35"
+          "F38"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "8d9843b9c153d10a"
 }

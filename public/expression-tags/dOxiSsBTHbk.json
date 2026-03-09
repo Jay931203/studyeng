@@ -12,10 +12,10 @@
       "ko": "다시 해보자, 이번에는 좀 더 멀리 떨어져서.",
       "tags": {
         "functions": [
-          "F35"
+          "F36"
         ],
-        "situation": "S30",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -25,7 +25,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -37,8 +39,8 @@
         "functions": [
           "F09"
         ],
-        "situation": "S30",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,9 +60,9 @@
       "ko": "응, 응, 이 정도면 괜찮아.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S30",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -81,9 +83,9 @@
       "ko": "좋아. 그리고... 시작!",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S30",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -104,13 +106,13 @@
       "ko": "네, 아주 좋아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S30",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -118,7 +120,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -127,13 +131,13 @@
       "ko": "네!",
       "tags": {
         "functions": [
-          "F09"
+          "F15"
         ],
-        "situation": "S30",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -141,7 +145,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,13 +156,13 @@
       "ko": "아야!",
       "tags": {
         "functions": [
-          "F17"
+          "F15"
         ],
-        "situation": "S30",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -164,7 +170,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -173,13 +181,13 @@
       "ko": "오, 안 돼!",
       "tags": {
         "functions": [
-          "F19"
+          "F15"
         ],
-        "situation": "S30",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -196,13 +204,13 @@
       "ko": "오, 안 돼!",
       "tags": {
         "functions": [
-          "F19"
+          "F15"
         ],
-        "situation": "S30",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -213,5 +221,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "2d28fd501c71849c"
 }

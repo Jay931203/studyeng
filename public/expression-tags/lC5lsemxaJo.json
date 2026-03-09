@@ -12,18 +12,18 @@
       "ko": "알겠어.",
       "tags": {
         "functions": [
-          "F01"
+          "F53"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,18 +37,18 @@
       "ko": "전화카드는 미래의 흐름이야. 이건 스스로 팔려. 전화카드를 누가 쓰는데? 알겠어?",
       "tags": {
         "functions": [
-          "F09"
+          "F48"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,19 +60,22 @@
       "ko": "좋은 태도네, 라이언.",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01",
+          "P07"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -83,19 +86,22 @@
       "ko": "난 네 미래에 투자하도록 도와주고 있는 거야, 친구. 이건 빠르게 부자가 되겠다는 계획 같아. 그래, 고마워. 너는 빠르게 부자가 될 거야.",
       "tags": {
         "functions": [
-          "F34"
+          "F27"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03",
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -106,18 +112,18 @@
       "ko": "우리 모두 그럴 거야. 너 그 다른 투자에서 돈 많이 잃지 않았어?",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S04",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -131,16 +137,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S24",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,18 +158,18 @@
       "ko": "나이지리아의 폐위된 왕의 아들이",
       "tags": {
         "functions": [
-          "F03"
+          "F06"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,18 +181,18 @@
       "ko": "직접 도움을 요청하는 이메일을 보내면, 도와줘야 해.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,18 +204,18 @@
       "ko": "그의 아버지는 그 나라를 다스렸어, 알겠어?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,19 +227,21 @@
       "ko": "자, 부자가 되고 싶은 사람은 손 들어봐. 좋아.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -244,20 +252,24 @@
       "ko": "아니, 이게 어떻게 피라미드 계획이 아니지? 자, 다시 설명할게.",
       "tags": {
         "functions": [
-          "F04"
+          "F39",
+          "F57",
+          "F50"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -269,16 +281,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -292,16 +304,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,21 +325,25 @@
       "ko": "더 많은 사람들이 투자하고, 우리 모두 더 많은 돈을 벌게 될 거야. 이건 피라미드 계획이 아니야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S04",
+        "cefr": "C1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -336,22 +352,27 @@
       "ko": "이건, 사실 계획도 아니야. 그냥...",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "ec6ac8fcbf453390"
 }

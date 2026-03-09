@@ -12,20 +12,23 @@
       "ko": "매우 영리하시군요, 하지만 화재가 나면 어떻게 하실 건가요?",
       "tags": {
         "functions": [
-          "F04"
+          "F36"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S20",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09",
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -35,20 +38,25 @@
       "ko": "화재 규정을 위반하고 아이들의 생명을 위험에 빠뜨리는 것은 지금 당신의 경력에 좋지 않을 것 같습니다.",
       "tags": {
         "functions": [
-          "F12"
+          "F09"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05",
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V01",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -58,9 +66,9 @@
       "ko": "알겠어요. 이걸로 뭐 하실 건가요? 이걸 치워주세요, 제발.",
       "tags": {
         "functions": [
-          "F35"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -69,7 +77,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +89,18 @@
       "ko": "당신은 무슨 문제라도 있나요? 어서!",
       "tags": {
         "functions": [
-          "F06"
+          "F38"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,19 +112,22 @@
       "ko": "학교에는 도서관 양쪽 끝에 비상구가 있습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S19",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05",
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V01",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -127,20 +138,23 @@
       "ko": "딕에게 존경심을 보여주세요. 가자.",
       "tags": {
         "functions": [
-          "F30"
+          "F36",
+          "F38"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S20",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -152,18 +166,18 @@
       "ko": "가세요. 자리로 돌아가세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,10 +189,10 @@
       "ko": "주전 선수에게서 좀 더 기대했어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F20"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -186,7 +200,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,10 +212,10 @@
       "ko": "아무도 당신을 속지 않아요, 벤더.",
       "tags": {
         "functions": [
-          "F56"
+          "F12"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,7 +223,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,10 +235,10 @@
       "ko": "다음에 떨어지는 나사는 당신이 될 거예요.",
       "tags": {
         "functions": [
-          "F40"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -232,12 +246,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -246,18 +258,18 @@
       "ko": "내 반바지를 먹어봐. 뭐라고요?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X05"
+          "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -269,21 +281,23 @@
       "ko": "내 반바지를 먹어봐.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X05"
+          "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -292,9 +306,9 @@
       "ko": "당신은 또 다른 토요일을 샀어요, 아저씨. 아, 이런. 당신은 바로 그 자리에서 또 하나를 샀어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F12"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -303,7 +317,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -315,9 +329,9 @@
       "ko": "그 다음 토요일은 비어 있어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F03"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -326,11 +340,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "3276651980e6a54e"
 }

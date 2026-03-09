@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,18 +37,18 @@
       "ko": "리듬을 높여, 함께 즐기고 싶지 않아?",
       "tags": {
         "functions": [
-          "F36"
+          "F40"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,7 +62,7 @@
       "ko": "내 옷을 꽉 조여, 오늘 밤 내 심장 박동을 볼 수 있어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -73,7 +73,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,18 +87,18 @@
       "ko": "나는 열기를 견딜 수 있어, 믿어줘, 그 순간이 내가 빛나는 때야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,18 +112,18 @@
       "ko": "모든 로맨스는 흔들리고 구부러져, 신경 쓰지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F40"
         ],
         "situation": "S46",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V03",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -138,20 +138,22 @@
       "ko": "밤이 오면, 나는 눈물을 흘리지 않아, 기회가 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -163,10 +165,10 @@
       "ko": "나는 춤출 수 있어, 나는 춤출 수 있어, 나는 춤출 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -174,7 +176,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -188,7 +190,7 @@
       "ko": "나를 지켜봐, 밤새 춤춰.",
       "tags": {
         "functions": [
-          "F03"
+          "F35"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -199,7 +201,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -213,7 +215,7 @@
       "ko": "내 마음은 타오를 수 있지만, 내 얼굴에서는 보이지 않을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "B1",
@@ -222,9 +224,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -238,7 +240,7 @@
       "ko": "나를 지켜봐, 밤새 춤춰.",
       "tags": {
         "functions": [
-          "F03"
+          "F35"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -249,7 +251,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -266,7 +268,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -274,7 +276,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -288,10 +290,10 @@
       "ko": "최근에 나는 가장자리에 가까워지고 있어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -299,7 +301,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -313,10 +315,10 @@
       "ko": "여전히 최선을 다하고 있어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -324,7 +326,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -344,12 +346,12 @@
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -357,5 +359,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "92f0bf90ac48e4d4"
 }

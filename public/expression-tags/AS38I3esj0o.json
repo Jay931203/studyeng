@@ -12,20 +12,25 @@
       "ko": "맞아. 아마 마들린이 우리가 그녀가 축산이라고 알리려는 것 같아. 축산이 뭐야?",
       "tags": {
         "functions": [
-          "F09"
+          "F06",
+          "F10",
+          "F14"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -37,7 +42,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -58,10 +63,10 @@
       "ko": "외양간에 살고, 머리카락으로 목을 감아 죽을 때까지 질식시키는 거야?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,16 +86,16 @@
       "ko": "알겠어. 만약 발표가 그녀가 축산이라고 하면 6,000달러 줄게.",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -104,13 +109,13 @@
       "ko": "자, 여러분. 소식이 있어요.",
       "tags": {
         "functions": [
-          "F62"
+          "F23"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -127,20 +132,23 @@
       "ko": "마들린 원쉬가 한국 화장실 귀신이라고? 지루해. 우리는 이미 알고 있었어.",
       "tags": {
         "functions": [
-          "F12"
+          "F23"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E03",
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -150,20 +158,22 @@
       "ko": "마들린 원쉬가 죽었어. 뭐라고?",
       "tags": {
         "functions": [
-          "F18"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -173,13 +183,13 @@
       "ko": "잠깐. 원쉬가 죽었어?",
       "tags": {
         "functions": [
-          "F18"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -196,9 +206,9 @@
       "ko": "응. 위원회 사무실에서 방금 통보받았어.",
       "tags": {
         "functions": [
-          "F05"
+          "F07"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -219,20 +229,25 @@
       "ko": "그게 사실일 리 없어. 원쉬가 데오도란트를 보면 말하듯이, 난 믿지 않아. 그녀는 죽었어.",
       "tags": {
         "functions": [
-          "F11"
+          "F18",
+          "F43",
+          "F10"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -242,9 +257,9 @@
       "ko": "오, 테리. 좀비는 죽을 수 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -265,16 +280,17 @@
       "ko": "이건 어떤 사기야. 만약 그녀가 죽었다면, 거리에서 아이들이 노래하는 소리를 듣고 있을 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -288,20 +304,25 @@
       "ko": "잘 모르겠어, 선생님. 우리가 디스코 교살자가 죽었다고 말했을 때도 믿지 않았잖아. 그리고 내가 맞았어. 그는 가짜였어. 아마 그녀도 살아있을 거야.",
       "tags": {
         "functions": [
-          "F06"
+          "F14",
+          "F55"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -311,9 +332,9 @@
       "ko": "왜 원쉬가 자신의 죽음을 위장하겠어?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -334,10 +355,10 @@
       "ko": "매년 한 번 멕시코에 가서 염소의 피를 빨아먹기 위해서야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -359,8 +380,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -369,8 +390,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -380,16 +405,16 @@
       "ko": "뭘 원해? 그녀의 관을 열어보고 확인해? 오, 그녀는 정말 죽었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -397,5 +422,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d70cb19f1c230c96"
 }

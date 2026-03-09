@@ -12,18 +12,18 @@
       "ko": "마지막 할 말이 있다면 지금이 기회입니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,20 +35,22 @@
       "ko": "당신은 살아있으면 안 됩니다.",
       "tags": {
         "functions": [
-          "F12"
+          "F37"
         ],
-        "situation": "S39",
-        "cefr": "B1",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -58,21 +60,23 @@
       "ko": "그건 옳지 않아요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "A2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,18 +85,18 @@
       "ko": "나를 죽이는 것도 옳지 않았어요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B1",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,8 +110,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,7 +133,7 @@
         "functions": [
           "F34"
         ],
-        "situation": "S39",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -140,7 +144,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -150,9 +156,9 @@
       "ko": "그녀에게 내가 야생인들과 싸우다 죽었다고 전해줘요.",
       "tags": {
         "functions": [
-          "F06"
+          "F35"
         ],
-        "situation": "S39",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -163,7 +169,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G23"
+        ],
         "flags": []
       }
     },
@@ -173,11 +181,11 @@
       "ko": "선택의 여지가 있었어요, 지휘관님.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -196,11 +204,11 @@
       "ko": "당신을 배신하느냐, 밤의 경비대를 배신하느냐.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -219,22 +227,23 @@
       "ko": "당신은 우리 땅에 야생인들의 군대를 데려왔어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
-        "situation": "S39",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "0abe4a5f4592ab55"
 }

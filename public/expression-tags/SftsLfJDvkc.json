@@ -12,11 +12,11 @@
       "ko": "손상과 파손을 방지하세요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -37,7 +37,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -60,9 +60,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -83,9 +83,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -106,9 +106,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -129,9 +129,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -152,9 +152,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -175,9 +175,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -198,14 +198,14 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S44",
         "cefr": "B1",
-        "register": "R2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
         "vibe": "V18",
         "power": [],
@@ -221,9 +221,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -242,11 +242,11 @@
       "ko": "믿어보세요, 얕은 계곡이.",
       "tags": {
         "functions": [
-          "F01"
+          "F45"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -267,14 +267,14 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -290,9 +290,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -313,9 +313,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -336,9 +336,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -357,11 +357,11 @@
       "ko": "아, 그게 당신이군요. 네, 마님. 당신은 똑똑하군요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -369,11 +369,11 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P11"
+        ],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -384,8 +384,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -405,13 +405,13 @@
       "ko": "네덜란드 모자 냅킨 접기를 진정으로 마스터한 사람은 몇 안 됩니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F23"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -430,8 +430,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -455,7 +455,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -467,8 +467,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "8a2a69d4ea714d51"
 }

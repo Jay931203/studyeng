@@ -12,7 +12,7 @@
       "ko": "일어나세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -37,7 +37,7 @@
       "ko": "벽을 바라보세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -62,10 +62,10 @@
       "ko": "바로 거기입니다.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -87,10 +87,10 @@
       "ko": "앞으로 가세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -112,20 +112,24 @@
       "ko": "이 글을 읽고 계시다니 기쁩니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F32",
+          "F34"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02",
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -158,13 +162,13 @@
       "ko": "그러므로 조심하라. 집 주인이 언제 오는지 모르기 때문이다.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -172,7 +176,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -184,7 +190,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -195,8 +201,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "253a710b206b9d81"
 }

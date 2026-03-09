@@ -12,7 +12,8 @@
       "ko": "이 펜을 팔아봐. 좋은 펜이야. 생각을 적는 데 사용할 수 있어.",
       "tags": {
         "functions": [
-          "F39"
+          "F21",
+          "F34"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -21,11 +22,13 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -35,7 +38,7 @@
       "ko": "네 삶의 기억을 위해서 이 펜을 팔아봐.",
       "tags": {
         "functions": [
-          "F39"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -58,7 +61,7 @@
       "ko": "이 펜은 잘 작동해.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -75,5 +78,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "45e41093b6c4ab5f"
 }

@@ -12,10 +12,10 @@
       "ko": "파일을 주문해, 대니. 내가 도와줄 수 있는 방법이 있어. 고마워.",
       "tags": {
         "functions": [
-          "F34"
+          "F27"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -24,7 +24,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -35,10 +37,10 @@
       "ko": "믿지? 대니, 내가 도와줄 수 있는 방법이 있다는 걸.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,10 +60,10 @@
       "ko": "물론이야, 병장. 비행선으로 나가는 길에 너를 데려다 줄게.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,13 +83,13 @@
       "ko": "원하는 전출 명령서를 모두 받을 수 있어. 나에게 정중하게 요청해야 해.",
       "tags": {
         "functions": [
-          "F34"
+          "F45"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
@@ -104,10 +106,11 @@
       "ko": "뭐라고? 정중하게 요청해야 해. 대니, 나는 총알과 폭탄, 피는 처리할 수 있어.",
       "tags": {
         "functions": [
-          "F34"
+          "F28",
+          "F45"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -117,7 +120,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -127,10 +132,10 @@
       "ko": "나는 돈도 원하지 않고, 메달도 원하지 않아. 내가 원하는 것은 너가 그 이상한 흰색 유니폼을 입고",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -140,8 +145,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -150,10 +159,10 @@
       "ko": "하버드식으로 나에게 예의를 표하는 거야.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,10 +182,10 @@
       "ko": "정중하게 요청해야 해.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -187,9 +196,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -198,10 +205,10 @@
       "ko": "제섭 대령님, 번거롭지 않다면 전출 명령서 사본을 받고 싶습니다.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -221,10 +228,10 @@
       "ko": "제스업 대령, 번거롭지 않다면 전환 명령서 사본을 받고 싶습니다.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -233,10 +240,15 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "2c463a27e635156c"
 }

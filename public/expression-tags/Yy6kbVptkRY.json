@@ -12,10 +12,10 @@
       "ko": "유머러스한 번역의 혼란.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S49",
-        "cefr": "B2",
+        "situation": "S29",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,8 +35,7 @@
       "ko": "아, 그걸 할 수 있을지 모르겠어요. 농담인가요? 아니요.",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F06"
         ],
         "situation": "S29",
         "cefr": "B1",
@@ -47,9 +46,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -59,7 +62,7 @@
       "ko": "그걸 너무 티나지 않게 하려고 노력할게요. 좋아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S29",
         "cefr": "B1",
@@ -91,7 +94,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -105,20 +108,25 @@
       "ko": "음, 어머니가 돌아가셔서 아버지가 그에 대해 이야기할 수 없어서인 것 같아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F04",
+          "F09",
+          "F52"
         ],
         "situation": "S29",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -128,20 +136,23 @@
       "ko": "그리고 언니와 저는 1년 동안 이야기하지 않았어요. 언니는 제가 그녀의 남편과 자려고 했다고 생각하거든요.",
       "tags": {
         "functions": [
-          "F09"
+          "F04",
+          "F56"
         ],
         "situation": "S29",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -151,20 +162,22 @@
       "ko": "그리고 저는 성관계를 통해 빈 마음속의 고통을 피하는 데 대부분의 성인 삶을 보냈어요. 이건 잘해요.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
         "situation": "S29",
-        "cefr": "C1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -174,7 +187,7 @@
       "ko": "하지만 이제는 그렇게 하지 않아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
         "situation": "S29",
         "cefr": "B1",
@@ -206,9 +219,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -220,20 +233,22 @@
       "ko": "아, 아니요. 친구는요? 뭐라고요? 친구요?",
       "tags": {
         "functions": [
-          "F06"
+          "F28"
         ],
         "situation": "S29",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -243,7 +258,32 @@
       "ko": "음... 사실 친구를 만날 시간이 없어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
+        ],
+        "situation": "S29",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "Yy6kbVptkRY-11",
+      "en": "Well, I have a guinea pig, but she blows hot and cold. Not a joke.",
+      "ko": "음, 기니피그가 하나 있는데, 그녀는 변덕이 심해요. 농담이 아니에요.",
+      "tags": {
+        "functions": [
+          "F52"
         ],
         "situation": "S29",
         "cefr": "B1",
@@ -254,30 +294,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "Yy6kbVptkRY-11",
-      "en": "Well, I have a guinea pig, but she blows hot and cold. Not a joke.",
-      "ko": "음, 기니피그가 하나 있는데, 그녀는 변덕이 심해요. 농담이 아니에요.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S29",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -289,11 +306,11 @@
       "ko": "성관계에 대해 이야기해 주세요.",
       "tags": {
         "functions": [
-          "F06"
+          "F35"
         ],
         "situation": "S29",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -306,5 +323,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "e42c02aba2c44e72"
 }

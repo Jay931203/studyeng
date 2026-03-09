@@ -12,10 +12,10 @@
       "ko": "좋아, 이야기해보자.",
       "tags": {
         "functions": [
-          "F34"
+          "F36"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,10 +23,16 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G09"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,18 +41,18 @@
       "ko": "비밀 상담관처럼 할 수 있을까?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,10 +64,10 @@
       "ko": "서서 간단히 하자.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +75,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,10 +87,10 @@
       "ko": "결혼 문제야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S44",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,10 +98,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,18 +114,18 @@
       "ko": "그래, 우리가 이런 방향으로 가고 있다는 끔찍한 생각이 들었어.",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,9 +137,9 @@
       "ko": "최선을 다했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -138,7 +148,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,18 +160,18 @@
       "ko": "정말 최선을 다했고, 고통받고 있어.",
       "tags": {
         "functions": [
-          "F16"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,18 +183,18 @@
       "ko": "아니, 너는 고통받고 있지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +206,18 @@
       "ko": "우리는 모두 이 상황을 견뎌야 하니 고통받고 있어.",
       "tags": {
         "functions": [
-          "F16"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,10 +229,10 @@
       "ko": "분명히 하고 싶은 게 있어.",
       "tags": {
         "functions": [
-          "F04"
+          "F39"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,7 +240,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,18 +252,18 @@
       "ko": "사람들이 너와 다이애나를 볼 때,",
       "tags": {
         "functions": [
-          "F02"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,21 +275,23 @@
       "ko": "그들은 운 좋게 모든 것을 가진 두 특권층 젊은이를 본다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -288,10 +300,10 @@
       "ko": "아무도, 살아있는 영혼 하나도 고통의 이유를 보지 못해. 알게 된다면 다를 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "C1",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E02"
@@ -299,7 +311,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,18 +323,18 @@
       "ko": "뭘 알게 된다면?",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "C1",
+        "situation": "S44",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,21 +346,23 @@
       "ko": "그들은 네가 아내를 배신하고",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -357,13 +371,13 @@
       "ko": "숨기려 하지 않는 걸 알고 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -380,13 +394,13 @@
       "ko": "그들은 네 덕분에 그녀가 심리적 문제를 겪고",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -403,19 +417,21 @@
       "ko": "먹거나 안 먹거나, 또는 그녀가 하는 것과 하지 않는 것을 알고 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F27"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V12",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -426,18 +442,18 @@
       "ko": "그들은 네가 버릇없는 미성숙한 남자라는 걸 알고 있어,",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S05",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -449,13 +465,13 @@
       "ko": "끝없이 불필요하게 불평하고 있지.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -472,13 +488,13 @@
       "ko": "버릇없는 미성숙한 여자와 결혼했으니,",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -486,7 +502,9 @@
         "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -495,13 +513,13 @@
       "ko": "끝없이 불필요하게 불평하고 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -518,13 +536,13 @@
       "ko": "끝없이 불평하고 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -532,8 +550,11 @@
         "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "a927b8a386411dbf"
 }

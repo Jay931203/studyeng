@@ -12,10 +12,10 @@
       "ko": "그건 이해가 가.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,7 +35,7 @@
       "ko": "Xbox 다음에는 Xbox Two가 나올 줄 알았지. 하지만 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -69,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -92,7 +92,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,20 +104,22 @@
       "ko": "아마 이름 짓는 데 생각한 시간만큼이 아닐까.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -127,18 +129,18 @@
       "ko": "버터 좀 가져다줄래?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
         "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -153,7 +155,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -161,7 +163,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -184,7 +186,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -199,7 +201,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -207,7 +209,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -222,7 +224,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,7 +232,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,7 +244,7 @@
       "ko": "잠깐만.",
       "tags": {
         "functions": [
-          "F52"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -253,7 +255,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -267,20 +269,23 @@
       "ko": "네가 이 딜레마를 진지하게 받아들이지 않는 것 같아.",
       "tags": {
         "functions": [
-          "F12"
+          "F40"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07",
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -290,82 +295,13 @@
       "ko": "알겠어, 셸든.",
       "tags": {
         "functions": [
-          "F10"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "hFyLq6qNRew-13",
-      "en": "You have my undivided attention.",
-      "ko": "너에게 온전히 집중할게.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "hFyLq6qNRew-14",
-      "en": "Okay, now, the PS4 is more angular and sleek-looking.",
-      "ko": "자, PS4는 더 각지고 세련된 디자인이야.",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "hFyLq6qNRew-15",
-      "en": "No way!",
-      "ko": "말도 안 돼!",
-      "tags": {
-        "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -379,12 +315,87 @@
       }
     },
     {
+      "id": "hFyLq6qNRew-13",
+      "en": "You have my undivided attention.",
+      "ko": "너에게 온전히 집중할게.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "hFyLq6qNRew-14",
+      "en": "Okay, now, the PS4 is more angular and sleek-looking.",
+      "ko": "자, PS4는 더 각지고 세련된 디자인이야.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G10"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "hFyLq6qNRew-15",
+      "en": "No way!",
+      "ko": "말도 안 돼!",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E05"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
       "id": "hFyLq6qNRew-16",
       "en": "It's true, but the larger size of the Xbox One may keep it from overheating.",
       "ko": "사실이지만, Xbox One의 더 큰 크기가 과열을 방지할 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -395,7 +406,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -407,7 +418,7 @@
       "ko": "게임 시스템이 과열되면 안 되지.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -416,9 +427,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -430,16 +441,16 @@
       "ko": "아니, 절대 그렇게 되면 안 돼.",
       "tags": {
         "functions": [
-          "F17"
+          "F10"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -453,18 +464,18 @@
       "ko": "게다가 Xbox One은",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "C1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -479,7 +490,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -487,11 +498,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "6ee9210fa787ace1"
 }

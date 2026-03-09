@@ -14,9 +14,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -37,16 +37,16 @@
         "functions": [
           "F35"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,9 +58,9 @@
       "ko": "드레이코.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -83,9 +83,9 @@
       "ko": "드레이코.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -108,9 +108,9 @@
       "ko": "드레이코.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -135,7 +135,7 @@
         "functions": [
           "F35"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -147,10 +147,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d712bb63ebc3deea"
 }

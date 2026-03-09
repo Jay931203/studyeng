@@ -14,7 +14,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S35",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -35,9 +35,9 @@
       "ko": "저는 화장실 칸에 숨어 있어서",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -58,9 +58,9 @@
       "ko": "얼굴은 못 봤지만, 목소리는 들었어요.",
       "tags": {
         "functions": [
-          "F03"
+          "F56"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -83,7 +83,7 @@
         "functions": [
           "F02"
         ],
-        "situation": "S32",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -95,7 +95,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -106,7 +108,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S35",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -129,18 +131,21 @@
         "functions": [
           "F09"
         ],
-        "situation": "S35",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -150,9 +155,9 @@
       "ko": "백스트리트 보이즈. 알고 있습니다.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S35",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -173,9 +178,9 @@
       "ko": "좋아요.",
       "tags": {
         "functions": [
-          "F07"
+          "F53"
         ],
-        "situation": "S35",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -187,7 +192,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -198,9 +205,9 @@
         "functions": [
           "F34"
         ],
-        "situation": "S35",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R3",
         "emotions": [
           "E09"
         ],
@@ -209,7 +216,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -219,9 +228,9 @@
       "ko": "시작 부분을 불러주시겠어요?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S35",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -232,7 +241,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -242,9 +253,9 @@
       "ko": "진짜요?",
       "tags": {
         "functions": [
-          "F18"
+          "F06"
         ],
-        "situation": "S35",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -256,7 +267,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,9 +278,9 @@
       "ko": "알겠습니다.",
       "tags": {
         "functions": [
-          "F07"
+          "F53"
         ],
-        "situation": "S35",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -279,7 +292,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -288,9 +303,9 @@
       "ko": "당신은 나의 불꽃.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S35",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -311,9 +326,9 @@
       "ko": "2번, 계속하세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F02"
         ],
-        "situation": "S35",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -334,30 +349,7 @@
       "ko": "하나의 소망. 3번.",
       "tags": {
         "functions": [
-          "F09"
-        ],
-        "situation": "S35",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "ffyKY3Dj5ZE-15",
-      "en": "Believe when I say. Number four.",
-      "ko": "내가 말할 때 믿어줘. 4번.",
-      "tags": {
-        "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -371,6 +363,31 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "ffyKY3Dj5ZE-15",
+      "en": "Believe when I say. Number four.",
+      "ko": "내가 말할 때 믿어줘. 4번.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V05",
+        "power": [],
+        "grammar_intent": [],
         "flags": []
       }
     },
@@ -380,7 +397,7 @@
       "ko": "나는 그렇게 원해. 말해줘 왜.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -403,19 +420,21 @@
       "ko": "그건 그저 가슴 아픈 일일 뿐.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -426,10 +445,10 @@
       "ko": "말해줘 왜.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -440,7 +459,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -449,19 +470,21 @@
       "ko": "그건 그저 실수일 뿐.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -472,7 +495,33 @@
       "ko": "이제 5번.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "ffyKY3Dj5ZE-21",
+      "en": "I never want to hear you say. Whoo!",
+      "ko": "네가 이렇게 말하는 걸 절대 듣고 싶지 않아.",
+      "tags": {
+        "functions": [
+          "F43",
+          "F56"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -485,30 +534,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "ffyKY3Dj5ZE-21",
-      "en": "I never want to hear you say. Whoo!",
-      "ko": "네가 이렇게 말하는 걸 절대 듣고 싶지 않아.",
-      "tags": {
-        "functions": [
-          "F17"
+        "grammar_intent": [
+          "G01",
+          "G19"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
         "flags": []
       }
     },
@@ -524,14 +553,16 @@
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -541,13 +572,13 @@
       "ko": "아, 소름. 진짜 소름 돋는다.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -564,13 +595,13 @@
       "ko": "5번이었어요. 5번이 제 형을 죽였어요.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -578,7 +609,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -587,7 +620,7 @@
       "ko": "맙소사, 그 부분을 깜빡했네.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -604,5 +637,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "fcd84efc2380f1d3"
 }

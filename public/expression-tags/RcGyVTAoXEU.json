@@ -12,21 +12,23 @@
       "ko": "고백할 게 있어요.",
       "tags": {
         "functions": [
-          "F64"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -35,21 +37,26 @@
       "ko": "하지만 먼저, 당신도 저에게 작은 고백을 해주길 원해요.",
       "tags": {
         "functions": [
-          "F64"
+          "F34"
         ],
-        "situation": "S16",
+        "situation": "S47",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G02",
+          "G15"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -58,21 +65,26 @@
       "ko": "지난 1년 동안, 스트레스를 거의 느끼지 않은 분은 손을 들어주세요.",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
-        "situation": "S16",
+        "situation": "S47",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G02",
+          "G15"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -81,21 +93,23 @@
       "ko": "손을 들어주세요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -106,19 +120,21 @@
         "functions": [
           "F06"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -127,21 +143,26 @@
       "ko": "지난 1년 동안, 스트레스를 거의 느끼지 않은 분은 손을 들어주세요.",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
-        "situation": "S16",
+        "situation": "S47",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G02",
+          "G15"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -150,21 +171,23 @@
       "ko": "손을 들어주세요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -175,19 +198,22 @@
         "functions": [
           "F06"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -196,21 +222,25 @@
       "ko": "그럼 적당한 스트레스를 경험한 분은요?",
       "tags": {
         "functions": [
-          "F06"
+          "F36"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G09"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -221,19 +251,23 @@
         "functions": [
           "F06"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -242,21 +276,27 @@
       "ko": "네, 저도요.",
       "tags": {
         "functions": [
+          "F53",
           "F10"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G20"
+        ],
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,21 +305,23 @@
       "ko": "하지만 그게 제 고백은 아니에요.",
       "tags": {
         "functions": [
-          "F64"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -288,21 +330,23 @@
       "ko": "제 고백은 이거예요.",
       "tags": {
         "functions": [
-          "F64"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -311,21 +355,23 @@
       "ko": "저는 건강 심리학자예요,",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -334,21 +380,23 @@
       "ko": "제 임무는 사람들이 더 행복하고 건강해지도록 돕는 거예요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S47",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -357,21 +405,23 @@
       "ko": "하지만 제가 지난 10년 동안 가르쳐온 것이",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -380,21 +430,25 @@
       "ko": "오히려 해가 될까 두려워요,",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G10"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -403,22 +457,25 @@
       "ko": "그리고 그것은 스트레스와 관련이 있어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "3baeafe681356f15"
 }

@@ -14,21 +14,21 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S38",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G15"
+        ],
+        "flags": []
       }
     },
     {
@@ -39,16 +39,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S38",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,18 +60,18 @@
       "ko": "이미 말했잖아.",
       "tags": {
         "functions": [
-          "F01"
+          "F05"
         ],
-        "situation": "S14",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -85,16 +85,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S04",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,19 +106,22 @@
       "ko": "그리고 네가 그의 경호원이란 거지? 뭐? 뭐? 네가 그렇게 말했잖아.",
       "tags": {
         "functions": [
-          "F09"
+          "F05"
         ],
-        "situation": "S14",
+        "situation": "S38",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01",
+          "P07"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -129,19 +132,21 @@
       "ko": "나는 그를 지킨다고 했어. 백업처럼. 두 번째 눈처럼.",
       "tags": {
         "functions": [
-          "F01"
+          "F05"
         ],
-        "situation": "S14",
+        "situation": "S38",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -152,18 +157,18 @@
       "ko": "누구나 백업이 필요하지, 그렇지?",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -177,16 +182,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,20 +203,22 @@
       "ko": "타이러스나 구스가 고용한 근육질 친구들 중 한 명이 될 수는 없어.",
       "tags": {
         "functions": [
-          "F14"
+          "F02"
         ],
-        "situation": "S14",
+        "situation": "S38",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -221,21 +228,23 @@
       "ko": "그가 고용한 친구들 중 한 명이 될 수는 없어.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S38",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -244,18 +253,18 @@
       "ko": "반드시 제시 핑크맨이어야 해. 왜?",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -269,18 +278,20 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -292,16 +303,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -315,57 +326,11 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "VqWIZGbtZAk-14",
-      "en": "All I'm saying is that do you not even question this?",
-      "ko": "내가 하는 말은, 이걸 의심조차 하지 않니?",
-      "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "VqWIZGbtZAk-15",
-      "en": "Do you really believe that you mean anything to these people?",
-      "ko": "정말로 이 사람들이 너에게 의미가 있다고 믿니?",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S39",
-        "cefr": "B2",
-        "register": "R3",
-        "emotions": [
-          "E04"
+          "E05"
         ],
         "expression_types": [
           "X08"
@@ -377,27 +342,74 @@
       }
     },
     {
+      "id": "VqWIZGbtZAk-14",
+      "en": "All I'm saying is that do you not even question this?",
+      "ko": "내가 하는 말은, 이걸 의심조차 하지 않니?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S38",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E05"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "VqWIZGbtZAk-15",
+      "en": "Do you really believe that you mean anything to these people?",
+      "ko": "정말로 이 사람들이 너에게 의미가 있다고 믿니?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S38",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E05"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V05",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "VqWIZGbtZAk-16",
       "en": "And I'm not trying to be insulting, I'm just trying to make you see things clearly.",
       "ko": "나는 모욕하려는 게 아니야, 그냥 네가 상황을 명확히 보게 하고 싶어.",
       "tags": {
         "functions": [
-          "F50"
+          "F02"
         ],
-        "situation": "S39",
+        "situation": "S38",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d48c912e32a9834d"
 }

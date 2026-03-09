@@ -12,9 +12,9 @@
       "ko": "네. 아니, 아니, 아니. 문제 없어요. 지금 나가고 있어요.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S48",
+        "situation": "S37",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -24,7 +24,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -35,16 +37,18 @@
       "ko": "음, 좋았어요. 좋았어요. 당신이... 호텔 프론트 직원에게 전화를 걸게 해달라고 돈을 줬나요? 그게 당신이 한 일인가요?",
       "tags": {
         "functions": [
-          "F09"
+          "F06",
+          "F52",
+          "F55"
         ],
-        "situation": "S48",
+        "situation": "S37",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -60,8 +64,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
+        "situation": "S37",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,19 +85,21 @@
       "ko": "루크 대장! 루크 대장! 오, 루크 대장. 음, 칼, 내가 말해야겠어요, 그... 그건 꽤 공식적으로 들리네요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S37",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -104,9 +110,9 @@
       "ko": "하지만, 내가 말했듯이, 나는... 우리 둘만 여기 있어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F09"
         ],
-        "situation": "S48",
+        "situation": "S37",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -127,19 +133,21 @@
       "ko": "나와 당신이니까, 나를 잡아야 해요. 프랭크! 프랭크! 이건 나를 믿어야 해요.",
       "tags": {
         "functions": [
-          "F34"
+          "F45"
         ],
-        "situation": "S48",
+        "situation": "S37",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E04"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -150,10 +158,10 @@
       "ko": "이 사람들은 창피를 당했어요, 프랭크. 그들은 화가 나 있어요. 당신은 그들의 은행을 털었고,",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S37",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -161,9 +169,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V04",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -173,16 +183,16 @@
       "ko": "그들의 돈을 훔쳤고, 그들의 나라에 살고 있어요. 내가 이 일이 일어날 거라고 말했잖아요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S37",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -196,16 +206,16 @@
       "ko": "하지만 그렇게 끝날 수밖에 없었어요. 실수를 하지 마세요.",
       "tags": {
         "functions": [
-          "F04"
+          "F03"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S37",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
         "vibe": "V18",
         "power": [],
@@ -219,10 +229,10 @@
       "ko": "잘했어. 잘했어, 칼. 그 거짓말을 계속 밀어붙여. 계속 밀어붙여.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S37",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,22 +252,26 @@
       "ko": "진짜로 만들어낼 때까지 밀어붙여. 그들이 널 죽일 거야! 그 문을 나가면, 널 죽일 거야.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S37",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "e0d349beeac0d536"
 }

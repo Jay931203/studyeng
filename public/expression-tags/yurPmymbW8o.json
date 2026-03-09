@@ -12,10 +12,10 @@
       "ko": "이틀 남았어요.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S22",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,8 +23,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -35,18 +37,18 @@
       "ko": "자, 자기야, 아이들이 지쳤고, 당신도 지쳤어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S22",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,20 +60,25 @@
       "ko": "이 공항에서 더 이상 할 수 있는 게 없어요.",
       "tags": {
         "functions": [
-          "F01"
+          "F10"
         ],
         "situation": "S22",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G16",
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -81,18 +88,18 @@
       "ko": "이제 로브 집으로 가자,",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S22",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,18 +111,18 @@
       "ko": "그렇게 하면 경찰에 다시 연락할 수 있고, 그들이 우리에게 연락할 수 있어.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S22",
-        "cefr": "A2",
+        "situation": "S37",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,7 +136,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S22",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -138,7 +145,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,9 +157,9 @@
       "ko": "비행기를 타지 않는 한 여기 떠나지 않을 거야.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S22",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -161,8 +168,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -173,9 +182,9 @@
       "ko": "손님, 저희는 최선을 다하고 있습니다.",
       "tags": {
         "functions": [
-          "F05"
+          "F02"
         ],
-        "situation": "S22",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -184,7 +193,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,7 +205,7 @@
       "ko": "공항에 남고 싶으시면,",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S22",
         "cefr": "A2",
@@ -205,9 +214,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,20 +228,23 @@
       "ko": "대기자로 등록할 수 있을지도 몰라요.",
       "tags": {
         "functions": [
-          "F34"
+          "F36"
         ],
-        "situation": "S22",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -242,19 +254,21 @@
       "ko": "좌석이 열릴 가능성이 있어요. 알겠죠? 네, 기다릴게요.",
       "tags": {
         "functions": [
-          "F14"
+          "F49"
         ],
-        "situation": "S22",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -267,7 +281,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S22",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -276,10 +290,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -290,7 +306,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S22",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -299,10 +315,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -311,20 +329,22 @@
       "ko": "정말 죄송하지만, 오늘은 크리스마스 이브입니다.",
       "tags": {
         "functions": [
-          "F20"
+          "F28"
         ],
-        "situation": "S22",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -336,16 +356,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S22",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -359,7 +379,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S23",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -368,10 +388,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -380,20 +402,22 @@
       "ko": "시내 호텔 방을 예약해 드릴까요?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
         "situation": "S23",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -403,9 +427,9 @@
       "ko": "내일 오후에 시카고행 비행기를 예약해 드릴 수 있어요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S23",
+        "situation": "S22",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -414,7 +438,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -428,18 +452,20 @@
         "functions": [
           "F43"
         ],
-        "situation": "S23",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -449,20 +475,22 @@
       "ko": "정말 죄송합니다, 손님,",
       "tags": {
         "functions": [
-          "F27"
+          "F28"
         ],
-        "situation": "S23",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -472,20 +500,23 @@
       "ko": "하지만 저희는 최선을 다하고 있습니다. 계속하세요.",
       "tags": {
         "functions": [
-          "F09"
+          "F10"
         ],
-        "situation": "S23",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16",
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -495,21 +526,25 @@
       "ko": "죄송합니다.",
       "tags": {
         "functions": [
-          "F27"
+          "F28"
         ],
-        "situation": "S23",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -518,22 +553,27 @@
       "ko": "실례합니다. 가야 할 곳이 있고, 만날 사람이 있죠. 거기 티켓이 있어요.",
       "tags": {
         "functions": [
-          "F06"
+          "F28"
         ],
-        "situation": "S23",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "5a3d6d3d54a6f700"
 }

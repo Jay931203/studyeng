@@ -12,18 +12,18 @@
       "ko": "나는 너를 완전히 믿어.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,21 +35,23 @@
       "ko": "해리 포터에게 뭔가를 말해야 할 때가 올 것이다.",
       "tags": {
         "functions": [
-          "F09"
+          "F05"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -58,18 +60,18 @@
       "ko": "하지만 볼드모트가 가장 취약할 때까지 기다려야 한다.",
       "tags": {
         "functions": [
-          "F36"
+          "F49"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,8 +85,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,7 +94,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,21 +106,23 @@
       "ko": "볼드모트가 해리를 죽이기 위해 고드릭의 홀로 갔던 밤에...",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -127,18 +131,18 @@
       "ko": "...릴리 포터가 그들 사이에 몸을 던졌다.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,7 +156,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -161,10 +165,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -173,18 +180,18 @@
       "ko": "그때 볼드모트의 영혼의 일부가...",
       "tags": {
         "functions": [
-          "F03"
+          "F06"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,8 +205,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -207,7 +214,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,7 +228,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -230,10 +237,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -242,18 +251,18 @@
       "ko": "해리가 뱀과 대화할 수 있는 이유가 있다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,18 +274,18 @@
       "ko": "그가 볼드모트의 마음을 들여다볼 수 있는 이유가 있다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,7 +299,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -299,11 +308,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "4c35a6b6f269fec3"
 }

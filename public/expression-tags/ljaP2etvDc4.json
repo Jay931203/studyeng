@@ -12,16 +12,16 @@
       "ko": "이제, 코스비의 유산이 훼손될 것 같나요? 네.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S28",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -35,18 +35,18 @@
       "ko": "그렇게 생각하나요?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,14 +60,14 @@
         "functions": [
           "F03"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -83,18 +83,20 @@
         "functions": [
           "F09"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -104,13 +106,13 @@
       "ko": "저는 동의하지 않았어요.",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -129,16 +131,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,13 +152,13 @@
       "ko": "네. 저는 강간이 최악이라고 생각했어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -173,13 +175,13 @@
       "ko": "제 생각에, 대부분의 강간범은 위선자예요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -196,13 +198,13 @@
       "ko": "남자를 만나서 \"나는 강간하는 걸 좋아해\"라고 말하지 않죠,",
       "tags": {
         "functions": [
-          "F09"
+          "F12"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -219,19 +221,21 @@
       "ko": "그리고 정치적으로 올바르지 않다는 걸 알지만, 정말로,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -242,16 +246,16 @@
       "ko": "사람들은 \"그는 위선자가 아니네\"라고 하죠,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -265,22 +269,25 @@
       "ko": "그리고 그게 최악의 부분이에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "ab9c2d07683fd4fa"
 }

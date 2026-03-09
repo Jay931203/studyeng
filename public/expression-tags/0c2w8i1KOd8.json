@@ -12,20 +12,25 @@
       "ko": "많이 생각해봤는데, 사랑해.",
       "tags": {
         "functions": [
-          "F09"
+          "F22"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S40",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P09"
+        ],
+        "grammar_intent": [
+          "G18",
+          "G22"
+        ],
         "flags": []
       }
     },
@@ -35,20 +40,24 @@
       "ko": "뭐라고? 사랑해.",
       "tags": {
         "functions": [
-          "F09"
+          "F22"
         ],
-        "situation": "S08",
+        "situation": "S40",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P09"
+        ],
+        "grammar_intent": [
+          "G22"
+        ],
         "flags": []
       }
     },
@@ -61,33 +70,10 @@
           "F06"
         ],
         "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "0c2w8i1KOd8-3",
-      "en": "How about you love me, too?",
-      "ko": "나도 사랑한다고 해줄래?",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -99,12 +85,12 @@
       }
     },
     {
-      "id": "0c2w8i1KOd8-4",
-      "en": "How about I'm leaving?",
-      "ko": "나는 떠날 거야.",
+      "id": "0c2w8i1KOd8-3",
+      "en": "How about you love me, too?",
+      "ko": "나도 사랑한다고 해줄래?",
       "tags": {
         "functions": [
-          "F43"
+          "F36"
         ],
         "situation": "S08",
         "cefr": "A2",
@@ -115,9 +101,36 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "0c2w8i1KOd8-4",
+      "en": "How about I'm leaving?",
+      "ko": "나는 떠날 거야.",
+      "tags": {
+        "functions": [
+          "F36"
+        ],
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V07",
+        "power": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -127,10 +140,10 @@
       "ko": "내가 한 말이 너에게 아무 의미도 없니?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
         "situation": "S08",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,7 +151,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -156,14 +169,16 @@
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -173,18 +188,18 @@
       "ko": "외롭다는 건 알지만, 이렇게 나타나서는",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +211,18 @@
       "ko": "사랑한다고 말하고 모든 게 괜찮아질 거라고 기대할 수는 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,10 +234,10 @@
       "ko": "이렇게는 안 돼. 그럼 어떻게 해야 해?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
         "situation": "S08",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,7 +245,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,7 +257,7 @@
       "ko": "모르겠어, 하지만 이렇게는 아니야. 이렇게는 어때? 이렇게는 어때?",
       "tags": {
         "functions": [
-          "F52"
+          "F36"
         ],
         "situation": "S08",
         "cefr": "B1",
@@ -251,11 +266,14 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -265,13 +283,13 @@
       "ko": "21도에서 추워하는 게 좋아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -290,11 +308,11 @@
         "functions": [
           "F09"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -305,5 +323,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "bce9aefc9773e02b"
 }

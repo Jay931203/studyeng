@@ -14,16 +14,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S22",
-        "cefr": "A2",
+        "situation": "S46",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,20 +37,24 @@
       "ko": "그래, 잘됐다 자기야. 지난 3년은 안 치는 거야, 왜냐면",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S22",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S46",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -62,20 +66,24 @@
       "ko": "마지막 박스를 드디어 풀었거든. 이제 공식이야.",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
-        "situation": "S22",
+        "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -87,18 +95,18 @@
       "ko": "하하하, 왜 이렇게 잡동사니가 많은 거야? 자기야, 나 조용히 해야 해. 더 말 안 해도 돼.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S22",
-        "cefr": "A2",
+        "situation": "S46",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,19 +120,22 @@
       "ko": "한 번에 하나씩 세상을 구해, 자기야. 아, 나 애들 데리러 가야 해.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S22",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S46",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -137,20 +148,27 @@
       "ko": "학교에서. 오늘 밤에 봐. 안녕 자기야. 실례합니다, 어디까지 했죠? 저는 고정 수입으로 살고 있는데, 도와주지 못하면 어떡해야 할지 모르겠어요.",
       "tags": {
         "functions": [
-          "F06"
+          "F32",
+          "F28"
         ],
-        "situation": "S22",
-        "cefr": "A2",
+        "situation": "S46",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E04"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V14",
+        "power": [
+          "P01",
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04",
+          "G17"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -162,20 +180,25 @@
       "ko": "좋아요, 잘 들으세요. 도와드리고 싶지만 할 수 없어요. 말씀드리고 싶지만.",
       "tags": {
         "functions": [
-          "F50"
+          "F43"
         ],
-        "situation": "S22",
-        "cefr": "A2",
+        "situation": "S46",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G15"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -187,10 +210,10 @@
       "ko": "보험 증권 사본을 노마 윌콕스에게 가져가세요. 노마 윌콕스, W-I-L-C-O-X.",
       "tags": {
         "functions": [
-          "F34"
+          "F12"
         ],
-        "situation": "S22",
-        "cefr": "A2",
+        "situation": "S46",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -198,7 +221,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -212,20 +235,22 @@
       "ko": "3층에 있지만 말할 수 없어요. 또한 양식을 작성해서 제출하라고 조언하지 않겠습니다.",
       "tags": {
         "functions": [
-          "F50"
+          "F43"
         ],
-        "situation": "S22",
-        "cefr": "A2",
+        "situation": "S46",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -237,10 +262,10 @@
       "ko": "법무부에 2층에 있는 WS 2475 양식을 작성해서 제출하라고 절대 조언하지 않겠습니다.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S22",
-        "cefr": "A2",
+        "situation": "S46",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -248,7 +273,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -256,5 +281,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "90f6d8d97a98a814"
 }

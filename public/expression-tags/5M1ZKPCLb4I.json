@@ -12,10 +12,35 @@
       "ko": "넌 죽었어.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "5M1ZKPCLb4I-1",
+      "en": "Trying to use the word hate less often,",
+      "ko": "증오라는 단어를 덜 쓰려고 노력 중이야,",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S34",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E03"
@@ -25,30 +50,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "5M1ZKPCLb4I-1",
-      "en": "Trying to use the word hate less often,",
-      "ko": "증오라는 단어를 덜 쓰려고 노력 중이야,",
-      "tags": {
-        "functions": [
-          "F09"
+        "grammar_intent": [
+          "G10"
         ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
         "flags": []
       }
     },
@@ -58,13 +62,13 @@
       "ko": "자, 시작할게, 나는 샘 스미스를 정말 싫어해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -81,21 +85,23 @@
       "ko": "잘했어.",
       "tags": {
         "functions": [
-          "F30"
+          "F29"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V02",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,18 +110,18 @@
       "ko": "제시 제이는 거대한...",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,10 +133,10 @@
       "ko": "냄새 나는 똥을 싸는 것 같아.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,7 +144,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,13 +156,13 @@
       "ko": "엿먹어, 블레이크 셸튼, 너 촌놈이야.",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "C1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -164,9 +170,7 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -175,23 +179,23 @@
       "ko": "사실, 하임의 여자들은 진짜 못생겼어.",
       "tags": {
         "functions": [
-          "F58"
+          "F35"
         ],
         "situation": "S34",
-        "cefr": "C1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "grammar_intent": [
+          "G09"
+        ],
+        "flags": []
       }
     },
     {
@@ -200,18 +204,18 @@
       "ko": "그리고 오르가즘을 느끼는 것처럼 공연해.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -223,18 +227,19 @@
       "ko": "그게 좀 마음에 들어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V02",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -246,13 +251,13 @@
       "ko": "이봐, 에드 시런은 여전히 못생겼어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -269,18 +274,18 @@
       "ko": "위즈 칼리파는 홈리스 여성 같아.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -292,13 +297,13 @@
       "ko": "이기 아젤리아의 바보 같은 점을 얼굴에서 쳐내고 싶어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -315,10 +320,10 @@
       "ko": "쓰레기통에 버리고 싶어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -326,7 +331,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -338,18 +343,18 @@
       "ko": "핏불이 점점 마음에 들어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -361,13 +366,13 @@
       "ko": "농담이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E10"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -386,13 +391,13 @@
       "ko": "그의 목소리 상자가 고릴라 성기로 부서지길 바래.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -400,9 +405,7 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -411,24 +414,23 @@
       "ko": "시아는 입에 똥이 가득 찬 것 같아.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "b62f408a95848562"
 }

@@ -14,7 +14,7 @@
         "functions": [
           "F25"
         ],
-        "situation": "S08",
+        "situation": "S16",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -37,20 +37,23 @@
       "ko": "어디에... 그녀와 제이가 방금... 그를 데려갔어... 나... 나 모르겠어... 맞아. 음, 그럼 나는...",
       "tags": {
         "functions": [
-          "F50"
+          "F06",
+          "F14"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S16",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": [
           "is_fragment"
         ]
@@ -64,14 +67,14 @@
         "functions": [
           "F52"
         ],
-        "situation": "S08",
+        "situation": "S16",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -87,9 +90,9 @@
       "ko": "네 번호를 물어보는 게 정말 잘못된 걸까?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S08",
+        "situation": "S16",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -110,9 +113,9 @@
       "ko": "아니.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S16",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -124,7 +127,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -133,9 +138,35 @@
       "ko": "혹시라도 너에게 전화해야 할 일이 생기면... 그런 것들. 음, 알겠어. 그건...",
       "tags": {
         "functions": [
+          "F01"
+        ],
+        "situation": "S16",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "dgMKzky9S4I-6",
+      "en": "Would you... It's Mary. Mary? Okay. I thought this phone was... I...",
+      "ko": "너는... 마리야. 마리? 알겠어. 이 전화가... 나는...",
+      "tags": {
+        "functions": [
+          "F21",
           "F34"
         ],
-        "situation": "S08",
+        "situation": "S16",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -146,19 +177,23 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G02"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
-      "id": "dgMKzky9S4I-6",
-      "en": "Would you... It's Mary. Mary? Okay. I thought this phone was... I...",
-      "ko": "너는... 마리야. 마리? 알겠어. 이 전화가... 나는...",
+      "id": "dgMKzky9S4I-7",
+      "en": "I... I... I... I... I... I... I...",
+      "ko": "나... 나... 나... 나... 나... 나... 나...",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S16",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -174,31 +209,7 @@
           "is_fragment"
         ]
       }
-    },
-    {
-      "id": "dgMKzky9S4I-7",
-      "en": "I... I... I... I... I... I... I...",
-      "ko": "나... 나... 나... 나... 나... 나... 나...",
-      "tags": {
-        "functions": [
-          "F52"
-        ],
-        "situation": "S08",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
     }
-  ]
+  ],
+  "transcriptHash": "7c47188a5f1a8a29"
 }

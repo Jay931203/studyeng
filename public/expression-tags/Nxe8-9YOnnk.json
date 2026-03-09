@@ -12,20 +12,22 @@
       "ko": "온 나라 앞에서 자신을 잃고 의회 명예 훈장을 받았어.",
       "tags": {
         "functions": [
-          "F01"
+          "F17"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -37,10 +39,11 @@
       "ko": "그래, 그래서?",
       "tags": {
         "functions": [
-          "F09"
+          "F06",
+          "F53"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -51,7 +54,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -60,9 +65,9 @@
       "ko": "완벽하네.",
       "tags": {
         "functions": [
-          "F12"
+          "F52"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -83,20 +88,22 @@
       "ko": "그래, 그럼 난 그저 미국 만세라고 말하고 싶어.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -108,9 +115,9 @@
       "ko": "오, 이봐, 이봐!",
       "tags": {
         "functions": [
-          "F25"
+          "F15"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -131,9 +138,9 @@
       "ko": "아, 이런. 오, 신이여! 아야!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -154,9 +161,9 @@
       "ko": "오, 신이여!",
       "tags": {
         "functions": [
-          "F09"
+          "F15"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -177,10 +184,10 @@
       "ko": "다이안 중위!",
       "tags": {
         "functions": [
-          "F25"
+          "F15"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -191,7 +198,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -200,9 +209,9 @@
       "ko": "다이안 중위는 호텔에 살고 있다고 했어,",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -223,10 +232,10 @@
       "ko": "다리가 없어서,",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -236,7 +245,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -246,11 +257,11 @@
       "ko": "대부분의 시간을 팔 운동에 썼대.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -260,7 +271,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -269,13 +282,13 @@
       "ko": "뉴욕에서 뭐해, 다이안 중위?",
       "tags": {
         "functions": [
-          "F06"
+          "F23"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -294,7 +307,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -315,13 +328,13 @@
       "ko": "꺼져!",
       "tags": {
         "functions": [
-          "F43"
+          "F15"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -329,7 +342,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -340,7 +355,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -355,5 +370,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "3ddb0d2340cd8e8c"
 }

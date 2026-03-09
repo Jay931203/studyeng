@@ -12,7 +12,7 @@
       "ko": "읽기. 그래서 영어를 배울 때는 읽기보다 듣기를 더 많이 해야 합니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F37"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -35,7 +35,7 @@
       "ko": "그래서 어떤 사람들은 영화를 두 번 봅니다. 처음에는 자막과 함께 영화를 보고,",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -58,7 +58,32 @@
       "ko": "그 다음에는 자막 없이 같은 영화를 다시 보며 듣기 연습을 합니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G20"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "uH1aDCjypKg-3",
+      "en": "Now, this is an effective way to improve your listening, but I think it's really boring",
+      "ko": "이제, 이것은 듣기를 향상시키는 효과적인 방법이지만, 저는 영화를 두 번 보는 것이 정말 지루하다고 생각합니다.",
+      "tags": {
+        "functions": [
+          "F09"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -76,41 +101,18 @@
       }
     },
     {
-      "id": "uH1aDCjypKg-3",
-      "en": "Now, this is an effective way to improve your listening, but I think it's really boring",
-      "ko": "이제, 이것은 듣기를 향상시키는 효과적인 방법이지만, 저는 영화를 두 번 보는 것이 정말 지루하다고 생각합니다.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "uH1aDCjypKg-4",
       "en": "to watch movies twice. So personally, I never use this approach. It's not for me.",
       "ko": "그래서 개인적으로 저는 이 방법을 사용하지 않습니다. 저에게는 맞지 않아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -127,7 +129,7 @@
       "ko": "그래서 오늘은 여러분과 새로운 접근 방식을 공유하고 싶습니다. 이 방법은 듣기와 어휘 향상에 꽤 효과적입니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -150,7 +152,7 @@
       "ko": "그리고 이 방법을 사용하면 영화를 두 번 볼 필요가 없습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F40"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -176,10 +178,10 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
           "X08"
@@ -199,7 +201,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -219,7 +221,7 @@
       "ko": "이 방법을 사용하려면 자막을 지연시킬 수 있는 영화 플레이어가 필요합니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -236,5 +238,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "531d02f7362d08e0"
 }

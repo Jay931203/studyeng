@@ -5,30 +5,23 @@
   "seriesId": "snl",
   "sentenceCount": 16,
   "taggedCount": 16,
+  "transcriptHash": "1e80949c25175440",
   "sentences": [
     {
       "id": "6twwlGOTwXk-0",
       "en": "through songs. Hit it, baby.",
       "ko": "노래로. 시작해, 아가.",
       "tags": {
-        "functions": [
-          "F25"
-        ],
-        "situation": "S34",
+        "functions": ["F35"],
+        "situation": "S22",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
+        "emotions": ["E14"],
+        "expression_types": ["X04", "X05"],
+        "vibe": "V01",
+        "power": ["P01"],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": ["is_fragment"]
       }
     },
     {
@@ -36,24 +29,16 @@
       "en": "♪ We know it's frustrating when you really want to fly ♪",
       "ko": "♪ 날고 싶을 때 답답한 거 알아 ♪",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
+        "functions": ["F31", "F59"],
+        "situation": "S22",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
+        "emotions": ["E10"],
+        "expression_types": ["X08"],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": ["is_lyrics"]
       }
     },
     {
@@ -61,24 +46,16 @@
       "en": "♪ But too bad your plane is delayed and has not arrived ♪",
       "ko": "♪ 하지만 안타깝게도 비행기가 지연되고 도착하지 않았어 ♪",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
+        "functions": ["F05", "F59"],
+        "situation": "S22",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
+        "emotions": ["E10"],
+        "expression_types": ["X08"],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": ["is_lyrics"]
       }
     },
     {
@@ -86,24 +63,16 @@
       "en": "♪ If I were you right now, I would start to pray ♪",
       "ko": "♪ 지금 네 입장이라면 기도를 시작할 거야 ♪",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
+        "functions": ["F37", "F59"],
+        "situation": "S22",
+        "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
+        "emotions": ["E10"],
+        "expression_types": ["X02"],
+        "vibe": "V03",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "grammar_intent": ["G12"],
+        "flags": ["is_lyrics"]
       }
     },
     {
@@ -111,24 +80,16 @@
       "en": "♪ Cause it's looking like you won't be flying today ♪",
       "ko": "♪ 오늘은 비행기를 탈 수 없을 것 같아 보여 ♪",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
+        "functions": ["F05"],
+        "situation": "S22",
+        "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
+        "emotions": ["E10"],
+        "expression_types": ["X08"],
+        "vibe": "V03",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "grammar_intent": ["G17"],
+        "flags": ["is_lyrics"]
       }
     },
     {
@@ -136,18 +97,12 @@
       "en": "Uh, yeah, we are super delayed. More updates coming real soon.",
       "ko": "어, 맞아, 우리는 정말 지연되고 있어. 곧 더 많은 소식이 올 거야.",
       "tags": {
-        "functions": [
-          "F05"
-        ],
-        "situation": "S34",
+        "functions": ["F05", "F62"],
+        "situation": "S22",
         "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "register": "R3",
+        "emotions": ["E09"],
+        "expression_types": ["X06", "X08"],
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
@@ -159,18 +114,12 @@
       "en": "Did they just say we might not get on the plane today?",
       "ko": "오늘 비행기를 못 탈 수도 있다고 말한 거야?",
       "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
+        "functions": ["F07", "F18"],
+        "situation": "S22",
+        "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "emotions": ["E05"],
+        "expression_types": ["X08"],
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
@@ -182,18 +131,12 @@
       "en": "I do think they sang that, yes.",
       "ko": "그걸 노래한 것 같아, 맞아.",
       "tags": {
-        "functions": [
-          "F07"
-        ],
-        "situation": "S34",
+        "functions": ["F07"],
+        "situation": "S22",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
@@ -205,19 +148,13 @@
       "en": "Oh my goodness, thank you for your applause.",
       "ko": "오 마이 갓, 박수 고마워.",
       "tags": {
-        "functions": [
-          "F27"
-        ],
-        "situation": "S34",
+        "functions": ["F27", "F59"],
+        "situation": "S22",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
+        "emotions": ["E14"],
+        "expression_types": ["X04"],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -228,22 +165,16 @@
       "en": "We are Shrimp and Grits, bringing you smooth sounds",
       "ko": "우리는 Shrimp and Grits, 부드러운 사운드를 전해.",
       "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S34",
+        "functions": ["F26"],
+        "situation": "S22",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
+        "emotions": ["E14"],
+        "expression_types": ["X03"],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["is_fragment"]
       }
     },
     {
@@ -251,22 +182,16 @@
       "en": "from gate C-32 in the Mel Gibson Regional Terminal.",
       "ko": "C-32 게이트에서 멜 깁슨 지역 터미널로.",
       "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S34",
+        "functions": ["F01"],
+        "situation": "S22",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "emotions": ["E14"],
+        "expression_types": ["X08"],
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["is_fragment"]
       }
     },
     {
@@ -274,19 +199,13 @@
       "en": "And my name is Lashley, as in firstly in Lashley.",
       "ko": "내 이름은 Lashley, Lashley의 첫 글자처럼.",
       "tags": {
-        "functions": [
-          "F25"
-        ],
-        "situation": "S34",
+        "functions": ["F26"],
+        "situation": "S22",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
+        "emotions": ["E14"],
+        "expression_types": ["X08"],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -297,20 +216,14 @@
       "en": "And I am Parfait, as in the parfait don't start till I walk in.",
       "ko": "나는 Parfait, 내가 들어올 때까지 파르페는 시작하지 않아.",
       "tags": {
-        "functions": [
-          "F25"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
+        "functions": ["F26", "F59"],
+        "situation": "S22",
+        "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
+        "emotions": ["E14"],
+        "expression_types": ["X05"],
+        "vibe": "V01",
+        "power": ["P07"],
         "grammar_intent": [],
         "flags": []
       }
@@ -320,21 +233,15 @@
       "en": "I'm sorry, these delays are not acceptable.",
       "ko": "미안하지만, 이런 지연은 용납할 수 없어.",
       "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
+        "functions": ["F55", "F19"],
+        "situation": "S22",
+        "cefr": "B1",
+        "register": "R3",
+        "emotions": ["E03"],
+        "expression_types": ["X03"],
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": ["G19"],
         "flags": []
       }
     },
@@ -343,20 +250,14 @@
       "en": "Okay, so accept these nuts.",
       "ko": "좋아, 그럼 이 견과류를 받아.",
       "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S34",
+        "functions": ["F58", "F59"],
+        "situation": "S22",
         "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
+        "register": "R5",
+        "emotions": ["E10"],
+        "expression_types": ["X05"],
+        "vibe": "V03",
+        "power": ["P07", "P05"],
         "grammar_intent": [],
         "flags": []
       }
@@ -366,24 +267,16 @@
       "en": "All right, are we getting?",
       "ko": "좋아, 이제 탑승할 수 있어?",
       "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
+        "functions": ["F06"],
+        "situation": "S22",
+        "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "emotions": ["E21"],
+        "expression_types": ["X08"],
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": ["is_fragment"]
       }
     }
   ]

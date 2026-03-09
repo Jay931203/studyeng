@@ -12,10 +12,10 @@
       "ko": "~에 따라",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -49,7 +49,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -61,7 +63,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -95,7 +97,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,10 +108,10 @@
       "ko": "오늘의 리포트를 보고 들어보세요.",
       "tags": {
         "functions": [
-          "F06"
+          "F35"
         ],
-        "situation": "S47",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -118,9 +122,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -132,7 +134,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -175,31 +177,6 @@
       "ko": "중국 전통에 따라, 명명식이 열렸습니다.",
       "tags": {
         "functions": [
-          "F04"
-        ],
-        "situation": "S47",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
-      }
-    },
-    {
-      "id": "kN-q8yX0loc-8",
-      "en": "as Bao Bao, which means precious baby, turned 100 days old.",
-      "ko": "‘귀한 아기’라는 뜻의 바오바오가 태어난 지 100일이 되었을 때요.",
-      "tags": {
-        "functions": [
           "F01"
         ],
         "situation": "S50",
@@ -218,15 +195,38 @@
       }
     },
     {
+      "id": "kN-q8yX0loc-8",
+      "en": "as Bao Bao, which means precious baby, turned 100 days old.",
+      "ko": "‘귀한 아기’라는 뜻의 바오바오가 태어난 지 100일이 되었을 때요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E11"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "kN-q8yX0loc-9",
       "en": "Bao Bao herself was too busy snuggling up to mum in their den",
       "ko": "바오바오 본인은 굴에서 엄마에게 바짝 붙어 있느라 바빴고,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -269,9 +269,9 @@
       "ko": "전체 텍스트와 함께 리포트를 다시 시청하세요.",
       "tags": {
         "functions": [
-          "F06"
+          "F35"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -283,10 +283,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a49bb1da1e36497e"
 }

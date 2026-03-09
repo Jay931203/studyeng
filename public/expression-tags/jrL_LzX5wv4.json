@@ -12,7 +12,8 @@
       "ko": "절대 느슨해지지 마, punky는 물러서야 해",
       "tags": {
         "functions": [
-          "F35"
+          "F35",
+          "F40"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -23,7 +24,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,10 +38,10 @@
       "ko": "역할을 하려 하면, 전 crew가 난리칠 거야",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +49,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -65,15 +66,16 @@
           "F35"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,7 +89,7 @@
       "ko": "기분이 좋다면, 점프해서 천장을 만져",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -98,7 +100,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,10 +114,10 @@
       "ko": "스님들, 다 함께 모여",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -123,9 +125,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -137,18 +141,18 @@
       "ko": "누군가 헛소리하고 있어, 눈에 주먹을 날릴 거야",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,7 +166,7 @@
       "ko": "그리고 그 punk들을 처치할 거야, 기분이 좋으니까",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -173,7 +177,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -198,9 +202,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -223,7 +229,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -237,7 +243,7 @@
       "ko": "나타나, 아이들로부터 피가 나",
       "tags": {
         "functions": [
-          "F01"
+          "F35"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -248,7 +254,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -265,7 +271,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -273,7 +279,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -298,7 +304,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -312,7 +318,7 @@
       "ko": "그러니 자리에 앉고 뛰어봐",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -323,7 +329,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -337,7 +343,7 @@
       "ko": "뛰어봐",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A1",
@@ -348,11 +354,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -362,7 +369,7 @@
       "ko": "뛰어봐",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A1",
@@ -373,11 +380,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -398,11 +406,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -415,7 +424,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -423,7 +432,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -448,7 +457,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -473,7 +482,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -498,7 +507,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -523,7 +532,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -548,7 +557,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -562,22 +571,23 @@
       "ko": "네 엉덩이를 존 매켄로처럼 다룰 거야",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "contains_profanity"
         ]
       }
     },
@@ -587,10 +597,10 @@
       "ko": "네 여자친구가 나서면, 세게 때릴 거야",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -598,7 +608,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -612,10 +622,10 @@
       "ko": "네 엄마에게 전해, 난 폭탄을 떨어뜨리러 왔어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -623,7 +633,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -637,10 +647,10 @@
       "ko": "난 성경의 시편보다 더 많은 라임이 있어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -648,9 +658,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -662,18 +674,18 @@
       "ko": "그리고 타바락처럼, 태양처럼 돌아왔어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -687,10 +699,10 @@
       "ko": "나를 밟는 사람은, 너는 타버릴 거야",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -698,7 +710,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -712,10 +724,10 @@
       "ko": "나를 밟는 사람은, 너는 타버릴 거야",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -723,7 +735,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -737,18 +749,18 @@
       "ko": "난 가사가 있지만, 너는 아무것도 없어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -762,7 +774,7 @@
       "ko": "오려면, 산탄총을 가져와야 해",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -771,9 +783,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -781,5 +793,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "9513a0ea833970b7"
 }

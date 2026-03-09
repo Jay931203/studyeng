@@ -12,18 +12,18 @@
       "ko": "당신의 눈물이 즐겁고 밝기를 바랍니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F16"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,20 +35,22 @@
       "ko": "아가씨, 프린스 발리언트 감자튀김 가격 확인이 필요해요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S04",
+        "situation": "S01",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -58,20 +60,26 @@
       "ko": "캔 세 개 리필해 주실 수 있나요?",
       "tags": {
         "functions": [
-          "F34"
+          "F34",
+          "F46"
         ],
-        "situation": "S04",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G02",
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -83,7 +91,7 @@
         "functions": [
           "F27"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -93,9 +101,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -106,7 +118,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S04",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -127,9 +139,9 @@
       "ko": "잘 모르겠어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -139,9 +151,15 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,10 +168,10 @@
       "ko": "한번 시도해 볼게요.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S01",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,9 +191,9 @@
       "ko": "아이들을 위해서요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -187,7 +205,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -196,9 +216,34 @@
       "ko": "잠깐만요, 그거에 대한 쿠폰이 있어요.",
       "tags": {
         "functions": [
-          "F34"
+          "F52"
         ],
-        "situation": "S04",
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "e7dfCs0z5Eg-9",
+      "en": "It was in the paper this morning.",
+      "ko": "오늘 아침 신문에 있었어요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -210,18 +255,20 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
-      "id": "e7dfCs0z5Eg-9",
-      "en": "It was in the paper this morning.",
-      "ko": "오늘 아침 신문에 있었어요.",
+      "id": "e7dfCs0z5Eg-10",
+      "en": "1983.",
+      "ko": "1983년.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -233,30 +280,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "e7dfCs0z5Eg-10",
-      "en": "1983.",
-      "ko": "1983년.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -267,8 +293,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S01",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -279,7 +305,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -288,9 +316,9 @@
       "ko": "알겠어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F44"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -302,8 +330,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "1e24c02bf25489dc"
 }

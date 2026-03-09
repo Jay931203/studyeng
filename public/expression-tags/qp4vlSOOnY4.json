@@ -14,7 +14,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -23,10 +23,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,9 +37,9 @@
       "ko": "제가 가장 좋아하는 것은 남아프리카 억양이에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -46,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +60,18 @@
       "ko": "아시죠, 그게...",
       "tags": {
         "functions": [
-          "F50"
+          "F52"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +83,18 @@
       "ko": "매일 다른 억양으로 일어나요. 제가 가장 좋아하는 것은? 흥미로운 질문이에요... 상황에 따라 다르죠.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S03",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,10 +106,10 @@
       "ko": "어디에 가느냐에 따라 다르죠... 새로운 나라에 갈 때마다,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,7 +131,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -138,7 +140,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,20 +152,22 @@
       "ko": "사실, 언어를 배우는 데 사용하는 지름길이에요.",
       "tags": {
         "functions": [
-          "F04"
+          "F11"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -175,8 +179,8 @@
         "functions": [
           "F04"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,9 +188,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -198,7 +204,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -207,7 +213,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,8 +227,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,7 +236,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,7 +250,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -253,7 +259,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,18 +273,20 @@
         "functions": [
           "F04"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -288,18 +296,19 @@
       "ko": "\"그거 만지지 마\"라고 해요. 그리고 당신은 \"그거 만지지 마\"라고 하고... 아시겠죠? 그들은 \"내가 제대로 말하고 있지 않다\"고 생각하지 않아요. 그냥 계속 말해요.",
       "tags": {
         "functions": [
-          "F04"
+          "F50",
+          "F51"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,10 +320,10 @@
       "ko": "그래서 제가 언어를 배우는 방법은 억양으로 시작한 다음 억양을 배우는 거예요. 그래서, 상황에 따라 다르죠.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -322,7 +331,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,9 +343,9 @@
       "ko": "생각해보려고 해요...",
       "tags": {
         "functions": [
-          "F50"
+          "F02"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -345,7 +354,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -359,18 +368,20 @@
         "functions": [
           "F09"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -382,11 +393,11 @@
         "functions": [
           "F09"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -403,9 +414,9 @@
       "ko": "왜냐하면, 나이지리아...",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -414,13 +425,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "65f43abe5dcdd96f"
 }

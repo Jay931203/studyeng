@@ -14,8 +14,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -37,7 +37,7 @@
         "functions": [
           "F07"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -58,10 +58,10 @@
       "ko": "문 여는 법을 알아내지 않았다면요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -70,7 +70,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P12"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -81,9 +83,9 @@
       "ko": "으악!",
       "tags": {
         "functions": [
-          "F09"
+          "F15"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -100,5 +102,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "edd8a7d07c61b056"
 }

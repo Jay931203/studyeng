@@ -12,19 +12,18 @@
       "ko": "우리는 메시지를 받고 있지만, 아무것도 나가지 않아. 그가 살아있을까? 아, 그래. 너는...",
       "tags": {
         "functions": [
-          "F01",
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -36,18 +35,18 @@
       "ko": "응.",
       "tags": {
         "functions": [
-          "F09"
+          "F53"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -63,21 +62,19 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -88,8 +85,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -97,7 +94,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -111,7 +108,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -120,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -132,10 +129,10 @@
       "ko": "갱 앞에서는 놀 수 없어.",
       "tags": {
         "functions": [
-          "F35"
+          "F12"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -143,7 +140,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -155,9 +152,9 @@
       "ko": "안녕, 아빠.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S10",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -166,10 +163,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -178,10 +177,10 @@
       "ko": "확인해봐.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -189,7 +188,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -203,7 +202,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -212,10 +211,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -224,9 +227,9 @@
       "ko": "학교에서 2등 했어.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S19",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -235,7 +238,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -249,16 +252,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -270,18 +273,18 @@
       "ko": "나를 떨어뜨렸지만, 2등도 나쁘지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -295,7 +298,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S12",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -304,7 +307,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -316,9 +319,9 @@
       "ko": "아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -327,7 +330,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -341,9 +344,9 @@
       "ko": "다른 여자애를 만났어, 아빠.",
       "tags": {
         "functions": [
-          "F14"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -352,7 +355,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -364,18 +367,18 @@
       "ko": "나는, 어...",
       "tags": {
         "functions": [
-          "F50"
+          "F52"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -389,18 +392,18 @@
       "ko": "이게 그 사람이라고 생각하지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -412,9 +415,9 @@
       "ko": "이름은 로이스야.",
       "tags": {
         "functions": [
-          "F26"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -423,10 +426,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -435,10 +440,10 @@
       "ko": "거기서 시작해.",
       "tags": {
         "functions": [
-          "F35"
+          "F53"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -446,11 +451,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "3fddd1d99b2084cb"
 }

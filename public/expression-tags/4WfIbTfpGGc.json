@@ -12,20 +12,22 @@
       "ko": "내 목소리 별로 같지 않아? 아니, 좋아. 다시 해볼래?",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -37,18 +39,18 @@
       "ko": "물론, 좋아. 네 돈이니까. 정말로.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S04",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,10 +62,10 @@
       "ko": "너는 내 것이고, 나는 너를 시험할 거야, 영원히 너에게 속해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S19",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,7 +73,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,10 +85,10 @@
       "ko": "훨씬 나아. 실험해봐야 해.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -94,7 +96,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,10 +108,10 @@
       "ko": "아-아를 위해 좌우로 튕겨봐.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S34",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -117,7 +119,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,10 +131,10 @@
       "ko": "너는 내 것이고, 나는 너를 시험할 거야, 영원히 너에게 속해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S19",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -140,7 +142,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,10 +154,10 @@
       "ko": "이제 마지막을 위해 정중앙으로.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S34",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -163,7 +165,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,10 +177,10 @@
       "ko": "그럼 쏴버려!",
       "tags": {
         "functions": [
-          "F35"
+          "F03"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S34",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -186,7 +188,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,10 +200,10 @@
       "ko": "좋지, 그렇지?",
       "tags": {
         "functions": [
-          "F06"
+          "F53"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S34",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,7 +211,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -223,8 +225,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S34",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -232,7 +234,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -246,8 +248,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -255,11 +257,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "90953b6bda1688d1"
 }

@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,19 @@
       "ko": "잠깐만 FaceTime 해도 될까? 정말 잠깐이야. 약속할게. 누군가와 FaceTime 할 거야?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F41"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +59,18 @@
       "ko": "응, 한 사람에게 말하는 걸 잊었어. 누굴 FaceTime 할 건데?",
       "tags": {
         "functions": [
-          "F01"
+          "F07"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,7 +82,7 @@
       "ko": "아, 그냥 내 친한 친구야,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -90,9 +91,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,10 +105,10 @@
       "ko": "내가 아주 가까운 사람이지.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +116,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -138,7 +139,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,19 +151,21 @@
       "ko": "그에게 FaceTime 할 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -173,18 +176,18 @@
       "ko": "알아. 그를 알아. 우리는 드웨인 존슨을 사랑해.",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,19 +199,21 @@
       "ko": "들어봐, 그가 내가 여기 있다는 걸 믿지 못할 거야. 봐봐. 봐.",
       "tags": {
         "functions": [
-          "F18"
+          "F35"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -219,18 +224,18 @@
       "ko": "그가 오늘 밤 내가 여기 있다는 걸 듣고 엄청 신날 거야. 그가 전화를 받을 때까지 기다려봐.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,18 +247,18 @@
       "ko": "그가 이걸 듣고 신날 거라는 걸 알아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,7 +270,7 @@
       "ko": "잠깐만. 잠깐만. 기다려.",
       "tags": {
         "functions": [
-          "F52"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -276,7 +281,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,7 +293,7 @@
       "ko": "한 순간만. 그에게 시도해볼게. 그냥 시도해볼게.",
       "tags": {
         "functions": [
-          "F52"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -299,7 +304,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,18 +316,18 @@
       "ko": "아마 운전 중일 수도 있어.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -345,7 +350,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -368,7 +373,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -380,7 +385,7 @@
       "ko": "아마 그냥 못 봤을 거야.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -389,9 +394,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -403,7 +408,7 @@
       "ko": "두 분만 기다려. 그가 받을 거야. 봐봐. 그는 받을 거야.",
       "tags": {
         "functions": [
-          "F34"
+          "F35"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -412,9 +417,10 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -426,7 +432,7 @@
       "ko": "다시 시도해볼게. 봐봐.",
       "tags": {
         "functions": [
-          "F34"
+          "F35"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -435,10 +441,12 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -449,10 +457,10 @@
       "ko": "이걸 봐. 이걸 봐.",
       "tags": {
         "functions": [
-          "F34"
+          "F35"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -460,7 +468,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -472,18 +480,18 @@
       "ko": "그는 미칠 거야. 이걸 봐.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -495,7 +503,7 @@
       "ko": "그가 받자마자, 한 2초 안에,",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -504,9 +512,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -518,18 +526,18 @@
       "ko": "그는 미칠 거야.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -541,7 +549,7 @@
       "ko": "내가 여기 있다는 사실, 네가 여기 있다는 사실.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -552,7 +560,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -564,7 +572,7 @@
       "ko": "이 모든 걸 편집할 수 있어. 이 모든 걸 편집할 수 있어.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -575,7 +583,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -587,7 +595,7 @@
       "ko": "편집할 필요 없어.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -598,7 +606,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -610,7 +618,7 @@
       "ko": "잠깐만. 이건 미쳤어. 아니, 진짜 미쳤어.",
       "tags": {
         "functions": [
-          "F18"
+          "F64"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -621,11 +629,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "cfa3d79b95b67e46"
 }

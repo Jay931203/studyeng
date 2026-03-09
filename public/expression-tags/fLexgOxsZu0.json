@@ -12,19 +12,21 @@
       "ko": "발 올리고 누워서 선풍기나 쳐다볼 거야",
       "tags": {
         "functions": [
-          "F01"
+          "F03"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -40,15 +42,15 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,20 +64,24 @@
       "ko": "아무도 나한테 안 된다고 못 해",
       "tags": {
         "functions": [
-          "F12"
+          "F43"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -90,16 +96,18 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -112,18 +120,18 @@
       "ko": "MTV 틀어서 더기 추는 법 배워볼 거야",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -148,7 +156,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,18 +170,18 @@
       "ko": "그래 내가 말했어, 말했어, 말할 수 있으니까 말했어",
       "tags": {
         "functions": [
-          "F01"
+          "F05"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,7 +195,7 @@
       "ko": "오늘은 아무것도 하기 싫어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -198,7 +206,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -212,19 +220,21 @@
       "ko": "그냥 침대에 누워 있고 싶어",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -237,7 +247,7 @@
       "ko": "전화 받기도 싫어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -248,7 +258,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -271,9 +281,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -287,7 +297,8 @@
       "ko": "오늘은 진짜 아무것도 안 할 거니까",
       "tags": {
         "functions": [
-          "F01"
+          "F41",
+          "F56"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -298,9 +309,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G08"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -323,7 +336,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -340,7 +353,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -348,13 +361,16 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "41be536648a4ebd6"
 }

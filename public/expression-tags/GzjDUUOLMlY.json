@@ -12,18 +12,18 @@
       "ko": "눈을 뗄 수 있어.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S42",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,21 +35,23 @@
       "ko": "돌아!",
       "tags": {
         "functions": [
-          "F35"
+          "F15"
         ],
-        "situation": "S42",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,55 +60,9 @@
       "ko": "뒤로, 뒤로!",
       "tags": {
         "functions": [
-          "F35"
+          "F15"
         ],
-        "situation": "S42",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E04"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "GzjDUUOLMlY-3",
-      "en": "Fire!",
-      "ko": "발사!",
-      "tags": {
-        "functions": [
-          "F35"
-        ],
-        "situation": "S42",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E04"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "GzjDUUOLMlY-4",
-      "en": "detonator!",
-      "ko": "폭발 장치!",
-      "tags": {
-        "functions": [
-          "F35"
-        ],
-        "situation": "S42",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -118,7 +74,59 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "GzjDUUOLMlY-3",
+      "en": "Fire!",
+      "ko": "발사!",
+      "tags": {
+        "functions": [
+          "F15"
+        ],
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "GzjDUUOLMlY-4",
+      "en": "detonator!",
+      "ko": "폭발 장치!",
+      "tags": {
+        "functions": [
+          "F15"
+        ],
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -129,7 +137,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S42",
+        "situation": "S44",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -141,7 +149,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,21 +160,23 @@
       "ko": "도와줘!",
       "tags": {
         "functions": [
-          "F34"
+          "F15"
         ],
-        "situation": "S42",
+        "situation": "S44",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -175,16 +187,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S42",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,22 +208,23 @@
       "ko": "안 돼! 안 돼! 안 돼! 안 돼! 안 돼! 안 돼!",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S42",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "7c46b88ea5a4f74c"
 }

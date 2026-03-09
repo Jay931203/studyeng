@@ -15,7 +15,7 @@
           "F06"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,10 +37,11 @@
       "ko": "가자, 가자. 600명쯤 데리고 돌아다녀.",
       "tags": {
         "functions": [
-          "F35"
+          "F36",
+          "F38"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,9 +49,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -62,10 +65,11 @@
       "ko": "가자, 가자, 가자. 부탁 같은 건 하지 마.",
       "tags": {
         "functions": [
-          "F43"
+          "F36",
+          "F38"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -73,9 +77,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -87,10 +93,11 @@
       "ko": "가자, 가자, 가자. 형제에게는 사랑을, 배신자에게는 죽음을.",
       "tags": {
         "functions": [
-          "F09"
+          "F36",
+          "F38"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -98,9 +105,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -112,10 +121,12 @@
       "ko": "가자, 그녀가 지금은 거절할 수 있지만 나중에는 승낙할 거야.",
       "tags": {
         "functions": [
-          "F36"
+          "F32",
+          "F36",
+          "F38"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -123,9 +134,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09",
+          "G25"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -137,22 +151,26 @@
       "ko": "가자, 그녀는 플로리다 악어처럼 자연산이야.",
       "tags": {
         "functions": [
-          "F02"
+          "F36",
+          "F38"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "contains_profanity"
         ]
       }
     },
@@ -162,10 +180,11 @@
       "ko": "가자, 넌 동료들을 배신하고 적을 도왔어.",
       "tags": {
         "functions": [
-          "F55"
+          "F36",
+          "F38"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,9 +192,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -187,20 +208,23 @@
       "ko": "가자, 복수는 미정이야. 이걸 비트코인처럼 봐.",
       "tags": {
         "functions": [
-          "F14"
+          "F36",
+          "F38"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": [
           "is_lyrics",
           "contains_profanity"
@@ -213,20 +237,22 @@
       "ko": "이번 주에 내려갈 수 있지만 다음 주에 올라가.",
       "tags": {
         "functions": [
-          "F12"
+          "F03"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -238,20 +264,22 @@
       "ko": "네가 날 사랑하든 상관없어. 네가 날 좋아하든 상관없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "is_lyrics",
           "contains_profanity"
@@ -264,18 +292,18 @@
       "ko": "어떤 느낌이냐고 물었지. 놀라지 않았다고는 못 해.",
       "tags": {
         "functions": [
-          "F06"
+          "F05"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -289,10 +317,10 @@
       "ko": "마지막으로 오른쪽을 봤을 때 너희는 내 옆에 서 있었어.",
       "tags": {
         "functions": [
-          "F11"
+          "F02"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -300,7 +328,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -314,10 +342,10 @@
       "ko": "내가 사랑하는 사람들을 팔아넘기고 나를 시험하는 놈들과 어울리고.",
       "tags": {
         "functions": [
-          "F55"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -325,7 +353,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -339,7 +367,8 @@
       "ko": "가자.",
       "tags": {
         "functions": [
-          "F35"
+          "F36",
+          "F38"
         ],
         "situation": "S46",
         "cefr": "A1",
@@ -350,13 +379,16 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": [
           "is_lyrics"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "ae9e0533810355c0"
 }

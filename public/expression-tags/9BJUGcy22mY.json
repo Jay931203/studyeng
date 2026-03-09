@@ -12,20 +12,22 @@
       "ko": "좋습니다. 더할 나위 없이 행복합니다.",
       "tags": {
         "functions": [
-          "F15"
+          "F36"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -35,10 +37,10 @@
       "ko": "자, 환영합니다.",
       "tags": {
         "functions": [
-          "F25"
+          "F48"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -49,7 +51,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,18 +85,18 @@
       "ko": "아니요, 선생님. 아니요, 전혀 아니었습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,7 +108,7 @@
       "ko": "잘 되길 바랍니다, 크리스.",
       "tags": {
         "functions": [
-          "F37"
+          "F52"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -130,8 +134,8 @@
           "F27"
         ],
         "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -139,7 +143,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -150,7 +156,7 @@
       "ko": "아, 크리스.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -164,7 +170,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -185,7 +193,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -196,10 +206,10 @@
       "ko": "내 인생의 이 부분...",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -210,7 +220,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -219,10 +231,10 @@
       "ko": "이 작은 부분...",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -233,8 +245,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "7e6be0f372b7f255"
 }

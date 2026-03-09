@@ -12,23 +12,21 @@
       "ko": "내 커피가 얼마나 좋은지 말해줄 필요 없어, 알겠지?",
       "tags": {
         "functions": [
-          "F17"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S19",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -39,7 +37,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S19",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -60,9 +58,9 @@
       "ko": "보니가 쇼핑할 때는 별로 사.",
       "tags": {
         "functions": [
-          "F02"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S19",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -85,10 +83,10 @@
       "ko": "나는 고급스럽고 비싼 걸 사. 마실 때 맛을 느끼고 싶으니까.",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S19",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -98,7 +96,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15",
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -108,16 +109,16 @@
       "ko": "그런데 지금 내 머릿속에 있는 건 뭐냐면?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S19",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -133,19 +134,23 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S19",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -156,18 +161,20 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S19",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -177,20 +184,22 @@
       "ko": "오, 지미, 걱정하지 마. 아니, 아니, 아무것도 생각하지 마. 질문 하나 할게. 여기 들어올 때,",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S19",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -202,18 +211,24 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S19",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P05",
+          "P08"
+        ],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -225,19 +240,21 @@
       "ko": "내 집 앞에 \"죽은 사람 보관소\"라는 표지판 봤어?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S19",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -248,20 +265,22 @@
       "ko": "아니, 못 봤어.",
       "tags": {
         "functions": [
-          "F07"
+          "F56"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S19",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -271,20 +290,25 @@
       "ko": "왜 그 표지판을 못 봤는지 알아? 왜? 그게 없으니까.",
       "tags": {
         "functions": [
-          "F04"
+          "F04",
+          "F55"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S19",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -294,23 +318,25 @@
       "ko": "죽은 사람을 보관하는 건 내 일이 아니거든. 그게 이유야. 지미, 우리는 그걸 보관하지 않을 거야. 아니, 아니, 아니, 제발 깨닫지 못해?",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S50",
+        "situation": "S19",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V03",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
       }
     },
     {
@@ -319,18 +345,18 @@
       "ko": "보니가 집에 와서 시체를 발견하면, 나는 이혼할 거야. 알겠어? 결혼 상담사도 필요 없어. 시범 분리도 없어.",
       "tags": {
         "functions": [
-          "F20"
+          "F07"
         ],
-        "situation": "S50",
+        "situation": "S19",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -342,60 +368,10 @@
       "ko": "나는 이혼할 거야. 알겠어? 결혼 상담사도 필요 없어. 시범 분리도 없어. 나는 이혼할 거야. 알겠어?",
       "tags": {
         "functions": [
-          "F20"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S19",
         "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
-      "id": "UhinDPlcdLY-15",
-      "en": "And I don't want to get fucking divorced. No, man, you know, fuck.",
-      "ko": "그리고 나는 이혼하고 싶지 않아. 아니, 제발.",
-      "tags": {
-        "functions": [
-          "F11"
-        ],
-        "situation": "S11",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V04",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
-      "id": "UhinDPlcdLY-16",
-      "en": "I mean, I want to help.",
-      "ko": "나는 도와주고 싶어.",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -408,6 +384,60 @@
         "grammar_intent": [],
         "flags": []
       }
+    },
+    {
+      "id": "UhinDPlcdLY-15",
+      "en": "And I don't want to get fucking divorced. No, man, you know, fuck.",
+      "ko": "그리고 나는 이혼하고 싶지 않아. 아니, 제발.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S19",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": [
+          "contains_profanity"
+        ]
+      }
+    },
+    {
+      "id": "UhinDPlcdLY-16",
+      "en": "I mean, I want to help.",
+      "ko": "나는 도와주고 싶어.",
+      "tags": {
+        "functions": [
+          "F50"
+        ],
+        "situation": "S19",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G15",
+          "G18"
+        ],
+        "flags": []
+      }
     }
-  ]
+  ],
+  "transcriptHash": "a34c87024ae6d57b"
 }

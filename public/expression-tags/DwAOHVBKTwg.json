@@ -12,10 +12,10 @@
       "ko": "우리를 위해 맛있는 메뉴를 준비했어요, 칠레 농어라고 생각해요.",
       "tags": {
         "functions": [
-          "F02"
+          "F09"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -24,7 +24,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P02"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -37,8 +39,8 @@
         "functions": [
           "F36"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,8 +50,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G09"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,21 +64,23 @@
       "ko": "모두 파괴해야 합니다.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E12"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -83,7 +91,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -104,18 +112,18 @@
       "ko": "조금 과장된 면이 있지만, 맹금류에 대해선 누구보다 잘 알고 있습니다.",
       "tags": {
         "functions": [
-          "F12"
+          "F19"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E04"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,7 +137,30 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V02",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "DwAOHVBKTwg-6",
+      "en": "They're lethal at eight months, and I do mean lethal.",
+      "ko": "여덟 달이면 치명적입니다. 정말로 치명적이에요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S43",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -145,38 +176,15 @@
       }
     },
     {
-      "id": "DwAOHVBKTwg-6",
-      "en": "They're lethal at eight months, and I do mean lethal.",
-      "ko": "여덟 달이면 치명적입니다. 정말로 치명적이에요.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "DwAOHVBKTwg-7",
       "en": "I've hunted most things that can hunt you, but the way these things can hunt you...",
       "ko": "당신을 사냥할 수 있는 대부분의 것들을 사냥해봤지만, 이 녀석들이 당신을 사냥하는 방식은...",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -187,8 +195,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "be8a8330c542f800"
 }

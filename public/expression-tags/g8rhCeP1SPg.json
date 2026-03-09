@@ -12,11 +12,11 @@
       "ko": "진실은 받아들이기 더 어려워.",
       "tags": {
         "functions": [
-          "F04"
+          "F64"
         ],
-        "situation": "S48",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S33",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -35,9 +35,9 @@
       "ko": "안녕, 잘 지내?",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -58,9 +58,9 @@
       "ko": "좋아, 너는 어때?",
       "tags": {
         "functions": [
-          "F25"
+          "F35"
         ],
-        "situation": "S09",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -81,9 +81,9 @@
       "ko": "괜찮아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -95,7 +95,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,9 +106,9 @@
       "ko": "아, 괜찮아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -129,9 +131,9 @@
         "functions": [
           "F04"
         ],
-        "situation": "S48",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S33",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -150,11 +152,11 @@
       "ko": "용감하게든 아니면 어리석게든 음악에 맞서고 있으니까.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S33",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -175,7 +177,7 @@
         "functions": [
           "F25"
         ],
-        "situation": "S09",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -196,11 +198,11 @@
       "ko": "그건 너희가 결정할 문제야.",
       "tags": {
         "functions": [
-          "F63"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S33",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -219,13 +221,13 @@
       "ko": "꺼져, 바보!",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -233,9 +235,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -244,10 +244,10 @@
       "ko": "안녕. 괜찮아? 그만해! 매번 그래!",
       "tags": {
         "functions": [
-          "F25"
+          "F51"
         ],
-        "situation": "S09",
-        "cefr": "A1",
+        "situation": "S33",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -267,11 +267,11 @@
       "ko": "그리고 맞아, 그는 상황에 휘말려 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S33",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -290,11 +290,11 @@
       "ko": "그는 리치몬드가 이기든 지든 상관하지 않는다고 두 번이나 주장했어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S33",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -313,11 +313,11 @@
       "ko": "하지만 라소 방식이 틀리다면, 옳다고 상상하기는 어려워.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S33",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -326,7 +326,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -338,8 +340,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S48",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -359,16 +361,16 @@
       "ko": "제발 이건 내 말이 아니라 트렌트 크림의 말이라는 걸 기억해 줘.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S33",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -382,9 +384,9 @@
       "ko": "계속해.",
       "tags": {
         "functions": [
-          "F52"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -395,7 +397,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G23"
+        ],
         "flags": []
       }
     },
@@ -405,11 +409,11 @@
       "ko": "자아를 중시하는 비즈니스에서, 테드는 자아를 억제해.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S33",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -428,11 +432,11 @@
       "ko": "그의 코칭 스타일은 미묘해.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
-        "register": "R3",
+        "situation": "S33",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -451,11 +455,11 @@
       "ko": "결코 머리를 가격하지 않아.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S33",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -476,7 +480,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -497,9 +501,9 @@
       "ko": "은퇴 파티인 줄 몰랐어.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -520,13 +524,13 @@
       "ko": "젠장!",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -535,9 +539,10 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "contains_profanity"
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "be74cf3eebba1fe0"
 }

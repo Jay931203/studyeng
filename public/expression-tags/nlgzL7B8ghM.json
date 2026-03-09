@@ -12,13 +12,13 @@
       "ko": "화장실 가야 해.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S05",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E15"
         ],
         "expression_types": [
           "X08"
@@ -37,8 +37,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S05",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,20 +58,24 @@
       "ko": "가야 할 땐 가야지.",
       "tags": {
         "functions": [
-          "F09"
+          "F32"
         ],
-        "situation": "S50",
+        "situation": "S05",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -81,10 +85,10 @@
       "ko": "씻겼어. 깨끗해.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S05",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -106,7 +110,7 @@
         "functions": [
           "F35"
         ],
-        "situation": "S50",
+        "situation": "S05",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -127,11 +131,11 @@
       "ko": "천 명의 어린 엉덩이를 씻겼어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S05",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -150,11 +154,11 @@
       "ko": "천 명의 어린 엉덩이를 씻겼어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S05",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -173,11 +177,11 @@
       "ko": "천 명의 어린 엉덩이를 씻겼어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S05",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -190,5 +194,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "f3746cc236a32afa"
 }

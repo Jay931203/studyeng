@@ -12,18 +12,18 @@
       "ko": "내가 말할 때 믿어줘, 자기야",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,7 +37,7 @@
       "ko": "잠깐 생각해 볼게",
       "tags": {
         "functions": [
-          "F52"
+          "F39"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -48,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,18 +62,18 @@
       "ko": "넌 이해 못 해",
       "tags": {
         "functions": [
-          "F12"
+          "F57"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,7 +87,7 @@
       "ko": "내 계획의 진정한 의도를",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -98,7 +98,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,19 +112,21 @@
       "ko": "자기야, 네 영혼의 공급자가 되고 싶어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -137,19 +139,21 @@
       "ko": "그래, 자기야, 그렇게 있고 싶어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -162,10 +166,10 @@
       "ko": "아주 오랫동안",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,7 +177,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,19 +191,21 @@
       "ko": "자기야, 네 영혼의 공급자가 되고 싶어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -212,7 +218,7 @@
       "ko": "그렇게 해달라고 말만 해, 자기야",
       "tags": {
         "functions": [
-          "F34"
+          "F39"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -223,8 +229,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -237,18 +245,18 @@
       "ko": "그럴 거야, 그럴 거야, 그래",
       "tags": {
         "functions": [
-          "F07"
+          "F63"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -256,5 +264,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "9e2fdbe8e2387e72"
 }

@@ -12,19 +12,21 @@
       "ko": "아무도 아프게 하고 싶지 않아",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -37,18 +39,18 @@
       "ko": "하지만 내 마음은 참을 수 없어",
       "tags": {
         "functions": [
-          "F19"
+          "F22"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,18 +64,18 @@
       "ko": "네가 나를 느끼게 하는 방식이야",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,18 +89,18 @@
       "ko": "네가 나를 느끼게 하는 방식이야",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,18 +114,18 @@
       "ko": "내 세상을 빙글빙글 돌게 해",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -137,20 +139,23 @@
       "ko": "말해줘, 어떻게 떠날 수 있을까",
       "tags": {
         "functions": [
-          "F06"
+          "F35",
+          "F46"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -162,7 +167,7 @@
       "ko": "그들이 뭐라고 하든 상관 없어",
       "tags": {
         "functions": [
-          "F09"
+          "F05"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -173,7 +178,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,18 +192,18 @@
       "ko": "나는 어쨌든 너를 사랑해",
       "tags": {
         "functions": [
-          "F22"
+          "F48"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -212,18 +217,18 @@
       "ko": "네가 나를 느끼게 하는 방식이야",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -237,19 +242,21 @@
       "ko": "너를 내 것으로 만들 거야",
       "tags": {
         "functions": [
-          "F39"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V07",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -262,7 +269,7 @@
       "ko": "불가능한 건 아니야",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -273,11 +280,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -287,7 +295,7 @@
       "ko": "너에게 알려야 해",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -298,7 +306,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -312,32 +320,7 @@
       "ko": "나는 매력적이야",
       "tags": {
         "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "E9L-0x92vXk-13",
-      "en": "Baby, can't you see",
-      "ko": "베이비, 너는 보이지 않니",
-      "tags": {
-        "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -348,7 +331,33 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics",
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "E9L-0x92vXk-13",
+      "en": "Baby, can't you see",
+      "ko": "베이비, 너는 보이지 않니",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -362,18 +371,18 @@
       "ko": "너는 나를 위한 사람이야",
       "tags": {
         "functions": [
-          "F09"
+          "F55"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -387,7 +396,7 @@
       "ko": "하지만 너는 다른 사람의 것이야",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -398,7 +407,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -412,7 +421,7 @@
       "ko": "아무도 아프게 하고 싶지 않아",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -421,15 +430,18 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "94a153e541207b7e"
 }

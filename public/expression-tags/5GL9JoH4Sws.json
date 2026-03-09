@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,18 +37,18 @@
       "ko": "하지만 이 밤을 혼자 보내는 건 참을 수 없어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,7 +62,7 @@
       "ko": "설명은 필요 없어",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
         "situation": "S46",
         "cefr": "A1",
@@ -73,7 +73,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -93,12 +93,12 @@
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,7 +112,7 @@
       "ko": "일하러 갈 필요는 없어, 일, 일, 일, 일, 일, 일, 일",
       "tags": {
         "functions": [
-          "F35"
+          "F40"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -121,9 +121,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -137,7 +137,7 @@
       "ko": "하지만 일해야 해, 일, 일, 일, 일, 일, 일, 일",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -146,9 +146,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,7 +162,7 @@
       "ko": "일하러 갈 필요는 없어, 일, 일, 일, 일, 일, 일, 일",
       "tags": {
         "functions": [
-          "F35"
+          "F40"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -171,11 +171,13 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -198,7 +200,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -215,7 +217,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -223,7 +225,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -240,7 +242,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -248,7 +250,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -262,10 +264,10 @@
       "ko": "시작해보자",
       "tags": {
         "functions": [
-          "F36"
+          "F35"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -273,7 +275,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -287,10 +289,10 @@
       "ko": "너에게 승진을 줄게",
       "tags": {
         "functions": [
-          "F41"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -298,7 +300,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -312,7 +314,7 @@
       "ko": "휴가처럼 느끼게 해줄게",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -321,9 +323,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -337,10 +339,10 @@
       "ko": "침대를 바다로 만들어",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -348,7 +350,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -362,10 +364,10 @@
       "ko": "우리는 아무도 필요 없어",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -373,7 +375,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -387,10 +389,10 @@
       "ko": "나는 너의 몸만 필요해",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -398,7 +400,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -412,10 +414,10 @@
       "ko": "우리 사이에는 이불만 있을 뿐이야",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -423,7 +425,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -431,5 +433,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "a05c211adb8f4edc"
 }

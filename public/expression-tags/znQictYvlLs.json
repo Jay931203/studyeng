@@ -12,11 +12,11 @@
       "ko": "그것은 우리의 삼각형 그래픽과 Hamlindigo 블루와 함께",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -35,11 +35,11 @@
       "ko": "상표 브랜드 식별자를 구성합니다. 와, 잠깐, Hamlindigo 블루?",
       "tags": {
         "functions": [
-          "F02"
+          "F06"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -58,9 +58,9 @@
       "ko": "네, 그것이 우리의 상표 이름입니다.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -81,18 +81,18 @@
       "ko": "세상에, 진짜로 색깔을 Hamlindigo라고 지었어요?",
       "tags": {
         "functions": [
-          "F18"
+          "F06"
         ],
-        "situation": "S36",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -106,9 +106,9 @@
       "ko": "그건, 헉.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S27",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -117,10 +117,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V04",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -129,10 +131,11 @@
       "ko": "헉, 나와 똑같이 옷을 입은 사람이 하는 말이군요.",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F10"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -140,9 +143,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V04",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -154,9 +159,9 @@
         "functions": [
           "F09"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -165,7 +170,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G14"
+        ],
         "flags": []
       }
     },
@@ -175,10 +182,11 @@
       "ko": "서로 팔을 흔들며 서 있어야 할 것 같아요. 정말? 나는 그렇게 보이지 않는데.",
       "tags": {
         "functions": [
-          "F09"
+          "F18",
+          "F36"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -188,7 +196,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07",
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -198,11 +209,11 @@
       "ko": "게다가, McGill이라는 이름이 두 로고에 모두 나타납니다,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -221,11 +232,12 @@
       "ko": "제가 알기로는 McGill 씨가",
       "tags": {
         "functions": [
+          "F06",
           "F09"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -233,7 +245,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P02"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -244,18 +258,18 @@
       "ko": "잠재 고객을 더 혼란스럽게 하기를 바라고 있습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S27",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -269,7 +283,80 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "znQictYvlLs-12",
+      "en": "I'm to be penalized because I happen to share a name",
+      "ko": "제가 HHM의 파트너 중 한 명과 이름이 같다는 이유로",
+      "tags": {
+        "functions": [
+          "F04"
+        ],
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "znQictYvlLs-13",
+      "en": "with one of HHM's partners?",
+      "ko": "처벌을 받아야 한다는 건가요?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S27",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "znQictYvlLs-14",
+      "en": "You can't take my name from me.",
+      "ko": "제 이름을 빼앗을 수는 없습니다.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -285,84 +372,15 @@
       }
     },
     {
-      "id": "znQictYvlLs-12",
-      "en": "I'm to be penalized because I happen to share a name",
-      "ko": "제가 HHM의 파트너 중 한 명과 이름이 같다는 이유로",
-      "tags": {
-        "functions": [
-          "F20"
-        ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "znQictYvlLs-13",
-      "en": "with one of HHM's partners?",
-      "ko": "처벌을 받아야 한다는 건가요?",
-      "tags": {
-        "functions": [
-          "F20"
-        ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "znQictYvlLs-14",
-      "en": "You can't take my name from me.",
-      "ko": "제 이름을 빼앗을 수는 없습니다.",
-      "tags": {
-        "functions": [
-          "F20"
-        ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "znQictYvlLs-15",
       "en": "The name is not the problem here, Mr. McGill.",
       "ko": "이름이 문제는 아닙니다, McGill 씨.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -382,10 +400,10 @@
       "ko": "Hamlind 씨는 분명 그렇게 생각하는 것 같습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -395,7 +413,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16"
+        ],
         "flags": []
       }
     },
@@ -405,11 +425,12 @@
       "ko": "제 말은, 그는 제 이름을 바꾸길 원한다는 거죠, 왜냐하면 그게 뭐,",
       "tags": {
         "functions": [
-          "F04"
+          "F04",
+          "F50"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -418,7 +439,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -428,21 +451,22 @@
       "ko": "그의 사업에 위협이 된다고 주장하니까요? 재판장님. 이것은 상업적 제한입니다, 알겠어요? 자유 시장은 어떻게 된 건가요?",
       "tags": {
         "functions": [
-          "F09",
-          "F40"
+          "F06"
         ],
-        "situation": "S36",
+        "situation": "S27",
         "cefr": "B2",
         "register": "R2",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -452,11 +476,11 @@
       "ko": "아니요, Hamlind는 당신에게-",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S27",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -469,5 +493,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "e526db932d18cfd8"
 }

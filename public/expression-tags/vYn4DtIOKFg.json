@@ -12,10 +12,10 @@
       "ko": "그냥 물어봐. 그녀는 런웨이의 편집장이자 전설이야.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,9 +35,9 @@
       "ko": "그녀를 위해 1년 일하면 원하는 어떤 잡지에서도 일할 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -58,9 +58,9 @@
       "ko": "백만 명의 소녀들이 이 일을 원해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -72,7 +72,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -81,21 +83,25 @@
       "ko": "정말 좋은 기회인 것 같아. 고려해주면 좋겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F44"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G15"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -104,10 +110,10 @@
       "ko": "안드레아, 런웨이는 패션 잡지니까 패션에 대한 관심이 중요해.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,7 +135,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -140,7 +146,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -150,13 +158,13 @@
       "ko": "오, 세상에. 안 돼, 안 돼, 안 돼!",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -173,10 +181,10 @@
       "ko": "그녀가 오고 있어. 모두에게 말해.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,10 +204,10 @@
       "ko": "그녀는 아홉 시까지 여기 오지 않아야 해.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,7 +217,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -219,10 +229,10 @@
       "ko": "그녀의 운전자가 방금 문자 보냈고 그녀의 얼굴이 망가졌대.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,9 +252,9 @@
       "ko": "세상에, 이 사람들.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -256,7 +266,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,20 +277,22 @@
       "ko": "그건 내가 이야기할 수 없는 거야. 움직여!",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -288,10 +302,10 @@
       "ko": "왜 이걸 확인하는 게 이렇게 어려운지 이해가 안 돼.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -311,20 +325,23 @@
       "ko": "알아. 정말 미안해, 미란다. 사실 어젯밤에 확인했어.",
       "tags": {
         "functions": [
-          "F27"
+          "F28",
+          "F08"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -334,13 +351,13 @@
       "ko": "너의 무능력에 대한 이야기는 나에게 흥미롭지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E08"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -348,7 +365,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -357,10 +376,10 @@
       "ko": "시몬에게 그 소녀에게 내가 증명하지 않을 거라고 전해줘...",
       "tags": {
         "functions": [
-          "F09"
+          "F35"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -376,5 +395,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "9755f48a5c3c14cb"
 }

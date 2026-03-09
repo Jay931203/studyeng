@@ -12,20 +12,24 @@
       "ko": "나는 모델도 아니었고, 학자도 아니었지만, 너는 항상 인기가 많았어",
       "tags": {
         "functions": [
-          "F01"
+          "F43",
+          "F56"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -37,20 +41,22 @@
       "ko": "너는 내가 모르는 모든 노래를 부르고 있었고, 이제 너는 앞줄에 있어, 내 노래가 인기가 많으니까",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -65,15 +71,15 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,10 +93,10 @@
       "ko": "네가 누구인지나 멋진 차는 중요하지 않아, 너는 항상 네가 있는 곳에 있을 뿐이야",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -98,8 +104,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -115,15 +123,15 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -137,10 +145,10 @@
       "ko": "네가 해야 할 일은 너 자신에게 진실한 것뿐이야",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -148,7 +156,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -165,7 +173,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,8 +181,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -187,18 +197,18 @@
       "ko": "그러니 따라잡아, 너는 갈 길이 멀어",
       "tags": {
         "functions": [
-          "F34"
+          "F29"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -212,18 +222,18 @@
       "ko": "그러니 따라잡아, 너는 갈 길이 멀어",
       "tags": {
         "functions": [
-          "F34"
+          "F29"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -237,7 +247,7 @@
       "ko": "나는 미워할 사람을 찾고 있었어",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -248,7 +258,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -262,19 +272,21 @@
       "ko": "나를 저녁 접시처럼 괴롭히고",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -287,7 +299,7 @@
       "ko": "수업 중에 때리고, 그 사이에 뭔가 있어",
       "tags": {
         "functions": [
-          "F01"
+          "F12"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -298,8 +310,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -312,23 +326,24 @@
       "ko": "화장실에서 나를 괴롭혔고, 이제 너가 청소해야 해",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics",
-          "contains_profanity"
+          "is_lyrics"
         ]
       }
     },
@@ -338,18 +353,18 @@
       "ko": "네가 하는 일로 나를 기분 나쁘게 만들려고 해",
       "tags": {
         "functions": [
-          "F17"
+          "F02"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -363,24 +378,27 @@
       "ko": "그게 그렇게 웃기지 않아, 그때는",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "6ec23367e320dd4e"
 }

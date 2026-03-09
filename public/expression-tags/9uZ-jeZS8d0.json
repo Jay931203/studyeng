@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,18 +35,18 @@
       "ko": "하지만 빠르게 움직이면 무사히 집에 갈 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,18 +58,18 @@
       "ko": "그리고 당신은 끔찍하게도 시계가 고장났다는 것을 깨닫게 된다.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E04"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -85,8 +83,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -106,18 +104,18 @@
       "ko": "45초를 세는 데 작은 실수라도 하면,",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,21 +127,23 @@
       "ko": "큰일 난다.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -152,16 +152,16 @@
       "ko": "주머니를 뒤지다 도움이 될 만한 것을 찾는다—",
       "tags": {
         "functions": [
-          "F01"
+          "F14"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -177,18 +177,20 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -198,9 +200,9 @@
       "ko": "각 퓨즈는 불이 붙을 수 있는 가연성 끈으로",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -221,19 +223,21 @@
       "ko": "양쪽 끝에서 불이 붙어 정확히 1분 동안 타도록 만들어졌다.",
       "tags": {
         "functions": [
-          "F04"
+          "F07"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -244,9 +248,9 @@
       "ko": "문제는 퓨즈가 균일해 보이지만,",
       "tags": {
         "functions": [
-          "F02"
+          "F21"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -269,8 +273,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -290,9 +294,9 @@
       "ko": "예를 들어, 하나를 반으로 자르면,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -313,16 +317,16 @@
       "ko": "한 쪽이 다른 쪽보다 더 오래 탈 수 있다.",
       "tags": {
         "functions": [
-          "F04"
+          "F14"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -338,7 +342,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -359,34 +363,9 @@
       "ko": "당신은 행동해야 한다.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "9uZ-jeZS8d0-16",
-      "en": "How can you use the fuses and lighter to time exactly 45 seconds?",
-      "ko": "퓨즈와 라이터를 사용해 정확히 45초를 측정하려면 어떻게 해야 할까?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S48",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -402,15 +381,42 @@
       }
     },
     {
+      "id": "9uZ-jeZS8d0-16",
+      "en": "How can you use the fuses and lighter to time exactly 45 seconds?",
+      "ko": "퓨즈와 라이터를 사용해 정확히 45초를 측정하려면 어떻게 해야 할까?",
+      "tags": {
+        "functions": [
+          "F34",
+          "F10"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G02",
+          "G20"
+        ],
+        "flags": []
+      }
+    },
+    {
       "id": "9uZ-jeZS8d0-17",
       "en": "For more UN videos visit www.un.org",
       "ko": "더 많은 UN 영상은 www.un.org를 방문하세요.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -424,5 +430,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a6f83d62d2e58698"
 }

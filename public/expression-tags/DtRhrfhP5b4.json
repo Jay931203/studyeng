@@ -14,7 +14,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -35,9 +35,9 @@
       "ko": "그냥 너무 이론적이라는 거야, 알지?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -58,21 +58,27 @@
       "ko": "그러니까, 아마 더...",
       "tags": {
         "functions": [
-          "F04"
+          "F14",
+          "F50"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G17",
+          "G18"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,10 +87,10 @@
       "ko": "구체적인 접근이 있을지도 몰라.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -95,7 +101,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,10 +112,10 @@
       "ko": "자, 이걸 해보자.",
       "tags": {
         "functions": [
-          "F35"
+          "F36"
         ],
-        "situation": "S40",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -117,7 +125,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -127,13 +137,13 @@
       "ko": "오, 세상에!",
       "tags": {
         "functions": [
-          "F18"
+          "F15"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -152,8 +162,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -175,18 +185,20 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -196,20 +208,23 @@
       "ko": "우리가 윤리가 실제로 어떻게 작용하는지 볼 수 있도록.",
       "tags": {
         "functions": [
-          "F04"
+          "F36",
+          "F08"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -221,7 +236,7 @@
         "functions": [
           "F02"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -242,9 +257,9 @@
       "ko": "여기 선로를 전환할 레버가 있어. 선택해.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -265,21 +280,27 @@
       "ko": "문제는, 윤리적으로 말하자면... 시간 없어, 친구! 결정해! 음, 복잡해! 한편으로는,",
       "tags": {
         "functions": [
-          "F12",
-          "F52"
+          "F04",
+          "F50"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03",
+          "X04",
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -289,13 +310,13 @@
       "ko": "순수한 공리주의적 세계관을 따른다면...",
       "tags": {
         "functions": [
-          "F14"
+          "F23"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -303,7 +324,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -312,9 +335,9 @@
       "ko": "알겠어.",
       "tags": {
         "functions": [
-          "F07"
+          "F44"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -326,7 +349,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -335,10 +360,10 @@
       "ko": "그래서...",
       "tags": {
         "functions": [
-          "F52"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -349,7 +374,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -360,8 +387,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -381,10 +408,10 @@
       "ko": "치디?",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S39",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -395,9 +422,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -406,9 +431,9 @@
       "ko": "이야기해봐, 친구. 어떤 생각이야?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -429,13 +454,13 @@
       "ko": "그는 트롤리로 많은 사람을 죽였다고 생각해. 그냥 시뮬레이션이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -452,20 +477,22 @@
       "ko": "나는 절대 너에게 실제 사람을 죽이라고 하지 않을 거야.",
       "tags": {
         "functions": [
-          "F41"
+          "F43"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E07"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -475,13 +502,13 @@
       "ko": "오, 그건 안심이네.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -498,10 +525,10 @@
       "ko": "얼굴의 일부는...",
       "tags": {
         "functions": [
-          "F02"
+          "F04"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -511,11 +538,14 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": [
           "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "f7bcf3dc549125ba"
 }

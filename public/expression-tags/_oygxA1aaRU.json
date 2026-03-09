@@ -12,9 +12,9 @@
       "ko": "나는 이렇게 서서 이야기한 적이 없어.",
       "tags": {
         "functions": [
-          "F02"
+          "F43"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -25,7 +25,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -35,10 +37,10 @@
       "ko": "샬롯!",
       "tags": {
         "functions": [
-          "F25"
+          "F15"
         ],
-        "situation": "S09",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -49,7 +51,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,13 +62,13 @@
       "ko": "오, 세상에! 팀!",
       "tags": {
         "functions": [
-          "F18"
+          "F15"
         ],
-        "situation": "S09",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -81,32 +85,9 @@
       "ko": "만나서 정말 반가워!",
       "tags": {
         "functions": [
-          "F25"
+          "F32"
         ],
-        "situation": "S09",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "_oygxA1aaRU-4",
-      "en": "Wow! This is my girlfriend, Tina.",
-      "ko": "와! 이분이 내 여자친구 티나야.",
-      "tags": {
-        "functions": [
-          "F26"
-        ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -117,7 +98,34 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "_oygxA1aaRU-4",
+      "en": "Wow! This is my girlfriend, Tina.",
+      "ko": "와! 이분이 내 여자친구 티나야.",
+      "tags": {
+        "functions": [
+          "F18"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E05"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V11",
+        "power": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -127,13 +135,13 @@
       "ko": "아니! 오!",
       "tags": {
         "functions": [
-          "F18"
+          "F15"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -150,20 +158,23 @@
       "ko": "정말 멋지다! 안녕, 티나! 왜 멋지지?",
       "tags": {
         "functions": [
-          "F09"
+          "F25",
+          "F30"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -173,10 +184,11 @@
       "ko": "인생에서 평생 마음에 상처를 남기는 순간들이 있어.",
       "tags": {
         "functions": [
-          "F04"
+          "F02",
+          "F52"
         ],
-        "situation": "S09",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,13 +208,13 @@
       "ko": "샬롯의 거절이 그런 순간 중 하나였어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -219,9 +231,9 @@
       "ko": "하지만 이제 그녀에게 여자친구가 있다는 걸 알게 됐어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -242,13 +254,13 @@
       "ko": "그게 갑자기 내 마음에서 큰 짐이 덜어진 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
-        "situation": "S09",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -265,13 +277,13 @@
       "ko": "다시 자신감 있는 이성애자가 될 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -288,18 +300,18 @@
       "ko": "그런 여자친구가 아니야. 뭐?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S09",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,13 +323,13 @@
       "ko": "내가 게이라고 생각해? 아니.",
       "tags": {
         "functions": [
-          "F11"
+          "F06"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -334,9 +346,9 @@
       "ko": "아니, 물론 아니지.",
       "tags": {
         "functions": [
-          "F10"
+          "F44"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -346,7 +358,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -359,8 +373,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -382,9 +396,9 @@
       "ko": "응. 아니. 와. 그래, 친구인데...",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -393,7 +407,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -401,5 +415,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "faf1f5bc0c44ced8"
 }

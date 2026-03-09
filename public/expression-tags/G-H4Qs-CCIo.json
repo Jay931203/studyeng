@@ -12,18 +12,18 @@
       "ko": "나를 지치게 해, 내 행동은 용서받을 거야. 처음 만났을 때, 간단한 맛.",
       "tags": {
         "functions": [
-          "F09"
+          "F61"
         ],
         "situation": "S50",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,21 +35,24 @@
       "ko": "간단한 맛.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,21 +61,24 @@
       "ko": "간단한 맛.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,18 +87,18 @@
       "ko": "그리고 아무것도 느끼지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,18 +110,18 @@
       "ko": "우리가 처음 만났던 때를 회상하며.",
       "tags": {
         "functions": [
-          "F09"
+          "F03"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,22 +133,23 @@
       "ko": "우리가 처음 만났던 때를 회상하며.",
       "tags": {
         "functions": [
-          "F09"
+          "F03"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "2947c4a438ea79f0"
 }

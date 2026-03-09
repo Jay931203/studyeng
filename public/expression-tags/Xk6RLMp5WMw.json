@@ -12,10 +12,10 @@
       "ko": "그럼 뭔가 추가해야겠네, 가격을 조정해 보자.",
       "tags": {
         "functions": [
-          "F34"
+          "F36"
         ],
         "situation": "S36",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,9 +23,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -35,21 +39,22 @@
       "ko": "알리시아, 여기 있네. 카를라 브라우닝, 안녕하세요, 플로렉 씨. 제가 팬이에요.",
       "tags": {
         "functions": [
-          "F25",
-          "F26"
+          "F25"
         ],
         "situation": "S36",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -61,18 +66,23 @@
         "functions": [
           "F27"
         ],
-        "situation": "S36",
+        "situation": "S11",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P01",
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -82,10 +92,10 @@
       "ko": "네, 고객들이 M&M으로 입이 가득 차면 울기 더 힘들어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S36",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -93,7 +103,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -105,10 +115,10 @@
       "ko": "이혼 변호사를 많이 가보셨나요?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S11",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -116,7 +126,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -128,20 +138,22 @@
       "ko": "몇 번 가봤어요. 남편과 저는 여러 번의 재발을 겪었죠.",
       "tags": {
         "functions": [
-          "F03"
+          "F09"
         ],
         "situation": "S36",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -154,17 +166,19 @@
           "F09"
         ],
         "situation": "S36",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -174,7 +188,7 @@
       "ko": "끝났어.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S36",
         "cefr": "A1",
@@ -185,7 +199,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -199,7 +213,7 @@
       "ko": "조정 회의 방향을 알려줘.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S36",
         "cefr": "B1",
@@ -210,7 +224,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -222,10 +236,10 @@
       "ko": "일주일 전쯤 이사했는데, 그가 언제든지 전화하고 있어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S36",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -233,11 +247,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "555fc67e810b9775"
 }

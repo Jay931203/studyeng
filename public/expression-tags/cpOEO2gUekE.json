@@ -12,13 +12,13 @@
       "ko": "영화. 크리스 오도넬은 감자 얼굴을 가지고 있어. 맞아. 해시태그 감자 얼굴. 기억해",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E10"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -26,9 +26,7 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,13 +35,13 @@
       "ko": "샤론 스톤이 TV에 나온다는 말이 기쁨을 줬던 때가 있었어.",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -60,20 +58,22 @@
       "ko": "그 년을 싫어하는 대신에. 닉 오퍼맨의 손은 그의 머리에 비해 미친 듯이 작아 보여.",
       "tags": {
         "functions": [
-          "F17"
+          "F13"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -85,19 +85,21 @@
       "ko": "만약 파이와 제이슨 빅스 중 하나를 선택해야 한다면, 나는 파이를 선택할 거야. 그 놈은",
       "tags": {
         "functions": [
-          "F09"
+          "F57"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -108,13 +110,13 @@
       "ko": "더럽고. 에이미 포엘러의 얼굴은 도대체 뭐야? 그 년은 핵폭발을 견딘 것 같아.",
       "tags": {
         "functions": [
-          "F17"
+          "F02"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -133,13 +135,13 @@
       "ko": "훌륭한 연기야, 데니스 퀘이드. 너는 늙고 쓸모없는 돼지야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -156,9 +158,9 @@
       "ko": "아론 폴은 작은 ***을 가지고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -173,5 +175,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "2d3e42f46707f115"
 }

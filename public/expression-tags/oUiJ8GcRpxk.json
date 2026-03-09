@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -26,7 +26,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -35,10 +37,10 @@
       "ko": "그녀는 세상의 중심에 서 있었다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -49,7 +51,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -58,18 +62,18 @@
       "ko": "그는 가진 게 하나도 없었다.",
       "tags": {
         "functions": [
-          "F01"
+          "F52"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X02"
+          "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,16 +85,17 @@
       "ko": "아니, 제발!",
       "tags": {
         "functions": [
-          "F06"
+          "F21",
+          "F45"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -106,8 +111,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,16 +132,16 @@
       "ko": "다른 삶에서는 내가 새가 될 수 있었을까?",
       "tags": {
         "functions": [
-          "F14"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -152,8 +157,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,9 +178,9 @@
       "ko": "환생처럼.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -187,7 +192,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -198,7 +205,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -208,9 +215,15 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -221,7 +234,7 @@
         "functions": [
           "F09"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -244,7 +257,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -265,10 +278,10 @@
       "ko": "아니. 그렇게 하지 마. 내가 새라고 말해. 그만해. 지금 그만해.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,9 +301,9 @@
       "ko": "말해봐!",
       "tags": {
         "functions": [
-          "F06"
+          "F15"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -302,7 +315,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -313,7 +328,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -325,7 +340,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -336,7 +353,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -348,8 +365,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "bbbe1521f1c5c25b"
 }

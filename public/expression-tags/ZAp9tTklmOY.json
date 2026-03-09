@@ -14,16 +14,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,20 +35,23 @@
       "ko": "아, 내 여자친구가 나를 보기 전에 여기서 나가는 게 좋을 것 같아.",
       "tags": {
         "functions": [
-          "F37"
+          "F35"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -58,19 +61,21 @@
       "ko": "음, 네 차례가 곧 올 거야. 네가 가는 곳마다 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -81,18 +86,18 @@
       "ko": "너는 알고 있는 삶의 고통에서 벗어나기 위해 모든 것을 시도해.",
       "tags": {
         "functions": [
-          "F09"
+          "F12"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,20 +109,24 @@
       "ko": "모든 것이 실패하고 오늘보다 나은 것을 보고 싶어 할 때.",
       "tags": {
         "functions": [
-          "F20"
+          "F13"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -127,19 +136,21 @@
       "ko": "내가 너를 피할 수 있는 곳을 알아. 춤추는 공간이라고 불러.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -152,8 +163,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -161,11 +172,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "aea2e91014c628f1"
 }

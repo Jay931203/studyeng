@@ -14,17 +14,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S19",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X05",
-          "X08"
+          "X01"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -36,9 +35,9 @@
       "ko": "솥에 넣어, 잘생긴 녀석!",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -47,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -61,8 +60,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S04",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -70,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -84,8 +83,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -93,7 +92,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -107,7 +106,7 @@
         "functions": [
           "F25"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -116,10 +115,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -128,18 +129,18 @@
       "ko": "사랑의 물약이군요, 그렇죠?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -151,18 +152,18 @@
       "ko": "네, 정말 효과가 있어요.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -174,18 +175,18 @@
       "ko": "하지만 우리가 듣기로는, 자매님, 혼자서 잘 지내고 있는 것 같아요. 무슨 뜻이죠?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -199,17 +200,19 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -222,16 +225,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -243,9 +246,9 @@
       "ko": "오 갤리언이에요. 나는 네 형이야.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -254,7 +257,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -268,7 +271,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -277,11 +280,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "60db984bad038cff"
 }

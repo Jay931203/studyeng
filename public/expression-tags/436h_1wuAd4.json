@@ -12,18 +12,18 @@
       "ko": "그걸 언급하다니, 웃기네요. 지금요? 왜 안 되죠?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,18 @@
       "ko": "좋아요, 엄마, 아빠, 정말 큰 소식이 있어요.",
       "tags": {
         "functions": [
-          "F62"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V01",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,9 +58,9 @@
       "ko": "대학 합격 통지를 받았어요.",
       "tags": {
         "functions": [
-          "F01"
+          "F03"
         ],
-        "situation": "S19",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -69,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,8 +83,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S19",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,7 +92,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,9 +104,9 @@
       "ko": "많은 고민 끝에 결정을 내렸어요.",
       "tags": {
         "functions": [
-          "F63"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -115,7 +115,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,16 +129,16 @@
         "functions": [
           "F63"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V01",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,16 +152,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,11 +173,10 @@
       "ko": "저는 예일로 가요. 아빠가 다녔던 곳이죠. 좋았다고 했잖아요? 조니 마체테 좀 건네주세요. 뭐라고요? 이해가 안 돼요.",
       "tags": {
         "functions": [
-          "F63",
-          "F09"
+          "F63"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S10",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -185,8 +184,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -197,21 +198,24 @@
       "ko": "제가 예일에 가길 원하셨던 줄 알았어요. 아니요, 전혀요. 그런 생각은 왜 했죠?",
       "tags": {
         "functions": [
-          "F09",
-          "F11"
+          "F43",
+          "F10"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G16"
+        ],
         "flags": []
       }
     },
@@ -221,18 +225,18 @@
       "ko": "엄마, 아빠, 보세요, 로리가 어디에 가야 할지 의견이 다를 때도 있었지만,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S19",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,19 +248,21 @@
       "ko": "이제는 그건 지나간 일이에요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -267,19 +273,21 @@
       "ko": "그녀는 예일에 가고, 그건 좋은 일이에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V01",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -290,21 +298,23 @@
       "ko": "정말 좋은 일이에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V01",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -313,18 +323,18 @@
       "ko": "웃음만 가득해요. 우리 둘 다 이 일에 매우 행복해요. 둘 다. 그녀와 저. 그녀와 나.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V01",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -336,18 +346,18 @@
       "ko": "이 방에 있는 로레라이라는 이름을 가진 모든 사람은 예일에 가는 것에 대해 매우 기뻐하고 있어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V01",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -359,22 +369,23 @@
       "ko": "그러니 이 방에 로레라이라는 이름이 아닌 모든 사람도 예일에 가는 것에 대해 똑같이 기뻐할 수 있어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "93a59f76b971d5bc"
 }

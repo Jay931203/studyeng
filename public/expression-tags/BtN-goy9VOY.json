@@ -15,7 +15,7 @@
           "F01"
         ],
         "situation": "S47",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -48,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -65,7 +65,7 @@
           "F01"
         ],
         "situation": "S47",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -73,7 +73,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,7 +87,7 @@
       "ko": "이 바이러스는 COVID-19라는 질병을 유발하며, 모두가 코로나바이러스라고 부릅니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F05"
         ],
         "situation": "S47",
         "cefr": "B1",
@@ -98,7 +98,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,20 +112,22 @@
       "ko": "인간에게 감염되면 실제로 어떤 일이 발생하며, 우리는 무엇을 해야 할까요?",
       "tags": {
         "functions": [
-          "F06"
+          "F11"
         ],
         "situation": "S47",
         "cefr": "B1",
         "register": "R2",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": [
           "is_narration"
         ]
@@ -137,18 +139,18 @@
       "ko": "바이러스는 유전 물질과 몇 가지 단백질로 이루어진 껍데기에 불과하며, 사실상 살아있는 것이라고 보기 어렵습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S47",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,7 +164,7 @@
       "ko": "바이러스는 살아있는 세포에 들어가야만 자신을 복제할 수 있습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
         "situation": "S47",
         "cefr": "B1",
@@ -173,7 +175,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -190,16 +192,18 @@
           "F01"
         ],
         "situation": "S47",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V16",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_narration"
@@ -223,7 +227,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -237,10 +241,10 @@
       "ko": "또는 아픈 사람을 만진 후 얼굴, 예를 들어 눈이나 코를 비비는 경우에도 전파될 수 있습니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F03"
         ],
         "situation": "S47",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -248,8 +252,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V16",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_narration"
@@ -265,7 +271,7 @@
           "F01"
         ],
         "situation": "S47",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -273,7 +279,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -281,5 +287,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "329d0a9b6c13558f"
 }

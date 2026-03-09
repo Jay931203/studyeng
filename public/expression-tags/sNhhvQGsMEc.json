@@ -37,9 +37,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -49,9 +49,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -60,9 +58,9 @@
       "ko": "최소 1000억 개의 은하가 있으며, 각 은하에는 100억에서 1000억 개의 별이 있다.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -74,9 +72,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -87,7 +83,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -99,9 +95,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -110,23 +104,22 @@
       "ko": "아마도 우주에는 수조 개의 거주 가능한 행성이 있을 것이다.",
       "tags": {
         "functions": [
-          "F01"
+          "F02",
+          "F14"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -135,9 +128,9 @@
       "ko": "즉, 생명이 발전하고 존재할 기회가 많아야 한다는 거지? 그런데 어디에 있을까?",
       "tags": {
         "functions": [
-          "F14"
+          "F06"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -149,9 +142,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -160,23 +151,23 @@
       "ko": "우주가 우주선으로 가득 차 있어야 하지 않을까? 한 발 물러서 보자.",
       "tags": {
         "functions": [
-          "F14"
+          "F36"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "grammar_intent": [
+          "G09"
+        ],
+        "flags": []
       }
     },
     {
@@ -185,9 +176,9 @@
       "ko": "다른 은하에 외계 문명이 있다 하더라도,",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -199,9 +190,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -210,23 +199,26 @@
       "ko": "우리는 그들에 대해 알 방법이 없다.",
       "tags": {
         "functions": [
-          "F01"
+          "F18",
+          "F43",
+          "F11"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "grammar_intent": [
+          "G01",
+          "G07"
+        ],
+        "flags": []
       }
     },
     {
@@ -237,7 +229,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -249,9 +241,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -262,7 +252,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -274,9 +264,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -287,7 +275,7 @@
         "functions": [
           "F04"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -298,10 +286,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
       }
     },
     {
@@ -310,24 +298,25 @@
       "ko": "정말 빠른 우주선이 있다 하더라도, 그것은 문자 그대로...",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_narration"
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "98dce749d6f43ea2"
 }

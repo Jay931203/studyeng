@@ -12,18 +12,18 @@
       "ko": "응.",
       "tags": {
         "functions": [
-          "F09"
+          "F53"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -39,16 +39,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,20 +60,22 @@
       "ko": "응, 진실을 원해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -85,18 +87,20 @@
         "functions": [
           "F11"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -106,18 +110,18 @@
       "ko": "우리 모두와 함께, 아니면 그냥...",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,9 +133,9 @@
       "ko": "너희 모두와 함께.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -140,7 +144,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,10 +156,10 @@
       "ko": "정말 좋은 태도네, 클레어.",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -163,8 +167,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V01",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -175,18 +181,18 @@
       "ko": "솔직해져, 앤디.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,19 +204,21 @@
       "ko": "만약 브라이언이 월요일에 복도에서 너에게 다가온다면,",
       "tags": {
         "functions": [
-          "F14"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X02"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V01",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -223,16 +231,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,18 +252,18 @@
       "ko": "상상해봐. 너는 모든 스포츠와 함께 있어.",
       "tags": {
         "functions": [
-          "F14"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,20 +275,24 @@
       "ko": "네가 어떻게 할지 정확히 알아.",
       "tags": {
         "functions": [
-          "F12"
+          "F10"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V01",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -290,19 +302,21 @@
       "ko": "그에게 인사하고, 그가 떠나면,",
       "tags": {
         "functions": [
-          "F09"
+          "F25"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -313,19 +327,21 @@
       "ko": "친구들이 네가 그를 정말 좋아한다고 생각하지 않도록 그를 헐뜯을 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V01",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -336,21 +352,27 @@
       "ko": "절대 그럴 리 없어.",
       "tags": {
         "functions": [
+          "F43",
           "F11"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G01",
+          "G07"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -359,18 +381,18 @@
       "ko": "응.",
       "tags": {
         "functions": [
-          "F09"
+          "F53"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -384,20 +406,25 @@
       "ko": "내가 너에게 다가가면?",
       "tags": {
         "functions": [
-          "F06"
+          "F36"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X02"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P06"
+        ],
+        "grammar_intent": [
+          "G09",
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -409,7 +436,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -418,10 +445,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -430,18 +459,18 @@
       "ko": "너 진짜 나쁜 년이야!",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S20",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -455,20 +484,22 @@
       "ko": "왜? 내가 진실을 말한다고? 그게 나쁜 년이 되는 거야?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -480,20 +511,22 @@
       "ko": "아니. 누군가에게 그렇게 하는 게 얼마나 나쁜지 알면서.",
       "tags": {
         "functions": [
-          "F12"
+          "F04"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V03",
+        "vibe": "V01",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -503,18 +536,18 @@
       "ko": "그리고 너는 친구들 앞에서 당당히 서서",
       "tags": {
         "functions": [
-          "F12"
+          "F35"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V03",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -526,19 +559,21 @@
       "ko": "네가 좋아하고 싶은 사람을 좋아한다고 말할 용기가 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V03",
-        "power": [],
+        "vibe": "V01",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -549,18 +584,18 @@
       "ko": "그럼 너는 어때, 위선자야?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -572,20 +607,22 @@
       "ko": "왜 앨리슨을 너의 헤비메탈 구토 파티에 데려가지 않아?",
       "tags": {
         "functions": [
-          "F06"
+          "F36"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -597,20 +634,21 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S05",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "ab18f90cb2544810"
 }

@@ -12,10 +12,10 @@
       "ko": "오늘 A&P에서 아이시스를 봤어.",
       "tags": {
         "functions": [
-          "F01"
+          "F08"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,11 +35,12 @@
       "ko": "얌을 고르고 있었을 때. 아니, 그건 아니야, 캐시 이모.",
       "tags": {
         "functions": [
-          "F09"
+          "F06",
+          "F55"
         ],
         "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -58,20 +59,24 @@
       "ko": "그건 아시아 여성이었어. 미안해, 미안해, 미안해. 있잖아, 질문이 있어.",
       "tags": {
         "functions": [
-          "F06"
+          "F28"
         ],
         "situation": "S34",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -104,10 +109,10 @@
       "ko": "왜 내 남자친구한테 그런 질문을 해?",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -117,7 +122,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -127,20 +134,24 @@
       "ko": "그냥 자말을 알아가고 싶어서. 그건 너무 드러내는 거야. 실례합니다. 그녀는 여기 손님이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E16"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -164,7 +175,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -173,7 +186,7 @@
       "ko": "나야.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -187,7 +200,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -196,16 +211,16 @@
       "ko": "이렇게 오랜 시간이 지난 후에 만나서 모든 걸 이야기하고 싶었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V10",
         "power": [],
@@ -219,20 +234,24 @@
       "ko": "시간은 치유한다고 하지만, 나는 별로 나아지지 않았어.",
       "tags": {
         "functions": [
-          "F16"
+          "F05"
         ],
         "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -245,7 +264,7 @@
           "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -259,5 +278,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "6a97ce03e812111c"
 }

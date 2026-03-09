@@ -12,18 +12,18 @@
       "ko": "그녀의 뇌 안에서 일어나는 일.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,20 +35,22 @@
       "ko": "오, 그녀를 내 전 남자친구의 품으로 데려가야 할까?",
       "tags": {
         "functions": [
-          "F34"
+          "F14"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S06",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -58,18 +60,18 @@
       "ko": "재밌겠네.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S11",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,16 +85,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S39",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,16 +108,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S39",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,18 +129,18 @@
       "ko": "그리고 모두의 기분을 좋게 하기 위해",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,16 +154,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,18 +175,18 @@
       "ko": "나는 이걸 할 사람이 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +198,18 @@
       "ko": "나는 우주의 구세주가 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,18 +221,18 @@
       "ko": "나는 애리조나 출신의 평범한 소녀야.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,21 +244,25 @@
       "ko": "그게 전부야.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,18 +271,18 @@
       "ko": "나는 애리조나의 평범한 소녀야. 정크푸드를 먹었어.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,18 +294,18 @@
       "ko": "리얼리티 쇼를 봤어.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,18 +317,18 @@
       "ko": "가끔 H&M에서 입고 온 것보다 더 많은 속옷을 입고 나왔어.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -336,16 +342,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -357,18 +363,18 @@
       "ko": "내 인생을 잘 관리하지도 못했는데, 이제 다른 사람들의 인생을 관리해야 한다고?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -380,18 +386,18 @@
       "ko": "나는...",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -405,18 +411,18 @@
       "ko": "이걸 할 수 없어.",
       "tags": {
         "functions": [
-          "F43"
+          "F02"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -428,18 +434,18 @@
       "ko": "내 실험을 시작했을 때,",
       "tags": {
         "functions": [
-          "F03"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -451,22 +457,23 @@
       "ko": "나는 네 개의 부서진 새의 뇌를 생각했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "4650440a439b1c67"
 }

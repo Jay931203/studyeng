@@ -14,7 +14,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -37,8 +37,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -62,9 +62,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -83,20 +83,25 @@
       "ko": "너무 끔찍해서 설명할 방법이 없어요.",
       "tags": {
         "functions": [
-          "F04"
+          "F18",
+          "F43",
+          "F11"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -106,11 +111,11 @@
       "ko": "자기야, 나는 네 물건에 반대하지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -129,9 +134,9 @@
       "ko": "여분의 방이 있다면, 네 모든 물건을 그곳에 넣을 수 있어, 바 스툴도 포함해서.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -152,18 +157,18 @@
       "ko": "자기야, 잠깐만. 내 바 스툴이 마음에 안 들어?",
       "tags": {
         "functions": [
-          "F10"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,10 +180,33 @@
       "ko": "해리, 제발. 누군가는 내 편이 되어야 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F45"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "ZW8zvaTRuGo-8",
+      "en": "I'm on your side. I'm just trying to help you have good taste.",
+      "ko": "나는 네 편이야. 네가 좋은 취향을 가지도록 도와주고 싶을 뿐이야.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -193,37 +221,14 @@
       }
     },
     {
-      "id": "ZW8zvaTRuGo-8",
-      "en": "I'm on your side. I'm just trying to help you have good taste.",
-      "ko": "나는 네 편이야. 네가 좋은 취향을 가지도록 도와주고 싶을 뿐이야.",
-      "tags": {
-        "functions": [
-          "F31"
-        ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E07"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V02",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "ZW8zvaTRuGo-9",
       "en": "I have good taste.",
       "ko": "나는 좋은 취향이 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -244,9 +249,9 @@
       "ko": "모두가 자신이 좋은 취향과 유머 감각이 있다고 생각해,",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -267,20 +272,22 @@
       "ko": "하지만 모두가 좋은 취향을 가질 수는 없지.",
       "tags": {
         "functions": [
-          "F12"
+          "F14"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -290,18 +297,18 @@
       "ko": "웃기지, 우리도 이렇게 시작했어, 엘렌과 나.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,9 +320,9 @@
       "ko": "우리는 빈 벽이었고, 물건을 걸고, 타일을 함께 고르기도 했어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -324,7 +331,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -338,14 +345,14 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -359,10 +366,11 @@
       "ko": "6년 후, 이라 앞에서 '서리 위에 장식이 있는' 노래를 부르고 있어!",
       "tags": {
         "functions": [
+          "F32",
           "F03"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -372,7 +380,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -384,14 +394,14 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -405,16 +415,17 @@
       "ko": "응, 지금이 이 얘기를 하기 딱 좋은 때라고 생각해.",
       "tags": {
         "functions": [
+          "F08",
           "F09"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -428,10 +439,10 @@
       "ko": "왜냐하면 내 경험의 지혜를 친구들이 누리게 하고 싶거든.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -439,9 +450,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15",
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -451,13 +465,13 @@
       "ko": "지금은 모든 게 좋아.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -474,22 +488,30 @@
       "ko": "모두 행복하고, 모두 사랑에 빠져 있고, 그건 멋져. 하지만 알아야 해...",
       "tags": {
         "functions": [
-          "F12"
+          "F30"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E01",
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "vibe": "V02",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G03"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "5432d1dad9e8d3ea"
 }

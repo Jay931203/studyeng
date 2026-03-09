@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_period"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,10 +35,10 @@
       "ko": "다음 비디오에서 만나요.",
       "tags": {
         "functions": [
-          "F25"
+          "F32"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -50,7 +48,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -62,8 +62,35 @@
         "functions": [
           "F32"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G25"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "udKE1ksKWDE-3",
+      "en": "This is the end of the video.",
+      "ko": "이 비디오는 끝났습니다.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -78,40 +105,15 @@
       }
     },
     {
-      "id": "udKE1ksKWDE-3",
-      "en": "This is the end of the video.",
-      "ko": "이 비디오는 끝났습니다.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_period"
-        ]
-      }
-    },
-    {
       "id": "udKE1ksKWDE-4",
       "en": "See you in the next video.",
       "ko": "다음 비디오에서 만나요.",
       "tags": {
         "functions": [
-          "F25"
+          "F32"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -121,7 +123,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -133,7 +137,7 @@
         "functions": [
           "F32"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -144,9 +148,14 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G25"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "4a4c59b8f3a922cf"
 }

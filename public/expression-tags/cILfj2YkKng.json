@@ -12,20 +12,24 @@
       "ko": "실례합니다, 아가씨. 괜찮으세요?",
       "tags": {
         "functions": [
-          "F06"
+          "F28"
         ],
-        "situation": "S14",
+        "situation": "S20",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -35,21 +39,23 @@
       "ko": "네.",
       "tags": {
         "functions": [
-          "F09"
+          "F53"
         ],
-        "situation": "S14",
+        "situation": "S20",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -60,16 +66,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +87,18 @@
       "ko": "교수님들이요? 네, 그런 경향이 있어요. 소크라테스식 방법이죠.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S20",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,18 +110,18 @@
       "ko": "그래서 답을 모르면 그냥 쫓아내는 거군요.",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
-        "situation": "S14",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,18 +133,18 @@
       "ko": "스트롬웰 교수님이시군요?",
       "tags": {
         "functions": [
-          "F03"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,16 +158,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,18 +179,18 @@
       "ko": "아니요. 하지만 한 번 울게 만들었어요. 수업 중은 아니었지만요.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S19",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,19 +202,21 @@
       "ko": "방에 돌아가서 울었어요. 하지만 네, 그녀는 정말 강하게 다가와요.",
       "tags": {
         "functions": [
-          "F09"
+          "F03"
         ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S20",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -219,18 +227,18 @@
       "ko": "네, 어디든지요. 하지만 정말 강해요. 정말로요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S20",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,21 +250,23 @@
       "ko": "알겠어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F53"
         ],
-        "situation": "S14",
+        "situation": "S20",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,20 +275,22 @@
       "ko": "걱정하지 마세요. 나아질 거예요. 다른 교수님은 누구세요?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G05"
+        ],
         "flags": []
       }
     },
@@ -290,16 +302,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,18 +323,18 @@
       "ko": "네. 칼라한 수업에서는 적극적으로 참여하세요.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S19",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,21 +346,23 @@
       "ko": "그는 의견이 뚜렷한 사람을 정말 좋아해요. 알겠죠?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -357,24 +371,23 @@
       "ko": "그리고 로얄턴 수업에서는, 어...",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S19",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "1ce158ac596a91a4"
 }

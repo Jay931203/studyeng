@@ -12,21 +12,23 @@
       "ko": "내 이름으로. 감사히 받아들이는 영광입니다. 사랑하는 윈스턴, 축하합니다. 제가 너무",
       "tags": {
         "functions": [
-          "F09"
+          "F29"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -35,22 +37,23 @@
       "ko": "헌법에 어긋나는 말을 하는 걸까요? 제가 얼마나 행복한지요? 주간 대화가 그리웠습니다.",
       "tags": {
         "functions": [
-          "F09",
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -59,21 +62,23 @@
       "ko": "당신의 전임자는 훌륭한 의원입니다. 좋은 사람입니다. 하지만, 음, 동료로서, 친구로서.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -82,11 +87,11 @@
       "ko": "빈 택시가 하원 앞에 멈추고 아틀리 씨가 내렸습니다.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -96,7 +101,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -105,23 +112,25 @@
       "ko": "그렇습니다. 이제 저를 축하해 주셔도 됩니다. 무엇을요? 제 빠른 회복을요. 아, 네. 사람들이 예상했던 것보다 훨씬 빨리 회복한 것 같습니다.",
       "tags": {
         "functions": [
-          "F09",
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "b52e6de5f74695bb"
 }

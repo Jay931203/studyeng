@@ -14,16 +14,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -37,8 +37,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,10 +58,11 @@
       "ko": "멜리사 맥카시, 용서받을 수 있을까?",
       "tags": {
         "functions": [
-          "F01"
+          "F28",
+          "F34"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,9 +70,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02",
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -83,8 +87,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,10 +96,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -106,8 +112,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,10 +121,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -129,8 +137,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,7 +146,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,7 +160,7 @@
         "functions": [
           "F27"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -161,11 +169,16 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "9c7c46e0300156b5"
 }

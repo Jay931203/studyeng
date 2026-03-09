@@ -12,9 +12,9 @@
       "ko": "그는 나오미 피어스에게 전화를 받았다. 아빠. 로만.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -35,13 +35,13 @@
       "ko": "누가 너를 괴롭혔어?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -58,13 +58,13 @@
       "ko": "아빠, 나는 당신을 배신하지 않았어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E07"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -81,16 +81,17 @@
       "ko": "그럼 오늘 전화는 뭐야? 왜 그녀와 이야기하고 있어? 제발.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -104,13 +105,13 @@
       "ko": "나는 거래를 망치려던 게 아니야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -118,9 +119,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -131,7 +130,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -152,13 +151,13 @@
       "ko": "좋은 서프라이즈가 될 거라고 생각했어. 로만.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
@@ -175,13 +174,13 @@
       "ko": "너는 바보야. 바닥에 지루하게 누워있어?",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -198,13 +197,13 @@
       "ko": "뭐라고? 꺼져.",
       "tags": {
         "functions": [
-          "F17"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -212,9 +211,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -223,10 +220,10 @@
       "ko": "나는 바보가 아니야, 아빠.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -248,7 +245,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -269,23 +266,22 @@
       "ko": "우유 1갤런 가격이 얼마냐고? 모르겠어. 누가 아냐, 아빠? 진짜로, 아무도 몰라.",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F40"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -294,10 +290,10 @@
       "ko": "레이! 응?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -308,7 +304,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -319,7 +317,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -334,5 +332,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "f10ed6e4180ac324"
 }

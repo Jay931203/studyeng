@@ -14,7 +14,7 @@
         "functions": [
           "F25"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -37,11 +37,11 @@
       "ko": "프롬 씨, 만나서 반갑습니다.",
       "tags": {
         "functions": [
-          "F25"
+          "F32"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -50,7 +50,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -60,9 +62,9 @@
       "ko": "멋진 셔츠네요.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -74,7 +76,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -85,9 +89,9 @@
         "functions": [
           "F27"
         ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -95,9 +99,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -106,23 +114,24 @@
       "ko": "오늘 셔츠를 입으려고 했어요.",
       "tags": {
         "functions": [
-          "F06"
+          "F21",
+          "F52"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [
-          "G01"
-        ],
-        "flags": []
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -131,10 +140,10 @@
       "ko": "오늘 입으려고요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -154,10 +163,10 @@
       "ko": "네, 마지막 날이니까요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -177,9 +186,10 @@
       "ko": "감사합니다.",
       "tags": {
         "functions": [
-          "F27"
+          "F27",
+          "F52"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -189,9 +199,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -202,7 +216,7 @@
         "functions": [
           "F27"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -212,7 +226,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -223,10 +239,35 @@
       "ko": "하지만...",
       "tags": {
         "functions": [
-          "F50"
+          "F52"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "S_6vjb1cJkE-10",
+      "en": "You can...",
+      "ko": "셔츠를 입을 수 있어요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -243,37 +284,14 @@
       }
     },
     {
-      "id": "S_6vjb1cJkE-10",
-      "en": "You can...",
-      "ko": "셔츠를 입을 수 있어요.",
-      "tags": {
-        "functions": [
-          "F46"
-        ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "S_6vjb1cJkE-11",
       "en": "wear one tomorrow, though, okay?",
       "ko": "내일 입을 수 있어요, 알겠죠?",
       "tags": {
         "functions": [
-          "F46"
+          "F21"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -294,9 +312,9 @@
       "ko": "내일은",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -307,7 +325,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -319,8 +339,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -331,7 +351,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -340,11 +362,11 @@
       "ko": "중개인으로 여기서 일하고 싶으신가요?",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -363,9 +385,9 @@
       "ko": "크리스, 그렇게 하고 싶나요?",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -376,7 +398,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -386,9 +410,34 @@
       "ko": "네, 선생님.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R2",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "S_6vjb1cJkE-17",
+      "en": "Good.",
+      "ko": "좋습니다.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -400,30 +449,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "S_6vjb1cJkE-17",
-      "en": "Good.",
-      "ko": "좋습니다.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S14",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -432,20 +460,22 @@
       "ko": "우리는 더할 나위 없이 기쁩니다.",
       "tags": {
         "functions": [
-          "F15"
+          "F36"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -455,10 +485,10 @@
       "ko": "그래서...",
       "tags": {
         "functions": [
-          "F52"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -469,7 +499,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -478,10 +510,10 @@
       "ko": "환영합니다.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -492,7 +524,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -503,8 +537,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -524,11 +558,11 @@
       "ko": "아니요, 선생님.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -538,7 +572,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -547,11 +583,11 @@
       "ko": "아니요, 선생님, 그렇지 않았어요.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -564,5 +600,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "8dedcee45ae2e933"
 }

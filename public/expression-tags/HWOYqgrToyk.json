@@ -14,8 +14,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S24",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,19 +35,18 @@
       "ko": "응, 여기 신클레어야. 듣고 있어. 계속해. 신클레어, 혼란스러워.",
       "tags": {
         "functions": [
-          "F09",
-          "F06"
+          "F01"
         ],
-        "situation": "S24",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -59,11 +58,10 @@
       "ko": "네 여동생이 티나가 못됐다고 했던 것 같은데. 아, 아니야, 그녀는 못된 게 아니야. 악당이야.",
       "tags": {
         "functions": [
-          "F12",
-          "F09"
+          "F01"
         ],
         "situation": "S10",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,20 +81,23 @@
       "ko": "강아지를 위해 코트를 만들 정도의 악당. 믿어줘.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V06",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -106,10 +107,10 @@
       "ko": "약효가 나타나기까지 얼마나 걸려? 그들이 얼마나 많은 파이를 먹느냐에 달려 있어. 그리고 얼마나 빨리 먹느냐에 따라.",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S05",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -117,7 +118,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,10 +130,10 @@
       "ko": "점심으로 뭘 먹었는지, 언제 점심을 먹었는지.",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S05",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -140,7 +141,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,10 +153,10 @@
       "ko": "카페인 섭취량, 알코올 섭취량. 변수가 많아.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S32",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -163,7 +164,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,18 +176,18 @@
       "ko": "뭐가 잘못될 수 있겠어, 그렇지? 모든 걸 제외하면.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S43",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -200,16 +201,16 @@
         "functions": [
           "F15"
         ],
-        "situation": "S10",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E01"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V07",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,18 +222,18 @@
       "ko": "우리는 정말 너를 그리워했어, 에리카, 그치, 사랑아?",
       "tags": {
         "functions": [
-          "F31"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,9 +245,9 @@
       "ko": "이 파이를 그리워했어, 확실히.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -255,7 +256,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,9 +268,9 @@
       "ko": "에리카, 이번에 뭔가 다르게 만들었네. 뭐라고?",
       "tags": {
         "functions": [
-          "F50"
+          "F28"
         ],
-        "situation": "S10",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -278,9 +279,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -290,10 +293,10 @@
       "ko": "네 파이에 오늘 밤 특별한 게 좀 들어갔어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -301,7 +304,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,10 +316,10 @@
       "ko": "약간의... 육두구 향이.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -324,10 +327,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -336,10 +341,10 @@
       "ko": "육두구, 물론이지.",
       "tags": {
         "functions": [
-          "F09"
+          "F44"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -347,10 +352,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -359,10 +366,10 @@
       "ko": "훌륭해, 훌륭해, 훌륭해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -370,10 +377,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -382,20 +391,25 @@
       "ko": "티나, 좀 먹어볼래? 아, 그랬으면 좋겠어.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G11",
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -405,22 +419,25 @@
       "ko": "정말 맛있어 보이는데, 그냥... 조심해야 해.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d9b1cdf8410877e4"
 }

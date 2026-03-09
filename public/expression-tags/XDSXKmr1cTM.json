@@ -14,18 +14,20 @@
         "functions": [
           "F28"
         ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S37",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -35,20 +37,22 @@
       "ko": "해외 생활을 즐기시길 바랍니다.",
       "tags": {
         "functions": [
-          "F24"
+          "F19"
         ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S37",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E06"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -60,7 +64,7 @@
         "functions": [
           "F27"
         ],
-        "situation": "S14",
+        "situation": "S37",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -69,10 +73,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,9 +89,9 @@
       "ko": "저도 그럴 것 같아요.",
       "tags": {
         "functions": [
-          "F10"
+          "F44"
         ],
-        "situation": "S14",
+        "situation": "S37",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -92,9 +100,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16"
+        ],
         "flags": []
       }
     },
@@ -104,18 +114,18 @@
       "ko": "여기 귀하의 수표입니다, 선생님.",
       "tags": {
         "functions": [
-          "F62"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S37",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,18 +137,18 @@
       "ko": "다른 필요하신 것은 없으신가요?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S37",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,20 +160,22 @@
       "ko": "이걸 발신 우편에 추가해 주실 수 있나요?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S37",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -173,10 +185,10 @@
       "ko": "기꺼이 하겠습니다. 좋은 하루 되세요, 선생님. 안녕히 가세요.",
       "tags": {
         "functions": [
-          "F44"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,7 +196,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +208,18 @@
       "ko": "스티븐스 씨는 포틀랜드 지역의 거의 12개 은행을 방문했습니다.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S37",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,18 +231,18 @@
       "ko": "그날 아침.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S03",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,20 +254,22 @@
       "ko": "총합으로 그는 370,000달러 이상의 노튼 교도소장의 돈을 가지고 떠났습니다.",
       "tags": {
         "functions": [
-          "F05"
+          "F13"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S37",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -265,18 +279,18 @@
       "ko": "노튼 교도소장의 돈입니다.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S04",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,18 +302,18 @@
       "ko": "19년간의 퇴직금입니다.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S04",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,9 +325,9 @@
       "ko": "좋은 아침, 포틀랜드 데일리 뷰글입니다.",
       "tags": {
         "functions": [
-          "F03"
+          "F25"
         ],
-        "situation": "S14",
+        "situation": "S03",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -322,11 +336,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "933ac3823eaf075a"
 }

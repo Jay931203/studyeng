@@ -12,7 +12,7 @@
       "ko": "오해하지 마세요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,57 +37,7 @@
       "ko": "사소한 것들이",
       "tags": {
         "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "p3hQUe0DFrk-2",
-      "en": "Suddenly",
-      "ko": "갑자기",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "p3hQUe0DFrk-3",
-      "en": "They mean so much to me",
-      "ko": "나에게는 너무 소중해요.",
-      "tags": {
-        "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -98,7 +48,59 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics",
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "p3hQUe0DFrk-2",
+      "en": "Suddenly",
+      "ko": "갑자기",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics",
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "p3hQUe0DFrk-3",
+      "en": "They mean so much to me",
+      "ko": "나에게는 너무 소중해요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,7 +114,7 @@
       "ko": "아마도 당신에게 말해야 할 것 같아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -121,11 +123,13 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -137,7 +141,7 @@
       "ko": "나에게도 결점이 있다는 걸.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -148,7 +152,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,7 +166,7 @@
       "ko": "보장할 수는 없어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -173,7 +177,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,18 +191,18 @@
       "ko": "오, 자기야, 못 느끼겠어요?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -212,7 +216,7 @@
       "ko": "나도 인간이에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -223,7 +227,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -237,10 +241,10 @@
       "ko": "너무 빠르게 너무 많은 걸 기대하지 마세요.",
       "tags": {
         "functions": [
-          "F09"
+          "F35"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -248,7 +252,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -262,10 +266,10 @@
       "ko": "나도 인간이에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -273,11 +277,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -287,10 +292,10 @@
       "ko": "조심스럽게 행동할게요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -298,7 +303,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -306,5 +311,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "55d4c369600b39f3"
 }

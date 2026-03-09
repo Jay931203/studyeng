@@ -12,9 +12,9 @@
       "ko": "♪",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S34",
+        "situation": "S42",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -23,11 +23,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -37,9 +37,9 @@
       "ko": "♪",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S34",
+        "situation": "S42",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -48,11 +48,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -62,9 +62,9 @@
       "ko": "♪",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S34",
+        "situation": "S42",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -73,11 +73,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -87,9 +87,9 @@
       "ko": "♪",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S34",
+        "situation": "S42",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -98,11 +98,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -112,9 +112,9 @@
       "ko": "♪",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S34",
+        "situation": "S42",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -123,11 +123,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -137,9 +137,9 @@
       "ko": "♪",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S34",
+        "situation": "S42",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -148,11 +148,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -162,9 +162,9 @@
       "ko": "아, 세상에.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S42",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -173,10 +173,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -187,7 +189,7 @@
         "functions": [
           "F27"
         ],
-        "situation": "S34",
+        "situation": "S42",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -196,10 +198,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -210,7 +216,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S42",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -219,10 +225,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -233,7 +241,7 @@
         "functions": [
           "F27"
         ],
-        "situation": "S34",
+        "situation": "S42",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -242,8 +250,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -254,9 +264,9 @@
       "ko": "나는 확실히 아니라고 생각했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S42",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -265,7 +275,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -279,7 +289,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S42",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -288,10 +298,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -302,16 +316,16 @@
         "functions": [
           "F27"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S42",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -323,18 +337,18 @@
       "ko": "동료들로부터 투표를 받다니, 정말 믿을 수 없어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S42",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -346,18 +360,18 @@
       "ko": "이 쇼는 정말 멋져요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S42",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -369,9 +383,9 @@
       "ko": "우리 쇼를 쓰는 데브라 칸 덕분이에요.",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
-        "situation": "S16",
+        "situation": "S42",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -380,7 +394,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -392,13 +406,13 @@
       "ko": "여러분 중 누구라도 이 쇼에 출연할 수 있다면 정말 행운이에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S42",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -415,9 +429,9 @@
       "ko": "그녀의 글은 정말 훌륭해요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S42",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -426,7 +440,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -438,10 +452,10 @@
       "ko": "그리고 루퍼스, 누가...",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S42",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -449,7 +463,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -457,5 +471,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "acb5159073d7566f"
 }

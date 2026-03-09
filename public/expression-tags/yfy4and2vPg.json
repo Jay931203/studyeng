@@ -5,28 +5,23 @@
   "seriesId": "legally-blonde",
   "sentenceCount": 16,
   "taggedCount": 16,
+  "transcriptHash": "3814f68f7c31d243",
   "sentences": [
     {
       "id": "yfy4and2vPg-0",
       "en": "was to discuss our future.",
       "ko": "우리의 미래에 대해 이야기하려고 했어.",
       "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S36",
+        "functions": ["F04"],
+        "situation": "S11",
         "cefr": "B1",
         "register": "R3",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E06"],
+        "expression_types": ["X03"],
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["is_fragment"]
       }
     },
     {
@@ -34,21 +29,15 @@
       "en": "And I am fully amenable to that discussion. Good.",
       "ko": "그 논의에 전적으로 동의해. 좋아.",
       "tags": {
-        "functions": [
-          "F10"
-        ],
-        "situation": "S36",
-        "cefr": "B1",
-        "register": "R3",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "functions": ["F10", "F44"],
+        "situation": "S11",
+        "cefr": "C1",
+        "register": "R2",
+        "emotions": ["E06"],
+        "expression_types": ["X03"],
+        "vibe": "V09",
+        "power": ["P02"],
+        "grammar_intent": ["G20"],
         "flags": []
       }
     },
@@ -57,19 +46,13 @@
       "en": "Well, you know how we've been having all kinds of fun lately? Yeah.",
       "ko": "최근에 우리가 얼마나 재미있게 지냈는지 알지? 응.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S36",
+        "functions": ["F51", "F03"],
+        "situation": "S11",
         "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V02",
+        "register": "R5",
+        "emotions": ["E06"],
+        "expression_types": ["X04", "X06"],
+        "vibe": "V11",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -80,19 +63,13 @@
       "en": "Well, Harvard is going to be different.",
       "ko": "하버드는 다를 거야.",
       "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S36",
-        "cefr": "B1",
-        "register": "R3",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "functions": ["F01", "F14"],
+        "situation": "S11",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -103,19 +80,13 @@
       "en": "Law school is a completely different world. And I need to be serious.",
       "ko": "로스쿨은 완전히 다른 세계야. 나는 진지해져야 해.",
       "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S36",
+        "functions": ["F04", "F63"],
+        "situation": "S11",
         "cefr": "B1",
         "register": "R3",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -126,21 +97,15 @@
       "en": "Of course.",
       "ko": "물론이지.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S36",
-        "cefr": "A2",
+        "functions": ["F10"],
+        "situation": "S11",
+        "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "emotions": ["E07"],
+        "expression_types": ["X04"],
+        "vibe": "V09",
+        "power": ["P03"],
+        "grammar_intent": ["G20"],
         "flags": []
       }
     },
@@ -149,19 +114,13 @@
       "en": "I mean, my family expects a lot from me. Right.",
       "ko": "내 가족이 나에게 많은 기대를 하고 있어. 맞아.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S36",
+        "functions": ["F04", "F50"],
+        "situation": "S11",
         "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E09"],
+        "expression_types": ["X06", "X08"],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -172,19 +131,13 @@
       "en": "I expect a lot from me.",
       "ko": "나도 나에게 많은 기대를 하고 있어.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S36",
-        "cefr": "B1",
+        "functions": ["F01"],
+        "situation": "S11",
+        "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -195,20 +148,13 @@
       "en": "I plan on running for office someday. And I fully support that warning. You know that, right? Absolutely.",
       "ko": "언젠가 공직에 출마할 계획이야. 그 경고에 전적으로 동의해. 알지?",
       "tags": {
-        "functions": [
-          "F09",
-          "F10"
-        ],
-        "situation": "S36",
+        "functions": ["F62", "F10"],
+        "situation": "S11",
         "cefr": "B2",
         "register": "R3",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E06", "E07"],
+        "expression_types": ["X03", "X08"],
+        "vibe": "V11",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,22 +165,16 @@
       "en": "But the thing is, if I'm going to be a senator by the time",
       "ko": "하지만 문제는, 내가 30살 때 상원이 되려면",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S36",
+        "functions": ["F04"],
+        "situation": "S11",
         "cefr": "B2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E09"],
+        "expression_types": ["X04", "X08"],
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": ["G12"],
+        "flags": ["is_fragment"]
       }
     },
     {
@@ -242,22 +182,16 @@
       "en": "I'm 30, I need to stop dicking around.",
       "ko": "30살이 되면 더 이상 장난치지 말아야 해.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S36",
+        "functions": ["F63"],
+        "situation": "S11",
         "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
+        "register": "R5",
+        "emotions": ["E09"],
+        "expression_types": ["X01", "X05"],
+        "vibe": "V12",
+        "power": ["P01"],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["contains_profanity"]
       }
     },
     {
@@ -265,21 +199,15 @@
       "en": "Warner, I completely agree.",
       "ko": "워너, 나도 완전히 동의해.",
       "tags": {
-        "functions": [
-          "F10"
-        ],
-        "situation": "S36",
-        "cefr": "B1",
-        "register": "R3",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "functions": ["F10"],
+        "situation": "S11",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": ["E07"],
+        "expression_types": ["X08"],
+        "vibe": "V09",
+        "power": ["P03"],
+        "grammar_intent": ["G20"],
         "flags": []
       }
     },
@@ -288,20 +216,14 @@
       "en": "That's why I think it's time for us, Elle. Pooh Bear.",
       "ko": "그래서 나는 이제 우리에게 시간이 필요하다고 생각해, 엘. 푸우 베어.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
+        "functions": ["F09", "F63"],
+        "situation": "S11",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": ["E02"],
+        "expression_types": ["X04"],
+        "vibe": "V09",
+        "power": ["P10"],
         "grammar_intent": [],
         "flags": []
       }
@@ -311,21 +233,15 @@
       "en": "Yes? I do. I think we should break up.",
       "ko": "응? 나도 그렇게 생각해. 우리는 헤어져야 해.",
       "tags": {
-        "functions": [
-          "F11"
-        ],
-        "situation": "S36",
+        "functions": ["F63"],
+        "situation": "S11",
         "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "emotions": ["E05"],
+        "expression_types": ["X01"],
+        "vibe": "V09",
+        "power": ["P04", "P10"],
+        "grammar_intent": ["G09"],
         "flags": []
       }
     },
@@ -334,19 +250,13 @@
       "en": "What? Well, I've been thinking about it.",
       "ko": "뭐라고? 사실, 나도 그걸 생각해왔어.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S36",
+        "functions": ["F18", "F64"],
+        "situation": "S11",
         "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E05"],
+        "expression_types": ["X08"],
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -357,21 +267,15 @@
       "en": "And I think it's the right thing to do.",
       "ko": "그리고 그게 옳은 선택이라고 생각해.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "functions": ["F09", "F63"],
+        "situation": "S11",
+        "cefr": "B1",
+        "register": "R3",
+        "emotions": ["E09"],
+        "expression_types": ["X04"],
+        "vibe": "V09",
+        "power": ["P03"],
+        "grammar_intent": ["G16"],
         "flags": []
       }
     }

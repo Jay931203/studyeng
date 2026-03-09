@@ -12,13 +12,13 @@
       "ko": "버락 오바마는 대통령 중에서 니켈백 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E10"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -35,13 +35,13 @@
       "ko": "오바마는 우드스톡 데이브에게 피클 없는 와퍼를 협상할 수 없었어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E10"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -60,19 +60,23 @@
         "functions": [
           "F27"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -83,18 +87,22 @@
         "functions": [
           "F14"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E10"
+          "E08"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -104,18 +112,18 @@
       "ko": "내 딸이 오바마와 생일이 같다는 걸 방금 알았어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,13 +135,13 @@
       "ko": "구역질 나.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -141,7 +149,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,21 +160,24 @@
       "ko": "고양이들에서.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -173,21 +186,23 @@
       "ko": "네 아이 넷의 엄마에게.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -196,16 +211,16 @@
       "ko": "버락 오바마는 그의 청바지처럼 춤을 춰.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E10"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -219,16 +234,16 @@
       "ko": "이 청바지 얘기, 너무 오래된 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E10"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -242,21 +257,23 @@
       "ko": "이건 몇 년 전 일이야, 제발.",
       "tags": {
         "functions": [
-          "F09"
+          "F38"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -265,9 +282,9 @@
       "ko": "엄마가 새 컨디셔너를 샀는데, 머리도 제대로 안 감겨. 오바마 탓이야. 버락 오바마.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S10",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -276,7 +293,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,17 +307,19 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -311,22 +330,25 @@
       "ko": "음, 나는 쿠바 시가 금지를 해제했어, 그건 가치가 있어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "03cb7c8037df1c26"
 }

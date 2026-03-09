@@ -12,20 +12,24 @@
       "ko": "바보 같거나, 느리거나, 어쩌면 쓸모없지만, 이를 위해 노력할 단서가 있어, 알아.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
         "situation": "S46",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -37,20 +41,22 @@
       "ko": "어린애 같은 남자야, 왜 항상 나에게 달려오니?",
       "tags": {
         "functions": [
-          "F34"
+          "F55"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G19"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -62,20 +68,22 @@
       "ko": "내 인생 망쳤어, 순진한 여자를 좀 내버려 두지 않을래?",
       "tags": {
         "functions": [
-          "F20"
+          "F17"
         ],
         "situation": "S46",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "is_lyrics",
           "contains_profanity"
@@ -88,20 +96,25 @@
       "ko": "자기 관리라는 걸 들어본 적 없어, 네 뇌의 반은 없잖아.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
         "situation": "S46",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -113,20 +126,22 @@
       "ko": "어린애 같은 남자야, 왜 항상 달려와서 내 사랑을 다 가져가니?",
       "tags": {
         "functions": [
-          "F34"
+          "F55"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G19"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -138,18 +153,18 @@
       "ko": "왜 이렇게 섹시해, 너는 너무 멍청한데, 어떻게 이렇게 활기차?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -157,5 +172,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "1378f5c1b231119c"
 }

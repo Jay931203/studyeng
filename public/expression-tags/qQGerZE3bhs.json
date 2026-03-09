@@ -14,16 +14,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,18 @@
       "ko": "회의가 끝났습니다. 출구로 후퇴하세요. 요원들이 오고 있습니다. 요원들? 가세요.",
       "tags": {
         "functions": [
-          "F62"
+          "F02"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,19 +58,21 @@
       "ko": "안녕하세요, 여러분. 그 사람입니다. 이상 현상. 진행할까요? 네. 그는 아직...",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -83,8 +85,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,7 +94,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -106,9 +108,9 @@
       "ko": "업그레이드.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -117,10 +119,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -129,22 +133,23 @@
       "ko": "그를 놓치지 마세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S43",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "9922c1241d02c7b0"
 }

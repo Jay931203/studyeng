@@ -24,9 +24,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -38,10 +42,10 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
@@ -58,16 +62,16 @@
       "ko": "저도 사실 그렇고, 아기가 우리 아기 같지 않았어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -81,10 +85,11 @@
       "ko": "그 아기는 항상 그녀의 아기였던 것 같아요.",
       "tags": {
         "functions": [
-          "F14"
+          "F09",
+          "F03"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,7 +109,7 @@
       "ko": "아들을 만나고 싶으신가요?",
       "tags": {
         "functions": [
-          "F38"
+          "F06"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -113,7 +118,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -153,7 +158,7 @@
           "F09"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -167,5 +172,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "2496e81a65021b3b"
 }

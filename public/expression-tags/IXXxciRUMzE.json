@@ -12,19 +12,21 @@
       "ko": "오늘 저녁 '스트레스와 섹시함 지원 그룹'에 함께해 주셔서 감사합니다.",
       "tags": {
         "functions": [
-          "F25"
+          "F27"
         ],
-        "situation": "S29",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
-        "power": [],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -35,18 +37,18 @@
       "ko": "그룹에 여러분을 만나서 정말 반갑습니다.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S29",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -60,18 +62,18 @@
       "ko": "오, 새로운 얼굴들을 보니 정말 좋네요.",
       "tags": {
         "functions": [
-          "F25"
+          "F23"
         ],
-        "situation": "S29",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,9 +85,9 @@
       "ko": "지난번 만났을 때, 스트레스를 주는 것과 섹시함을 느끼게 하는 것을 비교하는 시를 준비해 오라고 했어요.",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S29",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -106,9 +108,9 @@
       "ko": "그것을 준비해 오라고 했죠.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S29",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -131,7 +133,32 @@
         "functions": [
           "F34"
         ],
-        "situation": "S29",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G02"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "IXXxciRUMzE-6",
+      "en": "It's that bitch o'clock, yeah, it's thick thirty.",
+      "ko": "지금은 그 년의 시간, 두꺼운 30분이야.",
+      "tags": {
+        "functions": [
+          "F07"
+        ],
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -143,33 +170,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "IXXxciRUMzE-6",
-      "en": "It's that bitch o'clock, yeah, it's thick thirty.",
-      "ko": "지금은 그 년의 시간, 두꺼운 30분이야.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S29",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
         "flags": [
           "contains_profanity"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "3ebfc9c9955aa947"
 }

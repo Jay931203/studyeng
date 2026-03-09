@@ -14,21 +14,19 @@
         "functions": [
           "F06"
         ],
-        "situation": "S31",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,9 +35,9 @@
       "ko": "여자들은 소녀에서 여성으로, 남자들은 남자에서 소년으로 변했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -48,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,18 +58,19 @@
       "ko": "이건 큰 그림에서 문제야, 무슨 말인지 알겠어?",
       "tags": {
         "functions": [
-          "F04"
+          "F50",
+          "F51"
         ],
-        "situation": "S31",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,21 +82,23 @@
       "ko": "응.",
       "tags": {
         "functions": [
-          "F09"
+          "F53"
         ],
-        "situation": "S31",
+        "situation": "S14",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -106,19 +107,21 @@
       "ko": "또 하나 마실 거야.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S14",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -129,19 +132,18 @@
       "ko": "또? 정말 괜찮아? 응.",
       "tags": {
         "functions": [
-          "F06",
-          "F07"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S14",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -153,19 +155,21 @@
       "ko": "이건 내 이론이야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -176,18 +180,18 @@
       "ko": "우리는 모두 '딸을 직장에 데려가자' 행사 때 자랐잖아?",
       "tags": {
         "functions": [
-          "F02"
+          "F06"
         ],
-        "situation": "S31",
-        "cefr": "B2",
+        "situation": "S10",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -199,20 +203,23 @@
       "ko": "그래서 우리는 항상 무엇이든 될 수 있다고 들었어.",
       "tags": {
         "functions": [
-          "F02"
+          "F36"
         ],
-        "situation": "S31",
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -222,20 +229,23 @@
       "ko": "남자들은 아마 뒤처진 건 아니지만, 그렇게 잘 보살핌을 받지 못한 것 같아.",
       "tags": {
         "functions": [
-          "F12"
+          "F09"
         ],
-        "situation": "S31",
+        "situation": "S14",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -245,18 +255,18 @@
       "ko": "우리는 '너 잘해'라는 세대였고, 오프라도 있었잖아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -268,18 +278,18 @@
       "ko": "가끔 남자들이 어떻게 적응하는지 궁금해.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S31",
-        "cefr": "B1",
+        "situation": "S30",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -293,19 +303,21 @@
         "functions": [
           "F02"
         ],
-        "situation": "S31",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -316,16 +328,16 @@
         "functions": [
           "F02"
         ],
-        "situation": "S31",
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -337,18 +349,18 @@
       "ko": "그래도 그들은 훌륭해졌어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -360,18 +372,18 @@
       "ko": "어떻게 한 세대 만에 남자들이 잭 니콜슨과 해리슨 포드 같은 사람들에서...",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -383,18 +395,18 @@
       "ko": "응? 응.",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -408,10 +420,10 @@
       "ko": "데려가! 여기.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -419,10 +431,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -431,18 +445,18 @@
       "ko": "죽고 슬퍼해, 알겠어?",
       "tags": {
         "functions": [
-          "F20"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -454,22 +468,28 @@
       "ko": "보고 배우렴, 남자들, 왜냐하면 내 생각에 우리는 이렇게 할 거니까.",
       "tags": {
         "functions": [
-          "F04"
+          "F09"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04",
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V16",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "1f20abefc0f14fd5"
 }

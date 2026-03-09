@@ -14,19 +14,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -35,21 +37,25 @@
       "ko": "당신은 먼저 시작했지만, 안전한 길은 하나뿐입니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F12"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V16",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -58,21 +64,23 @@
       "ko": "거대한 협곡을 가로지르는 오래된 로프 다리에서,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S47",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -81,21 +89,23 @@
       "ko": "당신은 1분 만에 건널 수 있습니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F12"
         ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -106,19 +116,23 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V16",
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -129,19 +143,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S47",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -152,19 +168,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S47",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -173,21 +191,23 @@
       "ko": "매 걸음마다 로프를 잡고 있습니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
-        "situation": "S50",
+        "situation": "S47",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -196,21 +216,23 @@
       "ko": "교수의 계산에 따르면,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S47",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -219,21 +241,26 @@
       "ko": "좀비가 당신을 따라잡는 데 17분이 조금 넘게 걸립니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "C1",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
-          "X08"
+          "X02",
+          "X03"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -242,21 +269,23 @@
       "ko": "그래서 모두를 건너게 할 시간은 그만큼만 있습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -265,21 +294,23 @@
       "ko": "로프를 자를 시간도 그만큼만 있습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S47",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -288,21 +319,23 @@
       "ko": "불행히도, 다리는 한 번에 두 사람만 지탱할 수 있습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -311,21 +344,25 @@
       "ko": "상황이 더 나쁜 것은, 밖이 너무 어두워 거의 보이지 않습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V06",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -334,21 +371,23 @@
       "ko": "당신이 가져온 오래된 랜턴은 작은 영역만 비춥니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -359,19 +398,23 @@
         "functions": [
           "F06"
         ],
-        "situation": "S48",
+        "situation": "S47",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G02"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -380,24 +423,27 @@
       "ko": "기억하세요, 두 사람 이상이 함께 다리를 건널 수 없습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F13"
         ],
-        "situation": "S48",
+        "situation": "S47",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": [
           "is_narration"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "e8a91244bda36769"
 }

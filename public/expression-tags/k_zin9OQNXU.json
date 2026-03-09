@@ -12,21 +12,23 @@
       "ko": "멋지지?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S08",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -41,12 +43,12 @@
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +60,18 @@
       "ko": "응, 네가 밴드를 시작할 때 쓸 수 있을 것 같아서.",
       "tags": {
         "functions": [
-          "F09"
+          "F20"
         ],
         "situation": "S08",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,19 +83,21 @@
       "ko": "게다가 여유 돈도 좀 있었고.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S04",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V01",
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -104,19 +108,18 @@
       "ko": "어떤 바보가 나한테 정말 좋은 여자애를 데려오라고 돈을 줬어. 맞지? 응, 근데 내가 망쳤어.",
       "tags": {
         "functions": [
-          "F05",
-          "F09"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -130,18 +133,18 @@
       "ko": "나, 음... 그녀에게 반했어. 정말?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -153,10 +156,10 @@
       "ko": "누군가를 구하기 위해 누군가에게 보여줄 여자애를 찾는 건 매일 있는 일이 아니야. 난 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -164,8 +167,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V01",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -176,23 +181,21 @@
       "ko": "네가 망칠 때마다 나에게 기타를 사줄 수는 없어, 알지?",
       "tags": {
         "functions": [
-          "F09"
+          "F12"
         ],
-        "situation": "S08",
+        "situation": "S04",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -201,18 +204,18 @@
       "ko": "응, 알아.",
       "tags": {
         "functions": [
-          "F07"
+          "F53"
         ],
         "situation": "S08",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "A1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -224,22 +227,29 @@
       "ko": "하지만 항상 드럼과 베이스가 있고 언젠가는 탬버린도 있을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
         "situation": "S08",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V01",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17",
+          "G19"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "ffa9e4737875d6f1"
 }

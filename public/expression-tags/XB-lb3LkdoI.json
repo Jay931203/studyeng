@@ -35,13 +35,13 @@
       "ko": "나는 정말 인기 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -58,18 +58,18 @@
       "ko": "이 학교에서 모두 나를 너무 좋아해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -94,8 +94,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G25"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -117,8 +121,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G25"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -127,7 +135,7 @@
       "ko": "우와.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -146,5 +154,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "e99358bb3526d94c"
 }

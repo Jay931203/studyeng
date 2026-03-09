@@ -12,18 +12,18 @@
       "ko": "아니, 아니, 아니, 아니. 그렉이 원하는 것은 그렉이 가져야 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S38",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -37,17 +37,19 @@
         "functions": [
           "F27"
         ],
-        "situation": "S10",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V02",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -60,16 +62,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,19 +83,21 @@
       "ko": "맞아. 순전히 사교적인 거야, 알지?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -104,20 +108,22 @@
       "ko": "문제는 네가 그와 너무 가까워지면 웨이스타의 입장이 복잡해질 수 있다는 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S15",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -127,18 +133,18 @@
       "ko": "응? 그걸 볼 수 있구나.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,20 +156,22 @@
       "ko": "강하네. 와. 멋지고 강해. 남자답게 강하네.",
       "tags": {
         "functions": [
-          "F12"
+          "F18"
         ],
-        "situation": "S10",
+        "situation": "S38",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -173,18 +181,18 @@
       "ko": "FBI가 우리 사무실을 조사하고 있다는 거 알고 있지?",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,20 +204,23 @@
       "ko": "그렉, 너는 아마 이런 걸 처음 해보는 거고, 우리 모두 매우 걱정하고 있어.",
       "tags": {
         "functions": [
-          "F19"
+          "F43"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -219,20 +230,22 @@
       "ko": "네가 다치는 걸 보고 싶지 않아.",
       "tags": {
         "functions": [
-          "F31"
+          "F32"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S28",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -242,18 +255,18 @@
       "ko": "우리 변호사들이 모두 함께 일해야 해, 하나의 큰 행복한 가족처럼, 공동 방어 협약, 큰 강한 우산처럼.",
       "tags": {
         "functions": [
-          "F34"
+          "F02"
         ],
         "situation": "S10",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,22 +278,23 @@
       "ko": "너를 비로부터 지켜줘.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S38",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "03bbe1400b836a78"
 }

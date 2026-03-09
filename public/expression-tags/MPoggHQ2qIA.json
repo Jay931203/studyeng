@@ -12,21 +12,23 @@
       "ko": "내가 정말 원했던 남자였는데, 우리와 함께하지 않았어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -35,10 +37,10 @@
       "ko": "그는 이미 퀘일루드를 팔아서 많은 돈을 벌고 있었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -49,7 +51,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -58,11 +62,11 @@
       "ko": "그는 베이사이드의 퀘일루드 왕이 되었지. 그거랑 같이 여자도 있냐? 그래, 물론이지.",
       "tags": {
         "functions": [
-          "F09"
+          "F44"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -70,7 +74,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -81,10 +87,10 @@
       "ko": "가끔 그 여자들 좀 데려와봐.",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,10 +110,10 @@
       "ko": "그들이 구경하게 해줘, 알겠지?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,11 +133,11 @@
       "ko": "이봐, 집, 네 여동생이 나를 궁금해한다고 전해줘. 다음에 올 때 그녀의 팬티 한 쌍 가져다줄래?",
       "tags": {
         "functions": [
-          "F34"
+          "F36"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -140,7 +146,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -150,23 +158,21 @@
       "ko": "다음에 올 때?",
       "tags": {
         "functions": [
-          "F34"
+          "F21"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -175,19 +181,21 @@
       "ko": "그래, 그녀가 더 이상 너와 이야기하고 싶지 않다고 했어. 꺼져.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "contains_profanity"
@@ -203,7 +211,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -223,10 +231,10 @@
       "ko": "너가 전화하는 모든 사람들은",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -246,21 +254,25 @@
       "ko": "부자가 되고 싶어하고, 빨리 부자가 되고 싶어해. 아무것도 없이 뭘 원하지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -272,16 +284,18 @@
           "F03"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -292,10 +306,10 @@
       "ko": "수염은 있는데 콧수염은 없는 그런 남자들 알지?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -315,10 +329,10 @@
       "ko": "콧수염 없이 수염만 있는 그런 남자들 말이야?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -338,10 +352,11 @@
       "ko": "그는 가구만 만들고 싶다고 하더라고. 이해가 안 가. 그게 무슨 상관이야?",
       "tags": {
         "functions": [
-          "F04"
+          "F06",
+          "F52"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -361,20 +376,22 @@
       "ko": "너 뭐라고 하는 거야? 내가 네 말을 왜곡하고 있는 건 아니고,",
       "tags": {
         "functions": [
-          "F59"
+          "F17"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -386,7 +403,7 @@
       "ko": "너 방금 모든 사람이 부자가 되고 싶다고 했잖아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -409,18 +426,18 @@
       "ko": "세상에, 너 정말 그렇게 말했어.",
       "tags": {
         "functions": [
-          "F18"
+          "F55"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -428,5 +445,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "56afc6d6ed7cba25"
 }

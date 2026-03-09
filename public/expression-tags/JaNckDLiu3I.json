@@ -12,9 +12,9 @@
       "ko": "당신이 리노베이션을 한다니 놀랍네요. 정말 멋진 사무실이에요.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -23,9 +23,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -35,10 +37,10 @@
       "ko": "좋은 사무실이지만, 때때로 완벽한 것들도 나만의 스타일로 바꿔야 해요.",
       "tags": {
         "functions": [
-          "F09"
+          "F45"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,19 +62,23 @@
         "functions": [
           "F34"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G02"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,9 +87,9 @@
       "ko": "그녀에게 다시 전화할게요. 그녀가 백악관 전화선에 있나요? 좋네요.",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -104,9 +110,9 @@
       "ko": "그들에게 오전 4시에 차를 마실 수 있다고 전해줘요.",
       "tags": {
         "functions": [
-          "F34"
+          "F35"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -117,7 +123,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -127,9 +135,9 @@
       "ko": "5인치지만 두꺼워요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -152,7 +160,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -173,10 +181,10 @@
       "ko": "요리는 별로 안 해요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,9 +204,9 @@
       "ko": "물론이죠. 알겠어요.",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -208,7 +216,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -219,20 +229,23 @@
       "ko": "뉴욕, 제3물결 페미니스트, 대학 교육을 받은 싱글, 행복한 척하는, 일정이 빡빡하고 성생활은 부족해요.",
       "tags": {
         "functions": [
-          "F12"
+          "F23"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E01",
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G14"
+        ],
         "flags": []
       }
     },
@@ -242,21 +255,23 @@
       "ko": "건강한 몸매 이미지라고 적힌 잡지는 다 사고, 2년마다 뜨개질을 시작해요...",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,9 +280,9 @@
       "ko": "일주일 동안.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -279,7 +294,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -288,13 +305,13 @@
       "ko": "완벽하게 맞아요!",
       "tags": {
         "functions": [
-          "F12"
+          "F15"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -313,7 +330,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -334,10 +351,10 @@
       "ko": "그건 원하지 않아요.",
       "tags": {
         "functions": [
-          "F43"
+          "F39"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -357,9 +374,9 @@
       "ko": "그 뜨개질은 정말 신기하네요. 어떻게 그렇게 하나요?",
       "tags": {
         "functions": [
-          "F02"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -382,8 +399,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -391,11 +408,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "868fa7d043b06a7d"
 }

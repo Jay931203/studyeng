@@ -12,21 +12,25 @@
       "ko": "이건 병이에요. 독처럼 보이네요.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -37,7 +41,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -46,10 +50,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -58,9 +64,9 @@
       "ko": "그런데 이건 뭔가 이상해요.",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -69,7 +75,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,9 +87,9 @@
       "ko": "알겠어요. 알겠어요. 알겠어요. 시작해볼까요...",
       "tags": {
         "functions": [
-          "F50"
+          "F36"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -92,9 +98,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -104,18 +112,18 @@
       "ko": "설명하기 어려운데... 여기 꽤 큰 게 있네요, 그렇죠? 자, 좋아요. 기다릴게요.",
       "tags": {
         "functions": [
-          "F04"
+          "F49"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,18 +135,18 @@
       "ko": "뭔가 심각한 상황이에요. 왜 그렇게 많이 먹고 있어요?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,20 +158,22 @@
       "ko": "사람들이 그걸 보러 왔어요. 오, 신이시여. 오, 신이시여. 오, 세상에. 이건 정말 대단해요.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E05"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -173,13 +183,13 @@
       "ko": "이거 진짜 매워요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -188,7 +198,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "contains_profanity"
+          "is_narration"
         ]
       }
     },
@@ -198,10 +208,10 @@
       "ko": "내가 말하는 거예요.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,10 +219,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -221,21 +233,25 @@
       "ko": "오, 친구.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "A1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -246,7 +262,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -255,7 +271,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,13 +283,13 @@
       "ko": "이건 미친 거예요. 진짜 미친 거예요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -290,10 +306,10 @@
       "ko": "뭐라고? 그만해.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -301,10 +317,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -313,20 +331,22 @@
       "ko": "잠깐만, 도덕적 불편함을 느끼고 있어요. 우우.",
       "tags": {
         "functions": [
-          "F19"
+          "F49"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -336,9 +356,9 @@
       "ko": "그거에 우유 한 모금 더 마셔봐요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -347,7 +367,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -359,9 +379,9 @@
       "ko": "마치 와인을 입안에서 돌리는 것 같아요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S32",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -382,13 +402,13 @@
       "ko": "네, 네, 네. 난 랜치를 좋아해요. 지금 필요해요. 왜 없는지 모르겠어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -407,7 +427,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
+        "situation": "S32",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -418,7 +438,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -428,16 +450,16 @@
       "ko": "자, 랜치를 먹어보네요. 처음이에요.",
       "tags": {
         "functions": [
-          "F01"
+          "F03"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V10",
         "power": [],
@@ -451,13 +473,13 @@
       "ko": "음, 그건 나쁜 생각이에요. 이게 끝인가요?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -468,5 +490,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "c391d9d2aa7a377c"
 }

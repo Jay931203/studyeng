@@ -12,18 +12,20 @@
       "ko": "그래, 내가 예스라고 하면 나는 바보지, 맞지?",
       "tags": {
         "functions": [
-          "F09"
+          "F06",
+          "F52",
+          "F58"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +37,19 @@
       "ko": "어차피 너는 바보야.",
       "tags": {
         "functions": [
+          "F48",
           "F58"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +61,18 @@
       "ko": "하지만 네가 부모님과 잘 지낸다고 하면, 너도 거짓말쟁이지.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,8 +86,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,33 +107,10 @@
       "ko": "지금 학교에 안 있다면, 너를 망가뜨릴 거야.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "Tm0oAv2moOw-5",
-      "en": "Can you hear this?",
-      "ko": "이 소리 들리니?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -145,15 +125,40 @@
       }
     },
     {
+      "id": "Tm0oAv2moOw-5",
+      "en": "Can you hear this?",
+      "ko": "이 소리 들리니?",
+      "tags": {
+        "functions": [
+          "F34"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G02"
+        ],
+        "flags": []
+      }
+    },
+    {
       "id": "Tm0oAv2moOw-6",
       "en": "You want me to turn it up?",
       "ko": "소리 키워줄까?",
       "tags": {
         "functions": [
-          "F34"
+          "F39"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -175,8 +180,8 @@
         "functions": [
           "F50"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -186,8 +191,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -196,13 +205,13 @@
       "ko": "나도 부모님이 싫어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -221,8 +230,8 @@
         "functions": [
           "F50"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -232,7 +241,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": [
           "is_fragment"
         ]
@@ -244,16 +255,16 @@
       "ko": "그들과 잘 지내지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -267,10 +278,10 @@
       "ko": "그들의 부모의 연민이라는 건, 그냥, 너 알잖아...",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -292,32 +303,9 @@
       "ko": "미친 거야, 알겠어?",
       "tags": {
         "functions": [
-          "F18"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E05"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "Tm0oAv2moOw-13",
-      "en": "Do it.",
-      "ko": "해봐.",
-      "tags": {
-        "functions": [
-          "F35"
-        ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -333,15 +321,40 @@
       }
     },
     {
+      "id": "Tm0oAv2moOw-13",
+      "en": "Do it.",
+      "ko": "해봐.",
+      "tags": {
+        "functions": [
+          "F35"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
       "id": "Tm0oAv2moOw-14",
       "en": "You are a parent's wet dream, okay?",
       "ko": "너는 부모의 꿈의 이상형이야, 알겠어?",
       "tags": {
         "functions": [
-          "F30"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -361,10 +374,10 @@
       "ko": "그게 문제야.",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -384,20 +397,22 @@
       "ko": "봐, 너가 이런 옷을 입게 해서 속상해하는 건 이해해.",
       "tags": {
         "functions": [
-          "F02"
+          "F32"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -407,10 +422,10 @@
       "ko": "하지만 사실 너는 네오-맥시-줌-드위비야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -424,5 +439,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "6630ea90c0b14bb5"
 }

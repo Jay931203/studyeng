@@ -12,10 +12,10 @@
       "ko": "나는 원하는 것을 얻기 위해 램프를 문지르지 않아도 돼.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -25,7 +25,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -35,10 +37,10 @@
       "ko": "나는 탑에서 나와 스포트라이트 속으로 들어왔어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,35 +60,10 @@
       "ko": "그리고 나는 정말 엉망이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
-      "id": "b-2fnZfK9Lg-3",
-      "en": "It's the princesses as you've never seen them before.",
-      "ko": "공주들이 지금까지 본 적 없는 모습이야.",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -101,24 +78,51 @@
       }
     },
     {
-      "id": "b-2fnZfK9Lg-4",
-      "en": "Thank you all for coming to my castle warming party.",
-      "ko": "내 성의 집들이 파티에 와줘서 고마워.",
+      "id": "b-2fnZfK9Lg-3",
+      "en": "It's the princesses as you've never seen them before.",
+      "ko": "공주들이 지금까지 본 적 없는 모습이야.",
       "tags": {
         "functions": [
-          "F25"
+          "F43"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
         "power": [],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "b-2fnZfK9Lg-4",
+      "en": "Thank you all for coming to my castle warming party.",
+      "ko": "내 성의 집들이 파티에 와줘서 고마워.",
+      "tags": {
+        "functions": [
+          "F27"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -129,7 +133,7 @@
       "ko": "너희는 나에게 악당이 아닌 의붓자매 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "B1",
@@ -140,7 +144,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,10 +156,10 @@
       "ko": "여러분, 난 난쟁이를 돕기 위한 자선단체를 시작할 거야.",
       "tags": {
         "functions": [
-          "F62"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -175,10 +179,10 @@
       "ko": "그들은 우리의 도움이 필요해, 왜냐하면 그들은 진짜 사람이 아니니까.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -188,7 +192,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -198,10 +204,10 @@
       "ko": "그녀가 그렇게 했다는 게 믿기지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -221,10 +227,10 @@
       "ko": "난쟁이는 내 취향이야. 그리고 그들이 사람이라고?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -244,7 +250,7 @@
       "ko": "그녀가 닥 앞에서 그렇게 말했어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "B1",
@@ -267,10 +273,10 @@
       "ko": "바다 속 여행을 위해 내가 가져온 거 봐.",
       "tags": {
         "functions": [
-          "F02"
+          "F35"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -290,7 +296,7 @@
       "ko": "25,000달러, 믿을 수 있어?",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -303,7 +309,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -313,10 +321,10 @@
       "ko": "하지만 괜찮아, 우리 모두 감당할 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -363,7 +371,7 @@
         ],
         "situation": "S34",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -376,5 +384,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "bdc0651e999fd55c"
 }

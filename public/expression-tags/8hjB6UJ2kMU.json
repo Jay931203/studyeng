@@ -12,20 +12,23 @@
       "ko": "팀, 그게 뭐인지 말해줄 수 있어? 그건... 가... 어...",
       "tags": {
         "functions": [
-          "F06"
+          "F34",
+          "F52"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": [
           "is_fragment"
         ]
@@ -37,16 +40,16 @@
       "ko": "어... 갈라... 어... 갈리미무스. 그게...",
       "tags": {
         "functions": [
-          "F06"
+          "F52"
         ],
-        "situation": "S44",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -62,23 +65,22 @@
       "ko": "육식의... 어... 메타사우루스인가?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F52"
         ],
-        "situation": "S44",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -87,9 +89,9 @@
       "ko": "회전하는 걸 봐. 방향이 일관되게 바뀌어.",
       "tags": {
         "functions": [
-          "F02"
+          "F35"
         ],
-        "situation": "S44",
+        "situation": "S43",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -110,21 +112,26 @@
       "ko": "마치 포식자를 피하는 새 떼처럼. 그들은, 어...",
       "tags": {
         "functions": [
-          "F09"
+          "F13",
+          "F52"
         ],
-        "situation": "S44",
+        "situation": "S43",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G10"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -133,9 +140,9 @@
       "ko": "이쪽으로 모여들고 있어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -156,16 +163,16 @@
       "ko": "어...",
       "tags": {
         "functions": [
-          "F06"
+          "F52"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -175,5 +182,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "bc84e5dab2a03162"
 }

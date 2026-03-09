@@ -15,10 +15,10 @@
           "F06"
         ],
         "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
@@ -26,7 +26,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -35,11 +37,11 @@
       "ko": "그들은 우리가 이름을 유지하지 않기를 원해. 마운트배튼.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -49,7 +51,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -61,8 +65,8 @@
           "F06"
         ],
         "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -72,7 +76,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -81,34 +87,11 @@
       "ko": "그들과는 상관없는 일이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "w4sOfI2CTSE-4",
-      "en": "I think you'll find it's very much their business.",
-      "ko": "그들에게는 매우 중요한 일일 거야.",
-      "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -118,7 +101,36 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
+      }
+    },
+    {
+      "id": "w4sOfI2CTSE-4",
+      "en": "I think you'll find it's very much their business.",
+      "ko": "그들에게는 매우 중요한 일일 거야.",
+      "tags": {
+        "functions": [
+          "F09"
+        ],
+        "situation": "S10",
+        "cefr": "A2",
+        "register": "R2",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P02"
+        ],
+        "grammar_intent": [],
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -130,8 +142,8 @@
           "F01"
         ],
         "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -141,7 +153,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -150,11 +164,11 @@
       "ko": "관습이지, 법은 아니야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -164,7 +178,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -173,21 +189,24 @@
       "ko": "그렇게 보편적으로 행해지는 관습은 법과 다름없어. 이건 할 수 없어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -196,11 +215,11 @@
       "ko": "내가 나라에서 유일하게 아내와 자녀가 내 이름을 쓰지 않는 남자가 되어야 해?",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -210,7 +229,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -219,21 +240,27 @@
       "ko": "아내와 자녀가 내 이름을 쓰지 않는 남자가 되어야 해? 이렇게 하면 딕키에게 큰 상처가 될 거야. 너도 알잖아.",
       "tags": {
         "functions": [
-          "F12"
+          "F06",
+          "F40"
         ],
         "situation": "S10",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G01",
+          "G24"
+        ],
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -242,11 +269,36 @@
       "ko": "그에게 얼마나 중요한 일인지 알고 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
+        ],
+        "situation": "S10",
+        "cefr": "A2",
+        "register": "R2",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_period"
+        ]
+      }
+    },
+    {
+      "id": "w4sOfI2CTSE-11",
+      "en": "I've told him the Royal House Mountbatten is in the bag. That was a mistake. It's not.",
+      "ko": "나는 그에게 로열 하우스 마운트배튼이 확정됐다고 말했어. 그건 실수였어. 사실이 아니야.",
+      "tags": {
+        "functions": [
+          "F01"
         ],
         "situation": "S10",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -256,30 +308,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "w4sOfI2CTSE-11",
-      "en": "I've told him the Royal House Mountbatten is in the bag. That was a mistake. It's not.",
-      "ko": "나는 그에게 로열 하우스 마운트배튼이 확정됐다고 말했어. 그건 실수였어. 사실이 아니야.",
-      "tags": {
-        "functions": [
-          "F05"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -291,8 +322,8 @@
           "F01"
         ],
         "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -301,8 +332,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G10"
+        ],
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -311,11 +346,11 @@
       "ko": "클레어런스 하우스. 우리의 집. 그건 어쩌고?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S10",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -325,7 +360,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -334,11 +371,11 @@
       "ko": "우리는 그것을 포기해야 해.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
         "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -348,8 +385,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "c06a8ebb36755c22"
 }

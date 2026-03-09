@@ -12,23 +12,21 @@
       "ko": "아, 그냥, 어, 바로 들어가네?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S16",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,18 +35,18 @@
       "ko": "응, 나도 나이가 좀 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S38",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,23 +58,21 @@
       "ko": "뭘 원해? 좀, 어...",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S16",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -85,18 +81,18 @@
       "ko": "오, 여기 집 정말 멋지네.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -108,18 +104,18 @@
       "ko": "아니, 좋아. 나는 쉽게 지루해져.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -131,18 +127,18 @@
       "ko": "응, 모든 게 지루하지, 그렇지?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S16",
+        "situation": "S38",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -154,23 +150,21 @@
       "ko": "응, 모든 게 정말 지루해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S38",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -179,21 +173,23 @@
       "ko": "이걸 제외하고.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S38",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -202,18 +198,18 @@
       "ko": "응, 나를 흥미롭게 만들었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S38",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -227,19 +223,21 @@
         "functions": [
           "F06"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S38",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -248,20 +246,22 @@
       "ko": "자, 이걸로 계속 시간을 낭비하고 싶진 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S16",
+        "situation": "S38",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -273,18 +273,18 @@
       "ko": "내 말은, 네 가격을 봤고,",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S16",
+        "situation": "S04",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -296,18 +296,18 @@
       "ko": "네 이사회가 모든 옵션을 보고 있다는 걸 이해해,",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -319,18 +319,18 @@
       "ko": "하지만 우리가 긴밀하게 유지하면, 이건 잘 될 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -342,18 +342,18 @@
       "ko": "그럼, 춤출까, 아니면 앉을래? 응, 좋아.",
       "tags": {
         "functions": [
-          "F34"
+          "F35"
         ],
-        "situation": "S16",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -365,18 +365,18 @@
       "ko": "음, 저커버그가 한 번...",
       "tags": {
         "functions": [
-          "F50"
+          "F52"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -390,19 +390,23 @@
       "ko": "마크 알아? 어-huh.",
       "tags": {
         "functions": [
-          "F06"
+          "F48"
         ],
-        "situation": "S16",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X02",
+          "X03",
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -413,21 +417,23 @@
       "ko": "그는 한 번 나에게 고대 로마에서,",
       "tags": {
         "functions": [
-          "F03"
+          "F05"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -436,21 +442,23 @@
       "ko": "어느 시점에 모든 노예들이 뭔가를 입게 하려 했다고 말했어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S38",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -459,18 +467,18 @@
       "ko": "그래서 그들을 식별할 수 있도록. 어-huh. 여기 위에. 음, 뭐라고 하지?",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S38",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -484,16 +492,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S16",
+        "situation": "S24",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -505,19 +513,21 @@
       "ko": "망토 같은 거 말이야?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S16",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V13",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -528,18 +538,18 @@
       "ko": "하지만 그들은 그렇게 하지 않기로 결정했어,",
       "tags": {
         "functions": [
-          "F63"
+          "F03"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -553,16 +563,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S16",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -576,20 +586,24 @@
         "functions": [
           "F04"
         ],
-        "situation": "S16",
+        "situation": "S38",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G12",
+          "G18"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a3ab2cbffff75238"
 }

@@ -12,9 +12,9 @@
       "ko": "자, 베스, 얼마 원해?",
       "tags": {
         "functions": [
-          "F34"
+          "F52"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -35,32 +35,9 @@
       "ko": "와!",
       "tags": {
         "functions": [
-          "F09"
+          "F15"
         ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E05"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RcpEeWgIVjw-2",
-      "en": "All right, punk, now I'm gonna...",
-      "ko": "좋아, 너, 이제 내가...",
-      "tags": {
-        "functions": [
-          "F35"
-        ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -72,7 +49,36 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "RcpEeWgIVjw-2",
+      "en": "All right, punk, now I'm gonna...",
+      "ko": "좋아, 너, 이제 내가...",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -83,7 +89,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -104,18 +110,18 @@
       "ko": "그건 칼빈 클라인이야. 오, 세상에, 그는 꿈의 남자야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,10 +133,10 @@
       "ko": "와, 와, 애야, 애야, 멈춰, 멈춰, 멈춰.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -152,7 +158,7 @@
         "functions": [
           "F25"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -164,7 +170,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -173,10 +181,10 @@
       "ko": "다시 돌려줄게, 알겠지?",
       "tags": {
         "functions": [
-          "F41"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,13 +204,13 @@
       "ko": "네가 부셨어!",
       "tags": {
         "functions": [
-          "F56"
+          "F15"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S43",
+        "cefr": "A1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -219,32 +227,9 @@
       "ko": "와!",
       "tags": {
         "functions": [
-          "F09"
+          "F15"
         ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E05"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RcpEeWgIVjw-10",
-      "en": "Wow, look at him go!",
-      "ko": "와, 저 사람 봐!",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -256,6 +241,33 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "RcpEeWgIVjw-10",
+      "en": "Wow, look at him go!",
+      "ko": "와, 저 사람 봐!",
+      "tags": {
+        "functions": [
+          "F18"
+        ],
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E05"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V11",
+        "power": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -265,9 +277,9 @@
       "ko": "가, 가, 가, 가!",
       "tags": {
         "functions": [
-          "F34"
+          "F15"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -282,5 +294,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "53e767a794431f88"
 }

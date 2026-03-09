@@ -12,11 +12,11 @@
       "ko": "동쪽을 보라. 그래.",
       "tags": {
         "functions": [
-          "F01"
+          "F35"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -35,9 +35,9 @@
       "ko": "그래.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -49,7 +49,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -60,9 +62,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -72,7 +74,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -83,9 +87,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -104,11 +108,11 @@
       "ko": "마지막 한 번. 그래!",
       "tags": {
         "functions": [
-          "F01"
+          "F15"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -118,7 +122,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -127,11 +133,11 @@
       "ko": "이 시간이 되게 하라.",
       "tags": {
         "functions": [
-          "F04"
+          "F35"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -150,18 +156,18 @@
       "ko": "우리가 함께 검을 뽑는 때.",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,9 +181,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -198,9 +204,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -219,11 +225,11 @@
       "ko": "복수자들을 강제로!",
       "tags": {
         "functions": [
-          "F35"
+          "F15"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -242,9 +248,9 @@
       "ko": "아니!",
       "tags": {
         "functions": [
-          "F11"
+          "F15"
         ],
-        "situation": "S44",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -256,8 +262,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "562e882d60151963"
 }

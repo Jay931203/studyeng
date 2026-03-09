@@ -12,20 +12,22 @@
       "ko": "조용히 해, 많은 사람들이 파이트 클럽의 첫 두 규칙을 어겼다는 뜻이야.",
       "tags": {
         "functions": [
-          "F35"
+          "F17"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -35,11 +37,11 @@
       "ko": "파이트 클럽에서 나는 지금까지 살아온 가장 강하고 똑똑한 남자들을 봐.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S48",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -58,10 +60,10 @@
       "ko": "나는 이 모든 잠재력을 보고, 낭비되고 있는 걸 봐.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +71,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,10 +83,10 @@
       "ko": "젠장, 한 세대가 주유소에서 일하고, 식당에서 일하며, 화이트칼라의 노예가 되고 있어.",
       "tags": {
         "functions": [
-          "F04"
+          "F17"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -92,9 +94,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -106,10 +110,10 @@
       "ko": "광고는 우리가 자동차와 옷을 쫓게 하고, 우리가 싫어하는 일을 하게 만들어서 필요 없는 물건을 사게 해.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -117,9 +121,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -131,13 +137,13 @@
       "ko": "우리는 역사 속의 중간 아이들, 목적도 장소도 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -154,10 +160,10 @@
       "ko": "우리는 위대한 전쟁도, 대공황도 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -177,10 +183,10 @@
       "ko": "우리의 위대한 전쟁은 영적인 전쟁이야. 우리의 대공황.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -194,5 +200,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "7989d36802eb2e29"
 }

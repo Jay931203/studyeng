@@ -12,20 +12,22 @@
       "ko": "그래, 진짜로 그가 내 역할을 하고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S14",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -39,16 +41,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S14",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -64,7 +66,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -73,10 +75,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -87,7 +91,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -96,7 +100,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -110,32 +114,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
-      "id": "wVOUYGCBb18-5",
-      "en": "I left them in the car. I'll be right back. Take me five minutes.",
-      "ko": "차에 두고 왔어. 금방 올게. 5분이면 돼.",
-      "tags": {
-        "functions": [
-          "F50"
-        ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -144,7 +123,30 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "wVOUYGCBb18-5",
+      "en": "I left them in the car. I'll be right back. Take me five minutes.",
+      "ko": "차에 두고 왔어. 금방 올게. 5분이면 돼.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -158,7 +160,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -167,7 +169,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -179,23 +181,21 @@
       "ko": "네이먼, 너는 그 역할을 잃었어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -204,23 +204,21 @@
       "ko": "아니, 나는 잃지 않았어. 이럴 수는 없어. 못해? 그래.",
       "tags": {
         "functions": [
-          "F12"
+          "F56"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -231,21 +229,19 @@
         "functions": [
           "F12"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -254,20 +250,24 @@
       "ko": "너는 진짜 자아도취한 놈이야. 나는 그 역할을 얻었어. 너는 아무것도 얻지 못했어.",
       "tags": {
         "functions": [
-          "F12"
+          "F43",
+          "F55"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S39",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -279,18 +279,18 @@
       "ko": "세상에, 너는 정말 자기 의식이 강한 놈이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -304,8 +304,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -313,12 +313,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -329,8 +327,8 @@
         "functions": [
           "F04"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -338,9 +336,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -352,8 +352,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -361,7 +361,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -373,20 +373,23 @@
       "ko": "내가 나소에서 뭘 요구할지 정확히 말해줬기 때문이야. 내가 틀렸어?",
       "tags": {
         "functions": [
-          "F06"
+          "F10"
         ],
-        "situation": "S44",
+        "situation": "S14",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18",
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -396,22 +399,25 @@
       "ko": "응, 아니, 나는 스튜디오 밴드에 있는 이유는 내가 최고의 연주자이기 때문이야. 야, 그냥 물러나지 그래, 친구? 그래, 꺼져, 조니 유타.",
       "tags": {
         "functions": [
-          "F09",
-          "F17"
+          "F36"
         ],
-        "situation": "S44",
+        "situation": "S14",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03",
-          "E01"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V03",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G09",
+          "G18"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -423,18 +429,18 @@
       "ko": "내 페이지를 넘겨, 이 자식아.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S14",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -448,23 +454,23 @@
       "ko": "언제든지 너를 잘라버릴 수 있어.",
       "tags": {
         "functions": [
-          "F42"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "grammar_intent": [
+          "G15"
+        ],
+        "flags": []
       }
     },
     {
@@ -473,9 +479,9 @@
       "ko": "지금쯤 너는 나를 잘랐을 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S14",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -484,7 +490,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -496,23 +502,21 @@
       "ko": "나를 시험해봐, 이 쥐새끼야.",
       "tags": {
         "functions": [
-          "F42"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -521,22 +525,25 @@
       "ko": "5시 30분, 정확한 시간이야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S14",
         "cefr": "A2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "79d8199c4b02ae8c"
 }

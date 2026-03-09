@@ -12,18 +12,18 @@
       "ko": "오.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S38",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,18 +37,18 @@
       "ko": "4.6. 좋아, 가자.",
       "tags": {
         "functions": [
-          "F35"
+          "F38"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,18 +60,18 @@
       "ko": "이봐, 내가 뭐라고 했지? 이 사람 요리 잘해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B1",
+        "situation": "S02",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,19 +83,21 @@
       "ko": "너 괜찮아, 괜찮아. 우리 함께 많은 돈 벌 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F12"
         ],
-        "situation": "S40",
+        "situation": "S04",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V02",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -106,18 +108,18 @@
       "ko": "누구를 위해 일하는지 기억해. 뭘 위해 일하는지? 뭐라고 했지?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S40",
+        "situation": "S38",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,19 +131,21 @@
       "ko": "그냥 말하는 거야. 그들이 너를 위해 일하고 있다는 걸 알아야 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S40",
+        "situation": "S38",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -152,18 +156,18 @@
       "ko": "그걸 모른다고? 그들이 바보라고 말하는 거야?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S40",
+        "situation": "S38",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,18 +179,18 @@
       "ko": "아니, 그냥 말하는 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S40",
+        "situation": "S38",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -200,16 +204,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,18 +225,18 @@
       "ko": "아니, 이봐, 투코. 그냥 말하는 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F38"
         ],
-        "situation": "S40",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,21 +248,25 @@
       "ko": "아니, 너는 내 대신 말하고 있어! 마치 내가 스스로 말할 능력이 없는 것처럼!",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S38",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -269,20 +277,21 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "647c624ceb72a3b4"
 }

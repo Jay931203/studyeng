@@ -12,20 +12,22 @@
       "ko": "왜 너를 모르지?",
       "tags": {
         "functions": [
-          "F06"
+          "F36"
         ],
-        "situation": "S09",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -35,18 +37,18 @@
       "ko": "나 새로 이사 왔어. 아프리카에서.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S09",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,16 +62,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +83,18 @@
       "ko": "잠깐, 뭐라고? 우리 엄마가 집에서 가르쳤어.",
       "tags": {
         "functions": [
-          "F01"
+          "F49"
         ],
-        "situation": "S09",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,18 +106,18 @@
       "ko": "아니, 아니, 홈스쿨이 뭔지 알아. 나 바보 아니야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,20 +129,24 @@
       "ko": "그럼 진짜 학교에 가본 적이 없는 거야?",
       "tags": {
         "functions": [
-          "F06"
+          "F43",
+          "F11"
         ],
-        "situation": "S09",
+        "situation": "S19",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -152,19 +158,21 @@
         "functions": [
           "F35"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -175,19 +183,21 @@
         "functions": [
           "F35"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -196,18 +206,18 @@
       "ko": "나는 아무 말도 안 했어.",
       "tags": {
         "functions": [
-          "F01"
+          "F56"
         ],
-        "situation": "S09",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,19 +229,22 @@
       "ko": "홈스쿨링. 정말 흥미롭네. 고마워. 너 정말 예쁘다.",
       "tags": {
         "functions": [
-          "F09"
+          "F27"
         ],
-        "situation": "S09",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01",
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -242,19 +255,21 @@
       "ko": "고마워. 너도 동의해. 뭐? 너도 정말 예쁘다고 생각해?",
       "tags": {
         "functions": [
-          "F10"
+          "F27"
         ],
-        "situation": "S09",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -265,20 +280,22 @@
       "ko": "아, 잘 모르겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -288,20 +305,23 @@
       "ko": "오 마이 갓, 너의 팔찌 너무 예쁘다. 어디서 샀어?",
       "tags": {
         "functions": [
-          "F09"
+          "F18",
+          "F51"
         ],
-        "situation": "S09",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -311,19 +331,21 @@
       "ko": "오, 엄마가 만들어줬어. 정말 귀여워.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V02",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -334,19 +356,21 @@
       "ko": "정말 멋져. 'fetch'가 뭐야?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S09",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -357,19 +381,21 @@
       "ko": "아, 그건 속어야. 영국에서 온 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X05"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -382,16 +408,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -403,20 +429,22 @@
       "ko": "오 마이 갓, 카렌, 사람들에게 왜 백인인지 물어보면 안 돼.",
       "tags": {
         "functions": [
-          "F40"
+          "F18"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -426,20 +454,22 @@
       "ko": "우리에게 사생활을 좀 줄 수 있어? 한 순간만?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -449,21 +479,24 @@
       "ko": "응, 물론이지.",
       "tags": {
         "functions": [
-          "F44"
+          "F44",
+          "F53"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -472,22 +505,25 @@
       "ko": "좋아, 우리는 이런 걸 자주 하지 않으니까, 이건 정말 큰 일이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F36"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "3ef85cf4369ae11a"
 }

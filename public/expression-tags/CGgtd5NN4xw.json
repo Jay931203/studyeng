@@ -14,7 +14,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,10 +35,10 @@
       "ko": "아직 하고 싶은 일이 몇 가지 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,8 +60,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,21 +81,23 @@
       "ko": "나를 비웃지 마.",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,10 +106,10 @@
       "ko": "그냥 이건...",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,21 +129,28 @@
       "ko": "절대 일어나지 않을 일이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F43"
         ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S20",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "vibe": "V01",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -150,18 +159,18 @@
       "ko": "알겠어...",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,18 +182,18 @@
       "ko": "네 셔츠는 바보 같아.",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,21 +205,23 @@
       "ko": "좀 더 성장해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -219,9 +230,9 @@
       "ko": "네가 커트 코베인이 되기를 기다려야 한다면,",
       "tags": {
         "functions": [
-          "F06"
+          "F49"
         ],
-        "situation": "S08",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -230,7 +241,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,20 +253,25 @@
       "ko": "나는 절대 엄마가 될 수 없어.",
       "tags": {
         "functions": [
-          "F20"
+          "F43"
         ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V01",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -265,10 +281,11 @@
       "ko": "내가 좋은 아빠가 될 거라고 말한 적 없어.",
       "tags": {
         "functions": [
-          "F12"
+          "F43",
+          "F56"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -276,9 +293,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -288,10 +308,11 @@
       "ko": "그런 말 한 적 없어.",
       "tags": {
         "functions": [
-          "F12"
+          "F43",
+          "F56"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -299,11 +320,15 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a5b6be6c23b63441"
 }

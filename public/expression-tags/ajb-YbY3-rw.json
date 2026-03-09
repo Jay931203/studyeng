@@ -15,15 +15,15 @@
           "F01"
         ],
         "situation": "S05",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,10 +35,10 @@
       "ko": "이건 포라는 특별한 수프야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S05",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +58,18 @@
       "ko": "그 단어를 말하지 말라고 했잖아. 맛있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S05",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,10 +81,10 @@
       "ko": "이건 너희 나라의 음식이야. 다른 거 필요해?",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S05",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,7 +92,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,23 +104,21 @@
       "ko": "사실, 우리는 우리 딸에게",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S05",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -129,10 +127,10 @@
       "ko": "너희 나라에 대해 가르치고 있어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -140,7 +138,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,18 +150,18 @@
       "ko": "내가 그렇게 말하면서, 네가 베트남 출신이길 바라고 있어. 나는 거기서 태어났어. 릴리도 그래.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S05",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E07"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,20 +173,22 @@
       "ko": "아, 정말 아름다운 나라야. 내 가족은 아직도 거기 살아.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S05",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -198,10 +198,10 @@
       "ko": "나는 베트남이 싫어.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -209,7 +209,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,20 +221,22 @@
       "ko": "릴리, 자기야, 우리는 싫어하지 않아.",
       "tags": {
         "functions": [
-          "F31"
+          "F40"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E07"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -244,10 +246,10 @@
       "ko": "나는 베트남이 싫어.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -255,7 +257,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,18 +269,18 @@
       "ko": "음, 잠깐만 필요해. 릴리, 그건 무례했어. 집에 가고 싶어.",
       "tags": {
         "functions": [
-          "F52"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S05",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,18 +292,18 @@
       "ko": "아니, 너는 조상들의 문화를 기념하는 게 중요해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E07"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,18 +315,18 @@
       "ko": "너는 조상들의 문화를 기념해야 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E07"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -336,18 +338,18 @@
       "ko": "아니, 나는 아니야. 나는 게이야. 나는 게이야. 자기야, 아니야, 너는 게이가 아니야. 너는 그냥 혼란스러운 거야.",
       "tags": {
         "functions": [
-          "F56"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -359,19 +361,18 @@
       "ko": "오, 세상에, 나한테 뭐가 잘못된 거지? 마치 내가...",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03",
-          "E02"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -383,18 +384,18 @@
       "ko": "제발, 우리는 레즈비언 친구들이 많아.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S05",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -406,18 +407,18 @@
       "ko": "나는 너희 친구들을 언급할 줄 알았어, 우리를 말고. 나는 정말 게이야. 그냥 가야 해. 아니, 아무도 어디도 못 가.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S05",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -429,20 +430,22 @@
       "ko": "그녀가 수프를 다 먹을 때까지. 아니, 글로리아, 괜찮아. 아니, 아니, 괜찮지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S05",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -452,18 +455,18 @@
       "ko": "이 나라의 문제야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -475,18 +478,18 @@
       "ko": "이 나라의 문제는 그거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -498,10 +501,10 @@
       "ko": "아무도 자신이 어디서 왔는지 신경 쓰지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -509,7 +512,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -521,10 +524,10 @@
       "ko": "그들은 그냥 치즈버거와 사립학교를 원하고,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -532,7 +535,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -544,10 +547,10 @@
       "ko": "콜롬비아는 까맣게 잊어버렸어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -555,11 +558,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "ee86338ad52e5982"
 }

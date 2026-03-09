@@ -12,20 +12,22 @@
       "ko": "만약 내가 책 속의 소녀라면, 이 모든 게 너무 쉬울 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -35,18 +37,18 @@
       "ko": "세상을 행복하게 포기해.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,19 +60,18 @@
       "ko": "로리가 돌아온대, 알아? 아, 그래?",
       "tags": {
         "functions": [
-          "F06",
-          "F07"
+          "F06"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -82,9 +83,9 @@
       "ko": "에이미에게서 편지가 왔어. 그녀가 집으로 돌아온대.",
       "tags": {
         "functions": [
-          "F05"
+          "F02"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -93,8 +94,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -107,8 +110,8 @@
         "functions": [
           "F16"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E02"
@@ -116,7 +119,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -128,18 +131,18 @@
       "ko": "마르지 이모가 매우 아프셔서 로리가 그들과 함께 갈 거야.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -151,9 +154,9 @@
       "ko": "그가 참 착하네.",
       "tags": {
         "functions": [
-          "F30"
+          "F02"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -162,8 +165,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -176,16 +181,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -197,20 +202,23 @@
       "ko": "잘 모르겠어. 나는 항상 가족과 함께하는 게 꽤 만족스러웠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S44",
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -220,10 +228,10 @@
       "ko": "이해가 안 돼.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -231,9 +239,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -243,20 +253,23 @@
       "ko": "아마, 음, 내가 그를 거절한 게 너무 빨랐던 것 같아.",
       "tags": {
         "functions": [
-          "F20"
+          "F14"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -268,7 +281,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -277,7 +290,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -293,20 +306,21 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "0e57ad7c207d209c"
 }

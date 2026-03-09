@@ -12,9 +12,9 @@
       "ko": "이 비행기를 타야 하는데, 시간이 촉박해. 지금까지 여행이 꽤 무책임하게 시작됐어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S22",
+        "situation": "S34",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -35,9 +35,9 @@
       "ko": "그리고 이렇게 시작된다.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -58,10 +58,10 @@
       "ko": "파리에 도착했어. 밖은 17도야. 공항은 괜찮아.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S22",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,10 +81,10 @@
       "ko": "카이로에 오신 것을 환영합니다.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S22",
-        "cefr": "A1",
+        "situation": "S34",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -95,8 +95,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "4ec31b0899fe131a"
 }

@@ -12,18 +12,19 @@
       "ko": "그래, 죽을 수도 있어, 베이비. 그녀가 마음에 들면 같이 할 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,10 +38,10 @@
       "ko": "신에게 맹세해, 우리가 기도하는 거야. 우, 네가 그렇게 위험하다니 못 믿겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F41"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +49,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,18 +63,18 @@
       "ko": "그래, 네 후광에 뿔이 달렸어. 너무 웃겨, 천사 같으니라고.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,7 +88,7 @@
       "ko": "내 침대 안에서 축복받았어. 자기야, 나한테 솔직해도 돼.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -96,9 +97,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,20 +113,23 @@
       "ko": "나한테 독이 될 필요 없어. 나 말고 다른 선택지는 필요 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G24"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -137,7 +141,7 @@
       "ko": "왜냐면 넌 내 메인일 수도 있으니까, 그래.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -146,9 +150,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,18 +166,18 @@
       "ko": "이름 목록이 한가득 있어, 같은 사람은 상대 안 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,18 +191,19 @@
       "ko": "우, 네가 낮게 내려갈 때 좋아. 하지만 넌 여전히 손이 많이 가.",
       "tags": {
         "functions": [
-          "F09"
+          "F22"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01",
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -212,7 +217,7 @@
       "ko": "머리도 해야 하잖아. 말해줄게.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -221,9 +226,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -237,7 +242,7 @@
       "ko": "신이 만든 거야, 화장한 거야?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -246,9 +251,10 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -262,18 +268,18 @@
       "ko": "두 대 있어, 다른 데서 만나. 흑백, 다시 멋지게 만들었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -287,10 +293,10 @@
       "ko": "은행에 있을 때만 쫓아가. 레이업하는 걸 보면 레이커스에서 뛸 줄 알았어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -298,7 +304,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -312,18 +318,18 @@
       "ko": "5일 연속 깨어 있어, 하나도 안 했어. 그래, 몇 개 있어, 좀 가져갈래?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -331,5 +337,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "f827e59c842a33e6"
 }

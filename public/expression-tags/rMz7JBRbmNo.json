@@ -14,8 +14,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -37,8 +37,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S42",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,10 +46,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -58,18 +60,18 @@
       "ko": "너가 결정하고 우리가 둘 다 마셔서 누가 맞고 누가 죽는지 알 때 끝나.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S32",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,9 +83,9 @@
       "ko": "하지만 정말 간단해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -92,7 +94,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,10 +106,10 @@
       "ko": "내가 너에 대해 아는 것에서 나누기만 하면 돼.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,18 +131,21 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -150,10 +155,10 @@
       "ko": "이제, 똑똑한 사람은 자신의 잔에 독을 넣을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -161,7 +166,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,7 +180,7 @@
         "functions": [
           "F04"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -184,9 +189,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -196,9 +203,9 @@
       "ko": "나는 큰 바보가 아니니까, 너 앞에 있는 포도주를 선택할 수 없어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S32",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -207,7 +214,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,9 +226,9 @@
       "ko": "하지만 너는 내가 큰 바보가 아니라는 걸 알고 있었을 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -230,7 +237,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,9 +249,9 @@
       "ko": "너는 그것을 믿었을 테니, 나는 분명히 내 앞에 있는 포도주를 선택할 수 없어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S32",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -253,7 +260,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,8 +274,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -276,7 +283,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,10 +295,10 @@
       "ko": "전혀 그렇지 않아, 왜냐하면 이오케인은 호주에서 온다는 걸 모두가 알기 때문이야.",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -299,9 +306,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -313,8 +322,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -322,7 +331,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,9 +343,9 @@
       "ko": "범죄자들은 사람들이 자신을 믿지 않는 것에 익숙해, 너가 나에게 믿음을 주지 않는 것처럼.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -345,7 +354,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -357,10 +366,10 @@
       "ko": "그래서 나는 분명히 너 앞에 있는 포도주를 선택할 수 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S32",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -368,7 +377,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -380,10 +389,10 @@
       "ko": "정말로, 너는 어지러운 지성을 가지고 있구나.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -391,7 +400,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -403,10 +412,10 @@
       "ko": "내가 시작하면 기다려! 내가 어디까지 갔더라? 호주. 맞아, 호주.",
       "tags": {
         "functions": [
-          "F50"
+          "F49"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -414,11 +423,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "fb4b21782e8067d4"
 }

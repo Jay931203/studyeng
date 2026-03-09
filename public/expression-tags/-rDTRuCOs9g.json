@@ -15,7 +15,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,10 +35,10 @@
       "ko": "음, 더 필요하죠, 그렇죠? 오, 이건...",
       "tags": {
         "functions": [
-          "F06"
+          "F52"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -49,7 +49,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,16 +60,17 @@
       "ko": "이게... 어떻게 생각해?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F14"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -81,7 +84,8 @@
       "ko": "응, 나를 잘 알잖아.",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F53"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -104,7 +108,7 @@
       "ko": "풀 발레리나 스커트에 살oon의 느낌만 주면 난 괜찮아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -127,30 +131,7 @@
       "ko": "음, 하지만 너무 비슷하지 않을까...",
       "tags": {
         "functions": [
-          "F06"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "-rDTRuCOs9g-6",
-      "en": "Like the Lacroix from July? I thought that, but no.",
-      "ko": "7월의 라크루아처럼? 나도 그렇게 생각했지만, 아니야.",
-      "tags": {
-        "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -164,6 +145,33 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "-rDTRuCOs9g-6",
+      "en": "Like the Lacroix from July? I thought that, but no.",
+      "ko": "7월의 라크루아처럼? 나도 그렇게 생각했지만, 아니야.",
+      "tags": {
+        "functions": [
+          "F21"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P11"
+        ],
+        "grammar_intent": [],
         "flags": []
       }
     },
@@ -173,7 +181,7 @@
       "ko": "적절한 액세서리와 함께라면 괜찮을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -242,10 +250,10 @@
       "ko": "결정하기 어려운 일이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F21"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,7 +273,7 @@
       "ko": "너무 다르네. 음.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -299,7 +307,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,10 +319,10 @@
       "ko": "아니, 아니, 아무것도...",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -325,7 +333,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -334,7 +344,8 @@
       "ko": "그냥 두 벨트가 똑같이 보인다는 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F07",
+          "F10"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -347,7 +358,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -357,16 +370,16 @@
       "ko": "나 아직 이거에 대해 배우고 있고, 어...",
       "tags": {
         "functions": [
-          "F06"
+          "F52"
         ],
         "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -385,7 +398,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -405,7 +418,7 @@
       "ko": "오.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -430,7 +443,7 @@
       "ko": "알겠어. 너는 이게 너와는 상관없다고 생각하는구나.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -447,5 +460,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "9a3b4dfc456296fb"
 }

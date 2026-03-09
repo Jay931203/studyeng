@@ -12,10 +12,10 @@
       "ko": "마이크, 잠깐 이야기할 수 있을까?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -37,8 +37,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,10 +58,10 @@
       "ko": "그는 우리의 문제를 해결할 수 있다고 해.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,10 +81,10 @@
       "ko": "너 그와 이야기했어? 응.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,10 +104,10 @@
       "ko": "내 지역에서 보안을 마련할 수 있어. 좋아.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,10 +127,10 @@
       "ko": "좋아.",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -141,7 +141,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,10 +152,10 @@
       "ko": "좋아.",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -164,8 +166,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "e792e67ee446bdae"
 }

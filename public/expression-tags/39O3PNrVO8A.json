@@ -5,6 +5,7 @@
   "seriesId": "succession",
   "sentenceCount": 11,
   "taggedCount": 11,
+  "transcriptHash": "3b76a835932005b9",
   "sentences": [
     {
       "id": "39O3PNrVO8A-0",
@@ -12,23 +13,27 @@
       "ko": "당신을 달래고 대접하는 거죠. 글쎄, 뻔한 걸 말하자면.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S14",
+        "situation": "S38",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X04",
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": []
       }
     },
     {
@@ -37,18 +42,18 @@
       "ko": "생각하고 끌어내려서 죽기를 바래요.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,20 +65,25 @@
       "ko": "후계자를 정해요. 음, 그건 좀 복잡해요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -85,17 +95,19 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S38",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -106,23 +118,21 @@
       "ko": "당신에게 말하게 하려면 돈을 줘야 하나요? 당신은 팔고 싶지 않잖아요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S04",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -131,19 +141,21 @@
       "ko": "팔고 싶지 않으니 내가 당신에게 말할 여지가 없네요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S38",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -154,19 +166,21 @@
       "ko": "당신에 대한 신뢰의 장기 투자로 생각해 보세요.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S38",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -177,18 +191,18 @@
       "ko": "알겠어요. 비즈니스 기본에 대한 솔직함이 없네요. 거래를 해야 해요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -200,20 +214,24 @@
       "ko": "그렇지 않으면 치열한 싸움이 될 거예요. 몇 달, 몇 년까지 갈 수 있어요.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S42",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E04"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -225,18 +243,22 @@
         "functions": [
           "F14"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -246,18 +268,18 @@
       "ko": "당신의 모든 자원과 관심을 다 흡수할 거예요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []

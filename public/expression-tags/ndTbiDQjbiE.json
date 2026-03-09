@@ -12,23 +12,23 @@
       "ko": "블라, 블라, 블라. 잡담. 그래, 잡담, 고마워.",
       "tags": {
         "functions": [
-          "F33"
+          "F27"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V08",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,18 +37,18 @@
       "ko": "비즈니스에 대해 이야기하기 전에. 그래.",
       "tags": {
         "functions": [
-          "F04"
+          "F03"
         ],
-        "situation": "S44",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,10 +60,10 @@
       "ko": "물론이지. 본론으로 들어가자. 무엇을 알고 싶어?",
       "tags": {
         "functions": [
-          "F06"
+          "F36"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,9 +71,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -83,10 +85,10 @@
       "ko": "어떤 상황에서 FBI나",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -94,12 +96,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -108,10 +108,10 @@
       "ko": "미국 법무부 조사에 협조해야 할까? 예를 들어? 상황에 따라 다르지.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -119,7 +119,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -133,8 +133,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -142,7 +142,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -154,9 +154,9 @@
       "ko": "무엇에 따라 다르지?",
       "tags": {
         "functions": [
-          "F06"
+          "F44"
         ],
-        "situation": "S44",
+        "situation": "S38",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -165,10 +165,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -177,10 +179,10 @@
       "ko": "미국이 앞으로 몇 달 안에 스위스를 침공할 계획인지 여부. 그러니까 탱크가 rue de la Croix를 지나가는지 확인해봐, 응?",
       "tags": {
         "functions": [
-          "F06"
+          "F10"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -188,9 +190,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -200,9 +204,9 @@
       "ko": "미국이 앞으로 몇 달 안에 스위스를 침공할 계획인지. 그러니까 탱크가 rue de la Croix를 지나가는지 확인해봐, 응?",
       "tags": {
         "functions": [
-          "F06"
+          "F02"
         ],
-        "situation": "S44",
+        "situation": "S38",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -211,7 +215,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -223,10 +227,10 @@
       "ko": "Croix가 아니라, rue de la Croix도 아니야. Croix. 봐, 이게 내가 법대 다닐 때 하던 일이야. 샴페인, 샴페인, 그래.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -234,10 +238,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -246,18 +252,18 @@
       "ko": "응, 응, 프렌치 프라이. 좋은 밤.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S19",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -269,18 +275,18 @@
       "ko": "그런 종류의, 그런 종류의 것들. 웃기네.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -292,20 +298,23 @@
       "ko": "내가 묻고 있는 건, 너 스위스 놈,",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -317,16 +326,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -340,24 +349,27 @@
       "ko": "나를 배신할 거야?",
       "tags": {
         "functions": [
-          "F06"
+          "F17"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "a916fe559b510cbd"
 }

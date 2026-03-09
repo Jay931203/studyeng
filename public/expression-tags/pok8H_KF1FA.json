@@ -12,19 +12,21 @@
       "ko": "전혀 눈치 못 챘어, 더 이상 할 수 있는 게 없어. 집중하게 해줘, 뭐라고 말하고 싶어?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -37,10 +39,10 @@
       "ko": "순간이 없었어, 순간을 믿어야 해. 네가 다른 걸 생각했을 줄 알았는데, 왜 말하지 않아?",
       "tags": {
         "functions": [
-          "F09"
+          "F36"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,9 +50,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -62,19 +66,21 @@
       "ko": "전혀 눈치 못 챘어, 더 이상 할 수 있는 게 없어. 집중하게 해줘, 뭐라고 말하고 싶어?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -87,19 +93,21 @@
       "ko": "사랑을 느낀 지 오래됐어. 너 자신을 잃어버린 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -112,20 +120,24 @@
       "ko": "내 사랑을 전하려면 뭘 해야 할까?",
       "tags": {
         "functions": [
-          "F34"
+          "F22"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V07",
+        "power": [
+          "P09"
+        ],
+        "grammar_intent": [
+          "G22"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -137,10 +149,10 @@
       "ko": "운 좋게도 나는 숨 쉬는 게 빨라. 그를 귀찮게 하진 않을 거야, 그는 계속 쫓아올 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -148,7 +160,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,10 +174,10 @@
       "ko": "우리는 하루 종일 그 주위를 돌며 춤출 수 있어. 네가 겁먹으면, 나는 튕겨 나갈 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,7 +185,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,10 +199,10 @@
       "ko": "나를 원한다면.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -198,7 +210,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -206,5 +218,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "8ca2002f02e44353"
 }

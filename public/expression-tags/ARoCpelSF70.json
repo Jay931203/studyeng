@@ -12,18 +12,18 @@
       "ko": "저는 여러분의 질문에 최선을 다해 답변하기 위해 여기 있습니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F02"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,20 +35,22 @@
       "ko": "무엇이든 편하게 물어보세요.",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -58,21 +60,22 @@
       "ko": "무엇이든 답변하겠습니다. 네. 짐 필립스, 택시 뉴스. 안녕하세요, 프랭크. 어떻게... 짐. 아, 죄송합니다.",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F28"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -82,20 +85,22 @@
       "ko": "어떻게 이렇게 오랫동안 숨길 수 있었나요? 음, 바지가 너무 넓어서요.",
       "tags": {
         "functions": [
-          "F04"
+          "F32"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V13",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -107,18 +112,22 @@
         "functions": [
           "F09"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -128,21 +137,23 @@
       "ko": "네.",
       "tags": {
         "functions": [
-          "F09"
+          "F44"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -153,16 +164,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V13",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -174,22 +185,23 @@
       "ko": "그들은 저를 경외감과 혐오감이 섞인 태도로 대했습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E08",
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -198,18 +210,18 @@
       "ko": "하지만 정치 세계에 있다 보니 익숙합니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,16 +233,16 @@
       "ko": "그래서 누가 신경 쓰겠어요? 네.",
       "tags": {
         "functions": [
-          "F09"
+          "F44"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V10",
         "power": [],
@@ -244,18 +256,18 @@
       "ko": "로렌조 라마스, 데일리 레니게이드. 안녕하세요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,20 +279,24 @@
       "ko": "고무와 망토에 대한 애착이 있나요? 음, 그건 당연한 거라고 생각합니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F09"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -290,22 +306,25 @@
       "ko": "그렇지 않았다면 제가 지금 하고 있는 일을 하고 있을까요? 그렇지 않다고 생각합니다. 아니요. 고무, 망토. 고무, 망토.",
       "tags": {
         "functions": [
-          "F09"
+          "F11"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "534284c5cb8e58af"
 }

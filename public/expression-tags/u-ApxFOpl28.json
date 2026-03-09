@@ -12,9 +12,9 @@
       "ko": "불 좀 켜 줘.",
       "tags": {
         "functions": [
-          "F34"
+          "F35"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -35,18 +35,18 @@
       "ko": "다시. 다시 때려. 제발, 크리스. 전 세계가 보고 있어. 그가 생중계 앞에서 죽게 할 수는 없어. 그는 생중계 앞에서 태어났어.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,18 +60,20 @@
         "functions": [
           "F40"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -81,20 +83,24 @@
       "ko": "그가 보여? 봐! 바로 저기 있어! 어서! 보여? 어서! 어서!",
       "tags": {
         "functions": [
-          "F06"
+          "F21",
+          "F34",
+          "F45"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -104,20 +110,24 @@
       "ko": "조심해! 어서! 뭐? 뭐? 조심해!",
       "tags": {
         "functions": [
-          "F40"
+          "F21",
+          "F40",
+          "F45"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -129,18 +139,20 @@
         "functions": [
           "F40"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -150,22 +162,27 @@
       "ko": "어서!",
       "tags": {
         "functions": [
-          "F34"
+          "F21",
+          "F35",
+          "F45"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "fcaf8af3af6e087d"
 }

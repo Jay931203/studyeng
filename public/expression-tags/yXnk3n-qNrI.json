@@ -12,9 +12,9 @@
       "ko": "좋아, 작동해. 가자.",
       "tags": {
         "functions": [
-          "F01"
+          "F36"
         ],
-        "situation": "S40",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -25,7 +25,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -37,7 +39,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -60,7 +62,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -83,8 +85,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,9 +106,10 @@
       "ko": "응, 보여.",
       "tags": {
         "functions": [
-          "F07"
+          "F07",
+          "F53"
         ],
-        "situation": "S40",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -129,7 +132,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -144,5 +147,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "68d9b597650637c9"
 }

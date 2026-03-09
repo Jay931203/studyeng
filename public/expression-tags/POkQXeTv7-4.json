@@ -12,20 +12,26 @@
       "ko": "과거에 몇 번 마음이 아팠을 수도 있어. 예전만큼 강하게 지속되지는 않지.",
       "tags": {
         "functions": [
-          "F09"
+          "F23",
+          "F43",
+          "F47"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E08",
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G13"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -37,18 +43,18 @@
       "ko": "예전만큼 좋게 느껴지지 않지만, 네가 했던 모든 말들과 했던 모든 행동들.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,10 +68,10 @@
       "ko": "문 밖으로 사라져 버렸어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -73,7 +79,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,20 +93,22 @@
       "ko": "더 이상 너는 그 사람이 아닐 거야. 주변 사람들에게 그렇게 말하잖아.",
       "tags": {
         "functions": [
-          "F09"
+          "F34"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -112,20 +120,22 @@
       "ko": "하지만 그들은 다 들어본 말이라는 거 알잖아. 더 무슨 말을 할 수 있겠어?",
       "tags": {
         "functions": [
-          "F09"
+          "F34"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -137,18 +147,18 @@
       "ko": "사랑은 너를 떠나게 내버려 두지 않아. 누구를 사랑하는지 어쩔 수 없잖아.",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,18 +172,18 @@
       "ko": "네가 충분하다고 생각할 때 모든 걸 주고 있는 자신을 발견하게 돼.",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,19 +197,22 @@
       "ko": "네가 믿는 사람이 되고 싶어. 네 마음이 내 앞에 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E07",
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V02",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -212,20 +225,22 @@
       "ko": "네가 떠나면 내 일부도 함께 떠나. 너는 하늘이 보내준 사람이니까.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -237,24 +252,28 @@
       "ko": "네가 믿는 사람이 되고 싶어. 네 마음이 내 앞에 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E07",
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V02",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "930b585d3af99879"
 }

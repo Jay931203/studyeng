@@ -12,21 +12,23 @@
       "ko": "정말 끔찍해.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -38,7 +40,7 @@
           "F01"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -61,7 +63,7 @@
           "F01"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -84,7 +86,7 @@
           "F01"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -107,7 +109,7 @@
           "F01"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -116,7 +118,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -141,7 +145,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,10 +156,11 @@
       "ko": "내가 너한테 뭘 원하는 건데?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F50"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -163,7 +170,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -196,10 +205,10 @@
       "ko": "하루 종일 머리를 쥐어짜고 있었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -219,11 +228,11 @@
       "ko": "45분 동안 마트에서 돌아다녔어, 친구.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S09",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -242,10 +251,10 @@
       "ko": "너한테 뭘 사야 할지 몰랐어.",
       "tags": {
         "functions": [
-          "F09"
+          "F56"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,10 +274,10 @@
       "ko": "그때 너가 예전처럼 먹던 라면을 사줄까 생각했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -276,7 +285,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,16 +297,16 @@
       "ko": "하지만 이제 너는 무화과 같은 고급 라면을 먹을 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
         "situation": "S09",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -311,7 +320,59 @@
       "ko": "모르겠어, 친구.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
+        ],
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "Y331RYPpCJc-14",
+      "en": "You love me too much, Schmidt.",
+      "ko": "너는 나를 너무 사랑해, 슈미트.",
+      "tags": {
+        "functions": [
+          "F10"
+        ],
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E11"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V02",
+        "power": [],
+        "grammar_intent": [
+          "G20"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "Y331RYPpCJc-15",
+      "en": "And you picked the wrong guy.",
+      "ko": "그리고 잘못된 사람을 선택했어.",
+      "tags": {
+        "functions": [
+          "F01"
         ],
         "situation": "S09",
         "cefr": "A2",
@@ -329,69 +390,23 @@
       }
     },
     {
-      "id": "Y331RYPpCJc-14",
-      "en": "You love me too much, Schmidt.",
-      "ko": "너는 나를 너무 사랑해, 슈미트.",
-      "tags": {
-        "functions": [
-          "F22"
-        ],
-        "situation": "S09",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E11"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "Y331RYPpCJc-15",
-      "en": "And you picked the wrong guy.",
-      "ko": "그리고 잘못된 사람을 선택했어.",
-      "tags": {
-        "functions": [
-          "F11"
-        ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "Y331RYPpCJc-16",
       "en": "And when are you going to get that giant head of yours?",
       "ko": "너의 그 거대한 머리를 언제 좀 가질 건데?",
       "tags": {
         "functions": [
-          "F11"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -403,18 +418,18 @@
       "ko": "나는 너를 실망시킬 거야, 친구.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -426,9 +441,9 @@
       "ko": "나를 실망시킬 건가?",
       "tags": {
         "functions": [
-          "F06"
+          "F20"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -443,5 +458,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "8894e3421ed9314f"
 }

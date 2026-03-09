@@ -12,20 +12,23 @@
       "ko": "그래, 뭐 어때.",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F53"
         ],
         "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "is_fragment"
         ]
@@ -37,7 +40,7 @@
       "ko": "자, 다음 주에 전화할게. 세부 사항을 정리하자, 알겠지?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
         "situation": "S10",
         "cefr": "B1",
@@ -60,7 +63,8 @@
       "ko": "응, 응.",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F53"
         ],
         "situation": "S10",
         "cefr": "A2",
@@ -85,18 +89,18 @@
       "ko": "너를 만나서 정말 좋았어, 아들.",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
         "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -108,21 +112,23 @@
       "ko": "나도, 루.",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
         "situation": "S10",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -131,7 +137,9 @@
       "ko": "응, 음...",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F52",
+          "F53"
         ],
         "situation": "S10",
         "cefr": "A2",
@@ -140,7 +148,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -159,30 +167,7 @@
           "F28"
         ],
         "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "EZGXCDJATDs-7",
-      "en": "You know what? Actually, this works out better for me. You know, the slimmies of summer come to class wearing next to nothing, you know what I'm saying?",
-      "ko": "사실, 이게 나한테 더 좋네. 여름에 슬리미들이 거의 아무것도 안 입고 수업에 오는 거 알지?",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -191,8 +176,41 @@
           "X08"
         ],
         "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "EZGXCDJATDs-7",
+      "en": "You know what? Actually, this works out better for me. You know, the slimmies of summer come to class wearing next to nothing, you know what I'm saying?",
+      "ko": "사실, 이게 나한테 더 좋네. 여름에 슬리미들이 거의 아무것도 안 입고 수업에 오는 거 알지?",
+      "tags": {
+        "functions": [
+          "F06",
+          "F08",
+          "F50"
+        ],
+        "situation": "S10",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -202,20 +220,22 @@
       "ko": "윌, 화내는 건 괜찮아.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
         "situation": "S10",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -225,20 +245,23 @@
       "ko": "왜 내가 화를 내야 하지? 적어도 이번에는 작별 인사를 했잖아.",
       "tags": {
         "functions": [
-          "F19"
+          "F32"
         ],
         "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06",
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -248,18 +271,19 @@
       "ko": "이 바보 같은 선물 사느라 돈을 낭비하지 않았으면 좋겠어.",
       "tags": {
         "functions": [
-          "F20"
+          "F24",
+          "F58"
         ],
         "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E16"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -271,30 +295,8 @@
       "ko": "미안해. 내가 뭔가 할 수 있다면 좋겠어...",
       "tags": {
         "functions": [
-          "F28"
-        ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "EZGXCDJATDs-12",
-      "en": "Hey, you know what? You ain't got to do nothing, Uncle Phil.",
-      "ko": "야, 너는 아무것도 할 필요 없어, 필 삼촌.",
-      "tags": {
-        "functions": [
-          "F44"
+          "F28",
+          "F03"
         ],
         "situation": "S10",
         "cefr": "B1",
@@ -306,7 +308,39 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "EZGXCDJATDs-12",
+      "en": "Hey, you know what? You ain't got to do nothing, Uncle Phil.",
+      "ko": "야, 너는 아무것도 할 필요 없어, 필 삼촌.",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S10",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X04",
+          "X05"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -317,10 +351,64 @@
       "ko": "내가 아직 다섯 살도 아니잖아, 알지?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S10",
-        "cefr": "A2",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G14"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "EZGXCDJATDs-14",
+      "en": "Ain't like I'm gonna be sitting up every night asking my mom, when's Daddy coming home, you know? Who needs him?",
+      "ko": "매일 밤 엄마한테 아빠 언제 집에 오냐고 묻지도 않을 거야, 알겠어? 그가 필요해?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S10",
+        "cefr": "B2",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G14"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "EZGXCDJATDs-15",
+      "en": "Hey, he wasn't there to teach me how to shoot my first...",
+      "ko": "그는 내 첫 총 쏘는 법을 가르쳐주지 않았어...",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S10",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -331,56 +419,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "EZGXCDJATDs-14",
-      "en": "Ain't like I'm gonna be sitting up every night asking my mom, when's Daddy coming home, you know? Who needs him?",
-      "ko": "매일 밤 엄마한테 아빠 언제 집에 오냐고 묻지도 않을 거야, 알겠어? 그가 필요해?",
-      "tags": {
-        "functions": [
-          "F19"
-        ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E04"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "EZGXCDJATDs-15",
-      "en": "Hey, he wasn't there to teach me how to shoot my first...",
-      "ko": "그는 내 첫 총 쏘는 법을 가르쳐주지 않았어...",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
         "flags": [
           "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "6dc595af181bb32d"
 }

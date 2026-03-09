@@ -14,19 +14,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,18 +37,18 @@
       "ko": "얼마나 긴장했는지 봐.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +60,18 @@
       "ko": "자, 이제 시작해.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,16 +83,16 @@
       "ko": "오, 세상에, 이걸 봐.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -106,17 +108,19 @@
         "functions": [
           "F02"
         ],
-        "situation": "S34",
+        "situation": "S12",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -127,21 +131,23 @@
       "ko": "이건 옳지 않아. 이건 옳지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -150,20 +156,22 @@
       "ko": "살이 모르는 것은 신랑 신부가 사실 이걸 알고 있다는 거야. 맞아.",
       "tags": {
         "functions": [
-          "F04"
+          "F11"
         ],
-        "situation": "S34",
+        "situation": "S12",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -173,20 +181,24 @@
       "ko": "하지만 방 안의 300명의 낯선 사람들은 전혀 모르는 이야기야. 이 결혼식을 망칠 거야. 이제 그가 온다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S12",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G16"
+        ],
         "flags": []
       }
     },
@@ -196,19 +208,21 @@
       "ko": "자, 친구, 다음 연설은 네 차례야. 건배.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -219,16 +233,16 @@
       "ko": "예! 예! 시작하자. 맞아.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V10",
         "power": [],
@@ -242,13 +256,13 @@
       "ko": "오, 젠장.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -257,7 +271,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "contains_profanity"
+          "is_fragment"
         ]
       }
     },
@@ -269,19 +283,21 @@
         "functions": [
           "F25"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -290,16 +306,16 @@
       "ko": "오, 세상에. 시작해. 시작해. 너희가 싫어.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V10",
         "power": [],
@@ -315,18 +331,20 @@
         "functions": [
           "F28"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -338,18 +356,20 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -361,19 +381,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -384,18 +406,20 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -405,22 +429,23 @@
       "ko": "그들은 충성스러운 개 같아. 내 개 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "1ff1b1da7c8ce5a9"
 }

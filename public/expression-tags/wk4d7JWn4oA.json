@@ -12,18 +12,18 @@
       "ko": "제발, 잠 좀 자게 해줘.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,18 @@
       "ko": "내가 그 개 조용히 하라고 했잖아. 대신에 메가폰을 달아주다니.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +58,18 @@
       "ko": "지난 36시간 동안 낮잠도 못 잤고, 새벽 2시까지 복귀해야 해.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,9 +81,9 @@
       "ko": "에디, 잘 들어봐.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -95,7 +95,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,9 +106,9 @@
       "ko": "오늘이 끝날 때쯤, 우리 중 한 명은 잠을 잘 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -115,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,9 +129,59 @@
       "ko": "걱정 마, 크레인 박사. 내가 에디를 산책시킬게.",
       "tags": {
         "functions": [
-          "F38"
+          "F31"
         ],
-        "situation": "S10",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G05"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "wk4d7JWn4oA-6",
+      "en": "And as far as your problem at work goes, if you want my opinion...",
+      "ko": "그리고 네 직장에서의 문제에 대해 내 의견이 필요하다면...",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "wk4d7JWn4oA-7",
+      "en": "Don't!",
+      "ko": "하지 마!",
+      "tags": {
+        "functions": [
+          "F15"
+        ],
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -141,53 +193,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "wk4d7JWn4oA-6",
-      "en": "And as far as your problem at work goes, if you want my opinion...",
-      "ko": "그리고 네 직장에서의 문제에 대해 내 의견이 필요하다면...",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "wk4d7JWn4oA-7",
-      "en": "Don't!",
-      "ko": "하지 마!",
-      "tags": {
-        "functions": [
-          "F43"
-        ],
-        "situation": "S10",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -196,18 +204,18 @@
       "ko": "방송국의 새로운 라이히 총리와 로슬러의 끊임없는 불평으로 이번 주 여성의 의견은 충분히 들었어.",
       "tags": {
         "functions": [
-          "F12"
+          "F23"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,32 +227,9 @@
       "ko": "내 생각엔, 너희 성별은 조용히 해도 돼.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "wk4d7JWn4oA-10",
-      "en": "Boy, you never let me get away with a comment like that.",
-      "ko": "너는 그런 댓글을 내가 그냥 넘어가게 하지 않네.",
-      "tags": {
-        "functions": [
-          "F11"
-        ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -260,27 +245,55 @@
       }
     },
     {
+      "id": "wk4d7JWn4oA-10",
+      "en": "Boy, you never let me get away with a comment like that.",
+      "ko": "너는 그런 댓글을 내가 그냥 넘어가게 하지 않네.",
+      "tags": {
+        "functions": [
+          "F17",
+          "F43"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E16"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G01",
+          "G06"
+        ],
+        "flags": []
+      }
+    },
+    {
       "id": "wk4d7JWn4oA-11",
       "en": "Oh, even the best of us can get a bit cranky when we're overtired.",
       "ko": "아, 우리 중 누구라도 피곤하면 좀 짜증날 수 있어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a3978e9fb6fec4f9"
 }

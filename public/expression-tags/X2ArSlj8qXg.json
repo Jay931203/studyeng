@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -37,20 +37,22 @@
       "ko": "피고와의 관계를 말씀해 주세요.",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -62,7 +64,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -74,7 +76,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -85,9 +89,9 @@
         "functions": [
           "F27"
         ],
-        "situation": "S36",
-        "cefr": "A1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -95,7 +99,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -108,8 +114,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -131,14 +137,14 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -154,9 +160,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -175,9 +181,9 @@
       "ko": "네.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -189,7 +195,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -200,8 +208,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -223,7 +231,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -246,7 +254,7 @@
         "functions": [
           "F09"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -269,7 +277,7 @@
         "functions": [
           "F27"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -279,9 +287,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -290,11 +302,11 @@
       "ko": "플로렉 부인, 아파트가 3베드룸이고 자녀가 두 명이라고 하셨습니다.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -315,7 +327,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -336,9 +348,9 @@
       "ko": "아니요.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -350,8 +362,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "b2c44c7a9a71af0d"
 }

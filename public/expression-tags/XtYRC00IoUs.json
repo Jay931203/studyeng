@@ -12,10 +12,10 @@
       "ko": "여성을 유혹하기 위해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,10 +23,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,10 +37,10 @@
       "ko": "오늘 우리는 이야기할 것입니다.",
       "tags": {
         "functions": [
-          "F03"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,7 +62,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -69,10 +71,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,9 +85,9 @@
       "ko": "알아요.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -92,7 +96,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,20 +108,22 @@
       "ko": "많은 분들이 이걸 기대하는 게",
       "tags": {
         "functions": [
-          "F06"
+          "F13"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -127,10 +133,10 @@
       "ko": "뿌리관 치료만큼이나 싫으실 거예요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,10 +144,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,10 +158,10 @@
       "ko": "우리는 셰익스피어에 대해 이야기할 것입니다.",
       "tags": {
         "functions": [
-          "F03"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -161,7 +169,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,10 +181,10 @@
       "ko": "매우 흥미로운 글을 쓰는 사람으로.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,7 +192,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,10 +204,10 @@
       "ko": "많은 분들이 셰익스피어를",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -207,7 +215,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,9 +227,9 @@
       "ko": "이렇게 보셨을 겁니다.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -230,7 +238,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,10 +250,10 @@
       "ko": "오 타이투스, 친구를",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -253,7 +261,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,10 +273,10 @@
       "ko": "여기로 데려와.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -276,10 +284,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -288,10 +299,10 @@
       "ko": "하지만 마를론 브란도 씨를 본 적이 있다면",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -299,7 +310,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,10 +322,10 @@
       "ko": "아니, 셰익스피어는",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -322,7 +333,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -336,8 +347,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -345,7 +356,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -359,8 +370,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -368,7 +379,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -382,10 +393,10 @@
       "ko": "좀 쉬게 해주세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F39"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -393,10 +404,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -405,9 +418,9 @@
       "ko": "당신은 또한 상상할 수 있습니다.",
       "tags": {
         "functions": [
-          "F14"
+          "F12"
         ],
-        "situation": "S44",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -416,7 +429,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -430,18 +443,20 @@
         "functions": [
           "F14"
         ],
-        "situation": "S44",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -451,9 +466,9 @@
       "ko": "이건 내 앞에 있는 단검인가?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -462,7 +477,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -476,8 +491,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -485,7 +500,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -499,8 +514,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -508,10 +523,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -520,9 +537,9 @@
       "ko": "아, 지금은 아니에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -531,7 +548,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -543,10 +560,10 @@
       "ko": "가끔 좋은 개를",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -554,7 +571,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -566,9 +583,9 @@
       "ko": "즐기는 편입니다, 선생님.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -577,10 +594,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -589,9 +610,9 @@
       "ko": "한 마리 개로",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -600,7 +621,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -614,7 +635,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S05",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -623,7 +644,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -635,9 +656,9 @@
       "ko": "개의 전채로 시작하세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -646,7 +667,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -658,10 +679,10 @@
       "ko": "메인 코스로",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -669,7 +690,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -681,9 +702,9 @@
       "ko": "다섯 마리 개 플람베로 가세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -692,11 +713,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "f605627a05ca4660"
 }

@@ -14,7 +14,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -37,14 +37,14 @@
         "functions": [
           "F06"
         ],
-        "situation": "S47",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -58,9 +58,9 @@
       "ko": "별은 대부분 수소 원자로 이루어진 엄청나게 거대한 집합체입니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -81,9 +81,9 @@
       "ko": "이들은 자신의 중력으로 거대한 가스 구름에서 붕괴됩니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -104,9 +104,9 @@
       "ko": "중심부에서는 핵융합이 수소 원자를 헬륨으로 압축합니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -127,10 +127,10 @@
       "ko": "이 과정에서 막대한 양의 에너지가 방출됩니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,9 +150,9 @@
       "ko": "이 에너지는 방사선 형태로 중력에 맞서 밀어냅니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -173,9 +173,9 @@
       "ko": "두 힘 사이의 미세한 균형을 유지합니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -196,9 +196,9 @@
       "ko": "중심부에서 핵융합이 이루어지는 한, 별은 충분히 안정적입니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F21"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -219,9 +219,9 @@
       "ko": "하지만 우리 태양보다 훨씬 더 많은 질량을 가진 별들은,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -242,9 +242,9 @@
       "ko": "중심부의 열과 압력이 더 무거운 원소를 융합할 수 있게 합니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -265,10 +265,10 @@
       "ko": "이 과정은 철에 도달할 때까지 계속됩니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,9 +288,9 @@
       "ko": "이전의 모든 원소와는 달리,",
       "tags": {
         "functions": [
-          "F12"
+          "F13"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -301,7 +301,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -311,9 +313,9 @@
       "ko": "철을 생성하는 융합 과정은 에너지를 생성하지 않습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -334,9 +336,9 @@
       "ko": "철은 별의 중심에 쌓여서 임계량에 도달할 때까지 계속됩니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -345,7 +347,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -357,24 +359,23 @@
       "ko": "그리고 방사선과 중력 사이의 균형이 갑자기 깨집니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "3bb268981f85220a"
 }

@@ -12,23 +12,21 @@
       "ko": "움직여, 움직여, 움직여. 괜찮아? 움직여, 움직여, 움직여. 가고 있어, 그렇지? 가고 있어. 가고 있어.",
       "tags": {
         "functions": [
-          "F35"
+          "F02"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,23 +35,23 @@
       "ko": "여기 있어, 여기 있어. 내가 찾았어. 가져, 가져, 가져. 좋아, 이제! 이제! 가자!",
       "tags": {
         "functions": [
-          "F35"
+          "F38"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V12",
-        "power": [],
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -62,13 +60,13 @@
       "ko": "그들은 너를 도와줄 수 없어, 맥스.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -85,19 +83,21 @@
       "ko": "그들에게서 숨는 이유가 있어.",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
-        "situation": "S39",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V12",
-        "power": [],
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -108,18 +108,18 @@
       "ko": "너는 나와 함께 여기 있어야 해.",
       "tags": {
         "functions": [
-          "F22"
+          "F12"
         ],
-        "situation": "S39",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -131,20 +131,22 @@
       "ko": "너는 정말 여기 있지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F11"
         ],
-        "situation": "S39",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -154,18 +156,18 @@
       "ko": "오, 하지만 나는 여기 있어, 맥스.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V07",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -177,22 +179,23 @@
       "ko": "나는 여기 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "711410d48e5347da"
 }

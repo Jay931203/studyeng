@@ -15,7 +15,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,18 @@
       "ko": "로네, 그건 옳지 않아.",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,21 +58,23 @@
       "ko": "입 다물어.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V03",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,10 +83,10 @@
       "ko": "너한테 마지막 일을 하나 맡길게, 탐정.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,7 +94,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,10 +106,10 @@
       "ko": "들리냐?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,10 +129,10 @@
       "ko": "자, 우리는 이걸 다 겪어봤어.",
       "tags": {
         "functions": [
-          "F02"
+          "F35"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,7 +140,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,7 +152,7 @@
       "ko": "그래?",
       "tags": {
         "functions": [
-          "F06"
+          "F07"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -161,10 +163,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -173,10 +177,10 @@
       "ko": "응, 그리고 난 할 수 없다고 했어.",
       "tags": {
         "functions": [
-          "F11"
+          "F07"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,7 +188,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,10 +200,10 @@
       "ko": "그건 잘못된 대답이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -207,7 +211,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,10 +223,10 @@
       "ko": "테이블로 가.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,7 +234,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,8 +248,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S37",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -253,7 +257,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,10 +269,10 @@
       "ko": "나한테 뭐든지 할 수 있어!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -276,7 +280,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,10 +292,10 @@
       "ko": "나한테 뭐든지 할 수 있어!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -299,9 +303,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G23"
+        ],
         "flags": []
       }
     },
@@ -311,21 +317,23 @@
       "ko": "곧 경찰 전체가 너를 쫓을 거야!",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -334,18 +342,18 @@
       "ko": "입 닥쳐.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -357,23 +365,21 @@
       "ko": "뚱뚱한 쓰레기 같은 놈.",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -385,15 +391,15 @@
           "F35"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -405,7 +411,7 @@
       "ko": "알겠어!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -414,12 +420,14 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -428,20 +436,22 @@
       "ko": "이게 대체 뭐야?",
       "tags": {
         "functions": [
-          "F18"
+          "F06"
         ],
         "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E05"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V03",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -464,7 +474,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -476,19 +486,18 @@
       "ko": "이걸 후회하려고 하고 있어. 지금 당장 멈춰!",
       "tags": {
         "functions": [
-          "F20",
-          "F35"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E12"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -500,10 +509,10 @@
       "ko": "버킷이 충분히 뜨거워지면, 탐정,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -511,7 +520,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -523,10 +532,10 @@
       "ko": "쥐가,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -534,10 +543,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -546,18 +557,18 @@
       "ko": "나가고 싶어 할 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -569,22 +580,23 @@
       "ko": "오, 세상에.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d838e30a0ec6c1a6"
 }

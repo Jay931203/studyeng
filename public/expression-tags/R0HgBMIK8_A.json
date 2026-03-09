@@ -12,7 +12,7 @@
       "ko": "라디오에서 시작했지. 아.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -40,7 +38,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,7 +58,7 @@
       "ko": "아마도.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -69,12 +67,16 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -83,7 +85,7 @@
       "ko": "그래, 본론으로 들어갈게.",
       "tags": {
         "functions": [
-          "F04"
+          "F52"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -106,20 +108,23 @@
       "ko": "우리 몇 년째 가까운 사이잖아? 사람들이 우릴 알고 있어.",
       "tags": {
         "functions": [
-          "F01"
+          "F23",
+          "F50"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -135,15 +140,17 @@
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -152,13 +159,13 @@
       "ko": "그리고 매일 새로운 지배자들이 나타나고 있잖아.",
       "tags": {
         "functions": [
-          "F02"
+          "F23"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -175,10 +182,10 @@
       "ko": "네가 그 얘기 꺼내기 전에... 네가 스스로 제안한 거잖아. 알아, 알겠어?",
       "tags": {
         "functions": [
-          "F50"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -198,10 +205,10 @@
       "ko": "하지만 나는 훨씬 더 앞을 내다보는 사람이야,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -221,10 +228,10 @@
       "ko": "내 말을 듣는 게 네게 이익이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -244,7 +251,7 @@
       "ko": "듣고 있어, 친구.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -258,7 +265,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -267,7 +276,7 @@
       "ko": "바텐더, 위스키 한 잔 더?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -290,10 +299,10 @@
       "ko": "그래서 생각해 봤는데, 앨리스테어,",
       "tags": {
         "functions": [
-          "F09"
+          "F48"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -313,10 +322,10 @@
       "ko": "네 엄청난 힘과",
       "tags": {
         "functions": [
-          "F01"
+          "F30"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -326,7 +335,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -339,7 +350,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -359,10 +370,10 @@
       "ko": "우리를 막을 수 없을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -370,7 +381,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -382,10 +393,10 @@
       "ko": "라디오와 비디오. 너와 나.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -405,10 +416,10 @@
       "ko": "우리가 지옥을 지배할 수 있어. 함께.",
       "tags": {
         "functions": [
-          "F09"
+          "F36"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -416,9 +427,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -430,33 +443,10 @@
       "ko": "파트너로서.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "R0HgBMIK8_A-19",
-      "en": "Uh-huh. Uh-huh.",
-      "ko": "으흠. 으흠.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -473,15 +463,41 @@
       }
     },
     {
+      "id": "R0HgBMIK8_A-19",
+      "en": "Uh-huh. Uh-huh.",
+      "ko": "으흠. 으흠.",
+      "tags": {
+        "functions": [
+          "F52",
+          "F53"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
       "id": "R0HgBMIK8_A-20",
       "en": "Ah-ha-ha-ha-ha-ha-ha-ha-ha-ha-ha!",
       "ko": "아하하하하하하하하하!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -503,10 +519,10 @@
       "ko": "아, 그건...",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -528,10 +544,10 @@
       "ko": "아, 진심이었어!",
       "tags": {
         "functions": [
-          "F09"
+          "F15"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -551,10 +567,10 @@
       "ko": "이봐, 복스!",
       "tags": {
         "functions": [
-          "F09"
+          "F15"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -568,5 +584,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "6c070f923f662dc0"
 }

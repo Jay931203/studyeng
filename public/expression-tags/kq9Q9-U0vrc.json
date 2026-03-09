@@ -12,19 +12,21 @@
       "ko": "집에 오신 것을 환영합니다. 정말 감사합니다, 선생님.",
       "tags": {
         "functions": [
-          "F25"
+          "F27"
         ],
-        "situation": "S23",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -36,20 +38,22 @@
       "tags": {
         "functions": [
           "F25",
-          "F06"
+          "F34"
         ],
-        "situation": "S23",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -61,7 +65,7 @@
         "functions": [
           "F07"
         ],
-        "situation": "S23",
+        "situation": "S34",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -70,10 +74,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -82,10 +88,10 @@
       "ko": "철자 좀 알려주시겠어요? 네, A입니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
-        "situation": "S23",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -93,9 +99,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -105,10 +113,10 @@
       "ko": "찾았습니다. 방과 부대 비용은 처리되었습니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F32"
         ],
-        "situation": "S23",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -116,9 +124,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -128,18 +138,18 @@
       "ko": "처음 오셨으니, 저희 편의 시설에 대해 말씀드리고 싶습니다. 예를 들어,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S23",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S34",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -151,19 +161,19 @@
       "ko": "스타게이저 라운지 같은 곳이요. 아, 괜찮아요. 그냥 방에 들어가서 쉬고 싶어요. 긴 하루였어요.",
       "tags": {
         "functions": [
-          "F09",
-          "F15"
+          "F06"
         ],
-        "situation": "S23",
-        "cefr": "B1",
+        "situation": "S34",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X04"
         ],
-        "vibe": "V10",
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,20 +185,22 @@
       "ko": "멋지네요. 어디서 오셨나요?",
       "tags": {
         "functions": [
-          "F06"
+          "F30"
         ],
-        "situation": "S23",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -200,8 +212,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S23",
-        "cefr": "A1",
+        "situation": "S34",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,10 +221,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -221,9 +235,9 @@
       "ko": "환상적입니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F15"
         ],
-        "situation": "S23",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -235,7 +249,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -244,20 +260,22 @@
       "ko": "잠시만 기다려 주세요, 방을 불러올게요. 아, 잠깐만요, 방해해서 죄송합니다.",
       "tags": {
         "functions": [
-          "F50"
+          "F28"
         ],
-        "situation": "S23",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -269,20 +287,23 @@
         "functions": [
           "F34"
         ],
-        "situation": "S23",
-        "cefr": "B1",
+        "situation": "S34",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "159f27545dd15cc5"
 }

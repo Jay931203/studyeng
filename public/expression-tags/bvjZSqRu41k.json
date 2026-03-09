@@ -14,18 +14,20 @@
         "functions": [
           "F28"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -37,16 +39,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +60,18 @@
       "ko": "어, 응, 너 같은 사람에 대해 언급한 적은 있어.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +83,18 @@
       "ko": "하지만 구체적인 건 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,18 +106,18 @@
       "ko": "음, 아, 그래, 그들은 꽤 보수적이야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,20 +129,22 @@
       "ko": "그래서 아마 그 바지는 안 될 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -150,21 +154,23 @@
       "ko": "아, 알겠어. 응.",
       "tags": {
         "functions": [
-          "F07"
+          "F53"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -173,18 +179,18 @@
       "ko": "아, 아, 맙소사. 알겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F19"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E04"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +202,18 @@
       "ko": "방금, 음, 시간을 끌었어? 시간을 끌었어?",
       "tags": {
         "functions": [
-          "F50"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,20 +225,23 @@
       "ko": "올라와. 뭐? 미안해, 그들은 기다리는 걸 싫어해.",
       "tags": {
         "functions": [
-          "F09"
+          "F28",
+          "F38"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -242,20 +251,22 @@
       "ko": "알겠어, 음, 내가 여기 살고 있어? 어, 절대 아니야.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16"
+        ],
         "flags": []
       }
     },
@@ -267,16 +278,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,19 +299,22 @@
       "ko": "어, 응, 하지만 구강 성교는 아니야. 구강 성교는 언급할 생각이 없었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X05",
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V07",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -311,21 +325,23 @@
       "ko": "좋아, 그러지 마.",
       "tags": {
         "functions": [
-          "F40"
+          "F53"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -334,20 +350,25 @@
       "ko": "그게 어떻게 나올 거라고 생각했어? 이거 도와줄 수 있어?",
       "tags": {
         "functions": [
-          "F34"
+          "F19"
         ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S28",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E04"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -359,18 +380,23 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
+        "situation": "S10",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X04",
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -382,16 +408,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -403,20 +429,24 @@
       "ko": "글쎄, 모르는 거지.",
       "tags": {
         "functions": [
-          "F09"
+          "F43",
+          "F55"
         ],
-        "situation": "S08",
+        "situation": "S39",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -426,23 +456,21 @@
       "ko": "알겠어. 알겠어. 응. 준비됐어? 응. 응, 그들은 그래, 응.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
         "situation": "S08",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -451,22 +479,23 @@
       "ko": "응, 바로 너 뒤에 있어. 그래, 알겠어.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
         "situation": "S08",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "3f2858d3f690ed3d"
 }

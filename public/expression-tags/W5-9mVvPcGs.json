@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,7 +35,7 @@
       "ko": "그래서 스페인에 갔을 때 사탕이랑 젤리, 아이스크림,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,7 +58,7 @@
       "ko": "도넛, 그리고 모든 것을 사는 데",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -69,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,10 +81,10 @@
       "ko": "완전히 빠져들었어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,7 +92,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,18 +104,19 @@
       "ko": "그래서 어느 시점에 멈춰야 했죠. 네. 이제 미국에 계시잖아요. 심각해지고 있었군요. 어떤 느낌이에요?",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,7 +128,7 @@
       "ko": "네. 세상에.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -138,10 +139,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,18 +153,18 @@
       "ko": "스페인에서 살 때는 이건 파에야잖아 하고 생각했는데.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,10 +176,10 @@
       "ko": "여기 오면 도넛 때문에 움직여야 해요. 맞아요.",
       "tags": {
         "functions": [
-          "F03"
+          "F10"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,7 +187,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +199,19 @@
       "ko": "이 쇼를 시작한 이후로 약 14킬로가 쪘어요. 네.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,7 +223,7 @@
       "ko": "통조림 음식에도 완전히 빠져 있었어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -230,7 +234,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -245,7 +249,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -253,7 +257,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,7 +269,7 @@
       "ko": "그래서 옥수수랑 수프를 열어보고,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -274,9 +278,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,7 +292,7 @@
       "ko": "캔 안에 있는 모든 것이 저에게는",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -299,7 +303,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,18 +315,18 @@
       "ko": "너무 먹기 쉬웠어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,7 +338,7 @@
       "ko": "압력솥으로 세 시간 기다릴 필요가 없었으니까요, 아시죠?",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "B1",
@@ -343,9 +347,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -368,7 +372,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -380,10 +384,10 @@
       "ko": "이게 대단하다고 말할 거라고는 생각도 못 했어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E01"
@@ -403,7 +407,7 @@
       "ko": "그런 말을 들을 거라고는 상상도 못 했죠.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -414,7 +418,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -426,7 +430,7 @@
       "ko": "저희에게 가르쳐 주실 수 있나요, 마이클과 제가 배울 수 있는",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -437,9 +441,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -449,7 +455,7 @@
       "ko": "쿠바의 대표적인 표현이 뭐가 있을까요?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -460,11 +466,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "16f8e8ae6b61c59b"
 }

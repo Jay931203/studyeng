@@ -15,7 +15,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,12 +23,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,18 +35,18 @@
       "ko": "진짜 눈물이 나.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,18 +58,18 @@
       "ko": "론다, 함께 이겨내자. 오, 맙소사.",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V05",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,19 +81,21 @@
       "ko": "오, 세상에. 힘든 상황이야.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -106,7 +106,7 @@
       "ko": "많아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -117,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,18 +129,18 @@
       "ko": "괜찮아, 왜냐하면 괜찮지 않으니까.",
       "tags": {
         "functions": [
-          "F20"
+          "F04"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,18 +152,18 @@
       "ko": "너의 질문을 아예 듣지 못했어.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,7 +175,7 @@
       "ko": "정말 덥다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -186,7 +186,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,18 +198,18 @@
       "ko": "오, 세상에. 나에게 무슨 일이 일어나고 있는 거지?",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,32 +221,7 @@
       "ko": "지금은 나와 너뿐이야, 이 자식아.",
       "tags": {
         "functions": [
-          "F17"
-        ],
-        "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
-      "id": "L9d960njfC8-10",
-      "en": "There's nothing else I see.",
-      "ko": "내가 보는 건 아무것도 없어.",
-      "tags": {
-        "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -257,7 +232,30 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "L9d960njfC8-10",
+      "en": "There's nothing else I see.",
+      "ko": "내가 보는 건 아무것도 없어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S34",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -269,25 +267,21 @@
       "ko": "나는 완전히 정신이 나갔어.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [
-          "P01"
-        ],
+        "vibe": "V10",
+        "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -296,18 +290,18 @@
       "ko": "여행의 그 부분이야, 알지? 맞아, 정말로.",
       "tags": {
         "functions": [
-          "F09"
+          "F10"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -319,18 +313,18 @@
       "ko": "이게 바로 네가 이렇게 생각하는 부분이야,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -342,10 +336,10 @@
       "ko": "알겠어, 알겠어, 이제 나도 이 상황에 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -353,7 +347,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -368,7 +362,7 @@
           "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -376,7 +370,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -388,18 +382,18 @@
       "ko": "솔직히 말할게, 친구.",
       "tags": {
         "functions": [
-          "F09"
+          "F35"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -411,18 +405,18 @@
       "ko": "나는 안 좋아.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -434,7 +428,7 @@
       "ko": "집에 있는 사람들은 모두 이렇게 말해.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -443,9 +437,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -457,7 +451,7 @@
       "ko": "오, 너는 유명인 소스에 보낼 수 없어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -468,7 +462,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -480,10 +474,10 @@
       "ko": "그들은 날개를 제대로 소스하지 않을 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -491,7 +485,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -503,7 +497,7 @@
       "ko": "그런데 내가 알아차린 건, 모두가 그냥",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -514,7 +508,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -526,24 +520,23 @@
       "ko": "날개에 소스를 쏟고 있다는 거야. 잘 찍어야 해. 그렇게 하지 마...",
       "tags": {
         "functions": [
-          "F04"
+          "F40"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "114847250ec83bc1"
 }

@@ -12,10 +12,10 @@
       "ko": "밖에서 차들이 그냥 지나가, 붙잡을 수 없던 생각들처럼.",
       "tags": {
         "functions": [
-          "F02"
+          "F21"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,10 +37,10 @@
       "ko": "이웃들은 벽 너머로 꿈을 꾸고, 고요함이 천천히 복도를 채워.",
       "tags": {
         "functions": [
-          "F02"
+          "F21"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,10 +62,10 @@
       "ko": "매 순간이 느리게 흘러가, 갈 곳이 아무 데도 없어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -73,9 +73,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V09",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -87,10 +91,10 @@
       "ko": "오늘 밤 시계 바늘이 거의 안 움직여, 화면 빛이 아침 빛처럼 느껴져.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -98,7 +102,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,10 +116,10 @@
       "ko": "새벽 2시인데 아직 여기 있어, 사라지는 생각들을 쫓으며.",
       "tags": {
         "functions": [
-          "F02"
+          "F21"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -123,7 +127,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -137,10 +141,10 @@
       "ko": "마음속을 달리는 고속도로, 모든 걸 뒤에 남기고.",
       "tags": {
         "functions": [
-          "F02"
+          "F21"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -148,7 +152,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,18 +166,18 @@
       "ko": "아무도 내가 지새우는 밤을 몰라, 반쯤 깨어 있지만 잠들기가 두려워.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E04"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,10 +191,10 @@
       "ko": "세상이 멀게 느껴지면, 그냥 날이 밝을 때까지 깨어 있을 거야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -198,7 +202,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -212,7 +216,7 @@
       "ko": "먼 길을 돌아 집으로 가.",
       "tags": {
         "functions": [
-          "F02"
+          "F35"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -223,7 +227,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -231,5 +235,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "4a17ec08b4e3cdda"
 }

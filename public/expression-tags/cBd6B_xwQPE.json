@@ -12,13 +12,13 @@
       "ko": "이제 우리는 화가 났어.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S42",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -35,13 +35,13 @@
       "ko": "솔직히, 나는 화가 나.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S42",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -58,16 +58,18 @@
       "ko": "나 정말 짜증 나, 알지? 너희는 지금 무슨 일이 일어나고 있는지 알고 싶지 않을 거야.",
       "tags": {
         "functions": [
-          "F17"
+          "F40"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S42",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X05",
+          "X04"
         ],
         "vibe": "V10",
         "power": [],
@@ -81,20 +83,24 @@
       "ko": "너희는 원하지 않을 거야, 아니. 나는 정말 화가 나. 나는 열받았어.",
       "tags": {
         "functions": [
-          "F17"
+          "F40"
         ],
-        "situation": "S34",
+        "situation": "S42",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -104,16 +110,17 @@
       "ko": "알겠어? 나는 이걸 할 수 없어. 미안해. 우리는 너무 화가 났어.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S42",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X04"
         ],
         "vibe": "V10",
         "power": [],
@@ -127,13 +134,13 @@
       "ko": "우리는 이걸 할 수 없을 만큼 화가 났어. 미안해. 얘들아, 얘들아. 우리는 화난 게 아니야.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S42",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
@@ -150,10 +157,10 @@
       "ko": "그건 연기였어. 그래.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S42",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,10 +180,10 @@
       "ko": "우리는 연기하고 있었어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S42",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,9 +203,9 @@
       "ko": "오늘 밤 여기 많은 감독들이 있다는 걸 알고 있었어. 그리고...",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S34",
+        "situation": "S42",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -219,13 +226,13 @@
       "ko": "우리는 그들에게 우리가 정말 재미있었다는 걸 알리고 싶었어. 우리는 정말 재미있었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S42",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -242,9 +249,9 @@
       "ko": "우리는 그들에게 우리가 코미디만 하는 게 아니라는 걸 알리고 싶었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S42",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -265,10 +272,10 @@
       "ko": "아, 그건 내 대사였어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S42",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,16 +295,17 @@
       "ko": "글쎄, 이제 내 차례인 것 같아, 아들! 너는 어떻게 알겠어?",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S42",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
         "vibe": "V10",
         "power": [],
@@ -305,5 +313,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "4e74a80b4e5c6204"
 }

@@ -12,7 +12,7 @@
       "ko": "내가 너에게 여성에 대해 물어보면, 아마 너의 개인적인 좋아하는 목록을 줄 거야.",
       "tags": {
         "functions": [
-          "F06"
+          "F14"
         ],
         "situation": "S50",
         "cefr": "B2",
@@ -21,11 +21,15 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -35,10 +39,10 @@
       "ko": "너는 아마 몇 번 성관계를 가졌을지도 몰라.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +50,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +62,18 @@
       "ko": "하지만 여자의 옆에서 깨어나 진정으로 행복한 기분이 어떤 건지 말해줄 수는 없어.",
       "tags": {
         "functions": [
-          "F50"
+          "F03"
         ],
-        "situation": "S50",
+        "situation": "S03",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,7 +85,7 @@
       "ko": "너는 강한 아이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F12"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -92,7 +96,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,20 +108,24 @@
       "ko": "내가 전쟁에 대해 물어보면, 아마 셰익스피어를 인용할 거야, 그렇지?",
       "tags": {
         "functions": [
-          "F06"
+          "F14"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -127,10 +135,10 @@
       "ko": "다시 한 번, 친구들아.",
       "tags": {
         "functions": [
-          "F62"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,10 +146,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -150,10 +160,10 @@
       "ko": "하지만 너는 전쟁 근처에도 가본 적이 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -161,9 +171,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -173,10 +186,10 @@
       "ko": "너는 절친의 머리를 무릎에 올리고",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,12 +197,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
+        "flags": []
       }
     },
     {
@@ -198,18 +212,18 @@
       "ko": "그가 마지막 숨을 쉬며 도움을 바라보는 모습을 지켜본 적이 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,20 +235,24 @@
       "ko": "내가 사랑에 대해 물어보면, 아마 소네트를 인용할 거야.",
       "tags": {
         "functions": [
-          "F06"
+          "F14"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -244,20 +262,24 @@
       "ko": "하지만 너는 여자를 바라보며 완전히 취약해 본 적이 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F43",
+          "F10"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -267,10 +289,10 @@
       "ko": "그녀의 눈빛으로 너를 무너뜨릴 수 있는 사람을 알지 못해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -278,7 +300,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,22 +312,23 @@
       "ko": "마치 신이 너를 위해 지구에 천사를 보낸 것 같은 기분.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "c7d43b83b8e7dedd"
 }

@@ -15,7 +15,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,18 +35,18 @@
       "ko": "그거요, 사실. 아! 안 될 것 같아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E04"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,13 +58,13 @@
       "ko": "미안하지만, 묻는 게 아니었어요. 이건 원하지 않아요.",
       "tags": {
         "functions": [
-          "F34"
+          "F40"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -81,20 +81,24 @@
       "ko": "아, 맞아요, 원하지 않지만 그 돌이 필요하고 논의할 시간이 없어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F10",
+          "F40"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -104,20 +108,23 @@
       "ko": "다시 시작해볼까요? 제발, 제발.",
       "tags": {
         "functions": [
-          "F36"
+          "F34"
         ],
         "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02",
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -127,20 +134,22 @@
       "ko": "미안해요, 브루스, 도와줄 수 없어요.",
       "tags": {
         "functions": [
-          "F31"
+          "F28"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -150,16 +159,16 @@
       "ko": "타임 스톤을 포기하면 내 현실이 망가져요.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -173,16 +182,16 @@
       "ko": "모든 존경을 표하며 말씀드리는 거예요, 알겠죠?",
       "tags": {
         "functions": [
-          "F04"
+          "F51"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -196,16 +205,16 @@
       "ko": "과학이 그걸 정말 뒷받침하는지 확신이 없어요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -219,10 +228,10 @@
       "ko": "인피니티 스톤은 당신이 경험하는 시간의 흐름을 만들어내요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,10 +251,10 @@
       "ko": "스톤 하나를 제거하면 그 흐름이 갈라져요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,10 +274,10 @@
       "ko": "이건 당신의 현실에는 도움이 될 수 있지만, 내 새로운 현실에는 그렇지 않아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,10 +297,10 @@
       "ko": "이 새로운 분기 현실에서는 우리의 주요 무기가 없어요...",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -305,5 +314,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "35e065b97330ae9c"
 }

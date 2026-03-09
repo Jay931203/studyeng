@@ -12,7 +12,7 @@
       "ko": "그냥 얘기하는 건데, 네 입술을 쳐다보게 돼.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,7 +37,7 @@
       "ko": "안 좋을 수도 있지만, 알아보고 싶어.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -46,9 +46,11 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07",
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,10 +64,10 @@
       "ko": "그리고 한밤중에 잠이 깨.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -73,7 +75,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -93,12 +95,12 @@
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,20 +114,22 @@
       "ko": "네가 여기 없으니까, 뭔가 잘못된 느낌이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F40"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -137,7 +141,7 @@
       "ko": "네가 여기 없으니까.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A1",
@@ -148,7 +152,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,18 +166,18 @@
       "ko": "세상에, 나 진짜 빠져들었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F35"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,7 +191,7 @@
       "ko": "아직 만나지도 않았는데.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A1",
@@ -198,7 +202,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -212,20 +216,22 @@
       "ko": "이게 잘못된 거면 어떡하지?",
       "tags": {
         "functions": [
-          "F19"
+          "F35"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -237,7 +243,7 @@
       "ko": "전형적인 하느님.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A1",
@@ -248,11 +254,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -262,10 +269,10 @@
       "ko": "깊은 곳으로 뛰어들고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -273,7 +280,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -287,18 +294,18 @@
       "ko": "수영하는 게 더 재밌어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -312,18 +319,18 @@
       "ko": "위험은 빠지는 거지만.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E12"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -337,18 +344,18 @@
       "ko": "하지만 감수할 거야.",
       "tags": {
         "functions": [
-          "F41"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -362,18 +369,18 @@
       "ko": "감수할 거야. 재밌지 않아?",
       "tags": {
         "functions": [
-          "F41"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -387,7 +394,7 @@
       "ko": "아마 틀렸는데 맞다고 생각하는 거.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -396,11 +403,14 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17",
+          "G21"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -412,7 +422,7 @@
       "ko": "누군가 앞에 있는 것처럼 숨을 참고.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -421,9 +431,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -437,18 +447,18 @@
       "ko": "네가 나를 만진 적 없다는 걸 잘 알면서도.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V03",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -466,7 +476,7 @@
           "F09"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -474,7 +484,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -482,5 +492,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "aa8c6d5512219de9"
 }

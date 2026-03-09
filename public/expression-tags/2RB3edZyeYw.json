@@ -12,56 +12,10 @@
       "ko": "아프든 상관없어, 나는 통제하고 싶어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E04"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "2RB3edZyeYw-1",
-      "en": "I want a perfect body I want a perfect soul",
-      "ko": "완벽한 몸과 완벽한 영혼을 원해",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E04"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "2RB3edZyeYw-2",
-      "en": "I want you to notice When I'm not around",
-      "ko": "내가 없을 때 알아주길 바래",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S11",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,7 +25,59 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "2RB3edZyeYw-1",
+      "en": "I want a perfect body I want a perfect soul",
+      "ko": "완벽한 몸과 완벽한 영혼을 원해",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S11",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G15"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "2RB3edZyeYw-2",
+      "en": "I want you to notice When I'm not around",
+      "ko": "내가 없을 때 알아주길 바래",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S11",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -83,31 +89,8 @@
         "functions": [
           "F30"
         ],
-        "situation": "S50",
+        "situation": "S11",
         "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "2RB3edZyeYw-4",
-      "en": "I need to do something substantial in order to get the attention of the clubs. Why?",
-      "ko": "클럽의 주목을 받으려면 뭔가 의미 있는 일을 해야 해. 왜냐고?",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -117,7 +100,34 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "2RB3edZyeYw-4",
+      "en": "I need to do something substantial in order to get the attention of the clubs. Why?",
+      "ko": "클럽의 주목을 받으려면 뭔가 의미 있는 일을 해야 해. 왜냐고?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S11",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -129,8 +139,8 @@
         "functions": [
           "F04"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S11",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -140,9 +150,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "4ea128eb5d9e8aa2"
 }

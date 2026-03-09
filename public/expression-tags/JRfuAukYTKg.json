@@ -12,9 +12,9 @@
       "ko": "큰 소리로 말하지만 말하는 건 별로 없어요",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,10 +37,10 @@
       "ko": "비판받지만, 그건 그들이 그렇기 때문이야",
       "tags": {
         "functions": [
-          "F12"
+          "F04"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S46",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,9 +48,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -62,18 +64,18 @@
       "ko": "나를 쓰러뜨려도, 나는 일어설 거야",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S46",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,9 +89,9 @@
       "ko": "잃을 게 없잖아",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -98,7 +100,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,9 +114,9 @@
       "ko": "쏴봐, 쏴봐",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -123,7 +125,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -137,9 +139,9 @@
       "ko": "튕겨나가, 너는 조준해",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -148,7 +150,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,9 +164,9 @@
       "ko": "쏴봐, 쏴봐",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -173,7 +175,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,10 +189,10 @@
       "ko": "나를 쓰러뜨려도, 나는 넘어지지 않아",
       "tags": {
         "functions": [
-          "F17"
+          "F43"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S46",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -198,9 +200,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -214,8 +218,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S46",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -223,11 +227,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -237,10 +242,10 @@
       "ko": "나를 쓰러뜨려도, 나는 넘어지지 않아",
       "tags": {
         "functions": [
-          "F17"
+          "F43"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S46",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -248,13 +253,16 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": [
           "is_lyrics"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "2b6c9f53d4a7f612"
 }

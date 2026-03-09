@@ -14,18 +14,23 @@
         "functions": [
           "F27"
         ],
-        "situation": "S34",
-        "cefr": "A1",
-        "register": "R5",
+        "situation": "S10",
+        "cefr": "B2",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03",
+          "P09"
+        ],
+        "grammar_intent": [
+          "G22"
+        ],
         "flags": []
       }
     },
@@ -37,18 +42,20 @@
         "functions": [
           "F27"
         ],
-        "situation": "S34",
-        "cefr": "A1",
-        "register": "R5",
+        "situation": "S10",
+        "cefr": "B2",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -58,10 +65,10 @@
       "ko": "어머니, 미 마드레. 영화의 식사 서비스를 맡아주신 어머니.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S10",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +76,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +88,18 @@
       "ko": "제가 아는 가장 용감하고 아름다운 여성이에요.",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,21 +111,23 @@
       "ko": "이 세상에서 가장 위대한 여성이 오늘 밤 여기 있습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -129,8 +138,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,7 +147,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,18 +159,18 @@
       "ko": "제 어머니와 맷의 어머니, 여기서 가장 아름다운 분들이에요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,20 +182,22 @@
       "ko": "제 어머니, 블라이스 태너, 그 무엇보다 사랑합니다.",
       "tags": {
         "functions": [
-          "F22"
+          "F13"
         ],
-        "situation": "S34",
+        "situation": "S10",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -196,18 +207,18 @@
       "ko": "어머니가 글 쓰는 법을 가르쳐 주셨어요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,18 +230,18 @@
       "ko": "제 손가락 그림이 전부 피카소 작품이라고 가르쳐 주셨죠.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,18 +255,20 @@
         "functions": [
           "F27"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R5",
+        "situation": "S10",
+        "cefr": "B2",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -265,18 +278,18 @@
       "ko": "이런 밤에 참여할 수 있는 삶을 만들어 주신 분이에요.",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,20 +301,22 @@
       "ko": "시상식에 데려오는 것에 대해 남들이 뭐라 하든 상관없어요, 항상 데려올 거예요.",
       "tags": {
         "functions": [
-          "F09"
+          "F65"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -311,20 +326,25 @@
       "ko": "시상식에요, 왜냐하면 당신이 자랑스럽고 사랑하니까요.",
       "tags": {
         "functions": [
-          "F09"
+          "F22"
         ],
-        "situation": "S34",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P09"
+        ],
+        "grammar_intent": [
+          "G18",
+          "G22"
+        ],
         "flags": []
       }
     },
@@ -334,18 +354,18 @@
       "ko": "당신은 제가 여기서 살고 꿈을 이룰 수 있도록 너무나 많은 것을 희생하셨어요.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -359,18 +379,22 @@
         "functions": [
           "F22"
         ],
-        "situation": "S34",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P09"
+        ],
+        "grammar_intent": [
+          "G22"
+        ],
         "flags": []
       }
     },
@@ -382,20 +406,23 @@
         "functions": [
           "F27"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S10",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E07"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a98e53d8a967b951"
 }

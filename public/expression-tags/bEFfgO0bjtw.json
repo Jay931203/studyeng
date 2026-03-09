@@ -12,16 +12,16 @@
       "ko": "그 문에서 물러나세요. 그에 대한 빚이 있어요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -35,16 +35,16 @@
       "ko": "새것 같아요. 무기를 내려놓으세요. 저와 함께 있어요.",
       "tags": {
         "functions": [
-          "F35"
+          "F23"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -58,11 +58,11 @@
       "ko": "닐은 어때요? 그는 스스로 잘할 수 있어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F36"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -71,7 +71,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -83,14 +85,14 @@
         "functions": [
           "F35"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -98,5 +100,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "e0c54cc7090490fe"
 }

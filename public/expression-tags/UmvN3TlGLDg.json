@@ -14,9 +14,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -35,9 +35,9 @@
       "ko": "아니, 닉. 그녀는 내가 일주일 내내 그녀와 이야기하고 있는 걸 몰라.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -60,9 +60,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -81,9 +81,9 @@
       "ko": "항상. 하지만 나는 그녀와 우리가 결정을 내렸다고 생각했어. 그게 뭐야? 안 될 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F21"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -104,10 +104,11 @@
       "ko": "왜 안 돼?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F52"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,10 +128,10 @@
       "ko": "관심이 없어서. 말하기는 안 좋지만, 그렇게 보이는 게 싫어.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -140,7 +141,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -150,16 +154,16 @@
       "ko": "사람들은 할 말을 할 거야. 그걸 하지 말 이유는 없어.",
       "tags": {
         "functions": [
-          "F12"
+          "F21"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -175,7 +179,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -198,7 +202,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -210,7 +214,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -219,9 +225,10 @@
       "ko": "그 냄새. 응, 그리고 그건 시시의 잘못이 아니야. 모든 사람들이 다 그래. 나는 그녀에게 그걸 말했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F50"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -232,7 +239,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -242,9 +251,9 @@
       "ko": "너 시시에게 모든 여자가...",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -256,7 +265,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,9 +276,9 @@
       "ko": "이걸 페미니즘 문제로 만들지 마. 나는 페미니즘 문제로 만들고 싶지 않아.",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -288,9 +299,9 @@
       "ko": "어떻게? 그들은 끔찍한 냄새가 나. 다 아는 사실이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -311,9 +322,9 @@
       "ko": "그러니까 너의 가장 큰 걱정은 주변 사람들에게 미치는 영향이겠네.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -334,9 +345,9 @@
       "ko": "물론, 술 취한 노인들이 그것을 잡으려고 할 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -357,9 +368,9 @@
       "ko": "하지만 네 가장 큰 걱정이 냄새라면, 그건 충분히 관리할 수 있을 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -370,9 +381,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "61767e290f2ceaa4"
 }

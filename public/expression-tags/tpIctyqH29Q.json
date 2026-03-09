@@ -14,19 +14,21 @@
         "functions": [
           "F25"
         ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -37,19 +39,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -60,19 +64,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S47",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -83,19 +89,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S47",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -106,19 +114,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -129,19 +139,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -152,19 +164,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -173,21 +187,23 @@
       "ko": "마법이라고 부르지 마세요. 절대 그렇지 않습니다. 다시 말하지만, 마법이 아닙니다. 그러니 우리가",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -196,21 +212,25 @@
       "ko": "이 시리즈에서 이야기할 내용에 들어가기 전에, 우리가 이야기하지 않을 내용을 말씀드리는 것이 좋을 것 같습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F14"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -219,21 +239,23 @@
       "ko": "우리는 프로그래밍을 가르치지 않을 것입니다. 프로그래밍은",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -242,21 +264,23 @@
       "ko": "컴퓨터 과학의 매우 중요한 측면이며, 하드웨어와 소프트웨어 설계의 논리를 안내하는 규칙에 대해 다룰 것입니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -265,21 +289,23 @@
       "ko": "디자인입니다. 하지만 우리는 아두이노를 프로그래밍하여 식물에 물을 주는 방법이나,",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -290,20 +316,23 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "d5126cd5c6233161"
 }

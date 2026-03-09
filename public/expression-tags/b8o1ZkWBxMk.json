@@ -12,9 +12,9 @@
       "ko": "♪",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S15",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -37,9 +37,9 @@
       "ko": "크리스 가드너?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S15",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -51,7 +51,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -62,8 +64,8 @@
         "functions": [
           "F25"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S15",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -85,7 +87,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S15",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -97,7 +99,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -106,10 +110,10 @@
       "ko": "크리스 가드너, 다시 만나서 반갑습니다.",
       "tags": {
         "functions": [
-          "F25"
+          "F32"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S15",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,9 +133,9 @@
       "ko": "크리스 가드너. 반갑습니다.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S15",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -152,9 +156,9 @@
       "ko": "지난 반 시간 동안 밖에서 앉아 있었어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S15",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -175,16 +179,16 @@
       "ko": "이야기를 생각해내려고요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S15",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -198,10 +202,10 @@
       "ko": "제가 여기 있는 이유를 설명할 이야기를요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S15",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -221,16 +225,16 @@
       "ko": "이렇게 입고 있는.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S15",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -244,16 +248,16 @@
       "ko": "그리고 저는 이야기를 생각해내고 싶었어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S15",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -267,10 +271,10 @@
       "ko": "여러분이 분명히 존경할 만한 자질을 보여주는,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S15",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -292,14 +296,14 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S15",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -315,8 +319,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S15",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -336,10 +340,10 @@
       "ko": "그런데 아무것도 생각이 나지 않았어요.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S15",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -359,10 +363,10 @@
       "ko": "그래서 사실은,",
       "tags": {
         "functions": [
-          "F01"
+          "F64"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S15",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -382,9 +386,9 @@
       "ko": "주차 위반 티켓 미납으로 체포되었어요.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S15",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -399,5 +403,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "48f5f6dd334ee48f"
 }

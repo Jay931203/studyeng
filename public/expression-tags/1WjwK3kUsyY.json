@@ -12,11 +12,11 @@
       "ko": "미크스, 문 닫혔습니다. 네, 선생님.",
       "tags": {
         "functions": [
-          "F08"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S16",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -39,7 +37,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S16",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -60,10 +58,10 @@
       "ko": "희극, 권력, 타락, 배설물.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S16",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -83,9 +81,9 @@
       "ko": "좋아요, 스터디 그룹. 미크스, 라틴어 잘해.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S16",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -106,9 +104,9 @@
       "ko": "영어는 그렇게 망치진 않았어.",
       "tags": {
         "functions": [
-          "F11"
+          "F56"
         ],
-        "situation": "S14",
+        "situation": "S16",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -129,10 +127,10 @@
       "ko": "그러니까, 원한다면 스터디 그룹이 있어. 물론, 카메론이 나에게 부탁했어.",
       "tags": {
         "functions": [
-          "F34"
+          "F48"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S16",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -154,7 +152,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S16",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -175,13 +173,13 @@
       "ko": "당신의 전문은 아부인가요?",
       "tags": {
         "functions": [
-          "F58"
+          "F06"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S16",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -200,9 +198,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "A1",
-        "register": "R4",
+        "situation": "S16",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -212,7 +210,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -221,13 +221,13 @@
       "ko": "그건 내 잘못이 아니야.",
       "tags": {
         "functions": [
-          "F11"
+          "F08"
         ],
-        "situation": "S14",
+        "situation": "S16",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -244,10 +244,11 @@
       "ko": "죄송합니다, 제 이름은 스티븐 미크스입니다.",
       "tags": {
         "functions": [
-          "F25"
+          "F28",
+          "F26"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S16",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -256,8 +257,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -267,10 +272,11 @@
       "ko": "아, 이분은 토드 앤더슨입니다. 만나서 반갑습니다.",
       "tags": {
         "functions": [
-          "F25"
+          "F25",
+          "F26"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S16",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -279,7 +285,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -292,8 +300,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S16",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -315,9 +323,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S16",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -336,10 +344,10 @@
       "ko": "아, 그래, 물론.",
       "tags": {
         "functions": [
-          "F10"
+          "F07"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S16",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -350,7 +358,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -361,7 +371,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S16",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -382,9 +392,9 @@
       "ko": "아, 헬튼에 오신 것을 환영합니다.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S16",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -405,9 +415,10 @@
       "ko": "정말 힘든 곳이에요, 그들이 말하는 것처럼,",
       "tags": {
         "functions": [
-          "F02"
+          "F21",
+          "F05"
         ],
-        "situation": "S50",
+        "situation": "S16",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -428,9 +439,9 @@
       "ko": "미크스처럼 천재가 아니라면요. 나를 칭찬하네요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S16",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -440,7 +451,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P12"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -451,10 +464,10 @@
       "ko": "그래서 내가 그를 라틴어로 도와주는 거죠.",
       "tags": {
         "functions": [
-          "F34"
+          "F04"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S16",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -464,7 +477,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -474,9 +489,9 @@
       "ko": "그리고 영어와 속임수도요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S16",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -491,5 +506,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "303f583a5718cc27"
 }

@@ -12,7 +12,8 @@
       "ko": "어서.",
       "tags": {
         "functions": [
-          "F25"
+          "F35",
+          "F45"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -21,12 +22,14 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,7 +38,9 @@
       "ko": "거기 500달러가 있고, 지갑도 그보다 더 가치가 있으니, 적어도 나를 정류소에 내려줄 수 있잖아.",
       "tags": {
         "functions": [
-          "F34"
+          "F36",
+          "F13",
+          "F14"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -44,11 +49,14 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09",
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -58,20 +66,22 @@
       "ko": "내 정류소에 내려줘. 이건... 젠장! 그를 막아! 돌아와! 무슨 일이야? 이건 설계에 없었어.",
       "tags": {
         "functions": [
-          "F40"
+          "F19",
+          "F60"
         ],
         "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03",
-          "E09"
+          "E04"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V12",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": [
           "contains_profanity"
@@ -84,21 +94,22 @@
       "ko": "콥? 콥? 이게 뭐야? 왜 여기 있어? 잘 안 보여. 이건 엉망이야. 어서.",
       "tags": {
         "functions": [
-          "F18"
+          "F45"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03",
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -108,20 +119,22 @@
       "ko": "잘 안 보여. 어서, 어서. 어서. 잘 안 보여. 잘 안 보여. 어서. 어서.",
       "tags": {
         "functions": [
-          "F09"
+          "F45"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -131,16 +144,16 @@
       "ko": "어서. 어서. 어서. 어서. 어서. 어서. 어서.",
       "tags": {
         "functions": [
-          "F25"
+          "F45"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -154,21 +167,22 @@
       "ko": "잘 안 보여. 어서. 어서. 잘 안 보여. 잘 안 보여. 잘 안 보여! 잘 안 보여!",
       "tags": {
         "functions": [
-          "F09"
+          "F45"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03",
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -178,22 +192,26 @@
       "ko": "오 마이 갓! 잘 안 보여! 잘 안 보여! 잘 안 보여! 잘 안 보여!",
       "tags": {
         "functions": [
-          "F19"
+          "F18"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G07"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "115d0ed9b66306e3"
 }

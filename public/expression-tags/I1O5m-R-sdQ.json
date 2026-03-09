@@ -12,10 +12,10 @@
       "ko": "가, 가, 가, 가, 가, 가, 가, 가, 가, 가, 가, 가! 헤이, 헤이, 헤이, 헤이, 헤이!",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
+        "situation": "S40",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,12 +23,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,18 +35,18 @@
       "ko": "그 사람에서 떨어져. 그는 뭘 하고 있는지 몰라. 그는 미국인이야.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,9 +58,9 @@
       "ko": "미국인? 아니, 그렇지? 나를 봐.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S39",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -83,9 +81,9 @@
       "ko": "진 파르마산, 잘 지내?",
       "tags": {
         "functions": [
-          "F25"
+          "F06"
         ],
-        "situation": "S39",
+        "situation": "S40",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -106,20 +104,22 @@
       "ko": "진, 도대체 뭐 하는 거야?",
       "tags": {
         "functions": [
-          "F04"
+          "F17"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S40",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -131,16 +131,16 @@
       "ko": "일어나지 마. 나는 그냥 물건을 찾고 있어.",
       "tags": {
         "functions": [
-          "F50"
+          "F35"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S40",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -154,9 +154,38 @@
       "ko": "나는 사설 탐정이야, 진 파르마산. 너는 어때?",
       "tags": {
         "functions": [
-          "F01"
+          "F25",
+          "F04",
+          "F33"
         ],
-        "situation": "S39",
+        "situation": "S40",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "I1O5m-R-sdQ-7",
+      "en": "Ah, Gene! Oh, Gene, isn't he the best?",
+      "ko": "아, 진! 오, 진, 그는 최고가 아니야?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -172,46 +201,23 @@
       }
     },
     {
-      "id": "I1O5m-R-sdQ-7",
-      "en": "Ah, Gene! Oh, Gene, isn't he the best?",
-      "ko": "아, 진! 오, 진, 그는 최고가 아니야?",
-      "tags": {
-        "functions": [
-          "F30"
-        ],
-        "situation": "S39",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "I1O5m-R-sdQ-8",
       "en": "Gene was far from the best. Gene Parmesan? Right here. Ah!",
       "ko": "진은 결코 최고가 아니었어. 진 파르마산? 여기 있어. 아!",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S39",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -225,8 +231,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S39",
-        "cefr": "A1",
+        "situation": "S40",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -248,9 +254,10 @@
       "ko": "그냥 풍선 가진 바보야. 오, 그렇구나?",
       "tags": {
         "functions": [
-          "F09"
+          "F06",
+          "F58"
         ],
-        "situation": "S39",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -271,36 +278,13 @@
       "ko": "아! 알았어!",
       "tags": {
         "functions": [
-          "F18"
+          "F23"
         ],
-        "situation": "S39",
+        "situation": "S40",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "I1O5m-R-sdQ-12",
-      "en": "Uh, I've got some bad news. I'm...",
-      "ko": "어, 나쁜 소식이 있어. 나는...",
-      "tags": {
-        "functions": [
-          "F05"
-        ],
-        "situation": "S39",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -312,14 +296,40 @@
       }
     },
     {
+      "id": "I1O5m-R-sdQ-12",
+      "en": "Uh, I've got some bad news. I'm...",
+      "ko": "어, 나쁜 소식이 있어. 나는...",
+      "tags": {
+        "functions": [
+          "F23",
+          "F52"
+        ],
+        "situation": "S40",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E08"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
       "id": "I1O5m-R-sdQ-13",
       "en": "Gene Parmesan, how you doing?",
       "ko": "진 파르마산, 잘 지내?",
       "tags": {
         "functions": [
-          "F25"
+          "F06"
         ],
-        "situation": "S39",
+        "situation": "S40",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -340,18 +350,18 @@
       "ko": "아! 또 나를 잡았어!",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S40",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -363,11 +373,11 @@
       "ko": "하지만 그가 내부 출혈이 있다고 들었어.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S27",
+        "situation": "S40",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -380,5 +390,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "5a05ae59a33326fb"
 }

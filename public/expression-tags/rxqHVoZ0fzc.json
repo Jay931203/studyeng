@@ -14,7 +14,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -35,21 +35,23 @@
       "ko": "그게, 음...",
       "tags": {
         "functions": [
-          "F50"
+          "F52"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,22 +60,24 @@
       "ko": "충격 진동이야. 꽤 놀랐어. 빨리, 빨리, 빨리, 빨리! 여기서 나가야 해! 여기서 나가야 해!",
       "tags": {
         "functions": [
-          "F04",
-          "F15"
+          "F17",
+          "F21",
+          "F45"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02",
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -83,21 +87,22 @@
       "ko": "지금! 지금! 당장! 가, 가, 가, 가! 가자! 이봐! 엔진 켜!",
       "tags": {
         "functions": [
-          "F35",
           "F36"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -107,19 +112,18 @@
       "ko": "엔진 켜! 더 빨리 가야 해. J.D.! J.D.! J.D.! 맞아. 무대에서 내려와, 이 더러운 달!",
       "tags": {
         "functions": [
-          "F35",
-          "F36"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -131,20 +135,23 @@
       "ko": "조심해! 아래! 이봐! 이봐! 이봐! 이봐! 이봐!",
       "tags": {
         "functions": [
+          "F35",
           "F40"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -154,10 +161,10 @@
       "ko": "이봐! J.D.! J.D.! J.D.! J.D.! J.D.! J.D.!",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -177,9 +184,9 @@
       "ko": "J.D.! 이봐! J.D.! J.D.! J.D.! J.D.!",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -200,9 +207,9 @@
       "ko": "J.D.! J.D.! J.D.! J.D.! J.D.!",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -217,5 +224,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "2105284222eeab0f"
 }

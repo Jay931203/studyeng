@@ -12,11 +12,11 @@
       "ko": "그리고 사루만이 우리를 배신했다고 하네.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -35,11 +35,11 @@
       "ko": "우리의 동맹 목록이 줄어들고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -58,11 +58,11 @@
       "ko": "그의 배신은 네가 아는 것보다 깊어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -81,11 +81,11 @@
       "ko": "팔크래프트에 의해, 사루만은 오크와 고블린을 교배했어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -104,11 +104,11 @@
       "ko": "그는 아이젠가르드의 동굴에서 군대를 키우고 있어.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -127,21 +127,23 @@
       "ko": "햇빛 아래 지배할 수 있고 빠르게 이동할 수 있는 군대야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -150,11 +152,11 @@
       "ko": "사루만이 반지를 가지러 오고 있어.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -173,13 +175,13 @@
       "ko": "이 악은 엘프의 힘으로 숨길 수 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -196,13 +198,13 @@
       "ko": "우리는 모르도르와 아이젠가르드를 동시에 상대할 힘이 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -219,10 +221,10 @@
       "ko": "간달프.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -244,11 +246,11 @@
       "ko": "반지는 여기 있을 수 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -258,7 +260,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -267,11 +271,11 @@
       "ko": "계속됩니다...",
       "tags": {
         "functions": [
-          "F62"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
-        "register": "R1",
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -281,8 +285,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "24f7d06fbd962603"
 }

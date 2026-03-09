@@ -14,11 +14,11 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -35,13 +35,13 @@
       "ko": "그래",
       "tags": {
         "functions": [
-          "F01"
+          "F44"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -49,7 +49,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,20 +60,23 @@
       "ko": "우리는 겨우 11살이었지만 지금처럼 어른인 척했어, 플라스틱 컵으로 마시면서, 사랑은 영원하다고 노래했지, 글쎄 그게 사실이었나 봐.",
       "tags": {
         "functions": [
-          "F02"
+          "F14"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V14",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G14",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -83,11 +88,11 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -108,20 +113,21 @@
         "functions": [
           "F02"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V14",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "7fa91f08a1abd436"
 }

@@ -12,20 +12,22 @@
       "ko": "내가 네가 할 수 있을 것 같다고 했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -35,10 +37,10 @@
       "ko": "손을 내줘.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,10 +60,10 @@
       "ko": "이제 눈을 감아.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +71,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,21 +83,23 @@
       "ko": "계속해.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,21 +108,23 @@
       "ko": "올라와.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -127,18 +133,18 @@
       "ko": "이제 난간을 잡아.",
       "tags": {
         "functions": [
-          "F35"
+          "F49"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,9 +156,9 @@
       "ko": "눈을 감고 있어. 실수하지 마.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -161,7 +167,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,9 +179,9 @@
       "ko": "안 그래.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -184,10 +190,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -196,18 +204,18 @@
       "ko": "난간 위로 올라와.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,18 +227,18 @@
       "ko": "잡아. 잡아.",
       "tags": {
         "functions": [
-          "F35"
+          "F49"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,10 +250,10 @@
       "ko": "눈을 감고 있어.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -253,7 +261,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,7 +275,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -276,7 +284,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,9 +296,9 @@
       "ko": "알겠어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F53"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -299,10 +307,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -311,9 +321,9 @@
       "ko": "좋아. 눈을 떠.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -322,11 +332,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "7fcc82d59ca846f7"
 }

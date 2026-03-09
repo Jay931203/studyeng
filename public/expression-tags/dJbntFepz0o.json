@@ -12,30 +12,9 @@
       "ko": "응, 드디어 배불러. 그건 불가능할 것 같은데. 아니, 맞아.",
       "tags": {
         "functions": [
-          "F01"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "dJbntFepz0o-1",
-      "en": "You and I have, we have a special connection. I really believe that. We're both gingers. Yes. We both grew up. Unsightly from the Massachusetts area.",
-      "ko": "너와 나는, 우리 특별한 유대감이 있어. 진심으로 그렇게 생각해. 우리 둘 다 빨간 머리잖아. 맞아. 매사추세츠 쪽에서 둘 다 자랐고.",
-      "tags": {
-        "functions": [
-          "F09"
+          "F11",
+          "F40",
+          "F07"
         ],
         "situation": "S34",
         "cefr": "B1",
@@ -46,7 +25,33 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G21",
+          "G24"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "dJbntFepz0o-1",
+      "en": "You and I have, we have a special connection. I really believe that. We're both gingers. Yes. We both grew up. Unsightly from the Massachusetts area.",
+      "ko": "너와 나는, 우리 특별한 유대감이 있어. 진심으로 그렇게 생각해. 우리 둘 다 빨간 머리잖아. 맞아. 매사추세츠 쪽에서 둘 다 자랐고.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S34",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +63,19 @@
       "ko": "우리는 뭐랄까, 스튜에 들어가는 양념 같은 존재지.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -84,7 +90,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,7 +98,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,7 +110,7 @@
       "ko": "우리 둘은 나란히 있으면 안 돼.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -115,7 +121,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,7 +133,7 @@
       "ko": "LA 카운티에서 우리가 일 년에 한 번만 만나서 저녁 먹는 게 허용된 것처럼.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "B1",
@@ -136,9 +142,10 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X06"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -161,7 +168,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,10 +180,10 @@
       "ko": "엄청나게 이상한 쓴맛의 조합이지, 맞지?",
       "tags": {
         "functions": [
-          "F12"
+          "F51"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,7 +191,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,7 +203,7 @@
       "ko": "그게, 나라면 분노를 먼저 골랐겠지만, 좋아, 쓴맛, 분노, 혼란 순서로 가자.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "B2",
@@ -205,9 +212,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,18 +226,19 @@
       "ko": "나는, 분노를 숨기는 편이야, 아마, 예전에는. 빌보다 잘 숨기지 않아? 오, 맙소사.",
       "tags": {
         "functions": [
-          "F09"
+          "F09",
+          "F40"
         ],
         "situation": "S34",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,7 +250,7 @@
       "ko": "아, 그래.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -253,10 +261,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,18 +275,18 @@
       "ko": "얘들아, 내가 스테이션 왜건에서 너희 때릴 때도 숨기지 않아?",
       "tags": {
         "functions": [
-          "F06"
+          "F40"
         ],
         "situation": "S34",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,10 +298,10 @@
       "ko": "내 말에 다 동의해, 안 그러면 나중에 대화가 있을 거야.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -299,11 +309,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "f63d7842f41b252e"
 }

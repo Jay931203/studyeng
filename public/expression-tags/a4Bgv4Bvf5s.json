@@ -12,20 +12,22 @@
       "ko": "정말 무겁네요.",
       "tags": {
         "functions": [
-          "F02"
+          "F10"
         ],
-        "situation": "S50",
+        "situation": "S44",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R3",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -37,7 +39,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S44",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -46,10 +48,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,18 +62,19 @@
       "ko": "상징적인 무게도 말할 필요 없이, 흠?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04",
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,22 +86,26 @@
       "ko": "절대 보고 싶지 않았던 광경이군요.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a9768760bbb2add0"
 }

@@ -15,7 +15,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,13 +35,13 @@
       "ko": "준비됐어, 프레디?",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
           "X08"
@@ -49,7 +49,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -61,17 +63,19 @@
           "F35"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -84,7 +88,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -95,9 +99,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -106,10 +108,10 @@
       "ko": "언제든지 말해줬어.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,10 +131,10 @@
       "ko": "내 길에 어려움이 있었어.",
       "tags": {
         "functions": [
-          "F02"
+          "F03"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -152,16 +154,16 @@
       "ko": "조금 더 지혜로워질 수 있을까?",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -175,10 +177,10 @@
       "ko": "매일 조금씩 나아져.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -198,10 +200,10 @@
       "ko": "하지만 내가 백만 개의 강을 건넜다면.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -221,10 +223,10 @@
       "ko": "백만 개의 선을 넘었어.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -238,5 +240,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "023b652dce1e30d9"
 }

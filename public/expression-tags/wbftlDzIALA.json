@@ -12,22 +12,22 @@
       "ko": "알겠지? 거짓말은 우리가 두 가지 진실과 하나의 거짓말 게임을 안 하고 있다는 거였어. 그런데 거짓말을 해본 적 있어?",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_fragment"
+          "is_narration"
         ]
       }
     },
@@ -37,21 +37,26 @@
       "ko": "모든 사람이 해봤잖아. 하지만 그게 너에게 어떤 영향을 줄 수 있는지 생각해 본 적 있어? 만약 거짓말을 안 하면",
       "tags": {
         "functions": [
-          "F09"
+          "F36"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G09",
+          "G12"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -60,21 +65,27 @@
       "ko": "더 좋은 직장을 얻을 수 있다면? 그 직장이 돈을 더 많이 준다면? 그래도 거짓말할 거야?",
       "tags": {
         "functions": [
-          "F14"
+          "F34",
+          "F36"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G02",
+          "G09"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -83,21 +94,25 @@
       "ko": "아마 이 한 번의 거짓말은 괜찮겠지 하고 생각했을 거야. 하지만 계속 반복하다 보면",
       "tags": {
         "functions": [
-          "F12"
+          "F14"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -106,21 +121,23 @@
       "ko": "습관이 돼. 습관이 되면 사람들이 너를 피하기 시작해. 경험으로",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -129,21 +146,23 @@
       "ko": "알아. 그렇게 될 거야. 내 여동생은 얼굴에 빨간 점을 그려놓고",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -152,21 +171,23 @@
       "ko": "벌레 물린 거라고 했어. 이제 그녀를 예전만큼 믿지 못해. 내 친여동생인데도. 이건",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
-          "E02"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -175,21 +196,23 @@
       "ko": "거짓말이 너에게 할 수 있는 일 중 하나일 뿐이야. 스트레스, 불행, 그리고 정신 건강 손상은",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S47",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -200,20 +223,23 @@
         "functions": [
           "F06"
         ],
-        "situation": "S16",
+        "situation": "S47",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "b67bbd7725c04ca6"
 }

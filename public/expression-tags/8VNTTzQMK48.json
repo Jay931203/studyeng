@@ -14,8 +14,8 @@
         "functions": [
           "F27"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,8 +23,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -37,7 +39,7 @@
         "functions": [
           "F02"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -46,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,7 +62,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -69,7 +71,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,10 +83,10 @@
       "ko": "위즈 칼리파입니다!",
       "tags": {
         "functions": [
-          "F62"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,7 +94,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,9 +106,9 @@
       "ko": "-♪♪♪♪",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -115,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -131,17 +133,19 @@
         "functions": [
           "F27"
         ],
-        "situation": "S34",
-        "cefr": "A1",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "A2",
+        "register": "R3",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -152,19 +156,22 @@
       "ko": "위즈, 짐. 위즈 알아? 안녕, 친구? 잘 지내?",
       "tags": {
         "functions": [
-          "F34"
+          "F25"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05",
+          "X06"
         ],
-        "vibe": "V13",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -175,10 +182,10 @@
       "ko": "마일스, 위즈. 위즈, 마일스.",
       "tags": {
         "functions": [
-          "F48"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -186,7 +193,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,10 +205,11 @@
       "ko": "안녕, 친구? 만나서 반가워. 게임 진행 방식은 이래.",
       "tags": {
         "functions": [
-          "F25"
+          "F25",
+          "F32"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,9 +217,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -221,10 +231,10 @@
       "ko": "마일스, 너는 이 버튼을 눌러서 게임을 시작할 거야.",
       "tags": {
         "functions": [
-          "F36"
+          "F02"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -232,7 +242,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,9 +254,9 @@
       "ko": "여기 있는 이 부저에서 시작 버튼을 눌러.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -255,7 +265,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,10 +277,10 @@
       "ko": "그리고 더미에서 가장 위에 있는 단서를 뽑아. 너의 팀원인 위즈에게 단서를 최대한 빨리 맞추게 해.",
       "tags": {
         "functions": [
-          "F36"
+          "F03"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -278,7 +288,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,9 +300,9 @@
       "ko": "그리고 버튼을 오른쪽 사람에게 넘겨줘.",
       "tags": {
         "functions": [
-          "F36"
+          "F13"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -301,9 +311,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -313,10 +325,10 @@
       "ko": "어떤 신체 동작도 하고 뭐든지 말할 수 있어.",
       "tags": {
         "functions": [
-          "F36"
+          "F03"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -324,7 +336,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -336,9 +348,9 @@
       "ko": "실제 단어는 말할 수 없어...",
       "tags": {
         "functions": [
-          "F36"
+          "F12"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -347,7 +359,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -359,11 +371,57 @@
       "ko": "우리가 픽셔너리 할 때 기억나?",
       "tags": {
         "functions": [
-          "F09"
+          "F12"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "8VNTTzQMK48-16",
+      "en": "Do you remember when we played Pictionary?",
+      "ko": "응, 응, 응.",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S31",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V14",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "8VNTTzQMK48-17",
+      "en": "Yeah, yeah, yeah.",
+      "ko": "버튼을 들고 있을 때 소리가 나면 너희 팀은 그 라운드를 잃어.",
+      "tags": {
+        "functions": [
+          "F53"
+        ],
+        "situation": "S31",
+        "cefr": "A1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -379,61 +437,15 @@
       }
     },
     {
-      "id": "8VNTTzQMK48-16",
-      "en": "Do you remember when we played Pictionary?",
-      "ko": "응, 응, 응.",
-      "tags": {
-        "functions": [
-          "F03"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "8VNTTzQMK48-17",
-      "en": "Yeah, yeah, yeah.",
-      "ko": "버튼을 들고 있을 때 소리가 나면 너희 팀은 그 라운드를 잃어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "8VNTTzQMK48-18",
       "en": "If you're holding the buzzer when it goes off, your team loses that round.",
       "ko": "두 라운드를 먼저 이긴 팀이 게임에서 승리해.",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -453,9 +465,9 @@
       "ko": "자리 잡자. 나는 여기로 갈게.",
       "tags": {
         "functions": [
-          "F04"
+          "F03"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -476,9 +488,9 @@
       "ko": "자, 제자리로 가자. 나는 여기 갈게.",
       "tags": {
         "functions": [
-          "F04"
+          "F36"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -489,7 +501,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -499,10 +513,10 @@
       "ko": "아, 알겠어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F53"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -516,5 +530,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "34111a9575485cbc"
 }

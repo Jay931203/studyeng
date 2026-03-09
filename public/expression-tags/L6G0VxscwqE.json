@@ -12,23 +12,23 @@
       "ko": "앉으세요. 부탁드립니다. 어제 저와 만나지 않은 이유를 알고 싶습니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S37",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G02"
+        ],
+        "flags": []
       }
     },
     {
@@ -37,11 +37,11 @@
       "ko": "죄송하지만, 잘 이해하지 못하겠습니다. 저는 어제 여기 앉아 있었고,",
       "tags": {
         "functions": [
-          "F50"
+          "F28"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S37",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -49,8 +49,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -62,9 +66,9 @@
         "functions": [
           "F09"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S37",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -72,7 +76,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P02"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -83,11 +89,11 @@
       "ko": "저는 그렇게 생각하지 않습니다. 선생님, 불만이 있으시다면 저희 이메일 시스템을 통해 제출하시길 권장합니다.",
       "tags": {
         "functions": [
-          "F37"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S37",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -106,18 +112,18 @@
       "ko": "기꺼이 저희 웹사이트를 안내해 드리겠습니다.",
       "tags": {
         "functions": [
-          "F34"
+          "F21"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S37",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,11 +135,11 @@
       "ko": "제가 만날 사람은 매우 신중한 분이라고 들었습니다. 조심스러운 분이죠. 그런 점에서 우리는 비슷하다고 생각합니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F09"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S37",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -141,7 +147,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P02"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -152,11 +160,11 @@
       "ko": "우리는 그런 점에서 비슷해.",
       "tags": {
         "functions": [
-          "F13"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S37",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -169,5 +177,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d6f1c7dfdba61271"
 }

@@ -12,18 +12,19 @@
       "ko": "나 죽어가고 있어, 포레스트. 들어와서 여기 앉아.",
       "tags": {
         "functions": [
-          "F03"
+          "F35",
+          "F38"
         ],
-        "situation": "S41",
-        "cefr": "B2",
+        "situation": "S28",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V09",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -37,16 +38,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S41",
+        "situation": "S28",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,7 +61,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S41",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -69,10 +70,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -83,8 +86,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S41",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,7 +95,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,18 +107,18 @@
       "ko": "자, 두려워하지 마, 얘야.",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
-        "situation": "S41",
-        "cefr": "B1",
-        "register": "R5",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E07"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,10 +130,10 @@
       "ko": "죽음은 삶의 일부일 뿐이야. 우리 모두가 겪어야 할 일이야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S41",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,7 +141,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,10 +153,10 @@
       "ko": "나도 몰랐지만, 너희 엄마가 되는 게 내 운명이었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F56"
         ],
-        "situation": "S41",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -161,7 +164,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,10 +176,10 @@
       "ko": "내가 할 수 있는 최선을 다했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S41",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,7 +187,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +199,18 @@
       "ko": "엄마, 잘하셨어요.",
       "tags": {
         "functions": [
-          "F30"
+          "F55"
         ],
-        "situation": "S41",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,10 +222,10 @@
       "ko": "난 자기 운명은 스스로 만드는 거라고 믿어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S41",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,7 +233,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,9 +245,9 @@
       "ko": "하나님이 준 걸로 최선을 다해야 해. 내 운명은 뭐야, 엄마?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S41",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -253,11 +256,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "1a3a5af5e470ae1a"
 }

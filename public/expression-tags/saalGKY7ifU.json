@@ -12,20 +12,24 @@
       "ko": "매일 밤 꿈에서 당신을 보고, 당신을 느낍니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F32"
         ],
-        "situation": "S44",
-        "cefr": "C1",
-        "register": "R5",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V18",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -37,16 +41,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "C1",
-        "register": "R5",
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,9 +64,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "C1",
-        "register": "R5",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -83,16 +87,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "C1",
-        "register": "R5",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,22 +108,25 @@
       "ko": "가까이, 멀리, 당신이 어디에 있든지 마음은 계속 존재한다고 믿습니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F09"
         ],
-        "situation": "S44",
-        "cefr": "C1",
-        "register": "R5",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V07",
-        "power": [],
+        "vibe": "V02",
+        "power": [
+          "P02"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "2bcead788941ca14"
 }

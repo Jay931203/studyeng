@@ -5,30 +5,23 @@
   "seriesId": "hot-ones",
   "sentenceCount": 14,
   "taggedCount": 14,
+  "transcriptHash": "42e1b3036e3c1ace",
   "sentences": [
     {
       "id": "LiISYvzuLK4-0",
       "en": "That asshole hasn't cheated on me, I'm gonna be on your stupid ass show, getting my f***ing",
       "ko": "그 개새끼는 나를 속이지 않았어. 난 너희 바보 같은 쇼에 나가서,",
       "tags": {
-        "functions": [
-          "F09"
-        ],
+        "functions": ["F17", "F55"],
         "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "cefr": "C1",
+        "register": "R5",
+        "emotions": ["E03"],
+        "expression_types": ["X05"],
         "vibe": "V03",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "power": ["P07"],
+        "grammar_intent": ["G19"],
+        "flags": ["contains_profanity", "is_fragment"]
       }
     },
     {
@@ -36,24 +29,16 @@
       "en": "face melted off, eating these little tiny spicy pieces of s***, when blowing my f***ing",
       "ko": "내 얼굴이 녹아내리게 하고, 이 작은 매운 조각들을 먹으면서,",
       "tags": {
-        "functions": [
-          "F09"
-        ],
+        "functions": ["F17"],
         "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "cefr": "C1",
+        "register": "R5",
+        "emotions": ["E03"],
+        "expression_types": ["X05"],
         "vibe": "V03",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "grammar_intent": ["G19"],
+        "flags": ["contains_profanity", "is_fragment"]
       }
     },
     {
@@ -61,24 +46,16 @@
       "en": "shorts out on f***ing national television! It's a YouTube channel.",
       "ko": "내 바지를 터뜨리게 될 거야, 개새끼 같은 전국 방송에서! 유튜브 채널이야.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
+        "functions": ["F17", "F08"],
         "situation": "S34",
         "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V03",
+        "register": "R5",
+        "emotions": ["E03", "E14"],
+        "expression_types": ["X05"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": ["contains_profanity"]
       }
     },
     {
@@ -86,24 +63,16 @@
       "en": "I don't give a f*** what the f*** it is!",
       "ko": "난 그게 뭐든 상관 없어!",
       "tags": {
-        "functions": [
-          "F09"
-        ],
+        "functions": ["F43"],
         "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": ["E03"],
+        "expression_types": ["X05", "X04"],
         "vibe": "V03",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "power": ["P05"],
+        "grammar_intent": ["G06"],
+        "flags": ["contains_profanity"]
       }
     },
     {
@@ -111,19 +80,13 @@
       "en": "Are you ready to move on to the next sauce?",
       "ko": "다음 소스로 넘어갈 준비 됐어?",
       "tags": {
-        "functions": [
-          "F06"
-        ],
+        "functions": ["F06"],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -134,22 +97,16 @@
       "en": "Caribbean Scorch, shoes coming off.",
       "ko": "카리브 스코치, 신발 벗어야겠네.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
+        "functions": ["F62"],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E06"],
+        "expression_types": ["X08"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["is_fragment"]
       }
     },
     {
@@ -157,20 +114,14 @@
       "en": "Let me tell you something, Sean.",
       "ko": "하나 말해줄게, 숀.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
+        "functions": ["F48"],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
+        "emotions": ["E09"],
+        "expression_types": ["X04"],
+        "vibe": "V08",
+        "power": ["P03"],
         "grammar_intent": [],
         "flags": []
       }
@@ -180,19 +131,13 @@
       "en": "I have 87 billion dollars.",
       "ko": "난 870억 달러가 있어.",
       "tags": {
-        "functions": [
-          "F01"
-        ],
+        "functions": ["F01"],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -203,24 +148,16 @@
       "en": "I could buy you, and this whole studio, and every motherf***er in it, and I could shut",
       "ko": "난 너와 이 스튜디오, 그리고 여기 있는 모든 개새끼들을 살 수 있어,",
       "tags": {
-        "functions": [
-          "F09"
-        ],
+        "functions": ["F42", "F45"],
         "situation": "S34",
         "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "register": "R5",
+        "emotions": ["E03"],
+        "expression_types": ["X05"],
         "vibe": "V03",
-        "power": [],
+        "power": ["P07"],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": ["contains_profanity", "is_fragment"]
       }
     },
     {
@@ -228,24 +165,16 @@
       "en": "it the f*** down.",
       "ko": "그리고 이걸 다 닫아버릴 수 있어.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
+        "functions": ["F42"],
         "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": ["E03"],
+        "expression_types": ["X01", "X05"],
         "vibe": "V03",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": ["contains_profanity", "is_fragment"]
       }
     },
     {
@@ -253,24 +182,16 @@
       "en": "I could kill everybody in here and get away with it.",
       "ko": "여기 있는 모든 사람을 죽일 수 있고, 무사히 빠져나올 수 있어.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
+        "functions": ["F42"],
         "situation": "S34",
         "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "register": "R5",
+        "emotions": ["E12"],
+        "expression_types": ["X02"],
         "vibe": "V03",
-        "power": [],
+        "power": ["P07"],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -278,21 +199,15 @@
       "en": "Alright, I think maybe we should wrap this up.",
       "ko": "좋아, 이제 이걸 마무리해야 할 것 같아.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
+        "functions": ["F36"],
         "situation": "S34",
         "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E04"],
+        "expression_types": ["X01", "X07"],
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": ["G09"],
         "flags": []
       }
     },
@@ -301,20 +216,14 @@
       "en": "I don't need anything. I don't need anybody.",
       "ko": "난 아무것도 필요 없어. 난 누구도 필요 없어.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
+        "functions": ["F63"],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
+        "emotions": ["E16"],
+        "expression_types": ["X08"],
+        "vibe": "V08",
+        "power": ["P10"],
         "grammar_intent": [],
         "flags": []
       }
@@ -324,24 +233,16 @@
       "en": "Y'all are letting houses, motherf***ers.",
       "ko": "너희는 집을 내놓고 있어, 개새끼들아.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
+        "functions": ["F58"],
         "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V03",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": ["E03"],
+        "expression_types": ["X05"],
+        "vibe": "V17",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": ["contains_profanity"]
       }
     }
   ]

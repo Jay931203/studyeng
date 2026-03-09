@@ -12,10 +12,11 @@
       "ko": "그들이 글로벌 슈퍼스타가 될 것 같지는 않았지만, 그렇게 됐죠.",
       "tags": {
         "functions": [
-          "F09"
+          "F02",
+          "F13"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,9 +24,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -35,20 +38,22 @@
       "ko": "너 왜 그래?",
       "tags": {
         "functions": [
-          "F17"
+          "F06"
         ],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -58,10 +63,10 @@
       "ko": "웃음",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +74,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -83,7 +88,7 @@
       "ko": "그때 우리는 정말로 파스티만 먹고 있었어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F09"
         ],
         "situation": "S34",
         "cefr": "B1",
@@ -94,7 +99,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,7 +111,7 @@
       "ko": "그리고 서비스 스테이션에서 파는 마스 밀크요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "B1",
@@ -117,7 +122,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -138,9 +143,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,7 +157,7 @@
       "ko": "네, 그게 전부였고, 우리는 괜찮을 거라고 생각했어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
         "situation": "S34",
         "cefr": "B1",
@@ -163,7 +168,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,7 +180,7 @@
       "ko": "우리는 멋져 보일 거라고 생각했죠, 문제 없다고.",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
         "situation": "S34",
         "cefr": "B1",
@@ -186,10 +191,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -198,7 +207,8 @@
       "ko": "스타일리스트가 없었던 거야?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F03"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -209,7 +219,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,10 +231,10 @@
       "ko": "웃음",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -232,7 +242,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -246,10 +256,11 @@
       "ko": "맞아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F53"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -257,10 +268,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -269,30 +282,7 @@
       "ko": "우리는 그 사람에게 8,000파운드를 줬고, 다시는 보지 못했어요.",
       "tags": {
         "functions": [
-          "F05"
-        ],
-        "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "YbwNuyKKzSk-12",
-      "en": "Please tell me that isn't true.",
-      "ko": "그게 사실이 아니라고 말해줘.",
-      "tags": {
-        "functions": [
-          "F06"
+          "F43"
         ],
         "situation": "S34",
         "cefr": "B1",
@@ -303,9 +293,36 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "YbwNuyKKzSk-12",
+      "en": "Please tell me that isn't true.",
+      "ko": "그게 사실이 아니라고 말해줘.",
+      "tags": {
+        "functions": [
+          "F34"
+        ],
+        "situation": "S34",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E13"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -315,10 +332,10 @@
       "ko": "아니, 사실이 아니에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F08"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -326,7 +343,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -338,18 +355,18 @@
       "ko": "지금 콜드플레이를 보면, 당신들은 신과 같고,",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -364,7 +381,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -372,7 +389,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -384,18 +401,18 @@
       "ko": "그리고 휴 그랜트 옆에 앉아있고. 맞아요, 휴. 당신이 팬인 걸 알아요.",
       "tags": {
         "functions": [
-          "F01"
+          "F21"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -407,13 +424,14 @@
       "ko": "저는 휴의 열렬한 팬이에요. 저도요, 저도요. 제 타투 보고 싶어요? 휴 그랜트 타투 있어요? 아니요, 없어요. 웃음",
       "tags": {
         "functions": [
-          "F09"
+          "F21",
+          "F23"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -421,9 +439,7 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -435,7 +451,7 @@
           "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -443,11 +459,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "4fe11ed27b84212d"
 }

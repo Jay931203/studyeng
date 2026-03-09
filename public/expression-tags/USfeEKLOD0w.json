@@ -5,27 +5,22 @@
   "seriesId": "ted-lasso",
   "sentenceCount": 18,
   "taggedCount": 18,
+  "transcriptHash": "668bbcc8677c3d29",
   "sentences": [
     {
       "id": "USfeEKLOD0w-0",
       "en": "They have a myth, where they believe that all soulmates are connected by an invisible red string.",
       "ko": "그들은 모든 소울메이트가 보이지 않는 빨간 실로 연결되어 있다고 믿는 신화를 가지고 있어.",
       "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S48",
+        "functions": ["F03", "F04"],
+        "situation": "S33",
         "cefr": "B2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
+        "vibe": "V02",
+        "power": ["P06"],
+        "grammar_intent": ["G18"],
         "flags": []
       }
     },
@@ -34,21 +29,15 @@
       "en": "And those strings are attached to each of their little fingers.",
       "ko": "그 실은 각자의 새끼손가락에 묶여 있어.",
       "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S48",
-        "cefr": "B2",
+        "functions": ["F04"],
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": ["G18"],
         "flags": []
       }
     },
@@ -57,24 +46,16 @@
       "en": "Hmm?",
       "ko": "응?",
       "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S48",
+        "functions": ["F53"],
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E09"],
+        "expression_types": ["X06"],
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": ["is_fragment"]
       }
     },
     {
@@ -82,22 +63,16 @@
       "en": "Okay, so why is it tied around our dicks?",
       "ko": "그런데 왜 그게 우리의 성기에 묶여 있는 거지?",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S48",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
+        "functions": ["F06", "F59"],
+        "situation": "S33",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": ["E14"],
+        "expression_types": ["X05"],
+        "vibe": "V10",
+        "power": ["P07"],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["contains_profanity"]
       }
     },
     {
@@ -105,19 +80,13 @@
       "en": "Yeah, well, you know, that was Roy's idea.",
       "ko": "응, 그건 로이의 아이디어였어.",
       "tags": {
-        "functions": [
-          "F07"
-        ],
-        "situation": "S48",
-        "cefr": "B1",
+        "functions": ["F57", "F50"],
+        "situation": "S33",
+        "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E14"],
+        "expression_types": ["X06"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -128,22 +97,16 @@
       "en": "But I'm pretty sure the thought behind it is that it is nearly impossible to not be fully aware of what your teammate's doing when you all got a rope tied around your ding-dongs.",
       "ko": "하지만 그 생각의 배경은, 모두의 성기에 밧줄이 묶여 있으면 팀원이 무엇을 하고 있는지 완전히 인지하기가 거의 불가능하다는 거야.",
       "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S48",
-        "cefr": "B2",
+        "functions": ["F04"],
+        "situation": "S33",
+        "cefr": "C1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "emotions": ["E14"],
+        "expression_types": ["X05", "X07"],
+        "vibe": "V10",
+        "power": ["P01"],
+        "grammar_intent": ["G18"],
+        "flags": ["contains_profanity"]
       }
     },
     {
@@ -151,19 +114,13 @@
       "en": "Alright about that, Roy?",
       "ko": "그 부분에 대해 어떻게 생각해, 로이?",
       "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S48",
-        "cefr": "B1",
+        "functions": ["F51"],
+        "situation": "S33",
+        "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E14"],
+        "expression_types": ["X08"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -174,21 +131,15 @@
       "en": "Yeah, something like that.",
       "ko": "응, 그런 거야.",
       "tags": {
-        "functions": [
-          "F10"
-        ],
-        "situation": "S48",
-        "cefr": "A2",
+        "functions": ["F10"],
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "emotions": ["E09"],
+        "expression_types": ["X07"],
+        "vibe": "V10",
+        "power": ["P03"],
+        "grammar_intent": ["G20"],
         "flags": []
       }
     },
@@ -197,19 +148,13 @@
       "en": "Okay, great.",
       "ko": "좋아.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S48",
+        "functions": ["F44"],
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E06"],
+        "expression_types": ["X04"],
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -220,19 +165,13 @@
       "en": "Yeah, so we're going to get after this right now.",
       "ko": "자, 지금 바로 시작할 거야.",
       "tags": {
-        "functions": [
-          "F35"
-        ],
-        "situation": "S48",
+        "functions": ["F62"],
+        "situation": "S33",
         "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E06"],
+        "expression_types": ["X01"],
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -243,19 +182,13 @@
       "en": "We're going to do a full scrimmage at half speed.",
       "ko": "우리는 반속도로 전체 연습 경기를 할 거야.",
       "tags": {
-        "functions": [
-          "F35"
-        ],
-        "situation": "S48",
+        "functions": ["F62"],
+        "situation": "S33",
         "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E06"],
+        "expression_types": ["X03"],
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -266,21 +199,15 @@
       "en": "And I don't want to see them strings get too loose.",
       "ko": "그리고 그 실이 너무 느슨해지지 않도록 해줘.",
       "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S48",
+        "functions": ["F40"],
+        "situation": "S33",
         "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E06"],
+        "expression_types": ["X08"],
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": ["G24"],
         "flags": []
       }
     },
@@ -289,22 +216,16 @@
       "en": "And I'll leave it up to y'all to make sure they don't get too tight. Do not leave my side. Shall we? Dicks on three. One, two, three.",
       "ko": "너무 꽉 조이지 않도록 하는 건 너희에게 맡길게. 내 곁을 떠나지 마. 시작할까? 성기 셋, 하나, 둘, 셋.",
       "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S48",
+        "functions": ["F35", "F38"],
+        "situation": "S33",
         "cefr": "B2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
+        "emotions": ["E14"],
+        "expression_types": ["X04", "X05"],
+        "vibe": "V10",
+        "power": ["P01"],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["contains_profanity"]
       }
     },
     {
@@ -312,24 +233,16 @@
       "en": "Dicks.",
       "ko": "성기.",
       "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S48",
+        "functions": ["F53"],
+        "situation": "S33",
         "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "register": "R5",
+        "emotions": ["E14"],
+        "expression_types": ["X05"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": ["is_fragment", "contains_profanity"]
       }
     },
     {
@@ -337,20 +250,14 @@
       "en": "Come on, let's move!",
       "ko": "자, 움직이자!",
       "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S48",
-        "cefr": "A2",
+        "functions": ["F35"],
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
+        "emotions": ["E06"],
+        "expression_types": ["X04"],
+        "vibe": "V05",
+        "power": ["P03"],
         "grammar_intent": [],
         "flags": []
       }
@@ -360,20 +267,14 @@
       "en": "Figure it out!",
       "ko": "알아서 해!",
       "tags": {
-        "functions": [
-          "F35"
-        ],
-        "situation": "S16",
+        "functions": ["F35"],
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
+        "emotions": ["E03"],
+        "expression_types": ["X01"],
+        "vibe": "V08",
+        "power": ["P03"],
         "grammar_intent": [],
         "flags": []
       }
@@ -383,19 +284,13 @@
       "en": "This is what we're doing!",
       "ko": "이게 우리가 하는 거야!",
       "tags": {
-        "functions": [
-          "F62"
-        ],
-        "situation": "S16",
-        "cefr": "A2",
+        "functions": ["F62"],
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E06"],
+        "expression_types": ["X08"],
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -406,21 +301,15 @@
       "en": "Goodbye!",
       "ko": "안녕!",
       "tags": {
-        "functions": [
-          "F32"
-        ],
-        "situation": "S16",
+        "functions": ["F32"],
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "emotions": ["E14"],
+        "expression_types": ["X04"],
+        "vibe": "V10",
+        "power": ["P03"],
+        "grammar_intent": ["G25"],
         "flags": []
       }
     }

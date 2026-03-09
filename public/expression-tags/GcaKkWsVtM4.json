@@ -12,20 +12,21 @@
       "ko": "그건 닭 소리가 아니야. 닭은 쨱쨱거리지 않아. 위험한 게 뭔지 알아?",
       "tags": {
         "functions": [
-          "F02",
-          "F09"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -38,16 +39,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -59,19 +60,18 @@
       "ko": "그녀의 이름은 앤이야, 아빠. 그는 그녀에게 가지 않아.",
       "tags": {
         "functions": [
-          "F01",
-          "F06"
+          "F02"
         ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,20 +83,22 @@
       "ko": "안녕, 친구, 혼자야? 거의 항상 그래.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S47",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -108,16 +110,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,21 +131,26 @@
       "ko": "아마도 '핫 마더 작전' 어때? 그보다 더 나은 걸 찾아보자. 전혀 사실이 아니야.",
       "tags": {
         "functions": [
-          "F09",
-          "F36"
+          "F36",
+          "F56"
         ],
-        "situation": "S10",
+        "situation": "S47",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G09",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -153,20 +160,21 @@
       "ko": "그게 뭐야? 닭이야? 이게 뭐지? 아, 마이클이 샐리를 데이트 신청하는 게 무서운 거구나. 아니야, 그렇지 않아. 아, 이건 정말 귀여워. 가자!",
       "tags": {
         "functions": [
-          "F18",
-          "F09"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S47",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -177,23 +185,21 @@
       "ko": "가자! 가자! 가자! 가자! 가자! 가자! 가자!",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -202,23 +208,21 @@
       "ko": "가자! 가자! 가자! 가자! 가자! 가자! 가자!",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -227,23 +231,21 @@
       "ko": "가자! 가자! 가자! 가자! 가자! 가자! 가자!",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -252,20 +254,21 @@
       "ko": "가자! 좋은 생각이야. 난 앤이 좋아. 좋아.",
       "tags": {
         "functions": [
-          "F09",
-          "F15"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S47",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -276,22 +279,27 @@
       "ko": "실례합니다, 아가씨? 오늘 비행하셨죠?",
       "tags": {
         "functions": [
-          "F06"
+          "F28"
         ],
-        "situation": "S24",
+        "situation": "S47",
         "cefr": "A2",
-        "register": "R3",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "9ceb9dba58243ad7"
 }

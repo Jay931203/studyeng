@@ -12,20 +12,24 @@
       "ko": "잘됐네, 너 정말 쉽게 잊었나 보네. 새로운 여자친구를 찾았고, 단 몇 주 만에.",
       "tags": {
         "functions": [
-          "F09"
+          "F23",
+          "F14",
+          "F52"
         ],
         "situation": "S46",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E08"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -37,20 +41,22 @@
       "ko": "내가 세상을 주고 싶다고 했던 거 기억나? 그리고 잘됐네, 너 자신을 위해 노력하고 있나 보네.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V09",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -62,7 +68,8 @@
       "ko": "내가 너를 위해 찾은 치료사가 정말 도움이 될 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F37",
+          "F14"
         ],
         "situation": "S46",
         "cefr": "B1",
@@ -71,11 +78,14 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09",
+          "G17"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -87,18 +97,18 @@
       "ko": "이제 너는 새로운 여자친구를 위해 더 나은 남자가 될 수 있겠네.",
       "tags": {
         "functions": [
-          "F09"
+          "F23"
         ],
         "situation": "S46",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,13 +122,42 @@
       "ko": "잘됐네, 너 행복하고 건강해 보여, 장난꾸러기.",
       "tags": {
         "functions": [
-          "F09"
+          "F30",
+          "F21",
+          "F52"
         ],
         "situation": "S46",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E01"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V13",
+        "power": [],
+        "grammar_intent": [
+          "G03"
+        ],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "gNi_6U5Pm_o-5",
+      "en": "If you ever cared to ask",
+      "ko": "만약 네가 물어봤다면.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -132,43 +171,18 @@
       }
     },
     {
-      "id": "gNi_6U5Pm_o-5",
-      "en": "If you ever cared to ask",
-      "ko": "만약 네가 물어봤다면.",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
       "id": "gNi_6U5Pm_o-6",
       "en": "Good for you, you're doin' great, I'll do it without me, baby",
       "ko": "잘됐네, 잘 지내고 있구나, 나 없이도 잘할 수 있을 거야, 베이비.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -187,19 +201,22 @@
       "ko": "그걸 하지 않았으면 좋겠어.",
       "tags": {
         "functions": [
-          "F20"
+          "F24",
+          "F56"
         ],
         "situation": "S46",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V09",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -237,38 +254,13 @@
       "ko": "내 욕실 바닥에서.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "gNi_6U5Pm_o-10",
-      "en": "But you're so infected, I really don't get it",
-      "ko": "하지만 너는 너무 감정이 메말라서, 이해가 안 가.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E02"
         ],
         "expression_types": [
           "X08"
@@ -282,12 +274,39 @@
       }
     },
     {
+      "id": "gNi_6U5Pm_o-10",
+      "en": "But you're so infected, I really don't get it",
+      "ko": "하지만 너는 너무 감정이 메말라서, 이해가 안 가.",
+      "tags": {
+        "functions": [
+          "F30"
+        ],
+        "situation": "S46",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [
+          "G03"
+        ],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
       "id": "gNi_6U5Pm_o-11",
       "en": "I guess good for you",
       "ko": "잘됐네.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -296,15 +315,18 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": [
           "is_lyrics"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "1b1bcf349bd715ab"
 }

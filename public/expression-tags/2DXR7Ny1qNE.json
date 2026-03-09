@@ -16,14 +16,14 @@
         ],
         "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,11 +37,10 @@
       "ko": "저 사람은 호스 검프야, 코치. 그냥 지역 바보야. 믿을 수 있어? 나도 대학에 가야 해. 뛰어! 워커!",
       "tags": {
         "functions": [
-          "F02",
-          "F09"
+          "F02"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -49,8 +48,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V05",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -61,18 +62,18 @@
       "ko": "뛰어! 어서!",
       "tags": {
         "functions": [
-          "F35"
+          "F38"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -84,22 +85,23 @@
       "ko": "뛰어! 뛰어! 안 돼!",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "1115b615cbf83d8d"
 }

@@ -12,12 +12,11 @@
       "ko": "당신은 항상 먼저 가야 한다는 뜻이에요. 당신은 허튼소리예요. 당신은 웨일스의 왕자예요. 태어날 때부터 먼저 가야 할 운명이죠.",
       "tags": {
         "functions": [
-          "F01",
-          "F09"
+          "F01"
         ],
         "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -27,7 +26,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -39,18 +40,20 @@
           "F06"
         ],
         "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -59,11 +62,11 @@
       "ko": "나는 눈이 멀지 않았어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -73,7 +76,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -82,21 +87,23 @@
       "ko": "당신이 얼마나 불행한지 보이고 있어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S10",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -105,11 +112,11 @@
       "ko": "당신이 얼마나 말랐는지.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -119,7 +126,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -128,21 +137,26 @@
       "ko": "믿어봐요, 당신은 그 일의 반도 모르고 있어요. 내가 생각하는 것보다 더 많은 걸 알고 있어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
         "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
-          "E04"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G10",
+          "G24"
+        ],
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -151,21 +165,23 @@
       "ko": "사람들은 이야기해요. 직원들과 저는 매우 슬펐어요.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
         "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -174,22 +190,23 @@
       "ko": "제가 알게 된 것에 충격을 받았어요. 그래서 당신은 저에게 무엇을 원하나요?",
       "tags": {
         "functions": [
-          "F18",
-          "F09"
+          "F01"
         ],
         "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -198,11 +215,11 @@
       "ko": "들려주고 싶어요. 저는 듣고 있어요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -212,7 +229,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -221,11 +240,11 @@
       "ko": "그 이상은 아니에요. 이해받고 싶어요. 인정받고 싶어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S10",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -235,8 +254,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "89c120ef87bd3553"
 }

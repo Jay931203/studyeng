@@ -12,19 +12,21 @@
       "ko": "최악을 예상하며, 폭탄을 떨어뜨릴 거야 말 거야?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -37,18 +39,18 @@
       "ko": "젊어서 죽게 해줘, 그리고 영원히 살게 해줘",
       "tags": {
         "functions": [
-          "F09"
+          "F35"
         ],
         "situation": "S46",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,7 +64,7 @@
       "ko": "우리에게 힘은 없지만 절대 포기하지 않아",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
         "situation": "S46",
         "cefr": "B1",
@@ -73,9 +75,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -87,10 +91,10 @@
       "ko": "모래밭에 앉아, 인생은 짧은 여행이야",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -98,7 +102,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,7 +116,7 @@
       "ko": "음악은 슬픈 사람들을 위한 거야",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -123,7 +127,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -137,7 +141,7 @@
       "ko": "이 경주가 끝나면 상상할 수 있어?",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
         "situation": "S46",
         "cefr": "B1",
@@ -148,9 +152,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -162,7 +168,7 @@
       "ko": "황금빛 얼굴을 태양을 향해 돌려",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "B1",
@@ -173,7 +179,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,10 +193,10 @@
       "ko": "리더들을 찬양하며 우리는 빠져들어",
       "tags": {
         "functions": [
-          "F09"
+          "F62"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -198,7 +204,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -212,20 +218,22 @@
       "ko": "음악은 미친 사람들이 연주해",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -237,19 +245,21 @@
       "ko": "영원히 젊고 싶어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V02",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -262,32 +272,7 @@
       "ko": "영원히 젊게",
       "tags": {
         "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "3iAiWIytqdw-11",
-      "en": "Till you really wanna live forever",
-      "ko": "정말로 영원히 살고 싶을 때까지",
-      "tags": {
-        "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -298,8 +283,36 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics",
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "3iAiWIytqdw-11",
+      "en": "Till you really wanna live forever",
+      "ko": "정말로 영원히 살고 싶을 때까지",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V09",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -312,7 +325,7 @@
       "ko": "영원히, 영원히",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A1",
@@ -323,11 +336,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -337,19 +351,21 @@
       "ko": "영원히 젊고 싶어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V02",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -362,10 +378,10 @@
       "ko": "영원히 젊게",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -373,13 +389,15 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "02c44456ea93275a"
 }

@@ -12,9 +12,9 @@
       "ko": "좋아.",
       "tags": {
         "functions": [
-          "F01"
+          "F53"
         ],
-        "situation": "S16",
+        "situation": "S38",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -23,10 +23,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,9 +37,9 @@
       "ko": "안녕!",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S38",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -46,10 +48,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,10 +62,10 @@
       "ko": "모델 두 명 데려와.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S38",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,10 +73,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,9 +87,9 @@
       "ko": "앉아.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S38",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -92,10 +98,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,9 +112,9 @@
       "ko": "앉아.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S38",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -115,10 +123,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -127,22 +137,25 @@
       "ko": "네 친구, 음...",
       "tags": {
         "functions": [
-          "F06"
+          "F52"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S38",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "aead85e30f184fd8"
 }

@@ -12,19 +12,21 @@
       "ko": "안 돼, 안 돼. 소용없어, 조. 제발 그러지 마. 조, 우리는 이 문제를 해결해야 해. 안 돼, 테디. 나는 너를 알게 된 이후로 항상 사랑해왔어. 어쩔 수 없었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -35,20 +37,22 @@
       "ko": "나는 보여주려고 했고, 너는 나를 허락하지 않았어, 괜찮아. 아니. 하지만 이제 너에게 들려줘야 하고 대답을 받아야 해, 더 이상 이렇게는 못 가겠어. 테디, 제발, 제발 그러지 마. 나는 당구를 포기했어. 네가 싫어하는 모든 것을 포기했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F39"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E13"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -58,20 +62,27 @@
       "ko": "나는 그걸 잘한 것 같아. 괜찮아. 그리고 나는 기다렸고, 불평하지 않았어, 왜냐하면 나는... 너가 나를 사랑할 거라고 생각했거든, 조. 나는 너를 사랑해. 나는 너를 사랑해. 나는 너를 사랑해.",
       "tags": {
         "functions": [
-          "F09"
+          "F43",
+          "F56"
         ],
-        "situation": "S08",
+        "situation": "S40",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P01",
+          "P09"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -81,20 +92,24 @@
       "ko": "나는 너를 사랑해. 나는 너를 사랑해. 나는 너를 사랑해.",
       "tags": {
         "functions": [
-          "F09"
+          "F22"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S40",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P09"
+        ],
+        "grammar_intent": [
+          "G22"
+        ],
         "flags": []
       }
     },
@@ -104,10 +119,11 @@
       "ko": "나는 기다렸고, 불평하지 않았어, 왜냐하면 나는...",
       "tags": {
         "functions": [
-          "F09"
+          "F43",
+          "F56"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,12 +131,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G01",
+          "G18"
+        ],
+        "flags": []
       }
     },
     {
@@ -129,19 +146,21 @@
       "ko": "너가 나를 사랑할 거라고 생각했거든, 조.",
       "tags": {
         "functions": [
-          "F09"
+          "F12"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -152,18 +171,18 @@
       "ko": "그리고 나는 내가 절반도 충분하지 않다는 걸 깨달았어. 나는 이 위대한 남자가 아니야. 오, 그래. 그래, 너는 그래. 너는 나에게 너무나도 훌륭해.",
       "tags": {
         "functions": [
-          "F12"
+          "F21"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,20 +194,22 @@
       "ko": "나는 너에게 정말 고마워, 그리고 너가 자랑스러워. 그리고 나는 그냥...",
       "tags": {
         "functions": [
-          "F31"
+          "F27"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V07",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G23"
+        ],
         "flags": []
       }
     },
@@ -198,20 +219,23 @@
       "ko": "왜 내가 너를 원하는 대로 사랑할 수 없는지 모르겠어. 이유를 모르겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -221,20 +245,22 @@
       "ko": "너는 못해? 아니. 나는 못해.",
       "tags": {
         "functions": [
-          "F06"
+          "F43"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -244,20 +270,22 @@
       "ko": "내 기분을 바꿀 수 없어...",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -267,18 +295,18 @@
       "ko": "내가 그렇지 않으면서 그렇다고 말하는 건 거짓말이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -292,20 +320,23 @@
         "functions": [
           "F28"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a41f11423afcdd2a"
 }

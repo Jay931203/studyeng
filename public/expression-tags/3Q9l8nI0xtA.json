@@ -12,9 +12,9 @@
       "ko": "좋은 하루입니다.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -23,10 +23,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,194 +37,10 @@
       "ko": "그 모욕적인 발언이 불쾌합니다, 페팅턴 경.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "3Q9l8nI0xtA-2",
-      "en": "and I ask, sir, how dare you? He asks him how he dares.",
-      "ko": "당신이 감히 그런 말을 할 수 있는지 묻습니다.",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "3Q9l8nI0xtA-3",
-      "en": "Such an affront, according to the gentleman's code,",
-      "ko": "신사로서 그런 모욕은",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "3Q9l8nI0xtA-4",
-      "en": "permits me to remove my glove and slap your face.",
-      "ko": "내 장갑을 벗고 당신의 얼굴을 때릴 수 있게 합니다.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "3Q9l8nI0xtA-5",
-      "en": "How dare you?",
-      "ko": "감히 어떻게 그런 말을 할 수 있습니까?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "3Q9l8nI0xtA-6",
-      "en": "I asked twice, sir, how dare you?",
-      "ko": "두 번이나 물었습니다, 당신이 감히 어떻게 그런 말을 할 수 있습니까?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "3Q9l8nI0xtA-7",
-      "en": "I rebuke you, sir, and give it to you twice. How dare you?",
-      "ko": "당신을 꾸짖습니다, 두 번이나 말씀드립니다. 감히 어떻게 그런 말을 할 수 있습니까?",
-      "tags": {
-        "functions": [
-          "F55"
-        ],
-        "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "3Q9l8nI0xtA-8",
-      "en": "I deny your rebut thrice-fold. How dare you? How dare you?",
-      "ko": "당신의 반박을 세 번 부인합니다. 감히 어떻게 그런 말을 할 수 있습니까? 감히 어떻게 그런 말을 할 수 있습니까?",
-      "tags": {
-        "functions": [
-          "F56"
-        ],
-        "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "3Q9l8nI0xtA-9",
-      "en": "Ha, dodge! How dare you?",
-      "ko": "하하, 피하셨군요! 감히 어떻게 그런 말을 할 수 있습니까?",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
-        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -237,14 +55,39 @@
       }
     },
     {
-      "id": "3Q9l8nI0xtA-10",
-      "en": "How dare you?",
-      "ko": "감히 어떻게 그런 말을 할 수 있습니까?",
+      "id": "3Q9l8nI0xtA-2",
+      "en": "and I ask, sir, how dare you? He asks him how he dares.",
+      "ko": "당신이 감히 그런 말을 할 수 있는지 묻습니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F17"
         ],
-        "situation": "S34",
+        "situation": "S39",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "3Q9l8nI0xtA-3",
+      "en": "Such an affront, according to the gentleman's code,",
+      "ko": "신사로서 그런 모욕은",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -253,7 +96,178 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "3Q9l8nI0xtA-4",
+      "en": "permits me to remove my glove and slap your face.",
+      "ko": "내 장갑을 벗고 당신의 얼굴을 때릴 수 있게 합니다.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S31",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "3Q9l8nI0xtA-5",
+      "en": "How dare you?",
+      "ko": "감히 어떻게 그런 말을 할 수 있습니까?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S39",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "3Q9l8nI0xtA-6",
+      "en": "I asked twice, sir, how dare you?",
+      "ko": "두 번이나 물었습니다, 당신이 감히 어떻게 그런 말을 할 수 있습니까?",
+      "tags": {
+        "functions": [
+          "F17"
+        ],
+        "situation": "S39",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "3Q9l8nI0xtA-7",
+      "en": "I rebuke you, sir, and give it to you twice. How dare you?",
+      "ko": "당신을 꾸짖습니다, 두 번이나 말씀드립니다. 감히 어떻게 그런 말을 할 수 있습니까?",
+      "tags": {
+        "functions": [
+          "F17"
+        ],
+        "situation": "S39",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "3Q9l8nI0xtA-8",
+      "en": "I deny your rebut thrice-fold. How dare you? How dare you?",
+      "ko": "당신의 반박을 세 번 부인합니다. 감히 어떻게 그런 말을 할 수 있습니까? 감히 어떻게 그런 말을 할 수 있습니까?",
+      "tags": {
+        "functions": [
+          "F17"
+        ],
+        "situation": "S39",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "3Q9l8nI0xtA-9",
+      "en": "Ha, dodge! How dare you?",
+      "ko": "하하, 피하셨군요! 감히 어떻게 그런 말을 할 수 있습니까?",
+      "tags": {
+        "functions": [
+          "F17"
+        ],
+        "situation": "S39",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "3Q9l8nI0xtA-10",
+      "en": "How dare you?",
+      "ko": "감히 어떻게 그런 말을 할 수 있습니까?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S39",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,8 +281,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -276,7 +290,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,20 +302,22 @@
       "ko": "신사 여러분, 평민처럼 행동하고 있습니다. 감히 어떻게 그런 말을 할 수 있습니까?",
       "tags": {
         "functions": [
-          "F12"
+          "F17"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -313,16 +329,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S39",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,10 +350,10 @@
       "ko": "나는 장갑을 벗었으므로 반박할 수 없습니다.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -345,11 +361,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "03ab951141ae9162"
 }

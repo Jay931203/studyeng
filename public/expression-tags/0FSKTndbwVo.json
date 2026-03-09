@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S37",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,10 +23,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,13 +37,89 @@
       "ko": "나가. 뭐? 나가. 나는 내 마음의 궁전으로 가야 해. 네 뭐?",
       "tags": {
         "functions": [
-          "F35"
+          "F06"
         ],
-        "situation": "S39",
+        "situation": "S37",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [
+          "G15"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "0FSKTndbwVo-2",
+      "en": "He's not going to be doing much talking for a while. We may as well go. His what? Oh, his mind palace.",
+      "ko": "그는 당분간 말을 많이 하지 않을 거야. 우리 가는 게 좋겠어. 그의 뭐? 아, 그의 마음의 궁전.",
+      "tags": {
+        "functions": [
+          "F02"
+        ],
+        "situation": "S37",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [
+          "P08"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "0FSKTndbwVo-3",
+      "en": "It's a memory technique, a sort of mental map. You plot a map with a location.",
+      "ko": "기억 기법이야, 일종의 정신적 지도. 장소를 정해서 지도를 그리는 거지.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S37",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06",
+          "X07"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "0FSKTndbwVo-4",
+      "en": "It doesn't have to be a real place, and then you deposit memories there.",
+      "ko": "실제 장소일 필요는 없고, 그곳에 기억을 저장하는 거야.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S37",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -53,15 +131,15 @@
       }
     },
     {
-      "id": "0FSKTndbwVo-2",
-      "en": "He's not going to be doing much talking for a while. We may as well go. His what? Oh, his mind palace.",
-      "ko": "그는 당분간 말을 많이 하지 않을 거야. 우리 가는 게 좋겠어. 그의 뭐? 아, 그의 마음의 궁전.",
+      "id": "0FSKTndbwVo-5",
+      "en": "Theoretically, you can never forget anything.",
+      "ko": "이론적으로는 어떤 것도 잊을 수 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,78 +147,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "0FSKTndbwVo-3",
-      "en": "It's a memory technique, a sort of mental map. You plot a map with a location.",
-      "ko": "기억 기법이야, 일종의 정신적 지도. 장소를 정해서 지도를 그리는 거지.",
-      "tags": {
-        "functions": [
-          "F04"
+        "vibe": "V12",
+        "power": [
+          "P10"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R3",
-        "emotions": [
-          "E09"
+        "grammar_intent": [
+          "G01",
+          "G19"
         ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "0FSKTndbwVo-4",
-      "en": "It doesn't have to be a real place, and then you deposit memories there.",
-      "ko": "실제 장소일 필요는 없고, 그곳에 기억을 저장하는 거야.",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R3",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "0FSKTndbwVo-5",
-      "en": "Theoretically, you can never forget anything.",
-      "ko": "이론적으로는 어떤 것도 잊을 수 없어.",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R3",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
         "flags": []
       }
     },
@@ -150,18 +164,18 @@
       "ko": "너는 그곳으로 돌아가는 것만 하면 돼.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S37",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,20 +187,22 @@
       "ko": "그래서 이 상상의 장소는 뭐든 될 수 있어, 집이나 거리 같은. 응. 궁전이야. 그는 궁전이라고 했어. 응, 그럴 거야, 그렇지?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S37",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -198,20 +214,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S37",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "9bb9580a6a1956c5"
 }

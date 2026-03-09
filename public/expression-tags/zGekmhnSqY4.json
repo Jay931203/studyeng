@@ -12,10 +12,10 @@
       "ko": "스마트 리스트의 숀 헤이즈, 윌 아넷, 그리고 내 취향과는 거리가 먼 제이슨 베이튼.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -25,7 +25,10 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -37,30 +40,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "zGekmhnSqY4-2",
-      "en": "musical or comedy truly raised the bar by delivering nuanced, unparalleled performances.",
-      "ko": "뮤지컬 또는 코미디 부문에서 정말 뛰어난 연기를 선보이며 기준을 높였습니다.",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -69,7 +49,32 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "zGekmhnSqY4-2",
+      "en": "musical or comedy truly raised the bar by delivering nuanced, unparalleled performances.",
+      "ko": "뮤지컬 또는 코미디 부문에서 정말 뛰어난 연기를 선보이며 기준을 높였습니다.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S32",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,18 +88,20 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G14"
+        ],
         "flags": []
       }
     },
@@ -104,9 +111,9 @@
       "ko": "아나운서가 제이슨 베이튼은 내 취향이 아니라고 했어요. 누가 그런 말을 해요?",
       "tags": {
         "functions": [
-          "F09"
+          "F11"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -117,7 +124,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -127,20 +136,24 @@
       "ko": "솔직히 많은 사람들이 그렇게 말해요. 그래요? 정말요?",
       "tags": {
         "functions": [
-          "F09"
+          "F64"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V10",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17",
+          "G22"
+        ],
         "flags": []
       }
     },
@@ -150,11 +163,11 @@
       "ko": "그래, 친구. 너는 모두의 취향은 아니야. 괜찮아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -173,20 +186,23 @@
       "ko": "나는 네가 훌륭하다고 생각해. 오자크가 좋았어.",
       "tags": {
         "functions": [
-          "F09"
+          "F30"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -198,7 +214,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -207,7 +223,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,33 +235,10 @@
       "ko": "세 시즌은 너무 길었어요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "zGekmhnSqY4-10",
-      "en": "Look, man, this is... Dude, I can't... Somehow you made... You managed to...",
-      "ko": "들어봐, 친구, 이건... 친구, 나는... 어떻게든 너는... 너는 해냈어...",
-      "tags": {
-        "functions": [
-          "F50"
-        ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -257,9 +250,37 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_fragment"
+          "is_narration"
         ]
       }
+    },
+    {
+      "id": "zGekmhnSqY4-10",
+      "en": "Look, man, this is... Dude, I can't... Somehow you made... You managed to...",
+      "ko": "들어봐, 친구, 이건... 친구, 나는... 어떻게든 너는... 너는 해냈어...",
+      "tags": {
+        "functions": [
+          "F43"
+        ],
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
+      }
     }
-  ]
+  ],
+  "transcriptHash": "3cb332dab1924157"
 }

@@ -12,9 +12,9 @@
       "ko": "나는 가고 싶은 곳에 가기 위해 뛰었다.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S19",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,10 +35,11 @@
       "ko": "나는 그곳이 나를 어디로 데려갈지 생각해본 적이 없다.",
       "tags": {
         "functions": [
-          "F09"
+          "F43",
+          "F56"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,9 +47,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -60,8 +64,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E05"
@@ -69,7 +73,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +85,18 @@
       "ko": "너구리들이 학교에 들어가려고 하고 있어.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
         "situation": "S19",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,16 +110,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S19",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -129,18 +133,18 @@
       "ko": "음, 쥐너구리가 우리 뒷마당에 들어가려고 하고 있어.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -154,16 +158,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S19",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -177,7 +181,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S19",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -186,7 +190,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -200,7 +204,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S19",
+        "situation": "S24",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -209,11 +213,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "9d7992e280072826"
 }

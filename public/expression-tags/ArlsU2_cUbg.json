@@ -12,7 +12,7 @@
       "ko": "음, 이상적으로는 내가 책상으로 돌아갔을 때 너는 바지에서 발리의 그누겐 가이드를 꺼내서 닦고 다시 넣거나 사야 해.",
       "tags": {
         "functions": [
-          "F04"
+          "F52"
         ],
         "situation": "S50",
         "cefr": "B2",
@@ -35,11 +35,13 @@
       "ko": "금방 볼게. 미안해. 괜찮아.",
       "tags": {
         "functions": [
-          "F25"
+          "F32",
+          "F28",
+          "F08"
         ],
         "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -48,7 +50,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04",
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -58,7 +63,7 @@
       "ko": "하나 훔칠까 했는데, 이제 마음이 바뀌었어.",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -81,10 +86,10 @@
       "ko": "아, 저자 사인이군요, 알겠어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,10 +109,10 @@
       "ko": "응, 그를 막을 수가 없었어. 사인 없는 걸 찾으면 엄청난 가치가 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,10 +132,10 @@
       "ko": "저기요. 네? 사인 받을 수 있을까요? 물론이죠. 네.",
       "tags": {
         "functions": [
-          "F34"
+          "F46"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -139,8 +144,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -153,7 +162,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -176,7 +185,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,11 +205,11 @@
       "ko": "그게 내 서명이고, 그 위에 '루퍼스에게, 너는 감옥에 있어야 해'라고 써 있어. 좋은데.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -219,7 +228,7 @@
       "ko": "내 전화번호를 전해줘.",
       "tags": {
         "functions": [
-          "F34"
+          "F35"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -236,5 +245,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a84f00ee29a699fe"
 }

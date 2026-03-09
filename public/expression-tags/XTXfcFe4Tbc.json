@@ -12,23 +12,23 @@
       "ko": "로열 해리, 아니, 로열, 이 로열 팰리스 플레이스에서, 죄송해요, 방금 백스테이지에서 들었는데",
       "tags": {
         "functions": [
-          "F01"
+          "F28"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": []
       }
     },
     {
@@ -39,14 +39,14 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -60,20 +60,25 @@
       "ko": "지갑을 받아요. 웃긴 게 그게 제 거기 별명이기도 하거든요. 그래서, 아마",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17",
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -83,21 +88,27 @@
       "ko": "오늘 밤 애프터파티에서 최우수 오리지널 스코어를 받는 건 저일 수도 있어요. 자, 그레이엄이",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G10"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -106,22 +117,23 @@
       "ko": "말했듯이 오늘 밤은 지속 가능성에 대한 거예요. 그래서 이 드레스를 바느질로 만들었어요.",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "2b369f4ff62fdfa3"
 }

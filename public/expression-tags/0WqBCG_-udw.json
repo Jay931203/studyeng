@@ -12,19 +12,21 @@
       "ko": "그들이 너무 많아!",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V12",
-        "power": [],
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -35,16 +37,16 @@
       "ko": "너희 이제 끝났어!",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V12",
         "power": [],
@@ -58,10 +60,10 @@
       "ko": "타노스를 불러!",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,11 +71,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "ab4e7346ec69ca08"
 }

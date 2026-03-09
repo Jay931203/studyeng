@@ -12,18 +12,19 @@
       "ko": "네, 매튜, 이걸로 마무리할게. 너의 신랑 보좌관이 되는 건 특권이야,",
       "tags": {
         "functions": [
-          "F01"
+          "F23",
+          "F52"
         ],
-        "situation": "S16",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -37,16 +38,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,18 +61,22 @@
         "functions": [
           "F22"
         ],
-        "situation": "S16",
-        "cefr": "A1",
-        "register": "R4",
+        "situation": "S34",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V02",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G22"
+        ],
         "flags": []
       }
     },
@@ -81,13 +86,13 @@
       "ko": "저기 내 친구다! 좋아!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -104,10 +109,10 @@
       "ko": "신랑 보좌관에게 박수!",
       "tags": {
         "functions": [
-          "F34"
+          "F35"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +120,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,10 +132,10 @@
       "ko": "하지만 우리는 지루한 연설, 비꼬는 건 없다고 했어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,7 +143,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,10 +155,11 @@
       "ko": "어쨌든, 아름다운 내 동생, 신부 켈시에게 주목해 주세요!",
       "tags": {
         "functions": [
-          "F02"
+          "F30",
+          "F48"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -161,9 +167,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -173,13 +181,13 @@
       "ko": "같은 엄마, 다른 아빠!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -198,18 +206,20 @@
         "functions": [
           "F22"
         ],
-        "situation": "S16",
-        "cefr": "A1",
+        "situation": "S34",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G22"
+        ],
         "flags": []
       }
     },
@@ -219,128 +229,13 @@
       "ko": "켈시의 신부 들러리들, 즉 켈 스쿼드를 초대하고 싶어!",
       "tags": {
         "functions": [
-          "F38"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RLn5qNngGn4-10",
-      "en": "Okay, so instead of a speech, we're going to do something different for y'all,",
-      "ko": "자, 연설 대신 여러분을 위해 다른 걸 할 거예요,",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S16",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RLn5qNngGn4-11",
-      "en": "because we're a little bit creative and a little bit quirky.",
-      "ko": "왜냐하면 우리는 조금 창의적이고 조금 엉뚱하거든요.",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S16",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RLn5qNngGn4-12",
-      "en": "And we know we're not Matt's favorite, because every time Kelsey's with us,",
-      "ko": "그리고 우리는 우리가 매트의 최애가 아니라는 걸 알아요, 왜냐하면 켈시가 우리와 함께할 때마다,",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S16",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RLn5qNngGn4-13",
-      "en": "she low-key blacks out.",
-      "ko": "그녀는 살짝 기절하거든요.",
-      "tags": {
-        "functions": [
-          "F18"
-        ],
-        "situation": "S16",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RLn5qNngGn4-14",
-      "en": "Nah, come on, I love y'all.",
-      "ko": "아니야, 농담이야, 사랑해 여러분.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S16",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
         ],
         "expression_types": [
           "X08"
@@ -352,18 +247,144 @@
       }
     },
     {
-      "id": "RLn5qNngGn4-15",
-      "en": "But Kelsey loves her espresso martinis,",
-      "ko": "하지만 켈시는 에스프레소 마티니를 좋아하니까,",
+      "id": "RLn5qNngGn4-10",
+      "en": "Okay, so instead of a speech, we're going to do something different for y'all,",
+      "ko": "자, 연설 대신 여러분을 위해 다른 걸 할 거예요,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "RLn5qNngGn4-11",
+      "en": "because we're a little bit creative and a little bit quirky.",
+      "ko": "왜냐하면 우리는 조금 창의적이고 조금 엉뚱하거든요.",
+      "tags": {
+        "functions": [
+          "F04"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "RLn5qNngGn4-12",
+      "en": "And we know we're not Matt's favorite, because every time Kelsey's with us,",
+      "ko": "그리고 우리는 우리가 매트의 최애가 아니라는 걸 알아요, 왜냐하면 켈시가 우리와 함께할 때마다,",
+      "tags": {
+        "functions": [
+          "F04"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "RLn5qNngGn4-13",
+      "en": "she low-key blacks out.",
+      "ko": "그녀는 살짝 기절하거든요.",
+      "tags": {
+        "functions": [
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "RLn5qNngGn4-14",
+      "en": "Nah, come on, I love y'all.",
+      "ko": "아니야, 농담이야, 사랑해 여러분.",
+      "tags": {
+        "functions": [
+          "F45"
+        ],
+        "situation": "S34",
+        "cefr": "A2",
+        "register": "R5",
+        "emotions": [
+          "E11"
+        ],
+        "expression_types": [
+          "X01",
+          "X05"
+        ],
+        "vibe": "V02",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "RLn5qNngGn4-15",
+      "en": "But Kelsey loves her espresso martinis,",
+      "ko": "하지만 켈시는 에스프레소 마티니를 좋아하니까,",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S34",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E11"
         ],
         "expression_types": [
           "X08"
@@ -380,11 +401,11 @@
       "ko": "우리는 우리의 독신 파티에 대한 특별한 노래를 썼어요.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -392,10 +413,13 @@
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "00e35574055e9a1f"
 }

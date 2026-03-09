@@ -12,19 +12,18 @@
       "ko": "도와줘! 즉흥적으로 행동하고 있어! 트루먼!",
       "tags": {
         "functions": [
-          "F25",
-          "F09"
+          "F19"
         ],
-        "situation": "S50",
+        "situation": "S28",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E04"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -36,19 +35,18 @@
       "ko": "피지는 잊어. 피지에서 운전할 수는 없잖아, 그치? 아니!",
       "tags": {
         "functions": [
-          "F09",
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S06",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -62,16 +60,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,19 +81,18 @@
       "ko": "아, 안 돼. 너 도박 싫어하잖아.",
       "tags": {
         "functions": [
-          "F12",
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -107,21 +104,24 @@
       "ko": "맞아, 싫어해, 그렇지?",
       "tags": {
         "functions": [
-          "F07",
-          "F09"
+          "F10"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -131,20 +131,22 @@
       "ko": "그럼 왜 거기 가고 싶어?",
       "tags": {
         "functions": [
-          "F06"
+          "F38"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -154,21 +156,26 @@
       "ko": "가본 적이 없으니까. 사람들이 여행 가는 이유가 그거잖아?",
       "tags": {
         "functions": [
-          "F09",
-          "F04"
+          "F43",
+          "F56"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -178,22 +185,25 @@
       "ko": "트루먼. 트루먼, 나 토할 것 같아. 나도!",
       "tags": {
         "functions": [
-          "F19",
-          "F15"
+          "F63",
+          "F10"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04",
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17",
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -203,10 +213,10 @@
       "ko": "우리는 모든 방향을 걸었어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -214,7 +224,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -226,19 +236,18 @@
       "ko": "아름답게 조화롭지, 동의해?",
       "tags": {
         "functions": [
-          "F12",
-          "F09"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -250,19 +259,18 @@
       "ko": "내가 교통체증을 책임져야 해? 그래야 할까?",
       "tags": {
         "functions": [
-          "F12",
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S06",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -274,10 +282,11 @@
       "ko": "트루먼, 집에 가자.",
       "tags": {
         "functions": [
-          "F36"
+          "F36",
+          "F38"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -285,9 +294,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -297,21 +310,24 @@
       "ko": "맞아. 여기서 몇 시간 동안 갇힐 수도 있어.",
       "tags": {
         "functions": [
-          "F09",
-          "F12"
+          "F36",
+          "F10"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -323,19 +339,23 @@
         "functions": [
           "F04"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -344,22 +364,30 @@
       "ko": "돌아가자.",
       "tags": {
         "functions": [
-          "F36"
+          "F36",
+          "F38"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G09"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "4f7977fbfe7a43af"
 }

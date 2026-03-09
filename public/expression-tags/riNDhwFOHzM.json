@@ -12,10 +12,10 @@
       "ko": "정말 이걸 하고 싶은 거야? 들어가자!",
       "tags": {
         "functions": [
-          "F06"
+          "F07"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -37,8 +37,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S19",
-        "cefr": "A1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,8 +60,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,9 +81,9 @@
       "ko": "귀 피어싱 두 개, 인피니티 스카프.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S19",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -104,20 +104,22 @@
       "ko": "와, 아이섀도우를 바른 거야? 그래, 걔네랑 친구하고 싶어. 가서 말 걸자!",
       "tags": {
         "functions": [
-          "F09"
+          "F36"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -127,20 +129,22 @@
       "ko": "장난해? 말 걸면 안 돼. 걔네가 우리를 좋아하게 해야지. 아, 그래. 잠깐, 뭐?",
       "tags": {
         "functions": [
-          "F11"
+          "F18"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -150,9 +154,9 @@
       "ko": "잠재적 재난 목록 거의 다 끝났어,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S19",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -161,7 +165,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,10 +177,10 @@
       "ko": "시나리오는 모래늪, 자연발화,",
       "tags": {
         "functions": [
-          "F02"
+          "F06"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,10 +200,10 @@
       "ko": "아니면 선생님한테 지목당하는 거야. 그러니까 그중 아무것도 안 일어나면...",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -210,7 +214,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -219,20 +225,23 @@
       "ko": "자, 여러분, 오늘 새 학생이 왔습니다. 장난이지?",
       "tags": {
         "functions": [
-          "F62"
+          "F18",
+          "F23"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -242,13 +251,13 @@
       "ko": "시작부터? 이건 일어나면 안 돼!",
       "tags": {
         "functions": [
-          "F17"
+          "F06"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -265,20 +274,23 @@
       "ko": "라일리, 자기소개 해줄래? 안 돼! 영어 못하는 척 해.",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
-        "situation": "S19",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S45",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02",
+          "G14"
+        ],
         "flags": []
       }
     },
@@ -288,10 +300,11 @@
       "ko": "걱정 마, 내가 할게.",
       "tags": {
         "functions": [
-          "F07"
+          "F35",
+          "F31"
         ],
-        "situation": "S19",
-        "cefr": "A1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -301,7 +314,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G05"
+        ],
         "flags": []
       }
     },
@@ -311,21 +326,23 @@
       "ko": "어, 좋아.",
       "tags": {
         "functions": [
-          "F01"
+          "F52"
         ],
-        "situation": "S19",
+        "situation": "S45",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -334,10 +351,10 @@
       "ko": "제 이름은 라일리 앤더슨이에요.",
       "tags": {
         "functions": [
-          "F01"
+          "F26"
         ],
-        "situation": "S19",
-        "cefr": "A1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -359,8 +376,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S20",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -380,11 +397,12 @@
       "ko": "미네소타는 어때? 뭐 좀 얘기해줄 수 있어?",
       "tags": {
         "functions": [
-          "F06"
+          "F34",
+          "F36"
         ],
-        "situation": "S20",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S45",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -393,7 +411,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02",
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -403,10 +424,10 @@
       "ko": "음, 확실히 여기보다 눈이 훨씬 많이 와요.",
       "tags": {
         "functions": [
-          "F02"
+          "F52"
         ],
-        "situation": "S20",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -416,9 +437,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "4785077e8aa59a75"
 }

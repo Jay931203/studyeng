@@ -13,11 +13,10 @@
       "tags": {
         "functions": [
           "F25",
-          "F32",
-          "F09"
+          "F26"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -25,7 +24,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -37,7 +36,7 @@
       "ko": "응.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "A1",
@@ -51,7 +50,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -62,9 +63,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R2",
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -85,9 +86,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R2",
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -108,9 +109,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R2",
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -129,11 +130,11 @@
       "ko": "그가 가장 바랐던 것은 결과물인 장치가 멋지게 되길 바라는 것이었다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -152,9 +153,9 @@
       "ko": "잘 해냈군.",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -166,7 +167,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -175,11 +178,12 @@
       "ko": "우리가 여기서 하고 있는 일을 설명할게.",
       "tags": {
         "functions": [
-          "F04"
+          "F35",
+          "F50"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -188,7 +192,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -200,9 +206,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "B1",
-        "register": "R2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -223,9 +229,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "B1",
-        "register": "R2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -244,19 +250,21 @@
       "ko": "그 중 하나에서 레이저를 쏘고",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -267,9 +275,9 @@
       "ko": "빛이 이 포토멀티플라이어로 되돌아오게 할 거야.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -290,9 +298,9 @@
       "ko": "오, 정말 멋지네. 질문 하나 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -313,9 +321,9 @@
       "ko": "어떻게 폭발하지 않을지 확신할 수 있어? 레이저? 달?",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -326,7 +334,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -336,10 +346,10 @@
       "ko": "자, 이제 이 사람은 동전으로 할 수 있는 사람이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -359,16 +369,17 @@
       "ko": "어, 어, 좋은 질문이야, 잭. 아니, 그렇지 않아.",
       "tags": {
         "functions": [
-          "F06"
+          "F08",
+          "F52"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -382,7 +393,7 @@
       "ko": "셸든, 잘 지내.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "A2",
@@ -396,8 +407,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "e9a9ec60909b7794"
 }

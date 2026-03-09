@@ -12,9 +12,9 @@
       "ko": "이제 그가 도박꾼이라는 걸 추측할 수 있어.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S37",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,20 +35,22 @@
       "ko": "만약 내가 너라면 그 지참금을 주의 깊게 살펴볼 거야. 그런 시절은 지나갔어.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S37",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -58,9 +60,9 @@
       "ko": "바로 너 뒤에 있어.",
       "tags": {
         "functions": [
-          "F01"
+          "F53"
         ],
-        "situation": "S40",
+        "situation": "S37",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -69,10 +71,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,10 +85,10 @@
       "ko": "이건 여러 번 집세를 날렸어.",
       "tags": {
         "functions": [
-          "F05"
+          "F13"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S04",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,10 +96,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G10"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -104,18 +112,18 @@
       "ko": "존을 잘 아는 만큼, 존경을 표하며 말씀드리지만, 홈즈 씨.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S37",
+        "cefr": "B1",
+        "register": "R1",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,7 +137,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
+        "situation": "S37",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -138,9 +146,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -150,23 +160,24 @@
       "ko": "너... 그건 아닌 것 같아... 저녁에 그런 얘기는... 다른 때 하자. 난 주장해. 너도 주장해? 우리가 이 얘기를 했던 거 기억나?",
       "tags": {
         "functions": [
-          "F50"
+          "F14"
         ],
-        "situation": "S40",
+        "situation": "S05",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": []
       }
     },
     {
@@ -175,10 +186,10 @@
       "ko": "그 여인이 주장해.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S37",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -186,10 +197,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -198,9 +212,9 @@
       "ko": "넌 가정교사구나. 잘했어. 응, 잘했어. 그럼... 웨이터!",
       "tags": {
         "functions": [
-          "F09"
+          "F29"
         ],
-        "situation": "S40",
+        "situation": "S05",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -209,7 +223,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -223,7 +237,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
+        "situation": "S19",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -232,7 +246,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,20 +258,22 @@
       "ko": "찰리는 사실 일곱 살이야. 오. 그럼 또래에 비해 키가 크네.",
       "tags": {
         "functions": [
-          "F12"
+          "F11"
         ],
-        "situation": "S40",
-        "cefr": "B1",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -269,7 +285,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
+        "situation": "S02",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -278,10 +294,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -292,8 +310,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
-        "cefr": "A1",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -301,7 +319,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,9 +331,9 @@
       "ko": "네 얼굴엔 아무 문제 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S37",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -324,7 +342,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -338,16 +356,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
-        "cefr": "B1",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -359,10 +377,10 @@
       "ko": "그리고 그걸 씻어내는 건 거의 불가능했어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -370,7 +388,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -382,18 +400,18 @@
       "ko": "어쨌든, 그 소년의 매우 충동적인 행동이었고,",
       "tags": {
         "functions": [
-          "F12"
+          "F48"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -405,10 +423,10 @@
       "ko": "하지만 너는 너무 경험이 많아서 경솔하게 반응하지 않아,",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -416,7 +434,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -428,9 +446,9 @@
       "ko": "그래서 너를 위해 일하는 그 여인이 그 목걸이를 빌려준 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S37",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -439,7 +457,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -453,8 +471,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -462,11 +480,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "4352e4c14073152b"
 }

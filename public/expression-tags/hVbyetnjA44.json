@@ -12,18 +12,18 @@
       "ko": "아, 그 신발 정말 싫어.",
       "tags": {
         "functions": [
-          "F23"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V04",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,11 +35,10 @@
       "ko": "오! 시작하는 건가? 제발. 좋아, 급여부터 시작하자. 뭐 하고 있어? 아, 미안해.",
       "tags": {
         "functions": [
-          "F06",
-          "F34",
-          "F35"
+          "F28",
+          "F36"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -48,9 +47,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04",
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -60,19 +62,18 @@
       "ko": "무의식적으로 이걸 네 남성성을 가지고 장난치는 것으로 보고 있는 거야? 물론이지.",
       "tags": {
         "functions": [
-          "F09",
-          "F14"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "C1",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -84,11 +85,10 @@
       "ko": "내가 그걸 발명했어. 보카 2002. 테이프 봤잖아. 뭐? 아니.",
       "tags": {
         "functions": [
-          "F01",
-          "F05"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -96,7 +96,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -108,10 +108,9 @@
       "ko": "나는... 네가 나에게 코칭받고 있어. 미안해, 잭. 이 전화를 받아야 해. 응. 피자와 통화할 수 있을까요?",
       "tags": {
         "functions": [
-          "F50",
-          "F34"
+          "F28"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -120,9 +119,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02",
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -132,10 +134,9 @@
       "ko": "긴급 상황에서 시간을 벌기 위한 가짜 전화? 고전적인 도나기야. 좋아. 알겠어, 네가 나를 잡았어.",
       "tags": {
         "functions": [
-          "F09",
-          "F50"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S28",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -144,7 +145,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -156,10 +157,10 @@
       "ko": "게임 끝. 아니, 아니. 이건 단지 평등한 경쟁을 만드는 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -167,7 +168,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -179,10 +180,10 @@
       "ko": "진짜 적과 맞붙는 거지. 나.",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -190,7 +191,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -204,8 +205,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -213,7 +214,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -225,11 +226,10 @@
       "ko": "잭 도나기가 혼자 놀고 있어. 자위 중이야. 이봐, 잭.",
       "tags": {
         "functions": [
-          "F09",
-          "F10"
+          "F02"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -237,11 +237,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "5a372ec15521ff86"
 }

@@ -12,7 +12,32 @@
       "ko": "이런 일은 처음이에요. 차에 기름을 채우는 걸 잊었어요. 자, 갑니다. 좋아요.",
       "tags": {
         "functions": [
-          "F01"
+          "F43"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "Rj1RS3738VE-1",
+      "en": "Are you kidding me?",
+      "ko": "농담이죠?",
+      "tags": {
+        "functions": [
+          "F18"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -23,34 +48,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "Rj1RS3738VE-1",
-      "en": "Are you kidding me?",
-      "ko": "농담이죠?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S34",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E05"
-        ],
-        "expression_types": [
-          "X08"
-        ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -66,15 +68,19 @@
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -89,16 +95,21 @@
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "df9261f35f32da4d"
 }

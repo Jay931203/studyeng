@@ -12,21 +12,26 @@
       "ko": "전혀 아무것도 아니야.",
       "tags": {
         "functions": [
-          "F01"
+          "F44"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G16",
+          "G20"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,19 +40,21 @@
       "ko": "솔롯의 사람들도 회의가 어디서 열릴지 몰라.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -60,16 +67,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,17 +90,19 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -104,20 +113,22 @@
       "ko": "정확히 1시간 반이야.",
       "tags": {
         "functions": [
-          "F01"
+          "F10"
         ],
-        "situation": "S44",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -127,20 +138,22 @@
       "ko": "그를 따라가게 할 수도 있을 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F36"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -150,21 +163,27 @@
       "ko": "솔롯은 우리를 블록 돌아다니게 할 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -175,16 +194,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +215,18 @@
       "ko": "내 집에서 내 남자들과 피노키오 게임하고 있어.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,18 +238,18 @@
       "ko": "그곳에서 행복해, 그들이 이기게 놔두고 있어.",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,20 +261,25 @@
       "ko": "마이크에게 위험이 너무 커. 아마 취소해야 할 것 같아, 소니.",
       "tags": {
         "functions": [
-          "F12"
+          "F36"
         ],
-        "situation": "S44",
+        "situation": "S24",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G09",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -265,21 +289,23 @@
       "ko": "협상가는 마이크가 무사히 돌아올 때까지 카드 게임을 계속해.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -290,19 +316,23 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -311,19 +341,21 @@
       "ko": "그는 위험해. 그걸 찾고 있을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -334,18 +366,18 @@
       "ko": "솔롯이 차 안에 없을 수도 있어, 소니.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -357,18 +389,18 @@
       "ko": "알겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S38",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -380,22 +412,25 @@
       "ko": "돌아가, 소니.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "b003485a1fcca2ad"
 }

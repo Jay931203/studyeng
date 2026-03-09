@@ -12,10 +12,10 @@
       "ko": "아니, 아니, 아니, 아니, 아니, 아니, 아니.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -40,7 +38,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,20 +58,23 @@
       "ko": "나를 데리고 나가서 내가 원하는 대로 하라고 했다고 믿어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06",
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -83,20 +84,24 @@
       "ko": "이제 나는 춤추고 싶고, 이기고 싶고, 그 트로피를 원해. 잘 춰줘. 알겠지?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V01",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -106,16 +111,16 @@
       "ko": "첫 번째 참가자를 위해 여기로 와주세요. 어서. 어서. 어서. 어서. 어서. 어서.",
       "tags": {
         "functions": [
-          "F34"
+          "F45"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -129,16 +134,17 @@
       "ko": "어서. 어서.",
       "tags": {
         "functions": [
-          "F34"
+          "F35",
+          "F45"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -152,10 +158,10 @@
       "ko": "이제 오늘 저녁의 첫 번째 참가자를 만나봅시다.",
       "tags": {
         "functions": [
-          "F03"
+          "F36"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -165,7 +171,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -201,8 +209,8 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -212,7 +220,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -221,7 +231,32 @@
       "ko": "그리고 당신의 동료는요?",
       "tags": {
         "functions": [
-          "F06"
+          "F36"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G09"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "QYVc4v1gfgg-10",
+      "en": "Luz Invega.",
+      "ko": "루즈 인베가입니다.",
+      "tags": {
+        "functions": [
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -235,30 +270,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "QYVc4v1gfgg-10",
-      "en": "Luz Invega.",
-      "ko": "루즈 인베가입니다.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -267,7 +281,8 @@
       "ko": "좋아요, 당신이 할 수 있는 걸 보여주세요. 시작하세요. 그래. 어서. 어서. 어서.",
       "tags": {
         "functions": [
-          "F03"
+          "F36",
+          "F45"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -276,11 +291,13 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -304,8 +321,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "aca54c2792646d3f"
 }

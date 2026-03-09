@@ -12,20 +12,23 @@
       "ko": "엘, 내가 상원이 되려면 재키와 결혼해야지, 마릴린이 아니라.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S36",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X05"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -35,13 +38,14 @@
       "ko": "내가 너무 금발이라서 헤어지는 거야? 아니, 그건 완전히 사실은 아니야.",
       "tags": {
         "functions": [
-          "F11"
+          "F11",
+          "F04"
         ],
-        "situation": "S10",
+        "situation": "S36",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -58,10 +62,10 @@
       "ko": "하버드가 네가 물방울 무늬 역사에서 A를 받았다고 감명받지 않을 거야. 대안은 뭐야?",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S19",
-        "cefr": "B2",
+        "situation": "S36",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,10 +85,10 @@
       "ko": "대안은 필요 없어. 나는 하버드에 갈 거야. 엘? 워너? 너도 여기 다니는 줄 완전히 잊었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
-        "situation": "S19",
-        "cefr": "B2",
+        "situation": "S36",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,9 +108,10 @@
       "ko": "무슨 소리야? 미안, 나 보러 온 거야? 아니, 바보야. 나 여기 다녀.",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F28"
         ],
-        "situation": "S19",
+        "situation": "S36",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -127,16 +132,16 @@
       "ko": "너 어디 다니는데? 하버드. 로스쿨. 하버드 로스쿨에 합격했어? 뭐, 그게 어렵냐고?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S19",
-        "cefr": "B2",
+        "situation": "S36",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -150,16 +155,17 @@
       "ko": "어쩌면 너가 가입할 수 있는 여학생 클럽이 있을지도 몰라. 알지,",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S19",
-        "cefr": "B2",
+        "situation": "S36",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -173,9 +179,9 @@
       "ko": "만약 네가 러시 파티에 왔다면, 나는 적어도 너에게 친절했을 거야.",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
-        "situation": "S19",
+        "situation": "S36",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -190,5 +196,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "37f4191fb6b6824c"
 }

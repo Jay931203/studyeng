@@ -12,18 +12,18 @@
       "ko": "고인의 형에게 경의를 표하며, 이미 힘든 여행에 이 굴욕까지 더해지다니.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,10 +35,10 @@
       "ko": "타이밍이 정말 불행한 것 같아요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,10 +58,10 @@
       "ko": "정말 화가 납니다.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S44",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -69,10 +69,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -83,7 +87,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -106,8 +110,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,16 +131,16 @@
       "ko": "버티와의 합의는 내가 모든 것을 포기하고 망명하겠다는 것이었고,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -150,11 +154,11 @@
       "ko": "내 평생을 위한 연금과 맞바꾸는 것이었습니다. 그의 것이 아니라.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -173,10 +177,10 @@
       "ko": "이제 겨우 차가워졌는데, 쿠키가 그 끔찍한 지원을 끊다니. 어떻게 감히!",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -184,9 +188,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -196,10 +202,10 @@
       "ko": "그녀가 그랬다는 걸 모르시겠어요? 물론 그녀가 그랬죠.",
       "tags": {
         "functions": [
-          "F11"
+          "F44"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -208,7 +214,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -219,10 +227,10 @@
       "ko": "그런 식으로 부르지 마세요.",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,18 +250,18 @@
       "ko": "왜 안 되죠? 그녀는 뚱뚱하고 평범하며 요리사처럼 생겼어요.",
       "tags": {
         "functions": [
-          "F11"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,8 +275,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,18 +296,18 @@
       "ko": "왕실의 확장된 가족 구성원이 보상받고 사치스럽게 사는 것은 무감각해 보일 것이라고요.",
       "tags": {
         "functions": [
-          "F04"
+          "F23"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,18 +319,18 @@
       "ko": "확장된 왕실 가족? 나는 그 가족의 가장 고위 구성원이었어요, 왕이었죠.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,22 +342,25 @@
       "ko": "이제 우리는 간신히 생계를 유지하고 있어요. 매일이 힘든 싸움입니다. 당신은 훌륭한...",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "89c93683e99cb86a"
 }

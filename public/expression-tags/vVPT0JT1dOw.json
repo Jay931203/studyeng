@@ -14,9 +14,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S37",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -37,9 +37,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S37",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -58,11 +58,11 @@
       "ko": "포드 작전, 그는 상승 그룹과 함께 일하는 이중 스파이를 심었어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S37",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -81,11 +81,11 @@
       "ko": "에커, 그로이, 위버. 그의 임무는 로켓을 방해하는 것이었어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S37",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -104,13 +104,13 @@
       "ko": "뭔가 잘못됐어, 메이슨.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S37",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -127,25 +127,23 @@
       "ko": "이 숫자가 머리에서 떠나질 않아.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S37",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
-        "power": [
-          "P12"
+        "power": [],
+        "grammar_intent": [
+          "G01"
         ],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -154,13 +152,13 @@
       "ko": "집중해, 메이슨. 시간이 없어. 세상이 전쟁 직전이야.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S37",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -168,9 +166,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -179,13 +175,14 @@
       "ko": "누구의 전쟁이지? 도대체 너는 누구야?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F48"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S37",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -204,13 +201,13 @@
       "ko": "계속 그 숫자가 들려.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -218,9 +215,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -229,11 +224,11 @@
       "ko": "방송이야, 메이슨. 숫자는 방송이야. 너는 세뇌당했어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S37",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -252,10 +247,10 @@
       "ko": "계속 그 숫자가 들려.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -266,9 +261,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -277,11 +270,11 @@
       "ko": "방송이야, 메이슨. 그 방송. 허드슨이 거기서 숫자에 대해 알게 됐어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S37",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -294,5 +287,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "0300d516423eaa80"
 }

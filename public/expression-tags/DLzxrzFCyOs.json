@@ -5,6 +5,7 @@
   "seriesId": "award-shows",
   "sentenceCount": 6,
   "taggedCount": 6,
+  "transcriptHash": "4c4a6dac9d5c77ed",
   "sentences": [
     {
       "id": "DLzxrzFCyOs-0",
@@ -12,23 +13,21 @@
       "ko": "우리는 사랑에 익숙해요. 규칙을 알고 저도 그래요.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -39,21 +38,19 @@
         "functions": [
           "F09"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E12"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -62,23 +59,23 @@
       "ko": "당신에게 제 기분을 전하고 싶어요. 이해해 주셨으면 해요.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V13",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -87,23 +84,26 @@
       "ko": "절대 당신을 포기하지 않을 거예요. 절대 실망시키지 않을 거예요.",
       "tags": {
         "functions": [
-          "F41"
+          "F43"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
+        "flags": []
       }
     },
     {
@@ -112,23 +112,26 @@
       "ko": "절대 당신을 피하고 버리지 않을 거예요. 절대 당신을 울리지 않을 거예요.",
       "tags": {
         "functions": [
-          "F41"
+          "F43"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "vibe": "V09",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
+        "flags": []
       }
     },
     {
@@ -137,23 +140,28 @@
       "ko": "절대 작별 인사를 하지 않을 거예요. 절대 거짓말로 상처 주지 않을 거예요.",
       "tags": {
         "functions": [
-          "F41"
+          "F32",
+          "F43"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S28",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "vibe": "V10",
+        "power": [
+          "P01",
+          "P03"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
+        "flags": []
       }
     }
   ]

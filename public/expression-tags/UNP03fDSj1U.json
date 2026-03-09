@@ -12,21 +12,23 @@
       "ko": "몇 년 전, 나는 정체된 기분이 들었다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S47",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -35,21 +37,23 @@
       "ko": "그래서 나는 위대한 미국 철학자의 발자취를 따르기로 했다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S47",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -58,21 +62,24 @@
       "ko": "모건 스펄록,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,21 +88,23 @@
       "ko": "그리고 30일 동안 새로운 것을 시도해 보기로 했다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -104,21 +113,25 @@
       "ko": "아이디어는 사실 꽤 간단하다.",
       "tags": {
         "functions": [
-          "F09"
+          "F11"
         ],
-        "situation": "S48",
+        "situation": "S47",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G21"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -127,21 +140,25 @@
       "ko": "항상 내 삶에 추가하고 싶었던 것을 생각하고",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S47",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G19"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -150,21 +167,23 @@
       "ko": "다음 30일 동안 시도해 보라.",
       "tags": {
         "functions": [
-          "F35"
+          "F03"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -173,21 +192,23 @@
       "ko": "30일은 새로운 습관을 추가하거나",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S47",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -196,21 +217,23 @@
       "ko": "뉴스 시청과 같은 습관을 빼기에 적당한 시간이다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -219,21 +242,23 @@
       "ko": "이 30일 도전 중에 배운 몇 가지가 있다.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -242,21 +267,25 @@
       "ko": "첫 번째는, 몇 달이 잊혀지며 지나가는 대신,",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S48",
+        "situation": "S47",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V16",
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -265,21 +294,23 @@
       "ko": "시간이 훨씬 더 기억에 남는다는 것이다.",
       "tags": {
         "functions": [
-          "F04"
+          "F03"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -288,21 +319,23 @@
       "ko": "이것은 내가 한 달 동안 매일 사진을 찍는 도전의 일환이었다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -311,21 +344,23 @@
       "ko": "그날 내가 어디에 있었고 무엇을 하고 있었는지 정확히 기억한다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -334,21 +369,25 @@
       "ko": "또한 더 많고 어려운 30일 도전을 시작하면서,",
       "tags": {
         "functions": [
-          "F09"
+          "F10"
         ],
-        "situation": "S48",
+        "situation": "S47",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G20"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -357,22 +396,25 @@
       "ko": "더 어렵고 다양한 30일 도전을 하면서도 느낀 점이 있어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S47",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "b4394bc459935015"
 }

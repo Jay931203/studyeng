@@ -12,16 +12,16 @@
       "ko": "사회적 기술. 자, 너희 둘은 두 명의 슈퍼 바보가 될 수도 있었는데, 지금 뭐가 되어버렸니?",
       "tags": {
         "functions": [
-          "F09"
+          "F45"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -35,20 +35,23 @@
       "ko": "두 명의 다투는 반 바보들, 그리고 나는 더 많은 걸 기대한 바보야. 알겠어? 듣고 싶지 않아. 그냥 위로 올라가.",
       "tags": {
         "functions": [
-          "F17"
+          "F20",
+          "F58"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -58,20 +61,23 @@
       "ko": "와, 방금 뭐였지? 그건 부모 역할의 마스터 클래스였어. 지금 우리 딸들은 위에서",
       "tags": {
         "functions": [
-          "F04"
+          "F18",
+          "F21"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -81,9 +87,9 @@
       "ko": "그들이 스스로 결정했다고 생각하는 걸 하고 있지만, 사실 그건 내가 능숙하게",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -104,9 +110,9 @@
       "ko": "심어준 아이디어야. 인셉션, 클레어. 위험한 게임이지만, 난 좋아.",
       "tags": {
         "functions": [
-          "F04"
+          "F40"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -117,7 +123,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -129,17 +137,19 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -150,10 +160,10 @@
       "ko": "루크, 카메라 가져와.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,10 +183,10 @@
       "ko": "루크. 나는 자고 있지 않았어.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -198,9 +208,9 @@
         "functions": [
           "F09"
         ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -219,9 +229,9 @@
       "ko": "한 번 이상은 아니야. 그건 좋은 추천이 아니야.",
       "tags": {
         "functions": [
-          "F12"
+          "F13"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -232,9 +242,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "780cda67dd749719"
 }

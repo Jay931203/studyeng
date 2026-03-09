@@ -41,7 +41,7 @@
         ],
         "situation": "S50",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -62,11 +62,11 @@
       "ko": "다소 불행한 이름이군요. 피츠 씨. 어디 계신가요?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
         "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -85,7 +85,7 @@
       "ko": "542페이지 첫 번째 연을 읽으세요. 그곳에 있는 시를 찾아보세요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -108,7 +108,7 @@
       "ko": "시간을 소중히 여겨라, 맞죠?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -122,7 +122,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -131,16 +133,16 @@
       "ko": "다소 적절하네요, 그렇죠?",
       "tags": {
         "functions": [
-          "F12"
+          "F23"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -154,7 +156,7 @@
       "ko": "꽃봉오리를 모아라, 시간이 흘러가고 오늘 웃고 있는 이 꽃이 내일은 시들 것이다.",
       "tags": {
         "functions": [
-          "F01"
+          "F47"
         ],
         "situation": "S50",
         "cefr": "B2",
@@ -167,7 +169,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -181,7 +185,7 @@
         ],
         "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -189,7 +193,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -200,7 +206,7 @@
       "ko": "꽃봉오리를 모아라, 시간이 있을 때.",
       "tags": {
         "functions": [
-          "F01"
+          "F47"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -213,7 +219,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -246,11 +254,11 @@
       "ko": "카르페 디엠, 하루를 붙잡아라. 아주 좋습니다. 미크스 씨, 또 다른 특이한 이름이군요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -269,10 +277,10 @@
       "ko": "하루를 붙잡아라.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -283,7 +291,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -306,8 +316,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "f26379ee799ee25c"
 }

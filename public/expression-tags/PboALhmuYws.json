@@ -12,23 +12,21 @@
       "ko": "내 몸을 부드럽게 만져줘, 그 느낌이 나를 약하게 만들어",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E11"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,23 +35,23 @@
       "ko": "이불을 걷어차고, 천장을 바라보니 나를 내려다보고 있는 것 같아",
       "tags": {
         "functions": [
-          "F02"
+          "F14"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": []
       }
     },
     {
@@ -62,23 +60,21 @@
       "ko": "우리가 침대를 공유했는데 어떻게 다시 친구가 될 수 있어?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -87,23 +83,24 @@
       "ko": "나를 어떻게 바라보면서 내가 처음 만난 사람인 척할 수 있어?",
       "tags": {
         "functions": [
-          "F12"
+          "F43"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "grammar_intent": [
+          "G01",
+          "G02"
+        ],
+        "flags": []
       }
     },
     {
@@ -112,23 +109,21 @@
       "ko": "작년 12월이었어, 너는 내 가슴에 누워 있었어",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -137,24 +132,23 @@
       "ko": "아직도 기억해, 말하기가 무서웠어",
       "tags": {
         "functions": [
-          "F16"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "7d2329a0a6e74a34"
 }

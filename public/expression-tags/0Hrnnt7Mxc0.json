@@ -12,7 +12,7 @@
       "ko": "침입자 경보! 침입자 경보! 침입자 경보!",
       "tags": {
         "functions": [
-          "F62"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -41,12 +41,12 @@
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +58,18 @@
       "ko": "응, 엄마가 뭐라고 했는지 기억해야 해. 야, 그만 말해.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S45",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,9 +81,9 @@
       "ko": "거기 서! 움직이지 마! 아빠, 도망쳐! 뭐? 도망쳐!",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -92,7 +92,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,18 +104,18 @@
       "ko": "뭐야? 그들은 슈퍼야! 그 아이를 잡아! 나와!",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,7 +127,7 @@
       "ko": "계속됩니다...",
       "tags": {
         "functions": [
-          "F62"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A1",
@@ -138,13 +138,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_period"
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "9cc9e6c6020cdf4b"
 }

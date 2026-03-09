@@ -12,10 +12,10 @@
       "ko": "그래, 알겠어. 오늘은 내가 너를 잡았네.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -37,7 +37,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -49,7 +49,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,13 +60,13 @@
       "ko": "젠장.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S33",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -73,7 +75,8 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "contains_profanity"
+          "contains_profanity",
+          "is_fragment"
         ]
       }
     },
@@ -83,10 +86,10 @@
       "ko": "너, 다섯 시, 그림자 머리.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -108,8 +111,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,34 +132,10 @@
       "ko": "정말 멍청한 질문이네.",
       "tags": {
         "functions": [
-          "F12"
+          "F06",
+          "F58"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
-      "id": "PBYpyxVxtP8-6",
-      "en": "Of course we don't.",
-      "ko": "물론 용납하지 않아.",
-      "tags": {
-        "functions": [
-          "F07"
-        ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -172,18 +151,43 @@
       }
     },
     {
+      "id": "PBYpyxVxtP8-6",
+      "en": "Of course we don't.",
+      "ko": "물론 용납하지 않아.",
+      "tags": {
+        "functions": [
+          "F44"
+        ],
+        "situation": "S33",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "PBYpyxVxtP8-7",
       "en": "What Isaac did was awful. He was lucky he only got a red card.",
       "ko": "아이작이 한 행동은 끔찍했어. 그는 빨간 카드만 받은 게 다행이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -202,7 +206,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -225,7 +229,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -246,9 +250,9 @@
       "ko": "내가 선덜랜드에서 처음 올라올 때,",
       "tags": {
         "functions": [
-          "F03"
+          "F21"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -269,9 +273,9 @@
       "ko": "팀에 오래된 선수 한 명이 있었어, 지역 사람.",
       "tags": {
         "functions": [
-          "F02"
+          "F03"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -292,11 +296,11 @@
       "ko": "그와 그의 아내는 첫 아이를 가질 예정이었고,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -317,8 +321,8 @@
         "functions": [
           "F03"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S33",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -338,22 +342,25 @@
       "ko": "통계적으로 내가 진짜 아빠일 가능성이 있다고 농담을 했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "5dcf8fb823db5614"
 }

@@ -12,20 +12,22 @@
       "ko": "나한테 말하는 거지? 너에게 줄 게 있어. 졸업식 때 주려고 했는데.",
       "tags": {
         "functions": [
-          "F25",
-          "F34"
+          "F02"
         ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X05",
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -36,21 +38,24 @@
       "ko": "네가 한 일 때문에 지금 줄게.",
       "tags": {
         "functions": [
-          "F09",
-          "F34"
+          "F55"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -62,14 +67,14 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -83,18 +88,18 @@
       "ko": "이건 못 받아들여, 필 삼촌.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,20 +111,24 @@
       "ko": "너한테 말해야 할 게 있어, 뭐야?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S40",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -131,19 +140,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -154,16 +165,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,18 +186,18 @@
       "ko": "필 삼촌, 필요할까 봐 그냥 두고 있었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,21 +209,22 @@
       "ko": "어떻게 그렇게 멍청할 수 있어? 약물에 손대면 안 된다는 걸 알아야 해. 알아, 필 삼촌.",
       "tags": {
         "functions": [
-          "F12",
-          "F40"
+          "F55"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -222,19 +234,18 @@
       "ko": "학교에서 누가 나한테 줬어. 칼튼이 먹게 하려던 건 아니야.",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F56"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S19",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -246,21 +257,25 @@
       "ko": "내가 먹을지도 몰랐어. 미안해, 필 삼촌.",
       "tags": {
         "functions": [
-          "F20",
-          "F28"
+          "F28",
+          "F56"
         ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -272,19 +287,23 @@
         "functions": [
           "F28"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -293,20 +312,22 @@
       "ko": "내 아들이 너 때문에 죽을 뻔했어.",
       "tags": {
         "functions": [
-          "F12"
+          "F04"
         ],
         "situation": "S10",
-        "cefr": "B1",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -316,22 +337,23 @@
       "ko": "하지만 알아, 필 삼촌.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "9693c1c1bfe0196e"
 }

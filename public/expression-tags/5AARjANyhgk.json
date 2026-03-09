@@ -14,7 +14,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -26,7 +26,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -37,8 +39,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,10 +60,10 @@
       "ko": "칠면조 고기 반 파운드 같아.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,20 +83,22 @@
       "ko": "아니, 그건 못 먹어. 디종 없이 샌드위치를 먹을 수 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -104,20 +108,23 @@
       "ko": "응, 맞아. 네가 좋아하는 걸 더 많이 준비해야겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F10"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -127,10 +134,10 @@
       "ko": "야, 야, 야. 뭔가 느낌이 오는데.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,18 +157,18 @@
       "ko": "뭐, 우리 약속이 불만이야?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,8 +182,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -187,7 +194,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -196,9 +205,9 @@
       "ko": "나는 네 냉장고에서 원하는 걸 다 가져갈 수 있다고 생각했어.",
       "tags": {
         "functions": [
-          "F04"
+          "F52"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -209,7 +218,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -219,20 +230,22 @@
       "ko": "너도 내 냉장고에서 원하는 걸 가져갈 수 있다고.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -242,9 +255,9 @@
       "ko": "거기서 뭔가 생기면 알려줘, 그럼 가져갈게. 알겠어, 이해했어. 뭐를?",
       "tags": {
         "functions": [
-          "F50"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -254,7 +267,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -265,13 +280,13 @@
       "ko": "답을 찾았어, 제리. 냉장고 문제는 해결됐어.",
       "tags": {
         "functions": [
-          "F04"
+          "F62"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -288,20 +303,24 @@
       "ko": "아, 괜찮아. 원하는 거 다 가져가.",
       "tags": {
         "functions": [
-          "F44"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V13",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -311,9 +330,9 @@
       "ko": "아, 그럴게, 하지만 이제 책임져야 해.",
       "tags": {
         "functions": [
-          "F41"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -334,10 +353,10 @@
       "ko": "좋아, 내가 원하는 걸 가져갈게. 여기.",
       "tags": {
         "functions": [
-          "F44"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -347,7 +366,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -359,8 +380,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S05",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -380,10 +401,10 @@
       "ko": "그리고 그걸 그릇에 넣어. 뭐?",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S05",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -403,10 +424,10 @@
       "ko": "거기, 아주 간단해.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S05",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -417,7 +438,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -426,16 +449,17 @@
       "ko": "일종의 공짜 재고 목록이네.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S05",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -449,9 +473,9 @@
       "ko": "아니, 아니. 공짜가 아니야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S05",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -474,8 +498,8 @@
         "functions": [
           "F04"
         ],
-        "situation": "S05",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -485,9 +509,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "9f5b88b1fd612601"
 }

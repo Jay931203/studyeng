@@ -12,11 +12,11 @@
       "ko": "♪♪",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
-        "register": "R1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -27,7 +27,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -37,11 +37,11 @@
       "ko": "♪♪",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
-        "register": "R1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -52,7 +52,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -62,34 +62,11 @@
       "ko": "안녕. 안녕!",
       "tags": {
         "functions": [
-          "F25"
-        ],
-        "situation": "S44",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "l9VViSscQvA-3",
-      "en": "♪♪",
-      "ko": "♪♪",
-      "tags": {
-        "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
-        "register": "R1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -100,7 +77,32 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "l9VViSscQvA-3",
+      "en": "♪♪",
+      "ko": "♪♪",
+      "tags": {
+        "functions": [
+          "F02"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
         ]
       }
     },
@@ -110,18 +112,18 @@
       "ko": "바커, 그건 네 남자친구의 것이 아니야. 일찍 오지 마.",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -135,10 +137,10 @@
       "ko": "바 93. 다섯, 여섯, 그리고...",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -149,7 +151,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -158,11 +162,11 @@
       "ko": "♪♪",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
-        "register": "R1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -173,9 +177,10 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "cb51da61bab27223"
 }

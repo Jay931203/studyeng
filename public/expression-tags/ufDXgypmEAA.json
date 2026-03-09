@@ -12,20 +12,23 @@
       "ko": "음, 만약 네가 오후 내내 집에만 앉아 있고 외부 관심사를 전혀 발전시키지 않으면,",
       "tags": {
         "functions": [
-          "F04"
+          "F43",
+          "F52"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -35,9 +38,9 @@
       "ko": "매우, 매우 얕은 사람이 될 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -60,18 +63,20 @@
         "functions": [
           "F30"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -81,9 +86,9 @@
       "ko": "그 모자 좀 보여줘. 좋아.",
       "tags": {
         "functions": [
-          "F34"
+          "F35"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -104,10 +109,9 @@
       "ko": "그 옷과는 잘 안 어울리는 것 같아. 힐러리, 잠깐 이야기해도 될까?",
       "tags": {
         "functions": [
-          "F36",
-          "F06"
+          "F46"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -118,7 +122,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -128,10 +134,10 @@
       "ko": "지금은 안 돼, 애쉬. 내 쇼가 5분 후에 시작해.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -151,16 +157,16 @@
       "ko": "어머, 큰 언니 레이더.",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -176,7 +182,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -197,11 +203,11 @@
       "ko": "내가 알 수 있어. 이런 것에 대해 제3의 감각이 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -220,11 +226,11 @@
       "ko": "나에게 미술관은 마치...",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -234,7 +240,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -243,11 +251,11 @@
       "ko": "음, 알잖아, 그런 느낌이야...",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -257,7 +265,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -266,21 +276,24 @@
       "ko": "음, 미술관에 들어가면, 음...",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -289,9 +302,11 @@
       "ko": "내가 선택해야 한다면, 알겠지?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F50",
+          "F57"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -301,8 +316,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P12"
+        ],
+        "grammar_intent": [
+          "G12",
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -312,11 +332,12 @@
       "ko": "음, 알잖아, 그런 느낌이야...",
       "tags": {
         "functions": [
-          "F09"
+          "F50",
+          "F52"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -325,8 +346,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -335,13 +360,13 @@
       "ko": "나를 내버려 둬!",
       "tags": {
         "functions": [
-          "F43"
+          "F15"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -358,11 +383,11 @@
       "ko": "자, 범죄자가 어떤 불법 행위를 저지르도록 촉진한 완화적 상황이 있었나요?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S36",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -372,9 +397,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -383,10 +406,10 @@
       "ko": "음, 나는 그렇게 생각하지 않아...",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -402,5 +425,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "c700c70e0699b957"
 }

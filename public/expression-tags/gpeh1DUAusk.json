@@ -12,13 +12,14 @@
       "ko": "밴드에게 설명해 주세요. 빨리 끝내죠. 준비됐나요, 얘들아?",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E06",
+          "E13"
         ],
         "expression_types": [
           "X08"
@@ -35,11 +36,11 @@
       "ko": "자, 여러분, 이건 음원 재생이에요. 립싱크만 하면 됩니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F35"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -58,11 +59,11 @@
       "ko": "우리는 악기를 연주할 줄 압니다. 립싱크를 하라고요?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -81,34 +82,11 @@
       "ko": "왜 그냥 라이브로 공연할 수 없는지 이해가 안 돼요. 관객은 차이를 모를 거예요. 우리는 그 차이를 알죠. 이건 BBC입니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B2",
-        "register": "R3",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "gpeh1DUAusk-4",
-      "en": "That's how things are done around here, all right? Don't be a nuisance. Freddy, it'll be great. Oh, my.",
-      "ko": "여기서는 이렇게 하는 거예요, 알겠죠? 귀찮게 굴지 마세요. 프레디, 멋질 거예요. 오, 세상에.",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -122,16 +100,43 @@
       }
     },
     {
+      "id": "gpeh1DUAusk-4",
+      "en": "That's how things are done around here, all right? Don't be a nuisance. Freddy, it'll be great. Oh, my.",
+      "ko": "여기서는 이렇게 하는 거예요, 알겠죠? 귀찮게 굴지 마세요. 프레디, 멋질 거예요. 오, 세상에.",
+      "tags": {
+        "functions": [
+          "F51",
+          "F40"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G03",
+          "G24"
+        ],
+        "flags": []
+      }
+    },
+    {
       "id": "gpeh1DUAusk-5",
       "en": "You'll just have to make sure no one's looking at your lips.",
       "ko": "누군가 당신의 입술을 보지 않도록 해야 해요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -150,18 +155,18 @@
       "ko": "이렇게 하는 건 말도 안 돼요, 친구. 이건 BBC입니다. 안심하세요. 당신도 그럴 거예요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,11 +178,11 @@
       "ko": "아니요, 완벽한 공연입니다.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -185,7 +190,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -196,86 +203,11 @@
       "ko": "그녀는 킬러 퀸, 총몸의 젠틀틴",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R5",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "gpeh1DUAusk-9",
-      "en": "Dynamite with a laser beam",
-      "ko": "레이저 빔과 함께하는 다이너마이트",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R5",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "gpeh1DUAusk-10",
-      "en": "Guaranteed to blow your mind",
-      "ko": "당신의 마음을 날려버릴 보장된",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R5",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "gpeh1DUAusk-11",
-      "en": "Camera two.",
-      "ko": "카메라 2.",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -289,16 +221,87 @@
       }
     },
     {
+      "id": "gpeh1DUAusk-9",
+      "en": "Dynamite with a laser beam",
+      "ko": "레이저 빔과 함께하는 다이너마이트",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "gpeh1DUAusk-10",
+      "en": "Guaranteed to blow your mind",
+      "ko": "당신의 마음을 날려버릴 보장된",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "gpeh1DUAusk-11",
+      "en": "Camera two.",
+      "ko": "카메라 2.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
       "id": "gpeh1DUAusk-12",
       "en": "Only above the waist.",
       "ko": "허리 위만.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -317,11 +320,11 @@
       "ko": "카메라 올려. 카메라 2.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -340,22 +343,23 @@
       "ko": "이건 아무도 보고 싶어하지 않아요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "54fd4d831d838639"
 }

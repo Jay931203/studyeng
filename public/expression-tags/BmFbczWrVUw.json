@@ -12,18 +12,18 @@
       "ko": "있잖아, 가끔 사람들은 서로 멀어지거든, 그리고 우리한테는 그런 일이 일어나지 않았으면 해, 알겠지?",
       "tags": {
         "functions": [
-          "F10"
+          "F06"
         ],
-        "situation": "S08",
+        "situation": "S45",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V07",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,20 +35,22 @@
       "ko": "있잖아, 내가 항상 네가 원하는 대로 하거나 네가 듣고 싶은 말을 하는 건 아니지만,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S45",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -58,9 +60,9 @@
       "ko": "나는...",
       "tags": {
         "functions": [
-          "F08"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S45",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -69,7 +71,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -83,19 +85,21 @@
       "ko": "나는 너에게서 빛나는 무언가를 봐. 정말 대단해.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V07",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -106,19 +110,21 @@
       "ko": "그래서 너를 밀어붙이는 거야, 하지만 그건 너의 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -129,19 +135,21 @@
       "ko": "그걸로 뭘 하든, 넌 대단할 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
-        "power": [],
+        "vibe": "V13",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -154,16 +162,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -177,18 +185,22 @@
         "functions": [
           "F22"
         ],
-        "situation": "S08",
+        "situation": "S45",
         "cefr": "A1",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P09"
+        ],
+        "grammar_intent": [
+          "G22"
+        ],
         "flags": []
       }
     },
@@ -198,22 +210,23 @@
       "ko": "다시 말하지 않아도 괜찮아.",
       "tags": {
         "functions": [
-          "F44"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "6ce6e0ea4c155259"
 }

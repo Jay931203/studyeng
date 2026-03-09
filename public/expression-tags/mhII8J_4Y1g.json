@@ -12,10 +12,10 @@
       "ko": "정말 좋은 사람이 되려고 노력하는 사람들,",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -37,8 +37,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,8 +60,8 @@
         "functions": [
           "F04"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,9 +69,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -81,10 +83,10 @@
       "ko": "나쁘기 때문이야.",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,10 +94,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,9 +110,9 @@
       "ko": "지구에서 받은 점수가 그들이 얼마나 좋은지 나쁜지를 나타내.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -115,10 +121,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -129,8 +137,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,7 +146,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,10 +158,10 @@
       "ko": "그럼 왜 이 네 명은 내 동네에서",
       "tags": {
         "functions": [
-          "F06"
+          "F03"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -161,7 +169,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,7 +183,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -184,7 +192,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,10 +204,10 @@
       "ko": "서로를 도왔을까?",
       "tags": {
         "functions": [
-          "F01"
+          "F43"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -207,9 +215,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -219,20 +230,23 @@
       "ko": "잘 모르겠어, 아마 우연일 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -242,10 +256,10 @@
       "ko": "게다가 그들이 나아졌다는 증거는 전혀 없어.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -253,7 +267,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,18 +279,18 @@
       "ko": "그들의 점수를 기록하지 않았잖아.",
       "tags": {
         "functions": [
-          "F01"
+          "F12"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,8 +304,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -299,10 +313,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -313,7 +329,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -322,7 +338,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,10 +350,10 @@
       "ko": "아, 그는 우리가 아직 IHOP에 있다는 걸 잊었네.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -345,7 +361,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -357,18 +373,18 @@
       "ko": "치디를 본 사람 있어? 도와줘. 도와줘.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -380,9 +396,9 @@
       "ko": "내 작은 남자친구 좀 잡아줄 수 있어? 내가 할게.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -391,7 +407,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -405,8 +421,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S39",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -414,7 +430,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -426,18 +442,18 @@
       "ko": "나는 방금 수조각 같은 얇은 금속 시트들이",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -449,10 +465,10 @@
       "ko": "서로 겹쳐져 하나의 칼날을 형성하는",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -460,7 +476,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -472,10 +488,10 @@
       "ko": "하나의 날이 형성되고 있어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -483,7 +499,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -495,22 +511,25 @@
       "ko": "그래, 그래, 시간의 칼, 우리 모두 봤어. 다시 시작하자.",
       "tags": {
         "functions": [
-          "F09"
+          "F36"
         ],
-        "situation": "S39",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "522ea5ddece855c3"
 }

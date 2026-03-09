@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "A1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,12 +23,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -39,21 +37,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "A1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "grammar_intent": [
+          "G02"
+        ],
+        "flags": []
       }
     },
     {
@@ -62,9 +60,9 @@
       "ko": "감사합니다.",
       "tags": {
         "functions": [
-          "F27"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -73,10 +71,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -85,18 +85,18 @@
       "ko": "오늘 여러분과 함께하게 되어 영광입니다.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -110,7 +110,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -119,7 +119,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -133,7 +133,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -142,7 +142,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -156,16 +156,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -179,16 +179,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -200,9 +200,9 @@
       "ko": "오늘 여러분에게 세 가지 이야기를 해드리고 싶습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -211,7 +211,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -225,7 +225,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -234,7 +234,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -248,7 +248,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -257,7 +257,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -271,8 +271,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -280,7 +280,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -294,8 +294,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -303,7 +303,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -317,7 +317,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -326,7 +326,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -340,8 +340,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -349,7 +349,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -361,10 +361,10 @@
       "ko": "정말로 그만두기 전까지요.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -372,12 +372,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -386,10 +384,10 @@
       "ko": "그래서 왜 중퇴했냐고요?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -397,7 +395,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -409,10 +407,10 @@
       "ko": "그것은 제가 태어나기 전부터 시작되었습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -420,7 +418,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -432,9 +430,9 @@
       "ko": "제 생모는 젊은 미혼 대학원생이었고,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -443,7 +441,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -455,10 +453,10 @@
       "ko": "저를 입양 보내기로 결정했습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -466,7 +464,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -478,10 +476,10 @@
       "ko": "그녀는 제가 대학 졸업자에게 입양되기를 강하게 원했습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -489,7 +487,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -501,9 +499,9 @@
       "ko": "그래서 모든 것이 준비되어 있었습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -512,7 +510,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -524,10 +522,10 @@
       "ko": "변호사와 그의 아내에게 입양될 예정이었습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -535,7 +533,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -547,9 +545,9 @@
       "ko": "그런데 제가 태어났을 때,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -558,7 +556,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -570,9 +568,9 @@
       "ko": "그들은 마지막 순간에",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -581,7 +579,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -593,10 +591,10 @@
       "ko": "사실은 여자아이를 원한다고 결정했습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -604,7 +602,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -616,9 +614,9 @@
       "ko": "그래서 대기 명단에 있던 제 부모님이",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -627,7 +625,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -639,9 +637,9 @@
       "ko": "한밤중에 전화를 받았습니다.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -650,7 +648,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -662,10 +660,10 @@
       "ko": "\"예상치 못한 남자 아기가 태어났는데, 원하시나요?\"",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -673,7 +671,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -685,18 +683,18 @@
       "ko": "그들은 \"물론이죠\"라고 대답했습니다.",
       "tags": {
         "functions": [
-          "F10"
+          "F03"
         ],
-        "situation": "S16",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -710,8 +708,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -719,12 +717,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -735,8 +731,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -744,12 +740,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -760,8 +754,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -769,12 +763,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -785,8 +777,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -794,12 +786,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -808,10 +798,10 @@
       "ko": "몇 달 후 제 부모님이 저를 대학에 보내겠다고 약속하자",
       "tags": {
         "functions": [
-          "F08"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -819,12 +809,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -835,8 +823,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -844,12 +832,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -860,8 +846,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -869,12 +855,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -885,8 +869,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -894,12 +878,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -910,8 +892,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -919,7 +901,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -935,8 +917,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -944,12 +926,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -960,8 +940,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -969,12 +949,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -985,8 +963,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -994,12 +972,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1010,8 +986,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1019,12 +995,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1035,8 +1009,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1044,12 +1018,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1060,8 +1032,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1069,12 +1041,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1083,9 +1053,9 @@
       "ko": "대학이 어떻게 도움이 될지 전혀 몰랐습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -1094,12 +1064,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1108,10 +1076,10 @@
       "ko": "그래서 부모님이 평생 모은 돈을",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1119,12 +1087,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1133,23 +1099,21 @@
       "ko": "다 쓰고 있었기에",
       "tags": {
         "functions": [
-          "F09"
+          "F35"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1158,10 +1122,10 @@
       "ko": "저는 중퇴하기로 결심했습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1169,12 +1133,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1183,10 +1145,10 @@
       "ko": "모든 게 잘 될 거라고 믿었습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1194,12 +1156,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1208,23 +1168,21 @@
       "ko": "그때는 정말 무서웠지만",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1233,23 +1191,21 @@
       "ko": "돌아보면 제가 한 최고의 결정 중 하나였습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1258,9 +1214,9 @@
       "ko": "중퇴하자마자 흥미 없는 필수 과목을 듣지 않아도 되었고",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -1269,12 +1225,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1283,10 +1237,10 @@
       "ko": "훨씬 더 흥미로운 수업에 참여하기 시작했습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1294,7 +1248,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1308,10 +1262,10 @@
       "ko": "모든 게 낭만적이지는 않았습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1319,12 +1273,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1333,10 +1285,10 @@
       "ko": "기숙사도 없어서 친구 방 바닥에서 잤고",
       "tags": {
         "functions": [
-          "F09"
+          "F35"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1344,12 +1296,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1358,10 +1308,10 @@
       "ko": "음식을 사려고 5센트 보증금을 받으려 콜라 병을 반납했습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1369,12 +1319,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1383,10 +1331,10 @@
       "ko": "매주 일요일 밤 도시를 가로질러 11킬로를 걸어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1394,12 +1342,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1408,10 +1354,10 @@
       "ko": "하레 크리슈나 사원에서 한 끼 좋은 식사를 했습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1419,12 +1365,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1433,23 +1377,21 @@
       "ko": "정말 좋았습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1460,7 +1402,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -1469,12 +1411,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1485,7 +1425,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -1494,12 +1434,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1510,7 +1448,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -1519,12 +1457,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1535,7 +1471,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -1544,12 +1480,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1558,9 +1492,9 @@
       "ko": "하리 크리슈나 사원에서 한 끼 잘 먹기 위해",
       "tags": {
         "functions": [
-          "F01"
+          "F35"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -1569,12 +1503,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1585,7 +1517,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -1594,12 +1526,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1610,7 +1540,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -1619,12 +1549,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1635,7 +1563,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -1644,12 +1572,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1660,7 +1586,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -1669,12 +1595,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1685,8 +1609,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1694,12 +1618,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1710,21 +1632,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": []
       }
     },
     {
@@ -1735,8 +1657,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1744,12 +1666,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1760,7 +1680,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -1769,12 +1689,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1785,8 +1703,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1794,12 +1712,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1810,7 +1726,7 @@
         "functions": [
           "F04"
         ],
-        "situation": "S48",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -1819,7 +1735,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -1831,34 +1747,9 @@
       "ko": "정규 수업을 듣지 않아도 되었고,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "UF8uR6Z6KLc-76",
-      "en": "Decided to take a calligraphy class to",
-      "ko": "서예 수업을 듣기로 결정했습니다.",
-      "tags": {
-        "functions": [
-          "F63"
-        ],
-        "situation": "S16",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -1867,7 +1758,30 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "UF8uR6Z6KLc-76",
+      "en": "Decided to take a calligraphy class to",
+      "ko": "서예 수업을 듣기로 결정했습니다.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S14",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -1879,10 +1793,10 @@
       "ko": "이것을 배우기 위해, 나는",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1890,12 +1804,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -1904,10 +1816,10 @@
       "ko": "세리프와 산세리프 서체에 대해 배웠습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1915,7 +1827,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -1927,10 +1839,10 @@
       "ko": "다양한 글자 조합 사이의 간격을 조절하는 법을 배웠습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1938,7 +1850,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -1952,16 +1864,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -1973,18 +1885,18 @@
       "ko": "제가 대학에서 중퇴하지 않았다면,",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -1996,10 +1908,10 @@
       "ko": "그 서예 수업을 듣지 못했을 것이고,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -2007,7 +1919,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -2019,10 +1931,10 @@
       "ko": "개인용 컴퓨터에 그런 기능이 탑재되지 않았을 수도 있습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -2030,11 +1942,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "faa8b4a09a67dacd"
 }

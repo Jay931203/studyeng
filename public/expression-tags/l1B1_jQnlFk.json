@@ -12,18 +12,18 @@
       "ko": "일을 해!",
       "tags": {
         "functions": [
-          "F35"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,16 @@
       "ko": "나한테 춤추라고 하지 마! 좋아. 헤이! 헤이! 좋아! 나는 운동선수야!",
       "tags": {
         "functions": [
-          "F17",
-          "F15"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03",
-          "E01"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V12",
         "power": [],
@@ -60,9 +58,9 @@
       "ko": "나는 연예인이 아니야! 좋아!",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -71,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,10 +81,10 @@
       "ko": "이게 나의 기본이야, 베이비!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -94,10 +92,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -106,9 +106,9 @@
       "ko": "나는 춤추지 않고, 계약 없이는 프리시즌을 시작하지 않아!",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -117,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,9 +129,9 @@
       "ko": "좋아! 좋아! 좋아!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -140,7 +140,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,9 +152,9 @@
       "ko": "제리, 나와 이야기해.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -163,7 +163,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,9 +175,9 @@
       "ko": "숨 쉬어.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -186,10 +186,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -198,9 +200,9 @@
       "ko": "숨 쉬어, 제리.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -209,10 +211,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -221,9 +225,9 @@
       "ko": "나는 너를 위해 여기 있어.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -232,7 +236,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,9 +248,9 @@
       "ko": "너는 내가 너를 위해 여기 있는 게 어떤 건지 몰라.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -255,8 +259,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -267,10 +273,10 @@
       "ko": "새벽에 일어나서 자존심을 삼키는 전투야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -278,10 +284,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -290,20 +298,23 @@
       "ko": "내가 절대 다 말해주지 않을 거라는 거 알아, 알겠어?",
       "tags": {
         "functions": [
-          "F01"
+          "F43"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -313,9 +324,9 @@
       "ko": "그냥...",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -324,7 +335,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -338,18 +349,18 @@
       "ko": "신이여, 도와주세요!",
       "tags": {
         "functions": [
-          "F31"
+          "F19"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S28",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E04"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -361,18 +372,18 @@
       "ko": "도와줘, 롯드.",
       "tags": {
         "functions": [
-          "F34"
+          "F19"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S28",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E04"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -386,18 +397,18 @@
       "ko": "내가 너를 도와줄 수 있도록 도와줘.",
       "tags": {
         "functions": [
-          "F34"
+          "F19"
         ],
-        "situation": "S50",
+        "situation": "S28",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E04"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -409,18 +420,18 @@
       "ko": "도와줘...",
       "tags": {
         "functions": [
-          "F34"
+          "F19"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S28",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E04"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -434,18 +445,18 @@
       "ko": "내가 너를 도와줄 수 있도록 도와줘.",
       "tags": {
         "functions": [
-          "F34"
+          "F19"
         ],
-        "situation": "S50",
+        "situation": "S28",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E04"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -457,22 +468,23 @@
       "ko": "내가 너를 도와줄 수 있도록 도와줘.",
       "tags": {
         "functions": [
-          "F34"
+          "F19"
         ],
-        "situation": "S50",
+        "situation": "S28",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E04"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "1bf8497c06072532"
 }

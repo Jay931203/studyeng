@@ -12,18 +12,18 @@
       "ko": "우리는 모두 사물을 다르게 보기 시작했다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,18 @@
       "ko": "우리가 가는 곳마다 우리는 사물을 평가하고 있었다.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,20 +58,22 @@
       "ko": "체육관에 가득 찬 남자들이 안쓰러웠다,",
       "tags": {
         "functions": [
-          "F31"
+          "F28"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -81,18 +83,18 @@
       "ko": "Calvin Klein이나 Tommy Hilfiger가 말한 대로 보이려고 애쓰는 모습이.",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,16 +108,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,10 +129,10 @@
       "ko": "자기 개선은 자위다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -138,7 +140,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,21 +152,23 @@
       "ko": "자기 파괴는 없다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -173,21 +177,27 @@
       "ko": "실례합니다.",
       "tags": {
         "functions": [
-          "F25"
+          "F28"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S39",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "vibe": "V12",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -198,20 +208,25 @@
         "functions": [
           "F28"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S39",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "665edee85b4ac3fc"
 }

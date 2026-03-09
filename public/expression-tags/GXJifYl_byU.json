@@ -12,9 +12,9 @@
       "ko": "원하시면 항상 신선하게",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -35,10 +35,10 @@
       "ko": "모든 것을 포함할 거예요",
       "tags": {
         "functions": [
-          "F09"
+          "F12"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,9 +58,9 @@
       "ko": "당신을 끌어당기고, 흘러가게 하고, 자유롭게 해줄게요",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -81,20 +81,23 @@
       "ko": "제발 여기로 보내지 마세요",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -106,9 +109,9 @@
       "ko": "한쪽 눈을 뜨고 자세요",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S03",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -129,9 +132,9 @@
       "ko": "베개를 꽉 쥐고",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -152,9 +155,9 @@
       "ko": "삶이 있고, 밤이 있어요",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -175,10 +178,10 @@
       "ko": "내 손을 잡아요",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -198,9 +201,9 @@
       "ko": "뭔가 이상해, 단지 불빛일 뿐",
       "tags": {
         "functions": [
-          "F09"
+          "F19"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -221,13 +224,13 @@
       "ko": "오늘 밤 무거운 생각이 들어요",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -244,9 +247,9 @@
       "ko": "눈처럼 하얀 눈의 눈동자 속에서",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -258,7 +261,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -267,9 +272,9 @@
       "ko": "그녀가 그 사람, 그녀가 빛이에요",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -290,9 +295,9 @@
       "ko": "그녀는 드래곤, 불이에요",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -313,10 +318,10 @@
       "ko": "원하는 건 무엇이든",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -336,9 +341,9 @@
       "ko": "한쪽 눈을 뜨고 자세요",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S03",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -353,5 +358,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "ebdd5927b8b2e56d"
 }

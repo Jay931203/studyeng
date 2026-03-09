@@ -12,20 +12,22 @@
       "ko": "그곳의 일부가 되고 싶어, 뉴욕, 뉴욕",
       "tags": {
         "functions": [
-          "F09"
+          "F23"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S22",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -35,9 +37,9 @@
       "ko": "이 방랑자의 신발",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S22",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -49,7 +51,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -60,7 +64,7 @@
         "functions": [
           "F18"
         ],
-        "situation": "S50",
+        "situation": "S22",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -69,9 +73,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V17",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -81,20 +87,22 @@
       "ko": "이게 최고야. 세상에.",
       "tags": {
         "functions": [
-          "F09"
+          "F18"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S22",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -104,9 +112,9 @@
       "ko": "야, 나 다음에 해도 돼?",
       "tags": {
         "functions": [
-          "F34"
+          "F46"
         ],
-        "situation": "S50",
+        "situation": "S22",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -117,7 +125,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -127,20 +137,22 @@
       "ko": "그곳의 일부가 되고 싶어, 뉴욕, 뉴욕",
       "tags": {
         "functions": [
-          "F09"
+          "F23"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S22",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -150,20 +162,22 @@
       "ko": "잠들지 않는 도시에서 깨어나고 싶어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S22",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -173,18 +187,18 @@
       "ko": "그리고 내가 정상에 있다는 걸 알게 되고 싶어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S22",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,13 +210,13 @@
       "ko": "이 작은 마을의 우울함",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S22",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -219,13 +233,13 @@
       "ko": "아, 나는 녹아내리고 있어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S22",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -242,13 +256,13 @@
       "ko": "나는 사라졌어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S22",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -256,8 +270,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "8ca482a31758e2b3"
 }

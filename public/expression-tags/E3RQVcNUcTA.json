@@ -12,20 +12,23 @@
       "ko": "내 마음에 맹세하고 죽기를 바랄게.",
       "tags": {
         "functions": [
-          "F09"
+          "F22",
+          "F41"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G08"
+        ],
         "flags": []
       }
     },
@@ -35,9 +38,9 @@
       "ko": "알겠어.",
       "tags": {
         "functions": [
-          "F07"
+          "F44"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -49,7 +52,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,10 +63,10 @@
       "ko": "알겠어, 애기야.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -72,7 +77,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,9 +88,9 @@
       "ko": "나한테 줘.",
       "tags": {
         "functions": [
-          "F34"
+          "F35"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -104,10 +111,10 @@
       "ko": "정통으로 맞았어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S01",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -118,7 +125,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -129,7 +138,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -152,8 +161,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S01",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -164,7 +173,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -175,8 +186,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,20 +207,23 @@
       "ko": "가서 또 던져봐.",
       "tags": {
         "functions": [
-          "F35"
+          "F35",
+          "F47"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -219,20 +233,24 @@
       "ko": "그 정도밖에 못 한다면, 애기야, 너는 질 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F13"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -242,32 +260,9 @@
       "ko": "해리, 안 돼.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "E3RQVcNUcTA-11",
-      "en": "No!",
-      "ko": "안 돼!",
-      "tags": {
-        "functions": [
-          "F40"
-        ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -279,8 +274,36 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "E3RQVcNUcTA-11",
+      "en": "No!",
+      "ko": "안 돼!",
+      "tags": {
+        "functions": [
+          "F15"
+        ],
+        "situation": "S01",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "d81f2bed9c215f2a"
 }

@@ -12,10 +12,10 @@
       "ko": "이름을 말해봐.",
       "tags": {
         "functions": [
-          "F06"
+          "F52"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -26,7 +26,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -38,7 +40,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -61,10 +63,10 @@
           "F12"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -81,13 +83,13 @@
       "ko": "나한텐 그렇지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E07"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -104,7 +106,7 @@
       "ko": "그들과 대화가 많지 않잖아.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -127,16 +129,16 @@
       "ko": "그들에게 되돌려줄 수는 없어, 윌.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -150,10 +152,10 @@
       "ko": "심각한 냄새 나는 소금과 히터 없이는.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,7 +175,86 @@
       "ko": "맞아. 내가 말하는 게 그거야.",
       "tags": {
         "functions": [
-          "F10"
+          "F07",
+          "F50",
+          "F53"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "zKQBHkzOYvw-8",
+      "en": "You'll never have that kind of relationship in a world...",
+      "ko": "그런 관계는 가질 수 없어, 세상에서...",
+      "tags": {
+        "functions": [
+          "F43"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V02",
+        "power": [],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "zKQBHkzOYvw-9",
+      "en": "where you're always afraid to take the first step...",
+      "ko": "항상 첫 발을 내딛는 게 두려운...",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E04"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "zKQBHkzOYvw-10",
+      "en": "because all you see is every negative thing ten miles down the road.",
+      "ko": "왜냐하면 너는 10마일 앞의 모든 부정적인 것만 보니까.",
+      "tags": {
+        "functions": [
+          "F04"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -186,76 +267,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "zKQBHkzOYvw-8",
-      "en": "You'll never have that kind of relationship in a world...",
-      "ko": "그런 관계는 가질 수 없어, 세상에서...",
-      "tags": {
-        "functions": [
-          "F12"
+        "grammar_intent": [
+          "G18"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E04"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "zKQBHkzOYvw-9",
-      "en": "where you're always afraid to take the first step...",
-      "ko": "항상 첫 발을 내딛는 게 두려운...",
-      "tags": {
-        "functions": [
-          "F19"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E04"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "zKQBHkzOYvw-10",
-      "en": "because all you see is every negative thing ten miles down the road.",
-      "ko": "왜냐하면 너는 10마일 앞의 모든 부정적인 것만 보니까.",
-      "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E04"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
         "flags": []
       }
     },
@@ -265,19 +279,22 @@
       "ko": "교수 편을 들 건가? 헛소리 하지 마, 아니. 이 일 원하지 않았어.",
       "tags": {
         "functions": [
-          "F11"
+          "F56"
         ],
         "situation": "S50",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "contains_profanity"
@@ -290,16 +307,16 @@
       "ko": "일에 관한 게 아니야. 네가 정부에서 일하든 상관 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -313,18 +330,18 @@
       "ko": "하지만 네가 원하는 건 뭐든 할 수 있어.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -336,10 +353,10 @@
       "ko": "너는 아무것에도 얽매이지 않아.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -363,7 +380,7 @@
         ],
         "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -405,7 +422,8 @@
       "ko": "평생 벽돌을 쌓는 사람들도 있어...",
       "tags": {
         "functions": [
-          "F02"
+          "F02",
+          "F50"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -418,8 +436,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -428,7 +450,7 @@
       "ko": "그들의 아이들이 여기서 너가 가진 기회를 가질 수 있도록. 이건 내가 원한 게 아니야.",
       "tags": {
         "functions": [
-          "F04"
+          "F56"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -474,7 +496,7 @@
       "ko": "그러니까 \"이건 내가 원한 게 아니야\"라고 변명하지 마.",
       "tags": {
         "functions": [
-          "F08"
+          "F56"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -497,7 +519,8 @@
       "ko": "변명이라니? 벽돌 쌓는 게 뭐가 문제인데? 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F06",
+          "F50"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -510,7 +533,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -520,7 +546,7 @@
       "ko": "문제는 없어. 내가 짓는 건 누군가의 집이야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -543,7 +569,7 @@
       "ko": "맞아. 내 아버지도 벽돌을 쌓았어, 알겠어?",
       "tags": {
         "functions": [
-          "F02"
+          "F06"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -560,5 +586,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "ef8768229a745de5"
 }

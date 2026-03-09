@@ -12,18 +12,18 @@
       "ko": "나는 그의 차를 협곡에서 찾았어, 옆에 총알 구멍이 있어서 지금 소식을 기다리고 있어.",
       "tags": {
         "functions": [
-          "F05"
+          "F02"
         ],
-        "situation": "S37",
+        "situation": "S06",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,20 +35,22 @@
       "ko": "어떻게 된 건지, 총알 구멍이 전부야. 여기 뉴멕시코에서는 소다 캔을 밖에 두면 누군가 총을 쏴.",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S37",
+        "situation": "S38",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -58,18 +60,18 @@
       "ko": "그게 네가 말하는 거야? 총을 가진 몇 명이 고철차를 쏘는 게 불가능하다고 생각해?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S37",
+        "situation": "S32",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +83,18 @@
       "ko": "도대체 어떤 작전을 하고 있는 거야?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S37",
+        "situation": "S38",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,20 +106,23 @@
       "ko": "말해봐, 왜 그를 이 일을 시켰는지 알 것 같아.",
       "tags": {
         "functions": [
-          "F06"
+          "F48"
         ],
-        "situation": "S37",
+        "situation": "S32",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -129,18 +134,20 @@
         "functions": [
           "F09"
         ],
-        "situation": "S37",
+        "situation": "S38",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -150,22 +157,23 @@
       "ko": "당신은 믿을 수 있어요.",
       "tags": {
         "functions": [
-          "F10"
+          "F12"
         ],
-        "situation": "S37",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S38",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "149ce16359ad9508"
 }

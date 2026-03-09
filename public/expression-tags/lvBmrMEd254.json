@@ -12,10 +12,10 @@
       "ko": "팀미, 팀미, 그게 뭐인지 말해줄래? 갈라...",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -25,7 +25,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": [
           "is_fragment"
         ]
@@ -37,23 +39,21 @@
       "ko": "갈라... 어... 어... 갈라... 어... 갈라-마이너스.",
       "tags": {
         "functions": [
-          "F50"
+          "F52"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -62,16 +62,16 @@
       "ko": "저게... 저게 고기를 먹는... 어...",
       "tags": {
         "functions": [
-          "F06"
+          "F52"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -89,7 +89,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -112,10 +112,10 @@
       "ko": "균일한 방향으로 회전하는 바퀴는,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -126,7 +126,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -135,9 +137,9 @@
       "ko": "마치 포식자를 피하는 새 떼처럼 변해.",
       "tags": {
         "functions": [
-          "F02"
+          "F13"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -148,7 +150,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -158,16 +162,16 @@
       "ko": "저들은, 어...",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -185,7 +189,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -206,10 +210,10 @@
       "ko": "헉... 헉... 헉...",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -225,5 +229,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "6752808bef77885a"
 }

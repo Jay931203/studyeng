@@ -12,18 +12,18 @@
       "ko": "그들은 베트남이 미국과 매우 다를 것이라고 말했지만,",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -37,7 +37,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S32",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,19 +58,21 @@
       "ko": "이 물에서 새우를 잡는다고 하더군요. 이 베트남은 좋은 새우가 있다고 합니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F14"
         ],
-        "situation": "S44",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V02",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -81,18 +83,18 @@
       "ko": "우리가 이 전쟁에서 이기면 모든 것을 차지하고, 미국 새우를 이곳으로 데려와서 이 물에서 새우를 잡을 수 있습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,7 +108,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -115,8 +117,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V02",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -127,9 +131,9 @@
       "ko": "당신들은 내 FNG들인가요?",
       "tags": {
         "functions": [
-          "F01"
+          "F36"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -138,7 +142,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,10 +154,10 @@
       "ko": "손을 내리세요. 나에게 경례하지 마세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -161,7 +165,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,24 +177,26 @@
       "ko": "이 지역에는 장교를 겨냥하는 저격수들이 많습니다.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S37",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
+          "is_narration",
           "contains_profanity"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "1fd09a90a50df564"
 }

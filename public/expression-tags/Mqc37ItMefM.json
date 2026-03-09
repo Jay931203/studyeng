@@ -12,18 +12,18 @@
       "ko": "거기까지 가는 데 몇 년이 걸렸어",
       "tags": {
         "functions": [
-          "F01"
+          "F23"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,10 +37,10 @@
       "ko": "그럴 시간이 있었나 봐",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,7 +62,7 @@
       "ko": "아무도 여기 주차하면 안 된다고 안 했어",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -73,7 +73,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,10 +87,10 @@
       "ko": "그래, 당연히 벌금 먹었지",
       "tags": {
         "functions": [
-          "F05"
+          "F07"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -98,7 +98,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,10 +112,10 @@
       "ko": "내 분노가 반으로 갈라진다면",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -123,7 +123,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -137,7 +137,7 @@
       "ko": "오, 반은 너한테 줄게",
       "tags": {
         "functions": [
-          "F39"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -148,7 +148,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,24 +162,28 @@
       "ko": "넌 모르겠지만, 어쩌면 나를 볼 수도 있어",
       "tags": {
         "functions": [
-          "F18"
+          "F43",
+          "F14"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": [
           "is_lyrics"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "eb5fa8a25cc88724"
 }

@@ -14,9 +14,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -37,9 +37,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -60,9 +60,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -83,9 +83,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -104,11 +104,11 @@
       "ko": "당신은 많은 질문이 있지만, 과정이 당신의 의식을 변화시켰음에도 불구하고",
       "tags": {
         "functions": [
-          "F04"
+          "F21"
         ],
-        "situation": "S44",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -127,11 +127,11 @@
       "ko": "당신은 여전히 인간입니다. 따라서 제 답변 중 일부는 이해할 수 있고, 일부는 이해하지 못할 것입니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -150,11 +150,11 @@
       "ko": "따라서 첫 번째 질문이 가장 중요할 수 있지만,",
       "tags": {
         "functions": [
-          "F04"
+          "F47"
         ],
-        "situation": "S44",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -163,7 +163,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -173,11 +175,11 @@
       "ko": "그것이 가장 무의미하다는 것을 깨닫지 못할 수도 있습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -198,9 +200,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -221,9 +223,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -244,9 +246,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -259,5 +261,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "46ac27183c27bb22"
 }

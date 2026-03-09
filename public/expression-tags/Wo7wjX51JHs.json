@@ -12,11 +12,34 @@
       "ko": "생각했던 것처럼. 커피 더 필요해, 자기? 응, 계속 가져다 줘, 제발. 알겠어.",
       "tags": {
         "functions": [
-          "F01",
-          "F06"
+          "F59"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "C1",
+        "register": "R4",
+        "emotions": [
+          "E10",
+          "E13"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "Wo7wjX51JHs-1",
+      "en": "Oh, geez, real nice.",
+      "ko": "오, 세상에, 정말 멋지네.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -31,39 +54,15 @@
       }
     },
     {
-      "id": "Wo7wjX51JHs-1",
-      "en": "Oh, geez, real nice.",
-      "ko": "오, 세상에, 정말 멋지네.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "Wo7wjX51JHs-2",
       "en": "Just put that anywhere, pal. Good save.",
       "ko": "그거 아무데나 두면 돼, 친구. 잘했어.",
       "tags": {
         "functions": [
-          "F09",
-          "F30"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -83,20 +82,23 @@
       "ko": "콜레스테롤, 폐암, 뱃살 걱정 안 해?",
       "tags": {
         "functions": [
-          "F06"
+          "F35",
+          "F40"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -106,11 +108,10 @@
       "ko": "나는 더 이상 아무것도 걱정하지 않아. 너는 왜 그렇게 특별해?",
       "tags": {
         "functions": [
-          "F09",
-          "F12"
+          "F40"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -130,10 +131,10 @@
       "ko": "모두가 뭔가에 대해 걱정해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -153,19 +154,19 @@
       "ko": "그게 바로 내가 특별한 이유야. 나는 치실도 필요 없어.",
       "tags": {
         "functions": [
-          "F09",
-          "F01"
+          "F10",
+          "F40"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -179,7 +180,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S05",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -202,9 +203,9 @@
       "ko": "뭐?",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S05",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -229,9 +230,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S05",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -252,8 +253,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "C2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -275,8 +276,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "C2",
+        "situation": "S05",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -298,9 +299,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "C2",
-        "register": "R2",
+        "situation": "S05",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -321,8 +322,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "C2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -336,5 +337,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "7129ed3fe552b952"
 }

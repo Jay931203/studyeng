@@ -12,20 +12,22 @@
       "ko": "그녀를 찾아가서 진실을 알아내볼까 해.",
       "tags": {
         "functions": [
-          "F06"
+          "F36"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -35,20 +37,24 @@
       "ko": "지금 보여줘서 미안해.",
       "tags": {
         "functions": [
-          "F27"
+          "F28"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -58,9 +64,9 @@
       "ko": "괜찮아, 괜찮아.",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -81,13 +87,13 @@
       "ko": "내 예전 왕국은 잘 돌아가지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -104,10 +110,10 @@
       "ko": "코라는 잘 적응하고 있어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,18 +133,18 @@
       "ko": "어색할 거라는 걸 알아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,10 +156,10 @@
       "ko": "아니, 나는 어제고, 그녀는 내일이야, 그렇게 되어 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,18 +179,18 @@
       "ko": "많이 상처받았겠구나.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,16 +202,16 @@
       "ko": "사실, 솔직해지는 게 나을 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -219,11 +225,10 @@
       "ko": "나는 내가 대우받은 방식에 화가 나. 너를 탓하지는 않아.",
       "tags": {
         "functions": [
-          "F17",
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -231,9 +236,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -243,10 +250,10 @@
       "ko": "화가 나면 어떤 사람들은 용서하기 힘든 말을 하게 돼.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -254,9 +261,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -266,16 +275,16 @@
       "ko": "그래서 나는 떠나기로 결심했어.",
       "tags": {
         "functions": [
-          "F63"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -289,10 +298,10 @@
       "ko": "그녀의 죽음에 분노를 표출하고 싶어.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -300,9 +309,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -312,9 +323,9 @@
       "ko": "그리고 내 입을 다시 다스릴 수 있을 때 돌아올 거야.",
       "tags": {
         "functions": [
-          "F63"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -335,11 +346,10 @@
       "ko": "너의 자기 인식은 우리 모두에게 본보기가 돼. 내가 틀렸다고 생각하지 않지?",
       "tags": {
         "functions": [
-          "F12",
-          "F09"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -359,9 +369,9 @@
       "ko": "지금 너의 인생에서 가장 필요 없는 것은",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -382,9 +392,9 @@
       "ko": "아들과 며느리와 다투는 거야. 정확히 그렇지.",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -405,18 +415,18 @@
       "ko": "하지만 걱정하지 마, 떠나기 전에 크룩샹크 양을 찾아갈 거야.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E04"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -428,9 +438,9 @@
       "ko": "그녀는 꽤 강한 사람일 것 같아.",
       "tags": {
         "functions": [
-          "F14"
+          "F21"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -451,10 +461,10 @@
       "ko": "그리고 나는 꽤 강한 너구리 깨는 사람이지.",
       "tags": {
         "functions": [
-          "F14"
+          "F21"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -468,5 +478,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "15f8210d3d24961c"
 }

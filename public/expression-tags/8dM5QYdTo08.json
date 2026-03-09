@@ -12,13 +12,14 @@
       "ko": "이 입술, 네 피부를 맛보고 싶어. 아기, 아니, 이 눈으로는 안 돼, 그래.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R5",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E06",
+          "E11"
         ],
         "expression_types": [
           "X08"
@@ -37,13 +38,14 @@
       "ko": "네 미소를 빨리 보고 싶어. 오, 아기, 내 사랑을.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E06",
+          "E11"
         ],
         "expression_types": [
           "X08"
@@ -62,13 +64,14 @@
       "ko": "내 사랑이 너를 감싸게 해줘. 제발, 아기, 그래.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E11",
+          "E13"
         ],
         "expression_types": [
           "X08"
@@ -87,16 +90,17 @@
       "ko": "그래, 알아, 너도 알아야 해. 너는 내가 너를 감싼다는 걸.",
       "tags": {
         "functions": [
-          "F22"
+          "F07"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X05"
         ],
         "vibe": "V07",
         "power": [],
@@ -112,13 +116,13 @@
       "ko": "그래, 아기. 아기, 이 주먹은.",
       "tags": {
         "functions": [
-          "F22"
+          "F07"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R5",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
@@ -137,13 +141,13 @@
       "ko": "항상 너를 지킬 거야. 아가, 이 마음 속에서.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -156,5 +160,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "ed980d4e3305db99"
 }

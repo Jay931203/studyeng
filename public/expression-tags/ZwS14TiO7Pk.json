@@ -12,10 +12,10 @@
       "ko": "당신이 공유하는 또 다른 열정은 음악입니다. 어떻게 함께 음악을 작업했는지 모르겠어요. 아니, 아니, 아니.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,12 +23,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,20 +35,23 @@
       "ko": "아니요, 우리는 그런 적이 없어요. 네, 아시죠, 그런 느낌이에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -60,18 +61,18 @@
       "ko": "그는 작업하는 스튜디오가 있고, 네, 그는 정말 좋은 래퍼예요. 고마워요.",
       "tags": {
         "functions": [
-          "F02"
+          "F27"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,20 +84,22 @@
       "ko": "하지만 아직은 아니에요. 언젠가는 뭔가 할지도 몰라요.",
       "tags": {
         "functions": [
-          "F04"
+          "F14"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -106,18 +109,18 @@
       "ko": "당신을 강요하고 싶지 않아요. 나가라고 하면 안 되니까요.",
       "tags": {
         "functions": [
-          "F40"
+          "F35"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,20 +132,23 @@
       "ko": "하지만 마이크가 몇 개 있어요. 조금 해볼래요?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G12",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -154,17 +160,20 @@
         "functions": [
           "F35"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -177,7 +186,7 @@
         "functions": [
           "F25"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -186,7 +195,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -202,7 +211,7 @@
         "functions": [
           "F25"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -211,7 +220,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -227,7 +236,7 @@
         "functions": [
           "F25"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -236,7 +245,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -250,8 +259,8 @@
         "functions": [
           "F25"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -259,7 +268,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -273,8 +282,8 @@
         "functions": [
           "F09"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S19",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -282,7 +291,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -294,9 +303,9 @@
       "ko": "젊은 로맨스, 이건 당신의 기회예요. 힘든 도전이지만요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -305,7 +314,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -317,10 +326,10 @@
       "ko": "당신은 공을 치려고 하지만, 잘못된 샷이에요. 왜냐하면 저는 마이크를 흔들고 싶거든요.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S32",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -328,11 +337,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "780b8be2475231ca"
 }

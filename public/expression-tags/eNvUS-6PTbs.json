@@ -12,7 +12,7 @@
       "ko": "아내는 그렇게 강할 수 없어",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,7 +37,7 @@
       "ko": "남자를 위해 기회를 잡아",
       "tags": {
         "functions": [
-          "F34"
+          "F35"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -46,9 +46,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,22 +62,24 @@
       "ko": "내 마음을 가져가",
       "tags": {
         "functions": [
-          "F44"
+          "F22",
+          "F35"
         ],
         "situation": "S46",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -87,20 +89,22 @@
       "ko": "나는 너를 너무 필요해",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -123,11 +127,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -137,32 +142,7 @@
       "ko": "나는 절대 떠나지 않을 거야",
       "tags": {
         "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "eNvUS-6PTbs-6",
-      "en": "Sherry, Sherry lady",
-      "ko": "셰리, 셰리 레이디",
-      "tags": {
-        "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A1",
@@ -173,11 +153,38 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "eNvUS-6PTbs-6",
+      "en": "Sherry, Sherry lady",
+      "ko": "셰리, 셰리 레이디",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -187,22 +194,23 @@
       "ko": "감정 속으로 들어가",
       "tags": {
         "functions": [
-          "F09"
+          "F35"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -212,18 +220,18 @@
       "ko": "사랑은 네가 찾는 곳에 있어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -237,18 +245,18 @@
       "ko": "네 마음의 소리를 들어",
       "tags": {
         "functions": [
-          "F09"
+          "F35"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -262,10 +270,10 @@
       "ko": "셰리, 셰리 레이디",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -273,11 +281,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -287,7 +296,7 @@
       "ko": "헌신 속에 살아",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -298,11 +307,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -312,7 +322,7 @@
       "ko": "항상 처음인 것처럼",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -323,7 +333,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -337,7 +347,7 @@
       "ko": "네 역할을 맡게 해줘",
       "tags": {
         "functions": [
-          "F44"
+          "F35"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -348,7 +358,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -362,10 +372,10 @@
       "ko": "셰리, 셰리 레이디",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -373,11 +383,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -398,7 +409,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -412,18 +423,19 @@
       "ko": "내 마음을 가져가, 잃지 마",
       "tags": {
         "functions": [
-          "F22"
+          "F22",
+          "F35"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -437,18 +449,18 @@
       "ko": "네 마음의 소리를 들어",
       "tags": {
         "functions": [
-          "F09"
+          "F35"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -462,7 +474,7 @@
       "ko": "셰리, 셰리 레이디",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -473,11 +485,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -487,7 +500,7 @@
       "ko": "네가 나를 들어준다는 걸 알아",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -498,7 +511,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -512,18 +525,18 @@
       "ko": "네가 알면, 베이비",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -537,20 +550,22 @@
       "ko": "절대 두려워하지 않을 거야",
       "tags": {
         "functions": [
-          "F19"
+          "F43"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E04"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -562,7 +577,7 @@
       "ko": "셰리",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -573,11 +588,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -587,7 +603,7 @@
       "ko": "셰리",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -598,11 +614,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -612,7 +629,7 @@
       "ko": "셰리",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -623,13 +640,15 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "9fc3abfef5effb15"
 }

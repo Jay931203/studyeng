@@ -12,16 +12,16 @@
       "ko": "아니, 내가 말하는 건, 우리 모두 잘못하고 있다는 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F09"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -35,10 +35,10 @@
       "ko": "이게 잘 되려면, 나한테 오는 걸 멈춰야 해.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,10 +58,10 @@
       "ko": "그리고 나를 통해서 플레이해야 해.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,10 +81,10 @@
       "ko": "알겠어?",
       "tags": {
         "functions": [
-          "F51"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,10 +104,10 @@
       "ko": "어, 잠깐만, 그냥 봐봐.",
       "tags": {
         "functions": [
-          "F52"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,9 +127,9 @@
       "ko": "내가, 괜찮아?",
       "tags": {
         "functions": [
-          "F46"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -150,16 +150,16 @@
       "ko": "응, 해봐.",
       "tags": {
         "functions": [
-          "F44"
+          "F07"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -173,10 +173,10 @@
       "ko": "좋아, 그러니까 나는 여기 있을 필요 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S33",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,10 +196,10 @@
       "ko": "앞으로 나가면 안 돼.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -219,10 +219,10 @@
       "ko": "나는 여기 중앙에 있어야 해.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S33",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,10 +242,10 @@
       "ko": "나는 여기 있어야 하고, 대니는 앞으로 나가게 하고,",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S33",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,10 +265,10 @@
       "ko": "콜린은 저기로, 리차드는 저기로 가게 해.",
       "tags": {
         "functions": [
-          "F36"
+          "F35"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,10 +288,10 @@
       "ko": "그러니까 나한테 오는 걸 멈추고, 나를 통해서 가야 해.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -313,19 +313,21 @@
         "functions": [
           "F51"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -334,10 +336,10 @@
       "ko": "그게 총체적 축구야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -359,14 +361,14 @@
         "functions": [
           "F06"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -382,7 +384,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -403,10 +405,10 @@
       "ko": "팀을 위해 개인적인 영광을 제쳐두는 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F35"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S33",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -428,8 +430,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -449,10 +451,10 @@
       "ko": "팀을 위해 개인적인 영광을 제쳐두는 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F35"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S33",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -472,16 +474,17 @@
       "ko": "오, 그거 마음에 들어, 하지만 그건 네 번째가 아니야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X05"
         ],
         "vibe": "V18",
         "power": [],
@@ -497,18 +500,21 @@
         "functions": [
           "F35"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -520,7 +526,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -543,7 +549,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -555,8 +561,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "6c059b096bd8f8fd"
 }

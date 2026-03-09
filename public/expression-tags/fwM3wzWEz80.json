@@ -14,7 +14,7 @@
         "functions": [
           "F27"
         ],
-        "situation": "S14",
+        "situation": "S38",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -23,10 +23,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,9 +37,9 @@
       "ko": "자, 정말 흥미진진했어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -46,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,10 +60,10 @@
       "ko": "카펫 속 클레오파트라처럼 밀반입했네요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +71,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,20 +83,22 @@
       "ko": "응, 비밀스럽게 해서 미안해요. 레그, 렐.",
       "tags": {
         "functions": [
-          "F20"
+          "F28"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -104,10 +108,10 @@
       "ko": "당신이 오이디푸스 로이군요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +119,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,18 +131,18 @@
       "ko": "아, 맞아요. 농담이에요. 이쪽인가요? 네, 여기로 가요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S38",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,9 +154,9 @@
       "ko": "밖의 소란에 대해 미안해요.",
       "tags": {
         "functions": [
-          "F27"
+          "F28"
         ],
-        "situation": "S14",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -161,9 +165,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -173,10 +179,10 @@
       "ko": "리아 자렐, 로건 로이, 아빠, 리아 자렐.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,7 +190,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +202,18 @@
       "ko": "당신을 만나서 반가워요.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,10 +225,10 @@
       "ko": "앉으세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,7 +236,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,9 +248,9 @@
       "ko": "음료수 드릴까요?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S32",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -253,9 +259,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -267,16 +275,16 @@
         "functions": [
           "F27"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,10 +296,10 @@
       "ko": "정말 멋진 전망이에요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S38",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -299,10 +307,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -311,10 +321,10 @@
       "ko": "자유의 여신상이네요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S38",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -322,10 +332,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -334,20 +346,23 @@
       "ko": "그래서 회의의 의제는, 그냥,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -357,18 +372,18 @@
       "ko": "우리가 어떻게 더 잘 협력해서",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S23",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -380,22 +395,23 @@
       "ko": "적대적인 환경에서 기자들을 보호할 수 있을지 점검하는 거예요. 아, 네, 네.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "c2cb6c06b97bb4e1"
 }

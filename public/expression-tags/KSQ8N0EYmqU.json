@@ -12,16 +12,17 @@
       "ko": "설명하기 좀 어렵네요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -35,17 +36,17 @@
       "ko": "우리는 이상 현상에서 이 좌표를 배웠어요. 어떤 이상 현상인가요?",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -59,10 +60,10 @@
       "ko": "초자연적이라고 하기는 망설여지지만,",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -82,10 +83,10 @@
       "ko": "처음에는 분명 과학적이지 않았어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F10"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -105,11 +106,10 @@
       "ko": "구체적으로 말씀해 주셔야 합니다, 쿠퍼 씨, 지금 당장요.",
       "tags": {
         "functions": [
-          "F06",
-          "F34"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,7 +129,7 @@
       "ko": "중력이었어요.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -152,16 +152,17 @@
       "ko": "어떤 종류의 중력 이상 현상이었나요? 그게 뭐였죠?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -175,10 +176,10 @@
       "ko": "중력에 흥미를 가져서 정말 기뻐요, 친구,",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E01"
@@ -198,11 +199,10 @@
       "ko": "하지만 제가 보장을 받을 때까지는 답변을 드릴 수 없어요. 보장? 네.",
       "tags": {
         "functions": [
-          "F34",
-          "F40"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -222,16 +222,16 @@
       "ko": "우리가 여기서 나갈 수 있다는 것처럼요,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -245,10 +245,10 @@
       "ko": "차 트렁크에 들어가는 게 아니라는 뜻이에요.",
       "tags": {
         "functions": [
-          "F04"
+          "F40"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -268,16 +268,17 @@
       "ko": "우리가 누구인지 모르세요, 쿠퍼?",
       "tags": {
         "functions": [
-          "F06"
+          "F35",
+          "F40"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -291,10 +292,10 @@
       "ko": "아니요, 교수님, 모르겠습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -303,7 +304,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -314,10 +317,10 @@
       "ko": "당신은 제 아버지가 아니에요, 브랜드 교수님.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -351,7 +354,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -388,7 +393,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -411,7 +416,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -425,5 +430,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "cf9d7dbaa4082c9e"
 }

@@ -12,20 +12,23 @@
       "ko": "사설 탐정에게 가지 마세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F35",
+          "F40"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -37,8 +40,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,10 +61,10 @@
       "ko": "이 직업을 발명한 유일한 사람입니다. 그게 무슨 뜻인가요?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,9 +84,9 @@
       "ko": "경찰이 힘들어할 때,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -104,10 +107,10 @@
       "ko": "항상 저에게 상담합니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,9 +132,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S39",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -150,9 +153,9 @@
       "ko": "어제 처음 만났을 때,",
       "tags": {
         "functions": [
-          "F03"
+          "F06"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -173,10 +176,11 @@
       "ko": "아프가니스탄이나 이라크라고 했더니 놀라더군요. 어떻게 알았나요? 몰랐어요, 봤어요.",
       "tags": {
         "functions": [
-          "F18"
+          "F30",
+          "F56"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E05"
@@ -184,9 +188,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03",
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -196,9 +203,9 @@
       "ko": "당신의 헤어컷과 자세가 군인 같아요,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -219,16 +226,16 @@
       "ko": "하지만 방에 들어올 때의 대화는 제 시대와는 좀 다릅니다.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -244,8 +251,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,10 +272,10 @@
       "ko": "얼굴은 햇볕에 그을렸지만, 손목 위는 그렇지 않네요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,11 +295,11 @@
       "ko": "해외에 있었지만, 일광욕은 하지 않았군요. 입술이 많이 변형됐어요. 회장을 요청하지 않아요,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -311,11 +318,11 @@
       "ko": "잊어버린 듯 서 있습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -334,10 +341,10 @@
       "ko": "그러니 적어도 부분적으로 심리적 원인입니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -357,11 +364,11 @@
       "ko": "그건 부상의 원래 상황이 외상적이었다는 뜻입니다. 전투 중 부상당한 거군요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S29",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -380,11 +387,11 @@
       "ko": "전투 중 부상당한, 산타나, 아프가니스탄이나 이라크. 치료사가 있다고 하셨죠.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S29",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -403,11 +410,11 @@
       "ko": "심리적 절뚝거림이 있군요,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S29",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -426,11 +433,11 @@
       "ko": "물론 치료사가 있겠죠. 그리고 당신의 형이 있습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F44"
         ],
-        "situation": "S29",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -438,7 +445,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -449,11 +458,11 @@
       "ko": "비싼 이메일 기능이 있는 MP3 플레이어. 플래시를 찾고 있나요?",
       "tags": {
         "functions": [
-          "F06"
+          "F30"
         ],
-        "situation": "S29",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -462,9 +471,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "201387af0d5508dc"
 }

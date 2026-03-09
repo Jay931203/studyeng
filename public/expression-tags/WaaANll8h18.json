@@ -15,15 +15,16 @@
           "F06"
         ],
         "situation": "S14",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +36,18 @@
       "ko": "그건 말도 안 되는 질문이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F11"
         ],
         "situation": "S14",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,10 +59,10 @@
       "ko": "틀렸어. 흑곰이지.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +70,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +82,18 @@
       "ko": "그건 논란의 여지가 있어. 기본적으로 두 가지 의견이 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
         "situation": "S14",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -107,7 +108,7 @@
           "F01"
         ],
         "situation": "S14",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +116,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,7 +128,7 @@
       "ko": "곰은... 무슨 일이야? 뭐하고 있는 거야?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S14",
         "cefr": "A2",
@@ -138,7 +139,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,7 +151,7 @@
       "ko": "지난주에 약국에 갔는데 이 안경을 봤어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S14",
         "cefr": "A2",
@@ -161,7 +162,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -184,10 +185,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -199,7 +202,7 @@
           "F01"
         ],
         "situation": "S14",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -207,7 +210,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -222,7 +225,7 @@
           "F01"
         ],
         "situation": "S14",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,7 +233,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -253,10 +256,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,18 +270,19 @@
       "ko": "알겠어? 모방은 가장 진정한 칭찬이니까 고마워.",
       "tags": {
         "functions": [
-          "F11"
+          "F27"
         ],
         "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E07"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,22 +294,23 @@
       "ko": "신원 도용은 농담이 아니야, 짐.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "292c815f5811f514"
 }

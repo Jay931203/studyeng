@@ -14,7 +14,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S35",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,9 +35,9 @@
       "ko": "응, 어떻게 하는지 알아내려고 노력 중이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S35",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,8 +60,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S35",
-        "cefr": "A1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,10 +81,10 @@
       "ko": "늦더라도 하는 게 낫지. 도움이 필요해?",
       "tags": {
         "functions": [
-          "F36"
+          "F43"
         ],
-        "situation": "S35",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,9 +92,14 @@
         "expression_types": [
           "X02"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P06"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -104,10 +109,10 @@
       "ko": "도움 받고 싶지만, 너는 더 중요한 일이 있을 거야.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S35",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +120,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,9 +132,9 @@
       "ko": "아니, 나한테는 다른 일이 필요해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S35",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -138,9 +143,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -150,9 +157,9 @@
       "ko": "너 사진 있어? 아니, 나한테 필요해.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S35",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -161,9 +168,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -173,18 +182,18 @@
       "ko": "아, 고등학교 때 그 멋진 애들 찾아보려면 필요하지.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S35",
-        "cefr": "A2",
+        "situation": "S19",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +205,18 @@
       "ko": "치즈! 치즈! 귀엽다.",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
-        "situation": "S35",
-        "cefr": "A1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,10 +228,10 @@
       "ko": "좋아, 그걸 너한테 보내야 해.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S35",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,7 +239,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,18 +251,18 @@
       "ko": "어, 프로필에 대한 질문들이 있는데",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S35",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,9 +274,9 @@
       "ko": "원하면 대답해도 되고 안 해도 돼,",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S35",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -276,7 +285,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,9 +297,9 @@
       "ko": "종교적 견해, 정치적 견해, 너에게 영감을 주는 사람들 같은 것들.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S35",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -299,7 +308,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,7 +322,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S35",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -322,10 +331,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -334,9 +345,9 @@
       "ko": "아부하려는 건 아닌데, 나는 오랫동안 사업을 해왔고,",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
-        "situation": "S35",
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -345,7 +356,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -357,10 +368,10 @@
       "ko": "너 같은 사람은 처음이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -368,9 +379,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -380,18 +394,18 @@
       "ko": "너는 영감을 줘, 줄스.",
       "tags": {
         "functions": [
-          "F30"
+          "F12"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -403,19 +417,21 @@
       "ko": "하루가 끝날 때, 와인 한 잔과 노트북을 가진 여자는",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S32",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X02"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -426,10 +442,10 @@
       "ko": "진짜 쇼핑 잠재력이 있다고 확신했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -437,7 +453,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -451,7 +467,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -460,7 +476,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -472,10 +488,10 @@
       "ko": "옳은 일을 하는 데 잘못이 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -483,11 +499,15 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "4ed5823402ff184d"
 }

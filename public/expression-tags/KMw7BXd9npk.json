@@ -12,23 +12,21 @@
       "ko": "오, 세상에!",
       "tags": {
         "functions": [
-          "F18"
+          "F15"
         ],
-        "situation": "S42",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,23 +35,21 @@
       "ko": "오, 세상에!",
       "tags": {
         "functions": [
-          "F18"
+          "F15"
         ],
-        "situation": "S42",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -64,8 +60,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S42",
-        "cefr": "A1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -85,10 +81,10 @@
       "ko": "모르겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S42",
-        "cefr": "A1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -97,8 +93,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -108,34 +108,9 @@
       "ko": "오, 세상에!",
       "tags": {
         "functions": [
-          "F18"
+          "F15"
         ],
-        "situation": "S42",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E04"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "KMw7BXd9npk-5",
-      "en": "Hold on!",
-      "ko": "잠깐만!",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S42",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -151,28 +126,53 @@
       }
     },
     {
+      "id": "KMw7BXd9npk-5",
+      "en": "Hold on!",
+      "ko": "잠깐만!",
+      "tags": {
+        "functions": [
+          "F52"
+        ],
+        "situation": "S08",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
       "id": "KMw7BXd9npk-6",
       "en": "Oh, my God!",
       "ko": "오, 세상에!",
       "tags": {
         "functions": [
-          "F18"
+          "F15"
         ],
-        "situation": "S42",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -181,18 +181,18 @@
       "ko": "누군가 도와줘!",
       "tags": {
         "functions": [
-          "F34"
+          "F15"
         ],
-        "situation": "S42",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -204,21 +204,23 @@
       "ko": "도와줘!",
       "tags": {
         "functions": [
-          "F34"
+          "F15"
         ],
-        "situation": "S42",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -227,21 +229,23 @@
       "ko": "도와줘!",
       "tags": {
         "functions": [
-          "F34"
+          "F15"
         ],
-        "situation": "S42",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -250,21 +254,23 @@
       "ko": "도와줘!",
       "tags": {
         "functions": [
-          "F34"
+          "F15"
         ],
-        "situation": "S42",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -273,21 +279,23 @@
       "ko": "도와줘!",
       "tags": {
         "functions": [
-          "F34"
+          "F15"
         ],
-        "situation": "S42",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -298,19 +306,23 @@
         "functions": [
           "F34"
         ],
-        "situation": "S42",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G02"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -319,21 +331,23 @@
       "ko": "도와줘!",
       "tags": {
         "functions": [
-          "F34"
+          "F15"
         ],
-        "situation": "S42",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -342,22 +356,25 @@
       "ko": "도와줘!",
       "tags": {
         "functions": [
-          "F34"
+          "F15"
         ],
-        "situation": "S42",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "2ab22bab43d1ac2c"
 }

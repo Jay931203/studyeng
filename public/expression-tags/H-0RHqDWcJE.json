@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -62,7 +60,7 @@
       "ko": "그럴 리가.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -85,10 +83,10 @@
       "ko": "확인해봐. 그는 사라졌어.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -111,13 +109,13 @@
           "F32"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -131,10 +129,10 @@
       "ko": "그러니까, 당신은 죽을 수 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -154,7 +152,7 @@
       "ko": "죽을 수 없어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -177,10 +175,11 @@
       "ko": "왜냐하면 내가 당신을 사랑하니까.",
       "tags": {
         "functions": [
-          "F22"
+          "F22",
+          "F04"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E11"
@@ -200,10 +199,10 @@
       "ko": "들리니?",
       "tags": {
         "functions": [
-          "F51"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -217,5 +216,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "c0e5f170e593971f"
 }

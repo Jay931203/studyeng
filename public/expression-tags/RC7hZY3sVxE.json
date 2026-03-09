@@ -12,21 +12,26 @@
       "ko": "나는 네 창녀 같은 엄마가 나를 이렇게 만든 게 싫어.",
       "tags": {
         "functions": [
-          "F17"
+          "F09"
         ],
         "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V12",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -35,21 +40,23 @@
       "ko": "데니스, 네 엄마는 더러운, 더러운 창녀야.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -58,13 +65,113 @@
       "ko": "아, 젠장, 아빠.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
         "situation": "S10",
         "cefr": "A2",
+        "register": "R5",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": [
+          "contains_profanity"
+        ]
+      }
+    },
+    {
+      "id": "RC7hZY3sVxE-3",
+      "en": "I mean, all during the 60s, before I met my whore wife, I was a boxer.",
+      "ko": "60년대, 내 창녀 아내를 만나기 전까지 나는 복서였어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S09",
+        "cefr": "B2",
+        "register": "R5",
+        "emotions": [
+          "E14"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "contains_profanity"
+        ]
+      }
+    },
+    {
+      "id": "RC7hZY3sVxE-4",
+      "en": "I just can't believe this. Hey, Dad, keep your voice down.",
+      "ko": "믿을 수가 없어. 아빠, 목소리 좀 낮춰.",
+      "tags": {
+        "functions": [
+          "F09"
+        ],
+        "situation": "S10",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V05",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "RC7hZY3sVxE-5",
+      "en": "You whore! Horrible whore wife.",
+      "ko": "너 창녀야! 끔찍한 창녀 아내.",
+      "tags": {
+        "functions": [
+          "F12"
+        ],
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R5",
+        "emotions": [
+          "E14"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "contains_profanity"
+        ]
+      }
+    },
+    {
+      "id": "RC7hZY3sVxE-6",
+      "en": "Matt, did you bang my whore wife?",
+      "ko": "맷, 네가 내 창녀 아내와 잤어?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R5",
+        "emotions": [
+          "E05"
         ],
         "expression_types": [
           "X08"
@@ -78,98 +185,6 @@
       }
     },
     {
-      "id": "RC7hZY3sVxE-3",
-      "en": "I mean, all during the 60s, before I met my whore wife, I was a boxer.",
-      "ko": "60년대, 내 창녀 아내를 만나기 전까지 나는 복서였어.",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RC7hZY3sVxE-4",
-      "en": "I just can't believe this. Hey, Dad, keep your voice down.",
-      "ko": "믿을 수가 없어. 아빠, 목소리 좀 낮춰.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RC7hZY3sVxE-5",
-      "en": "You whore! Horrible whore wife.",
-      "ko": "너 창녀야! 끔찍한 창녀 아내.",
-      "tags": {
-        "functions": [
-          "F17"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RC7hZY3sVxE-6",
-      "en": "Matt, did you bang my whore wife?",
-      "ko": "맷, 네가 내 창녀 아내와 잤어?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "RC7hZY3sVxE-7",
       "en": "Does anybody here have any illegitimate children with my whore wife that I should know about?",
       "ko": "여기 내 창녀 아내와의 불륜 자식이 있는 사람 있어?",
@@ -177,19 +192,21 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -200,18 +217,21 @@
         "functions": [
           "F14"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -221,21 +241,25 @@
       "ko": "네 엄마는 거대한 창녀였으니까.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
         "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -244,19 +268,22 @@
       "ko": "있잖아, 친구? 난 네 말 안 믿어, 프랭크.",
       "tags": {
         "functions": [
-          "F11"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X05",
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V05",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -267,21 +294,23 @@
       "ko": "그녀에게 그녀가 창녀라고 말해!",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -290,21 +319,27 @@
       "ko": "항상 창녀였어! 나는 데니스를 불렀어. 아니, 난 창녀가 될 수 없어, 프랭크.",
       "tags": {
         "functions": [
-          "F17"
+          "F05"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G19"
+        ],
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -313,13 +348,13 @@
       "ko": "넌 이미 창녀야. 왜 그걸로 돈을 벌지 않겠어?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S04",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
           "X08"
@@ -327,7 +362,9 @@
         "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -336,19 +373,22 @@
       "ko": "아니, 넌 나를 노인 여성과 자게 하려고 하고, 그 다음엔 남자에게로 넘어가게 할 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -359,21 +399,25 @@
       "ko": "뭐, 문제 있어? 그래, 이건 나를 창녀처럼 보이게 해. 넌 창녀야.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S09",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V03",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -382,21 +426,23 @@
       "ko": "아니, 난 창녀가 아니야. 난 잘생긴 동반자야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -405,22 +451,27 @@
       "ko": "아, 그녀가 뭘 할 것 같아? 남편에게 전화해서 창녀와 자고 있다고 말할까?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S39",
+        "situation": "S24",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "94289bcfc0d68459"
 }

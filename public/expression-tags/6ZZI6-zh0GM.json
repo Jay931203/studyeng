@@ -14,7 +14,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,10 +37,10 @@
       "ko": "누구랑 같이 가는 거야? 누구랑 같이 가는 거야? 누구랑 같이 가는 거야?",
       "tags": {
         "functions": [
-          "F06"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,8 +48,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -60,19 +62,22 @@
       "ko": "플리퍼 말고 누구랑 같이 가는 거야?",
       "tags": {
         "functions": [
-          "F06"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01",
+          "P08"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -83,32 +88,9 @@
       "ko": "이거 민망하네",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "6ZZI6-zh0GM-4",
-      "en": "All right",
-      "ko": "알겠어",
-      "tags": {
-        "functions": [
-          "F07"
-        ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -117,10 +99,37 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "6ZZI6-zh0GM-4",
+      "en": "All right",
+      "ko": "알겠어",
+      "tags": {
+        "functions": [
+          "F53"
+        ],
+        "situation": "S14",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -129,19 +138,18 @@
       "ko": "웬디, 갈까? 오, 제르. 나는 이제 급여 인상까지 3개월 남았어",
       "tags": {
         "functions": [
-          "F01",
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S04",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -153,9 +161,9 @@
       "ko": "알겠어, 알겠어",
       "tags": {
         "functions": [
-          "F07"
+          "F53"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -164,10 +172,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -176,9 +186,9 @@
       "ko": "알겠어",
       "tags": {
         "functions": [
-          "F07"
+          "F53"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -187,10 +197,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -199,22 +211,23 @@
       "ko": "내가 너랑 같이 갈게",
       "tags": {
         "functions": [
-          "F34"
+          "F63"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "0208742be8addd0e"
 }

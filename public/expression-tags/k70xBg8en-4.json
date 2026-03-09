@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,16 @@
       "ko": "저는 국제 스타 스티븐 연을 데리고 왔습니다. 들어오세요. 그렇게 무서워하지 마세요, 괜찮아요? 네, 괜찮아요.",
       "tags": {
         "functions": [
-          "F25",
-          "F34",
-          "F06"
+          "F38"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V10",
         "power": [],
@@ -60,10 +58,34 @@
       "ko": "괜찮아요? 네, 이게... 걱정하는 것 같아요. 네, 여기 한 번만 와봤어요.",
       "tags": {
         "functions": [
-          "F34",
-          "F06"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
+        "cefr": "B2",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "k70xBg8en-4-3",
+      "en": "You battle zombies for a living.",
+      "ko": "당신은 좀비와 싸우는 직업이에요.",
+      "tags": {
+        "functions": [
+          "F12"
+        ],
+        "situation": "S42",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -79,37 +101,14 @@
       }
     },
     {
-      "id": "k70xBg8en-4-3",
-      "en": "You battle zombies for a living.",
-      "ko": "당신은 좀비와 싸우는 직업이에요.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "k70xBg8en-4-4",
       "en": "You fight the undead,",
       "ko": "언데드와 싸우지만,",
       "tags": {
         "functions": [
-          "F01"
+          "F12"
         ],
-        "situation": "S34",
+        "situation": "S42",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -118,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -130,9 +129,9 @@
       "ko": "스파에 오는 게 걱정인 것 같아요.",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -141,7 +140,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -155,7 +154,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -176,33 +175,9 @@
       "ko": "그게 의식의 일부라고는 아무도 말해주지 않았어요.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "k70xBg8en-4-8",
-      "en": "We're supposed to be naked., I've never been naked.",
-      "ko": "우리는 벌거벗어야 해요. 저는 한 번도 벌거벗어본 적이 없어요.",
-      "tags": {
-        "functions": [
-          "F01",
-          "F09"
-        ],
-        "situation": "S34",
+        "situation": "S12",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -218,15 +193,41 @@
       }
     },
     {
+      "id": "k70xBg8en-4-8",
+      "en": "We're supposed to be naked., I've never been naked.",
+      "ko": "우리는 벌거벗어야 해요. 저는 한 번도 벌거벗어본 적이 없어요.",
+      "tags": {
+        "functions": [
+          "F43"
+        ],
+        "situation": "S31",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
+        "flags": []
+      }
+    },
+    {
       "id": "k70xBg8en-4-9",
       "en": "So what did you just give me right here?, You just gave me a...",
       "ko": "그래서 방금 저에게 주신 건 뭐예요?, 저에게 주신 건...",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -246,9 +247,9 @@
       "ko": "그래서 이건 큰 사이즈, 당신의 티셔츠예요.",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -257,7 +258,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -269,9 +270,9 @@
       "ko": "혼성 층에 갈 때 입는 거예요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -280,7 +281,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -292,10 +293,10 @@
       "ko": "그리고 여기 반바지가 있어요. 아, 혼성 구역이 있나요?, 네.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -317,8 +318,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -338,10 +339,10 @@
       "ko": "그들과 이야기해도 되나요?",
       "tags": {
         "functions": [
-          "F46"
+          "F06"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -361,9 +362,9 @@
       "ko": "마음대로 어울릴 수 있어요. 성적인 활동은 안 되며,",
       "tags": {
         "functions": [
-          "F34"
+          "F12"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -372,7 +373,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -384,10 +385,10 @@
       "ko": "그렇지 않으면 평생 금지됩니다. 얼마나 금지되나요? 평생. 아, 평생 금지. 그게 정책 중 하나인가요?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -409,8 +410,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -418,11 +419,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a55efc1f9f542ac6"
 }

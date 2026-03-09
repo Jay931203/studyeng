@@ -12,18 +12,18 @@
       "ko": "내 암살자들, 내 암살자들, 거절을 받아들이지 않는.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,23 +35,21 @@
       "ko": "내 개같은 전사들, 전화를 끊지 않는.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -60,23 +58,21 @@
       "ko": "고객이 사거나 죽을 때까지! 그래!",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -85,18 +81,18 @@
       "ko": "그래! 그래! 그래! 그래! 그래! 그래! 그래! 그래!",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V01",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -108,18 +104,18 @@
       "ko": "그래! 그래! 그래! 그래! 그래! 그래! 그래! 그래!",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V01",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -131,9 +127,9 @@
       "ko": "뭔가 말해줄게.",
       "tags": {
         "functions": [
-          "F04"
+          "F35"
         ],
-        "situation": "S16",
+        "situation": "S48",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -154,10 +150,10 @@
       "ko": "가난에는 고귀함이 없다.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S48",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -177,9 +173,9 @@
       "ko": "나는 부자였고 가난한 적도 있었다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S48",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -200,23 +196,24 @@
       "ko": "그리고 나는 매번 부자를 선택한다. 그래! 그래! 그래! 적어도 부자로서 문제에 직면할 때,",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F04"
         ],
-        "situation": "S16",
+        "situation": "S48",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E15"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
       }
     },
     {
@@ -225,16 +222,16 @@
       "ko": "리무진 뒤에 나타나고,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -248,10 +245,10 @@
       "ko": "2,000달러 수트와 40,000달러짜리 금 시계를 차고 있다. 그래! 그래!",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -262,9 +259,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -273,18 +268,18 @@
       "ko": "그래! 그래! 그래! 그래! 그래! 그래! 그래!",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V01",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -296,9 +291,9 @@
       "ko": "이제 여기서 누군가 내가 피상적이라고 생각한다면.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S48",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -313,5 +308,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "da611bd38c34d1c1"
 }

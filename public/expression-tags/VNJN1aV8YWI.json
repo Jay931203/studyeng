@@ -12,10 +12,10 @@
       "ko": "아무도 이 펜을 가지고 있지 않다면,",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S40",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -25,7 +25,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -35,18 +37,18 @@
       "ko": "언젠가 당신이 이 펜을 가지고 있다는 걸 깨닫고 말하기 부끄러웠다는 뜻이야. 그래서 우리는 당신을 죽일 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S40",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V04",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +60,18 @@
       "ko": "나는 내 펜을 숨기고 있지 않아, 너는 편집증 환자야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,18 +85,22 @@
         "functions": [
           "F34"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S40",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -104,20 +110,22 @@
       "ko": "우리가 넘어가고 있는 경계를 고려해 볼 수 있을까요?",
       "tags": {
         "functions": [
-          "F04"
+          "F34"
         ],
-        "situation": "S10",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -127,20 +135,22 @@
       "ko": "우리는 아베드를 믿지 않아요. 그는 내 배낭을 찢었어요. 그는 내 애완 원숭이를 풀어줬어요. 우리가 그를 타락시켰기 때문이에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S40",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -150,10 +160,10 @@
       "ko": "그는 우리의 순수한 존재예요. 그는 당신의 머리카락에 껌을 넣었어요. 가방을 비워, 아베드.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S40",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -175,7 +185,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S40",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -198,76 +208,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "VNJN1aV8YWI-9",
-      "en": "Hey, Jeff, you don't have a bag? Oh, I could never deprive the world",
-      "ko": "이봐, 제프, 가방이 없어요? 아, 나는 세상을",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "VNJN1aV8YWI-10",
-      "en": "of the portion of my chest a strap would cover. Makes sense. So what's left? Shirley, a little hugging and crying, and then we're done?",
-      "ko": "내 가슴을 가릴 스트랩 없이 두고 싶지 않아. 이해가 돼. 그럼 남은 건 뭐야? 셜리, 조금 포옹하고 울고 끝내는 거야?",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "VNJN1aV8YWI-11",
-      "en": "Wait, Abed.",
-      "ko": "잠깐, 아베드.",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S10",
+        "situation": "S40",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -279,7 +220,82 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "VNJN1aV8YWI-9",
+      "en": "Hey, Jeff, you don't have a bag? Oh, I could never deprive the world",
+      "ko": "이봐, 제프, 가방이 없어요? 아, 나는 세상을",
+      "tags": {
+        "functions": [
+          "F43"
+        ],
+        "situation": "S40",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
+      }
+    },
+    {
+      "id": "VNJN1aV8YWI-10",
+      "en": "of the portion of my chest a strap would cover. Makes sense. So what's left? Shirley, a little hugging and crying, and then we're done?",
+      "ko": "내 가슴을 가릴 스트랩 없이 두고 싶지 않아. 이해가 돼. 그럼 남은 건 뭐야? 셜리, 조금 포옹하고 울고 끝내는 거야?",
+      "tags": {
+        "functions": [
+          "F16"
+        ],
+        "situation": "S40",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E02"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "VNJN1aV8YWI-11",
+      "en": "Wait, Abed.",
+      "ko": "잠깐, 아베드.",
+      "tags": {
+        "functions": [
+          "F35"
+        ],
+        "situation": "S40",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -290,7 +306,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -313,16 +329,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,10 +350,10 @@
       "ko": "그건 내 개인적인 비즈니스야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S40",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -359,7 +375,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S40",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -382,7 +398,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S40",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -394,7 +410,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -405,7 +423,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S40",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -426,23 +444,27 @@
       "ko": "세상에, 우리 생리 주기를 기록하고 있는 거야? 뭐? 역겨워!",
       "tags": {
         "functions": [
-          "F09"
+          "F18",
+          "F23"
         ],
-        "situation": "S10",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03",
-          "E05"
+          "E05",
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V04",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "f8ecff2a8dec4d59"
 }

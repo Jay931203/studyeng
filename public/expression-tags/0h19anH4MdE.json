@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -26,7 +26,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,20 +37,24 @@
       "ko": "응, 그래서 그가 메이저리그 수비수들과 맞붙으면 좋은 타자가 될 거야. 그는 훌륭한 타자가 될 수 있어. 나는 그렇게 생각하지 않아. 이 아이는 타석 경험이 필요해.",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F11",
+          "F14"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -60,8 +66,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -83,7 +89,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -106,7 +112,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -127,20 +133,22 @@
       "ko": "좋아, 다음으로 넘어가자.",
       "tags": {
         "functions": [
-          "F50"
+          "F36"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -152,8 +160,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,9 +181,9 @@
       "ko": "그는 고전적인 스윙을 가지고 있어. 정말 깔끔한 타격이야. 모르겠어. 커브볼을 못 쳐.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -185,8 +193,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -196,10 +208,11 @@
       "ko": "음, 해야 할 일이 좀 있어, 인정해. 그래, 그렇지. 하지만 그는 눈에 띄어. 못생긴 여자친구가 있어. 그게 무슨 뜻이야?",
       "tags": {
         "functions": [
-          "F04"
+          "F06",
+          "F52"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -219,10 +232,10 @@
       "ko": "못생긴 여자친구는 자신감이 없다는 뜻이야. 알겠어. 너희들은 정말 그렇네. 아르티가 맞아. 이 친구는 태도가 있어. 태도는 좋아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,20 +255,24 @@
       "ko": "그는 방에 들어가면, 그의 존재감이 이미 2분 전에 있었던 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F50"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V02",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -269,8 +286,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -280,8 +297,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G14"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -290,9 +311,9 @@
       "ko": "그냥 말하는 건데, 그의 여자친구는 최악의 경우 6점이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -313,22 +334,26 @@
       "ko": "봐, 우리가 레온비를 대체하려고 한다면, 이 친구가 그럴 수 있어. 나는 너에게 동의해.",
       "tags": {
         "functions": [
-          "F10"
+          "F10",
+          "F14"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d40c0405b6ca0c59"
 }

@@ -14,7 +14,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -39,8 +39,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,19 +60,21 @@
       "ko": "그건 말 안 할 거야.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V07",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -83,9 +85,9 @@
       "ko": "좋아, 말하지 마.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -94,7 +96,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -108,7 +110,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -117,10 +119,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -131,8 +135,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -140,10 +144,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -152,18 +158,18 @@
       "ko": "아니, 너는 셸던과 좋은 섹스를 하지 않았어. 나도 그랬어.",
       "tags": {
         "functions": [
-          "F12"
+          "F55"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,18 +181,18 @@
       "ko": "아니, 안 했어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,10 +204,10 @@
       "ko": "셸던은 세금 신고를 도와줄 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,7 +215,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,10 +227,10 @@
       "ko": "근데 루트 캐널이 필요하면 셸던이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -232,7 +238,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,18 +250,18 @@
       "ko": "하지만 섹스는 셸던의 강점이 아니야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,10 +273,10 @@
       "ko": "이름이야. 나한테 해봐, 셸던.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -278,7 +284,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,18 +296,18 @@
       "ko": "너는 짐승이야, 셸던.",
       "tags": {
         "functions": [
-          "F30"
+          "F12"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,10 +319,10 @@
       "ko": "나를 타봐, 큰 셸던. 안 돼.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -324,7 +330,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -336,10 +342,10 @@
       "ko": "안녕하세요. 무엇을 드릴까요?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -347,9 +353,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -359,9 +367,9 @@
       "ko": "3번 주세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S05",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -370,7 +378,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -382,10 +390,10 @@
       "ko": "셰프 샐러드 하나 주세요. 드레싱은 따로 주세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S05",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -393,9 +401,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -405,9 +415,9 @@
       "ko": "그리고 애플 파이 알라 모드도요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S05",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -416,7 +426,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -428,7 +438,7 @@
       "ko": "셰프 샐러드와 애플 파이 알라 모드요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S05",
         "cefr": "A2",
@@ -439,7 +449,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -451,10 +461,10 @@
       "ko": "그런데 파이는 따뜻하게 해주시고, 아이스크림은 위에 올리지 말고 옆에 주세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S05",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -462,9 +472,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -474,10 +486,10 @@
       "ko": "그리고 바닐라 대신 딸기를 원해요, 있으면요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S05",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -485,9 +497,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -497,9 +511,9 @@
       "ko": "없으면 아이스크림은 빼고 휘핑크림만 주세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F03"
         ],
-        "situation": "S05",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -508,7 +522,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -520,10 +534,10 @@
       "ko": "단, 진짜 휘핑크림이면요. 통조림이면 아무것도 필요 없어요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S05",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -531,11 +545,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a0fdcdb9447fd209"
 }

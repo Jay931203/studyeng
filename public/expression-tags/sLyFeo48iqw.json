@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,7 +37,7 @@
       "ko": "침묵의 목소리들이 내 의지를 꺾으려 했어",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -48,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,18 +62,18 @@
       "ko": "하지만 내 안의 무언가가 버틸 수 있다고 말했어",
       "tags": {
         "functions": [
-          "F09"
+          "F05"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -98,7 +98,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,7 +112,7 @@
       "ko": "내가 얻은 모든 상처가 하나의 이야기를 말해",
       "tags": {
         "functions": [
-          "F04"
+          "F05"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -123,7 +123,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -148,7 +148,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -173,7 +173,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,7 +187,7 @@
       "ko": "어둠이 부르지만, 나는 쓰러지지 않을 거야",
       "tags": {
         "functions": [
-          "F17"
+          "F43"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -198,9 +198,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -212,7 +214,7 @@
       "ko": "메아리를 듣고, 부름에 응해",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -223,7 +225,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -241,15 +243,17 @@
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -262,7 +266,7 @@
       "ko": "진실을 보아, 나는 여기서 두려움이 없어",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -271,9 +275,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -298,7 +302,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -312,10 +316,10 @@
       "ko": "두려움 없이, 일어서야 하니까 일어나",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -323,9 +327,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -346,9 +352,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -362,7 +368,7 @@
       "ko": "더 강한 나 자신이 가까이 서 있어",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -373,7 +379,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -393,12 +399,12 @@
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -415,15 +421,15 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V09",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -443,12 +449,12 @@
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -462,18 +468,18 @@
       "ko": "나는 살아 서 있어, 나는 두려움이 없어",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -481,5 +487,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "efeb18d2a3d48040"
 }

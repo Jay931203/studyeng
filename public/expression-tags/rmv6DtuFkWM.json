@@ -12,13 +12,13 @@
       "ko": "나는 코스에서 조트 반바지를 입고 있어, 조트 반바지를 입고 있어.",
       "tags": {
         "functions": [
-          "F01"
+          "F03"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -26,9 +26,7 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -39,21 +37,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -64,11 +62,11 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -76,9 +74,7 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -89,11 +85,11 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -101,9 +97,7 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -114,11 +108,11 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -126,9 +120,7 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -139,21 +131,19 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S03",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -164,11 +154,11 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S48",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -176,9 +166,7 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -187,23 +175,23 @@
       "ko": "안녕 얘들아, 오 로버트, 안녕하세요, 나도 조트를 입어도 될까?",
       "tags": {
         "functions": [
-          "F06"
+          "F25"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "grammar_intent": [
+          "G13"
+        ],
+        "flags": []
       }
     },
     {
@@ -212,23 +200,25 @@
       "ko": "물론이지, 조트를 입어도 돼, 우리는 너를 전폭 지원해.",
       "tags": {
         "functions": [
-          "F07"
+          "F36"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G09"
+        ],
+        "flags": []
       }
     },
     {
@@ -237,13 +227,13 @@
       "ko": "자, 한번 보자.",
       "tags": {
         "functions": [
-          "F01"
+          "F53"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -256,5 +246,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "ea4561a6e2c5d191"
 }

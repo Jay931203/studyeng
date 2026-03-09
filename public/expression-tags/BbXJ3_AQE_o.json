@@ -12,7 +12,7 @@
       "ko": "너",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A1",
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,10 +37,10 @@
       "ko": "그녀는 나쁜 나쁜",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,10 +48,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -60,16 +62,16 @@
       "ko": "이제 그만하자, 베이비. 내 집에서 난 엉망이야, 베이비. 좋아",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V09",
         "power": [],
@@ -83,10 +85,10 @@
       "ko": "내가 떠날 때마다",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -94,7 +96,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,18 +108,18 @@
       "ko": "너는 그렇게 하지 않아",
       "tags": {
         "functions": [
-          "F09"
+          "F12"
         ],
         "situation": "S45",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,7 +131,7 @@
       "ko": "우리",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A1",
@@ -140,7 +142,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -154,7 +156,7 @@
       "ko": "마일스, 잠깐 시간 있어? 오",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
@@ -163,9 +165,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -177,7 +179,7 @@
       "ko": "언제",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A1",
@@ -188,7 +190,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -208,12 +210,12 @@
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -225,10 +227,10 @@
       "ko": "긴 이야기야. 이 방이 네가 자란 방이야? 맞아, 하지만 내 기숙사 방은",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -236,8 +238,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -248,18 +252,18 @@
       "ko": "아주 성숙하네, 그렇지? 아니, 물론 아니야",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -271,7 +275,7 @@
       "ko": "이거 네 그림이야? 뭐? 아니, 아니야",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
@@ -280,9 +284,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -294,7 +298,7 @@
       "ko": "나",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A1",
@@ -305,7 +309,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -313,5 +317,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "41274e8ae2274098"
 }

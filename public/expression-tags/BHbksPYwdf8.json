@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -37,8 +37,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,10 +58,10 @@
       "ko": "머릿속에 있어, 일곱, 여덟, 아홉, 열, 열하나, 열둘.",
       "tags": {
         "functions": [
-          "F01"
+          "F62"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -83,14 +83,14 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -106,7 +106,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -129,14 +129,14 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -150,9 +150,9 @@
       "ko": "72를 예상하고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -164,7 +164,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -173,10 +175,10 @@
       "ko": "혹시 잘못 셌다면? 그럴 가능성도 있어.",
       "tags": {
         "functions": [
-          "F14"
+          "F19"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -186,7 +188,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -196,10 +200,11 @@
       "ko": "나와 성관계를 갖고 싶었어?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F48"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -219,20 +224,22 @@
       "ko": "원했지만, 72번째가 없어서 너무 걱정했어, 그게 문제였어.",
       "tags": {
         "functions": [
-          "F19"
+          "F52"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -242,10 +249,10 @@
       "ko": "72번째가 없어서 그게 문제였어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,10 +272,10 @@
       "ko": "내게 흥미로운 건, 내가 발견한 건,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,10 +295,10 @@
       "ko": "너가 여성들의 수에 집중하고 있다는 거야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -311,10 +318,11 @@
       "ko": "그들은 분명히 너에게 매우 관심이 많아.",
       "tags": {
         "functions": [
-          "F02"
+          "F06",
+          "F05"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -334,9 +342,9 @@
       "ko": "그런데, 래리, 너는 신경 쓰고 있는 것 같아.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -357,10 +365,10 @@
       "ko": "궁금한 게 있는데, 이 두 의자의 차이를 느껴본 적 있어?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -380,9 +388,9 @@
       "ko": "네 의자는 이 의자보다 훨씬 좋아.",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -403,10 +411,10 @@
       "ko": "이 의자는 전혀 편하지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F13"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -416,7 +424,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -426,10 +436,10 @@
       "ko": "응, 둘 다 샀어. 네가 둘 다 골랐어? 내가 골랐어, 맞아. 무슨 일이 있었던 거야?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -451,7 +461,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -472,10 +482,10 @@
       "ko": "응, 둘 다 샀어. 네가 둘 다 골랐어? 내가 골랐어, 맞아. 무슨 일이 있었어?",
       "tags": {
         "functions": [
-          "F07"
+          "F21"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -489,5 +499,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "cc4126122595c3b7"
 }

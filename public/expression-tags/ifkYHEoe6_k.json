@@ -12,20 +12,22 @@
       "ko": "좋아, 척, 네 이야기의 요점이 뭐야? 그는 도망쳤어. 그게 요점이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S16",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V03",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -39,55 +41,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V03",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
-      "id": "ifkYHEoe6_k-2",
-      "en": "I'm trying to clarify something, bro. You're embarrassing us.",
-      "ko": "뭔가 명확히 하려고 하는 거야, 형. 우리를 창피하게 하지 마.",
-      "tags": {
-        "functions": [
-          "F50"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V03",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "ifkYHEoe6_k-3",
-      "en": "It doesn't make any sense. It does make sense.",
-      "ko": "말이 안 돼. 말이 돼.",
-      "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S50",
+        "situation": "S16",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -103,15 +57,66 @@
       }
     },
     {
+      "id": "ifkYHEoe6_k-2",
+      "en": "I'm trying to clarify something, bro. You're embarrassing us.",
+      "ko": "뭔가 명확히 하려고 하는 거야, 형. 우리를 창피하게 하지 마.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S16",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V04",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "ifkYHEoe6_k-3",
+      "en": "It doesn't make any sense. It does make sense.",
+      "ko": "말이 안 돼. 말이 돼.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S16",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X03"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
       "id": "ifkYHEoe6_k-4",
       "en": "If you listen to the story, it could ask you questions. Morgan, let's see if you can get this one.",
       "ko": "이야기를 듣고 질문을 해볼 수 있어. 모건, 이걸 맞춰봐.",
       "tags": {
         "functions": [
-          "F50"
+          "F36",
+          "F03"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S16",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -121,7 +126,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -131,16 +138,16 @@
       "ko": "너에게 작은 이야기가 있어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S16",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -154,10 +161,10 @@
       "ko": "좋아, 침대에 있는 노부부, 메리와 패디가 있어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S16",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -177,16 +184,16 @@
       "ko": "그들은 50주년 아침에 일어나.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S16",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -200,18 +207,18 @@
       "ko": "메리가 패디를 사랑스럽게 바라봐.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S16",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -225,18 +232,20 @@
         "functions": [
           "F22"
         ],
-        "situation": "S50",
+        "situation": "S16",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G22"
+        ],
         "flags": []
       }
     },
@@ -246,20 +255,22 @@
       "ko": "작은 선물을 주고 싶어.",
       "tags": {
         "functions": [
-          "F39"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S16",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E16"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -269,18 +280,18 @@
       "ko": "네가 원하는 건 뭐든지,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S16",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -292,10 +303,10 @@
       "ko": "내가 줄게. 뭐가 필요해?",
       "tags": {
         "functions": [
-          "F39"
+          "F34"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S16",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -305,7 +316,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -315,18 +328,18 @@
       "ko": "패디: 오, 메리, 정말 달콤한 제안이야.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S16",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -338,10 +351,10 @@
       "ko": "그런데 50년 동안 하나가 부족했어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S16",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -361,10 +374,10 @@
       "ko": "그래서 나에게 구강 성교를 해줬으면 해. 하나 받고 싶어.",
       "tags": {
         "functions": [
-          "F39"
+          "F01"
         ],
-        "situation": "S32",
-        "cefr": "B2",
+        "situation": "S16",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -372,11 +385,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "eb47ddd6ead096a9"
 }

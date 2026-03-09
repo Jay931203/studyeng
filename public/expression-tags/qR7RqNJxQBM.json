@@ -14,9 +14,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -37,18 +37,20 @@
         "functions": [
           "F28"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -58,11 +60,11 @@
       "ko": "상황이 너무 악화되어 정부는 비밀 문서를 넣는 것을 중단해야 했습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -81,11 +83,11 @@
       "ko": "그의 빨간 상자에, 하지만 우리는 걱정할 필요가 없었습니다. 왜냐하면 그때 우리는 퇴위 소식을 접했기 때문입니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -94,7 +96,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -104,11 +108,11 @@
       "ko": "공적 생활에서 은퇴하겠다고 약속했지만, 이제 우리는 그가 그런 의도가 없었다는 것을 알고 있습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -116,7 +120,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -129,8 +135,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -144,5 +150,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "c566597fb8b5d54b"
 }

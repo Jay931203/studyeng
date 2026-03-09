@@ -12,10 +12,10 @@
       "ko": "아버지, 고백하고 싶습니다.",
       "tags": {
         "functions": [
-          "F64"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S10",
+        "cefr": "A1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -23,10 +23,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -35,10 +37,10 @@
       "ko": "고백하고 싶습니다.",
       "tags": {
         "functions": [
-          "F64"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S10",
+        "cefr": "A1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -46,10 +48,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -58,10 +62,10 @@
       "ko": "고백하고 싶다고?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S10",
+        "cefr": "A1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -69,10 +73,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -83,8 +89,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S10",
+        "cefr": "A1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -92,10 +98,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -106,8 +114,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -115,10 +123,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -127,21 +137,23 @@
       "ko": "스태니스가 당신들을 모두 죽이게 놔둘 걸 그랬습니다.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S10",
         "cefr": "B2",
         "register": "R2",
         "emotions": [
-          "E09"
+          "E12"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -150,21 +162,22 @@
       "ko": "티리온!",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S10",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": [
+          "is_period",
           "is_fragment"
         ]
       }
@@ -177,8 +190,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S10",
+        "cefr": "A1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -186,10 +199,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -198,10 +213,10 @@
       "ko": "네, 아버지. 저는 유죄입니다.",
       "tags": {
         "functions": [
-          "F64"
+          "F07"
         ],
         "situation": "S36",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -209,10 +224,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V05",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -221,10 +240,10 @@
       "ko": "유죄입니다.",
       "tags": {
         "functions": [
-          "F64"
+          "F01"
         ],
         "situation": "S36",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -232,10 +251,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -244,10 +266,10 @@
       "ko": "그게 듣고 싶은 건가요?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -255,10 +277,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -267,10 +291,10 @@
       "ko": "당신은 왕을 독살했다고 인정합니다. 아니요.",
       "tags": {
         "functions": [
-          "F64"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -278,10 +302,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -290,10 +316,10 @@
       "ko": "그건 제가 무죄입니다. 저는 다른 범죄에 유죄입니다.",
       "tags": {
         "functions": [
-          "F64"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -301,11 +327,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "5b810973855d8c56"
 }

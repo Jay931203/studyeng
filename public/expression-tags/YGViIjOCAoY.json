@@ -12,9 +12,10 @@
       "ko": "위험한 조합이네. 들어와서 편하게 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F36",
+          "F40"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -35,20 +36,22 @@
       "ko": "네가 작은 여자라면 금방 내려올 거야. 좋아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -60,11 +63,11 @@
         "functions": [
           "F27"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -81,16 +84,16 @@
       "ko": "이봐, 형. 그녀가 그렇게 팁을 주게 두지 마.",
       "tags": {
         "functions": [
-          "F40"
+          "F25"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -104,16 +107,16 @@
       "ko": "친구야, 너희가 외식할 때 그녀는 뭘 했어?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
         "power": [],
@@ -127,16 +130,17 @@
       "ko": "여러분, 이분은 프랭크예요. 프랭크, 이분들은 여러분이에요. 자, 자기야, 방으로 안내해줄게.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -144,5 +148,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "93b96f1f27f02324"
 }

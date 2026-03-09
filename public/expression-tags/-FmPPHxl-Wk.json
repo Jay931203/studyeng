@@ -14,9 +14,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
+        "situation": "S44",
         "cefr": "A1",
-        "register": "R1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -27,7 +27,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -39,9 +39,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
+        "situation": "S44",
         "cefr": "A1",
-        "register": "R1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -52,7 +52,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -64,9 +64,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
+        "situation": "S44",
         "cefr": "A1",
-        "register": "R1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -77,7 +77,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -87,9 +87,9 @@
       "ko": "창을 꺼내!",
       "tags": {
         "functions": [
-          "F35"
+          "F15"
         ],
-        "situation": "S42",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -101,7 +101,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -112,9 +114,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
+        "situation": "S44",
         "cefr": "A1",
-        "register": "R1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -125,7 +127,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -135,9 +137,9 @@
       "ko": "창을 꺼내!",
       "tags": {
         "functions": [
-          "F35"
+          "F15"
         ],
-        "situation": "S42",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -149,7 +151,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -160,9 +164,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
+        "situation": "S44",
         "cefr": "A1",
-        "register": "R1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -173,7 +177,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -185,9 +189,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
+        "situation": "S44",
         "cefr": "A1",
-        "register": "R1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -198,7 +202,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -208,16 +212,16 @@
       "ko": "킹스랜딩으로 돌아가. 내 군대를 포기할 수는 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F35"
         ],
-        "situation": "S42",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -231,20 +235,22 @@
       "ko": "너는 지휘관이지 보병이 아니야.",
       "tags": {
         "functions": [
-          "F12"
+          "F17"
         ],
-        "situation": "S42",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -256,13 +262,13 @@
       "ko": "저 놈들이 우리를 덮칠 거야. -♪♪",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S42",
+        "situation": "S44",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -270,9 +276,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -281,9 +285,9 @@
       "ko": "우리는 그들을 막을 수 있어.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S42",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -306,9 +310,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
+        "situation": "S44",
         "cefr": "A1",
-        "register": "R1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -319,7 +323,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -331,9 +335,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
+        "situation": "S44",
         "cefr": "A1",
-        "register": "R1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -344,9 +348,10 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "35d9171a364c96ff"
 }

@@ -12,10 +12,10 @@
       "ko": "나는 이 젊은이와 비교할 수 없어.",
       "tags": {
         "functions": [
-          "F12"
+          "F13"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -25,7 +25,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -37,8 +39,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,10 +60,10 @@
       "ko": "1905년, 우주 연구로 유명한 교수들이 수백 명 있었어,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,10 +83,10 @@
       "ko": "하지만 세상을 바꾼 것은 26세의 스위스 특허 사무원이었어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,10 +106,10 @@
       "ko": "여가 시간에 물리학을 공부한 사람이었지.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,9 +129,9 @@
       "ko": "만약 아인슈타인이 매일 밤 비엔나에서 친구들과 술 마시느라 포기했다면,",
       "tags": {
         "functions": [
-          "F14"
+          "F34"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -140,7 +142,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02",
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -150,10 +155,10 @@
       "ko": "우리는 모두 뭔가를 잃었을 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,10 +178,10 @@
       "ko": "팀은 그를 절대 알지 못했을 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,10 +201,10 @@
       "ko": "꽤 극적이네, 제리.",
       "tags": {
         "functions": [
-          "F12"
+          "F43"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,7 +214,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -219,10 +226,10 @@
       "ko": "아니, 그렇지 않아, 숀. 이 소년은 그 재능이 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -233,7 +240,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -242,10 +251,10 @@
       "ko": "그는 방향을 찾지 못했지만, 우리가 그걸 줄 수 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,10 +274,10 @@
       "ko": "이봐, 제리, 1960년대에,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -279,7 +288,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -288,10 +299,10 @@
       "ko": "미시간 대학교를 졸업한 젊은이가 있었어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -311,10 +322,10 @@
       "ko": "그는 수학에서 뛰어난 업적을 남겼고,",
       "tags": {
         "functions": [
-          "F02"
+          "F03"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -334,20 +345,22 @@
       "ko": "특히 제한된 조화 함수에 대해 연구했어.",
       "tags": {
         "functions": [
-          "F02"
+          "F30"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -357,11 +370,11 @@
       "ko": "그 후 그는 버클리로 가서 조교수가 되었고,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "C1",
-        "register": "R2",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -380,11 +393,11 @@
       "ko": "놀라운 잠재력을 보여줬지.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "C1",
-        "register": "R2",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -403,21 +416,25 @@
       "ko": "그리고 그는 몬태나로 이사 갔고, 경쟁자를 압도했어. 그가 누구였지?",
       "tags": {
         "functions": [
-          "F09"
+          "F30"
         ],
         "situation": "S50",
-        "cefr": "C1",
-        "register": "R2",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G03"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -426,13 +443,13 @@
       "ko": "테드 카진스키. 들어본 적 없어. 이봐, 팀! 요!",
       "tags": {
         "functions": [
-          "F03"
+          "F23"
         ],
         "situation": "S50",
-        "cefr": "C1",
-        "register": "R2",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -449,22 +466,27 @@
       "ko": "테드 카진스키. 들어본 적 없어. 헤이, 팀미! 요!",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
         "situation": "S50",
-        "cefr": "C1",
-        "register": "R2",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "105df3ec545e8022"
 }

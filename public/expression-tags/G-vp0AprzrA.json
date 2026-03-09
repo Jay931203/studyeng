@@ -14,8 +14,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,9 +23,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -35,9 +37,10 @@
       "ko": "들어가자. 안 돼!",
       "tags": {
         "functions": [
-          "F35"
+          "F36",
+          "F38"
         ],
-        "situation": "S16",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -46,9 +49,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -58,18 +63,18 @@
       "ko": "파즈 피터스가 미래의 나를 죽이러 왔어!",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,21 +86,23 @@
       "ko": "잘 되고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S16",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,9 +111,9 @@
       "ko": "안 돼! 괜찮아, 트레이시.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -115,7 +122,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,18 +134,18 @@
       "ko": "돌아와. 네, 알겠습니다.",
       "tags": {
         "functions": [
-          "F34"
+          "F44"
         ],
-        "situation": "S16",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,9 +157,9 @@
       "ko": "트레이시 조던 씨를 위한 처방전이 있나요? 감사합니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F27"
         ],
-        "situation": "S16",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -161,8 +168,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -173,18 +182,18 @@
       "ko": "거기서 나와, 친구.",
       "tags": {
         "functions": [
-          "F34"
+          "F38"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,9 +205,9 @@
       "ko": "아, 거의 잊어버릴 뻔했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -207,7 +216,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,9 +228,9 @@
       "ko": "잭이 당신을 그의 사무실로 부르고 싶어 해.",
       "tags": {
         "functions": [
-          "F06"
+          "F32"
         ],
-        "situation": "S16",
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -230,9 +239,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -242,18 +253,18 @@
       "ko": "아, 이럴 시간이 없어!",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,20 +276,18 @@
       "ko": "응, 조나단, 트레이시 때문에 바쁘다고 전해줘. 화난 것 같아. 화났어.",
       "tags": {
         "functions": [
-          "F19",
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E03",
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,18 +299,18 @@
       "ko": "자, 올라와서 이야기하자. 으르렁!",
       "tags": {
         "functions": [
-          "F36"
+          "F38"
         ],
-        "situation": "S16",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,9 +322,9 @@
       "ko": "좋아, 다른 장소를 시도해볼게.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -324,7 +333,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -336,10 +345,10 @@
       "ko": "하지만 솔직히, 라돈나카, 너는 진실하지 않았어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -347,11 +356,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "76b3adcebf367a37"
 }

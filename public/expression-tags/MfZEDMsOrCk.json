@@ -12,18 +12,18 @@
       "ko": "스테이크 나이프, 찌르고 싶은 충동이 생겨.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -37,18 +37,20 @@
         "functions": [
           "F09"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -58,20 +60,24 @@
       "ko": "찌르고 싶어, 알지? 정말? 응, 야구 방망이를 들면 휘두르고 싶잖아.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S40",
+        "situation": "S09",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15",
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -81,18 +87,18 @@
       "ko": "테니스 공을 들면 던지고 싶고.",
       "tags": {
         "functions": [
-          "F09"
+          "F12"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,20 +110,24 @@
       "ko": "칼을 들면 찌르고 싶지 않니? 응, 조금. 뭐? 이건 뭐가 있어야 할까? 뭐가 있어야 해?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "C1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G11",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -127,18 +137,18 @@
       "ko": "찌르기 공간. 찌르기 공간.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,20 +160,22 @@
       "ko": "응, 더미를 찌르는 찌르기 공간. 와. 기분이 좋고, 기분이 좋고. 찌르기 공간은 어디에 있을까?",
       "tags": {
         "functions": [
-          "F09"
+          "F18"
         ],
-        "situation": "S40",
+        "situation": "S09",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -173,18 +185,18 @@
       "ko": "계곡에. 어떻게 생각해, 마릴린?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +208,18 @@
       "ko": "칼을 들면 누군가를 찌르고 싶어?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,16 +233,16 @@
         "functions": [
           "F09"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,19 +254,21 @@
       "ko": "이건 환상적인 음식이야. 고마워. 정말 그래.",
       "tags": {
         "functions": [
-          "F09"
+          "F27"
         ],
-        "situation": "S40",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E01"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V02",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -265,20 +279,23 @@
       "ko": "난 절대 이렇게 감자를 만들 수 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S40",
+        "situation": "S09",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -288,18 +305,18 @@
       "ko": "정말 맛있어. 이건 수돗물? 응, 맞아. 필터 없어?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,18 +328,18 @@
       "ko": "필터 없어, 수돗물.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,18 +351,18 @@
       "ko": "흥미롭네, 필터가 없다는 게 놀라워. 필터가 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -357,22 +374,27 @@
       "ko": "더 명확해.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "4b489bb9a7f4e4ea"
 }

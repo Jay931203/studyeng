@@ -12,23 +12,25 @@
       "ko": "그건 미친 일이야. 남자들이 바람피우는 이유는 개들이 자기 고환을 핥는 이유와 같아. 할 수 있으니까, 그게 그들의 생물학의 일부야.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
       }
     },
     {
@@ -37,20 +39,25 @@
       "ko": "이 에너지를 낭비하며 비난하기보다는, 상황의 현실에 맞춰야 할 때가 아닐까.",
       "tags": {
         "functions": [
-          "F04"
+          "F14"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01",
+          "P08"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -60,20 +67,24 @@
       "ko": "그건 매우 힘을 주는 말처럼 들리지만, 중요한 세부사항을 잊고 있어. 제발, 여자가 바람피우는 건 다르지.",
       "tags": {
         "functions": [
-          "F09"
+          "F19"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -83,9 +94,9 @@
       "ko": "우리는 끌리는 남자를 아무렇게나 공격하지 않아. 너 자신을 대변해. 우리는 테스토스테론에 의해 움직이지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F04"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -96,7 +107,9 @@
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -106,21 +119,23 @@
       "ko": "그럼, 너의 말에 따르면 우리를 움직이는 건 뭐야? 감정? 호르몬을 말하는 거야?",
       "tags": {
         "functions": [
-          "F06"
+          "F03"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S06",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -129,18 +144,18 @@
       "ko": "아니, 내 안에 있는 그 작은 목소리, '평생 함께할 운명'이라고 말하는 그 목소리를 말하는 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V12",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,9 +167,9 @@
       "ko": "머릿속에 떠오르는 모든 목소리를 듣고 살 수는 없어. 그럼 미쳐버릴 거야.",
       "tags": {
         "functions": [
-          "F40"
+          "F12"
         ],
-        "situation": "S10",
+        "situation": "S06",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -164,11 +179,11 @@
           "X08"
         ],
         "vibe": "V12",
-        "power": [],
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -177,10 +192,10 @@
       "ko": "문제는 너희 둘이 바람피우는 것에 대한 정의가 매우 다르다는 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -200,20 +215,24 @@
       "ko": "나는 그런 걸 용납하지 않아. 나는 인간 본성에 대해 더 관대하고 현실적이야. 그건 네가 바람을 피우기 때문이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F04"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -223,22 +242,25 @@
       "ko": "나는 바람피우는 것을 절대적인 기준으로 정의할 수 없다고 생각해. 네가 말하는 건 바람피우는 게 괜찮다는 거야. 글쎄, 아마도...",
       "tags": {
         "functions": [
-          "F12"
+          "F09"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "29720595d3b16c66"
 }

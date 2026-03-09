@@ -14,7 +14,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S05",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -26,8 +26,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "2ca0b390afb77af2"
 }

@@ -12,21 +12,23 @@
       "ko": "나를 좀... 덩치 있어 보이게 해.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -35,10 +37,11 @@
       "ko": "맞아. 지루하고 덩치 있어. 싫어.",
       "tags": {
         "functions": [
-          "F09"
+          "F17",
+          "F10"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -46,9 +49,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06",
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -58,11 +64,11 @@
       "ko": "그럼 이건 어때?",
       "tags": {
         "functions": [
-          "F06"
+          "F36"
         ],
         "situation": "S50",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -71,7 +77,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -81,20 +89,22 @@
       "ko": "멋져. 우리가 해냈어.",
       "tags": {
         "functions": [
-          "F15"
+          "F30"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -104,13 +114,13 @@
       "ko": "아니! 너무 가슴이 드러나! 그래? 괜찮아.",
       "tags": {
         "functions": [
-          "F17"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -127,13 +137,13 @@
       "ko": "아니. 이 하이힐은 못 신겠어. 매춘부 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E08"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -150,7 +160,7 @@
       "ko": "그럼 하이힐은 빼자.",
       "tags": {
         "functions": [
-          "F08"
+          "F52"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -173,10 +183,10 @@
       "ko": "그래, 하지만 그럼 짧은 다리 문제가 생겨.",
       "tags": {
         "functions": [
-          "F12"
+          "F07"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,10 +206,10 @@
       "ko": "그럼 매춘부처럼 보이고 싶어, 아니면 난쟁이처럼?",
       "tags": {
         "functions": [
-          "F10"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -232,7 +242,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -242,7 +254,7 @@
       "ko": "아니. 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -256,7 +268,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,13 +279,13 @@
       "ko": "이건 마음에 들어.",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -288,10 +302,10 @@
       "ko": "아니. 이 드레스에 맞는 걸 고르고 있어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -311,10 +325,10 @@
       "ko": "나쁜 남자네. 이거? 나쁘지 않아. 아니면 이거?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -334,10 +348,10 @@
       "ko": "속임수 질문이지? 같은 드레스? 아니! 아니야? 그래.",
       "tags": {
         "functions": [
-          "F14"
+          "F07"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -351,5 +365,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "048fb188af0e7dd3"
 }

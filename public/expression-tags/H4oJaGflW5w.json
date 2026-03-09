@@ -12,11 +12,10 @@
       "ko": "\"빅 쇼트\"는 소수의 외부인들에 관한 이야기야. 물어볼게, 나한테 화났어?",
       "tags": {
         "functions": [
-          "F01",
           "F06"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -38,7 +37,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -47,10 +46,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -59,14 +60,13 @@
       "ko": "괜찮아? 화난 것 같아.",
       "tags": {
         "functions": [
-          "F09",
-          "F06"
+          "F44"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -83,9 +83,9 @@
       "ko": "아니야, 우리는 괜찮아, 뭐든지. 좋아.",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -94,7 +94,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,18 +106,18 @@
       "ko": "어, 글쎄...",
       "tags": {
         "functions": [
-          "F50"
+          "F52"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -131,57 +131,10 @@
       "ko": "정말?",
       "tags": {
         "functions": [
-          "F06"
+          "F44"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "H4oJaGflW5w-6",
-      "en": "Honestly, I was told I was presenting alone, so...",
-      "ko": "솔직히 혼자 발표한다고 들었어, 그래서...",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "H4oJaGflW5w-7",
-      "en": "It's fine, you know what I mean, obviously I've been recast into some kind of Joe Biden, Andy Richter, Robin type role, it's fine, I'm here for the movie.",
-      "ko": "괜찮아, 내 말 알지? 분명히 나는 어떤 조 바이든, 앤디 리히터, 로빈 같은 역할로 다시 캐스팅된 거야, 괜찮아, 나는 영화를 위해 여기 있어.",
-      "tags": {
-        "functions": [
-          "F09",
-          "F04"
-        ],
-        "situation": "S34",
-        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -192,6 +145,61 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "H4oJaGflW5w-6",
+      "en": "Honestly, I was told I was presenting alone, so...",
+      "ko": "솔직히 혼자 발표한다고 들었어, 그래서...",
+      "tags": {
+        "functions": [
+          "F64"
+        ],
+        "situation": "S31",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G22"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "H4oJaGflW5w-7",
+      "en": "It's fine, you know what I mean, obviously I've been recast into some kind of Joe Biden, Andy Richter, Robin type role, it's fine, I'm here for the movie.",
+      "ko": "괜찮아, 내 말 알지? 분명히 나는 어떤 조 바이든, 앤디 리히터, 로빈 같은 역할로 다시 캐스팅된 거야, 괜찮아, 나는 영화를 위해 여기 있어.",
+      "tags": {
+        "functions": [
+          "F50",
+          "F51"
+        ],
+        "situation": "S31",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06",
+          "X07"
+        ],
+        "vibe": "V02",
+        "power": [],
+        "grammar_intent": [
+          "G05",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -201,11 +209,10 @@
       "ko": "아니, 괜찮아, 나는 너를 지원하러 왔어, 그러니까 원하면... 오, 그거 좋네. 정말로.",
       "tags": {
         "functions": [
-          "F31",
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -225,17 +232,16 @@
       "ko": "잘했어, 고상하게 행동해, 나는 초라해 보여.",
       "tags": {
         "functions": [
-          "F12",
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S06",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V10",
         "power": [],
@@ -249,9 +255,9 @@
       "ko": "전형적인 브래드, 그냥 전형적이야, 전형적인 브래드.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -272,10 +278,9 @@
       "ko": "자, 앞으로 어떻게 할래?",
       "tags": {
         "functions": [
-          "F06",
-          "F34"
+          "F06"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -284,7 +289,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -296,11 +301,10 @@
       "ko": "최소한 수상자를 읽고 싶어, 알겠지?",
       "tags": {
         "functions": [
-          "F09",
-          "F34"
+          "F06"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -308,9 +312,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -322,7 +328,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -331,7 +337,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -345,18 +351,20 @@
         "functions": [
           "F18"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -366,16 +374,17 @@
       "ko": "이건 재앙이야, 마치 몬테소리 같은 거야, 모두가 트로피를 받아, 아무의 감정도 상처받지 않게, 제발.",
       "tags": {
         "functions": [
-          "F09"
+          "F38"
         ],
-        "situation": "S34",
+        "situation": "S28",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E10"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -389,22 +398,25 @@
       "ko": "수상자는 있을 거야, 우리는 소개를 발표하러 왔어, 응.",
       "tags": {
         "functions": [
-          "F62"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "8d443005e2a41ca2"
 }

@@ -14,9 +14,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S48",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -35,20 +35,25 @@
       "ko": "어쨌든, 존에 대해 이야기해봅시다. 제발.",
       "tags": {
         "functions": [
+          "F34",
+          "F36",
           "F48"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S48",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02",
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -58,16 +63,16 @@
       "ko": "모험 중에 작은 도우미를 두는 것은",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S48",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -81,11 +86,11 @@
       "ko": "감정이나 변덕 때문이 아닙니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S48",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -104,11 +109,11 @@
       "ko": "그가 나에게 집착하면서 간과한",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S48",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -127,11 +132,11 @@
       "ko": "많은 훌륭한 자질이 있기 때문입니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S48",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -152,9 +157,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S48",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -173,11 +178,11 @@
       "ko": "존이 무 selfish하게 제공하는 특별한 대비에서 비롯됩니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S48",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -198,9 +203,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S48",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -219,11 +224,11 @@
       "ko": "매우 평범한 신부 들러리를 선호하는 경향이 있습니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F09"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S48",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -231,7 +236,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P02"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -242,11 +249,11 @@
       "ko": "그 안에는 어떤 유사성이 있다고 느낍니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S48",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -265,11 +272,11 @@
       "ko": "그리고 대비는 결국",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S48",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -288,11 +295,11 @@
       "ko": "신의 창조물의 아름다움을 향상시키기 위한 계획입니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S48",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -311,11 +318,11 @@
       "ko": "만약 신이 가족의 바보에게 직업 기회를 제공하기 위해 만들어진",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S48",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -334,11 +341,11 @@
       "ko": "우스꽝스러운 환상이 아니라면 말이죠.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S48",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -357,10 +364,10 @@
       "ko": "내가 하고 싶은 말은, 내가 가장 불쾌하고,",
       "tags": {
         "functions": [
-          "F09"
+          "F58"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -368,7 +375,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -380,10 +387,10 @@
       "ko": "무례하며, 무지하고, 전반적으로 불쾌한 사람이라는 것입니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -403,10 +410,10 @@
       "ko": "누구든지 만날 수 있는 불행한 사람입니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -426,22 +433,25 @@
       "ko": "누군가가 만날 수 있는 불행일 수 있다.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "bc3fea6cc8e9ae8d"
 }

@@ -14,16 +14,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,16 +35,17 @@
       "ko": "제발, 스포츠. 솔직하게 말해봐.",
       "tags": {
         "functions": [
-          "F50"
+          "F35",
+          "F45"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -58,19 +59,22 @@
       "ko": "뜨거운 고기 주사를 맞고 싶어? 꺼져! 거기서 무슨 일이야?",
       "tags": {
         "functions": [
-          "F17"
+          "F06",
+          "F60"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
-        "power": [],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": [
           "contains_profanity"
@@ -83,78 +87,9 @@
       "ko": "멍청이들.",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V03",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "rnbDA4wKrg0-4",
-      "en": "Scumbag.",
-      "ko": "쓰레기 같은 놈.",
-      "tags": {
-        "functions": [
-          "F58"
-        ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V03",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "rnbDA4wKrg0-5",
-      "en": "What do you say we close that door? We can't have any kind of party. We're burning. Checking us out every few seconds. Well, you know, the door's supposed to stay open.",
-      "ko": "그 문을 닫는 게 어때? 우리는 어떤 파티도 할 수 없어. 계속 우리를 지켜보고 있어. 문은 열어둬야 하는 거잖아.",
-      "tags": {
-        "functions": [
-          "F36"
-        ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "rnbDA4wKrg0-6",
-      "en": "So what?",
-      "ko": "그래서?",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -166,7 +101,84 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "rnbDA4wKrg0-4",
+      "en": "Scumbag.",
+      "ko": "쓰레기 같은 놈.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "rnbDA4wKrg0-5",
+      "en": "What do you say we close that door? We can't have any kind of party. We're burning. Checking us out every few seconds. Well, you know, the door's supposed to stay open.",
+      "ko": "그 문을 닫는 게 어때? 우리는 어떤 파티도 할 수 없어. 계속 우리를 지켜보고 있어. 문은 열어둬야 하는 거잖아.",
+      "tags": {
+        "functions": [
+          "F23"
+        ],
+        "situation": "S50",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E08"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V02",
+        "power": [],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": []
+      }
+    },
+    {
+      "id": "rnbDA4wKrg0-6",
+      "en": "So what?",
+      "ko": "그래서?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -175,20 +187,24 @@
       "ko": "그러니까 그냥 입 닥쳐. 여기 다른 사람 네 명이 있어.",
       "tags": {
         "functions": [
-          "F58"
+          "F17",
+          "F36"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V03",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06",
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -198,20 +214,24 @@
       "ko": "세상에, 너는 셀 수 있구나. 봐, 레슬러가 되려면 똑똑해야 한다는 걸 알았어. 도대체 누구에게 판단할 자격이 있다고 생각해?",
       "tags": {
         "functions": [
-          "F12"
+          "F18",
+          "F23",
+          "F48"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -223,9 +243,9 @@
       "ko": "너, 벤더, 너는 아예 중요하지도 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -246,10 +266,10 @@
       "ko": "네가 영원히 사라져도 아무 상관없어.",
       "tags": {
         "functions": [
-          "F12"
+          "F50"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -259,7 +279,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -269,10 +291,10 @@
       "ko": "이 학교에서는 아예 존재하지 않는 것과 마찬가지야.",
       "tags": {
         "functions": [
-          "F12"
+          "F47"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -282,7 +304,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -292,9 +316,9 @@
       "ko": "뭐?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -306,8 +330,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "7320dd4777fbb3b7"
 }

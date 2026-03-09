@@ -12,23 +12,22 @@
       "ko": "지금이라고 했어! 알겠어! 이리 와, 이리 와!",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E06"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X04"
         ],
-        "vibe": "V12",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -43,12 +42,13 @@
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E01",
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,18 +60,18 @@
       "ko": "죽고 싶어?",
       "tags": {
         "functions": [
-          "F42"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,7 +83,7 @@
       "ko": "야!",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A1",
@@ -94,7 +94,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -108,18 +108,18 @@
       "ko": "나한테서 떨어져!",
       "tags": {
         "functions": [
-          "F43"
+          "F35"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E04"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -131,21 +131,23 @@
       "ko": "오, 하느님!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -154,22 +156,23 @@
       "ko": "나는 강해!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "8e59ec64239bbd14"
 }

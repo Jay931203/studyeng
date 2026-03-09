@@ -12,30 +12,7 @@
       "ko": "나는 너에게 충분히 좋지 않을 거야, 그렇지?",
       "tags": {
         "functions": [
-          "F20"
-        ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "WIGz4I56Lc8-1",
-      "en": "Oh, come on.",
-      "ko": "아, 제발.",
-      "tags": {
-        "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S36",
         "cefr": "A2",
@@ -53,15 +30,39 @@
       }
     },
     {
+      "id": "WIGz4I56Lc8-1",
+      "en": "Oh, come on.",
+      "ko": "아, 제발.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S36",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01",
+          "X04"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "WIGz4I56Lc8-2",
       "en": "Just forget it.",
       "ko": "그냥 잊어버려.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
         "situation": "S36",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -84,7 +85,7 @@
           "F01"
         ],
         "situation": "S36",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,20 +105,23 @@
       "ko": "묻지 마. 물어보려던 것도 아니야.",
       "tags": {
         "functions": [
-          "F43"
+          "F35",
+          "F40"
         ],
         "situation": "S36",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -127,10 +131,10 @@
       "ko": "이거 알아. 샤넬이야.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S36",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -153,7 +157,7 @@
           "F06"
         ],
         "situation": "S36",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -185,10 +189,15 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "37d72e9fed8c1e29"
 }

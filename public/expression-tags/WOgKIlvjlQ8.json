@@ -12,10 +12,10 @@
       "ko": "좋아요, 저는 한 번도 체포된 적이 없어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -25,7 +25,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -35,10 +37,10 @@
       "ko": "후회하는 문신을 한 적이 한 번도 없어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +50,10 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G11"
+        ],
         "flags": []
       }
     },
@@ -58,10 +63,10 @@
       "ko": "마일 하이 클럽에 가입한 적이 한 번도 없어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,7 +76,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -81,10 +88,10 @@
       "ko": "취업하려고 거짓말한 적이 한 번도 없어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -94,7 +101,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -104,39 +113,16 @@
       "ko": "에이, 설마.",
       "tags": {
         "functions": [
-          "F09"
+          "F45"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "WOgKIlvjlQ8-5",
-      "en": "Never, ever have I gotten out of a...",
-      "ko": "한 번도...에서 빠져나간 적이 없어요.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V10",
         "power": [],
@@ -145,6 +131,34 @@
           "is_fragment"
         ]
       }
+    },
+    {
+      "id": "WOgKIlvjlQ8-5",
+      "en": "Never, ever have I gotten out of a...",
+      "ko": "한 번도...에서 빠져나간 적이 없어요.",
+      "tags": {
+        "functions": [
+          "F43"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
+      }
     }
-  ]
+  ],
+  "transcriptHash": "f6afc6550cb81fe6"
 }

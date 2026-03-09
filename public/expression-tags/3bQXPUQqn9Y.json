@@ -12,10 +12,10 @@
       "ko": "나는 잠깐 생각해봤다고 말하고 싶었어. 타운센드에게는 아직 전화하지 않았지만, 여전히",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,10 +35,10 @@
       "ko": "이게 옳은 일이라고 느껴. 음, 나도 잘 자지 못했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F56"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,8 +60,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -83,8 +83,8 @@
         "functions": [
           "F07"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,10 +104,10 @@
       "ko": "응. 그럼, 나는 뒤에 서서 네가 직원들에게 옷을 접고",
       "tags": {
         "functions": [
-          "F03"
+          "F07"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,18 +127,18 @@
       "ko": "상자에 담는 방법을 보여주는 걸 지켜봤어. 그때 나는 ATF가 성공한 이유를 알았어.",
       "tags": {
         "functions": [
-          "F02"
+          "F23"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,18 +150,18 @@
       "ko": "아무도 너의 회사에 그렇게 헌신할 수는 없어, 줄스. 나에게는 꽤 간단해.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,20 +173,22 @@
       "ko": "너에게 필요한 것이고, 내가 말해도 괜찮다면, 너는 그것이 필요해.",
       "tags": {
         "functions": [
-          "F09"
+          "F42"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -196,10 +198,11 @@
       "ko": "누군가 너보다 더 많은 경험을 가지고 올 수도 있지만,",
       "tags": {
         "functions": [
-          "F09"
+          "F43",
+          "F56"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,7 +212,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -219,10 +224,10 @@
       "ko": "그들은 절대 네가 아는 것을 알지 못할 거야. 나는 내 인생에서 이런 경험은 처음이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F30"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,11 +235,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "849b7e76bedb37e3"
 }

@@ -12,10 +12,10 @@
       "ko": "당신의 잘못을 받아들이고, 이야기해보자.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,10 +35,10 @@
       "ko": "시간이 흘러가게 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,10 +58,10 @@
       "ko": "내 것처럼, 다른 날을 부를 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S24",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +81,18 @@
       "ko": "어서, 어서.",
       "tags": {
         "functions": [
-          "F25"
+          "F38"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,18 +104,18 @@
       "ko": "어떻게 쉽게 잠들 수 있을지 방법을 찾아봐.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B1",
+        "situation": "S03",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,10 +127,10 @@
       "ko": "신비로움.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,10 +138,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,10 +153,10 @@
       "ko": "나는 귀를 기울이고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -161,7 +164,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,10 +176,10 @@
       "ko": "유리와 벽에 귀를 대고.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,7 +187,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,19 +199,22 @@
       "ko": "그런데.",
       "tags": {
         "functions": [
-          "F50"
+          "F48"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X02",
+          "X03"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V01",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -219,10 +225,10 @@
       "ko": "네가 얼굴에 했던 말.",
       "tags": {
         "functions": [
-          "F09"
+          "F05"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,7 +236,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,10 +248,10 @@
       "ko": "내가 들은 것에 대해 말하지 않았어.",
       "tags": {
         "functions": [
-          "F09"
+          "F56"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -253,7 +259,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,18 +273,20 @@
         "functions": [
           "F09"
         ],
-        "situation": "S40",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -288,18 +296,18 @@
       "ko": "내가 너에 대해 사랑하지 않았던 모든 것들.",
       "tags": {
         "functions": [
-          "F12"
+          "F56"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,22 +319,23 @@
       "ko": "너가 상처를 줄수록.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S28",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "20d7aa5520774564"
 }

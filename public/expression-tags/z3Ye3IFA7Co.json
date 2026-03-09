@@ -15,7 +15,7 @@
           "F01"
         ],
         "situation": "S31",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E01"
@@ -24,11 +24,11 @@
           "X08"
         ],
         "vibe": "V02",
-        "power": [],
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,20 +37,22 @@
       "ko": "길을 나서자, 시작할 시간이 몇 번 있어.",
       "tags": {
         "functions": [
-          "F34"
+          "F36"
         ],
         "situation": "S31",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -63,7 +65,7 @@
           "F01"
         ],
         "situation": "S31",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E01"
@@ -72,11 +74,11 @@
           "X08"
         ],
         "vibe": "V02",
-        "power": [],
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -88,13 +90,13 @@
           "F06"
         ],
         "situation": "S31",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -111,7 +113,7 @@
           "F01"
         ],
         "situation": "S31",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -122,7 +124,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -131,7 +135,7 @@
       "ko": "아, 그건 그렇고.",
       "tags": {
         "functions": [
-          "F50"
+          "F48"
         ],
         "situation": "S31",
         "cefr": "A2",
@@ -154,18 +158,18 @@
       "ko": "들으면 감정이 북받칠 거예요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S31",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -177,23 +181,23 @@
       "ko": "노래하는 목소리, 즐거운 기분이 들어요.",
       "tags": {
         "functions": [
-          "F01"
+          "F36"
         ],
         "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "grammar_intent": [
+          "G09"
+        ],
+        "flags": []
       }
     },
     {
@@ -202,10 +206,10 @@
       "ko": "홀리로 장식된 홀.",
       "tags": {
         "functions": [
-          "F01"
+          "F21"
         ],
         "situation": "S31",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -228,31 +232,6 @@
           "F01"
         ],
         "situation": "S31",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "z3Ye3IFA7Co-10",
-      "en": "I'll come back tomorrow, maybe they'll be gone by then",
-      "ko": "내일 다시 올게, 그때쯤이면 그들이 없을 거야.",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -262,8 +241,36 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "z3Ye3IFA7Co-10",
+      "en": "I'll come back tomorrow, maybe they'll be gone by then",
+      "ko": "내일 다시 올게, 그때쯤이면 그들이 없을 거야.",
+      "tags": {
+        "functions": [
+          "F14"
+        ],
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01",
+          "X07"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -273,7 +280,7 @@
       "ko": "빨리 들어가야 해.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S31",
         "cefr": "A2",
@@ -282,7 +289,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -290,5 +297,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "4f4927a9bf6d262a"
 }

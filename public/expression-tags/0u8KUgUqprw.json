@@ -12,10 +12,10 @@
       "ko": "고래를 구해줘, 조지.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,16 +35,16 @@
       "ko": "그래서 물속으로 걸어 들어갔어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -58,9 +58,9 @@
       "ko": "나",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -83,18 +83,18 @@
       "ko": "너희들에게 거짓말 안 할게. 정말 무서웠어.",
       "tags": {
         "functions": [
-          "F16"
+          "F19"
         ],
-        "situation": "S16",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E04"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,20 +106,22 @@
       "ko": "가슴이 두근거리면서 파도를 지나갈 때 이상한 평온함이 찾아왔어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -129,9 +131,9 @@
       "ko": "그게 신의 개입인지 모든 생명체의 유대감인지 모르겠지만, 그 순간 나는 제리에게 말했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S09",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -141,8 +143,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -154,7 +160,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -175,10 +181,10 @@
       "ko": "신문에서 이걸 읽고 있었어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -198,13 +204,13 @@
       "ko": "믿을 수 없어. 나도 방금 그 이야기를 하고 있었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F03"
         ],
-        "situation": "S16",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -221,16 +227,17 @@
       "ko": "어서 조지, 이야기 끝내봐.",
       "tags": {
         "functions": [
-          "F34"
+          "F45",
+          "F03"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -244,9 +251,9 @@
       "ko": "그날 바다는 화가 나 있었어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -255,9 +262,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -267,16 +276,16 @@
       "ko": "마치 델리에서 수프를 다시 보내려는 노인처럼.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -284,5 +293,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "9bc2dacf62c0297c"
 }

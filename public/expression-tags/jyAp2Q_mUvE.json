@@ -12,18 +12,18 @@
       "ko": "나는 달릴 수도 있었고, 아니면 그에게 질문을 할 수도 있었어. 그 질문을 하지 않으면 평생 나를 괴롭힐 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F56"
         ],
-        "situation": "S11",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,9 +35,9 @@
       "ko": "여기 도착할 때쯤이면 뭐라고 말해야 할지 알 줄 알았어. 그런데?",
       "tags": {
         "functions": [
-          "F06"
+          "F21"
         ],
-        "situation": "S11",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -58,10 +58,10 @@
       "ko": "늦었네. 파티는 끝났어. 그렇게 말할 수 있겠네.",
       "tags": {
         "functions": [
-          "F01"
+          "F52"
         ],
-        "situation": "S11",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,13 +81,13 @@
       "ko": "웃기네.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S11",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -95,7 +95,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,10 +106,11 @@
       "ko": "어쨌든, 나는 집에 가는 길이었고... 이봐.",
       "tags": {
         "functions": [
-          "F03"
+          "F48",
+          "F57"
         ],
-        "situation": "S11",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,16 +132,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S11",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,9 +153,9 @@
       "ko": "네가 그걸 말하는 걸 정말 듣고 싶어.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S11",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -173,9 +176,37 @@
       "ko": "제발, 친구답게 해줘. 모르겠어.",
       "tags": {
         "functions": [
-          "F34"
+          "F35",
+          "F45"
         ],
-        "situation": "S11",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V02",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "jyAp2Q_mUvE-8",
+      "en": "It just got so hard.",
+      "ko": "너무 힘들어졌어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -191,37 +222,14 @@
       }
     },
     {
-      "id": "jyAp2Q_mUvE-8",
-      "en": "It just got so hard.",
-      "ko": "너무 힘들어졌어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S11",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "jyAp2Q_mUvE-9",
       "en": "And she's... She's... Yeah.",
       "ko": "그리고 그녀는... 그녀는... 그래.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S11",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -236,5 +244,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a2811f54cd92392c"
 }

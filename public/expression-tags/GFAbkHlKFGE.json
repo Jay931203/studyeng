@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -51,9 +49,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -62,13 +58,13 @@
       "ko": "오, 저걸 봐.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -85,18 +81,18 @@
       "ko": "와, 아기 큰 머리 좀 봐.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -108,19 +104,21 @@
       "ko": "친구, 저건 정말 이상하게 생겼어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E08"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V10",
-        "power": [],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -131,10 +129,10 @@
       "ko": "실례합니다, 저는 신성한 그릇입니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -154,16 +152,16 @@
       "ko": "자, 너의 배에는 타코벨밖에 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -177,18 +175,18 @@
       "ko": "이걸 보고 우는 사람이 실제로 있다니 놀라워.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -200,33 +198,10 @@
       "ko": "뭐? 나는 돌로 만들어진 게 아니야.",
       "tags": {
         "functions": [
-          "F12"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "GFAbkHlKFGE-9",
-      "en": "Well, there you have it. Would you like to know the sex? Yes. No. Please. No, definitely.",
-      "ko": "자, 그럼 이거야. 성별을 알고 싶어? 응. 아니. 제발. 아니, 절대 안 돼.",
-      "tags": {
-        "functions": [
           "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -241,15 +216,41 @@
       }
     },
     {
+      "id": "GFAbkHlKFGE-9",
+      "en": "Well, there you have it. Would you like to know the sex? Yes. No. Please. No, definitely.",
+      "ko": "자, 그럼 이거야. 성별을 알고 싶어? 응. 아니. 제발. 아니, 절대 안 돼.",
+      "tags": {
+        "functions": [
+          "F10"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E13"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G02",
+          "G16"
+        ],
+        "flags": []
+      }
+    },
+    {
       "id": "GFAbkHlKFGE-10",
       "en": "No, there's no sex. Planning to be surprised when you deliver.",
       "ko": "아니, 성별은 없어. 출산할 때 놀라길 원해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -269,16 +270,16 @@
       "ko": "아니, 마크와 바네사가 놀라길 원해,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -292,18 +293,18 @@
       "ko": "네가 말해주면 모든 게 망가질 거야.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -315,7 +316,7 @@
       "ko": "마크와 바네사는 학교 친구야?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -338,7 +339,7 @@
       "ko": "아니, 아니, 그들은 입양 부모야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -361,18 +362,18 @@
       "ko": "아, 그거 다행이네.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V13",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -387,7 +388,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -407,10 +408,10 @@
       "ko": "여기 많은 십대 엄마들이 오는 걸 봐.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -430,18 +431,18 @@
       "ko": "아기를 키우기에는 분명 독성이 있는 환경이야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -453,24 +454,26 @@
       "ko": "내가 그렇게 독성이 있다고 어떻게 알아? 만약...",
       "tags": {
         "functions": [
-          "F14"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G09",
+          "G12"
+        ],
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "018632727f92af2d"
 }

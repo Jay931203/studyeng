@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,10 +35,10 @@
       "ko": "네 세상이야, 보그스.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,8 +60,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,10 +81,10 @@
       "ko": "모든 수감자는 봉쇄를 위해 보고하라.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -106,8 +106,33 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
+        "situation": "S05",
         "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "Uw2evtnTm2c-5",
+      "en": "Where'd he go? Grab his ankles. No! No!",
+      "ko": "어디 갔지? 그의 발목을 잡아. 안 돼! 안 돼!",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S05",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -122,47 +147,26 @@
       }
     },
     {
-      "id": "Uw2evtnTm2c-5",
-      "en": "Where'd he go? Grab his ankles. No! No!",
-      "ko": "어디 갔지? 그의 발목을 잡아. 안 돼! 안 돼!",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S44",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "Uw2evtnTm2c-6",
       "en": "No! Help!",
       "ko": "안 돼! 도와줘!",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S05",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
-        "power": [],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -173,18 +177,18 @@
       "ko": "그는 죽었어! 일어나!",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,10 +200,10 @@
       "ko": "그 이후로 두 가지는 다시 일어나지 않았다. 자매들은 다시 만나지 않았다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -213,5 +217,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "2bc931f1cc70eec5"
 }

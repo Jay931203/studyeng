@@ -12,10 +12,10 @@
       "ko": "꼬꼬, 꼬꼬, 꼬꼬, 꼬꼬. 애디!",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -26,9 +26,7 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,32 +35,9 @@
       "ko": "뛰지 말자.",
       "tags": {
         "functions": [
-          "F35"
+          "F36"
         ],
-        "situation": "S34",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "9tqhEE9DVVA-2",
-      "en": "Gobble! Gobble, gobble, gobble.",
-      "ko": "꼬꼬! 꼬꼬, 꼬꼬, 꼬꼬.",
-      "tags": {
-        "functions": [
-          "F25"
-        ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -73,10 +48,35 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": [
           "is_fragment"
         ]
+      }
+    },
+    {
+      "id": "9tqhEE9DVVA-2",
+      "en": "Gobble! Gobble, gobble, gobble.",
+      "ko": "꼬꼬! 꼬꼬, 꼬꼬, 꼬꼬.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S31",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
       }
     },
     {
@@ -85,10 +85,10 @@
       "ko": "너를 집에 데려가서 호박을 만들어줄게. 꼬꼬, 꼬꼬, 꼬꼬.",
       "tags": {
         "functions": [
-          "F34"
+          "F63"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -108,9 +108,9 @@
       "ko": "꼬꼬, 꼬꼬, 꼬꼬.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -133,9 +133,9 @@
       "ko": "꼬꼬.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -158,13 +158,13 @@
       "ko": "행복한 추수감사절!",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -172,7 +172,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -181,9 +183,9 @@
       "ko": "꼬꼬, 꼬꼬, 꼬꼬.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -206,9 +208,9 @@
       "ko": "저건 제 조카 아그네스와 제 아이들이에요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -217,10 +219,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -231,7 +235,7 @@
         "functions": [
           "F27"
         ],
-        "situation": "S34",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -240,9 +244,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -252,9 +258,9 @@
       "ko": "그날 그들을 여기로 데려와 준 것에 대해,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -263,7 +269,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -275,9 +281,9 @@
       "ko": "매년 11월마다 그들을 꾸며준 의상팀에게도요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -286,7 +292,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -298,9 +304,9 @@
       "ko": "이건.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -309,13 +315,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_fragment"
+          "is_narration"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "4161ba9bec6438f8"
 }

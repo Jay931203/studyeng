@@ -15,7 +15,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -40,7 +38,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -63,7 +61,30 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "XSQoorx7foI-3",
+      "en": "No, I don't know some fucking country in Europe.",
+      "ko": "아니, 나는 유럽의 어떤 개같은 나라도 몰라.",
+      "tags": {
+        "functions": [
+          "F40"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -78,43 +99,18 @@
       }
     },
     {
-      "id": "XSQoorx7foI-3",
-      "en": "No, I don't know some fucking country in Europe.",
-      "ko": "아니, 나는 유럽의 어떤 개같은 나라도 몰라.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
       "id": "XSQoorx7foI-4",
       "en": "Fuck a shit, let them do what they want to fucking do. Our market's solid.",
       "ko": "젠장, 그들이 하고 싶은 대로 하게 둬. 우리의 시장은 튼튼해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -122,9 +118,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -133,13 +127,13 @@
       "ko": "이건 환상적인 그림들이야. 팔고 싶어하는 게 아니야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
@@ -156,23 +150,22 @@
       "ko": "무슨 일이 있었는지 알아? 개같은 쓰나미야. 큰 실수를 하고 있어, 타이슨 씨. 응, 당신 아내와 이야기할게.",
       "tags": {
         "functions": [
-          "F04"
+          "F09"
         ],
         "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -181,13 +174,13 @@
       "ko": "나를 믿어, 전화 받지 마. 많은 사람들이 너에게 전화할 거야, 너의 더러운 속사정을 캐내려고.",
       "tags": {
         "functions": [
-          "F37"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E07"
         ],
         "expression_types": [
           "X08"
@@ -204,16 +197,17 @@
       "ko": "그 테이블에서 나와. 여기서 무슨 일이 일어나는지 몰라. 알아, 알아.",
       "tags": {
         "functions": [
-          "F03"
+          "F35",
+          "F40"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -227,13 +221,13 @@
       "ko": "세상에.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -242,9 +236,10 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "contains_profanity"
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "3a538566346d6337"
 }

@@ -12,10 +12,11 @@
       "ko": "무슨 일이야?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F60"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,8 +24,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -37,7 +40,7 @@
       "ko": "네 마음은 묶인 줄 같아",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -48,7 +51,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,10 +65,11 @@
       "ko": "네가 갔던 곳에 정확히 묶여 있어",
       "tags": {
         "functions": [
-          "F02"
+          "F07",
+          "F10"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -73,9 +77,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -90,7 +96,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -98,7 +104,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -115,7 +121,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -123,7 +129,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -140,7 +146,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -148,7 +154,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,7 +168,7 @@
       "ko": "떠날 수 있을 것 같아",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -173,7 +179,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,7 +193,7 @@
       "ko": "떠나버릴 수 있을 것 같아",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -196,9 +202,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -212,10 +218,10 @@
       "ko": "네가 말하는 방식을 보여줘",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -223,7 +229,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -240,7 +246,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -248,7 +254,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -262,7 +268,7 @@
       "ko": "내가 떠나면, 따라올래?",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -273,9 +279,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -290,7 +298,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -298,7 +306,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -312,7 +320,7 @@
       "ko": "색들이, 형체들이 흔들려",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -323,7 +331,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -337,6 +345,7 @@
       "ko": "그것들이 너를 데려갈 수도 있지만",
       "tags": {
         "functions": [
+          "F21",
           "F14"
         ],
         "situation": "S46",
@@ -346,9 +355,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -373,7 +382,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -387,20 +396,22 @@
       "ko": "내가 떠나면, 따라올래?",
       "tags": {
         "functions": [
-          "F38"
+          "F34"
         ],
-        "situation": "S08",
+        "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -412,20 +423,22 @@
       "ko": "내가 떠나면, 따라올래?",
       "tags": {
         "functions": [
-          "F38"
+          "F34"
         ],
-        "situation": "S08",
+        "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -437,20 +450,22 @@
       "ko": "내가 떠나면, 따라올래?",
       "tags": {
         "functions": [
-          "F38"
+          "F34"
         ],
-        "situation": "S08",
+        "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -462,20 +477,22 @@
       "ko": "내가 떠나면, 따라올래?",
       "tags": {
         "functions": [
-          "F38"
+          "F34"
         ],
-        "situation": "S08",
+        "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -487,10 +504,10 @@
       "ko": "불안한 잠에서 걸어 나와, 내 발이야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S46",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -498,7 +515,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -514,8 +531,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S46",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -523,7 +540,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -531,5 +548,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "4aa81c4997f7d96a"
 }

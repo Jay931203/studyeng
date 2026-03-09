@@ -12,16 +12,16 @@
       "ko": "세상이 불타고 있지만, 나는 이렇게 생각해,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -35,20 +35,22 @@
       "ko": "좀 웃겨보자, 알지?",
       "tags": {
         "functions": [
-          "F09"
+          "F35"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -58,10 +60,10 @@
       "ko": "나는 페이스북에서 바이섹슈얼로 커밍아웃했어.",
       "tags": {
         "functions": [
-          "F64"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,20 +83,24 @@
       "ko": "그만해. 듣고 싶지 않아. 지금 그만해.",
       "tags": {
         "functions": [
+          "F35",
           "F40"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -104,10 +110,10 @@
       "ko": "아빠에게 전화해서 모든 이야기를 했어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,10 +133,10 @@
       "ko": "그는 잠시 멈추더니 말했어,",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,10 +156,10 @@
       "ko": "친구야, 만약 너가 6개월 후에 완전 게이로 커밍아웃할 거라면,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,10 +179,10 @@
       "ko": "그 부분은 건너뛰면 안 될까?",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -199,7 +205,7 @@
           "F07"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -219,30 +225,7 @@
       "ko": "어렸을 때 나는 너무 경직되어 있었어.",
       "tags": {
         "functions": [
-          "F02"
-        ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "ISJpKRTkvpc-10",
-      "en": "When I was 15, I asked for a business suit.",
-      "ko": "15살 때 비즈니스 수트를 요청했어.",
-      "tags": {
-        "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -260,12 +243,37 @@
       }
     },
     {
+      "id": "ISJpKRTkvpc-10",
+      "en": "When I was 15, I asked for a business suit.",
+      "ko": "15살 때 비즈니스 수트를 요청했어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S34",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [
+          "P02"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "ISJpKRTkvpc-11",
       "en": "He had no business to speak of.",
       "ko": "그는 사업이 없었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -288,13 +296,13 @@
       "ko": "미안, 나는 이 작은 마을보다 더 커.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -311,13 +319,13 @@
       "ko": "나는 원칙적으로 이성애자를 존중하지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F40"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -334,10 +342,10 @@
       "ko": "내가 진정으로 존경했던 유일한 이성애자는",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -357,35 +365,10 @@
       "ko": "한 번 바에서 우연히 들었던 남자야.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "ISJpKRTkvpc-16",
-      "en": "And he goes, no, no, dude, I'm telling you.",
-      "ko": "그는 이렇게 말했어, 아니, 아니, 친구야, 내가 말하는 거 들어봐.",
-      "tags": {
-        "functions": [
-          "F03"
-        ],
-        "situation": "S34",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -400,15 +383,40 @@
       }
     },
     {
+      "id": "ISJpKRTkvpc-16",
+      "en": "And he goes, no, no, dude, I'm telling you.",
+      "ko": "그는 이렇게 말했어, 아니, 아니, 친구야, 내가 말하는 거 들어봐.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S34",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "ISJpKRTkvpc-17",
       "en": "I just tell girls I can't come from blowjobs",
       "ko": "나는 여자들에게 구강 성교로는 오지 못한다고 말해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -428,10 +436,10 @@
       "ko": "그러면 그들이 나에게 구강 성교를 더 하고 싶어해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -441,7 +449,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -451,10 +461,10 @@
       "ko": "천재야, 천재, 아름다운 마음의 몽타주.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -474,10 +484,10 @@
       "ko": "나는 그가 매주 주말 클럽 밖에서 하얀 울타리를 칠하는 모습을 상상해.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -497,13 +507,13 @@
       "ko": "구강 성교로 오고 싶어.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
@@ -520,10 +530,10 @@
       "ko": "여기서는 그런 걸 할 수 있는 사람이 없는 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -537,5 +547,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "6eada35d5d5a06c9"
 }

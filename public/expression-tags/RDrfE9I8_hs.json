@@ -12,10 +12,10 @@
       "ko": "중국, 중국, 중국, 중국, 중국, 중국, 중국, 중국, 중국, 중국, 중국,",
       "tags": {
         "functions": [
-          "F01"
+          "F36"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -25,10 +25,10 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G09"
+        ],
+        "flags": []
       }
     },
     {
@@ -40,7 +40,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -65,7 +65,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -85,10 +85,10 @@
       "ko": "중국, 중국. 나는 그를 사랑합니다. 중국, 중국, 중국, 중국.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E11"
@@ -96,7 +96,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -111,7 +111,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -134,7 +134,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -157,7 +157,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -180,7 +180,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -203,7 +203,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -226,7 +226,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -237,7 +237,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -246,19 +248,21 @@
       "ko": "당신은 중국에서 구매하고 싶어합니다. 좋습니다. 중국에서 구매하세요. 중국, 중국, 중국.",
       "tags": {
         "functions": [
-          "F34"
+          "F12"
         ],
         "situation": "S34",
-        "cefr": "A1",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -272,7 +276,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -286,5 +290,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "ee80e7935d5e4cc6"
 }

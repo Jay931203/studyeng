@@ -12,18 +12,18 @@
       "ko": "폭력과 전쟁. ISIS의 미친 잔혹함이 계속되고 있습니다. 러시아가 침공하고 있습니다.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,18 +37,18 @@
       "ko": "우크라이나와 팔레스타인, 이스라엘이 계속해서 충돌하고 있습니다. 이런 상황이",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,20 +62,22 @@
       "ko": "우울하게 느껴지나요? 그렇지 마세요. 숫자를 보면 전쟁은",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V12",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": [
           "is_narration"
         ]
@@ -87,20 +89,24 @@
       "ko": "실제로 유행에서 벗어나고 있으며, 세계 인구는",
       "tags": {
         "functions": [
-          "F05"
+          "F11"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V16",
+        "power": [
+          "P08"
+        ],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": [
           "is_narration"
         ]
@@ -112,20 +118,22 @@
       "ko": "사상 최고치를 기록하고 있습니다. 우리는 인류 역사상 가장 평화로운",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": [
           "is_narration"
         ]
@@ -140,15 +148,15 @@
           "F06"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,10 +170,10 @@
       "ko": "2014년 9월 기준으로, 2013년 1월 이후로 10,000명 이상이",
       "tags": {
         "functions": [
-          "F05"
+          "F03"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -173,7 +181,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,10 +195,10 @@
       "ko": "사망한 전쟁이 세계에서 네 건 있었습니다. 1,000명 이상이",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -198,7 +206,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -212,10 +220,10 @@
       "ko": "사망한 전쟁은 아홉 건, 100명 이상이 사망한 전쟁은 13건이었습니다.",
       "tags": {
         "functions": [
-          "F05"
+          "F13"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -223,9 +231,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": [
           "is_narration"
         ]
@@ -237,20 +247,22 @@
       "ko": "2013. 그렇게 평화롭지는 않지만, 이 점을 고려해 보세요. 현재 진행 중인",
       "tags": {
         "functions": [
-          "F05"
+          "F11"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": [
           "is_narration"
         ]
@@ -262,10 +274,10 @@
       "ko": "모든 전쟁 중에서 국가 간의 전면전은 없습니다. 모두 내전이나",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -273,7 +285,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -287,10 +299,10 @@
       "ko": "지역 분쟁입니다. 내전은",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -298,13 +310,16 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V16",
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_narration"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "f0164b988b45fb9e"
 }

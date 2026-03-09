@@ -12,18 +12,18 @@
       "ko": "기념품의 실루엣, 장밋빛 햇살에 그을린 피부",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "C1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,13 +35,13 @@
       "ko": "눈은 빛나지만 희망 없이, 그녀는 생각했어",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
         "situation": "S45",
-        "cefr": "C1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -58,13 +58,13 @@
       "ko": "아무도 나를 보지 않아, 네 고개는 숙여져 있어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "C1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -81,10 +81,11 @@
       "ko": "거울에 비친 너를 볼 때",
       "tags": {
         "functions": [
+          "F30",
           "F24"
         ],
         "situation": "S45",
-        "cefr": "C1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -94,7 +95,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -104,10 +107,10 @@
       "ko": "네가 얼마나 소중한 존재인지 깨달았으면 좋겠어",
       "tags": {
         "functions": [
-          "F24"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "C1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,10 +130,10 @@
       "ko": "내가 보는 것처럼 넌 볼 수 있다면",
       "tags": {
         "functions": [
-          "F24"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "C1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -140,7 +143,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G11",
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -150,10 +156,10 @@
       "ko": "내가 보는 방식으로 볼 수 있다면",
       "tags": {
         "functions": [
-          "F24"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "C1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -163,7 +169,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G11",
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -173,10 +182,10 @@
       "ko": "너무 깊은 눈, 거의 빨려 들어갈 것 같아",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "C1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,10 +205,10 @@
       "ko": "나머지 세상은 사라지는 것 같아",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "C1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -213,5 +222,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "78db90da9cd14e20"
 }

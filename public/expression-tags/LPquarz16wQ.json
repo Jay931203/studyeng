@@ -12,13 +12,13 @@
       "ko": "아, 내 아기. 안녕, 엄마.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A1",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
@@ -35,11 +35,11 @@
       "ko": "빅터, 내 아들. 잘 지내니?",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A1",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -58,11 +58,11 @@
       "ko": "자, 이분은 우리 친구 리처드 루이스야.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "A1",
-        "register": "R5",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -83,14 +83,14 @@
         "functions": [
           "F27"
         ],
-        "situation": "S09",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
         "power": [],
@@ -106,11 +106,11 @@
         "functions": [
           "F27"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
@@ -129,8 +129,8 @@
         "functions": [
           "F27"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,9 +150,58 @@
       "ko": "음...",
       "tags": {
         "functions": [
-          "F08"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "LPquarz16wQ-7",
+      "en": "Yeah, it's, uh... You know what? Um... I'm going to excuse myself.",
+      "ko": "응, 그게... 알겠어? 음... 나 좀 나가볼게.",
+      "tags": {
+        "functions": [
+          "F07"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06",
+          "X04"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "LPquarz16wQ-8",
+      "en": "Victor.",
+      "ko": "빅터.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -170,62 +219,16 @@
       }
     },
     {
-      "id": "LPquarz16wQ-7",
-      "en": "Yeah, it's, uh... You know what? Um... I'm going to excuse myself.",
-      "ko": "응, 그게... 알겠어? 음... 나 좀 나가볼게.",
-      "tags": {
-        "functions": [
-          "F52"
-        ],
-        "situation": "S09",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "LPquarz16wQ-8",
-      "en": "Victor.",
-      "ko": "빅터.",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S09",
-        "cefr": "A1",
-        "register": "R5",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "LPquarz16wQ-9",
       "en": "Victor! What? What?",
       "ko": "빅터! 뭐? 뭐라고?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A1",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -244,23 +247,21 @@
       "ko": "너 그에게 봉사에 감사하지 않았잖아, 바보야. 그들이 그에게 감사했어. 세 사람이 그에게 감사했어. 왜 내가 그에게 감사해야 해? 얼마나 힘들었겠어? 그의 봉사에 감사해.",
       "tags": {
         "functions": [
-          "F55"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -269,18 +270,19 @@
       "ko": "그건 좀 명백한 거잖아. 모두가 그에게 감사해야 해? 응. 이제 너 때문에 모든 게 망쳤어, 래리.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -292,10 +294,10 @@
       "ko": "내가 이 맛있는 연어를 만들고 있는데,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -315,9 +317,9 @@
       "ko": "온 밤이 망쳤어. 그거 볶고 있어? 응.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -332,5 +334,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "11a56c8b45046b6f"
 }

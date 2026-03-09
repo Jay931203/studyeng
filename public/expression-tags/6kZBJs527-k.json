@@ -12,9 +12,10 @@
       "ko": "아, 미안해. 이 전화 받아야 해. 여보세요?",
       "tags": {
         "functions": [
-          "F34"
+          "F25",
+          "F28"
         ],
-        "situation": "S24",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -23,12 +24,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": []
       }
     },
     {
@@ -37,20 +38,22 @@
       "ko": "아직 제목이 뭔지 모르겠어?",
       "tags": {
         "functions": [
-          "F06"
+          "F17"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -60,10 +63,10 @@
       "ko": "아니, 아무도 몰라. 그녀에게 물어보기에 너무 오래 걸렸어.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,7 +74,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,9 +86,9 @@
       "ko": "이 제목은 이해하기 어렵지 않지?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -94,7 +97,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -108,7 +111,7 @@
         "functions": [
           "F15"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -117,7 +120,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -131,17 +134,19 @@
         "functions": [
           "F09"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -152,9 +157,9 @@
       "ko": "'Roar Her, Gem Her'일 수도 있어?",
       "tags": {
         "functions": [
-          "F14"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -163,7 +168,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,21 +180,25 @@
       "ko": "아니, 그건 말이 안 돼. 'Oral Germ Whore'여야 해. 그럼, 안녕.",
       "tags": {
         "functions": [
-          "F12"
+          "F32"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G25"
+        ],
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -198,9 +207,9 @@
       "ko": "미안, 내 홍보 담당자였어.",
       "tags": {
         "functions": [
-          "F34"
+          "F28"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -209,9 +218,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -221,20 +232,23 @@
       "ko": "사실, 트레이시 조던이 TGS의 유일한 영화 스타가 아니라는 게 마음에 들어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E07"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -244,20 +258,22 @@
       "ko": "드디어 여기서 존중받기 시작할지도 몰라.",
       "tags": {
         "functions": [
-          "F24"
+          "F14"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -267,9 +283,9 @@
       "ko": "무슨 일이야, 뚱뚱한 엉덩이? 오늘 이상해 보여.",
       "tags": {
         "functions": [
-          "F09"
+          "F25"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -278,7 +294,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,10 +306,10 @@
       "ko": "이봐, 피트, 임신한 좀비 수녀가 나오는 만화책 보고 싶어?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -301,7 +317,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -315,7 +331,7 @@
         "functions": [
           "F44"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -324,7 +340,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -336,10 +352,10 @@
       "ko": "그리고 너를 위한 영화 스크리너도 있어. 꼭 봐줬으면 해.",
       "tags": {
         "functions": [
-          "F36"
+          "F34"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -347,9 +363,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02",
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -361,7 +380,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -370,7 +389,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -382,20 +401,22 @@
       "ko": "대단한데! 빨리 보고 싶어.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E06"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V01",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -405,18 +426,18 @@
       "ko": "실망하지 않을 거야. 원작이 정말 훌륭했어.",
       "tags": {
         "functions": [
-          "F07"
+          "F20"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E07"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -428,9 +449,9 @@
       "ko": "케빈 그리샴 소설은 잘못될 일이 없어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -439,11 +460,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "ffa32cebe4b96022"
 }

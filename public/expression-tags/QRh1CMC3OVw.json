@@ -23,8 +23,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -46,10 +48,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,10 +64,10 @@
       "ko": "NBC의 수잔 기억나세요?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +75,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +87,18 @@
       "ko": "물론이죠. 잘 지내세요?",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,7 +110,7 @@
       "ko": "잘 지내요. 만나서 반가워요.",
       "tags": {
         "functions": [
-          "F25"
+          "F32"
         ],
         "situation": "S09",
         "cefr": "A1",
@@ -115,7 +121,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,7 +133,7 @@
       "ko": "이분은 크레이머예요.",
       "tags": {
         "functions": [
-          "F26"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "A1",
@@ -138,7 +144,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -161,10 +167,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -173,7 +183,7 @@
       "ko": "자, 수잔, 말해줘요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "A2",
@@ -182,9 +192,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,7 +206,7 @@
       "ko": "뭐라고요?",
       "tags": {
         "functions": [
-          "F06"
+          "F35"
         ],
         "situation": "S09",
         "cefr": "A1",
@@ -207,7 +217,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,10 +229,10 @@
       "ko": "죄송해요. 잠시만요.",
       "tags": {
         "functions": [
-          "F34"
+          "F28"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,7 +240,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,7 +252,7 @@
       "ko": "여보세요?",
       "tags": {
         "functions": [
-          "F06"
+          "F25"
         ],
         "situation": "S09",
         "cefr": "A1",
@@ -253,10 +263,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,10 +279,10 @@
       "ko": "안녕하세요. TMI 장거리 서비스로 바꾸실 생각 있으세요?",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S24",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -276,7 +290,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,18 +302,18 @@
       "ko": "아, 지금은 통화할 수 없어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S24",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,10 +325,11 @@
       "ko": "집 번호를 주시면 나중에 전화할게요.",
       "tags": {
         "functions": [
-          "F34"
+          "F36",
+          "F40"
         ],
-        "situation": "S24",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -322,9 +337,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -334,20 +351,22 @@
       "ko": "아, 죄송하지만 그건 할 수 없어요.",
       "tags": {
         "functions": [
-          "F43"
+          "F28"
         ],
-        "situation": "S24",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -357,18 +376,18 @@
       "ko": "아, 집에 전화 오는 걸 원하지 않으시군요.",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -380,9 +399,9 @@
       "ko": "아니요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -391,8 +410,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_fragment"
@@ -405,22 +426,23 @@
       "ko": "이제 제 기분을 아시겠네요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "f7cdf1e972e15848"
 }

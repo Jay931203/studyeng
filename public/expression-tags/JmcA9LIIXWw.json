@@ -12,10 +12,10 @@
       "ko": "모순을 파는 법을 모르는 사람이 있을까?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,7 +37,7 @@
       "ko": "너는 오고 가고, 너는 오고 가고",
       "tags": {
         "functions": [
-          "F01"
+          "F12"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -48,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -65,7 +65,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -73,7 +73,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,7 +87,7 @@
       "ko": "너는 오고 가고, 너는 오고 가고",
       "tags": {
         "functions": [
-          "F01"
+          "F12"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -98,7 +98,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,10 +112,10 @@
       "ko": "연인들은 바빴고, 그들의 색깔은 내 꿈 같았어",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -123,7 +123,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -140,7 +140,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -148,7 +148,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -165,7 +165,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,7 +173,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,10 +187,10 @@
       "ko": "그리고 너는 그렇게 달콤했었지, 내가 들었어",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -198,7 +198,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -212,20 +212,24 @@
       "ko": "내 사랑이 중독이라고",
       "tags": {
         "functions": [
-          "F09"
+          "F22"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V07",
+        "power": [
+          "P09"
+        ],
+        "grammar_intent": [
+          "G22"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -240,7 +244,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -248,7 +252,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -262,10 +266,10 @@
       "ko": "네가 가면, 영원히 사라져",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -273,7 +277,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -281,5 +285,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "008719fb022a19ad"
 }

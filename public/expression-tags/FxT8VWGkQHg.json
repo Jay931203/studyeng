@@ -15,7 +15,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,10 +35,10 @@
       "ko": "커피 한 잔 사줄 때마다 오르가즘을 느껴.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,7 +58,8 @@
       "ko": "그래, 맞아.",
       "tags": {
         "functions": [
-          "F10"
+          "F07",
+          "F53"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -74,7 +73,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -83,18 +84,18 @@
       "ko": "그녀는 정말 대단해. 스콧 씨에 대한 포인트는",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,7 +107,7 @@
       "ko": "그녀의 눈에 반짝임이 있다는 거야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -129,16 +130,16 @@
       "ko": "아마 약물 때문일 거야. 인생의 대부분을 재활원에서 보냈어.",
       "tags": {
         "functions": [
-          "F04"
+          "F14"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -152,7 +153,57 @@
       "ko": "뭐, 어쨌든 그녀는 분명히 원하고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V13",
+        "power": [],
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "FxT8VWGkQHg-7",
+      "en": "I mean, you see, most girls, they're all like, stay away, chum.",
+      "ko": "대부분의 여자들은 다들, 가까이 오지 마라, 친구야.",
+      "tags": {
+        "functions": [
+          "F50"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "FxT8VWGkQHg-8",
+      "en": "But Anna, she is absolutely gagging for it.",
+      "ko": "하지만 안나는 정말로 원하고 있어.",
+      "tags": {
+        "functions": [
+          "F10"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -165,53 +216,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "FxT8VWGkQHg-7",
-      "en": "I mean, you see, most girls, they're all like, stay away, chum.",
-      "ko": "대부분의 여자들은 다들, 가까이 오지 마라, 친구야.",
-      "tags": {
-        "functions": [
-          "F12"
+        "grammar_intent": [
+          "G16",
+          "G20"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "FxT8VWGkQHg-8",
-      "en": "But Anna, she is absolutely gagging for it.",
-      "ko": "하지만 안나는 정말로 원하고 있어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
         "flags": []
       }
     },
@@ -247,7 +255,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -258,7 +266,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -270,7 +280,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -290,10 +300,10 @@
       "ko": "정말 더러운 사람, 그냥 뒤집어서 다시 시작할 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -313,7 +323,8 @@
       "ko": "좋아, 그만해. 미안해.",
       "tags": {
         "functions": [
-          "F10"
+          "F28",
+          "F53"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -326,7 +337,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -336,16 +349,16 @@
       "ko": "아니, 정말 그럴 필요 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -359,20 +372,23 @@
       "ko": "음, 방해해서 미안한데, 여러분,",
       "tags": {
         "functions": [
-          "F34"
+          "F28",
+          "F52"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": [
           "is_fragment"
         ]
@@ -384,33 +400,11 @@
       "ko": "음, 당신들의 대화를 엿듣지 않았으면 좋았겠지만,",
       "tags": {
         "functions": [
-          "F09"
+          "F24",
+          "F52"
         ],
         "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "FxT8VWGkQHg-17",
-      "en": "but I did, and, um...",
-      "ko": "엿들었고, 음...",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -420,11 +414,38 @@
         ],
         "vibe": "V18",
         "power": [],
+        "grammar_intent": [
+          "G11",
+          "G15"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "FxT8VWGkQHg-17",
+      "en": "but I did, and, um...",
+      "ko": "엿들었고, 음...",
+      "tags": {
+        "functions": [
+          "F52"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
         "grammar_intent": [],
         "flags": [
           "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "01fc933605368fdf"
 }

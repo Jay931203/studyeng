@@ -14,7 +14,7 @@
         "functions": [
           "F27"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -26,7 +26,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -37,14 +39,14 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -60,8 +62,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -72,7 +74,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -81,13 +85,13 @@
       "ko": "그게 너를 무섭게 하지.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -104,10 +108,10 @@
       "ko": "편안하다고는 할 수 없지.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,77 +133,8 @@
         "functions": [
           "F35"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "cg1rtWXHSKU-6",
-      "en": "Got a window.",
-      "ko": "창문이 있어.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "cg1rtWXHSKU-7",
-      "en": "Four, three...",
-      "ko": "4, 3...",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "cg1rtWXHSKU-8",
-      "en": "Give him hell.",
-      "ko": "그에게 지옥을 보여줘.",
-      "tags": {
-        "functions": [
-          "F40"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -211,7 +146,83 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "contains_profanity"
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "cg1rtWXHSKU-6",
+      "en": "Got a window.",
+      "ko": "창문이 있어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S43",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "cg1rtWXHSKU-7",
+      "en": "Four, three...",
+      "ko": "4, 3...",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "cg1rtWXHSKU-8",
+      "en": "Give him hell.",
+      "ko": "그에게 지옥을 보여줘.",
+      "tags": {
+        "functions": [
+          "F35"
+        ],
+        "situation": "S43",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "contains_profanity",
+          "is_fragment"
         ]
       }
     },
@@ -221,13 +232,13 @@
       "ko": "멋져.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -235,8 +246,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "1a45bbc530c0a934"
 }

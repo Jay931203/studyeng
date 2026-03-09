@@ -12,23 +12,21 @@
       "ko": "그래서 너는 마크를 만날 때마다 실리콘 밸리의 여자들과 놀 수 있었던 거야. 전혀 사실이 아니야,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,18 +35,18 @@
       "ko": "그리고 나는 실리콘 밸리의 여자들이",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -62,8 +60,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -85,7 +83,7 @@
         "functions": [
           "F34"
         ],
-        "situation": "S50",
+        "situation": "S24",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -94,9 +92,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -108,7 +108,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -117,10 +117,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -129,19 +131,22 @@
       "ko": "좋아, 이건 좀 복잡할 거야. 어, 선물을 열어봐.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S14",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05",
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -154,8 +159,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -163,7 +168,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -177,8 +182,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -186,7 +191,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,19 +203,18 @@
       "ko": "이게 네 첫 번째야. 응. 네가 우리 계정을 동결했어? 그랬어. 네가 계정을 동결했어? 네 주목을 끌어야 했어, 마크.",
       "tags": {
         "functions": [
-          "F09",
-          "F07"
+          "F57"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -222,15 +226,13 @@
       "ko": "네가 회사 전체를 위험에 빠뜨렸다는 걸 알고 있어? 네 행동이 내가 그동안 해온 모든 것을 영구적으로 파괴할 수 있었다는 걸 알고 있어? 우리는 함께 해왔어.",
       "tags": {
         "functions": [
-          "F12",
-          "F19"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
-          "E03",
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -247,9 +249,9 @@
       "ko": "돈이 없으면 사이트는 작동하지 않아. 좋아, 페이스북과 다른 모든 것의 차이를 말해줄게. 우리는 절대 다운되지 않아.",
       "tags": {
         "functions": [
-          "F04"
+          "F39"
         ],
-        "situation": "S50",
+        "situation": "S04",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -258,7 +260,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -272,8 +274,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -281,7 +283,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -293,13 +295,13 @@
       "ko": "우리의 전체 평판은 돌이킬 수 없이 망가져. 봐, 내 계정은... 사용자들이 불만이야. 프렌스터가 그걸 증명했어. 몇몇 사람들이 떠나는 것만으로도",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -316,10 +318,9 @@
       "ko": "전체 사용자 기반에 영향을 미칠 거야. 사용자들은 서로 연결되어 있어. 그게 핵심이야. 대학생들이 온라인에 있는 이유는 친구들이 온라인에 있기 때문이고, 만약 하나의 도미노가 넘어지면,",
       "tags": {
         "functions": [
-          "F12",
-          "F09"
+          "F04"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -328,9 +329,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -340,13 +343,13 @@
       "ko": "다른 도미노들도 넘어져. 그걸 이해하지 못해?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -363,10 +366,10 @@
       "ko": "나는 85년 카리브해의 밤으로 돌아가지 않을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -374,7 +377,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -386,24 +389,30 @@
       "ko": "세상에!",
       "tags": {
         "functions": [
-          "F18"
+          "F17"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S14",
+        "cefr": "A1",
+        "register": "R5",
         "emotions": [
+          "E03",
           "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06",
+          "G07"
+        ],
         "flags": [
-          "contains_profanity"
+          "contains_profanity",
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "1174d32407fc5ea2"
 }

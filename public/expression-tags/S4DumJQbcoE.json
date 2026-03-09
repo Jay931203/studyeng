@@ -12,10 +12,11 @@
       "ko": "뭐야? 고마워.",
       "tags": {
         "functions": [
-          "F25"
+          "F25",
+          "F27"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,10 +24,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,20 +38,22 @@
       "ko": "젠장, 정말 맛있어. 너의 여자친구는 어때?",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S09",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -60,18 +65,18 @@
       "ko": "응, 그녀는 떠났어. 떠났다고? 어디로?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,18 +88,18 @@
       "ko": "의대야. 캘리포니아의 의대. 정말? 언제?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S09",
+        "situation": "S19",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -108,8 +113,8 @@
         "functions": [
           "F02"
         ],
-        "situation": "S09",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -117,7 +122,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,21 +134,24 @@
       "ko": "그거 안타깝네.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -154,16 +162,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -177,7 +185,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -186,7 +194,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -200,17 +208,19 @@
         "functions": [
           "F06"
         ],
-        "situation": "S09",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -221,23 +231,21 @@
       "ko": "응, 다음 50년 동안 방에 앉아서 나눗셈만 하면 좋겠네.",
       "tags": {
         "functions": [
-          "F12"
+          "F03"
         ],
-        "situation": "S09",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -246,20 +254,27 @@
       "ko": "그래도 꽤 괜찮은 돈 벌겠지. 난 그냥 실험용 쥐가 될 거야. 이거보단 나아.",
       "tags": {
         "functions": [
-          "F12"
+          "F17",
+          "F13"
         ],
-        "situation": "S09",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X05",
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G06",
+          "G10"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -271,9 +286,9 @@
       "ko": "여기서 나가야 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -282,11 +297,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "eff0ca0bfa706103"
 }

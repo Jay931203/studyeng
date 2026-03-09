@@ -14,8 +14,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,11 +35,11 @@
       "ko": "오늘 저와 제 형이 당신에게 정중히 요청하러 온 것은,",
       "tags": {
         "functions": [
-          "F34"
+          "F44"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -47,7 +47,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -60,9 +62,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -83,8 +85,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,20 +106,22 @@
       "ko": "네, 선생님. 하우스 마스터가 광고 위원회에 추천을 했지만,",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -129,9 +133,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -152,8 +156,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,11 +177,11 @@
       "ko": "저희는 지난 2주 동안 마크 저커버그에게 이메일이나 전화로 연락했지만,",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -198,8 +202,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -221,19 +225,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -244,8 +250,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,10 +271,10 @@
       "ko": "그를 쿼드에서 보고 하버드 스퀘어를 통해 쫓아간 것이 전부입니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F21"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,10 +294,10 @@
       "ko": "당신이 그를 쫓았다고요?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -311,10 +317,10 @@
       "ko": "네, 쫓았고 그가 저를 봤다는 걸 압니다. 그를 쫓았지만, 그는 사라졌습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -334,10 +340,10 @@
       "ko": "저는 이 문제를 대학 문제로 보지 않습니다.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -357,11 +363,11 @@
       "ko": "물론 이건 대학 문제입니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F44"
         ],
-        "situation": "S20",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -369,7 +375,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -380,11 +388,11 @@
       "ko": "윤리 강령과 명예 규정이 있으며, 그는 둘 다 위반했습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S20",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -403,11 +411,11 @@
       "ko": "당신은 대학과 윤리 강령을 맺는 것이지 서로와 맺는 것이 아닙니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S20",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -426,20 +434,24 @@
       "ko": "죄송합니다, 서머스 총장님, 하지만 당신이 방금 말씀하신 것은 전혀 이해가 되지 않습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F28"
         ],
-        "situation": "S20",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -451,9 +463,9 @@
         "functions": [
           "F16"
         ],
-        "situation": "S20",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E02"
         ],
@@ -472,11 +484,11 @@
       "ko": "제 형이 말하고자 하는 것은 만약 마크 저커버그가 우리 기숙사에 들어와서 우리의 컴퓨터를 훔친다면,",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S20",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -497,9 +509,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S20",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -518,18 +530,18 @@
       "ko": "저는 정말 모르겠습니다. 이 사무실은 사소한 절도 사건을 다루지 않습니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S20",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V15",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -541,18 +553,18 @@
       "ko": "이건 사소한 절도가 아닙니다. 수백만 달러? 맞습니다.",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S20",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V15",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -566,19 +578,22 @@
         "functions": [
           "F14"
         ],
-        "situation": "S20",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -587,11 +602,11 @@
       "ko": "선생님.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S20",
+        "situation": "S50",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -606,5 +621,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "30f36f27bb0493fa"
 }

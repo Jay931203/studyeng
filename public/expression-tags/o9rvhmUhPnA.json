@@ -12,20 +12,22 @@
       "ko": "사실, 나는 이제 하루도 여행을 가지 않아.",
       "tags": {
         "functions": [
-          "F01"
+          "F64"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S40",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G22"
+        ],
         "flags": []
       }
     },
@@ -35,20 +37,24 @@
       "ko": "매일을 마치 일부러 이 하루로 돌아온 것처럼 살려고 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F59"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E10"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V01",
+        "power": [
+          "P06"
+        ],
+        "grammar_intent": [
+          "G14"
+        ],
         "flags": []
       }
     },
@@ -58,20 +64,26 @@
       "ko": "내 특별하고 평범한 삶의 마지막 날인 것처럼 즐기려고 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F59",
+          "F13"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E10"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V01",
+        "power": [
+          "P06"
+        ],
+        "grammar_intent": [
+          "G10",
+          "G14"
+        ],
         "flags": []
       }
     },
@@ -81,18 +93,18 @@
       "ko": "처음에 많은 것을 잘하지 못해.",
       "tags": {
         "functions": [
-          "F12"
+          "F03"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,16 +118,16 @@
         "functions": [
           "F05"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,18 +139,18 @@
       "ko": "이제 모든 잘못된 길과 넘어짐이 나를 여기로 데려왔다는 걸 알아.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,19 +162,23 @@
       "ko": "안녕, 벌써 내려왔구나. 정말 고마워.",
       "tags": {
         "functions": [
-          "F25"
+          "F25",
+          "F27"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V02",
-        "power": [],
+        "vibe": "V07",
+        "power": [
+          "P01",
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -173,18 +189,18 @@
       "ko": "아, 우리가 못했나?",
       "tags": {
         "functions": [
-          "F11"
+          "F06"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +212,18 @@
       "ko": "포지! 포지!",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -215,5 +231,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "c1ee7529fc29b70a"
 }

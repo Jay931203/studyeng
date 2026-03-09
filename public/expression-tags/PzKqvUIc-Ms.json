@@ -12,11 +12,11 @@
       "ko": "나일스 크레인입니다. 만나서 반갑습니다. 아, 당신도요. 와, 이거 신기하네요. 그는 정말,",
       "tags": {
         "functions": [
-          "F25"
+          "F07"
         ],
-        "situation": "S09",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -35,10 +35,12 @@
       "ko": "당신이 처음 만났을 때와 똑같이 생겼어요. 무슨 일이 있었던 거죠?",
       "tags": {
         "functions": [
-          "F09"
+          "F06",
+          "F13",
+          "F55"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +50,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -58,9 +62,10 @@
       "ko": "당신이 운영하던 곳은 건강 클럽이라고 하긴 힘들었죠, 샘.",
       "tags": {
         "functions": [
-          "F04"
+          "F07",
+          "F10"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -71,7 +76,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -81,19 +88,21 @@
       "ko": "이건 이상해요, 말씀드려야겠어요. 사실, 저는 그에게 형이 있다는 걸 몰랐어요.",
       "tags": {
         "functions": [
-          "F03"
+          "F56"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -104,16 +113,16 @@
       "ko": "프레이저, 제가 말씀드리지만, 당신이 맥주 애호가들과 재치 있는 대화를 나누는 동안",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -127,20 +136,22 @@
       "ko": "형이 있다는 걸 한 번도 언급하지 않은 게 좀 기분 나빠요? 아니, 사실,",
       "tags": {
         "functions": [
-          "F17"
+          "F43"
         ],
-        "situation": "S09",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E16"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -150,18 +161,18 @@
       "ko": "진실은, 아마 그가 뭔가 말했을 거예요. 그냥 프레이저가 이야기할 때는",
       "tags": {
         "functions": [
-          "F14"
+          "F64"
         ],
-        "situation": "S09",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,10 +184,10 @@
       "ko": "귀를 기울이기가 힘들어요. 그의 라디오 쇼에 잘 어울리는 슬로건이죠. 닥터 프레이저 크레인, 그가 이야기할 때는,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,11 +207,11 @@
       "ko": "귀를 기울이기가 힘들어요. 이봐, 샘, 나에 대해 뭐라고 했어요? 아버지, 그 옛날 경찰.",
       "tags": {
         "functions": [
-          "F06"
+          "F45"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -219,13 +230,13 @@
       "ko": "그는 당신이 죽었다고 했어요. 죽었다고요? 음, 우리는 다툼이 있었죠. 그는 저를 고리타분하다고 하고",
       "tags": {
         "functions": [
-          "F03"
+          "F06"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -242,10 +253,10 @@
       "ko": "전화를 끊었어요. 저는 화가 났어요.",
       "tags": {
         "functions": [
-          "F16"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -253,11 +264,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "2a494eaafeb5b3dc"
 }

@@ -12,23 +12,21 @@
       "ko": "사랑이 없지만, 나는 처음부터 너에게 내 애정을 주었어.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R5",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,13 +35,13 @@
       "ko": "나를 사랑하는 연인이 있어.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
-        "register": "R5",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
@@ -51,9 +49,7 @@
         "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -62,23 +58,21 @@
       "ko": "어떻게 그런 마음을 아프게 할 수 있을까? 그럼에도 불구하고 너는 내 관심을 끌어.",
       "tags": {
         "functions": [
-          "F17"
+          "F06"
         ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R5",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E02"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -87,23 +81,21 @@
       "ko": "내가 힘든 걸 알면서 왜 여기 오는 거야?",
       "tags": {
         "functions": [
-          "F19"
+          "F21"
         ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R5",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -112,23 +104,23 @@
       "ko": "내가 전화를 받을 수 없다는 걸 알면서 왜 나에게 전화하는 거야?",
       "tags": {
         "functions": [
-          "F19"
+          "F06"
         ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R5",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
       }
     },
     {
@@ -137,23 +129,23 @@
       "ko": "원하지 않을 때 나를 사랑하게 하고, 다른 사람을 알 수 없는 바보로 만들어.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R5",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E02"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V09",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
       }
     },
     {
@@ -162,23 +154,21 @@
       "ko": "내가 있어야 할 곳이 아닌데도 너는 나를 붙잡아.",
       "tags": {
         "functions": [
-          "F22"
+          "F58"
         ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R5",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -187,24 +177,23 @@
       "ko": "너는 그렇게 강한 건가, 아니면 모든 약점이 너에게 있는 건가?",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R5",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "879a717417d40b79"
 }

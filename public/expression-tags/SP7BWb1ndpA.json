@@ -14,9 +14,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -35,10 +35,10 @@
       "ko": "포크피크와 세 개의 화물창, 이사회 6번에서요. 맞습니다, 선장님.",
       "tags": {
         "functions": [
-          "F01"
+          "F07"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -58,20 +58,22 @@
       "ko": "언제 출항할 수 있습니까, 젠장?",
       "tags": {
         "functions": [
-          "F06"
+          "F17"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -85,9 +87,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -97,7 +99,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -106,13 +110,13 @@
       "ko": "처음 네 개 구역이 파손되어도 떠 있을 수 있지만, 다섯 개는 안 됩니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -120,7 +124,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -131,9 +137,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S08",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -143,7 +149,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -152,13 +160,13 @@
       "ko": "선미가 가라앉으면서 물이 격벽 위로 넘칠 것입니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -177,9 +185,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -200,11 +208,11 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -221,11 +229,11 @@
       "ko": "펌프를 열면...",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -235,7 +243,10 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -244,13 +255,13 @@
       "ko": "펌프는 시간을 벌어주지만, 몇 분밖에 안 됩니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -258,7 +269,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -267,11 +280,11 @@
       "ko": "지금 이 순간부터, 우리가 무엇을 하든,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -292,11 +305,11 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -313,13 +326,13 @@
       "ko": "하지만 이 배는 침몰할 수 없습니다.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -336,20 +349,22 @@
       "ko": "그녀는 철로 만들어졌습니다, 선장님. 확신합니다, 침몰할 수 있습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
-          "E07"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -361,9 +376,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
-        "register": "R2",
+        "situation": "S08",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -373,7 +388,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -384,9 +401,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -396,7 +413,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -407,9 +426,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
-        "cefr": "A2",
-        "register": "R2",
+        "situation": "S08",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -430,9 +449,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
-        "register": "R2",
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -442,8 +461,12 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "68229ccd0086c9eb"
 }

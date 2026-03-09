@@ -12,19 +12,18 @@
       "ko": "그녀는 하나 얻고 그는 하나 잃어. 너는 뭐하고 있었어? 나는 뭐했지?",
       "tags": {
         "functions": [
-          "F01",
           "F06"
         ],
         "situation": "S36",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -36,19 +35,18 @@
       "ko": "너도 알다시피, 나는 직장이 있어.",
       "tags": {
         "functions": [
-          "F01",
-          "F02"
+          "F01"
         ],
         "situation": "S36",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,7 +58,7 @@
       "ko": "저기요, 여기는 흡연 구역이 아닙니다.",
       "tags": {
         "functions": [
-          "F35"
+          "F28"
         ],
         "situation": "S36",
         "cefr": "A2",
@@ -71,9 +69,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -83,20 +85,21 @@
       "ko": "여기는 비밀 구역이에요. 나가세요. 나가세요! 이게 뭐죠? 주소 변경. 누구를 위한 거죠?",
       "tags": {
         "functions": [
-          "F04",
           "F06"
         ],
         "situation": "S36",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -118,7 +121,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -132,18 +135,18 @@
       "ko": "아, 나는 네 옛 주소도 모르는 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S36",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -155,7 +158,7 @@
       "ko": "이제 내 새 주소를 알게 되었네.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
         "situation": "S36",
         "cefr": "A2",
@@ -164,9 +167,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -181,15 +184,15 @@
           "F09"
         ],
         "situation": "S36",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -201,7 +204,7 @@
       "ko": "자, 돌려줘.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S36",
         "cefr": "A2",
@@ -210,9 +213,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -224,18 +227,18 @@
       "ko": "아, 안 돼, 안 돼, 안 돼, 안 돼.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
         "situation": "S36",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -247,32 +250,9 @@
       "ko": "이건 내 '먹고 기도하고 사랑하라' 책에 들어갈 거야.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S36",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "_royauacHzU-11",
-      "en": "Oh, Zach, there you are.",
-      "ko": "아, 잭, 거기 있었구나.",
-      "tags": {
-        "functions": [
-          "F25"
-        ],
-        "situation": "S36",
+        "situation": "S05",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -281,7 +261,32 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "_royauacHzU-11",
+      "en": "Oh, Zach, there you are.",
+      "ko": "아, 잭, 거기 있었구나.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S36",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -293,21 +298,22 @@
       "ko": "재키와 나는 방금 작은 대화를 나누고 있었어. 안녕. 미안해. 천천히 해. 우리는 여기서 기다리는 거 신경 쓰지 않아.",
       "tags": {
         "functions": [
-          "F34",
-          "F09"
+          "F28"
         ],
         "situation": "S36",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -317,20 +323,22 @@
       "ko": "내가 말했듯이, 우리는 너를 다시 원해.",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
         "situation": "S36",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -346,15 +354,17 @@
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -369,12 +379,12 @@
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -386,7 +396,7 @@
       "ko": "음, 사무실 공간과...",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S14",
         "cefr": "A2",
@@ -395,13 +405,14 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "abe0856eb1ac2f60"
 }

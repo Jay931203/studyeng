@@ -12,7 +12,8 @@
       "ko": "내 인생에서 이렇게 아름다운 것은 처음 봤어.",
       "tags": {
         "functions": [
-          "F02"
+          "F30",
+          "F43"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -23,9 +24,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -35,23 +39,27 @@
       "ko": "그녀는 마치 천사 같았어. 앉을 거지? 다리가 왜 그래? 나는 괜찮아, 고마워.",
       "tags": {
         "functions": [
-          "F09",
-          "F06",
-          "F34"
+          "F27"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G19"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -60,10 +68,10 @@
       "ko": "내 다리는 아주 괜찮아.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -83,7 +91,7 @@
       "ko": "나는 그 버스에서 그녀 옆에 앉아 학교까지 대화를 나눴어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -106,10 +114,10 @@
       "ko": "엄마는 내 등이 물음표처럼 구부러졌다고 하셔. 이건 나를 곧게 만들어 줄 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,7 +137,7 @@
       "ko": "엄마 외에는 아무도 나에게 말을 걸거나 질문하지 않았어.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -152,13 +160,14 @@
       "ko": "너 바보야?",
       "tags": {
         "functions": [
-          "F11"
+          "F06",
+          "F58"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -175,7 +184,7 @@
       "ko": "엄마는 바보는 바보처럼 행동하는 거라고 하셔.",
       "tags": {
         "functions": [
-          "F04"
+          "F58"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -198,7 +207,7 @@
       "ko": "나는 제니야.",
       "tags": {
         "functions": [
-          "F26"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -212,7 +221,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -221,30 +232,7 @@
       "ko": "나는 포레스트야.",
       "tags": {
         "functions": [
-          "F26"
-        ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "-pYA8Nu2dDM-10",
-      "en": "Forrest, come up.",
-      "ko": "포레스트, 올라와.",
-      "tags": {
-        "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -258,7 +246,34 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "-pYA8Nu2dDM-10",
+      "en": "Forrest, come up.",
+      "ko": "포레스트, 올라와.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -267,7 +282,7 @@
       "ko": "그날 이후로 우리는 항상 함께였어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -278,7 +293,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,7 +305,7 @@
       "ko": "그녀와 나는 완벽한 짝이었어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -304,7 +319,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -313,10 +330,10 @@
       "ko": "그녀는 나에게 오르는 법을 가르쳐 줬어.",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -327,8 +344,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "8628a72acc0c3aba"
 }

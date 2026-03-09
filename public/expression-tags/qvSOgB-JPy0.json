@@ -12,19 +12,21 @@
       "ko": "그건 무릎 꿇는 의자야.",
       "tags": {
         "functions": [
-          "F01"
+          "F12"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -35,18 +37,18 @@
       "ko": "내 아들, 네 죄를 말해보아라.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S29",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,19 +60,21 @@
       "ko": "음, 나는 유대인이라는 걸 언급해야겠어. 그건 죄가 아니야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S29",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -81,21 +85,23 @@
       "ko": "아, 좋군.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,18 +110,18 @@
       "ko": "어쨌든, 나는 너와 왓리 박사에 대해 이야기하고 싶었어.",
       "tags": {
         "functions": [
-          "F03"
+          "F48"
         ],
-        "situation": "S29",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,18 +133,18 @@
       "ko": "그는 농담을 위해서만 유대교로 개종한 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S29",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,17 +158,19 @@
         "functions": [
           "F06"
         ],
-        "situation": "S29",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -173,19 +181,21 @@
       "ko": "아니, 나는 코미디언으로서 불쾌해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S29",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -196,22 +206,25 @@
       "ko": "그리고 그가 가톨릭 농담도 하고 있다는 걸 알면 흥미로울 거야.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S29",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "bafe3e86f3922846"
 }

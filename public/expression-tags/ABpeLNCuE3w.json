@@ -12,10 +12,10 @@
       "ko": "나도 교도관이야. 교도관은 아니지만.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,13 +35,13 @@
       "ko": "주님, 기적이야!",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -58,33 +58,10 @@
       "ko": "남자는 사라졌어, 바람처럼. 남은 건...",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "ABpeLNCuE3w-3",
-      "en": "some damn rocks on the windowsill...",
-      "ko": "창턱에 있는 몇 개의 돌뿐...",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -96,7 +73,35 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "contains_profanity"
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "ABpeLNCuE3w-3",
+      "en": "some damn rocks on the windowsill...",
+      "ko": "창턱에 있는 몇 개의 돌뿐...",
+      "tags": {
+        "functions": [
+          "F17"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": [
+          "contains_profanity",
+          "is_fragment"
         ]
       }
     },
@@ -106,9 +111,9 @@
       "ko": "그리고 벽에 있는 컵케이크.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -129,20 +134,24 @@
       "ko": "그녀에게 물어보자. 아마 그녀가 알지도 몰라.",
       "tags": {
         "functions": [
-          "F06"
+          "F36",
+          "F14"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -154,7 +163,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -175,10 +184,10 @@
       "ko": "아, 아닌 것 같네.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -189,7 +198,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -198,10 +209,10 @@
       "ko": "그녀가 다를 이유가 없지.",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -221,10 +232,10 @@
       "ko": "이건 음모야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -244,20 +255,22 @@
       "ko": "바로 이거야. 하나의 큰... 음모!",
       "tags": {
         "functions": [
-          "F12"
+          "F17"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -269,10 +282,10 @@
       "ko": "모두가 이 음모에 연루되어 있어! 그녀도 포함해서.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -294,8 +307,8 @@
         "functions": [
           "F27"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -309,5 +322,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "0a90af3ffd09bc7e"
 }

@@ -12,10 +12,10 @@
       "ko": "우주 탐사가 활발해지면 모든 이름을 지을 것은 기업들이 될 것입니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -37,53 +37,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "8pDY_9u5Sn0-2",
-      "en": "I'm gonna need you out of town a little more this week. We've got some red flags to cover.",
-      "ko": "이번 주에는 당신이 좀 더 외곽에 있어야 할 것 같아요. 해결해야 할 문제들이 있습니다.",
-      "tags": {
-        "functions": [
-          "F35"
-        ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "8pDY_9u5Sn0-3",
-      "en": "It must have been Tuesday. He was wearing his cornflower blue tie.",
-      "ko": "화요일이었을 거예요. 그는 옥색 넥타이를 매고 있었죠.",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S50",
+        "situation": "S39",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -95,7 +49,60 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "8pDY_9u5Sn0-2",
+      "en": "I'm gonna need you out of town a little more this week. We've got some red flags to cover.",
+      "ko": "이번 주에는 당신이 좀 더 외곽에 있어야 할 것 같아요. 해결해야 할 문제들이 있습니다.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S39",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05",
+          "X07"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
         "flags": []
+      }
+    },
+    {
+      "id": "8pDY_9u5Sn0-3",
+      "en": "It must have been Tuesday. He was wearing his cornflower blue tie.",
+      "ko": "화요일이었을 거예요. 그는 옥색 넥타이를 매고 있었죠.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S39",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -104,11 +111,11 @@
       "ko": "현재 보고서를 우선순위에서 낮추라는 건가요? 상태 업데이트를 알려줄 때까지요?",
       "tags": {
         "functions": [
-          "F34"
+          "F39"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S39",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -127,11 +134,11 @@
       "ko": "이것들을 주요 작업 항목으로 삼으세요. 비행 쿠폰입니다. 도중에 문제가 생기면 전화하세요.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S39",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -139,7 +146,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P11"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -150,21 +159,23 @@
       "ko": "그는 에너지가 넘쳤어요. 아마 그란데 라떼 관장을 했겠죠.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S39",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -173,10 +184,10 @@
       "ko": "많은 이들처럼, 저는 IKEA의 둥지 본능에 사로잡혔습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,10 +207,10 @@
       "ko": "네, 에리카 피카리 먼지 커버를 주문하고 싶어요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -208,8 +219,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -219,16 +234,16 @@
       "ko": "만약 제가 음양 모양의 작은 커피 테이블 같은 기발한 것을 본다면, 꼭 가져야 했습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F57"
         ],
-        "situation": "S50",
+        "situation": "S39",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -244,8 +259,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -256,7 +271,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -267,8 +284,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -290,8 +307,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -305,5 +322,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "8cfba55ed9dc2b7d"
 }

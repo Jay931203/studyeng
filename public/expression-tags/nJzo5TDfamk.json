@@ -13,9 +13,9 @@
       "tags": {
         "functions": [
           "F25",
-          "F06"
+          "F33"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -25,7 +25,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -36,10 +38,9 @@
       "ko": "대화했었죠. 아까 전화했었죠? 두 시간 전. 맞아요. 네.",
       "tags": {
         "functions": [
-          "F03",
-          "F06"
+          "F07"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -60,21 +61,22 @@
       "ko": "떠오르는 신예에 대해 들어본 적 없죠. 그게 무슨 뜻인지예요. 주당 3센트.",
       "tags": {
         "functions": [
-          "F01",
-          "F04"
+          "F43"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E16"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -84,18 +86,18 @@
       "ko": "그건 3달러야, 싸구려야.",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -109,11 +111,11 @@
       "ko": "그럼, 당신의 쿼트론은 어디 있어요? 쿼트론? 네, 당신의 컴퓨터요.",
       "tags": {
         "functions": [
-          "F06",
-          "F34"
+          "F07",
+          "F48"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -133,11 +135,10 @@
       "ko": "아니요, 여기서는 컴퓨터도 필요 없어요. 그냥 핑크 시트에서 거래해요. 핑크 시트? 네, 그건 페니 주식이에요.",
       "tags": {
         "functions": [
-          "F01",
-          "F04"
+          "F07"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -157,10 +158,9 @@
       "ko": "NASDAQ에 상장될 수 없는 회사들. 자본이 부족해요.",
       "tags": {
         "functions": [
-          "F01",
-          "F04"
+          "F21"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -181,11 +181,10 @@
       "ko": "그들의 주식은 여기서 거래돼요. 페니 주식? 네.",
       "tags": {
         "functions": [
-          "F01",
-          "F04"
+          "F07"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -205,9 +204,9 @@
       "ko": "이거, 에어로타인, 정말 흥미로운...",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -219,7 +218,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -228,16 +229,17 @@
       "ko": "아니면, 에어로타인. 에어로타인, 맞아요.",
       "tags": {
         "functions": [
-          "F02"
+          "F07",
+          "F52"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -251,10 +253,9 @@
       "ko": "에어로... 에어로타인. 에어로타인, 맞아요. 지금 매우 인기 있는 주식이에요. 그래요?",
       "tags": {
         "functions": [
-          "F02",
-          "F01"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -275,21 +276,24 @@
       "ko": "네, 그들은 그냥 차고에서 레이더 탐지기를 만드는 형제들이에요. 그들은 두뷰크에 있어요. 아마도 마이크로웨이브일 거예요.",
       "tags": {
         "functions": [
-          "F01",
-          "F04"
+          "F07",
+          "F14"
         ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -299,9 +303,9 @@
       "ko": "잘 모르겠지만, 회사의 대표 전화로 전화해 보세요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -312,7 +316,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -322,10 +328,9 @@
       "ko": "그들의 엄마, 도로시가 받는데, 정말 친절해요. 그 회사? 사실 그 외에는 잘 모르겠어요...",
       "tags": {
         "functions": [
-          "F01",
-          "F09"
+          "F08"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -334,10 +339,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -348,9 +355,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -358,8 +365,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -369,16 +380,16 @@
       "ko": "주당 6센트? 제발.",
       "tags": {
         "functions": [
-          "F09"
+          "F45"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -386,5 +397,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "02f390b63a292466"
 }

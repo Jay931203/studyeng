@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -37,9 +37,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -58,9 +58,10 @@
       "ko": "맞아요. 에이미는 어떤 사람인가요?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F53"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -81,9 +82,9 @@
       "ko": "그녀는 싱글인가요? 아니요. 우리는 사귀고 있어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -104,16 +105,16 @@
       "ko": "자, 질문은 여기서 누가 레이몬드 홀트 선장을 가장 잘 흉내 내는가입니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F45"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -129,8 +130,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -152,7 +153,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -175,7 +176,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -198,8 +199,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -219,9 +220,9 @@
       "ko": "홀트 대결을 시작합시다!",
       "tags": {
         "functions": [
-          "F62"
+          "F35"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -242,10 +243,10 @@
       "ko": "내 앞에 있는 이 끈적한 괴물은 뭐지?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,18 +266,18 @@
       "ko": "이건 꽤 달콤하군요. 오!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,10 +289,10 @@
       "ko": "아하하하하! 그게 네 홀트 흉내라고? 그 소리가 들려.",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -311,13 +312,13 @@
       "ko": "끈적한 베개 같아. 난 별로야.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E08"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -334,10 +335,10 @@
       "ko": "클래식 음악. 여기서 무슨 일이야? 뭐하고 있어? 선장, 그냥 마시멜로 먹고 있어.",
       "tags": {
         "functions": [
-          "F06"
+          "F60"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -346,7 +347,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -357,10 +360,10 @@
       "ko": "마시멜로 좀 먹고 있어. 하나 드릴래?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -368,7 +371,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -380,9 +383,9 @@
       "ko": "마시-멜로. 흠! 하하하하!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -403,10 +406,10 @@
       "ko": "하하하하하하하하하!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -428,13 +431,13 @@
       "ko": "이봐, 찰스, 집에 가기 전에 맥주 한 잔 할래? 오, 효모 잔치. 괜찮아. 아니, 아니, 난 가고 싶어.",
       "tags": {
         "functions": [
-          "F18"
+          "F23"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -451,10 +454,10 @@
       "ko": "그냥 먼저 처리해야 할 큰 긴급 상황이 있어.",
       "tags": {
         "functions": [
-          "F34"
+          "F43"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -464,7 +467,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -474,22 +480,23 @@
       "ko": "처리해야 할 큰 비상 상황이 있어서.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E15"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "e7d71b0fe3ad0001"
 }

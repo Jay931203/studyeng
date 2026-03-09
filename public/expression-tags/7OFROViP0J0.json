@@ -12,10 +12,10 @@
       "ko": "한쪽 팔에는 푸들, 다른 쪽 팔에는 두 피트 살라미를 들고.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,10 +35,10 @@
       "ko": "그녀는 푸들을 테이블 위에 놓는다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -49,7 +49,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -58,7 +60,7 @@
       "ko": "바텐더가 말한다.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -72,7 +74,10 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,20 +86,22 @@
       "ko": "술은 필요 없겠군요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -104,7 +111,7 @@
       "ko": "벌거벗은 여자가 말한다...",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -118,7 +125,10 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -127,13 +137,13 @@
       "ko": "아, 젠장!",
       "tags": {
         "functions": [
-          "F17"
+          "F15"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -152,16 +162,16 @@
       "ko": "예수님, 맙소사!",
       "tags": {
         "functions": [
-          "F18"
+          "F14"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -175,7 +185,7 @@
       "ko": "연필을 잊어버렸어.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -189,7 +199,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -201,7 +213,7 @@
           "F17"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -209,9 +221,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -226,7 +240,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -269,10 +283,11 @@
       "ko": "사무실에 있었는데 소란이 들렸어.",
       "tags": {
         "functions": [
-          "F02"
+          "F05",
+          "F57"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -292,11 +307,11 @@
       "ko": "소란을 설명해 주시겠어요, 선생님?",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
         "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -305,7 +320,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -315,10 +332,10 @@
       "ko": "말 조심해, 젊은이. 조심해.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -341,7 +358,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -375,9 +392,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -412,7 +427,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -423,10 +438,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "70de5004a4f7f5e8"
 }

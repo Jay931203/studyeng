@@ -12,9 +12,9 @@
       "ko": "괜찮아. 다 괜찮아. 오, 세상에. 좋아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -23,12 +23,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G05"
+        ],
+        "flags": []
       }
     },
     {
@@ -37,20 +37,24 @@
       "ko": "내가 너를 얼마나 사랑할까?",
       "tags": {
         "functions": [
-          "F09"
+          "F22"
         ],
-        "situation": "S44",
+        "situation": "S40",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V07",
+        "power": [
+          "P09"
+        ],
+        "grammar_intent": [
+          "G22"
+        ],
         "flags": []
       }
     },
@@ -60,20 +64,22 @@
       "ko": "별이 너 위에 있는 한? 좋아.",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -83,10 +89,10 @@
       "ko": "내가 할 수 있다면 더 오래. 좋아. 내가 너를 얼마나 필요할까?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -94,9 +100,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -106,9 +114,9 @@
       "ko": "걱정하지 마. 들어와.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -117,9 +125,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G05"
+        ],
         "flags": []
       }
     },
@@ -129,20 +139,22 @@
       "ko": "내일 계절이 만나는 한?",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -152,20 +164,22 @@
       "ko": "내가 할 수 있는 한.",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -177,7 +191,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -186,7 +200,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,20 +212,22 @@
       "ko": "내가 사는 한?",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -223,7 +239,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -232,9 +248,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -244,20 +262,24 @@
       "ko": "내가 너를 얼마나 사랑할까?",
       "tags": {
         "functions": [
-          "F09"
+          "F22"
         ],
-        "situation": "S44",
+        "situation": "S40",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V07",
+        "power": [
+          "P09"
+        ],
+        "grammar_intent": [
+          "G22"
+        ],
         "flags": []
       }
     },
@@ -267,22 +289,25 @@
       "ko": "별이 너 위에 있는 한?",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "9a1b0303750c051a"
 }

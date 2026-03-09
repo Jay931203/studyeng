@@ -12,11 +12,11 @@
       "ko": "너에게 잘 자라고 말하려고",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,11 +35,11 @@
       "ko": "너를 위해 노래할게, 엄마를 위해 노래할게",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A2",
-        "register": "R5",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -51,9 +49,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -62,11 +58,11 @@
       "ko": "우리는 세상을 위해 기도하고 있어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -76,9 +72,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -87,11 +81,11 @@
       "ko": "그리고 어디에나 있는 사람들을 위해",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -101,9 +95,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -112,7 +104,7 @@
       "ko": "우리가 걱정하고 있다는 걸 모두에게 보여줄 거야",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
@@ -121,14 +113,14 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V02",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -137,11 +129,11 @@
       "ko": "오, 잠든 내 아이",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -151,9 +143,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -162,23 +152,21 @@
       "ko": "세상이 너무 거칠어서 너만의",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A2",
-        "register": "R5",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V17",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -187,11 +175,11 @@
       "ko": "천국을 만들었구나, 그게 바로",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -201,9 +189,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -212,11 +198,11 @@
       "ko": "내가 너를 지켜줄게, 잠든 아이야",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -226,9 +212,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -237,11 +221,11 @@
       "ko": "전 세계의 모든 사람들이",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A2",
-        "register": "R5",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -251,9 +235,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -262,11 +244,11 @@
       "ko": "너 같은 마음을 가졌다면",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -276,9 +258,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -287,11 +267,11 @@
       "ko": "싸움도 전쟁도 없을 텐데",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A2",
-        "register": "R5",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -300,11 +280,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "grammar_intent": [
+          "G23"
+        ],
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "c1e4b0e80609cfc6"
 }

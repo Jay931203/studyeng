@@ -12,7 +12,7 @@
       "ko": "돈이 없다고? 괜찮아.",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -69,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,7 +81,7 @@
       "ko": "이런 집밥은 그만. 올리브 가든으로 갈 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -95,9 +95,7 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -106,7 +104,8 @@
       "ko": "네. 정말 고마워.",
       "tags": {
         "functions": [
-          "F27"
+          "F27",
+          "F07"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -140,7 +139,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,7 +151,7 @@
       "ko": "시체 처리 외에도 파워포인트와 엑셀을 사용할 줄 알아야 해.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "B1",
@@ -163,7 +162,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -187,7 +186,9 @@
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -201,7 +202,7 @@
           "F27"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -215,5 +216,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "054ecd5355114a3e"
 }

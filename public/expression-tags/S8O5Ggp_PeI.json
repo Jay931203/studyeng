@@ -12,20 +12,24 @@
       "ko": "이상하게도, 그건 완전히 사실이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F10"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -35,10 +39,10 @@
       "ko": "나는 다시 할머니를 방문할 예정이었어.",
       "tags": {
         "functions": [
-          "F03"
+          "F02"
         ],
-        "situation": "S01",
-        "cefr": "A2",
+        "situation": "S10",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +50,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,9 +62,9 @@
       "ko": "그리고 이건... 내 가족이야. 확대된 가족.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S01",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -69,7 +73,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,9 +85,9 @@
       "ko": "그냥 그를 데리고 나올 수 있어. 누구를? 러시아 경비원.",
       "tags": {
         "functions": [
-          "F34"
+          "F02"
         ],
-        "situation": "S39",
+        "situation": "S43",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -92,7 +96,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,10 +108,10 @@
       "ko": "뭐? 내가 그 뒤로 몰래 가서 기절시키고, 그의 키카드를 가져오는 거야. 쉬워.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,8 +119,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V13",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -129,16 +135,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,9 +156,9 @@
       "ko": "응, 더스틴. 들었어.",
       "tags": {
         "functions": [
-          "F07"
+          "F44"
         ],
-        "situation": "S39",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -161,7 +167,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,16 +181,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S24",
+        "situation": "S37",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,20 +202,22 @@
       "ko": "그녀가 거기 있을 거라고 확신해. 응.",
       "tags": {
         "functions": [
-          "F09"
+          "F44"
         ],
-        "situation": "S01",
+        "situation": "S43",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16"
+        ],
         "flags": []
       }
     },
@@ -219,20 +227,25 @@
       "ko": "아마 그녀가 바쁠 수도 있어. 응. 저녁 시간쯤이니까. 응. 여기.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S01",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S05",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -242,9 +255,9 @@
       "ko": "너에게 말하기 싫지만, 이건 물이 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -253,7 +266,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,20 +278,24 @@
       "ko": "아니, 하지만 액체야. 만약 내가 그걸 마시거나 목이 말라 죽는 상황이라면, 나는 마실 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S28",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -290,10 +307,10 @@
       "ko": "그녀의 얼굴에서, 너의 꿈의 거울, 비밀을 간직한 운율이 구름 뒤에서 펼쳐질 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "C1",
+        "situation": "S43",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -301,7 +318,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,18 +330,18 @@
       "ko": "응.",
       "tags": {
         "functions": [
-          "F09"
+          "F53"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -332,5 +349,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "9be4eaf7a277d721"
 }

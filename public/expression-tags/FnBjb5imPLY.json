@@ -12,18 +12,18 @@
       "ko": "사랑하는 릴리벳, 너가 아빠를 얼마나 사랑했는지 알아, 내 아들.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R5",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,11 +35,12 @@
       "ko": "그리고 이 상실로 인해 너도 나만큼 슬퍼할 것이라는 걸 알아.",
       "tags": {
         "functions": [
-          "F16"
+          "F16",
+          "F13"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R5",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E02"
         ],
@@ -48,7 +49,9 @@
         ],
         "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -58,18 +61,18 @@
       "ko": "하지만 이제 그 감정을 한쪽으로 제쳐두어야 해, 의무가 부른다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R5",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +84,18 @@
       "ko": "너의 아버지의 죽음에 대한 슬픔은 널리 퍼질 것이다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R5",
+        "situation": "S41",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,18 +107,18 @@
       "ko": "너의 국민들은 너의 힘과 리더십이 필요할 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R5",
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,18 +130,18 @@
       "ko": "나는 개인적인 쾌락과 의무를 분리하지 못해 무너진 세 개의 위대한 군주국을 보았다.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R5",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,18 +153,18 @@
       "ko": "개인적인 즐거움과 의무를 분리해야 해.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R5",
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,20 +176,22 @@
       "ko": "너는 같은 실수를 저지르지 말아야 해.",
       "tags": {
         "functions": [
-          "F40"
+          "F36"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R5",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -196,19 +201,21 @@
       "ko": "그리고 아버지를 애도하는 동안, 다른 누군가도 애도해야 합니다.",
       "tags": {
         "functions": [
-          "F16"
+          "F01"
         ],
         "situation": "S10",
-        "cefr": "B2",
-        "register": "R5",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -221,19 +228,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R5",
+        "situation": "S44",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -244,16 +253,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R5",
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,20 +276,23 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R5",
+        "situation": "S44",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "2a7bbc725570a007"
 }

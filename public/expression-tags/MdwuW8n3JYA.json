@@ -12,10 +12,10 @@
       "ko": "방금 들어온 뉴스입니다.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,10 +35,10 @@
       "ko": "비행기가 문제를 겪으며 시헤이븐 상공에서 부품을 떨어뜨렸습니다. 오.",
       "tags": {
         "functions": [
-          "F05"
+          "F19"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,10 +46,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -58,20 +60,18 @@
       "ko": "다행히 부상자는 없었습니다. 그런데, 오늘 기분은 어때요? 좋군요. 어딘가 비행기 타고 가고 싶어요? 아니요. 오, 좋습니다. 이것은 클래식 플라이와 클래식 드라이브입니다.",
       "tags": {
         "functions": [
-          "F09",
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S28",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E01",
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,10 +83,10 @@
       "ko": "그러니 비행의 위험은 잊고 편안히 앉아 이 음악에 몸을 맡겨보세요. 클래식 드라이브. 그러니 비행의 위험은 잊고 편안히 앉아 이 음악에 몸을 맡겨보세요.",
       "tags": {
         "functions": [
-          "F04"
+          "F36"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S06",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -94,11 +94,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "cc952d218e57bd50"
 }

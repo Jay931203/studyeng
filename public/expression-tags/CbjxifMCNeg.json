@@ -12,23 +12,23 @@
       "ko": "분위기가 좋고, 기분이 최고야, 우리는 오늘 밤 여기 있어, 그게 충분해, 단순히",
       "tags": {
         "functions": [
-          "F01"
+          "F21"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V07",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,10 +37,10 @@
       "ko": "멋진 크리스마스를 보내고 있어, 단순히 멋진 크리스마스를 보내고 있어.",
       "tags": {
         "functions": [
-          "F01"
+          "F30"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E01"
@@ -48,12 +48,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "vibe": "V10",
+        "power": [
+          "P06"
+        ],
+        "grammar_intent": [
+          "G03"
+        ],
+        "flags": []
       }
     },
     {
@@ -62,10 +64,10 @@
       "ko": "아이들의 합창이 노래를 부르고, 그들 사이에 어둠이 드리워져, 딩동, 딩",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -73,12 +75,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -90,7 +90,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -98,12 +98,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -112,23 +110,23 @@
       "ko": "분위기가 좋고, 기분이 최고야, 우리는 오늘 밤 여기 있어, 그게 충분해,",
       "tags": {
         "functions": [
-          "F01"
+          "F21"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V07",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -137,7 +135,7 @@
       "ko": "단순히 멋진 크리스마스를 보내고 있어.",
       "tags": {
         "functions": [
-          "F01"
+          "F30"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -148,13 +146,16 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "vibe": "V10",
+        "power": [
+          "P06"
+        ],
+        "grammar_intent": [
+          "G03"
+        ],
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "502859070c1b55dc"
 }

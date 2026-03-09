@@ -12,23 +12,23 @@
       "ko": "내가 말하기 시작하면, 너는 제발.",
       "tags": {
         "functions": [
-          "F50"
+          "F34"
         ],
         "situation": "S40",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G02"
+        ],
+        "flags": []
       }
     },
     {
@@ -37,10 +37,10 @@
       "ko": "그럼 나를 뭐라고 부르지, 로렐,",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S40",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,10 +60,10 @@
       "ko": "기회를 잡는 건? 남자들은 바닥에 매달릴 때",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S40",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -83,10 +83,10 @@
       "ko": "완전히 다른 사람이야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S40",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -106,20 +106,22 @@
       "ko": "어쩌면 내가 이용하고 있는 걸지도 몰라.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
         "situation": "S40",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -129,13 +131,13 @@
       "ko": "그게 나를 나쁜 사람으로 만드는 건가, 응?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
         "situation": "S40",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -155,7 +157,7 @@
           "F01"
         ],
         "situation": "S40",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -175,10 +177,10 @@
       "ko": "그는 인기 있고 매력적이었지만 나에게는 그렇게 좋지 않았고,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S40",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -198,10 +200,10 @@
       "ko": "그는 죽었어, 알겠어?",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
         "situation": "S40",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -221,10 +223,10 @@
       "ko": "그럼 왜 이 남자를 놓아줘야 해?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
         "situation": "S40",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -244,18 +246,18 @@
       "ko": "왜, 내 몸의 모든 것이 이 사람이 맞다고 말하는데? 진정해, 알겠지?",
       "tags": {
         "functions": [
-          "F19"
+          "F06"
         ],
         "situation": "S40",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,13 +269,14 @@
       "ko": "나는 그냥 몇 가지 재미있는 세부사항을 찾고 있었어. 오.",
       "tags": {
         "functions": [
-          "F02"
+          "F23",
+          "F57"
         ],
         "situation": "S40",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -290,10 +293,11 @@
       "ko": "그럼 왜 그렇게 말하지 않았어?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F52"
         ],
         "situation": "S40",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -313,10 +317,10 @@
       "ko": "음, 나는 네가 이 작은 세부사항에 관심이 있는지 모르겠어.",
       "tags": {
         "functions": [
-          "F06"
+          "F52"
         ],
         "situation": "S40",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -325,8 +329,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -336,13 +344,13 @@
       "ko": "응, 나는 관심 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S40",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E08"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -359,18 +367,18 @@
       "ko": "하지만 나는 방금 그를 사랑한다고 말하려고 했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F57"
         ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S40",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -382,9 +390,9 @@
       "ko": "나는 그래. 그를 사랑해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S40",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -393,7 +401,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -405,10 +413,10 @@
       "ko": "나는 그를 사랑하고 네가 어떻게 생각하든 상관 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S40",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E11"
@@ -428,10 +436,10 @@
       "ko": "나는 그가 되고 싶어하는 남자를 사랑해,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S40",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E11"
@@ -439,7 +447,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -451,10 +459,10 @@
       "ko": "그리고 그가 거의 되는 남자를 사랑해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S40",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E11"
@@ -462,7 +470,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -474,10 +482,10 @@
       "ko": "나는 그를 사랑해, 로렐. 나는 그를 사랑해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S40",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E11"
@@ -485,7 +493,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -497,9 +505,9 @@
       "ko": "나.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S40",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -516,5 +524,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "dd0fab84c6e7afa8"
 }

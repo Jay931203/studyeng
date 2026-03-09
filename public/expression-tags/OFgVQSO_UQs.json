@@ -12,11 +12,11 @@
       "ko": "자기야?",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S10",
         "cefr": "A1",
-        "register": "R5",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -27,6 +27,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
+          "is_period",
           "is_fragment"
         ]
       }
@@ -39,9 +40,9 @@
         "functions": [
           "F25"
         ],
-        "situation": "S08",
+        "situation": "S10",
         "cefr": "A1",
-        "register": "R5",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -49,9 +50,14 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -60,11 +66,12 @@
       "ko": "안녕, 솔직히?",
       "tags": {
         "functions": [
-          "F25"
+          "F25",
+          "F64"
         ],
-        "situation": "S08",
+        "situation": "S10",
         "cefr": "A1",
-        "register": "R5",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -72,9 +79,14 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -85,9 +97,9 @@
         "functions": [
           "F25"
         ],
-        "situation": "S08",
+        "situation": "S10",
         "cefr": "A1",
-        "register": "R5",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -95,9 +107,14 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -108,78 +125,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
+        "situation": "S10",
         "cefr": "A1",
-        "register": "R5",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "OFgVQSO_UQs-5",
-      "en": "Do pick up.",
-      "ko": "꼭 받아줘.",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S08",
-        "cefr": "A1",
-        "register": "R5",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "OFgVQSO_UQs-6",
-      "en": "Hello?",
-      "ko": "안녕?",
-      "tags": {
-        "functions": [
-          "F25"
-        ],
-        "situation": "S08",
-        "cefr": "A1",
-        "register": "R5",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "OFgVQSO_UQs-7",
-      "en": "Sweetie?",
-      "ko": "자기야?",
-      "tags": {
-        "functions": [
-          "F25"
-        ],
-        "situation": "S08",
-        "cefr": "A1",
-        "register": "R5",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -190,6 +138,85 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
+          "is_period"
+        ]
+      }
+    },
+    {
+      "id": "OFgVQSO_UQs-5",
+      "en": "Do pick up.",
+      "ko": "꼭 받아줘.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R2",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_period"
+        ]
+      }
+    },
+    {
+      "id": "OFgVQSO_UQs-6",
+      "en": "Hello?",
+      "ko": "안녕?",
+      "tags": {
+        "functions": [
+          "F25"
+        ],
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R2",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [],
+        "flags": [
+          "is_period",
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "OFgVQSO_UQs-7",
+      "en": "Sweetie?",
+      "ko": "자기야?",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R2",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_period",
           "is_fragment"
         ]
       }
@@ -202,9 +229,9 @@
         "functions": [
           "F25"
         ],
-        "situation": "S08",
+        "situation": "S10",
         "cefr": "A1",
-        "register": "R5",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -212,9 +239,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -223,14 +254,14 @@
       "ko": "안녕, 자기야? 폐하? 네? 에든버러 공작입니다. 저 아닌데요, 아쉽게도. 저는 달링이나 양배추예요.",
       "tags": {
         "functions": [
-          "F09",
-          "F04"
+          "F25"
         ],
-        "situation": "S08",
-        "cefr": "A2",
-        "register": "R5",
+        "situation": "S10",
+        "cefr": "B1",
+        "register": "R1",
         "emotions": [
-          "E09"
+          "E04",
+          "E11"
         ],
         "expression_types": [
           "X08"
@@ -238,7 +269,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -247,12 +280,11 @@
       "ko": "자기야는 다른 사람이에요. 아, 알겠죠?",
       "tags": {
         "functions": [
-          "F09",
-          "F04"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S10",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -262,7 +294,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -271,12 +305,11 @@
       "ko": "잘 되네요. 저를 보고 싶다고 하셨죠?",
       "tags": {
         "functions": [
-          "F11",
-          "F06"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S10",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -286,7 +319,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -297,9 +332,9 @@
         "functions": [
           "F07"
         ],
-        "situation": "S08",
+        "situation": "S10",
         "cefr": "A1",
-        "register": "R5",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -307,9 +342,14 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -318,11 +358,11 @@
       "ko": "오디안 대령과 이야기했어요. 네? 그리고 마틴 차터리스와요. 네? 그리고 윌리엄 헤셀타인과요.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
-        "register": "R5",
+        "situation": "S10",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -332,8 +372,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "5decc0b35c6777a4"
 }

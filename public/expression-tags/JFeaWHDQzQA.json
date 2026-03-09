@@ -12,10 +12,10 @@
       "ko": "나는 나쁜 사람이 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,18 @@
       "ko": "나도 알아.",
       "tags": {
         "functions": [
-          "F07"
+          "F02"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,19 +58,21 @@
       "ko": "감정적인 증언이 있을 때,",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -81,10 +83,10 @@
       "ko": "나는 그 중 85%는 과장이라고 생각해.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,7 +94,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,16 +108,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,10 +129,10 @@
       "ko": "위증이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,10 +140,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,10 +154,10 @@
       "ko": "창조 신화가 악마를 만나다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -161,7 +165,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,16 +179,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,9 +200,9 @@
       "ko": "사이와 다른 사람들은",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -207,7 +211,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,9 +223,9 @@
       "ko": "유니버시티 애비뉴에서",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -230,7 +234,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,10 +246,10 @@
       "ko": "이해관계를 가지고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -253,10 +257,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,19 +272,21 @@
       "ko": "그러면 그들은 사무실로 돌아와서",
       "tags": {
         "functions": [
-          "F09"
+          "F03"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -288,10 +297,10 @@
       "ko": "당신에게 제안할 합의서를 작성할 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -299,7 +308,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,9 +320,9 @@
       "ko": "그들이 합의할 건가?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -322,7 +331,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,19 +343,21 @@
       "ko": "아, 맞아. 그리고 당신은 조금 더 내야 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S14",
+        "cefr": "A1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -357,19 +368,21 @@
       "ko": "왜?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S04",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -382,19 +395,21 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -405,16 +420,16 @@
         "functions": [
           "F04"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -426,10 +441,10 @@
       "ko": "당신은 그들의 아내와 아이들을 소유하게 돼.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -437,7 +452,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -449,10 +464,10 @@
       "ko": "내가 페이스북을 만들었어.",
       "tags": {
         "functions": [
-          "F01"
+          "F12"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -460,7 +475,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -472,10 +487,10 @@
       "ko": "나는 페이스북을 만들었어.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S40",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -483,7 +498,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -495,10 +510,10 @@
       "ko": "나는 배심원에 대해 이야기하고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F50"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S36",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -506,7 +521,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -518,10 +533,10 @@
       "ko": "나는 배심원 선정 전문이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -529,7 +544,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -543,19 +558,21 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
+        "situation": "S36",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -564,18 +581,18 @@
       "ko": "배심원이 피고를 볼 때 무엇을 보는지.",
       "tags": {
         "functions": [
-          "F02"
+          "F06"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S36",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -587,10 +604,10 @@
       "ko": "옷, 머리, 말투, 호감도.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -598,7 +615,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -610,10 +627,10 @@
       "ko": "호감도.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -621,10 +638,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -633,10 +652,10 @@
       "ko": "그리고 나는 배심원이 당신이 에두아르도와 닭에 대한 이야기를 심어줬다고 믿게 만들 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S36",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -644,7 +663,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -658,30 +677,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "JFeaWHDQzQA-29",
-      "en": "Watch what else.",
-      "ko": "다른 것도 봐.",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S40",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -690,11 +686,37 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "JFeaWHDQzQA-29",
+      "en": "Watch what else.",
+      "ko": "다른 것도 봐.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S14",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "032a3e1d02991f21"
 }

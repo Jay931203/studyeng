@@ -14,21 +14,19 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,19 +35,21 @@
       "ko": "나는 연기할 거야. 아하!",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V01",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -60,19 +60,21 @@
       "ko": "맞아! 맞아! 나는 배우가 될 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V01",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -83,10 +85,10 @@
       "ko": "내가 기억하는 한, 항상 이걸 해보고 싶었어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -94,7 +96,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,9 +108,9 @@
       "ko": "작년 여름 스톡 오디션도 가보려고 했었어.",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -117,7 +119,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,18 +131,18 @@
       "ko": "하지만, 물론 아빠가 허락하지 않았지.",
       "tags": {
         "functions": [
-          "F12"
+          "F39"
         ],
-        "situation": "S50",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,9 +154,9 @@
       "ko": "내 인생에서 처음으로,",
       "tags": {
         "functions": [
-          "F09"
+          "F03"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -163,7 +165,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -177,18 +179,20 @@
         "functions": [
           "F09"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -198,19 +202,21 @@
       "ko": "그리고 처음으로, 나는 그걸 할 거야!",
       "tags": {
         "functions": [
-          "F09"
+          "F03"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V01",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -221,220 +227,13 @@
       "ko": "아빠가 원하든 원하지 않든. 카르페 디엠!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "syMqVXS4Zo4-10",
-      "en": "You know, hold on a minute.",
-      "ko": "잠깐만, 기다려봐.",
-      "tags": {
-        "functions": [
-          "F50"
-        ],
-        "situation": "S50",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "syMqVXS4Zo4-11",
-      "en": "How are you gonna be in a play if your father won't let you?",
-      "ko": "아빠가 허락하지 않으면 어떻게 연극에 출연할 건데?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "syMqVXS4Zo4-12",
-      "en": "First, I gotta get the part. Then I can worry about that.",
-      "ko": "먼저 역할을 따내야 해. 그 다음에 그걸 걱정할 수 있어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "syMqVXS4Zo4-13",
-      "en": "Hey, but won't he kill you if he finds out you went to an audition and didn't even tell him? No, no, no. As far as I'm concerned,",
-      "ko": "그런데 오디션 갔다가 아빠한테 말 안 하면 아빠가 화내지 않을까? 아니, 아니, 아니. 내 입장에서는,",
-      "tags": {
-        "functions": [
-          "F19"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E04"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "syMqVXS4Zo4-14",
-      "en": "he won't have to know about any of this. That's impossible.",
-      "ko": "그는 이 모든 걸 알 필요가 없어. 그건 불가능해.",
-      "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E04"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "syMqVXS4Zo4-15",
-      "en": "Bullshit. Nothing's impossible.",
-      "ko": "말도 안 돼. 불가능한 건 없어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V03",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "syMqVXS4Zo4-16",
-      "en": "Well, why don't you just call him and ask him, and maybe he'll say yes?",
-      "ko": "그럼 그냥 전화해서 물어보면 어때? 아마 허락할 수도 있어.",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "syMqVXS4Zo4-17",
-      "en": "That's a laugh.",
-      "ko": "웃기네.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E05"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "syMqVXS4Zo4-18",
-      "en": "If I don't ask him, at least I won't be disobeying him. Yeah, but if he said no...",
-      "ko": "내가 물어보지 않으면 적어도 아빠에게 불순종하지는 않을 거야. 그래, 하지만 만약 그가 안 된다고 하면...",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E04"
         ],
         "expression_types": [
           "X08"
@@ -446,15 +245,116 @@
       }
     },
     {
-      "id": "syMqVXS4Zo4-19",
-      "en": "Jesus, Todd! Whose side are you on?",
-      "ko": "제발, 토드! 너는 누구 편이야?",
+      "id": "syMqVXS4Zo4-10",
+      "en": "You know, hold on a minute.",
+      "ko": "잠깐만, 기다려봐.",
       "tags": {
         "functions": [
-          "F06"
+          "F49"
         ],
-        "situation": "S50",
+        "situation": "S20",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01",
+          "X06"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "syMqVXS4Zo4-11",
+      "en": "How are you gonna be in a play if your father won't let you?",
+      "ko": "아빠가 허락하지 않으면 어떻게 연극에 출연할 건데?",
+      "tags": {
+        "functions": [
+          "F25"
+        ],
+        "situation": "S10",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E05"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V12",
+        "power": [
+          "P01",
+          "P03"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "syMqVXS4Zo4-12",
+      "en": "First, I gotta get the part. Then I can worry about that.",
+      "ko": "먼저 역할을 따내야 해. 그 다음에 그걸 걱정할 수 있어.",
+      "tags": {
+        "functions": [
+          "F03"
+        ],
+        "situation": "S20",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "syMqVXS4Zo4-13",
+      "en": "Hey, but won't he kill you if he finds out you went to an audition and didn't even tell him? No, no, no. As far as I'm concerned,",
+      "ko": "그런데 오디션 갔다가 아빠한테 말 안 하면 아빠가 화내지 않을까? 아니, 아니, 아니. 내 입장에서는,",
+      "tags": {
+        "functions": [
+          "F19",
+          "F13"
+        ],
+        "situation": "S20",
         "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V06",
+        "power": [],
+        "grammar_intent": [
+          "G10"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "syMqVXS4Zo4-14",
+      "en": "he won't have to know about any of this. That's impossible.",
+      "ko": "그는 이 모든 걸 알 필요가 없어. 그건 불가능해.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -462,11 +362,145 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "syMqVXS4Zo4-15",
+      "en": "Bullshit. Nothing's impossible.",
+      "ko": "말도 안 돼. 불가능한 건 없어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S20",
+        "cefr": "A1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "contains_profanity",
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "syMqVXS4Zo4-16",
+      "en": "Well, why don't you just call him and ask him, and maybe he'll say yes?",
+      "ko": "그럼 그냥 전화해서 물어보면 어때? 아마 허락할 수도 있어.",
+      "tags": {
+        "functions": [
+          "F36"
+        ],
+        "situation": "S24",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E05"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G09",
+          "G17"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "syMqVXS4Zo4-17",
+      "en": "That's a laugh.",
+      "ko": "웃기네.",
+      "tags": {
+        "functions": [
+          "F02"
+        ],
+        "situation": "S20",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "syMqVXS4Zo4-18",
+      "en": "If I don't ask him, at least I won't be disobeying him. Yeah, but if he said no...",
+      "ko": "내가 물어보지 않으면 적어도 아빠에게 불순종하지는 않을 거야. 그래, 하지만 만약 그가 안 된다고 하면...",
+      "tags": {
+        "functions": [
+          "F43"
+        ],
+        "situation": "S20",
+        "cefr": "B2",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "syMqVXS4Zo4-19",
+      "en": "Jesus, Todd! Whose side are you on?",
+      "ko": "제발, 토드! 너는 누구 편이야?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S20",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E05"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "8b879139eee998f4"
 }

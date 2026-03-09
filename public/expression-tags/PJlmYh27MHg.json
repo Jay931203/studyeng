@@ -14,9 +14,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -35,11 +35,11 @@
       "ko": "이건 이 정도 크기야. 왜? 모르겠어.",
       "tags": {
         "functions": [
-          "F04"
+          "F50"
         ],
-        "situation": "S44",
+        "situation": "S43",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -47,8 +47,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17",
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -60,8 +65,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -85,8 +90,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -102,5 +107,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "bff9f3b50c50a095"
 }

@@ -12,9 +12,9 @@
       "ko": "안녕하세요! 아니, 아니, 아니!",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S26",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -23,12 +23,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,18 +35,18 @@
       "ko": "아, 제발! 문 좀 열어줘!",
       "tags": {
         "functions": [
-          "F34"
+          "F38"
         ],
-        "situation": "S26",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -62,17 +60,19 @@
         "functions": [
           "F06"
         ],
-        "situation": "S26",
+        "situation": "S09",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -83,10 +83,10 @@
       "ko": "왜 가운데 앉아 있어? 조금 옮기지 그래?",
       "tags": {
         "functions": [
-          "F50"
+          "F36"
         ],
-        "situation": "S26",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -94,9 +94,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -106,9 +108,9 @@
       "ko": "알겠어, 네가 하는 말은.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S26",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -117,7 +119,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,9 +131,9 @@
       "ko": "하지만 좀 이상해.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S26",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -140,7 +142,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,9 +154,9 @@
       "ko": "가운데 앉아 있는 사람은 처음 봐.",
       "tags": {
         "functions": [
-          "F02"
+          "F43"
         ],
-        "situation": "S26",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -163,9 +165,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -175,18 +180,18 @@
       "ko": "가운데 소변기를 사용하는 것처럼. 이상해.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S26",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,20 +203,23 @@
       "ko": "내가 너를 이해할 수 있을지 모르겠어. 아니, 아니, 거기 가야 해.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S26",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -221,9 +229,9 @@
       "ko": "아니, 거기 앉아.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S26",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -232,7 +240,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -246,7 +254,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S26",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -255,7 +263,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -269,16 +277,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S26",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,22 +298,23 @@
       "ko": "제가 하우저에서 올림픽 가야 하나요? 응.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S26",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "6b3a5b72a3c61b75"
 }

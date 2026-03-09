@@ -12,7 +12,7 @@
       "ko": "그리고 그들과 함께 테스트를 하려고 나왔고,",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -23,12 +23,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,7 +35,7 @@
       "ko": "나는 그냥, 무서워. 정말 무서워.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -46,9 +44,9 @@
           "E04"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -71,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,10 +81,10 @@
       "ko": "그들의 순수한 취약함이 무서운 점이었어?",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -94,7 +92,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,7 +104,7 @@
       "ko": "아니, 그냥 그들이 아이라는 사실이야. 정신이 없고 통제할 수 없어. 그래, 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "B1",
@@ -117,7 +115,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,7 +127,7 @@
       "ko": "그들은 서로 싸우고 있었어.",
       "tags": {
         "functions": [
-          "F02"
+          "F03"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -140,7 +138,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,13 +150,13 @@
       "ko": "그들은 나에게 욕을 하고, 방을 뛰어다니고 있었어. 오, 와우.",
       "tags": {
         "functions": [
-          "F17"
+          "F03"
         ],
         "situation": "S34",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -175,18 +173,18 @@
       "ko": "하지만 그래, 그들은 특별해. 정말 그래.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,7 +196,7 @@
       "ko": "그리고 리처드, 조금 더 나이 많은 아이가,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -209,7 +207,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,18 +219,19 @@
       "ko": "헨리보다 몇 초 더 나이가 많고, 마치 초자연적으로 노련한 영혼 같아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,10 +243,10 @@
       "ko": "그들은 나이가 같음에도 불구하고 더 늙어 보이네.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -255,7 +254,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,10 +266,10 @@
       "ko": "태어난 지 몇 초 차이인데, 내가 기억하는 두 가지 순간이 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F03"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -278,7 +277,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,18 +289,19 @@
       "ko": "우리가 어떻게 이겨냈는지에 대한 순간이야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,10 +313,10 @@
       "ko": "우리가 해냈다는 게 믿기지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -324,7 +324,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -336,10 +336,10 @@
       "ko": "한 순간은 내가 그들에게 엄마가 돌아가셨다고 말할 때,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -347,7 +347,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -359,13 +359,13 @@
       "ko": "리처드는 그걸 믿을 수 없을 만큼 웃겼어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -382,16 +382,16 @@
       "ko": "그는 나에게 다가와서, 훕 하고 웃었어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -408,15 +408,15 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -428,24 +428,23 @@
       "ko": "그리고 나중에 그는-",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "fbd7992fc53d059b"
 }

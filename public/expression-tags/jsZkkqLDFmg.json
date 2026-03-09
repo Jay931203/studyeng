@@ -12,33 +12,10 @@
       "ko": "정말 멋졌어, 클레어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "jsZkkqLDFmg-1",
-      "en": "My image of you is totally blown.",
-      "ko": "너에 대한 내 이미지는 완전히 무너졌어.",
-      "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -53,23 +30,48 @@
       }
     },
     {
+      "id": "jsZkkqLDFmg-1",
+      "en": "My image of you is totally blown.",
+      "ko": "너에 대한 내 이미지는 완전히 무너졌어.",
+      "tags": {
+        "functions": [
+          "F10"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G20"
+        ],
+        "flags": []
+      }
+    },
+    {
       "id": "jsZkkqLDFmg-2",
       "en": "You're a shit. Don't do that to her.",
       "ko": "너는 나쁜 놈이야. 그녀에게 그렇게 하지 마.",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -83,10 +85,10 @@
       "ko": "너는 하나님께 웃지 않겠다고 맹세했잖아. 내가 웃고 있어?",
       "tags": {
         "functions": [
-          "F50"
+          "F21"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -94,7 +96,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,22 +108,22 @@
       "ko": "정말 개새끼네.",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "contains_profanity"
+          "is_fragment"
         ]
       }
     },
@@ -131,10 +133,12 @@
       "ko": "내가 뭘 생각하든 상관해?",
       "tags": {
         "functions": [
-          "F09"
+          "F06",
+          "F09",
+          "F48"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -142,7 +146,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -154,10 +158,10 @@
       "ko": "나는 아예 중요하지 않지, 그렇지?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -177,18 +181,18 @@
       "ko": "내가 영원히 사라져도 아무 상관없을 거야.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -200,18 +204,18 @@
       "ko": "이 학교에 존재하지 않는 것과 마찬가지야, 기억해?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -223,10 +227,10 @@
       "ko": "그리고 너는 어차피 나를 좋아하지 않잖아.",
       "tags": {
         "functions": [
-          "F09"
+          "F48"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -246,18 +250,18 @@
       "ko": "나도 너만큼 감정이 있고, 누군가 내 감정을 짓밟을 때 아프기도 해.",
       "tags": {
         "functions": [
-          "F16"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -269,20 +273,24 @@
       "ko": "세상에, 너 정말 한심해.",
       "tags": {
         "functions": [
-          "F12"
+          "F30",
+          "F12",
+          "F58"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -292,10 +300,10 @@
       "ko": "절대 나와 비교하지 마, 알겠어?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -315,18 +323,18 @@
       "ko": "너는 모든 걸 가졌고 나는 아무것도 없어. 정말 라푼젤 같아, 그렇지?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -334,5 +342,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "701d72b66eb3e8ae"
 }

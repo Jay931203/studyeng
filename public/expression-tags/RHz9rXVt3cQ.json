@@ -35,21 +35,22 @@
       "ko": "내가 틀고 있는 음악 마음에 들어? 응, 좋아.",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F07"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G14"
+        ],
         "flags": []
       }
     },
@@ -59,11 +60,11 @@
       "ko": "네가 좋아할 거라고 생각하지 않았어. 응, 뭐, 알잖아...",
       "tags": {
         "functions": [
-          "F09",
-          "F01"
+          "F07",
+          "F55"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -74,7 +75,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -83,13 +86,13 @@
       "ko": "너는 항상 키스가 최악이라고 했잖아,",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E16"
         ],
         "expression_types": [
           "X08"
@@ -106,22 +109,28 @@
       "ko": "그런데 이제 그와 함께 몇 년 동안 투어를 하게 되니까, 난 그냥... 네가 지금 뭘 하고 있는지 모르겠어. 네가 행복한지 모르겠어. 왜 이걸 하고 있는 거야? 난...",
       "tags": {
         "functions": [
-          "F06",
-          "F01"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "vibe": "V02",
+        "power": [
+          "P03",
+          "P05"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -130,10 +139,11 @@
       "ko": "네가 이걸 하길 원한다고 생각했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F20",
+          "F21"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -153,34 +163,10 @@
       "ko": "지금은 네가 이걸 원하지 않는 것 같아.",
       "tags": {
         "functions": [
-          "F12"
+          "F39"
         ],
         "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RHz9rXVt3cQ-7",
-      "en": "What do you mean, I wanted you to do this?",
-      "ko": "내가 이걸 하길 원했다고? 무슨 소리야?",
-      "tags": {
-        "functions": [
-          "F09",
-          "F06"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -191,6 +177,33 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "RHz9rXVt3cQ-7",
+      "en": "What do you mean, I wanted you to do this?",
+      "ko": "내가 이걸 하길 원했다고? 무슨 소리야?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -200,7 +213,7 @@
       "ko": "이게 네가 나에게 원했던 거잖아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -246,10 +259,10 @@
       "ko": "밴드에 들어가고, 안정적인 직업을 가지라고, 알잖아?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -308,7 +321,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -317,20 +332,24 @@
       "ko": "물론 나는 네가 안정적인 직업을 가지길 원했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F44"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -340,21 +359,24 @@
       "ko": "네가 스스로를 돌보고, 네 삶을 챙기고, 클럽을 시작할 수 있도록. 응, 그래서 나는 그렇게 하고 있어. 그래서 이해가 안 가. 왜 우리는 축하하지 않는 거야?",
       "tags": {
         "functions": [
-          "F09",
-          "F06"
+          "F32"
         ],
         "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V02",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -366,8 +388,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -387,9 +409,9 @@
       "ko": "너 스스로 말했잖아, 아무도 그 클럽에 가고 싶어 하지 않는다고.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -410,9 +432,9 @@
       "ko": "아무도 '치킨 온 어 스틱'이라는 클럽에 가고 싶어 하지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -433,9 +455,9 @@
       "ko": "그러면 이름을 바꿔. 음, 아무도 재즈를 좋아하지 않아. 너조차도.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -456,32 +478,9 @@
       "ko": "나는 이제 너 덕분에 재즈를 좋아해.",
       "tags": {
         "functions": [
-          "F09"
-        ],
-        "situation": "S44",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RHz9rXVt3cQ-20",
-      "en": "This is what I thought you wanted me to do. What am I supposed to do?",
-      "ko": "이게 네가 나에게 원했던 거라고 생각했어. 나는 뭘 해야 해?",
-      "tags": {
-        "functions": [
           "F04"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -492,7 +491,35 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "RHz9rXVt3cQ-20",
+      "en": "This is what I thought you wanted me to do. What am I supposed to do?",
+      "ko": "이게 네가 나에게 원했던 거라고 생각했어. 나는 뭘 해야 해?",
+      "tags": {
+        "functions": [
+          "F20",
+          "F21"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -504,20 +531,23 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G14"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "4d27bfb4bc89a09c"
 }

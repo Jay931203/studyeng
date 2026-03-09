@@ -16,14 +16,14 @@
         ],
         "situation": "S34",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -38,7 +38,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -69,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -92,7 +92,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -107,7 +107,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,10 +115,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -127,18 +129,18 @@
       "ko": "종교, 정부의 역할, 개인의 책임 등을 포함해서요.",
       "tags": {
         "functions": [
-          "F01"
+          "F08"
         ],
         "situation": "S34",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -161,7 +163,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -184,7 +186,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,7 +198,7 @@
       "ko": "우리가 둘 다 틀릴 수도 있을까요? 답은 중간 어딘가에 있을까요?",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
         "situation": "S34",
         "cefr": "B1",
@@ -207,7 +209,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,18 +221,18 @@
       "ko": "글쎄요, 바로 그걸 알아보려고 합니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F23"
         ],
         "situation": "S34",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,7 +244,9 @@
       "ko": "지난주 돈 레몬과 이야기했듯이, 언론은 이 나라의 좌우 대립에 대해 너무 많이 이야기해서",
       "tags": {
         "functions": [
-          "F01"
+          "F07",
+          "F10",
+          "F52"
         ],
         "situation": "S34",
         "cefr": "B1",
@@ -251,11 +255,13 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -269,14 +275,14 @@
         ],
         "situation": "S34",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -286,6 +292,54 @@
       "id": "IFqVNPwsLNo-12",
       "en": "in this country that it's easy to forget that there are decent people on both sides of the debate.",
       "ko": "그래서 제가 이 쇼에서 왼쪽을 그렇게 많이 비판한 이유 중 하나입니다.",
+      "tags": {
+        "functions": [
+          "F02"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "IFqVNPwsLNo-13",
+      "en": "That's one of the reasons I've taken the left to task so much on this show.",
+      "ko": "그들이 더 극단으로 갈수록, 그들이 옳을 가능성은 줄어듭니다.",
+      "tags": {
+        "functions": [
+          "F04"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "IFqVNPwsLNo-14",
+      "en": "The further off the deep end they go, the less likely it is for them to be right.",
+      "ko": "그들이 더 깊은 곳으로 갈수록, 그들이 옳을 가능성은 줄어듭니다.",
       "tags": {
         "functions": [
           "F01"
@@ -299,57 +353,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "IFqVNPwsLNo-13",
-      "en": "That's one of the reasons I've taken the left to task so much on this show.",
-      "ko": "그들이 더 극단으로 갈수록, 그들이 옳을 가능성은 줄어듭니다.",
-      "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "IFqVNPwsLNo-14",
-      "en": "The further off the deep end they go, the less likely it is for them to be right.",
-      "ko": "그들이 더 깊은 곳으로 갈수록, 그들이 옳을 가능성은 줄어듭니다.",
-      "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "255341202e1ec310"
 }

@@ -12,10 +12,10 @@
       "ko": "무엇에 대해 조언해줄까요?",
       "tags": {
         "functions": [
-          "F37"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,10 +35,10 @@
       "ko": "내가 원하는 것을 얻는 방법.",
       "tags": {
         "functions": [
-          "F49"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +48,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -60,7 +62,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -72,7 +74,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,20 +85,24 @@
       "ko": "다른 것을 원해보는 게 좋을지도.",
       "tags": {
         "functions": [
-          "F36"
+          "F37",
+          "F14"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -104,10 +112,10 @@
       "ko": "농담이 필요하면 제대로 된 광대를 구할게.",
       "tags": {
         "functions": [
-          "F09"
+          "F58"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -117,7 +125,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -127,18 +137,18 @@
       "ko": "농담이 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,8 +162,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,10 +183,10 @@
       "ko": "여기서 얼마나 많은 수천 수만의 삶을 더 좋게 바꿨니?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,20 +206,22 @@
       "ko": "아마도 여기서 네가 가장 많은 선을 행할 수 있을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -219,9 +231,9 @@
       "ko": "나는 슬레이버스 베이에 태어난 아이가 사거나 팔리는 게 어떤 의미인지 알지 못하게 싸웠어.",
       "tags": {
         "functions": [
-          "F04"
+          "F21"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -242,10 +254,10 @@
       "ko": "나는 여기서 그리고 그 너머에서 그 싸움을 계속할 거지만, 이곳은 내 집이 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -267,14 +279,14 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -288,10 +300,10 @@
       "ko": "관대하게 생각해보자, 그게 일어날 거라고 가정해보자.",
       "tags": {
         "functions": [
-          "F14"
+          "F36"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -301,7 +313,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -311,10 +325,10 @@
       "ko": "슬레이버스 베이에서는 평민들만의 지지를 받았어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -334,11 +348,11 @@
       "ko": "부자 없이 통치하는 건 어땠어?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -359,8 +373,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -382,8 +396,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -397,5 +411,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "ab9f65cd2e01a25f"
 }

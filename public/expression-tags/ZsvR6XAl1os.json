@@ -12,10 +12,10 @@
       "ko": "픽업트럭을 탄 매력적인 여자, 아빠의 돈으로 차를 꾸몄지.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,10 +37,10 @@
       "ko": "사우스캐롤라이나에서 온 밤새 파티하는 여자, 앨라배마에서 온 대단한 여자.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,10 +62,10 @@
       "ko": "브런즈윅에서 온 열정적인 케이준 광녀, 진한 남부 억양의 탐스러운 조지아 복숭아.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -73,7 +73,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,10 +87,10 @@
       "ko": "섹시하게 흔들어, 형제여, 그녀는 카우보이 부츠부터 시골 뿌리까지.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -98,7 +98,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,10 +112,10 @@
       "ko": "그녀는 시골 소녀, 그녀가 듣는 노래부터 드리는 기도까지, 태어나고 자란 방식이 그래.",
       "tags": {
         "functions": [
-          "F02"
+          "F04"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -123,7 +123,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -137,19 +137,21 @@
       "ko": "시골 소녀로 사는 게 두렵지 않아, 형제여, 그녀는 시골 소녀야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -162,10 +164,10 @@
       "ko": "해가 지면 언덕에서 사탕을 키우는, 엄마가 가르쳐준 대로.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,7 +175,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,7 +189,7 @@
       "ko": "마음에서 흘러나오는 달콤한 꿀.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -198,7 +200,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -206,5 +208,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "1e6996b9f8b76095"
 }

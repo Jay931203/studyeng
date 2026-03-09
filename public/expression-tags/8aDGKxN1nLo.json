@@ -12,20 +12,22 @@
       "ko": "할아버지에게 가서 일하고 제대로 된 사람이 되어라, 공정하게 놀지 말고.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G14"
+        ],
         "flags": []
       }
     },
@@ -60,13 +62,13 @@
       "ko": "아주 좋아.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -74,7 +76,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -129,10 +133,10 @@
       "ko": "프레드를 처음 만난 날, 맞아.",
       "tags": {
         "functions": [
-          "F03"
+          "F07"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -191,7 +195,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -200,13 +206,13 @@
       "ko": "그는 런던에서 사업 중이야, 몇 주 후에 돌아올 거야.",
       "tags": {
         "functions": [
-          "F02"
+          "F23"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -223,13 +229,13 @@
       "ko": "그와 결혼하지 마.",
       "tags": {
         "functions": [
-          "F40"
+          "F35"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -237,8 +243,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "a502aaa3e4bbc136"
 }

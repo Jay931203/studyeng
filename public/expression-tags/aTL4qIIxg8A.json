@@ -12,13 +12,14 @@
       "ko": "너가 여기 있다는 걸 알아. 지금 너를 느낄 수 있어. 너가 두려워하고 있다는 것도 알아. 너는",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E04"
+          "E04",
+          "E07"
         ],
         "expression_types": [
           "X08"
@@ -35,11 +36,11 @@
       "ko": "우리를 두려워하고, 변화가 두려워. 나는 미래를 모르겠어. 여기 온 이유는",
       "tags": {
         "functions": [
-          "F09"
+          "F56"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E04"
         ],
@@ -47,8 +48,12 @@
           "X08"
         ],
         "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -58,11 +63,11 @@
       "ko": "이 일이 어떻게 끝날지 말하려고 한 게 아니야. 어떻게 시작될지를 말하려고 왔어.",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -81,16 +86,16 @@
       "ko": "이 전화를 끊고, 사람들이 너가 보길 원하지 않는 것을 보여줄 거야.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -104,11 +109,11 @@
       "ko": "너 없는 세상을 보여줄 거야. 규칙과 통제가 없는 세상, 경계가 없는 세상.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -127,11 +132,11 @@
       "ko": "모든 것이 가능한 세상. 그 다음에 어디로 갈지는 너에게 맡길게.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -150,11 +155,11 @@
       "ko": "너에게 맡길게.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -167,5 +172,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "5c99a2de6fd50921"
 }

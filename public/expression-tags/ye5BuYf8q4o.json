@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,7 +35,7 @@
       "ko": "소리 키워. 소리 키워.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -63,7 +61,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -86,13 +84,13 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -109,7 +107,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,10 +127,10 @@
       "ko": "다시 한 번 앨라배마가 그리워.",
       "tags": {
         "functions": [
-          "F09"
+          "F22"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E02"
@@ -175,7 +173,7 @@
       "ko": "영 씨가 그녀에 대해 노래하는 걸 들었어.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -184,7 +182,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -198,7 +196,7 @@
       "ko": "오닐이 그녀를 깎아내리는 걸 들었어.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -207,7 +205,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -215,5 +213,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "3e23ea7e70f5c75e"
 }

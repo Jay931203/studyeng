@@ -12,18 +12,18 @@
       "ko": "당신의 책을 읽는 것은 당신의 마음을 여는 창을 여는 것 같았어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,9 +35,9 @@
       "ko": "제임스 필즈가 내 손에서 책을 빼앗아갔고, 다시는 돌려주지 않았어요.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -58,13 +58,14 @@
       "ko": "나는 그런 소식은 내가 직접 전해야 한다고 말했어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F23"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08",
+          "E15"
         ],
         "expression_types": [
           "X08"
@@ -81,13 +82,13 @@
       "ko": "음, 그건... 정말 어리석은 충동이었어요.",
       "tags": {
         "functions": [
-          "F20"
+          "F52"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -104,13 +105,13 @@
       "ko": "아니, 전혀 어리석지 않아요.",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E07"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -127,32 +128,9 @@
       "ko": "당신을 만나서 정말 반가워요.",
       "tags": {
         "functions": [
-          "F25"
+          "F32"
         ],
-        "situation": "S44",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "1Ylk2e-x--8-6",
-      "en": "Come and meet my family.",
-      "ko": "와서 내 가족을 만나세요.",
-      "tags": {
-        "functions": [
-          "F38"
-        ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -162,6 +140,31 @@
           "X08"
         ],
         "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G25"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "1Ylk2e-x--8-6",
+      "en": "Come and meet my family.",
+      "ko": "와서 내 가족을 만나세요.",
+      "tags": {
+        "functions": [
+          "F35"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,19 +176,21 @@
       "ko": "고마워요, 하지만 기차를 타야 해요.",
       "tags": {
         "functions": [
-          "F34"
+          "F27"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E15"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -198,8 +203,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -221,8 +226,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -244,8 +249,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -267,9 +272,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -279,7 +284,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -288,9 +295,9 @@
       "ko": "나도 그것에 신경 쓰지 않아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -311,9 +318,9 @@
       "ko": "보세요, 내 이모가 나를 통통하게 키웠어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -328,5 +335,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "4e238933206d6fc8"
 }

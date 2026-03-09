@@ -12,10 +12,10 @@
       "ko": "모든 것이 철저하게 진행되어야 했어. 완벽해야 했어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -37,16 +37,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -60,20 +60,22 @@
       "ko": "이 회사 역사상 가장 큰 IPO야. 저 아이 뭐 하는 거야?",
       "tags": {
         "functions": [
-          "F02"
+          "F17"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -85,10 +87,10 @@
       "ko": "나비 넥타이를 매고 있네? 안녕. 잘 지내? 좋아.",
       "tags": {
         "functions": [
-          "F06"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -96,7 +98,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -108,9 +110,9 @@
       "ko": "야, 어항 청소했어?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -119,7 +121,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -131,18 +133,18 @@
       "ko": "그냥... 잠깐 시간이 있어서... 너 잠깐 시간이 있었어? 응, 잠깐 시간이 있었어.",
       "tags": {
         "functions": [
-          "F52"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -156,8 +158,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -165,7 +167,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -177,9 +179,9 @@
       "ko": "서류 작업을 끝내고 몇 분 시간이 있었어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S38",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -188,7 +190,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -202,8 +204,8 @@
         "functions": [
           "F25"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -211,8 +213,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V08",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -223,18 +227,18 @@
       "ko": "새로운 발행일이야?!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -246,18 +250,18 @@
       "ko": "개새끼 같은 새로운 발행일이야?!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -271,18 +275,18 @@
       "ko": "이게 네가 하는 일이야?!",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -294,9 +298,9 @@
       "ko": "이봐, 모두! 잘 들어!",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -305,7 +309,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -317,20 +321,22 @@
       "ko": "새로운 발행일에 애완동물 가지고 장난치면 이렇게 되는 거야!",
       "tags": {
         "functions": [
-          "F04"
+          "F17"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -342,22 +348,25 @@
       "ko": "오, 안돼!",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S38",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "d65f3e40a49c8d11"
 }

@@ -1,10 +1,11 @@
 {
   "videoId": "OHE8TUfo7MU",
   "category": "movie",
-  "title": "“Whops!” Scene - Romance Clips",
+  "title": "\"Whops!\" Scene - Romance Clips",
   "seriesId": "10-things",
   "sentenceCount": 16,
   "taggedCount": 16,
+  "transcriptHash": "e4c707f8203f55d4",
   "sentences": [
     {
       "id": "OHE8TUfo7MU-0",
@@ -12,20 +13,24 @@
       "ko": "불을 끄자, 바로 시작하자.",
       "tags": {
         "functions": [
-          "F35"
+          "F36"
         ],
         "situation": "S08",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V01",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -33,6 +38,130 @@
       "id": "OHE8TUfo7MU-1",
       "en": "Soon as I walk in the door",
       "ko": "문 안으로 들어서자마자.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V01",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "OHE8TUfo7MU-2",
+      "en": "I don't wanna be out of line",
+      "ko": "선을 넘고 싶지는 않지만.",
+      "tags": {
+        "functions": [
+          "F43"
+        ],
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V01",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "OHE8TUfo7MU-3",
+      "en": "But girl, I can't wait anymore, I want you in",
+      "ko": "하지만 더 이상 기다릴 수 없어, 너를 원해.",
+      "tags": {
+        "functions": [
+          "F43"
+        ],
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E06"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V01",
+        "power": [],
+        "grammar_intent": [
+          "G01",
+          "G15"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "OHE8TUfo7MU-4",
+      "en": "The worst way",
+      "ko": "너무나 간절하게.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S08",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V01",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "OHE8TUfo7MU-5",
+      "en": "My hands are needin' your hips",
+      "ko": "내 손이 네 허리를 원해.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V01",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "OHE8TUfo7MU-6",
+      "en": "Want the first taste",
+      "ko": "첫 맛을 원해.",
       "tags": {
         "functions": [
           "F03"
@@ -46,122 +175,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "OHE8TUfo7MU-2",
-      "en": "I don't wanna be out of line",
-      "ko": "선을 넘고 싶지는 않지만.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "OHE8TUfo7MU-3",
-      "en": "But girl, I can't wait anymore, I want you in",
-      "ko": "하지만 더 이상 기다릴 수 없어, 너를 원해.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "OHE8TUfo7MU-4",
-      "en": "The worst way",
-      "ko": "너무나 간절하게.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "OHE8TUfo7MU-5",
-      "en": "My hands are needin' your hips",
-      "ko": "내 손이 네 허리를 원해.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "OHE8TUfo7MU-6",
-      "en": "Want the first taste",
-      "ko": "첫 맛을 원해.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S08",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,18 +187,18 @@
       "ko": "위스키 맛이 네 입술에서 나길.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +210,18 @@
       "ko": "블라인드 다 내리고, 문 다 잠가.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V13",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,19 +233,21 @@
       "ko": "깨질 수 있는 건 다 치워.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V13",
-        "power": [],
+        "vibe": "V01",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -242,20 +258,22 @@
       "ko": "자기야, 오늘 밤 네가 필요해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V01",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -265,20 +283,24 @@
       "ko": "우리 얼마나 사랑할 수 있는지 보자.",
       "tags": {
         "functions": [
-          "F09"
+          "F36"
         ],
         "situation": "S08",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V01",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -291,17 +313,19 @@
           "F09"
         ],
         "situation": "S08",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V01",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -311,10 +335,10 @@
       "ko": "자기야, 그렇다고 내가.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -322,7 +346,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,10 +358,10 @@
       "ko": "와인과 저녁 식사를 안 좋아하는 건 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S32",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -345,7 +369,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -357,19 +381,21 @@
       "ko": "하지만 오늘 밤 메뉴에는 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S05",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V01",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }

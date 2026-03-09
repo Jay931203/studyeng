@@ -15,7 +15,7 @@
           "F06"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -38,20 +38,22 @@
       "ko": "아, 있잖아, 새로운 걸 시도하고 싶지 않아. 모험심이 생겼나 봐?",
       "tags": {
         "functions": [
-          "F09"
+          "F23"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -63,20 +65,24 @@
       "ko": "그러니까, 어쩌면. 취소할 수도 있어. 안 돼.",
       "tags": {
         "functions": [
+          "F14",
           "F50"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17",
+          "G18"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -88,7 +94,7 @@
       "ko": "아니. 아니. 아니.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A1",
@@ -99,13 +105,15 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "f0d8e7e797876eb7"
 }

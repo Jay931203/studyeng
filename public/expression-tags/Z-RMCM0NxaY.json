@@ -14,8 +14,8 @@
         "functions": [
           "F35"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,32 +35,9 @@
       "ko": "너는 내 모든 것을 빼앗았어",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "Z-RMCM0NxaY-2",
-      "en": "You will",
-      "ko": "너는 그럴 거야",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -76,15 +53,65 @@
       }
     },
     {
+      "id": "Z-RMCM0NxaY-2",
+      "en": "You will",
+      "ko": "너는 그럴 거야",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S43",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
       "id": "Z-RMCM0NxaY-3",
       "en": "I got it",
       "ko": "알겠어",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "Z-RMCM0NxaY-4",
+      "en": "You took everything from me",
+      "ko": "너는 내 모든 것을 빼앗았어",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -97,29 +124,7 @@
         "grammar_intent": [],
         "flags": []
       }
-    },
-    {
-      "id": "Z-RMCM0NxaY-4",
-      "en": "You took everything from me",
-      "ko": "너는 내 모든 것을 빼앗았어",
-      "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
     }
-  ]
+  ],
+  "transcriptHash": "5582c37a84cf42aa"
 }

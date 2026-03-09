@@ -21,7 +21,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -35,7 +35,8 @@
       "ko": "그의 이름은 모르겠어. 남자였던 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F40",
+          "F02"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -58,16 +59,16 @@
       "ko": "음, 하지만 그의 작업은 알아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -81,13 +82,13 @@
       "ko": "살을 봐!",
       "tags": {
         "functions": [
-          "F03"
+          "F35"
         ],
         "situation": "S34",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -113,7 +114,8 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
         "vibe": "V10",
         "power": [],
@@ -127,7 +129,7 @@
       "ko": "살?",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -141,7 +143,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,20 +154,23 @@
       "ko": "음, 나는 주로 좋은 사람들, 하지만 몇몇 노숙자도 있을 것 같아. 제니퍼?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -173,7 +180,7 @@
       "ko": "나는 다양한 배경의 열심히 일하는 창의적인 사람들을 상상해. 음, 조?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -182,7 +189,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -196,7 +203,7 @@
       "ko": "음, 물론, 나는 희망적으로 이곳이 용광로가 되길 바랐어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -205,10 +212,13 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X04"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -219,7 +229,7 @@
       "ko": "음, 다른 인종의 사람들을 알고 싶어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -228,7 +238,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -242,16 +252,16 @@
       "ko": "음, 인도, 아시아, 아프리카, 남미,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -265,10 +275,10 @@
       "ko": "남극, 푸에르토리코, 그리고 여성들.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,7 +298,7 @@
       "ko": "그리고 나는, 또한, '더 보이스'의 우승자들이 있으면 좋겠다고 생각했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -297,7 +307,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V10",
         "power": [],
@@ -311,7 +321,7 @@
       "ko": "그곳에 '더 보이스'의 우승자들이 있으면 좋겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -334,13 +344,13 @@
       "ko": "살이 미쳐가고 있어! 살이 미쳐가고 있어!",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -357,13 +367,13 @@
       "ko": "하하하하하하!",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -371,9 +381,7 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -382,18 +390,18 @@
       "ko": "오, 그의 얼굴에 눈물이 흘러내렸어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -405,13 +413,13 @@
       "ko": "네가 썼잖아! 어떻게 그렇게 망칠 수 있어?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -419,10 +427,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "b45f9685cdcdf48c"
 }

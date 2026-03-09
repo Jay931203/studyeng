@@ -12,19 +12,21 @@
       "ko": "가슴. 가슴이라고 하지 마. 별일 아니야, 알겠어? 나는 가슴이 좋아. 너도 가슴이 좋아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X02"
         ],
-        "vibe": "V10",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -35,9 +37,9 @@
       "ko": "비키도 가슴을 좋아해. 확실히. 가슴.",
       "tags": {
         "functions": [
-          "F09"
+          "F44"
         ],
-        "situation": "S09",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -46,9 +48,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16"
+        ],
         "flags": []
       }
     },
@@ -58,9 +62,9 @@
       "ko": "내 여자친구가 네 여자친구보다 낫다고 말하는 건 아니야.",
       "tags": {
         "functions": [
-          "F12"
+          "F13"
         ],
-        "situation": "S09",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -69,9 +73,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -81,9 +87,9 @@
       "ko": "그냥 수지는 천재 같아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -92,7 +98,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,9 +110,9 @@
       "ko": "엘라가 세상을 두 번이나 구했다는 걸 알고 있지?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S09",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -115,7 +121,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,10 +133,10 @@
       "ko": "그런데도 너는 스페인어에서 C를 받고 있어. 잠깐, 그녀의 옷을 벗길 수 있어?",
       "tags": {
         "functions": [
-          "F12"
+          "F49"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,9 +144,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -152,7 +160,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S09",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -161,7 +169,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -175,9 +183,9 @@
       "ko": "소름끼치는 인형, 그녀의 드레스를 벗길 수 있어? 알겠어.",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
-        "situation": "S09",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -186,9 +194,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -198,9 +208,9 @@
       "ko": "제기랄. 뭐? 그녀는 유두가 있어.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -209,7 +219,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -223,8 +233,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -232,7 +242,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,10 +254,10 @@
       "ko": "그러니까 너는 3년 더 괴짜들과 함께 있고 싶다는 거야? 우리는 괴짜야!",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -255,7 +265,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,9 +277,9 @@
       "ko": "그러니까 그녀가 너를 차버리는 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -278,7 +288,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,19 +300,21 @@
       "ko": "친구야, 아니야, 그녀는 나를 차버리지 않아. 그녀는 일해야 해.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S43",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V10",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -315,16 +327,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S09",
+        "situation": "S43",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -338,10 +350,10 @@
       "ko": "낸시! 낸시가 해!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -349,7 +361,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -363,8 +375,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -372,11 +384,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a6c12792b8bde02e"
 }

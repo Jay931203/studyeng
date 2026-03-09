@@ -12,10 +12,34 @@
       "ko": "어, 너... 게리야?",
       "tags": {
         "functions": [
-          "F25"
+          "F06",
+          "F52"
         ],
-        "situation": "S36",
-        "cefr": "A1",
+        "situation": "S27",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "i_NB9j4axxk-1",
+      "en": "Gary. Anderson.",
+      "ko": "게리 앤더슨.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S27",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -32,37 +56,14 @@
       }
     },
     {
-      "id": "i_NB9j4axxk-1",
-      "en": "Gary. Anderson.",
-      "ko": "게리 앤더슨.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S36",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "i_NB9j4axxk-2",
       "en": "Of course. Gary.",
       "ko": "물론이지, 게리.",
       "tags": {
         "functions": [
-          "F01"
+          "F44"
         ],
-        "situation": "S36",
+        "situation": "S27",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -72,9 +73,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -85,8 +90,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -106,10 +111,10 @@
       "ko": "맞아.",
       "tags": {
         "functions": [
-          "F07"
+          "F53"
         ],
-        "situation": "S36",
-        "cefr": "A1",
+        "situation": "S27",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -120,7 +125,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -129,21 +136,28 @@
       "ko": "미안해, 내가, 어...",
       "tags": {
         "functions": [
-          "F28"
+          "F28",
+          "F52"
         ],
-        "situation": "S36",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -152,16 +166,16 @@
       "ko": "여기, 작은 팁을 보여줄게.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -175,11 +189,11 @@
       "ko": "원심력이 캔 안의 기포를 끌어내서,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S27",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -198,9 +212,9 @@
       "ko": "폭발하는 걸 막아줘.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -221,10 +235,10 @@
       "ko": "우리 고객들이 놀라지 않게 해야지.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S27",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -244,9 +258,9 @@
       "ko": "그게 효과가 있어?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S36",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -267,32 +281,9 @@
       "ko": "좋아.",
       "tags": {
         "functions": [
-          "F07"
-        ],
-        "situation": "S36",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "i_NB9j4axxk-12",
-      "en": "All right.",
-      "ko": "그 팁을 누가 가르쳐줬는지 알아?",
-      "tags": {
-        "functions": [
           "F06"
         ],
-        "situation": "S36",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -304,7 +295,34 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "i_NB9j4axxk-12",
+      "en": "All right.",
+      "ko": "그 팁을 누가 가르쳐줬는지 알아?",
+      "tags": {
+        "functions": [
+          "F44"
+        ],
+        "situation": "S27",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -313,9 +331,9 @@
       "ko": "그 팁을 누가 가르쳐줬는지 알아?",
       "tags": {
         "functions": [
-          "F04"
+          "F21"
         ],
-        "situation": "S36",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -336,9 +354,9 @@
       "ko": "그는 습관처럼 그렇게 했어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -347,7 +365,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -361,8 +379,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -382,9 +400,9 @@
       "ko": "거의 무의식적으로.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -396,7 +414,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -405,11 +425,11 @@
       "ko": "한 번 물어봤어.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -428,10 +448,10 @@
       "ko": "그건 언제든지 대비하는 그의 방식이었어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -445,5 +465,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "0714d3c54c97b6fa"
 }

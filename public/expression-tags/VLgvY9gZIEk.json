@@ -5,26 +5,21 @@
   "seriesId": "impractical-jokers",
   "sentenceCount": 23,
   "taggedCount": 23,
+  "transcriptHash": "a7151f2e7d9a31a8",
   "sentences": [
     {
       "id": "VLgvY9gZIEk-0",
       "en": "Sure. Let's do it.",
       "ko": "좋아. 시작하자.",
       "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
+        "functions": ["F44"],
+        "situation": "S30",
+        "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
+        "emotions": ["E06"],
+        "expression_types": ["X04"],
+        "vibe": "V10",
+        "power": ["P03"],
         "grammar_intent": [],
         "flags": []
       }
@@ -34,22 +29,16 @@
       "en": "Now, Murr, I want you to just go everywhere,",
       "ko": "이제, 머르, 네가 여기저기 다니면서,",
       "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S34",
+        "functions": ["F35"],
+        "situation": "S30",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
+        "emotions": ["E14"],
+        "expression_types": ["X08"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["is_fragment"]
       }
     },
     {
@@ -57,19 +46,13 @@
       "en": "like, jump rope all around. All right. Never stop jump roping.",
       "ko": "줄넘기를 계속 해봐. 알겠지? 줄넘기를 멈추지 마.",
       "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S34",
+        "functions": ["F35"],
+        "situation": "S30",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
+        "emotions": ["E14"],
+        "expression_types": ["X06", "X08"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -80,24 +63,16 @@
       "en": "♪♪",
       "ko": "♪♪",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
+        "functions": ["F02"],
+        "situation": "S30",
         "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": ["is_fragment"]
       }
     },
     {
@@ -105,19 +80,13 @@
       "en": "Just bowl right through him. Bowl right through him.",
       "ko": "그냥 그를 뚫고 지나가. 뚫고 지나가.",
       "tags": {
-        "functions": [
-          "F35"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
+        "functions": ["F35"],
+        "situation": "S30",
+        "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
+        "emotions": ["E14"],
+        "expression_types": ["X01"],
+        "vibe": "V17",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -128,21 +97,15 @@
       "en": "Watch out. Watch out. Coming through.",
       "ko": "조심해. 조심해. 지나간다.",
       "tags": {
-        "functions": [
-          "F40"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
+        "functions": ["F40"],
+        "situation": "S30",
+        "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
+        "emotions": ["E06"],
+        "expression_types": ["X04"],
+        "vibe": "V10",
+        "power": ["P03"],
+        "grammar_intent": ["G24"],
         "flags": []
       }
     },
@@ -151,24 +114,16 @@
       "en": "-♪♪",
       "ko": "-♪♪",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
+        "functions": ["F02"],
+        "situation": "S30",
         "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": ["is_fragment"]
       }
     },
     {
@@ -176,22 +131,16 @@
       "en": "Aggressive.",
       "ko": "공격적이네.",
       "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
+        "functions": ["F12"],
+        "situation": "S30",
+        "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
+        "emotions": ["E14"],
+        "expression_types": ["X08"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["is_fragment"]
       }
     },
     {
@@ -199,20 +148,14 @@
       "en": "You look like a show horse.",
       "ko": "너는 쇼 말 같아.",
       "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S34",
+        "functions": ["F12", "F59"],
+        "situation": "S30",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
+        "emotions": ["E14"],
+        "expression_types": ["X02"],
+        "vibe": "V10",
+        "power": ["P07"],
         "grammar_intent": [],
         "flags": []
       }
@@ -222,24 +165,16 @@
       "en": "-♪♪ How am I doing, Mike? How am I doing, Mike?",
       "ko": "-♪♪ 내가 잘하고 있어, 마이크? 내가 잘하고 있어, 마이크?",
       "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S34",
+        "functions": ["F06", "F51"],
+        "situation": "S30",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
+        "emotions": ["E14"],
+        "expression_types": ["X08"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -247,19 +182,13 @@
       "en": "It's actually terrible form.",
       "ko": "사실 형이 정말 안 좋아.",
       "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S34",
+        "functions": ["F12"],
+        "situation": "S30",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
+        "emotions": ["E14"],
+        "expression_types": ["X03"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -270,24 +199,16 @@
       "en": "-♪♪",
       "ko": "-♪♪",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
+        "functions": ["F02"],
+        "situation": "S30",
         "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": ["is_fragment"]
       }
     },
     {
@@ -295,20 +216,14 @@
       "en": "Okay. Let's wrangle it back in here.",
       "ko": "좋아. 다시 집중하자.",
       "tags": {
-        "functions": [
-          "F50"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
+        "functions": ["F48", "F36"],
+        "situation": "S30",
+        "cefr": "B2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
+        "emotions": ["E09"],
+        "expression_types": ["X02"],
+        "vibe": "V10",
+        "power": ["P01"],
         "grammar_intent": [],
         "flags": []
       }
@@ -318,22 +233,16 @@
       "en": "Hey, Murr, by the pillar over there,",
       "ko": "헤이, 머르, 저 기둥 옆에,",
       "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S34",
+        "functions": ["F35"],
+        "situation": "S30",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
+        "emotions": ["E14"],
+        "expression_types": ["X08"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["is_fragment"]
       }
     },
     {
@@ -341,19 +250,13 @@
       "en": "we hid some protein powder, bro.",
       "ko": "단백질 파우더를 숨겨놨어, 친구.",
       "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S34",
+        "functions": ["F01"],
+        "situation": "S30",
         "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
+        "register": "R5",
+        "emotions": ["E14"],
+        "expression_types": ["X05"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -364,19 +267,13 @@
       "en": "We didn't give you any liquid.",
       "ko": "액체는 안 줬어.",
       "tags": {
-        "functions": [
-          "F01"
-        ],
+        "functions": ["F01"],
         "situation": "S30",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E14"],
+        "expression_types": ["X08"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -387,19 +284,13 @@
       "en": "So just start piling protein powder in your mouth, please.",
       "ko": "그러니까 단백질 파우더를 입에 쌓아 넣어줘.",
       "tags": {
-        "functions": [
-          "F35"
-        ],
+        "functions": ["F35"],
         "situation": "S30",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
+        "emotions": ["E14"],
+        "expression_types": ["X01", "X08"],
+        "vibe": "V17",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -410,20 +301,14 @@
       "en": "Can you mind give me one second before... I just got to fuel up a little bit. You know what I'm saying, Antoine?",
       "ko": "잠깐만, 연료를 좀 보충해야 해. 알지, 앙투안?",
       "tags": {
-        "functions": [
-          "F06"
-        ],
+        "functions": ["F52", "F04"],
         "situation": "S30",
         "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "emotions": ["E14"],
+        "expression_types": ["X02", "X06"],
         "vibe": "V10",
-        "power": [],
+        "power": ["P01"],
         "grammar_intent": [],
         "flags": []
       }
@@ -433,20 +318,14 @@
       "en": "There it is, buddy.",
       "ko": "여기 있어, 친구.",
       "tags": {
-        "functions": [
-          "F01"
-        ],
+        "functions": ["F01"],
         "situation": "S30",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "cefr": "A1",
+        "register": "R5",
+        "emotions": ["E01"],
+        "expression_types": ["X04"],
         "vibe": "V10",
-        "power": [],
+        "power": ["P03"],
         "grammar_intent": [],
         "flags": []
       }
@@ -456,21 +335,15 @@
       "en": "Do you have any water?",
       "ko": "물 있어?",
       "tags": {
-        "functions": [
-          "F06"
-        ],
+        "functions": ["F34"],
         "situation": "S30",
         "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "emotions": ["E15"],
+        "expression_types": ["X08"],
+        "vibe": "V10",
+        "power": ["P03"],
+        "grammar_intent": ["G02"],
         "flags": []
       }
     },
@@ -479,21 +352,15 @@
       "en": "No, I don't need it.",
       "ko": "아니, 필요 없어.",
       "tags": {
-        "functions": [
-          "F43"
-        ],
+        "functions": ["F43", "F14"],
         "situation": "S30",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "emotions": ["E14"],
+        "expression_types": ["X08"],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": ["G01"],
         "flags": []
       }
     },
@@ -502,22 +369,16 @@
       "en": "When you work out like I do, just go straight for the...",
       "ko": "내가 운동할 때는 그냥 바로...",
       "tags": {
-        "functions": [
-          "F09"
-        ],
+        "functions": ["F37", "F14"],
         "situation": "S30",
         "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "emotions": ["E14"],
+        "expression_types": ["X01", "X08"],
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["is_fragment"]
       }
     },
     {
@@ -525,24 +386,16 @@
       "en": "-♪♪",
       "ko": "-♪♪",
       "tags": {
-        "functions": [
-          "F01"
-        ],
+        "functions": ["F02"],
         "situation": "S30",
         "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": ["is_fragment"]
       }
     }
   ]

@@ -14,8 +14,8 @@
         "functions": [
           "F35"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,9 +35,9 @@
       "ko": "오!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -60,21 +60,23 @@
       "ko": "만세!",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -83,10 +85,33 @@
       "ko": "자, 친구야, 내가 뭐라고 했는지 기억나?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S33",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "nJ0a8k-l1d0-4",
+      "en": "Glad he's on our team.",
+      "ko": "그가 우리 팀에 있어서 기뻐.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -101,38 +126,15 @@
       }
     },
     {
-      "id": "nJ0a8k-l1d0-4",
-      "en": "Glad he's on our team.",
-      "ko": "그가 우리 팀에 있어서 기뻐.",
-      "tags": {
-        "functions": [
-          "F15"
-        ],
-        "situation": "S16",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V02",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "nJ0a8k-l1d0-5",
       "en": "You don't need it.",
       "ko": "필요 없어.",
       "tags": {
         "functions": [
-          "F43"
+          "F40"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -152,23 +154,21 @@
       "ko": "저 작은 녀석이 거기서 골 넣을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V03",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -177,9 +177,9 @@
       "ko": "기다려.",
       "tags": {
         "functions": [
-          "F52"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -202,10 +202,10 @@
       "ko": "너무 멀어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -219,5 +219,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "f1942c1ea2a9a179"
 }

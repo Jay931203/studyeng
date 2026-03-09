@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,10 +35,10 @@
       "ko": "자, 여러분, 내 말을 들어봐.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S33",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,8 +60,8 @@
         "functions": [
           "F04"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,7 +71,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -83,7 +85,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -95,7 +97,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,10 +108,10 @@
       "ko": "그건 여기서부터 오는 거야. 알겠어? 그리고 여기 위에서, 아래에서.",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,10 +131,10 @@
       "ko": "문제는, 우리 안에 너무 많은 잡동사니가 떠다닌다는 거야,",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,10 +154,10 @@
       "ko": "그래서 많은 경우 우리가 스스로를 방해하게 돼.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,18 +177,18 @@
       "ko": "질투나 두려움, 수치 같은 것들 말이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E04"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -198,20 +202,22 @@
       "ko": "더 이상 그런 것들과 엮이고 싶지 않아.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -223,20 +229,26 @@
       "ko": "내 말 이해하지?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F50",
+          "F51"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -248,8 +260,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -260,7 +272,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -269,9 +283,9 @@
       "ko": "아니, 코치.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -283,7 +297,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -292,9 +308,9 @@
       "ko": "아니.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -306,7 +322,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -317,30 +335,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S16",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "ZPGBceVfV60-14",
-      "en": "No.",
-      "ko": "아니.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -352,7 +347,34 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "ZPGBceVfV60-14",
+      "en": "No.",
+      "ko": "아니.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S33",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -361,9 +383,9 @@
       "ko": "아니.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -386,33 +408,10 @@
       "ko": "나도 마찬가지야.",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "ZPGBceVfV60-17",
-      "en": "Hell no.",
-      "ko": "절대 안 돼.",
-      "tags": {
-        "functions": [
-          "F43"
-        ],
-        "situation": "S48",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -424,7 +423,35 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "contains_profanity"
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "ZPGBceVfV60-17",
+      "en": "Hell no.",
+      "ko": "절대 안 돼.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S33",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": [
+          "contains_profanity",
+          "is_fragment"
         ]
       }
     },
@@ -434,20 +461,22 @@
       "ko": "내가 엮이고 싶은 건 뭘까?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S48",
+        "situation": "S33",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -457,10 +486,10 @@
       "ko": "내가 중요하다는 믿음이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S33",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -480,9 +509,9 @@
       "ko": "알겠지?",
       "tags": {
         "functions": [
-          "F51"
+          "F06"
         ],
-        "situation": "S48",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -503,10 +532,10 @@
       "ko": "내가 무엇을 이루든 이루지 않든 상관없이.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -514,11 +543,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V05",
+        "power": [
+          "P12"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "6be80f2647de46d1"
 }

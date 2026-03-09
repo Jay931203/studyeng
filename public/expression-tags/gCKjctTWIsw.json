@@ -12,9 +12,9 @@
       "ko": "아, 그래서 TV 도쿄 발표팀에 계신 거군요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S48",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,9 +35,9 @@
       "ko": "네, 맞아요. 아나운서를 담당하고 있어요.",
       "tags": {
         "functions": [
-          "F01"
+          "F07"
         ],
-        "situation": "S16",
+        "situation": "S48",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,7 +60,7 @@
         "functions": [
           "F27"
         ],
-        "situation": "S16",
+        "situation": "S48",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -69,11 +69,16 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V05",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "b9b18791562dca23"
 }

@@ -12,18 +12,18 @@
       "ko": "앉아.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S39",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -39,16 +39,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,20 +60,24 @@
       "ko": "너도 알 것 같아. 아니, 나는 몰라. 응, 너는 알아. 왜 누가 너를 나와 혼동할 수 있겠어? 나는... 모르겠어. 맞았어.",
       "tags": {
         "functions": [
-          "F50"
+          "F09"
         ],
-        "situation": "S50",
+        "situation": "S39",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X04",
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -85,9 +89,9 @@
         "functions": [
           "F17"
         ],
-        "situation": "S50",
+        "situation": "S39",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
@@ -96,7 +100,10 @@
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06",
+          "G18"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -108,20 +115,24 @@
       "ko": "맞아. 우리는 모두 연결되어 있고, 춤추고, 엉망이야. 이해가 안 돼.",
       "tags": {
         "functions": [
-          "F09"
+          "F10"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S39",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -133,18 +144,18 @@
       "ko": "너는 삶을 바꿀 방법을 찾고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S39",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -156,18 +167,18 @@
       "ko": "너 혼자서는 이걸 할 수 없어.",
       "tags": {
         "functions": [
-          "F43"
+          "F12"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -179,20 +190,24 @@
       "ko": "네가 되고 싶어하는 모든 모습, 그게 나야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S39",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -202,20 +217,22 @@
       "ko": "나는 네가 원하는 모습이고, 네가 원하는 방식으로 섹스하고, 똑똑하고 유능해,",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S50",
+        "situation": "S39",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -227,22 +244,23 @@
       "ko": "가장 중요한 건, 나는 모든 면에서 자유로워.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "e7836ec13db1f3ac"
 }

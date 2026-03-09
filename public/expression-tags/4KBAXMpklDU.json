@@ -12,20 +12,22 @@
       "ko": "도시. 맨체스터도 포함해서. 뭔가 할 일이 생길 거라고 확신해. 너도 좋아할 거야.",
       "tags": {
         "functions": [
-          "F01"
+          "F14"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16"
+        ],
         "flags": []
       }
     },
@@ -37,14 +39,15 @@
         "functions": [
           "F06"
         ],
-        "situation": "S27",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -58,10 +61,10 @@
       "ko": "병원이야. 클락슨 박사에게 들키지 마. 그는 이 병원이 세인트 토마스 병원 다음으로 좋다고 생각해.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S27",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,10 +84,10 @@
       "ko": "물론 코티지 병원이지만 꽤 잘 갖춰져 있어. 누가 비용을 부담해?",
       "tags": {
         "functions": [
-          "F06"
+          "F44"
         ],
-        "situation": "S27",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -93,7 +96,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -104,20 +109,22 @@
       "ko": "오, 좋네. 돈 얘기를 해보자. 아버지가 건물과 운영 기금을 주셨어.",
       "tags": {
         "functions": [
-          "F34"
+          "F36"
         ],
-        "situation": "S27",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -127,16 +134,17 @@
       "ko": "운영 기금을 마련해 주셨어. 어찌 보면 그가 자신의 기념비를 세운 거지. 정말 멋지네. 그리고 로이드 조지 씨의 새로운 보험 정책이 도움이 될 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S27",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -150,20 +158,24 @@
       "ko": "로이드 조지의 새로운 보험 정책이 도움이 될 거야. 제발 그 사람 이름을 말하지 마.",
       "tags": {
         "functions": [
-          "F09"
+          "F23",
+          "F34"
         ],
-        "situation": "S27",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08",
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -173,11 +185,11 @@
       "ko": "우리는 이제 막 식사할 거야. 내가 고정해줄게, 너는 스스로 가져가면 돼, 선생님.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S27",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -196,10 +208,10 @@
       "ko": "네, 알아. 고마워. 여기서 하는 방식에 곧 익숙해질 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F27"
         ],
-        "situation": "S27",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -207,8 +219,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -219,10 +233,10 @@
       "ko": "내가 이와 아주 다른 삶에 익숙하다는 말이라면 맞아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,10 +256,10 @@
       "ko": "너는 시간을 어떻게 보낼 거야? 나는 리폰에서 일자리가 있어. 내일 시작한다고 했어.",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -255,9 +269,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "38434b7db89149e6"
 }

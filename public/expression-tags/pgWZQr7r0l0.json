@@ -12,7 +12,7 @@
       "ko": "금발과 빨간 머리 아가씨들, 늙은 개와 새로운 재주",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,7 +37,7 @@
       "ko": "아직 못 버린 습관들, 하나님의 은혜에 대해 이야기했지",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -46,9 +46,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,18 +62,18 @@
       "ko": "우리가 저질렀던 난리들, 그러다 그 노인이 말하는 걸 들었어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V03",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -88,18 +88,18 @@
       "ko": "하나님은 위대하고, 맥주는 맛있고, 사람들은 미쳤어",
       "tags": {
         "functions": [
-          "F09"
+          "F35"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -113,7 +113,7 @@
       "ko": "그가 말했어, 전쟁 두 번 했고, 결혼하고 이혼했다고",
       "tags": {
         "functions": [
-          "F09"
+          "F03"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -124,7 +124,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -138,18 +138,19 @@
       "ko": "오하이오에는 왜 왔냐고? 글쎄, 나도 모르겠다고 했어",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F03"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V03",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -164,7 +165,7 @@
       "ko": "한두 시간 동안 얘기했어, 우리가 알던 모든 여자들에 대해",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -175,7 +176,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -189,18 +190,18 @@
       "ko": "우리가 겪었던 모든 것들",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -208,5 +209,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "eece6a764f29b8e0"
 }

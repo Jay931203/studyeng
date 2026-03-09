@@ -12,11 +12,10 @@
       "ko": "너를 위해서, 브라이언. 우리가 정말 친구일까? 왜 안 되지?",
       "tags": {
         "functions": [
-          "F25",
           "F06"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -36,9 +35,10 @@
       "ko": "친구는 서로에게 무엇이든 말할 수 있으니까.",
       "tags": {
         "functions": [
-          "F09"
+          "F04",
+          "F50"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -49,7 +49,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -59,9 +61,10 @@
       "ko": "친구의 모자를 쓰고 있다면, 맞지? 그렇게 생각해.",
       "tags": {
         "functions": [
+          "F07",
           "F09"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -72,7 +75,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -82,9 +87,9 @@
       "ko": "좋아.",
       "tags": {
         "functions": [
-          "F01"
+          "F44"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -96,7 +101,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -105,10 +112,10 @@
       "ko": "네가 1천만 달러를 아직 못 받은 이유를 말해줄게.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -128,10 +135,10 @@
       "ko": "지금 너는 월급쟁이 선수야.",
       "tags": {
         "functions": [
-          "F12"
+          "F04"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -141,7 +148,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -151,18 +160,18 @@
       "ko": "머리로 플레이하고, 마음으로는 하지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -174,18 +183,18 @@
       "ko": "개인적인 삶은 마음이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -199,14 +208,14 @@
         "functions": [
           "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -220,10 +229,11 @@
       "ko": "네가 얻지 못한 것, 누가 잘못했는지,",
       "tags": {
         "functions": [
-          "F09"
+          "F06",
+          "F55"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -243,13 +253,13 @@
       "ko": "누가 패스를 던지지 않았는지,",
       "tags": {
         "functions": [
-          "F09"
+          "F23"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -266,10 +276,10 @@
       "ko": "누가 네가 가지지 못한 계약을 가지고 있는지,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -289,18 +299,18 @@
       "ko": "누가 너에게 사랑을 주지 않는지. 그리고 알겠니?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -312,10 +322,10 @@
       "ko": "그건 사람들을 감동시키지 않아.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -335,20 +345,23 @@
       "ko": "그건 사람들을 감동시키지 않아. 그냥 입 다물고, 게임을 해. 마음으로 해. 그리고 알겠니?",
       "tags": {
         "functions": [
-          "F04"
+          "F17"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -361,7 +374,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -381,10 +394,10 @@
       "ko": "그게 진실이야, 친구. 그게 진실이야. 감당할 수 있어?",
       "tags": {
         "functions": [
-          "F09"
+          "F34"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -394,7 +407,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -404,7 +419,7 @@
       "ko": "친구 사이의 질문일 뿐이야.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -450,10 +465,10 @@
       "ko": "아, 그리고 누가 너를 새우라고 부를 때,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -473,10 +488,10 @@
       "ko": "내가 너를 방어하는 사람이야.",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -496,10 +511,10 @@
       "ko": "뭔가를 방어하고 싶어. 좋아. 그리고 나를 이용하지 마.",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -509,9 +524,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "7aa2d1821fa9937c"
 }

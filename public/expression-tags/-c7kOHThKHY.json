@@ -12,23 +12,23 @@
       "ko": "그래서 내가 어떻게 이렇게 맞았는지, 모든 방향에서 맞았어. 괜찮아, 톰, 잘했어.",
       "tags": {
         "functions": [
-          "F17"
+          "F04"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "grammar_intent": [
+          "G05"
+        ],
+        "flags": []
       }
     },
     {
@@ -37,23 +37,23 @@
       "ko": "아, 나한테 자원이 충분히 쓰이지 않았어. 도대체 무슨 일이야? 모든 방향에서 맞고 있어.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": []
       }
     },
     {
@@ -62,23 +62,21 @@
       "ko": "너 나를 농락하는 거야, 시브? 나는 희생양이야. 샌드위치 속의 고기야. 제리는 방탄 스님이고, 켄달은 예비군이야.",
       "tags": {
         "functions": [
-          "F17"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -87,34 +85,9 @@
       "ko": "나는 샌드위치 속의 고기야.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
-      "id": "-c7kOHThKHY-4",
-      "en": "Oh",
-      "ko": "오",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -130,28 +103,51 @@
       }
     },
     {
+      "id": "-c7kOHThKHY-4",
+      "en": "Oh",
+      "ko": "오",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
       "id": "-c7kOHThKHY-5",
       "en": "Fuck oh fuck. Okay. Oh fuck guys. Everything is fine. Nothing bad is happening here. Oh, man. Oh my god",
       "ko": "젠장, 아 젠장. 괜찮아, 여러분. 여기서 나쁜 일은 일어나고 있지 않아. 아, 맙소사.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -160,23 +156,21 @@
       "ko": "젠장, 나는 2억 5천만 달러를 거절했는데, 이제 이 자때문에 영원히 감옥에 가게 생겼어.",
       "tags": {
         "functions": [
-          "F17"
+          "F04"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -185,9 +179,9 @@
       "ko": "너",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -210,9 +204,32 @@
       "ko": "밖에, 아 젠장, 이제",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "-c7kOHThKHY-9",
+      "en": "Unbelievable",
+      "ko": "믿을 수 없어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -225,32 +242,8 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_fragment",
-          "contains_profanity"
+          "is_fragment"
         ]
-      }
-    },
-    {
-      "id": "-c7kOHThKHY-9",
-      "en": "Unbelievable",
-      "ko": "믿을 수 없어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
       }
     },
     {
@@ -259,16 +252,16 @@
       "ko": "시브, 우리에게 어떤 일이 다가오고 있는지 알 방법이 있을까?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -276,5 +269,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "af9e6688e74c84ec"
 }

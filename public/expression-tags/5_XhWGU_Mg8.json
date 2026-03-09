@@ -12,11 +12,11 @@
       "ko": "전하.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "A1",
-        "register": "R5",
+        "register": "R1",
         "emotions": [
           "E09"
         ],
@@ -27,6 +27,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
+          "is_period",
           "is_fragment"
         ]
       }
@@ -37,11 +38,11 @@
       "ko": "할아버지.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "A1",
-        "register": "R5",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -52,6 +53,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
+          "is_period",
           "is_fragment"
         ]
       }
@@ -62,11 +64,11 @@
       "ko": "저와 이야기하고 싶으셨죠.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -76,7 +78,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -87,9 +91,9 @@
         "functions": [
           "F07"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "A1",
-        "register": "R5",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -97,9 +101,14 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -108,21 +117,23 @@
       "ko": "소회의 회의 보고서를 받고 싶습니다.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -131,11 +142,11 @@
       "ko": "전하, 소회의 회의에 참석하셔도 됩니다.",
       "tags": {
         "functions": [
-          "F44"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R1",
         "emotions": [
           "E09"
         ],
@@ -145,7 +156,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -154,11 +167,11 @@
       "ko": "모든 회의에 참석하셔도 좋습니다.",
       "tags": {
         "functions": [
-          "F44"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -168,7 +181,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -177,11 +192,11 @@
       "ko": "저는 매우 바빴습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -191,7 +206,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -200,11 +217,11 @@
       "ko": "많은 중요한 사안들이 왕의 관심을 필요로 합니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -214,7 +231,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -225,19 +244,24 @@
         "functions": [
           "F07"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "A1",
-        "register": "R5",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -246,11 +270,11 @@
       "ko": "소회의 회의를 손의 탑에서 열고 계셨죠,",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -260,7 +284,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -269,11 +295,11 @@
       "ko": "소회의실 대신에.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -283,7 +309,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -292,11 +320,11 @@
       "ko": "그렇습니다.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "A1",
-        "register": "R5",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -306,7 +334,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -315,11 +345,11 @@
       "ko": "이유를 여쭤봐도 될까요?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -329,7 +359,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -338,11 +370,11 @@
       "ko": "손의 탑이 제가 일하는 곳입니다.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -352,7 +384,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -361,11 +395,11 @@
       "ko": "거기서 여기까지 가는 데 시간이 걸립니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -375,7 +409,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -384,11 +420,11 @@
       "ko": "그 시간을 생산적으로 쓸 수 있습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -398,7 +434,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -407,11 +445,11 @@
       "ko": "그래서 제가 회의에 참석하고 싶다면,",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -419,9 +457,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P02"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -430,11 +472,11 @@
       "ko": "이제 손의 탑의 모든 계단을 올라가야 하나요?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -444,7 +486,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -455,9 +499,9 @@
         "functions": [
           "F07"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -465,10 +509,16 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period",
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "3decc07175803d5f"
 }

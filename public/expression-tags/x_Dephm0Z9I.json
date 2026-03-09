@@ -12,18 +12,18 @@
       "ko": "이혼 후 재산에 대해 설명하자면, 피고는",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S48",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,18 @@
       "ko": "팀이 나에게 그의 신랑 연설을 부탁했을 때, 내 즉각적인 반응은 \"얼마 줄 건데, 이 자식아? 나는 무료로 글 안 써\"였어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,23 +58,22 @@
       "ko": "그 당시 그에게 가능한 여자들은 이들이었고, 그는 이들과 얼마나 멀리 갔는지 보여줄게.",
       "tags": {
         "functions": [
-          "F34"
+          "F40"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X05"
         ],
-        "vibe": "V10",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -83,10 +82,10 @@
       "ko": "코드 설명하자면, 5번은 구강 성교, 8번은 완전한 성관계야.",
       "tags": {
         "functions": [
-          "F02"
+          "F25"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -94,7 +93,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,10 +105,10 @@
       "ko": "그러니 최악의 헤어스타일을 가진 남자지만 방 안에서 최고의 신부를 위해 건배를 하자.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -117,7 +116,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,18 +128,18 @@
       "ko": "신사숙녀 여러분, 팀과 메리에게. \"사랑해\"라고 말했어야 했는데.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,20 +151,26 @@
       "ko": "아빠, 당신은 이미 그렇게 말했어요. 암시했잖아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F22",
+          "F02"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V07",
+        "power": [
+          "P10"
+        ],
+        "grammar_intent": [
+          "G11",
+          "G22"
+        ],
         "flags": []
       }
     },
@@ -175,20 +180,23 @@
       "ko": "결혼식 날에 암시가 충분한지 잘 모르겠어요.",
       "tags": {
         "functions": [
-          "F12"
+          "F40"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17",
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -198,10 +206,11 @@
       "ko": "괜찮아요, 하지 마세요. 이렇게 되어 너무 행복해요.",
       "tags": {
         "functions": [
-          "F15"
+          "F28",
+          "F02"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E01"
@@ -215,5 +224,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "e778adf769e07ea9"
 }

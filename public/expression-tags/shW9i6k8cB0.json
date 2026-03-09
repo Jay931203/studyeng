@@ -12,10 +12,10 @@
       "ko": "내 이름은 마일스 모랄레스야.",
       "tags": {
         "functions": [
-          "F26"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,10 +35,10 @@
       "ko": "나는 브루클린의 유일한 스파이더맨이고, 모든 게 잘 되고 있어.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,20 +58,22 @@
       "ko": "아, 맞아, 너 그녀의 스파이 역할을 해야 했잖아. 좋아, 뭐 어때. 뭐? 와우. 뭐?",
       "tags": {
         "functions": [
-          "F09"
+          "F18"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S45",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -83,17 +85,19 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -104,10 +108,10 @@
       "ko": "나는 스팟이야.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +119,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,21 +131,25 @@
       "ko": "그건 웃기지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,10 +158,10 @@
       "ko": "내가 그걸 할게.",
       "tags": {
         "functions": [
-          "F44"
+          "F63"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -161,8 +169,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -175,7 +185,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S19",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -184,7 +194,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,19 +206,21 @@
       "ko": "AP 물리학 A, 내 아들. 그리고 스페인어 B. 뭐? 오, 알겠어. 마일스, 너 엄마를 죽이려고 하는 거야?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V06",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -219,20 +231,24 @@
       "ko": "미라, 그건 불가능해. 나 가야 해. 좋아, 재밌게 놀아. 안녕.",
       "tags": {
         "functions": [
-          "F06"
+          "F32"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S45",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V09",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -242,20 +258,28 @@
       "ko": "그는 너에게 거짓말하고 있어, 그리고 너도 알고 있을 거야. 무슨 일이야, 위험해? 마일스! 여기서 나갈래? 오, 언제?",
       "tags": {
         "functions": [
-          "F09"
+          "F25",
+          "F40"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S45",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05",
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17",
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -265,19 +289,21 @@
       "ko": "잠깐만. 최고의 스파이더맨들이 모인 엘리트 팀이 있다고?",
       "tags": {
         "functions": [
-          "F04"
+          "F49"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -290,20 +316,23 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "fa51602562e83086"
 }

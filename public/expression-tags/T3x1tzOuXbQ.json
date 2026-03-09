@@ -12,18 +12,18 @@
       "ko": "아, 맞아, 그 작은 년 기억해.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -39,16 +39,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,18 +60,18 @@
       "ko": "정리해볼게.",
       "tags": {
         "functions": [
-          "F50"
+          "F39"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,19 +83,22 @@
       "ko": "내가 네 마약을 훔치고, 흠?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X05",
+          "X06"
         ],
-        "vibe": "V03",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -108,18 +111,20 @@
         "functions": [
           "F17"
         ],
-        "situation": "S10",
+        "situation": "S38",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -131,21 +136,23 @@
       "ko": "메스를 가져온다고?",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S38",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -154,10 +161,10 @@
       "ko": "우와, 그거 정말 멋진 계획이네, 그렇지?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E05"
@@ -165,8 +172,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -177,21 +186,23 @@
       "ko": "멋져.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S38",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -200,18 +211,18 @@
       "ko": "그런데 그 중 하나가 틀렸어.",
       "tags": {
         "functions": [
-          "F08"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -225,20 +236,23 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "08fe7e5a7197248c"
 }

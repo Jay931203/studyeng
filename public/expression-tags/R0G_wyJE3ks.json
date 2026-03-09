@@ -5,6 +5,7 @@
   "seriesId": "shawshank",
   "sentenceCount": 10,
   "taggedCount": 10,
+  "transcriptHash": "02b5dbcff684e418",
   "sentences": [
     {
       "id": "R0G_wyJE3ks-0",
@@ -12,9 +13,9 @@
       "ko": "멕시코, 태평양에 있는 작은 곳.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S37",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -23,10 +24,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -35,20 +38,22 @@
       "ko": "멕시코 사람들이 태평양에 대해 뭐라고 하는지 알아?",
       "tags": {
         "functions": [
-          "F06"
+          "F17"
         ],
-        "situation": "S50",
+        "situation": "S37",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -60,7 +65,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S37",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -69,7 +74,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,20 +86,24 @@
       "ko": "내가 평생 살고 싶은 곳이야,",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S37",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -104,21 +113,23 @@
       "ko": "기억이 없는 따뜻한 곳, 작은 호텔을 열고",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S23",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -127,18 +138,18 @@
       "ko": "해변에 바로, 쓸모없는 오래된 배를 사서",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S04",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,10 +161,10 @@
       "ko": "새로 고쳐서 손님들을 낚시로 데려가고 싶어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S37",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -161,7 +172,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,18 +184,18 @@
       "ko": "오늘은 뭐라고, 노인?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S37",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,10 +207,10 @@
       "ko": "그런 곳에서는 일을 잘 아는 사람이 필요해.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S37",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -207,7 +218,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,18 +230,18 @@
       "ko": "나는 밖에서 잘 지낼 수 있을 것 같지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F09"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S37",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []

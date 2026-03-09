@@ -12,16 +12,16 @@
       "ko": "그렇게 쉽지 않아. 그녀는 이 분야에 새로 왔고, 민감하고, 기쁘게 해주고 싶어 해.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -35,18 +35,19 @@
       "ko": "그녀는 흑인 아빠, 제발. 이 모든 게 그거라는 걸 잘 알잖아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E03",
+          "E13"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V12",
+        "vibe": "V03",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -60,9 +61,9 @@
       "ko": "그녀가 너무 많이 말하면 그냥 조용히 하라고 말해.",
       "tags": {
         "functions": [
-          "F06"
+          "F40"
         ],
-        "situation": "S10",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -83,10 +84,10 @@
       "ko": "그녀를 어떻게 조용히 시킬 수 있을까? 정말로?",
       "tags": {
         "functions": [
-          "F06"
+          "F59"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -106,16 +107,17 @@
       "ko": "완전한 편견처럼 들리지 않게 하려면 아마 조금 외교적인 접근이 필요할 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -129,9 +131,9 @@
       "ko": "그러니까 내 말을 좀 더 신중하게 선택하라는 거야?",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -152,20 +154,25 @@
       "ko": "맞아, 정확히 그거야. 좋아, 그럼 그게 어떻게 진행될지 보여줘. 내가 너 역할을 하고, 너는 메리 역할을 해봐.",
       "tags": {
         "functions": [
-          "F50"
+          "F10",
+          "F36",
+          "F40"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20",
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -175,9 +182,78 @@
       "ko": "좋아, 메리 프레이저. 너와 이야기하고 싶었어.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "nDgLncOu4Ug-8",
+      "en": "speak to you you know people listen to the show for my expertise so my opinion",
+      "ko": "사람들은 내 전문성을 위해 쇼를 듣는 거니까 내 의견은 별로 중요하지 않아.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "nDgLncOu4Ug-9",
+      "en": "is not worth anything well I'm the one with the medical degree now I want you",
+      "ko": "나는 의학 학위를 가진 사람인데, 너도 기여하길 원하지만 한계가 있어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "nDgLncOu4Ug-10",
+      "en": "to contribute but only up to a point so you want me to stay in my place",
+      "ko": "그러니까 내가 내 자리를 지키라는 거야?",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -193,92 +269,23 @@
       }
     },
     {
-      "id": "nDgLncOu4Ug-8",
-      "en": "speak to you you know people listen to the show for my expertise so my opinion",
-      "ko": "사람들은 내 전문성을 위해 쇼를 듣는 거니까 내 의견은 별로 중요하지 않아.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "nDgLncOu4Ug-9",
-      "en": "is not worth anything well I'm the one with the medical degree now I want you",
-      "ko": "나는 의학 학위를 가진 사람인데, 너도 기여하길 원하지만 한계가 있어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "nDgLncOu4Ug-10",
-      "en": "to contribute but only up to a point so you want me to stay in my place",
-      "ko": "그러니까 내가 내 자리를 지키라는 거야?",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "nDgLncOu4Ug-11",
       "en": "Massa she's not going to say mass what am I getting too uppity for you you",
       "ko": "그녀는 그렇게 말하지 않을 거야. 내가 너무 나대는 거야?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,22 +297,23 @@
       "ko": "너는 샤리 스윌린, 오페라 사랑하는 아르마니 입는 엘리트야. 너는 아무것도 없어.",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "c5f96cd7279e7462"
 }

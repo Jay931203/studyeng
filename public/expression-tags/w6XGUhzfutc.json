@@ -12,18 +12,18 @@
       "ko": "당신은 너무 완벽해요.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
-        "register": "R5",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,18 @@
       "ko": "당신에게서 눈을 뗄 수가 없어요.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
-        "register": "R5",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +58,18 @@
       "ko": "당신은 만지면 천국 같을 거예요.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,19 +81,21 @@
       "ko": "당신을 너무 안고 싶어요.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R5",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V07",
-        "power": [],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -104,18 +106,18 @@
       "ko": "드디어 사랑이 찾아왔어요.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
           "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,18 +129,18 @@
       "ko": "살아있다는 것에 감사해요.",
       "tags": {
         "functions": [
-          "F22"
+          "F27"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,18 +152,18 @@
       "ko": "당신은 너무 완벽해요.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
-        "register": "R5",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,18 +175,18 @@
       "ko": "당신에게서 눈을 뗄 수가 없어요.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
-        "register": "R5",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,7 +200,7 @@
         "functions": [
           "F22"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R5",
         "emotions": [
@@ -207,9 +209,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G22"
+        ],
         "flags": []
       }
     },
@@ -219,11 +223,11 @@
       "ko": "괜찮다면.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -242,32 +246,9 @@
       "ko": "당신이 필요해요, 베이비.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
-        "register": "R5",
-        "emotions": [
-          "E11"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "w6XGUhzfutc-11",
-      "en": "To warm the lonely night",
-      "ko": "외로운 밤을 따뜻하게 해줄.",
-      "tags": {
-        "functions": [
-          "F22"
-        ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R5",
         "emotions": [
@@ -277,6 +258,31 @@
           "X08"
         ],
         "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G15"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "w6XGUhzfutc-11",
+      "en": "To warm the lonely night",
+      "ko": "외로운 밤을 따뜻하게 해줄.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E02"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,7 +296,7 @@
         "functions": [
           "F22"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R5",
         "emotions": [
@@ -299,9 +305,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G22"
+        ],
         "flags": []
       }
     },
@@ -311,13 +319,13 @@
       "ko": "내가 말할 때 나를 믿어줘요.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
@@ -328,5 +336,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "8e448389765473b9"
 }

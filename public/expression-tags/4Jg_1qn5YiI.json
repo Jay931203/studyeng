@@ -12,9 +12,9 @@
       "ko": "아, 만약 차를 권하면 그냥 거절해.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -35,11 +35,10 @@
       "ko": "아니. 아니. 아니. 안녕하세요. 엄마, 이분은 메리야. 메리. 안녕.",
       "tags": {
         "functions": [
-          "F25",
-          "F26"
+          "F25"
         ],
-        "situation": "S31",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -59,18 +58,18 @@
       "ko": "세상에, 정말 예쁘네.",
       "tags": {
         "functions": [
-          "F09"
+          "F35"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -82,10 +81,10 @@
       "ko": "아, 아니야, 그냥 마스카라랑 립스틱을 많이 발랐어.",
       "tags": {
         "functions": [
-          "F08"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -105,9 +104,9 @@
       "ko": "한번 봐봐. 아, 그래. 좋아.",
       "tags": {
         "functions": [
-          "F02"
+          "F35"
         ],
-        "situation": "S31",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -128,9 +127,9 @@
       "ko": "너무 예쁜 건 여자에게 좋지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -151,10 +150,10 @@
       "ko": "유머 감각이나 개성이 발달하지 않거든. 차?",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -174,13 +173,13 @@
       "ko": "차 한 잔 마시고 싶어.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
@@ -197,13 +196,13 @@
       "ko": "아, 이런, 하루가 다 갔네.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -220,18 +219,18 @@
       "ko": "맛있는 아침식사네. 고마워.",
       "tags": {
         "functions": [
-          "F30"
+          "F27"
         ],
-        "situation": "S31",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -243,9 +242,9 @@
       "ko": "오, 돌 던지기.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -266,10 +265,10 @@
       "ko": "그가 이 정도 키였을 때부터 계속 해왔어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -279,7 +278,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -289,10 +290,10 @@
       "ko": "그리고 너의 단점은 뭐야?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -312,23 +313,21 @@
       "ko": "음, 작은 약점들. 아. 음... 나... 음...",
       "tags": {
         "functions": [
-          "F52"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -337,16 +336,16 @@
       "ko": "음, 나는 매우 불안해.",
       "tags": {
         "functions": [
-          "F16"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -360,30 +359,7 @@
       "ko": "귀엽네.",
       "tags": {
         "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V02",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "4Jg_1qn5YiI-16",
-      "en": "Okay, I, uh...",
-      "ko": "좋아, 나는...",
-      "tags": {
-        "functions": [
-          "F52"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -401,6 +377,34 @@
           "is_fragment"
         ]
       }
+    },
+    {
+      "id": "4Jg_1qn5YiI-16",
+      "en": "Okay, I, uh...",
+      "ko": "좋아, 나는...",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
     }
-  ]
+  ],
+  "transcriptHash": "2690f51ac6375d9f"
 }

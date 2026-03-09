@@ -12,18 +12,18 @@
       "ko": "스마트폰으로 주문하고 결제해.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S05",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,18 @@
       "ko": "내가 들어갈 때 커피가 기다리고 있어.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,23 +58,23 @@
       "ko": "난 던킨이 정말 좋아. 무슨 소리야? 아침식사와 완벽한 선물을 어디서 더 구할 수 있어?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S34",
+        "situation": "S05",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "grammar_intent": [
+          "G13"
+        ],
+        "flags": []
       }
     },
     {
@@ -83,19 +83,22 @@
       "ko": "진짜 고객에 대해 이야기하고 싶어? 애야, 그게 나야. 난 던킨의 시장 같아.",
       "tags": {
         "functions": [
-          "F01"
+          "F12"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01",
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -106,18 +109,18 @@
       "ko": "이게 바로 던킨 도너츠의 얼굴이야. 여기서 담배 피우면 안 돼. 난 안 피워, 마크. 여기서 담배 피우는 건 너야. 너무 피곤해.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,23 +132,21 @@
       "ko": "나는 그냥-",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -156,17 +157,19 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -179,18 +182,23 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V02",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -202,18 +210,22 @@
         "functions": [
           "F36"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -225,34 +237,11 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "FSvNhxKJJyU-10",
-      "en": "there's even more reason to celebrate the season. Yo, free coffee! I got the big one.",
-      "ko": "시즌을 축하할 이유가 더 많아. 야, 무료 커피! 큰 걸로 받았어.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -264,23 +253,48 @@
       }
     },
     {
+      "id": "FSvNhxKJJyU-10",
+      "en": "there's even more reason to celebrate the season. Yo, free coffee! I got the big one.",
+      "ko": "시즌을 축하할 이유가 더 많아. 야, 무료 커피! 큰 걸로 받았어.",
+      "tags": {
+        "functions": [
+          "F02"
+        ],
+        "situation": "S31",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E14"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "FSvNhxKJJyU-11",
       "en": "I got a free coffee right there on the app. What are you doing, man? Show and tell or something? Huh?",
       "ko": "앱에서 무료 커피를 받았어. 뭐 하는 거야? 쇼 앤 텔 같은 거? 응?",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -292,18 +306,18 @@
       "ko": "나는 작은 쇼 앤 텔이야, 던킨 너츠.",
       "tags": {
         "functions": [
-          "F03"
+          "F02"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -315,21 +329,23 @@
       "ko": "그거 보여줘, 엄마.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -340,16 +356,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S15",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -363,19 +379,22 @@
       "ko": "난 거기 가고 싶지 않아. 제발, 친구야. 영화야. 네가 가장 좋아하는 걸 말해줘,",
       "tags": {
         "functions": [
-          "F09"
+          "F38"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -386,22 +405,25 @@
       "ko": "바닐라 너트 타프를 어떻게 좋아하는지. 뭐? 바닐라 너트 타프. 오!",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V10",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "661d7652bab0cb17"
 }

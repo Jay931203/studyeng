@@ -14,7 +14,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -35,9 +35,9 @@
       "ko": "내가 '심연'이라고 부르는 또 다른 세계야. 특별한 이유라도 있어?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -58,10 +58,10 @@
       "ko": "순수한 혼돈과 악의 영역이야. 뭐라고? D&D. 예수님. 와.",
       "tags": {
         "functions": [
-          "F02"
+          "F28"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,9 +69,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V17",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -83,7 +87,7 @@
         "functions": [
           "F09"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -93,7 +97,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P02"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -104,13 +110,13 @@
       "ko": "덩굴, 마인드 플레이어, 우리가 업사이드 다운에서 발견한 모든 끔찍한 것들.",
       "tags": {
         "functions": [
-          "F01"
+          "F23"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -131,7 +137,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -152,9 +158,9 @@
       "ko": "그는 몇 년 동안 잃어버렸고, 브레너 덕분에 찾을 수 있었어. 그가 헨리를 찾게 했어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -175,20 +181,22 @@
       "ko": "네가 심연과 원거리 접촉을 했을 때, 다리가 형성됐어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -200,7 +208,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -223,7 +231,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -244,10 +252,35 @@
       "ko": "우리는 작년에 벡나를 물리쳤지만,",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "contains_profanity"
+        ]
+      }
+    },
+    {
+      "id": "AnDZaIKIXtI-11",
+      "en": "think he just bled across this bridge back to the Abyss to lick his wounds. What a pussy.",
+      "ko": "그는 이 다리를 통해 심연으로 돌아가 상처를 핥고 있는 것 같아. 정말 겁쟁이야.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -262,29 +295,6 @@
       }
     },
     {
-      "id": "AnDZaIKIXtI-11",
-      "en": "think he just bled across this bridge back to the Abyss to lick his wounds. What a pussy.",
-      "ko": "그는 이 다리를 통해 심연으로 돌아가 상처를 핥고 있는 것 같아. 정말 겁쟁이야.",
-      "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "AnDZaIKIXtI-12",
       "en": "So all this time, Vecna's been hiding in the sky?",
       "ko": "그러니까 그동안 벡나는 하늘에 숨어 있었던 거야?",
@@ -292,7 +302,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -313,9 +323,9 @@
       "ko": "그래서 모든 통로가 막다른 길로 이어졌구나.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -336,20 +346,23 @@
       "ko": "그리고 왜 목욕탕에서 그를 찾을 수 없는지, 그리고 왜 홀리가 하늘에서 떨어졌는지.",
       "tags": {
         "functions": [
-          "F06"
+          "F17"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -363,7 +376,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S39",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -384,9 +397,9 @@
       "ko": "나를 데려간 이유와 같아. 아이들의 마음은 더 약해.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -407,9 +420,9 @@
       "ko": "맞아, 더 쉽게 형성되고 조종될 수 있어. 그래서 그는 심연을 통해 자신의 생각과 힘을 전달했어.",
       "tags": {
         "functions": [
-          "F04"
+          "F21"
         ],
-        "situation": "S39",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -424,5 +437,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "b85fd86f10bf52e9"
 }

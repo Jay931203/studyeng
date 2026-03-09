@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,12 +23,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -39,7 +37,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -48,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,13 +60,13 @@
       "ko": "지미 키멜은 엉덩이에 킥을 맞아야 해. 아. 생일 축하해.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E01"
         ],
         "expression_types": [
           "X08"
@@ -87,10 +85,10 @@
       "ko": "홈디포에서 지미 키멜을 본 것 같았어.",
       "tags": {
         "functions": [
-          "F01"
+          "F21"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -98,7 +96,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -112,17 +110,19 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -133,13 +133,13 @@
       "ko": "지미 키멜, 너는 멍청한 바보야.",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -158,9 +158,9 @@
       "ko": "입 다물고 네 작은 TV 쇼나 해.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -169,7 +169,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -181,13 +181,13 @@
       "ko": "아니면 우리나라에서 나가.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -204,13 +204,13 @@
       "ko": "지미 키멜, 너는 내가 싫어하는 모든 것을 대표해.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E16"
         ],
         "expression_types": [
           "X08"
@@ -227,11 +227,11 @@
       "ko": "내가 싫어하는 모든 것이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F17"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
@@ -240,7 +240,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -252,8 +254,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -261,10 +263,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -273,9 +277,9 @@
       "ko": "생일 축하해, 지미.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -284,9 +288,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -296,18 +304,18 @@
       "ko": "생일 선물로 이걸 줄게, 지미.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -321,7 +329,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -330,7 +338,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -342,13 +350,14 @@
       "ko": "지미 키멜은 사시눈인가, 아니면 그냥 엄청 못생겼나?",
       "tags": {
         "functions": [
+          "F06",
           "F12"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -365,13 +374,13 @@
       "ko": "그냥 멍청해.",
       "tags": {
         "functions": [
-          "F09"
+          "F58"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E10"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -379,7 +388,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -388,13 +399,13 @@
       "ko": "그냥 멍청해.",
       "tags": {
         "functions": [
-          "F09"
+          "F58"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E10"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -402,7 +413,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -411,13 +424,13 @@
       "ko": "지미 키멜, 고릴라나 빨아라, 바보야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E10"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -428,5 +441,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "2a6e5d53397733df"
 }

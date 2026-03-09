@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,21 +35,23 @@
       "ko": "어서, 케이트.",
       "tags": {
         "functions": [
-          "F25"
+          "F38"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,10 +60,10 @@
       "ko": "뱀에 물리면 독을 빨아내야 해.",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +71,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,10 +83,10 @@
       "ko": "그게 내가 해야 했던 일이야. 내 인생의 독을 모두 빨아냈어.",
       "tags": {
         "functions": [
-          "F04"
+          "F57"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,7 +94,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,9 +106,9 @@
       "ko": "레지나부터 시작했어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -115,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,10 +129,10 @@
       "ko": "사람들이 너를 두려워할수록 더 많은 꽃을 받는다는 살아있는 증거야.",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,7 +140,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,7 +154,7 @@
         "functions": [
           "F03"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -161,7 +163,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,10 +175,10 @@
       "ko": "선한 행동이 벌을 받는다는 살아있는 증거야.",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,7 +186,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,7 +200,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S04",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -207,7 +209,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,7 +223,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -230,7 +232,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,9 +244,9 @@
       "ko": "잠깐만, 지금 바로 채점할게.",
       "tags": {
         "functions": [
-          "F34"
+          "F49"
         ],
-        "situation": "S50",
+        "situation": "S19",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -253,7 +255,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,19 +267,21 @@
       "ko": "경찰이 내 집을 수색하는 걸 보는 건 정말 환상적인 한 해의 정점이었어.",
       "tags": {
         "functions": [
-          "F12"
+          "F15"
         ],
-        "situation": "S50",
+        "situation": "S37",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -288,18 +292,18 @@
       "ko": "진실을 말해서 얼마나 곤란했어?",
       "tags": {
         "functions": [
-          "F06"
+          "F19"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,7 +317,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -322,10 +326,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -336,7 +343,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -345,11 +352,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "6ecfad04250eec99"
 }

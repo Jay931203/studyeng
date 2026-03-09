@@ -12,13 +12,13 @@
       "ko": "너랑 피오나, 그렇구나? 누가 알았겠어?",
       "tags": {
         "functions": [
-          "F09"
+          "F23"
         ],
-        "situation": "S09",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -35,56 +35,10 @@
       "ko": "그녀는 정말 좋은 여자야.",
       "tags": {
         "functions": [
-          "F30"
-        ],
-        "situation": "S09",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V02",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "uZrk0st4_x0-2",
-      "en": "She surprised me last night. She brought over dinner.",
-      "ko": "어젯밤에 나를 놀라게 했어. 저녁을 가져왔거든.",
-      "tags": {
-        "functions": [
-          "F18"
-        ],
-        "situation": "S09",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E05"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "uZrk0st4_x0-3",
-      "en": "It's brand new.",
-      "ko": "완전 새 거야.",
-      "tags": {
-        "functions": [
           "F01"
         ],
-        "situation": "S09",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -99,19 +53,70 @@
       }
     },
     {
+      "id": "uZrk0st4_x0-2",
+      "en": "She surprised me last night. She brought over dinner.",
+      "ko": "어젯밤에 나를 놀라게 했어. 저녁을 가져왔거든.",
+      "tags": {
+        "functions": [
+          "F21"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E05"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V11",
+        "power": [],
+        "grammar_intent": [
+          "G07"
+        ],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "uZrk0st4_x0-3",
+      "en": "It's brand new.",
+      "ko": "완전 새 거야.",
+      "tags": {
+        "functions": [
+          "F23"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E08"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
       "id": "uZrk0st4_x0-4",
       "en": "Congratulations. I love her.",
       "ko": "축하해. 나는 그녀를 좋아해.",
       "tags": {
         "functions": [
-          "F29",
-          "F22"
+          "F29"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
@@ -128,10 +133,11 @@
       "ko": "응.",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F53"
         ],
-        "situation": "S09",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -142,7 +148,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -153,16 +161,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S03",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -176,7 +184,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -197,16 +205,17 @@
       "ko": "그래서 들르기로 했어. 괜찮길 바래.",
       "tags": {
         "functions": [
-          "F34"
+          "F21",
+          "F24"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -220,10 +229,11 @@
       "ko": "응.",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F53"
         ],
-        "situation": "S09",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -234,7 +244,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -243,10 +255,10 @@
       "ko": "그냥 말하고 싶었어...",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -257,7 +269,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -266,10 +280,10 @@
       "ko": "고민해봤어.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -289,10 +303,10 @@
       "ko": "타운센드에게는 아직 전화하지 않았지만...",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -303,7 +317,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -312,9 +328,9 @@
       "ko": "여전히 이게 옳은 선택인 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -335,10 +351,10 @@
       "ko": "음...",
       "tags": {
         "functions": [
-          "F50"
+          "F52"
         ],
-        "situation": "S09",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -360,10 +376,10 @@
       "ko": "나도 잘 자지 못했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F56"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -385,8 +401,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -406,9 +422,9 @@
       "ko": "내가 너를 창고로 데려갔던 날 기억나?",
       "tags": {
         "functions": [
-          "F03"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -429,9 +445,9 @@
       "ko": "네가 잘못된 방향을 알려줬던 거 말이야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -452,10 +468,11 @@
       "ko": "응, 기억해.",
       "tags": {
         "functions": [
-          "F07"
+          "F07",
+          "F53"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -466,7 +483,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -475,9 +494,9 @@
       "ko": "좋아, 그럼 나는 뒤에 서 있었고,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -498,9 +517,9 @@
       "ko": "네가 창고를 보여주는 걸 지켜봤어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -515,5 +534,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "eeea1fd8f2324d99"
 }

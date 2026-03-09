@@ -12,20 +12,22 @@
       "ko": "이 브이로그에 대해 조금 이야기하자면, 제 일반 영화만큼 좋지는 않을 거예요.",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
         "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -35,18 +37,18 @@
       "ko": "빠르게 편집하고, 대충 편집하고, 촬영 퀄리티는 최악의 C 플러스지만,",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
         "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,21 +60,23 @@
       "ko": "더 많이 만들고 싶었어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,20 +85,22 @@
       "ko": "시청자들과 더 많은 대화를 나누고 싶고, 더 많이 편집하고 싶었어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -104,18 +110,18 @@
       "ko": "그래서...",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -123,5 +129,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "d5b1aee20013e231"
 }

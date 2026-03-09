@@ -12,10 +12,10 @@
       "ko": "아직 계신가요? 그렇다면 오늘 드라이브에 함께해 주셔서 감사합니다.",
       "tags": {
         "functions": [
-          "F34"
+          "F27"
         ],
-        "situation": "S06",
-        "cefr": "A2",
+        "situation": "S46",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,8 +23,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -39,8 +41,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S06",
-        "cefr": "A1",
+        "situation": "S46",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +50,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -56,5 +58,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "129c3cb3a6a57ffe"
 }

@@ -12,20 +12,23 @@
       "ko": "네, 스콧 씨, 두 분이 단순한 친구 이상이 될 가능성이 있을까요?",
       "tags": {
         "functions": [
-          "F06"
+          "F13"
         ],
         "situation": "S08",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -35,18 +38,18 @@
       "ko": "그런 가능성이 있기를 바랐지만, 아니라고 확신하고 있습니다. 그런데 만약...",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S08",
-        "cefr": "B2",
-        "register": "R3",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
-          "E02"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -62,16 +65,18 @@
         ],
         "situation": "S08",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -81,20 +86,22 @@
       "ko": "괜찮습니다.",
       "tags": {
         "functions": [
-          "F34"
+          "F28"
         ],
         "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -104,19 +111,21 @@
       "ko": "말씀해 보세요.",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
         "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V07",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -127,18 +136,18 @@
       "ko": "만약 그 사람, 타커가...",
       "tags": {
         "functions": [
-          "F50"
+          "F06"
         ],
         "situation": "S08",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,18 +159,18 @@
       "ko": "그의 이름은 타커입니다. 감사합니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "B2",
-        "register": "R3",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,21 +182,25 @@
       "ko": "만약 타커 씨가 자신이 바보 같은 짓을 했다는 걸 깨닫고 무릎을 꿇고 당신에게 다시 생각해 달라고 부탁한다면, 당신은 다시 고려할 의향이 있을까요?",
       "tags": {
         "functions": [
-          "F06"
+          "F27"
         ],
         "situation": "S08",
-        "cefr": "B2",
-        "register": "R3",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V07",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -196,19 +209,21 @@
       "ko": "자기가 얼마나 못되게 굴었는지 깨닫고 무릎을 꿇고",
       "tags": {
         "functions": [
-          "F14"
+          "F02"
         ],
         "situation": "S08",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V07",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -219,22 +234,23 @@
       "ko": "무릎을 꿇고 다시 생각해 달라고 부탁했어.",
       "tags": {
         "functions": [
-          "F34"
+          "F03"
         ],
         "situation": "S08",
-        "cefr": "B2",
-        "register": "R3",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "28c6cc33a168c9ea"
 }

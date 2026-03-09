@@ -15,7 +15,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,30 +35,7 @@
       "ko": "저건 칼빈 클라인이야. 세상에, 그는 꿈의 남자야.",
       "tags": {
         "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "qW2syroSQTs-2",
-      "en": "Whoa, whoa, kid, kid. Stop, stop. Stop, stop. I'll get it back to you, all right?",
-      "ko": "와, 와, 얘야, 얘야. 멈춰, 멈춰. 멈춰, 멈춰. 내가 다시 돌려줄게, 알겠지?",
-      "tags": {
-        "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -76,12 +53,35 @@
       }
     },
     {
+      "id": "qW2syroSQTs-2",
+      "en": "Whoa, whoa, kid, kid. Stop, stop. Stop, stop. I'll get it back to you, all right?",
+      "ko": "와, 와, 얘야, 얘야. 멈춰, 멈춰. 멈춰, 멈춰. 내가 다시 돌려줄게, 알겠지?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "qW2syroSQTs-3",
       "en": "You broke it.",
       "ko": "네가 부셨어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -104,7 +104,7 @@
       "ko": "와, 저기 봐. 와, 와, 와.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -127,22 +127,24 @@
       "ko": "저게 그가 들고 있는 거야. 바퀴가 달린 판이야. 그는 정말 꿈의 남자야. 어서, 어서, 어서, 어서. 와, 와, 와.",
       "tags": {
         "functions": [
-          "F02"
+          "F35"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X04"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d33d6950c5ae6f13"
 }

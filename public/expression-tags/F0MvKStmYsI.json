@@ -12,18 +12,18 @@
       "ko": "아니면 그 질문을 하고 서 있을 수도 있어. 내가 묻지 않으면 평생 후회할 질문.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,32 +35,9 @@
       "ko": "여기 도착할 때쯤엔 뭐라고 말해야 할지 알 줄 알았어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "F0MvKStmYsI-2",
-      "en": "Well, you're late parties over I'll say it is",
-      "ko": "음, 너 늦었어. 파티는 끝났어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -76,26 +53,51 @@
       }
     },
     {
-      "id": "F0MvKStmYsI-3",
-      "en": "Funny",
-      "ko": "웃기네.",
+      "id": "F0MvKStmYsI-2",
+      "en": "Well, you're late parties over I'll say it is",
+      "ko": "음, 너 늦었어. 파티는 끝났어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
+      }
+    },
+    {
+      "id": "F0MvKStmYsI-3",
+      "en": "Funny",
+      "ko": "웃기네.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E14"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,9 +106,9 @@
       "ko": "어쨌든, 나는 방금 집에 가는 길이었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -127,9 +129,9 @@
       "ko": "안녕.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -141,7 +143,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,10 +154,10 @@
       "ko": "너에게 질문이 있어.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -175,16 +179,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +200,18 @@
       "ko": "캐리, 아니, 진짜로,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,18 +223,18 @@
       "ko": "네가 그 말을 하는 걸 정말 듣고 싶어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,16 +246,17 @@
       "ko": "제발 친구가 되어줘.",
       "tags": {
         "functions": [
-          "F31"
+          "F35"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -265,18 +270,18 @@
       "ko": "모르겠어, 그냥 너무 힘들어졌고 그녀가...",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,9 +293,9 @@
       "ko": "응.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -302,7 +307,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -311,9 +318,9 @@
       "ko": "너.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -325,8 +332,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "23be12228af7f21b"
 }

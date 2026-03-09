@@ -14,7 +14,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -35,10 +35,10 @@
       "ko": "당신이 괜찮은지 보고 싶었어요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,9 +58,9 @@
       "ko": "사실, 근처에 있었던 것도 아니고, 그냥...",
       "tags": {
         "functions": [
-          "F09"
+          "F50"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -71,8 +71,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -83,8 +87,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,20 +108,22 @@
       "ko": "제가 바보 같은 여자예요, 오지 말았어야 했어요.",
       "tags": {
         "functions": [
-          "F20"
+          "F58"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G11"
+        ],
         "flags": []
       }
     },
@@ -129,20 +135,27 @@
         "functions": [
           "F28"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "092f7f8739bdd75a"
 }

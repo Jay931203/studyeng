@@ -12,18 +12,18 @@
       "ko": "그런 질문은 누구에게나 하기 힘든 질문이야.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S15",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,9 +35,9 @@
       "ko": "너의 노래 \"Life is Real\"에서,",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S15",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -60,16 +60,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S15",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,10 +81,10 @@
       "ko": "파트너가 많을수록,",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S15",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,10 +104,10 @@
       "ko": "뭔가를 감염될 확률이 높아진다는 뜻이야? 뭐라고?",
       "tags": {
         "functions": [
-          "F14"
+          "F06"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S15",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -118,7 +118,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -127,20 +129,24 @@
       "ko": "잘 모르겠어. 사랑에 대해 아직 모르겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S15",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V02",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -150,10 +156,10 @@
       "ko": "하지만 그건 다른 의미를 내포하고 있어, 프레디.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S15",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,16 +179,16 @@
       "ko": "그건 로그에게 물어보는 게 더 나을 것 같아. 조심해.",
       "tags": {
         "functions": [
-          "F36"
+          "F14"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S15",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -196,10 +202,10 @@
       "ko": "프레디, 너의 사생활에 관해서,",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S15",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -221,14 +227,15 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S15",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -244,8 +251,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S15",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,13 +272,13 @@
       "ko": "지난주에 감기에 걸렸었어, 누가 관심이나 있겠어.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S15",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -288,18 +295,18 @@
       "ko": "감기에 대한 질문을 하고 싶지만,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S15",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,20 +318,24 @@
       "ko": "앨범에 대해 이야기하고 싶어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S15",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -336,9 +347,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S15",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -357,11 +368,11 @@
       "ko": "프레디, 너의 부모님은 보수적인 조로아스터교도야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S15",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -380,16 +391,17 @@
       "ko": "그들이 너의 공적인 모습에 대해 어떻게 생각할까 궁금해.",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F14"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S15",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -405,11 +417,11 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S15",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -426,11 +438,13 @@
       "ko": "그건 사실이 아니란 걸 알고 있어, 맞지?",
       "tags": {
         "functions": [
-          "F07"
+          "F06",
+          "F08",
+          "F11"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S15",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -439,7 +453,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -449,11 +465,11 @@
       "ko": "그들이 너를 자랑스러워했는지 알고 싶었어.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S15",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -472,13 +488,13 @@
       "ko": "나는 여전히 너를 자랑스럽게 생각해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S15",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -497,9 +513,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S15",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -512,5 +528,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "2b879f06abbcef4b"
 }

@@ -12,9 +12,9 @@
       "ko": "안녕.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S32",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -26,7 +26,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,10 +37,10 @@
       "ko": "이야기하고 싶어? 아니.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S32",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,8 +62,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S32",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -72,7 +74,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -83,7 +87,7 @@
         "functions": [
           "F35"
         ],
-        "situation": "S40",
+        "situation": "S32",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -106,7 +110,7 @@
         "functions": [
           "F35"
         ],
-        "situation": "S40",
+        "situation": "S32",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -127,9 +131,9 @@
       "ko": "너 문제 있어. 아, 나 문제 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S32",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -150,9 +154,9 @@
       "ko": "너는 모든 사람이 시키는 대로 다 해. 그게 문제야. 알겠어, 좋아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S32",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -173,10 +177,10 @@
       "ko": "하지만 내 가방을 소파에 쏟아놓고 사람들을 내 문제에 초대하진 않았어. 그랬어?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S32",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,10 +200,10 @@
       "ko": "그래서 뭐가 문제야? 뭐야?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S32",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,7 +213,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -219,10 +225,10 @@
       "ko": "나쁜 거야? 정말 나쁜 거야?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S32",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,9 +248,9 @@
       "ko": "부모님?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S32",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -256,8 +262,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "4939f3252794e68e"
 }

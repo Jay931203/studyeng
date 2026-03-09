@@ -12,20 +12,22 @@
       "ko": "가끔, 내가 춤을 춘 모든 남자들이 죽은 것 같은 기분이 들어.",
       "tags": {
         "functions": [
-          "F09"
+          "F59"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E10"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V01",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G14"
+        ],
         "flags": []
       }
     },
@@ -35,19 +37,21 @@
       "ko": "그리고 그게 너무 무의미하게 느껴져. 그들이 자신의 삶을 희생하는 동안 내 삶을 낭비하고 있어.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -58,18 +62,18 @@
       "ko": "콘서트에서 정말 큰 도움이 되었어.",
       "tags": {
         "functions": [
-          "F31"
+          "F12"
         ],
-        "situation": "S14",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,9 +85,9 @@
       "ko": "아니, 프로그램을 판매하거나 복권 상품을 찾는 게 아니라.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -92,7 +96,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,7 +110,7 @@
         "functions": [
           "F09"
         ],
-        "situation": "S14",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -115,9 +119,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -127,10 +133,10 @@
       "ko": "그렇다면, 진지하다면 보조 간호사가 되는 건 어때?",
       "tags": {
         "functions": [
-          "F36"
+          "F06"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S27",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,7 +144,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,9 +156,9 @@
       "ko": "요크에 교육 대학이 있어. 너를 과정에 등록시킬 수 있을 거야.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S30",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -161,7 +167,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,10 +179,10 @@
       "ko": "다소 힘든 각성이 될 수도 있어.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,10 +190,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -198,7 +206,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -207,7 +215,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,16 +229,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,7 +252,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -253,7 +261,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,9 +273,9 @@
       "ko": "플랫 씨가 한 분과 그랜섬 부인을 마을로 데려가고 있어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -276,7 +284,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,10 +296,10 @@
       "ko": "그들과 함께 가고 싶어하는지 궁금해했어.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -299,7 +307,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,17 +321,19 @@
         "functions": [
           "F27"
         ],
-        "situation": "S14",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V02",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -334,22 +344,25 @@
       "ko": "계속해. 또 뭐가 필요할까?",
       "tags": {
         "functions": [
-          "F50"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "e158cde2e8dc2bec"
 }

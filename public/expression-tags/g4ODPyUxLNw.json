@@ -12,9 +12,9 @@
       "ko": "♪ 나를 진실하게 만들 수 있어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,9 +35,57 @@
       "ko": "♪ 나를 우울하게 만들 수 있어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "g4ODPyUxLNw-2",
+      "en": "I'm going.",
+      "ko": "나 가야 해.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S08",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "g4ODPyUxLNw-3",
+      "en": "It's almost midnight.",
+      "ko": "거의 자정이야.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -52,54 +98,8 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
-      }
-    },
-    {
-      "id": "g4ODPyUxLNw-2",
-      "en": "I'm going.",
-      "ko": "나 가야 해.",
-      "tags": {
-        "functions": [
-          "F62"
-        ],
-        "situation": "S44",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "g4ODPyUxLNw-3",
-      "en": "It's almost midnight.",
-      "ko": "거의 자정이야.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S44",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
       }
     },
     {
@@ -108,21 +108,24 @@
       "ko": "누군가와 키스하지 않는 생각은 그냥...",
       "tags": {
         "functions": [
-          "F09"
+          "F21",
+          "F52"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -131,21 +134,23 @@
       "ko": "내가 키스해줄게.",
       "tags": {
         "functions": [
-          "F39"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -154,10 +159,10 @@
       "ko": "이봐, 택시! 택시! 택시!",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -177,32 +182,9 @@
       "ko": "택시!",
       "tags": {
         "functions": [
-          "F34"
+          "F15"
         ],
-        "situation": "S44",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "g4ODPyUxLNw-8",
-      "en": "Come on, stay. Please.",
-      "ko": "제발, 좀 기다려.",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -214,6 +196,35 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "g4ODPyUxLNw-8",
+      "en": "Come on, stay. Please.",
+      "ko": "제발, 좀 기다려.",
+      "tags": {
+        "functions": [
+          "F34",
+          "F35",
+          "F45"
+        ],
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E13"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -223,13 +234,13 @@
       "ko": "고마워, 제스. 나 그냥... 가야 해.",
       "tags": {
         "functions": [
-          "F34"
+          "F27"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E15"
         ],
         "expression_types": [
           "X08"
@@ -246,9 +257,9 @@
       "ko": "두 분만 기다려.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -269,9 +280,9 @@
       "ko": "내일 전화할게.",
       "tags": {
         "functions": [
-          "F41"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -292,23 +303,24 @@
       "ko": "♪ 절대 나일 수 없을지도",
       "tags": {
         "functions": [
-          "F09"
+          "F43",
+          "F14"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
       }
     },
     {
@@ -317,23 +329,24 @@
       "ko": "♪ 절대 교차되지 않을지도",
       "tags": {
         "functions": [
-          "F09"
+          "F43",
+          "F14"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
       }
     },
     {
@@ -342,9 +355,9 @@
       "ko": "♪ 사려고 해도",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -356,9 +369,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -367,9 +378,9 @@
       "ko": "♪ 그들은 하지 않을 거야",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -381,9 +392,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -392,10 +401,10 @@
       "ko": "♪ 아무에게도",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -407,9 +416,10 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "52d50fd5c7b832ab"
 }

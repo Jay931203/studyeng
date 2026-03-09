@@ -12,11 +12,11 @@
       "ko": "바이럴 소셜 미디어 스타가 되는 것이 아니라, 대화를 더 나은 방향으로 만드는 것입니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S40",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -35,9 +35,9 @@
       "ko": "친구, 가족과 함께할 때나, 상사에게 승진을 설득할 때도 마찬가지입니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,9 +58,9 @@
       "ko": "그러니 매 순간을 소중히 여기는 방법을 알아봅시다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -83,18 +83,20 @@
         "functions": [
           "F04"
         ],
-        "situation": "S48",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -104,16 +106,16 @@
       "ko": "답을 찾기 위해 끝까지 집중하게 됩니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S40",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -127,16 +129,16 @@
       "ko": "그리고 청중의 관심을 즉시 끌어야 하므로 충격적인 질문으로 시작해야 합니다.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -150,9 +152,9 @@
       "ko": "제가 항상 궁금했던 것 중 하나는 패스트푸드가 정말 그렇게 빠른지였습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F05"
         ],
-        "situation": "S48",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -163,7 +165,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G14"
+        ],
         "flags": []
       }
     },
@@ -173,13 +177,13 @@
       "ko": "이 질문에 대한 답을 영상으로 만들었고, 4천5백만 뷰를 넘겼습니다.",
       "tags": {
         "functions": [
-          "F05"
+          "F23"
         ],
-        "situation": "S48",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -196,20 +200,23 @@
       "ko": "제가 어떻게 시청자를 끌어들였는지 확인해봅시다. 버거?",
       "tags": {
         "functions": [
-          "F34"
+          "F23",
+          "F36"
         ],
-        "situation": "S48",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -221,7 +228,7 @@
         "functions": [
           "F34"
         ],
-        "situation": "S48",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -232,7 +239,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -242,10 +251,10 @@
       "ko": "그건 정말 뜨겁지 않았습니다.",
       "tags": {
         "functions": [
-          "F12"
+          "F21"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S40",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,9 +274,9 @@
       "ko": "하지만 보시다시피, 저는 이 질문을 매우 진지하게 다뤘습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -288,9 +297,9 @@
       "ko": "청중을 끌어들인 후에는 답으로 가는 여정을 만들어야 합니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -311,9 +320,9 @@
       "ko": "그 과정에서 지속적인 발전을 느끼게 해야 합니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -334,9 +343,9 @@
       "ko": "그래서 우리는 답에 점점 가까워지고 있습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F58"
         ],
-        "situation": "S48",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -357,9 +366,9 @@
       "ko": "그래서 우리는 듣는 것을 멈출 수 없다고 느끼게 됩니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -374,5 +383,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "87b04a93f34764bb"
 }

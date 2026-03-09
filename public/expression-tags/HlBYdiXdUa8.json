@@ -12,10 +12,10 @@
       "ko": "그래서 이 남자들 중 누군가를 알아보나요? 화장실 칸막이에 숨었어서 얼굴을 못 봤어요.",
       "tags": {
         "functions": [
-          "F06"
+          "F56"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,11 +35,11 @@
       "ko": "하지만 그의 목소리는 들었어요. 바에서 음악에 맞춰 노래하고 있었거든요. 그가 어떤 노래를 부르고 있었는지 기억나나요?",
       "tags": {
         "functions": [
-          "F01",
-          "F06"
+          "F06",
+          "F05"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -59,10 +59,10 @@
       "ko": "그 노래 같아요. \"I Want It That Way\" 백스트리트 보이즈. 익숙해요. 좋아요.",
       "tags": {
         "functions": [
-          "F01"
+          "F09"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -72,7 +72,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -82,20 +84,24 @@
       "ko": "1번, \"I Want It That Way\"의 시작 부분을 불러줄 수 있나요?",
       "tags": {
         "functions": [
+          "F18",
           "F34"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02",
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -105,9 +111,9 @@
       "ko": "좋아요.",
       "tags": {
         "functions": [
-          "F01"
+          "F44"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -119,7 +125,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -130,7 +138,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -153,9 +161,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S39",
-        "cefr": "A1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -165,7 +173,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -174,10 +184,10 @@
       "ko": "2번, 계속해 주세요. 그 노래",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -199,9 +209,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S39",
-        "cefr": "A1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -211,7 +221,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -222,8 +234,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -233,7 +245,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -243,19 +257,21 @@
       "ko": "이유를 말해줘. 이건 단지 마음의 고통일 뿐이야.",
       "tags": {
         "functions": [
-          "F01"
+          "F35"
         ],
-        "situation": "S39",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V07",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -266,19 +282,21 @@
       "ko": "이유를 말해줘. 이건 단지 실수일 뿐이야.",
       "tags": {
         "functions": [
-          "F01"
+          "F35"
         ],
-        "situation": "S39",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -289,20 +307,25 @@
       "ko": "이제 5번, 당신의 말을 듣고 싶지 않아.",
       "tags": {
         "functions": [
-          "F01"
+          "F43",
+          "F56"
         ],
-        "situation": "S39",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -314,20 +337,23 @@
         "functions": [
           "F18"
         ],
-        "situation": "S39",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "98b313ba0889fe70"
 }

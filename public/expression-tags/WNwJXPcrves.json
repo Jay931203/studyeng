@@ -12,10 +12,10 @@
       "ko": "그는 자신감 있게 나와서,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S48",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,20 +35,22 @@
       "ko": "원하는 곳에서 읽어 내려갑니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F34"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S48",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -60,7 +62,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
+        "situation": "S48",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -83,7 +85,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
+        "situation": "S48",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -106,8 +108,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S48",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,8 +131,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S48",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -141,7 +143,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,9 +154,9 @@
       "ko": "따라서 가장 중요한 것은",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S48",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -175,14 +179,14 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
+        "situation": "S48",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V10",
         "power": [],
@@ -190,5 +194,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d9924cb1b614b34a"
 }

@@ -12,18 +12,18 @@
       "ko": "나는 나 자신에게 꽃을 사줄 수 있어, 모래에 내 이름을 쓸 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,10 +37,10 @@
       "ko": "나 자신과 몇 시간 동안 이야기하고, 네가 이해하지 못하는 말을 해.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,18 +62,18 @@
       "ko": "나는 나 자신과 춤출 수 있고, 내 손을 잡을 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,20 +87,22 @@
       "ko": "그리고 나는 너보다 나를 더 사랑할 수 있어.",
       "tags": {
         "functions": [
-          "F22"
+          "F13"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -112,18 +114,18 @@
       "ko": "나를 더 사랑할 수 있어, 아, 나를 더 사랑할 수 있어, 베이비.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -137,18 +139,18 @@
       "ko": "나를 더 사랑할 수 있어, 아, 나를 더 사랑할 수 있어, 베이비.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,18 +164,18 @@
       "ko": "내 손톱을 체리 레드로 칠하고, 네가 준 장미와 맞춰.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,13 +189,13 @@
       "ko": "후회도, 미련도 없어, 네가 하는 모든 말을 용서해.",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -212,19 +214,21 @@
       "ko": "오, 나는 떠나고 싶지 않았어, 베이비, 나는 싸우고 싶지 않았어.",
       "tags": {
         "functions": [
-          "F16"
+          "F56"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V09",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -237,13 +241,13 @@
       "ko": "울기 시작했어.",
       "tags": {
         "functions": [
-          "F16"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -252,9 +256,11 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "d2d91854cab6f87e"
 }

@@ -14,34 +14,11 @@
         "functions": [
           "F22"
         ],
-        "situation": "S31",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V02",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "Xh3zD5CB_-Q-1",
-      "en": "All right, just the last one. No, just one more. Come on. Leave. Ah! Can I go to school?",
-      "ko": "좋아, 마지막 하나야. 아니, 하나만 더. 제발. 나가. 아! 학교 가도 돼?",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S19",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
@@ -53,21 +30,49 @@
       }
     },
     {
-      "id": "Xh3zD5CB_-Q-2",
-      "en": "Wait, wait, wait. Okay, stay. Who are you gonna call? No. Da-da-da-da-da-da. Da-da-da-da-da-da-da. Da-da-da-da-da-da-da.",
-      "ko": "잠깐, 잠깐, 잠깐. 좋아, 기다려. 누구 부를 건데? 아니. 다다다다다다. 다다다다다다다. 다다다다다다다.",
+      "id": "Xh3zD5CB_-Q-1",
+      "en": "All right, just the last one. No, just one more. Come on. Leave. Ah! Can I go to school?",
+      "ko": "좋아, 마지막 하나야. 아니, 하나만 더. 제발. 나가. 아! 학교 가도 돼?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X04"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G10"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "Xh3zD5CB_-Q-2",
+      "en": "Wait, wait, wait. Okay, stay. Who are you gonna call? No. Da-da-da-da-da-da. Da-da-da-da-da-da-da. Da-da-da-da-da-da-da.",
+      "ko": "잠깐, 잠깐, 잠깐. 좋아, 기다려. 누구 부를 건데? 아니. 다다다다다다. 다다다다다다다. 다다다다다다다.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
         ],
         "vibe": "V18",
         "power": [],
@@ -81,18 +86,18 @@
       "ko": "다다다다다다다. 다다다다다다다. 누구 부를 건데? 고스트버스터즈! 헤이! 헤이! 빈크맨!",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V02",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,10 +109,10 @@
       "ko": "여기 있어, 빈크맨! 응! 와. 뭐라고? 내가 빈크맨이니까. 아니, 내가 빈크맨이야.",
       "tags": {
         "functions": [
-          "F22"
+          "F04"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,10 +132,11 @@
       "ko": "왜 빈크맨이 두 명일 수 없어? 현실에는 빈크맨이 하나뿐이니까.",
       "tags": {
         "functions": [
-          "F12"
+          "F06",
+          "F04"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,10 +156,10 @@
       "ko": "우리는 몇 달 전에 이걸 계획했어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,9 +179,9 @@
       "ko": "나는 빈크맨, 더스틴 스탄즈, 너는 이곤, 너는 윈스턴이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -196,10 +202,11 @@
       "ko": "나는 윈스턴에 동의하지 않았어. 응, 동의했어! 그는 동의하지 않았다고 생각해.",
       "tags": {
         "functions": [
-          "F11"
+          "F11",
+          "F40"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -219,13 +226,13 @@
       "ko": "아무도 윈스턴이 되고 싶어 하지 않아. 윈스턴이 뭐가 문제인데? 윈스턴이 뭐가 문제야?",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -242,10 +249,10 @@
       "ko": "그는 팀에 늦게 합류했어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,13 +272,13 @@
       "ko": "그는 재미없고, 과학자도 아니야. 응, 하지만 그는 여전히 멋져.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -288,9 +295,9 @@
       "ko": "그가 멋지면, 너가 윈스턴 해. 나는 못 해. 왜 안 돼? 왜냐하면...",
       "tags": {
         "functions": [
-          "F43"
+          "F04"
         ],
-        "situation": "S31",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -311,13 +318,13 @@
       "ko": "너가 흑인이 아니니까? 그런 말 안 했어! 너 그렇게 생각했잖아.",
       "tags": {
         "functions": [
-          "F11"
+          "F04"
         ],
-        "situation": "S31",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -328,5 +335,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "77aa9126fca264c8"
 }

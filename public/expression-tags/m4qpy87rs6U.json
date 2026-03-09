@@ -12,23 +12,21 @@
       "ko": "어, 어, 니 일이나 신경 써.",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,10 +35,10 @@
       "ko": "그게 내가 하려던 말이야. 니 일이나 신경 써, 그게 다야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,32 +58,9 @@
       "ko": "내가 할 말은 그게 다야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "m4qpy87rs6U-3",
-      "en": "Just because, you know, it's my business.",
-      "ko": "왜냐면, 그거 알잖아, 내 일이니까.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -101,15 +76,15 @@
       }
     },
     {
-      "id": "m4qpy87rs6U-4",
-      "en": "That's all.",
-      "ko": "그게 다야.",
+      "id": "m4qpy87rs6U-3",
+      "en": "Just because, you know, it's my business.",
+      "ko": "왜냐면, 그거 알잖아, 내 일이니까.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -117,10 +92,37 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "m4qpy87rs6U-4",
+      "en": "That's all.",
+      "ko": "그게 다야.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -129,13 +131,13 @@
       "ko": "오, 맙소사!",
       "tags": {
         "functions": [
-          "F18"
+          "F15"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -152,9 +154,9 @@
       "ko": "너무 보기 힘들어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -177,7 +179,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -198,9 +200,9 @@
       "ko": "응.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -209,10 +211,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -221,9 +225,9 @@
       "ko": "살, 혹시",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -246,7 +250,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -267,10 +271,38 @@
       "ko": "당연히 있지, 그렇지?",
       "tags": {
         "functions": [
-          "F09"
+          "F44",
+          "F50"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "m4qpy87rs6U-12",
+      "en": "Yes.",
+      "ko": "응.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -281,30 +313,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "m4qpy87rs6U-12",
-      "en": "Yes.",
-      "ko": "응.",
-      "tags": {
-        "functions": [
-          "F07"
-        ],
-        "situation": "S34",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -313,13 +324,13 @@
       "ko": "이거 싫어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -336,11 +347,11 @@
       "ko": "손 소독제 꺼내. 실례합니다, 선생님. 여기요, 선생님. 실례합니다, 선생님.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -348,7 +359,9 @@
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -359,9 +372,9 @@
       "ko": "여기요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -370,10 +383,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -382,13 +397,13 @@
       "ko": "당신이 거기를 긁는 걸 봤어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -405,13 +420,13 @@
       "ko": "당신이 거기를 만지는 걸 봤어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -428,13 +443,13 @@
       "ko": "거기 만지는 거 잡았어요. 당신 거예요.",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -451,13 +466,13 @@
       "ko": "이건 당신 거예요. 뭐라고요? 미쳤어요? 미친 게 아니라.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -474,13 +489,13 @@
       "ko": "아니, 당신의... 당신의 그게 아니라. 견과류가 아니라. 당신의 그것도 아니라.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -491,5 +506,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "581cdd1fb9e4b716"
 }

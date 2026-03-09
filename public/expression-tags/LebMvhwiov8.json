@@ -12,10 +12,10 @@
       "ko": "호수로 가자!",
       "tags": {
         "functions": [
-          "F36"
+          "F15"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,19 +35,21 @@
       "ko": "우리는...",
       "tags": {
         "functions": [
-          "F52"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S27",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_fragment"
@@ -60,16 +62,16 @@
       "ko": "잠깐 수영할 거야.",
       "tags": {
         "functions": [
-          "F36"
+          "F35"
         ],
-        "situation": "S31",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -83,9 +85,9 @@
       "ko": "밤 수영이야. 더스티!",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -106,33 +108,10 @@
       "ko": "거기서 누가 방금 살해당했어!",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S38",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E04"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "LebMvhwiov8-5",
-      "en": "Yeah, we... we didn't realize that till we got there. That's why we didn't swim.",
-      "ko": "응, 우리는 그곳에 도착할 때까지 몰랐어. 그래서 수영을 안 했지.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S38",
-        "cefr": "B1",
+        "situation": "S27",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -147,6 +126,32 @@
       }
     },
     {
+      "id": "LebMvhwiov8-5",
+      "en": "Yeah, we... we didn't realize that till we got there. That's why we didn't swim.",
+      "ko": "응, 우리는 그곳에 도착할 때까지 몰랐어. 그래서 수영을 안 했지.",
+      "tags": {
+        "functions": [
+          "F07",
+          "F04"
+        ],
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
       "id": "LebMvhwiov8-6",
       "en": "And Nancy, was she with you at this night swim? No. Yes.",
       "ko": "낸시는 그 밤 수영에 함께 있었어? 아니. 응.",
@@ -154,7 +159,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S38",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -175,10 +180,10 @@
       "ko": "확실하지 않아. 그녀는 거기 있었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S38",
-        "cefr": "B1",
+        "situation": "S27",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -198,10 +203,10 @@
       "ko": "그리고 나서 떠났어.",
       "tags": {
         "functions": [
-          "F08"
+          "F01"
         ],
-        "situation": "S38",
-        "cefr": "B1",
+        "situation": "S27",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -212,7 +217,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -221,16 +228,16 @@
       "ko": "좀 혼란스러워. 그리고 그때 너희가 왔지.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S38",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -244,11 +251,11 @@
       "ko": "맞아, 그리고 그들이 내가 한 말을 하라고 도전했어. 아, 맞아. 살인자에 대해.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S38",
+        "situation": "S27",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -267,13 +274,13 @@
       "ko": "총에 맞지 않아서 다행이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F55"
         ],
-        "situation": "S38",
-        "cefr": "B1",
+        "situation": "S27",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E07"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -292,8 +299,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S38",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -313,34 +320,11 @@
       "ko": "그 사이코 살인자? 제발, 아니. 전혀.",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S38",
+        "situation": "S27",
         "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "LebMvhwiov8-14",
-      "en": "No, we haven't heard from him in ages. We barely know the guy. Who? Oh, that's a bunch of bull. Erica! I mean, you realize they're lying.",
-      "ko": "아니, 우리는 그와 오랫동안 연락이 없었어. 우리는 그를 거의 몰라. 누구? 아, 그건 말도 안 돼. 에리카! 그들이 거짓말하고 있다는 걸 알잖아.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S38",
-        "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -354,6 +338,31 @@
       }
     },
     {
+      "id": "LebMvhwiov8-14",
+      "en": "No, we haven't heard from him in ages. We barely know the guy. Who? Oh, that's a bunch of bull. Erica! I mean, you realize they're lying.",
+      "ko": "아니, 우리는 그와 오랫동안 연락이 없었어. 우리는 그를 거의 몰라. 누구? 아, 그건 말도 안 돼. 에리카! 그들이 거짓말하고 있다는 걸 알잖아.",
+      "tags": {
+        "functions": [
+          "F50"
+        ],
+        "situation": "S27",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
       "id": "LebMvhwiov8-15",
       "en": "The whole couch is on fire. Erica! Just the facts!",
       "ko": "소파가 불타고 있어. 에리카! 사실만 말해!",
@@ -361,8 +370,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S37",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -382,14 +391,13 @@
       "ko": "이 경찰들에게 거짓말하고 있는 거야, 더스티? 아니!",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F06"
         ],
-        "situation": "S37",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -400,5 +408,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "3d0c80dc6421f395"
 }

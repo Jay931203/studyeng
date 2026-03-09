@@ -5,30 +5,23 @@
   "seriesId": "the-notebook",
   "sentenceCount": 1,
   "taggedCount": 1,
+  "transcriptHash": "08b041935798fbf6",
   "sentences": [
     {
       "id": "xTW_nTPwItw-0",
       "en": "You",
       "ko": "너",
       "tags": {
-        "functions": [
-          "F25"
-        ],
-        "situation": "S50",
+        "functions": ["F22"],
+        "situation": "S13",
         "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
+        "register": "R5",
+        "emotions": ["E11"],
+        "expression_types": ["X08"],
+        "vibe": "V07",
+        "power": ["P10"],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": ["is_fragment"]
       }
     }
   ]

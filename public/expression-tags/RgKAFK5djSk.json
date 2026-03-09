@@ -12,10 +12,10 @@
       "ko": "또 만났군. 우리가 시작했던 곳에서 많이 왔어.",
       "tags": {
         "functions": [
-          "F01"
+          "F12"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,20 +37,24 @@
       "ko": "오, 다시 만날 때 모든 걸 이야기해줄게.",
       "tags": {
         "functions": [
-          "F09"
+          "F32"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -62,20 +66,22 @@
       "ko": "다시 만날 때, 대체 누가 알았겠어?",
       "tags": {
         "functions": [
-          "F18"
+          "F32"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": [
           "is_lyrics",
           "contains_profanity"
@@ -88,7 +94,7 @@
       "ko": "우리가 탄 비행기들, 함께한 좋은 일들.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -99,7 +105,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -122,10 +128,12 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -138,19 +146,21 @@
       "ko": "다른 길에 대해, 우리가 도로를 달리고 웃는 걸 좋아했던 걸 알아.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X02"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -163,7 +173,7 @@
       "ko": "하지만 뭔가가 이게 오래가지 않을 거라고 말해줬어.",
       "tags": {
         "functions": [
-          "F14"
+          "F05"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -174,7 +184,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -188,18 +198,18 @@
       "ko": "바꿔야 했어, 다른 시각으로 보고, 더 큰 그림을 봐야 했어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -213,7 +223,7 @@
       "ko": "그때가 좋았어, 노력은 항상 보상을 가져와.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -224,7 +234,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -238,7 +248,7 @@
       "ko": "이제 너를 더 나은 곳에서 보게 되었어.",
       "tags": {
         "functions": [
-          "F02"
+          "F32"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -247,11 +257,13 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -266,15 +278,15 @@
           "F06"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -282,5 +294,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "ca72c79563ac1536"
 }

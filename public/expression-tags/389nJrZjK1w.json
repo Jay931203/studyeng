@@ -12,18 +12,18 @@
       "ko": "저는 조던과 함께 시간을 보냈고 발렌타인 데이에 그와 함께하고 싶었어요.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,10 +35,10 @@
       "ko": "그래서 우리는 사랑에 대해 이야기하고 그냥 수다를 떨기 위해 동네 바에서 만났어요.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S32",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,9 +58,9 @@
       "ko": "사랑과 로맨스에 대해 이야기했는데, 자, 무슨 일이 있었는지 들어보세요.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -69,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,10 +81,10 @@
       "ko": "안녕하세요, 저는 팀미 놀란의 타버에 와 있고, 워너 브라더스 스튜디오에서 몇 블록 떨어진 곳이에요.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,7 +92,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,10 +104,10 @@
       "ko": "저는 우리 보조 프로듀서 중 한 명인 조던 슐란스키와 앉아 있어요.",
       "tags": {
         "functions": [
-          "F03"
+          "F02"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +115,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,12 +127,10 @@
       "ko": "당신이 유일한 보조 프로듀서인가요, 아니면 다른 사람도 있나요? 저는 유일한 사람이에요. 알겠어요. 보조 프로듀서는 어떤 일을 하나요? 저는 보조 프로듀서로 모든 책임을 맡고 있어요.",
       "tags": {
         "functions": [
-          "F06",
-          "F07",
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -140,7 +138,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,21 +150,22 @@
       "ko": "알겠어요. 당신은 로맨틱한 사람인가요? 저는 로맨틱한 사람이라고 믿어요.",
       "tags": {
         "functions": [
-          "F06",
           "F09"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V13",
+        "vibe": "V05",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -176,9 +175,9 @@
       "ko": "처음 우리 쇼에 왔을 때 당신은 떨고 있는 괴짜였어요. 무슨 일이 있었나요?",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -187,7 +186,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -199,10 +198,10 @@
       "ko": "더 많은 인생 경험을 통해 외부 세계와 내부 세계에 대한 인식이 더 커졌어요. 당신은 무엇을 읽고 있나요?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S15",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -210,7 +209,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -224,8 +223,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -233,7 +232,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -247,7 +246,7 @@
         "functions": [
           "F09"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -256,7 +255,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -268,10 +267,10 @@
       "ko": "당신을 편안하고 자신감 있게 만들어줄 옷을 입고 나머지는 중요하지 않아요. 맞아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -279,7 +278,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -291,9 +290,9 @@
       "ko": "이건 아니에요, 왜냐하면 당신은 코치에서 제리 반 다이크처럼 보이거든요.",
       "tags": {
         "functions": [
-          "F58"
+          "F04"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -302,9 +301,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -316,20 +317,23 @@
         "functions": [
           "F09"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "7479321fff6fa893"
 }

@@ -12,23 +12,23 @@
       "ko": "방해해서 정말 미안해.",
       "tags": {
         "functions": [
-          "F34"
+          "F28"
         ],
-        "situation": "S44",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": []
       }
     },
     {
@@ -37,9 +37,10 @@
       "ko": "괜찮아.",
       "tags": {
         "functions": [
-          "F07"
+          "F61",
+          "F53"
         ],
-        "situation": "S44",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -48,10 +49,16 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G05"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -60,18 +67,18 @@
       "ko": "왼팔을 뻗어, 줄스.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,21 +90,23 @@
       "ko": "왼무릎을 올려.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -106,19 +115,18 @@
       "ko": "숨을 쉬고 내면의 균형을 위해 편안히 해. 잘하고 있어? 거의 맞아.",
       "tags": {
         "functions": [
-          "F04",
-          "F06"
+          "F02"
         ],
-        "situation": "S44",
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -130,18 +138,18 @@
       "ko": "좋은 소식이 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S44",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -153,9 +161,9 @@
       "ko": "좋아. 끝나면 말해줘.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S11",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -164,7 +172,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -176,10 +184,10 @@
       "ko": "깊게 숨 쉬어, 줄스.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -187,10 +195,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -199,9 +209,9 @@
       "ko": "그거야.",
       "tags": {
         "functions": [
-          "F07"
+          "F02"
         ],
-        "situation": "S44",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -210,10 +220,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -222,9 +236,9 @@
       "ko": "응.",
       "tags": {
         "functions": [
-          "F07"
+          "F44"
         ],
-        "situation": "S44",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -233,11 +247,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "d941a2b016b33172"
 }

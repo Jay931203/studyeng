@@ -12,7 +12,7 @@
       "ko": "잠깐 멈추고 미소 지어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,20 +37,22 @@
       "ko": "왜 다들 그렇게 심각하고, 왜 그렇게 신비로운 척해?",
       "tags": {
         "functions": [
-          "F06"
+          "F17"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "is_lyrics",
           "contains_profanity"
@@ -63,10 +65,10 @@
       "ko": "선글라스를 쓰고 힐이 너무 높아서",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -74,7 +76,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -88,10 +90,10 @@
       "ko": "즐기지도 못하잖아.",
       "tags": {
         "functions": [
-          "F09"
+          "F32"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -99,9 +101,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V09",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -113,7 +119,7 @@
       "ko": "다들 왼쪽을 봐, 그래.",
       "tags": {
         "functions": [
-          "F02"
+          "F07"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -124,7 +130,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -138,7 +144,7 @@
       "ko": "다들 오른쪽을 봐.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -149,7 +155,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -163,7 +169,7 @@
       "ko": "느껴지지, 그래?",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -174,9 +180,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -188,18 +196,18 @@
       "ko": "오늘 밤은 사랑으로 지불해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -213,7 +221,7 @@
       "ko": "돈, 돈, 돈 얘기가 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -224,7 +232,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -238,10 +246,10 @@
       "ko": "네 돈, 돈, 돈은 필요 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -249,7 +257,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -263,10 +271,10 @@
       "ko": "우리는 그저 세상을 춤추게 하고 싶어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -274,7 +282,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -288,7 +296,7 @@
       "ko": "가격표는 잊어버려.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -299,7 +307,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -313,7 +321,7 @@
       "ko": "차칭, 차칭 소리가 중요한 게 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -322,10 +330,13 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05",
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -338,7 +349,7 @@
       "ko": "반짝반짝 빛나는 게 중요한 게 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -347,10 +358,12 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -361,106 +374,6 @@
       "id": "iBYOl-HpPRM-14",
       "en": "Want to make the world dance.",
       "ko": "세상을 춤추게 하고 싶어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "iBYOl-HpPRM-15",
-      "en": "Forget about the price tag.",
-      "ko": "가격표는 잊어버려.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "iBYOl-HpPRM-16",
-      "en": "Huh, listen.",
-      "ko": "들어봐.",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S46",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "iBYOl-HpPRM-17",
-      "en": "We need to take it back in time, where",
-      "ko": "과거로 돌아가야 해, 그때",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "iBYOl-HpPRM-18",
-      "en": "music made us all unite, yeah.",
-      "ko": "음악이 우리 모두를 하나로 만들었지, 그래.",
       "tags": {
         "functions": [
           "F01"
@@ -474,9 +387,112 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "iBYOl-HpPRM-15",
+      "en": "Forget about the price tag.",
+      "ko": "가격표는 잊어버려.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "iBYOl-HpPRM-16",
+      "en": "Huh, listen.",
+      "ko": "들어봐.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics",
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "iBYOl-HpPRM-17",
+      "en": "We need to take it back in time, where",
+      "ko": "과거로 돌아가야 해, 그때",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "iBYOl-HpPRM-18",
+      "en": "music made us all unite, yeah.",
+      "ko": "음악이 우리 모두를 하나로 만들었지, 그래.",
+      "tags": {
+        "functions": [
+          "F07"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -488,10 +504,10 @@
       "ko": "비열한 수작이나 영상이 아니었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -499,7 +515,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -513,10 +529,10 @@
       "ko": "지친 건 나만이 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -524,7 +540,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -549,7 +565,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -566,7 +582,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -574,13 +590,15 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "9314ebb279a3bdac"
 }

@@ -12,10 +12,10 @@
       "ko": "세상에, 아직도 이기려고 애쓰고 있나요?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -37,16 +37,16 @@
         "functions": [
           "F12"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,9 +58,9 @@
       "ko": "언젠가는 그것이 문제를 일으킬 거예요.",
       "tags": {
         "functions": [
-          "F40"
+          "F19"
         ],
-        "situation": "S40",
+        "situation": "S43",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -69,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,7 +83,7 @@
         "functions": [
           "F25"
         ],
-        "situation": "S40",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -92,10 +92,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,10 +106,10 @@
       "ko": "제 이름은 이니고 몬토야입니다.",
       "tags": {
         "functions": [
-          "F26"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,22 +129,23 @@
       "ko": "당신이 제 아버지를 죽였어요. 죽을 준비를 하세요.",
       "tags": {
         "functions": [
-          "F62"
+          "F12"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "4b1c22acb6753603"
 }

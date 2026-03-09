@@ -12,21 +12,23 @@
       "ko": "이 파티는 인류의 최정상 같은 순간이 될 거야.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
         "situation": "S31",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -35,18 +37,18 @@
       "ko": "초대장은 받았고, 주소도 맞아.",
       "tags": {
         "functions": [
-          "F01"
+          "F12"
         ],
-        "situation": "S31",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,20 +60,22 @@
       "ko": "약이 필요해, 대답은 항상 '응'이야.",
       "tags": {
         "functions": [
-          "F34"
+          "F12"
         ],
-        "situation": "S31",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -81,20 +85,22 @@
       "ko": "우연한 만남이 네가 기다려온 순간일 수 있어.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V12",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -104,18 +110,18 @@
       "ko": "조금 더 힘을 내.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,18 +133,18 @@
       "ko": "오늘 밤 우리는 임무를 수행해, 오늘 밤은 오디션이야.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "B1",
+        "situation": "S24",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,16 +156,16 @@
       "ko": "이게 진짜 오디션이라면, 오 하나님, 우리를 도와줘.",
       "tags": {
         "functions": [
-          "F09"
+          "F19"
         ],
-        "situation": "S31",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E04"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V12",
         "power": [],
@@ -173,18 +179,18 @@
       "ko": "좋은 인상을 남기면, 모두가 네 이름을 알게 돼.",
       "tags": {
         "functions": [
-          "F09"
+          "F03"
         ],
-        "situation": "S31",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +202,18 @@
       "ko": "너는 뒷좌석에 있어.",
       "tags": {
         "functions": [
-          "F01"
+          "F12"
         ],
-        "situation": "S31",
-        "cefr": "A1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,20 +225,22 @@
       "ko": "군중 속의 누군가가 네가 알아야 할 사람일 수 있어.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V12",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -242,18 +250,18 @@
       "ko": "너를 땅에서 들어올릴 사람.",
       "tags": {
         "functions": [
-          "F01"
+          "F03"
         ],
-        "situation": "S31",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,18 +273,18 @@
       "ko": "군중 속의 누군가가 네가 가고 싶은 곳으로 데려갈 수 있어.",
       "tags": {
         "functions": [
-          "F14"
+          "F38"
         ],
-        "situation": "S31",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,16 +298,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S31",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,19 +321,22 @@
         "functions": [
           "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -334,18 +345,18 @@
       "ko": "그들이 너를 발견할 때까지 해야 할 일이야.",
       "tags": {
         "functions": [
-          "F01"
+          "F36"
         ],
-        "situation": "S31",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -357,20 +368,22 @@
       "ko": "그리고 지금 보는 것보다 더 나아지게 해줄 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -382,20 +395,25 @@
         "functions": [
           "F09"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V07",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "fb97e2a42d3ebc9f"
 }

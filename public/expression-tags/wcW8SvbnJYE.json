@@ -12,10 +12,10 @@
       "ko": "루이지애나 깊은 곳, 뉴올리언스에서 숲속의 상록수 사이에",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -37,8 +37,8 @@
         "functions": [
           "F02"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,10 +46,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -58,20 +60,23 @@
       "ko": "그는 읽고 쓰는 법을 잘 배우지 못했지만 기타를 치는 건 마치 종을 울리는 것처럼 잘했다",
       "tags": {
         "functions": [
-          "F02"
+          "F43"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -81,59 +86,9 @@
       "ko": "가, 조니, 가, 가",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "wcW8SvbnJYE-4",
-      "en": "Go, Johnny, go, go, go",
-      "ko": "가, 조니, 가, 가, 가",
-      "tags": {
-        "functions": [
-          "F25"
-        ],
-        "situation": "S44",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "wcW8SvbnJYE-5",
-      "en": "Hey, George, heard you laid out a bit. Nice going.",
-      "ko": "이봐, 조지, 좀 쉬었다고 들었어. 잘했어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S44",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -142,7 +97,53 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "wcW8SvbnJYE-4",
+      "en": "Go, Johnny, go, go, go",
+      "ko": "가, 조니, 가, 가, 가",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "wcW8SvbnJYE-5",
+      "en": "Hey, George, heard you laid out a bit. Nice going.",
+      "ko": "이봐, 조지, 좀 쉬었다고 들었어. 잘했어.",
+      "tags": {
+        "functions": [
+          "F02"
+        ],
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -156,16 +157,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
+        "situation": "S19",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -179,7 +180,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -188,7 +189,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -200,10 +201,10 @@
       "ko": "가, 조니, 가, 가",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -211,12 +212,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -225,10 +224,10 @@
       "ko": "가, 조니, 가, 가, 가",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -236,12 +235,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -252,7 +249,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -261,11 +258,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "5c8bff6ee7dc2b62"
 }

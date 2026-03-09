@@ -21,9 +21,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,7 +37,7 @@
       "ko": "마음에 드는 게 있으면 거래할 수 있어.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -48,8 +48,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -62,7 +64,7 @@
       "ko": "뭐든지 다 괜찮아.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -73,7 +75,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,7 +89,7 @@
       "ko": "하지만 이 세 개는 모니카가 미리 승인한 거야.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -98,7 +100,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -121,10 +123,12 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -137,7 +141,7 @@
       "ko": "레이첼, 네가 내 손님으로 결혼식에 와줬으면 해.",
       "tags": {
         "functions": [
-          "F38"
+          "F34"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -148,9 +152,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02",
+          "G15"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -162,7 +169,7 @@
       "ko": "나는 모니카의 신부 들러리야, 알겠지?",
       "tags": {
         "functions": [
-          "F01"
+          "F12"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -173,7 +180,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,7 +194,7 @@
       "ko": "나를 속이려고 하지 마.",
       "tags": {
         "functions": [
-          "F56"
+          "F43"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -196,11 +203,13 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -212,7 +221,7 @@
       "ko": "이 턱시도들 괜찮아 보이는데.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -223,7 +232,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -237,19 +246,21 @@
       "ko": "맞아, 우리는 유명인들을 위한 맞춤 턱시도를 만들어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -265,7 +276,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -273,7 +284,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -287,7 +298,7 @@
       "ko": "시상식 같은 거 말하는 거야?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -298,7 +309,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -312,10 +323,10 @@
       "ko": "그 중 일부는. 이 턱시도들이 레드 카펫을 걸었다고?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -323,7 +334,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -340,15 +351,15 @@
           "F02"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -362,7 +373,7 @@
       "ko": "잠깐, 내 거? PN을 좀 보고 E는 좀 덜 보라고 추천해.",
       "tags": {
         "functions": [
-          "F36"
+          "F49"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -373,7 +384,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -387,7 +398,7 @@
       "ko": "누가 입었는지 알아?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -398,7 +409,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -412,7 +423,7 @@
       "ko": "음, 이건 톰 브로카야.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -421,9 +432,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -437,7 +448,7 @@
       "ko": "나쁘지 않네.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -446,10 +457,12 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -462,7 +475,7 @@
       "ko": "이건 폴 오닐이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A1",
@@ -473,11 +486,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -487,7 +501,7 @@
       "ko": "그게 누구야?",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -496,9 +510,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -512,7 +526,7 @@
       "ko": "저 사람 누구야?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A1",
@@ -523,11 +537,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -537,7 +554,7 @@
       "ko": "양키스에서 뛰는 선수야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -548,7 +565,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -562,10 +579,10 @@
       "ko": "진짜로? ESPN.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -573,11 +590,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -587,10 +605,10 @@
       "ko": "가끔 배경으로 틀어놓는 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -598,8 +616,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -612,7 +632,7 @@
       "ko": "오, 이건 피어스 브로스넌이야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -621,9 +641,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -643,14 +663,16 @@
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -662,18 +684,18 @@
       "ko": "007, 이건 제임스 본드의 대화야. 그래서 나는 제임스 본드 턱시도로 결혼해야 하는 거야?",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -687,7 +709,7 @@
       "ko": "제임스 본드 턱시도로 결혼하는 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -698,7 +720,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -712,10 +734,10 @@
       "ko": "그건 꽤 멋진 세금이야, 단순히 그런 게 아니야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -723,8 +745,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -737,7 +761,7 @@
       "ko": "내가 영국의 가장 강력한 무기가 될 거라는 것.",
       "tags": {
         "functions": [
-          "F14"
+          "F02"
         ],
         "situation": "S46",
         "cefr": "B1",
@@ -748,7 +772,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -762,7 +786,7 @@
       "ko": "누구도 두려워하지 않는 남자.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -773,7 +797,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -787,10 +811,10 @@
       "ko": "살인 면허를 가진 남자. 고마워.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -798,7 +822,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -812,10 +836,10 @@
       "ko": "모니카가 이걸 입게 해줄까?",
       "tags": {
         "functions": [
-          "F09"
+          "F27"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -823,8 +847,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -837,10 +863,10 @@
       "ko": "우리 진짜로 체스를 제대로 배워야겠다.",
       "tags": {
         "functions": [
-          "F06"
+          "F39"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -848,7 +874,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -862,20 +888,22 @@
       "ko": "나는 우리 방식이 좋은데.",
       "tags": {
         "functions": [
-          "F09"
+          "F36"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -887,7 +915,7 @@
       "ko": "오, 체스!",
       "tags": {
         "functions": [
-          "F09"
+          "F25"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -896,9 +924,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -912,18 +940,18 @@
       "ko": "좋은 수야.",
       "tags": {
         "functions": [
-          "F12"
+          "F53"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "A1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -937,7 +965,7 @@
       "ko": "이봐, 조이. 로스와 챈들러한테 결혼식 턱시도를 구해줬어.",
       "tags": {
         "functions": [
-          "F03"
+          "F25"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -946,9 +974,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -962,10 +990,10 @@
       "ko": "너도 필요해? 아니, 나는 예식을 진행하니까 턱시도 안 입어.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -973,7 +1001,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -987,19 +1015,21 @@
       "ko": "그럼 뭘 입을 건데?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -1012,7 +1042,7 @@
       "ko": "다채로운 로브, 아 그리고 아마 모자도.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -1021,11 +1051,13 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -1037,7 +1069,7 @@
       "ko": "어, 모니카가 이거 알아? 모르겠어.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -1048,7 +1080,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1062,20 +1094,23 @@
       "ko": "아닌 것 같아. 그녀한테 말할 때 나도 있어도 돼?",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02",
+          "G13"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -1087,20 +1122,24 @@
       "ko": "이봐, 잠깐, 오늘 밤 영화 볼래? 아, 나 안 돼.",
       "tags": {
         "functions": [
-          "F06"
+          "F25",
+          "F38",
+          "F43"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -1112,10 +1151,10 @@
       "ko": "멜리사라는 여자랑 저녁 먹어야 해. 나도 가도 돼?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1123,9 +1162,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -1148,7 +1189,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1168,14 +1209,16 @@
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -1187,20 +1230,22 @@
       "ko": "실제로 뭐가 있었는지? 조이의 외설적인 버전.",
       "tags": {
         "functions": [
-          "F04"
+          "F11"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -1212,7 +1257,7 @@
       "ko": "그녀의 대학 친구야, 나는 조이한테 그걸 말하는 바보 같은 실수를 했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S46",
         "cefr": "B1",
@@ -1223,7 +1268,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1246,9 +1291,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1265,17 +1310,19 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -1287,20 +1334,22 @@
       "ko": "응, 그거 확실히 있었겠지.",
       "tags": {
         "functions": [
-          "F07"
+          "F44"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -1312,7 +1361,7 @@
       "ko": "그랬어, 맞아.",
       "tags": {
         "functions": [
-          "F07"
+          "F44"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -1323,7 +1372,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1337,18 +1386,18 @@
       "ko": "이봐, 그거 진짜야. 응.",
       "tags": {
         "functions": [
-          "F07"
+          "F25"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1373,7 +1422,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1390,7 +1439,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1398,7 +1447,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1412,18 +1461,18 @@
       "ko": "우리는 많이 취해서 결국 키스를 했어.",
       "tags": {
         "functions": [
-          "F01"
+          "F03"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1440,7 +1489,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1448,7 +1497,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1473,7 +1522,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1498,11 +1547,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -1515,15 +1565,15 @@
           "F06"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1540,15 +1590,15 @@
           "F06"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1562,18 +1612,18 @@
       "ko": "알겠어, 나는 네가",
       "tags": {
         "functions": [
-          "F09"
+          "F56"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1587,32 +1637,7 @@
       "ko": "레즈비언인 줄 몰랐어.",
       "tags": {
         "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "wIuBcb2T55Q-64",
-      "en": "Foreign",
-      "ko": "외국어",
-      "tags": {
-        "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A1",
@@ -1623,11 +1648,38 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "wIuBcb2T55Q-64",
+      "en": "Foreign",
+      "ko": "외국어",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V14",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -1637,10 +1689,10 @@
       "ko": "내가 레즈비언이라는 게 아니라, 그냥 이런 일이 있었다고",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -1648,7 +1700,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1662,18 +1714,18 @@
       "ko": "말하는 거야, 알겠어?",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1687,18 +1739,18 @@
       "ko": "꽤 황당하게 들리고, 넌 좀",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1712,7 +1764,33 @@
       "ko": "평범하잖아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V14",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics",
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "wIuBcb2T55Q-69",
+      "en": "Vanilla I'm not vanilla I don't I've",
+      "ko": "평범하다고? 나는 안 평범해, 미친 짓도 해봤어.",
+      "tags": {
+        "functions": [
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -1723,32 +1801,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "wIuBcb2T55Q-69",
-      "en": "Vanilla I'm not vanilla I don't I've",
-      "ko": "평범하다고? 나는 안 평범해, 미친 짓도 해봤어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1762,18 +1815,18 @@
       "ko": "나는 라스베가스에서 취해서",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1787,18 +1840,18 @@
       "ko": "로스와 결혼까지 했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F03"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1812,20 +1865,23 @@
       "ko": "있잖아, 믿기 싫으면",
       "tags": {
         "functions": [
-          "F09"
+          "F36"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09",
+          "G12"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -1837,20 +1893,23 @@
       "ko": "오늘 밤 저녁에 나랑 같이 가.",
       "tags": {
         "functions": [
+          "F36",
           "F38"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -1862,18 +1921,18 @@
       "ko": "그녀가 직접 말해줄 거야. 좋아, 알겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -1887,24 +1946,27 @@
       "ko": "응, 왜냐면 상상이 안 돼. 아니, 넌 내 머릿속에 들어올 수 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
         "situation": "S46",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": [
           "is_lyrics"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "f8f3d317334283ca"
 }

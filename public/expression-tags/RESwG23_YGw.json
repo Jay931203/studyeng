@@ -12,20 +12,22 @@
       "ko": "당신의 친절한 요청에 그냥 아니라고 말하고 이대로 두면 될까요?",
       "tags": {
         "functions": [
-          "F43"
+          "F06"
         ],
         "situation": "S08",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -35,21 +37,23 @@
       "ko": "네.",
       "tags": {
         "functions": [
-          "F07"
+          "F44"
         ],
         "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,18 +62,18 @@
       "ko": "좋아요, 물론, 저... 물론이죠.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -87,14 +91,18 @@
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V07",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -104,20 +112,23 @@
       "ko": "문제는 당신과 함께 있으면 정말 위험하다는 거예요.",
       "tags": {
         "functions": [
-          "F19"
+          "F40"
         ],
         "situation": "S08",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18",
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -127,21 +138,27 @@
       "ko": "당신의 나쁜 기분을 제외하면 완벽한 상황인 것 같아요.",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
         "situation": "S08",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "vibe": "V07",
+        "power": [
+          "P06"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -150,18 +167,18 @@
       "ko": "하지만 제 경험이 부족한 마음은 다시 버림받으면 회복하지 못할 것 같아요.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,20 +190,24 @@
       "ko": "제가 다시 한 번 버림받는다면, 그건 당연히 예상되는 일이니까요.",
       "tags": {
         "functions": [
-          "F20"
+          "F10",
+          "F13"
         ],
         "situation": "S08",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10",
+          "G16"
+        ],
         "flags": []
       }
     },
@@ -196,18 +217,18 @@
       "ko": "당신의 사진이 너무 많고, 영화도 너무 많아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,22 +240,25 @@
       "ko": "당신이 떠나면, 저는... 음, 정말 곤란해질 거예요.",
       "tags": {
         "functions": [
-          "F19"
+          "F12"
         ],
         "situation": "S08",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V07",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "22d4677c7843e425"
 }

@@ -12,20 +12,22 @@
       "ko": "뭘 원해?",
       "tags": {
         "functions": [
-          "F58"
+          "F17"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -37,12 +39,11 @@
       "ko": "나는 제임스의 아들이야. 누구? 제임스 레이크. 그게 어쨌다고?",
       "tags": {
         "functions": [
-          "F01",
-          "F06"
+          "F36"
         ],
         "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -51,7 +52,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -61,7 +64,7 @@
       "ko": "그가 네 방이 있다고 했어.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -75,7 +78,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -93,7 +98,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -107,10 +112,10 @@
       "ko": "진짜야. 소리 내지 마.",
       "tags": {
         "functions": [
-          "F35"
+          "F50"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -120,7 +125,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -133,17 +140,19 @@
           "F42"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E12"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -153,7 +162,7 @@
       "ko": "오.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -178,10 +187,10 @@
       "ko": "사실 네가 초인종을 눌렀을 때, 10년 만에 처음으로 좋은 아이디어가 떠올랐어.",
       "tags": {
         "functions": [
-          "F09"
+          "F08"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -201,7 +210,7 @@
       "ko": "하지만 이제 사라졌어.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -224,22 +233,23 @@
       "ko": "이 자식아.",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "contains_profanity"
+          "contains_profanity",
+          "is_fragment"
         ]
       }
     },
@@ -272,10 +282,10 @@
       "ko": "이상한 놈이야, 난 그렇게 생각했어.",
       "tags": {
         "functions": [
-          "F12"
+          "F21"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -283,7 +293,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -295,21 +305,22 @@
       "ko": "뭔가 이상해. 정말?",
       "tags": {
         "functions": [
-          "F12",
-          "F05"
+          "F18"
         ],
         "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -319,7 +330,9 @@
       "ko": "응, 사실 그를 별로 좋아하지 않았어.",
       "tags": {
         "functions": [
-          "F09"
+          "F43",
+          "F08",
+          "F56"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -332,7 +345,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -342,10 +357,10 @@
       "ko": "네 엄마는 여전히 앤디 워홀 같았어. 뭐?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -365,7 +380,7 @@
       "ko": "그거 말이야.",
       "tags": {
         "functions": [
-          "F50"
+          "F48"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -379,10 +394,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "22e4223dab2f66ea"
 }

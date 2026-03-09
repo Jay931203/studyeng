@@ -12,7 +12,7 @@
       "ko": "참가자 여러분, 스튜디오에 적절한 화장실 시설이 있다는 점을 다시 한 번 상기시켜 드립니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
         "situation": "S34",
         "cefr": "B1",
@@ -21,9 +21,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,13 +35,13 @@
       "ko": "정말 흥미진진한 경기가 펼쳐지고 있습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -69,10 +69,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -81,13 +83,13 @@
       "ko": "이봐, 너, G를 연주해봐. G? 그게 무슨 뜻이야, 할아버지?",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -104,13 +106,13 @@
       "ko": "G가 그 뜻이야? 프랭크, 새로운 별명이 생겼네. G야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -130,7 +132,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,7 +140,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -161,7 +163,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -179,7 +181,7 @@
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E06"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -196,7 +198,7 @@
       "ko": "음, 당신은 꽤 많은 점수를 잃어버렸군요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "B1",
@@ -205,13 +207,14 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "eba933fffa5c50e8"
 }

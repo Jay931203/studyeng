@@ -14,7 +14,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -37,9 +37,9 @@
       "ko": "오, 신이시여.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -62,56 +62,10 @@
       "ko": "그녀가 있었어요. 어릴 때 항상 제가 가장 좋아했던 친구였죠.",
       "tags": {
         "functions": [
-          "F09"
+          "F03"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "tYm7xeg27Rw-3",
-      "en": "Now I see her, she's the most beautiful thing I ever saw.",
-      "ko": "지금 보니, 그녀는 제가 본 것 중 가장 아름다운 존재예요.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S44",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "tYm7xeg27Rw-4",
-      "en": "It's okay.",
-      "ko": "괜찮아요.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S44",
-        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -126,15 +80,67 @@
       }
     },
     {
+      "id": "tYm7xeg27Rw-3",
+      "en": "Now I see her, she's the most beautiful thing I ever saw.",
+      "ko": "지금 보니, 그녀는 제가 본 것 중 가장 아름다운 존재예요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G03"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "tYm7xeg27Rw-4",
+      "en": "It's okay.",
+      "ko": "괜찮아요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G05"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
       "id": "tYm7xeg27Rw-5",
       "en": "Necrovesicles. That's interesting. Thanks.",
       "ko": "네크로베시클. 흥미롭네요. 고마워요.",
       "tags": {
         "functions": [
-          "F09"
+          "F27"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -156,8 +162,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -177,16 +183,16 @@
       "ko": "아마 불균형, 방향 감각 상실, 힘든 호흡일 거예요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -200,10 +206,10 @@
       "ko": "대략 6주마다 발생하는 것 같아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -225,7 +231,32 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "tYm7xeg27Rw-10",
+      "en": "She's a good girl.",
+      "ko": "그녀는 착한 아이예요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -239,29 +270,7 @@
         "grammar_intent": [],
         "flags": []
       }
-    },
-    {
-      "id": "tYm7xeg27Rw-10",
-      "en": "She's a good girl.",
-      "ko": "그녀는 착한 아이예요.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S44",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
     }
-  ]
+  ],
+  "transcriptHash": "b7a1055254d3c588"
 }

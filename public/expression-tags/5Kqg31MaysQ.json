@@ -12,23 +12,23 @@
       "ko": "당신의 수준을 알겠군요. 오, 제 신이시여. 그럴 리가 없죠... 그만하세요. 나만 이 연극을 간파한 건가요?",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G07"
+        ],
+        "flags": []
       }
     },
     {
@@ -37,18 +37,20 @@
       "ko": "이렇게 많은 사람들이 오랫동안 그렇게 바보일 수 있을까요?",
       "tags": {
         "functions": [
-          "F12"
+          "F06",
+          "F14",
+          "F58"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,11 +62,11 @@
       "ko": "저도 가끔 믿기 힘들 때가 있습니다. 그런데 왜 그렇게 애쓰시죠?",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -83,11 +85,11 @@
       "ko": "너무 많은 꽃들이, 제 신이시여, 각자 가장 높이 자라길 원하고, 가장 밝게 피길 원하지만, 결국 하나씩 모두 꺾이게 됩니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -106,11 +108,11 @@
       "ko": "저는 가장 높거나 가장 밝고 싶지 않습니다. 그저 제 시간이 되어 흙으로 돌아갈 때까지 정원에 남고 싶습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F32"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -119,7 +121,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -129,11 +134,11 @@
       "ko": "시적인 솔직함에 감사하지만, 여전히 당신을 제 평의회에 다시 들여보내야 할 이유를 모르겠습니다. 왕의 평의회입니다, 제 신이시여.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -152,11 +157,11 @@
       "ko": "당신을 똑같이 흙으로 되돌릴 수도 있습니다...",
       "tags": {
         "functions": [
-          "F09"
+          "F27"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -164,7 +169,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -175,11 +182,11 @@
       "ko": "왜 당신을 다시 내 평의회에 받아들여야 하는지 모르겠습니다. 왕의 평의회입니다, 전하.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -198,18 +205,18 @@
       "ko": "당신을 다시 흙으로 되돌릴 수도 있습니다...",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -217,5 +224,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "174859c812ed5199"
 }

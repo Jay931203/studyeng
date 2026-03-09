@@ -12,18 +12,18 @@
       "ko": "사람들이 나를 볼 때 금발 머리와 큰 가슴만 보지.",
       "tags": {
         "functions": [
-          "F09"
+          "F35"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E08"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,18 @@
       "ko": "아무도 나를 진지하게 생각하지 않을 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,10 +58,10 @@
       "ko": "로스쿨 친구들도 그렇고, 워너도 그래.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S19",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +81,18 @@
       "ko": "내 부모님조차 나를 진지하게 생각하지 않는 것 같아.",
       "tags": {
         "functions": [
-          "F12"
+          "F09"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,10 +104,10 @@
       "ko": "처음으로 누군가가 나에게 기대하고 있다는 걸 느꼈어...",
       "tags": {
         "functions": [
-          "F18"
+          "F03"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +115,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,10 +127,10 @@
       "ko": "빅토리아 시크릿 모델이 되는 것 이상의 삶을 살기를.",
       "tags": {
         "functions": [
-          "F24"
+          "F13"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,9 +138,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -150,18 +152,18 @@
       "ko": "내가 스스로를 속이고 있었던 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,20 +175,24 @@
       "ko": "칼라한은 나를 변호사로 보지 않았어. 그저 성적 대상으로만 봤지.",
       "tags": {
         "functions": [
-          "F12"
+          "F43",
+          "F13"
         ],
         "situation": "S36",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E08"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -196,10 +202,10 @@
       "ko": "다른 사람들과 마찬가지로.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -207,7 +213,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,18 +225,18 @@
       "ko": "결국 나는 농담이었어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,10 +248,10 @@
       "ko": "아니, 너는 농담이 아니야.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -253,7 +259,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,22 +273,25 @@
         "functions": [
           "F32"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S19",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": [
           "contains_profanity"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "f278db349364c88e"
 }

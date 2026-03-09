@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,10 +35,10 @@
       "ko": "드럼 연습은 어떻게 되고 있어, 앤디?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,16 +58,16 @@
       "ko": "아, 잘 되고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -83,8 +83,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,9 +104,9 @@
       "ko": "이봐!",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S05",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -118,7 +118,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -127,9 +129,9 @@
       "ko": "안녕!",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S05",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -141,7 +143,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,10 +154,10 @@
       "ko": "브래디, 와!",
       "tags": {
         "functions": [
-          "F38"
+          "F35"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,11 +177,10 @@
       "ko": "들었어? 아니, 무슨 일이야? 드라이브가 올해의 MVP로 선정됐어.",
       "tags": {
         "functions": [
-          "F06",
-          "F01"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -197,10 +200,10 @@
       "ko": "대단해, 트래비스!",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E01"
@@ -222,7 +225,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S05",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -245,8 +248,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -268,8 +271,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -291,8 +294,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -312,19 +315,23 @@
       "ko": "이봐,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X06",
+          "X04"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -335,9 +342,9 @@
       "ko": "이 테이블의 재능은 정말 놀라워.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S05",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -360,8 +367,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -383,10 +390,10 @@
       "ko": "네 드럼 연주는 어때?",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -406,10 +413,10 @@
       "ko": "괜찮아, 앤디?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -429,16 +436,16 @@
       "ko": "응, 사실 정말 잘 되고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S10",
+        "situation": "S05",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -454,7 +461,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S05",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -475,9 +482,9 @@
       "ko": "그건 전국에서 제일 좋다는 뜻이야,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S05",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -500,8 +507,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -521,10 +528,10 @@
       "ko": "그래서 대회에서 연주를 시작할 거야,",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -544,16 +551,16 @@
       "ko": "그리고 사실, 나는 방금 알게 됐어.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -569,7 +576,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S05",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -592,14 +599,14 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S05",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -613,10 +620,10 @@
       "ko": "주관적이지 않아?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -636,9 +643,9 @@
       "ko": "아니.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S05",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -648,9 +655,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -659,9 +670,9 @@
       "ko": "스튜디오가 너에게 일을 주는 거야?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S05",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -682,10 +693,10 @@
       "ko": "아니, 실제 스튜디오는 아니야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -699,5 +710,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "5f5e4df54118430d"
 }

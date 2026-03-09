@@ -12,9 +12,9 @@
       "ko": "음, 좋은 시작이야.",
       "tags": {
         "functions": [
-          "F01"
+          "F52"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -35,10 +35,11 @@
       "ko": "음, 어떤 생각이 있어?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F52"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,9 +59,9 @@
       "ko": "음.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -83,10 +84,10 @@
       "ko": "저기 러닝머신 몇 대, 바벨, 벤치프레스가 있어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -106,11 +107,11 @@
       "ko": "재고 바를 만들고, 생맥주도 있어야 해. 독일 사람들이니까...",
       "tags": {
         "functions": [
-          "F04"
+          "F50"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -119,8 +120,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -129,9 +134,9 @@
       "ko": "여기 엔터테인먼트 시스템, DVD 플레이어가 있어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -152,16 +157,16 @@
       "ko": "프로젝터와 스크린 설치하면 좋겠네.",
       "tags": {
         "functions": [
-          "F36"
+          "F14"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -175,20 +180,24 @@
       "ko": "몇 개의 라지 보이 의자와 소파, 당구대, 그리고 풋볼도 괜찮아.",
       "tags": {
         "functions": [
-          "F02"
+          "F23"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -200,18 +209,20 @@
         "functions": [
           "F36"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -223,10 +234,10 @@
       "ko": "맞아.",
       "tags": {
         "functions": [
-          "F07"
+          "F09"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -235,9 +246,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P02"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -246,19 +261,21 @@
       "ko": "베르너가 이게 6개월 걸린다고 했어,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -269,16 +286,17 @@
       "ko": "그러면 최소 8개월, 아마 10개월은 고립될 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F06",
+          "F14"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -292,19 +310,21 @@
       "ko": "이 사람들은 매일 10시간씩 힘든 일을 하고, 밤새도록 일할 거야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -315,10 +335,10 @@
       "ko": "그리고 이런 환경에서 돌아올 거야. 그저 살아있게 할 수는 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -338,19 +358,21 @@
       "ko": "그들이 벽을 오르는 걸 막아야 해.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -361,10 +383,10 @@
       "ko": "목록을 만들어.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -375,8 +397,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "1f195eb8253917d9"
 }

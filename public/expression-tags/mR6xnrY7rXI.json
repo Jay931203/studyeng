@@ -12,78 +12,9 @@
       "ko": "당신이 학업과 아르바이트를 잘 조화롭게 해낸 것에 정말 자랑스럽습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V02",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "mR6xnrY7rXI-1",
-      "en": "your schoolwork and your part-time job.",
-      "ko": "이게 무슨 병신 같은 농담이야?",
-      "tags": {
-        "functions": [
-          "F17"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V03",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "mR6xnrY7rXI-2",
-      "en": "Is this some kind of sick joke?",
-      "ko": "이 청구서는 농담이 아니야.",
-      "tags": {
-        "functions": [
-          "F17"
-        ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V03",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "mR6xnrY7rXI-3",
-      "en": "These bills are no joke.",
-      "ko": "너희는 윌에게서 배울 게 좀 있어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -99,14 +30,83 @@
       }
     },
     {
+      "id": "mR6xnrY7rXI-1",
+      "en": "your schoolwork and your part-time job.",
+      "ko": "이게 무슨 병신 같은 농담이야?",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "mR6xnrY7rXI-2",
+      "en": "Is this some kind of sick joke?",
+      "ko": "이 청구서는 농담이 아니야.",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V02",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "mR6xnrY7rXI-3",
+      "en": "These bills are no joke.",
+      "ko": "너희는 윌에게서 배울 게 좀 있어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "mR6xnrY7rXI-4",
       "en": "You kids could stand to learn a thing or two from Will.",
       "ko": "우리가 지금 황혼의 존에 있는 건가?",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -127,11 +127,11 @@
       "ko": "언제 모두가 돼지 가면을 쓰는 거야?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -150,16 +150,16 @@
       "ko": "칼튼, 양말 한 켤레에 90달러? 말도 안 돼.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -173,18 +173,18 @@
       "ko": "정말 그렇지.",
       "tags": {
         "functions": [
-          "F17"
+          "F12"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,10 +196,10 @@
       "ko": "음, 자기야, 그건 9달러야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,8 +209,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G16"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -219,16 +223,16 @@
       "ko": "아.",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -242,10 +246,10 @@
       "ko": "애슐리, 약국에서 우리 계좌로 80달러어치 장신구를 어떻게 결제한 거야?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -256,7 +260,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,9 +271,10 @@
       "ko": "어, 그건 80센트야.",
       "tags": {
         "functions": [
-          "F06"
+          "F34",
+          "F12"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -278,7 +285,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -290,7 +299,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -311,18 +320,18 @@
       "ko": "말도 안 돼, 비비안. 이건 몇 달째 계속되고 있어.",
       "tags": {
         "functions": [
-          "F17"
+          "F52"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V03",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -336,7 +345,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -357,18 +366,18 @@
       "ko": "나는 잘 보이는데.",
       "tags": {
         "functions": [
-          "F09"
+          "F12"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -380,10 +389,10 @@
       "ko": "글씨가 예전보다 작아졌어.",
       "tags": {
         "functions": [
-          "F06"
+          "F58"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -403,18 +412,18 @@
       "ko": "자, 이건 신발 한 켤레에 300달러로 보이네. 뭐라고 적혀 있어? 신발 300달러.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -426,10 +435,10 @@
       "ko": "나는 잘 보인다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -449,10 +458,10 @@
       "ko": "글씨를 예전보다 작게 만들고 있다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -460,7 +469,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -472,9 +481,9 @@
       "ko": "자, 이 신발 한 켤레에 300달러네. 뭐라고 적혀 있어? 신발 300달러.",
       "tags": {
         "functions": [
-          "F02"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -489,5 +498,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d3a3302355b42b0f"
 }

@@ -5,25 +5,20 @@
   "seriesId": "graham-norton",
   "sentenceCount": 14,
   "taggedCount": 14,
+  "transcriptHash": "fe1a8c2369bfd421",
   "sentences": [
     {
       "id": "yuXGpUR7fXA-0",
       "en": "This is based on your life. I mean, this is things. Yeah",
       "ko": "슬프게도 이건 당신의 실제 이야기에서 따온 거잖아요. 실제로 있었던 일이에요.",
       "tags": {
-        "functions": [
-          "F01"
-        ],
+        "functions": ["F07", "F01"],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E14"],
+        "expression_types": ["X08"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -34,22 +29,16 @@
       "en": "Loosely Graham",
       "ko": "대충 따온 거야, 그레이엄.",
       "tags": {
-        "functions": [
-          "F01"
-        ],
+        "functions": ["F08"],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E14"],
+        "expression_types": ["X08"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["is_fragment"]
       }
     },
     {
@@ -57,19 +46,13 @@
       "en": "Things like isn't the washing machine that happened to you. What the washing you were very hungover. Oh",
       "ko": "아니, 하지만 세탁기 같은 건 실제로 당신한테 일어난 일이잖아. 뭐라고?",
       "tags": {
-        "functions": [
-          "F01"
-        ],
+        "functions": ["F07", "F06"],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E14"],
+        "expression_types": ["X05"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -80,22 +63,16 @@
       "en": "Yeah",
       "ko": "응",
       "tags": {
-        "functions": [
-          "F01"
-        ],
+        "functions": ["F53"],
         "situation": "S34",
         "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E09"],
+        "expression_types": ["X06"],
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["is_fragment"]
       }
     },
     {
@@ -103,19 +80,13 @@
       "en": "Tell Tony Foster that story",
       "ko": "토니 포스터한테 그 이야기 해줘.",
       "tags": {
-        "functions": [
-          "F34"
-        ],
+        "functions": ["F34"],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E06"],
+        "expression_types": ["X08"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -126,21 +97,15 @@
       "en": "All their stories are really cool. Oh, Graham",
       "ko": "근데 그레이엄, 그 이야기들 다 진짜 재밌긴 해.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
+        "functions": ["F30"],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "emotions": ["E01"],
+        "expression_types": ["X08"],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": ["G03"],
         "flags": []
       }
     },
@@ -149,22 +114,16 @@
       "en": "when I was teaching",
       "ko": "그레이엄, 내가 교사로 일할 때, 이 쇼가 바로 그때 이야기를 바탕으로 한 건데,",
       "tags": {
-        "functions": [
-          "F03"
-        ],
+        "functions": ["F03"],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["is_fragment"]
       }
     },
     {
@@ -172,19 +131,13 @@
       "en": "This show is based on I I went home one weekend and I was in my 30s",
       "ko": "어느 주말에 집에 갔었어. 그때 나는 30대였고.",
       "tags": {
-        "functions": [
-          "F03"
-        ],
+        "functions": ["F03"],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -195,22 +148,16 @@
       "en": "I was probably 33 years of age. I went home to see my",
       "ko": "아마 33살이었을 거야.",
       "tags": {
-        "functions": [
-          "F01"
-        ],
+        "functions": ["F03"],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["is_fragment"]
       }
     },
     {
@@ -218,19 +165,13 @@
       "en": "Mother and then I went back and while I was at home, my mother did my washing for me because I was only 33",
       "ko": "집에 있는 동안 어머니가 빨래를 해주셨어.",
       "tags": {
-        "functions": [
-          "F03"
-        ],
+        "functions": ["F03"],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E14"],
+        "expression_types": ["X08"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -241,19 +182,13 @@
       "en": "And I went back on the on the Sunday night I got really drunk",
       "ko": "일요일 밤에 엄청 취했어.",
       "tags": {
-        "functions": [
-          "F01"
-        ],
+        "functions": ["F03"],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E14"],
+        "expression_types": ["X05"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -264,19 +199,13 @@
       "en": "And then I went for a curry and then the next day I went into school",
       "ko": "그다음에 카레를 먹으러 갔어.",
       "tags": {
-        "functions": [
-          "F01"
-        ],
+        "functions": ["F03"],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -287,19 +216,13 @@
       "en": "I'm gonna I went into school and it was a school in Slough and it was a quite a rough school",
       "ko": "학교에 갔는데, 슬라우에 있는 학교였어.",
       "tags": {
-        "functions": [
-          "F03"
-        ],
+        "functions": ["F03"],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -310,19 +233,13 @@
       "en": "But they had a really brilliant hearing impaired department. So they were hit hearing impaired kids who?",
       "ko": "하지만 그들은 정말 뛰어난 청각 장애인 부서를 가지고 있었어. 그래서 청각 장애인 아이들이 있었어?",
       "tags": {
-        "functions": [
-          "F01"
-        ],
+        "functions": ["F03"],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E06"],
+        "expression_types": ["X08"],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []

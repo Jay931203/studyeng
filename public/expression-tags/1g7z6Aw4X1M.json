@@ -12,34 +12,9 @@
       "ko": "쾅! 쾅! 쾅!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "1g7z6Aw4X1M-1",
-      "en": "Come on!",
-      "ko": "어서!",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -55,14 +30,40 @@
       }
     },
     {
+      "id": "1g7z6Aw4X1M-1",
+      "en": "Come on!",
+      "ko": "어서!",
+      "tags": {
+        "functions": [
+          "F35"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01",
+          "X04"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "1g7z6Aw4X1M-2",
       "en": "Huh?",
       "ko": "응?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -85,9 +86,9 @@
       "ko": "아!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -110,13 +111,13 @@
       "ko": "이런!",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -125,7 +126,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "contains_profanity"
+          "is_fragment"
         ]
       }
     },
@@ -135,9 +136,9 @@
       "ko": "아아아아!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -160,9 +161,9 @@
       "ko": "오!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -185,9 +186,9 @@
       "ko": "아아아아!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -204,5 +205,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "b48d8e304fb36ee6"
 }

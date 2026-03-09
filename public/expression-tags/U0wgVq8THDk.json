@@ -12,13 +12,13 @@
       "ko": "케이블이 끊어져서 이 엘리베이터가 10층을 곤두박질쳤어. 비정규직 근로자들만 있었지.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S27",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -35,16 +35,16 @@
       "ko": "괴물 같은 존재들이야. 그 건물은 네가 있던 곳 바로 옆에 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S27",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V12",
         "power": [],
@@ -58,20 +58,23 @@
       "ko": "네가 그 안에 있었다면 상상할 수 있어? 생각하기도 싫어.",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
-        "situation": "S27",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02",
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -81,16 +84,16 @@
       "ko": "어쨌든 그 엘리베이터에 있던 젊은 여성 중 한 명이 절단 수술을 받아야 해.",
       "tags": {
         "functions": [
-          "F04"
+          "F48"
         ],
-        "situation": "S27",
+        "situation": "S43",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V12",
         "power": [],
@@ -104,16 +107,16 @@
       "ko": "그녀는 아주 젊고, 정말 슬픈 일이야. 어쨌든, 행운을 빌어줘. 너를 위해 기도할게.",
       "tags": {
         "functions": [
-          "F09"
+          "F48"
         ],
-        "situation": "S27",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V12",
         "power": [],
@@ -127,10 +130,10 @@
       "ko": "너를 위한 손가락",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S27",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,13 +141,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "e3eb9fd432132629"
 }

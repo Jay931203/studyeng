@@ -27,7 +27,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -52,7 +52,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -62,10 +62,10 @@
       "ko": "안녕, 작은 집.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S01",
-        "cefr": "A1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -76,7 +76,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -100,7 +102,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -112,14 +114,14 @@
         "functions": [
           "F35"
         ],
-        "situation": "S01",
+        "situation": "S45",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -148,7 +150,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -173,9 +175,10 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "b377e6d479682069"
 }

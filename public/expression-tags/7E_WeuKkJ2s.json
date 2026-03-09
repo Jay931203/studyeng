@@ -12,18 +12,18 @@
       "ko": "더그, 자기야, 어디 있어? 토론이 곧 시작돼.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,13 +35,13 @@
       "ko": "여기 있어, 엄마.",
       "tags": {
         "functions": [
-          "F01"
+          "F53"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -49,7 +49,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,21 +60,25 @@
       "ko": "나야, 더그.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -83,18 +89,22 @@
         "functions": [
           "F04"
         ],
-        "situation": "S34",
+        "situation": "S38",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -104,13 +114,13 @@
       "ko": "더기, 오늘 기분이 좋아. 우리는 좋은 흐름을 타고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -127,13 +137,13 @@
       "ko": "리즈 체니가 나를 지지할 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -152,11 +162,11 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -164,7 +174,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -173,13 +185,13 @@
       "ko": "다시 말할게. 그리고 브루스 스프링스틴도.",
       "tags": {
         "functions": [
-          "F50"
+          "F39"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -198,18 +210,21 @@
         "functions": [
           "F14"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17",
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -219,13 +234,13 @@
       "ko": "여론조사가 좋고, 나도 실수로 나를 구글링했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -242,21 +257,24 @@
       "ko": "어떤 사람들은 나를 '그릴프'라고 부르는데, 그건 골든 리트리버를 의미해. 난 프렌치하고 싶어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X05",
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -266,20 +284,25 @@
       "ko": "그건 분명 잘못된 것 같아.",
       "tags": {
         "functions": [
-          "F12"
+          "F44",
+          "F11"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -289,20 +312,24 @@
       "ko": "응, 아마도 잘못된 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F14"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E04"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -312,22 +339,27 @@
       "ko": "어쨌든, 조 바이든이 나중에 보자고 했을 때, 오늘 밤 오겠다는 뜻이었을까?",
       "tags": {
         "functions": [
-          "F06"
+          "F32"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "0981c984cff6d004"
 }

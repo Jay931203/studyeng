@@ -12,18 +12,18 @@
       "ko": "상사가 방금 나를 한계까지 몰아붙였어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S46",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,10 +37,10 @@
       "ko": "뭐라고 한마디 하고 싶지만",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S46",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,9 +48,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -64,18 +66,23 @@
         "functions": [
           "F09"
         ],
-        "situation": "S14",
+        "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X02",
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V14",
+        "power": [
+          "P06"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -87,9 +94,9 @@
       "ko": "큰 잔에 독한 거 하나 따라줘",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -98,7 +105,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,18 +119,18 @@
       "ko": "미치기 전에 허리케인 칵테일로 해줘",
       "tags": {
         "functions": [
-          "F34"
+          "F03"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S46",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -137,10 +144,10 @@
       "ko": "아직 열두 시 반밖에 안 됐지만",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S46",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -148,7 +155,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,18 +169,18 @@
       "ko": "상관없어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S46",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,9 +194,9 @@
       "ko": "어딘가에서는 다섯 시니까",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -198,7 +205,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -212,19 +219,21 @@
       "ko": "이 점심시간은 오후 내내 그리고 밤까지 갈 거야",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S46",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -237,20 +246,22 @@
       "ko": "내일 아침 큰일이 날 거란 거 알아",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E04"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "is_lyrics",
           "contains_profanity"
@@ -263,9 +274,9 @@
       "ko": "하지만 괜찮아",
       "tags": {
         "functions": [
-          "F09"
+          "F44"
         ],
-        "situation": "S14",
+        "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -274,7 +285,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -288,19 +299,21 @@
       "ko": "일 년 넘게 하루도 쉬지 못했어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S46",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V12",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -313,19 +326,21 @@
       "ko": "나의 자메이카 휴가가 바로 여기서 시작될 거야",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V07",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -338,9 +353,9 @@
       "ko": "나한테 전화 오면, 방금 배 타고 떠났다고 전해줘",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S46",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -349,7 +364,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -357,5 +372,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "33926e40864795df"
 }

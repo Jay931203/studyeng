@@ -12,20 +12,24 @@
       "ko": "나는 이 노래에 내 마음과 영혼을 쏟았어. 그건 누구도 부정하지 않아.",
       "tags": {
         "functions": [
-          "F01"
+          "F22"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V07",
+        "power": [
+          "P09"
+        ],
+        "grammar_intent": [
+          "G22"
+        ],
         "flags": []
       }
     },
@@ -35,9 +39,9 @@
       "ko": "그리고 너는 앨범에 네 노래를 넣고 싶어서 싫어하는 거야. 그게 아니야, 로저.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S50",
+        "situation": "S34",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -46,9 +50,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -60,16 +68,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,20 +89,26 @@
       "ko": "나는 내 차를 사랑해. 아마 그게 충분히 강하지 않은 걸까?",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
-        "situation": "S50",
+        "situation": "S34",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V07",
+        "power": [
+          "P01",
+          "P09"
+        ],
+        "grammar_intent": [
+          "G17",
+          "G22"
+        ],
         "flags": []
       }
     },
@@ -104,19 +118,18 @@
       "ko": "그게 무슨 뜻이야, 충분히 강하지 않다는 게? 잠깐, 나 늦었어. 내가 놓친 게 뭐야? 로저의 차 노래에 대해 이야기하고 있어. 그게 충분히 강해?",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F21"
         ],
-        "situation": "S50",
+        "situation": "S06",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -128,9 +141,9 @@
       "ko": "그게 내가 묻고 싶은 전부야.",
       "tags": {
         "functions": [
-          "F06"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -139,8 +152,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -151,10 +166,10 @@
       "ko": "내가 여기서 혼자라면, 사과할게.",
       "tags": {
         "functions": [
-          "F28"
+          "F03"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S34",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -162,7 +177,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -176,16 +191,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -197,20 +212,26 @@
       "ko": "너는 나를 치즈처럼 달콤하다고 부르네. 좋네. 와우.",
       "tags": {
         "functions": [
-          "F09"
+          "F18"
         ],
-        "situation": "S50",
+        "situation": "S24",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V02",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G07",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -220,20 +241,21 @@
       "ko": "그게, 내 손이 너의 그리스 건에 있을 때 말하는 거야? 아주 미묘하네, 그렇지? 비유야, 브라이언. 그냥 좀 이상해, 로저.",
       "tags": {
         "functions": [
-          "F04",
-          "F09"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S34",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -244,20 +266,22 @@
       "ko": "그 차로 도대체 뭐 하는 거야? 아이들, 제발.",
       "tags": {
         "functions": [
-          "F06"
+          "F10"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S34",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -267,20 +291,22 @@
       "ko": "우리 모두 서로를 죽일 수 있지만, 그럼 이 앨범을 녹음할 사람은 누가 남아?",
       "tags": {
         "functions": [
-          "F09"
+          "F36"
         ],
-        "situation": "S50",
+        "situation": "S37",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V06",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -292,16 +318,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S11",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,20 +339,22 @@
       "ko": "도대체 왜 그런 말을 해?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -338,10 +366,10 @@
       "ko": "로저, 이 밴드에는 한 명의 히스테리컬한 여왕만 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -349,8 +377,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -361,16 +391,16 @@
       "ko": "너가 화난 이유를 알아, 로저? 왜?",
       "tags": {
         "functions": [
-          "F03"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S34",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V12",
         "power": [],
@@ -384,22 +414,25 @@
       "ko": "네 노래가 충분히 강하지 않다는 걸 알기 때문이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F21"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S34",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "1e5a33f622ad9b87"
 }

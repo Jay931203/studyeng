@@ -15,15 +15,15 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -38,7 +38,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +58,18 @@
       "ko": "10월 18일에 공개되는 넷플릭스 코미디 '리빙 위드 유어셀프'에서도 그를 만날 수 있습니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F23"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,20 +81,22 @@
       "ko": "폴 러드, 쇼에 오신 것을 환영합니다. 감사합니다, 숀. 여기 오게 되어 기쁩니다.",
       "tags": {
         "functions": [
-          "F25",
           "F27"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E01",
+          "E06"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -105,10 +107,11 @@
       "ko": "기분이 어떠신가요?",
       "tags": {
         "functions": [
-          "F06"
+          "F25",
+          "F33"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -116,8 +119,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -128,20 +133,21 @@
       "ko": "매운 음식을 좋아하시나요? 저는 매운 음식을 좋아합니다.",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -152,10 +158,10 @@
       "ko": "저는 매운 음식을 피하지 않아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F50"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -163,9 +169,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -175,18 +183,18 @@
       "ko": "플루토늄은 별로 좋아하지 않지만, 그쪽으로 가는 것 같아서",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V17",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -201,7 +209,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,10 +217,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -224,7 +234,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -232,10 +242,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -244,7 +256,7 @@
       "ko": "채소들에 대한 응원.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -255,7 +267,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,7 +279,7 @@
       "ko": "여기서 낚시하고 있네요.",
       "tags": {
         "functions": [
-          "F02"
+          "F35"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -278,11 +290,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "07eed3789a479907"
 }

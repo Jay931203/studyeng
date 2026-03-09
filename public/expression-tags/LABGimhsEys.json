@@ -12,13 +12,13 @@
       "ko": "인기 없는 의견이지만, 레나 던햄의 가슴은 개 코 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E10"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -37,8 +37,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S19",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,13 +58,13 @@
       "ko": "그래서 이런 영화들을 다 찍는 건가?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E10"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -72,9 +72,7 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -83,13 +81,13 @@
       "ko": "나는 대출이 없고, 그냥 이런 영화들을 다 찍어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S19",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E10"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -97,9 +95,7 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -108,13 +104,13 @@
       "ko": "타이 버렐은 존 햄이 마약 중독자였다면 이렇게 생겼을 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E10"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -133,7 +129,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -142,7 +138,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -154,13 +150,13 @@
       "ko": "브리트니 스피어스가 라디오에서 나를 스토킹하는 것 같아, 그만 좀 해.",
       "tags": {
         "functions": [
-          "F19"
+          "F09"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -177,13 +173,13 @@
       "ko": "지친 할머니야.",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E10"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -200,10 +196,10 @@
       "ko": "시나 데이비스는 진정한 남자다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -211,7 +207,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -223,24 +219,23 @@
       "ko": "클로이 모레츠, 아니면 그 멍청한 이름, 내 엉덩이처럼 생겼어.",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E10"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "af9b65f338a2b77f"
 }

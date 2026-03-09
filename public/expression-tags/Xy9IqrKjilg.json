@@ -12,14 +12,14 @@
       "ko": "밤이 너무 천천히 지나가. 이대로 혼자 끝나지 않길 바라.",
       "tags": {
         "functions": [
-          "F09"
+          "F21",
+          "F24"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02",
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -38,20 +38,23 @@
       "ko": "안됐지만 난 항상 혼자 지냈어. 널 만나기 전까지는 신경 쓴 적 없었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F43",
+          "F56"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -66,15 +69,15 @@
           "F06"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -88,13 +91,13 @@
       "ko": "네 입술에 닿고 꼭 안고 싶었던 게 얼마나 오래됐는지 넌 몰라.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -107,5 +110,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "16ecd577e9a17183"
 }

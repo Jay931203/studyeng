@@ -12,20 +12,24 @@
       "ko": "네, 미안하지만, 그건 제 아들이 예전에도 했던 말이에요.",
       "tags": {
         "functions": [
-          "F20"
+          "F28"
         ],
         "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -35,10 +39,10 @@
       "ko": "당신의 재규어, 당신의 나마스떼 플레이트. 당신이었어요!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +50,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,10 +62,10 @@
       "ko": "하워드, 도움을 요청하는 데는 해가 없어요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +73,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,9 +85,9 @@
       "ko": "당신을 지지하는 사람들이 많아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F12"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -92,7 +96,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,10 +108,10 @@
       "ko": "그러니까 컨트리 클럽에 가방이 있나요? 네.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +119,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,10 +131,10 @@
       "ko": "그 후에, 이름을 밝힐 수 없는 몇몇 고객들이 암시를 해요.",
       "tags": {
         "functions": [
-          "F05"
+          "F04"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,9 +142,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -150,10 +156,10 @@
       "ko": "그리고 목요일에 비즈니스 미팅이 있고, 재규어가 빠르게 지나가는 걸 목격해요.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -161,7 +167,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,7 +181,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -184,7 +190,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,10 +202,10 @@
       "ko": "그게 왜 중요한지는 잘 모르겠지만, 킴 웩슬러요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -207,9 +213,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -219,10 +227,10 @@
       "ko": "그녀가 저에게 경력 조언을 구했어요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,10 +238,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -242,9 +252,10 @@
       "ko": "알겠어요. 좋아요.",
       "tags": {
         "functions": [
-          "F07"
+          "F44",
+          "F53"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -253,10 +264,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,10 +278,10 @@
       "ko": "물론이죠. 물론이죠.",
       "tags": {
         "functions": [
-          "F07"
+          "F44"
         ],
-        "situation": "S36",
-        "cefr": "A1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -276,7 +289,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,22 +301,23 @@
       "ko": "클리프, 이게 당신에게 쉽지 않았다는 걸 알아요. 친구로서 저에게 와주셔서 고마워요.",
       "tags": {
         "functions": [
-          "F31"
+          "F27"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E07"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "f0a7491d6f8a924b"
 }

@@ -14,18 +14,20 @@
         "functions": [
           "F28"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -35,20 +37,26 @@
       "ko": "미안해, 미안해, 내가 보상할게, 내가 보상할게.",
       "tags": {
         "functions": [
-          "F28"
+          "F28",
+          "F39"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X02"
         ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V07",
+        "power": [
+          "P06"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -58,9 +66,9 @@
       "ko": "너를 탓하지 않아.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -69,7 +77,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,8 +91,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S11",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,7 +100,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,7 +114,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -115,10 +123,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -127,18 +137,18 @@
       "ko": "더 이상 창피 당하고 싶지 않아, 끝났어, 끝났어. 아무도 안 왔어. 그래서 뭐?",
       "tags": {
         "functions": [
-          "F20"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,20 +160,22 @@
       "ko": "극장에 돈을 갚을 수 없어, 이게 전부야.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S04",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V09",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -175,20 +187,26 @@
         "functions": [
           "F32"
         ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S08",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V07",
+        "power": [
+          "P05",
+          "P08"
+        ],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "895ff3e3d9f96138"
 }

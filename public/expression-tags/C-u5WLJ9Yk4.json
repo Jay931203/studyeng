@@ -12,20 +12,22 @@
       "ko": "오, 베이비, 베이비, 내가 어떻게 알았겠어?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -48,7 +50,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,20 +64,22 @@
       "ko": "오, 베이비, 베이비, 너를 보내지 말았어야 했어",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G11"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -87,7 +91,7 @@
       "ko": "이제 너는 바로 밖에 있어",
       "tags": {
         "functions": [
-          "F09"
+          "F10"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -98,9 +102,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -112,10 +118,10 @@
       "ko": "네가 원하는 게 뭔지 보여줘",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -123,7 +129,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -137,20 +143,22 @@
       "ko": "말해줘, 베이비, 지금 알아야 해",
       "tags": {
         "functions": [
-          "F06"
+          "F35"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -162,20 +170,22 @@
       "ko": "내 외로움이 날 죽이고 있어",
       "tags": {
         "functions": [
-          "F17"
+          "F04"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -187,18 +197,18 @@
       "ko": "베이비, 나, 고백해야 해, 아직 믿고 있어",
       "tags": {
         "functions": [
-          "F64"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -212,7 +222,7 @@
       "ko": "여전히 믿고 있어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -223,11 +233,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -237,18 +248,18 @@
       "ko": "네가 없으면 미쳐버려",
       "tags": {
         "functions": [
-          "F17"
+          "F06"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -262,7 +273,7 @@
       "ko": "신호를 줘",
       "tags": {
         "functions": [
-          "F34"
+          "F35"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -273,7 +284,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -287,18 +298,18 @@
       "ko": "다시 한 번 나를 쳐줘, 베이비",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -312,20 +323,22 @@
       "ko": "오, 베이비, 베이비, 내가 숨 쉬는 이유는 너야",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -337,7 +350,7 @@
       "ko": "소년, 너 때문에 날아오르고 있어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -348,7 +361,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -356,5 +369,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "7a1b47d3751c6130"
 }

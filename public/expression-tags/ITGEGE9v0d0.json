@@ -23,10 +23,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V02",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,7 +39,7 @@
       "ko": "나 좀 먹었어. 이봐, 나는 계속...",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -44,9 +48,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -61,7 +65,7 @@
           "F02"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +73,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -92,7 +96,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -115,7 +119,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,7 +131,7 @@
       "ko": "나는 멀리 달렸어...",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -138,7 +142,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -161,7 +165,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,20 +177,22 @@
       "ko": "들어봐, 포레스트, 이걸 어떻게 말해야 할지 모르겠어.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -196,7 +202,7 @@
       "ko": "나는 그냥...",
       "tags": {
         "functions": [
-          "F50"
+          "F02"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -207,7 +213,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -221,20 +227,23 @@
       "ko": "내가 너에게 했던 모든 것에 대해 사과하고 싶어, 왜냐하면...",
       "tags": {
         "functions": [
-          "F28"
+          "F04"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15",
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -244,18 +253,18 @@
       "ko": "나는 엉망이었거든...",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,7 +276,7 @@
       "ko": "오랫동안, 그리고... 유후! 이봐! 안녕! 이봐, 너!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -276,9 +285,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,18 +299,18 @@
       "ko": "이건 내 앨라배마의 옛 친구야. 잘 지냈어? 잘 지냈어?",
       "tags": {
         "functions": [
-          "F26"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,7 +322,7 @@
       "ko": "들어봐, 다음 주에 내 일정이 바뀌니까... 고마워. 문제 없어.",
       "tags": {
         "functions": [
-          "F34"
+          "F27"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -322,13 +331,17 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V13",
+        "power": [
+          "P01",
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "0d257dd05a745923"
 }

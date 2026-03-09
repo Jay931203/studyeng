@@ -14,7 +14,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S49",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -37,11 +37,11 @@
         "functions": [
           "F01"
         ],
-        "situation": "S49",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
@@ -60,7 +60,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S49",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -81,10 +81,11 @@
       "ko": "걱정하지 마세요, 곧 자세히 설명해 드릴게요!",
       "tags": {
         "functions": [
-          "F04"
+          "F35",
+          "F40"
         ],
-        "situation": "S49",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -94,7 +95,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G05"
+        ],
         "flags": []
       }
     },
@@ -104,10 +108,10 @@
       "ko": "많은 언어에서는 각 글자가 하나의 소리만 나타내서 단어의 철자를 보고 발음하기 쉬워요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S49",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,16 +131,16 @@
       "ko": "단어의 철자를 보고 발음하기 쉬워요. 하지만 영어는 그렇지 않아요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S49",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -150,10 +154,10 @@
       "ko": "아니, 아니, 아니, 아니, 아니, 아니. 절대 아니에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S49",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -164,10 +168,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d6e6bd39fae5e964"
 }

@@ -12,9 +12,9 @@
       "ko": "하지만 계속 그렇게 할 필요는 없어.",
       "tags": {
         "functions": [
-          "F04"
+          "F08"
         ],
-        "situation": "S14",
+        "situation": "S35",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -37,7 +37,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S35",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -58,18 +58,18 @@
       "ko": "아, 잘했네. 한 조각 먹을래?",
       "tags": {
         "functions": [
-          "F30"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S35",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,10 +81,10 @@
       "ko": "그래, 고마워. 건배. 건배.",
       "tags": {
         "functions": [
-          "F25"
+          "F27"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S35",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,9 +104,9 @@
       "ko": "몇 시간 전에 다른 CEO 후보와 회의한 걸 봤어.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S35",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -127,9 +127,9 @@
       "ko": "그가 도착하는 걸 봤어. 어떻게 됐어?",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S35",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -150,9 +150,9 @@
       "ko": "잘 진행되고 있었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S35",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -164,7 +164,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -173,9 +175,9 @@
       "ko": "우리가 나가라고 할 때까지. 그가 쓴 용어는 '여성 사이트'였어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S35",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -196,9 +198,9 @@
       "ko": "그 이후로는 그의 말을 듣지 못했어.",
       "tags": {
         "functions": [
-          "F01"
+          "F56"
         ],
-        "situation": "S14",
+        "situation": "S35",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -219,20 +221,25 @@
       "ko": "아무래도 옷을 파는 게 우리를 여성 사이트로 만든대. 정말 그럴 수 있어? 이게 다 정당한 건가?",
       "tags": {
         "functions": [
-          "F12"
+          "F18",
+          "F05"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S35",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -242,9 +249,9 @@
       "ko": "나도 전적으로 동의해. 놀라워.",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S35",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -267,18 +274,20 @@
         "functions": [
           "F18"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S35",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -288,9 +297,10 @@
       "ko": "그럼, 은퇴하기 전에는 뭐 했어?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F48"
         ],
-        "situation": "S14",
+        "situation": "S35",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -311,9 +321,9 @@
       "ko": "나는 Dex One의 부사장이었어. 전화번호부?",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S35",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -334,9 +344,9 @@
       "ko": "아니. 인쇄를 담당했어. 그 전에 영업을 했어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S35",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -351,5 +361,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d2a62405024ee72d"
 }

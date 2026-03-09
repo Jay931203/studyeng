@@ -12,23 +12,21 @@
       "ko": "어, 너... 괜찮아?",
       "tags": {
         "functions": [
-          "F06"
+          "F52"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,18 +35,18 @@
       "ko": "나는 화학을 정말 못했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,19 +58,18 @@
       "ko": "나는, 어, 인문학 쪽이야. 나를 어떻게 찾았어?",
       "tags": {
         "functions": [
-          "F09",
           "F06"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -84,10 +81,10 @@
       "ko": "그에 대해 이야기해야 해.",
       "tags": {
         "functions": [
-          "F34"
+          "F36"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -95,9 +92,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -107,9 +106,9 @@
       "ko": "사람들이 너를 추적하기는 훨씬 더 어려워야 해.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -118,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -130,10 +129,10 @@
       "ko": "내 사립 탐정이 3시간 분을 청구했어,",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -141,7 +140,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -153,10 +152,10 @@
       "ko": "그래서 그가 1시간 이상 걸렸다고는 의심스러워.",
       "tags": {
         "functions": [
-          "F12"
+          "F13"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -164,9 +163,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -176,10 +177,10 @@
       "ko": "그럼, 이게 뭐야? 협박이야?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -187,7 +188,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -210,7 +211,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -222,10 +223,10 @@
       "ko": "내가 듣는 모든 것은 완전히 비밀이야.",
       "tags": {
         "functions": [
-          "F01"
+          "F10"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -233,9 +234,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -245,10 +248,10 @@
       "ko": "나는... 나는 협박업에 연루되지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -256,7 +259,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -268,11 +271,10 @@
       "ko": "나는 변호사야. 마약 밀매자도 변호사가 필요하잖아, 그렇지?",
       "tags": {
         "functions": [
-          "F01",
-          "F09"
+          "F06"
         ],
         "situation": "S36",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -280,7 +282,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -294,8 +296,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S38",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -303,10 +305,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -315,9 +319,9 @@
       "ko": "그럼, 너는 단순히 마음의 선의로 이걸 하는 거야?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -326,7 +330,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -338,21 +342,23 @@
       "ko": "아, 제발.",
       "tags": {
         "functions": [
-          "F09"
+          "F38"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -363,8 +369,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -372,7 +378,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -384,19 +390,22 @@
       "ko": "아, 그건 그렇고, 돈은 어디에 숨겨놨어? 매트리스 안에 있어?",
       "tags": {
         "functions": [
-          "F06"
+          "F48"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S04",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X02",
+          "X03"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V08",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -409,7 +418,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -418,11 +427,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "96477dd4f2845505"
 }

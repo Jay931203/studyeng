@@ -14,30 +14,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "AST2-4db4ic-1",
-      "en": "I'm working on a novel. It is a story of my life and my sister's.",
-      "ko": "저는 소설을 쓰고 있어요. 제 인생과 제 자매의 이야기예요.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -46,7 +23,32 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "AST2-4db4ic-1",
+      "en": "I'm working on a novel. It is a story of my life and my sister's.",
+      "ko": "저는 소설을 쓰고 있어요. 제 인생과 제 자매의 이야기예요.",
+      "tags": {
+        "functions": [
+          "F02"
+        ],
+        "situation": "S10",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +60,19 @@
       "ko": "짧고 강렬하게 써주세요. 그리고 주인공이 여자라면, 결말에 결혼하게 해주세요.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X03"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,9 +84,9 @@
       "ko": "아, 조!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -92,7 +95,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -108,8 +111,8 @@
         "functions": [
           "F09"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -117,9 +120,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -129,9 +134,9 @@
       "ko": "당신도 그렇죠, 조? 유명한 작가가 되고 싶죠.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -140,7 +145,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,10 +157,10 @@
       "ko": "하지만 그녀가 그렇게 말하면 너무 거칠게 들려요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -163,7 +168,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,9 +180,9 @@
       "ko": "내 딸들은 장난을 잘 치는 편이에요. 저도 그렇고요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -186,7 +191,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -200,30 +205,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "AST2-4db4ic-9",
-      "en": "I intend to make my own way in the world.",
-      "ko": "저는 세상에서 제 길을 만들고 싶어요.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -232,7 +214,32 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "AST2-4db4ic-9",
+      "en": "I intend to make my own way in the world.",
+      "ko": "저는 세상에서 제 길을 만들고 싶어요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,9 +251,9 @@
       "ko": "누구도 자신의 길을 만들지 않아요, 특히 여성은요. 잘 결혼해야 해요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S12",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -255,7 +262,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,10 +274,10 @@
       "ko": "당신은 결혼하지 않았죠? 그건 제가 부자라서 그래요.",
       "tags": {
         "functions": [
-          "F12"
+          "F04"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -278,9 +285,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -290,10 +299,10 @@
       "ko": "조, 저와 함께 춤추고 싶어요?",
       "tags": {
         "functions": [
-          "F38"
+          "F06"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -301,7 +310,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,10 +322,10 @@
       "ko": "못해요, 드레스를 태워버렸거든요. 메그가 아무도 보지 않게 가만히 있으라고 했어요. 베스, 좋은 생각이 있어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -324,11 +333,15 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G18"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "35dfb11a7bafb32b"
 }

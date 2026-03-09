@@ -12,9 +12,9 @@
       "ko": "세 잔의 와인을 마셨더니 파블로프식이야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -35,10 +35,10 @@
       "ko": "파블로프식? 그게 뭐야, 와인 때문이야?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S33",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,10 +58,10 @@
       "ko": "혼란스러워, 그들은 감정적인 행동을 하게 만들고.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,7 +71,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -81,10 +83,10 @@
       "ko": "그런 감정에 휘말리면 화를 내.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -92,9 +94,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -104,10 +108,10 @@
       "ko": "공연 중에 그들에게 소리치고 이야기하려고 하면 화를 내요. 나랑 한 잔 할래?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,16 +131,16 @@
       "ko": "어...",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -152,19 +156,21 @@
       "ko": "어, 아니. 섬의 최고 득점자. 성적으로. 그래? 그럼 내가 스콘을 만들까?",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S33",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -175,9 +181,9 @@
       "ko": "성적으로 그는 누구야? 그래서 나는 스콘을 만들어.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -198,13 +204,13 @@
       "ko": "잘됐네, 나도 스콘을 안 좋아해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E08"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -221,20 +227,23 @@
       "ko": "잘됐네, 나도 스콘을 안 좋아해.",
       "tags": {
         "functions": [
-          "F09"
+          "F04",
+          "F58"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E08"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -244,10 +253,10 @@
       "ko": "스튜디오에 여기 있는 건, 패배자 제이미입니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -267,16 +276,17 @@
       "ko": "어, 조심해 필립, 나는 단순한 패배자가 아니라 진짜 패배자야. 제이미?",
       "tags": {
         "functions": [
-          "F09"
+          "F52",
+          "F58"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -290,10 +300,10 @@
       "ko": "어, 조심해 필립, 나는 단순한 패배자가 아니라 진짜 패배자야.",
       "tags": {
         "functions": [
-          "F09"
+          "F58"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -313,19 +323,21 @@
       "ko": "제이미, 나는 너희를 스토킹하는 게 아니야, 나는.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -336,13 +348,13 @@
       "ko": "몇 블록 따라왔는데 너에게 문자를 못 보냈어, 네 번호를 지웠거든. 그를 테드라고 이름 지었어.",
       "tags": {
         "functions": [
-          "F06"
+          "F23"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -359,10 +371,10 @@
       "ko": "그리고 나는 그 때문에 너에게 문자할 수 없었어.",
       "tags": {
         "functions": [
-          "F06"
+          "F04"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -372,10 +384,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
       }
     },
     {
@@ -386,7 +398,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S09",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -407,10 +419,10 @@
       "ko": "테드 댄슨에서 따온 거야. 똑똑하네.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -421,7 +433,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -430,9 +444,9 @@
       "ko": "똑똑하네, 그럼 나는 뭐 해야 해?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -453,11 +467,11 @@
       "ko": "그럼 나는 여기 앉아서 나에 대해 계속 떠들어야 해? 기본적으로 그렇지.",
       "tags": {
         "functions": [
-          "F02"
+          "F35"
         ],
-        "situation": "S09",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S33",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -478,7 +492,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S09",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -490,7 +504,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -499,13 +515,13 @@
       "ko": "멋져, 모든 사람들이 정말 지혜로워.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -522,10 +538,10 @@
       "ko": "그들은 키가 큰 요다 같아. 비밀 산타 선물 안 샀어?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -545,9 +561,10 @@
       "ko": "내가 사야 하는 줄 몰랐어.",
       "tags": {
         "functions": [
-          "F06"
+          "F56",
+          "F57"
         ],
-        "situation": "S09",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -570,8 +587,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -593,7 +610,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S09",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -605,7 +622,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -614,9 +633,9 @@
       "ko": "여기서 도움을 요청하는 거야.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -637,9 +656,9 @@
       "ko": "킵맨 씨, 나를 때려줘.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -660,16 +679,16 @@
       "ko": "아, 나는 꽤 지루한 역할을 하고 있어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -683,10 +702,10 @@
       "ko": "이번엔 나쁜 말 안 하겠다는 거야, 헤이?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -708,7 +727,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -731,8 +750,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -743,8 +762,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "b3910fcba87e632c"
 }

@@ -12,10 +12,10 @@
       "ko": "시작해볼까요, 샐? 체크인할까요? 네. 좋아요.",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
         "situation": "S23",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,12 +23,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,20 +35,21 @@
       "ko": "아론 이름으로 예약하셨죠? 여기서 4박 하시나요? 네. 훌륭해요. 확인했습니다.",
       "tags": {
         "functions": [
-          "F01",
           "F06"
         ],
         "situation": "S23",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -61,11 +60,10 @@
       "ko": "아, 12번 방인가요? 네, 12번 방으로 가봅시다, 샐. 알겠습니다.",
       "tags": {
         "functions": [
-          "F06",
-          "F01"
+          "F36"
         ],
         "situation": "S23",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -73,9 +71,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -85,18 +85,18 @@
       "ko": "현재 쓰레기 뷰가 있는 방으로 예약되어 있습니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F23"
         ],
         "situation": "S23",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -119,7 +119,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -131,18 +131,18 @@
       "ko": "약간의 추가 요금으로 에어컨 유닛이 보이는 방으로 업그레이드해드릴 수 있습니다.",
       "tags": {
         "functions": [
-          "F34"
+          "F23"
         ],
         "situation": "S23",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -165,7 +165,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -180,7 +180,7 @@
           "F01"
         ],
         "situation": "S23",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -188,7 +188,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -200,10 +200,10 @@
       "ko": "소액의 추가 요금입니다. 알겠습니다. 괜찮아요. $5.94입니다. 정말 덥네요.",
       "tags": {
         "functions": [
-          "F01"
+          "F07"
         ],
         "situation": "S23",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -211,7 +211,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -223,11 +223,10 @@
       "ko": "그게 그의 유리한 쪽으로 작용했을 것 같아요. 1번 방으로 가보세요.",
       "tags": {
         "functions": [
-          "F09",
           "F01"
         ],
         "situation": "S23",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -235,7 +234,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -250,7 +249,7 @@
           "F01"
         ],
         "situation": "S23",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -258,7 +257,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -270,10 +269,10 @@
       "ko": "매력적인 하우스키퍼를 방에 배정해드립니다.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S23",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -281,9 +280,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16"
+        ],
         "flags": []
       }
     },
@@ -291,6 +292,31 @@
       "id": "5s6y4r-xamk-12",
       "en": "Okay.",
       "ko": "알겠습니다.",
+      "tags": {
+        "functions": [
+          "F44"
+        ],
+        "situation": "S23",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "5s6y4r-xamk-13",
+      "en": "So think a seven or higher.",
+      "ko": "7점 이상이라고 생각하시면 됩니다.",
       "tags": {
         "functions": [
           "F01"
@@ -304,30 +330,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "5s6y4r-xamk-13",
-      "en": "So think a seven or higher.",
-      "ko": "7점 이상이라고 생각하시면 됩니다.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S23",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -339,7 +342,8 @@
       "ko": "네, 그렇게 하죠.",
       "tags": {
         "functions": [
-          "F09"
+          "F36",
+          "F53"
         ],
         "situation": "S23",
         "cefr": "A2",
@@ -350,11 +354,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "b873d1f584e67a78"
 }

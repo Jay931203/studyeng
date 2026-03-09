@@ -15,7 +15,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,33 +35,10 @@
       "ko": "유럽이요? 오, 멋지네요!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "bqsZzZ4kXbg-2",
-      "en": "You shouldn't use words like that. Says who?",
-      "ko": "그런 말은 쓰지 말아야 해요. 누가 그래요?",
-      "tags": {
-        "functions": [
-          "F36"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -76,15 +53,38 @@
       }
     },
     {
+      "id": "bqsZzZ4kXbg-2",
+      "en": "You shouldn't use words like that. Says who?",
+      "ko": "그런 말은 쓰지 말아야 해요. 누가 그래요?",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "bqsZzZ4kXbg-3",
       "en": "Oh, Meg. She's my older sister. Here.",
       "ko": "오, 메그. 그녀는 제 언니예요. 여기요.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,7 +104,7 @@
       "ko": "오, 저기 그녀예요. 보세요? 보라색 드레스를 입은 여자아이요?",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -127,18 +127,18 @@
       "ko": "음. 그녀는 정말 예뻐요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,18 +150,18 @@
       "ko": "그녀는 제가 착하게 지내도록 상기시켜줘요, 아버지가 돌아오실 때 자랑스러워하실 수 있도록. 아버지는 어디 계세요?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,21 +196,24 @@
       "ko": "여자라는 것에 대한 실망을 극복할 수가 없어요. 그러니 저와 춤추고 싶으세요? 못해요, 왜냐하면...",
       "tags": {
         "functions": [
-          "F20",
-          "F38"
+          "F04"
         ],
         "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X06"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02",
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -220,7 +223,7 @@
       "ko": "왜요? 말 안 할 거예요? 절대요.",
       "tags": {
         "functions": [
-          "F06"
+          "F04"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -243,10 +246,10 @@
       "ko": "드레스를 태워버렸어요. 보세요? 저기요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -266,7 +269,7 @@
       "ko": "메그가 아무도 보지 않게 가만히 있으라고 했어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -289,22 +292,23 @@
       "ko": "원하시면 웃어도 괜찮아요. 웃긴 거 알아요. 우리가 어떻게 해결할 수 있을지 아이디어가 있어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "b49fa31f96645450"
 }

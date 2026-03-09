@@ -14,9 +14,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -35,13 +35,13 @@
       "ko": "나는 이전에 우려를 제기한 적이 있습니다. 그런 말은 하지 마세요, 신사분들.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S01",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -58,11 +58,11 @@
       "ko": "제가 말하는 것은 이 편지가 언급하는 1월 회의에서의 일입니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -70,7 +70,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P02"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -81,11 +83,11 @@
       "ko": "다시 말해볼게요. 당신은 제 고객에게 16통의 이메일을 보냈고, 처음 15통에서는 어떤 우려도 제기하지 않았습니다.",
       "tags": {
         "functions": [
-          "F50"
+          "F35"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -104,11 +106,11 @@
       "ko": "그게 질문인가요? 16번째 이메일에서 사이트 기능에 대한 우려를 제기했습니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -127,11 +129,11 @@
       "ko": "당신은 그들을 6주 동안 속인 건가요? 아니요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -150,11 +152,11 @@
       "ko": "그럼 왜 그 우려를 미리 제기하지 않았나요? 비가 오고 있어요. 죄송합니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F28"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -162,8 +164,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -173,11 +179,11 @@
       "ko": "방금 비가 시작됐습니다. 저, 저커버그 씨, 당신의 전적인 주의를 받을 수 있나요? 아니요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -196,11 +202,11 @@
       "ko": "제가 그럴 자격이 있다고 생각하나요? 당신은 제가 어떤 자격이 있다고 생각하나요? 당신의 전적인 주의요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -219,11 +225,11 @@
       "ko": "저는 이 증언을 시작하기 전에 맹세를 해야 하고, 위증하고 싶지 않아요.",
       "tags": {
         "functions": [
-          "F62"
+          "F40"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -232,7 +238,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -242,11 +251,11 @@
       "ko": "그래서 저는 법적 의무로 '아니요'라고 말해야 합니다. 알겠어요, 당신은 제가 주의를 받을 자격이 없다고 생각하나요?",
       "tags": {
         "functions": [
-          "F62"
+          "F40"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -267,9 +276,9 @@
         "functions": [
           "F09"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -290,9 +299,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -313,9 +322,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S01",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -328,5 +337,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "dc7a881ee1bdb1ac"
 }

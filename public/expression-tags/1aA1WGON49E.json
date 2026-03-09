@@ -11,16 +11,27 @@
       "en": "Wow.",
       "ko": "와.",
       "tags": {
-        "functions": ["F18"],
-        "situation": "S16",
+        "functions": [
+          "F18"
+        ],
+        "situation": "S47",
         "cefr": "A1",
-        "register": "R4",
-        "emotions": ["E05"],
-        "expression_types": ["X06"],
-        "vibe": "V10",
+        "register": "R2",
+        "emotions": [
+          "E05"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": ["G07"],
-        "flags": ["is_fragment"]
+        "grammar_intent": [
+          "G07"
+        ],
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -28,16 +39,24 @@
       "en": "What an audience.",
       "ko": "정말 멋진 관중이네요.",
       "tags": {
-        "functions": ["F30"],
-        "situation": "S16",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": ["E05"],
-        "expression_types": ["X04"],
-        "vibe": "V10",
-        "power": ["P03"],
-        "grammar_intent": ["G03"],
-        "flags": ["is_fragment"]
+        "functions": [
+          "F06"
+        ],
+        "situation": "S47",
+        "cefr": "A1",
+        "register": "R2",
+        "emotions": [
+          "E05"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -45,16 +64,24 @@
       "en": "But if I'm being honest, I don't care what you think of my talk. I don't.",
       "ko": "하지만 솔직히 말하자면, 제 이야기에 대한 여러분의 생각은 신경 쓰지 않아요.",
       "tags": {
-        "functions": ["F09", "F64"],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": ["E10"],
-        "expression_types": ["X04", "X08"],
-        "vibe": "V10",
-        "power": ["P07"],
+        "functions": [
+          "F01"
+        ],
+        "situation": "S47",
+        "cefr": "B2",
+        "register": "R2",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V16",
+        "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -62,16 +89,27 @@
       "en": "I care what the Internet thinks of my talk, because they're the ones who get it seen and get it shared.",
       "ko": "제가 신경 쓰는 건 인터넷이 제 이야기를 어떻게 생각하는지예요. 그들이 그것을 보고 공유하니까요.",
       "tags": {
-        "functions": ["F04", "F09"],
-        "situation": "S16",
+        "functions": [
+          "F17"
+        ],
+        "situation": "S47",
         "cefr": "B2",
-        "register": "R4",
-        "emotions": ["E10"],
-        "expression_types": ["X08"],
-        "vibe": "V10",
+        "register": "R2",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": ["G18"],
-        "flags": []
+        "grammar_intent": [
+          "G06",
+          "G18"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -79,16 +117,28 @@
       "en": "And I think that's where most people get it wrong. They're talking to you here.",
       "ko": "대부분의 사람들이 여기서 잘못하고 있는 점이 바로 그거예요. 그들은 여러분에게 이야기하고 있어요.",
       "tags": {
-        "functions": ["F09", "F12"],
-        "situation": "S16",
+        "functions": [
+          "F09"
+        ],
+        "situation": "S47",
         "cefr": "B1",
-        "register": "R4",
-        "emotions": ["E10"],
-        "expression_types": ["X02", "X08"],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "register": "R2",
+        "emotions": [
+          "E04"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -96,16 +146,26 @@
       "en": "Instead of talking to you, random person scrolling Facebook.",
       "ko": "여러분 대신, 페이스북을 스크롤하는 랜덤한 사람에게 이야기하고 있어요.",
       "tags": {
-        "functions": ["F04"],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": ["E10"],
-        "expression_types": ["X08"],
-        "vibe": "V10",
-        "power": [],
+        "functions": [
+          "F02"
+        ],
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V16",
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
-        "flags": ["is_fragment"]
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -113,16 +173,26 @@
       "en": "Thanks for the click.",
       "ko": "클릭해 주셔서 감사합니다.",
       "tags": {
-        "functions": ["F27", "F59"],
-        "situation": "S16",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": ["E10"],
-        "expression_types": ["X08"],
-        "vibe": "V10",
-        "power": ["P07"],
+        "functions": [
+          "F27"
+        ],
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V16",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -130,16 +200,24 @@
       "en": "You see, back in 2009, we all had these weird little things called attention spans. Yeah.",
       "ko": "보세요, 2009년에는 모두 주의 집중이라는 이상한 작은 것들이 있었어요. 맞아요.",
       "tags": {
-        "functions": ["F03", "F59"],
-        "situation": "S16",
+        "functions": [
+          "F05"
+        ],
+        "situation": "S47",
         "cefr": "B2",
-        "register": "R4",
-        "emotions": ["E10"],
-        "expression_types": ["X03", "X06"],
-        "vibe": "V10",
-        "power": ["P06"],
-        "grammar_intent": ["G18"],
-        "flags": []
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V16",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -147,16 +225,24 @@
       "en": "They're gone. They're gone. We killed them. They're dead.",
       "ko": "이제 사라졌어요. 사라졌어요. 우리가 없애버렸어요. 죽었어요.",
       "tags": {
-        "functions": ["F01", "F59"],
-        "situation": "S16",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": ["E10"],
-        "expression_types": ["X08"],
+        "functions": [
+          "F01"
+        ],
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
+        "emotions": [
+          "E02"
+        ],
+        "expression_types": [
+          "X08"
+        ],
         "vibe": "V06",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -164,16 +250,26 @@
       "en": "I'm trying to think of the last time I watched an 18-minute TED talk. It's been years. Literally years.",
       "ko": "마지막으로 18분짜리 TED 강연을 본 게 언제였는지 생각해 보려고 해요. 몇 년 전이었어요. 정말 몇 년 전이에요.",
       "tags": {
-        "functions": ["F09", "F59"],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": ["E10"],
-        "expression_types": ["X06", "X08"],
-        "vibe": "V10",
-        "power": [],
+        "functions": [
+          "F02"
+        ],
+        "situation": "S47",
+        "cefr": "B2",
+        "register": "R2",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V16",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -181,16 +277,24 @@
       "en": "So if you're giving a TED talk, keep it quick.",
       "ko": "그러니 TED 강연을 한다면, 짧게 하세요.",
       "tags": {
-        "functions": ["F37"],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": ["E09"],
-        "expression_types": ["X03", "X08"],
+        "functions": [
+          "F01"
+        ],
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
         "vibe": "V16",
-        "power": ["P03"],
-        "grammar_intent": ["G09"],
-        "flags": []
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -198,16 +302,24 @@
       "en": "I'm doing mine in under a minute. I'm at 44 seconds right now.",
       "ko": "저는 1분도 안 걸려서 할 거예요. 지금 44초가 지났어요.",
       "tags": {
-        "functions": ["F01", "F62"],
-        "situation": "S16",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": ["E14"],
-        "expression_types": ["X08"],
-        "vibe": "V10",
+        "functions": [
+          "F02"
+        ],
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -215,16 +327,24 @@
       "en": "That means we've got time for one final joke.",
       "ko": "그러니 마지막 농담 하나 할 시간이 있어요.",
       "tags": {
-        "functions": ["F01", "F62"],
-        "situation": "S16",
+        "functions": [
+          "F02"
+        ],
+        "situation": "S47",
         "cefr": "A2",
-        "register": "R4",
-        "emotions": ["E14"],
-        "expression_types": ["X08"],
+        "register": "R2",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -232,17 +352,26 @@
       "en": "Why are balloons so expensive?",
       "ko": "풍선이 왜 이렇게 비쌀까요?",
       "tags": {
-        "functions": ["F06"],
-        "situation": "S16",
+        "functions": [
+          "F06"
+        ],
+        "situation": "S47",
         "cefr": "A2",
-        "register": "R4",
-        "emotions": ["E14"],
-        "expression_types": ["X08"],
-        "vibe": "V10",
+        "register": "R2",
+        "emotions": [
+          "E05"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "ebe49737d9f0edc7"
 }

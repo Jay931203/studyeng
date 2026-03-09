@@ -12,10 +12,10 @@
       "ko": "잘 늙지 않았군요. 여기는 피어스 모건의 오늘밤입니다. 안녕하세요, 저는 하비 와인스타인입니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F25"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -37,8 +37,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +58,18 @@
       "ko": "저는 맷 라우어를 사랑하지만, 제 남편 크레이그가 제 맷 라우어입니다.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,10 +81,10 @@
       "ko": "당신의 꿈의 선생님이 누구인지 말해 주세요, 트윗하고 해시태그 #dreamteacher를 달아주세요. 저는",
       "tags": {
         "functions": [
-          "F06"
+          "F03"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S19",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,7 +92,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,10 +104,10 @@
       "ko": "빌 코스비를 선택하겠습니다. 위대한 빌 코스비가 여기서 첫 데이트 이야기를 하고 있습니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +115,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,20 +127,23 @@
       "ko": "그리고 그의 최신 책에서 더 많은 이야기를 들려줄 것입니다. 저는 마리오 바탈리입니다. 저는 하고 싶은 것을 언제든지 합니다. 그게 전부입니다, 계획이 있는 남자입니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F17"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06",
+          "G15"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -152,10 +155,10 @@
       "ko": "저는 솔저 크릭 초등학교에 제레드, 서브웨이 남자와 함께 있습니다.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S06",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -163,7 +166,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -177,16 +180,16 @@
         "functions": [
           "F12"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,10 +201,10 @@
       "ko": "스페이시, 안녕하세요. 이 작업을 통해 젊은이들과 워크숍을 할 때,",
       "tags": {
         "functions": [
-          "F06"
+          "F25"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,7 +212,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -223,7 +226,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -232,9 +235,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -244,10 +249,10 @@
       "ko": "케빈 스페이시가 다시 이 테이블에 와서 기쁩니다, 환영합니다, 선생님. 찰리",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -255,7 +260,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,9 +272,9 @@
       "ko": "로즈가 어제 저에게 전화해서 이 쇼를 하라고 했습니다. 저는 좋습니다. 당신이",
       "tags": {
         "functions": [
-          "F03"
+          "F34"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -278,9 +283,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02",
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -290,10 +298,10 @@
       "ko": "찰리 로즈에게 아니라고 말하면, 당신의 사회 생활은 끝납니다.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -301,11 +309,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d6372f2097bc6213"
 }

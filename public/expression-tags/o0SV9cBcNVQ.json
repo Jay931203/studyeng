@@ -12,20 +12,22 @@
       "ko": "자, 음, 앉아서 이야기해볼까요?",
       "tags": {
         "functions": [
-          "F34"
+          "F36"
         ],
-        "situation": "S14",
+        "situation": "S37",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -37,8 +39,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S37",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,7 +62,7 @@
         "functions": [
           "F27"
         ],
-        "situation": "S14",
+        "situation": "S37",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -69,10 +71,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,10 +85,10 @@
       "ko": "자, 디킨스 씨.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S37",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,10 +96,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,9 +110,9 @@
       "ko": "그리고 앤디가 말하길, 디킨스 씨, 아드님들을 하버드나 예일에 보내고 싶으신가요?",
       "tags": {
         "functions": [
-          "F03"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S37",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -115,7 +121,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,21 +133,25 @@
       "ko": "그건 그가 말한 게 아니야. 맙소사, 그는 내 증인이야, 정말로.",
       "tags": {
         "functions": [
-          "F09"
+          "F10"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S37",
+        "cefr": "A2",
+        "register": "R3",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G20"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -150,20 +160,24 @@
       "ko": "디킨스는 잠깐 눈을 깜빡였고, 그 후에 웃음을 터뜨리며 앤디의 손을 실제로 shook. 내 엉덩이.",
       "tags": {
         "functions": [
-          "F04"
+          "F17",
+          "F11"
         ],
-        "situation": "S14",
+        "situation": "S37",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06",
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -173,9 +187,9 @@
       "ko": "그는 그의 손을 shook.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S37",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -184,10 +198,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -196,22 +212,23 @@
       "ko": "나는 거의 기절할 뻔했어. 앤디에게 필요한 건 정장과 넥타이, 그리고 조금의 재치였어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S37",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "bd8d96bccee1f9df"
 }

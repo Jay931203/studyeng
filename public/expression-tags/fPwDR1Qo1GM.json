@@ -12,18 +12,18 @@
       "ko": "오늘 나는 손가락을 걸고 사랑해, 나를 안아줘",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,18 +37,18 @@
       "ko": "지금 너가 나에게 주는 느낌이 들어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R5",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,18 +62,18 @@
       "ko": "오, 사랑아, 오늘 밤 나를 데려가",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,19 +87,21 @@
       "ko": "너의 삶에 대한 아픔을 느끼고 싶어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R5",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V07",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -112,18 +114,18 @@
       "ko": "오, 사랑아, 오늘 밤 나를 데려가",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -137,19 +139,21 @@
       "ko": "너의 울음소리의 전율을 느끼고 싶어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R5",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V07",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -162,20 +166,22 @@
       "ko": "나를 사랑해, 라디오와 함께 노래하자",
       "tags": {
         "functions": [
-          "F22"
+          "F36"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -187,19 +193,21 @@
       "ko": "비트를 멈춰, 너가 주는 느낌을 알고 싶어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R5",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V07",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -212,20 +220,23 @@
       "ko": "나를 안아줘, 너는 절대 모를 것 같은 느낌이 들어",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -237,18 +248,18 @@
       "ko": "너가 나에게 주는 말, 이제 들었어",
       "tags": {
         "functions": [
-          "F09"
+          "F12"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R5",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -262,18 +273,18 @@
       "ko": "오, 사랑아, 오늘 밤 나를 데려가",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -281,5 +292,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "b12f915a76e4ebad"
 }

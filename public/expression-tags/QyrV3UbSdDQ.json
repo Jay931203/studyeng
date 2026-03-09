@@ -14,7 +14,7 @@
         "functions": [
           "F35"
         ],
-        "situation": "S44",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -37,10 +37,34 @@
       "ko": "어서, 움직여!",
       "tags": {
         "functions": [
-          "F35"
+          "F35",
+          "F45"
         ],
-        "situation": "S44",
+        "situation": "S43",
         "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "QyrV3UbSdDQ-2",
+      "en": "Dammit! Geez!",
+      "ko": "젠장! 아이고!",
+      "tags": {
+        "functions": [
+          "F15"
+        ],
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -57,38 +81,15 @@
       }
     },
     {
-      "id": "QyrV3UbSdDQ-2",
-      "en": "Dammit! Geez!",
-      "ko": "젠장! 아이고!",
-      "tags": {
-        "functions": [
-          "F17"
-        ],
-        "situation": "S44",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "QyrV3UbSdDQ-3",
       "en": "Geez!",
       "ko": "아이고!",
       "tags": {
         "functions": [
-          "F09"
+          "F15"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -110,16 +111,16 @@
       "ko": "포기할게!",
       "tags": {
         "functions": [
-          "F20"
+          "F15"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -127,5 +128,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a6df3fd2a057c86d"
 }

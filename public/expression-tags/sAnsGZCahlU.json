@@ -12,23 +12,23 @@
       "ko": "침대. 모터는 당신이 준비되면 작동해요. 자비스는 언제 떠나나요? 잘 모르겠어요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": []
       }
     },
     {
@@ -37,20 +37,22 @@
       "ko": "40년의 서비스에 비해 보상이 적은 것 같아요. 그럴지도요. 하지만 그는 당신 아버지의 사람이었어요.",
       "tags": {
         "functions": [
-          "F12"
+          "F14"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S10",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -60,20 +62,23 @@
       "ko": "그에게 당신은 항상 젊은 주인이었고, 결코 수장이 아니었죠. 하지만 이제 우리는 다른 사람을 찾아야 한다는 사실은 변하지 않아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S14",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -83,18 +88,18 @@
       "ko": "하지만 이미 그를 찾았잖아요. 무슨 뜻이에요?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,18 +111,18 @@
       "ko": "분명히 천 가지 질문에 대한 답은 브랜슨에게 자리를 주는 거예요. 톰.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,18 +134,18 @@
       "ko": "그가 에이전트라면 다시 브랜슨이라고 부를 수 있어요.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S15",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,19 +157,21 @@
       "ko": "다행이에요. 그건 미친 계획이에요. 아니에요. 톰과 매튜가 함께 새로운 아이디어를 작업할 수 있어요.",
       "tags": {
         "functions": [
-          "F20"
+          "F27"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S44",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -175,10 +182,10 @@
       "ko": "그들은 같은 나이예요. 하지만 그는 농사에 대해 무엇을 알고 있죠?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -186,7 +193,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,10 +205,10 @@
       "ko": "그의 할아버지가 농부였어요. 소규모로요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,7 +216,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,9 +228,9 @@
       "ko": "즉, 그는 자비스보다 더 많은 실무 경험이 있어요. 아이를 생각해 보세요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S15",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -232,7 +239,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,22 +251,23 @@
       "ko": "당신의 유일한 손녀가 차고에서 자라기를 원하지는 않겠죠.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "5b419e352ece9983"
 }

@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -35,20 +35,22 @@
       "ko": "누군가 천이 얼마나 진행되었는지 말씀해 주실 수 있나요?",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -58,11 +60,11 @@
       "ko": "곧 답변이 없으면, 신사 여러분, 모두에게 입장이 있을 것입니다.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -81,16 +83,16 @@
       "ko": "그리고 앉으세요!",
       "tags": {
         "functions": [
-          "F35"
+          "F15"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -106,9 +108,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
-        "register": "R1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -118,7 +120,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -127,10 +131,10 @@
       "ko": "이제 8장을 열어보세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -152,7 +156,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -164,7 +168,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -175,8 +181,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -185,7 +191,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -196,16 +204,16 @@
       "ko": "브렛, 지금 일어나서 반 앞에 서서 5번 텍스트를 읽어주세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -219,11 +227,11 @@
       "ko": "프랑스인은 일반적으로 선한 사람들로 여겨집니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -233,8 +241,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "e0f6bdad633ce2bd"
 }

@@ -12,20 +12,24 @@
       "ko": "미안해, 누구 이름도 기억이 안 나.",
       "tags": {
         "functions": [
-          "F20"
+          "F28",
+          "F43"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -35,10 +39,10 @@
       "ko": "너는 정말 속임수가 많은 마법사야.",
       "tags": {
         "functions": [
-          "F09"
+          "F12"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +50,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,22 +62,29 @@
       "ko": "네가 가장 강력한 무기를 한 번도 사용하지 않았을 것 같아.",
       "tags": {
         "functions": [
-          "F14"
+          "F43",
+          "F55"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S37",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "87bf3a62087dd569"
 }

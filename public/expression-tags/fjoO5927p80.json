@@ -12,6 +12,31 @@
       "ko": "모든 사람에 대해. 그래서 그녀의 머리카락이 그렇게 크다. 비밀로 가득 차 있다.",
       "tags": {
         "functions": [
+          "F04"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "fjoO5927p80-1",
+      "en": "An evil takes a human form in Regina George.",
+      "ko": "악이 레지나 조지의 인간 형태로 나타난다.",
+      "tags": {
+        "functions": [
           "F01"
         ],
         "situation": "S50",
@@ -26,30 +51,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "fjoO5927p80-1",
-      "en": "An evil takes a human form in Regina George.",
-      "ko": "악이 레지나 조지의 인간 형태로 나타난다.",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -58,10 +62,12 @@
       "ko": "잘 속지 마, 그녀는 전형적인 이기적인,",
       "tags": {
         "functions": [
-          "F09"
+          "F04",
+          "F52",
+          "F58"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,7 +77,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -81,10 +89,10 @@
       "ko": "배신하는, 성적으로 문란한 여자처럼 보일 수 있지만, 실제로 그녀는",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,7 +112,7 @@
       "ko": "그 이상이다. 그녀는 여왕벌, 스타다.",
       "tags": {
         "functions": [
-          "F01"
+          "F13"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -115,9 +123,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -150,10 +160,10 @@
       "ko": "레지나 조지를 어떻게 설명해야 할까? 레지나 조지는",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,10 +183,10 @@
       "ko": "완벽하다. 그녀는 두 개의 펜디 가방과 은색 렉서스를 가지고 있다. 그녀의 머리카락은",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -199,7 +209,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,10 +252,10 @@
       "ko": "그가 그녀에게 예쁘다고 말했다. 한 번은 그녀가 내 얼굴을 주먹으로 쳤다.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,7 +275,7 @@
       "ko": "정말 멋졌다. 그녀는 항상 강렬해 보인다. 그녀는 항상",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -276,10 +286,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -288,18 +300,18 @@
       "ko": "스프링 플링 여왕으로 뽑힌다. 누가 신경 써? 나는 신경 써! 매년,",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -314,7 +326,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -325,7 +337,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -337,15 +351,15 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -359,9 +373,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S19",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -371,8 +385,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "fd455c0681b47eec"
 }

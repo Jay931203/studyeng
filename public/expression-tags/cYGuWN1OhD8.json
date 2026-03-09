@@ -12,7 +12,7 @@
       "ko": "당신의 엄마 콧구멍 주위의 붉은 기색과 손목에 편리하게 숨겨둔 티슈를 보면,",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S10",
         "cefr": "B2",
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,10 +35,11 @@
       "ko": "그녀의 문제는 생리 전 증후군(PMS)보다 URI일 가능성이 더 높아 보여.",
       "tags": {
         "functions": [
-          "F14"
+          "F09",
+          "F13"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,9 +47,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -60,19 +65,21 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,9 +88,9 @@
       "ko": "호흡기 감염이야. 감기.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -92,7 +99,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,18 +113,20 @@
         "functions": [
           "F11"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -127,18 +136,18 @@
       "ko": "나도 그녀가 SAC에 문제가 있다고 생각해. SAC?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,19 +159,21 @@
       "ko": "놀아줘서 고마워, 바보 같은 미국 아이야.",
       "tags": {
         "functions": [
-          "F58"
+          "F27"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -173,10 +184,10 @@
       "ko": "알약이 필요하면, 저지의 어떤 보건소에 혼자 가서 요청하기만 하면 돼.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,7 +195,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,20 +207,22 @@
       "ko": "정확히 어떤 계획이었어?",
       "tags": {
         "functions": [
-          "F06"
+          "F10"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -219,18 +232,18 @@
       "ko": "피임약을 일반 약국의 비충혈 완화제와 바꾸고",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,18 +255,18 @@
       "ko": "엄마의 감기가 또 6년 동안 지속되기를 바라는 거야?",
       "tags": {
         "functions": [
-          "F14"
+          "F06"
         ],
         "situation": "S10",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,9 +278,9 @@
       "ko": "아니.",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -276,10 +289,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -288,10 +303,10 @@
       "ko": "그렇게 차갑지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -299,10 +314,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -311,9 +328,9 @@
       "ko": "아니? 그건 네 난소를 위한 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -322,8 +339,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -334,18 +353,18 @@
       "ko": "뇌졸중은 없었겠지? 혈전이 생긴 적 있어? 없어.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -357,7 +376,7 @@
       "ko": "아주 좋아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -368,7 +387,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -382,9 +401,9 @@
       "ko": "3개월 후에 리필이 필요할 때, 무료 클리닉으로 버스를 타고 가.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S27",
+        "situation": "S06",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -393,7 +412,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -405,13 +424,13 @@
       "ko": "엄마가 다시 재채기를 하기를 기다리지 마. 그 셔츠는 안 돼.",
       "tags": {
         "functions": [
-          "F40"
+          "F49"
         ],
         "situation": "S10",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -422,5 +441,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "eadebcdbcf362efc"
 }

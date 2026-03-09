@@ -14,7 +14,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -37,7 +37,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S44",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -46,10 +46,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,18 +60,18 @@
       "ko": "버티와 나의 합의는 내가 모든 것을 포기하고",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +83,18 @@
       "ko": "망명하며 낮은 프로필을 유지하는 대신 연금을 받는 것이었어요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,21 +106,23 @@
       "ko": "그 연금은 분명히 내 평생 동안의 것이지 그의 것이 아니었죠.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -127,13 +131,13 @@
       "ko": "이제 그는 겨우 차가워졌고 쿠키는 그 끔찍한 돈줄을 끊었어요.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -150,10 +154,10 @@
       "ko": "그녀가 감히!",
       "tags": {
         "functions": [
-          "F17"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -173,10 +177,10 @@
       "ko": "아, 그녀가 그랬다는 걸 모르겠군요. 물론 그녀가 그랬죠.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,7 +188,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,10 +200,10 @@
       "ko": "그녀를 그렇게 부르지 마세요.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S24",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -207,7 +211,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,13 +223,13 @@
       "ko": "왜 안 되죠? 그녀는 뚱뚱하고 평범하며 요리사처럼 생겼어요.",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S02",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E08"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -244,8 +248,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -253,7 +257,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,21 +269,23 @@
       "ko": "왕실의 확장 가족 구성원이 보상을 받고 사치스럽게 사는 것은",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -288,18 +294,18 @@
       "ko": "무감각하게 보일 것이라고요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -314,7 +320,7 @@
           "F06"
         ],
         "situation": "S10",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -322,7 +328,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -337,15 +343,15 @@
           "F01"
         ],
         "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -359,16 +365,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -382,16 +388,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -403,10 +409,10 @@
       "ko": "당신은 듣기로는 멋지게 살고 있잖아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F12"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -414,7 +420,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -426,20 +432,22 @@
       "ko": "아마도 고인의 형의 방식을 배워야 할 것 같아요.",
       "tags": {
         "functions": [
-          "F37"
+          "F14"
         ],
         "situation": "S10",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -451,16 +459,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -474,8 +482,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -483,11 +491,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "311bba92901be143"
 }

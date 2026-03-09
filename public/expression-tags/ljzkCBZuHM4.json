@@ -12,9 +12,9 @@
       "ko": "왜 두 남자가 아침부터 감금되어 있고, 그들의 변호사가 밖에서 공을 치고 있는지 궁금했어.",
       "tags": {
         "functions": [
-          "F06"
+          "F57"
         ],
-        "situation": "S36",
+        "situation": "S39",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,18 +35,18 @@
       "ko": "우리는 연습이 필요해. 그건 웃기지 않았어.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S39",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,18 +58,18 @@
       "ko": "조금 웃기긴 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S39",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,20 +81,22 @@
       "ko": "테넷, 당신의 상사에게 다른 변호사를 추천하면 기분이 나쁠까요? 왜냐하면 당신이 변호를 맡기에는 적합하지 않다고 생각하거든요.",
       "tags": {
         "functions": [
-          "F37"
+          "F34"
         ],
-        "situation": "S36",
+        "situation": "S39",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -106,13 +106,13 @@
       "ko": "당신은 나를 잘 모르잖아요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S39",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -129,13 +129,13 @@
       "ko": "보통 누군가는 이 사실을 알아내는 데 몇 시간이 걸려요. 내가 변호를 맡기에는 적합하지 않다는 걸요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -152,20 +152,23 @@
       "ko": "아, 그건 정말 웃겼어.",
       "tags": {
         "functions": [
-          "F09"
+          "F17",
+          "F45"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -177,13 +180,13 @@
       "ko": "당신이 틀렸어요.",
       "tags": {
         "functions": [
-          "F11"
+          "F08"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S39",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -191,7 +194,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -200,13 +205,13 @@
       "ko": "나는 당신을 알아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F35"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S39",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E07"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -214,7 +219,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -225,7 +232,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
+        "situation": "S39",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -248,7 +255,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
+        "situation": "S39",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -271,11 +278,11 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
+        "situation": "S39",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -294,7 +301,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
+        "situation": "S39",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -315,22 +322,26 @@
       "ko": "아마도 그게 아버지가 원했던 일이었고, 이제 당신은 3년 동안 그저 시간을 보내고 있는 거예요.",
       "tags": {
         "functions": [
+          "F04",
           "F14"
         ],
-        "situation": "S36",
+        "situation": "S39",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "f64a61bf0867ffcd"
 }

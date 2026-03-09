@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,10 +35,10 @@
       "ko": "자연과 볼링을 사랑하는 사람이었으며, 서퍼로서 그는 남부 캘리포니아의 해변을 탐험했습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,8 +46,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V01",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -58,18 +60,18 @@
       "ko": "라 호야에서 리오 카리요, 그리고 피스모까지. 그는 죽었습니다. 그의 세대의 많은 젊은 남자들처럼.",
       "tags": {
         "functions": [
-          "F01"
+          "F16"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +83,18 @@
       "ko": "주님, 당신의 지혜로 그를 데려가셨습니다. 많은 밝고 꽃피는 젊은 남자들을 데려가신 것처럼.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S20",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V09",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,20 +108,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "ce93e871afc39fdd"
 }

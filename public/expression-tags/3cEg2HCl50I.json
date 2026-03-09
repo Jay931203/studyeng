@@ -12,18 +12,18 @@
       "ko": "어쩔 수 없었고, 그에게 네가 나를 허락하지 않을 거라고 보여주려고 했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -37,8 +37,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,20 +58,22 @@
       "ko": "더 이상 이렇게는 못하겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -81,18 +83,18 @@
       "ko": "나는 당구를 포기했고, 네가 싫어하는 모든 것을 포기했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F55"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,9 +106,9 @@
       "ko": "그 선택이 기뻐. 괜찮아.",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -115,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,10 +129,111 @@
       "ko": "나는 기다렸고, 불평하지 않았어, 왜냐하면...",
       "tags": {
         "functions": [
-          "F09"
+          "F43",
+          "F04",
+          "F56"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G01",
+          "G18"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "3cEg2HCl50I-6",
+      "en": "You know, I figured you loved me, Joe.",
+      "ko": "너도 알다시피, 나는 네가 나를 사랑한다고 생각했어, 조.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E11"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V07",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "3cEg2HCl50I-7",
+      "en": "And I realize I'm not half good enough, and I'm not this great man, and...",
+      "ko": "그리고 나는 내가 충분히 좋지 않다는 걸 깨달았고, 나는 이 위대한 남자가 아니야, 그리고...",
+      "tags": {
+        "functions": [
+          "F21"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "3cEg2HCl50I-8",
+      "en": "Oh, yes. Yes, you are. You're a great deal too good for me.",
+      "ko": "아, 맞아. 맞아, 너는 나에게 너무나도 훌륭해.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "3cEg2HCl50I-9",
+      "en": "And I'm so grateful to you, and I'm so proud of you, and I just...",
+      "ko": "나는 너에게 너무 고마워, 그리고 너가 자랑스러워, 그리고 나는 그냥...",
+      "tags": {
+        "functions": [
+          "F27"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -147,117 +250,28 @@
       }
     },
     {
-      "id": "3cEg2HCl50I-6",
-      "en": "You know, I figured you loved me, Joe.",
-      "ko": "너도 알다시피, 나는 네가 나를 사랑한다고 생각했어, 조.",
-      "tags": {
-        "functions": [
-          "F14"
-        ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E07"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "3cEg2HCl50I-7",
-      "en": "And I realize I'm not half good enough, and I'm not this great man, and...",
-      "ko": "그리고 나는 내가 충분히 좋지 않다는 걸 깨달았고, 나는 이 위대한 남자가 아니야, 그리고...",
-      "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "3cEg2HCl50I-8",
-      "en": "Oh, yes. Yes, you are. You're a great deal too good for me.",
-      "ko": "아, 맞아. 맞아, 너는 나에게 너무나도 훌륭해.",
-      "tags": {
-        "functions": [
-          "F10"
-        ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "3cEg2HCl50I-9",
-      "en": "And I'm so grateful to you, and I'm so proud of you, and I just...",
-      "ko": "나는 너에게 너무 고마워, 그리고 너가 자랑스러워, 그리고 나는 그냥...",
-      "tags": {
-        "functions": [
-          "F31"
-        ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "3cEg2HCl50I-10",
       "en": "I don't see why I can't love you as you want me to.",
       "ko": "왜 내가 네가 원하는 대로 너를 사랑할 수 없는지 모르겠어.",
       "tags": {
         "functions": [
-          "F06"
+          "F22",
+          "F39"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -267,9 +281,9 @@
       "ko": "이유를 모르겠어.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -279,8 +293,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -292,8 +310,160 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "3cEg2HCl50I-13",
+      "en": "No. I can't. I can't change how I feel, and...",
+      "ko": "아니. 나는 못해. 내 감정을 바꿀 수 없어, 그리고...",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "3cEg2HCl50I-14",
+      "en": "It would be a lie to say I do and I don't.",
+      "ko": "내가 사랑한다고 말하는 건 거짓말이야.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "3cEg2HCl50I-15",
+      "en": "I'm so sorry, Teddy.",
+      "ko": "정말 미안해, 테디.",
+      "tags": {
+        "functions": [
+          "F28"
+        ],
+        "situation": "S50",
         "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "3cEg2HCl50I-16",
+      "en": "I'm so sorry, but I just can't help it.",
+      "ko": "정말 미안하지만, 어쩔 수 없어.",
+      "tags": {
+        "functions": [
+          "F28"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "3cEg2HCl50I-17",
+      "en": "I can't love anyone else, Joe. I only love you.",
+      "ko": "나는 다른 누구도 사랑할 수 없어, 조. 나는 오직 너만 사랑해.",
+      "tags": {
+        "functions": [
+          "F22"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E11"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V02",
+        "power": [],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "3cEg2HCl50I-18",
+      "en": "Teddy, it would be a disaster if we married. It wouldn't be a disaster. We'd be miserable. Joe, I'd be a perfect saint.",
+      "ko": "테디, 우리가 결혼하면 재앙이 될 거야. 우리는 불행할 거야. 조, 나는 완벽한 성인이 될 거야.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -308,166 +478,30 @@
       }
     },
     {
-      "id": "3cEg2HCl50I-13",
-      "en": "No. I can't. I can't change how I feel, and...",
-      "ko": "아니. 나는 못해. 내 감정을 바꿀 수 없어, 그리고...",
-      "tags": {
-        "functions": [
-          "F20"
-        ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "3cEg2HCl50I-14",
-      "en": "It would be a lie to say I do and I don't.",
-      "ko": "내가 사랑한다고 말하는 건 거짓말이야.",
-      "tags": {
-        "functions": [
-          "F20"
-        ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "3cEg2HCl50I-15",
-      "en": "I'm so sorry, Teddy.",
-      "ko": "정말 미안해, 테디.",
-      "tags": {
-        "functions": [
-          "F28"
-        ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "3cEg2HCl50I-16",
-      "en": "I'm so sorry, but I just can't help it.",
-      "ko": "정말 미안하지만, 어쩔 수 없어.",
-      "tags": {
-        "functions": [
-          "F28"
-        ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "3cEg2HCl50I-17",
-      "en": "I can't love anyone else, Joe. I only love you.",
-      "ko": "나는 다른 누구도 사랑할 수 없어, 조. 나는 오직 너만 사랑해.",
-      "tags": {
-        "functions": [
-          "F22"
-        ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "3cEg2HCl50I-18",
-      "en": "Teddy, it would be a disaster if we married. It wouldn't be a disaster. We'd be miserable. Joe, I'd be a perfect saint.",
-      "ko": "테디, 우리가 결혼하면 재앙이 될 거야. 우리는 불행할 거야. 조, 나는 완벽한 성인이 될 거야.",
-      "tags": {
-        "functions": [
-          "F09",
-          "F12"
-        ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E04"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "3cEg2HCl50I-19",
       "en": "I can't. I can't. I've tried.",
       "ko": "나는 못해. 나는 못해. 노력해봤어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "80c28b118b62af14"
 }

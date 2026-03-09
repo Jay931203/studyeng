@@ -12,7 +12,7 @@
       "ko": "음, 이 목록은 사실 11까지 가야 할 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -21,11 +21,14 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -35,10 +38,10 @@
       "ko": "WatchMojo.com에 오신 것을 환영합니다. 오늘은 '기묘한 이야기' 시즌 1의",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,10 +61,10 @@
       "ko": "최고의 순간 10가지를 정리해 보겠습니다.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,10 +84,10 @@
       "ko": "이 목록에서는 넷플릭스의 인기 초자연 드라마 첫 시즌에서 가장 기억에 남는 장면들을",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,10 +107,10 @@
       "ko": "살펴보겠습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,10 +130,10 @@
       "ko": "이 놀라운 쇼를 아직 정주행하지 않았다면, 스포일러가 포함되어 있으니 주의하세요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,13 +153,13 @@
       "ko": "80년대 대중문화에 대한 이 사랑의 편지는 처음 몇 분 만에 우리를 사로잡았고,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
@@ -173,10 +176,10 @@
       "ko": "스티븐 스필버그와 스티븐 킹의 작품을 떠올리게 했습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,7 +199,7 @@
       "ko": "열띤 던전 앤 드래곤 캠페인 중에, 두려운 데모고르곤이 나타나 윌 바이어스를",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -219,10 +222,10 @@
       "ko": "잡아갑니다.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -233,8 +236,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "855a7d9ae551b02d"
 }

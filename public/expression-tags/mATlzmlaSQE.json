@@ -5,25 +5,20 @@
   "seriesId": "house-md",
   "sentenceCount": 15,
   "taggedCount": 15,
+  "transcriptHash": "d8a448c9153978ab",
   "sentences": [
     {
       "id": "mATlzmlaSQE-0",
       "en": "No, I don't. Good enough for me. Where are you going?",
       "ko": "아니, 나는 안 그래. 나한테는 충분해. 어디 가는 거야?",
       "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S10",
-        "cefr": "A2",
+        "functions": ["F43", "F06"],
+        "situation": "S27",
+        "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E09"],
+        "expression_types": ["X04"],
+        "vibe": "V03",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -34,20 +29,14 @@
       "en": "Mother is no best. Get yourself a sucker on the way out.",
       "ko": "엄마가 제일 잘 알지. 나가는 길에 사탕이나 하나 사.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
-        "cefr": "A2",
+        "functions": ["F59", "F39"],
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
+        "emotions": ["E10"],
+        "expression_types": ["X02", "X05"],
+        "vibe": "V03",
+        "power": ["P07"],
         "grammar_intent": [],
         "flags": []
       }
@@ -57,21 +46,15 @@
       "en": "Look, I think he's just faking so he doesn't have to go to school.",
       "ko": "봐, 그는 학교에 가기 싫어서 그냥 뻥치는 것 같아.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
-        "cefr": "A2",
+        "functions": ["F09", "F55"],
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "emotions": ["E09"],
+        "expression_types": ["X05"],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": ["G17"],
         "flags": []
       }
     },
@@ -80,20 +63,14 @@
       "en": "How did you know I was a truant officer?",
       "ko": "내가 어떻게 네가 무단결석 단속관인지 알았지?",
       "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S10",
-        "cefr": "A2",
+        "functions": ["F59", "F06"],
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
+        "emotions": ["E10"],
+        "expression_types": ["X08"],
+        "vibe": "V03",
+        "power": ["P07"],
         "grammar_intent": [],
         "flags": []
       }
@@ -103,18 +80,12 @@
       "en": "I told him he had a choice. Go to school or the doctor.",
       "ko": "나는 그에게 선택권이 있다고 말했어. 학교에 가거나 의사에게 가거나.",
       "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S10",
+        "functions": ["F04"],
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
@@ -126,21 +97,15 @@
       "en": "Right. He's wasting your precious time so you decided to waste mine. How thoughtful.",
       "ko": "맞아. 그는 너의 소중한 시간을 낭비하고, 너는 내 시간을 낭비하기로 결정했네. 정말 배려가 깊어.",
       "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S10",
-        "cefr": "B1",
+        "functions": ["F59", "F55"],
+        "situation": "S27",
+        "cefr": "B2",
         "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "emotions": ["E10"],
+        "expression_types": ["X08"],
+        "vibe": "V03",
+        "power": ["P07"],
+        "grammar_intent": ["G19"],
         "flags": []
       }
     },
@@ -149,19 +114,13 @@
       "en": "I'm in a wheelchair so I can't examine him all the way up there. Hop down.",
       "ko": "나는 휠체어에 있어서 저기까지 검사할 수 없어. 뛰어내려.",
       "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S10",
+        "functions": ["F04", "F35"],
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E09"],
+        "expression_types": ["X01"],
+        "vibe": "V03",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -172,20 +131,14 @@
       "en": "My life is just one horror after another. Open.",
       "ko": "내 인생은 끔찍한 일들로 가득해. 열어봐.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
+        "functions": ["F59", "F35"],
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
+        "emotions": ["E10"],
+        "expression_types": ["X02"],
+        "vibe": "V06",
+        "power": ["P07"],
         "grammar_intent": [],
         "flags": []
       }
@@ -195,19 +148,13 @@
       "en": "Does it look like it hurts? Nope.",
       "ko": "아파 보이니? 아니.",
       "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S10",
+        "functions": ["F06"],
+        "situation": "S27",
         "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
+        "vibe": "V03",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -218,19 +165,13 @@
       "en": "What's that?",
       "ko": "그게 뭐야?",
       "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S10",
+        "functions": ["F06"],
+        "situation": "S27",
         "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E04"],
+        "expression_types": ["X08"],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -241,19 +182,13 @@
       "en": "Syringe. What happened to you?",
       "ko": "주사기. 너한테 무슨 일이 있었어?",
       "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S10",
-        "cefr": "A2",
+        "functions": ["F01", "F06"],
+        "situation": "S27",
+        "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E04"],
+        "expression_types": ["X08"],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -264,21 +199,15 @@
       "en": "You make him hate the doctor's office more than he hates school.",
       "ko": "너는 그를 학교보다 의사 사무실을 더 싫어하게 만들어.",
       "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S10",
+        "functions": ["F12", "F55"],
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E05"],
+        "expression_types": ["X08"],
+        "vibe": "V03",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": ["G10"],
         "flags": []
       }
     },
@@ -287,22 +216,16 @@
       "en": "That's okay. I don't think that...",
       "ko": "괜찮아. 나는 그렇게 생각하지 않아...",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
+        "functions": ["F57"],
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": ["is_fragment"]
       }
     },
     {
@@ -310,24 +233,16 @@
       "en": "It's just saline. Hurts like hell when it's injected directly into the muscle. So what do you think? Arm or ass?",
       "ko": "그냥 식염수야. 근육에 직접 주사하면 정말 아파. 그래서 어떻게 생각해? 팔이야, 엉덩이야?",
       "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S10",
-        "cefr": "B1",
+        "functions": ["F04", "F42"],
+        "situation": "S27",
+        "cefr": "B2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
+        "emotions": ["E10", "E12"],
+        "expression_types": ["X02", "X05"],
+        "vibe": "V03",
+        "power": ["P07", "P04"],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": ["contains_profanity"]
       }
     },
     {
@@ -335,20 +250,14 @@
       "en": "I think he's learned his lesson.",
       "ko": "그는 교훈을 배운 것 같아.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
+        "functions": ["F09"],
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
+        "emotions": ["E07"],
+        "expression_types": ["X02"],
+        "vibe": "V03",
+        "power": ["P03"],
         "grammar_intent": [],
         "flags": []
       }

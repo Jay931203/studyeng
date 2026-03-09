@@ -12,10 +12,10 @@
       "ko": "허락을 구하고, 타협하는 법을 배워라.",
       "tags": {
         "functions": [
-          "F46"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -24,7 +24,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -35,13 +37,13 @@
       "ko": "이건 끔찍한 조언이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -58,11 +60,11 @@
       "ko": "만약 내가 자서전을 쓴다면, 내 삶에 대한 책 제목 중 하나는",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S50",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -71,7 +73,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -83,8 +87,8 @@
         "functions": [
           "F04"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -94,7 +98,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -104,20 +110,22 @@
       "ko": "내가 뉴욕으로 이사하고 싶다고 했을 때 아빠는, 너는 돈이 없으니 안 된다고 했어.",
       "tags": {
         "functions": [
-          "F03"
+          "F23"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -127,55 +135,9 @@
       "ko": "내가 처음으로 영화를 만들고 싶다고 했을 때, 너는 영화 학교에 가지 않았으니 안 된다고 했어.",
       "tags": {
         "functions": [
-          "F03"
+          "F55"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "jG7dSXcfVqE-6",
-      "en": "I want to have a TV show. You can't, Casey. You're not pretty enough.",
-      "ko": "나는 TV 쇼를 갖고 싶어. 안 돼, 케이시. 너는 충분히 예쁘지 않아.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "jG7dSXcfVqE-7",
-      "en": "And to go even further, like if I were to characterize what this new generation of content",
-      "ko": "그리고 더 나아가서, 이 새로운 세대의 콘텐츠 제작자와 영화 제작자들이",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S48",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -186,7 +148,59 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "jG7dSXcfVqE-6",
+      "en": "I want to have a TV show. You can't, Casey. You're not pretty enough.",
+      "ko": "나는 TV 쇼를 갖고 싶어. 안 돼, 케이시. 너는 충분히 예쁘지 않아.",
+      "tags": {
+        "functions": [
+          "F21"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G15"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "jG7dSXcfVqE-7",
+      "en": "And to go even further, like if I were to characterize what this new generation of content",
+      "ko": "그리고 더 나아가서, 이 새로운 세대의 콘텐츠 제작자와 영화 제작자들이",
+      "tags": {
+        "functions": [
+          "F23"
+        ],
+        "situation": "S50",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E08"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -198,8 +212,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -219,10 +233,10 @@
       "ko": "너는 액션 영화 감독이 될 수 없지만, 너의 파쿠르 친구들을 비디오 게임 캐릭터로 분장시켜서",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,10 +256,10 @@
       "ko": "건물에서 뛰어내리게 할 수 있어. 맞지, 데빈? 응. 너는 토크쇼를 가질 수 없어.",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -259,5 +273,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "24c7947f26e2b3a0"
 }

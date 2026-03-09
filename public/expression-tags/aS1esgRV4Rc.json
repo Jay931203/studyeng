@@ -12,11 +12,11 @@
       "ko": "우리는 시를 읽고 쓰는 것이 귀여워서가 아니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
-        "situation": "S44",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -25,7 +25,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -35,11 +37,11 @@
       "ko": "우리는 인간이기 때문에 시를 읽고 쓰며, 인간은 열정으로 가득 차 있다.",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
-        "situation": "S44",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -48,7 +50,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -60,9 +64,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -72,7 +76,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -83,9 +89,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -106,16 +112,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,11 +133,11 @@
       "ko": "휘트먼의 말을 인용하자면, 오 나여, 오 삶이여, 이 반복되는 질문들,",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -150,11 +156,11 @@
       "ko": "믿지 않는 자들의 끝없는 기차들, 어리석은 자들로 가득한 도시들 속에서,",
       "tags": {
         "functions": [
-          "F03"
+          "F58"
         ],
-        "situation": "S44",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -173,11 +179,11 @@
       "ko": "이들 사이에서 무슨 의미가 있는가, 오 나여, 오 삶이여, 대답하라,",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -196,11 +202,11 @@
       "ko": "네가 여기 있다는 것, 삶이 존재하고 정체성이 있다는 것, 강력한 연극이 계속되고 너도 한 구절을 기여할 수 있다는 것.",
       "tags": {
         "functions": [
-          "F03"
+          "F47"
         ],
-        "situation": "S44",
-        "cefr": "C1",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -209,9 +215,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "ee4d9c972d489756"
 }

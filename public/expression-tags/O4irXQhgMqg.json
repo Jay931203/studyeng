@@ -15,7 +15,7 @@
           "F09"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,9 +23,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -37,10 +39,10 @@
       "ko": "여름 옷을 입은 소녀들이 높은 곳에 보여. 내 어둠이 사라질 때까지 고개를 돌려야 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +50,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,20 +64,26 @@
       "ko": "검은색으로 칠해진 차들이 줄지어 서 있어. 꽃들과 내 사랑, 다시 돌아오지 않기를 바라.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06",
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V07",
+        "power": [
+          "P09"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -90,7 +98,7 @@
           "F09"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -98,7 +106,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -106,5 +114,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "00d38b660a399a04"
 }

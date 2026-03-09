@@ -12,9 +12,9 @@
       "ko": "마크, 주변을 탐색해.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,9 +35,9 @@
       "ko": "괜찮다면...",
       "tags": {
         "functions": [
-          "F46"
+          "F06"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -46,9 +46,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02",
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -58,9 +61,9 @@
       "ko": "모든 것을 살짝 만져봐, 머레이.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -81,10 +84,10 @@
       "ko": "머레이의 얼굴을 봐.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,7 +95,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,9 +107,9 @@
       "ko": "봐, 그는 제대로 쳐다보지도 못해.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -127,9 +130,9 @@
       "ko": "머레이는 뒤를 돌아보지도 못해.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -150,55 +153,9 @@
       "ko": "카메라를 보고, 아, 시점 촬영이야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "5dkxJVljyaA-7",
-      "en": "Ah, point of view camera.",
-      "ko": "아, 시점 카메라.",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S34",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "5dkxJVljyaA-8",
-      "en": "Start waving at your ass like you're farted while you're staring at the camera.",
-      "ko": "카메라를 바라보면서 엉덩이를 흔들어봐.",
-      "tags": {
-        "functions": [
-          "F36"
-        ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -214,14 +171,66 @@
       }
     },
     {
+      "id": "5dkxJVljyaA-7",
+      "en": "Ah, point of view camera.",
+      "ko": "아, 시점 카메라.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S31",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "5dkxJVljyaA-8",
+      "en": "Start waving at your ass like you're farted while you're staring at the camera.",
+      "ko": "카메라를 바라보면서 엉덩이를 흔들어봐.",
+      "tags": {
+        "functions": [
+          "F17"
+        ],
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [
+          "P08"
+        ],
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": [
+          "contains_profanity"
+        ]
+      }
+    },
+    {
       "id": "5dkxJVljyaA-9",
       "en": "Point of wave.",
       "ko": "손을 흔들어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -230,10 +239,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -244,7 +255,7 @@
         "functions": [
           "F27"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -253,11 +264,16 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "69775fecf5e95e73"
 }

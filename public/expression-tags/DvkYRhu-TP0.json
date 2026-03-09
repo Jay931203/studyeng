@@ -14,7 +14,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
+        "situation": "S27",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -35,18 +35,18 @@
       "ko": "정오에 들어와서 자정에 나갔어요. 긴 하루였네요. 잘했어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,10 +58,10 @@
       "ko": "힘든 하루 일하는 건 나쁘지 않아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,10 +81,10 @@
       "ko": "그렇게 말하죠, 한 남자가 들어왔고",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,10 +104,10 @@
       "ko": "카운터를 넘어서서 말하길,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,16 +127,16 @@
       "ko": "내 금고에서 돈을 집어들고 도망쳤어요. 맞아요.",
       "tags": {
         "functions": [
-          "F03"
+          "F07"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -150,10 +150,10 @@
       "ko": "그때 가게에 다른 사람은 없었어요. 그때는 없었죠.",
       "tags": {
         "functions": [
-          "F01"
+          "F03"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,10 +173,10 @@
       "ko": "카메라 시스템이 작동하지 않았으니,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,20 +196,23 @@
       "ko": "당신만 범인을 봤네요. 네, 그런 것 같아요.",
       "tags": {
         "functions": [
-          "F01"
+          "F07",
+          "F14"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -219,18 +222,19 @@
       "ko": "그래서 이 사람이 들어와서 뭔가를 샀어요. 아몬드 조이였던 것 같아요. 아몬드 조이를 샀어요.",
       "tags": {
         "functions": [
-          "F03"
+          "F21",
+          "F09"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,9 +246,9 @@
       "ko": "그리고 당신이 계산할 때,",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -265,10 +269,10 @@
       "ko": "그때 그 사람이 금고에서 현금을 낚아챘어요.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,9 +292,9 @@
       "ko": "꽤 빨리 일어난 것 같네요,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -311,10 +315,10 @@
       "ko": "하지만 당신은 그를 잘 봤다고 하죠, 맞죠? 네.",
       "tags": {
         "functions": [
-          "F06"
+          "F07"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -334,10 +338,10 @@
       "ko": "당신은 제가 마시는 것보다 더 강한 커피를 마시는군요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -357,10 +361,10 @@
       "ko": "왜냐하면 11시간 일한 후에는",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -370,7 +374,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -380,13 +386,13 @@
       "ko": "제대로 볼 수가 없거든요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -403,10 +409,10 @@
       "ko": "그리고 밖은 어두웠어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A1",
+        "situation": "S27",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -420,5 +426,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "87f65d0139417f83"
 }

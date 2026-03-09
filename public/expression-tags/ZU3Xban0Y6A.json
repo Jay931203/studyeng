@@ -12,19 +12,21 @@
       "ko": "좋아, 벤자민, 우리 인턴들에게 중요한 질문 하나 할게.",
       "tags": {
         "functions": [
-          "F06"
+          "F02"
         ],
         "situation": "S14",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -38,17 +40,19 @@
           "F06"
         ],
         "situation": "S14",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -58,18 +62,18 @@
       "ko": "내가 80살일 때",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,9 +85,9 @@
       "ko": "몇 주 전에 고등학생이나 대학생 인턴 프로그램에 대해 이야기했잖아, 아니, 아니,",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S19",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -92,7 +96,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,7 +108,7 @@
       "ko": "인생의 선배들에 대해 말하는 거야. 잠깐, 저게 우리 창립자이자 CEO인 줄스 오스틴이야. 들어가기 전에 조언 좀 해줄래?",
       "tags": {
         "functions": [
-          "F04"
+          "F49"
         ],
         "situation": "S14",
         "cefr": "B2",
@@ -113,10 +117,12 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -127,10 +133,10 @@
       "ko": "블링크. 그녀는 사람들이 눈을 깜빡이지 않는 걸 싫어해. 그게 그녀를 불편하게 해. 안녕하세요, 줄스. 저는 당신의 새로운 인턴 벤입니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F25"
         ],
         "situation": "S14",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,7 +144,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,16 +158,16 @@
         "functions": [
           "F15"
         ],
-        "situation": "S14",
+        "situation": "S24",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E01"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,7 +179,7 @@
       "ko": "당신의 소식을 기다릴게요, 선생님.",
       "tags": {
         "functions": [
-          "F06"
+          "F49"
         ],
         "situation": "S14",
         "cefr": "A2",
@@ -184,8 +190,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -196,30 +204,7 @@
       "ko": "정말 죄송합니다, 실례합니다.",
       "tags": {
         "functions": [
-          "F27"
-        ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "ZU3Xban0Y6A-9",
-      "en": "So you're Jules new driver no actually I'm her intern",
-      "ko": "그래서 당신이 줄스의 새로운 운전사인가요? 아니요, 저는 그녀의 인턴이에요.",
-      "tags": {
-        "functions": [
-          "F06"
+          "F28"
         ],
         "situation": "S14",
         "cefr": "A2",
@@ -230,9 +215,38 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "ZU3Xban0Y6A-9",
+      "en": "So you're Jules new driver no actually I'm her intern",
+      "ko": "그래서 당신이 줄스의 새로운 운전사인가요? 아니요, 저는 그녀의 인턴이에요.",
+      "tags": {
+        "functions": [
+          "F11"
+        ],
+        "situation": "S14",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -242,21 +256,25 @@
       "ko": "그거 웃기네.",
       "tags": {
         "functions": [
-          "F15"
+          "F02"
         ],
         "situation": "S14",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,7 +283,7 @@
       "ko": "매니저는 바쁘게 지내, 모두가 그를 좋아해. 인상적으로 옷을 입어야 해, 셔츠를 집어넣어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S14",
         "cefr": "B2",
@@ -276,7 +294,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -294,16 +312,17 @@
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "e98bdb075c6fb157"
 }

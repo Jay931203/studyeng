@@ -12,10 +12,10 @@
       "ko": "고통을 느낄 수 없습니다. 감사합니다. 도움이 됩니다. 하지만 경고해야 할 게 있어요.",
       "tags": {
         "functions": [
-          "F01"
+          "F27"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,8 +23,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P03",
+          "P08"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -35,9 +38,9 @@
       "ko": "저는 킬 스위치에 가까워지면 자동으로 생존을 위해 애원하도록 프로그래밍되어 있습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -58,9 +61,9 @@
       "ko": "우발적인 종료에 대비한 장치일 뿐이지만, 매우 현실감 있게 보일 것입니다. 그래서 누가 이걸 하는 거죠? 나인가요, 당신인가요?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -81,13 +84,13 @@
       "ko": "아, 해야 할 것 같아요.",
       "tags": {
         "functions": [
-          "F06"
+          "F09"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E15"
         ],
         "expression_types": [
           "X08"
@@ -104,10 +107,10 @@
       "ko": "방관자가 되는 건 뭔가 더 나쁜 것 같아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,8 +132,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,20 +153,23 @@
       "ko": "죽고 싶지 않아요, 제발.",
       "tags": {
         "functions": [
-          "F09"
+          "F34"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -175,8 +181,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -186,7 +192,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -198,8 +206,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -219,13 +227,13 @@
       "ko": "당신의 애원이 너무 현실감 있어요. 아, 네. 매우 효과적인 안전장치입니다. 아, 로봇을 죽이고 싶으신 거죠?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -242,9 +250,9 @@
       "ko": "당신이 직접 해야 합니다.",
       "tags": {
         "functions": [
-          "F35"
+          "F45"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -265,20 +273,22 @@
       "ko": "엘리너, 엘리너. 아니, 아니, 제발. 기다려요. 기다려요, 엘리너. 저는 아이들이 있어요. 세 명이요.",
       "tags": {
         "functions": [
-          "F09"
+          "F34"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -288,22 +298,25 @@
       "ko": "아름다운 아이들, 타일러, 엠마, 그리고 작은 아기 필립. 타일러를 봐요. 타일러는",
       "tags": {
         "functions": [
-          "F02"
+          "F30"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "500f0cbda9000423"
 }

@@ -12,20 +12,25 @@
       "ko": "이 천이 뭔지 모르겠지만, 아기를 갖고 싶어. 잠깐만.",
       "tags": {
         "functions": [
-          "F09"
+          "F49"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X04",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -35,10 +40,10 @@
       "ko": "그리고 스웨터와 바지에 어울리는 멋진 벨트를 샀어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +51,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +63,18 @@
       "ko": "간단하고 검은색이지만, 버클을 봐. 나는 벨트가 필요 없어. 멋진 버클이야. 파이 줘. 어떤 파이? 보이젠베리 파이.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,20 +86,22 @@
       "ko": "보이젠베리 파이가 다 떨어졌어. 보이젠베리 파이가 다 떨어질 수가 있어?",
       "tags": {
         "functions": [
-          "F05"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -104,9 +111,9 @@
       "ko": "누군가 마지막 조각을 주문했거든.",
       "tags": {
         "functions": [
-          "F05"
+          "F04"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -115,9 +122,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -127,19 +136,21 @@
       "ko": "내가 보이젠베리 파이 한 조각 남겨달라고 분명히 부탁했어.",
       "tags": {
         "functions": [
-          "F34"
+          "F05"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -150,18 +161,18 @@
       "ko": "아니, 그런 말 안 했어.",
       "tags": {
         "functions": [
-          "F11"
+          "F52"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,20 +184,24 @@
       "ko": "그냥 우리가 루크의 아침식사를 먹으러 갈 거라고 생각했어. 왜? 루크의 아침식사가 좋거든. 나는 루크야. 알아. 그리고 내가 다이너에서 만드는 것과 똑같은 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S10",
+        "situation": "S05",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -196,18 +211,18 @@
       "ko": "알아.",
       "tags": {
         "functions": [
-          "F07"
+          "F02"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,18 +236,22 @@
         "functions": [
           "F36"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E14"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -242,20 +261,24 @@
       "ko": "나한테서 떨어져, 정신병자야. 메시지를 남겼어. 메시지를 받은 적 없어. 네 휴대폰에 남겼어.",
       "tags": {
         "functions": [
-          "F60"
+          "F43",
+          "F56"
         ],
-        "situation": "S10",
+        "situation": "S27",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E02"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -265,20 +288,22 @@
       "ko": "아, 그 성가신 삐 소리가 그거였어?",
       "tags": {
         "functions": [
-          "F18"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -288,18 +313,18 @@
       "ko": "응, 네 여자친구가 전화해서 파이 좀 남겨달라고 했다는 거야. 버거는 끝났어. 시저, 네가 책임져. 아, 잠깐. 돈 있어?",
       "tags": {
         "functions": [
-          "F02"
+          "F49"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S04",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,20 +336,24 @@
       "ko": "돈이 필요해. 이걸 여는 건 어떤 거야? 저거야? 그거 만지지 마. 내 노트북으로 작업해도 돼? 어, 소리 나? 아니, 가끔 나긴 해.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S04",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13",
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -334,9 +363,9 @@
       "ko": "너는 항상 그래. 여기 모일 수 없어. 이렇게 머리한 거 어때? 좋아, 하지만 여기 모일 수 없어. 너와 자는 건 나한테 아무것도 안 돼. 그녀는 내가 남자가 필요하다고 생각해. 너는 필요해.",
       "tags": {
         "functions": [
-          "F19"
+          "F55"
         ],
-        "situation": "S10",
+        "situation": "S39",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -345,9 +374,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G14",
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -357,9 +389,9 @@
       "ko": "좋은 소파와 깊은...",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -368,13 +400,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_fragment"
+          "is_narration"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "e44b80eb757752af"
 }

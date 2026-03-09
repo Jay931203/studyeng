@@ -12,35 +12,10 @@
       "ko": "궁금하신가요? 이것이 역사상 가장 혁신적인 생물학 강좌의 시작입니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R3",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
-      }
-    },
-    {
-      "id": "QnQe0xW_JY4-1",
-      "en": "Come today to learn about covalent and ionic and hydrogen bonds.",
-      "ko": "오늘 오셔서 공유 결합, 이온 결합, 수소 결합에 대해 배우세요.",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S47",
-        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -51,22 +26,20 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
-      "id": "QnQe0xW_JY4-2",
-      "en": "What about electron orbitals, and the octet rule, and what does it all have to do with a madman named Gilbert Lewis?",
-      "ko": "전자 궤도와 옥텟 규칙은 어떤 관련이 있으며, 미친 사람 길버트 루이스와는 무슨 관계가 있을까요?",
+      "id": "QnQe0xW_JY4-1",
+      "en": "Come today to learn about covalent and ionic and hydrogen bonds.",
+      "ko": "오늘 오셔서 공유 결합, 이온 결합, 수소 결합에 대해 배우세요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -76,9 +49,35 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
+      }
+    },
+    {
+      "id": "QnQe0xW_JY4-2",
+      "en": "What about electron orbitals, and the octet rule, and what does it all have to do with a madman named Gilbert Lewis?",
+      "ko": "전자 궤도와 옥텟 규칙은 어떤 관련이 있으며, 미친 사람 길버트 루이스와는 무슨 관계가 있을까요?",
+      "tags": {
+        "functions": [
+          "F23",
+          "F36"
+        ],
+        "situation": "S50",
+        "cefr": "B2",
+        "register": "R5",
+        "emotions": [
+          "E03",
+          "E08"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [
+          "G06",
+          "G09"
+        ],
+        "flags": []
       }
     },
     {
@@ -89,32 +88,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
-      }
-    },
-    {
-      "id": "QnQe0xW_JY4-4",
-      "en": "Hello, I'm Hank. I assume you're here because you're interested in biology, and if you are, that makes sense,",
-      "ko": "안녕하세요, 저는 행크입니다. 여러분이 생물학에 관심이 있어서 여기 오셨다고 생각합니다.",
-      "tags": {
-        "functions": [
-          "F25"
-        ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -126,9 +100,35 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
+      }
+    },
+    {
+      "id": "QnQe0xW_JY4-4",
+      "en": "Hello, I'm Hank. I assume you're here because you're interested in biology, and if you are, that makes sense,",
+      "ko": "안녕하세요, 저는 행크입니다. 여러분이 생물학에 관심이 있어서 여기 오셨다고 생각합니다.",
+      "tags": {
+        "functions": [
+          "F25",
+          "F04"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
       }
     },
     {
@@ -137,11 +137,11 @@
       "ko": "생물학은 좋은 노래처럼 성과 죽지 않는 것에 관한 것입니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -150,10 +150,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
       }
     },
     {
@@ -162,9 +162,9 @@
       "ko": "이 영상을 보고 있는 모든 사람은 성과 죽지 않는 것에 관심이 있어야 합니다. 여러분은 인간이니까요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -176,9 +176,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -187,59 +185,9 @@
       "ko": "저는 여러분이 지금까지 들어본 대부분의 강좌와는 다르게 이 생물학 강좌를 진행할 것입니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B2",
-        "register": "R3",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
-      }
-    },
-    {
-      "id": "QnQe0xW_JY4-8",
-      "en": "For example, I'm not going to spend the first class talking about how I'm going to spend the rest of the class.",
-      "ko": "예를 들어, 첫 수업에서 나머지 수업을 어떻게 진행할지 이야기하지 않을 것입니다.",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S47",
-        "cefr": "B2",
-        "register": "R3",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
-      }
-    },
-    {
-      "id": "QnQe0xW_JY4-9",
-      "en": "I'm just going to start teaching you.",
-      "ko": "그냥 바로 가르치기 시작할 것입니다.",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -251,10 +199,55 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
+      }
+    },
+    {
+      "id": "QnQe0xW_JY4-8",
+      "en": "For example, I'm not going to spend the first class talking about how I'm going to spend the rest of the class.",
+      "ko": "예를 들어, 첫 수업에서 나머지 수업을 어떻게 진행할지 이야기하지 않을 것입니다.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B2",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "QnQe0xW_JY4-9",
+      "en": "I'm just going to start teaching you.",
+      "ko": "그냥 바로 가르치기 시작할 것입니다.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "e901efae0eeb9aed"
 }

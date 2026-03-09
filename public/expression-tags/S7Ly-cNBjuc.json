@@ -12,16 +12,17 @@
       "ko": "그건 일종의 너를 위한 하나, 나를 위한 하나 시스템으로 작동했어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -35,10 +36,11 @@
       "ko": "그럼 두 개는 너를 위해, 하나는 나를 위해 어때?",
       "tags": {
         "functions": [
+          "F06",
           "F36"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,10 +60,11 @@
       "ko": "그럼 모두 너를 위해, 나를 위해서는 아무것도 없으면 어때? 완벽해, 그래.",
       "tags": {
         "functions": [
+          "F06",
           "F36"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,7 +74,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -81,13 +86,13 @@
       "ko": "좋아. 그럼 상호 결정이네.",
       "tags": {
         "functions": [
-          "F63"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
@@ -104,10 +109,10 @@
       "ko": "맞아, 내가 만든 거야.",
       "tags": {
         "functions": [
-          "F01"
+          "F07"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -130,7 +135,7 @@
           "F07"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,10 +155,10 @@
       "ko": "뭐든지, 네가 알고 싶은 대로 생각해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,16 +178,16 @@
       "ko": "음, 다시 돌아온 걸 환영해.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -196,10 +201,10 @@
       "ko": "그렇게 말하는 좋은 방법이 있어, 카렌.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -219,10 +224,10 @@
       "ko": "후우!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -244,7 +249,7 @@
       "ko": "♪",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -259,7 +264,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -269,7 +274,7 @@
       "ko": "♪",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -284,7 +289,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -294,7 +299,7 @@
       "ko": "♪",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -309,7 +314,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -319,7 +324,7 @@
       "ko": "♪",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -334,7 +339,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -344,7 +349,7 @@
       "ko": "♪",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -359,7 +364,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -369,11 +374,11 @@
       "ko": "♪",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
-        "register": "R1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -384,7 +389,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -394,11 +399,11 @@
       "ko": "♪",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
-        "register": "R1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -409,7 +414,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -419,11 +424,11 @@
       "ko": "♪",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
-        "register": "R1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -434,9 +439,10 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "9e947aa8143b1ab8"
 }

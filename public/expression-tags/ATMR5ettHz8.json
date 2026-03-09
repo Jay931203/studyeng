@@ -12,10 +12,12 @@
       "ko": "무슨 일이 일어나고 있는지 말해줘. 전화한 사람이 누구인지 말해줘.",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F36",
+          "F40"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +25,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,10 +39,12 @@
       "ko": "그에게 무슨 문제가 있는지 물어봐. 폭풍이 언제 오는지 물어봐.",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F36",
+          "F40"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +52,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,24 +66,28 @@
       "ko": "나를 사랑한다고 말하지 마.",
       "tags": {
         "functions": [
-          "F09"
+          "F35",
+          "F40"
         ],
         "situation": "S46",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": [
           "is_lyrics"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "db858cf8bbd3b6ea"
 }

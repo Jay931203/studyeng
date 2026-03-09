@@ -12,9 +12,9 @@
       "ko": "유명인 퀴즈쇼에 다시 오신 것을 환영합니다!",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,9 +35,9 @@
       "ko": "더블 퀴즈 라운드를 시작하기 전에 아시아 시청자분들께 사과드리고 싶습니다.",
       "tags": {
         "functions": [
-          "F28"
+          "F03"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -46,9 +46,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -58,10 +60,10 @@
       "ko": "중국 역사라는 주제가 불쾌한 억양을 초래할 것이라는 걸 알았어야 했습니다.",
       "tags": {
         "functions": [
-          "F12"
+          "F36"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,9 +71,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09",
+          "G11"
+        ],
         "flags": []
       }
     },
@@ -81,10 +86,10 @@
       "ko": "참가자들의 억양이 불쾌할 것이라는 점에서.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,7 +97,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,9 +109,9 @@
       "ko": "그렇긴 하지만, 점수를 살펴보겠습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F36"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -115,10 +120,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G09"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -129,8 +138,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,7 +147,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,10 +159,10 @@
       "ko": "그리고 당신의 어머니는 현재 내 얼굴 위에 있습니다, 트라박.",
       "tags": {
         "functions": [
-          "F59"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,9 +182,9 @@
       "ko": "그건 너무 이른 농담입니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -196,9 +205,9 @@
       "ko": "정말 너무 이릅니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -207,10 +216,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -219,10 +230,10 @@
       "ko": "다음은 저스틴 비버, -17,000달러입니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F03"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,7 +241,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,11 +253,11 @@
       "ko": "여기서는 별로 없었던 것 같죠?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -265,9 +276,9 @@
       "ko": "하지만 여기에는 정말 많은 것이 있고, 그냥 꺼내고 싶어요, 친구.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -282,5 +293,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a31f303c678938bf"
 }

@@ -12,10 +12,10 @@
       "ko": "여자애들은 담배를 잘 못 피워, 그게 사실이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,18 +58,18 @@
       "ko": "나는 정말 인기 많아, 이 학교에서 모두 나를 너무 좋아해. 불쌍한 아기.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -94,7 +94,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": [
           "is_fragment"
         ]
@@ -106,7 +108,7 @@
       "ko": "우와!",
       "tags": {
         "functions": [
-          "F09"
+          "F15"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -125,5 +127,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "34ccd641e9580274"
 }

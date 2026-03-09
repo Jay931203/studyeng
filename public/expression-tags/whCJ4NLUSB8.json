@@ -14,8 +14,31 @@
         "functions": [
           "F01"
         ],
-        "situation": "S26",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "whCJ4NLUSB8-1",
+      "en": "Cambridge Ideas. Transforming tomorrow.",
+      "ko": "케임브리지 아이디어. 내일을 변화시키다.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -30,9 +53,32 @@
       }
     },
     {
-      "id": "whCJ4NLUSB8-1",
-      "en": "Cambridge Ideas. Transforming tomorrow.",
-      "ko": "케임브리지 아이디어. 내일을 변화시키다.",
+      "id": "whCJ4NLUSB8-2",
+      "en": "Please drive to highlighted route.",
+      "ko": "강조된 경로로 운전하세요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E13"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "whCJ4NLUSB8-3",
+      "en": "Oh no, look, it's plopped up there. Recalculating.",
+      "ko": "오, 안돼, 저기 떨어져 있어. 재계산 중.",
       "tags": {
         "functions": [
           "F01"
@@ -53,61 +99,15 @@
       }
     },
     {
-      "id": "whCJ4NLUSB8-2",
-      "en": "Please drive to highlighted route.",
-      "ko": "강조된 경로로 운전하세요.",
-      "tags": {
-        "functions": [
-          "F35"
-        ],
-        "situation": "S06",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "whCJ4NLUSB8-3",
-      "en": "Oh no, look, it's plopped up there. Recalculating.",
-      "ko": "오, 안돼, 저기 떨어져 있어. 재계산 중.",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S06",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "whCJ4NLUSB8-4",
       "en": "Continue 0.3 miles, then turn left.",
       "ko": "0.3마일 직진한 후 좌회전하세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S06",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,7 +129,7 @@
         "functions": [
           "F09"
         ],
-        "situation": "S06",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -150,10 +150,10 @@
       "ko": "보세요? 볼라드입니다. 이제 어쩌죠, 똑똑한 친구?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S06",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,10 +173,9 @@
       "ko": "0.3마일 직진한 후 좌회전하세요. 해고입니다.",
       "tags": {
         "functions": [
-          "F35",
-          "F20"
+          "F01"
         ],
-        "situation": "S06",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -197,16 +196,16 @@
       "ko": "GPS 위성 내비게이션 시스템 같은 기기를 좋아해요,",
       "tags": {
         "functions": [
-          "F09"
+          "F22"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -220,13 +219,13 @@
       "ko": "하지만 사용하기가 너무 어렵다는 점은 싫어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E03"
         ],
         "expression_types": [
           "X08"
@@ -243,13 +242,14 @@
       "ko": "그건 마치 가학자들이 설계한 것 같아요.",
       "tags": {
         "functions": [
-          "F12"
+          "F09",
+          "F03"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -266,7 +266,7 @@
       "ko": "문제는 컴퓨터가 제가 사용하는 방식에 반응하지 않는다는 거예요.",
       "tags": {
         "functions": [
-          "F04"
+          "F40"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -283,5 +283,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "ac56a749fc643cdf"
 }

@@ -15,15 +15,15 @@
           "F06"
         ],
         "situation": "S08",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -41,15 +41,19 @@
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V07",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,21 +62,24 @@
       "ko": "이 방이야.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
         "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -84,15 +91,15 @@
           "F06"
         ],
         "situation": "S08",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,18 +111,18 @@
       "ko": "이 방이야?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
         "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -133,12 +140,12 @@
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -152,21 +159,23 @@
       "ko": "배불러.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
         "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -181,15 +190,19 @@
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G20"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -198,16 +211,16 @@
       "ko": "네 손가락이 나를 졸리게 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "B2",
-        "register": "R5",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V07",
         "power": [],
@@ -221,11 +234,11 @@
       "ko": "네 숨결이 나를 감싸는 이슬 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "B2",
-        "register": "R5",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E11"
         ],
@@ -244,11 +257,11 @@
       "ko": "네 맥박이 내 귀를 달래.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "B2",
-        "register": "R5",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E11"
         ],
@@ -270,8 +283,8 @@
           "F09"
         ],
         "situation": "S08",
-        "cefr": "B2",
-        "register": "R5",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E11"
         ],
@@ -290,22 +303,25 @@
       "ko": "충분히 맛있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F21"
         ],
         "situation": "S08",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "c0bc3a88ffdee4f1"
 }

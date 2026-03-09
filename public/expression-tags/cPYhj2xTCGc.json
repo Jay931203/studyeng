@@ -15,7 +15,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,17 +35,16 @@
       "ko": "더 높이면 개들만 들을 거야. 해봐. 프레디의 음, 미안. 계속해, 테이프 돌려.",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -62,7 +61,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -85,7 +84,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -105,10 +104,10 @@
       "ko": "제발, 갈릴레오 몇 개 더 필요해?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -128,11 +127,10 @@
       "ko": "프레디가 몇 개 더 더빙하고 싶대. 테이프 남아있어?",
       "tags": {
         "functions": [
-          "F06",
-          "F34"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -152,10 +150,10 @@
       "ko": "테이프가 닳아가고 있어. 더는 못 버텨.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -165,7 +163,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -175,10 +175,10 @@
       "ko": "그래, 더는 감당할 수 없어.",
       "tags": {
         "functions": [
-          "F12"
+          "F07"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -198,10 +198,10 @@
       "ko": "이미 일정이 3주 넘었어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -221,7 +221,7 @@
       "ko": "프레디의 26번 더빙. 하나 더, 하나 더.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -244,10 +244,10 @@
       "ko": "하나 더. 다시.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -267,16 +267,16 @@
       "ko": "계속해, 트랙 돌려.",
       "tags": {
         "functions": [
-          "F34"
+          "F35"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -293,7 +293,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -313,17 +313,16 @@
       "ko": "지금 내 고환이 가슴에 있는 것 같아. 끝났어? 그게 다야.",
       "tags": {
         "functions": [
-          "F16",
-          "F06"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -331,5 +330,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "fd7143ee9ef4b1f6"
 }

@@ -12,20 +12,22 @@
       "ko": "아니면 뜨거운 철퇴로 때릴 수도 있었는데, 너는 그냥 거절했어야 했어!",
       "tags": {
         "functions": [
-          "F40"
+          "F37"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -35,9 +37,9 @@
       "ko": "에밀리, 선택의 여지가 없었어. 그녀가 어떤 사람인지 알잖아.",
       "tags": {
         "functions": [
-          "F06"
+          "F56"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -58,79 +60,11 @@
       "ko": "그건 한심한 변명이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F12",
+          "F58"
         ],
-        "situation": "S44",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "tjA3DZAyCgI-3",
-      "en": "Do you know what really just gets me about this whole thing?",
-      "ko": "이 모든 것에 대해 정말 짜증나는 게 뭔지 알아?",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "tjA3DZAyCgI-4",
-      "en": "Is that, you know, you're the one who said,",
-      "ko": "너가 이 모든 것에 대해 신경 쓰지 않는다고 말한 사람이 너라는 거야.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "tjA3DZAyCgI-5",
-      "en": "you don't really care about this stuff.",
-      "ko": "너는 패션에 신경 쓰지 않고, 그냥 기자가 되고 싶어 해.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -145,23 +79,92 @@
       }
     },
     {
+      "id": "tjA3DZAyCgI-3",
+      "en": "Do you know what really just gets me about this whole thing?",
+      "ko": "이 모든 것에 대해 정말 짜증나는 게 뭔지 알아?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "tjA3DZAyCgI-4",
+      "en": "Is that, you know, you're the one who said,",
+      "ko": "너가 이 모든 것에 대해 신경 쓰지 않는다고 말한 사람이 너라는 거야.",
+      "tags": {
+        "functions": [
+          "F55"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "tjA3DZAyCgI-5",
+      "en": "you don't really care about this stuff.",
+      "ko": "너는 패션에 신경 쓰지 않고, 그냥 기자가 되고 싶어 해.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V02",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "tjA3DZAyCgI-6",
       "en": "You don't really care about fashion, you just want to be a journalist.",
       "ko": "정말 말도 안 되는 소리야!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,18 +176,18 @@
       "ko": "에밀리, 네가 화난 거 알아. 너를 탓하지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,12 +199,13 @@
       "ko": "사실을 받아들여, 앤디, 너는 첫 번째 지미 추를 신은 날 영혼을 팔았어. 내가 봤어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
+          "E03",
           "E07"
         ],
         "expression_types": [
@@ -209,7 +213,9 @@
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -219,18 +225,18 @@
       "ko": "그리고 이 모든 것에 대해 정말 나를 괴롭히는 게 뭔지 알아?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,18 +248,18 @@
       "ko": "네가 받을 옷들이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,9 +271,9 @@
       "ko": "너는 그걸 받을 자격이 없어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -288,20 +294,22 @@
       "ko": "너는 탄수화물을 먹잖아, 제발!",
       "tags": {
         "functions": [
-          "F12"
+          "F50"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -311,18 +319,18 @@
       "ko": "세상에! 너무 불공평해!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,18 +342,18 @@
       "ko": "에밀리...",
       "tags": {
         "functions": [
-          "F09"
+          "F15"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -357,10 +365,10 @@
       "ko": "그냥 가.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -382,7 +390,7 @@
       "ko": "가.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -396,7 +404,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -405,7 +415,7 @@
       "ko": "가.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -419,8 +429,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "2a93722d28a10467"
 }

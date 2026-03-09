@@ -12,10 +12,10 @@
       "ko": "모든 트럭은 밤에 뒷길에서 자주 막히곤 했어",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,7 +37,7 @@
       "ko": "나는 여름 내내 그 옆에 있었어",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -46,9 +46,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -65,15 +65,15 @@
           "F03"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,20 +87,22 @@
       "ko": "네가 여름 소녀를 부를 때, 내 최애 노래를 생각해주길 바래",
       "tags": {
         "functions": [
-          "F09"
+          "F19"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -112,19 +114,21 @@
       "ko": "우리가 밤새 춤출 때, 달이 호수 위의 스포트라이트처럼 비춰",
       "tags": {
         "functions": [
-          "F03"
+          "F06"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -137,20 +141,22 @@
       "ko": "네가 행복을 생각할 때, 그 작은 검은 드레스를 떠올리길 바래",
       "tags": {
         "functions": [
-          "F09"
+          "F19"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -162,10 +168,10 @@
       "ko": "내 머리가 네 가슴에 기대어 있고, 내 오래된 퇴색한 청바지를 생각해",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,7 +179,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,20 +193,22 @@
       "ko": "네가 여름 소녀를 생각할 때, 나를 떠올리길 바래",
       "tags": {
         "functions": [
-          "F09"
+          "F19"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -212,18 +220,18 @@
       "ko": "9월은 눈물의 달이었고, 네가 여기 없다는 것에 감사했어",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -231,5 +239,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "1cf51771d15e5376"
 }

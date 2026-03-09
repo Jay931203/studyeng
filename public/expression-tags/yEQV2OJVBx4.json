@@ -12,9 +12,9 @@
       "ko": "안녕, 내 최고의 친구들은 어떻게 지내?",
       "tags": {
         "functions": [
-          "F25"
+          "F06"
         ],
-        "situation": "S09",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,9 +35,9 @@
       "ko": "안녕, 조지 아줌마. 저는 케이리예요.",
       "tags": {
         "functions": [
-          "F26"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,19 +60,21 @@
         "functions": [
           "F25"
         ],
-        "situation": "S09",
-        "cefr": "A2",
-        "register": "R5",
+        "situation": "S20",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,9 +83,9 @@
       "ko": "우리 집에 오신 걸 환영해요.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -92,7 +94,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,10 +106,10 @@
       "ko": "필요한 거 있으면 주저하지 말고 말해줘, 알겠지?",
       "tags": {
         "functions": [
-          "F31"
+          "F06"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,7 +131,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S09",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -138,10 +140,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -150,9 +154,9 @@
       "ko": "나는 일반 엄마가 아니야. 나는 쿨한 엄마야. 맞지, 레지나? 제발 그만 말해.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S09",
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -161,7 +165,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,19 +177,21 @@
       "ko": "좋아. 너희를 위해 수요일 간식을 만들어 줄게.",
       "tags": {
         "functions": [
-          "F39"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S20",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V01",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -198,7 +204,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S09",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -207,7 +213,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,9 +225,9 @@
       "ko": "원래는 내 부모님 방이었는데, 내가 바꿔 달라고 했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -230,7 +236,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,18 +248,18 @@
       "ko": "이거 98.8로 틀어줘.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,7 +273,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S09",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -276,7 +282,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,18 +294,18 @@
       "ko": "음, 스파이스 걸스?",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
-        "situation": "S09",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,18 +317,18 @@
       "ko": "그녀를 사랑해. 그녀는 화성인 같아.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,18 +340,18 @@
       "ko": "세상에, 내 엉덩이가 엄청 커.",
       "tags": {
         "functions": [
-          "F16"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -357,18 +363,18 @@
       "ko": "제발, 내 종아리가 싫어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V04",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -380,18 +386,18 @@
       "ko": "적어도 너희는 홀터를 입을 수 있어. 나는 남자 어깨가 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V04",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -403,10 +409,10 @@
       "ko": "예전에는 그냥 뚱뚱한 사람과 마른 사람만 있다고 생각했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F03"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -414,7 +420,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -426,10 +432,10 @@
       "ko": "그건 사실이 아닌 것 같아.",
       "tags": {
         "functions": [
-          "F04"
+          "F56"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -437,11 +443,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "92f5f7f465f07986"
 }

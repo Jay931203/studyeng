@@ -12,10 +12,10 @@
       "ko": "좋은 지적이야, 드와이트.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,10 +23,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -35,10 +37,10 @@
       "ko": "우회전 해.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S06",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,9 +60,9 @@
       "ko": "잠깐, 잠깐, 잠깐. 아니, 아니, 아니. 오른쪽으로 가라는 뜻이야. 저기 위로.",
       "tags": {
         "functions": [
-          "F50"
+          "F49"
         ],
-        "situation": "S06",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -69,7 +71,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,9 +83,9 @@
       "ko": "오른쪽이라고 했어. 우회전 하라고 했어.",
       "tags": {
         "functions": [
-          "F01"
+          "F05"
         ],
-        "situation": "S06",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -92,10 +94,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -104,18 +108,18 @@
       "ko": "아니, 아니, 아니. 봐봐. 오른쪽으로 올라가서, 다리 건너서 307과 연결되는 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S06",
+        "situation": "S09",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,10 +131,10 @@
       "ko": "우회전 해.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S06",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,7 +142,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,18 +156,20 @@
         "functions": [
           "F14"
         ],
-        "situation": "S06",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -173,21 +179,23 @@
       "ko": "그럴 리가 없어. 거기 호수가 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S06",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -196,21 +204,23 @@
       "ko": "기계가 어디로 가는지 알아. 기계가 알아. 여기 호수야. 여기 호수야. 나한테 소리 지르지 마.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S06",
+        "situation": "S39",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -219,10 +229,10 @@
       "ko": "아니, 저기 위에 있고 여기 도로가 없어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S06",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,7 +240,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,10 +252,10 @@
       "ko": "침착해. 이걸 위해 훈련했어. 알겠어.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S06",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -253,7 +263,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,18 +275,18 @@
       "ko": "창문을 통해 나가. 가자.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S06",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,9 +298,9 @@
       "ko": "가능하면 유턴 해.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S06",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -299,7 +309,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,18 +323,20 @@
         "functions": [
           "F40"
         ],
-        "situation": "S06",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -334,9 +346,9 @@
       "ko": "마이클, 괜찮아? 수영해.",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
-        "situation": "S06",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -345,7 +357,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -357,9 +369,9 @@
       "ko": "내가 잡았어. 내가 잡았어.",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -368,7 +380,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -382,21 +394,19 @@
         "functions": [
           "F35"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -405,22 +415,23 @@
       "ko": "괜찮아. 내가 잡았어. 내가 잡았어.",
       "tags": {
         "functions": [
-          "F31"
+          "F38"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "0ca429e6cd672bef"
 }

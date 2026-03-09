@@ -12,19 +12,21 @@
       "ko": "잠시 동안 그건 사라졌었어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -35,18 +37,18 @@
       "ko": "하지만 최근에 나는 정말 불행해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +60,18 @@
       "ko": "왜, 치디? 너는 좋은 곳에 있어.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +83,18 @@
       "ko": "알아, 하지만 나는 이 문제가 있어.",
       "tags": {
         "functions": [
-          "F01"
+          "F03"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,18 +106,18 @@
       "ko": "그리고 A를 선택하면...",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,18 +129,18 @@
       "ko": "오, 하지만 B를 선택하면... 응, 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,18 +152,18 @@
       "ko": "치디, 때때로 역경이 성장으로 이어질 수 있어. 도덕적 딜레마가 무엇이든,",
       "tags": {
         "functions": [
-          "F04"
+          "F12"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,20 +175,25 @@
       "ko": "아마 너는 그 반대편에서 더 나아질 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -196,21 +203,23 @@
       "ko": "응. 아니.",
       "tags": {
         "functions": [
-          "F09"
+          "F53"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -221,16 +230,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,18 +251,18 @@
       "ko": "그건 내 취향이야, 하지만 이건 마치 내가... 뭐라고?",
       "tags": {
         "functions": [
-          "F17"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,19 +274,21 @@
       "ko": "마치 내가 뭔가 처벌받고 있는 것 같아. 그리고 분명히, 그건 어리석다는 걸 알아. 이곳은 좋은 곳이야.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V09",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -288,20 +299,23 @@
       "ko": "너희 둘은 절대 누구에게도 상처를 주지 않을 거야,",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S28",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -311,18 +325,18 @@
       "ko": "하지만 나는 내가 뭔가 잘못한 게 아닌지 정말 걱정돼.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,18 +348,18 @@
       "ko": "그리고 이건 우주가 나에게 복수하는 거야.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -357,18 +371,18 @@
       "ko": "오, 안 돼.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V04",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -382,19 +396,21 @@
       "ko": "잠깐, 지금 뭐가 일어나고 있는 거지? 오, 안 돼. 안 돼, 안 돼, 안 돼, 안 돼.",
       "tags": {
         "functions": [
-          "F06"
+          "F49"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V04",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -407,22 +423,25 @@
         "functions": [
           "F17"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V04",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "0da8c323525af4dd"
 }

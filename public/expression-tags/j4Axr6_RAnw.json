@@ -12,23 +12,21 @@
       "ko": "뭐 보고 있어? 나 나쁜 사람 아니야. 나 나쁜 선수 아니야. 조용히 해, 앤디.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,7 +35,7 @@
       "ko": "여자 괴롭히는 애를 밀어내는 것 같았어. 응.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -46,9 +44,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,13 +58,13 @@
       "ko": "어쨌든 전설적이야. 거기서 농구하는 건 전설적이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -83,7 +81,7 @@
       "ko": "그래서 뉴욕 거리 농구를 하러 시내로 갔어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -94,7 +92,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,7 +104,7 @@
       "ko": "자, 여러분, 무슨 일이 있었는지 보여줄게.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -117,7 +115,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,10 +127,10 @@
       "ko": "안녕하세요, 저도 할 수 있을까요?",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -140,7 +138,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,7 +150,7 @@
       "ko": "좋아. 아!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -161,9 +159,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,7 +173,7 @@
       "ko": "아!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -186,7 +184,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -200,7 +198,7 @@
       "ko": "아!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -211,7 +209,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -219,5 +217,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "ba14f7bad60f7a90"
 }

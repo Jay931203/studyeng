@@ -12,18 +12,18 @@
       "ko": "이게 게임이라고 생각해?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,18 @@
       "ko": "여기서 훈련하기엔 너 너무 어려.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,23 +58,21 @@
       "ko": "시간 낭비하지 마. 나가.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -83,10 +81,10 @@
       "ko": "안 좋은 소식이야, 친구.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -106,18 +104,18 @@
       "ko": "그건 일어나지 않을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -132,7 +130,7 @@
           "F28"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -152,18 +150,18 @@
       "ko": "세상이 끝난 건 아니야. 그냥 꺼져.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,10 +196,35 @@
       "ko": "너는 불법 침입자야.",
       "tags": {
         "functions": [
-          "F12"
+          "F04"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "leeoJLBtLIw-9",
+      "en": "And I will have to call the police. Don't you look at me.",
+      "ko": "경찰을 불러야겠어. 나를 쳐다보지 마.",
+      "tags": {
+        "functions": [
+          "F40"
+        ],
+        "situation": "S37",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -216,29 +239,6 @@
       }
     },
     {
-      "id": "leeoJLBtLIw-9",
-      "en": "And I will have to call the police. Don't you look at me.",
-      "ko": "경찰을 불러야겠어. 나를 쳐다보지 마.",
-      "tags": {
-        "functions": [
-          "F40"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "leeoJLBtLIw-10",
       "en": "Do you think you're ever getting in this house?",
       "ko": "이 집에 들어갈 수 있다고 생각해?",
@@ -247,7 +247,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -267,23 +267,21 @@
       "ko": "이 집에 절대 들어갈 수 없어.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -292,23 +290,21 @@
       "ko": "절대. 내 현관에서 나가. 나가!",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -317,10 +313,10 @@
       "ko": "결국 우리는 모두 타일러가 원하는 대로 변했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -340,16 +336,16 @@
       "ko": "안으로 들어가서 삽을 가져올 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
         "power": [],
@@ -363,11 +359,11 @@
       "ko": "검은 셔츠 두 개 있어? 두 개의 검은 바지?",
       "tags": {
         "functions": [
-          "F06"
+          "F35"
         ],
         "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -380,5 +376,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "0bc01c31637510ae"
 }

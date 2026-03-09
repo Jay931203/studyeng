@@ -12,18 +12,18 @@
       "ko": "하늘에 그의 성기를 흔들고, 나머지 세상은 그에 맞춰 재편성되어야 한다고?",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,10 +37,12 @@
       "ko": "그의 마음에 맞게? 그렇지 않을 것 같은데, 맞지?",
       "tags": {
         "functions": [
+          "F06",
+          "F05",
           "F11"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -50,7 +52,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -83,18 +87,18 @@
       "ko": "오, 마녀 사냥이야. 검사들은 시간이나 돈을 쓴 걸 후회할 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,25 +133,21 @@
       "ko": "별로 신경 쓰지 않아. 아니, 그는 아침, 점심, 저녁으로 여론조사가 눈앞에서 춤추고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
-        "power": [
-          "P10"
-        ],
+        "vibe": "V18",
+        "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -156,18 +156,18 @@
       "ko": "그래서 누군가 위스콘신에서 똥을 싸면, 미시시피를 따라 흘러서 아이오와에서 그의 수치를 망칠까 걱정하고 있어.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -179,10 +179,10 @@
       "ko": "편하게 있어. 우리가 그를 지켜줄 거야. 그래, 그건 좋네. 그러니까, 이 일이 터졌을 때, 모든 사람은 로건 로이가 무너질 거라고 생각했어. 하지만 우리 중 일부는",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -190,7 +190,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -202,20 +202,24 @@
       "ko": "로이가 무너질 리가 없다고 생각해. 대통령이 그를 보호할 거라고. 시스템은 망가졌어. 사람들은 전혀 몰라. 그들은 이런 편집증적인 환상을 가지고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F12",
+          "F14"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -225,11 +229,11 @@
       "ko": "이 일이 터졌을 때, 로건 로이가 무너질 거라고 생각했어. 하지만",
       "tags": {
         "functions": [
-          "F11"
+          "F06"
         ],
         "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -248,20 +252,25 @@
       "ko": "우리 중 일부는 로이가 무너질 리가 없다고 해. 대통령이 그를 보호할 거야.",
       "tags": {
         "functions": [
+          "F18",
+          "F43",
           "F11"
         ],
         "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -271,18 +280,18 @@
       "ko": "시스템은 망가졌어. 사람들은 전혀 몰라. 그들은 이런 편집증적인",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -294,10 +303,10 @@
       "ko": "환상을 가지고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -308,8 +317,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "4947394f2d121ebd"
 }

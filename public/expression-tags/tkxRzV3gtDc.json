@@ -12,16 +12,17 @@
       "ko": "오 마이 갓, 저게 뭐야? 너는 몰라야 하지 않아?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X04"
         ],
         "vibe": "V10",
         "power": [],
@@ -58,10 +59,10 @@
       "ko": "아, 너 스튜어디스 아니야?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,10 +82,10 @@
       "ko": "기장을 불러올게.",
       "tags": {
         "functions": [
-          "F34"
+          "F35"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,10 +105,10 @@
       "ko": "누가 기장을 보고 싶어 했어?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -130,7 +131,7 @@
           "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,16 +151,16 @@
       "ko": "그곳이 어디인지 알아?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -173,10 +174,10 @@
       "ko": "그게 작은 비장 모양의 섬 아니야?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -205,7 +206,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -219,10 +220,10 @@
       "ko": "배에 폭탄이 있는 사람 있어?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -245,13 +246,13 @@
           "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -288,7 +289,7 @@
       "ko": "아니.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -300,9 +301,13 @@
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -334,16 +339,16 @@
       "ko": "내가 뭔가 일어날 것처럼 보여? 나한테 뭘 원해?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -357,10 +362,10 @@
       "ko": "옷 벗어줄래?",
       "tags": {
         "functions": [
-          "F38"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -383,7 +388,7 @@
           "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -393,7 +398,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -420,5 +427,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "221d59948fa354e8"
 }

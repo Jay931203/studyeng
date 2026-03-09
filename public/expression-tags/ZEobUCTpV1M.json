@@ -12,10 +12,10 @@
       "ko": "너희는 더 이상 랍스터 앞치마 없니? 미안해, 자기야. 오, 세상에. 또 한 접시?",
       "tags": {
         "functions": [
-          "F01"
+          "F28"
         ],
-        "situation": "S05",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,9 +23,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -35,23 +37,21 @@
       "ko": "너 미쳤어? 뭐? 먹으라고 적혀 있잖아? 그러니까 먹어. 응, 알지만 그래도. 너 정말 열심히 먹고 있네. 음.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S05",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -60,23 +60,24 @@
       "ko": "우와! 이 질문 해볼게. 너 인생에서 소변 보느라 얼마나 많은 시간을 낭비했는지 생각해본 적 있어? 수백 시간. 맞아. 그 시간에 뭔가 배울 수 있었잖아, 알지? 음.",
       "tags": {
         "functions": [
-          "F06"
+          "F39"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": []
       }
     },
     {
@@ -85,20 +86,23 @@
       "ko": "너의 인생에 큰 변화가 있을 거야. 응. 그 시간에 뭔가 배울 수 있었잖아, 알지? 음. 너의 인생에 큰 변화가 있을 거야. 응.",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -108,20 +112,24 @@
       "ko": "너의 인생에 큰 변화가 있을 거야. 응. 그 시간에 뭔가 배울 수 있었잖아, 알지? 음. 너에게 소변으로 움직이는 차를 만드는 억만장자가 나타날 거야. 응.",
       "tags": {
         "functions": [
-          "F04"
+          "F17"
         ],
-        "situation": "S50",
+        "situation": "S06",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06",
+          "G17"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -133,20 +141,22 @@
       "ko": "알겠어? 더 이상 시간 낭비는 없어. 너의 그 멍청한 두뇌가 드디어 착륙했어. 그는 전국을 여행 중이야. 뭔가를 발견했어. 응. 그는 물과 게토레이, 커피 같은 걸 마시고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -158,18 +168,18 @@
       "ko": "응. 그 여행 내내. 차를 세우고, 그걸 꺼내서 작은 구멍에 넣고, 가스를 채워. 그러면 너는 즐겁게 떠날 수 있어. 그걸 P.S.라고 불러.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S09",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -183,22 +193,23 @@
       "ko": "P.S. 환상적이야. 환상적이야. 또 좋은 아이디어가 있어? 음. 내가 일어나서 또 한 접시 가져오는 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F15"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "1e7afbbf751157ce"
 }

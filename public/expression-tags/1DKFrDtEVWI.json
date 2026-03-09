@@ -12,20 +12,24 @@
       "ko": "이게 도대체 뭐냐로 돌아가자.",
       "tags": {
         "functions": [
-          "F04"
+          "F17",
+          "F10"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06",
+          "G20"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -37,18 +41,18 @@
       "ko": "내 중학교 8학년 감시원의 현재 위치? 말해줄게, 마이크, 너는-",
       "tags": {
         "functions": [
-          "F06"
+          "F39"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S19",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,18 +64,18 @@
       "ko": "와, 너 그거 잘하고 있어.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V10",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,20 +87,24 @@
       "ko": "이제 우리 둘 다 편안해지자.",
       "tags": {
         "functions": [
-          "F34"
+          "F36"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V08",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -106,18 +114,18 @@
       "ko": "내가 핑크맨을 찾고 있다고 말할 때,",
       "tags": {
         "functions": [
-          "F06"
+          "F02"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,18 +137,18 @@
       "ko": "우리 둘 다 그 이유를 알고 있지, 그렇지?",
       "tags": {
         "functions": [
-          "F07"
+          "F06"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,18 +160,18 @@
       "ko": "네가 그렇지 않다고 가장하는 건 내 시간만 낭비할 뿐이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V12",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,18 +183,18 @@
       "ko": "그리고 나를 짜증나게 할 뿐이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,18 +206,18 @@
       "ko": "봐, 마이크, 이 변호사 일에는 규칙이 있어. 맞지?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
         "situation": "S36",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,19 +229,21 @@
       "ko": "응, 변호사-클라이언트 특권, 그게 중요해.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S36",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V08",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -244,10 +254,10 @@
       "ko": "그리고 그건 내가 너에게 제공하는 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -255,8 +265,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V08",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -267,18 +279,18 @@
       "ko": "내가 핑크맨을 포기하면,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,19 +302,21 @@
       "ko": "그럼 너는 물어보게 될 거야,",
       "tags": {
         "functions": [
-          "F06"
+          "F03"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V08",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -313,10 +327,10 @@
       "ko": "올드 솔은 그걸 쉽게 포기해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -324,7 +338,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -336,19 +350,21 @@
       "ko": "그럼 나를 포기하지 않게 할 이유가 뭐지? 알겠어? 그러면 신뢰는 어디에 있어?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V12",
-        "power": [],
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -359,19 +375,21 @@
       "ko": "내가 너를 버릴 사막의 구멍을 믿어.",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
-        "power": [],
+        "vibe": "V08",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -382,22 +400,25 @@
       "ko": "응, 그건 논쟁이네. 그래서?",
       "tags": {
         "functions": [
-          "F11"
+          "F06"
         ],
         "situation": "S39",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a8eee31f34402505"
 }

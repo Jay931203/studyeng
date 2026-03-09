@@ -14,16 +14,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S48",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,18 @@
       "ko": "음, 아이들, 부모님께 GE 전면 세탁기를 사달라고 해봐.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
+        "situation": "S04",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,20 +58,24 @@
       "ko": "지구가 없으면 그린조가 어디서 춤을 추겠어?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S48",
+        "situation": "S09",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -83,17 +87,19 @@
         "functions": [
           "F27"
         ],
-        "situation": "S48",
+        "situation": "S24",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -106,16 +112,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S48",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,20 +133,24 @@
       "ko": "미안해, 여러분, 저 사람은 메레디스 비에라야.",
       "tags": {
         "functions": [
-          "F09"
+          "F28"
         ],
-        "situation": "S48",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -150,21 +160,23 @@
       "ko": "투데이 쇼에서 우리에게 정기 코너를 주고 싶대.",
       "tags": {
         "functions": [
-          "F62"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -173,20 +185,23 @@
       "ko": "레몬, 너가 그걸 정리해줘.",
       "tags": {
         "functions": [
-          "F35"
+          "F34"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02",
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -198,18 +213,20 @@
         "functions": [
           "F09"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -219,20 +236,22 @@
       "ko": "알겠어, 하지만 지구를 좋아해서 그래.",
       "tags": {
         "functions": [
-          "F10"
+          "F04"
         ],
-        "situation": "S48",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -242,18 +261,18 @@
       "ko": "자레드가 너에게 몇 가지 자료를 보낼 거야.",
       "tags": {
         "functions": [
-          "F62"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,20 +284,24 @@
       "ko": "아, 나는 참여해서 피드백을 주고 싶어.",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -288,19 +311,21 @@
       "ko": "그린조의 목소리가 담기도록 해줘.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -311,22 +336,26 @@
       "ko": "그 목소리는 재치 있고 지혜롭지만, 동시에 매우 섹시해. 고마워.",
       "tags": {
         "functions": [
-          "F12"
+          "F27"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V16",
+        "power": [
+          "P01",
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d850e2e7f3f14517"
 }

@@ -12,10 +12,10 @@
       "ko": "카메라가 움직이고, 플라스틱 식물 뒤에 있는 칵테일 잔.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,20 +37,23 @@
       "ko": "나는 두꺼운 다이아몬드 반지를 낀 여자를 찾고, 그러고 나서 기억이 나지 않아.",
       "tags": {
         "functions": [
-          "F03"
+          "F17"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G06"
+        ],
         "flags": [
           "is_lyrics",
           "contains_profanity"
@@ -66,7 +69,7 @@
           "F09"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -74,7 +77,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -88,10 +91,10 @@
       "ko": "아니면 꿈이 뭔가를 말하려고 하는 건데, 과연 그 생각을 그만둘 수 있을까?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -99,7 +102,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -113,10 +116,10 @@
       "ko": "모르겠어, 의심스러워. 지하에서 설계된 것처럼.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -124,9 +127,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V09",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -138,10 +145,10 @@
       "ko": "너를 만난다면 무엇을 찾을 수 있을지 궁금해, 내 눈이 너를 감싸게 할 때까지.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -149,7 +156,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -163,10 +170,10 @@
       "ko": "미세스 프린세스의 딸을 만날 때까지, 누굴까?",
       "tags": {
         "functions": [
-          "F06"
+          "F21"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -174,7 +181,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -188,20 +195,22 @@
       "ko": "그녀가 무엇으로 일하는지 자주 궁금해, 그 질문은 전문가에게 맡길게.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -213,18 +222,19 @@
       "ko": "아마도 그들 중에는 혼자인 사람도 있을 거야, 솔리테어처럼.",
       "tags": {
         "functions": [
-          "F09"
+          "F02",
+          "F14"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -238,10 +248,10 @@
       "ko": "과거의 친밀한 친구와 만났던 때가 기억나.",
       "tags": {
         "functions": [
-          "F03"
+          "F21"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -249,7 +259,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -263,19 +273,22 @@
       "ko": "그녀가 말했어, 하지만 너는 아마 내가 사랑스럽다고 말할 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F14"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X05",
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V07",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -288,18 +301,18 @@
       "ko": "하지만 너는 아마 나에 대해 아무것도 생각하지 않을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -307,5 +320,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "ca14e72d03aad44e"
 }

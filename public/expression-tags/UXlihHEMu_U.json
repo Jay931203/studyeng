@@ -12,18 +12,18 @@
       "ko": "고쳐줄게.",
       "tags": {
         "functions": [
-          "F35"
+          "F51"
         ],
-        "situation": "S08",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,20 +35,21 @@
       "ko": "믿어줘, 고칠 수 있는 사람이 있다면 이 친구야. 정말 대단해. 고마워.",
       "tags": {
         "functions": [
-          "F09",
           "F27"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
-        "power": [],
+        "vibe": "V05",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -59,18 +60,18 @@
       "ko": "예의가 없었네. 음료수 좀 마실래? 좋겠네.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S32",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -82,18 +83,18 @@
       "ko": "진저 에일이 정말 땡겨.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S08",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V02",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -107,16 +108,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -128,18 +129,18 @@
       "ko": "진저 에일을 충분히 사둘 수가 없어. 진저 에일을 사랑해.",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -151,20 +152,24 @@
       "ko": "그럼 내가 진저 에일 좀 가져올게. 충분히 있겠지?",
       "tags": {
         "functions": [
-          "F34"
+          "F36"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -174,20 +179,21 @@
       "ko": "아, 아니, 진저 에일이 엄청 많아. 고마워, 제프. 고마워.",
       "tags": {
         "functions": [
-          "F07",
           "F27"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E04"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V02",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -198,19 +204,22 @@
       "ko": "아기 성별 알아? 아들 낳을 거야.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X05",
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -221,20 +230,22 @@
       "ko": "아들, 어때?",
       "tags": {
         "functions": [
-          "F09"
+          "F36"
         ],
-        "situation": "S08",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -244,20 +255,22 @@
       "ko": "피부색에 대해 생각해본 적 있어? 뭐라고?",
       "tags": {
         "functions": [
-          "F06"
+          "F28"
         ],
-        "situation": "S08",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -267,20 +280,24 @@
       "ko": "톤 말이야, 좀 더 어두운 게 좋겠어?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S08",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -290,18 +307,18 @@
       "ko": "아마도 너는 좀 더 어두운 게 좋을 거라고 생각해.",
       "tags": {
         "functions": [
-          "F14"
+          "F09"
         ],
-        "situation": "S08",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,19 +330,21 @@
       "ko": "밝은 것보다 어두운 게 좋지, 그렇지?",
       "tags": {
         "functions": [
-          "F14"
+          "F06"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -336,20 +355,23 @@
       "ko": "음, 그런 건 생각해본 적이 없어,",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -359,23 +381,23 @@
       "ko": "하지만 어두운 게 좋을 것 같아. 응, 그렇게 생각해. 맞지? 그렇지, 그게 맞아.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": []
       }
     },
     {
@@ -384,18 +406,18 @@
       "ko": "너는 그가 더 어두운 게 좋다고? 나는 그렇게 생각해.",
       "tags": {
         "functions": [
-          "F09"
+          "F12"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -407,20 +429,25 @@
       "ko": "누군가가 선택하라고 한다면, 음, 그녀에게 물어보자. 왜 선택하고 있어?",
       "tags": {
         "functions": [
-          "F06"
+          "F36",
+          "F57"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -430,20 +457,22 @@
       "ko": "아마도 너는 좀 더 밝은 게 좋을 거야, 아닐까?",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -453,20 +482,22 @@
       "ko": "아니, 내 아기가 더 밝은 건 원하지 않아. 그런 건 전혀 생각해본 적 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -476,22 +507,23 @@
       "ko": "네가 그런 걸 생각해봤다니 놀라워.",
       "tags": {
         "functions": [
-          "F18"
+          "F02"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "b4c73840aaef6f26"
 }

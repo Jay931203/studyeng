@@ -12,20 +12,22 @@
       "ko": "넌 내게 설명할 수 없는 무언가를 해. 더 가까이 안아주면 아무 고통도 느끼지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S08",
-        "cefr": "A2",
-        "register": "R5",
+        "situation": "S46",
+        "cefr": "B2",
+        "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -37,11 +39,11 @@
       "ko": "내 심장이 뛸 때마다, 우리 사이에 뭔가 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F22"
         ],
-        "situation": "S08",
+        "situation": "S46",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
           "E11"
         ],
@@ -49,8 +51,12 @@
           "X08"
         ],
         "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P09"
+        ],
+        "grammar_intent": [
+          "G22"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -62,18 +68,18 @@
       "ko": "사랑은 눈이 멀다는 걸 알아, 헌신이 필요해. 우리가 느끼는 이 사랑은 말이 필요 없어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R5",
+        "situation": "S46",
+        "cefr": "B2",
+        "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,18 +93,18 @@
       "ko": "우리가 함께 써 내려가, 으-흥. 서로 사랑하며, 으-흥.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S08",
-        "cefr": "A2",
-        "register": "R5",
+        "situation": "S46",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V07",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,18 +118,18 @@
       "ko": "물줄기 속의 섬, 그게 우리야. 우리 사이에 아무도 없어, 어떻게 틀릴 수 있겠어?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R5",
+        "situation": "S46",
+        "cefr": "B2",
+        "register": "R4",
         "emotions": [
-          "E11"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -137,18 +143,18 @@
       "ko": "나와 함께 다른 세상으로 항해하자. 그리고 우리는 서로에게 기대, 으-흥.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
-        "register": "R5",
+        "situation": "S46",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E11"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V07",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,18 +168,18 @@
       "ko": "한 연인에서 다른 연인으로.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A1",
-        "register": "R5",
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -181,5 +187,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "b59ec325311964fe"
 }

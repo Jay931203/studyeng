@@ -12,18 +12,18 @@
       "ko": "나는 컨설팅 탐정이야, 이 직업을 발명한 유일한 사람이야. 그게 무슨 뜻이야?",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S37",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,9 +35,9 @@
       "ko": "경찰이 힘들어할 때, 항상 그렇지, 나에게 상담해.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S37",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -46,10 +46,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G19"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -60,8 +64,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,10 +73,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -81,18 +87,18 @@
       "ko": "어제 처음 만났을 때, 아프가니스탄이나 이라크라고 했더니 놀란 표정을 지었지. 어떻게 알았어? 몰랐어, 봤어.",
       "tags": {
         "functions": [
-          "F03"
+          "F56"
         ],
-        "situation": "S14",
+        "situation": "S37",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,9 +110,9 @@
       "ko": "네 머리 스타일과 자세가 군인 같아, 하지만 방에 들어올 때의 대화는...",
       "tags": {
         "functions": [
-          "F02"
+          "F04"
         ],
-        "situation": "S14",
+        "situation": "S42",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -115,7 +121,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,10 +133,10 @@
       "ko": "내 시대와는 좀 다르지.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,10 +144,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -150,18 +158,18 @@
       "ko": "...훈련받은 것 같지만, 군의사인 게 분명해.",
       "tags": {
         "functions": [
-          "F02"
+          "F05"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,10 +181,10 @@
       "ko": "얼굴은 그을렸지만, 손목 위는 태닝이 없어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,7 +192,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,10 +204,10 @@
       "ko": "해외에 있었지만, 일광욕은 하지 않았어.",
       "tags": {
         "functions": [
-          "F02"
+          "F12"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -207,7 +215,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,18 +227,18 @@
       "ko": "걸을 때 절뚝거림이 심한데, 서 있을 때 의자 요청은 안 해, 마치 잊어버린 것처럼.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S37",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,19 +250,21 @@
       "ko": "그러니까 최소한 부분적으로 심리적 원인이 있어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -265,10 +275,10 @@
       "ko": "그건 부상의 원래 상황이 외상적이었다는 걸 말해.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -276,10 +286,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -288,9 +300,9 @@
       "ko": "전투 중 부상당했군, 전투 중 부상, 태닝, 아프가니스탄이나 이라크. 너는 내가 치료사를 가졌다고 했지.",
       "tags": {
         "functions": [
-          "F02"
+          "F05"
         ],
-        "situation": "S14",
+        "situation": "S29",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -299,7 +311,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,19 +323,21 @@
       "ko": "심리적 절뚝거림이 있으니, 당연히 치료사가 있어. 그리고 네 형이 있네.",
       "tags": {
         "functions": [
-          "F04"
+          "F12"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S29",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -334,10 +348,10 @@
       "ko": "네 전화, 비싸고, 이메일은 안 되고, MP3 플레이어야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S04",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -345,8 +359,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -357,9 +373,9 @@
       "ko": "너는 원룸을 찾고 있어, 이런 데 돈 낭비하지 않을 거야.",
       "tags": {
         "functions": [
-          "F06"
+          "F02"
         ],
-        "situation": "S14",
+        "situation": "S04",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -368,11 +384,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "4fefe65e9eabbb93"
 }

@@ -12,10 +12,10 @@
       "ko": "네가 생각했던 건 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,9 +35,9 @@
       "ko": "이봐, 봐.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -46,10 +46,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -60,7 +62,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -69,10 +71,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,21 +85,22 @@
       "ko": "미스터 인크레더블. 괜찮아, 내가 잡았어. 물론, 네가 잡았지.",
       "tags": {
         "functions": [
-          "F09",
-          "F07"
+          "F18"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -105,11 +110,10 @@
       "ko": "내가 너를 위해 그를 처리했어. 물론, 네가 처리했지. 그의 관심은 나에게 있었어.",
       "tags": {
         "functions": [
-          "F09",
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -117,7 +121,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,10 +133,9 @@
       "ko": "나는 그 사실을 이용해서 내 일을 했어. 네 일이란 말이지.",
       "tags": {
         "functions": [
-          "F09",
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -141,7 +144,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -153,11 +156,10 @@
       "ko": "간단한 감사 인사면 충분해. 고마워, 하지만 도움이 필요 없어.",
       "tags": {
         "functions": [
-          "F27",
-          "F34"
+          "F27"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -165,8 +167,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -177,10 +181,9 @@
       "ko": "여성 우선은 어쩌고? 평등한 대우는 어쩌고?",
       "tags": {
         "functions": [
-          "F09",
-          "F12"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -189,7 +192,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -201,11 +204,10 @@
       "ko": "이봐, 잠깐. 여자가 먼저 나를 잡았어. 음, 우리가 너를 나눌 수 있어. 나는 혼자 일해.",
       "tags": {
         "functions": [
-          "F09",
-          "F34"
+          "F36"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -213,9 +215,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -225,21 +229,22 @@
       "ko": "음, 너는 좀 더 유연해져야 할 것 같아...",
       "tags": {
         "functions": [
-          "F09",
-          "F37"
+          "F09"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -249,10 +254,10 @@
       "ko": "나는 유연하지 않아. 나는 유연해. 나는 유연해. 나는 유연해. 나는 유연해. 나는 유연해. 나는 유연해.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -260,7 +265,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -272,10 +277,9 @@
       "ko": "나는 유연해. 나는 유연해. 더 유연해져.",
       "tags": {
         "functions": [
-          "F12",
-          "F37"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -284,7 +288,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -296,9 +300,9 @@
       "ko": "나중에 뭐 할 거야? 나는 약속이 있어.",
       "tags": {
         "functions": [
-          "F06"
+          "F32"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -307,11 +311,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "11e2a2f9a0862674"
 }

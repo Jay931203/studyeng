@@ -14,9 +14,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S22",
-        "cefr": "A2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -37,8 +37,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,8 +60,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -83,8 +83,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -106,18 +106,22 @@
         "functions": [
           "F28"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -127,16 +131,16 @@
       "ko": "유럽으로 돌아가면 페핀 영 감옥에서 죽게 될 거야.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
         "power": [],
@@ -150,13 +154,13 @@
       "ko": "여기서 도망치면 50년 동안 애틀랜타로 돌려보낼 거야.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -173,9 +177,9 @@
       "ko": "그거 알아.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -196,10 +200,10 @@
       "ko": "네 석방을 위해 4년을 보냈어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -219,10 +223,10 @@
       "ko": "네가 도망치지 않을 거라고 FBI 상사와 미국 법무부 장관을 설득해야 했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,10 +246,10 @@
       "ko": "왜 그랬어? 너는 그냥 애잖아.",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,13 +269,13 @@
       "ko": "나는 네 애가 아니야.",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -288,9 +292,9 @@
       "ko": "시카고 간다고 했잖아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -311,13 +315,13 @@
       "ko": "내 딸은 이번 주말에 나를 못 봐, 스키 타러 갔어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -334,13 +338,13 @@
       "ko": "네가 4살이라고 했잖아, 거짓말이야.",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -357,10 +361,10 @@
       "ko": "내가 떠날 때 그녀는 4살이었어.",
       "tags": {
         "functions": [
-          "F01"
+          "F03"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -382,7 +386,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -405,7 +409,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -428,7 +432,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -443,5 +447,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "de27db6f8b03095c"
 }

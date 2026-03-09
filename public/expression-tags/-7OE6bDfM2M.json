@@ -12,16 +12,17 @@
       "ko": "그렇죠? 아마도.",
       "tags": {
         "functions": [
-          "F06"
+          "F51",
+          "F07"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -37,11 +38,11 @@
       "ko": "홉킨스 선생님, 당신은 그와 동의할지도 모릅니다.",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
-        "register": "R3",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -60,11 +61,11 @@
       "ko": "네, 우리는 프리차드를 연구해야 한다고 생각하며",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S50",
-        "cefr": "B1",
-        "register": "R3",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -83,11 +84,11 @@
       "ko": "운율과 미터를 배워야 한다고 생각하고",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
-        "register": "R3",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -106,11 +107,11 @@
       "ko": "다른 목표를 달성하는 일에 조용히 임해야 한다고요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
-        "register": "R3",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -129,10 +130,10 @@
       "ko": "당신에게 작은 비밀이 있습니다. 모여요.",
       "tags": {
         "functions": [
-          "F62"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -152,10 +153,10 @@
       "ko": "모여요!",
       "tags": {
         "functions": [
-          "F62"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -166,7 +167,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -175,11 +178,12 @@
       "ko": "우리는 시를 읽고 쓰는 것이 귀여워서가 아닙니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F40",
+          "F04"
         ],
         "situation": "S50",
-        "cefr": "B1",
-        "register": "R3",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -198,11 +202,11 @@
       "ko": "우리는 인류의 일원으로서 시를 읽고 쓰는 것입니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
         "situation": "S50",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -224,8 +228,8 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
-        "register": "R3",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -246,9 +250,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -269,9 +273,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -292,11 +296,11 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
@@ -315,9 +319,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -336,11 +340,11 @@
       "ko": "이는 휘트먼의 인용입니다.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -359,11 +363,11 @@
       "ko": "오 나여, 오 삶이여, 이 질문들의 질문.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -376,5 +380,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "6c66a379b91e6b28"
 }

@@ -12,9 +12,10 @@
       "ko": "그럼 설명이 되네. 뭐가 설명이 되는데? 너를 설명해. 그러니까, 너는 공작부인이잖아?",
       "tags": {
         "functions": [
-          "F04"
+          "F06",
+          "F50"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -25,7 +26,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -37,8 +40,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S08",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,9 +61,9 @@
       "ko": "잠깐만요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -70,9 +73,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,20 +88,27 @@
       "ko": "빨대 하나 주실 수 있나요? 감사합니다.",
       "tags": {
         "functions": [
-          "F34"
+          "F27",
+          "F34",
+          "F46"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G02",
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -104,20 +118,22 @@
       "ko": "그래서 네가 크리스티에게 내 번호를 물어본 게 좀 놀랐어.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -129,8 +145,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -141,7 +157,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -152,7 +170,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -173,9 +191,10 @@
       "ko": "응, 그렇긴 한데, 뭐? 결혼한 사람들이 친구를 사귀면 안 돼?",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F52"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -196,18 +215,18 @@
       "ko": "우리가 친구가 될 건가? 응. 너 내 친구가 되고 싶어?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,9 +238,9 @@
       "ko": "우리는 친구가 되지 않을 거야.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -242,18 +261,18 @@
       "ko": "너 나를 완전히 매료시켰어.",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,10 +284,10 @@
       "ko": "그리고 내 발도.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,34 +307,9 @@
       "ko": "아야, 아야, 아야, 아야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "NxoW7MEWFEY-13",
-      "en": "And at night, I work on my designs.",
-      "ko": "밤에는 내 디자인 작업을 해.",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -329,6 +323,30 @@
         "grammar_intent": [],
         "flags": []
       }
+    },
+    {
+      "id": "NxoW7MEWFEY-13",
+      "en": "And at night, I work on my designs.",
+      "ko": "밤에는 내 디자인 작업을 해.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
     }
-  ]
+  ],
+  "transcriptHash": "91f496363882e336"
 }

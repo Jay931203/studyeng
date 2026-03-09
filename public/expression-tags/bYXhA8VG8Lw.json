@@ -14,7 +14,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S22",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -35,16 +35,18 @@
       "ko": "저녁 6시 30분에 볼티모어로. 세상을 구할 거래. 그게 사실인지 잘 모르겠지만, 잠깐만. 내가 이 사건을 맡은 지 8초밖에 안 됐어. 아, 제발. 이건 코드가 아니야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S22",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07",
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -58,9 +60,9 @@
       "ko": "이건 여객기의 좌석 배치야. 봐, I는 없는데, 1로 오해할 수 있어서 그래. K 이후는 없어. 비행기의 폭이 한계야. 숫자는 항상 무작위로 나타나고 순서가 없어. 하지만 글자는 여기저기서 조금씩 순서가 있어. 가족과 커플이 함께 앉아 있어.",
       "tags": {
         "functions": [
-          "F02"
+          "F04"
         ],
-        "situation": "S22",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -81,10 +83,10 @@
       "ko": "K나 55번 이후의 줄이 필요할 만큼 넓은 건 점보기뿐이야. 그래서 항상 위층이 있어. 13번 줄이 있어서 더 미신적인 항공사를 배제해. 그리고 007 비행기 번호 스타일이 몇 개 더 배제해. 그리고 정보의 원천을 고려할 때 영국에서 출발한다고 가정하면, 최근 너에게 가해진 압력을 고려할 때 위기가 임박하지 않았다고 가정하면, K가 선택될 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S22",
-        "cefr": "C1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -106,14 +108,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S22",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07",
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -129,7 +133,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S22",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -152,8 +156,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S22",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -167,5 +171,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "28c844660028fc2a"
 }

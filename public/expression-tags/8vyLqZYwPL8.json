@@ -12,7 +12,7 @@
       "ko": "이거 만화책 가져왔어.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -58,7 +58,7 @@
       "ko": "그레이스. 뭐?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -72,7 +72,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,13 +83,13 @@
       "ko": "잘 모르겠어. 그녀는 시카고에서 엄마와 살고 있어. 자주 보지 못해.",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -107,7 +109,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,10 +129,10 @@
       "ko": "공항 가는 중이야. 종이 작업자가 미네소타에서 일하고 있어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,13 +152,13 @@
       "ko": "아, 제길. 우리를 미치게 하고 있어.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -173,10 +175,10 @@
       "ko": "수표는 좀 있어?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,10 +198,10 @@
       "ko": "응, 응. 레드 레이크 저축은행에서 그가 그린 위조 수표가 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -219,7 +221,7 @@
       "ko": "봐, 그는 스텐실 기계와 언더우드를 사용하고 있어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -242,10 +244,10 @@
       "ko": "응, 은행에 말하려고.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,7 +267,7 @@
       "ko": "잘 모르겠어. 잘 모르겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -288,7 +290,7 @@
       "ko": "봐, 그는 스텐실 기계와 언더우드를 사용하고 있어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -311,7 +313,7 @@
       "ko": "응, 은행에 말하려고. 다시 말해봐?",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -334,7 +336,32 @@
       "ko": "확실히 그녀에게 말하려는 거야, 칼. 은행은 날짜를 위해 항상 손 도장을 사용하잖아, 봐?",
       "tags": {
         "functions": [
-          "F04"
+          "F10"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G16"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "8vyLqZYwPL8-15",
+      "en": "They get used over and over again, so you always get worn out.",
+      "ko": "반복해서 사용되니까 항상 닳아버려.",
+      "tags": {
+        "functions": [
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -350,29 +377,7 @@
         "grammar_intent": [],
         "flags": []
       }
-    },
-    {
-      "id": "8vyLqZYwPL8-15",
-      "en": "They get used over and over again, so you always get worn out.",
-      "ko": "반복해서 사용되니까 항상 닳아버려.",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
     }
-  ]
+  ],
+  "transcriptHash": "ce3c3a0344055962"
 }

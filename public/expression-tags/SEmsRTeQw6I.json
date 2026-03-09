@@ -12,10 +12,10 @@
       "ko": "모르겠어. 정말 이상해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -24,8 +24,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -35,23 +39,25 @@
       "ko": "인사팀이 내일 나랑 이야기하고 싶대. 두 분만 엉덩이를 핥는 걸 멈출 수 있어? 여기 문제가 있어.",
       "tags": {
         "functions": [
-          "F06",
-          "F34",
-          "F09"
+          "F34"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G02"
+        ],
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -60,9 +66,9 @@
       "ko": "지금 술을 마셔야 한다고 생각해?",
       "tags": {
         "functions": [
-          "F06"
+          "F37"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -73,7 +79,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -83,20 +91,22 @@
       "ko": "인사팀 여자와 어떻게 이야기하라고?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -106,9 +116,9 @@
       "ko": "모르겠어. 전문가의 도움을 받아봐.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S29",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -118,8 +128,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -129,9 +143,9 @@
       "ko": "받았어. 술집 아저씨가 이거 커피에 넣으면 맛있다고 하더라.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -152,19 +166,18 @@
       "ko": "너도 불려갔어? 무슨 일이야? 셸던이 우리 모두를 팔았어.",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F23"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -178,16 +191,16 @@
         "functions": [
           "F09"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -199,11 +212,11 @@
       "ko": "갈색 설탕이 나를 정직시키면 좋겠어. 성 스윙에서.",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -222,10 +235,10 @@
       "ko": "이건 실수였던 것 같아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -245,18 +258,18 @@
       "ko": "진정해. 모든 게 잘 될 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -268,10 +281,10 @@
       "ko": "버나뎃을 만나기 전에는 매일 여기 왔어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -285,5 +298,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "10533569b65f574a"
 }

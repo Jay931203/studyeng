@@ -12,16 +12,16 @@
       "ko": "깊은 댓글로 네 생각을 말해 줘.",
       "tags": {
         "functions": [
-          "F06"
+          "F35"
         ],
-        "situation": "S35",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -35,10 +35,10 @@
       "ko": "잘 모르겠어. 잘 모르겠어. 잘 모르겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S35",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,11 +48,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "6382f0cb5cc6841a"
 }

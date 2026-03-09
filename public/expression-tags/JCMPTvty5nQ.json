@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S49",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,10 +35,10 @@
       "ko": "이렇게 멋진 새를",
       "tags": {
         "functions": [
-          "F02"
+          "F45"
         ],
-        "situation": "S49",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +58,18 @@
       "ko": "맛있는 부위로 나눌 수 있어야 해. 맞아.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S49",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,101 +81,9 @@
       "ko": "정말 쉬워.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S49",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "JCMPTvty5nQ-4",
-      "en": "Honestly, for me, I could do it with my eyes closed.",
-      "ko": "솔직히 말해서, 나는 눈을 감고도 할 수 있어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S49",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "JCMPTvty5nQ-5",
-      "en": "Really, Gordon? Yeah.",
-      "ko": "정말이야, 고든? 응.",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S49",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "JCMPTvty5nQ-6",
-      "en": "All right, well, here's the deal. Go on.",
-      "ko": "좋아, 그럼 이렇게 해보자. 계속해.",
-      "tags": {
-        "functions": [
-          "F36"
-        ],
-        "situation": "S49",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "JCMPTvty5nQ-7",
-      "en": "Oh!",
-      "ko": "오!",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S49",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -193,14 +101,37 @@
       }
     },
     {
-      "id": "JCMPTvty5nQ-8",
-      "en": "Put that on for size, my friend.",
-      "ko": "내 친구, 그걸 한번 해봐.",
+      "id": "JCMPTvty5nQ-4",
+      "en": "Honestly, for me, I could do it with my eyes closed.",
+      "ko": "솔직히 말해서, 나는 눈을 감고도 할 수 있어.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S49",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "JCMPTvty5nQ-5",
+      "en": "Really, Gordon? Yeah.",
+      "ko": "정말이야, 고든? 응.",
+      "tags": {
+        "functions": [
+          "F07"
+        ],
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -209,7 +140,80 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "JCMPTvty5nQ-6",
+      "en": "All right, well, here's the deal. Go on.",
+      "ko": "좋아, 그럼 이렇게 해보자. 계속해.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "JCMPTvty5nQ-7",
+      "en": "Oh!",
+      "ko": "오!",
+      "tags": {
+        "functions": [
+          "F18"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G07"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "JCMPTvty5nQ-8",
+      "en": "Put that on for size, my friend.",
+      "ko": "내 친구, 그걸 한번 해봐.",
+      "tags": {
+        "functions": [
+          "F35"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,13 +225,13 @@
       "ko": "음. 오 주님, 맙소사.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S49",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E13"
         ],
         "expression_types": [
           "X08"
@@ -244,9 +248,9 @@
       "ko": "믿을 수 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S49",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -255,10 +259,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -267,13 +273,39 @@
       "ko": "저 사람이 눈가리개를 하고 이 닭을 자를 거라고? 와우.",
       "tags": {
         "functions": [
-          "F04"
+          "F08"
         ],
-        "situation": "S49",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01",
+          "X05"
+        ],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "JCMPTvty5nQ-12",
+      "en": "Two drums, two thighs, two wings, two breasts, one carcass. You watching up there?",
+      "ko": "두 개의 다리, 두 개의 허벅지, 두 개의 날개, 두 개의 가슴, 하나의 뼈대. 위에서 보고 있어?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -285,37 +317,14 @@
       }
     },
     {
-      "id": "JCMPTvty5nQ-12",
-      "en": "Two drums, two thighs, two wings, two breasts, one carcass. You watching up there?",
-      "ko": "두 개의 다리, 두 개의 허벅지, 두 개의 날개, 두 개의 가슴, 하나의 뼈대. 위에서 보고 있어?",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S49",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "JCMPTvty5nQ-13",
       "en": "Yes, Chef.",
       "ko": "네, 셰프.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S49",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -324,10 +333,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -336,18 +347,18 @@
       "ko": "칼을 들어서, 피부를 찔러서, 실제로 썰어.",
       "tags": {
         "functions": [
-          "F35"
+          "F21"
         ],
-        "situation": "S49",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -359,16 +370,16 @@
       "ko": "뒤로 당기고, 관절을 빼내.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S49",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V10",
         "power": [],
@@ -384,14 +395,14 @@
         "functions": [
           "F35"
         ],
-        "situation": "S49",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V10",
         "power": [],
@@ -405,16 +416,16 @@
       "ko": "다시 찔러서, 당겨.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S49",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V10",
         "power": [],
@@ -422,5 +433,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "10d6d25c7cc0e5f9"
 }

@@ -12,23 +12,23 @@
       "ko": "나는 그에게 가지 않을 거야. 알겠어, 나는 그런 바보가 아니야. 나는 픽업 같은 거 안 해. 잘 들어.",
       "tags": {
         "functions": [
-          "F17"
+          "F35"
         ],
-        "situation": "S50",
+        "situation": "S38",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V03",
-        "power": [],
+        "vibe": "V08",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -39,18 +39,20 @@
         "functions": [
           "F17"
         ],
-        "situation": "S50",
+        "situation": "S38",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -62,23 +64,23 @@
       "ko": "그는 완전히 헛소리하고 엉망이야. 맹세코 내 친구, 그 바보의 이빨을 봐.",
       "tags": {
         "functions": [
-          "F17"
+          "F41"
         ],
-        "situation": "S50",
+        "situation": "S38",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "grammar_intent": [
+          "G08"
+        ],
+        "flags": []
       }
     },
     {
@@ -87,10 +89,10 @@
       "ko": "나는 그 테이블 위에 돈을 올려놨어.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S05",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -98,12 +100,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -112,23 +112,21 @@
       "ko": "너의 약장사에 대해 말하자면, 나도 너 같은 애들 다섯 명 더 있어.",
       "tags": {
         "functions": [
-          "F17"
+          "F12"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V03",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -139,18 +137,20 @@
         "functions": [
           "F17"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -164,20 +164,23 @@
         "functions": [
           "F17"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "A1",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
-          "contains_profanity"
+          "contains_profanity",
+          "is_fragment"
         ]
       }
     },
@@ -187,24 +190,23 @@
       "ko": "차를 주차해, 이 바보야.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S06",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "ae55053671f790f0"
 }

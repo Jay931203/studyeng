@@ -12,35 +12,10 @@
       "ko": "그녀를 만나면 내가 여기 건물에서 뭐하고 있다고 말하지?",
       "tags": {
         "functions": [
-          "F06"
-        ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "ZI_hOP_K6MY-1",
-      "en": "see me I work in the building what do you do I'm an architect oh I'm an",
-      "ko": "나를 보러 왔잖아. 나는 이 건물에서 일해. 너는 뭐해? 나는 건축가야.",
-      "tags": {
-        "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -55,18 +30,41 @@
       }
     },
     {
+      "id": "ZI_hOP_K6MY-1",
+      "en": "see me I work in the building what do you do I'm an architect oh I'm an",
+      "ko": "나를 보러 왔잖아. 나는 이 건물에서 일해. 너는 뭐해? 나는 건축가야.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "ZI_hOP_K6MY-2",
       "en": "architect any buildings in New York have you seen the new addition to the",
       "ko": "아, 나는 건축가야. 뉴욕에 지은 건물이 있어? 구겐하임의 새로운 추가 부분 봤어?",
       "tags": {
         "functions": [
-          "F01"
+          "F23"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -83,11 +81,12 @@
       "ko": "너가 그걸 했어? 응, 응. 그렇게 오래 걸리지도 않았어. 스티븐 건축가는 어때?",
       "tags": {
         "functions": [
-          "F07"
+          "F36",
+          "F55"
         ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -96,7 +95,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -106,10 +107,10 @@
       "ko": "그는 건축에 관심이 있어. 너처럼 말이야. 내가 건축가가 되게 해줘.",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -119,7 +120,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10",
+          "G14"
+        ],
         "flags": []
       }
     },
@@ -129,10 +133,10 @@
       "ko": "나는 할 수 있어. 왜 나를 건축가로 만들어주지 않을 수 있어? 나는 항상 건축가인 척하고 싶었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -152,10 +156,10 @@
       "ko": "너는 뭐 설계해? 철도? 나는 엔지니어가 그걸 한다고 생각했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -165,7 +169,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G14"
+        ],
         "flags": []
       }
     },
@@ -175,10 +181,11 @@
       "ko": "너는 정말 많이 아는구나. 나도 건축가야. 너는 건축가야? 나는 아니야. 나는 할 수 없어.",
       "tags": {
         "functions": [
-          "F12"
+          "F21",
+          "F34"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -188,7 +195,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -198,10 +207,10 @@
       "ko": "저는 잘 알고 있어요. 저도 건축가예요. 당신은 건축가가 아니에요. 저는 못해요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -211,9 +220,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "3b4843c0b287f4d5"
 }

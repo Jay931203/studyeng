@@ -15,7 +15,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,10 +35,10 @@
       "ko": "이제 프레고로 나가볼게. 의심의 여지가 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +48,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16"
+        ],
         "flags": []
       }
     },
@@ -58,10 +60,10 @@
       "ko": "정말 쉽게 알 수 있어. 너의 유두는 진짜 갈색이야?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,16 +83,16 @@
       "ko": "응. 아마 네 남자친구는 고기와 정자를 가지고 있을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -104,10 +106,10 @@
       "ko": "너를 두 번 임신시켰네. 조용히 해, 늙은이.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,7 +129,7 @@
       "ko": "나 방금 써니 D를 내 몸무게만큼 마셨고, 빨리 가야 해.",
       "tags": {
         "functions": [
-          "F01"
+          "F35"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -136,7 +138,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
         "power": [],
@@ -150,7 +152,7 @@
       "ko": "화장실이 어디인지 알잖아.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -159,7 +161,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -173,13 +175,13 @@
       "ko": "다 끝나면 그 소변 검사기 비용은 네가 내야 해.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E12"
         ],
         "expression_types": [
           "X08"
@@ -196,10 +198,12 @@
       "ko": "네 소변으로 표시했다고 네 것이라고 생각하지 마. 알겠지?",
       "tags": {
         "functions": [
-          "F09"
+          "F35",
+          "F40",
+          "F04"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,7 +213,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18",
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -219,7 +226,7 @@
       "ko": "알겠어. 알겠어.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -231,9 +238,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -242,10 +253,10 @@
       "ko": "이건 예측이야, 다산의 미르틀. 마이너스야, 플러스야?",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -259,5 +270,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "48df5605764832ae"
 }

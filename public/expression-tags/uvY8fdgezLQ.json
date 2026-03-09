@@ -12,7 +12,7 @@
       "ko": "조금 더 빠르게 운전해",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -21,9 +21,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,7 +37,7 @@
       "ko": "오늘 밤은 신경 쓰지 않아",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -46,10 +46,12 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -60,331 +62,6 @@
       "id": "uvY8fdgezLQ-2",
       "en": "But I'm feelin' so high",
       "ko": "하지만 기분이 너무 좋아",
-      "tags": {
-        "functions": [
-          "F15"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "uvY8fdgezLQ-3",
-      "en": "Show my tan lines",
-      "ko": "내 태닝 자국 보여줘",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "uvY8fdgezLQ-4",
-      "en": "Low rise, rooftop down",
-      "ko": "낮은 허리, 루프를 내리고",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "uvY8fdgezLQ-5",
-      "en": "It's golden now",
-      "ko": "지금은 황금빛이야",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "uvY8fdgezLQ-6",
-      "en": "All the time",
-      "ko": "항상 그렇지",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "uvY8fdgezLQ-7",
-      "en": "It's a midnight sun kiss Get under the red sky",
-      "ko": "한밤중의 태양의 키스, 붉은 하늘 아래로 가",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "uvY8fdgezLQ-8",
-      "en": "Layin' on your chest like this",
-      "ko": "이렇게 네 가슴에 누워",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "uvY8fdgezLQ-9",
-      "en": "Hold me like the pebbles in your hand",
-      "ko": "네 손 안의 조약돌처럼 나를 안아줘",
-      "tags": {
-        "functions": [
-          "F31"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "uvY8fdgezLQ-10",
-      "en": "Initials in the sand, yeah",
-      "ko": "모래에 새긴 이니셜, 그래",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "uvY8fdgezLQ-11",
-      "en": "Summer isn't over yet",
-      "ko": "여름은 아직 끝나지 않았어",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "uvY8fdgezLQ-12",
-      "en": "Skinny paper with your heart out It's my favorite part now",
-      "ko": "너의 마음이 담긴 얇은 종이, 지금이 제일 좋아",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "uvY8fdgezLQ-13",
-      "en": "We ain't gotta tell no one",
-      "ko": "아무에게도 말할 필요 없어",
-      "tags": {
-        "functions": [
-          "F43"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "uvY8fdgezLQ-14",
-      "en": "A never ending midnight sun",
-      "ko": "끝나지 않는 한밤중의 태양",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "uvY8fdgezLQ-15",
-      "en": "A never ending midnight sun",
-      "ko": "끝나지 않는 한밤중의 태양",
       "tags": {
         "functions": [
           "F01"
@@ -398,13 +75,347 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
         ]
       }
+    },
+    {
+      "id": "uvY8fdgezLQ-3",
+      "en": "Show my tan lines",
+      "ko": "내 태닝 자국 보여줘",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "uvY8fdgezLQ-4",
+      "en": "Low rise, rooftop down",
+      "ko": "낮은 허리, 루프를 내리고",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "uvY8fdgezLQ-5",
+      "en": "It's golden now",
+      "ko": "지금은 황금빛이야",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics",
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "uvY8fdgezLQ-6",
+      "en": "All the time",
+      "ko": "항상 그렇지",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics",
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "uvY8fdgezLQ-7",
+      "en": "It's a midnight sun kiss Get under the red sky",
+      "ko": "한밤중의 태양의 키스, 붉은 하늘 아래로 가",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E11"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V07",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "uvY8fdgezLQ-8",
+      "en": "Layin' on your chest like this",
+      "ko": "이렇게 네 가슴에 누워",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "uvY8fdgezLQ-9",
+      "en": "Hold me like the pebbles in your hand",
+      "ko": "네 손 안의 조약돌처럼 나를 안아줘",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "uvY8fdgezLQ-10",
+      "en": "Initials in the sand, yeah",
+      "ko": "모래에 새긴 이니셜, 그래",
+      "tags": {
+        "functions": [
+          "F07"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "uvY8fdgezLQ-11",
+      "en": "Summer isn't over yet",
+      "ko": "여름은 아직 끝나지 않았어",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "uvY8fdgezLQ-12",
+      "en": "Skinny paper with your heart out It's my favorite part now",
+      "ko": "너의 마음이 담긴 얇은 종이, 지금이 제일 좋아",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E11"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V02",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "uvY8fdgezLQ-13",
+      "en": "We ain't gotta tell no one",
+      "ko": "아무에게도 말할 필요 없어",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V09",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "uvY8fdgezLQ-14",
+      "en": "A never ending midnight sun",
+      "ko": "끝나지 않는 한밤중의 태양",
+      "tags": {
+        "functions": [
+          "F43"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "uvY8fdgezLQ-15",
+      "en": "A never ending midnight sun",
+      "ko": "끝나지 않는 한밤중의 태양",
+      "tags": {
+        "functions": [
+          "F43"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
     }
-  ]
+  ],
+  "transcriptHash": "84ce35c47f0d66cf"
 }

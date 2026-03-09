@@ -12,23 +12,21 @@
       "ko": "일하는 척 해. 우리한테 주식 좀 있어?",
       "tags": {
         "functions": [
-          "F35"
+          "F06"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,20 +35,22 @@
       "ko": "알겠어, 잠깐만. 그가 오고 있어. 뭔가 만들어내.",
       "tags": {
         "functions": [
-          "F52"
+          "F17"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -64,18 +64,20 @@
         "functions": [
           "F09"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -85,18 +87,18 @@
       "ko": "한 달에 430,000달러, 조디? 응?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -108,34 +110,9 @@
       "ko": "한 달에 430,000달러라니.",
       "tags": {
         "functions": [
-          "F04"
-        ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V03",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
-      "id": "g6o3rEInTII-5",
-      "en": "Good morning. They're business expenses. We're live.",
-      "ko": "좋은 아침. 이건 사업 비용이야. 생방송 중이야.",
-      "tags": {
-        "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -144,8 +121,33 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "g6o3rEInTII-5",
+      "en": "Good morning. They're business expenses. We're live.",
+      "ko": "좋은 아침. 이건 사업 비용이야. 생방송 중이야.",
+      "tags": {
+        "functions": [
+          "F25"
+        ],
+        "situation": "S03",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V08",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -156,18 +158,18 @@
       "ko": "사업 비용? 조디, 이게 뭐야?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -179,23 +181,21 @@
       "ko": "이걸 봐. 저녁식사에 26,000달러야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V03",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -204,20 +204,22 @@
       "ko": "아니, 아니, 이건 설명할 수 있어.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S38",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -229,7 +231,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -238,7 +240,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -252,16 +254,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -275,7 +277,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S32",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -284,7 +286,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -296,34 +298,9 @@
       "ko": "그리고 너는 모든 사이드를 주문했어. 사이드에 대해 말해줘. 내가 사이드를 주문했어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V03",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
-      "id": "g6o3rEInTII-13",
-      "en": "Sides? Sides? $26,000 worth of sides?",
-      "ko": "사이드? 사이드? 26,000달러어치 사이드?",
-      "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S14",
+        "situation": "S38",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -332,7 +309,30 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "g6o3rEInTII-13",
+      "en": "Sides? Sides? $26,000 worth of sides?",
+      "ko": "사이드? 사이드? 26,000달러어치 사이드?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E05"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -344,18 +344,18 @@
       "ko": "이 사이드가 뭐야? 암을 치료해?",
       "tags": {
         "functions": [
-          "F18"
+          "F06"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -367,10 +367,10 @@
       "ko": "그 사이드가 암을 치료했어. 그게 문제야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -378,10 +378,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V08",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -392,8 +396,8 @@
         "functions": [
           "F04"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S04",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -401,9 +405,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V08",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -413,20 +421,22 @@
       "ko": "입 닥쳐. 그만해.",
       "tags": {
         "functions": [
-          "F58"
+          "F17"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -438,20 +448,22 @@
       "ko": "EJ 엔터테인먼트. EJ 엔터테인먼트가 뭐야?",
       "tags": {
         "functions": [
-          "F06"
+          "F17"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -463,19 +475,21 @@
       "ko": "음, 그건...",
       "tags": {
         "functions": [
-          "F50"
+          "F52"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S38",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V08",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_fragment"
@@ -490,17 +504,19 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -511,24 +527,25 @@
       "ko": "그건 개같은 매춘 조직이야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S24",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
-        "power": [],
+        "vibe": "V08",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "26447d07d906fb07"
 }

@@ -12,10 +12,10 @@
       "ko": "하지만 네가 쏘면 그 추가 돈이 어디로 갔는지 알게 될 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,10 +35,10 @@
       "ko": "자, 이건 아무 문제 없어. 진짜, 진짜, 진짜 좋은 거야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,10 +60,10 @@
       "ko": "하지만 이건 미친놈이야.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -71,12 +71,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": []
       }
     },
     {
@@ -85,10 +85,10 @@
       "ko": "기억해, 나는 방금 암스테르담에서 돌아왔어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -108,13 +108,13 @@
       "ko": "내가 흑인인가? 우리가 잉글우드에 있나? 아니야.",
       "tags": {
         "functions": [
-          "F06"
+          "F23"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -122,9 +122,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -156,10 +154,10 @@
       "ko": "이제, 좋은 것과 나쁜 것을 구별할 줄 아는 백인들은 이 집에 온다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -181,10 +179,10 @@
       "ko": "내 물건은, 나는 그 암스테르담 물건과 언제든지 비교할 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -206,10 +204,10 @@
       "ko": "그건 대담한 발언이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -229,19 +227,21 @@
       "ko": "이건 암스테르담이 아니야, 빈스. 이건 판매자의 시장이야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -252,60 +252,10 @@
       "ko": "코카인은 완전히 죽었어... 죽었어.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
-      "id": "sRUsY8VYDJw-11",
-      "en": "Heroin is coming back in a big fucking way.",
-      "ko": "헤로인이 큰 방식으로 돌아오고 있어.",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
-      "id": "sRUsY8VYDJw-12",
-      "en": "All right. Give me three grand, madman. Okay.",
-      "ko": "좋아. 나에게 3천 달러 줘, 미친놈. 알겠어.",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -320,21 +270,71 @@
       }
     },
     {
-      "id": "sRUsY8VYDJw-13",
-      "en": "If it's as good as you say it is, I'll come back and buy another thousand.",
-      "ko": "네가 말한 만큼 좋다면, 다시 와서 천 달러 더 살게.",
+      "id": "sRUsY8VYDJw-11",
+      "en": "Heroin is coming back in a big fucking way.",
+      "ko": "헤로인이 큰 방식으로 돌아오고 있어.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P11"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "sRUsY8VYDJw-12",
+      "en": "All right. Give me three grand, madman. Okay.",
+      "ko": "좋아. 나에게 3천 달러 줘, 미친놈. 알겠어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "sRUsY8VYDJw-13",
+      "en": "If it's as good as you say it is, I'll come back and buy another thousand.",
+      "ko": "네가 말한 만큼 좋다면, 다시 와서 천 달러 더 살게.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -348,10 +348,10 @@
       "ko": "음, 네가 위해서 남아있기를 바랄 뿐이야.",
       "tags": {
         "functions": [
-          "F24"
+          "F52"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -371,10 +371,10 @@
       "ko": "하지만 나는 내 개인 stash에서 일부를 주는 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -394,10 +394,10 @@
       "ko": "내가 얼마나 좋은 사람인지 보여주는 거지.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -411,5 +411,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "8e7bd45879ee6be8"
 }

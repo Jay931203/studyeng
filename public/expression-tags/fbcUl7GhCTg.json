@@ -12,23 +12,25 @@
       "ko": "별들의 도시, 내가 볼 수 없는 것이 너무 많아.",
       "tags": {
         "functions": [
-          "F01"
+          "F43"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "vibe": "V07",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
       }
     },
     {
@@ -37,23 +39,23 @@
       "ko": "누가 알겠어, 이것이 새로운 멋진 시작일까?",
       "tags": {
         "functions": [
-          "F14"
+          "F15"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": []
       }
     },
     {
@@ -62,23 +64,21 @@
       "ko": "아니면 내가 이룰 수 없는 또 하나의 꿈일까?",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S48",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -89,21 +89,19 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -114,20 +112,20 @@
         "functions": [
           "F02"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_narration"
         ]
       }
     },
@@ -137,24 +135,25 @@
       "ko": "사랑이야, 우리가 찾고 있는 건 누군가의 사랑이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V07",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "25bcf70aec494649"
 }

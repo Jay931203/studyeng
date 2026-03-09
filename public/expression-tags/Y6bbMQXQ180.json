@@ -14,8 +14,8 @@
         "functions": [
           "F03"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,10 +35,10 @@
       "ko": "제 옆자리에 고등학생, 십대 소녀가 있었고, 그녀는 정말 가난한 집안 출신이었어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,10 +58,10 @@
       "ko": "가족이었어요. 그녀는 자신의 인생을 뭔가로 만들고 싶어 했어요. 그리고 저에게 간단한 질문을 했어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -83,13 +81,13 @@
       "ko": "그녀는 성공의 비결이 무엇인지 물었어요. 저는 좋은 대답을 해줄 수 없어서 정말 안타까웠어요.",
       "tags": {
         "functions": [
-          "F06"
+          "F04"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -106,13 +104,14 @@
       "ko": "비행기에서 내려 TED에 도착했어요. 성공한 사람들로 가득한 방에 있으니,",
       "tags": {
         "functions": [
+          "F35",
           "F09"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -129,10 +128,11 @@
       "ko": "그들에게 무엇이 성공을 이끌었는지 물어보고 아이들에게 전해주면 좋겠다고 생각했어요.",
       "tags": {
         "functions": [
-          "F06"
+          "F36",
+          "F40"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -143,7 +143,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -152,10 +154,10 @@
       "ko": "그래서 여기 있습니다. 7년, 500번의 인터뷰 후에,",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -175,10 +177,10 @@
       "ko": "정말로 성공으로 이끄는 것과 TED스터들이 움직이는 이유를 말씀드릴게요. 첫 번째는",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -192,5 +194,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "c221566b3df3bbcb"
 }

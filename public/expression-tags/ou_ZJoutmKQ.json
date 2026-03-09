@@ -12,9 +12,34 @@
       "ko": "좋아, 마지막으로 한 번 더 해보자.",
       "tags": {
         "functions": [
+          "F36"
+        ],
+        "situation": "S31",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G09"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "ou_ZJoutmKQ-1",
+      "en": "My name is Peter Parker.",
+      "ko": "내 이름은 피터 파커.",
+      "tags": {
+        "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -30,38 +55,15 @@
       }
     },
     {
-      "id": "ou_ZJoutmKQ-1",
-      "en": "My name is Peter Parker.",
-      "ko": "내 이름은 피터 파커.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S34",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "ou_ZJoutmKQ-2",
       "en": "I was bitten by a radioactive spider, and for 10 years I've been the one and only Spider-Man.",
       "ko": "방사능 거미에 물렸고, 10년 동안 하나뿐인 스파이더맨이었어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +71,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +83,18 @@
       "ko": "나머지는 다 알 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,8 +108,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,8 +131,8 @@
         "functions": [
           "F03"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -152,7 +154,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -175,7 +177,30 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "ou_ZJoutmKQ-8",
+      "en": "We don't really talk about this.",
+      "ko": "이건 별로 얘기 안 해.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -191,29 +216,6 @@
       }
     },
     {
-      "id": "ou_ZJoutmKQ-8",
-      "en": "We don't really talk about this.",
-      "ko": "이건 별로 얘기 안 해.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "ou_ZJoutmKQ-9",
       "en": "Look, I'm a comic book, I'm a cereal, did a Christmas album, I have an excellent theme",
       "ko": "봐, 난 만화책이고, 시리얼이고, 크리스마스 앨범도 냈고, 훌륭한 테마곡도 있어.",
@@ -221,8 +223,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -244,53 +246,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "ou_ZJoutmKQ-11",
-      "en": "I mean, I've looked worse, but after everything, I still love being Spider-Man.",
-      "ko": "더 안 좋았던 적도 있지만, 모든 걸 겪고도 스파이더맨인 게 좋아.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "ou_ZJoutmKQ-12",
-      "en": "I mean, who wouldn't?",
-      "ko": "누가 안 좋아하겠어?",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -306,15 +262,61 @@
       }
     },
     {
+      "id": "ou_ZJoutmKQ-11",
+      "en": "I mean, I've looked worse, but after everything, I still love being Spider-Man.",
+      "ko": "더 안 좋았던 적도 있지만, 모든 걸 겪고도 스파이더맨인 게 좋아.",
+      "tags": {
+        "functions": [
+          "F09"
+        ],
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "ou_ZJoutmKQ-12",
+      "en": "I mean, who wouldn't?",
+      "ko": "누가 안 좋아하겠어?",
+      "tags": {
+        "functions": [
+          "F52"
+        ],
+        "situation": "S31",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "ou_ZJoutmKQ-13",
       "en": "So no matter how many hits I take...",
       "ko": "그래서 아무리 많이 맞아도...",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -322,11 +324,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "56206ddfebe94b66"
 }

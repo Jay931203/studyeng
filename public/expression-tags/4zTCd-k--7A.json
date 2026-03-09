@@ -12,7 +12,7 @@
       "ko": "좋아. 응, 잘 모르겠어,",
       "tags": {
         "functions": [
-          "F08"
+          "F40"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -21,14 +21,15 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G17",
+          "G24"
+        ],
+        "flags": []
       }
     },
     {
@@ -37,20 +38,22 @@
       "ko": "너는 아마 내가 그랬던 만큼은 할 수 있을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -60,16 +63,17 @@
       "ko": "그렇게 되는 법이야, 알지?",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -83,16 +87,16 @@
       "ko": "나는 평균 이하였으니까, 우와.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -106,16 +110,16 @@
       "ko": "그러니까 너도 아마 그 정도에 머무를 거야,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -129,16 +133,16 @@
       "ko": "그래서 나는 정말...",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -154,10 +158,10 @@
       "ko": "많은 것에서 잘할 거야, 단지 이건 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -180,7 +184,7 @@
           "F40"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -190,7 +194,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -200,16 +207,16 @@
       "ko": "알겠지?",
       "tags": {
         "functions": [
-          "F07"
+          "F51"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -223,7 +230,7 @@
       "ko": "좋아. 알겠어.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -232,7 +239,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -246,7 +253,81 @@
       "ko": "가서 해봐.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "4zTCd-k--7A-11",
+      "en": "All right.",
+      "ko": "좋아.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "4zTCd-k--7A-12",
+      "en": "All right.",
+      "ko": "좋아.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "4zTCd-k--7A-13",
+      "en": "Don't ever let somebody tell you you can't.",
+      "ko": "절대 누군가가 너에게 할 수 없다고 말하게 하지 마.",
+      "tags": {
+        "functions": [
+          "F35",
+          "F40"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -262,75 +343,7 @@
         "grammar_intent": [],
         "flags": []
       }
-    },
-    {
-      "id": "4zTCd-k--7A-11",
-      "en": "All right.",
-      "ko": "좋아.",
-      "tags": {
-        "functions": [
-          "F07"
-        ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "4zTCd-k--7A-12",
-      "en": "All right.",
-      "ko": "좋아.",
-      "tags": {
-        "functions": [
-          "F07"
-        ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "4zTCd-k--7A-13",
-      "en": "Don't ever let somebody tell you you can't.",
-      "ko": "절대 누군가가 너에게 할 수 없다고 말하게 하지 마.",
-      "tags": {
-        "functions": [
-          "F40"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
     }
-  ]
+  ],
+  "transcriptHash": "fad891d31a263a4b"
 }

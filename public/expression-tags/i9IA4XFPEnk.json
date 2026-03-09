@@ -14,21 +14,19 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,21 +35,23 @@
       "ko": "어버이날 쇼에 나올 스태프 엄마들 말이야.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -60,18 +60,18 @@
       "ko": "NBC가 'Bitch Hunter' 파일럿을 재방송하기로 한 잘못된 결정 이후에 우리에게 강요하는 거야?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -85,18 +85,18 @@
       "ko": "미모사를 내려놔, 이 자식아!",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -104,5 +104,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "0b2af060c4db86fb"
 }

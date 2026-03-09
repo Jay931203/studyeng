@@ -12,20 +12,22 @@
       "ko": "제가 물리학을 조금 배울 수 있을지 궁금해요.",
       "tags": {
         "functions": [
-          "F06"
+          "F14"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -35,16 +37,16 @@
       "ko": "조금 물리학? 그런 건 없어요.",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -58,9 +60,9 @@
       "ko": "물리학은 우주 전체를 포함해요,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S19",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -81,9 +83,9 @@
       "ko": "양자 입자부터 초신성까지,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S19",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -104,10 +106,10 @@
       "ko": "회전하는 전자부터 회전하는 은하까지. 네, 알겠어요, 멋지네요.",
       "tags": {
         "functions": [
-          "F02"
+          "F07"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,9 +129,9 @@
       "ko": "PBS 특집은 필요 없어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S19",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -150,10 +152,10 @@
       "ko": "저는 레너드와 그의 일에 대해 이야기할 만큼만 알고 싶어요,",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -175,9 +177,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S19",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -196,20 +198,23 @@
       "ko": "그를 놀라게 하고 싶어서요.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S19",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15",
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -221,8 +226,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,20 +247,22 @@
       "ko": "예를 들어, 그가 기쁘게 놀랄 거예요,",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16"
+        ],
         "flags": []
       }
     },
@@ -265,9 +272,9 @@
       "ko": "당신이 아파트를 청소하면.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S19",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -288,16 +295,17 @@
       "ko": "제발, 셸든, 이건 저에게 중요해요.",
       "tags": {
         "functions": [
-          "F09"
+          "F35",
+          "F45"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -311,10 +319,10 @@
       "ko": "페니, 이건 엄청난 작업이에요,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -334,10 +342,10 @@
       "ko": "그리고 제 시간은 한정적이고 소중해요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -360,7 +368,7 @@
           "F01"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -370,7 +378,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G14"
+        ],
         "flags": []
       }
     },
@@ -380,7 +390,7 @@
       "ko": "맞아요, 그건 맞는 말이에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "A2",
@@ -394,7 +404,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -405,14 +417,15 @@
         "functions": [
           "F06"
         ],
-        "situation": "S19",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -428,7 +441,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S19",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -449,10 +462,10 @@
       "ko": "물론이죠, 개구리 수업을 들었어요.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -474,7 +487,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S19",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -489,5 +502,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "c86eefde47ff5903"
 }

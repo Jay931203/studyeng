@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -48,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,18 +62,18 @@
       "ko": "불빛이 보이면 나는 속도를 줄여.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,7 +87,7 @@
       "ko": "마치 나를 끌어당기는 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -98,7 +98,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,19 +112,21 @@
       "ko": "나는 그냥 지나칠 생각이었어. 멈추지 않을 거라고.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -135,206 +137,6 @@
       "id": "UIjvqFjWVwk-5",
       "en": "Then my old truck found a front row spot",
       "ko": "그러다 내 오래된 트럭이 1열 자리를 찾았어.",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "UIjvqFjWVwk-6",
-      "en": "Gonna drop in, but I wasn't gonna stay",
-      "ko": "들어가긴 할 건데, 오래 있을 생각은 아니었어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "UIjvqFjWVwk-7",
-      "en": "Then I heard a bar stool callin' my name",
-      "ko": "그때 바 스툴이 내 이름을 부르는 소리가 들렸어.",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "UIjvqFjWVwk-8",
-      "en": "Wasn't gonna let the bar twist my arm",
-      "ko": "바가 내 팔을 비틀게 하진 않을 거야.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "UIjvqFjWVwk-9",
-      "en": "But I'm helpless and a honky-tonk",
-      "ko": "하지만 나는 무력하고 헌키통크야.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "UIjvqFjWVwk-10",
-      "en": "Said I wasn't gonna drink",
-      "ko": "나는 술을 마시지 않겠다고 했어.",
-      "tags": {
-        "functions": [
-          "F10"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "UIjvqFjWVwk-11",
-      "en": "And then a country song came on",
-      "ko": "그런데 그때 컨트리 송이 나왔어.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "UIjvqFjWVwk-12",
-      "en": "I was almost one boot out of the door",
-      "ko": "나는 거의 한쪽 부츠가 문 밖에 나가 있었어.",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "UIjvqFjWVwk-13",
-      "en": "When the band kicked in",
-      "ko": "밴드가 시작했을 때.",
       "tags": {
         "functions": [
           "F03"
@@ -348,7 +150,214 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "UIjvqFjWVwk-6",
+      "en": "Gonna drop in, but I wasn't gonna stay",
+      "ko": "들어가긴 할 건데, 오래 있을 생각은 아니었어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01",
+          "X05"
+        ],
+        "vibe": "V14",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "UIjvqFjWVwk-7",
+      "en": "Then I heard a bar stool callin' my name",
+      "ko": "그때 바 스툴이 내 이름을 부르는 소리가 들렸어.",
+      "tags": {
+        "functions": [
+          "F03"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V14",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "UIjvqFjWVwk-8",
+      "en": "Wasn't gonna let the bar twist my arm",
+      "ko": "바가 내 팔을 비틀게 하진 않을 거야.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V14",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "UIjvqFjWVwk-9",
+      "en": "But I'm helpless and a honky-tonk",
+      "ko": "하지만 나는 무력하고 헌키통크야.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V14",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "UIjvqFjWVwk-10",
+      "en": "Said I wasn't gonna drink",
+      "ko": "나는 술을 마시지 않겠다고 했어.",
+      "tags": {
+        "functions": [
+          "F05"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V14",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "UIjvqFjWVwk-11",
+      "en": "And then a country song came on",
+      "ko": "그런데 그때 컨트리 송이 나왔어.",
+      "tags": {
+        "functions": [
+          "F03"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V14",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "UIjvqFjWVwk-12",
+      "en": "I was almost one boot out of the door",
+      "ko": "나는 거의 한쪽 부츠가 문 밖에 나가 있었어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V14",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "UIjvqFjWVwk-13",
+      "en": "When the band kicked in",
+      "ko": "밴드가 시작했을 때.",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -362,7 +371,7 @@
       "ko": "ETC 탓이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -373,7 +382,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -398,7 +407,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -416,20 +425,23 @@
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "36e1a70839549cea"
 }

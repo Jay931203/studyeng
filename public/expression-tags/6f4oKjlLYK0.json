@@ -12,24 +12,23 @@
       "ko": "모두가 싫어하는 대체 교사. 글쎄, 꺼져. 이 친구 리차드 젠킨스는",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S19",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity",
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -38,22 +37,25 @@
       "ko": "어디로 가야 할지 알아야 해. 트레이시 모건은 너의 못생긴 삼촌이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06",
+          "G15"
+        ],
         "flags": [
-          "is_fragment"
+          "contains_profanity"
         ]
       }
     },
@@ -63,26 +65,23 @@
       "ko": "헨네시 냄새가 나. 웃기지 않아. 내 *** 빨아. 앤 해서웨이는",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V10",
         "power": [
-          "P05"
+          "P01"
         ],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity",
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -91,23 +90,26 @@
       "ko": "이상한 질을 가졌을 것 같아. 글쎄, 너는 결코 알 수 없겠지, 러스 D. 딜런.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
+        "flags": []
       }
     },
     {
@@ -116,23 +118,21 @@
       "ko": "내가 기대하는 괴물들이 자라난 모습 같아. 톰 행크스는 너무",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -141,13 +141,13 @@
       "ko": "땀투성이야, 샤워 좀 해, 냄새 나는 난쟁이야. 그건 내가",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S03",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -155,9 +155,7 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -166,23 +164,24 @@
       "ko": "개인적으로 받아들여. 한나 와딩햄에게는 미안하지만",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G16",
+          "G18"
+        ],
+        "flags": []
       }
     },
     {
@@ -191,13 +190,13 @@
       "ko": "그녀는 참을 수 없을 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -205,10 +204,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "cb8c0bd73ada7c1f"
 }

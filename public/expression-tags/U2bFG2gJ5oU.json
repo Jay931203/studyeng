@@ -12,10 +12,10 @@
       "ko": "네 시간을 낭비하고 싶지 않아",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,10 +35,10 @@
       "ko": "그래, 모퉁이에서 차 안에서 만나자",
       "tags": {
         "functions": [
-          "F34"
+          "F07"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,19 +58,21 @@
       "ko": "하지만 언젠가는 바뀌어야 한다는 걸 알아",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -81,10 +83,10 @@
       "ko": "네 물의 맛을 좋아하는 거 알잖아",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E11"
@@ -92,7 +94,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,20 +106,23 @@
       "ko": "하지만 이제 작별할 때인 것 같아",
       "tags": {
         "functions": [
-          "F32"
+          "F32",
+          "F09"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -127,10 +132,10 @@
       "ko": "그래, 모퉁이에서 차 안에서 만나자",
       "tags": {
         "functions": [
-          "F34"
+          "F07"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,20 +155,24 @@
       "ko": "하지만 넌 절대 내 마음을 바꾸지 못해",
       "tags": {
         "functions": [
-          "F12"
+          "F43"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S45",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -173,19 +182,21 @@
       "ko": "머물고 싶다는 거 알지만 넌",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -196,20 +207,22 @@
       "ko": "떠나야 해, 이번엔 느낌이 안 좋으니까, 알겠지",
       "tags": {
         "functions": [
-          "F43"
+          "F04"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -219,9 +232,9 @@
       "ko": "밤새 거리를 떠돌고 있어",
       "tags": {
         "functions": [
-          "F03"
+          "F21"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -242,18 +255,18 @@
       "ko": "아직도 네 흔적에 멍이 들어 있어",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,9 +278,9 @@
       "ko": "차 안에서 만나, 4-5시에",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -288,10 +301,10 @@
       "ko": "오늘 밤 네 집에서 안 잘 거야",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -311,9 +324,9 @@
       "ko": "월요일이 항상 머릿속에 있어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -334,10 +347,10 @@
       "ko": "다 괜찮은 척하면서",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -347,8 +360,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G14"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -357,10 +374,10 @@
       "ko": "문 앞에 너를 둘 수 없었어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -380,10 +397,10 @@
       "ko": "네 시간을 낭비하고 싶지 않아",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -397,5 +414,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "03831e8a6770bfc6"
 }

@@ -14,7 +14,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S16",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -35,10 +35,11 @@
       "ko": "3월 31일이 존재한다고 생각하지 않았거든.",
       "tags": {
         "functions": [
-          "F09"
+          "F04",
+          "F56"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S16",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +49,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -60,8 +63,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S16",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -83,8 +86,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S16",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -95,7 +98,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -106,8 +111,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S16",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,11 +134,11 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S16",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E15"
         ],
         "expression_types": [
           "X08"
@@ -150,9 +155,9 @@
       "ko": "알겠어, 알겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S16",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -164,7 +169,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -173,16 +180,16 @@
       "ko": "자, 할 일은 알지. 맞아.",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S16",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -196,33 +203,10 @@
       "ko": "나에게 이 상황은 피로 물든 악몽 같은 지옥이야.",
       "tags": {
         "functions": [
-          "F12"
-        ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "4yAQcKhv_5k-9",
-      "en": "However, to Leslie Knope...",
-      "ko": "하지만 레슬리 노프에게는...",
-      "tags": {
-        "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S16",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -237,6 +221,33 @@
       }
     },
     {
+      "id": "4yAQcKhv_5k-9",
+      "en": "However, to Leslie Knope...",
+      "ko": "하지만 레슬리 노프에게는...",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S16",
+        "cefr": "A2",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P08"
+        ],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
       "id": "4yAQcKhv_5k-10",
       "en": "Oh, how fun! Yay!",
       "ko": "오, 얼마나 재미있어! 야호!",
@@ -244,7 +255,7 @@
         "functions": [
           "F15"
         ],
-        "situation": "S14",
+        "situation": "S16",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -267,7 +278,7 @@
         "functions": [
           "F36"
         ],
-        "situation": "S14",
+        "situation": "S16",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -278,7 +289,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -290,7 +303,7 @@
         "functions": [
           "F36"
         ],
-        "situation": "S14",
+        "situation": "S16",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -301,7 +314,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -311,9 +326,10 @@
       "ko": "왜냐하면 딱 100개가 되면 더 멋질 것 같거든.",
       "tags": {
         "functions": [
+          "F04",
           "F09"
         ],
-        "situation": "S14",
+        "situation": "S16",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -324,7 +340,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -336,7 +354,7 @@
         "functions": [
           "F36"
         ],
-        "situation": "S14",
+        "situation": "S16",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -347,7 +365,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -357,10 +377,10 @@
       "ko": "기본적으로 우리는 완전히 바빠.",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S16",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -370,7 +390,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -380,9 +402,9 @@
       "ko": "모두 나와라.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S16",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -403,16 +425,16 @@
       "ko": "나는 이 건물에서 일하지도 않아. 상관 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S16",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -426,9 +448,9 @@
       "ko": "나는 맥박과 두뇌가 있는 누구든지 도와주길 원해.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S16",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -439,9 +461,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "f442be034ed140b8"
 }

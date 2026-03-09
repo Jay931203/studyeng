@@ -12,10 +12,10 @@
       "ko": "오늘도 천국 같은 아름다운 날이지만, 라디오랜드에서는 안전벨트를 매는 걸 잊지 마세요.",
       "tags": {
         "functions": [
-          "F01"
+          "F30"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,9 +23,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -35,7 +37,7 @@
       "ko": "모든 엑스트라 대기하세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F35"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -44,7 +46,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -58,11 +60,11 @@
       "ko": "변호사가 90초 후에 도착합니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -72,7 +74,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -81,7 +85,7 @@
       "ko": "팝스, 커피가 뜨거운지 확인해줘.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -104,7 +108,7 @@
       "ko": "좋아, 이제 랜카스터 스퀘어로 방향을 틀고 있어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -113,7 +117,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -127,21 +131,24 @@
       "ko": "오 마이 갓! 그는 자신이 라디오랜드에 있다는 걸 알았어!",
       "tags": {
         "functions": [
-          "F18"
+          "F18",
+          "F23"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03",
-          "E05"
+          "E05",
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -151,18 +158,18 @@
       "ko": "뭔가 이상해! 주파수를 바꿔!",
       "tags": {
         "functions": [
-          "F40"
+          "F52"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -174,20 +181,24 @@
       "ko": "아야! 죄송합니다, 여러분. 경찰 주파수를 잡은 것 같아요.",
       "tags": {
         "functions": [
-          "F05"
+          "F28",
+          "F14"
         ],
         "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -197,7 +208,7 @@
       "ko": "가끔 이런 일이 발생할 수 있고, 정말 미칠 것 같아요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -208,10 +219,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V17",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -220,10 +233,10 @@
       "ko": "좋아, 클래식 음악으로 다시 돌아가요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -237,5 +250,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "7fb107e1f56ef61b"
 }

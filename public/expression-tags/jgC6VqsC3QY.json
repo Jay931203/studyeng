@@ -12,7 +12,7 @@
       "ko": "알겠어. 알겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -37,7 +37,7 @@
       "ko": "알겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F44"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -51,7 +51,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -60,7 +62,7 @@
       "ko": "여기서 일이 일어나야 해, 여기서 일이 일어나야 해.",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -83,13 +85,13 @@
       "ko": "나를 없애게 두지 않을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E07"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -106,11 +108,11 @@
       "ko": "어때?",
       "tags": {
         "functions": [
-          "F06"
+          "F36"
         ],
         "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "A1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -119,7 +121,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -129,7 +133,7 @@
       "ko": "예전에는 이게 내 전문이었어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -140,7 +144,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,7 +156,7 @@
       "ko": "알지, 거실에서 잘했었어. 나를 거기로 보냈거든.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -175,10 +179,10 @@
       "ko": "혼자서 했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -198,10 +202,10 @@
       "ko": "그리고 지금은 그냥...",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -223,7 +227,7 @@
       "ko": "모르겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -235,9 +239,15 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -246,10 +256,10 @@
       "ko": "하지만 오늘 밤,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -260,7 +270,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -269,7 +281,7 @@
       "ko": "우리의 작은 프로젝트, 우리의 회사,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -292,7 +304,7 @@
       "ko": "아주 큰 밤을 보냈어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -315,7 +327,7 @@
       "ko": "정말, 정말 큰 밤이었어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -329,8 +341,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "02d21ff12174cfe6"
 }

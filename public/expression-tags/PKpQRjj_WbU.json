@@ -12,18 +12,18 @@
       "ko": "야, 야, 야, 그러지 마! 그건 내 텐트야! 내 개인 고양이라고! 오, 찢을 거야?",
       "tags": {
         "functions": [
-          "F17"
+          "F40"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V12",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,18 +37,20 @@
       "ko": "그래, 맞을 수도 있어, 공주님. 하지만 내일 그를 보면 직접 재보라고.",
       "tags": {
         "functions": [
-          "F09"
+          "F10",
+          "F07"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,10 +64,10 @@
       "ko": "거울아, 거울아, 그녀를 보여줘. 공주를 보여줘.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -73,7 +75,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,7 +89,7 @@
       "ko": "아, 완벽해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A1",
@@ -98,11 +100,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -112,10 +115,10 @@
       "ko": "...완벽한 머리, 립스틱, 라이너, 섀도우, 블러셔로 왕자의 섹시한 터치를 얻기 위해.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -123,7 +126,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -137,20 +140,24 @@
       "ko": "그가 뭘 발견했어? 성별이 헷갈리는 늑대. 너무 긴장했어. 어깨 주물러 주고 싶어. 내가 알아서 할게, 고마워. 난 주무를 게 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F06",
+          "F27",
+          "F40"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -162,7 +169,7 @@
       "ko": "줄 서.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A1",
@@ -171,9 +178,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,7 +194,7 @@
       "ko": "조심해, 공주님. 새로운 내가 온다.",
       "tags": {
         "functions": [
-          "F09"
+          "F35"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -196,9 +203,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -212,18 +219,18 @@
       "ko": "어, 먼저 할 일부터. 그 옷부터 벗어야 해. 오, 안 돼!",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -231,5 +238,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "0b1d51699f48e21b"
 }

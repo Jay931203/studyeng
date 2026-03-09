@@ -12,16 +12,16 @@
       "ko": "당신은 침대에서 일어나 새벽 3시에 나가서 다림질을 해야 했어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -35,9 +35,9 @@
       "ko": "그리고 당신은 벽난로도 없잖아요, 제가 알 리가 없지만.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -58,18 +58,18 @@
       "ko": "왜 그렇게 화를 내고 있죠? 이건 당신에 관한 게 아니에요.",
       "tags": {
         "functions": [
-          "F17"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +81,18 @@
       "ko": "맞아요, 이건 저에 관한 거예요. 당신은 모든 여성에게 모욕이 되고, 저는 여성이에요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,11 +104,11 @@
       "ko": "저도 이 상황이 좋지 않지만, 아무도 불평하는 소리를 듣지 못했어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -127,9 +127,9 @@
       "ko": "물론이죠, 당신은 너무 빨리 나가버리니까요.",
       "tags": {
         "functions": [
-          "F09"
+          "F44"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -139,7 +139,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -150,9 +152,9 @@
       "ko": "그들은 괜찮은 시간을 보내는 것 같아요.",
       "tags": {
         "functions": [
-          "F02"
+          "F09"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -175,7 +177,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -196,9 +198,35 @@
       "ko": "그러니까, 내가 어떻게 아는 거지?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F50"
         ],
-        "situation": "S50",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "6pQgbEEFPq0-9",
+      "en": "because they",
+      "ko": "그들이니까요.",
+      "tags": {
+        "functions": [
+          "F04"
+        ],
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -209,30 +237,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "6pQgbEEFPq0-9",
-      "en": "because they",
-      "ko": "그들이니까요.",
-      "tags": {
-        "functions": [
-          "F09"
+        "grammar_intent": [
+          "G18"
         ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
         "flags": [
           "is_fragment"
         ]
@@ -244,10 +251,10 @@
       "ko": "맞아요, 그들이니까요.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -257,7 +264,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": [
           "is_fragment"
         ]
@@ -271,7 +280,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -292,9 +301,9 @@
       "ko": "당신은 그들이 오르가즘을 가장한다고 말하는 건가요? 그럴 수도 있어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -315,20 +324,22 @@
       "ko": "나가세요. 대부분의 여성들은 한 번쯤은 그렇게 했어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -338,9 +349,10 @@
       "ko": "음, 그들은 저와는 그렇게 하지 않았어요. 어떻게 아는 거죠?",
       "tags": {
         "functions": [
-          "F09"
+          "F06",
+          "F52"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -361,10 +373,10 @@
       "ko": "제가 알아요.",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -374,8 +386,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -386,7 +402,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -409,9 +425,9 @@
       "ko": "맞아요, 잊어버렸어요. 당신은 남자였죠.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -434,7 +450,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -445,7 +461,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -455,9 +473,9 @@
       "ko": "그냥 모든 남자들은 자신에게는 그런 일이 절대 없었다고 확신하고, 대부분의 여성들은 한 번쯤은 그렇게 했어요.",
       "tags": {
         "functions": [
-          "F04"
+          "F43"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -468,7 +486,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -480,8 +500,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -497,5 +517,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "1192cffaaf977565"
 }

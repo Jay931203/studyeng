@@ -15,7 +15,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -38,7 +38,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -49,7 +49,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -61,7 +63,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,18 +83,18 @@
       "ko": "젠장, 이제 모든 게 사라졌다.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -106,21 +108,23 @@
       "ko": "모든 게 사라졌다.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -129,21 +133,23 @@
       "ko": "다 사라졌다.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -155,13 +161,13 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -178,7 +184,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -201,7 +207,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -221,10 +227,10 @@
       "ko": "이게 우리의 생존에 필수적인 걸까?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -244,10 +250,10 @@
       "ko": "수렵-채집의 의미에서?",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -267,10 +273,10 @@
       "ko": "아니.",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -281,7 +287,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -293,7 +301,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -313,10 +321,10 @@
       "ko": "음, 소비자지.",
       "tags": {
         "functions": [
-          "F01"
+          "F52"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -336,10 +344,10 @@
       "ko": "맞아. 우리는 소비자야.",
       "tags": {
         "functions": [
-          "F01"
+          "F53"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -362,7 +370,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "C1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -382,10 +390,10 @@
       "ko": "살인, 범죄, 빈곤, 이런 건 나와 상관없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "C1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -405,10 +413,10 @@
       "ko": "내가 걱정하는 건 연예인 잡지,",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "C1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -428,10 +436,10 @@
       "ko": "500개의 채널이 있는 텔레비전,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "C1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -451,10 +459,10 @@
       "ko": "내 속옷에 적힌 어떤 남자의 이름,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "C1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -474,59 +482,13 @@
       "ko": "로게인, 비아그라, 올레스트라.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "C1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "CWRTqMGvdpc-21",
-      "en": "Martha Stewart.",
-      "ko": "마사 스튜어트.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "C1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "CWRTqMGvdpc-22",
-      "en": "Fuck Martha Stewart.",
-      "ko": "마사 스튜어트 따위.",
-      "tags": {
-        "functions": [
-          "F17"
-        ],
-        "situation": "S50",
-        "cefr": "C1",
-        "register": "R4",
-        "emotions": [
-          "E03"
         ],
         "expression_types": [
           "X08"
@@ -535,7 +497,58 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "contains_profanity"
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "CWRTqMGvdpc-21",
+      "en": "Martha Stewart.",
+      "ko": "마사 스튜어트.",
+      "tags": {
+        "functions": [
+          "F23"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E08"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "CWRTqMGvdpc-22",
+      "en": "Fuck Martha Stewart.",
+      "ko": "마사 스튜어트 따위.",
+      "tags": {
+        "functions": [
+          "F23"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E08"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "contains_profanity",
+          "is_fragment"
         ]
       }
     },
@@ -545,10 +558,10 @@
       "ko": "아서의 폴리싱 네브래스카.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "C1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -559,8 +572,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "392ef2e7e7d7c6e9"
 }

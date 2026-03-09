@@ -12,18 +12,18 @@
       "ko": "당신의 위치에서 이런 사랑의 둥지를 비밀로 유지하는 것은 매우 어렵습니다, 특히",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,11 +35,12 @@
       "ko": "결혼한 여성이 관련되어 있을 때는 더욱 그렇죠. 절대 불가능하죠. 하지만, 우리는 여기 있습니다. 딜레마가 생겼습니다. 그들이 가까워지고 있습니다. 당신이 준 만큼 받는 것입니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F43",
+          "F58"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "B2",
-        "register": "R2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -48,7 +49,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -58,9 +61,11 @@
       "ko": "글쎄, 그건 사실이 아닙니다.",
       "tags": {
         "functions": [
-          "F12"
+          "F08",
+          "F11",
+          "F52"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -71,7 +76,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -81,9 +88,9 @@
       "ko": "중요한 정보를 빼먹었죠, 그죠?",
       "tags": {
         "functions": [
-          "F50"
+          "F06"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -104,20 +111,23 @@
       "ko": "당신은 우리가 무엇을 하고 있는지 알고 있었기 때문에 뭔가를 숨겼습니다.",
       "tags": {
         "functions": [
+          "F23",
           "F04"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -129,9 +139,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -150,11 +160,11 @@
       "ko": "우리는 당신이 가진 모든 정보를 끌어냈습니다.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -173,11 +183,11 @@
       "ko": "하지만 당신의 속임수는 명백했습니다.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -190,5 +200,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "cedf08e0476df984"
 }

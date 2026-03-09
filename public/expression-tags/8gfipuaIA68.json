@@ -12,7 +12,7 @@
       "ko": "아, 진짜 최악이네.",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -27,7 +27,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "contains_profanity"
+          "is_fragment"
         ]
       }
     },
@@ -37,16 +37,18 @@
       "ko": "그래서, 그 회의 언제 끝나?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F48",
+          "F52"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -63,7 +65,7 @@
           "F09"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -86,16 +88,18 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -106,23 +110,21 @@
       "ko": "그래, 다음 50년 동안 방에 앉아서 나눗셈이나 하게 된다면.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -131,16 +133,17 @@
       "ko": "그래도 꽤 돈은 벌겠네.",
       "tags": {
         "functions": [
-          "F09"
+          "F21",
+          "F14"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -154,23 +157,23 @@
       "ko": "난 그냥 실험용 쥐가 될 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -179,10 +182,10 @@
       "ko": "이거보단 나아. 여기서 나가고 싶어.",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -192,7 +195,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -207,7 +212,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -227,25 +232,25 @@
       "ko": "난 여기서 평생 살 거거든.",
       "tags": {
         "functions": [
-          "F09"
+          "F50"
         ],
         "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
         "power": [
-          "P01"
+          "P05"
         ],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
       }
     },
     {
@@ -254,10 +259,10 @@
       "ko": "이웃이 되고, 애들도 생기고,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -277,10 +282,10 @@
       "ko": "폴리 필드에서 리틀 리그도 같이 하고.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,14 +293,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [
-          "P01"
-        ],
+        "vibe": "V02",
+        "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -304,10 +305,10 @@
       "ko": "너는 내 가장 친한 친구니까, 오해하지 마,",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -315,7 +316,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -327,10 +328,10 @@
       "ko": "하지만 20년 후에도 여기 살고 있다면,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -350,10 +351,10 @@
       "ko": "내 집에 와서 패트리어츠 경기 보면서,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -373,25 +374,21 @@
       "ko": "여전히 건설 일하고 있다면, 널 죽일 거야.",
       "tags": {
         "functions": [
-          "F42"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
-        "power": [
-          "P12"
-        ],
+        "vibe": "V18",
+        "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -400,25 +397,21 @@
       "ko": "위협이 아니라, 사실이야. 널 죽일 거라고.",
       "tags": {
         "functions": [
-          "F42"
+          "F08"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
-        "power": [
-          "P12"
-        ],
+        "vibe": "V18",
+        "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -427,20 +420,22 @@
       "ko": "도대체 무슨 소리 하는 거야?",
       "tags": {
         "functions": [
-          "F06"
+          "F17"
         ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -452,9 +447,9 @@
       "ko": "너는 우리 중에 아무도 가진 게 없는 걸 가지고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -475,16 +470,16 @@
       "ko": "아, 제발. 왜 항상 나야?",
       "tags": {
         "functions": [
-          "F09"
+          "F45"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -492,5 +487,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "6e7a36a94f07e5d7"
 }

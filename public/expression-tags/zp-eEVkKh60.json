@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -37,8 +37,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -49,7 +49,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -60,8 +62,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,13 +83,13 @@
       "ko": "젠장, 이제 다 사라졌다.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -108,8 +110,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -120,7 +122,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -131,8 +135,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -143,7 +147,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -154,14 +160,14 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -177,7 +183,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S39",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -189,7 +195,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -200,7 +208,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S39",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -223,8 +231,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -246,8 +254,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -267,10 +275,10 @@
       "ko": "사냥-채집의 의미에서?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -292,7 +300,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S39",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -304,7 +312,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -313,10 +323,10 @@
       "ko": "그럼 우리는 뭐지?",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -338,8 +348,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -348,8 +358,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -359,10 +373,10 @@
       "ko": "맞아. 우리는 소비자다.",
       "tags": {
         "functions": [
-          "F01"
+          "F53"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -384,8 +398,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -407,8 +421,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -419,7 +433,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -430,8 +446,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -451,10 +467,10 @@
       "ko": "내가 걱정하는 것은 연예인 잡지,",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -476,8 +492,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -499,8 +515,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -522,57 +538,11 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "zp-eEVkKh60-23",
-      "en": "Martha Stewart.",
-      "ko": "마사 스튜어트.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "zp-eEVkKh60-24",
-      "en": "Fuck Martha Stewart.",
-      "ko": "젠장, 마사 스튜어트.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
         ],
         "expression_types": [
           "X08"
@@ -581,7 +551,58 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "contains_profanity"
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "zp-eEVkKh60-23",
+      "en": "Martha Stewart.",
+      "ko": "마사 스튜어트.",
+      "tags": {
+        "functions": [
+          "F23"
+        ],
+        "situation": "S39",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E08"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "zp-eEVkKh60-24",
+      "en": "Fuck Martha Stewart.",
+      "ko": "젠장, 마사 스튜어트.",
+      "tags": {
+        "functions": [
+          "F23"
+        ],
+        "situation": "S39",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E08"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "contains_profanity",
+          "is_fragment"
         ]
       }
     },
@@ -593,8 +614,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -608,5 +629,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d181889a90861b5b"
 }

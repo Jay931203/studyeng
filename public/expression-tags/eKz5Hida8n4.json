@@ -37,16 +37,16 @@
       "ko": "사람들은 재즈를 싫어한다고 할 때,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -58,6 +58,29 @@
       "id": "eKz5Hida8n4-2",
       "en": "they just, they don't have context, they don't know where it comes from, you know?",
       "ko": "그들이 그 배경을 모르고 어디서 왔는지 모른다고 생각해.",
+      "tags": {
+        "functions": [
+          "F40"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "eKz5Hida8n4-3",
+      "en": "Jazz was born in a little flop house in New Orleans, and it just, because people were crammed in there,",
+      "ko": "재즈는 뉴올리언스의 작은 여관에서 태어났고, 사람들이 그곳에 꽉 들어차 있었어.",
       "tags": {
         "functions": [
           "F04"
@@ -78,38 +101,15 @@
       }
     },
     {
-      "id": "eKz5Hida8n4-3",
-      "en": "Jazz was born in a little flop house in New Orleans, and it just, because people were crammed in there,",
-      "ko": "재즈는 뉴올리언스의 작은 여관에서 태어났고, 사람들이 그곳에 꽉 들어차 있었어.",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "eKz5Hida8n4-4",
       "en": "they spoke five different languages, they couldn't talk to each other.",
       "ko": "그들은 다섯 가지 언어를 사용했지만 서로 대화할 수 없었지.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -132,7 +132,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -152,7 +152,7 @@
       "ko": "그래, 케니 G는 어때? 뭐?",
       "tags": {
         "functions": [
-          "F06"
+          "F07"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -161,7 +161,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -184,7 +184,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -198,16 +198,16 @@
       "ko": "내 인생에서, 나는 그게 편안하다고 생각해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -221,13 +221,13 @@
       "ko": "편안하지 않아, 전혀 그렇지 않아.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -247,7 +247,7 @@
           "F04"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -261,5 +261,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "0d08f29619afb71f"
 }

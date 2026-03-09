@@ -12,10 +12,10 @@
       "ko": "아, 이분은 프레이저 크레인 박사와 그의 아버지 마르티입니다.",
       "tags": {
         "functions": [
-          "F26"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,20 +35,22 @@
       "ko": "만나서 반가워요. 환영합니다.",
       "tags": {
         "functions": [
-          "F25"
+          "F32"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -58,9 +60,9 @@
       "ko": "이분은 아델 차일즈입니다. 안녕하세요.",
       "tags": {
         "functions": [
-          "F26"
+          "F25"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -81,10 +83,11 @@
       "ko": "우리는 마리나에서 정말 멋진 하루를 보냈어요. 아, 보트가 있나요?",
       "tags": {
         "functions": [
-          "F02"
+          "F30",
+          "F52"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E01"
@@ -94,7 +97,9 @@
         ],
         "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -104,13 +109,13 @@
       "ko": "사실, 아니요. 저는 내이 곡률이 있어서 멀미를 잘해요.",
       "tags": {
         "functions": [
-          "F09"
+          "F08"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -127,10 +132,10 @@
       "ko": "하지만 그곳에 아주 매력적인 비스트로가 있어서 정말 훌륭한 음식을 제공합니다...",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -141,7 +146,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,9 +157,9 @@
       "ko": "저 아니에요. 저 아니에요.",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -173,10 +180,10 @@
       "ko": "안녕하세요. 아, 지금은 이야기할 수 없어요, 듀크. 저는 트와일라잇 존에 있어요.",
       "tags": {
         "functions": [
-          "F06"
+          "F25"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -186,7 +193,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -198,7 +207,7 @@
         "functions": [
           "F34"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -209,7 +218,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -219,18 +230,18 @@
       "ko": "아, 네, 그거 좋겠어요.",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,9 +253,9 @@
       "ko": "도와줄게요, 프레이저.",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -265,20 +276,22 @@
       "ko": "저게 대체 뭐였죠?",
       "tags": {
         "functions": [
-          "F12"
+          "F17"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -290,9 +303,37 @@
       "ko": "진짜 나일스에게 빨간 표시를 해두면 구별하기 좋을 것 같아요.",
       "tags": {
         "functions": [
-          "F36"
+          "F36",
+          "F09",
+          "F14"
         ],
-        "situation": "S10",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G09",
+          "G17"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "lV8ocbooymE-13",
+      "en": "Niles must be going nuts.",
+      "ko": "나일스는 미치고 있을 거예요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -306,29 +347,7 @@
         "grammar_intent": [],
         "flags": []
       }
-    },
-    {
-      "id": "lV8ocbooymE-13",
-      "en": "Niles must be going nuts.",
-      "ko": "나일스는 미치고 있을 거예요.",
-      "tags": {
-        "functions": [
-          "F16"
-        ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
     }
-  ]
+  ],
+  "transcriptHash": "e9c44b2a8605228f"
 }

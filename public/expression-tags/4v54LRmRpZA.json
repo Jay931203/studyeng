@@ -12,18 +12,18 @@
       "ko": "어서 와.",
       "tags": {
         "functions": [
-          "F25"
+          "F38"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -39,8 +39,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,9 +60,9 @@
       "ko": "이봐, 친구.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S20",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -71,10 +71,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -83,11 +85,10 @@
       "ko": "여기 벽돌이 많네. 술 마실래?",
       "tags": {
         "functions": [
-          "F02",
-          "F34"
+          "F06"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S32",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -95,7 +96,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -107,9 +108,9 @@
       "ko": "아니, 괜찮아. 나는 안 마셔.",
       "tags": {
         "functions": [
-          "F09"
+          "F27"
         ],
-        "situation": "S08",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -118,7 +119,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -130,10 +131,10 @@
       "ko": "너 술 마시는지 물어보는 거야.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S32",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -141,7 +142,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -153,10 +154,10 @@
       "ko": "내 딸을 데리고 나가는 10대 운전사에게 술을 주겠어?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S32",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -164,7 +165,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -176,19 +177,21 @@
       "ko": "이봐, 친구, 보호하는 기분, 이해해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S20",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V01",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -199,9 +202,9 @@
       "ko": "너 뭐야, 애야? 샘미 데이비스가 죽었다고 래트 팩에 빈자리가 생겼다고 생각해? 와.",
       "tags": {
         "functions": [
-          "F18"
+          "F06"
         ],
-        "situation": "S08",
+        "situation": "S20",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -210,7 +213,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -222,9 +225,9 @@
       "ko": "크리스천.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S20",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -233,10 +236,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -245,10 +250,10 @@
       "ko": "인형 같은 얼굴이네.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -256,10 +261,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -268,10 +275,10 @@
       "ko": "잘생겼어.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -279,10 +286,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -291,10 +300,10 @@
       "ko": "멋지네.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -302,10 +311,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -314,18 +325,18 @@
       "ko": "그렇게 나가게 두지 않을 거지?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S08",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -337,22 +348,23 @@
       "ko": "셔, 여기 들어와.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d5164f215b1c6548"
 }

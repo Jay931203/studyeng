@@ -12,20 +12,22 @@
       "ko": "요약하자면, 버터컵은 30분도 안 되어 험퍼딘크와 결혼해.",
       "tags": {
         "functions": [
-          "F54"
+          "F13"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -35,16 +37,16 @@
       "ko": "그러니까 우리가 해야 할 일은 결혼식을 방해하고, 공주를 데려가고, 도망치는 거야.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -58,10 +60,10 @@
       "ko": "로간 백작을 죽인 후에 말이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,9 +83,9 @@
       "ko": "딜리에게는 시간이 별로 없겠네.",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -106,18 +108,20 @@
         "functions": [
           "F30"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -127,9 +131,9 @@
       "ko": "난 항상 빨리 먹어. 우리의 약점은 뭐야?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -138,7 +142,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,16 +154,16 @@
       "ko": "케셀게이트에는 단 하나의 일이 있어.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -173,9 +177,9 @@
       "ko": "여기 와봐.",
       "tags": {
         "functions": [
-          "F34"
+          "F35"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -187,7 +191,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -196,10 +202,10 @@
       "ko": "60명의 남자를 상대해야 해.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,7 +215,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -219,10 +227,10 @@
       "ko": "60명? 우리의 자산으로?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,10 +250,10 @@
       "ko": "네 두뇌. 힘이 있다면, 난 훔칠 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,10 +273,10 @@
       "ko": "그게 전부야? 불가능해.",
       "tags": {
         "functions": [
-          "F11"
+          "F06"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -290,18 +298,24 @@
         "functions": [
           "F14"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P12"
+        ],
+        "grammar_intent": [
+          "G12",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -311,19 +325,21 @@
       "ko": "네가 고개를 저었잖아. 그게 너를 행복하게 하지 않아?",
       "tags": {
         "functions": [
-          "F17"
+          "F06"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V02",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -334,10 +350,10 @@
       "ko": "내 두뇌, 그의 강철, 그리고 너의 힘으로 60명의 남자와 맞서고,",
       "tags": {
         "functions": [
-          "F13"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -357,20 +373,22 @@
       "ko": "그리고 네가 조금 고개를 흔드는 게 나를 행복하게 해줄 거라고 생각해?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -380,7 +398,32 @@
       "ko": "만약 우리가 손수레만 있다면, 그건 뭔가가 될 텐데.",
       "tags": {
         "functions": [
-          "F09"
+          "F50"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "XeO3jMZphhs-17",
+      "en": "Where do we put that wheelbarrow deal by no head?",
+      "ko": "그 손수레는 어디에 두지? 머리 없이?",
+      "tags": {
+        "functions": [
+          "F06"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -396,29 +439,7 @@
         "grammar_intent": [],
         "flags": []
       }
-    },
-    {
-      "id": "XeO3jMZphhs-17",
-      "en": "Where do we put that wheelbarrow deal by no head?",
-      "ko": "그 손수레는 어디에 두지? 머리 없이?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
     }
-  ]
+  ],
+  "transcriptHash": "da4f93619da98b3d"
 }

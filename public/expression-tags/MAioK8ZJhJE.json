@@ -12,21 +12,24 @@
       "ko": "아, 다시 만나서 반가워, 조지! 너 체포됐어!",
       "tags": {
         "functions": [
-          "F25",
-          "F06"
+          "F32"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S37",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -36,19 +39,21 @@
       "ko": "농담이지... 농담이겠지, 친구!",
       "tags": {
         "functions": [
-          "F18"
+          "F12"
         ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E05"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -59,21 +64,23 @@
       "ko": "지금 나를 놀리는 거야? 이봐! 이봐, 나한테서 꺼져! 이봐, 그 카메라 꺼!",
       "tags": {
         "functions": [
-          "F09",
           "F17"
         ],
-        "situation": "S10",
+        "situation": "S38",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E03",
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -85,23 +92,21 @@
       "ko": "이봐, 제발... 나는 여기서 인포머셜 찍고 있어, 이 개자식아!",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V12",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -110,10 +115,10 @@
       "ko": "카메라 꺼라고 했잖아!",
       "tags": {
         "functions": [
-          "F35"
+          "F05"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -121,12 +126,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -135,11 +138,11 @@
       "ko": "나한테는 아무것도 없어, 들리냐?",
       "tags": {
         "functions": [
-          "F56"
+          "F17"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
@@ -148,7 +151,9 @@
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -162,9 +167,9 @@
         "functions": [
           "F17"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
@@ -173,7 +178,9 @@
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -185,18 +192,18 @@
       "ko": "이봐, 조지, 법률 조언 좀 해줄게.",
       "tags": {
         "functions": [
-          "F37"
+          "F39"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -208,11 +215,11 @@
       "ko": "꺼져!",
       "tags": {
         "functions": [
-          "F56"
+          "F17"
         ],
-        "situation": "S10",
+        "situation": "S38",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
@@ -221,7 +228,9 @@
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -235,9 +244,9 @@
         "functions": [
           "F17"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
@@ -246,7 +255,9 @@
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -258,19 +269,18 @@
       "ko": "나는 내 행동을 고쳤고, 재활도 했고, TV 인물이고, 2년 동안 술도 안 마셨는데, 이런 일이 생겼어.",
       "tags": {
         "functions": [
-          "F09",
-          "F12"
+          "F03"
         ],
-        "situation": "S10",
+        "situation": "S38",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V09",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -282,10 +292,10 @@
       "ko": "러그랫은 마이애미에서 체포됐어. 나는 스위스 사람이고, 공산당이 아니야!",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -293,7 +303,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -305,20 +315,22 @@
       "ko": "그리고 누가 나를 잡았냐고? 소렐이야.",
       "tags": {
         "functions": [
-          "F05"
+          "F17"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -330,13 +342,86 @@
       "ko": "나를 때릴 거야? 그래, 네 나라를 알아, 너는 나를 때릴 거야, 그래!",
       "tags": {
         "functions": [
-          "F18"
+          "F12"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E07"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V08",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "MAioK8ZJhJE-14",
+      "en": "I mean, what are the fucking odds?",
+      "ko": "도대체 확률이 얼마나 되겠어?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E05"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "MAioK8ZJhJE-15",
+      "en": "There had to be 10,000 Swiss bankers in Geneva,",
+      "ko": "제네바에는 10,000명의 스위스 은행가가 있었어,",
+      "tags": {
+        "functions": [
+          "F02"
+        ],
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V08",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "MAioK8ZJhJE-16",
+      "en": "and Rugrat gets the one dumb enough to get himself arrested on U.S. soil?",
+      "ko": "그런데 러그랫은 미국 땅에서 체포될 만큼 멍청한 놈을 만나?",
+      "tags": {
+        "functions": [
+          "F21"
+        ],
+        "situation": "S38",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E05"
         ],
         "expression_types": [
           "X08"
@@ -348,98 +433,28 @@
       }
     },
     {
-      "id": "MAioK8ZJhJE-14",
-      "en": "I mean, what are the fucking odds?",
-      "ko": "도대체 확률이 얼마나 되겠어?",
-      "tags": {
-        "functions": [
-          "F14"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
-      "id": "MAioK8ZJhJE-15",
-      "en": "There had to be 10,000 Swiss bankers in Geneva,",
-      "ko": "제네바에는 10,000명의 스위스 은행가가 있었어,",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "MAioK8ZJhJE-16",
-      "en": "and Rugrat gets the one dumb enough to get himself arrested on U.S. soil?",
-      "ko": "그런데 러그랫은 미국 땅에서 체포될 만큼 멍청한 놈을 만나?",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "MAioK8ZJhJE-17",
       "en": "I know.",
       "ko": "알아.",
       "tags": {
         "functions": [
-          "F07"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S38",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "3b87b9e88aa8b6ae"
 }

@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S20",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,10 +35,10 @@
       "ko": "자고 있었어?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S20",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,8 +60,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S20",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -83,8 +83,33 @@
         "functions": [
           "F06"
         ],
-        "situation": "S20",
+        "situation": "S05",
         "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "aMuBngVO6QE-4",
+      "en": "Shit, that looks good, that looks really good.",
+      "ko": "와, 진짜 맛있어 보여, 정말 맛있어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S05",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -99,40 +124,15 @@
       }
     },
     {
-      "id": "aMuBngVO6QE-4",
-      "en": "Shit, that looks good, that looks really good.",
-      "ko": "와, 진짜 맛있어 보여, 정말 맛있어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S20",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
       "id": "aMuBngVO6QE-5",
       "en": "It's clean and simple.",
       "ko": "깔끔하고 간단해.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S20",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -154,8 +154,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S20",
-        "cefr": "B1",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -175,9 +175,9 @@
       "ko": "봐.",
       "tags": {
         "functions": [
-          "F06"
+          "F35"
         ],
-        "situation": "S20",
+        "situation": "S05",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -189,7 +189,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -200,8 +202,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S20",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -223,8 +225,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S20",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -244,10 +246,10 @@
       "ko": "이게 대학 생활의 원동력이야. 섹스할 건지 말 건지.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S20",
-        "cefr": "B2",
+        "situation": "S05",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -267,16 +269,16 @@
       "ko": "사람들이 특정 수업을 듣고, 앉는 자리와 행동하는 이유야, 알지?",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S20",
+        "situation": "S05",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -284,5 +286,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "ddb3bf1d21363fce"
 }

@@ -14,19 +14,21 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,21 +37,25 @@
       "ko": "정말 아름다워.",
       "tags": {
         "functions": [
-          "F09"
+          "F30"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G03"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,22 +64,26 @@
       "ko": "토드? 괜찮아, 토드. 괜찮아, 토드. 괜찮아.",
       "tags": {
         "functions": [
+          "F61",
           "F31"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G05"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "ebc3cc081a858dbd"
 }

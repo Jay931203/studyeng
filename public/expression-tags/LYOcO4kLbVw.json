@@ -12,10 +12,10 @@
       "ko": "네 발 달린 동물치고 나쁘지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,8 +23,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -35,19 +37,22 @@
       "ko": "거울을 확인해야 해. 눈의 옆쪽으로. 옆쪽으로. 그게 다야. 그게 다야. 이봐, 우리가 쫓기고 있어. 서둘러.",
       "tags": {
         "functions": [
-          "F35"
+          "F38"
         ],
-        "situation": "S06",
+        "situation": "S50",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -58,18 +63,18 @@
       "ko": "재미있게 해봐. 화내면서 운전하지 마. 화내면서 운전하지 마. 그가 타고 있어. 그가 타고 있어. 그가 타고 있어.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
         "situation": "S06",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,10 +86,10 @@
       "ko": "그가 타고 있어. 그가 타고 있어. 그가 타고 있어. 그가 타고 있어. 그가 타고 있어. 그가 타고 있어. 그가 타고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S06",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,7 +97,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,22 +109,23 @@
       "ko": "그가 타고 있어. 그가 타고 있어. 그가 타고 있어. 그가 타고 있어. 그가 타고 있어. 그가 타고 있어. 넘어지지 마.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S06",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "2c5e59a6b06994d8"
 }

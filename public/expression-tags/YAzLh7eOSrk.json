@@ -12,10 +12,10 @@
       "ko": "차치 피티요를 소개합니다. 라틴계 삼촌과 대화하는 듯한 첫 번째 AI입니다.",
       "tags": {
         "functions": [
-          "F26"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -38,7 +38,7 @@
           "F06"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,7 +58,7 @@
       "ko": "그들보다 더 진솔한 사람은 없으니까.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
         "situation": "S34",
         "cefr": "B1",
@@ -71,7 +71,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -82,16 +84,16 @@
       "tags": {
         "functions": [
           "F06",
-          "F09"
+          "F14"
         ],
         "situation": "S34",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V10",
         "power": [],
@@ -105,7 +107,7 @@
       "ko": "개잖아, 친구.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -128,10 +130,10 @@
       "ko": "중년 라틴계 삼촌의 지식, 노하우,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -151,7 +153,7 @@
       "ko": "그리고 필터 없는 의견이 당신의 손끝에.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "B1",
@@ -177,7 +179,7 @@
           "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -200,7 +202,7 @@
           "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -223,7 +225,7 @@
           "F06"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -234,7 +236,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -246,7 +250,7 @@
           "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -266,13 +270,13 @@
       "ko": "사실, 나는 더 이상 영어를 못해. 영어를 못해.",
       "tags": {
         "functions": [
-          "F09"
+          "F08"
         ],
         "situation": "S34",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -289,10 +293,10 @@
       "ko": "차치 피티요는 가장 가까운 경쟁자보다 40% 더 시끄럽습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -315,7 +319,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -326,7 +330,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -360,8 +366,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S49",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -369,11 +375,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "4bd7f711f7c730f5"
 }

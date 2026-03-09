@@ -12,20 +12,22 @@
       "ko": "나랑 그냥 있어줄래?",
       "tags": {
         "functions": [
-          "F38"
+          "F06"
         ],
         "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E11"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -35,18 +37,18 @@
       "ko": "나랑? 왜? 우리 지금 싸우고 있는데.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V12",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,19 +60,21 @@
       "ko": "그게 우리 하는 일이잖아. 싸우는 거.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S42",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V07",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -81,11 +85,11 @@
       "ko": "내가 거만한 놈일 때 말해주고,",
       "tags": {
         "functions": [
-          "F50"
+          "F17"
         ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
@@ -94,7 +98,9 @@
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -104,52 +110,6 @@
       "id": "E1I0hAxGFXw-4",
       "en": "and I tell you when you're being a pain in the ass,",
       "ko": "네가 귀찮을 때도 말해주잖아,",
-      "tags": {
-        "functions": [
-          "F50"
-        ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "E1I0hAxGFXw-5",
-      "en": "which you are, 99% of the time.",
-      "ko": "네가 99%는 귀찮은 존재야.",
-      "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "E1I0hAxGFXw-6",
-      "en": "I'm not afraid to hurt your feelings.",
-      "ko": "네 기분 상하게 하는 건 두렵지 않아.",
       "tags": {
         "functions": [
           "F17"
@@ -165,135 +125,22 @@
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
     {
-      "id": "E1I0hAxGFXw-7",
-      "en": "They have, like, a two-second rebound rate,",
-      "ko": "그건, 한 2초면 회복돼,",
+      "id": "E1I0hAxGFXw-5",
+      "en": "which you are, 99% of the time.",
+      "ko": "네가 99%는 귀찮은 존재야.",
       "tags": {
         "functions": [
-          "F04"
-        ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "E1I0hAxGFXw-8",
-      "en": "and you're back doing the next pain in the ass thing.",
-      "ko": "그리고 다음 귀찮은 짓을 또 하잖아.",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "E1I0hAxGFXw-9",
-      "en": "So what?",
-      "ko": "그래서 어쩌라고?",
-      "tags": {
-        "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S08",
         "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "E1I0hAxGFXw-10",
-      "en": "So it's not gonna be easy. It's gonna be really hard.",
-      "ko": "그러니까 쉽지 않을 거야. 정말 힘들 거야.",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "E1I0hAxGFXw-11",
-      "en": "And we're gonna have to work at this every day,",
-      "ko": "매일매일 이걸 위해 노력해야 해,",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "E1I0hAxGFXw-12",
-      "en": "but I want to do that because I want you.",
-      "ko": "하지만 나는 그렇게 하고 싶어. 너를 원하니까.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S08",
-        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E11"
@@ -304,6 +151,182 @@
         "vibe": "V07",
         "power": [],
         "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "E1I0hAxGFXw-6",
+      "en": "I'm not afraid to hurt your feelings.",
+      "ko": "네 기분 상하게 하는 건 두렵지 않아.",
+      "tags": {
+        "functions": [
+          "F02"
+        ],
+        "situation": "S28",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E11"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V07",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "E1I0hAxGFXw-7",
+      "en": "They have, like, a two-second rebound rate,",
+      "ko": "그건, 한 2초면 회복돼,",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E11"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V07",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "E1I0hAxGFXw-8",
+      "en": "and you're back doing the next pain in the ass thing.",
+      "ko": "그리고 다음 귀찮은 짓을 또 하잖아.",
+      "tags": {
+        "functions": [
+          "F17"
+        ],
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": [
+          "contains_profanity"
+        ]
+      }
+    },
+    {
+      "id": "E1I0hAxGFXw-9",
+      "en": "So what?",
+      "ko": "그래서 어쩌라고?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S08",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E05"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "E1I0hAxGFXw-10",
+      "en": "So it's not gonna be easy. It's gonna be really hard.",
+      "ko": "그러니까 쉽지 않을 거야. 정말 힘들 거야.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E11"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V13",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "E1I0hAxGFXw-11",
+      "en": "And we're gonna have to work at this every day,",
+      "ko": "매일매일 이걸 위해 노력해야 해,",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E11"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V07",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "E1I0hAxGFXw-12",
+      "en": "but I want to do that because I want you.",
+      "ko": "하지만 나는 그렇게 하고 싶어. 너를 원하니까.",
+      "tags": {
+        "functions": [
+          "F04"
+        ],
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E11"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V07",
+        "power": [],
+        "grammar_intent": [
+          "G15",
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -326,7 +349,9 @@
         ],
         "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -336,20 +361,22 @@
       "ko": "나를 위해 뭔가 해줄래?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
         "situation": "S08",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -359,18 +386,18 @@
       "ko": "제발? 네 미래를 상상해줄래?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
         "situation": "S08",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -382,19 +409,21 @@
       "ko": "30년 후, 40년 후, 어떤 모습일까?",
       "tags": {
         "functions": [
-          "F02"
+          "F06"
         ],
         "situation": "S08",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -405,19 +434,21 @@
       "ko": "그 남자와 함께라면, 가. 가!",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V07",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -428,20 +459,22 @@
       "ko": "난 한 번 너를 잃었어. 다시 할 수 있을 것 같아.",
       "tags": {
         "functions": [
-          "F20"
+          "F09"
         ],
         "situation": "S08",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E02"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -451,19 +484,21 @@
       "ko": "네가 정말 원하는 거라면.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V07",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -474,18 +509,18 @@
       "ko": "하지만 쉽게 포기하지 마.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -500,15 +535,15 @@
           "F06"
         ],
         "situation": "S08",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -520,22 +555,23 @@
       "ko": "내가 뭘 하든 쉬운 방법은 없어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "18c089dd9f826ac9"
 }

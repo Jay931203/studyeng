@@ -12,20 +12,24 @@
       "ko": "물론, 당신이 깨닫는다면, 우리는 그를 무한정 막을 수는 없어요.",
       "tags": {
         "functions": [
-          "F04"
+          "F44"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G16"
+        ],
         "flags": []
       }
     },
@@ -35,11 +39,11 @@
       "ko": "그렇다고 그를 지연시킬 수 없는 건 아니에요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -60,7 +64,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -81,9 +85,32 @@
       "ko": "필리어스, 그걸 사용해도 괜찮아요.",
       "tags": {
         "functions": [
-          "F34"
+          "F14"
         ],
-        "situation": "S44",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "2Tpb1XyqGOQ-4",
+      "en": "He's going to try to kill you either way.",
+      "ko": "어차피 그는 당신을 죽이려고 할 거예요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S43",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -99,29 +126,6 @@
       }
     },
     {
-      "id": "2Tpb1XyqGOQ-4",
-      "en": "He's going to try to kill you either way.",
-      "ko": "어차피 그는 당신을 죽이려고 할 거예요.",
-      "tags": {
-        "functions": [
-          "F40"
-        ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
-        "emotions": [
-          "E04"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "2Tpb1XyqGOQ-5",
       "en": "Pier totem locomoto!",
       "ko": "피어 토템 로코모토!",
@@ -129,8 +133,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,36 +154,13 @@
       "ko": "호그와트가 위협받고 있어요! 경계를 지키세요! 우리를 보호하세요! 학교를 위해 의무를 다하세요!",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "2Tpb1XyqGOQ-7",
-      "en": "I've always wanted to use that spell.",
-      "ko": "그 주문을 사용해보고 싶었어요.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S44",
+        "situation": "S43",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -191,15 +172,15 @@
       }
     },
     {
-      "id": "2Tpb1XyqGOQ-8",
-      "en": "Take it.",
-      "ko": "가져가세요.",
+      "id": "2Tpb1XyqGOQ-7",
+      "en": "I've always wanted to use that spell.",
+      "ko": "그 주문을 사용해보고 싶었어요.",
       "tags": {
         "functions": [
-          "F44"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -212,6 +193,32 @@
         "grammar_intent": [],
         "flags": []
       }
+    },
+    {
+      "id": "2Tpb1XyqGOQ-8",
+      "en": "Take it.",
+      "ko": "가져가세요.",
+      "tags": {
+        "functions": [
+          "F35"
+        ],
+        "situation": "S43",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
     }
-  ]
+  ],
+  "transcriptHash": "957ad87e6afc3403"
 }

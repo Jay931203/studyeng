@@ -12,16 +12,17 @@
       "ko": "네, 재판장님. 음, 웬델 씨, 파마를 해본 적이 있나요?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F52"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -35,9 +36,9 @@
       "ko": "네.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -49,7 +50,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,9 +61,9 @@
       "ko": "몇 번 정도였나요?",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -71,7 +74,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -83,7 +88,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -95,7 +100,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -104,9 +111,9 @@
       "ko": "제 여학생 동아리 친구인 트레이시 마친코가 한 번 파마를 했어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -127,16 +134,16 @@
       "ko": "우리는 모두 그녀를 말리려고 했죠. 컬이 그녀에게 잘 어울리지 않았거든요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -150,10 +157,10 @@
       "ko": "그녀는 당신처럼 뼈대가 좋지 않았어요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -164,7 +171,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -173,9 +182,9 @@
       "ko": "하지만 다행히 그날 그녀는 베타 델타 파이 젖은 티셔츠 대회에 참가했어요.",
       "tags": {
         "functions": [
-          "F04"
+          "F27"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -196,9 +205,9 @@
       "ko": "그녀는 머리부터 발끝까지 완전히 물에 젖었죠.",
       "tags": {
         "functions": [
-          "F02"
+          "F06"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -219,11 +228,11 @@
       "ko": "이의 있습니다! 왜 이게 중요한가요? 아, 제가 이유가 있어요. 약속해요.",
       "tags": {
         "functions": [
-          "F40"
+          "F41"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -231,8 +240,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P06"
+        ],
+        "grammar_intent": [
+          "G08"
+        ],
         "flags": []
       }
     },
@@ -242,11 +255,11 @@
       "ko": "그럼 말씀하세요. 네, 부인.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -265,16 +278,17 @@
       "ko": "음, 차트니, 트레이시 마친코의 컬이 왜 물에 젖었을 때 망가졌나요?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F52"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -288,10 +302,11 @@
       "ko": "머리가 젖어서요?",
       "tags": {
         "functions": [
-          "F01"
+          "F06",
+          "F04"
         ],
-        "situation": "S36",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -301,7 +316,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -311,20 +328,25 @@
       "ko": "정확해요. 파마 유지의 첫 번째 규칙이",
       "tags": {
         "functions": [
-          "F04"
+          "F07",
+          "F04",
+          "F10"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18",
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -334,10 +356,10 @@
       "ko": "파마 후 최소 24시간 동안 머리를 젖게 해서는 안 된다는 거 아닌가요?",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -357,11 +379,11 @@
       "ko": "암모늄 타이 글로콜레이트가 비활성화될 위험이 있죠?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -380,9 +402,9 @@
       "ko": "네.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -394,8 +416,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "4962e66e5af2afe3"
 }

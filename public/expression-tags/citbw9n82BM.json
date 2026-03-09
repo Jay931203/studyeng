@@ -15,7 +15,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -38,7 +38,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -61,7 +61,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -84,7 +84,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,14 +104,13 @@
       "ko": "내가 믿어주길 바라서야. 너는 신이 아니야. 내 말을 믿어도 돼.",
       "tags": {
         "functions": [
-          "F09",
-          "F01"
+          "F04"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
@@ -128,10 +127,10 @@
       "ko": "이건 12년간의 가톨릭 학교 교육이야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -151,13 +150,13 @@
       "ko": "네가 준비가 안 됐다면 다시 올 수 있어.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
           "X08"
@@ -174,17 +173,16 @@
       "ko": "내가 어떻게 신이 아닌지 어떻게 알아? 아, 제발. 어떻게 아는 거야?",
       "tags": {
         "functions": [
-          "F06",
-          "F01"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -198,10 +196,10 @@
       "ko": "그건 불가능하니까.",
       "tags": {
         "functions": [
-          "F12"
+          "F04"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -221,10 +219,10 @@
       "ko": "다시 올게. 점수.",
       "tags": {
         "functions": [
-          "F41"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -244,10 +242,10 @@
       "ko": "이 사람은 도리스야.",
       "tags": {
         "functions": [
-          "F26"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -270,7 +268,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -290,7 +288,7 @@
       "ko": "그녀는 17살 때부터 여기서 일했어. 그녀의 인생에서 가장 원하는 것은,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -303,7 +301,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10",
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -313,10 +314,10 @@
       "ko": "죽기 전에 파리를 보는 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -336,7 +337,7 @@
       "ko": "오, 세상에, 뭐하는 거야?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -361,7 +362,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S12",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -382,10 +383,10 @@
       "ko": "하지만 데비는 망설이고 있어. 뭐? 멋진 반지네. 이 사람은 빌이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S12",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -405,9 +406,9 @@
       "ko": "그는 3년 동안 웨이터로 일해왔어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S12",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -428,9 +429,9 @@
       "ko": "펜주립대를 졸업하고 일을 해야 했거든.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S12",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -451,9 +452,9 @@
       "ko": "그는 이 마을을 좋아하고, 장난감 병사를 그리며, 게이야. 나도 그래.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S12",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -468,5 +469,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "b93b85721f7b6bc8"
 }

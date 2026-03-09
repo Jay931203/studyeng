@@ -12,9 +12,9 @@
       "ko": "블라, 블라, 블라. 또 칩이 필요해. 가져가.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -23,12 +23,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G15"
+        ],
+        "flags": []
       }
     },
     {
@@ -37,18 +37,18 @@
       "ko": "오늘 점수를 받았어, 나도. 아, 그래?",
       "tags": {
         "functions": [
-          "F05"
+          "F06"
         ],
-        "situation": "S19",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -62,8 +62,8 @@
         "functions": [
           "F02"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,7 +71,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,18 +83,18 @@
       "ko": "점수를 상상하니 정말 긴장됐어.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S19",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,19 +106,21 @@
       "ko": "하지만 결국 열어봐야 한다는 걸 깨닫고 열었어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -129,18 +131,18 @@
       "ko": "그리고 내가 발견한 것에 정말 놀랐어.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S19",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,18 +154,18 @@
       "ko": "깜짝 놀라서 넘어질 뻔했어.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,18 +177,18 @@
       "ko": "응, 정말 놀랐어.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S19",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -200,16 +202,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S19",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,19 +223,22 @@
       "ko": "음, 로리, 물어봐 줘서 고마워. 자랑하는 건 아니지만, 수학 750, 언어 730이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F48"
         ],
-        "situation": "S19",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X02",
+          "X03"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -244,20 +249,24 @@
       "ko": "와, 그거 좋다. 축하해. 고마워. 정말 좋은 점수야.",
       "tags": {
         "functions": [
-          "F09"
+          "F27"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -269,16 +278,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S19",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,21 +299,23 @@
       "ko": "꽤 행복해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S19",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -313,18 +324,18 @@
       "ko": "하지만 내가 어떻게 네가 일몰을 보며 꽤 행복해하는 그런 사람인지 알지?",
       "tags": {
         "functions": [
-          "F14"
+          "F06"
         ],
-        "situation": "S19",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -338,20 +349,21 @@
         "functions": [
           "F06"
         ],
-        "situation": "S19",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "1c768f8eea1d2a00"
 }

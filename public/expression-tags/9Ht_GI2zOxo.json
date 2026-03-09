@@ -12,7 +12,7 @@
       "ko": "주목하지 않았어. 파워포인트를 사용한 내 잘못이야. 파워포인트는 지루해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S14",
         "cefr": "B1",
@@ -35,7 +35,7 @@
       "ko": "사람들은 여러 가지 방법으로 배우지만, 경험이 최고의 스승이야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S14",
         "cefr": "B1",
@@ -58,19 +58,21 @@
       "ko": "오늘, 흡연이 생명을 구할 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -84,7 +86,7 @@
           "F06"
         ],
         "situation": "S14",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,18 +106,18 @@
       "ko": "오, 세상에! 오, 세상에! 불이야! 오, 불! 오, 세상에! 절차가 뭐야?",
       "tags": {
         "functions": [
-          "F18"
+          "F06"
         ],
         "situation": "S14",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,22 +129,26 @@
       "ko": "우리 뭐 해야 해, 사람들? 뼈는 죽었어. 어떻게 된 거야? 복도에 있어. 아니, 그건 몰라. 연기는...",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F14"
         ],
         "situation": "S14",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "7c3cd47a21c09740"
 }

@@ -15,7 +15,7 @@
           "F09"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -61,7 +61,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -72,7 +72,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -84,7 +86,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -95,7 +97,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -107,7 +111,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,7 +131,7 @@
       "ko": "모르시는 분들을 위해, 요트는 큰 외침이나 소리예요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -138,7 +142,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,7 +154,7 @@
       "ko": "자, 토드, 야만적인 요트를 시연해 주세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -173,7 +177,8 @@
       "ko": "앉아서 외칠 수는 없잖아. 일어나. 가자.",
       "tags": {
         "functions": [
-          "F35"
+          "F36",
+          "F45"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -182,11 +187,13 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -196,19 +203,23 @@
       "ko": "외칠 준비를 해야 해. 어, 요트.",
       "tags": {
         "functions": [
-          "F50"
+          "F52"
         ],
         "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05",
+          "X06"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -219,7 +230,7 @@
       "ko": "아니, 그냥 요트가 아니라 야만적인 요트야. 더 크게 해봐.",
       "tags": {
         "functions": [
-          "F50"
+          "F45"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -228,7 +239,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -242,7 +253,7 @@
       "ko": "요트. 오, 그건 쥐야. 더 크게 해.",
       "tags": {
         "functions": [
-          "F18"
+          "F45"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -251,7 +262,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -265,7 +276,7 @@
       "ko": "오, 하느님, 소년. 그래, 그렇게. 바로 그거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -288,10 +299,10 @@
       "ko": "너는 너만의 방식으로 야만인이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -305,5 +316,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "afc3448ec4a5f7e1"
 }

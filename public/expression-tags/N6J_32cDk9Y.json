@@ -12,9 +12,9 @@
       "ko": "주차장을 다시 칠하는 동안, 모두에게 길가에 주차하라고 요청하고 있습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -35,13 +35,13 @@
       "ko": "내 메르세데스는 길가에 주차하지 않을 거야.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -58,10 +58,10 @@
       "ko": "모두 그렇게 하고 있어. 나도 하고 있어.",
       "tags": {
         "functions": [
-          "F10"
+          "F52"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,9 +81,9 @@
       "ko": "아무도 새턴을 훔치고 싶어하지 않으니까.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -94,7 +94,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -104,9 +106,10 @@
       "ko": "자, 재활용으로 넘어갑니다. 괜찮아, 론?",
       "tags": {
         "functions": [
-          "F04"
+          "F06",
+          "F48"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -127,19 +130,21 @@
       "ko": "이가 좀 아프긴 한데, 괜찮아. 계속해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -150,9 +155,9 @@
       "ko": "각 부서에 파란색 쓰레기통이 배포될 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -175,7 +180,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -196,13 +201,13 @@
       "ko": "치과 의사를 싫어해. 잠깐만.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -219,13 +224,36 @@
       "ko": "안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼,",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S10",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "N6J_32cDk9Y-10",
+      "en": "no, no.",
+      "ko": "안 돼.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -239,41 +267,18 @@
       }
     },
     {
-      "id": "N6J_32cDk9Y-10",
-      "en": "no, no.",
-      "ko": "안 돼.",
-      "tags": {
-        "functions": [
-          "F17"
-        ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "N6J_32cDk9Y-11",
       "en": "What the f**k. Oh, my God!",
       "ko": "뭐야, 세상에!",
       "tags": {
         "functions": [
-          "F18"
+          "F06"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -290,11 +295,11 @@
       "ko": "미안해, 여러분. 우리가 뭐에 대해 이야기하고 있었지? 재활용?",
       "tags": {
         "functions": [
-          "F27"
+          "F28"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -302,8 +307,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -313,10 +322,10 @@
       "ko": "어제 치과 의사가 이를 뽑았어.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -336,9 +345,9 @@
       "ko": "하지만 동료들에게 많은 고통을 견딜 수 있다는 걸 보여주는 건 항상 좋은 아이디어야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -359,9 +368,32 @@
       "ko": "엄청난 고통을 견딜 수 있다는 걸 보여주는 건 항상 좋은 아이디어야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S10",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "N6J_32cDk9Y-16",
+      "en": "Plus, it's always fun to see Tom faint.",
+      "ko": "맞아.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -377,29 +409,6 @@
       }
     },
     {
-      "id": "N6J_32cDk9Y-16",
-      "en": "Plus, it's always fun to see Tom faint.",
-      "ko": "맞아.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "N6J_32cDk9Y-17",
       "en": "That's right.",
       "ko": "맞아요.",
@@ -407,8 +416,8 @@
         "functions": [
           "F07"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -419,8 +428,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "d904d968147cf0e9"
 }

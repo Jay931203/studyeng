@@ -12,9 +12,9 @@
       "ko": "그냥 기다릴게.",
       "tags": {
         "functions": [
-          "F01"
+          "F49"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -23,8 +23,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -37,16 +39,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,7 +62,7 @@
         "functions": [
           "F27"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -69,10 +71,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,18 +87,18 @@
       "ko": "좋아, 그럼 오늘 밤 너는 일하는 거야.",
       "tags": {
         "functions": [
-          "F03"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,20 +110,22 @@
       "ko": "듣고 있어, 아니면 나를 놓쳤어? 벤, 그녀가 듣고 있어? 나는 완전히 듣고 있어.",
       "tags": {
         "functions": [
-          "F50"
+          "F10"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -127,18 +135,18 @@
       "ko": "어떻게 도착했는지 확인하려고 몇 가지 주문했어.",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,19 +158,23 @@
       "ko": "별로 좋지 않았어, 참고로. 계속해, 오늘 밤. 응, 좋아.",
       "tags": {
         "functions": [
-          "F09"
+          "F48"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S14",
+        "cefr": "C1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X02",
+          "X03"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -173,18 +185,18 @@
       "ko": "너는 일하니까, 페이지와 나는",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,10 +208,10 @@
       "ko": "학교 끝나고 루비 생일 파티 후에 엄마 집에 저녁 먹으러 갈 거야.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -207,7 +219,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,16 +233,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,16 +256,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S05",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,20 +277,25 @@
       "ko": "아, 다음 주는 너무 바빠. 미안해. 가고 싶으면 내가 맞출게. 언제였지?",
       "tags": {
         "functions": [
-          "F20"
+          "F28",
+          "F38"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -288,20 +305,23 @@
       "ko": "오 마이 갓, 월요일이야. 미안해.",
       "tags": {
         "functions": [
-          "F20"
+          "F28"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04",
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -311,9 +331,9 @@
       "ko": "이 색종이에 집중하고 있었어. 꼭 갈게.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -322,7 +342,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -336,17 +356,19 @@
         "functions": [
           "F27"
         ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
+        "situation": "S14",
+        "cefr": "A2",
+        "register": "R3",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -357,22 +379,29 @@
       "ko": "놀게 해줘서 고마워. 오ops. 미안. 차에서 만날게. 사실, 나 가야 해. 자, 가자, 아가.",
       "tags": {
         "functions": [
-          "F25",
+          "F27",
           "F28",
-          "F34"
+          "F38"
         ],
-        "situation": "S01",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01",
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04",
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -382,22 +411,27 @@
       "ko": "기억해, 페이지를 학교에 데려다 줄 거야, 알겠지? 자, 시작하자. 아빠에게 작별 인사해.",
       "tags": {
         "functions": [
-          "F01",
-          "F34",
-          "F25"
+          "F32",
+          "F36"
         ],
-        "situation": "S01",
-        "cefr": "A2",
+        "situation": "S19",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01",
+          "P03"
+        ],
+        "grammar_intent": [
+          "G09",
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -407,9 +441,9 @@
       "ko": "뽀뽀.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S01",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -418,10 +452,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -430,22 +466,23 @@
       "ko": "이봐, 잠깐, 너 강아지를 잊었어.",
       "tags": {
         "functions": [
-          "F06"
+          "F49"
         ],
-        "situation": "S01",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "e870d64cec76d888"
 }

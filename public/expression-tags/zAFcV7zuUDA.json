@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,16 +35,17 @@
       "ko": "선발전이 내일 방과 후래. 운이 좋지, 그렇지? 하키. 어쩌지, 우리 어떡하지?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F52"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -58,20 +59,22 @@
       "ko": "얘들아, 이거, 여기, 네가 기쁨이 척해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G14"
+        ],
         "flags": []
       }
     },
@@ -81,13 +84,13 @@
       "ko": "다시 빙판에 나가면 정말 좋지 않을까?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E06"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -104,10 +107,10 @@
       "ko": "오 그래, 그거 정말 좋겠다. 지금 뭐였어?",
       "tags": {
         "functions": [
-          "F09"
+          "F15"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E01"
@@ -115,7 +118,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,20 +130,23 @@
       "ko": "그건 기쁨이랑 전혀 안 닮았어. 내가 기쁨이가 아니니까? 그래, 당연하지.",
       "tags": {
         "functions": [
-          "F12"
+          "F07",
+          "F04"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -152,14 +158,14 @@
         "functions": [
           "F06"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -175,8 +181,8 @@
         "functions": [
           "F36"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -186,7 +192,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -196,20 +204,23 @@
       "ko": "학교 첫날 어땠어? 우리를 떠보고 있어. 난 됐어. 네가 기쁨이 척해. 뭐?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F48"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G14"
+        ],
         "flags": []
       }
     },
@@ -219,16 +230,16 @@
       "ko": "알겠어, 음, 흠.",
       "tags": {
         "functions": [
-          "F01"
+          "F52"
         ],
-        "situation": "S19",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -244,20 +255,24 @@
       "ko": "괜찮았어, 아마도. 모르겠어. 오, 아주 자연스러워.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -267,9 +282,9 @@
       "ko": "딱 기쁨이 같았어.",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
-        "situation": "S19",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -278,9 +293,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -290,9 +307,9 @@
       "ko": "분명히 뭔가 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S19",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -303,7 +320,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16"
+        ],
         "flags": []
       }
     },
@@ -313,10 +332,10 @@
       "ko": "이런 적이 한 번도 없었어. 어떡하지?",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S19",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -326,7 +345,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -336,19 +357,22 @@
       "ko": "무슨 일인지 알아낼 거야, 하지만 지원이 필요해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S19",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -359,9 +383,9 @@
       "ko": "남편에게 신호 보내. 에헴.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -373,9 +397,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -384,16 +406,16 @@
       "ko": "리드에게 멋진 패스를 하며,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -407,9 +429,9 @@
       "ko": "드메레에게 넘어간다. 에헴.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -421,10 +443,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "526a13121bdf3686"
 }

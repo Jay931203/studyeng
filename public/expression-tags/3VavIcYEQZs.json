@@ -12,10 +12,10 @@
       "ko": "글쎄, 그건 구슬이 아니었어. 우리가 반지의 제왕을 촬영한 뉴질랜드에서는, 운이 좋으면",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,10 +35,10 @@
       "ko": "떠날 때 조각된 초록색 돌을 받게 되고, 그걸 자주 착용하면",
       "tags": {
         "functions": [
-          "F02"
+          "F21"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +58,18 @@
       "ko": "뉴질랜드에 다시 돌아갈 확률이 높아져, 그런 의미야. 그리고 그게",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,10 +81,10 @@
       "ko": "약간의 행운을 가져다줄 거야. 그래서 그 영화들이 20개 정도의 오스카에",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,7 +92,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,7 +106,7 @@
         "functions": [
           "F02"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -115,10 +115,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -127,10 +129,10 @@
       "ko": "착용하고 있었어. 그리고 시상식에 들어가는 레드 카펫에서 매기 스미스를 만났어,",
       "tags": {
         "functions": [
-          "F03"
+          "F02"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S12",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,7 +140,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,18 +152,18 @@
       "ko": "안녕하세요, 여기 왜 오셨어요? 나는 반지의 제왕 때문에 왔다고 했어. 아, 그렇구나, 그녀가",
       "tags": {
         "functions": [
-          "F06"
+          "F25"
         ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,10 +175,10 @@
       "ko": "네 목에 있는 건 뭐야? 아, 이건 내 푸나미야, 매기. 아, 너의 푸나미, 그건 뭐에요?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,7 +186,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,9 +198,9 @@
       "ko": "나는 이걸 착용하면 행운이 온다고 했고, 난 아주 좋은 사람이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F05"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -207,11 +209,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "32db06aadd0c2833"
 }

@@ -12,9 +12,9 @@
       "ko": "그들이 코스에서 너를 혼자 두면.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,10 +35,10 @@
       "ko": "아니, 나는 방탕한 사람과 함께 플레이하는 게 좋아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E01"
@@ -48,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V01",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,9 +58,9 @@
       "ko": "그가 좋은 성격이고 함께 플레이하는 게 즐겁다면, 방탕한 사람과도 플레이할 거야. 정말? 응.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -83,9 +81,9 @@
       "ko": "너, 맨슨, 라미레즈, 그리고 히틀러. 좋은 4인조네. 빠르게 플레이하면 좋겠어. 빠르게 플레이하면 좋겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -106,10 +104,10 @@
       "ko": "나는 느린 펑카우저보다 빠른 맨슨과 플레이하는 게 더 좋아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,9 +127,9 @@
       "ko": "느린 펑카우저보다 빠른 맨슨과 플레이하는 게 더 좋아, 언제든지 말이야. 응, 너는 조금 느려.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -142,7 +140,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -152,9 +152,9 @@
       "ko": "나는 공을 정렬하고, 보고, 쳐.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -175,9 +175,9 @@
       "ko": "헤이, 락, 우리가 새 집을 위해 인테리어 디자이너를 고용했다고 말했었나?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -198,9 +198,9 @@
       "ko": "일요일에 샌프란시스코에서 그녀를 만나러 갈 거야.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -221,9 +221,9 @@
       "ko": "제프, 너는 1시에 나를 공항에 데려다 줄 거야.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S24",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -244,20 +244,25 @@
       "ko": "잊지 마, 계획 세우지 마. 공항? 오, 맙소사. 왜 그가 너를 공항에 데려다 줘야 하지? 나를 배웅해야 해. 배웅?",
       "tags": {
         "functions": [
-          "F06"
+          "F35",
+          "F32",
+          "F40"
         ],
-        "situation": "S24",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24",
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -267,13 +272,13 @@
       "ko": "너는 인도로 가지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -290,20 +295,23 @@
       "ko": "너는 샌프란시스코에 가는 거야, 한 시간 거리야. 그래서 어쩌라고? 배웅해줄 거야, 그날 밤에 돌아올 거야. 알겠어, 래리?",
       "tags": {
         "functions": [
-          "F12"
+          "F32"
         ],
-        "situation": "S40",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -313,10 +321,10 @@
       "ko": "너가 이 그룹에서 유일하게",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -336,10 +344,10 @@
       "ko": "싱글로 여기 있는 게 놀랍지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -359,35 +367,10 @@
       "ko": "여자친구도, 아내도 없잖아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "dx5jTXNnCZw-16",
-      "en": "Maybe if you would have seen Cheryl off a few more times, you'd still be together. I don't think so. He wants to, trust me, he wants to.",
-      "ko": "만약 네가 셰릴을 몇 번 더 배웅했더라면, 아직도 함께 있었을 거야. 그렇게 생각하지 않아. 그는 원해, 믿어봐, 그는 원해.",
-      "tags": {
-        "functions": [
-          "F14"
-        ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -402,19 +385,42 @@
       }
     },
     {
+      "id": "dx5jTXNnCZw-16",
+      "en": "Maybe if you would have seen Cheryl off a few more times, you'd still be together. I don't think so. He wants to, trust me, he wants to.",
+      "ko": "만약 네가 셰릴을 몇 번 더 배웅했더라면, 아직도 함께 있었을 거야. 그렇게 생각하지 않아. 그는 원해, 믿어봐, 그는 원해.",
+      "tags": {
+        "functions": [
+          "F11",
+          "F40"
+        ],
+        "situation": "S50",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E07"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "dx5jTXNnCZw-17",
       "en": "No, trust me, he doesn't. Jeff, do you want to?",
       "ko": "아니, 믿어봐, 그는 원하지 않아. 제프, 너는 원해?",
       "tags": {
         "functions": [
-          "F09",
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E07"
         ],
         "expression_types": [
           "X08"
@@ -431,16 +437,16 @@
       "ko": "음, 너는 갈 거야.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -448,5 +454,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "6cc8f7eb864b5765"
 }

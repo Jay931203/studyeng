@@ -12,19 +12,22 @@
       "ko": "어서, 가야 해.",
       "tags": {
         "functions": [
-          "F35"
+          "F38"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S46",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -37,22 +40,24 @@
       "ko": "젠장, 이게 말이 돼? 난 끝이야. 너한테 질렸어. 더 이상 상대 안 해.",
       "tags": {
         "functions": [
-          "F17",
-          "F20"
+          "F43"
         ],
-        "situation": "S50",
+        "situation": "S46",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E03",
-          "E02"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V04",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G07"
+        ],
         "flags": [
           "is_lyrics",
           "contains_profanity"
@@ -65,22 +70,23 @@
       "ko": "난 끝이야.",
       "tags": {
         "functions": [
-          "F20"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S46",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -90,20 +96,22 @@
       "ko": "7번 주유기에 20달러어치랑 9번 하나 주세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S46",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -115,18 +123,18 @@
       "ko": "아, 복권 100달러어치요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -134,5 +142,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "f23d37a6745dc37c"
 }

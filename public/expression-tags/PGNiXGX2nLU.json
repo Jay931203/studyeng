@@ -12,20 +12,24 @@
       "ko": "내가 아는 건 그게 나라는 거야. 너는 즐거운 것 같아. 사랑의 팔을 열어줘, 나도 원해!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -37,18 +41,18 @@
       "ko": "음, 나는 너에게 공감해. 다른 누구도 안 돼. 이제 내 방식대로 해야 해, 베이비!",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,20 +66,25 @@
       "ko": "내가 아는 건 그게 나라는 거야. 너는 즐거운 것 같아. 사랑의 팔을 열어줘, 조심해, 내가 간다!",
       "tags": {
         "functions": [
-          "F09"
+          "F35",
+          "F40"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -87,19 +96,21 @@
       "ko": "너는 나를 빙글빙글 돌려, 베이비, 빙글빙글, 마치 레코드처럼, 베이비, 빙글빙글!",
       "tags": {
         "functions": [
-          "F09"
+          "F12"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -112,7 +123,7 @@
       "ko": "나는 이제 너의 친구가 되어야 해, 베이비!",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -121,9 +132,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -131,5 +142,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "b8e7bf497c8c28f1"
 }

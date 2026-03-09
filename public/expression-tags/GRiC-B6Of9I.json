@@ -14,8 +14,8 @@
         "functions": [
           "F35"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,13 +35,13 @@
       "ko": "공정하게 하지 않잖아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -60,7 +60,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -83,13 +83,13 @@
       "ko": "정말 좋아.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -108,8 +108,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,9 +129,9 @@
       "ko": "해변에 갔던 날이야.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -152,10 +152,10 @@
       "ko": "프레드를 처음 만난 날이지. 맞아.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -177,8 +177,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -200,8 +200,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -221,9 +221,9 @@
       "ko": "몇 주 후에 돌아올 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -244,22 +244,26 @@
       "ko": "그와 결혼하지 마.",
       "tags": {
         "functions": [
-          "F43"
+          "F35",
+          "F40"
         ],
-        "situation": "S08",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "0513c7b6937b68be"
 }

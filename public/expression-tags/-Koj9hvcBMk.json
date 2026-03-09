@@ -14,16 +14,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,18 @@
       "ko": "저는 이미 크림슨에서 ABHW와 Fuerza Latina에게 사과했습니다.",
       "tags": {
         "functions": [
-          "F27"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +58,18 @@
       "ko": "그리고 하버드에서 모욕을 당했을지도 모르는 여성들에게도 사과했습니다.",
       "tags": {
         "functions": [
-          "F27"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S14",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +81,18 @@
       "ko": "보안 위반과 관련된 어떤 혐의에 대해서는,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S14",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,20 +104,23 @@
       "ko": "이 위원회에서 저에게 인정을 받을 자격이 있다고 생각합니다. 죄송하다고요?",
       "tags": {
         "functions": [
-          "F09"
+          "F28"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -127,18 +130,18 @@
       "ko": "네. 이해가 안 됩니다. 어떤 부분이죠? 인정을 받을 자격이 있습니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S14",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,20 +153,22 @@
       "ko": "저는 귀하의 시스템에서 꽤 큰 허점을 지적했다고 생각합니다.",
       "tags": {
         "functions": [
-          "F12"
+          "F09"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -173,20 +178,26 @@
       "ko": "실례하겠습니다, 제가 말씀해도 될까요? 네.",
       "tags": {
         "functions": [
-          "F46"
+          "F28",
+          "F44"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04",
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -198,16 +209,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,20 +230,22 @@
       "ko": "그리고 그 수준의 정교함을 보장할 수 있습니다. 사실, 그 정교함 덕분에",
       "tags": {
         "functions": [
-          "F01"
+          "F13"
         ],
-        "situation": "S36",
+        "situation": "S14",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -242,20 +255,22 @@
       "ko": "우리는 4시간도 안 되어 당신을 찾을 수 있었습니다. 4시간이요? 네, 맞습니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F13"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -265,18 +280,18 @@
       "ko": "인상적일 수 있지만, 만약 당신이 찾고 있는 것을 알고 있었다면,",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,20 +305,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
+        "situation": "S14",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "7863bbc12beebd9a"
 }

@@ -12,19 +12,21 @@
       "ko": "찰리는 압박 속에서 별로 좋아 보이지 않아.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V16",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -35,23 +37,22 @@
       "ko": "해냈어! 구원이 가능해, 파키! 나중에 차 한 잔 줘. 내가 의혹의 비밀을 알려줄게. 그를 처치할 수는 없어. 뭐? 안 돼!",
       "tags": {
         "functions": [
-          "F15",
-          "F09",
-          "F34"
+          "F32"
         ],
         "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
-          "E01",
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -61,23 +62,24 @@
       "ko": "절대 그럴 리 없어! 아, 하지만 이미 그랬잖아! 너는 나를 위해 훌륭한 스파이였어, 앤젤 더스트. 하지만 너의 호텔에서의 시간은 끝난 것 같아. 안 돼. 안 돼. 안 돼.",
       "tags": {
         "functions": [
-          "F09",
-          "F20",
-          "F12"
+          "F43"
         ],
-        "situation": "S50",
+        "situation": "S23",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
-          "E02",
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X03",
+          "X07"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -87,23 +89,21 @@
       "ko": "안 돼. 안 돼. 안 돼. 안 돼. 안 돼. 안 돼.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -112,18 +112,18 @@
       "ko": "안 돼. 안 돼. 그렇게 속상해하지 마.",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -135,20 +135,25 @@
       "ko": "벨벳이 네 발표를 위해 멋지게 꾸며줄 거야. 아! 아! 아!",
       "tags": {
         "functions": [
-          "F36"
+          "F30"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03",
+          "X05"
         ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V16",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -158,23 +163,21 @@
       "ko": "아! 아! 아! 아! 아! 아! 아!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -183,18 +186,18 @@
       "ko": "아! 아! 아! 아! 앤젤! 나, 어, 우리 대화에 대해 생각해봤어. 이봐!",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -206,22 +209,23 @@
       "ko": "돌아온 사람을 봐! 이봐!",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "4ae8f3844433a01d"
 }

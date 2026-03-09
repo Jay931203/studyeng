@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S34",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -26,7 +26,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -37,16 +39,16 @@
         "functions": [
           "F35"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,31 +62,8 @@
         "functions": [
           "F35"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "2G89nIGH53g-3",
-      "en": "This isn't gonna work. Wake him up.",
-      "ko": "이건 안 될 거야. 그를 깨워.",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S34",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -99,27 +78,55 @@
       }
     },
     {
+      "id": "2G89nIGH53g-3",
+      "en": "This isn't gonna work. Wake him up.",
+      "ko": "이건 안 될 거야. 그를 깨워.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "2G89nIGH53g-4",
       "en": "No!",
       "ko": "안 돼!",
       "tags": {
         "functions": [
-          "F17"
+          "F15"
         ],
-        "situation": "S50",
+        "situation": "S34",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "8c1cd5c4ba5773c5"
 }

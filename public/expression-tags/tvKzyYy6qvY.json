@@ -15,7 +15,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -24,7 +24,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -38,7 +40,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -47,8 +49,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -58,10 +64,10 @@
       "ko": "하지만 세상에서 가장 달콤한 목소리를 처음 들었던 건 기억해.",
       "tags": {
         "functions": [
-          "F01"
+          "F05"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,10 +110,10 @@
       "ko": "원하면 여기 앉아도 돼.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,6 +133,33 @@
       "ko": "내 인생에서 그렇게 아름다운 건 처음 봤어.",
       "tags": {
         "functions": [
+          "F30",
+          "F43"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V07",
+        "power": [],
+        "grammar_intent": [
+          "G01",
+          "G03"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "tvKzyYy6qvY-6",
+      "en": "She was like an angel.",
+      "ko": "그녀는 마치 천사 같았어.",
+      "tags": {
+        "functions": [
           "F01"
         ],
         "situation": "S50",
@@ -141,30 +174,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "tvKzyYy6qvY-6",
-      "en": "She was like an angel.",
-      "ko": "그녀는 마치 천사 같았어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E11"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -176,13 +188,13 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -209,7 +221,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -219,7 +233,7 @@
       "ko": "나는 괜찮아, 고마워.",
       "tags": {
         "functions": [
-          "F09"
+          "F27"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -231,7 +245,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -242,10 +258,10 @@
       "ko": "내 다리는 아주 좋고 멀쩡해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,10 +281,10 @@
       "ko": "나는 그 버스에서 그녀 옆에 앉았어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,10 +304,10 @@
       "ko": "학교까지 대화를 나눴어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -311,10 +327,10 @@
       "ko": "내 등은 물음표처럼 구부러져 있어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -334,10 +350,10 @@
       "ko": "이걸로 나는 곧게 펴질 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -359,8 +375,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -382,7 +398,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -403,13 +419,14 @@
       "ko": "너 바보야?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F58"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -426,10 +443,10 @@
       "ko": "엄마는 멍청한 건 멍청한 행동을 한다고 하셨어.",
       "tags": {
         "functions": [
-          "F04"
+          "F58"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -449,9 +466,9 @@
       "ko": "나는 제니야.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -463,7 +480,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -472,10 +491,10 @@
       "ko": "나는 포레스트, 포레스트 검프야.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -495,10 +514,10 @@
       "ko": "그날 이후로 우리는 항상 함께였어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -506,7 +525,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -518,10 +537,10 @@
       "ko": "제니와 나는 콩과 당근 같았어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -535,5 +554,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "eea1365e0139f15e"
 }

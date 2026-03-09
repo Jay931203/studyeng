@@ -12,11 +12,11 @@
       "ko": "뭔가 사라졌어요. 이번 주에는 조동사에 대해 이야기할 거예요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S19",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,11 +35,11 @@
       "ko": "평소처럼 90초 안에 모든 내용을 다룰 거예요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S19",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -51,9 +49,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -62,23 +58,21 @@
       "ko": "실례합니다. 아시다시피, 영어에는 조동사가 있어요. 총 아홉 개가 있습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
-        "situation": "S47",
+        "situation": "S19",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -87,23 +81,21 @@
       "ko": "예를 들면 must, can't, may, might, could 등이 있어요. 이 조동사는 보통",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S19",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -112,11 +104,12 @@
       "ko": "동사 원형 뒤에 오고, 인칭이나 시제에 따라 형태가 변하지 않아요.",
       "tags": {
         "functions": [
+          "F40",
           "F04"
         ],
-        "situation": "S47",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S19",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -125,10 +118,11 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "grammar_intent": [
+          "G18",
+          "G24"
+        ],
+        "flags": []
       }
     },
     {
@@ -137,11 +131,11 @@
       "ko": "현재 의미를 가지고 있지만, 과거 의미로 사용하고 싶을 때는 조동사 뒤에 have와",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S19",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -151,9 +145,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -162,11 +154,11 @@
       "ko": "과거 분사를 사용해요. 예를 들어, Rob must have eaten my cake.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S19",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -176,9 +168,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -187,11 +177,11 @@
       "ko": "Rob must have eaten my cake는 확신의 척도예요. 제가 Rob이 과거에",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S19",
+        "cefr": "B2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -201,9 +191,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -212,11 +200,11 @@
       "ko": "이 일을 했다는 것에 대해 매우 확신하고 있다는 뜻이에요. 조동사를 바꾸면",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S19",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -226,9 +214,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -237,11 +223,11 @@
       "ko": "확신의 정도도 바뀌어요. 예를 들어, Rob can't have eaten my cake.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S19",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -251,9 +237,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -262,11 +246,11 @@
       "ko": "이 말은 제가 이건 불가능하다고 생각하지만, 그가 했다는 걸 알고 있다는 뜻이에요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S19",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -276,9 +260,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -287,11 +269,11 @@
       "ko": "이건 불가능하다고 생각하지만, 그가 했다는 걸 알고 있어요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S19",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -301,10 +283,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a5bb218571b106b6"
 }

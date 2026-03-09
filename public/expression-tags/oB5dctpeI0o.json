@@ -14,18 +14,20 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -35,18 +37,18 @@
       "ko": "안녕하세요. 제 친구가 아까 여기 있었어요.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +60,18 @@
       "ko": "음, 대머리 남자? 이 정도 키?",
       "tags": {
         "functions": [
-          "F02"
+          "F06"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,16 +85,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
+        "situation": "S10",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E04"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,18 +106,18 @@
       "ko": "아니요, 아직 찾지 못했어요.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,21 +129,22 @@
       "ko": "정말 걱정돼요. 안타깝네요.",
       "tags": {
         "functions": [
-          "F09"
+          "F28"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04",
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -151,21 +154,23 @@
       "ko": "네.",
       "tags": {
         "functions": [
-          "F09"
+          "F53"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -174,20 +179,25 @@
       "ko": "그래서, 혹시 제 친구가 놓친 게 있을까 해서요?",
       "tags": {
         "functions": [
-          "F06"
+          "F14"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -197,9 +207,9 @@
       "ko": "제가 가진 모든 걸 보여줬어요.",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -208,7 +218,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -220,9 +230,9 @@
       "ko": "그에게 보여준 걸 보여주세요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -231,7 +241,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -243,20 +253,22 @@
       "ko": "그냥 친구에게 전화하는 게 좋겠어요.",
       "tags": {
         "functions": [
-          "F36"
+          "F14"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S24",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -266,18 +278,19 @@
       "ko": "했어요. 그리고, 그는 다시 와서 한 번 더 보라고 했어요. 제가...",
       "tags": {
         "functions": [
-          "F09"
+          "F05"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -291,17 +304,19 @@
         "functions": [
           "F27"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V08",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -312,20 +327,24 @@
       "ko": "못해요. 죄송해요.",
       "tags": {
         "functions": [
-          "F40"
+          "F28",
+          "F43"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -337,7 +356,7 @@
         "functions": [
           "F36"
         ],
-        "situation": "S36",
+        "situation": "S37",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -346,7 +365,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -360,8 +379,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S24",
-        "cefr": "A1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -369,11 +388,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "19b2f58c253617bd"
 }

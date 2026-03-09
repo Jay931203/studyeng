@@ -14,9 +14,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S18",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -25,7 +25,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16"
+        ],
         "flags": []
       }
     },
@@ -35,19 +37,22 @@
       "ko": "애리조나에서 시작한 만큼, 애리조나에서 경력을 마무리하게 될 거예요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S18",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05"
         ],
-        "vibe": "V07",
-        "power": [],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -60,14 +65,14 @@
         "functions": [
           "F06"
         ],
-        "situation": "S18",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -81,18 +86,18 @@
       "ko": "우와! 우와! 모두를 사랑해요. 아내를 사랑해요. 우와, 마르시!",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
-        "situation": "S18",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,18 +109,19 @@
       "ko": "아이들도 사랑해요. 타이슨, 내 아기, 새 아기 케이티. 한쪽 다리가 없지만 여전히 잘 지내는 형.",
       "tags": {
         "functions": [
-          "F15"
+          "F23"
         ],
-        "situation": "S18",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E08",
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,20 +133,25 @@
       "ko": "그리고 동생 TP. 너는 강한데, 나는 너에게 화나지 않아. 너에게 사랑밖에 없어.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S18",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E03",
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V02",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -150,18 +161,18 @@
       "ko": "팀원들도 사랑해요. 여기서 누군가를 빼먹었네요, 로이. 방송 시간이 30분밖에 없어요.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S18",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,20 +184,23 @@
       "ko": "내 공격 라인에게 아름다운 사랑을 전하고 싶어요.",
       "tags": {
         "functions": [
-          "F22"
+          "F30"
         ],
-        "situation": "S18",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03",
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -196,22 +210,25 @@
       "ko": "이들은 강하고 아름다우며 사랑이 넘치는 사람들입니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F30"
         ],
-        "situation": "S18",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "ce094b92767e188c"
 }

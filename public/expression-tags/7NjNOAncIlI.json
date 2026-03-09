@@ -12,10 +12,11 @@
       "ko": "안녕하세요 아버지, 따뜻한 곳으로 가요, 네, 저를 기억하시죠?",
       "tags": {
         "functions": [
-          "F25"
+          "F25",
+          "F36"
         ],
-        "situation": "S27",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,9 +24,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -35,11 +38,11 @@
       "ko": "실례합니다, 당신이 그 노인을 데려온 분인가요?",
       "tags": {
         "functions": [
-          "F06"
+          "F21"
         ],
-        "situation": "S27",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -47,7 +50,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -58,9 +63,10 @@
       "ko": "네, 그는 어떻게 지내고 있나요?",
       "tags": {
         "functions": [
-          "F02"
+          "F06",
+          "F53"
         ],
-        "situation": "S27",
+        "situation": "S01",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -81,13 +87,13 @@
       "ko": "음, 그는 방금 돌아가셨어요.",
       "tags": {
         "functions": [
-          "F05"
+          "F52"
         ],
-        "situation": "S27",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -106,7 +112,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S27",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -127,10 +133,10 @@
       "ko": "그냥 나이가 많아서, 때가 된 거죠.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S27",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -141,7 +147,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -150,10 +158,10 @@
       "ko": "그의 차트를 보고 싶습니다, 실례합니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S27",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -162,8 +170,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -173,16 +185,16 @@
       "ko": "선생님, 여기 들어오시면 안 됩니다.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S27",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -196,11 +208,11 @@
       "ko": "선생님, 여기는 출입 제한 구역입니다.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S27",
+        "situation": "S01",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -221,7 +233,7 @@
         "functions": [
           "F27"
         ],
-        "situation": "S27",
+        "situation": "S01",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -231,10 +243,15 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "a2ad72c07260de63"
 }

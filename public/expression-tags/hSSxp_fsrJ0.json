@@ -12,18 +12,18 @@
       "ko": "나는 행복하게 갸르릉거렸고, 마이크를 들고 있지 않다는 걸 방금 깨달았어.",
       "tags": {
         "functions": [
-          "F15"
+          "F02"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,21 +35,23 @@
       "ko": "크리스, 나 죽어가.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S28",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,18 +60,18 @@
       "ko": "오늘 아침에 죽어가다가, 결국 죽었어. 지금은 죽었어.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S28",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +83,18 @@
       "ko": "샤우나 모와의 데이트를 취소해야 했어, 나는 바보 같고, 그녀를 정말 좋아해.",
       "tags": {
         "functions": [
-          "F20"
+          "F57"
         ],
         "situation": "S08",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,18 +106,18 @@
       "ko": "내가 죽었는데도 그녀가 나를 여전히 좋아할까? 이게 뭐야?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,8 +131,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S08",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,7 +140,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,8 +154,8 @@
         "functions": [
           "F19"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S03",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E04"
@@ -173,10 +175,10 @@
       "ko": "톰과 이야기한 사람 있어? 그 작은 남자가 어떤 기분일지 상상도 못 해.",
       "tags": {
         "functions": [
-          "F06"
+          "F43"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,9 +186,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -196,10 +200,10 @@
       "ko": "지난 12시간 동안 톰의 체중보다 더 많은 걸 배출했어.",
       "tags": {
         "functions": [
-          "F01"
+          "F13"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -207,9 +211,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -219,10 +225,10 @@
       "ko": "그는 아마 지구에서 사라졌을지도 몰라.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,10 +236,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -242,10 +250,10 @@
       "ko": "그에게 전화해야 해. 꼭 연락해야 해.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S24",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -253,7 +261,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,8 +275,8 @@
         "functions": [
           "F43"
         ],
-        "situation": "S08",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -276,11 +284,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "4f5fc037f3e7ef55"
 }

@@ -12,16 +12,18 @@
       "ko": "응, 그게, 어...",
       "tags": {
         "functions": [
-          "F08"
+          "F07",
+          "F52",
+          "F53"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -37,10 +39,10 @@
       "ko": "움직일 수 있어? 응, 응, 응, 응.",
       "tags": {
         "functions": [
-          "F06"
+          "F07"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,13 +62,13 @@
       "ko": "며칠 전에 그 식료품점에 갔었어. 응?",
       "tags": {
         "functions": [
-          "F03"
+          "F23"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -83,13 +85,14 @@
       "ko": "아빠의 캐슈 건포도 가방을 봤어. 아, 좋네. 응. 좋지. 샀어?",
       "tags": {
         "functions": [
-          "F02"
+          "F23",
+          "F51"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -106,21 +109,26 @@
       "ko": "응. 아빠가 좀, 어...",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F52",
+          "F53"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -129,18 +137,18 @@
       "ko": "캐슈를 조금 아끼고 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F23"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -155,7 +163,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -175,16 +183,17 @@
       "ko": "가방에 캐슈가 네 개밖에 없거든, 알지? 어... 여기, 보여줄게.",
       "tags": {
         "functions": [
-          "F04"
+          "F23",
+          "F52"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -198,10 +207,11 @@
       "ko": "봐봐? 음... 가방을 아꼈네. 아니, 아끼지 않았어. 보여줘. 장례식 가야 해. 사실 간식이 필요해.",
       "tags": {
         "functions": [
-          "F09"
+          "F08",
+          "F56"
         ],
-        "situation": "S41",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -211,7 +221,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -221,20 +233,22 @@
       "ko": "음, 정말 맛있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F50"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -244,13 +258,13 @@
       "ko": "맛있는 캐슈지만, 알지,",
       "tags": {
         "functions": [
-          "F09"
+          "F23"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -267,16 +281,17 @@
       "ko": "거기다 캐슈 세 개 더 넣는다고 죽지는 않을 텐데? 내가 생각하기에, 그게 뭐냐면?",
       "tags": {
         "functions": [
-          "F12"
+          "F23",
+          "F09"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -290,20 +305,23 @@
       "ko": "우선, 캐슈가 비싸.",
       "tags": {
         "functions": [
-          "F12"
+          "F23",
+          "F50"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -313,7 +331,7 @@
       "ko": "어... 지금 부족해.",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -322,12 +340,14 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -336,13 +356,14 @@
       "ko": "응. 캐슈 부족? 지난 몇 년 동안 계속 그랬어.",
       "tags": {
         "functions": [
-          "F04"
+          "F23",
+          "F08"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -359,6 +380,85 @@
       "ko": "캐슈 부족에 대해 들어본 적 없어.",
       "tags": {
         "functions": [
+          "F23",
+          "F43"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E08"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "qq6icvSJq9g-16",
+      "en": "Well, that's because you're not in the industry.",
+      "ko": "그건 네가 업계에 있지 않아서 그래.",
+      "tags": {
+        "functions": [
+          "F04",
+          "F52"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "qq6icvSJq9g-17",
+      "en": "Can I give him a little piece of advice? Please. I would call it... Raisins.",
+      "ko": "그에게 작은 조언을 해도 될까? 제발. 나는 이렇게 부를 거야... 건포도.",
+      "tags": {
+        "functions": [
+          "F34",
+          "F46"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E13"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G02",
+          "G13"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "qq6icvSJq9g-18",
+      "en": "And then, let people be...",
+      "ko": "그리고 사람들을 그냥 두게 해줘...",
+      "tags": {
+        "functions": [
           "F01"
         ],
         "situation": "S50",
@@ -373,77 +473,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "qq6icvSJq9g-16",
-      "en": "Well, that's because you're not in the industry.",
-      "ko": "그건 네가 업계에 있지 않아서 그래.",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "qq6icvSJq9g-17",
-      "en": "Can I give him a little piece of advice? Please. I would call it... Raisins.",
-      "ko": "그에게 작은 조언을 해도 될까? 제발. 나는 이렇게 부를 거야... 건포도.",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "qq6icvSJq9g-18",
-      "en": "And then, let people be...",
-      "ko": "그리고 사람들을 그냥 두게 해줘...",
-      "tags": {
-        "functions": [
-          "F36"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "6dfc2ac101e531f1"
 }

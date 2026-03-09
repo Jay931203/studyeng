@@ -14,8 +14,8 @@
         "functions": [
           "F14"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,9 +35,9 @@
       "ko": "수천 명일 겁니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -46,10 +46,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -60,16 +62,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
+        "situation": "S34",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,9 +83,9 @@
       "ko": "물론입니다.",
       "tags": {
         "functions": [
-          "F07"
+          "F44"
         ],
-        "situation": "S44",
+        "situation": "S34",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -92,10 +94,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -106,8 +112,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S34",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,10 +121,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -129,7 +137,7 @@
         "functions": [
           "F28"
         ],
-        "situation": "S44",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -138,9 +146,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -150,9 +160,9 @@
       "ko": "괜찮습니다. 저도 두렵습니다.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S34",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -161,7 +171,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,20 +183,23 @@
       "ko": "하지만 우리는 자신의 운명을 쟁취하기 위해 싸우므로 앞으로의 전투를 이겨낼 것입니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F21",
+          "F04"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -196,9 +209,9 @@
       "ko": "우리 자신의 국가를 만들기 위해서요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -207,7 +220,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,10 +232,10 @@
       "ko": "그리고 영어로 우리만의 방식을 실현하기 위해서요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,7 +243,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,16 +257,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
+        "situation": "S34",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,9 +278,9 @@
       "ko": "네.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S34",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -276,10 +289,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -288,18 +303,18 @@
       "ko": "언젠가 우리 위대한 나라가 12를 나타내는 단어를 가질 것이라고 꿈꿉니다.",
       "tags": {
         "functions": [
-          "F14"
+          "F03"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E06"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,7 +328,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -322,7 +337,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -336,20 +351,21 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
+        "situation": "S34",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "1abc6875e47fe1fe"
 }

@@ -12,11 +12,11 @@
       "ko": "나는 너를 불편하게 할 권리가 없어. 다시 말하지만, 나는 너를 불편하게 할 권리가 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -37,7 +37,7 @@
         "functions": [
           "F25"
         ],
-        "situation": "S40",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -60,22 +60,26 @@
       "ko": "건물 주변에 경계선을 설정하고 공중에 헬기를 띄워줘. 정장을 가져왔다는 말 해줘.",
       "tags": {
         "functions": [
+          "F21",
           "F34"
         ],
-        "situation": "S40",
+        "situation": "S43",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "baefa2225b061aca"
 }

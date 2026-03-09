@@ -12,18 +12,18 @@
       "ko": "당신을 구원하는 유일한 것은 여자의 마음이야, 그래",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,18 +37,18 @@
       "ko": "당신을 구원하는 유일한 것은 여자의 마음이야, 그래",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,7 +62,7 @@
       "ko": "내가 하는 일의 이유는 무엇일까? 답은 찾지 못할 수도 있지만, 항상 당신을 선택할 거야",
       "tags": {
         "functions": [
-          "F06"
+          "F43"
         ],
         "situation": "S46",
         "cefr": "B1",
@@ -73,9 +73,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -87,21 +89,26 @@
       "ko": "당신을 포기하고 싶지만, 정말 포기할 수 없다는 걸 알아. 기회를 계속 준 건 내 잘못이야",
       "tags": {
         "functions": [
-          "F20"
+          "F17"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02",
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G06"
+        ],
         "flags": [
           "is_lyrics",
           "contains_profanity"
@@ -114,19 +121,18 @@
       "ko": "당신을 사랑하지만 당신이 싫어. 강해지려고 노력해",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01",
-          "E02"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -140,7 +146,7 @@
       "ko": "하지만 내가 얼마나 할 수 있을까? 이번에는 당신의 말을 당신의 삶에 담아",
       "tags": {
         "functions": [
-          "F09"
+          "F46"
         ],
         "situation": "S46",
         "cefr": "B1",
@@ -151,9 +157,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -165,7 +173,7 @@
       "ko": "당신의 말이 거짓이 아니길 바라, 왜냐하면 당신을 구원하는 유일한 것은",
       "tags": {
         "functions": [
-          "F09"
+          "F24"
         ],
         "situation": "S46",
         "cefr": "B1",
@@ -174,15 +182,18 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "c26e220e78696ac9"
 }

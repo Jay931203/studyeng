@@ -12,10 +12,10 @@
       "ko": "그리고 그곳에서 일하던 농장 소년을 괴롭혔습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,10 +35,10 @@
       "ko": "그의 이름은 웨슬리였지만, 그녀는 그렇게 부르지 않았습니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F43"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,10 +46,15 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -58,18 +63,18 @@
       "ko": "멋진 시작이죠?",
       "tags": {
         "functions": [
-          "F06"
+          "F15"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +86,18 @@
       "ko": "네, 정말 좋습니다.",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,20 +109,22 @@
       "ko": "버터컵에게 웨슬리를 부리는 것만큼 즐거운 일은 없었습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -127,9 +134,9 @@
       "ko": "농장 소년, 내 말 안장을 닦아줘.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -138,7 +145,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,8 +159,8 @@
         "functions": [
           "F09"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S03",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -161,9 +168,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -173,9 +182,9 @@
       "ko": "원하시는 대로요.",
       "tags": {
         "functions": [
-          "F44"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -184,8 +193,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P04"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -196,10 +207,10 @@
       "ko": "\"원하시는 대로요\"가 그가 그녀에게 한 말 전부였습니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F13"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -207,9 +218,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P04"
+        ],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -219,9 +234,9 @@
       "ko": "농장 소년, 이걸 물로 채워줘.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -230,7 +245,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,9 +257,9 @@
       "ko": "제발.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -253,10 +268,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,9 +282,9 @@
       "ko": "원하시는 대로요.",
       "tags": {
         "functions": [
-          "F44"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -276,8 +293,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P04"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -288,21 +307,23 @@
       "ko": "그날 그녀는 그가 \"원하시는 대로요\"라고 말할 때,",
       "tags": {
         "functions": [
-          "F18"
+          "F02"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -311,20 +332,27 @@
       "ko": "그 의미가 \"사랑해요\"라는 것을 깨닫고 놀랐습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F22",
+          "F13"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S40",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V07",
+        "power": [
+          "P04",
+          "P09"
+        ],
+        "grammar_intent": [
+          "G10",
+          "G22"
+        ],
         "flags": []
       }
     },
@@ -334,22 +362,23 @@
       "ko": "그리고 그녀가 진정으로 그를 사랑한다는 것을 깨달은 날은 더욱 놀라웠습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "584e6c77bef157dc"
 }

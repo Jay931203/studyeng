@@ -14,16 +14,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,18 +37,18 @@
       "ko": "나탈리 포트먼과 점심을 먹으면",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S05",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -62,19 +62,24 @@
         "functions": [
           "F14"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G16",
+          "G17"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -85,16 +90,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -108,18 +113,18 @@
       "ko": "나를 봐, 나는 라이언 고슬링이야. 완벽한 뼈 구조와 친절한 눈을 가졌어. 잘해라, 라이언 고슬링.",
       "tags": {
         "functions": [
-          "F09"
+          "F35"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E10"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V10",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -131,13 +136,13 @@
       "ko": "사무엘 L. 잭슨은 항상 방귀 낀 얼굴이야. 맞아, 나도 그래.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E10"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -154,13 +159,13 @@
       "ko": "제시카 차스테인의 가슴으로 내 TV의 화이트 밸런스를 맞출 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F63"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E10"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -177,18 +182,18 @@
       "ko": "에디 레드메인과 플리시티 존스가 같은 얼굴이라는 사실을 모두 무시하는 건가?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -200,13 +205,13 @@
       "ko": "사랑하는 에디 레드메인, 나는 너를 정말 싫어해. 너 때문에 토할 것 같아. 너는 내 발가락 사이의 쓰레기야. 사랑을 담아 유제니아.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -223,19 +228,21 @@
       "ko": "한나가 팔을 들고, 아빠는 그의 겨드랑이 털을 바라봐.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -246,18 +253,18 @@
       "ko": "너는 우피 골드버그를 헤드록하고 있는 것 같아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -269,22 +276,25 @@
       "ko": "정말 그게 다야. 린-마누엘 미란다는 1996년 NBC 시트콤을 위해 머리를 자른 것 같아.",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "7050d582bfa16ca9"
 }

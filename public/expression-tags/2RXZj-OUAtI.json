@@ -12,20 +12,24 @@
       "ko": "시계를 1년 전으로 돌려보자.",
       "tags": {
         "functions": [
-          "F04"
+          "F36"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -35,10 +39,10 @@
       "ko": "이 경찰들과 변호사들은 너희를 건드릴 엄두도 못 내.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E03"
@@ -58,18 +62,18 @@
       "ko": "도대체 무슨 일이 있었던 거야?",
       "tags": {
         "functions": [
-          "F06"
+          "F52"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,10 +85,227 @@
       "ko": "너의 남자다운 기운이 사라졌나? 응?",
       "tags": {
         "functions": [
-          "F17"
+          "F06"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E05"
+        ],
+        "expression_types": [
+          "X01",
+          "X06"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "2RXZj-OUAtI-4",
+      "en": "You see, a guy like me...",
+      "ko": "나 같은 사람은...",
+      "tags": {
+        "functions": [
+          "F12"
+        ],
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "2RXZj-OUAtI-5",
+      "en": "Freak.",
+      "ko": "괴물.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S43",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "2RXZj-OUAtI-6",
+      "en": "A guy like me...",
+      "ko": "나 같은 사람은...",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "2RXZj-OUAtI-7",
+      "en": "Look, listen.",
+      "ko": "들어봐.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S43",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "2RXZj-OUAtI-8",
+      "en": "I know why you choose to have your little group therapy sessions in broad daylight.",
+      "ko": "너희가 낮에 그룹 치료 세션을 하는 이유를 알아.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S29",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E07"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V08",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "2RXZj-OUAtI-9",
+      "en": "I know why you're afraid to go out at night.",
+      "ko": "밤에 나가는 게 두려운 이유도 알아.",
+      "tags": {
+        "functions": [
+          "F02"
+        ],
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E07"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V08",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "2RXZj-OUAtI-10",
+      "en": "The Batman.",
+      "ko": "배트맨.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S43",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "2RXZj-OUAtI-11",
+      "en": "You see, Batman has shown Gotham your true colors, unfortunately.",
+      "ko": "배트맨이 고담에 너의 진짜 모습을 보여줬어, 안타깝게도.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "2RXZj-OUAtI-12",
+      "en": "Dent, he's just the beginning.",
+      "ko": "덴트는 시작에 불과해.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E03"
@@ -99,232 +320,27 @@
       }
     },
     {
-      "id": "2RXZj-OUAtI-4",
-      "en": "You see, a guy like me...",
-      "ko": "나 같은 사람은...",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S44",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "2RXZj-OUAtI-5",
-      "en": "Freak.",
-      "ko": "괴물.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S44",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E08"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "2RXZj-OUAtI-6",
-      "en": "A guy like me...",
-      "ko": "나 같은 사람은...",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S44",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "2RXZj-OUAtI-7",
-      "en": "Look, listen.",
-      "ko": "들어봐.",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S44",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "2RXZj-OUAtI-8",
-      "en": "I know why you choose to have your little group therapy sessions in broad daylight.",
-      "ko": "너희가 낮에 그룹 치료 세션을 하는 이유를 알아.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "2RXZj-OUAtI-9",
-      "en": "I know why you're afraid to go out at night.",
-      "ko": "밤에 나가는 게 두려운 이유도 알아.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E04"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "2RXZj-OUAtI-10",
-      "en": "The Batman.",
-      "ko": "배트맨.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S44",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "2RXZj-OUAtI-11",
-      "en": "You see, Batman has shown Gotham your true colors, unfortunately.",
-      "ko": "배트맨이 고담에 너의 진짜 모습을 보여줬어, 안타깝게도.",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "2RXZj-OUAtI-12",
-      "en": "Dent, he's just the beginning.",
-      "ko": "덴트는 시작에 불과해.",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S44",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "2RXZj-OUAtI-13",
       "en": "And as for the television's so-called plan, Batman has no jurisdiction.",
       "ko": "그리고 TV에서 말하는 계획에 대해 말하자면, 배트맨은 관할권이 없어.",
       "tags": {
         "functions": [
-          "F04"
+          "F13"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -334,19 +350,21 @@
       "ko": "그를 찾고 고백하게 만들 거야.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -357,22 +375,23 @@
       "ko": "나는 고백하는 놈들을 알아.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "004efd02f47c8ee9"
 }

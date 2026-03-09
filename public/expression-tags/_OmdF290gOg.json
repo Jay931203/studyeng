@@ -14,8 +14,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,10 +35,10 @@
       "ko": "지금은 좀 조용하면 좋겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,20 +58,23 @@
       "ko": "너도 알다시피, 넌 바보야.",
       "tags": {
         "functions": [
-          "F17"
+          "F04",
+          "F58"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -81,16 +84,16 @@
       "ko": "아니, 아니, 생각조차 하지 마.",
       "tags": {
         "functions": [
-          "F40"
+          "F45"
         ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -104,20 +107,22 @@
       "ko": "앤더슨, 큰소리로 말하지 마. 너 때문에 거리 전체의 IQ가 떨어져. 경찰에 전화해야 해. 그래.",
       "tags": {
         "functions": [
-          "F40"
+          "F36"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -127,10 +132,10 @@
       "ko": "가는 중이야. 마음에 들어?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,33 +155,10 @@
       "ko": "음, 아니.",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "_OmdF290gOg-7",
-      "en": "The German for revenge. She couldn't be trying to help herself.",
-      "ko": "복수에 대한 독일어. 그녀는 스스로를 도우려는 게 아닐까?",
-      "tags": {
-        "functions": [
-          "F14"
-        ],
-        "situation": "S14",
-        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -185,6 +167,31 @@
           "X08"
         ],
         "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "_OmdF290gOg-7",
+      "en": "The German for revenge. She couldn't be trying to help herself.",
+      "ko": "복수에 대한 독일어. 그녀는 스스로를 도우려는 게 아닐까?",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V15",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,7 +205,7 @@
         "functions": [
           "F27"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -208,7 +215,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -219,10 +228,10 @@
       "ko": "그녀는 너희보다 똑똑하고, 이미 죽었어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,20 +251,23 @@
       "ko": "조용히 해. 뭐라고 하는 거야? 너는 생각하고 있었어. 짜증나.",
       "tags": {
         "functions": [
-          "F11"
+          "F17"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -265,14 +277,13 @@
       "ko": "오, 존, 너가 너무 부러워. 너가 나를 부러워해.",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01",
-          "E07"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -289,11 +300,11 @@
       "ko": "너의 마음은 너무 평온하고, 직설적이며, 거의 사용되지 않아. 뭐 쓰고 있어? 블로그. 주제는? 우리. 너는 우리를 말하는 거지.",
       "tags": {
         "functions": [
-          "F02"
+          "F06"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -312,10 +323,10 @@
       "ko": "내 것.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -337,9 +348,9 @@
       "ko": "음, 너는 많이 쓰고 있네.",
       "tags": {
         "functions": [
-          "F02"
+          "F52"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -362,19 +373,23 @@
         "functions": [
           "F30"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G03"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -383,20 +398,23 @@
       "ko": "응, 바보의 훌륭한 인상. 나는 잘 모르겠어.",
       "tags": {
         "functions": [
-          "F12"
+          "F30",
+          "F58"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -406,10 +424,10 @@
       "ko": "너는 보지만, 관찰하지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -429,10 +447,10 @@
       "ko": "알겠어, 알겠어, 얘들아, 진정해.",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -446,5 +464,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "2ee5d65c0dff2673"
 }

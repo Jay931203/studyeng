@@ -12,10 +12,10 @@
       "ko": "괜찮아, 괜찮아. 좋아, 주의해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,20 +35,24 @@
       "ko": "위험한 냄새야, 여러분. 잠깐, 이게 뭐지? 이건 역겨워. 브로콜리잖아! 맞아!",
       "tags": {
         "functions": [
-          "F17"
+          "F40"
         ],
         "situation": "S45",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E08"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -58,10 +62,10 @@
       "ko": "방금 우리 목숨을 구했어. 응, 천만에. 라일리, 저녁을 안 먹으면,",
       "tags": {
         "functions": [
-          "F01"
+          "F42"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -70,8 +74,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -84,16 +92,18 @@
           "F01"
         ],
         "situation": "S45",
-        "cefr": "A1",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -104,20 +114,22 @@
       "ko": "잠깐, 방금 디저트 못 먹는다고 했어? 저건 화내는 거야.",
       "tags": {
         "functions": [
-          "F03"
+          "F36"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -127,11 +139,11 @@
       "ko": "그는 공정한 것에 대해 굉장히 신경 써.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -150,19 +162,21 @@
       "ko": "그래, 그렇게 나오겠다 이거지, 아저씨? 디저트 없다고? 오, 그래.",
       "tags": {
         "functions": [
-          "F17"
+          "F06"
         ],
         "situation": "S45",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V10",
-        "power": [],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -173,10 +187,10 @@
       "ko": "아빠가 이거 먹으면 우리도 저녁 먹을게!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,10 +210,10 @@
       "ko": "어쨌든, 라일리는 이제 11살이야. 무슨 일이 생기겠어?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -219,10 +233,10 @@
       "ko": "좋아, 내가 생각한 건 이게 아닌데.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,20 +256,22 @@
       "ko": "이게 내 스타일의 사람들이지. 여기서 살아야 해? 어쩔 수 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -265,20 +281,22 @@
       "ko": "진짜, 여기서 뭔가 죽은 냄새가 나. 이사 때문에 죽을 수도 있어?",
       "tags": {
         "functions": [
-          "F02"
+          "F34"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -288,23 +306,25 @@
       "ko": "얘들아, 너무 과민반응이야. 아무도 안 죽어. 죽은 쥐! 으악! 최악이야. 토할 것 같아.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03",
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V10",
-        "power": [],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "fbb40f763675eb35"
 }

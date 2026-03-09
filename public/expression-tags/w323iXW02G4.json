@@ -12,18 +12,18 @@
       "ko": "하지 마, 제발. 진짜로 하지 마.",
       "tags": {
         "functions": [
-          "F40"
+          "F35"
         ],
-        "situation": "S39",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,19 +35,18 @@
       "ko": "트로이, 이건 좋은 생각인 것 같아. 마이크, 하지 마!",
       "tags": {
         "functions": [
-          "F36",
-          "F40"
+          "F09"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -61,8 +60,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S20",
-        "cefr": "A1",
+        "situation": "S27",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -82,10 +81,10 @@
       "ko": "4!",
       "tags": {
         "functions": [
-          "F01"
+          "F15"
         ],
-        "situation": "S20",
-        "cefr": "A1",
+        "situation": "S27",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -107,10 +106,10 @@
       "ko": "3! 2!",
       "tags": {
         "functions": [
-          "F01"
+          "F15"
         ],
-        "situation": "S20",
-        "cefr": "A1",
+        "situation": "S27",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -132,10 +131,10 @@
       "ko": "마이크!",
       "tags": {
         "functions": [
-          "F01"
+          "F15"
         ],
-        "situation": "S20",
-        "cefr": "A1",
+        "situation": "S27",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -157,9 +156,9 @@
       "ko": "1!",
       "tags": {
         "functions": [
-          "F01"
+          "F15"
         ],
-        "situation": "S20",
+        "situation": "S27",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -182,22 +181,23 @@
       "ko": "세상에.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "contains_profanity"
+          "contains_profanity",
+          "is_fragment"
         ]
       }
     },
@@ -209,21 +209,21 @@
         "functions": [
           "F18"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G07"
+        ],
+        "flags": []
       }
     },
     {
@@ -232,18 +232,18 @@
       "ko": "아아!",
       "tags": {
         "functions": [
-          "F18"
+          "F15"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -257,18 +257,18 @@
       "ko": "아아!",
       "tags": {
         "functions": [
-          "F18"
+          "F15"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -282,18 +282,18 @@
       "ko": "아아!",
       "tags": {
         "functions": [
-          "F18"
+          "F15"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -307,18 +307,18 @@
       "ko": "아아!",
       "tags": {
         "functions": [
-          "F18"
+          "F15"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -332,18 +332,18 @@
       "ko": "아아!",
       "tags": {
         "functions": [
-          "F18"
+          "F15"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -357,18 +357,18 @@
       "ko": "아아!",
       "tags": {
         "functions": [
-          "F18"
+          "F15"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -382,9 +382,9 @@
       "ko": "아아!",
       "tags": {
         "functions": [
-          "F01"
+          "F15"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -407,9 +407,9 @@
       "ko": "아아!",
       "tags": {
         "functions": [
-          "F01"
+          "F15"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -426,5 +426,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "41bc43aa4c0b8642"
 }

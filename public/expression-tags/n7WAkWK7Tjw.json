@@ -12,10 +12,10 @@
       "ko": "그들이 너를 만들 때 나쁜 여자들을 만드는 걸 멈추지 않았어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,20 +37,22 @@
       "ko": "레드본 슬림, 그녀는 겨우 22살이야",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "is_lyrics",
           "contains_profanity"
@@ -63,18 +65,18 @@
       "ko": "그녀는 운동을 위해 루루레몬에 가는 걸 알아",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -88,18 +90,18 @@
       "ko": "10점짜리, 우리가 피니시 할 때 수영장 옆에 누워 있게 해",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -113,20 +115,23 @@
       "ko": "내가 결심하면, 내가 원하면 반드시 이룰 거야",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10",
+          "G15"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -138,18 +143,18 @@
       "ko": "난 정말 거리의 아이야, 너무 높아, 내 차를 지나쳐",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -163,19 +168,21 @@
       "ko": "마치 내 척추가 마비된 것처럼, 형, 다시는 내 쌍둥이로 돌아갈 수 없어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -188,18 +195,18 @@
       "ko": "난 정말 깊고, 루이 비통이 내 10을 켜면 항상 신선해",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -213,20 +220,25 @@
       "ko": "난 정말 부드러워, 모든 걸 잘라내, 사업에 대해선 절대 말하지 않아",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": [
           "is_lyrics",
           "contains_profanity"
@@ -239,10 +251,10 @@
       "ko": "내가 도시에 있을 때 그녀는 내가 그녀의 것임을 알아, 내가 끝나면 너에게 돌려줄 수 있어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -250,7 +262,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -264,10 +276,10 @@
       "ko": "그들이 너를 만들 때 나쁜 여자들을 만드는 걸 멈추지 않았어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -275,7 +287,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -289,20 +301,22 @@
       "ko": "레드본 슬림, 그녀는 겨우 22살이야",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "is_lyrics",
           "contains_profanity"
@@ -315,10 +329,10 @@
       "ko": "그들이 너를 만들 때 나쁜 여자들을 만드는 걸 멈추지 않았어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -326,7 +340,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -340,20 +354,22 @@
       "ko": "레드본 슬림, 그녀는 겨우 22살이야",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "is_lyrics",
           "contains_profanity"
@@ -366,18 +382,18 @@
       "ko": "잠깐, 비트를 멈춰, 아기야, 내 이야기를 하게 해줘",
       "tags": {
         "functions": [
-          "F09"
+          "F39"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -392,20 +408,24 @@
       "ko": "내 전 여자친구가 너희가 그를 무시한다고 말해, 난 진짜로 떠들고 있어",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
         "situation": "S46",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "is_lyrics",
           "contains_profanity"
@@ -418,19 +438,21 @@
       "ko": "내 적들은 여전히 가난해, 그게 진짜 웃기지 않아?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S46",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V10",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics",
@@ -447,7 +469,7 @@
           "F09"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -455,7 +477,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -469,18 +491,18 @@
       "ko": "성관계에 인색하게 굴어, 그는 내가 창녀라고 생각하지 않는 것 같아",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -495,10 +517,10 @@
       "ko": "그들이 너를 만들 때 좋은 깊이를 만드는 걸 멈추지 않았어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -506,7 +528,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -514,5 +536,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "245c2374b4e5101e"
 }

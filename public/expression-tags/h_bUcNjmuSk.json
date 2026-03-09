@@ -12,18 +12,18 @@
       "ko": "당신이 잘못 알고 계신 것 같아요, 선생님.",
       "tags": {
         "functions": [
-          "F11"
+          "F19"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S01",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E04"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,13 +35,13 @@
       "ko": "그런 소리 하지 마세요.",
       "tags": {
         "functions": [
-          "F43"
+          "F35"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S01",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -58,13 +58,13 @@
       "ko": "당신은 모두와 엮였어요.",
       "tags": {
         "functions": [
-          "F56"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S01",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -81,10 +81,10 @@
       "ko": "스너피, 알, 레오,",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -95,7 +95,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,9 +106,9 @@
       "ko": "다리가 불편한 리틀 모,",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -127,9 +129,9 @@
       "ko": "치크스, 보니 밥,",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -141,7 +143,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,9 +154,9 @@
       "ko": "클리프.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -164,7 +168,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -173,9 +179,9 @@
       "ko": "아니요.",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -187,7 +193,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -196,13 +204,13 @@
       "ko": "거짓말이에요.",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -210,7 +218,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -219,16 +229,16 @@
       "ko": "계속할 수 있어요, 자기야.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S01",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -244,18 +254,20 @@
         "functions": [
           "F28"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S01",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -265,18 +277,18 @@
       "ko": "하지만 당신이 잘못 알고 계신 것 같아요.",
       "tags": {
         "functions": [
-          "F11"
+          "F19"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S01",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E04"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,9 +300,9 @@
       "ko": "우리는 젊은 남자를 찾고 있어요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -311,9 +323,9 @@
       "ko": "알겠어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F44"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -325,7 +337,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -336,19 +350,23 @@
         "functions": [
           "F09"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E07"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P02"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -357,10 +375,10 @@
       "ko": "하지만 내 배가...",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S01",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -384,14 +402,14 @@
         "functions": [
           "F35"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -405,18 +423,18 @@
       "ko": "나를 사랑한다고 말해봐요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -428,9 +446,9 @@
       "ko": "무릎 꿇고.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -442,7 +460,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -453,7 +473,7 @@
         "functions": [
           "F22"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -462,10 +482,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G22"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -474,10 +498,11 @@
       "ko": "알겠어요. 당신은 그보다 더 나은 사람이에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F44",
+          "F13"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -487,9 +512,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "34d71b09ef1a8dbb"
 }

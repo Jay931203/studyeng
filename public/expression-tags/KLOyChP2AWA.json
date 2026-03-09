@@ -12,16 +12,16 @@
       "ko": "음, 그녀의 삶에 대한 기본적인 스크랩북을 만들고 싶었어요.",
       "tags": {
         "functions": [
-          "F04"
+          "F52"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -35,19 +35,21 @@
       "ko": "베치가 가질 수 있는 무언가요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -58,20 +60,23 @@
       "ko": "음, 복사본을 만들 수 있을 것 같아요. 그거 좋겠네요.",
       "tags": {
         "functions": [
-          "F34"
+          "F30"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03",
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -81,13 +86,13 @@
       "ko": "네, 조지, 만나서 정말 반가워요. 저도요.",
       "tags": {
         "functions": [
-          "F25"
+          "F23"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -106,7 +111,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -127,10 +132,10 @@
       "ko": "뭐? 방금...",
       "tags": {
         "functions": [
-          "F50"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -154,9 +159,35 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P03",
+          "P07"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "KLOyChP2AWA-7",
+      "en": "You double-dipped the chip! Double-dipped? What are you talking about? You dipped the chip.",
+      "ko": "당신이 그 칩을 두 번 찍었어요! 두 번 찍었다고요? 무슨 소리예요? 당신이 칩을 찍었잖아요.",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -170,44 +201,21 @@
       }
     },
     {
-      "id": "KLOyChP2AWA-7",
-      "en": "You double-dipped the chip! Double-dipped? What are you talking about? You dipped the chip.",
-      "ko": "당신이 그 칩을 두 번 찍었어요! 두 번 찍었다고요? 무슨 소리예요? 당신이 칩을 찍었잖아요.",
-      "tags": {
-        "functions": [
-          "F55"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "KLOyChP2AWA-8",
       "en": "You took a bite, and you dipped again.",
       "ko": "한 입 베어 물고 다시 찍었어요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -221,9 +229,9 @@
       "ko": "그래서?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -235,7 +243,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -244,9 +254,9 @@
       "ko": "그건 마치 입을 통째로 딥에 넣는 것과 같아요!",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -261,5 +271,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "c00918ad1b3fb7e5"
 }

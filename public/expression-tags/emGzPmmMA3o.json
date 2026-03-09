@@ -12,9 +12,9 @@
       "ko": "우리는 그렇게 자주 하지 않아, 크리스, 특히 완벽한 일치로.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -35,9 +35,9 @@
       "ko": "과일 같은 수화에 대해 사과드립니다.",
       "tags": {
         "functions": [
-          "F28"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -58,16 +58,16 @@
       "ko": "라소가 우리 문화에 정말 잘 적응한 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -81,9 +81,9 @@
       "ko": "확실히 그렇지.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -94,8 +94,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G16"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,9 +108,9 @@
       "ko": "이봐, 바넷, 이제 어떻게 될지 말해줄게, 알겠지?",
       "tags": {
         "functions": [
-          "F35"
+          "F06"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -127,9 +131,9 @@
       "ko": "네가 나를 반칙할 거고, 나는 여기서 골을 넣을 거야.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -152,8 +156,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S16",
-        "cefr": "A1",
+        "situation": "S33",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,16 +177,16 @@
       "ko": "나와 함께 있어, 나와 함께 있어.",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -196,10 +200,11 @@
       "ko": "오! 만세!",
       "tags": {
         "functions": [
-          "F15"
+          "F15",
+          "F18"
         ],
-        "situation": "S16",
-        "cefr": "A1",
+        "situation": "S33",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E01"
@@ -207,9 +212,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V01",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -219,9 +226,9 @@
       "ko": "좋아, 자, 시작해보자.",
       "tags": {
         "functions": [
-          "F52"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -242,11 +249,12 @@
       "ko": "내가 말했지, 친구, 내가 뭐라고 했는지 기억나?",
       "tags": {
         "functions": [
-          "F50"
+          "F06",
+          "F52"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -267,19 +275,23 @@
         "functions": [
           "F27"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V01",
-        "power": [],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -288,9 +300,9 @@
       "ko": "그가 우리 팀에 있어서 기뻐.",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -299,7 +311,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V01",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,7 +325,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S16",
+        "situation": "S33",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -328,5 +340,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "eb35a4836fccf1d0"
 }

@@ -12,18 +12,18 @@
       "ko": "아, 안 돼, 점점 더 시끄러워지고 있어. 이건 좋지 않아. 전혀 좋지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,16 +35,16 @@
       "ko": "사실, 완벽해.",
       "tags": {
         "functions": [
-          "F09"
+          "F08"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V02",
         "power": [],
@@ -58,20 +58,23 @@
       "ko": "그렇지? 큰 창문, 클래식 음악. 마치 영화 속에 있는 것 같아. 볼륨 올려줘, 잘생긴 남자. 알겠어.",
       "tags": {
         "functions": [
-          "F02"
+          "F30",
+          "F44"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -81,10 +84,10 @@
       "ko": "분명히, 상황의 새로움이 불가피한 일을 미루고 있었어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,10 +107,10 @@
       "ko": "하지만 나는 필이 우리가 가진 악마 같은 아이들을 알기 전에 옐로우스톤 여행 중간에 도착하고 싶지 않았어.",
       "tags": {
         "functions": [
-          "F09"
+          "F56"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,10 +130,10 @@
       "ko": "필이 우리가 가진 악마 같은 아이들을 알기 전에.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,13 +153,13 @@
       "ko": "내가 정말 사랑하는 아이들.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
-        "register": "R5",
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
@@ -173,11 +176,11 @@
       "ko": "알렉스, 자기야, 그 스웨터 귀엽다. 헤일리가 비슷한 거 가지고 있지 않아?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -196,9 +199,10 @@
       "ko": "아, 사실 그건 헤일리 거야. 우리가 떠나기 전에 그녀의 옷장에서 가져왔어. 정말?",
       "tags": {
         "functions": [
-          "F50"
+          "F18",
+          "F08"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -209,7 +213,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -219,20 +225,22 @@
       "ko": "아, 미안, 얘들아. 이렇게 큰 일을 일으킬 생각은 아니었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F28"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -242,20 +250,22 @@
       "ko": "너가 항상 내 옷을 더 잘 소화하는 게 정말 지겨워. 언제부터 그랬지?",
       "tags": {
         "functions": [
-          "F12"
+          "F21"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E16"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -267,8 +277,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,20 +298,22 @@
       "ko": "아, 응. 내가 6개월 동안 입은 후에는 그녀가 원하는 대로 입을 수 있어. 오.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V13",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -311,9 +323,9 @@
       "ko": "아니면 내가 비슷한 걸 사면 자동으로 내 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -334,10 +346,10 @@
       "ko": "이건 그냥 맞는 느낌이야. 그렇지, 팀?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -357,10 +369,10 @@
       "ko": "사실, 이번 여름에 모두 옐로우스톤으로 드라이브 가는 걸 생각하고 있었어.",
       "tags": {
         "functions": [
-          "F01"
+          "F36"
         ],
-        "situation": "S01",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -370,7 +382,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -380,10 +394,10 @@
       "ko": "하지만 나는 이걸 가져가자...",
       "tags": {
         "functions": [
-          "F35"
+          "F36"
         ],
-        "situation": "S01",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -393,9 +407,14 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G09"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "bac3a82887c568b1"
 }

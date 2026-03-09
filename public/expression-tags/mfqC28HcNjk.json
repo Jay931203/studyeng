@@ -12,19 +12,22 @@
       "ko": "이봐, 너희가 괴짜들이구나. 좀 이상하긴 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05",
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V11",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -37,8 +40,8 @@
         "functions": [
           "F27"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -47,7 +50,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -58,20 +63,22 @@
       "ko": "음, 난 드래그 퀸이 정상 행동을 정의할 필요는 없다고 생각해.",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -81,10 +88,10 @@
       "ko": "하지만 이건 말할 수 있어, 모습이 완벽해.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,10 +111,10 @@
       "ko": "뭐 어때.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,21 +134,25 @@
       "ko": "오, 태도가 멋져. 좋아, 잘했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,10 +161,10 @@
       "ko": "연습을 많이 했어. 헤이, 헤이, 헤이.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,13 +184,13 @@
       "ko": "너 그렇게 대단하지 않아, 자매님. 알겠어?",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -196,13 +207,13 @@
       "ko": "난 너보다 셔를 더 잘해. 그렇게 생각해? 흠.",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S09",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -219,10 +230,10 @@
       "ko": "사실, 그렇게 생각해? 호!",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,9 +253,9 @@
       "ko": "사실, 그렇게 생각해? 호!",
       "tags": {
         "functions": [
-          "F09"
+          "F08"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -259,5 +270,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "ed9cde7e9df9a8e4"
 }

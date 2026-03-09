@@ -12,10 +12,11 @@
       "ko": "안녕하세요, 여러분!",
       "tags": {
         "functions": [
-          "F25"
+          "F06",
+          "F60"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -24,7 +25,9 @@
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -38,7 +41,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +49,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -61,15 +64,15 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -84,15 +87,15 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,10 +107,10 @@
       "ko": "물론 그녀는 어벤져스: 엔드게임에서 블랙 위도우로 출연합니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F44"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,8 +118,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -127,10 +132,10 @@
       "ko": "영화는 4월 26일에 개봉됩니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,7 +143,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,10 +155,10 @@
       "ko": "스칼렛 요한슨, 쇼에 오신 것을 환영합니다. 정말 감사합니다.",
       "tags": {
         "functions": [
-          "F25"
+          "F27"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -162,7 +167,9 @@
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -173,10 +180,10 @@
       "ko": "당신이 치킨 윙 애호가라는 걸 압니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,7 +191,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +203,18 @@
       "ko": "저는 치킨 윙을 정말 좋아합니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -222,7 +229,7 @@
           "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,7 +237,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -253,7 +260,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,7 +272,32 @@
       "ko": "치킨 윙과 라크로이 정도가 전부입니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F09"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [
+          "P11"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "SR5kfWXfxto-12",
+      "en": "What up, LaCroix? There you go.",
+      "ko": "라크로이, 여기 있습니다.",
+      "tags": {
+        "functions": [
+          "F06"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -276,16 +308,43 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P11"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "SR5kfWXfxto-12",
-      "en": "What up, LaCroix? There you go.",
-      "ko": "라크로이, 여기 있습니다.",
+      "id": "SR5kfWXfxto-13",
+      "en": "Although I will say that hot wings and carbonated beverages, that's a bad combo.",
+      "ko": "하지만 매운 윙과 탄산음료는 나쁜 조합이라고 말하고 싶습니다.",
+      "tags": {
+        "functions": [
+          "F21"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "SR5kfWXfxto-14",
+      "en": "Okay, so, all right.",
+      "ko": "알겠습니다, 좋아요.",
       "tags": {
         "functions": [
           "F01"
@@ -306,61 +365,15 @@
       }
     },
     {
-      "id": "SR5kfWXfxto-13",
-      "en": "Although I will say that hot wings and carbonated beverages, that's a bad combo.",
-      "ko": "하지만 매운 윙과 탄산음료는 나쁜 조합이라고 말하고 싶습니다.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "SR5kfWXfxto-14",
-      "en": "Okay, so, all right.",
-      "ko": "알겠습니다, 좋아요.",
-      "tags": {
-        "functions": [
-          "F52"
-        ],
-        "situation": "S34",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "SR5kfWXfxto-15",
       "en": "Now you're just going for it. Just dive in.",
       "ko": "이제 그냥 시작하세요. 뛰어드세요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -374,5 +387,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "b13347831f5f5643"
 }

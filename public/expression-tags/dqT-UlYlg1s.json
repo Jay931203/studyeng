@@ -12,11 +12,11 @@
       "ko": "대형 목초는 영양가가 매우 낮고 단백질이 적으며 섬유질이 많은 식품이다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "A2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,23 +35,21 @@
       "ko": "판다는 이를 잘 소화하지 못한다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "A2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -62,11 +58,11 @@
       "ko": "그럼에도 불구하고 대나무는 판다의 식단의 99%를 차지한다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -76,9 +72,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -87,11 +81,11 @@
       "ko": "이를 보충하기 위해 판다는 하루에 20~40파운드를 먹어야 한다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -101,9 +95,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -112,11 +104,11 @@
       "ko": "판다는 육식동물과 공통점이 많다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -126,9 +118,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -137,11 +127,11 @@
       "ko": "판다의 소화 시스템은 초식동물보다 육식동물과 더 밀접하게 관련되어 있다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "A2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -151,9 +141,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -162,23 +150,23 @@
       "ko": "이는 그들이 식물을 잘 소화하지 못하는 이유를 설명한다.",
       "tags": {
         "functions": [
-          "F04"
+          "F40"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "grammar_intent": [
+          "G24"
+        ],
+        "flags": []
       }
     },
     {
@@ -187,11 +175,11 @@
       "ko": "다행히도, 그들은 대나무 줄기를 잘 먹을 수 있도록 돕는 다른 적응력을 가지고 있다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "A2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -201,9 +189,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -212,11 +198,11 @@
       "ko": "그 중 하나는 크고 강력한 턱이다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "A2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -226,9 +212,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -237,11 +221,11 @@
       "ko": "먹지 않을 때 판다는 쉬고, 또 쉬고, 그리고 똥을 싸고, 또 똥을 싼다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -251,9 +235,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -262,23 +244,21 @@
       "ko": "대나무를 잘 소화하지 못하기 때문에 판다는 많은 양을 배설하게 된다.",
       "tags": {
         "functions": [
-          "F02"
+          "F40"
         ],
-        "situation": "S47",
-        "cefr": "A2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -287,11 +267,11 @@
       "ko": "이는 놀랍지 않게도 포함되어 있다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "A2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -301,10 +281,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "4b853c66602957ad"
 }

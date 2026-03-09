@@ -12,16 +12,17 @@
       "ko": "마이클이 갑자기 계곡에서 떠올린 것은 무언가 끔찍한 일이 갑자기 일어날 수 있다는 것을 암시해.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -35,18 +36,20 @@
       "ko": "게다가 언덕 위에 있어. 바보 같은 약이라도 먹었어? 제발, 우리에게 돈 좀 아껴줘.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X06",
+          "X04"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,9 +61,9 @@
       "ko": "이건 마이클이 그의 승인을 받기 위해 사용한 관리 도구였어. 거절하기 힘든 것이었지.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -81,10 +84,10 @@
       "ko": "내가 요청한 것은 재건된 450채 중 하나를 내면의 도시에서 불우한 가정에 주는 것이야.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,13 +107,13 @@
       "ko": "그거 좋네. 그러면 나머지",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
@@ -127,18 +130,20 @@
       "ko": "249가족은 두려움 속에 살아야 한다는 거야? 제발, 너의 양심은 어디 갔어?",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E04"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X06",
+          "X04"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,18 +155,18 @@
       "ko": "너의 얼굴에서 뭐가 떨어졌어?",
       "tags": {
         "functions": [
-          "F18"
+          "F06"
         ],
-        "situation": "S48",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V03",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -175,10 +180,10 @@
       "ko": "이 남자의 눈썹 중 하나가 사탕 그릇에 떨어졌어. 나는 항상 여분을 가지고 다녀.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -198,16 +203,16 @@
       "ko": "잘됐네, 너도 사탕 그릇 여분을 가지고 있기를 바래.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -221,16 +226,18 @@
       "ko": "제안이 매우 인상적이어서 위로 가져가서 반응을 보겠다.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07",
+          "X05"
         ],
         "vibe": "V18",
         "power": [],
@@ -244,9 +251,9 @@
       "ko": "그러니까",
       "tags": {
         "functions": [
-          "F08"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -267,19 +274,19 @@
       "ko": "마이클은 아버지를 감동시키고 싶어 했어. 나는 모든 것이 꽤 괜찮다고 생각해. 꽤 괜찮아. 끔찍했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F09",
+          "F02"
         ],
-        "situation": "S48",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02",
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -291,18 +298,18 @@
       "ko": "또 바보 같은 약 먹었어?",
       "tags": {
         "functions": [
-          "F17"
+          "F06"
         ],
-        "situation": "S48",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -314,9 +321,9 @@
       "ko": "하지만 조지 시니어가 내려갔을 때 그들의 예전 역학이 돌아왔어. 그 털 없는 괴물을 다룰 줄 아는 유일한 사람이었지.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -337,9 +344,9 @@
       "ko": "신께 감사해, 우리가 있어.",
       "tags": {
         "functions": [
-          "F27"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -354,5 +361,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d31f1d4a9eb0329b"
 }

@@ -12,23 +12,21 @@
       "ko": "아마존 강둑을 따라 카피바라 가족의 경계하는 구성원들이",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S10",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,9 +35,9 @@
       "ko": "무리를 지켜봅니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S10",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -52,7 +50,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_narration"
+          "is_fragment"
         ]
       }
     },
@@ -62,9 +60,9 @@
       "ko": "빽빽한 초목과 탁한 물속에는 이 거대한 설치류에게 많은 위협이 숨어 있습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -76,9 +74,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -87,34 +83,9 @@
       "ko": "어른들이 경계하는 동안 새끼들은 먹이를 먹습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
-      }
-    },
-    {
-      "id": "wE6pEsjgdHo-4",
-      "en": "Though able to eat grass from just a week old, they drink milk for the first 16 weeks",
-      "ko": "태어난 지 일주일 만에 풀을 먹을 수 있지만, 처음 16주 동안은",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S50",
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -126,9 +97,30 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
+      }
+    },
+    {
+      "id": "wE6pEsjgdHo-4",
+      "en": "Though able to eat grass from just a week old, they drink milk for the first 16 weeks",
+      "ko": "태어난 지 일주일 만에 풀을 먹을 수 있지만, 처음 16주 동안은",
+      "tags": {
+        "functions": [
+          "F21"
+        ],
+        "situation": "S10",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
       }
     },
     {
@@ -137,9 +129,9 @@
       "ko": "젖을 먹습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S10",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -152,7 +144,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_narration"
+          "is_fragment"
         ]
       }
     },
@@ -162,9 +154,9 @@
       "ko": "무리 안의 어떤 어미에게서든 젖을 먹을 수 있으며, 가리지 않고 그렇게 합니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -176,9 +168,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -187,10 +177,10 @@
       "ko": "이 삶이 행복해 보일 수 있지만, 아마존에는 많은 포식자가 있고, 이 통통한 몸을 가진",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S10",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -201,9 +191,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -214,7 +202,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -226,10 +214,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "357661dd122edd8a"
 }

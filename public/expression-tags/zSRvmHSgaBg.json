@@ -12,18 +12,19 @@
       "ko": "하지 마. 멀리 떨어져 있어. 가까이 오지 마.",
       "tags": {
         "functions": [
-          "F35"
+          "F35",
+          "F58"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +36,19 @@
       "ko": "제발, 손을 내줘. 내가 끌어올릴게.",
       "tags": {
         "functions": [
-          "F34"
+          "F35",
+          "F45"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,21 +60,22 @@
       "ko": "안 돼! 그 자리에서 움직이지 마. 진짜야. 놓을 거야.",
       "tags": {
         "functions": [
-          "F35",
-          "F12"
+          "F50"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -82,21 +85,23 @@
       "ko": "아니, 너는 안 그럴 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -105,10 +110,35 @@
       "ko": "무슨 소리야, 안 그럴 거라는 게?",
       "tags": {
         "functions": [
-          "F50"
+          "F43"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "zSRvmHSgaBg-5",
+      "en": "Don't presume to tell me what I will and will not do. You don't know me.",
+      "ko": "내가 뭘 할지 말하지 마. 넌 나를 몰라.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -123,37 +153,14 @@
       }
     },
     {
-      "id": "zSRvmHSgaBg-5",
-      "en": "Don't presume to tell me what I will and will not do. You don't know me.",
-      "ko": "내가 뭘 할지 말하지 마. 넌 나를 몰라.",
-      "tags": {
-        "functions": [
-          "F56"
-        ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "zSRvmHSgaBg-6",
       "en": "Well, you would have done it already.",
       "ko": "그럼 이미 했겠지.",
       "tags": {
         "functions": [
-          "F12"
+          "F52"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -174,18 +181,18 @@
       "ko": "너는 나를 방해하고 있어. 가버려.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -197,20 +204,22 @@
       "ko": "안 돼. 이제 나도 엮였어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -220,19 +229,18 @@
       "ko": "네가 놓으면 나도 뛰어들어야 해. 말도 안 돼.",
       "tags": {
         "functions": [
-          "F09",
-          "F40"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,18 +252,18 @@
       "ko": "너는 죽을 거야. 나는 수영 잘해.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,21 +275,23 @@
       "ko": "떨어지기만 해도 죽을 거야. 아플 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -290,10 +300,10 @@
       "ko": "그럴 거라고는 안 했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -313,22 +323,23 @@
       "ko": "솔직히 말하면, 그 물이 너무 차가운 게 더 걱정이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d45a1ac1c2029e09"
 }

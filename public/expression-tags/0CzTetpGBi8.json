@@ -12,23 +12,21 @@
       "ko": "네가 안 해도!",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,23 +35,21 @@
       "ko": "안 돼, 루포!",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -62,18 +58,18 @@
       "ko": "루포, 안 돼!",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,7 +83,7 @@
       "ko": "루포!",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A1",
@@ -98,7 +94,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -106,5 +102,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "98d82583da704023"
 }

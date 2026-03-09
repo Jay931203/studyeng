@@ -12,12 +12,10 @@
       "ko": "저는 카메론 윙클보스이고, 이분은 제 형 타이입니다. 당신은 여기 왜 오셨나요? 둘 중 한 분이 대답해 주세요.",
       "tags": {
         "functions": [
-          "F25",
-          "F26",
-          "F06"
+          "F04"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -27,7 +25,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -37,14 +37,13 @@
       "ko": "죄송합니다, 선생님. 제가 편지를 읽고 계신 줄 알았습니다. 저는 편지를 읽었습니다.",
       "tags": {
         "functions": [
-          "F27",
-          "F09"
+          "F28"
         ],
         "situation": "S14",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -61,17 +60,16 @@
       "ko": "저희는 하버드 커넥션이라는 웹사이트 아이디어를 생각해냈습니다.",
       "tags": {
         "functions": [
-          "F01",
-          "F04"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -85,11 +83,10 @@
       "ko": "그 이름을 '커넥트 유'로 바꿨습니다. 그리고 마크 저커버그가 그 아이디어를 훔쳤습니다. 이해합니다.",
       "tags": {
         "functions": [
-          "F04",
-          "F09"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -109,11 +106,10 @@
       "ko": "그래서 제가 그에 대해 무엇을 해주길 원하시는 건가요?",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -133,10 +129,10 @@
       "ko": "하버드 학생 핸드북에 따르면,",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -159,13 +155,13 @@
           "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -182,7 +178,7 @@
           "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -205,7 +201,7 @@
           "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -228,7 +224,7 @@
           "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -251,7 +247,7 @@
           "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -274,7 +270,7 @@
           "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -294,12 +290,11 @@
       "ko": "괜찮습니다.",
       "tags": {
         "functions": [
-          "F01",
-          "F06"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -321,7 +316,7 @@
           "F35"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -341,10 +336,10 @@
       "ko": "대학에서 퇴학당해야 할 수도 있습니다.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -364,11 +359,11 @@
       "ko": "당신은 그걸 외우고 대신 무엇을 했나요?",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S14",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -387,11 +382,11 @@
       "ko": "오늘 저와 제 형이 당신에게 요청하러 온 것은,",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S14",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -410,11 +405,11 @@
       "ko": "물론 존중하는 마음으로, 다른 학생에게서 훔치는 것은 대학 규칙에 위배된다는 것입니다. 간단합니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S14",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -433,16 +428,16 @@
       "ko": "그리고 당신은 하우스 마스터와 이야기했나요? 네, 선생님.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -456,10 +451,10 @@
       "ko": "하우스 마스터가 기록을 남겼습니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -479,11 +474,11 @@
       "ko": "그리고 집주인이 기록을 남겼다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S14",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -496,5 +491,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "7f2dfacab947f6ab"
 }

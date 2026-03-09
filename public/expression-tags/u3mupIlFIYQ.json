@@ -12,7 +12,7 @@
       "ko": "초밥?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -60,19 +60,18 @@
       "ko": "남자의 혀는 안 받아들이면서 그걸 먹겠다고? 나도 먹어도 돼?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03",
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -84,7 +83,7 @@
       "ko": "잘 모르겠어. 한번 해봐.",
       "tags": {
         "functions": [
-          "F36"
+          "F40"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -107,7 +106,35 @@
       "ko": "아니.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "u3mupIlFIYQ-5",
+      "en": "What's your problem? I don't know.",
+      "ko": "너 문제 있어? 잘 모르겠어.",
+      "tags": {
+        "functions": [
+          "F06",
+          "F40"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -123,29 +150,7 @@
         "grammar_intent": [],
         "flags": []
       }
-    },
-    {
-      "id": "u3mupIlFIYQ-5",
-      "en": "What's your problem? I don't know.",
-      "ko": "너 문제 있어? 잘 모르겠어.",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
     }
-  ]
+  ],
+  "transcriptHash": "0509831c69c872bd"
 }

@@ -12,9 +12,9 @@
       "ko": "잠깐, 잠깐만, 브레이크가 작동하지 않아.",
       "tags": {
         "functions": [
-          "F04"
+          "F49"
         ],
-        "situation": "S06",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,9 +35,9 @@
       "ko": "아니, 내가 말하는 건, 아니, 브레이크야!",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S06",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,7 +60,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S06",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -69,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,20 +81,22 @@
       "ko": "내가 브레이크를 잘랐거든!",
       "tags": {
         "functions": [
-          "F17"
+          "F04"
         ],
-        "situation": "S06",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -104,10 +106,10 @@
       "ko": "와일드카드, 이 자식들!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S06",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,10 +117,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -127,13 +131,13 @@
       "ko": "예-하! 뭐라고?",
       "tags": {
         "functions": [
-          "F15"
+          "F06"
         ],
-        "situation": "S06",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -141,8 +145,11 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "17598bf9978dfeee"
 }

@@ -15,8 +15,8 @@
           "F01"
         ],
         "situation": "S36",
-        "cefr": "C1",
-        "register": "R2",
+        "cefr": "B2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -24,7 +24,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P12"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -35,11 +37,12 @@
       "ko": "재판장님, 제가 말씀드려도 될까요? 특별한 상황이 고려되어야 한다고 생각합니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F02",
+          "F09"
         ],
         "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -47,7 +50,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P02"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -61,8 +66,8 @@
           "F06"
         ],
         "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -84,8 +89,8 @@
           "F46"
         ],
         "situation": "S36",
-        "cefr": "B1",
-        "register": "R3",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -94,7 +99,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -104,10 +111,10 @@
       "ko": "재판장님, 당신이야말로 첫 번째가 되는 것의 중요성을 이해해야 합니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S36",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -127,11 +134,11 @@
       "ko": "어떻게 말씀하시죠, 잭슨 부인?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
         "situation": "S36",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -150,7 +157,7 @@
       "ko": "당신은 가족 중 처음으로 미 해군에 복무한 사람이었습니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F52"
         ],
         "situation": "S36",
         "cefr": "B1",
@@ -161,7 +168,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -187,7 +194,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -219,11 +228,11 @@
       "ko": "조사를 하셨군요. 네, 맞습니다. 그게 무슨 의미인가요?",
       "tags": {
         "functions": [
-          "F50"
+          "F06"
         ],
         "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -236,5 +245,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "c9db6d3e60e4858d"
 }

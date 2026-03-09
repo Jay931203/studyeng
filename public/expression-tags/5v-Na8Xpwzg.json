@@ -12,20 +12,22 @@
       "ko": "네, 그리고 나쁜 곳에서 몇 가지 수정을 했어. 네가 가장 좋아하는 맥주를 가져왔어.",
       "tags": {
         "functions": [
-          "F01"
+          "F07"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -35,7 +37,8 @@
       "ko": "그래도 항상 따뜻해.",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F53"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -46,7 +49,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,10 +61,10 @@
       "ko": "네 주크박스에는 지금까지 불린 모든 노래가 있어. 이글스의 노래야.",
       "tags": {
         "functions": [
-          "F01"
+          "F07"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -107,7 +110,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,10 +130,10 @@
       "ko": "정말 끔찍해. 대충 이런 느낌이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,11 +176,10 @@
       "ko": "중간 장소에 오신 것을 환영합니다. 뭐해? 무슨 일이야? 솔로야?",
       "tags": {
         "functions": [
-          "F25",
-          "F34"
+          "F25"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -186,7 +188,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P09"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -197,10 +201,11 @@
       "ko": "무슨 일이야?",
       "tags": {
         "functions": [
-          "F34"
+          "F06",
+          "F60"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,7 +214,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -224,7 +231,7 @@
         ],
         "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -233,8 +240,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -243,18 +254,19 @@
       "ko": "혼자 사는 것의 장점 중 하나는 나체로 돌아다닐 수 있다는 거야. 내 스타일이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -266,19 +278,21 @@
       "ko": "그리고 너는 몸매가 좋네.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -289,13 +303,13 @@
       "ko": "오, 그건 30년 동안 누군가가 나에게 한 가장 친절한 말이야.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -312,7 +326,7 @@
       "ko": "그러니까 모든 걸 말해줘.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -335,30 +349,8 @@
       "ko": "여기 오게 된 이유가 뭐야?",
       "tags": {
         "functions": [
-          "F06"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "5v-Na8Xpwzg-15",
-      "en": "That's kind of a long story.",
-      "ko": "그건 좀 긴 이야기야.",
-      "tags": {
-        "functions": [
-          "F04"
+          "F06",
+          "F50"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -370,6 +362,31 @@
           "X08"
         ],
         "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "5v-Na8Xpwzg-15",
+      "en": "That's kind of a long story.",
+      "ko": "그건 좀 긴 이야기야.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -381,19 +398,21 @@
       "ko": "술 한 잔이나 세 잔 필요할 것 같아.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -404,20 +423,22 @@
       "ko": "확실히 내 스타일이야. 너희들 재밌게 놀아. 이건 나와 자넷의 허니문이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16"
+        ],
         "flags": []
       }
     },
@@ -427,19 +448,22 @@
       "ko": "그래서 우리는 섹스를 하는 방법을 알아보려고 해.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -450,11 +474,11 @@
       "ko": "나는 1980년대에 유명한 기업 변호사였어. 나는 오직-",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -464,10 +488,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "8ff38f39e3401e9a"
 }

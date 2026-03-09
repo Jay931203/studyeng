@@ -12,20 +12,23 @@
       "ko": "죄송합니다, 마님. 가서 알아보겠습니다.",
       "tags": {
         "functions": [
-          "F34"
+          "F28",
+          "F39"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -35,23 +38,23 @@
       "ko": "여기서 무슨 일이 일어나고 있는지 아는 사람은 없는 것 같아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": []
       }
     },
     {
@@ -60,21 +63,23 @@
       "ko": "제기랄, 영국식대로 모든 걸 처리하네요.",
       "tags": {
         "functions": [
-          "F17"
+          "F02"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -83,18 +88,18 @@
       "ko": "언어는 필요 없습니다, 호클리 씨.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
-        "register": "R2",
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,18 +111,18 @@
       "ko": "돌아가서 우리 방의 히터를 켜 주세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
-        "register": "R3",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,9 +134,9 @@
       "ko": "돌아올 때 차 한 잔 주시면 좋겠어요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -140,9 +145,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -152,18 +159,18 @@
       "ko": "네, 마님.",
       "tags": {
         "functions": [
-          "F07"
+          "F44"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -177,7 +184,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -186,10 +193,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -198,18 +207,18 @@
       "ko": "빙산을 봤고, 당신의 눈에서도 보입니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,20 +230,22 @@
       "ko": "제발 진실을 말해 주세요.",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "A2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -244,19 +255,18 @@
       "ko": "배가 침몰할 겁니다. 확실합니까?",
       "tags": {
         "functions": [
-          "F01",
-          "F04"
+          "F06"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -268,10 +278,10 @@
       "ko": "네. 한 시간 정도 후에요.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -279,7 +289,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -291,10 +301,56 @@
       "ko": "이 모든 것이 대서양 바닥에 있을 겁니다. 뭐라고요?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V07",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "it-jZnbmRzI-13",
+      "en": "Please, tell only who you must.",
+      "ko": "제발, 꼭 필요한 사람에게만 말해 주세요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V07",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "it-jZnbmRzI-14",
+      "en": "I don't want to be responsible for a panic. Now get to work.",
+      "ko": "패닉에 대한 책임을 지고 싶지 않아요. 이제 일하세요.",
+      "tags": {
+        "functions": [
+          "F19"
+        ],
+        "situation": "S38",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E04"
@@ -307,52 +363,7 @@
         "grammar_intent": [],
         "flags": []
       }
-    },
-    {
-      "id": "it-jZnbmRzI-13",
-      "en": "Please, tell only who you must.",
-      "ko": "제발, 꼭 필요한 사람에게만 말해 주세요.",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S44",
-        "cefr": "B1",
-        "register": "R3",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "it-jZnbmRzI-14",
-      "en": "I don't want to be responsible for a panic. Now get to work.",
-      "ko": "패닉에 대한 책임을 지고 싶지 않아요. 이제 일하세요.",
-      "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S44",
-        "cefr": "B1",
-        "register": "R3",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
     }
-  ]
+  ],
+  "transcriptHash": "6146dfd0aab9334e"
 }

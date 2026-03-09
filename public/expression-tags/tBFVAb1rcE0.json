@@ -12,10 +12,10 @@
       "ko": "어떤 일을 하시나요? 큰 회사에서요. 비행기가 이륙할 때나 착륙할 때 너무 급격히 기울어질 때마다, 저는 추락이나 공중 충돌을 기도했어요. 뭐든지요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S22",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,18 @@
       "ko": "출장 중에 죽으면 생명보험이 세 배로 지급돼요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S22",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -61,7 +61,7 @@
           "F01"
         ],
         "situation": "S22",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,20 +81,22 @@
       "ko": "책임이 정말 크네요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S22",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -104,10 +106,10 @@
       "ko": "자리 바꿀래요?",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S22",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,10 +129,10 @@
       "ko": "아니요, 그 일은 제가 잘할 수 있을지 모르겠어요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S22",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,7 +140,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,20 +152,22 @@
       "ko": "30,000피트에서의 비상문 절차요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S22",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -176,7 +180,7 @@
           "F01"
         ],
         "situation": "S22",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,7 +188,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,10 +200,10 @@
       "ko": "안전에 대한 환상이네요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S22",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -207,10 +211,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -219,10 +225,10 @@
       "ko": "네, 그런 것 같아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S22",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,7 +236,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,22 +248,23 @@
       "ko": "응, 그런 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S22",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "c2414b105e2cd3b6"
 }

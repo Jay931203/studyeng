@@ -12,7 +12,7 @@
       "ko": "모르겠어요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -23,9 +23,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": [
           "is_fragment"
         ]
@@ -37,7 +41,7 @@
       "ko": "여러분은 고개를 끄덕이며 괜찮다고 해요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -48,7 +52,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -63,7 +67,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,7 +75,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,7 +87,7 @@
       "ko": "알겠어요.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -94,10 +98,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -106,7 +112,7 @@
       "ko": "알겠어요.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -117,10 +123,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -129,10 +137,10 @@
       "ko": "하지만 그들은 임신 부분을 대본에 넣었어요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -140,7 +148,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,7 +160,7 @@
       "ko": "네, 처음 감독을 만나러 갔을 때",
       "tags": {
         "functions": [
-          "F03"
+          "F07"
         ],
         "situation": "S34",
         "cefr": "B1",
@@ -163,7 +171,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -178,7 +186,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -186,7 +194,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,53 +206,7 @@
       "ko": "거짓말할 수 없다고 생각했어요.",
       "tags": {
         "functions": [
-          "F09"
-        ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "XxoN6dFwawM-9",
-      "en": "because it's going to become obvious.",
-      "ko": "분명히 티가 날 거니까요.",
-      "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "XxoN6dFwawM-10",
-      "en": "And so I said I was pregnant",
-      "ko": "그래서 임신했다고 말했어요.",
-      "tags": {
-        "functions": [
-          "F09"
+          "F21"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -255,7 +217,57 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "XxoN6dFwawM-9",
+      "en": "because it's going to become obvious.",
+      "ko": "분명히 티가 날 거니까요.",
+      "tags": {
+        "functions": [
+          "F04"
+        ],
+        "situation": "S34",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "XxoN6dFwawM-10",
+      "en": "And so I said I was pregnant",
+      "ko": "그래서 임신했다고 말했어요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,7 +279,7 @@
       "ko": "수잔나가 오, 알겠다고 했어요.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -278,7 +290,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,10 +302,10 @@
       "ko": "그래서 프로듀서들과",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -301,7 +313,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,7 +325,7 @@
       "ko": "이야기해야 한다고 했어요.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -324,7 +336,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -336,7 +348,7 @@
       "ko": "그래서 이게 수잔나에 대한",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -347,7 +359,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -359,7 +371,7 @@
       "ko": "제 인상이에요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -370,7 +382,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -384,13 +396,13 @@
       "ko": "그녀가 여기 없어서 다행이에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -407,7 +419,32 @@
       "ko": "그래서 정말 잘한다고 말씀드릴 수 있어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F04"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "XxoN6dFwawM-18",
+      "en": "It is, it's absolutely spot on.",
+      "ko": "정말 완벽해요.",
+      "tags": {
+        "functions": [
+          "F10"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -418,25 +455,28 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16",
+          "G20"
+        ],
         "flags": []
       }
     },
     {
-      "id": "XxoN6dFwawM-18",
-      "en": "It is, it's absolutely spot on.",
-      "ko": "정말 완벽해요.",
+      "id": "XxoN6dFwawM-19",
+      "en": "And then I was going",
+      "ko": "그리고 제가 말했어요,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -448,38 +488,15 @@
       }
     },
     {
-      "id": "XxoN6dFwawM-19",
-      "en": "And then I was going",
-      "ko": "그리고 제가 말했어요,",
-      "tags": {
-        "functions": [
-          "F03"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "XxoN6dFwawM-20",
       "en": "and if you remember Fargo, Francis McDormand",
       "ko": "파고를 기억하신다면, 프랜시스 맥도먼드가",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -487,7 +504,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -499,10 +516,10 @@
       "ko": "임신했었고 그게 정말 도움이 되었거든요. 도움이 될 것 같아요.",
       "tags": {
         "functions": [
-          "F04"
+          "F09"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -510,7 +527,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -522,7 +539,7 @@
       "ko": "손가락 교차하면서요.",
       "tags": {
         "functions": [
-          "F09"
+          "F24"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -531,9 +548,10 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -545,10 +563,10 @@
       "ko": "그들이 갔다가 돌아와서 네, 괜찮다고 했어요.",
       "tags": {
         "functions": [
-          "F03"
+          "F07"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -556,7 +574,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -568,7 +586,7 @@
       "ko": "임신해도 괜찮다고요.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -579,7 +597,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -591,7 +609,8 @@
       "ko": "네, 그걸 대본에 넣기로 했어요.",
       "tags": {
         "functions": [
-          "F04"
+          "F07",
+          "F53"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -602,7 +621,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -614,10 +633,11 @@
       "ko": "좋았어요, 앞에 가방을 들고 다닐 필요가 없었으니까요.",
       "tags": {
         "functions": [
-          "F02"
+          "F04",
+          "F55"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -625,9 +645,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -637,7 +659,7 @@
       "ko": "코트 뭉치를 들거나요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -648,7 +670,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -660,10 +682,10 @@
       "ko": "숨길 수는 없었을 거예요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -671,8 +693,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P12"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -683,10 +707,10 @@
       "ko": "게다가 저는 뒤뚱뒤뚱 많이 걸었어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -694,7 +718,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -706,7 +730,7 @@
       "ko": "수잔나가 한 번 말했어요.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -717,11 +741,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "09c1253afc8d1df8"
 }

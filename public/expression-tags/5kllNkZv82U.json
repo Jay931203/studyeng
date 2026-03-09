@@ -12,7 +12,7 @@
       "ko": "응, 예전에는 싱글 제퍼디 중간에 있었는데, 이제는 싱글 제퍼디 끝나고 바로 해.",
       "tags": {
         "functions": [
-          "F02"
+          "F07"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,7 +35,7 @@
       "ko": "응, 훨씬 나아, 그렇지?",
       "tags": {
         "functions": [
-          "F10"
+          "F06"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -58,56 +58,10 @@
       "ko": "비교할 수 없어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "5kllNkZv82U-3",
-      "en": "Hey, I gotta stop at the bookstore and get my parents one of those French-English dictionaries.",
-      "ko": "나 서점에 들러서 부모님께 프랑스-영어 사전 하나 사야 해.",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S04",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "5kllNkZv82U-4",
-      "en": "Hey, hey, hey, hey, hey, hey. What?",
-      "ko": "어, 어, 어, 어, 어, 어. 뭐?",
-      "tags": {
-        "functions": [
-          "F50"
-        ],
-        "situation": "S50",
-        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -124,15 +78,63 @@
       }
     },
     {
-      "id": "5kllNkZv82U-5",
-      "en": "Your parents are going to Paris, right? Yeah.",
-      "ko": "너희 부모님 파리 가는 거지? 응.",
+      "id": "5kllNkZv82U-3",
+      "en": "Hey, I gotta stop at the bookstore and get my parents one of those French-English dictionaries.",
+      "ko": "나 서점에 들러서 부모님께 프랑스-영어 사전 하나 사야 해.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "5kllNkZv82U-4",
+      "en": "Hey, hey, hey, hey, hey, hey. What?",
+      "ko": "어, 어, 어, 어, 어, 어. 뭐?",
       "tags": {
         "functions": [
           "F06"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "5kllNkZv82U-5",
+      "en": "Your parents are going to Paris, right? Yeah.",
+      "ko": "너희 부모님 파리 가는 거지? 응.",
+      "tags": {
+        "functions": [
+          "F07"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -152,13 +154,13 @@
       "ko": "알렉에게 내가 정해지지 않은 기간 동안 파리에 가야 한다고 전해줘, 그러면",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E15"
         ],
         "expression_types": [
           "X08"
@@ -175,20 +177,22 @@
       "ko": "내가 해야 할 일은 엽서를 몇 장 사서 너희 부모님이 파리에서 보내게 하는 거야. 조이 아기는 어쩌고? 누구?",
       "tags": {
         "functions": [
-          "F34"
+          "F36"
         ],
         "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E15"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -198,16 +202,17 @@
       "ko": "그는 아마 더 나을 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F09",
+          "F14"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -221,20 +226,22 @@
       "ko": "나는 이 빅브라더 프로그램에서 빠져나가려고 하고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
         "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -244,10 +251,10 @@
       "ko": "그래서 파리에 도착하면 그냥 아무 우체통에 넣기만 하면 돼.",
       "tags": {
         "functions": [
-          "F34"
+          "F45"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -267,10 +274,10 @@
       "ko": "하지만 이건 우표가 없어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -290,19 +297,21 @@
       "ko": "아직은 아니야. 프랑스 우표를 사야 해.",
       "tags": {
         "functions": [
-          "F34"
+          "F52"
         ],
         "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -313,7 +322,7 @@
       "ko": "내가 물론 너에게 비용을 갚을게.",
       "tags": {
         "functions": [
-          "F41"
+          "F44"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -325,7 +334,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -339,7 +350,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -359,10 +370,10 @@
       "ko": "그는 이 사람이 자신이 파리에 있다고 생각하게 하고 싶어. 왜?",
       "tags": {
         "functions": [
-          "F14"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -382,10 +393,10 @@
       "ko": "조지는 매우 불안정한 사람이다.",
       "tags": {
         "functions": [
-          "F12"
+          "F04"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -395,7 +406,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -405,16 +418,17 @@
       "ko": "어, 엘렌, 핸드 로션 좀 더 쓸 수 있을까?",
       "tags": {
         "functions": [
-          "F34"
+          "F06",
+          "F52"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -428,10 +442,10 @@
       "ko": "좋다고 했잖아.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -454,7 +468,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -468,5 +482,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "38f23ec5c88bb87c"
 }

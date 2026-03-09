@@ -12,10 +12,33 @@
       "ko": "내가 하려는 일에 큰 즐거움을 느낄 것이다, 개야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V02",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "QJLg2cS-Zsw-1",
+      "en": "He wears the cone of shame! What? Do not just continue sitting. Attack! No! No! Stop your laughing!",
+      "ko": "그는 수치의 고깔을 쓰고 있어! 뭐? 그냥 앉아 있지 마. 공격해! 안 돼! 안 돼! 웃지 마!",
+      "tags": {
+        "functions": [
+          "F21"
+        ],
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -30,40 +53,15 @@
       }
     },
     {
-      "id": "QJLg2cS-Zsw-1",
-      "en": "He wears the cone of shame! What? Do not just continue sitting. Attack! No! No! Stop your laughing!",
-      "ko": "그는 수치의 고깔을 쓰고 있어! 뭐? 그냥 앉아 있지 마. 공격해! 안 돼! 안 돼! 웃지 마!",
-      "tags": {
-        "functions": [
-          "F17",
-          "F35"
-        ],
-        "situation": "S45",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "QJLg2cS-Zsw-2",
       "en": "Get this off of me! Listen, you dog! Sit! Yes, Alpha? Alpha? I am not Alpha.",
       "ko": "이것 좀 벗겨줘! 들어, 이 개야! 앉아! 네, 알파? 알파? 나는 알파가 아니야.",
       "tags": {
         "functions": [
-          "F34",
           "F06"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -83,21 +81,22 @@
       "ko": "그가 알파야. 오. 나는 못 하겠어. 응? 바퀴벌레! 으르렁! 바퀴벌레!",
       "tags": {
         "functions": [
-          "F19",
-          "F09"
+          "F06"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -107,23 +106,23 @@
       "ko": "으르렁! 프레드릭슨 할아버지를 내버려 둬!",
       "tags": {
         "functions": [
-          "F17",
-          "F09"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "73e0f5af8d0f04ed"
 }

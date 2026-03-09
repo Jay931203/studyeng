@@ -12,11 +12,11 @@
       "ko": "그 수트 비싸지 않았어, 너도 알잖아, 네가 샀으니까. 제기랄, 듣고 싶어.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S44",
+        "situation": "S04",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
@@ -25,7 +25,10 @@
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06",
+          "G15"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -37,21 +40,23 @@
       "ko": "제안",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -60,20 +65,24 @@
       "ko": "시계를 1년 전으로 돌려보자. 이 경찰들과 변호사들은 감히 너희를 건드리지 못했어.",
       "tags": {
         "functions": [
-          "F04"
+          "F36"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -83,16 +92,17 @@
       "ko": "너는 어떻게 된 거야? 남자답게 행동하지 않게 된 거냐? 나 같은 사람을 봐.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S43",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E03"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X06"
         ],
         "vibe": "V12",
         "power": [],
@@ -106,18 +116,18 @@
       "ko": "나 같은 사람을 봐. 들어봐, 너희가 낮에 그룹 치료를 하기로 선택한 이유를 알아.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S29",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,18 +139,18 @@
       "ko": "밤에 나가는 게 두려운 이유도 알아. 배트맨이 보았잖아, 배트맨이 고담에 너희의 진짜 모습을 보여줬어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V12",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,16 +162,16 @@
       "ko": "배트맨이 보았잖아, 불행히도 그건 시작에 불과해. 그리고...",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V12",
         "power": [],
@@ -175,22 +185,23 @@
       "ko": "시작에 불과하고",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "709d4991ee10a38c"
 }

@@ -14,8 +14,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,16 +35,16 @@
       "ko": "응, 예전처럼 젊고 밝은 애들.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -58,10 +58,10 @@
       "ko": "정말 싫어.",
       "tags": {
         "functions": [
-          "F17"
+          "F35"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -83,8 +83,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -106,8 +106,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,10 +127,10 @@
       "ko": "다른 곳에 있을 수는 없잖아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,10 +150,10 @@
       "ko": "내가 아는 존 왓슨이 아니야.",
       "tags": {
         "functions": [
-          "F12"
+          "F11"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,10 +173,10 @@
       "ko": "응, 내가 아는 존 왓슨이 아니야...",
       "tags": {
         "functions": [
-          "F12"
+          "F07"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,10 +196,10 @@
       "ko": "해리가 도와줄 수는 없었어?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -219,16 +219,17 @@
       "ko": "그래, 그럴 리가 없지.",
       "tags": {
         "functions": [
-          "F11"
+          "F07"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X05"
         ],
         "vibe": "V18",
         "power": [],
@@ -242,10 +243,10 @@
       "ko": "모르겠어, 플랫 쉐어라도 구해봐?",
       "tags": {
         "functions": [
-          "F36"
+          "F40"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -255,7 +256,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17",
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -265,16 +269,17 @@
       "ko": "누가 나를 룸메이트로 원하겠어? 뭐?",
       "tags": {
         "functions": [
-          "F11"
+          "F35"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -288,10 +293,10 @@
       "ko": "오늘 두 번째로 그렇게 말하는 사람이야.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -311,10 +316,10 @@
       "ko": "첫 번째는 누구야? 신선하네.",
       "tags": {
         "functions": [
-          "F05"
+          "F06"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -336,8 +341,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -357,10 +362,10 @@
       "ko": "그를 알았어, 그는 좋았어.",
       "tags": {
         "functions": [
-          "F01"
+          "F03"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -380,10 +385,10 @@
       "ko": "좋아, 채찍부터 시작하자.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -405,20 +410,25 @@
         "functions": [
           "F27"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "1b7e6f579a429723"
 }

@@ -12,23 +12,23 @@
       "ko": "매우 진지하게. 주의 깊게 들어주시고, 가능한 한 빨리 시작하겠습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F13"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S04",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G10"
+        ],
+        "flags": []
       }
     },
     {
@@ -37,128 +37,13 @@
       "ko": "이 비디오의 일부는 최근에 편집되었습니다.",
       "tags": {
         "functions": [
-          "F05"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "wbIXmB2ZLmA-2",
-      "en": "Let's go over a few documents you'll need.",
-      "ko": "필요한 몇 가지 문서를 살펴보겠습니다.",
-      "tags": {
-        "functions": [
-          "F50"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "wbIXmB2ZLmA-3",
-      "en": "First, your completed customs form. You'll also need a valid passport from your country of origin.",
-      "ko": "먼저, 작성된 세관 양식입니다. 원산지에서 유효한 여권도 필요합니다.",
-      "tags": {
-        "functions": [
-          "F50"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "wbIXmB2ZLmA-4",
-      "en": "Not including Iraq, Iran, Syria, Libya, Somalia, Sudan, or Yemen, and maybe Australia. We'll see.",
-      "ko": "이라크, 이란, 시리아, 리비아, 소말리아, 수단, 예멘을 제외하고, 아마도 호주도 포함될 수 있습니다. 두고 봅시다.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "wbIXmB2ZLmA-5",
-      "en": "Our priority is to make this process easy for each and every one of you.",
-      "ko": "우리의 우선순위는 여러분 각자가 이 과정을 쉽게 진행할 수 있도록 하는 것입니다.",
-      "tags": {
-        "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "wbIXmB2ZLmA-6",
-      "en": "Not you. Not you. No way. Nice try. Not you. Oh, wait. He's good. Come on in, bud. Huh? No.",
-      "ko": "당신은 아니에요. 당신도 아니에요. 절대 안 돼요. 잘 시도했어요. 당신은 아니에요. 아, 잠깐. 그는 괜찮아요. 들어오세요, 친구. 뭐? 아니요.",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
         ],
         "expression_types": [
           "X08"
@@ -170,14 +55,88 @@
       }
     },
     {
-      "id": "wbIXmB2ZLmA-7",
-      "en": "In addition, you may be asked to provide a few simple forms. 100. Confusing.",
-      "ko": "또한, 몇 가지 간단한 양식을 제출하라는 요청을 받을 수 있습니다. 100. 혼란스럽습니다.",
+      "id": "wbIXmB2ZLmA-2",
+      "en": "Let's go over a few documents you'll need.",
+      "ko": "필요한 몇 가지 문서를 살펴보겠습니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F36",
+          "F38"
         ],
-        "situation": "S50",
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G09"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "wbIXmB2ZLmA-3",
+      "en": "First, your completed customs form. You'll also need a valid passport from your country of origin.",
+      "ko": "먼저, 작성된 세관 양식입니다. 원산지에서 유효한 여권도 필요합니다.",
+      "tags": {
+        "functions": [
+          "F03"
+        ],
+        "situation": "S22",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "wbIXmB2ZLmA-4",
+      "en": "Not including Iraq, Iran, Syria, Libya, Somalia, Sudan, or Yemen, and maybe Australia. We'll see.",
+      "ko": "이라크, 이란, 시리아, 리비아, 소말리아, 수단, 예멘을 제외하고, 아마도 호주도 포함될 수 있습니다. 두고 봅시다.",
+      "tags": {
+        "functions": [
+          "F14"
+        ],
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "wbIXmB2ZLmA-5",
+      "en": "Our priority is to make this process easy for each and every one of you.",
+      "ko": "우리의 우선순위는 여러분 각자가 이 과정을 쉽게 진행할 수 있도록 하는 것입니다.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -186,7 +145,58 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "wbIXmB2ZLmA-6",
+      "en": "Not you. Not you. No way. Nice try. Not you. Oh, wait. He's good. Come on in, bud. Huh? No.",
+      "ko": "당신은 아니에요. 당신도 아니에요. 절대 안 돼요. 잘 시도했어요. 당신은 아니에요. 아, 잠깐. 그는 괜찮아요. 들어오세요, 친구. 뭐? 아니요.",
+      "tags": {
+        "functions": [
+          "F38",
+          "F43",
+          "F11"
+        ],
+        "situation": "S31",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E05"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [
+          "G01",
+          "G07"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "wbIXmB2ZLmA-7",
+      "en": "In addition, you may be asked to provide a few simple forms. 100. Confusing.",
+      "ko": "또한, 몇 가지 간단한 양식을 제출하라는 요청을 받을 수 있습니다. 100. 혼란스럽습니다.",
+      "tags": {
+        "functions": [
+          "F05"
+        ],
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,18 +208,18 @@
       "ko": "도움이 필요하시면, 도와줄 사람이 있습니다. 아무도 없습니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,9 +231,9 @@
       "ko": "모든 양식이 작성되면, 앞으로 나아가세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -232,7 +242,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,9 +254,9 @@
       "ko": "또한, D-9, W-8, F-12, D-9B 양식도 필요합니다. 거의 다 끝났습니다. 시작하세요.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -255,7 +265,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,10 +277,10 @@
       "ko": "즉시 시행되며, 모든 방문자는 극단적인 심사 절차를 거쳐야 합니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -278,7 +288,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,10 +300,10 @@
       "ko": "매우 상세한 질문지가 포함됩니다.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -301,10 +311,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -313,10 +325,10 @@
       "ko": "지문, 혈액 샘플, 소변 샘플도 필요합니다.",
       "tags": {
         "functions": [
-          "F50"
+          "F12"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -324,11 +336,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d6d3865a88669404"
 }

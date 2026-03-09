@@ -12,56 +12,10 @@
       "ko": "요리사, 안경 벗어.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S05",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "31N_HM2f9Ks-1",
-      "en": "All right, anyone brave enough to redazzle out?",
-      "ko": "좋아, 용감한 사람 누구야?",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S05",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E06"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "31N_HM2f9Ks-2",
-      "en": "I will.",
-      "ko": "내가 할게.",
-      "tags": {
-        "functions": [
-          "F44"
-        ],
-        "situation": "S05",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -76,15 +30,63 @@
       }
     },
     {
+      "id": "31N_HM2f9Ks-1",
+      "en": "All right, anyone brave enough to redazzle out?",
+      "ko": "좋아, 용감한 사람 누구야?",
+      "tags": {
+        "functions": [
+          "F21"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "31N_HM2f9Ks-2",
+      "en": "I will.",
+      "ko": "내가 할게.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
       "id": "31N_HM2f9Ks-3",
       "en": "Lord, here we go.",
       "ko": "좋아, 시작하자.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S05",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,10 +106,10 @@
       "ko": "네가 나한테 말하는 방식이랑 머리 자르는 게 싫어.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S05",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -117,7 +119,9 @@
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -127,10 +131,10 @@
       "ko": "네가 내 차를 운전하는 방식이 싫고, 쳐다보는 것도 싫어.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S05",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -140,7 +144,9 @@
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -150,10 +156,10 @@
       "ko": "네 큰 전투부츠와 내 마음을 읽는 게 싫어.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S05",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -163,7 +169,9 @@
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -173,10 +181,10 @@
       "ko": "너를 너무 싫어해서 아프기까지 해. 심지어 운율도 맞춰져.",
       "tags": {
         "functions": [
-          "F16"
+          "F17"
         ],
-        "situation": "S05",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -186,7 +194,9 @@
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -196,10 +206,10 @@
       "ko": "싫어. 항상 네가 맞는 게 싫어. 네가 거짓말할 때도 싫어.",
       "tags": {
         "functions": [
-          "F16"
+          "F17"
         ],
-        "situation": "S05",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -209,7 +219,9 @@
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -219,10 +231,11 @@
       "ko": "네가 나를 웃게 할 때도 싫고, 더 나쁜 건 나를 울릴 때야.",
       "tags": {
         "functions": [
-          "F16"
+          "F17",
+          "F21"
         ],
-        "situation": "S05",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -230,11 +243,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "198a3de165c548e2"
 }

@@ -18,29 +18,6 @@
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "ppunAo8ckBc-1",
-      "en": "Oh, come on.",
-      "ko": "아, 제발.",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S19",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
           "E09"
         ],
         "expression_types": [
@@ -53,12 +30,38 @@
       }
     },
     {
+      "id": "ppunAo8ckBc-1",
+      "en": "Oh, come on.",
+      "ko": "아, 제발.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S19",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01",
+          "X04"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "ppunAo8ckBc-2",
       "en": "Here you go.",
       "ko": "여기 있어요.",
       "tags": {
         "functions": [
-          "F44"
+          "F01"
         ],
         "situation": "S19",
         "cefr": "A1",
@@ -81,7 +84,7 @@
       "ko": "오!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S19",
         "cefr": "A1",
@@ -106,18 +109,18 @@
       "ko": "너무 느려요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S19",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,18 +132,18 @@
       "ko": "그냥 너무 느려요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S19",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,10 +155,10 @@
       "ko": "조용히 해주세요, 여러분.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S19",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -175,7 +178,7 @@
       "ko": "제 이름은 아바그넬입니다.",
       "tags": {
         "functions": [
-          "F26"
+          "F01"
         ],
         "situation": "S19",
         "cefr": "A1",
@@ -212,7 +215,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -221,10 +226,10 @@
       "ko": "아바그넬이 아니라,",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
         "situation": "S19",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -235,7 +240,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -244,10 +251,10 @@
       "ko": "아바그넬도 아니고,",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
         "situation": "S19",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -258,7 +265,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -281,7 +290,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -290,13 +301,13 @@
       "ko": "이제, 누가 제발",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S19",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
@@ -313,7 +324,7 @@
       "ko": "교과서에서 어디까지 했는지 말해줄래요?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S19",
         "cefr": "A2",
@@ -336,13 +347,38 @@
       "ko": "실례합니다, 여러분.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S19",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "ppunAo8ckBc-15",
+      "en": "If I need to ask again,",
+      "ko": "다시 물어봐야 한다면,",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S19",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E13"
         ],
         "expression_types": [
           "X08"
@@ -354,37 +390,12 @@
       }
     },
     {
-      "id": "ppunAo8ckBc-15",
-      "en": "If I need to ask again,",
-      "ko": "다시 물어봐야 한다면,",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S19",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
       "id": "ppunAo8ckBc-16",
       "en": "I'm gonna write up the entire class.",
       "ko": "전체 반을 기록할 거예요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S19",
         "cefr": "A2",
@@ -393,7 +404,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
         "power": [],
@@ -444,7 +455,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -453,13 +466,13 @@
       "ko": "교과서 8장으로",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S19",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
@@ -476,23 +489,21 @@
       "ko": "넘겨주세요,",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
         "situation": "S19",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -501,10 +512,10 @@
       "ko": "그러면 시작하겠습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S19",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -524,10 +535,10 @@
       "ko": "실례합니다. 이름이 뭐죠?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S19",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -561,7 +572,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -570,7 +583,8 @@
       "ko": "브래드, 여기 앞에 나와서",
       "tags": {
         "functions": [
-          "F34"
+          "F36",
+          "F40"
         ],
         "situation": "S19",
         "cefr": "A2",
@@ -579,7 +593,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -593,10 +607,10 @@
       "ko": "5번 대화를 읽어줄래요?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S19",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -616,10 +630,10 @@
       "ko": "읽어주세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S19",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -639,10 +653,10 @@
       "ko": "프랑스어로 해보세요.",
       "tags": {
         "functions": [
-          "F36"
+          "F35"
         ],
         "situation": "S19",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -662,16 +676,16 @@
       "ko": "음, 일반적으로.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S19",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -679,5 +693,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "5bebf9337cf7ce6b"
 }

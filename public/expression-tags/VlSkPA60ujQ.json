@@ -12,7 +12,7 @@
       "ko": "그들은 독점적이고 재미있으며 더 나은 삶으로 이끌어 줍니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -25,7 +25,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -35,10 +37,10 @@
       "ko": "테디 루즈벨트는 피닉스 클럽의 회원이라서 대통령에 선출된 것이 아닙니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +50,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -60,29 +64,6 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "VlSkPA60ujQ-3",
-      "en": "Well, why don't you just concentrate on being the best you you can be? Did you really just say that?",
-      "ko": "그럼, 최선을 다해 자신이 되는 데 집중해보는 건 어때요? 정말 그렇게 말했어요?",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
@@ -95,6 +76,34 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "VlSkPA60ujQ-3",
+      "en": "Well, why don't you just concentrate on being the best you you can be? Did you really just say that?",
+      "ko": "그럼, 최선을 다해 자신이 되는 데 집중해보는 건 어때요? 정말 그렇게 말했어요?",
+      "tags": {
+        "functions": [
+          "F36",
+          "F52"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -104,10 +113,11 @@
       "ko": "농담이었어요. 하지만 누군가가 진부하다고 해서 진실이 덜 진실이 되는 건 아니죠.",
       "tags": {
         "functions": [
-          "F09"
+          "F21",
+          "F04"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -117,7 +127,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -127,7 +139,9 @@
       "ko": "당신에게 솔직하게 말하고 싶어요. 좀 더 지지해주면 좋겠어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F37",
+          "F09",
+          "F14"
         ],
         "situation": "S50",
         "cefr": "B2",
@@ -136,11 +150,14 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09",
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -150,7 +167,7 @@
       "ko": "내가 들어가면 당신을 행사와 모임에 데려갈 거고, 평소에 만나지 못할 많은 사람들을 만날 거예요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B2",
@@ -159,7 +176,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -173,7 +190,7 @@
       "ko": "당신이 나를 위해 그렇게 해줄 건가요? 우리는 사귀고 있어요. 알겠어요.",
       "tags": {
         "functions": [
-          "F10"
+          "F06"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -196,7 +213,8 @@
       "ko": "하지만 나는 당신에게 솔직하게 말하고 싶어요. 우리는 더 이상 사귀지 않아요. 무슨 뜻이에요?",
       "tags": {
         "functions": [
-          "F09"
+          "F06",
+          "F52"
         ],
         "situation": "S50",
         "cefr": "B2",
@@ -209,7 +227,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -219,20 +239,25 @@
       "ko": "우리는 더 이상 사귀지 않아요. 미안해요. 이게 농담인가요? 아니요, 농담이 아니에요. 나와 헤어지겠다는 건가요?",
       "tags": {
         "functions": [
-          "F09"
+          "F28",
+          "F08"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -248,14 +273,16 @@
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -276,9 +303,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -288,7 +317,7 @@
       "ko": "문지기요. 그의 이름은 바비예요. 나는 문지기와 자지 않았어요. 문지기는 내 친구예요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B2",
@@ -299,11 +328,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "07905de459c9f2b2"
 }

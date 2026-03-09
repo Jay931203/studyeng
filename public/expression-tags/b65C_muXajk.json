@@ -12,10 +12,10 @@
       "ko": "에이미 브랜트, 캐스팅 디렉터가 당신의 연극을 봤어요,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,18 @@
       "ko": "그리고 정말 좋아했어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +58,18 @@
       "ko": "너무 좋아해서",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +81,18 @@
       "ko": "내일 와서 오디션을 보라고 해요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,9 +104,9 @@
       "ko": "그녀가 맡고 있는 큰 영화에요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -115,7 +115,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,19 +127,21 @@
       "ko": "나는 그거 안 갈 거예요. 나는 그거 안 갈 거예요. 뭐라고? 그건... 안 돼요.",
       "tags": {
         "functions": [
-          "F43"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S08",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V12",
-        "power": [],
+        "vibe": "V07",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -150,20 +152,24 @@
       "ko": "그건... 미안해요?",
       "tags": {
         "functions": [
-          "F50"
+          "F28"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V07",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -173,18 +179,18 @@
       "ko": "그건 나를 죽일 거예요. 뭐?! 뭐?! 뭐?! 쉿! 그만해!",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,19 +202,21 @@
       "ko": "안 돼! 쉿! 쉿! 조용히 해야 해요. 내가... 원한다면, 당신은 말이 되어야 해요. 내가 조용히 하길 원한다면, 좀 말이 되게 해주세요.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S08",
+        "cefr": "C1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X02"
         ],
-        "vibe": "V12",
-        "power": [],
+        "vibe": "V07",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": [
           "contains_profanity"
@@ -221,20 +229,22 @@
       "ko": "왜 안 가는지 말해줘요. 왜냐하면. 왜냐하면. 왜? 나는 수많은 오디션을 봤고, 매번 같은 일이 일어나요. 누군가 샌드위치를 먹으러 가서 방해하거나,",
       "tags": {
         "functions": [
-          "F06"
+          "F04"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -244,18 +254,18 @@
       "ko": "내가 울고 있는데 그들이 웃거나,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -269,7 +279,7 @@
         "functions": [
           "F02"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -278,7 +288,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,10 +300,10 @@
       "ko": "그들도 나와 비슷하지만 더 예쁘고, 더 잘해요...",
       "tags": {
         "functions": [
-          "F13"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -301,7 +311,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,20 +323,23 @@
       "ko": "아마 내가 충분히 잘하지 못해서요. 그래, 넌 잘해. 아니. 아마 내가 잘하지 못할 수도 있어. 그래, 넌 잘해. 아마 내가 잘하지 못할 수도 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F21"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V12",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17",
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -336,22 +349,25 @@
       "ko": "넌 잘해. 아마 내가 잘하지 못할 수도 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F14"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V12",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "667e56c737227f4a"
 }

@@ -12,18 +12,18 @@
       "ko": "나는 약을 훔치고 있었어. 또, 약쟁이 쓰레기. 그리고 또, 네 잘못은 아니야.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S40",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,11 +35,11 @@
       "ko": "중독에는 주요한 유전적 요소가 있어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S29",
+        "situation": "S40",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -58,19 +58,21 @@
       "ko": "그는 경찰에 신고하겠다고 해. 나는 면허를 잃을 수도 있어.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S37",
+        "situation": "S40",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V12",
-        "power": [],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -81,18 +83,18 @@
       "ko": "우리는 싸우고, 내 안에서 뭔가가 터져버려.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S40",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,19 +106,18 @@
       "ko": "그래서 나는 찾을 수 있는 첫 번째 물건을 집어들고 그를 쳤어. 너는 여전히 살인 무기가 없어. 나는 이제 있어. Yelp에서 찾은 사진이야.",
       "tags": {
         "functions": [
-          "F17",
-          "F09"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S40",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -130,8 +131,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S40",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -153,8 +154,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S40",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -174,9 +175,9 @@
       "ko": "살인 2주 후 같은 방을 찍은 사진이야. 차이점이 보이니? 우리는 그 질문에 답하지 않을 거야.",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S39",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -197,9 +198,9 @@
       "ko": "괜찮아. 내가 직접 말해줄 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -222,7 +223,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S39",
+        "situation": "S40",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -243,18 +244,18 @@
       "ko": "반면 이 사진에는 다섯 개만 있어. 여섯 번째는 어디 갔어? 너는 로버트를 그것으로 살해했어. 나는 아니야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S40",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -266,18 +267,18 @@
       "ko": "너는 모든 통제를 잃고 그를 죽였어. 피가 everywhere 있었을 거야, 하지만 너는 운이 좋았어. 너는 수술실에 있었으니까. 소독할 수 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F56"
         ],
-        "situation": "S39",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S40",
+        "cefr": "B1",
+        "register": "R1",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -289,18 +290,18 @@
       "ko": "너는 카펫이 깔린 사무실에서는 절대 빠져나갈 수 없었어. 그런 일은 없었어. 더 이상 말하지 마, 필립.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S40",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -312,20 +313,23 @@
       "ko": "그리고 너의 사무실 관리자는 모든 비명을 들었을 텐데,",
       "tags": {
         "functions": [
-          "F12"
+          "F43",
+          "F08"
         ],
-        "situation": "S39",
+        "situation": "S40",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E16"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -335,18 +339,18 @@
       "ko": "그녀는 손자의 연극을 보고 있었어. 또 운이 좋네. 너는 틀렸어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S40",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -358,18 +362,18 @@
       "ko": "너는 로버트의 시신을 휠체어에 넣고 엘리베이터에 밀어넣었어.",
       "tags": {
         "functions": [
-          "F11"
+          "F08"
         ],
-        "situation": "S39",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S40",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -383,9 +387,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S40",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -404,20 +408,24 @@
       "ko": "이제 너는 차고에 시신과 함께 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F08",
+          "F03",
+          "F11"
         ],
-        "situation": "S36",
+        "situation": "S40",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -429,9 +437,34 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
+        "situation": "S40",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "HhrbbYD5ScI-19",
+      "en": "You panicked and left your phone in your office, and you don't have your car keys, but Robert's are in his pocket, so you put him in his car.",
+      "ko": "당신은 당황해서 사무실에 전화기를 두고 나왔고, 차 키도 없지만 로버트의 차 키는 그의 주머니에 있으니 그를 그의 차에 태웠어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S40",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E04"
         ],
@@ -443,29 +476,7 @@
         "grammar_intent": [],
         "flags": []
       }
-    },
-    {
-      "id": "HhrbbYD5ScI-19",
-      "en": "You panicked and left your phone in your office, and you don't have your car keys, but Robert's are in his pocket, so you put him in his car.",
-      "ko": "당신은 당황해서 사무실에 전화기를 두고 나왔고, 차 키도 없지만 로버트의 차 키는 그의 주머니에 있으니 그를 그의 차에 태웠어.",
-      "tags": {
-        "functions": [
-          "F11"
-        ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
     }
-  ]
+  ],
+  "transcriptHash": "008f44add9590bf4"
 }

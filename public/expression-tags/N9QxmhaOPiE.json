@@ -14,7 +14,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -35,18 +35,18 @@
       "ko": "저건 칼빈 클라인이야. 오, 세상에, 그는 꿈의 남자야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,10 +58,10 @@
       "ko": "와, 얘야, 얘야, 멈춰, 멈춰. 멈춰, 멈춰. 이봐! 내가 다시 줄게, 알겠지?",
       "tags": {
         "functions": [
-          "F35"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -83,19 +83,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,20 +106,24 @@
       "ko": "와, 저기 가는 거 봐. 조심해!",
       "tags": {
         "functions": [
-          "F02"
+          "F18",
+          "F40"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07",
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -129,8 +135,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -152,31 +158,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "N9QxmhaOPiE-7",
-      "en": "Come on, come on, come on, come on! What are you doing?",
-      "ko": "어서, 어서, 어서, 어서! 뭐 하고 있어?",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -189,6 +172,31 @@
         "grammar_intent": [],
         "flags": []
       }
+    },
+    {
+      "id": "N9QxmhaOPiE-7",
+      "en": "Come on, come on, come on, come on! What are you doing?",
+      "ko": "어서, 어서, 어서, 어서! 뭐 하고 있어?",
+      "tags": {
+        "functions": [
+          "F21",
+          "F45"
+        ],
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
     }
-  ]
+  ],
+  "transcriptHash": "4a13cb60e3d7aac8"
 }

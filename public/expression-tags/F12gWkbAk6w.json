@@ -14,9 +14,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -35,13 +35,13 @@
       "ko": "글쎄, 그녀가 14년 전에 죽었으니 의심스러워.",
       "tags": {
         "functions": [
-          "F12"
+          "F52"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -58,11 +58,11 @@
       "ko": "기술적으로 그녀는 한 번도 살아있지 않았어.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -71,7 +71,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -81,11 +83,11 @@
       "ko": "레이첼은 14년 전 제니퍼 윌슨의 사산아였어.",
       "tags": {
         "functions": [
-          "F01"
+          "F21"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -104,9 +106,9 @@
       "ko": "아, 그거야...",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -129,13 +131,13 @@
       "ko": "그건 맞지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F08"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -143,7 +145,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -154,9 +158,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -175,16 +179,16 @@
       "ko": "왜 마지막 순간에 딸을 생각했을까?",
       "tags": {
         "functions": [
-          "F06"
+          "F21"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -198,13 +202,13 @@
       "ko": "맞아, 사회병리자 같아. 이제 알겠어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -221,16 +225,16 @@
       "ko": "그녀는 딸을 생각하지 않았어.",
       "tags": {
         "functions": [
-          "F12"
+          "F21"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -244,11 +248,11 @@
       "ko": "그녀는 손톱으로 바닥에 이름을 긁었어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -267,18 +271,18 @@
       "ko": "그녀는 죽어가고 있었어. 힘이 들었을 거야. 아팠을 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -292,9 +296,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -313,11 +317,11 @@
       "ko": "그가 그들을 그렇게 만들었다고.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -336,20 +340,26 @@
       "ko": "글쎄, 아마 그가, 잘 모르겠지만, 그들과 대화했을까?",
       "tags": {
         "functions": [
-          "F09"
+          "F06",
+          "F14",
+          "F52"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -359,20 +369,23 @@
       "ko": "아마 그녀의 딸의 죽음을 뭔가에 이용했을지도 몰라.",
       "tags": {
         "functions": [
+          "F21",
           "F14"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -382,13 +395,13 @@
       "ko": "하지만 그건 오래 전 일이야. 왜 아직도 괴로워할까?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -405,9 +418,9 @@
       "ko": "좋지 않아? 조금 좋지 않아, 그래.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -428,9 +441,10 @@
       "ko": "응, 하지만 네가 죽어가고 있다면,",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F53"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -451,13 +465,13 @@
       "ko": "마지막 몇 초에 살해당했다면,",
       "tags": {
         "functions": [
-          "F14"
+          "F23"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -474,20 +488,22 @@
       "ko": "너는 뭐라고 말할까? 제발, 하나님, 살게 해주세요.",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -497,9 +513,9 @@
       "ko": "상상력을 발휘해 봐.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -511,7 +527,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -520,9 +538,9 @@
       "ko": "그럴 필요 없어.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -543,10 +561,10 @@
       "ko": "응, 하지만 만약 네가 똑똑하다면, 정말 똑똑하다면...",
       "tags": {
         "functions": [
-          "F14"
+          "F07"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -557,8 +575,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "6a7f645ae0aa34a4"
 }

@@ -26,7 +26,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,13 +37,13 @@
       "ko": "하하하! 하하! 하! 헤헤! 우우우!",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -49,9 +51,7 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -63,7 +63,7 @@
           "F15"
         ],
         "situation": "S45",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E01"
@@ -71,12 +71,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -88,7 +86,7 @@
           "F16"
         ],
         "situation": "S45",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E02"
@@ -110,24 +108,23 @@
       "ko": "징징대기 하하!",
       "tags": {
         "functions": [
-          "F16"
+          "F15"
         ],
         "situation": "S45",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "bd4d3f937d5a8393"
 }

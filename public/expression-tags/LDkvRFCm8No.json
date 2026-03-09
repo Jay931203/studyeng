@@ -12,7 +12,7 @@
       "ko": "시작해 볼까요!",
       "tags": {
         "functions": [
-          "F25"
+          "F36"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -25,8 +25,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G09"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,7 +62,7 @@
       "ko": "유창하게 말할 수 있다면, 많은 멈춤 없이 쉽게 말할 수 있다는 거예요.",
       "tags": {
         "functions": [
-          "F04"
+          "F52"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -81,7 +85,7 @@
       "ko": "그럼 영어를 더 유창하게 말할 수 있는 다섯 가지 방법을 살펴볼게요.",
       "tags": {
         "functions": [
-          "F04"
+          "F36"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -94,7 +98,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -104,7 +110,7 @@
       "ko": "비격식 표현을 배우고 사용하는 연습을 하세요.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -127,7 +133,7 @@
       "ko": "예를 들어, 한 달에 다섯 개를 배우는 것을 목표로 할 수 있어요.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -150,13 +156,13 @@
       "ko": "오, 비가 정말 많이 오네.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -173,13 +179,13 @@
       "ko": "아니, 비가 억수같이 쏟아지고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F08"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -196,10 +202,11 @@
       "ko": "어떻게 지내? 잘 지내?",
       "tags": {
         "functions": [
+          "F25",
           "F33"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -208,7 +215,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -219,10 +228,11 @@
       "ko": "잘 지내? 잘 지내?",
       "tags": {
         "functions": [
+          "F06",
           "F33"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,10 +252,11 @@
       "ko": "헤이, 잘 지내?",
       "tags": {
         "functions": [
+          "F06",
           "F33"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,10 +276,10 @@
       "ko": "actually와 basically 같은 단어를 사용하세요.",
       "tags": {
         "functions": [
-          "F36"
+          "F08"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,7 +299,7 @@
       "ko": "이런 단어들은 생각할 시간을 더 주고 더 유창하게 들리게 해줘요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -311,7 +322,7 @@
       "ko": "기본적으로, 비 오는 동안은 나가고 싶지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -320,11 +331,13 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -334,10 +347,11 @@
       "ko": "사실, 그냥 갈게. 그래. 잘 가.",
       "tags": {
         "functions": [
-          "F09"
+          "F32",
+          "F08"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -347,7 +361,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -357,11 +373,11 @@
       "ko": "유창한 영어 화자들은...",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B1",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -372,9 +388,10 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_narration"
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "e5d9f06eadf93a69"
 }

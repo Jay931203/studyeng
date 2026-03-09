@@ -12,13 +12,13 @@
       "ko": "제이크 질렌할은 역사상 가장 주먹질하고 싶은 얼굴이다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -35,20 +35,25 @@
       "ko": "그의 못생기고 부드럽고 별빛 가득한 퍼그 같은 얼굴에 주먹을 날리고 싶다.",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G10",
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -58,13 +63,13 @@
       "ko": "엘리자베스 모스는 정말 아름답다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -83,16 +88,16 @@
         "functions": [
           "F09"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,10 +109,11 @@
       "ko": "존 리스고의 고환은 그의 얼굴과 똑같이 생겼을 것 같다.",
       "tags": {
         "functions": [
-          "F14"
+          "F07",
+          "F10"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -117,7 +123,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -127,10 +135,10 @@
       "ko": "내 얼굴은 칭찬받지 못하지만, 내 고환은 그렇다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,10 +158,10 @@
       "ko": "데자벨의 머리 스타일은 이제 그의 몸에 맞지 않는다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,10 +181,10 @@
       "ko": "그는 어깨에 있는 우유 엉덩이를 운동하는 것을 잊었다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,13 +204,13 @@
       "ko": "그 년은 정말 작다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E08"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -211,7 +219,8 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "contains_profanity"
+          "contains_profanity",
+          "is_fragment"
         ]
       }
     },
@@ -221,11 +230,11 @@
       "ko": "모든 찡그린 노인은 나에게 제프리 탐보와 같다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -244,13 +253,38 @@
       "ko": "그건 정말 상처 주는 말이다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "t2oVUxTV4WA-11",
+      "en": "Can Gwyneth Paltrow just stick to steaming her vagina and shut the f*** up for f***'s sake?",
+      "ko": "기네스 팰트로는 그냥 자신의 질을 찌고 조용히 좀 있으면 안 될까?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -262,40 +296,15 @@
       }
     },
     {
-      "id": "t2oVUxTV4WA-11",
-      "en": "Can Gwyneth Paltrow just stick to steaming her vagina and shut the f*** up for f***'s sake?",
-      "ko": "기네스 팰트로는 그냥 자신의 질을 찌고 조용히 좀 있으면 안 될까?",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
       "id": "t2oVUxTV4WA-12",
       "en": "Jennifer Aniston is what happens when a bag of flour gets its big break.",
       "ko": "제니퍼 애니스턴은 밀가루 봉지가 큰 기회를 얻은 모습이다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -309,5 +318,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "5ceb2f398f8a2c8d"
 }

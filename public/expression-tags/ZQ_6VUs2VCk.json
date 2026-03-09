@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,17 +35,16 @@
       "ko": "내 템포와는 조금 달라. 괜찮아, 걱정하지 마. 시작해.",
       "tags": {
         "functions": [
-          "F09",
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -75,84 +72,13 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
       "id": "ZQ_6VUs2VCk-3",
       "en": "You're rushing.",
       "ko": "너무 서두르고 있어.",
-      "tags": {
-        "functions": [
-          "F17"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "ZQ_6VUs2VCk-4",
-      "en": "Here we go.",
-      "ko": "시작해.",
-      "tags": {
-        "functions": [
-          "F36"
-        ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "ZQ_6VUs2VCk-5",
-      "en": "Ready? Okay.",
-      "ko": "준비됐어? 좋아.",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "ZQ_6VUs2VCk-6",
-      "en": "Five, six, and.",
-      "ko": "다섯, 여섯, 그리고.",
       "tags": {
         "functions": [
           "F01"
@@ -175,15 +101,86 @@
       }
     },
     {
+      "id": "ZQ_6VUs2VCk-4",
+      "en": "Here we go.",
+      "ko": "시작해.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E06"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "ZQ_6VUs2VCk-5",
+      "en": "Ready? Okay.",
+      "ko": "준비됐어? 좋아.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E06"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "ZQ_6VUs2VCk-6",
+      "en": "Five, six, and.",
+      "ko": "다섯, 여섯, 그리고.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "ZQ_6VUs2VCk-7",
       "en": "Dragging just a hair.",
       "ko": "조금 느려.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -203,10 +200,10 @@
       "ko": "내 신호를 기다려.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -240,9 +237,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -251,10 +246,10 @@
       "ko": "서두르고 있어.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,7 +260,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -288,38 +285,13 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
       "id": "ZQ_6VUs2VCk-12",
       "en": "Dragging.",
       "ko": "느려.",
-      "tags": {
-        "functions": [
-          "F17"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "ZQ_6VUs2VCk-13",
-      "en": "Five, six, and.",
-      "ko": "다섯, 여섯, 그리고.",
       "tags": {
         "functions": [
           "F01"
@@ -342,15 +314,15 @@
       }
     },
     {
-      "id": "ZQ_6VUs2VCk-14",
-      "en": "Dragging.",
-      "ko": "느려.",
+      "id": "ZQ_6VUs2VCk-13",
+      "en": "Five, six, and.",
+      "ko": "다섯, 여섯, 그리고.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -363,6 +335,32 @@
         "grammar_intent": [],
         "flags": []
       }
+    },
+    {
+      "id": "ZQ_6VUs2VCk-14",
+      "en": "Dragging.",
+      "ko": "느려.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
     }
-  ]
+  ],
+  "transcriptHash": "a617cc61f4d3fe06"
 }

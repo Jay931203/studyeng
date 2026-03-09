@@ -12,18 +12,18 @@
       "ko": "당신은 너무 완벽해서 믿을 수가 없어요. 당신에게서 눈을 뗄 수가 없어요.",
       "tags": {
         "functions": [
-          "F22"
+          "F12"
         ],
         "situation": "S08",
-        "cefr": "A2",
-        "register": "R5",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E11"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,19 +35,21 @@
       "ko": "당신을 만지는 건 마치 천국 같을 거예요.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
         "situation": "S08",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
-        "power": [],
+        "vibe": "V01",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -58,20 +60,22 @@
       "ko": "당신을 너무 안고 싶어요.",
       "tags": {
         "functions": [
-          "F22"
+          "F09"
         ],
         "situation": "S08",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V07",
+        "vibe": "V01",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -81,18 +85,18 @@
       "ko": "드디어 사랑이 찾아왔고, 제가 살아있다는 것에 감사해요.",
       "tags": {
         "functions": [
-          "F22"
+          "F27"
         ],
         "situation": "S08",
-        "cefr": "A2",
-        "register": "R5",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V07",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,18 +108,18 @@
       "ko": "당신은 너무 완벽해서 믿을 수가 없어요. 당신에게서 눈을 뗄 수가 없어요.",
       "tags": {
         "functions": [
-          "F22"
+          "F12"
         ],
         "situation": "S08",
-        "cefr": "A2",
-        "register": "R5",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E11"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,20 +133,27 @@
         "functions": [
           "F22"
         ],
-        "situation": "S08",
-        "cefr": "A2",
-        "register": "R5",
+        "situation": "S40",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P01",
+          "P09"
+        ],
+        "grammar_intent": [
+          "G15",
+          "G22"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d7bff8afc256f420"
 }

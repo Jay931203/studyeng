@@ -12,7 +12,7 @@
       "ko": "하지만 네가 하고 싶은 대로 해. 우리는 네가 반격할 방법을 생각할 때까지 시간을 보내고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S14",
         "cefr": "B2",
@@ -21,7 +21,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -35,7 +35,7 @@
       "ko": "여기서 이걸 하고 싶어?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S14",
         "cefr": "A2",
@@ -58,7 +58,7 @@
       "ko": "좋아.",
       "tags": {
         "functions": [
-          "F07"
+          "F44"
         ],
         "situation": "S14",
         "cefr": "A1",
@@ -72,7 +72,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,10 +106,10 @@
       "ko": "이사회에 미리 말하고 싶진 않지만,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -117,7 +119,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -127,13 +131,13 @@
       "ko": "내 생각, 우리의 생각은",
       "tags": {
         "functions": [
-          "F09"
+          "F23"
         ],
         "situation": "S14",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -150,10 +154,10 @@
       "ko": "반드시 설득력 있는 건 아니야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,10 +177,10 @@
       "ko": "숫자를 계산하고 있지만, ATN을 유지할 방법을 탐색하고 싶어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,7 +200,7 @@
       "ko": "알겠어.",
       "tags": {
         "functions": [
-          "F07"
+          "F44"
         ],
         "situation": "S14",
         "cefr": "A1",
@@ -210,7 +214,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -219,10 +225,10 @@
       "ko": "나쁜 소식이지만, 아빠의 거래에 대한 가격을 듣고 싶어. ATN은 필요 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,18 +248,18 @@
       "ko": "ATN을 원하지 않아? 알겠어, 하지만 우리는 좀 필요해.",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,10 +271,10 @@
       "ko": "오스카와 이야기해봤고, 우리는 돌아갈 방법을 봤어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -282,5 +288,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "369b3f84ae3efa33"
 }

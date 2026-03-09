@@ -12,10 +12,10 @@
       "ko": "그가 포털을 열고 걸어 들어갔다는 걸 우리는 모르잖아.",
       "tags": {
         "functions": [
-          "F04"
+          "F21"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,9 +35,9 @@
       "ko": "그가 왜 이러는 거지?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -48,7 +48,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -60,8 +62,8 @@
         "functions": [
           "F17"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E03"
@@ -69,10 +71,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,9 +87,9 @@
       "ko": "그는 실패했다고 생각해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -95,7 +101,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -104,19 +112,22 @@
       "ko": "물론 실패했지만, 요즘 그런 일이 많아, 솔직히 지금 이 순간에도.",
       "tags": {
         "functions": [
-          "F12"
+          "F44"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03",
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -127,21 +138,24 @@
       "ko": "너는 빌드 어 베어인 줄 알았어. 아마도 그렇겠지. 너는 지금 3주째 타노스를 추적하고 있어, 심우주 스캔과",
       "tags": {
         "functions": [
-          "F09",
-          "F34"
+          "F20",
+          "F21",
+          "F14"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -151,9 +165,9 @@
       "ko": "위성으로 아무것도 못 찾았어.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -174,9 +188,9 @@
       "ko": "토니, 너는 그와 싸웠잖아. 우리가 말해줬잖아.",
       "tags": {
         "functions": [
-          "F07"
+          "F21"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -197,10 +211,9 @@
       "ko": "너는 전사야. 아니, 내 얼굴이 행성을 위해 싸운 거지, 블리커 스트리트 마술사가 가게를 다 내줬어. 그게 사실이야.",
       "tags": {
         "functions": [
-          "F09",
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -221,10 +234,10 @@
       "ko": "싸움이 없어. 그가 사람들을 뭐라고 했어? 단서나 좌표, 아무것도?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -244,13 +257,14 @@
       "ko": "몇 년 전부터 이걸 예감했어. 비전을 봤고, 믿고 싶지 않았어.",
       "tags": {
         "functions": [
-          "F14"
+          "F23",
+          "F56"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -267,21 +281,24 @@
       "ko": "딸의 꿈이야, 토니. 집중해줘야 해, 그리고 네가 필요했어.",
       "tags": {
         "functions": [
-          "F09",
-          "F34"
+          "F21"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -291,10 +308,10 @@
       "ko": "과거형으로 말하는 게 네가 필요한 것보다 더 중요해. 너무 늦었어, 친구.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S43",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -316,7 +333,7 @@
         "functions": [
           "F28"
         ],
-        "situation": "S50",
+        "situation": "S43",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -327,9 +344,14 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "18b4736824da98d9"
 }

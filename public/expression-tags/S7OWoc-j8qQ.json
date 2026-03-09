@@ -12,30 +12,7 @@
       "ko": "그 애를 죽일 거야!",
       "tags": {
         "functions": [
-          "F42"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V03",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "S7OWoc-j8qQ-1",
-      "en": "Marv! Harry?",
-      "ko": "마브! 해리?",
-      "tags": {
-        "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -50,6 +27,31 @@
         "power": [],
         "grammar_intent": [],
         "flags": []
+      }
+    },
+    {
+      "id": "S7OWoc-j8qQ-1",
+      "en": "Marv! Harry?",
+      "ko": "마브! 해리?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -108,18 +110,18 @@
       "ko": "나 여기 있어, 바보들아!",
       "tags": {
         "functions": [
-          "F09"
+          "F58"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -154,16 +156,16 @@
       "ko": "너희 포기할래, 아니면 더 원해?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -177,16 +179,16 @@
       "ko": "너희 포기할래, 아니면 더 원해?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -194,5 +196,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "1522310cbf294ffa"
 }

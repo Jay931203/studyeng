@@ -12,9 +12,9 @@
       "ko": "내가 가장 좋아하는 것 중 하나야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S05",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,20 +35,22 @@
       "ko": "튀긴 오징어 샐러드로 가자. 좋아.",
       "tags": {
         "functions": [
-          "F34"
+          "F36"
         ],
-        "situation": "S05",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -58,17 +60,18 @@
       "ko": "그리고 폭탄 버거를 안 시키면 바보지. 폭탄 버거? 폭탄 버거. 저렇게 생겼어? 어, 그래. 아, 젠장.",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F52",
+          "F58"
         ],
-        "situation": "S05",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03",
-          "E05"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -84,20 +87,23 @@
       "ko": "있잖아, 나는 맥앤치즈를 정말 좋아해. 맥앤치즈 있어? 응. 좋아. 그걸로 다야. 완벽해. 알겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F30",
+          "F44"
         ],
-        "situation": "S05",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -109,8 +115,8 @@
         "functions": [
           "F27"
         ],
-        "situation": "S05",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -118,8 +124,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -130,18 +138,18 @@
       "ko": "맥앤치즈 하나 추가할래? 1.50달러야.",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S05",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -153,10 +161,10 @@
       "ko": "주문 완료, 애쉬. 이게 내 맥앤치즈야. 맥앤치즈. 맥앤치즈가 정말 빨라.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S05",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -164,7 +172,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -176,20 +184,22 @@
       "ko": "세상에. 아마 미리 만들어 놓은 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F14"
         ],
-        "situation": "S05",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -199,18 +209,18 @@
       "ko": "입안 가득 찬 끈적한 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S05",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E08"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -222,10 +232,10 @@
       "ko": "역겨워.",
       "tags": {
         "functions": [
-          "F12"
+          "F23"
         ],
-        "situation": "S05",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E08"
@@ -233,10 +243,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -245,10 +257,10 @@
       "ko": "여기서 조리한 맛이 아니야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S05",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -256,7 +268,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -268,9 +280,9 @@
       "ko": "우리는 여기서 맥앤치즈를 만들지 않아. 아니, 그런 맛이야. 인기 있는 메뉴야?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S05",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -279,7 +291,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -291,21 +303,23 @@
       "ko": "아니, 애들이 먹는 거야. 정말? 응, 끔찍하네. 불쌍한 애들.",
       "tags": {
         "functions": [
-          "F12"
+          "F18",
+          "F08"
         ],
-        "situation": "S05",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02",
-          "E08"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -315,24 +329,27 @@
       "ko": "젠장, 클래식 아메리칸 메뉴에서 이럴 줄은 몰랐어.",
       "tags": {
         "functions": [
-          "F12"
+          "F17"
         ],
-        "situation": "S05",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "533cc0b580fad6e5"
 }

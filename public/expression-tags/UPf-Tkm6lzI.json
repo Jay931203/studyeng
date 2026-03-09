@@ -12,11 +12,11 @@
       "ko": "샌포드 수녀님, 30밀리그램의 코데인을 4시간마다 주세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S27",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -35,11 +35,11 @@
       "ko": "액체 필요량을 결정할 때까지 플라즈마를 분당 60으로 유지하세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S27",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -60,9 +60,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S27",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -81,12 +81,11 @@
       "ko": "3도 화상은 신체 표면의 20% 이상입니다. 동의하시나요?",
       "tags": {
         "functions": [
-          "F09",
-          "F07"
+          "F06"
         ],
-        "situation": "S27",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -105,11 +104,11 @@
       "ko": "그렇지 않다면, 그를 어린이 병동으로 옮기세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S27",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -128,20 +127,22 @@
       "ko": "호프만 수녀님, 간호부로 오세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F34"
         ],
-        "situation": "S27",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -151,20 +152,23 @@
       "ko": "호프만 수녀님, 간호부로 오세요. 안녕하세요, 브렌다.",
       "tags": {
         "functions": [
-          "F35"
+          "F25",
+          "F34"
         ],
-        "situation": "S27",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -176,7 +180,7 @@
         "functions": [
           "F25"
         ],
-        "situation": "S27",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -188,7 +192,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -197,9 +203,37 @@
       "ko": "그들이 당신을 서명하게 하길 원했어요. 감사합니다.",
       "tags": {
         "functions": [
-          "F34"
+          "F27"
         ],
-        "situation": "S27",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "UPf-Tkm6lzI-9",
+      "en": "Well, is there anything you want to tell me? You look fabulous. Yes. Come, let me see.",
+      "ko": "음, 저에게 전하고 싶은 것이 있나요? 정말 멋져 보이네요. 네, 와서 보여주세요.",
+      "tags": {
+        "functions": [
+          "F30",
+          "F52"
+        ],
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -210,31 +244,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "UPf-Tkm6lzI-9",
-      "en": "Well, is there anything you want to tell me? You look fabulous. Yes. Come, let me see.",
-      "ko": "음, 저에게 전하고 싶은 것이 있나요? 정말 멋져 보이네요. 네, 와서 보여주세요.",
-      "tags": {
-        "functions": [
-          "F06",
-          "F30"
+        "grammar_intent": [
+          "G03"
         ],
-        "situation": "S27",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
         "flags": []
       }
     },
@@ -244,20 +256,22 @@
       "ko": "항상 보여주고 싶었어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S27",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -267,18 +281,18 @@
       "ko": "아, 잘했어요. 네.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
-        "situation": "S27",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -292,8 +306,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S27",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -301,7 +315,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,10 +327,35 @@
       "ko": "그 위에서 혀를 움직이는 걸 멈출 수가 없어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S27",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "UPf-Tkm6lzI-14",
+      "en": "It's so super smooth now. It's a good feeling now, isn't it?",
+      "ko": "지금은 정말 부드러워요. 기분이 좋죠?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -331,50 +370,28 @@
       }
     },
     {
-      "id": "UPf-Tkm6lzI-14",
-      "en": "It's so super smooth now. It's a good feeling now, isn't it?",
-      "ko": "지금은 정말 부드러워요. 기분이 좋죠?",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S27",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "UPf-Tkm6lzI-15",
       "en": "Yes, it feels heavenly.",
       "ko": "네, 천국 같은 기분이에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "e38ff9f1fab10558"
 }

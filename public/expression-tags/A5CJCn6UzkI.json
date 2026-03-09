@@ -12,10 +12,10 @@
       "ko": "이 나라 전체에서 가장 완벽한 꽃이야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,9 +35,9 @@
       "ko": "나와 결혼해 줄래?",
       "tags": {
         "functions": [
-          "F38"
+          "F34"
         ],
-        "situation": "S12",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -48,7 +48,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -60,8 +62,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
-        "cefr": "A1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,19 +83,21 @@
       "ko": "그녀가 브루노의 예언에 나온 사람이야. 그녀가 마법을 파괴할 거야, 그러면 우리 모두 끝장이야!",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E04"
+          "E12"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V12",
-        "power": [],
+        "vibe": "V03",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -104,10 +108,10 @@
       "ko": "이 나라 전체에서 가장 완벽한 꽃이야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,9 +131,9 @@
       "ko": "세뇨라, 제발! 세뇨라, 제발!",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -150,23 +154,27 @@
       "ko": "분명 설명이 있을 거야! 너를 싫어! 안 돼! 나는 혼자야!",
       "tags": {
         "functions": [
-          "F19"
+          "F17"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03",
-          "E04"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "0c2340f6745a8bbf"
 }

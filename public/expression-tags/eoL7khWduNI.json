@@ -35,18 +35,18 @@
       "ko": "음, 꽤 인상적인 이력서네요, 코너스 박사님.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
         "situation": "S27",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V02",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,16 +58,16 @@
       "ko": "하지만 불행히도 제가 필요한 것은 응급실 감독입니다.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S27",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -84,7 +84,7 @@
           "F01"
         ],
         "situation": "S27",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -107,7 +107,7 @@
           "F01"
         ],
         "situation": "S27",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,7 +127,78 @@
       "ko": "그런데...",
       "tags": {
         "functions": [
-          "F52"
+          "F01"
+        ],
+        "situation": "S27",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "eoL7khWduNI-6",
+      "en": "I doubt that you'd be interested in that.",
+      "ko": "당신이 그 일에 관심이 있을지 의문이네요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S27",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "eoL7khWduNI-7",
+      "en": "Well, in the past, they've always let me choose my own nurses.",
+      "ko": "과거에는 항상 제가 간호사를 선택할 수 있게 해주었어요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S27",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "eoL7khWduNI-8",
+      "en": "Dr. Connolly?",
+      "ko": "코놀리 박사님?",
+      "tags": {
+        "functions": [
+          "F01"
         ],
         "situation": "S27",
         "cefr": "A1",
@@ -147,81 +218,12 @@
       }
     },
     {
-      "id": "eoL7khWduNI-6",
-      "en": "I doubt that you'd be interested in that.",
-      "ko": "당신이 그 일에 관심이 있을지 의문이네요.",
-      "tags": {
-        "functions": [
-          "F14"
-        ],
-        "situation": "S27",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E04"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "eoL7khWduNI-7",
-      "en": "Well, in the past, they've always let me choose my own nurses.",
-      "ko": "과거에는 항상 제가 간호사를 선택할 수 있게 해주었어요.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S27",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "eoL7khWduNI-8",
-      "en": "Dr. Connolly?",
-      "ko": "코놀리 박사님?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S27",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "eoL7khWduNI-9",
       "en": "Dr. Harris? Present.",
       "ko": "해리스 박사님? 여기 있습니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S27",
         "cefr": "A1",
@@ -244,7 +246,7 @@
       "ko": "애슐랜드 박사님? 코너스 박사님.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S27",
         "cefr": "A1",
@@ -267,16 +269,16 @@
       "ko": "매일 밤 출석 체크할 건가요?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S27",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
         "power": [],
@@ -293,7 +295,7 @@
           "F07"
         ],
         "situation": "S27",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -313,16 +315,16 @@
       "ko": "늦을 경우에는 메모를 가져오라고 권장합니다.",
       "tags": {
         "functions": [
-          "F37"
+          "F36"
         ],
         "situation": "S27",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
         "power": [],
@@ -336,7 +338,7 @@
       "ko": "배스만 씨.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S27",
         "cefr": "A1",
@@ -350,7 +352,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -359,9 +363,9 @@
       "ko": "메이스 씨.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -384,9 +388,9 @@
       "ko": "스트롱 씨.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -403,5 +407,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "d7f884ac1a821738"
 }

@@ -12,11 +12,11 @@
       "ko": "♪♪",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
         "situation": "S50",
         "cefr": "A1",
-        "register": "R1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -27,7 +27,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -37,11 +37,11 @@
       "ko": "♪♪",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
         "situation": "S50",
         "cefr": "A1",
-        "register": "R1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -52,7 +52,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -62,11 +62,11 @@
       "ko": "♪♪",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
         "situation": "S50",
         "cefr": "A1",
-        "register": "R1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -77,7 +77,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -87,11 +87,11 @@
       "ko": "♪♪",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
         "situation": "S50",
         "cefr": "A1",
-        "register": "R1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -102,7 +102,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -112,11 +112,11 @@
       "ko": "♪♪",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
         "situation": "S50",
         "cefr": "A1",
-        "register": "R1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -127,7 +127,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -137,10 +137,10 @@
       "ko": "뭐 있어? 별로 없어.",
       "tags": {
         "functions": [
-          "F06"
+          "F35"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -160,10 +160,10 @@
       "ko": "그녀는 독일인이야. 'Rache'는 독일어로 복수야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -183,16 +183,17 @@
       "ko": "네, 의견 고마워. 그녀가 독일인이라고? 물론 아니지. 하지만 외지에서 왔어.",
       "tags": {
         "functions": [
-          "F09"
+          "F27",
+          "F07"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -206,9 +207,9 @@
       "ko": "콜론으로 돌아가기 전에 런던에 하룻밤 머무를 예정이었어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -223,5 +224,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "f575a38e4a8e14d4"
 }

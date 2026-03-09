@@ -14,7 +14,7 @@
         "functions": [
           "F04"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -24,11 +24,14 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G17"
+        ],
+        "flags": []
       }
     },
     {
@@ -37,11 +40,11 @@
       "ko": "마법에 대해 걱정하지 않을 거야. 그래서 그녀가 미래를 봐달라고 간청했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -60,9 +63,9 @@
       "ko": "그게 무슨 의미인지 보려고. 마법이 위험에 처한 걸 봤어, 우리 집이.",
       "tags": {
         "functions": [
-          "F04"
+          "F40"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -71,9 +74,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -83,9 +88,9 @@
       "ko": "무너지고, 그리고 너를 봤어. 환상은 달랐어, 계속 바뀌었고.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -106,13 +111,13 @@
       "ko": "하나의 답은 없었어, 명확한 운명도 없었지. 네 미래는 아직 정해지지 않았어. 하지만 나는 알았어.",
       "tags": {
         "functions": [
-          "F12"
+          "F23"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -129,20 +134,25 @@
       "ko": "어떻게 보일지 알았어. 모두가 어떻게 생각할지, 나는 브루노니까.",
       "tags": {
         "functions": [
-          "F09"
+          "F23",
+          "F04"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -152,9 +162,9 @@
       "ko": "모두가 항상 최악을 가정하잖아. 그래서 나를 보호하려고 떠난 거야? 모르겠어.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -163,9 +173,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V02",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -175,9 +189,9 @@
       "ko": "어느 쪽으로 갈지 모르겠지만, 내 추측은.",
       "tags": {
         "functions": [
-          "F14"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -192,5 +206,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "588566e1ed803897"
 }

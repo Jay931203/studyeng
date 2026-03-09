@@ -12,9 +12,9 @@
       "ko": "내 문제 걱정할 수 없어",
       "tags": {
         "functions": [
-          "F19"
+          "F43"
         ],
-        "situation": "S40",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -23,9 +23,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -35,20 +37,22 @@
       "ko": "떠날 때 가져갈 수 없으니까",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S40",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -58,10 +62,10 @@
       "ko": "하나, 둘이 오고 셋 그리고 넷",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +73,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,9 +85,9 @@
       "ko": "한 잔 더 가져오라고 해, 더 많이 필요해",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -92,7 +96,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,10 +108,10 @@
       "ko": "둘, 테이블 위에서 춤춰, 댄스 플로어가 필요 없어",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +119,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,20 +131,22 @@
       "ko": "오, 세상에",
       "tags": {
         "functions": [
-          "F09"
+          "F18"
         ],
-        "situation": "S40",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -150,9 +156,9 @@
       "ko": "누가 위스키 더블 샷 좀 따라줘",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -161,7 +167,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,9 +179,9 @@
       "ko": "나랑 J. 데일은 역사가 있거든",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -184,10 +190,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -198,7 +206,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S31",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -207,7 +215,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,9 +227,9 @@
       "ko": "바에서 다들 취하고 있어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -230,7 +238,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,9 +250,9 @@
       "ko": "바에서 다들 취하고 있어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -253,7 +261,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,9 +273,9 @@
       "ko": "바에서 다들 취하고 있어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -276,7 +284,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,19 +296,21 @@
       "ko": "떠난 후로 계속 술에 취해 있었어, 돈 때문에 바꾸지 않아",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S45",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -311,19 +321,22 @@
       "ko": "엄마한테 안 잊었다고 전해줘",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05",
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -334,20 +347,22 @@
       "ko": "오전 10시에 취해서 일어나, 또 이럴 거야",
       "tags": {
         "functions": [
-          "F19"
+          "F17"
         ],
-        "situation": "S31",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S45",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -359,9 +374,9 @@
       "ko": "네 여자친구한테 친구도 데려오라고 해, 세상에",
       "tags": {
         "functions": [
-          "F38"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -370,7 +385,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -384,8 +399,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -393,7 +408,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -405,9 +420,9 @@
       "ko": "한 잔 더 가져오라고 해, 더 많이 필요해",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -416,7 +431,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -428,10 +443,10 @@
       "ko": "둘, 테이블 위에서 춤춰, 댄스 플로어가 필요 없어",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -439,11 +454,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "7be6ef1b55be51e2"
 }

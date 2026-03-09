@@ -14,17 +14,20 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X02"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01",
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -35,18 +38,18 @@
       "ko": "참견하지 마.",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,21 +61,23 @@
       "ko": "나는 바쁘지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S36",
+        "situation": "S20",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -83,18 +88,21 @@
         "functions": [
           "F18"
         ],
-        "situation": "S36",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E05"
         ],
         "expression_types": [
-          "X08"
+          "X04",
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -104,19 +112,21 @@
       "ko": "워너의 형이야!",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S36",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -129,19 +139,21 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
+        "situation": "S20",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -152,16 +164,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S19",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,16 +187,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +208,18 @@
       "ko": "예일 법대 1학년.",
       "tags": {
         "functions": [
-          "F01"
+          "F03"
         ],
-        "situation": "S36",
-        "cefr": "A1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,21 +231,23 @@
       "ko": "이게 워너가 결혼하고 싶어하는 여자야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S12",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -242,20 +256,22 @@
       "ko": "내가 진지해지려면 이렇게 변해야 해. 뭐?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -265,10 +281,10 @@
       "ko": "거의 기형이야?",
       "tags": {
         "functions": [
-          "F18"
+          "F06"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E05"
@@ -276,10 +292,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -290,16 +308,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "A1",
+        "situation": "S19",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,16 +331,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
+        "situation": "S19",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,19 +352,21 @@
       "ko": "아주 존경받는 곳이야, 아빠.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -357,18 +377,18 @@
       "ko": "자기야, 너는 미스 하와이안 트로픽스 대회에서 1위였어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S20",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -380,13 +400,13 @@
       "ko": "왜 그걸 다 버리려고 해?",
       "tags": {
         "functions": [
-          "F40"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E05"
         ],
         "expression_types": [
           "X08"
@@ -403,22 +423,23 @@
       "ko": "하버드에 가는 게 내가 할 수 있는 유일한 방법이야.",
       "tags": {
         "functions": [
-          "F01"
+          "F63"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "bfa352b3218b0e95"
 }

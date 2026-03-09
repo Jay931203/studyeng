@@ -35,11 +35,11 @@
       "ko": "당신이 비둘기를 먹이는 걸 보았을 때, 그 중요성이 완전히 드러났습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R3",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -58,11 +58,11 @@
       "ko": "그렇게 거대한 제국을 가진 이상, 당신도 어딘가에 기록을 남겨야 할 것입니다.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R3",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -150,10 +150,10 @@
       "ko": "쉽게 해주지 않았군요. 제가 뭘 했죠, 몽시외?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,11 +196,11 @@
       "ko": "상당한 고통을 견뎌야 할 것입니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R3",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -219,7 +219,7 @@
       "ko": "마이클. 캐롤.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -233,7 +233,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -245,7 +247,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,11 +267,11 @@
       "ko": "하지만 노트북은 분명 암호화되어 있을 것이니, 그럼 어떻게 암호를 풀까요? 룩이 룩을 잡습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R3",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -334,11 +336,11 @@
       "ko": "가정 원예의 기술이 당신에게 의미가 있나요?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
-        "register": "R3",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -351,5 +353,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "bc3696cc53b94e89"
 }

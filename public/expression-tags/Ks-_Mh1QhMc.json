@@ -12,10 +12,10 @@
       "ko": "당신은 이렇습니다. 당신의 자세를 두 분 동안 바꿉니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,20 +35,22 @@
       "ko": "하지만 제가 이걸 드리기 전에, 지금 당신의 몸을 조금 점검해 보길 원합니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -58,10 +60,10 @@
       "ko": "그리고 당신이 몸으로 무엇을 하고 있는지요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,20 +83,23 @@
       "ko": "여러분 중 몇 명은 자신을 작게 만들고 있나요?",
       "tags": {
         "functions": [
-          "F06"
+          "F30"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -104,20 +109,22 @@
       "ko": "아마도 구부리거나, 다리를 꼬거나, 발목을 감고 있을지도 모릅니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F14"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -127,19 +134,21 @@
       "ko": "가끔 우리는 이렇게 팔을 붙잡고 있기도 합니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -150,9 +159,9 @@
       "ko": "가끔 우리는 몸을 펼치기도 합니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -173,9 +182,9 @@
       "ko": "여러분을 보고 있습니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F32"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -186,8 +195,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G25"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -196,20 +209,22 @@
       "ko": "그러니 지금 당신이 하고 있는 일에 주의를 기울여 주세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -219,16 +234,17 @@
       "ko": "몇 분 후에 다시 돌아올 것이고, 만약 여러분이 이것을 조금 조정한다면,",
       "tags": {
         "functions": [
-          "F04"
+          "F23"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -242,16 +258,16 @@
       "ko": "여러분의 삶이 전개되는 방식에 큰 변화를 줄 수 있을 것이라고 기대합니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -265,10 +281,10 @@
       "ko": "우리는 바디랭귀지에 정말 매료되어 있으며, 특히 다른 사람들의 바디랭귀지에 관심이 많습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,9 +304,9 @@
       "ko": "바디랭귀지에 관심이 많죠.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -302,8 +318,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "e43bb30391febfb9"
 }

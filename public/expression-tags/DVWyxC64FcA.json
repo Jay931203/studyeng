@@ -12,10 +12,35 @@
       "ko": "천사가 조각한 것 같아.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "DVWyxC64FcA-1",
+      "en": "Ripping the runway, serving the runway, eating the runway, pumping the runway,",
+      "ko": "런웨이를 찢고, 런웨이를 서브하고, 런웨이를 삼키고, 런웨이를 펌핑하고,",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -30,35 +55,12 @@
       }
     },
     {
-      "id": "DVWyxC64FcA-1",
-      "en": "Ripping the runway, serving the runway, eating the runway, pumping the runway,",
-      "ko": "런웨이를 찢고, 런웨이를 서브하고, 런웨이를 삼키고, 런웨이를 펌핑하고,",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S45",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X05"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "DVWyxC64FcA-2",
       "en": "pool the wrong way, pulling the runway.",
       "ko": "반대쪽으로 풀하고, 런웨이를 당기고.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "B1",
@@ -69,7 +71,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,7 +106,7 @@
       "ko": "그녀는, 어, 뒤쪽에 있어.",
       "tags": {
         "functions": [
-          "F04"
+          "F52"
         ],
         "situation": "S45",
         "cefr": "A2",
@@ -113,7 +115,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -127,76 +129,7 @@
       "ko": "비다 로카!",
       "tags": {
         "functions": [
-          "F09"
-        ],
-        "situation": "S45",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "DVWyxC64FcA-6",
-      "en": "It's a good time for you, darling!",
-      "ko": "좋은 시간이야, 달링!",
-      "tags": {
-        "functions": [
           "F15"
-        ],
-        "situation": "S45",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V02",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "DVWyxC64FcA-7",
-      "en": "But if this ever changed in words...",
-      "ko": "하지만 이게 말로 바뀐다면...",
-      "tags": {
-        "functions": [
-          "F14"
-        ],
-        "situation": "S45",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "DVWyxC64FcA-8",
-      "en": "Where's Doris?",
-      "ko": "도리스는 어디야?",
-      "tags": {
-        "functions": [
-          "F06"
         ],
         "situation": "S45",
         "cefr": "A1",
@@ -210,7 +143,82 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "DVWyxC64FcA-6",
+      "en": "It's a good time for you, darling!",
+      "ko": "좋은 시간이야, 달링!",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S45",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E11"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V07",
+        "power": [],
+        "grammar_intent": [],
         "flags": []
+      }
+    },
+    {
+      "id": "DVWyxC64FcA-7",
+      "en": "But if this ever changed in words...",
+      "ko": "하지만 이게 말로 바뀐다면...",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S45",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "DVWyxC64FcA-8",
+      "en": "Where's Doris?",
+      "ko": "도리스는 어디야?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S45",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -219,7 +227,7 @@
       "ko": "오늘 밤은 쉬는 거야.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
@@ -242,13 +250,13 @@
       "ko": "그녀는 여기 환영받지 못해.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -265,13 +273,13 @@
       "ko": "선물 시간이야!",
       "tags": {
         "functions": [
-          "F01"
+          "F15"
         ],
         "situation": "S45",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E16"
         ],
         "expression_types": [
           "X08"
@@ -312,21 +320,25 @@
       "tags": {
         "functions": [
           "F22",
-          "F20"
+          "F04"
         ],
         "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01",
-          "E02"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V02",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -336,10 +348,10 @@
       "ko": "아, 아무것도 아니야. 집에 여섯 개 더 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -359,19 +371,21 @@
       "ko": "맞아! 아기는 슈렉과 피오나의 사랑을 더 강하게 만들 뿐이야!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S45",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V07",
-        "power": [],
+        "vibe": "V02",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -382,19 +396,21 @@
       "ko": "모두 침착해! 다 죽을 거야! 빨리, 여러분!",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S38",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S45",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V12",
-        "power": [],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -405,18 +421,18 @@
       "ko": "넌 거지 같아. 아, 좀 봐줘!",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -428,16 +444,16 @@
       "ko": "라푼젤! 라푼젤! 황금 붙임머리를 내려줘!",
       "tags": {
         "functions": [
-          "F34"
+          "F20"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -451,9 +467,36 @@
       "ko": "그가 나쁜 놈이긴 하지만, 인정할 건 인정해야...",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "DVWyxC64FcA-20",
+      "en": "That charming makes me hotter than chocolate.",
+      "ko": "그 매력은 나를 초콜릿보다 뜨겁게 만들어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -467,29 +510,7 @@
         "grammar_intent": [],
         "flags": []
       }
-    },
-    {
-      "id": "DVWyxC64FcA-20",
-      "en": "That charming makes me hotter than chocolate.",
-      "ko": "그 매력은 나를 초콜릿보다 뜨겁게 만들어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S45",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
     }
-  ]
+  ],
+  "transcriptHash": "f7ddddf30d258ad5"
 }

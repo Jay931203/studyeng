@@ -12,21 +12,23 @@
       "ko": "나는 그런 남자들이 좋아, 엉덩이에 털이 좀 나 있는.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -35,16 +37,16 @@
       "ko": "그는 손잡이나 미로처럼 보여, 솔직히 말해서. 야구 체형이야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -58,17 +60,16 @@
       "ko": "매티, 너는 누구를 좋아해? 제로니모가 좋아. 응. 좋은 선수야.",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -82,10 +83,10 @@
       "ko": "그는 운동선수야, 크고 빠르고 재능이 있어. 내 리스트의 최상위야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -105,7 +106,7 @@
       "ko": "깔끔하게 잘생겼어. 응, 턱선도 좋아. 역대 5-2. 잘생긴 야구 선수야. 타격할 수 있어? 스윙이 아름다워, 맞지, 배리?",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B2",
@@ -118,7 +119,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -128,10 +131,10 @@
       "ko": "공이 그의 배트에서 터져 나와.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -151,10 +154,10 @@
       "ko": "그는 클럽 헤드를 공에 던지고, 연결될 때,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -174,10 +177,10 @@
       "ko": "강하게 쳐서, 배트에서 튕겨 나와.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -197,7 +200,7 @@
       "ko": "공원 전체에서 들릴 수 있어. 배트에서 많은 소리가 나.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -220,11 +223,10 @@
       "ko": "그가 좋은 타자라면, 왜 잘 칠까? 그는 좋은 타자야.",
       "tags": {
         "functions": [
-          "F04",
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -244,13 +246,13 @@
       "ko": "그는 준비가 될 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
           "X08"
@@ -267,21 +269,24 @@
       "ko": "그래서 그를 메이저 리그 선수들과 맞붙이면 좋은 타자가 될 거야. 그는 훌륭한 타자가 될 수 있어. 나는 그렇게 생각하지 않아. 이 아이는 조언이 필요해.",
       "tags": {
         "functions": [
-          "F04",
-          "F09"
+          "F11",
+          "F40"
         ],
         "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G03"
+        ],
         "flags": []
       }
     },
@@ -291,7 +296,7 @@
       "ko": "그에게 400번의 타석을 주면, 그는 더 나아질 거야. 그는 잘할 수 있어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -314,10 +319,10 @@
       "ko": "그는 모든 곳에서 잘 쳤어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -337,10 +342,10 @@
       "ko": "그는 우리 팀의 일원이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -360,10 +365,10 @@
       "ko": "좋아, 다음으로 넘어가자.",
       "tags": {
         "functions": [
-          "F48"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -372,7 +377,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -383,16 +390,16 @@
       "ko": "아르티, 너는 누구를 좋아해?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -400,5 +407,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "3c9f8a79e75da711"
 }

@@ -12,9 +12,9 @@
       "ko": "나",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,9 +37,9 @@
       "ko": "바로 거기서 말했어. 나는 \"야, 너는 여자고 나는 남자야. 다르지\"라고 생각했어. 뭐라고?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S39",
+        "situation": "S09",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -48,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,10 +60,10 @@
       "ko": "여기서 싸움이 일어나고 있어. 여기. 지금 시작됐어. 야",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,10 +71,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -83,23 +85,23 @@
       "ko": "너희들 중 누가야",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -108,20 +110,24 @@
       "ko": "나야. 너는 나한테 뭘 할 건데",
       "tags": {
         "functions": [
-          "F03"
+          "F17"
         ],
-        "situation": "S39",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -133,9 +139,9 @@
       "ko": "오",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -144,7 +150,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -158,18 +164,18 @@
       "ko": "그래, 내 친구가 나를 붙잡고 있어서 다행이야. 너는 운이 좋아. 내가 너의 머리를 날려버릴 거야. 나를 막지 마",
       "tags": {
         "functions": [
-          "F17"
+          "F02"
         ],
-        "situation": "S39",
+        "situation": "S09",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -181,18 +187,18 @@
       "ko": "막지 마, 막지 마. 오, 알겠어",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -204,10 +210,10 @@
       "ko": "내가 지금 너에게 달려들면 내 친구가 여기서",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -215,9 +221,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -227,20 +235,22 @@
       "ko": "마지막 순간에 나를 막을 거야. 아니, 아니, 아니, 나는 안 할 거야",
       "tags": {
         "functions": [
-          "F17"
+          "F43"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S19",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -250,9 +260,9 @@
       "ko": "나",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -261,7 +271,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -269,5 +279,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "66e9c85029b42897"
 }

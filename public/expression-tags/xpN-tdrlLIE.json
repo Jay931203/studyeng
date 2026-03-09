@@ -12,10 +12,11 @@
       "ko": "괜찮아요? 괜찮아요. 엘렌, 미안해요. 잠깐. 광고 가요. 안녕하세요. 만나서 반가워요.",
       "tags": {
         "functions": [
-          "F06"
+          "F32",
+          "F28"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -25,10 +26,11 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G04",
+          "G25"
+        ],
+        "flags": []
       }
     },
     {
@@ -37,13 +39,13 @@
       "ko": "저는 앤디예요. 네, 저는 앤디예요. 사랑해요. 세상에. 세상에. 페달 밟아. 페달 밟아.",
       "tags": {
         "functions": [
-          "F25"
+          "F09"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -60,20 +62,25 @@
       "ko": "경적 그만 울려. 나한테 경적 울릴 거야? 경적 울릴 거야? 나는 벨을 울릴 거야. 어때? 오늘 수영복은 뭐예요? 이걸 줬어요.",
       "tags": {
         "functions": [
-          "F06"
+          "F36",
+          "F63"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V10",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -85,8 +92,8 @@
         "functions": [
           "F18"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E05"
@@ -94,9 +101,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -106,13 +115,13 @@
       "ko": "세상에.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -120,7 +129,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -129,11 +140,11 @@
       "ko": "아니, 하지만 더 편하고, 수영할 때 저항도 줄여줘요. 저항을 줄여준다고요. 네.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -152,9 +163,9 @@
       "ko": "물에 들어가지도 않았는데 좀 줄어들었네요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -175,11 +186,11 @@
       "ko": "독감 주사 맞아본 적 있어요? 독감 주사 맞은 적 없어요. 그럼, 이걸 놔야 해요. 진짜예요? 네.",
       "tags": {
         "functions": [
-          "F06"
+          "F43"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S32",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -188,7 +199,10 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -198,10 +212,10 @@
       "ko": "편히 계세요. 네. 네. 진짜 바늘이 아니에요. 아니요. 아. 진짜 바늘이 아니에요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,7 +223,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,11 +235,11 @@
       "ko": "가만히 계세요. 네. 좋아요. 네. 손으로 밀어요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -244,9 +258,9 @@
       "ko": "내려요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -258,8 +272,11 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "13b721c563295231"
 }

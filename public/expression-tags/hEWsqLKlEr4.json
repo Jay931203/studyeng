@@ -12,7 +12,7 @@
       "ko": "알겠어, 오늘 내가 청바지를 입었다면 저쪽에서 아트 괴짜들과 앉아 있었을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -38,7 +38,7 @@
           "F04"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +48,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -58,16 +60,16 @@
       "ko": "음, 친구들에게 먼저 물어보지 않고 치마를 사지는 않잖아. 안 사겠어? 맞아.",
       "tags": {
         "functions": [
-          "F06"
+          "F02"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -81,7 +83,7 @@
       "ko": "아, 남자도 마찬가지야. 누군가를 좋아한다고 생각할 수 있지만, 틀릴 수도 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -90,11 +92,15 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20",
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -102,236 +108,6 @@
       "id": "hEWsqLKlEr4-4",
       "en": "120 calories and 48 calories from fat, what percent is that?",
       "ko": "120칼로리 중 48칼로리가 지방에서 온 건데, 그 비율은 얼마야?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "hEWsqLKlEr4-5",
-      "en": "Uh, 48 into 120?",
-      "ko": "어, 48을 120으로 나누는 거야?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "hEWsqLKlEr4-6",
-      "en": "I'm only eating foods with less than 30% calories from fat. It's 40%.",
-      "ko": "나는 지방에서 온 칼로리가 30% 미만인 음식만 먹고 있어. 그건 40%야.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "hEWsqLKlEr4-7",
-      "en": "Well, 48 over 120 equals x over 100, and then you cross multiply and get the value of x.",
-      "ko": "음, 48을 120으로 나누면 x를 100으로 나눈 것과 같고, 그럼 교차 곱셈을 해서 x의 값을 구해.",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "hEWsqLKlEr4-8",
-      "en": "Whatever, I'm getting cheese fries.",
-      "ko": "뭐 어때, 나는 치즈 프라이를 먹을 거야.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "hEWsqLKlEr4-9",
-      "en": "So, have you seen any guys that you think are cute yet?",
-      "ko": "그래서, 귀여운 남자들 본 적 있어?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "hEWsqLKlEr4-10",
-      "en": "Well, there's this guy in my calculus class.",
-      "ko": "음, 내 미적분 수업에 그런 남자가 있어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "hEWsqLKlEr4-11",
-      "en": "Who is it? It's a senior?",
-      "ko": "누구야? 고3이야?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "hEWsqLKlEr4-12",
-      "en": "His name's Aaron Samuels. No! No, no, no.",
-      "ko": "그의 이름은 아론 샘uels야. 아니! 아니, 아니, 아니.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "hEWsqLKlEr4-13",
-      "en": "No, you can't like Aaron Samuels. That's Regina's ex-boyfriend.",
-      "ko": "안 돼, 너는 아론 샘uels를 좋아할 수 없어. 그건 레지나의 전 남자친구야.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "hEWsqLKlEr4-14",
-      "en": "They went out for a year.",
-      "ko": "그들은 1년 동안 사귀었어.",
       "tags": {
         "functions": [
           "F01"
@@ -352,27 +128,261 @@
       }
     },
     {
-      "id": "hEWsqLKlEr4-15",
-      "en": "Yeah, and then she was devastated.",
-      "ko": "응, 그리고 그녀는 정말 상심했어.",
+      "id": "hEWsqLKlEr4-5",
+      "en": "Uh, 48 into 120?",
+      "ko": "어, 48을 120으로 나누는 거야?",
       "tags": {
         "functions": [
-          "F16"
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "hEWsqLKlEr4-6",
+      "en": "I'm only eating foods with less than 30% calories from fat. It's 40%.",
+      "ko": "나는 지방에서 온 칼로리가 30% 미만인 음식만 먹고 있어. 그건 40%야.",
+      "tags": {
+        "functions": [
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G10"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "hEWsqLKlEr4-7",
+      "en": "Well, 48 over 120 equals x over 100, and then you cross multiply and get the value of x.",
+      "ko": "음, 48을 120으로 나누면 x를 100으로 나눈 것과 같고, 그럼 교차 곱셈을 해서 x의 값을 구해.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "hEWsqLKlEr4-8",
+      "en": "Whatever, I'm getting cheese fries.",
+      "ko": "뭐 어때, 나는 치즈 프라이를 먹을 거야.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "hEWsqLKlEr4-9",
+      "en": "So, have you seen any guys that you think are cute yet?",
+      "ko": "그래서, 귀여운 남자들 본 적 있어?",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "hEWsqLKlEr4-10",
+      "en": "Well, there's this guy in my calculus class.",
+      "ko": "음, 내 미적분 수업에 그런 남자가 있어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "hEWsqLKlEr4-11",
+      "en": "Who is it? It's a senior?",
+      "ko": "누구야? 고3이야?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "hEWsqLKlEr4-12",
+      "en": "His name's Aaron Samuels. No! No, no, no.",
+      "ko": "그의 이름은 아론 샘uels야. 아니! 아니, 아니, 아니.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "hEWsqLKlEr4-13",
+      "en": "No, you can't like Aaron Samuels. That's Regina's ex-boyfriend.",
+      "ko": "안 돼, 너는 아론 샘uels를 좋아할 수 없어. 그건 레지나의 전 남자친구야.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "hEWsqLKlEr4-14",
+      "en": "They went out for a year.",
+      "ko": "그들은 1년 동안 사귀었어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "hEWsqLKlEr4-15",
+      "en": "Yeah, and then she was devastated.",
+      "ko": "응, 그리고 그녀는 정말 상심했어.",
+      "tags": {
+        "functions": [
+          "F03",
+          "F07"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "1f2a1ec13a121f41"
 }

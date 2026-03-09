@@ -12,7 +12,7 @@
       "ko": "제가 말할까요?",
       "tags": {
         "functions": [
-          "F06"
+          "F39"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -72,7 +72,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -84,7 +86,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -118,13 +120,68 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
       "id": "rgXESVtWX3U-5",
       "en": "whose average O.B.P. is...",
       "ko": "평균 출루율이...",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E03"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "rgXESVtWX3U-6",
+      "en": "$3.64. That doesn't look right. That didn't come out right. That's right, Artie. Billy? You gotta carry the one, right?",
+      "ko": "3달러 64센트. 그건 맞지 않은 것 같아. 제대로 안 나왔네. 맞아, 아티. 빌리? 올림해야 하는 거 아니야?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01",
+          "X05"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "rgXESVtWX3U-7",
+      "en": "Billy. That's his name.",
+      "ko": "빌리. 그게 그의 이름이야.",
       "tags": {
         "functions": [
           "F01"
@@ -145,58 +202,13 @@
       }
     },
     {
-      "id": "rgXESVtWX3U-6",
-      "en": "$3.64. That doesn't look right. That didn't come out right. That's right, Artie. Billy? You gotta carry the one, right?",
-      "ko": "3달러 64센트. 그건 맞지 않은 것 같아. 제대로 안 나왔네. 맞아, 아티. 빌리? 올림해야 하는 거 아니야?",
-      "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "rgXESVtWX3U-7",
-      "en": "Billy. That's his name.",
-      "ko": "빌리. 그게 그의 이름이야.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "rgXESVtWX3U-8",
       "en": "Yeah. Who's that?",
       "ko": "응. 저 사람은 누구야?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F53"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -222,7 +234,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -233,7 +245,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -245,7 +259,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,10 +279,10 @@
       "ko": "네, 있어야 합니다.",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -279,7 +293,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -314,7 +330,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -325,7 +341,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -334,11 +352,11 @@
       "ko": "제이슨의 동생 제레미. 안 돼. 빌리, 그건 문제가 있어.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -357,10 +375,10 @@
       "ko": "빌리, 봐요, 제가...",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -382,10 +400,11 @@
       "ko": "네, 빌리, 제가 말씀드려도 된다면",
       "tags": {
         "functions": [
-          "F34"
+          "F07",
+          "F53"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -405,10 +424,10 @@
       "ko": "그는 분명히 그라운드 밖에서 문제가 있었고",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -418,8 +437,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G16"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -428,10 +451,10 @@
       "ko": "그라운드에서 못하는 것도 알고 있습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -451,16 +474,16 @@
       "ko": "허리도 좀 두꺼워지고 있고요, 네.",
       "tags": {
         "functions": [
-          "F02"
+          "F07"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -474,11 +497,11 @@
       "ko": "그리고 그가 대마초와 스트립 클럽에 관한 보고도 있고. 음, 그의 출루율이 지금 우리가 보는 전부입니다.",
       "tags": {
         "functions": [
-          "F05"
+          "F52"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -497,10 +520,10 @@
       "ko": "그리고 제레미가 출루해...",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -516,5 +539,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "00aa9216bbab487f"
 }

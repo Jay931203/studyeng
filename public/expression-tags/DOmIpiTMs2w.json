@@ -12,7 +12,7 @@
       "ko": "다른 요청 있나요?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -58,18 +58,18 @@
       "ko": "나는 달렸어. 환상적인 제안이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F15"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,11 +81,11 @@
       "ko": "좋아, 피아노 남자, 건반을 만져봐. 시작하자.",
       "tags": {
         "functions": [
-          "F35"
+          "F36"
         ],
         "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -94,7 +94,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -107,7 +109,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -130,7 +132,7 @@
           "F07"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -141,7 +143,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,7 +154,7 @@
       "ko": "나는 거리 따라 걷고 있어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -159,7 +163,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -173,10 +177,12 @@
       "ko": "너 같은 소녀를 만날 줄은 몰랐어.",
       "tags": {
         "functions": [
-          "F09"
+          "F21",
+          "F43",
+          "F56"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -186,7 +192,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -219,10 +227,10 @@
       "ko": "머리카락과 황갈색 눈을 가진.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,21 +250,23 @@
       "ko": "나를 최면에 걸리게 하는 그런 눈.",
       "tags": {
         "functions": [
-          "F02"
+          "F21"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -265,7 +275,7 @@
       "ko": "나를 최면에 걸리게 해.",
       "tags": {
         "functions": [
-          "F02"
+          "F21"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -291,7 +301,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -302,7 +312,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -334,7 +346,7 @@
       "ko": "도망칠 수가 없었어.",
       "tags": {
         "functions": [
-          "F01"
+          "F17"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -343,13 +355,16 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "bd21d0f58fe46a7c"
 }

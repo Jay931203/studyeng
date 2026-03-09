@@ -14,16 +14,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,10 +35,10 @@
       "ko": "우리가 보통 듣는 이야기는 매우 간단하게 들립니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +58,18 @@
       "ko": "6일 전쟁 동안 이스라엘은 팔레스타인으로부터 요르단 강 서안 지구를 점령하고,",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,16 +83,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S31",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,8 +106,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S47",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +115,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,20 +127,23 @@
       "ko": "상황을 조금 더 잘 이해해 보도록 합시다.",
       "tags": {
         "functions": [
-          "F04"
+          "F36"
         ],
-        "situation": "S47",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -150,10 +153,10 @@
       "ko": "간단하지만 매우 중요한 질문으로 시작하겠습니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -161,7 +164,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,8 +178,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S47",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,7 +187,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,8 +201,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S47",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -207,7 +210,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,9 +222,9 @@
       "ko": "아니요.",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -230,10 +233,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -242,32 +247,9 @@
       "ko": "1967년에는 팔레스타인이라는 이름의 아랍 국가나 정부가 존재하지 않았습니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F03"
         ],
-        "situation": "S47",
-        "cefr": "B2",
-        "register": "R2",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "XGYxLWUKwWo-11",
-      "en": "Actually, was there ever?",
-      "ko": "사실, 그런 적이 있었나요?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S47",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -276,9 +258,37 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "XGYxLWUKwWo-11",
+      "en": "Actually, was there ever?",
+      "ko": "사실, 그런 적이 있었나요?",
+      "tags": {
+        "functions": [
+          "F52",
+          "F11"
+        ],
+        "situation": "S31",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -290,20 +300,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "e23446cbbb657960"
 }

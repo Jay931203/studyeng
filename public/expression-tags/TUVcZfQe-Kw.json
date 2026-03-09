@@ -12,10 +12,10 @@
       "ko": "하늘에 반짝임, 내 눈에도 반짝임 내가 좋아하는 방식으로 빛나고 있어",
       "tags": {
         "functions": [
-          "F02"
+          "F04"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,20 +37,22 @@
       "ko": "누군가가 필요하다고 느낀다면, 너는 완벽한 순간에 나를 만났어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -62,20 +64,22 @@
       "ko": "너는 나를 원하고, 나도 너를 원해, 베이비. 내 사랑스러운 너, 나는 떠올라",
       "tags": {
         "functions": [
-          "F09"
+          "F12"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -87,18 +91,18 @@
       "ko": "은하수, 우리는 반란을 일으켜. Yeah, yeah, yeah, yeah, yeah",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,20 +116,24 @@
       "ko": "나는 너를 가졌어, 달빛. 너는 내 별빛",
       "tags": {
         "functions": [
-          "F09"
+          "F22"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P09"
+        ],
+        "grammar_intent": [
+          "G22"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -137,20 +145,22 @@
       "ko": "나는 너가 필요해, 밤새. Come on, 나와 함께 춤춰, 나는 떠올라",
       "tags": {
         "functions": [
-          "F09"
+          "F38"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V07",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -162,20 +172,24 @@
       "ko": "너, 달빛. 너는 내 별빛",
       "tags": {
         "functions": [
-          "F09"
+          "F22"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P09"
+        ],
+        "grammar_intent": [
+          "G22"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -187,20 +201,22 @@
       "ko": "나는 너가 필요해, 밤새. Come on, 나와 함께 춤춰, 나는 떠올라",
       "tags": {
         "functions": [
-          "F09"
+          "F38"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V07",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -212,19 +228,21 @@
       "ko": "나는 가장 위대한 사람 중 하나야, 논쟁의 여지가 없어. 나는 여전히 떠올라, 약물에 의존하고 있어",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
         "situation": "S46",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -237,18 +255,18 @@
       "ko": "아이러니하게도, 나는 그에게 사랑을 줬고 그들은 나를 미워하게 됐어",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -262,18 +280,18 @@
       "ko": "그녀는 나를 사랑한다고 말했고 기다리고 있었어. 너의 사랑을 위해 열심히 싸워왔어",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -287,18 +305,18 @@
       "ko": "그리고 나는 인내심이 바닥나가고 있어. 누군가의 포옹이 필요해, 기본으로 돌아가기도 했어",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -312,19 +330,21 @@
       "ko": "내가 여기서 뭘 하고 있는지 봤어? 나를 방해할 수는 없지만, 아무도 이 움직임을 멈출 수 없어",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -337,20 +357,25 @@
       "ko": "가자. 왼발, 오른발, 떠올라",
       "tags": {
         "functions": [
-          "F09"
+          "F36",
+          "F38"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -362,10 +387,10 @@
       "ko": "팝스타들, 아기들과 함께 점프해. 나는 신발 끈을 묶어야 했어.",
       "tags": {
         "functions": [
-          "F02"
+          "F57"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -373,7 +398,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -381,5 +406,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "21c5e0f39489e424"
 }

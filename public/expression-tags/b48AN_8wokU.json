@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -39,8 +37,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,9 +58,9 @@
       "ko": "가슴을 좋아하는 사람입니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -83,10 +81,35 @@
       "ko": "우리가 \"가슴\"이라고 100번 말하는 합성 영상이 기다려져요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E06"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "b48AN_8wokU-4",
+      "en": "Boobies. Boobies. Boobies. Boobies. Boobies. Boobies. Boobies. Boobies.",
+      "ko": "가슴. 가슴. 가슴. 가슴. 가슴. 가슴. 가슴. 가슴.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -101,31 +124,6 @@
       }
     },
     {
-      "id": "b48AN_8wokU-4",
-      "en": "Boobies. Boobies. Boobies. Boobies. Boobies. Boobies. Boobies. Boobies.",
-      "ko": "가슴. 가슴. 가슴. 가슴. 가슴. 가슴. 가슴. 가슴.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
       "id": "b48AN_8wokU-5",
       "en": "He's going to the championship game.",
       "ko": "그는 챔피언십 게임에 가고 있습니다.",
@@ -133,8 +131,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S27",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -154,10 +152,10 @@
       "ko": "아, 챔피언십 게임이에요? 너무 많아요. 가겠습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -177,10 +175,10 @@
       "ko": "잠깐... 다시 해볼게요.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -200,10 +198,10 @@
       "ko": "이미 12명의 릭이 여기서 계정을 만들었어요. 많은 릭이네요. 네.",
       "tags": {
         "functions": [
-          "F01"
+          "F07"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -223,13 +221,13 @@
       "ko": "아, 그가 무엇을 할 수 있는지 이해하지 못하겠군요. 젠장.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -237,9 +235,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -248,9 +244,10 @@
       "ko": "이게 뭐죠? 총성의 연기? 바보와 추한 자?",
       "tags": {
         "functions": [
-          "F09"
+          "F06",
+          "F58"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -273,7 +270,7 @@
         "functions": [
           "F28"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -283,9 +280,15 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -294,9 +297,9 @@
       "ko": "괜찮아요? 저는 잘 지내고 있어요.",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -311,5 +314,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "293aec0020561685"
 }

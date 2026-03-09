@@ -12,10 +12,10 @@
       "ko": "너를 칭찬했어, 정말 멋지다고.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,16 +35,16 @@
       "ko": "그레첸, '멋지다'를 만들려 하지 마. 절대 안 될 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X05"
+          "X08"
         ],
         "vibe": "V18",
         "power": [],
@@ -58,18 +58,18 @@
       "ko": "왜 시저는 거대한 발로 돌아다니고 우리는 그의 발에 눌리지 않으려 애써야 해?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
         "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,11 +81,11 @@
       "ko": "시저가 뭐가 그렇게 대단한데?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -104,7 +104,7 @@
       "ko": "브루투스도 시저만큼 귀여워. 브루투스도 시저만큼 똑똑해. 사람들은 브루투스를 시저만큼 좋아해.",
       "tags": {
         "functions": [
-          "F13"
+          "F10"
         ],
         "situation": "S50",
         "cefr": "B2",
@@ -117,7 +117,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -125,75 +127,6 @@
       "id": "6ovOboVwB7g-5",
       "en": "And when did it become okay for one person to be the boss of everybody, huh?",
       "ko": "언제부터 한 사람이 모두의 보스가 되는 게 괜찮아졌지?",
-      "tags": {
-        "functions": [
-          "F40"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "6ovOboVwB7g-6",
-      "en": "Because that's not what Rome is about. We should totally just stab Caesar",
-      "ko": "그건 로마의 정신이 아니야. 우리는 시저를 찌르는 게 맞아.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "6ovOboVwB7g-7",
-      "en": "Gretchen Wieners had cracked",
-      "ko": "그레첸 위너스가 무너졌어.",
-      "tags": {
-        "functions": [
-          "F03"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "6ovOboVwB7g-8",
-      "en": "If you even knew how mean she really is",
-      "ko": "그녀가 얼마나 못된 사람인지 알기라도 한다면.",
       "tags": {
         "functions": [
           "F06"
@@ -214,6 +147,80 @@
       }
     },
     {
+      "id": "6ovOboVwB7g-6",
+      "en": "Because that's not what Rome is about. We should totally just stab Caesar",
+      "ko": "그건 로마의 정신이 아니야. 우리는 시저를 찌르는 게 맞아.",
+      "tags": {
+        "functions": [
+          "F36",
+          "F08",
+          "F04"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G09",
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "6ovOboVwB7g-7",
+      "en": "Gretchen Wieners had cracked",
+      "ko": "그레첸 위너스가 무너졌어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "6ovOboVwB7g-8",
+      "en": "If you even knew how mean she really is",
+      "ko": "그녀가 얼마나 못된 사람인지 알기라도 한다면.",
+      "tags": {
+        "functions": [
+          "F23"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E08"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "6ovOboVwB7g-9",
       "en": "You know that I'm not allowed to wear hoop earrings, right? Yeah, two years ago",
       "ko": "나 후프 귀걸이 못 착용하는 거 알지? 응, 2년 전이야.",
@@ -222,7 +229,7 @@
           "F07"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,7 +249,7 @@
       "ko": "그녀가 후프 귀걸이는 그녀의 것이라며 더 이상 착용하지 말라고 했어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -256,7 +263,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -265,7 +274,7 @@
       "ko": "그리고 한카카 때 부모님이 정말 비싼 화이트 골드 귀걸이를 사주셨어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -288,7 +297,8 @@
       "ko": "그래서 나는 그걸 좋아하지 않는 척해야 했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F56",
+          "F57"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -301,9 +311,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G14"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "bbe12b75d2fe43d5"
 }

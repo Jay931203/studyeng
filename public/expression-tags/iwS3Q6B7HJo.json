@@ -12,18 +12,18 @@
       "ko": "제 이야기를 들어주신다면,",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,18 +35,18 @@
       "ko": "돌아가신 할머니에 대한 이야기를 나누고 싶습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S09",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,13 +58,13 @@
       "ko": "오, 신이시여, 뉴스 플래시, 조니 애스콧.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -81,36 +81,13 @@
       "ko": "많은 사람들이 돌아가신 할머니가 있습니다.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "iwS3Q6B7HJo-4",
-      "en": "No, Marshall, don't be bitter.",
-      "ko": "아니, 마샬, 그렇게 비관적이지 마.",
-      "tags": {
-        "functions": [
-          "F17"
-        ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E03"
         ],
         "expression_types": [
           "X08"
@@ -122,14 +99,14 @@
       }
     },
     {
-      "id": "iwS3Q6B7HJo-5",
-      "en": "You're here for Lily.",
-      "ko": "너는 릴리를 위해 여기 있는 거야.",
+      "id": "iwS3Q6B7HJo-4",
+      "en": "No, Marshall, don't be bitter.",
+      "ko": "아니, 마샬, 그렇게 비관적이지 마.",
       "tags": {
         "functions": [
-          "F01"
+          "F40"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -138,7 +115,32 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G24"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "iwS3Q6B7HJo-5",
+      "en": "You're here for Lily.",
+      "ko": "너는 릴리를 위해 여기 있는 거야.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S09",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,10 +152,10 @@
       "ko": "그녀를 봐, 정말 전문적이야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -161,7 +163,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,9 +175,9 @@
       "ko": "그녀는 한 점의 예술작품에도 앉지 않았어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -184,7 +186,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +198,18 @@
       "ko": "나는 릴리를 위해 품위를 지키며 이걸 견딜 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,16 +221,16 @@
       "ko": "그녀를 부끄럽게 할 만한 일은 하나도 없어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V10",
         "power": [],
@@ -244,8 +246,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -253,7 +255,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,18 +267,18 @@
       "ko": "그래서 이 쇼를 할머니의 기억에 바칩니다.",
       "tags": {
         "functions": [
-          "F62"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,20 +290,22 @@
       "ko": "이제, 그녀를 기리기 위해",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -311,18 +315,18 @@
       "ko": "60초간의 절대적인 침묵에 함께해 주세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S09",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -336,7 +340,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -345,7 +349,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -359,13 +363,13 @@
       "ko": "관객들이 놀라며 외치고 있다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -378,5 +382,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "cd14d1000ec566bd"
 }

@@ -12,10 +12,10 @@
       "ko": "여러분, 미국식 억양으로 해볼 수 있을까요?",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -25,7 +25,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -35,10 +37,11 @@
       "ko": "이건 사실, 미셸, 너를 위한 거야. 앨런, 저쪽 시간은 어때? 휴, 이건 너를 위한 거야.",
       "tags": {
         "functions": [
-          "F02"
+          "F21",
+          "F08"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,10 +61,10 @@
       "ko": "이 장면은 다운튼 애비의 한 장면이야,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,10 +84,10 @@
       "ko": "비용을 어떻게 충당할지 결정하려고 하는 장면이지,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,10 +107,10 @@
       "ko": "비용을 어떻게 충당할지 결정해야 해.",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,32 +130,9 @@
       "ko": "돈이 부족하거든.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E04"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "wElbSFWgseA-6",
-      "en": "And I would like it if you could please do it",
-      "ko": "그리고 미국식 억양으로 해주면 좋겠어,",
-      "tags": {
-        "functions": [
-          "F36"
-        ],
-        "situation": "S14",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -163,7 +143,34 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "wElbSFWgseA-6",
+      "en": "And I would like it if you could please do it",
+      "ko": "그리고 미국식 억양으로 해주면 좋겠어,",
+      "tags": {
+        "functions": [
+          "F34"
+        ],
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E13"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -173,9 +180,9 @@
       "ko": "영국식 억양 말고,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -196,10 +203,10 @@
       "ko": "사람들이 더 끌릴지 한번 보자. 고마워.",
       "tags": {
         "functions": [
-          "F04"
+          "F27"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -208,7 +215,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -219,20 +228,23 @@
       "ko": "사람들을 좀 더 현실적으로 만들어봐. 여전히 좋아하는지 확인해봐. 맞아.",
       "tags": {
         "functions": [
-          "F04"
+          "F07",
+          "F10"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -242,16 +254,16 @@
       "ko": "좋아, 다운튼 애비에서 장면이 진행 중이야. 여기서 뭐 하고 있지?",
       "tags": {
         "functions": [
-          "F03"
+          "F06"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -265,10 +277,10 @@
       "ko": "나는 왜 그렇게 생각하는지 설명하고 싶어.",
       "tags": {
         "functions": [
-          "F04"
+          "F09"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -278,7 +290,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -288,20 +302,22 @@
       "ko": "웨이벨의 제안을 거절해야 한다고 생각해.",
       "tags": {
         "functions": [
-          "F09"
+          "F36"
         ],
-        "situation": "S14",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -311,10 +327,10 @@
       "ko": "맞아, 우리는 다운튼의 관리인일 뿐이지만,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -334,10 +350,10 @@
       "ko": "아빠, 어떤 것들은 변해야 해. 맞아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -357,23 +373,23 @@
       "ko": "이게 준비됐는지 잘 모르겠어. 몇 가지는 바뀌어야 해. 맞아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E06"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": []
       }
     },
     {
@@ -382,18 +398,18 @@
       "ko": "맞아, 하지만 우리가 보호하려는 것을 파괴해서는 안 돼.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E07"
+          "E12"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -405,22 +421,23 @@
       "ko": "웨이벨은 이 아름다운 곳을 영원히 망칠 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "b3b22a8d7034df0a"
 }

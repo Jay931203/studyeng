@@ -12,13 +12,13 @@
       "ko": "나를 낭만주의자라고 부르세요, 하지만 나는 뚫린 뉴스 카메라의 존재가",
       "tags": {
         "functions": [
-          "F09"
+          "F23"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -35,10 +35,10 @@
       "ko": "1989년에 특정 동독 국경 수비대가 발포하지 않도록 막았다고 믿습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -67,7 +67,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -81,7 +81,7 @@
       "ko": "맞아요.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
         "situation": "S14",
         "cefr": "A1",
@@ -95,7 +95,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,7 +106,32 @@
       "ko": "칭찬할 만하네요.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
+        ],
+        "situation": "S14",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "U7P4zKOgu8U-5",
+      "en": "You may not believe that, but I do.",
+      "ko": "당신은 믿지 않을지 모르지만, 저는 믿습니다.",
+      "tags": {
+        "functions": [
+          "F47"
         ],
         "situation": "S14",
         "cefr": "B1",
@@ -117,30 +144,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "U7P4zKOgu8U-5",
-      "en": "You may not believe that, but I do.",
-      "ko": "당신은 믿지 않을지 모르지만, 저는 믿습니다.",
-      "tags": {
-        "functions": [
-          "F09"
+        "grammar_intent": [
+          "G13"
         ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
         "flags": []
       }
     },
@@ -153,7 +159,7 @@
           "F01"
         ],
         "situation": "S14",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,13 +179,13 @@
       "ko": "한편으로, 저는 당신을 별로 좋아하지 않고, 당신의 정치도 싫습니다.",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -196,19 +202,21 @@
       "ko": "다른 한편으로, 오늘 아침 사촌 나오미와 대화를 나눴는데, 그녀는",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -219,10 +227,10 @@
       "ko": "매각이 뚫린 미디어가 번창할 수 있는 유일한 방법이라고 믿습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,10 +250,10 @@
       "ko": "그리고 그게 우리가 있는 곳일지도 모릅니다.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,10 +296,10 @@
       "ko": "저는...",
       "tags": {
         "functions": [
-          "F50"
+          "F09"
         ],
         "situation": "S14",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -302,7 +310,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -314,7 +324,7 @@
           "F09"
         ],
         "situation": "S14",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -334,22 +344,28 @@
       "ko": "우리는 시장 평가 측면에서 매우 관대한 제안을 했습니다. 그럼에도 불구하고...",
       "tags": {
         "functions": [
-          "F34"
+          "F43"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G01",
+          "G06"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "3fdc2d88b8f9b382"
 }

@@ -12,16 +12,16 @@
       "ko": "우리가 배운 대로. 그리고 무슨 일이 있었지?",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S32",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -35,11 +35,11 @@
       "ko": "그날 밤, 내 팀원들이 나에게 담요를 덮고,",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S32",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -58,11 +58,11 @@
       "ko": "차례로 내 팔을 다섯 분 동안 때렸어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S32",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -81,11 +81,11 @@
       "ko": "그리고 내 손에 풀을 부었지.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S32",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -106,18 +106,22 @@
         "functions": [
           "F04"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S32",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -127,12 +131,11 @@
       "ko": "상병 산티아고는 소대 회의에 늦은 적이 있었나? 예, 그렇습니다. 그의 막사는 항상 어질러져 있었나? 예, 그렇습니다.",
       "tags": {
         "functions": [
-          "F06",
-          "F07"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S32",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -151,12 +154,11 @@
       "ko": "그는 달리기에서 뒤처진 적이 있었나? 항상 그랬습니다.",
       "tags": {
         "functions": [
-          "F06",
-          "F07"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S32",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -175,11 +177,11 @@
       "ko": "9월 6일 밤 이전에,",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S32",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -198,11 +200,11 @@
       "ko": "코드 레드를 받은 적이 있나? 아니요, 없습니다. 절대?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S32",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -221,11 +223,11 @@
       "ko": "아니요, 없습니다.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S32",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -233,9 +235,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -246,9 +252,9 @@
         "functions": [
           "F04"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S32",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -267,11 +273,11 @@
       "ko": "왜 산티아고, 그의 부대에 짐이 된 그가 코드 레드를 받지 않았지?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S32",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -290,11 +296,11 @@
       "ko": "도슨이 허락하지 않았습니다, 선생님.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S32",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -313,11 +319,11 @@
       "ko": "도슨이 허락하지 않았습니다.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S32",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -336,11 +342,11 @@
       "ko": "팀원들은 산티아고에 대해 강하게 말했지만, 그에게 다가가지 않았어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S32",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -359,13 +365,13 @@
       "ko": "그들은 도슨이 너무 무서웠거든요, 선생님.",
       "tags": {
         "functions": [
-          "F09"
+          "F03"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S32",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
-          "E09"
+          "E04"
         ],
         "expression_types": [
           "X08"
@@ -382,11 +388,11 @@
       "ko": "이의 제기, 증인이 추측하고 있습니다.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S32",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -405,11 +411,11 @@
       "ko": "다시 말하겠습니다, 제프리, 너는 산티아고에게 코드 레드를 주고 싶었던 적이 있나?",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S32",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -428,11 +434,11 @@
       "ko": "산티아고에게 코드 레드를 주는 건가?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S32",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -445,5 +451,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "cf03cdcd574fd5aa"
 }

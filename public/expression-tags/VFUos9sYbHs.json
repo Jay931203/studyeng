@@ -12,10 +12,10 @@
       "ko": "별들의 도시, 너는 나를 위해 빛나고 있니? 별들의 도시, 내가 할 수 없는 것이 너무 많아.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,12 +23,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
       }
     },
     {
@@ -37,23 +37,21 @@
       "ko": "오, 아니야, 너와 처음 포옹했을 때부터 느꼈어.",
       "tags": {
         "functions": [
-          "F15"
+          "F19"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E04"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -62,23 +60,21 @@
       "ko": "이제 우리의 꿈이 마침내 이루어질 수 있을지도 몰라.",
       "tags": {
         "functions": [
-          "F24"
+          "F03"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V05",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -87,10 +83,10 @@
       "ko": "별들의 도시, 모두가 원하는 단 한 가지.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -98,12 +94,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -112,9 +106,9 @@
       "ko": "바에서, 혹은 붐비는 식당의 연기 너머에서.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S05",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -123,13 +117,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_narration"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "5ecad1a4994e1061"
 }

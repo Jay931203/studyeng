@@ -12,9 +12,10 @@
       "ko": "사람들은 그들을 통해 다른 영향력 있는 사람들을 만날 수 있어요.",
       "tags": {
         "functions": [
-          "F01"
+          "F21",
+          "F50"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -23,9 +24,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -35,20 +38,22 @@
       "ko": "당신 중 한 명이나 두 명이 함께 오면 정말 도움이 될 거예요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -58,18 +63,18 @@
       "ko": "이 비즈니스는 그렇게 운영돼요. 네트워킹이 전부죠.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,20 +86,24 @@
       "ko": "정말 즐길 수 있을 거예요. 걱정하지 마세요, 워윅. 꼭 가야 해요.",
       "tags": {
         "functions": [
-          "F09"
+          "F25",
+          "F28",
+          "F45"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -104,9 +113,11 @@
       "ko": "알겠어요, 하지만 꼭 가야 해요. 죄송해요, 저기 그가 있어요.",
       "tags": {
         "functions": [
-          "F34"
+          "F25",
+          "F28",
+          "F21"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -115,9 +126,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -127,10 +140,11 @@
       "ko": "안녕하세요. 저기 워윅이 있어요.",
       "tags": {
         "functions": [
-          "F03"
+          "F07",
+          "F08"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,7 +152,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,9 +164,9 @@
       "ko": "그는 지금 가고 있어요. 아, 네. 사실 우리는 스타워즈: 팬텀 메너스에서 함께 했어요.",
       "tags": {
         "functions": [
-          "F03"
+          "F21"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -161,7 +175,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,9 +187,10 @@
       "ko": "아, 네. 우리는 함께 장면이 있었는데, 그 장면은 잘렸어요.",
       "tags": {
         "functions": [
-          "F06"
+          "F27",
+          "F04"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -184,9 +199,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -196,9 +213,9 @@
       "ko": "기억나세요? 저를 만나줘서 고마워요. 저는 코미디를 해볼까 생각 중이에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -207,7 +224,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,18 +236,18 @@
       "ko": "무대에서 스탠드업 코미디 같은 거요. 와, 저는 웃긴 사람이에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,22 +259,25 @@
       "ko": "맞죠? 저는 웃긴 사람이죠? 네, 확실히요.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "6f9965229986c4bc"
 }

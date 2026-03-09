@@ -12,35 +12,10 @@
       "ko": "그만해. 뭐를 그만하라는 거야?",
       "tags": {
         "functions": [
-          "F35"
+          "F06"
         ],
         "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "8zfNfilNOIE-1",
-      "en": "You're talking about me and Morse code. You know what? Joke's on you, because I know Morse code.",
-      "ko": "너는 나와 모스 부호에 대해 이야기하고 있어. 알지? 너는 속았어, 왜냐하면 나는 모스 부호를 알아.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S14",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -55,23 +30,48 @@
       }
     },
     {
+      "id": "8zfNfilNOIE-1",
+      "en": "You're talking about me and Morse code. You know what? Joke's on you, because I know Morse code.",
+      "ko": "너는 나와 모스 부호에 대해 이야기하고 있어. 알지? 너는 속았어, 왜냐하면 나는 모스 부호를 알아.",
+      "tags": {
+        "functions": [
+          "F04"
+        ],
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
       "id": "8zfNfilNOIE-2",
       "en": "Ha!",
       "ko": "하!",
       "tags": {
         "functions": [
-          "F18"
+          "F15"
         ],
         "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -85,7 +85,7 @@
       "ko": "맞아. 우리가 하고 있는 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S14",
         "cefr": "A2",
@@ -108,7 +108,7 @@
       "ko": "우리의 매우 제한된 자유 시간에",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S14",
         "cefr": "A2",
@@ -131,7 +131,7 @@
       "ko": "그리고 매우 제한된 예산으로, 우리는 보모를 구했어,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S14",
         "cefr": "B1",
@@ -154,7 +154,7 @@
       "ko": "그리고 나서 우리는 수업을 들으러 갔어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S14",
         "cefr": "B1",
@@ -177,10 +177,10 @@
       "ko": "아주 구식이고 불필요한 의사소통 방식에 대해",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -200,20 +200,22 @@
       "ko": "너에 대해 너 앞에서 이야기하기 위해서.",
       "tags": {
         "functions": [
-          "F02"
+          "F36"
         ],
         "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -223,11 +225,12 @@
       "ko": "맞아. 우리가 한 일이 바로 그거야.",
       "tags": {
         "functions": [
-          "F07"
+          "F07",
+          "F10"
         ],
         "situation": "S14",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -236,7 +239,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -246,7 +251,7 @@
       "ko": "모든 것은 드와이트가 책상 다리에 발을 두드리기 시작하면서 시작됐어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S14",
         "cefr": "B1",
@@ -292,11 +297,11 @@
       "ko": "네가 아기 살을 빼면 그만할게.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S14",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -315,10 +320,10 @@
       "ko": "알겠어. 내가 착각했나 봐.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -351,8 +356,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -363,7 +372,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -376,7 +385,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -388,7 +397,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -401,9 +410,10 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "2688f4abf1e08d35"
 }

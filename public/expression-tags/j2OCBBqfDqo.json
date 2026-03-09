@@ -14,7 +14,7 @@
         "functions": [
           "F25"
         ],
-        "situation": "S31",
+        "situation": "S10",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -26,7 +26,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,9 +37,9 @@
       "ko": "당신이 한 최고의 호버링 중 하나였어요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -58,9 +60,9 @@
       "ko": "최고의 사람에게 배웠거든요.",
       "tags": {
         "functions": [
-          "F01"
+          "F21"
         ],
-        "situation": "S31",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -81,20 +83,22 @@
       "ko": "하지만 집중력이 대단했어요. 눈을 한 번도 깜빡이지 않았죠.",
       "tags": {
         "functions": [
-          "F02"
+          "F43"
         ],
-        "situation": "S31",
-        "cefr": "B1",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E16"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -104,9 +108,9 @@
       "ko": "그리고 재채기는 정말 작고, 우아하면서도 노인들에게는 무서웠어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -127,20 +131,24 @@
       "ko": "루크가 화낼 거예요.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S10",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -150,21 +158,24 @@
       "ko": "우리가 바쁜 시간에 두 개의 테이블을 차지했을 때 그걸 싫어하거든요. 아니요, 그때만 싫어했어요. 언제요?",
       "tags": {
         "functions": [
-          "F09",
-          "F40"
+          "F06",
+          "F50"
         ],
-        "situation": "S31",
+        "situation": "S10",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06",
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -174,21 +185,22 @@
       "ko": "우리가 그걸 했을 때 그가 화났던 때요. 그때 이후로 매번 싫어했어요. 아니요. 네. 그때만요. 언제요?",
       "tags": {
         "functions": [
-          "F09",
-          "F40"
+          "F06"
         ],
-        "situation": "S31",
+        "situation": "S10",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -198,21 +210,25 @@
       "ko": "우리가 그걸 했을 때 그가 화났던 때요. 당신은 루크에게 이럴 거죠? 그가 어지러워서 토할 때까지요. 좋아요. 달력은요? 해봅시다.",
       "tags": {
         "functions": [
-          "F09",
-          "F40"
+          "F36"
         ],
-        "situation": "S31",
+        "situation": "S10",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G06",
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -222,9 +238,9 @@
       "ko": "좋아요, 그러니까 기말고사로 인한 겨울잠이 시작되는군요... 월요일. 알겠어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -245,20 +261,24 @@
       "ko": "그러면 일요일에 세포라 쇼핑하고, 영화도 보고,",
       "tags": {
         "functions": [
-          "F36"
+          "F36",
+          "F14"
         ],
-        "situation": "S31",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -268,20 +288,26 @@
       "ko": "당신이 떠나기 전의 작별 인사 같은 날을 가져볼까요? 발 관리도 추가하면 거래 성사! 좋아요. 안녕하세요. 커피 금방 준비될 거예요. 뭐 드실 건가요?",
       "tags": {
         "functions": [
-          "F36"
+          "F32"
         ],
-        "situation": "S31",
+        "situation": "S10",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X04",
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -291,16 +317,16 @@
       "ko": "아, 음, 이 크고 넓은 테이블을 덮을 냅킨이 필요해요. 알겠어요.",
       "tags": {
         "functions": [
-          "F34"
+          "F52"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S10",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -314,22 +340,27 @@
       "ko": "어, 혹시 팬케이크 먹고 싶어요?",
       "tags": {
         "functions": [
-          "F06"
+          "F06",
+          "F52"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S10",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05",
+          "X06"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "1ef300ca46a7633b"
 }

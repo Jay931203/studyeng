@@ -14,14 +14,14 @@
         "functions": [
           "F62"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -35,11 +35,11 @@
       "ko": "다가오는 주주 총회를 앞두고요.",
       "tags": {
         "functions": [
-          "F62"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S14",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -58,11 +58,11 @@
       "ko": "저는 회사의 불법 관리와 관련된 제 역할을 설명하라는 요청을 받았습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -81,11 +81,11 @@
       "ko": "그리고 관련 은폐에 대해서도요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S14",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -104,11 +104,11 @@
       "ko": "제가 분노와 우려를 받아들일 적합한 인물이라는 제안이 있었습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -127,18 +127,18 @@
       "ko": "하지만 진실은 제 아버지가 악의적인 존재이며, 괴롭히고 거짓말을 하는 사람이라는 것입니다.",
       "tags": {
         "functions": [
-          "F12"
+          "F64"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,11 +150,11 @@
       "ko": "그는 수년 동안 이러한 사건을 완전히 인지하고 있었고, 숨기고 은폐하려고 노력했습니다.",
       "tags": {
         "functions": [
-          "F12"
+          "F09"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E03"
         ],
@@ -163,9 +163,12 @@
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "7c19b5efb8e34e6a"
 }

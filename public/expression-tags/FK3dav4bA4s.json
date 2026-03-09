@@ -12,23 +12,21 @@
       "ko": "고양이과 동물은 아홉 개의 아종으로 나뉘며, 오늘날 여섯 종이 생존해 있습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,10 +35,10 @@
       "ko": "가장 수가 많은 아종은 벵골 호랑이로, 전 세계 호랑이 개체수의 약 50퍼센트를 차지합니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -48,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,10 +60,10 @@
       "ko": "차지합니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -73,12 +71,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -87,9 +83,9 @@
       "ko": "호랑이는 세계에서 가장 큰 고양이과 동물입니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R2",
         "emotions": [
@@ -98,12 +94,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -112,10 +106,10 @@
       "ko": "대형 고양이과 동물의 평균 체중은 약 450파운드이지만, 가장 큰 종은 시베리아 호랑이 아종으로,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -123,7 +117,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -137,10 +131,10 @@
       "ko": "길이가 최대 13피트, 체중이 최대 660파운드에 달합니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -148,12 +142,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -164,7 +156,7 @@
         "functions": [
           "F04"
         ],
-        "situation": "S47",
+        "situation": "S30",
         "cefr": "A2",
         "register": "R2",
         "emotions": [
@@ -173,9 +165,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": [
           "is_narration"
         ]
@@ -189,8 +183,8 @@
         "functions": [
           "F13"
         ],
-        "situation": "S47",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -198,12 +192,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -212,9 +204,9 @@
       "ko": "더 무겁습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R2",
         "emotions": [
@@ -223,11 +215,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V16",
+        "power": [
+          "P02"
+        ],
         "grammar_intent": [],
         "flags": [
-          "is_narration"
+          "is_fragment"
         ]
       }
     },
@@ -237,9 +231,9 @@
       "ko": "호랑이는 물갈퀴가 있는 발가락을 가지고 있습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R2",
         "emotions": [
@@ -248,12 +242,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -262,10 +254,10 @@
       "ko": "호랑이는 물 근처에서 자주 생활하며 반수생 생활에 적응했습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -273,12 +265,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -287,10 +277,10 @@
       "ko": "대부분의 고양이과 동물과 달리 물속에 있는 것을 즐기며, 강력한 힘을 이용해 뛰어난 수영 실력을 보여줍니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F13"
         ],
-        "situation": "S47",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -298,7 +288,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -306,5 +296,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "cc4d046ec754c11f"
 }

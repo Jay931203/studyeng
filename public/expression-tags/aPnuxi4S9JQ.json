@@ -12,10 +12,11 @@
       "ko": "응.",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F53"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -37,7 +38,7 @@
       "ko": "세 명의 선수를 평가한다고? 응.",
       "tags": {
         "functions": [
-          "F12"
+          "F07"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -97,7 +98,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -106,7 +109,7 @@
       "ko": "알겠어.",
       "tags": {
         "functions": [
-          "F07"
+          "F44"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -120,7 +123,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -129,7 +134,7 @@
       "ko": "사실 51명이야.",
       "tags": {
         "functions": [
-          "F04"
+          "F08"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -143,7 +148,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -152,20 +159,24 @@
       "ko": "왜 그때 거짓말했는지 모르겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -175,10 +186,11 @@
       "ko": "보드를 설명해 줄래?",
       "tags": {
         "functions": [
-          "F34"
+          "F21",
+          "F36"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -188,7 +200,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -210,9 +224,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -221,10 +239,10 @@
       "ko": "여기 왼쪽 위의 이 공식을 사용해서, 최소 99승이 필요할 것 같아.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -238,5 +256,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "5c1cd75d42252660"
 }

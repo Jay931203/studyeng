@@ -12,20 +12,27 @@
       "ko": "난 네가 나를 막게 할 수는 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F18",
+          "F43",
+          "F11"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V03",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V09",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G07"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -37,18 +44,18 @@
       "ko": "내가 뭔가 하겠다고 하면, 반드시 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S46",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V05",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,10 +69,10 @@
       "ko": "네가 뭐라고 생각하든 상관 없어, 난 나를 위해 하는 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -73,9 +80,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "is_lyrics",
           "contains_profanity"
@@ -88,18 +97,18 @@
       "ko": "세상 따위는 신경 안 써, 그냥 내버려 둬.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -114,18 +123,18 @@
       "ko": "모든 게 나를 막을 수 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V05",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -139,20 +148,22 @@
       "ko": "내가 되기로 한 나는 반드시 될 거야. 의심의 여지 없이, 그리고 나를 깔보는 모든 이들에게.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V05",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -164,18 +175,18 @@
       "ko": "난 너의 발코니를 부수고 있어. 팬들이 열광하는 걸 알면서.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V05",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -189,10 +200,11 @@
       "ko": "왜 그런지, 어떻게 가능한지 물어보지 마.",
       "tags": {
         "functions": [
-          "F06"
+          "F35",
+          "F40"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -200,9 +212,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -214,18 +228,18 @@
       "ko": "무한한 고통 속에서도 마지막 재발까지 난 계속 할 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V05",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -239,10 +253,10 @@
       "ko": "그가 월급을 받든, 시급을 받든.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -250,7 +264,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -264,10 +278,10 @@
       "ko": "그가 물러나거나 힘을 잃을 때까지.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -275,7 +289,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -289,20 +303,22 @@
       "ko": "난 항상 우선순위를 두고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -314,10 +330,10 @@
       "ko": "좋든 나쁘든, 그는 갱단과 결혼했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -325,7 +341,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -339,19 +355,21 @@
       "ko": "크리스마스에 너와 자는 것처럼, 이 선물은 저주야. 지구는 잊어, 그는 땅에서 자신의 것을 꺼내.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics",
@@ -365,18 +383,18 @@
       "ko": "그리고 우주 전체를 무시해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -391,13 +409,13 @@
       "ko": "난 두렵지 않아, 난 두렵지 않아.",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E04"
         ],
         "expression_types": [
           "X08"
@@ -416,13 +434,13 @@
       "ko": "나서기를 두려워하지 않아.",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -444,7 +462,7 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -452,11 +470,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -466,13 +485,13 @@
       "ko": "내 손을 잡아, 내 손을 잡아.",
       "tags": {
         "functions": [
-          "F15"
+          "F35"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -491,18 +510,18 @@
       "ko": "우리는 이 길을 함께 걸을 거야. 폭풍 속에서도.",
       "tags": {
         "functions": [
-          "F15"
+          "F21"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -519,17 +538,19 @@
           "F01"
         ],
         "situation": "S46",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -541,13 +562,13 @@
       "ko": "너는 혼자가 아니라는 걸 알려주고 싶어.",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -566,13 +587,13 @@
       "ko": "같은 길을 걸어본 적이 있다면 외쳐봐.",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -585,5 +606,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "6105892ddde8b8d6"
 }

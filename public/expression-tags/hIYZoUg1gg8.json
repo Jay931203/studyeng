@@ -12,21 +12,22 @@
       "ko": "제 첫 직장입니다. 와, 축하해요. 감사합니다.",
       "tags": {
         "functions": [
-          "F25",
-          "F29",
-          "F27"
+          "F27",
+          "F29"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
-        "power": [],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -39,7 +40,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -51,7 +52,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -60,13 +63,13 @@
       "ko": "누구의 조카예요?",
       "tags": {
         "functions": [
-          "F06"
+          "F23"
         ],
-        "situation": "S14",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -85,7 +88,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -96,7 +99,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -106,16 +111,16 @@
       "ko": "잘 모르겠어요, 자주 듣는 것 같진 않아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
-        "situation": "S14",
+        "situation": "S33",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -129,9 +134,9 @@
       "ko": "방금 들었어요.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -143,7 +148,10 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -153,9 +161,9 @@
       "tags": {
         "functions": [
           "F09",
-          "F04"
+          "F52"
         ],
-        "situation": "S14",
+        "situation": "S33",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -176,9 +184,9 @@
       "ko": "흠.",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
-        "situation": "S14",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -203,7 +211,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -226,7 +234,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S14",
+        "situation": "S33",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -238,7 +246,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -247,21 +257,23 @@
       "ko": "당신 이름은 신경 쓰지 않아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S33",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -272,7 +284,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -295,7 +307,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -316,11 +328,11 @@
       "ko": "당신이 저에게 무엇을 묻는지 잘 모르겠어요, 미드 씨.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S33",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -341,7 +353,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S33",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -362,10 +374,10 @@
       "ko": "저는 브루스에게 가르시아가 좋다고 말했어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S33",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -379,5 +391,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d6003d452f4d3a9d"
 }

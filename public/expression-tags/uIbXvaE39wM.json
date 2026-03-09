@@ -12,18 +12,18 @@
       "ko": "누구에게도 짓밟히지 마세요",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,7 +37,7 @@
       "ko": "마음과 생각을 열어보세요",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -48,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,18 +62,18 @@
       "ko": "이렇게 느끼는 게 정말 공평한가요?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,20 +87,26 @@
       "ko": "언젠가 누군가가 당신을 돌아서게 하고 작별 인사를 하게 만들 거예요",
       "tags": {
         "functions": [
-          "F14"
+          "F32"
         ],
         "situation": "S46",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V14",
+        "power": [
+          "P01",
+          "P03"
+        ],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -112,19 +118,21 @@
       "ko": "그때까지, 아가, 그가 당신을 억누르고 울게 할 수 있도록 두겠어요?",
       "tags": {
         "functions": [
-          "F40"
+          "F06"
         ],
         "situation": "S46",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -137,18 +145,18 @@
       "ko": "모르겠어요? 모르겠어요?",
       "tags": {
         "functions": [
-          "F51"
+          "F06"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,10 +170,10 @@
       "ko": "상황은 변할 수 있고, 당신에게 유리하게 흘러갈 거예요",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,7 +181,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,18 +195,18 @@
       "ko": "하루만 더 버티면",
       "tags": {
         "functions": [
-          "F52"
+          "F49"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -212,20 +220,22 @@
       "ko": "하루만 더 버틸 수 있나요?",
       "tags": {
         "functions": [
-          "F46"
+          "F49"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -237,7 +247,7 @@
       "ko": "상황은 당신에게 유리하게 흘러갈 거예요",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -248,7 +258,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -262,18 +272,18 @@
       "ko": "하루만 더 버티세요",
       "tags": {
         "functions": [
-          "F52"
+          "F49"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -287,7 +297,7 @@
       "ko": "당신은 견딜 수 있어요",
       "tags": {
         "functions": [
-          "F52"
+          "F12"
         ],
         "situation": "S46",
         "cefr": "A1",
@@ -298,7 +308,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -312,7 +322,7 @@
       "ko": "내가 더 많이",
       "tags": {
         "functions": [
-          "F08"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A1",
@@ -323,7 +333,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -331,5 +341,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "bbc57b65b3a09bfe"
 }

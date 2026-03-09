@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -26,7 +26,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -35,10 +37,11 @@
       "ko": "뭐가, 마리? 잘 지내? 괜찮아. 조는 어때?",
       "tags": {
         "functions": [
-          "F06"
+          "F25",
+          "F33"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -47,7 +50,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -58,9 +63,9 @@
       "ko": "괜찮아. 조도 괜찮다고 들었어.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -83,7 +88,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -104,13 +109,13 @@
       "ko": "방금 헤어졌어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -127,20 +132,25 @@
       "ko": "아, 미안해. 안타깝네.",
       "tags": {
         "functions": [
-          "F31"
+          "F28",
+          "F20"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -150,9 +160,10 @@
       "ko": "응, 뭐 어쩔 수 없지.",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F53"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -173,11 +184,12 @@
       "ko": "그럼, 너는 어때? 나 괜찮아.",
       "tags": {
         "functions": [
-          "F06"
+          "F36",
+          "F48"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -185,8 +197,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -198,7 +214,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -219,13 +235,13 @@
       "ko": "별로야. 이혼할 거야.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -242,32 +258,9 @@
       "ko": "아, 미안해. 정말 안타깝다.",
       "tags": {
         "functions": [
-          "F31"
+          "F28"
         ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "Y9CKhEZCNS8-11",
-      "en": "Yeah, well, what are you gonna do?",
-      "ko": "응, 뭐 어쩔 수 있어?",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -277,7 +270,36 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "Y9CKhEZCNS8-11",
+      "en": "Yeah, well, what are you gonna do?",
+      "ko": "응, 뭐 어쩔 수 있어?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -288,9 +310,9 @@
       "ko": "우리가 처음 만났을 때, 너를 별로 좋아하지 않았어.",
       "tags": {
         "functions": [
-          "F12"
+          "F56"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -311,9 +333,10 @@
       "ko": "그랬잖아. 그때는 너무 경직되어 있었어. 지금은 훨씬 부드러워.",
       "tags": {
         "functions": [
-          "F12"
+          "F07",
+          "F55"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -334,20 +357,22 @@
       "ko": "그런 말 정말 싫어. 칭찬처럼 들리지만 사실은 모욕이야.",
       "tags": {
         "functions": [
-          "F23"
+          "F17"
         ],
-        "situation": "S10",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E08"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -357,22 +382,23 @@
       "ko": "알겠어. 여전히 강한 모습이네.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X02"
+          "X08"
         ],
-        "vibe": "V01",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d31b213a7ad87a46"
 }

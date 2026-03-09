@@ -12,19 +12,18 @@
       "ko": "좋아, 나 배고파! 슬퍼! 기뻐! 도와줘!",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01",
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V04",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -36,18 +35,18 @@
       "ko": "안 먹혀! 불안이야!",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -59,22 +58,23 @@
       "ko": "불안아, 멈춰!",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "282a9ac11247b699"
 }

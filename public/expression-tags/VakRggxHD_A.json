@@ -12,23 +12,27 @@
       "ko": "절대 그럴 리 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F43",
+          "F11"
         ],
         "situation": "S45",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "vibe": "V12",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G07"
+        ],
+        "flags": []
       }
     },
     {
@@ -37,19 +41,18 @@
       "ko": "나한테는 정상으로 보이는데, 이게 언제부터 시작된 거야? 헬렌이 취직한 이후? 그녀가 알고 있겠지? 농담이야?",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -61,9 +64,9 @@
       "ko": "그녀가 히어로 활동을 하는 동안에는 이 얘기를 할 수 없어.",
       "tags": {
         "functions": [
-          "F34"
+          "F43"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -72,9 +75,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V02",
+        "power": [
+          "P08"
+        ],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -84,10 +91,10 @@
       "ko": "내가 잘해야 그녀가 잘하고, 그래야 우리가 잘되는 거야, 밥.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -95,7 +102,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -107,10 +114,10 @@
       "ko": "알겠어, 마지막으로 잔 게 언제야? 누가 그런 걸 기록해? 게다가 그는 아기잖아.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -118,7 +125,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -130,9 +137,9 @@
       "ko": "나는 감당할 수 있어. 내가 처리할게.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -141,7 +148,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -153,10 +160,10 @@
       "ko": "괜찮은 거지? 모든 게 통제 아래에 있는 거야, 맞지?",
       "tags": {
         "functions": [
-          "F51"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -164,7 +171,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -176,22 +183,25 @@
       "ko": "뭐야, 좋아, 차차 쿠키 먹을래?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V02",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a87dda32a59734ea"
 }

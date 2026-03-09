@@ -12,9 +12,9 @@
       "ko": "다시 한번, 사냥이 나에게 특히 어려워져, 바짝 마른 숲에서 나를 숨기려고 해.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -25,7 +25,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -35,9 +37,9 @@
       "ko": "숲 속에서.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -60,16 +62,16 @@
       "ko": "하지만 나는 우기의 삶에서 뭔가를 배웠어, 이런 모습으로.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -85,8 +87,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -108,7 +110,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -131,7 +133,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -143,7 +145,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -152,10 +156,10 @@
       "ko": "이제 나에게 전략이 생겼어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -175,9 +179,9 @@
       "ko": "먼저 해야 할 일은 그 성가신 녀석들의 시야에서 벗어나는 거야.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -192,5 +196,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "7a4e5889b0502f02"
 }

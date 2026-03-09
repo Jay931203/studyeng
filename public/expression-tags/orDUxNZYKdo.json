@@ -15,7 +15,7 @@
           "F25"
         ],
         "situation": "S09",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,11 +35,11 @@
       "ko": "너희는 판타지 회계 회사를 만들고 있구나.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S09",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -60,20 +58,22 @@
       "ko": "우리는 라즈가 재정을 정리하도록 도와주고 있어. 아, 그는 직업이 있어. 얼마나 나쁠 수 있겠어?",
       "tags": {
         "functions": [
-          "F03"
+          "F46"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -83,7 +83,7 @@
       "ko": "음, 그의 집세와 자동차 리스가 너무 비싸. 여기에 외식과 쇼핑에 대한 그의 취향을 더하면.",
       "tags": {
         "functions": [
-          "F02"
+          "F52"
         ],
         "situation": "S09",
         "cefr": "B1",
@@ -106,10 +106,10 @@
       "ko": "잠깐, 잠깐, 옷 쇼핑은 아니지? 왜냐하면 봐봐.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
         "situation": "S09",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,7 +129,8 @@
       "ko": "그는 신용카드 빚도 상당히 많아.",
       "tags": {
         "functions": [
-          "F06"
+          "F07",
+          "F04"
         ],
         "situation": "S09",
         "cefr": "B1",
@@ -142,7 +143,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -152,7 +155,7 @@
       "ko": "네 아빠가 네 카드 갚아준다고 했잖아.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "B1",
@@ -175,10 +178,11 @@
       "ko": "나는 비상용 카드가 있어, 내가 직접 갚아.",
       "tags": {
         "functions": [
-          "F01"
+          "F20",
+          "F21"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -201,13 +205,13 @@
           "F01"
         ],
         "situation": "S09",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -221,7 +225,7 @@
       "ko": "그들은 지구온난화로 집을 잃고 있어.",
       "tags": {
         "functions": [
-          "F02"
+          "F06"
         ],
         "situation": "S09",
         "cefr": "B1",
@@ -232,7 +236,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,7 +248,7 @@
       "ko": "그리고 내 차는 갤런당 7마일밖에 안 나와서, 미안했어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "B1",
@@ -267,7 +271,7 @@
       "ko": "핑크 치크스가 뭐야?",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S09",
         "cefr": "B1",
@@ -290,10 +294,10 @@
       "ko": "그건 친밀한 왁싱, 약간의 미용, 그리고 염색이야. 아마 재정을 정리해줄 사람을 찾아야 할 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
         "situation": "S09",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -313,20 +317,24 @@
       "ko": "사업 관리자를 말하는 거야? 절대 안 돼.",
       "tags": {
         "functions": [
-          "F09"
+          "F37",
+          "F14"
         ],
         "situation": "S09",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -336,20 +344,26 @@
       "ko": "너는 돈을 쓸 수 없게 할 사람을 고용할 여유가 없어.",
       "tags": {
         "functions": [
-          "F34"
+          "F43",
+          "F10"
         ],
         "situation": "S09",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G16"
+        ],
         "flags": []
       }
     },
@@ -359,18 +373,18 @@
       "ko": "외식은 어리석은 지출이고, 나는 그걸 금지해.",
       "tags": {
         "functions": [
-          "F40"
+          "F58"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -382,22 +396,23 @@
       "ko": "급여는 어리석은 지출이니 금지해.",
       "tags": {
         "functions": [
-          "F40"
+          "F58"
         ],
-        "situation": "S14",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "5ad156b399adfe97"
 }

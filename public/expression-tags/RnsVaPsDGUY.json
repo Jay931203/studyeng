@@ -14,9 +14,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -35,12 +35,11 @@
       "ko": "코드 레드였나요? 네.",
       "tags": {
         "functions": [
-          "F06",
-          "F07"
+          "F06"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -59,12 +58,11 @@
       "ko": "켄드릭이 명령을 내렸나요? 네.",
       "tags": {
         "functions": [
-          "F06",
-          "F07"
+          "F06"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -83,12 +81,11 @@
       "ko": "당신은 그것을 목격했나요? 필요 없었습니다. 당신은 목격했나요? 아니요.",
       "tags": {
         "functions": [
-          "F06",
-          "F07"
+          "F56"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -107,12 +104,11 @@
       "ko": "그걸 어떻게 아나요? 압니다. 네, 당신은 아무것도 모릅니다.",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F07"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -133,21 +129,27 @@
       "ko": "그는 절대 그 기지에서 전출되지 않을 것입니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F43"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -158,17 +160,19 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -179,12 +183,11 @@
       "ko": "당신은 전출 명령서를 가지고 있습니다. 당신의 서명이 있습니다. 네, 압니다.",
       "tags": {
         "functions": [
-          "F01",
           "F07"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -205,9 +208,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -226,20 +229,22 @@
       "ko": "당신에게 거래를 만들어 줄게요. 검사와 면책을 받을 수 있는 어떤 것입니다.",
       "tags": {
         "functions": [
-          "F09",
-          "F34"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05",
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V02",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -250,20 +255,21 @@
       "ko": "약 4일 후에 당신은 변호 측 증인으로 출석할 것입니다.",
       "tags": {
         "functions": [
-          "F09",
-          "F34"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -274,21 +280,25 @@
       "ko": "그리고 당신은 법원에 저에게 말한 그대로 이야기할 것입니다.",
       "tags": {
         "functions": [
-          "F09",
-          "F34"
+          "F07",
+          "F10"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -298,19 +308,21 @@
       "ko": "지금 당장 모텔에 체크인할 것입니다.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -321,19 +333,21 @@
       "ko": "그리고 우리는 처음부터 시작할 것입니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -344,11 +358,11 @@
       "ko": "거래는 원하지 않습니다.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -357,7 +371,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -367,11 +383,11 @@
       "ko": "면책도 원하지 않습니다.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -380,7 +396,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -390,20 +408,22 @@
       "ko": "제가 한 일에도 자랑스럽지 않다는 것을 알아주세요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -413,18 +433,18 @@
       "ko": "지금 하고 있는 일에도 자랑스럽지 않습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -438,8 +458,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -459,11 +479,11 @@
       "ko": "북동쪽의 다운타운 로지입니다. 그를 경호해 주세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -472,9 +492,14 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G15"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "fe1af82d525e589a"
 }

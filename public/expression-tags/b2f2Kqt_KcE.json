@@ -12,10 +12,10 @@
       "ko": "제 이름은 앤디 색스입니다.",
       "tags": {
         "functions": [
-          "F26"
+          "F01"
         ],
-        "situation": "S15",
-        "cefr": "A1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,19 +35,18 @@
       "ko": "저는 최근 노스웨스턴 대학교를 졸업했습니다. 여기서 뭐하고 계신가요?",
       "tags": {
         "functions": [
-          "F01",
           "F06"
         ],
-        "situation": "S15",
-        "cefr": "A2",
+        "situation": "S14",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -59,9 +58,9 @@
       "ko": "음",
       "tags": {
         "functions": [
-          "F08"
+          "F01"
         ],
-        "situation": "S15",
+        "situation": "S14",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -70,7 +69,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -84,20 +83,23 @@
       "ko": "저는 당신의 비서로서 잘할 수 있을 것 같고, 기자가 되기 위해 뉴욕에 왔습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F30"
         ],
-        "situation": "S15",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -107,10 +109,10 @@
       "ko": "그리고 여러 곳에 편지를 보냈고, 결국 엘리어스 클락에게서 전화를 받고 셰리와 만났습니다.",
       "tags": {
         "functions": [
-          "F05"
+          "F03"
         ],
-        "situation": "S15",
-        "cefr": "B1",
+        "situation": "S24",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -118,7 +120,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -130,19 +132,21 @@
       "ko": "인사부에서, 기본적으로 이건 우리의 오토 유니버스입니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S15",
-        "cefr": "B1",
+        "situation": "S43",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -153,18 +157,18 @@
       "ko": "그래서 런웨이를 읽지 않나요? 아니요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S15",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -176,9 +180,9 @@
       "ko": "오늘 이전에 저를 들어본 적이 없었나요? 아니요.",
       "tags": {
         "functions": [
-          "F06"
+          "F43"
         ],
-        "situation": "S15",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -187,9 +191,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -201,16 +208,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S15",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -224,18 +231,20 @@
         "functions": [
           "F09"
         ],
-        "situation": "S15",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -245,9 +254,9 @@
       "ko": "그건 새로운 질문이었어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S15",
+        "situation": "S14",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -256,10 +265,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -270,8 +281,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S15",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -279,7 +290,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -291,10 +302,10 @@
       "ko": "저는 청소부에 대한 시리즈로 대학 기자 대회에서 국가적으로 상을 받기도 했습니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S15",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -302,11 +313,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "4210c25a3dcc5b1e"
 }

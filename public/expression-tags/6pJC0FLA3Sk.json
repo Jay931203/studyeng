@@ -14,7 +14,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S39",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -39,8 +39,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,8 +48,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V08",
+        "power": [
+          "P04"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -62,16 +64,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S39",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V12",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,18 +89,20 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -108,20 +112,22 @@
       "ko": "오 마이 갓. 안 돼! 제발 그만해! 뭐 하는 거야?",
       "tags": {
         "functions": [
-          "F09"
+          "F18"
         ],
-        "situation": "S50",
+        "situation": "S39",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -131,9 +137,9 @@
       "ko": "오 신이시여, 안 돼, 제발!",
       "tags": {
         "functions": [
-          "F09"
+          "F19"
         ],
-        "situation": "S50",
+        "situation": "S39",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -154,9 +160,9 @@
       "ko": "이유는 모르겠지만 타일러와의 첫 싸움이 생각났다. 안 돼!",
       "tags": {
         "functions": [
-          "F09"
+          "F03"
         ],
-        "situation": "S50",
+        "situation": "S42",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -165,11 +171,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "76079da286f14a16"
 }

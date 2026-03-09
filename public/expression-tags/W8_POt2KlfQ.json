@@ -58,10 +58,10 @@
       "ko": "월요일이야. 그래서?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,7 +81,7 @@
       "ko": "그래서 그건 규칙에 어긋나, 너는 우리와 앉을 수 없어.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -90,7 +90,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -104,20 +104,22 @@
       "ko": "뭐 어때. 그 규칙은 진짜가 아니야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -127,7 +129,7 @@
       "ko": "내가 조끼를 입었던 날은 진짜였어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -141,7 +143,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -150,20 +154,23 @@
       "ko": "그 조끼는 정말 끔찍했거든.",
       "tags": {
         "functions": [
-          "F23"
+          "F23",
+          "F04"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -173,7 +180,7 @@
       "ko": "너는 우리와 앉을 수 없어!",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -182,7 +189,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -194,6 +201,54 @@
       "id": "W8_POt2KlfQ-8",
       "en": "These sweatpants are all that fits me right now.",
       "ko": "지금은 이 트레이닝복밖에 안 맞아.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "W8_POt2KlfQ-9",
+      "en": "Fine.",
+      "ko": "좋아.",
+      "tags": {
+        "functions": [
+          "F44"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "W8_POt2KlfQ-10",
+      "en": "You can walk home, bitches.",
+      "ko": "너는 집까지 걸어가면 돼, 이 나쁜 년들아.",
       "tags": {
         "functions": [
           "F01"
@@ -214,15 +269,15 @@
       }
     },
     {
-      "id": "W8_POt2KlfQ-9",
-      "en": "Fine.",
-      "ko": "좋아.",
+      "id": "W8_POt2KlfQ-11",
+      "en": "That's where you're going, fat ass!",
+      "ko": "그게 네가 가는 길이야, 뚱뚱한 년!",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -233,54 +288,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "W8_POt2KlfQ-10",
-      "en": "You can walk home, bitches.",
-      "ko": "너는 집까지 걸어가면 돼, 이 나쁜 년들아.",
-      "tags": {
-        "functions": [
-          "F43"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "W8_POt2KlfQ-11",
-      "en": "That's where you're going, fat ass!",
-      "ko": "그게 네가 가는 길이야, 뚱뚱한 년!",
-      "tags": {
-        "functions": [
-          "F58"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "76f92633a1142761"
 }

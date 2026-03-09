@@ -14,16 +14,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S47",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,20 +35,23 @@
       "ko": "음, 어느 정도 그렇죠?",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
-        "situation": "S47",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -58,18 +61,18 @@
       "ko": "하지만 이게 더 이상 사실이 아닌 경계가 있을까요?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S47",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,20 +84,22 @@
       "ko": "당신이 당신이 아닌 상태가 되기 전에 얼마나 많은 자신을 제거할 수 있을까요?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S47",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -104,19 +109,21 @@
       "ko": "그리고 이 질문이 의미가 있나요?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S47",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X02"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -127,20 +134,22 @@
       "ko": "당신의 물리적 존재는 세포로 이루어져 있으며, 그 수는 수조 개에 달하고,",
       "tags": {
         "functions": [
-          "F02"
+          "F13"
         ],
-        "situation": "S47",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -150,18 +159,18 @@
       "ko": "은하수의 별보다 최소 열 배는 더 많습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,21 +182,23 @@
       "ko": "세포는 살아있는 존재로, 최대 50,000개의 서로 다른 단백질로 이루어진 기계입니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -196,21 +207,23 @@
       "ko": "의식도, 의지도, 목적도 없으며, 그저 존재할 뿐입니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -221,16 +234,16 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,18 +255,18 @@
       "ko": "당신의 세포들이 함께 모여 음식을 준비하고, 자원을 모으고,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,18 +278,18 @@
       "ko": "물건을 운반하고, 환경을 스캔하는 등의 큰 구조를 형성합니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,22 +301,23 @@
       "ko": "만약 당신의 몸에서 세포를 추출하여 적절한 곳에 놓으면",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S47",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "247d94098cb5ae2b"
 }

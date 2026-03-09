@@ -12,7 +12,7 @@
       "ko": "이렇게 매력적인 사람은 처음 봐. 노스 쇼어는 어때?",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -21,7 +21,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -58,13 +58,13 @@
       "ko": "안 돼. 절대 안 돼. 그건 사회적 자살이야.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -81,35 +81,10 @@
       "ko": "젠장. 우리가 너를 이끌어줄 수 있어서 정말 운이 좋네.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V03",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
-      "id": "eKUlOEHu7Uc-4",
-      "en": "Being at Old Orchard Mall kind of reminded me of being home in Africa.",
-      "ko": "올드 오차드 몰에 있으니 아프리카 집이 생각났어.",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -124,12 +99,36 @@
       }
     },
     {
+      "id": "eKUlOEHu7Uc-4",
+      "en": "Being at Old Orchard Mall kind of reminded me of being home in Africa.",
+      "ko": "올드 오차드 몰에 있으니 아프리카 집이 생각났어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06",
+          "X07"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "eKUlOEHu7Uc-5",
       "en": "By the watering hole.",
       "ko": "물웅덩이 옆에서.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -152,7 +151,7 @@
       "ko": "동물들이 발정났어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -175,16 +174,16 @@
       "ko": "세상에, 제이슨이다. 어디?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -198,7 +197,7 @@
       "ko": "아, 저기 있다.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -221,10 +220,10 @@
       "ko": "아, 그리고 테일러 워델과 함께 있어. 그들이 사귀고 있다고 들었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -244,10 +243,10 @@
       "ko": "잠깐. 제이슨이 테일러와 사귀고 있지 않아.",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -267,16 +266,16 @@
       "ko": "안 돼. 그렇게 너를 무시할 수는 없어.",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -290,7 +289,7 @@
       "ko": "스키가 너무 작아. 전화기 줘.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -313,22 +312,25 @@
       "ko": "하지만 너 그에게 전화하지 않을 거지? 내가 바보로 보여?",
       "tags": {
         "functions": [
-          "F06"
+          "F51"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "7935ea37d2496c33"
 }

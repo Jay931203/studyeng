@@ -14,7 +14,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -37,8 +37,8 @@
         "functions": [
           "F11"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +48,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -58,10 +60,10 @@
       "ko": "그는 완전히 잃어버린 것 같고, 괴롭힘을 당하고, 복수심에 차 있어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,10 +83,10 @@
       "ko": "찰스가 잃어버린 건 인정하지만, 그는 항상 그랬어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,13 +106,13 @@
       "ko": "그건 앤드류를 위한 거야. 네가 가장 좋아하는.",
       "tags": {
         "functions": [
-          "F01"
+          "F23"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -127,21 +129,25 @@
       "ko": "나는 충격을 받았어.",
       "tags": {
         "functions": [
-          "F16"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S44",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G07"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,9 +156,9 @@
       "ko": "그가 변하지 않으면, 그게 우리 부모로서 뭘 의미하지?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -175,9 +181,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -196,11 +202,11 @@
       "ko": "나는 엄마와 그에 대해 이야기했어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -221,8 +227,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -233,7 +239,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -244,7 +252,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -265,9 +273,9 @@
       "ko": "그녀는 내가 나 자신을 탓하지 말아야 한다고 했어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -290,7 +298,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -305,5 +313,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "84f6ef71e01487f2"
 }

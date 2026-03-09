@@ -12,18 +12,18 @@
       "ko": "사랑하는 것들이 어떻게 오래가지 않는지. 우리 둘에게 공평하지 않더라도.",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -37,20 +37,23 @@
       "ko": "오, 아마 나는 그냥 바보일 뿐이야. 어디서든 너와 함께하고 싶어.",
       "tags": {
         "functions": [
-          "F09"
+          "F14",
+          "F58"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V07",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -62,16 +65,16 @@
       "ko": "오, 내가 지나가는 이 지뢰밭들. 너와 가까워지기 위해 내가 감수하는 위험.",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V09",
         "power": [],
@@ -87,13 +90,13 @@
       "ko": "오, 나를 너에게서 멀어지게 하는 이 지뢰밭들. 너와 가까워지기 위해 내가 감수하는 위험.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -112,7 +115,7 @@
       "ko": "너와 가까이.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A1",
@@ -123,13 +126,15 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "029e7a1b8068dea3"
 }

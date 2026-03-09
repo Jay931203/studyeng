@@ -12,22 +12,26 @@
       "ko": "사실, 길 아래에 괜찮은 술집이 있어. 나도 가도 될까? 아니, 실례합니다. 물론 안 돼. 초대받은 사람만. 친절하네.",
       "tags": {
         "functions": [
-          "F34",
-          "F35",
-          "F09"
+          "F44",
+          "F46",
+          "F08"
         ],
-        "situation": "S31",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V02",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -39,8 +43,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,10 +64,10 @@
       "ko": "응, 무슨 일이야? 내가 알고 있어.",
       "tags": {
         "functions": [
-          "F09",
-          "F07"
+          "F25",
+          "F53"
         ],
-        "situation": "S31",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -86,7 +90,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S31",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -107,9 +111,9 @@
       "ko": "내가 직접 듣게 하고 싶었어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -120,7 +124,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -130,21 +136,22 @@
       "ko": "프레드, 정말 미안해. 브라이언, 그만해. 하지 마.",
       "tags": {
         "functions": [
-          "F31",
           "F28"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -154,9 +161,9 @@
       "ko": "하지만 지금은 우리 둘 사이의 일이야, 알겠지? 우리만.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S31",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -177,20 +184,22 @@
       "ko": "그러니까 제발, 누가 이 일로 시끄럽게 하거나 찡그리지 말고,",
       "tags": {
         "functions": [
-          "F40"
+          "F34"
         ],
-        "situation": "S31",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -200,10 +209,10 @@
       "ko": "가장 최악인 건, 너희의 동정심으로 나를 지루하게 만드는 거야. 그건 시간 낭비일 뿐이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -223,22 +232,25 @@
       "ko": "음악 만드는 데 쓸 수 있는 시간인데, 그게 내가 남은 시간에 하고 싶은 전부야.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S31",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "6e438c8e11d7c5c1"
 }

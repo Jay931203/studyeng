@@ -14,8 +14,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S04",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,9 +35,9 @@
       "ko": "그건 한 마디로 말할 수 있어요... 전통입니다!",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S04",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -58,9 +58,9 @@
       "ko": "우리의 전통 덕분에 우리는 오랫동안 균형을 유지해왔습니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
-        "situation": "S50",
+        "situation": "S04",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -71,7 +71,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -81,10 +83,10 @@
       "ko": "아나테프카에서는 모든 것에 대한 전통이 있습니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S04",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,10 +106,10 @@
       "ko": "어떻게 자고, 어떻게 먹고... 어떻게 일하는지...",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S04",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -118,8 +120,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "51ce0381b57ea664"
 }

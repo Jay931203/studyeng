@@ -14,8 +14,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -37,8 +37,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,8 +60,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -72,7 +72,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,10 +83,10 @@
       "ko": "나한텐 아니야, 애기야. 나는 여기 살지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S10",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,10 +106,10 @@
       "ko": "아, 그냥 휴가 동안 여기 있는 거구나?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S10",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,20 +129,22 @@
       "ko": "그렇게 말할 수 있겠네.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -150,10 +154,10 @@
       "ko": "이봐, 피자 왔어!",
       "tags": {
         "functions": [
-          "F01"
+          "F15"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -175,8 +179,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -187,7 +191,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -196,20 +202,24 @@
       "ko": "내 동생 집이야. 그가 처리할 거야.",
       "tags": {
         "functions": [
-          "F01"
+          "F32"
         ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V02",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -219,21 +229,23 @@
       "ko": "이봐, 잠깐 들어봐...",
       "tags": {
         "functions": [
-          "F50"
+          "F52"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -244,7 +256,7 @@
         "functions": [
           "F25"
         ],
-        "situation": "S50",
+        "situation": "S10",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -256,7 +268,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,12 +279,11 @@
       "ko": "안녕하세요. 맥앨리스터 씨 맞으세요?",
       "tags": {
         "functions": [
-          "F25",
-          "F06"
+          "F25"
         ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -289,10 +302,11 @@
       "ko": "네.",
       "tags": {
         "functions": [
-          "F07"
+          "F07",
+          "F53"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -303,7 +317,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -314,77 +330,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "yRadWIDAtRI-14",
-      "en": "Yes.",
-      "ko": "네.",
-      "tags": {
-        "functions": [
-          "F07"
-        ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "yRadWIDAtRI-15",
-      "en": "Oh, good, because somebody owes me $122.50.",
-      "ko": "아, 잘됐네. 누군가가 나한테 122.50달러를 빚졌어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S01",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "yRadWIDAtRI-16",
-      "en": "I'd like a word with you, sir.",
-      "ko": "당신과 이야기하고 싶습니다, 선생님.",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S01",
-        "cefr": "B1",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -395,6 +342,85 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "yRadWIDAtRI-14",
+      "en": "Yes.",
+      "ko": "네.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "yRadWIDAtRI-15",
+      "en": "Oh, good, because somebody owes me $122.50.",
+      "ko": "아, 잘됐네. 누군가가 나한테 122.50달러를 빚졌어.",
+      "tags": {
+        "functions": [
+          "F04"
+        ],
+        "situation": "S10",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "yRadWIDAtRI-16",
+      "en": "I'd like a word with you, sir.",
+      "ko": "당신과 이야기하고 싶습니다, 선생님.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S10",
+        "cefr": "B1",
+        "register": "R2",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -406,8 +432,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S01",
-        "cefr": "B1",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -427,9 +453,9 @@
       "ko": "아니, 아니, 아니, 아니, 아니. 크리스마스 시즌이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S01",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -439,7 +465,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -450,9 +478,9 @@
       "ko": "휴가철에는 항상 도둑이 많아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S01",
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -473,10 +501,10 @@
       "ko": "그래서 우리는 동네를 점검하고 있어.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S01",
-        "cefr": "B1",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -496,9 +524,9 @@
       "ko": "모두가 적절한 예방 조치를 취하고 있는지 확인하려고.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S01",
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -521,8 +549,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S01",
-        "cefr": "A1",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -533,7 +561,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -544,7 +574,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S01",
+        "situation": "S10",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -565,11 +595,11 @@
       "ko": "요즘 누구나 할 수 있는 최선이야, 맞지?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S01",
+        "situation": "S10",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -590,8 +620,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S01",
-        "cefr": "A2",
+        "situation": "S10",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -605,5 +635,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "7fdd9e1e05563335"
 }

@@ -37,7 +37,8 @@
       "ko": "수수께끼의 여행가방. 맞아요, 제이콥.",
       "tags": {
         "functions": [
-          "F01"
+          "F07",
+          "F10"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -50,7 +51,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -63,7 +66,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -86,7 +89,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -106,10 +109,10 @@
       "ko": "홀트 선장이 드디어 경매를 허락해 줘서 기뻐요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E01"
@@ -117,7 +120,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,10 +132,10 @@
       "ko": "원하는 색으로 스프레이 태닝 해줄게요.",
       "tags": {
         "functions": [
-          "F39"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -140,7 +143,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,8 +155,7 @@
       "ko": "제이콥, 자존심을 희생할 준비가 됐군요. 누가 이길 수 있을까요? 마사지 해줄게요.",
       "tags": {
         "functions": [
-          "F09",
-          "F40"
+          "F06"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -176,7 +178,7 @@
       "ko": "찰스, 잘못된 방향으로 가고 있어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -199,10 +201,10 @@
       "ko": "자격이 박탈되겠네요. 흥미로운 접근이네요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -222,7 +224,7 @@
       "ko": "오렌지 제이콥, 한 번, 두 번. 고등학교 때 사진 보여줄게요. 옆으로 묶은 머리 있어요.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -245,10 +247,10 @@
       "ko": "오, 로사가 뜨겁게 들어오네요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -268,16 +270,16 @@
       "ko": "내 머리와 옷장을 완전히 맡길게요. 데이트할게요.",
       "tags": {
         "functions": [
-          "F38"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -291,7 +293,7 @@
       "ko": "제이콥에게 팔렸어요, 스컬리에게는 아니에요.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -314,18 +316,18 @@
       "ko": "정말 무서웠어요, 이제 끝났으면 좋겠어요. 후우!",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -337,10 +339,10 @@
       "ko": "그래서 이 여행가방이 있는데... 신경 안 써요. 네!",
       "tags": {
         "functions": [
-          "F01"
+          "F07"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -360,24 +362,23 @@
       "ko": "팀, 불펜, 지금! 괜찮으세요, 선생님? 아니요, 괜찮지 않아요.",
       "tags": {
         "functions": [
-          "F06",
-          "F01",
-          "F09"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a0178b1423f78bd9"
 }

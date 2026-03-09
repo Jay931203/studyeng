@@ -12,11 +12,11 @@
       "ko": "앤이 없을 때, 쥐들은 파마를 해. 투표는 한 시간 후야.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S48",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -37,18 +37,20 @@
         "functions": [
           "F36"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -58,9 +60,9 @@
       "ko": "파마는 기다려야 해, 오텀!",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -81,9 +83,9 @@
       "ko": "파마는 기다려야 해.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -104,18 +106,18 @@
       "ko": "머리 마음에 들 거야.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,7 +131,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -150,13 +152,13 @@
       "ko": "뭐? 오, 세상에...",
       "tags": {
         "functions": [
-          "F18"
+          "F06"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -164,7 +166,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -173,10 +177,10 @@
       "ko": "저걸 봐!",
       "tags": {
         "functions": [
-          "F09"
+          "F35"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,10 +200,10 @@
       "ko": "조 바이든이 말 타고 상반신 노출이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -219,21 +223,26 @@
       "ko": "대단해!",
       "tags": {
         "functions": [
-          "F18"
+          "F30",
+          "F15"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G03"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -245,7 +254,7 @@
           "F25",
           "F27"
         ],
-        "situation": "S15",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -255,7 +264,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -266,9 +277,9 @@
       "ko": "잠깐, 그에게 기회를 줘.",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
-        "situation": "S15",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -291,7 +302,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S15",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -312,9 +323,9 @@
       "ko": "대학에서 동물학을 공부했어,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S15",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -335,20 +346,22 @@
       "ko": "그리고 내 마음으로 동물을 조종할 수 있어. 나가.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S15",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -358,20 +371,22 @@
       "ko": "내가 너에게 그렇게 말하게 했어. 그가 마음에 들어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -381,16 +396,16 @@
       "ko": "생선을 덜 익히면, 믿거나 말거나, 감옥이야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -404,10 +419,10 @@
       "ko": "닭고기를 과하게 익히면, 역시 감옥. 덜 익히거나, 과하게 익히거나.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -427,16 +442,16 @@
       "ko": "치과 예약하고 나타나지 않으면,",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -450,16 +465,16 @@
       "ko": "믿거나 말거나, 바로 감옥이야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -473,10 +488,10 @@
       "ko": "우리는 세계 최고의 환자를 가지고 있어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -490,5 +505,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d5115b490061fe40"
 }

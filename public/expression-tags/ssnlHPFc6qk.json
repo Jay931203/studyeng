@@ -12,10 +12,10 @@
       "ko": "내가 만난 대부분의 여자들과는 달라.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,10 +35,10 @@
       "ko": "그러니까 그녀에게 전화해, 로미오.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,23 +58,24 @@
       "ko": "왜? 그녀가 그렇게 똑똑하지 않고, 지루하다는 걸 깨닫게 하려고? 너도 알잖아...",
       "tags": {
         "functions": [
-          "F09"
+          "F06",
+          "F40"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "grammar_intent": [
+          "G24"
+        ],
+        "flags": []
       }
     },
     {
@@ -83,25 +84,21 @@
       "ko": "이 여자애는 지금 완벽해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
-        "power": [
-          "P10"
-        ],
+        "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -110,10 +107,10 @@
       "ko": "그걸 망치고 싶지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -133,20 +130,22 @@
       "ko": "어쩌면 너도 지금 완벽할지도 몰라.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -156,16 +155,16 @@
       "ko": "어쩌면 너도 그걸 망치고 싶지 않을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -179,13 +178,13 @@
       "ko": "하지만 그건 정말 멋진 철학이야, 윌.",
       "tags": {
         "functions": [
-          "F04"
+          "F09"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -202,10 +201,10 @@
       "ko": "그렇게 하면 평생 동안",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -225,10 +224,10 @@
       "ko": "누구도 진정으로 알 필요가 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -248,13 +247,13 @@
       "ko": "내 아내는 긴장할 때 방귀를 뀌곤 했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F03"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E04"
         ],
         "expression_types": [
           "X08"
@@ -271,10 +270,10 @@
       "ko": "그녀는 여러 가지 멋진 작은 환희를 가졌어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E01"
@@ -294,23 +293,21 @@
       "ko": "그녀는 잠을 자면서 방귀를 뀌곤 했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -321,18 +318,20 @@
         "functions": [
           "F28"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -342,10 +341,10 @@
       "ko": "어느 날 밤, 너무 시끄러워서 개를 깨웠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -367,8 +366,31 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "ssnlHPFc6qk-16",
+      "en": "See, I didn't have the heart to tell her. Oh, God.",
+      "ko": "나는 그녀에게 말할 용기가 없었어. 오, 신이여.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -383,29 +405,6 @@
       }
     },
     {
-      "id": "ssnlHPFc6qk-16",
-      "en": "See, I didn't have the heart to tell her. Oh, God.",
-      "ko": "나는 그녀에게 말할 용기가 없었어. 오, 신이여.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "ssnlHPFc6qk-17",
       "en": "She woke herself up. Oh, Christ.",
       "ko": "그녀가 스스로 깨버렸어. 오, 맙소사.",
@@ -413,8 +412,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -434,18 +433,18 @@
       "ko": "아, 하지만 윌, 그녀는 2년 전에 죽었어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -457,10 +456,10 @@
       "ko": "그녀가 여기 얼마나 더 있을까?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -480,24 +479,24 @@
       "ko": "너는 도대체 뭐가 문제야? 그런 표정 짓지 마.",
       "tags": {
         "functions": [
-          "F17"
+          "F06",
+          "F40"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "3d75816f184add73"
 }

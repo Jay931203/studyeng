@@ -12,83 +12,10 @@
       "ko": "너한테 진절머리가 나! 진짜 진절머리가 나! 이봐! 여보세요?",
       "tags": {
         "functions": [
-          "F17"
+          "F25"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "7Y01uy-Q1d8-1",
-      "en": "Oh, this is great. This is all we need, Mr. Wake-me-up-in-the-middle-of-the-night.",
-      "ko": "아, 이거 정말 좋네. 우리가 필요한 건 이거야, 한밤중에 깨우는 미스터.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "7Y01uy-Q1d8-2",
-      "en": "What the fuck are you doing here?",
-      "ko": "여기서 뭐하는 거야?",
-      "tags": {
-        "functions": [
-          "F17"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [
-          "P05"
-        ],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
-      "id": "7Y01uy-Q1d8-3",
-      "en": "Jeff and I were gonna play a new computer golf game. Oh, were you really?",
-      "ko": "제프랑 새 컴퓨터 골프 게임 하려고 했어. 정말 그랬어?",
-      "tags": {
-        "functions": [
-          "F03"
-        ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -103,15 +30,93 @@
       }
     },
     {
+      "id": "7Y01uy-Q1d8-1",
+      "en": "Oh, this is great. This is all we need, Mr. Wake-me-up-in-the-middle-of-the-night.",
+      "ko": "아, 이거 정말 좋네. 우리가 필요한 건 이거야, 한밤중에 깨우는 미스터.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S39",
+        "cefr": "B1",
+        "register": "R2",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "7Y01uy-Q1d8-2",
+      "en": "What the fuck are you doing here?",
+      "ko": "여기서 뭐하는 거야?",
+      "tags": {
+        "functions": [
+          "F17"
+        ],
+        "situation": "S39",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": [
+          "contains_profanity"
+        ]
+      }
+    },
+    {
+      "id": "7Y01uy-Q1d8-3",
+      "en": "Jeff and I were gonna play a new computer golf game. Oh, were you really?",
+      "ko": "제프랑 새 컴퓨터 골프 게임 하려고 했어. 정말 그랬어?",
+      "tags": {
+        "functions": [
+          "F18",
+          "F23"
+        ],
+        "situation": "S39",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E08"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G07"
+        ],
+        "flags": []
+      }
+    },
+    {
       "id": "7Y01uy-Q1d8-4",
       "en": "Well, let me tell you something, Larry.",
       "ko": "자, 하나 말해줄게, 래리.",
       "tags": {
         "functions": [
-          "F04"
+          "F52"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -133,8 +138,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -156,8 +161,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -177,13 +182,13 @@
       "ko": "새 DVD 플레이어도 없어. 모든 게 없어.",
       "tags": {
         "functions": [
-          "F01"
+          "F23"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -200,22 +205,22 @@
       "ko": "내 결혼 비디오도 없어. 네 뚱뚱한 매니저가 여기서",
       "tags": {
         "functions": [
-          "F17"
+          "F04"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
-        "power": [
-          "P05"
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G18"
         ],
-        "grammar_intent": [],
         "flags": [
           "contains_profanity"
         ]
@@ -227,23 +232,21 @@
       "ko": "바보 같은 애를 우리 집에 들여보냈거든, 알겠어? 기분 좋니?",
       "tags": {
         "functions": [
-          "F17"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -254,8 +257,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -275,19 +278,21 @@
       "ko": "그게 누구 잘못인데, 제프리? 래리 잘못은 아니란 걸 알아. 애 잘못이야! 아니, 아니, 아니. 애 잘못이 아니라고 생각해. 애 잘못이야. 아니, 내가 그 애를 잡으러 갈 거야.",
       "tags": {
         "functions": [
-          "F10"
+          "F09"
         ],
-        "situation": "S10",
+        "situation": "S39",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V12",
-        "power": [],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -298,19 +303,22 @@
       "ko": "아, 너 그 애를 잡으러 간다고? 너 참 한심하네.",
       "tags": {
         "functions": [
+          "F12",
           "F58"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S39",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V12",
-        "power": [],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -321,10 +329,10 @@
       "ko": "그리고 래리,",
       "tags": {
         "functions": [
-          "F01"
+          "F48"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S39",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -344,11 +352,11 @@
       "ko": "저번에 밤 10시에 10-20 부른 건 대체 뭐야?",
       "tags": {
         "functions": [
-          "F06"
+          "F17"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S39",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -357,7 +365,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -369,9 +379,9 @@
       "ko": "나는 마감 시간이 10시 30분인 줄 알았어.",
       "tags": {
         "functions": [
-          "F01"
+          "F21"
         ],
-        "situation": "S10",
+        "situation": "S39",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -394,18 +404,22 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S39",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -415,24 +429,27 @@
       "ko": "제프, 너 나의 잠 문제에 대해 그에게 말하지 않았어? 나...",
       "tags": {
         "functions": [
-          "F06"
+          "F43"
         ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S39",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E16"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": [
           "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "b153a2a6398e5332"
 }

@@ -12,16 +12,17 @@
       "ko": "좋아, 여러분, 휘몰아치기. 조금 느리게, 알겠지? 네이먼, 최선을 다해봐.",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -37,7 +38,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -60,7 +61,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -83,10 +84,10 @@
       "ko": "필을 들어보자.",
       "tags": {
         "functions": [
-          "F01"
+          "F36"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -96,7 +97,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -108,7 +111,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -133,8 +136,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -156,7 +159,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -179,10 +182,35 @@
       "ko": "조금 문제가 있었네. 17번부터 다시 해보자. 준비됐어?",
       "tags": {
         "functions": [
+          "F36"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G09"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "mIABSdupWdI-8",
+      "en": "Five, six, and. ♪",
+      "ko": "다섯, 여섯, 그리고. ♪",
+      "tags": {
+        "functions": [
           "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -195,31 +223,7 @@
         "grammar_intent": [],
         "flags": []
       }
-    },
-    {
-      "id": "mIABSdupWdI-8",
-      "en": "Five, six, and. ♪",
-      "ko": "다섯, 여섯, 그리고. ♪",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S44",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
     }
-  ]
+  ],
+  "transcriptHash": "ce90ec36f021a38d"
 }

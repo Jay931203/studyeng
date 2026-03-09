@@ -12,10 +12,10 @@
       "ko": "지난 콘서트 기억나? 관중들이 우리의 노래를 함께 불렀어.",
       "tags": {
         "functions": [
-          "F03"
+          "F06"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,20 +35,24 @@
       "ko": "정말 시끄러웠지만, 멋졌어.",
       "tags": {
         "functions": [
-          "F12"
+          "F30",
+          "F50"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03",
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -58,9 +62,9 @@
       "ko": "그들이 우리의 공연의 일부가 되고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -81,20 +85,23 @@
       "ko": "그걸 더 장려하고 싶어서, 그들을 조금 더 참여시키는 아이디어가 있어.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06",
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -104,20 +111,22 @@
       "ko": "이걸로 시작해보자.",
       "tags": {
         "functions": [
-          "F35"
+          "F36"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -127,9 +136,9 @@
       "ko": "이 비트에 맞춰 발을 구르세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -150,13 +159,13 @@
       "ko": "천재야.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -164,7 +173,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -175,7 +186,7 @@
         "functions": [
           "F27"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -185,9 +196,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -196,21 +211,24 @@
       "ko": "자, 시작해.",
       "tags": {
         "functions": [
-          "F35"
+          "F35",
+          "F45"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -219,9 +237,9 @@
       "ko": "좋아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -233,7 +251,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -242,10 +262,10 @@
       "ko": "이제 세 번째 비트에 맞춰 박수를 쳐봐.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -255,7 +275,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -265,10 +287,10 @@
       "ko": "속도를 올리지 마.",
       "tags": {
         "functions": [
-          "F40"
+          "F35"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -279,7 +301,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -288,9 +312,9 @@
       "ko": "록, 그 박자를 유지해.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -311,10 +335,10 @@
       "ko": "아니, 프린터.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -325,7 +349,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -334,9 +360,34 @@
       "ko": "너의 복제인 없이 너를 보는 건 드문 일이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F32"
         ],
-        "situation": "S34",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G25"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "bIQgJKJiQRQ-15",
+      "en": "It's unusual seeing you be so bitchy.",
+      "ko": "너가 이렇게 비꼬는 모습도 드물어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -352,61 +403,15 @@
       }
     },
     {
-      "id": "bIQgJKJiQRQ-15",
-      "en": "It's unusual seeing you be so bitchy.",
-      "ko": "너가 이렇게 비꼬는 모습도 드물어.",
-      "tags": {
-        "functions": [
-          "F58"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E10"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V03",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "bIQgJKJiQRQ-16",
       "en": "Ah, you kept the time, Rog. Good.",
       "ko": "아, 시간을 잘 맞췄네, 록. 잘했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V02",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "bIQgJKJiQRQ-17",
-      "en": "What's going on?",
-      "ko": "무슨 일이야?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S50",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -421,12 +426,38 @@
       }
     },
     {
+      "id": "bIQgJKJiQRQ-17",
+      "en": "What's going on?",
+      "ko": "무슨 일이야?",
+      "tags": {
+        "functions": [
+          "F06",
+          "F60"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "bIQgJKJiQRQ-18",
       "en": "You'd know if you were on time.",
       "ko": "제시간에 왔으면 알았을 텐데.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -452,19 +483,20 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "dff9e123a9c857be"
 }

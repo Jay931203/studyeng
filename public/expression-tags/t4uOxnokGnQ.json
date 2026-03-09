@@ -12,11 +12,10 @@
       "ko": "당신이 주방장이고, 월드 센트럴 키친을 운영하는 거죠? 네. 봉주르 사크레쾨르!",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F51"
         ],
-        "situation": "S05",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -36,9 +35,9 @@
       "ko": "봉주르, 콜린!",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S05",
+        "situation": "S34",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -50,7 +49,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -59,13 +60,13 @@
       "ko": "정말 멋지네요, 당신이 말하는 방식이 마음에 들어요.",
       "tags": {
         "functions": [
-          "F30"
+          "F22"
         ],
-        "situation": "S05",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
@@ -82,16 +83,16 @@
       "ko": "마치 폰 트랩 가족 같은 느낌이에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S05",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -105,10 +106,10 @@
       "ko": "먼저, 칼을 잡는 법을 배워야 해요. 내 칼을 잡아봐요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S02",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -128,9 +129,9 @@
       "ko": "저는 그냥 그녀가 하는 걸 보고 있을 뿐이에요. 네.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S02",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -151,9 +152,9 @@
       "ko": "뭐, 뭐라고요?",
       "tags": {
         "functions": [
-          "F50"
+          "F06"
         ],
-        "situation": "S05",
+        "situation": "S34",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -176,9 +177,9 @@
       "ko": "저건 썬 양파예요. 그게 뭐가 문제죠?",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S02",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -189,7 +190,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -199,9 +202,9 @@
       "ko": "그냥 괜찮았다고 가정할 수 있을까요? 네. 이건 마리화나예요.",
       "tags": {
         "functions": [
-          "F14"
+          "F02"
         ],
-        "situation": "S02",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -222,10 +225,10 @@
       "ko": "아, 타임. 타임. 타임. 알겠어요. 마리화나.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S02",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -245,16 +248,16 @@
       "ko": "자, 우리는 붉은 도미 필레를 만들 거예요. 그런데 이건 뭐죠?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S02",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V10",
         "power": [],
@@ -268,9 +271,9 @@
       "ko": "이건 새우예요. 네. 새우가 여기 들어가나요?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S02",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -291,10 +294,10 @@
       "ko": "아니요, 우리는 만들고 있어요, 잘 모르겠어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
-        "situation": "S02",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -314,16 +317,16 @@
       "ko": "우리는 새로운 아이티 요리를 만들 수 있어요. 물론이죠.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S02",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V10",
         "power": [],
@@ -337,16 +340,16 @@
       "ko": "네, 좋아요, 두 분을 합칠 거예요.",
       "tags": {
         "functions": [
-          "F36"
+          "F07"
         ],
-        "situation": "S02",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V10",
         "power": [],
@@ -354,5 +357,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "be1e65880ee5ecb0"
 }

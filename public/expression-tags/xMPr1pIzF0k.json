@@ -12,11 +12,11 @@
       "ko": "모두 그렇죠.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -26,7 +26,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -35,11 +37,11 @@
       "ko": "당신은 언설리드에 대해 꽤 잘 아는 것 같군요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -49,7 +51,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -60,9 +64,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -72,7 +76,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -83,9 +89,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
+        "situation": "S10",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -95,7 +101,10 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period",
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,11 +113,11 @@
       "ko": "이유를 물어봐도 될까요?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -118,7 +127,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -127,11 +138,11 @@
       "ko": "크고 아름다운 세상이니까요.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
-        "situation": "S40",
+        "situation": "S10",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -140,8 +151,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G03"
+        ],
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -152,9 +167,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
+        "situation": "S10",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -164,7 +179,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -173,13 +190,13 @@
       "ko": "저는 그런 사람들 중 하나가 되고 싶지 않아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
-        "situation": "S40",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -187,7 +204,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -198,9 +217,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -210,7 +229,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -221,9 +242,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -233,7 +254,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -244,9 +267,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -256,7 +279,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -265,13 +290,13 @@
       "ko": "저는 억양을 완전히 잃어버렸어요.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -279,7 +304,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -290,19 +317,21 @@
         "functions": [
           "F01"
         ],
-        "situation": "S40",
+        "situation": "S10",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -313,9 +342,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S40",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -325,7 +354,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -334,11 +365,11 @@
       "ko": "긴 이야기예요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -348,7 +379,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -357,11 +390,61 @@
       "ko": "사람들이 듣기 싫어하는 이야기죠.",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
-        "situation": "S09",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R2",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_period"
+        ]
+      }
+    },
+    {
+      "id": "xMPr1pIzF0k-16",
+      "en": "People I trust.",
+      "ko": "제가 믿는 사람들 앞에서요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S10",
+        "cefr": "A1",
+        "register": "R2",
+        "emotions": [
+          "E07"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_period"
+        ]
+      }
+    },
+    {
+      "id": "xMPr1pIzF0k-17",
+      "en": "My paramour, Eladia, she would find you very interesting.",
+      "ko": "제 연인 엘라디아는 당신을 매우 흥미롭게 생각할 거예요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S10",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -371,18 +454,20 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
-      "id": "xMPr1pIzF0k-16",
-      "en": "People I trust.",
-      "ko": "제가 믿는 사람들 앞에서요.",
+      "id": "xMPr1pIzF0k-18",
+      "en": "You should come to the brothel and meet her.",
+      "ko": "유곽에 와서 그녀를 만나보세요.",
       "tags": {
         "functions": [
-          "F09"
+          "F37"
         ],
-        "situation": "S09",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -394,53 +479,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "xMPr1pIzF0k-17",
-      "en": "My paramour, Eladia, she would find you very interesting.",
-      "ko": "제 연인 엘라디아는 당신을 매우 흥미롭게 생각할 거예요.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "xMPr1pIzF0k-18",
-      "en": "You should come to the brothel and meet her.",
-      "ko": "유곽에 와서 그녀를 만나보세요.",
-      "tags": {
-        "functions": [
-          "F38"
-        ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -451,7 +492,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S08",
+        "situation": "S10",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -463,7 +504,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -474,9 +517,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S08",
+        "situation": "S10",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -485,9 +528,14 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": [
+          "is_period"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "125bec606c2e3a12"
 }

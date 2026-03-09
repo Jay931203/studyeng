@@ -12,9 +12,9 @@
       "ko": "별들의 도시, 내가 볼 수 없는 것이 너무 많아. 누가 알겠어, 이게 무언가의 시작일까?",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -23,12 +23,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "grammar_intent": [
+          "G01",
+          "G17"
+        ],
+        "flags": []
       }
     },
     {
@@ -37,23 +38,21 @@
       "ko": "멋진 것일까? 아니면 내가 이룰 수 없는 또 하나의 꿈일까?",
       "tags": {
         "functions": [
-          "F09"
+          "F15"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S48",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -62,9 +61,9 @@
       "ko": "별들의 도시, 모두가 원하는 단 한 가지. 바에서나 혼잡한 식당의 연기 속에서",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S08",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -73,12 +72,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -87,10 +84,10 @@
       "ko": "그것은 사랑이야. 그래, 우리가 찾고 있는 것은 누군가의 사랑이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -98,12 +95,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": []
       }
     },
     {
@@ -112,10 +107,10 @@
       "ko": "그렇지 않으면.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S08",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -123,13 +118,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "a06d6ebb7f0fea2e"
 }

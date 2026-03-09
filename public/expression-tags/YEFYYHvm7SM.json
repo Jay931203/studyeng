@@ -12,9 +12,9 @@
       "ko": "잠깐, 뭐라고? 아이스브레이커네. 아이스브레이커야. 이제 우리 모두 이 질문이 좋은 질문인지 논쟁할 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -37,14 +37,14 @@
         "functions": [
           "F09"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V10",
         "power": [],
@@ -58,9 +58,11 @@
       "ko": "내 솔직한 의견으로는 휠체어 접근성을 제공하는 것이 초점이 되어서는 안 된다고 생각해. 그건 네가 집중해야 할 부분이야. 좋아. 그가 휠체어 접근성이 중요하지 않다고 하지 않게 해줘서 고마워.",
       "tags": {
         "functions": [
-          "F09"
+          "F09",
+          "F27",
+          "F37"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -70,7 +72,9 @@
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -81,18 +85,21 @@
       "ko": "음, 법이 있잖아, 맞지? 주와 지역 법률은 이미 따라야 했어, 맞지?",
       "tags": {
         "functions": [
-          "F04"
+          "F51",
+          "F35"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X02",
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,10 +111,10 @@
       "ko": "응. 응. 응. 응, 지역 법률은 이미 그 부분에 집중했어. 그건 이미 해결된 문제야.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,10 +134,10 @@
       "ko": "나는 네가 휠체어 접근성이 없는 곳에서는 이벤트를 열지 않을 거라고 이해했어. 응. 알겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,9 +157,9 @@
       "ko": "오, 그들은 정당하네. 전문성을 보여줘. 자, 여러분, 내가 겪었던 실제 경험이 있어. 2009년이야.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -173,9 +180,9 @@
       "ko": "나는 피스카타웨이에 있었어. 은퇴 파티를 조직했지. 그래서 그 남자의 아내가 나를 옆으로 불러서 나에게 끌린다고 분명히 말했어. 나는 어떻게 해야 할까? 유혹을 참아.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -196,10 +203,10 @@
       "ko": "나는 전문성을 유지하고, 이벤트 후에 그녀에게 DM을 보냈어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -213,5 +220,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "52264e079bb9f1cb"
 }

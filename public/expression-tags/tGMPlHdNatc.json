@@ -12,20 +12,23 @@
       "ko": "제발 누군가의 생일을 놓쳤다고 말하지 마세요. 아니에요, 놓치지 않았어요, 엄마.",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S12",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02",
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -37,9 +40,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S12",
         "cefr": "A1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -60,14 +63,14 @@
         "functions": [
           "F27"
         ],
-        "situation": "S10",
+        "situation": "S12",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -81,10 +84,10 @@
       "ko": "그런데, 내 생일인가요?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S12",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,9 +107,9 @@
       "ko": "아니에요, 엄마. 여러분 모두 너무 예뻐요.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S12",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -127,9 +130,9 @@
       "ko": "엄마, 무슨 일이에요? 안녕하세요, 캐서린.",
       "tags": {
         "functions": [
-          "F03"
+          "F25"
         ],
-        "situation": "S10",
+        "situation": "S12",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -150,9 +153,9 @@
       "ko": "그래서 아무 말도 안 할 건가요? 제 자리 아니에요. 당신 악당인가요?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S12",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -173,16 +176,16 @@
       "ko": "알겠어요, 전 이걸 밤새 하진 않을 거예요.",
       "tags": {
         "functions": [
-          "F52"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S12",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -196,9 +199,9 @@
       "ko": "오, 자비의 어머니. 그건 저를 위한 거예요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S12",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -219,9 +222,9 @@
       "ko": "슬퍼요, 엄마? 아니에요. 괜찮아요, 엄마.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S10",
+        "situation": "S12",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -242,9 +245,9 @@
       "ko": "그는 좋은 사람이에요. 알아요. 알아요. 그냥 어쩔 수 없어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S12",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -265,10 +268,10 @@
       "ko": "그는 아직 당신에게 물어보지도 않았어요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S12",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -282,5 +285,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d7708910005a696f"
 }

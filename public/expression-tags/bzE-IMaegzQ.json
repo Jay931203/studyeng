@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S06",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,56 +35,10 @@
       "ko": "비가 쏟아지는 이곳에서 자전거를 타는 건 세상을 위한 일이에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S06",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V05",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "bzE-IMaegzQ-2",
-      "en": "Look at this, look at these assholes, look at this guy, double park right here in a bus lane.",
-      "ko": "이봐, 저 사람들 좀 봐, 여기 버스 전용 차선에 이 사람은 이중 주차를 하고 있어.",
-      "tags": {
-        "functions": [
-          "F17"
-        ],
-        "situation": "S06",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V03",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "bzE-IMaegzQ-3",
-      "en": "I need a ticket. Yeah, let in guilty, not guilty.",
-      "ko": "티켓이 필요해요. 네, 유죄입니다, 무죄입니다.",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S06",
-        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -99,6 +53,54 @@
       }
     },
     {
+      "id": "bzE-IMaegzQ-2",
+      "en": "Look at this, look at these assholes, look at this guy, double park right here in a bus lane.",
+      "ko": "이봐, 저 사람들 좀 봐, 여기 버스 전용 차선에 이 사람은 이중 주차를 하고 있어.",
+      "tags": {
+        "functions": [
+          "F35"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "bzE-IMaegzQ-3",
+      "en": "I need a ticket. Yeah, let in guilty, not guilty.",
+      "ko": "티켓이 필요해요. 네, 유죄입니다, 무죄입니다.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S36",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E13"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
+      }
+    },
+    {
       "id": "bzE-IMaegzQ-4",
       "en": "Everything you need is right behind you.",
       "ko": "필요한 모든 것이 바로 뒤에 있어요.",
@@ -106,8 +108,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S06",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,7 +131,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S06",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -150,10 +152,10 @@
       "ko": "하지만 자전거 도로를 타지 않아서 부과되는 벌금은 더 낮아요. 빨간불이 다가오나요?",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S06",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,9 +175,9 @@
       "ko": "아니요. 아니요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S06",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -185,12 +187,15 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "cdd67972f1ba4968"
 }

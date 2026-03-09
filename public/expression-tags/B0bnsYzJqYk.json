@@ -12,10 +12,10 @@
       "ko": "그의 형편없는 집에서 콜센터를 옮기고",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S24",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,10 +35,10 @@
       "ko": "나머지는 모두 사라진다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,16 +60,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +81,18 @@
       "ko": "너의 상담사인 웩슬러 씨가 말했듯이, 나는 그렇게 할 수 없어. 좀 봐줘.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S29",
         "cefr": "B2",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,19 +104,21 @@
       "ko": "너는 셋째급 사기꾼으로",
       "tags": {
         "functions": [
-          "F58"
+          "F12"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
-        "power": [],
+        "vibe": "V08",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -127,18 +129,18 @@
       "ko": "원하는 것을 얻기 위해 어머니의 장기까지 팔 수 있는 사람이다.",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S10",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,57 +154,11 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "B0bnsYzJqYk-7",
-      "en": "Mind you, again, I'm not actually allowed to do any of this, not intentionally.",
-      "ko": "다시 말하지만, 나는 실제로 이런 일을 할 수 없어, 고의로는.",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "B0bnsYzJqYk-8",
-      "en": "Talk to the chase, jackass.",
-      "ko": "본론으로 들어가, 바보야.",
-      "tags": {
-        "functions": [
-          "F35"
-        ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
           "X08"
@@ -214,14 +170,39 @@
       }
     },
     {
-      "id": "B0bnsYzJqYk-9",
-      "en": "Well, Kevin, would you close your eyes",
-      "ko": "케빈, 눈을 감고",
+      "id": "B0bnsYzJqYk-7",
+      "en": "Mind you, again, I'm not actually allowed to do any of this, not intentionally.",
+      "ko": "다시 말하지만, 나는 실제로 이런 일을 할 수 없어, 고의로는.",
       "tags": {
         "functions": [
-          "F06"
+          "F11"
         ],
-        "situation": "S36",
+        "situation": "S38",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V08",
+        "power": [],
+        "grammar_intent": [
+          "G21"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "B0bnsYzJqYk-8",
+      "en": "Talk to the chase, jackass.",
+      "ko": "본론으로 들어가, 바보야.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S38",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -230,9 +211,34 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "B0bnsYzJqYk-9",
+      "en": "Well, Kevin, would you close your eyes",
+      "ko": "케빈, 눈을 감고",
+      "tags": {
+        "functions": [
+          "F34"
+        ],
+        "situation": "S38",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V08",
+        "power": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -242,18 +248,18 @@
       "ko": "나와 함께 세상을 상상해줄래?",
       "tags": {
         "functions": [
-          "F14"
+          "F06"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,10 +271,10 @@
       "ko": "그건 아커 씨가",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -276,8 +282,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V08",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -288,10 +296,10 @@
       "ko": "그의 집과 함께 45,000달러를 받는 세상이야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -299,7 +307,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,19 +319,21 @@
       "ko": "그 돈은 그의 고통과 괴로움에 대한 보상이지.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S04",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V08",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -334,10 +344,10 @@
       "ko": "그리고 이 세상에서는 공개 사과도 포함돼.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -345,7 +355,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -357,18 +367,18 @@
       "ko": "그리고 원주율 사진작가인 올리비아 비츠이가",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -380,10 +390,10 @@
       "ko": "그녀의 사진 사용에 대해 20만 달러를 보상받는 세상을 상상해봐.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -391,7 +401,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -403,22 +413,25 @@
       "ko": "추가로 받는 것도 포함해서.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S38",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X03"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V08",
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "4b0b05e7647563e7"
 }

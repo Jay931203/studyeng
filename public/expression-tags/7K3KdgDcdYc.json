@@ -12,10 +12,10 @@
       "ko": "이야기의 정확한 세부사항은 논란이 있지만,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -23,8 +23,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V16",
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_narration"
@@ -37,19 +39,22 @@
       "ko": "소문에 따르면 그 알약은",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V16",
+        "power": [
+          "P01",
+          "P08"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_narration"
@@ -62,10 +67,10 @@
       "ko": "냉동고 코일에 얼어붙어 깨졌고,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -73,7 +78,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,10 +92,10 @@
       "ko": "CIA의 계획을 저지하며 카스트로에게 더 많은 시간을 주었다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -98,7 +103,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,10 +117,10 @@
       "ko": "단 것을 만족시키기 위해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -123,7 +128,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -137,10 +142,10 @@
       "ko": "아이스크림은 우리 세계 역사에서 독특한 역할을 해왔다,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -148,7 +153,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,10 +167,10 @@
       "ko": "문화와 갈망 속에서.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -173,11 +178,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_narration"
+          "is_narration",
+          "is_fragment"
         ]
       }
     },
@@ -190,15 +196,15 @@
           "F06"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -212,10 +218,10 @@
       "ko": "차가운 디저트와 얼음 음료에 대한 최초의 기록은",
       "tags": {
         "functions": [
-          "F01"
+          "F03"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -223,7 +229,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -237,10 +243,10 @@
       "ko": "1세기까지 거슬러 올라간다.",
       "tags": {
         "functions": [
-          "F01"
+          "F13"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -248,9 +254,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": [
           "is_narration"
         ]
@@ -265,7 +273,7 @@
           "F01"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -273,7 +281,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -287,10 +295,10 @@
       "ko": "이러한 얼음 간식은 주로 왕족 엘리트들이 즐겼다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -298,7 +306,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -312,10 +320,10 @@
       "ko": "이러한 진미를 얼릴 방법을 찾는 것은",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -323,7 +331,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -337,10 +345,10 @@
       "ko": "항상 쉬운 일이 아니었다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -348,7 +356,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -362,22 +370,25 @@
       "ko": "부유한 지중해 귀족들은",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S47",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R2",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G19"
+        ],
         "flags": [
-          "is_narration"
+          "is_narration",
+          "is_fragment"
         ]
       }
     },
@@ -389,8 +400,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
+        "situation": "S47",
+        "cefr": "A1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -398,7 +409,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -414,7 +425,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
+        "situation": "S47",
         "cefr": "A2",
         "register": "R2",
         "emotions": [
@@ -423,7 +434,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -439,7 +450,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
+        "situation": "S47",
         "cefr": "A2",
         "register": "R2",
         "emotions": [
@@ -448,7 +459,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -462,18 +473,18 @@
       "ko": "얕은 단열 수조를 만들어",
       "tags": {
         "functions": [
-          "F01"
+          "F03"
         ],
-        "situation": "S48",
+        "situation": "S47",
         "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -489,7 +500,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
+        "situation": "S47",
         "cefr": "A2",
         "register": "R2",
         "emotions": [
@@ -498,7 +509,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -514,7 +525,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
+        "situation": "S47",
         "cefr": "A2",
         "register": "R2",
         "emotions": [
@@ -523,7 +534,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -539,8 +550,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
+        "situation": "S47",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -548,7 +559,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -564,7 +575,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
+        "situation": "S47",
         "cefr": "A2",
         "register": "R2",
         "emotions": [
@@ -573,7 +584,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -589,7 +600,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S48",
+        "situation": "S47",
         "cefr": "A2",
         "register": "R2",
         "emotions": [
@@ -598,7 +609,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -606,5 +617,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "02477c6c27bb482e"
 }

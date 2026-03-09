@@ -12,38 +12,12 @@
       "ko": "즐거운 연휴야, 드와이트.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "Xnk4seEHmgw-1",
-      "en": "But do not open it until Christmas. You're so pathetic. How long did this take you? Three hours? Five minutes, actually.",
-      "ko": "하지만 크리스마스까지 열지 마. 너 정말 한심해. 이거 하는 데 얼마나 걸렸어? 3시간? 사실 5분이야.",
-      "tags": {
-        "functions": [
-          "F09",
-          "F12",
-          "F04"
-        ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E03",
           "E09"
         ],
         "expression_types": [
@@ -52,6 +26,33 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "Xnk4seEHmgw-1",
+      "en": "But do not open it until Christmas. You're so pathetic. How long did this take you? Three hours? Five minutes, actually.",
+      "ko": "하지만 크리스마스까지 열지 마. 너 정말 한심해. 이거 하는 데 얼마나 걸렸어? 3시간? 사실 5분이야.",
+      "tags": {
+        "functions": [
+          "F11"
+        ],
+        "situation": "S09",
+        "cefr": "B2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -61,14 +62,13 @@
       "ko": "나는 선물 포장에 검은 띠야. 그런 건 없어.",
       "tags": {
         "functions": [
-          "F09",
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -85,21 +85,23 @@
       "ko": "바보 같은 것에 검은 띠를 주지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -108,21 +110,25 @@
       "ko": "잘했길 바래, 왜냐하면 5분 후에 뜯어낼 거니까.",
       "tags": {
         "functions": [
-          "F09",
-          "F04"
+          "F63"
         ],
-        "situation": "S14",
-        "cefr": "B1",
+        "situation": "S09",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
-          "X08"
+          "X02"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P06"
+        ],
+        "grammar_intent": [
+          "G15",
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -132,21 +138,22 @@
       "ko": "그보다 조금 더 걸릴 거라고 생각해. 정말?",
       "tags": {
         "functions": [
-          "F09",
-          "F12"
+          "F09"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -156,10 +163,9 @@
       "ko": "내가 10분 안에 노루 가죽을 벗길 수 있다면,",
       "tags": {
         "functions": [
-          "F09",
-          "F04"
+          "F13"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -168,9 +174,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -180,32 +188,9 @@
       "ko": "이걸 자르는 건 문제없어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "Xnk4seEHmgw-8",
-      "en": "It's kind of blurry.",
-      "ko": "좀 흐릿해.",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -214,9 +199,37 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "Xnk4seEHmgw-8",
+      "en": "It's kind of blurry.",
+      "ko": "좀 흐릿해.",
+      "tags": {
+        "functions": [
+          "F52"
+        ],
+        "situation": "S09",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06",
+          "X07"
+        ],
+        "vibe": "V02",
+        "power": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -226,9 +239,9 @@
       "ko": "그게 더 낫다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -237,11 +250,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "580a6f63a7794cce"
 }

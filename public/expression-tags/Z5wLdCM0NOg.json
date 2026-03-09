@@ -14,8 +14,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,20 +35,22 @@
       "ko": "잠을 잘 못 자서.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -58,13 +60,13 @@
       "ko": "헬렌이 정말 그리워.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -83,18 +85,20 @@
         "functions": [
           "F14"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -104,9 +108,9 @@
       "ko": "어젯밤, 새벽 4시에",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -127,9 +131,9 @@
       "ko": "스페인어로 비버 가족을 봤어. buenos dias, Señor Cleaver.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -150,13 +154,13 @@
       "ko": "Wallace와 Theodore는 어디 있어? 몸이 안 좋아.",
       "tags": {
         "functions": [
-          "F03"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -173,9 +177,9 @@
       "ko": "어젯밤 7시 30분에 잤어.",
       "tags": {
         "functions": [
-          "F03"
+          "F52"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -196,9 +200,9 @@
       "ko": "3학년 이후로 그런 적이 없어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -219,11 +223,11 @@
       "ko": "우울증의 좋은 점이지.",
       "tags": {
         "functions": [
-          "F12"
+          "F52"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -242,18 +246,18 @@
       "ko": "푹 쉴 수 있어. 나는 우울하지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E07"
+          "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,10 +269,10 @@
       "ko": "알겠어, 좋아.",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -279,7 +283,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -290,8 +296,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -311,33 +317,10 @@
       "ko": "정말 좋네.",
       "tags": {
         "functions": [
-          "F15"
+          "F12"
         ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "Z5wLdCM0NOg-14",
-      "en": "I feel weird when just my leg wanders over.",
-      "ko": "다리 하나만 넘어가도 이상해.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S08",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -346,6 +329,31 @@
           "X08"
         ],
         "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "Z5wLdCM0NOg-14",
+      "en": "I feel weird when just my leg wanders over.",
+      "ko": "다리 하나만 넘어가도 이상해.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V11",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -389,7 +397,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -403,7 +411,30 @@
       "ko": "내가 그리워하는 게 뭔지 알아?",
       "tags": {
         "functions": [
-          "F06"
+          "F16"
+        ],
+        "situation": "S08",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "Z5wLdCM0NOg-18",
+      "en": "I miss the idea of him.",
+      "ko": "그의 존재가 그리워.",
+      "tags": {
+        "functions": [
+          "F16"
         ],
         "situation": "S08",
         "cefr": "A2",
@@ -421,48 +452,27 @@
       }
     },
     {
-      "id": "Z5wLdCM0NOg-18",
-      "en": "I miss the idea of him.",
-      "ko": "그의 존재가 그리워.",
-      "tags": {
-        "functions": [
-          "F16"
-        ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "Z5wLdCM0NOg-19",
       "en": "Maybe I only miss the idea, Helen.",
       "ko": "아마 나는 그 존재만 그리워하는 것 같아, 헬렌.",
       "tags": {
         "functions": [
-          "F16"
+          "F14"
         ],
         "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -475,19 +485,20 @@
           "F16"
         ],
         "situation": "S08",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "1f25f4c5a37ab135"
 }

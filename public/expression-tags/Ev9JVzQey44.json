@@ -12,20 +12,22 @@
       "ko": "집으로 돌아가고 싶고, 아내를 안아주고, 아이들을 보호하고, 딸을 지키고 싶어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
-        "situation": "S01",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -35,7 +37,7 @@
       "ko": "앞으로 나아가고 싶어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -44,11 +46,13 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -58,7 +62,7 @@
       "ko": "모두에게 사과하고 싶어요.",
       "tags": {
         "functions": [
-          "F28"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -71,7 +75,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -81,10 +87,10 @@
       "ko": "극장에 가고 싶어요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -94,7 +100,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -104,10 +112,10 @@
       "ko": "식기세척기에서 깨끗한 컵을 꺼내서 집의 찬장에 넣고 싶어요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S01",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -117,7 +125,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -127,20 +137,22 @@
       "ko": "그리고 다음 날, 아내가 그 컵에서 마시는 모습을 보고 싶어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S01",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -150,20 +162,22 @@
       "ko": "아내를 기분 좋게 해주고 싶어요.",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
-        "situation": "S01",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -173,22 +187,25 @@
       "ko": "다시 아내를 오르가즘에 이르게 하고 싶어요.",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
-        "situation": "S01",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "30a3521631244974"
 }

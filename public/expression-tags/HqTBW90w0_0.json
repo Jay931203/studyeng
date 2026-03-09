@@ -12,18 +12,18 @@
       "ko": "매혹적인 것들, 나를 기쁘게 해",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R5",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,11 +35,11 @@
       "ko": "너가 나에 대해 이야기하고 있다는 걸 알아",
       "tags": {
         "functions": [
-          "F06"
+          "F48"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
           "E07"
         ],
@@ -58,11 +58,113 @@
       "ko": "매혹적인 것들",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "HqTBW90w0_0-3",
+      "en": "Get beside me",
+      "ko": "내 곁에 와줘",
+      "tags": {
+        "functions": [
+          "F35"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "HqTBW90w0_0-4",
+      "en": "I want you to love me",
+      "ko": "나를 사랑해줬으면 해",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E11"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V02",
+        "power": [],
+        "grammar_intent": [
+          "G15"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "HqTBW90w0_0-5",
+      "en": "I'm surprised",
+      "ko": "놀라워",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E05"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V11",
+        "power": [],
+        "grammar_intent": [
+          "G07"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "HqTBW90w0_0-6",
+      "en": "You've got eyes of gold",
+      "ko": "너의 눈은 금빛이야",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -76,115 +178,23 @@
       }
     },
     {
-      "id": "HqTBW90w0_0-3",
-      "en": "Get beside me",
-      "ko": "내 곁에 와줘",
-      "tags": {
-        "functions": [
-          "F38"
-        ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R5",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "HqTBW90w0_0-4",
-      "en": "I want you to love me",
-      "ko": "나를 사랑해줬으면 해",
-      "tags": {
-        "functions": [
-          "F41"
-        ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R5",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "HqTBW90w0_0-5",
-      "en": "I'm surprised",
-      "ko": "놀라워",
-      "tags": {
-        "functions": [
-          "F18"
-        ],
-        "situation": "S08",
-        "cefr": "A2",
-        "register": "R5",
-        "emotions": [
-          "E05"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "HqTBW90w0_0-6",
-      "en": "You've got eyes of gold",
-      "ko": "너의 눈은 금빛이야",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R5",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "HqTBW90w0_0-7",
       "en": "That you love me And you're perfect",
       "ko": "네가 나를 사랑하고 완벽하다는 것",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,11 +206,11 @@
       "ko": "누군가 너를 원한다면",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R5",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -219,21 +229,25 @@
       "ko": "놀라워",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
           "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G07"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -242,21 +256,25 @@
       "ko": "놀라워",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
           "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G07"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,18 +283,18 @@
       "ko": "너의 눈은 금빛이야",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R5",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,18 +306,18 @@
       "ko": "네가 나를 사랑하고 완벽하다는 것",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,11 +329,11 @@
       "ko": "누군가 너를 원한다면",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R5",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -334,22 +352,27 @@
       "ko": "놀라워",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
           "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G07"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "d3ddb87b8c63ca0d"
 }

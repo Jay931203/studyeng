@@ -5,30 +5,23 @@
   "seriesId": "rnb-hits",
   "sentenceCount": 2,
   "taggedCount": 2,
+  "transcriptHash": "da1ef6747822cc45",
   "sentences": [
     {
       "id": "2Vv-BfVoq4g-0",
       "en": "Are you still there? If so, we'd like to thank you for joining us in today's drive.",
       "ko": "아직 계신가요? 그렇다면 오늘 드라이브에 함께해 주셔서 감사합니다.",
       "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S06",
+        "functions": ["F06", "F27"],
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "register": "R3",
+        "emotions": ["E09"],
+        "expression_types": ["X04"],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": ["is_narration"]
       }
     },
     {
@@ -36,24 +29,16 @@
       "en": "We are turning left to Park Road",
       "ko": "파크 로드로 좌회전합니다.",
       "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S06",
+        "functions": ["F05"],
+        "situation": "S50",
         "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "register": "R3",
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
+        "flags": ["is_narration"]
       }
     }
   ]

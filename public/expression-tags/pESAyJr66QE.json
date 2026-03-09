@@ -12,19 +12,21 @@
       "ko": "이제 당신이 나와 소니 사이의 평화를 만들어야 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S38",
+        "cefr": "C1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X02"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V08",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -35,18 +37,18 @@
       "ko": "소니는 내 거래에 관심이 많았지, 그치?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +60,18 @@
       "ko": "그리고 당신은 그게 옳은 일이라는 걸 알았어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +83,18 @@
       "ko": "소니는 모든 걸 걸고 당신을 쫓아올 거야.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,18 +106,18 @@
       "ko": "그게 그의 첫 반응일 거야, 확실히.",
       "tags": {
         "functions": [
-          "F09"
+          "F03"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,20 +129,24 @@
       "ko": "그래서 그에게 이성을 좀 이야기해야 해.",
       "tags": {
         "functions": [
-          "F36"
+          "F04"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V08",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -150,21 +156,23 @@
       "ko": "타탈리아 가족이 나를 지지하고 있어, 그들의 모든 사람과 함께.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S10",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -173,21 +181,23 @@
       "ko": "다른 뉴욕 가족들도 전면전만 막을 수 있다면 뭐든지 따라갈 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S38",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -196,20 +206,22 @@
       "ko": "솔직히 말해, 톰, 존경을 표하지만.",
       "tags": {
         "functions": [
-          "F09"
+          "F36"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -219,21 +231,23 @@
       "ko": "고인의 돈은 기력이 떨어졌었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S41",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -242,18 +256,18 @@
       "ko": "10년 전, 그에게 접근할 수 있었을까?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S38",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V08",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,18 +279,18 @@
       "ko": "이제 그는 죽었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F16"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,22 +302,23 @@
       "ko": "그는 죽었어, 톰, 그리고 그를 되돌릴 수는 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F16"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S38",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "20d60b6507ec108d"
 }

@@ -12,10 +12,10 @@
       "ko": "그리고 액션.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,10 +23,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,7 +37,7 @@
       "ko": "♪♪",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -46,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -60,10 +62,10 @@
       "ko": "헤이, 로비.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,10 +73,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -86,16 +90,18 @@
           "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -109,7 +115,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -117,7 +123,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -140,7 +146,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,10 +158,11 @@
       "ko": "할 일이 좀 있었어. 봐, 로비, 너 잘하고 있어. 무슨 일이야?",
       "tags": {
         "functions": [
-          "F09"
+          "F25",
+          "F57"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -163,7 +170,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,19 +182,21 @@
       "ko": "오늘 너에게 장학금을 주려고 스카우트들이 줄 서 있을 거야.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -198,19 +207,21 @@
       "ko": "그걸 다 포기할 거야?",
       "tags": {
         "functions": [
-          "F43"
+          "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -221,7 +232,32 @@
       "ko": "너 이제 내 아빠냐? 미안, 얘들아, 집중해.",
       "tags": {
         "functions": [
-          "F11"
+          "F28"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "IUjf1lVOGOo-10",
+      "en": "Hey, basketball players? What's up?",
+      "ko": "야, 농구 선수들? 뭐해?",
+      "tags": {
+        "functions": [
+          "F25"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -232,30 +268,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "IUjf1lVOGOo-10",
-      "en": "Hey, basketball players? What's up?",
-      "ko": "야, 농구 선수들? 뭐해?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S34",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,18 +280,19 @@
       "ko": "지금 그냥 서로 패스만 하고 있어. 좀 이상해 보여.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -290,20 +304,26 @@
       "ko": "농구를 해, 알겠지?",
       "tags": {
         "functions": [
-          "F09"
+          "F06",
+          "F50",
+          "F51"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -313,20 +333,25 @@
       "ko": "드리블하고, 패스하고, 플레이 좀 해봐, 알겠어? 알겠어, 고마워. 미안, 얘들아. 처음부터 다시 할게.",
       "tags": {
         "functions": [
-          "F36"
+          "F27",
+          "F28"
         ],
         "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -334,52 +359,6 @@
       "id": "IUjf1lVOGOo-14",
       "en": "And action.",
       "ko": "그리고 액션.",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S34",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "IUjf1lVOGOo-15",
-      "en": "Coach Stan, what are you doing here?",
-      "ko": "스탠 코치, 여기서 뭐하세요?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "IUjf1lVOGOo-16",
-      "en": "I came to see if everything was okay. We missed your tryouts today.",
-      "ko": "모든 게 괜찮은지 보러 왔어. 오늘 너의 트라이아웃을 놓쳤어.",
       "tags": {
         "functions": [
           "F01"
@@ -393,7 +372,57 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "IUjf1lVOGOo-15",
+      "en": "Coach Stan, what are you doing here?",
+      "ko": "스탠 코치, 여기서 뭐하세요?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "IUjf1lVOGOo-16",
+      "en": "I came to see if everything was okay. We missed your tryouts today.",
+      "ko": "모든 게 괜찮은지 보러 왔어. 오늘 너의 트라이아웃을 놓쳤어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -405,18 +434,20 @@
       "ko": "응, 나... 할 일이 좀 있었어.",
       "tags": {
         "functions": [
-          "F02"
+          "F07",
+          "F52",
+          "F57"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -428,7 +459,7 @@
       "ko": "봐, 로비, 너 잘하고 있어. 무슨 일이야?",
       "tags": {
         "functions": [
-          "F02"
+          "F25"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -439,7 +470,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -451,22 +482,25 @@
       "ko": "오늘 너에게 장학금을 주려고 스카우트들이 줄 서 있을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V13",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "36a34a4e0c48616e"
 }

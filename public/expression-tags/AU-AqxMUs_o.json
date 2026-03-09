@@ -14,8 +14,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,10 +35,10 @@
       "ko": "저를 보호하고 있다고 생각해요?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,10 +58,10 @@
       "ko": "저를 들어가게 해줄 건가요?",
       "tags": {
         "functions": [
-          "F46"
+          "F34"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,7 +71,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -83,53 +85,7 @@
         "functions": [
           "F11"
         ],
-        "situation": "S39",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "AU-AqxMUs_o-4",
-      "en": "If I wanted to kill you, do you think I'd let a wooden door stop me?",
-      "ko": "제가 당신을 죽이고 싶다면, 나무 문이 저를 막을 거라고 생각하나요?",
-      "tags": {
-        "functions": [
-          "F14"
-        ],
-        "situation": "S39",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "AU-AqxMUs_o-5",
-      "en": "Please stay outside.",
-      "ko": "제발 밖에 있어 주세요.",
-      "tags": {
-        "functions": [
-          "F35"
-        ],
-        "situation": "S39",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -140,8 +96,62 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
+      }
+    },
+    {
+      "id": "AU-AqxMUs_o-4",
+      "en": "If I wanted to kill you, do you think I'd let a wooden door stop me?",
+      "ko": "제가 당신을 죽이고 싶다면, 나무 문이 저를 막을 거라고 생각하나요?",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S44",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G15"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "AU-AqxMUs_o-5",
+      "en": "Please stay outside.",
+      "ko": "제발 밖에 있어 주세요.",
+      "tags": {
+        "functions": [
+          "F34"
+        ],
+        "situation": "S44",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E13"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G02"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,18 +160,18 @@
       "ko": "저는 당신이 무섭지 않아요, 동생.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S44",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E04"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,9 +183,9 @@
       "ko": "왜 여기 왔어요? 당신 얼굴을 보고 싶었어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F32"
         ],
-        "situation": "S39",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -186,7 +196,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15",
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -196,10 +209,10 @@
       "ko": "그들이 당신이 코를 잃었다고 했지만, 그렇게 끔찍하진 않네요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -219,10 +232,10 @@
       "ko": "저를 베었던 남자는 코보다 더 많은 것을 잃었어요.",
       "tags": {
         "functions": [
-          "F12"
+          "F13"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -232,7 +245,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -242,10 +257,10 @@
       "ko": "그렇게 되길 바래요.",
       "tags": {
         "functions": [
-          "F24"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S44",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,10 +280,10 @@
       "ko": "반란군은 조프리의 목을 가지러 왔고, 아버지 덕분에 그들은 자신의 목을 잃었어요. 아버지 덕분에.",
       "tags": {
         "functions": [
-          "F05"
+          "F27"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S44",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -282,5 +297,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "437ef5f1d3553578"
 }

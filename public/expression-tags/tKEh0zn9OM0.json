@@ -12,19 +12,23 @@
       "ko": "그녀는 어떤 변호사가 필요할 거예요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05",
+          "X07"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -35,13 +39,13 @@
       "ko": "J. 미첼은 지금 너무 지쳐 있어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -58,10 +62,10 @@
       "ko": "그는 정말로 휴식이 필요해요.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E15"
@@ -83,7 +87,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -104,20 +108,23 @@
       "ko": "글로리아가 정말 그런 여자처럼 보이나요?",
       "tags": {
         "functions": [
-          "F04"
+          "F45",
+          "F50"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -127,18 +134,18 @@
       "ko": "네, 그녀와 함께 가는 게 좋겠어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S36",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,16 +157,17 @@
       "ko": "가는 게 좋겠어요. 네. 음, 긴장하지 마세요. 제가 상황을 설명할게요. 금방 나갈 수 있을 거예요.",
       "tags": {
         "functions": [
-          "F34"
+          "F07",
+          "F53"
         ],
-        "situation": "S36",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -173,10 +181,11 @@
       "ko": "카운티 교도소에서 30일. 오! 뭐라고? 우와, 그녀는 강인하네요.",
       "tags": {
         "functions": [
-          "F31"
+          "F19",
+          "F37"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -186,7 +195,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -196,13 +207,13 @@
       "ko": "다음은 아니타 멘차카, 경범죄 절도입니다. 보세요?",
       "tags": {
         "functions": [
-          "F18"
+          "F21"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -219,9 +230,9 @@
       "ko": "선생님, 당신은 변호사예요. 제발 도와주세요.",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S36",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -230,7 +241,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V15",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,18 +255,20 @@
         "functions": [
           "F34"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -265,9 +278,9 @@
       "ko": "제가 그녀를 도와서 이 일이 빨리 진행되도록 할게요.",
       "tags": {
         "functions": [
-          "F34"
+          "F28"
         ],
-        "situation": "S36",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -277,8 +290,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -288,10 +305,10 @@
       "ko": "그녀는 제 아부엘라를 생각나게 해요.",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -311,9 +328,9 @@
       "ko": "머리에 스카프를 쓰고 경범죄로 기소된 모습이요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -336,8 +353,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -345,7 +362,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V15",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -357,9 +374,9 @@
       "ko": "저는 미첼 프리쳇, 멘차카 양의 변호사입니다. 멘차카. 어떻게 지내세요? 유죄를 인정할 준비가 되셨나요? 물론입니다.",
       "tags": {
         "functions": [
-          "F26"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R2",
         "emotions": [
@@ -371,7 +388,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -380,12 +399,13 @@
       "ko": "이 사건이 법원의 소중한 시간을 더 이상 빼앗아서는 안 된다고 생각합니다.",
       "tags": {
         "functions": [
-          "F26",
-          "F06"
+          "F25",
+          "F10",
+          "F33"
         ],
-        "situation": "S36",
-        "cefr": "A2",
-        "register": "R2",
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -393,8 +413,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G16",
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -406,9 +431,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
+        "situation": "S09",
         "cefr": "A2",
-        "register": "R2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -429,14 +454,14 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
-        "register": "R2",
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -450,9 +475,9 @@
       "ko": "잠시 필요해요.",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R2",
         "emotions": [
@@ -475,7 +500,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -487,7 +512,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -496,19 +523,21 @@
       "ko": "잠깐 시간이 필요해요.",
       "tags": {
         "functions": [
-          "F52"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S09",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -519,10 +548,10 @@
       "ko": "재판장님, 함께 일하게 되어 영광이었습니다.",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -536,5 +565,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "50f4d2dff9ef6bc3"
 }

@@ -12,20 +12,25 @@
       "ko": "보세요, 제가 이야기하고 싶었던 신사님이 거기로 들어가는 걸 봤다고 생각했어요. 그 바에 가본 적은 없었거든요.",
       "tags": {
         "functions": [
-          "F02"
+          "F21",
+          "F24",
+          "F43"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -35,16 +40,16 @@
       "ko": "그런데 어떻게 바텐더의 이름을 알고 있었죠?",
       "tags": {
         "functions": [
-          "F06"
+          "F23"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -60,7 +65,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -81,10 +86,10 @@
       "ko": "그건 제 반바지가 아니에요. 스쿼시를 하고 친구에게 빌린 거예요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,9 +97,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G14"
+        ],
         "flags": []
       }
     },
@@ -104,10 +111,10 @@
       "ko": "그 친구는 엉덩이가 얇아요.",
       "tags": {
         "functions": [
-          "F02"
+          "F06"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -118,7 +125,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -127,18 +136,18 @@
       "ko": "네, 당신이 데려온 그 긴장한 남자처럼요.",
       "tags": {
         "functions": [
-          "F09"
+          "F19"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,9 +159,9 @@
       "ko": "자, 저는 아무도 데려오지 않았어요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -175,8 +184,8 @@
         "functions": [
           "F04"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -186,7 +195,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -196,9 +207,9 @@
       "ko": "체육관에서 집으로 가는 길에, 화장실에 있을 거라고 기대하며 배드 빌리의 바에 들렀어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -219,10 +230,10 @@
       "ko": "프랑스 폴리셔와 간단히 셰리를 마시고 나서 떠났어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,7 +241,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,10 +253,10 @@
       "ko": "다른 남자의 반바지에 어떻게 들어갔는지는 아무의 상관이 아니에요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,11 +276,11 @@
       "ko": "방송이 끝났습니다. 오, 신이시여.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -282,5 +293,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "0be34419ed54f1f0"
 }

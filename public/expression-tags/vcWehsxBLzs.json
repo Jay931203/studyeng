@@ -15,7 +15,7 @@
           "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,10 +35,10 @@
       "ko": "SNL에서 했어, 그래, 코난 흉내 잘 내. 정말 잘해.",
       "tags": {
         "functions": [
-          "F01"
+          "F07"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,10 +58,12 @@
       "ko": "맹세코, 코난 흉내 내는 사람은 처음 들어봐. 정말? 쉬워.",
       "tags": {
         "functions": [
-          "F18"
+          "F18",
+          "F41",
+          "F43"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,7 +73,10 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -81,10 +86,10 @@
       "ko": "코난 흉내 내는 건 정말 쉬워.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,7 +109,8 @@
       "ko": "응, 쉬워.",
       "tags": {
         "functions": [
-          "F01"
+          "F07",
+          "F53"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -118,7 +124,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -127,18 +135,18 @@
       "ko": "코난은 약간 이렇게, 그리고 이렇게, 오, 이런 식으로 해.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V10",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,10 +158,10 @@
       "ko": "안녕하세요, 저는 코난 오브라이언입니다. 그게 다야. 그게 다야.",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -176,7 +184,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,10 +204,11 @@
       "ko": "코난 오브라이언. 소름 끼쳐. 정말 소름 끼쳐. 그래, 너랑 똑같지? 응, 응.",
       "tags": {
         "functions": [
-          "F18"
+          "F07",
+          "F13"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,7 +218,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -219,10 +230,11 @@
       "ko": "너가 먹는 방식처럼, 그냥 이렇게. 느리게 먹는 게 그거 아니야?",
       "tags": {
         "functions": [
-          "F12"
+          "F06",
+          "F13"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -232,7 +244,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -242,10 +256,10 @@
       "ko": "나는 느리게 먹지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,11 +279,11 @@
       "ko": "그건 다 틀렸어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -288,10 +302,10 @@
       "ko": "그는 음식을 통째로 넣고 그냥 오, 오, 오 해.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -311,10 +325,10 @@
       "ko": "응, 그는 그냥 그렇게 해. 펠리컨처럼. 응, 그게 나야.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -328,5 +342,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d156eaec28e23deb"
 }

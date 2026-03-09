@@ -12,23 +12,22 @@
       "ko": "아니, 음, 아직 생각 중이야.",
       "tags": {
         "functions": [
-          "F50"
+          "F21",
+          "F52"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,10 +36,10 @@
       "ko": "생각 중이라고? 응.",
       "tags": {
         "functions": [
-          "F51"
+          "F21"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,16 +59,16 @@
       "ko": "그만둬, 신경 쓰지 마.",
       "tags": {
         "functions": [
-          "F43"
+          "F06"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -83,13 +82,13 @@
       "ko": "내가 너를 화나게 한 것 같으니, 제안은 취소야.",
       "tags": {
         "functions": [
-          "F20"
+          "F02"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -108,11 +107,11 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -129,18 +128,18 @@
       "ko": "이건 좀 이상해, 하워드.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -154,8 +153,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -163,7 +162,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,10 +174,10 @@
       "ko": "남자에게 일자리를 제안하고 그 대가로 볼링공이 차에 던져지는 게 이상해.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -186,7 +185,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,10 +197,10 @@
       "ko": "그리고 사업 점심에 매춘부가 오는 것도 이상해.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,7 +208,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,10 +220,10 @@
       "ko": "너 자신을 들어봐.",
       "tags": {
         "functions": [
-          "F51"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -244,10 +243,10 @@
       "ko": "요즘 네가 뭘 좋아하는지 모르겠지만, 매춘부와 볼링공은 좀 그렇네.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -256,10 +255,15 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "74e70bacd066b7fd"
 }

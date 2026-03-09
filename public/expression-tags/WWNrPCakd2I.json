@@ -12,13 +12,13 @@
       "ko": "이번 주, 여러분 각자에게 숙제가 있습니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F23"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S19",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -35,19 +35,22 @@
       "ko": "나가서 싸움을 시작할 거예요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S19",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -58,10 +61,10 @@
       "ko": "전력을 다해 싸울 거예요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S19",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,19 +84,21 @@
       "ko": "싸움을 시작하고, 질 거예요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S19",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -104,11 +109,11 @@
       "ko": "♪♪",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S19",
         "cefr": "A1",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -119,7 +124,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -129,20 +134,24 @@
       "ko": "이봐, 조심해, 바보야, 어서!",
       "tags": {
         "functions": [
-          "F40"
+          "F21",
+          "F40",
+          "F45"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S19",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -152,11 +161,11 @@
       "ko": "이건 생각보다 쉽지 않아요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S19",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -175,11 +184,11 @@
       "ko": "♪♪",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S19",
         "cefr": "A1",
-        "register": "R5",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -190,7 +199,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -200,11 +209,11 @@
       "ko": "대부분의 사람들, 정상적인 사람들은 싸움을 피하기 위해 뭐든지 할 거예요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S19",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -223,9 +232,9 @@
       "ko": "실례합니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S44",
+        "situation": "S19",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -235,9 +244,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -246,10 +259,10 @@
       "ko": "옷을 여기로 펼쳐주세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S19",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -269,10 +282,10 @@
       "ko": "그건 필요 없어요.",
       "tags": {
         "functions": [
-          "F43"
+          "F08"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S19",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -283,7 +296,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -292,10 +307,10 @@
       "ko": "그걸 잡지 마세요!",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S19",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -315,34 +330,9 @@
       "ko": "♪♪",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "A1",
-        "register": "R5",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "WWNrPCakd2I-14",
-      "en": "Stop!",
-      "ko": "멈춰!",
-      "tags": {
-        "functions": [
-          "F35"
-        ],
-        "situation": "S44",
+        "situation": "S19",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -354,7 +344,34 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "WWNrPCakd2I-14",
+      "en": "Stop!",
+      "ko": "멈춰!",
+      "tags": {
+        "functions": [
+          "F15"
+        ],
+        "situation": "S19",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -365,7 +382,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S19",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -378,7 +395,7 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     },
@@ -390,19 +407,23 @@
         "functions": [
           "F28"
         ],
-        "situation": "S44",
+        "situation": "S19",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -413,7 +434,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S44",
+        "situation": "S19",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -426,9 +447,10 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "0b0c35f650f7d459"
 }

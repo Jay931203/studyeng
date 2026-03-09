@@ -12,10 +12,10 @@
       "ko": "이거 기억하는지 모르겠지만, 우리는 전에 만났었어.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S35",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,9 +23,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -35,9 +39,9 @@
       "ko": "아, 기억해.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S35",
+        "situation": "S34",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -46,10 +50,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,18 +64,18 @@
       "ko": "이거 기억해? 나한테 정말 민망했어. 맞아? 그랬어?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S35",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V04",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,10 +87,10 @@
       "ko": "응. 그 이후로 널 본 적이 없어. 맞지?",
       "tags": {
         "functions": [
-          "F07"
+          "F06"
         ],
-        "situation": "S35",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,7 +98,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,7 +112,7 @@
         "functions": [
           "F07"
         ],
-        "situation": "S35",
+        "situation": "S34",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -115,7 +121,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,9 +133,10 @@
       "ko": "하지만 이건 몇 년 전 일이야. 내 이야기를 해줄까?",
       "tags": {
         "functions": [
-          "F04"
+          "F39",
+          "F03"
         ],
-        "situation": "S35",
+        "situation": "S34",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -138,7 +145,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,10 +157,11 @@
       "ko": "응, 네 이야기를 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F53"
         ],
-        "situation": "S35",
-        "cefr": "A1",
+        "situation": "S34",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -161,7 +169,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,18 +181,18 @@
       "ko": "나는 뉴욕 시에서 거리를 걷고 있어.",
       "tags": {
         "functions": [
-          "F02"
+          "F23"
         ],
-        "situation": "S35",
-        "cefr": "A1",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,19 +204,21 @@
       "ko": "응. 내 친구 릭이 전화해서, \"야, 뭐 하고 있어?\"라고 해. 나는 \"그냥 거리를 걷고 있어.\"라고 말해.",
       "tags": {
         "functions": [
-          "F03"
+          "F07"
         ],
-        "situation": "S35",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S34",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V02",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -219,10 +229,10 @@
       "ko": "그는 \"내가 니콜 키드먼과 함께 있어.\"라고 해.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S35",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,7 +240,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,20 +252,23 @@
       "ko": "\"그녀가 너를 만나고 싶대. 아마 '비위치드'에 출연할 수도 있어.\"라고 말해.",
       "tags": {
         "functions": [
-          "F03"
+          "F23",
+          "F14"
         ],
-        "situation": "S35",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -265,10 +278,10 @@
       "ko": "그래서 나는 \"뭐? 알겠어.\"라고 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S35",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -276,7 +289,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,10 +301,10 @@
       "ko": "그녀가 \"10분 안에 너의 아파트에 도착할 수 있어.\"라고 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S35",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -299,7 +312,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,10 +324,10 @@
       "ko": "나는 \"니콜 키드먼을 내 아파트로 데려온다고?\"라고 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S35",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -322,7 +335,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,20 +347,24 @@
       "ko": "나는 \"알겠어, 모르겠어.\"라고 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S35",
+        "situation": "S34",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -360,7 +377,7 @@
           "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -368,12 +385,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V11",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": []
       }
     },
     {
@@ -382,10 +401,10 @@
       "ko": "\"그냥 치즈와 크래커 같은 거 좀 준비해.\"라고 해.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -393,7 +412,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V11",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -405,18 +424,18 @@
       "ko": "나는 \"치즈와 크래커? 그런 거 말하지 마.\"라고 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V11",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -431,7 +450,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -439,7 +458,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V11",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -454,15 +473,15 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V11",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -474,30 +493,7 @@
       "ko": "정말 그래.",
       "tags": {
         "functions": [
-          "F01"
-        ],
-        "situation": "S34",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V11",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "qtsNbxgPngA-21",
-      "en": "So I go and I go, there's a deli and I go in the deli. I go, what?",
-      "ko": "그래서 나는 델리에 가서 들어가서, \"뭐라고?\"라고 해.",
-      "tags": {
-        "functions": [
-          "F03"
+          "F50"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -508,11 +504,37 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V11",
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "qtsNbxgPngA-21",
+      "en": "So I go and I go, there's a deli and I go in the deli. I go, what?",
+      "ko": "그래서 나는 델리에 가서 들어가서, \"뭐라고?\"라고 해.",
+      "tags": {
+        "functions": [
+          "F06"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "50e32546cd4f4900"
 }

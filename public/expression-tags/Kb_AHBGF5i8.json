@@ -12,13 +12,14 @@
       "ko": "내가 가장 좋아하는 30 Rock 농담은, 30 Rock을 정말 좋아하지만, 그들이 회상하는 최고의 농담이다.",
       "tags": {
         "functions": [
-          "F09"
+          "F22"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11",
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -35,7 +36,7 @@
       "ko": "그들이 말하길, 제안은 Sling Blade와 Oprah Winfrey이다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -58,7 +59,7 @@
       "ko": "관객의 제안은 Sling Blade와 데이트 중인 Oprah이다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -81,20 +82,22 @@
       "ko": "나는 그 프렌치 프라이 감자를 정말 좋아해. 아니, 너는 그렇지 않아, Oprah.",
       "tags": {
         "functions": [
-          "F09"
+          "F40"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -104,18 +107,18 @@
       "ko": "너무 웃겨, 이게 내가 가장 좋아하는 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -130,7 +133,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,13 +153,13 @@
       "ko": "이것이 30 Rock의 최고의 농담이라고 생각하며, 그럴 만한 이유가 있다.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -173,13 +176,13 @@
       "ko": "이 농담을 특별하게 만드는 무언가가 있다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -196,7 +199,7 @@
       "ko": "Tina Fey와 30 Rock의 다른 작가들은",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -219,7 +222,7 @@
       "ko": "이 하나의 펀치라인에 세 겹의 농담을 쓸 수 있었다. 너는 모두 캐치했니?",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -242,18 +245,18 @@
       "ko": "나는 처음 봤을 때도, 심지어 두 번째 봤을 때도 전혀 못 잡았다. 그래서 분석해보자.",
       "tags": {
         "functions": [
-          "F04"
+          "F10"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,10 +268,10 @@
       "ko": "먼저, 아주 간단한 배경 설명.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,7 +291,7 @@
       "ko": "Sling Blade가 누구인지 모르는 사람을 위해,",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -311,10 +314,10 @@
       "ko": "지금은 약간 구식의 언급이기 때문이다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -357,7 +360,7 @@
       "ko": "나는 그 프렌치 프라이 감자를 좋아해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -366,7 +369,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -374,5 +377,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "50ed10a8c718daae"
 }

@@ -12,19 +12,22 @@
       "ko": "아무도 나와 사귀고 싶어하지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -35,19 +38,18 @@
       "ko": "누구한테 물어봤어? 아니, 하지만 누가 나와 사귀겠어? 나는 좋은 능력도 없어.",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F06"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S15",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -61,16 +63,17 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
-        "cefr": "A1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X04",
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -82,18 +85,18 @@
       "ko": "쌍절곤 기술, 활 사냥 기술, 컴퓨터 해킹 기술.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S15",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -105,22 +108,23 @@
       "ko": "여자들은 뛰어난 능력을 가진 남자친구만 원해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S15",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "2a1c017c906f6a78"
 }

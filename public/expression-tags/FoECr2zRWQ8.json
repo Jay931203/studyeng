@@ -14,7 +14,7 @@
         "functions": [
           "F27"
         ],
-        "situation": "S50",
+        "situation": "S41",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -35,16 +35,16 @@
       "ko": "사실, 너를 한동안 팔로우해왔어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S41",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -58,9 +58,9 @@
       "ko": "웃어봐.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S41",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -72,7 +72,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,10 +83,10 @@
       "ko": "치대 학생이라면 이해가 가네.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S41",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,10 +106,10 @@
       "ko": "너는 천체물리학 전공이지? 응.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S41",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,16 +129,16 @@
       "ko": "그러면 너가 똑똑한 거네. 응, 그런 것 같아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S41",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -152,8 +154,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S41",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,16 +175,16 @@
       "ko": "응. 그리고, 음, 노래도 써.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S41",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -196,16 +198,16 @@
       "ko": "너에게 흥미로울 수도 있어. 그냥 재미로 하는 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S41",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -221,7 +223,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S41",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -244,8 +246,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S41",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,16 +267,16 @@
       "ko": "그럼 새로운 사람이 필요하겠네.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S41",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -288,10 +290,10 @@
       "ko": "아이디어 있어?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S41",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -302,7 +304,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -311,10 +315,10 @@
       "ko": "나 어때?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S41",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -334,16 +338,16 @@
       "ko": "음, 그 이빨로는 안 돼, 친구.",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S41",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -359,8 +363,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S41",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -374,5 +378,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "21f44fdd81524d63"
 }

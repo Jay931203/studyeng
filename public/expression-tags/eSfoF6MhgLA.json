@@ -15,7 +15,7 @@
           "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,12 +23,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,20 +35,23 @@
       "ko": "음, 우리가 처음 사귈 때는 어땠지,",
       "tags": {
         "functions": [
-          "F50"
+          "F36",
+          "F52"
         ],
         "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -60,20 +61,22 @@
       "ko": "나는 털이 많아서 정말 신경 쓰였어.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -86,7 +89,7 @@
           "F08"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -94,7 +97,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,7 +109,8 @@
       "ko": "음, 그래, 아니, 하지만 나는 정말,",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F52"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -117,7 +121,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -132,7 +136,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -140,7 +144,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,19 +156,21 @@
       "ko": "그래서 항상 그게 신경 쓰였어. 고마워.",
       "tags": {
         "functions": [
-          "F16"
+          "F27"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -175,10 +181,10 @@
       "ko": "네가 그걸 좋아한다고 말했던 게 기억나,",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -186,7 +192,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,10 +204,10 @@
       "ko": "그게 내가 더 많은,",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -209,9 +215,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -224,7 +232,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -232,7 +240,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,20 +252,22 @@
       "ko": "그래서 내가 섹스를 좋아한다고. 나는 로맨틱해, 그게 일부야.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -267,7 +277,33 @@
       "ko": "오늘 생각해봤는데, 그걸 생각해본 적이 없었어. 오늘 생각해봤어. 그리고 네가 좋아할 만한 게 뭐냐면? 뭐?",
       "tags": {
         "functions": [
-          "F06"
+          "F21",
+          "F04"
+        ],
+        "situation": "S34",
+        "cefr": "B2",
+        "register": "R5",
+        "emotions": [
+          "E11"
+        ],
+        "expression_types": [
+          "X04"
+        ],
+        "vibe": "V02",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "eSfoF6MhgLA-12",
+      "en": "Men. Really?",
+      "ko": "남자들. 정말?",
+      "tags": {
+        "functions": [
+          "F18"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -278,33 +314,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "eSfoF6MhgLA-12",
-      "en": "Men. Really?",
-      "ko": "남자들. 정말?",
-      "tags": {
-        "functions": [
-          "F09"
+        "grammar_intent": [
+          "G07"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E05"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -316,15 +333,15 @@
           "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -336,10 +353,10 @@
       "ko": "지금 그 놀라움이 생각나서, 미안해. 뭐?",
       "tags": {
         "functions": [
-          "F03"
+          "F28"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -347,9 +364,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -359,10 +380,10 @@
       "ko": "그 놀라움이 생각나서, 나는 그냥.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -370,13 +391,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "6eab94178fc0190d"
 }

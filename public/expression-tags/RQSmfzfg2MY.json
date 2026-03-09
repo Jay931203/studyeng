@@ -12,19 +12,21 @@
       "ko": "거기 내려가게 하지 마, 그렇지 않으면 네 머리를 때릴 거야!",
       "tags": {
         "functions": [
-          "F40"
+          "F42"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S37",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E12"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V12",
-        "power": [],
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -37,9 +39,9 @@
         "functions": [
           "F17"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S37",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
@@ -48,7 +50,9 @@
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -60,9 +64,9 @@
       "ko": "나는 일정을 지켜야 해!",
       "tags": {
         "functions": [
-          "F01"
+          "F03"
         ],
-        "situation": "S50",
+        "situation": "S37",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -71,7 +75,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,20 +87,24 @@
       "ko": "너는 아프거나 죽어 있어야 해, 농담 아니야!",
       "tags": {
         "functions": [
-          "F19"
+          "F17"
         ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S37",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V06",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -110,16 +118,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S37",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -133,18 +141,20 @@
         "functions": [
           "F18"
         ],
-        "situation": "S50",
+        "situation": "S37",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -154,21 +164,23 @@
       "ko": "오, 세상에.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S37",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -177,10 +189,10 @@
       "ko": "이 감방의 모든 남자를 심문해야 해.",
       "tags": {
         "functions": [
-          "F34"
+          "F09"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -188,9 +200,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -200,18 +214,18 @@
       "ko": "그의 친구부터 시작해. 누구?",
       "tags": {
         "functions": [
-          "F50"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S37",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -225,7 +239,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S37",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -234,10 +248,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -246,10 +262,10 @@
       "ko": "2-3-7 열어.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S37",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -257,10 +273,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -271,16 +289,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S37",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -292,13 +310,13 @@
       "ko": "그런 말 하지 마, 행크. 다시는 그런 말 하지 마.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S37",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -309,5 +327,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "f40a50279794c3e4"
 }

@@ -12,20 +12,22 @@
       "ko": "불빛을 보고, 파티를 보고, 드레스를 보고 사람들이 사이로 너를 찾아가",
       "tags": {
         "functions": [
-          "F02"
+          "F32"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -37,18 +39,18 @@
       "ko": "안녕이라고 말했지, 내가 몰랐던 것처럼 너는 로미오였고, 조약돌을 던지고 있었어",
       "tags": {
         "functions": [
-          "F02"
+          "F25"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,20 +64,22 @@
       "ko": "아빠는 줄리엣에게서 멀리하라고 했고, 나는 계단에서 울고 있었어",
       "tags": {
         "functions": [
-          "F02"
+          "F40"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -87,18 +91,18 @@
       "ko": "제발 가지 말라고 애원했지. 그리고 나는 말했어, 로미오, 나를 데려가 줘",
       "tags": {
         "functions": [
-          "F34"
+          "F05"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,19 +116,21 @@
       "ko": "우리가 혼자 있을 수 있는 곳으로 나는 기다릴 거야. 남은 건 도망치는 것뿐이야",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -137,19 +143,21 @@
       "ko": "너는 왕자이고 나는 공주가 될 거야. 이건 사랑 이야기야, 제발 응답해 줘",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -162,24 +170,27 @@
       "ko": "그래서 나는 너를 보러 정원으로 몰래 나갔어. 우리는 조용히 있어야 해, 우리는 죽었으니까",
       "tags": {
         "functions": [
-          "F02"
+          "F32"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E02"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": [
           "is_lyrics"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "94b5e788f2f1dcf7"
 }

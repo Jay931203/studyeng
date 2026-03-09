@@ -12,7 +12,7 @@
       "ko": "아마 그들은 무너지고 있어",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -21,11 +21,13 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -37,18 +39,18 @@
       "ko": "그리고 그들은 싸움도 하지 않았어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,18 +64,18 @@
       "ko": "소리조차 내지 않았어",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,7 +89,7 @@
       "ko": "너를 받아들일 방법을 찾았어",
       "tags": {
         "functions": [
-          "F09"
+          "F03"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -98,7 +100,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,7 +114,8 @@
       "ko": "하지만 나는 결코 의심하지 않았어",
       "tags": {
         "functions": [
-          "F09"
+          "F43",
+          "F56"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -121,11 +124,14 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -135,281 +141,6 @@
       "id": "bnVUHWCynig-5",
       "en": "Standing in the light of your halo",
       "ko": "너의 후광 속에 서 있어",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "bnVUHWCynig-6",
-      "en": "I got my angel now",
-      "ko": "이제 내 천사가 생겼어",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "bnVUHWCynig-7",
-      "en": "It's like I've been awakened",
-      "ko": "마치 깨어난 것 같아",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "bnVUHWCynig-8",
-      "en": "Every rule I had you breaking",
-      "ko": "네가 깨뜨린 모든 규칙들",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "bnVUHWCynig-9",
-      "en": "It's the risk that I'm taking",
-      "ko": "내가 감수하는 위험이야",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "bnVUHWCynig-10",
-      "en": "I ain't never gonna shut you out",
-      "ko": "너를 결코 외면하지 않을 거야",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "bnVUHWCynig-11",
-      "en": "Everywhere I'm looking now",
-      "ko": "지금 내가 보는 모든 곳에",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "bnVUHWCynig-12",
-      "en": "I'm surrounded by your embrace",
-      "ko": "너의 포옹에 둘러싸여 있어",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "bnVUHWCynig-13",
-      "en": "Baby, I can see your halo",
-      "ko": "베이비, 너의 후광이 보여",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "bnVUHWCynig-14",
-      "en": "You know you're my saving grace",
-      "ko": "너는 나의 구원의 은총이야",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "bnVUHWCynig-15",
-      "en": "You're everything I need and more",
-      "ko": "너는 내가 필요로 하는 모든 것이야",
-      "tags": {
-        "functions": [
-          "F22"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "bnVUHWCynig-16",
-      "en": "It's written all over your face",
-      "ko": "그건 너의 얼굴에 다 써 있어",
       "tags": {
         "functions": [
           "F02"
@@ -423,8 +154,302 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "bnVUHWCynig-6",
+      "en": "I got my angel now",
+      "ko": "이제 내 천사가 생겼어",
+      "tags": {
+        "functions": [
+          "F03"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V14",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "bnVUHWCynig-7",
+      "en": "It's like I've been awakened",
+      "ko": "마치 깨어난 것 같아",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "bnVUHWCynig-8",
+      "en": "Every rule I had you breaking",
+      "ko": "네가 깨뜨린 모든 규칙들",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V14",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "bnVUHWCynig-9",
+      "en": "It's the risk that I'm taking",
+      "ko": "내가 감수하는 위험이야",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "bnVUHWCynig-10",
+      "en": "I ain't never gonna shut you out",
+      "ko": "너를 결코 외면하지 않을 거야",
+      "tags": {
+        "functions": [
+          "F43"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "bnVUHWCynig-11",
+      "en": "Everywhere I'm looking now",
+      "ko": "지금 내가 보는 모든 곳에",
+      "tags": {
+        "functions": [
+          "F02"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V14",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "bnVUHWCynig-12",
+      "en": "I'm surrounded by your embrace",
+      "ko": "너의 포옹에 둘러싸여 있어",
+      "tags": {
+        "functions": [
+          "F02"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V14",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "bnVUHWCynig-13",
+      "en": "Baby, I can see your halo",
+      "ko": "베이비, 너의 후광이 보여",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V14",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "bnVUHWCynig-14",
+      "en": "You know you're my saving grace",
+      "ko": "너는 나의 구원의 은총이야",
+      "tags": {
+        "functions": [
+          "F22"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E11"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V07",
+        "power": [
+          "P09"
+        ],
+        "grammar_intent": [
+          "G22"
+        ],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "bnVUHWCynig-15",
+      "en": "You're everything I need and more",
+      "ko": "너는 내가 필요로 하는 모든 것이야",
+      "tags": {
+        "functions": [
+          "F12"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V14",
+        "power": [
+          "P09"
+        ],
+        "grammar_intent": [
+          "G15"
+        ],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "bnVUHWCynig-16",
+      "en": "It's written all over your face",
+      "ko": "그건 너의 얼굴에 다 써 있어",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E02"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V14",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -437,18 +462,18 @@
       "ko": "베이비, 너의 후광을 느낄 수 있어",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -462,7 +487,7 @@
       "ko": "사라지지 않기를 기도해",
       "tags": {
         "functions": [
-          "F24"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -473,7 +498,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -487,7 +512,7 @@
       "ko": "헤일로, 헤일로, 헤일로",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A1",
@@ -498,7 +523,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -512,18 +537,18 @@
       "ko": "너의 헤일로를 느낄 수 있어",
       "tags": {
         "functions": [
-          "F22"
+          "F09"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -537,18 +562,18 @@
       "ko": "헤일로, 너의 헤일로를 느낄 수 있어",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -556,5 +581,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "ebac7347b03b10c9"
 }

@@ -12,10 +12,10 @@
       "ko": "반대하는 사람은 \"아\"라고 해주세요. 아. 오페라 종류도,",
       "tags": {
         "functions": [
-          "F06"
+          "F34"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,12 +23,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G02"
+        ],
+        "flags": []
       }
     },
     {
@@ -37,10 +37,10 @@
       "ko": "랩 종류도 판매하지 않습니다. B, 재즈 종류도, 오페라 종류도",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S04",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,12 +48,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -62,10 +60,10 @@
       "ko": "판매하지 않습니다. C, 오페라 종류도, 소녀 종류도 판매하지 않습니다.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S04",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -73,11 +71,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_fragment"
+          "is_narration"
         ]
       }
     },
@@ -87,18 +85,18 @@
       "ko": "이봐, 우리가 너를 사랑한다고 생각하지 않아?",
       "tags": {
         "functions": [
-          "F22"
+          "F06"
         ],
-        "situation": "S36",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -110,10 +108,10 @@
       "ko": "이봐. 알겠어, 알겠어. 나는 중요한 세부사항을 즉시 기억할 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -121,7 +119,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -135,16 +133,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -156,18 +154,18 @@
       "ko": "왜, 그래, 마고, 알아. 다시 한 번 우리는 호프가 자신의 정체성을 찾는 이야기에 합류해.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S20",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -179,9 +177,9 @@
       "ko": "알다시피, 그녀는 악당 스테파노에게 세뇌당했어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S20",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -190,7 +188,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -202,10 +200,10 @@
       "ko": "셋, 준비, 시작!",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -213,7 +211,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -225,10 +223,10 @@
       "ko": "여섯, 일곱, 여덟, 그리고...",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A1",
+        "situation": "S20",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -236,7 +234,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -250,7 +248,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
+        "situation": "S20",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -259,11 +257,15 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration",
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "fbc6606b053847c4"
 }

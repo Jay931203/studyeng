@@ -12,20 +12,22 @@
       "ko": "와! 몸이 변하는 게 느껴져, 소금 때문에. 내 거시기가 절인 블라식 피클이 됐어.",
       "tags": {
         "functions": [
-          "F09"
+          "F18"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -35,14 +37,13 @@
       "ko": "솔직히 말해봐, 나 너무 하얀 거 아니야? 맞지? 너무 하얗지?",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F06"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -59,9 +60,9 @@
       "ko": "너무 하얘.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -70,10 +71,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -82,10 +85,10 @@
       "ko": "잠깐 질문, 남자친구랑 같이 왔어? 아니.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -93,7 +96,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -105,13 +108,13 @@
       "ko": "좋아, 이제 나랑 함께야. 결혼반지를 뺐어, 보석류를 착용하면 안 된다고 해서.",
       "tags": {
         "functions": [
-          "F09"
+          "F05"
         ],
-        "situation": "S34",
+        "situation": "S12",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -128,9 +131,9 @@
       "ko": "그러니까 사해에 있는 동안은 미혼인 셈이지. 왜 이 진흙을 뒤집어쓰고 있어?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -139,8 +142,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V06",
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -151,19 +156,18 @@
       "ko": "사해에서 진흙을 가져와? 미네랄이 다 들어 있거든. 그래서 온몸에 바르는 거야? 응, 응.",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,14 +179,13 @@
       "ko": "이게 매력적이야? 나 지금 매력적으로 보여? 매력적인 이스라엘 남자?",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F06"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -199,20 +202,22 @@
       "ko": "안 바른 것보다 더 매력적이야. 진심이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -222,20 +227,24 @@
       "ko": "알아. 그러니까 하나님이 만든 모습보다 진흙을 뒤집어쓴 내가 더 매력적이라는 거지. 나 저쪽으로 가서",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -245,22 +254,23 @@
       "ko": "울어야겠다.",
       "tags": {
         "functions": [
-          "F09"
+          "F63"
         ],
-        "situation": "S34",
-        "cefr": "A1",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "6805fe9a631b35bf"
 }

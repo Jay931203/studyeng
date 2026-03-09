@@ -12,11 +12,11 @@
       "ko": "즉, 이 두 개의 룬 중 어떤 것이 비생명체를 나타내는지.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -35,10 +35,10 @@
       "ko": "하지만 이 게임에는 비밀이 있었다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,10 +58,10 @@
       "ko": "첫 번째 라운드에서 참가자들의 답변",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,11 +81,11 @@
       "ko": "은 두 번째 라운드의 룬 의미를 결정했다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -104,11 +104,11 @@
       "ko": "첫 번째 라운드에서 참가자들은 모든 답변이 정답으로 표시되거나,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -118,7 +118,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -127,11 +129,11 @@
       "ko": "모든 질문에서 실패해야 했다.",
       "tags": {
         "functions": [
-          "F12"
+          "F03"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -150,11 +152,11 @@
       "ko": "이는 휴식 시간에",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -173,11 +175,11 @@
       "ko": "모든 참가자가 같은 양의 정보를 갖게 했고,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -196,11 +198,11 @@
       "ko": "두 번째 라운드에서는 진짜로 경쟁하게 되었다.",
       "tags": {
         "functions": [
-          "F02"
+          "F03"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -219,11 +221,11 @@
       "ko": "하지만 이러한 공평한 조건에도 불구하고,",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -242,11 +244,11 @@
       "ko": "첫 번째 라운드에서 성공한 참가자들이 순위에서 올라갔고,",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R3",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -265,16 +267,16 @@
       "ko": "실패자로 낙인 찍힌 사람들은 계속해서 실패했다.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -288,11 +290,11 @@
       "ko": "사람들은 종종 실패를 배울 수 있는 순간으로 묘사한다,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -311,11 +313,11 @@
       "ko": "개선을 위한 필수적인 넘어짐으로.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -334,11 +336,11 @@
       "ko": "하지만 실수에서 배우는 것은 항상 쉬운 일이 아니다,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -357,11 +359,11 @@
       "ko": "특히 그 실패가 사기를 꺾거나, 압도적이거나,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -371,9 +373,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -382,11 +382,11 @@
       "ko": "아예 혼란스러울 때는 더욱 그렇다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -396,10 +396,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "8dfcbf176d63e0fb"
 }

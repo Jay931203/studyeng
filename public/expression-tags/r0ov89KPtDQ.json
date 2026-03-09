@@ -14,7 +14,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S05",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -39,8 +39,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S05",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,10 +60,10 @@
       "ko": "자, 시작하자. 우리는 목요일에 태국 음식을 안 해. 목요일에는 피자를 먹어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S05",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -83,9 +83,9 @@
       "ko": "맞아, 하지만 우리는 매달 셋째 목요일은 뭐든지 일어날 수 있는 날로 하기로 합의했잖아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S05",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -106,13 +106,15 @@
       "ko": "음, 내 소화 시스템에는 소식이 안 닿은 것 같아. 놀라면",
       "tags": {
         "functions": [
-          "F04"
+          "F23",
+          "F05",
+          "F52"
         ],
-        "situation": "S05",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -131,8 +133,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S05",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -152,21 +154,24 @@
       "ko": "제발.",
       "tags": {
         "functions": [
-          "F34"
+          "F35",
+          "F45"
         ],
-        "situation": "S05",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -175,20 +180,22 @@
       "ko": "뭐든지 일어날 수 있는 날의 전체 아이디어는 최근에 빠져 있는 이 틀에서 벗어나는 거야. 틀?",
       "tags": {
         "functions": [
-          "F04"
+          "F17"
         ],
-        "situation": "S05",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -198,10 +205,11 @@
       "ko": "너는 일관성을 말하는 거고, 그걸 포기할 거라면 왜 목요일이라고 부르지?",
       "tags": {
         "functions": [
-          "F12"
+          "F06",
+          "F09"
         ],
-        "situation": "S05",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -223,8 +231,8 @@
         "functions": [
           "F36"
         ],
-        "situation": "S05",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -234,7 +242,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -244,16 +254,16 @@
       "ko": "강력한 신 라에게 염소를 바치며 축하하자.",
       "tags": {
         "functions": [
-          "F36"
+          "F14"
         ],
-        "situation": "S05",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -267,16 +277,16 @@
       "ko": "염소는 괜찮아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S05",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -290,9 +300,9 @@
       "ko": "셸든, 우리는 오늘 밤 뭔가 다른 걸 하기로 합의했어.",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
-        "situation": "S05",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -307,5 +317,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "2abef9334eccc23f"
 }

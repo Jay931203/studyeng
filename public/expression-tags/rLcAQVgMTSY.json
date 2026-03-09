@@ -12,10 +12,10 @@
       "ko": "엘리?",
       "tags": {
         "functions": [
-          "F25"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S19",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -37,10 +37,10 @@
       "ko": "워너?",
       "tags": {
         "functions": [
-          "F25"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S19",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -62,9 +62,9 @@
       "ko": "네가 여기 다니는 걸 완전히 잊어버렸어.",
       "tags": {
         "functions": [
-          "F09"
+          "F10"
         ],
-        "situation": "S50",
+        "situation": "S19",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -75,7 +75,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -87,9 +89,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S19",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -108,10 +110,10 @@
       "ko": "미안, 나를 보러 온 거야?",
       "tags": {
         "functions": [
-          "F06"
+          "F28"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S19",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -120,8 +122,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -131,9 +137,9 @@
       "ko": "아니, 바보야. 나 여기 다녀.",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S19",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -156,8 +162,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S19",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -179,8 +185,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S19",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -191,7 +197,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -200,9 +208,9 @@
       "ko": "하버드 로스쿨에 합격했어?",
       "tags": {
         "functions": [
-          "F07"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S19",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -223,9 +231,9 @@
       "ko": "뭐, 그게 어렵냐고?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S19",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -246,20 +254,22 @@
       "ko": "오 마이 갓, 워너, 정말 멋질 거야.",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S19",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -269,10 +279,10 @@
       "ko": "멋진 모임을 계획 중인데, 꼭 도와줘야 해.",
       "tags": {
         "functions": [
-          "F36"
+          "F10"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S19",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -282,7 +292,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -292,22 +304,27 @@
       "ko": "루아우 같은 거 생각 중인데, 아니면...",
       "tags": {
         "functions": [
-          "F36"
+          "F14"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S19",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "aadc1b2bb2b1567f"
 }

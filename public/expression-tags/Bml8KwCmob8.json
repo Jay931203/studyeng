@@ -12,10 +12,10 @@
       "ko": "암은 놀라워요. 아니면 그냥 석류 관장을 해주세요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,21 +35,25 @@
       "ko": "석류 주스를 엉덩이에 넣고 짜면 놀라운 결과를 볼 수 있어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -58,9 +62,9 @@
       "ko": "저는 그들의 주스를 뱀 기름이라고 언급했을 수도 있고,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -81,10 +85,10 @@
       "ko": "시청자들에게 병에 스티커를 붙이라고 권장했어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,10 +108,10 @@
       "ko": "그 주스에 개가 들어있다고요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -118,7 +122,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -127,10 +133,10 @@
       "ko": "그 방송이 나간 며칠 후, 이건 사실이에요,",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,10 +144,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -150,13 +158,13 @@
       "ko": "폰드 원더풀에서 작은 냉장고와 그들의 개 주스 몇 상자를 보냈어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F15"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
@@ -173,9 +181,9 @@
       "ko": "편지도 함께요. 편지를 읽어도 될까요?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -196,13 +204,13 @@
       "ko": "친애하는 올리버 씨, 정말 재미있었어요!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -219,10 +227,10 @@
       "ko": "여기에는 느낌표가 아니라 마침표가 있어요. 그게 중요한 차이점이에요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -230,7 +238,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,10 +250,10 @@
       "ko": "우리는 당신의 쇼 첫 방송을 정말 좋아했어요, 그건 알고 있어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -259,5 +267,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "9525ab57010389f2"
 }

@@ -14,9 +14,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S09",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -35,9 +35,9 @@
       "ko": "아니.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S01",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -49,7 +49,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -58,10 +60,10 @@
       "ko": "너는 내 옆집에 살지? 응.",
       "tags": {
         "functions": [
-          "F06"
+          "F07"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,18 +83,18 @@
       "ko": "나를 볼 때 인사해도 돼. 두려워할 필요 없어.",
       "tags": {
         "functions": [
-          "F34"
+          "F25"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E04"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,11 +106,11 @@
       "ko": "나에 대한 소문이 많지만, 진짜는 없어.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S01",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -127,9 +129,9 @@
       "ko": "알겠지?",
       "tags": {
         "functions": [
-          "F07"
+          "F06"
         ],
-        "situation": "S09",
+        "situation": "S01",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -150,10 +152,10 @@
       "ko": "올해 착한 아이였어? 그런 것 같아.",
       "tags": {
         "functions": [
-          "F06"
+          "F09"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -163,7 +165,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -173,10 +177,10 @@
       "ko": "맹세해? 아니.",
       "tags": {
         "functions": [
-          "F10"
+          "F06"
         ],
-        "situation": "S09",
-        "cefr": "A1",
+        "situation": "S01",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,9 +200,10 @@
       "ko": "응, 그런 느낌이 있었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F53"
         ],
-        "situation": "S09",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -219,11 +224,11 @@
       "ko": "네가 자신에 대해 나쁘게 느낀다면 여기야.",
       "tags": {
         "functions": [
-          "F04"
+          "F52"
         ],
-        "situation": "S09",
+        "situation": "S01",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -244,7 +249,7 @@
         "functions": [
           "F09"
         ],
-        "situation": "S09",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -255,8 +260,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -267,9 +276,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S09",
+        "situation": "S01",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -288,9 +297,9 @@
       "ko": "아니.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S01",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -302,7 +311,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -311,18 +322,18 @@
       "ko": "요즘 좀 아파.",
       "tags": {
         "functions": [
-          "F16"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,20 +345,22 @@
       "ko": "내가 하면 안 되는 말을 했어.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S01",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G11"
+        ],
         "flags": []
       }
     },
@@ -357,13 +370,13 @@
       "ko": "올해는 정말 좋지 않았어. 응.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -380,20 +393,22 @@
       "ko": "가족을 정말 좋아해서 그게 좀 속상해.",
       "tags": {
         "functions": [
-          "F17"
+          "F04"
         ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -403,10 +418,10 @@
       "ko": "가끔 내가 그렇지 않다고 말하긴 해도.",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -426,10 +441,10 @@
       "ko": "가끔은 내가 그렇지 않다고 생각하기도 해. 이해해?",
       "tags": {
         "functions": [
-          "F14"
+          "F06"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -449,9 +464,9 @@
       "ko": "그런 것 같아.",
       "tags": {
         "functions": [
-          "F07"
+          "F09"
         ],
-        "situation": "S10",
+        "situation": "S01",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -462,9 +477,14 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "f06fac2260c8a05d"
 }

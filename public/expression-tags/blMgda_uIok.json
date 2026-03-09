@@ -12,23 +12,21 @@
       "ko": "안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼. 엉덩이 만지지 마. 문 열어. 어, 안 돼.",
       "tags": {
         "functions": [
-          "F35"
+          "F52"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V11",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,9 +35,9 @@
       "ko": "좋은 변호사를 알아.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -60,21 +58,24 @@
       "ko": "그녀는 좀 무서워. 내 엉덩이 만져. 뭐? 내 엉덩이 만져도 상관 없어. 어서!",
       "tags": {
         "functions": [
-          "F09"
+          "F21",
+          "F45"
         ],
-        "situation": "S39",
+        "situation": "S27",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "contains_profanity"
+        ]
       }
     },
     {
@@ -83,20 +84,22 @@
       "ko": "이봐, 딩구스, 네 아이들이 여기 있어. 또? 진짜로?",
       "tags": {
         "functions": [
-          "F03"
+          "F18"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -108,8 +111,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -119,7 +122,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -129,9 +134,9 @@
       "ko": "그리고 티나는 항상 나를 도와줘.",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -152,18 +157,18 @@
       "ko": "나는 티나 신경 안 써!",
       "tags": {
         "functions": [
-          "F11"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S27",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V11",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -177,16 +182,16 @@
         "functions": [
           "F12"
         ],
-        "situation": "S39",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,19 +203,21 @@
       "ko": "네 엄마는 우리가 러시아 엘리베이터에서 죽어도 찾지 못할 거야. 그러면 우리는 모두 죽어. 그런 관점도 있지.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S27",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V12",
-        "power": [],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -221,18 +228,18 @@
       "ko": "네가 죽으면 나도 죽어. 알겠어.",
       "tags": {
         "functions": [
-          "F14"
+          "F23"
         ],
-        "situation": "S39",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E08"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,9 +251,9 @@
       "ko": "시나이 산에서 좌회전 해. 무슨 일이야? 오 마이 갓. 내가 운전할 수 있어.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -267,20 +274,25 @@
       "ko": "안 돼, 다시는 안 해.",
       "tags": {
         "functions": [
-          "F11"
+          "F18",
+          "F60"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V11",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -292,21 +304,21 @@
         "functions": [
           "F43"
         ],
-        "situation": "S39",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V11",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
       }
     },
     {
@@ -315,20 +327,22 @@
       "ko": "나 다쳤어, 나 젖었어!",
       "tags": {
         "functions": [
-          "F19"
+          "F34"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -338,22 +352,23 @@
       "ko": "아파, 젖었어!",
       "tags": {
         "functions": [
-          "F19"
+          "F16"
         ],
-        "situation": "S39",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V11",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "308d9d074d6055e1"
 }

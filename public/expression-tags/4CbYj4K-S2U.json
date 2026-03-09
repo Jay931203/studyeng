@@ -12,7 +12,7 @@
       "ko": "다른 프로그램이 없다면 누가 두 번째인지 궁금했어요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -36,16 +36,17 @@
       "tags": {
         "functions": [
           "F06",
-          "F09"
+          "F40"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07",
+          "X04"
         ],
         "vibe": "V10",
         "power": [],
@@ -61,7 +62,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
+        "situation": "S27",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -70,7 +71,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -82,7 +83,6 @@
       "ko": "글쎄요, 저는 트럼프를 오래 알았고, 사람들이 그가 진단 가능한지 아닌지 스스로 판단할 수 있다고 생각해요.",
       "tags": {
         "functions": [
-          "F03",
           "F09"
         ],
         "situation": "S34",
@@ -92,9 +92,10 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X06"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,7 +107,7 @@
       "ko": "하지만 아마 우리 모두 그가 외교력이 부족하다는 데 동의할 수 있을 거예요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "B1",
@@ -115,11 +116,13 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -129,10 +132,10 @@
       "ko": "그가 외교력이 부족하다는 데 동의하나요?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -140,7 +143,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,18 +155,18 @@
       "ko": "그가 당신에게 어떤 종류의 내각 직책을 제안한 적이 있나요? 아니요. 제안한 적이 없나요? 당신이 총의가 될 수 있다고 말한 적이 없나요?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,30 +178,7 @@
       "ko": "아니요. 다른 사람에게 주는 걸 봤어요.",
       "tags": {
         "functions": [
-          "F01"
-        ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "4CbYj4K-S2U-8",
-      "en": "Yeah, they gave it to another guy. Yeah. Nothing like that, huh?",
-      "ko": "네, 다른 사람에게 줬어요. 그런 건 없네요?",
-      "tags": {
-        "functions": [
-          "F01"
+          "F04"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -216,16 +196,38 @@
       }
     },
     {
+      "id": "4CbYj4K-S2U-8",
+      "en": "Yeah, they gave it to another guy. Yeah. Nothing like that, huh?",
+      "ko": "네, 다른 사람에게 줬어요. 그런 건 없네요?",
+      "tags": {
+        "functions": [
+          "F07"
+        ],
+        "situation": "S34",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "4CbYj4K-S2U-9",
       "en": "I think, wouldn't you agree he lacks diplomacy? Yes, I would agree.",
       "ko": "그가 외교력이 부족하다고 동의하지 않나요? 네, 동의해요.",
       "tags": {
         "functions": [
-          "F09",
-          "F10"
+          "F09"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -248,7 +250,7 @@
           "F06"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -256,7 +258,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -268,10 +270,11 @@
       "ko": "네, 그 점에 대해서는 전적으로 동의해요.",
       "tags": {
         "functions": [
-          "F10"
+          "F10",
+          "F07"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -281,7 +284,10 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16",
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -302,9 +308,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -317,19 +325,20 @@
           "F09"
         ],
         "situation": "S34",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a518237af3d079e6"
 }

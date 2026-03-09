@@ -15,13 +15,13 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -35,10 +35,10 @@
       "ko": "좋아, 그건 2개에 1개야. 좋은 거래네.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -61,7 +61,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -72,7 +72,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,10 +83,10 @@
       "ko": "계산대에서 무료로 받은 거 봐.",
       "tags": {
         "functions": [
-          "F01"
+          "F35"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -107,7 +109,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,7 +152,7 @@
       "ko": "날 필요 없고, 식기세척기 사용 가능.",
       "tags": {
         "functions": [
-          "F01"
+          "F43"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -161,10 +163,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -221,7 +227,7 @@
       "ko": "너 완전히 젖었네.",
       "tags": {
         "functions": [
-          "F02"
+          "F30"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -234,8 +240,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G03"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -267,7 +277,7 @@
       "ko": "8,000달러 모을 수 있을 것 같아.",
       "tags": {
         "functions": [
-          "F14"
+          "F36"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -278,9 +288,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -290,7 +302,7 @@
       "ko": "너랑 말론이 함께할 때마다...",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -299,12 +311,14 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -336,7 +350,7 @@
       "ko": "그 잔디깎이는 정말 버려야 해.",
       "tags": {
         "functions": [
-          "F20"
+          "F21"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -345,7 +359,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -359,13 +373,14 @@
       "ko": "새로운 엘크 로타리를 하나 사자.",
       "tags": {
         "functions": [
-          "F34"
+          "F23",
+          "F35"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -382,20 +397,23 @@
       "ko": "이 새로운 모코코 음료 좀 만들어줄게.",
       "tags": {
         "functions": [
-          "F34"
+          "F23",
+          "F36"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -405,10 +423,10 @@
       "ko": "자연 그대로의, 니카라과 산의 고급 카카오콩이야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -431,7 +449,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -442,7 +460,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -451,20 +471,22 @@
       "ko": "도대체 무슨 소리 하는 거야?",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
         "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -513,7 +535,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -568,13 +592,13 @@
       "ko": "이게 제일 맛있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -585,5 +609,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "8a67e488d0a9b80e"
 }

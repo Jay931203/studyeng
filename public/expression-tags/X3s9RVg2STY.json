@@ -12,9 +12,33 @@
       "ko": "뭔가 잡았어! 뭔가 잡았어! 아빠 문에게 와! 맞아! 어서!",
       "tags": {
         "functions": [
-          "F09"
+          "F38"
         ],
-        "situation": "S34",
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01",
+          "X03"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "X3s9RVg2STY-1",
+      "en": "Hi there. Who are you?",
+      "ko": "안녕하세요. 당신은 누구인가요?",
+      "tags": {
+        "functions": [
+          "F25"
+        ],
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -26,31 +50,6 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "X3s9RVg2STY-1",
-      "en": "Hi there. Who are you?",
-      "ko": "안녕하세요. 당신은 누구인가요?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S34",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
         "flags": []
       }
     },
@@ -60,10 +59,10 @@
       "ko": "나는 올드 그렉이야. 만나서 반가워. 뭘 원해?",
       "tags": {
         "functions": [
-          "F25"
+          "F06"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,7 +70,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,20 +82,22 @@
       "ko": "같은 질문을 해야 할 것 같아. 내 물에서 뭐 하고 있어?",
       "tags": {
         "functions": [
-          "F06"
+          "F14"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -106,18 +107,18 @@
       "ko": "그냥 바람 쐬고 있었어, 낚시 아니야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,13 +130,13 @@
       "ko": "그럼 왜 이 훅이 내 머리에 박혀 있는 거야, 바보야?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -152,9 +153,9 @@
       "ko": "나랑은 아무 상관 없어, 선생님.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -163,7 +164,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,13 +176,13 @@
       "ko": "너의 낚싯대에 붙어 있어, 이 자식아!",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S10",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -198,18 +199,18 @@
       "ko": "날 죽이지 마. 줄 게 너무 많아.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,9 +222,9 @@
       "ko": "그는 충분해, 털복숭이 복숭아 남자.",
       "tags": {
         "functions": [
-          "F09"
+          "F21"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -232,7 +233,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -246,20 +247,21 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
+        "situation": "S32",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "9b31e871e3bdb7b8"
 }

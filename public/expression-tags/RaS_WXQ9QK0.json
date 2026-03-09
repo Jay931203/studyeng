@@ -12,18 +12,18 @@
       "ko": "불행히도, 멕시코 문화에서는 이것이 훨씬 더 자극적인 제스처였습니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,20 +35,23 @@
       "ko": "내가 너에게 같이 가자고 하지 않은 유일한 이유는 네 닭 흉내 때문이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F38",
+          "F56"
         ],
-        "situation": "S09",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -58,18 +61,18 @@
       "ko": "맞아, 지난번에 그 때문에 정말 큰 곤란을 겪었지, 그치? 응. 나는 완전히...",
       "tags": {
         "functions": [
-          "F05"
+          "F19"
         ],
-        "situation": "S09",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,19 +84,21 @@
       "ko": "전혀 사실이 아니야.",
       "tags": {
         "functions": [
-          "F11"
+          "F56"
         ],
-        "situation": "S09",
+        "situation": "S47",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -106,17 +111,19 @@
         "functions": [
           "F06"
         ],
-        "situation": "S09",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -127,18 +134,18 @@
       "ko": "오, 마이클이 스텔라에게 데이트 신청하는 게 무서운 거구나. 아니, 안 그래.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S47",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
-          "E04"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,18 +157,18 @@
       "ko": "오, 이건 정말 귀엽네. 이건 새도 아니야.",
       "tags": {
         "functions": [
-          "F15"
+          "F38"
         ],
-        "situation": "S09",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
-          "E01"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V02",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,18 +180,18 @@
       "ko": "너는 원하는 건 뭐든 할 수 있어. 그냥 겁쟁이일 뿐이야.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,18 +203,18 @@
       "ko": "여자에게 데이트 신청하는 것도 무서워하잖아.",
       "tags": {
         "functions": [
-          "F19"
+          "F12"
         ],
-        "situation": "S08",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
-          "E04"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,20 +226,22 @@
       "ko": "왜 모두가 내가 여자들한테 겁먹었다고 생각하는 거지? 너가 겁쟁이니까. 너는 겁쟁이야. 쿠쿠카차!",
       "tags": {
         "functions": [
-          "F11"
+          "F19"
         ],
-        "situation": "S09",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
-          "E03"
+          "E04"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -242,22 +251,23 @@
       "ko": "쿠쿠카차! 너 뭐 하고 있어? 마이클과 윔...",
       "tags": {
         "functions": [
-          "F06"
+          "F02"
         ],
-        "situation": "S09",
+        "situation": "S47",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "7eaa64cac82e810c"
 }

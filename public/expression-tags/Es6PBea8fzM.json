@@ -12,9 +12,9 @@
       "ko": "올해 멋진 영화들이 많았어, Wicked부터 Conclave까지. 잠깐, 좋은 아이디어가 떠올랐어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -35,19 +35,22 @@
       "ko": "이거 정말 마음에 들 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E01",
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V10",
-        "power": [],
+        "vibe": "V02",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -58,20 +61,21 @@
       "ko": "너는 인기가 많아질 거야. 너는 인기가 많아질 거야. 내가 몇 가지 가톨릭 기도를 가르쳐줄게.",
       "tags": {
         "functions": [
-          "F09",
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -82,21 +86,22 @@
       "ko": "어, 뭐라고? 잠깐, 이거 별로야? 이 모든 게 별로야? 내가 엘튼 존 앞에서 망신을 주고 있어?",
       "tags": {
         "functions": [
-          "F18"
+          "F28"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03",
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V04",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -106,11 +111,11 @@
       "ko": "엘튼 존 앞에서? 좋아, 다음 노래로 넘어가자, 펭귄에 관한 TV 노래,",
       "tags": {
         "functions": [
-          "F50"
+          "F36"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -119,7 +124,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -129,20 +136,18 @@
       "ko": "펭귄에 미친 그 노래. 그것도 별로야? 그리고 아무도 그렇게 펭귄이라고 말하지 않아? 그럼 어떻게 말해?",
       "tags": {
         "functions": [
-          "F18",
           "F06"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03",
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V17",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -156,7 +161,7 @@
         "functions": [
           "F50"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -167,7 +172,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -177,22 +184,25 @@
       "ko": "좋아, 너는 길을 잃었어. 자, 계속 진행하자. 여기 상을 발표하러 왔어.",
       "tags": {
         "functions": [
-          "F50"
+          "F36"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E16"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "390e32713c171485"
 }

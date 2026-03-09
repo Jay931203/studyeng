@@ -5,24 +5,19 @@
   "seriesId": "good-place",
   "sentenceCount": 12,
   "taggedCount": 12,
+  "transcriptHash": "2cde1423ae49e201",
   "sentences": [
     {
       "id": "l1IchzbtNj0-0",
       "en": "Was I ever good at being sad?",
       "ko": "내가 슬퍼하는 걸 잘했던 적이 있었나?",
       "tags": {
-        "functions": [
-          "F16"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "functions": ["F06", "F16"],
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": ["E02"],
+        "expression_types": ["X08"],
         "vibe": "V09",
         "power": [],
         "grammar_intent": [],
@@ -34,18 +29,12 @@
       "en": "Partly because my mom straight up told me not to be.",
       "ko": "부분적으로는 엄마가 그렇게 하지 말라고 했기 때문이야.",
       "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
+        "functions": ["F04"],
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "emotions": ["E02"],
+        "expression_types": ["X05"],
         "vibe": "V09",
         "power": [],
         "grammar_intent": [],
@@ -57,20 +46,14 @@
       "en": "But this is sad, man.",
       "ko": "하지만 이건 슬퍼, 친구.",
       "tags": {
-        "functions": [
-          "F16"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "functions": ["F16", "F09"],
+        "situation": "S09",
+        "cefr": "A1",
+        "register": "R5",
+        "emotions": ["E02"],
+        "expression_types": ["X08"],
         "vibe": "V09",
-        "power": [],
+        "power": ["P10"],
         "grammar_intent": [],
         "flags": []
       }
@@ -80,21 +63,15 @@
       "en": "You got a John Locke quote or a piece of Kantian wisdom you can throw at me?",
       "ko": "존 로크의 인용구나 칸트의 지혜 같은 거 없나?",
       "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
+        "functions": ["F34", "F06"],
+        "situation": "S09",
+        "cefr": "C1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E13"],
+        "expression_types": ["X01", "X08"],
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": ["G02"],
         "flags": []
       }
     },
@@ -103,21 +80,15 @@
       "en": "Those guys were more focused on rules and regulations.",
       "ko": "그들은 규칙과 규제에 더 집중했지.",
       "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
+        "functions": ["F04"],
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E09"],
+        "expression_types": ["X03"],
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": ["G18"],
         "flags": []
       }
     },
@@ -126,21 +97,15 @@
       "en": "For spiritual stuff, you gotta turn to the East.",
       "ko": "영적인 것에 대해서는 동쪽을 바라봐야 해.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
+        "functions": ["F37"],
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E09"],
+        "expression_types": ["X05"],
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": ["G09"],
         "flags": []
       }
     },
@@ -149,21 +114,15 @@
       "en": "I'll take anything you got. Hit me.",
       "ko": "네가 가진 모든 걸 줄 수 있어. 던져봐.",
       "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
+        "functions": ["F34"],
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "emotions": ["E15"],
+        "expression_types": ["X04", "X05"],
+        "vibe": "V09",
+        "power": ["P03"],
+        "grammar_intent": ["G02"],
         "flags": []
       }
     },
@@ -172,20 +131,14 @@
       "en": "Picture a wave in the ocean.",
       "ko": "바다의 파도를 상상해봐.",
       "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
+        "functions": ["F37"],
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
+        "vibe": "V16",
+        "power": ["P10"],
         "grammar_intent": [],
         "flags": []
       }
@@ -195,21 +148,15 @@
       "en": "You can see it, measure it, its height, the way the sunlight refracts when it passes through.",
       "ko": "너는 그것을 보고, 측정하고, 높이와 햇빛이 통과할 때 굴절하는 방식을 알 수 있어.",
       "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S10",
+        "functions": ["F02"],
+        "situation": "S09",
         "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "register": "R3",
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": ["G18"],
         "flags": []
       }
     },
@@ -218,19 +165,13 @@
       "en": "And it's there. You can see it. You know what it is. It's a wave.",
       "ko": "그리고 그것은 거기 있어. 너는 그것을 볼 수 있어. 그게 뭔지 알아. 파도야.",
       "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
+        "functions": ["F01"],
+        "situation": "S09",
+        "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
+        "emotions": ["E09"],
+        "expression_types": ["X08"],
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -241,20 +182,14 @@
       "en": "And then it crashes on the shore. And it's gone.",
       "ko": "그리고 나서 그것은 해안에 부딪혀 사라져.",
       "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
+        "functions": ["F03"],
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
+        "emotions": ["E02"],
+        "expression_types": ["X08"],
+        "vibe": "V09",
+        "power": ["P10"],
         "grammar_intent": [],
         "flags": []
       }
@@ -264,24 +199,16 @@
       "en": "But the water...",
       "ko": "하지만 물은...",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
+        "functions": ["F04"],
+        "situation": "S09",
+        "cefr": "A1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
+        "emotions": ["E24"],
+        "expression_types": ["X08"],
+        "vibe": "V16",
+        "power": ["P04", "P10"],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": ["is_fragment"]
       }
     }
   ]

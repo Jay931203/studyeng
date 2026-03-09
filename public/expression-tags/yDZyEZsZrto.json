@@ -12,10 +12,10 @@
       "ko": "절대 불가능하다고 말하지 마세요",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -25,8 +25,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,10 +39,10 @@
       "ko": "크리스티!",
       "tags": {
         "functions": [
-          "F25"
+          "F15"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,10 +64,11 @@
       "ko": "조던, 이쪽은 내 친구 나오미야. 안녕! 나오미, 만나서 반가워. 나오미, 만나서 반가워.",
       "tags": {
         "functions": [
+          "F25",
           "F26"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,8 +76,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V02",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -83,18 +90,18 @@
       "ko": "여기 정말 멋진 집이네.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,10 +113,11 @@
       "ko": "이렇게 큰 집은 처음 와봐. 정말? 응. 밖에 아름다운 해변이 있어. 블레어, 홀링스워스.",
       "tags": {
         "functions": [
-          "F09"
+          "F30",
+          "F18"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -117,9 +125,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03",
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -129,11 +140,12 @@
       "ko": "안녕, 블레어. 만나서 반가워. 고마워. 네 이름이 블레어지? 응. 제트스키 타는 거 좋아해? 한 번도 해본 적 없어.",
       "tags": {
         "functions": [
-          "F26",
-          "F06"
+          "F25",
+          "F27",
+          "F43"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -142,8 +154,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -153,30 +169,7 @@
       "ko": "아니, 제트스키를 타본 적이 없어? 아니, 한 번도 없어.",
       "tags": {
         "functions": [
-          "F06"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "yDZyEZsZrto-7",
-      "en": "How many times are you going to ask her if she's never been on a jet ski? I don't know.",
-      "ko": "그녀가 제트스키를 타본 적이 없다고 몇 번이나 물어볼 거야? 잘 모르겠어.",
-      "tags": {
-        "functions": [
-          "F06"
+          "F43"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -189,7 +182,37 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "yDZyEZsZrto-7",
+      "en": "How many times are you going to ask her if she's never been on a jet ski? I don't know.",
+      "ko": "그녀가 제트스키를 타본 적이 없다고 몇 번이나 물어볼 거야? 잘 모르겠어.",
+      "tags": {
+        "functions": [
+          "F43"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -199,16 +222,16 @@
       "ko": "몇 번 더 물어볼 수도 있어. 좋아.",
       "tags": {
         "functions": [
-          "F36"
+          "F14"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -222,10 +245,11 @@
       "ko": "안녕, 나는 힐디야. 만나서 반가워. 안녕. 조던, 테레사, 도움이 필요해? 응. 몇 분 후에 나갈게.",
       "tags": {
         "functions": [
+          "F25",
           "F26"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -234,7 +258,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -245,7 +271,7 @@
       "ko": "그냥 내가 인사했다고 전해줘.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -262,5 +288,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "fb8ace9b5ba9c9f6"
 }

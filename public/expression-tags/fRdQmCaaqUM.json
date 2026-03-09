@@ -14,7 +14,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -35,13 +35,13 @@
       "ko": "의심스러워요. 치즈도, 버섯도, 지방도 없는 프리타타만 만들 수 있었어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -58,9 +58,9 @@
       "ko": "플라스틱 방에 있는 소녀 덕분이에요.",
       "tags": {
         "functions": [
-          "F01"
+          "F27"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -81,10 +81,10 @@
       "ko": "피자를 주문할까 생각 중이에요.",
       "tags": {
         "functions": [
-          "F36"
+          "F09"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,16 +104,16 @@
       "ko": "나일스에게 뭔가 말하고 싶어요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -127,13 +127,13 @@
       "ko": "그는 그 여자와 함께 끔찍한 실수를 하고 있어요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -150,13 +150,13 @@
       "ko": "하지만 아빠, 마리스와 똑같아요. 그녀가 그를 지배하고, 남성성을 빼앗고 있어요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -173,20 +173,24 @@
       "ko": "봐요, 저도 그녀를 좋아하지 않아요. 우리가 이 문제를 겪었던 걸 하나님이 아세요.",
       "tags": {
         "functions": [
-          "F09"
+          "F35",
+          "F40"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10",
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -196,18 +200,18 @@
       "ko": "릴리스를 좋아하지 않았고, 마리스를 둘 다 싫어했으며, 너희 남자들은 셰리를 정말 싫어했죠.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V03",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -221,13 +225,13 @@
       "ko": "하지만 그에 대해 이야기해봤자 무슨 소용이 있었나요? 그는 끔찍한 패턴을 반복하고 있어요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -246,14 +250,15 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X05"
         ],
         "vibe": "V18",
         "power": [],
@@ -267,16 +272,16 @@
       "ko": "그리고 당신이 뭔가 말하면, 그 사이에 틈이 생길 거예요. 그래서 아무도 말하지 않을 거예요.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
         "power": [],
@@ -290,16 +295,16 @@
       "ko": "멜이 떠나야 했던 건 아쉬워요.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -313,16 +318,16 @@
       "ko": "아, 맞아요. 정말 즐거운 시간을 보내고 있었어요.",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -338,7 +343,7 @@
         "functions": [
           "F07"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -348,9 +353,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -359,16 +368,16 @@
       "ko": "사실, 그녀를 여기 데려오는 게 긴장됐어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E04"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -382,16 +391,16 @@
       "ko": "처음으로 그녀를 제대로 알게 될까 걱정했어요.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -405,10 +414,10 @@
       "ko": "그래서?",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -424,5 +433,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "aa3e7fcf975e1dd1"
 }

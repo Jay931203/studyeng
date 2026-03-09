@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,9 +35,9 @@
       "ko": "더 줄까?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,9 +58,9 @@
       "ko": "안녕, 꼬마야.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -69,10 +69,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,10 +83,10 @@
       "ko": "다 먹지 마.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -92,7 +94,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,21 +106,23 @@
       "ko": "나와.",
       "tags": {
         "functions": [
-          "F34"
+          "F38"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -127,21 +131,23 @@
       "ko": "이리 와.",
       "tags": {
         "functions": [
-          "F34"
+          "F38"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,21 +156,23 @@
       "ko": "이리 와.",
       "tags": {
         "functions": [
-          "F34"
+          "F38"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -173,9 +181,9 @@
       "ko": "무서워하지 마, 작은 스나이프. 착한 스나이프.",
       "tags": {
         "functions": [
-          "F31"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -184,7 +192,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,9 +204,9 @@
       "ko": "착한 스나이프.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -207,10 +215,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -219,21 +229,23 @@
       "ko": "이리 와.",
       "tags": {
         "functions": [
-          "F34"
+          "F38"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -242,21 +254,23 @@
       "ko": "이리 와.",
       "tags": {
         "functions": [
-          "F34"
+          "F38"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,9 +279,9 @@
       "ko": "착한 스나이프.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -276,10 +290,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -288,9 +304,9 @@
       "ko": "착한 꼬마 스나이프.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -299,10 +315,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -311,9 +329,9 @@
       "ko": "착한 거대한 스나이프.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -322,10 +340,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -336,7 +356,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -345,7 +365,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -360,7 +380,7 @@
           "F06"
         ],
         "situation": "S45",
-        "cefr": "A1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -368,12 +388,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -382,20 +400,22 @@
       "ko": "정말 그래요. 초콜릿 좋아해? 오, 네.",
       "tags": {
         "functions": [
-          "F06"
+          "F10"
         ],
         "situation": "S45",
-        "cefr": "A1",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -408,7 +428,7 @@
           "F06"
         ],
         "situation": "S45",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -416,7 +436,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -439,10 +459,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -451,10 +473,10 @@
       "ko": "스나이프 같은 건 없어. 하지만 너가 스나이프라고 했잖아.",
       "tags": {
         "functions": [
-          "F12"
+          "F05"
         ],
         "situation": "S45",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -462,11 +484,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "15e209326f3cb406"
 }

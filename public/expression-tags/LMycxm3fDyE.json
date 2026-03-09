@@ -12,10 +12,10 @@
       "ko": "묻지 마.",
       "tags": {
         "functions": [
-          "F43"
+          "F35"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -37,9 +37,60 @@
       "ko": "그럴 생각 없었어.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "LMycxm3fDyE-2",
+      "en": "I love this one.",
+      "ko": "이거 정말 좋아.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E01",
+          "E11"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V02",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "LMycxm3fDyE-3",
+      "en": "It's Chanel.",
+      "ko": "샤넬이야.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -57,52 +108,6 @@
       }
     },
     {
-      "id": "LMycxm3fDyE-2",
-      "en": "I love this one.",
-      "ko": "이거 정말 좋아.",
-      "tags": {
-        "functions": [
-          "F22"
-        ],
-        "situation": "S36",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "LMycxm3fDyE-3",
-      "en": "It's Chanel.",
-      "ko": "샤넬이야.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S36",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "LMycxm3fDyE-4",
       "en": "Is she wearing boots?",
       "ko": "그녀가 부츠를 신고 있어?",
@@ -110,7 +115,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -133,19 +138,23 @@
         "functions": [
           "F14"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -156,7 +165,7 @@
         "functions": [
           "F27"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -168,7 +177,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -177,9 +188,9 @@
       "ko": "그래서...",
       "tags": {
         "functions": [
-          "F52"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -202,9 +213,9 @@
       "ko": "청구서를 제출했어.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -227,8 +238,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -239,7 +250,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -250,9 +263,9 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -262,7 +275,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -273,7 +288,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -296,7 +311,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -308,7 +323,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -317,10 +334,10 @@
       "ko": "네가 필요하다는 뜻이야...",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -331,7 +348,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -340,9 +359,9 @@
       "ko": "청구가 정당하다는 합리적인 믿음이...",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -354,7 +373,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -363,10 +384,10 @@
       "ko": "예를 들면...",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -390,8 +411,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -402,7 +423,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -413,20 +436,21 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "21c4b6a6a364806b"
 }

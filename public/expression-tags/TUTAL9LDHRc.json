@@ -14,16 +14,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -37,16 +37,16 @@
         "functions": [
           "F09"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,18 +58,18 @@
       "ko": "아니야. 네가 깨뜨린 게 아니야. 톰?",
       "tags": {
         "functions": [
-          "F07"
+          "F06"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +81,18 @@
       "ko": "나를 보지 마. 벤을 봐.",
       "tags": {
         "functions": [
-          "F50"
+          "F35"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,18 +104,18 @@
       "ko": "뭐? 나는 깨뜨리지 않았어.",
       "tags": {
         "functions": [
-          "F11"
+          "F56"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,19 +127,21 @@
       "ko": "어? 이상하네. 어떻게 깨졌는지 알았어?",
       "tags": {
         "functions": [
-          "F18"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -150,20 +152,24 @@
       "ko": "우리 바로 앞에 있고, 깨졌잖아. 의심스럽네. 아니야, 그렇지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F04"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -173,20 +179,22 @@
       "ko": "중요하다면. 아마 아닐 거야, 하지만 에이프릴이 마지막으로 사용했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -196,18 +204,18 @@
       "ko": "거짓말! 나는 그런 걸 안 마셔.",
       "tags": {
         "functions": [
-          "F56"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S32",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -223,16 +231,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -244,18 +252,18 @@
       "ko": "나무 스틱으로 내 큐티클을 밀었어. 모두가 아는 사실이야, 제리.",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,20 +275,25 @@
       "ko": "알겠어, 싸우지 말자. 내가 깨뜨렸어. 내가 비용을 낼게, 론.",
       "tags": {
         "functions": [
-          "F09"
+          "F36",
+          "F39"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S04",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -292,16 +305,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,18 +326,18 @@
       "ko": "론, 도나가 너무 조용해. 정말? 응, 정말이야. 오, 세상에!",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E05"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -336,18 +349,18 @@
       "ko": "내가 깨뜨렸어. 손이 타서 주먹으로 쳤어.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S14",
+        "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -359,19 +372,21 @@
       "ko": "10분 후면 서로 싸우고 있을 거야.",
       "tags": {
         "functions": [
-          "F14"
+          "F02"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V12",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -382,18 +397,18 @@
       "ko": "얼굴에 전투 화장을 하고, 막대기에 돼지 머리를 달고.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "B2",
+        "situation": "S42",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -405,22 +420,25 @@
       "ko": "좋아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S39",
+        "situation": "S09",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V01",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "90bd4d758ac044f1"
 }

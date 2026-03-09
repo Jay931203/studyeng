@@ -12,32 +12,7 @@
       "ko": "끔찍한 공연이야.",
       "tags": {
         "functions": [
-          "F12"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "opGJR_dBEvY-1",
-      "en": "This was supposed to be a sketch",
-      "ko": "이건 내가 소포를 받는 내용의 스케치였어.",
-      "tags": {
-        "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -48,9 +23,37 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
+        "flags": [
+          "is_lyrics",
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "opGJR_dBEvY-1",
+      "en": "This was supposed to be a sketch",
+      "ko": "이건 내가 소포를 받는 내용의 스케치였어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S46",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
+        "power": [],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -62,20 +65,22 @@
       "ko": "그리고 그 남자는 평범한 UPS 직원처럼 들어와야 했어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -87,10 +92,10 @@
       "ko": "대신 그는 미친 사람처럼 행동했어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -98,9 +103,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G14"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -112,13 +119,13 @@
       "ko": "그는 전혀 현실적이지 않았어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -137,7 +144,7 @@
       "ko": "나미, 캐스팅 담당자를 불러줄 수 있어?",
       "tags": {
         "functions": [
-          "F12"
+          "F10"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -148,9 +155,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -165,17 +174,19 @@
           "F34"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -187,13 +198,13 @@
       "ko": "왜 그 배우를 메신저 역할로 캐스팅했어? 정말 끔찍했어.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -212,20 +223,23 @@
       "ko": "미안해, 코난.",
       "tags": {
         "functions": [
-          "F12"
+          "F06",
+          "F50"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -237,22 +251,27 @@
       "ko": "최선을 다하려고 했어.",
       "tags": {
         "functions": [
-          "F20"
+          "F28"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -262,13 +281,13 @@
       "ko": "하지만 내 최선이 부족했나 봐.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -287,20 +306,23 @@
       "ko": "왜?",
       "tags": {
         "functions": [
-          "F20"
+          "F21",
+          "F14"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -312,13 +334,13 @@
       "ko": "왜 다른 사람들은 성공했는데 나는 실패했지?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -337,18 +359,18 @@
       "ko": "오, 달콤하고 자비로운 하늘이여.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -373,13 +395,15 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "788e99b0f324066b"
 }

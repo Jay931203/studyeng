@@ -12,10 +12,11 @@
       "ko": "응, 두 개. 응!",
       "tags": {
         "functions": [
-          "F25"
+          "F07",
+          "F53"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -26,9 +27,7 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,7 +36,7 @@
       "ko": "좋은 그린치야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -60,10 +59,10 @@
       "ko": "그래서 네 그린치를 시험해 보려고 해.",
       "tags": {
         "functions": [
-          "F04"
+          "F21"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -83,10 +82,10 @@
       "ko": "웃지 않기 도전에서 너와 대결할 거야.",
       "tags": {
         "functions": [
-          "F03"
+          "F21"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -106,10 +105,10 @@
       "ko": "우리는 번갈아가며 웃긴 영상을 볼 거야.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,10 +128,11 @@
       "ko": "웃지 않으려고 최선을 다하면서 그린치 표정을 유지해야 해.",
       "tags": {
         "functions": [
-          "F35"
+          "F21",
+          "F45"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -152,7 +152,7 @@
       "ko": "내 그린치 표정. 이제 시작이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -175,10 +175,11 @@
       "ko": "사실 네가 먼저 해도 좋아, 그래서 나는 웃을 수 있어.",
       "tags": {
         "functions": [
-          "F34"
+          "F21",
+          "F08"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -198,7 +199,7 @@
       "ko": "좋아, 베네딕트, 네가 먼저 해. 준비됐어?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -221,10 +222,10 @@
       "ko": "모니터를 봐. 첫 번째 영상을 재생해 보자.",
       "tags": {
         "functions": [
-          "F34"
+          "F36"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -234,7 +235,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -244,10 +247,10 @@
       "ko": "-♪♪",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -269,10 +272,10 @@
       "ko": "-♪♪",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -294,10 +297,10 @@
       "ko": "-♪♪",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -319,20 +322,24 @@
       "ko": "못 참겠어. 내가 참았는지 모르겠어.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -342,10 +349,10 @@
       "ko": "좋아, 이제 내 차례야.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -365,7 +372,7 @@
       "ko": "좋아, 행운을 빌어.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -391,7 +398,7 @@
           "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -411,7 +418,7 @@
       "ko": "-♪♪",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -436,7 +443,7 @@
       "ko": "-♪♪",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -455,5 +462,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "3a946f61eaf46380"
 }

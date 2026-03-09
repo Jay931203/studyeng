@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,10 +35,10 @@
       "ko": "사랑이 널 방향을 잃게 만들 때",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E11"
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,10 +58,10 @@
       "ko": "어떤 정보는 공유하면 안 돼",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -83,7 +83,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S23",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -104,10 +104,10 @@
       "ko": "한 번 시작되면 멈추기 어려워, 시작되면",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,9 +127,84 @@
       "ko": "나는 감상적이지 않아",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "p9P8CO4UXyA-6",
+      "en": "But there's something about the way you look tonight",
+      "ko": "하지만 오늘 밤 네 모습에는 뭔가가 있어",
+      "tags": {
+        "functions": [
+          "F30"
+        ],
+        "situation": "S45",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G03"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "p9P8CO4UXyA-7",
+      "en": "It makes me wanna take a picture",
+      "ko": "사진을 찍고 싶게 만들어",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S45",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "p9P8CO4UXyA-8",
+      "en": "Make a movie with you that we'd have to hide",
+      "ko": "너와 숨겨야 할 영화를 만들고 싶어",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -145,83 +220,14 @@
       }
     },
     {
-      "id": "p9P8CO4UXyA-6",
-      "en": "But there's something about the way you look tonight",
-      "ko": "하지만 오늘 밤 네 모습에는 뭔가가 있어",
-      "tags": {
-        "functions": [
-          "F22"
-        ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E11"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "p9P8CO4UXyA-7",
-      "en": "It makes me wanna take a picture",
-      "ko": "사진을 찍고 싶게 만들어",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E11"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "p9P8CO4UXyA-8",
-      "en": "Make a movie with you that we'd have to hide",
-      "ko": "너와 숨겨야 할 영화를 만들고 싶어",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E11"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "p9P8CO4UXyA-9",
       "en": "You better lock your phone",
       "ko": "핸드폰 잠금을 잘 해둬",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -242,10 +248,10 @@
       "ko": "혼자 있을 때 나를 봐",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -265,9 +271,9 @@
       "ko": "널 설레게 하는 건 어렵지 않아",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -288,20 +294,25 @@
       "ko": "고통스럽다면 미안해",
       "tags": {
         "functions": [
-          "F28"
+          "F28",
+          "F21"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -311,10 +322,10 @@
       "ko": "알아, 알아",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -336,20 +347,23 @@
         "functions": [
           "F14"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "99099e1292739da8"
 }

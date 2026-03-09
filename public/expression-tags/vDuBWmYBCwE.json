@@ -12,19 +12,21 @@
       "ko": "인기. 너는 인기가 많아질 거야. 남자애들과 대화할 때 올바른 방법을 가르쳐줄게.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V14",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -37,10 +39,10 @@
       "ko": "너를 알리고 자극하는 방법. 어떤 신발을 신어야 하는지 보여줄게. 머리를 어떻게 고쳐야 하는지도.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +50,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,10 +64,10 @@
       "ko": "인기가 많아지기 위해 정말 중요한 모든 것. 내가 너를 도와줄게. 너는",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -73,7 +75,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -87,10 +89,10 @@
       "ko": "올바른 친구들과 어울릴 거야. 스포츠도 잘할 거고. 알아야 할 속어도 알게 될 거야. 그러니까 시작하자.",
       "tags": {
         "functions": [
-          "F09"
+          "F36"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -98,9 +100,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -112,10 +116,10 @@
       "ko": "시작하자. 너는 정말 긴 길을 가야 해. 내 솔직한 분석에 기분 나빠하지 마.",
       "tags": {
         "functions": [
-          "F04"
+          "F29"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -123,7 +127,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -137,10 +141,10 @@
       "ko": "이걸 성격 다이알리시스로 생각해봐. 내가 친구 도우미이자",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -148,7 +152,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,10 +166,10 @@
       "ko": "조언자가 되기로 선택했으니까. 인기와 관련해서는 누구보다 똑똑해. 나는 인기 있는 것에 대해 잘 알아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,7 +177,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -187,10 +191,10 @@
       "ko": "내가 도와주면 너는 지금의 우울한 모습 대신 너가 될 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -198,7 +202,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -206,5 +210,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "1b195850a5938747"
 }

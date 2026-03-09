@@ -12,10 +12,10 @@
       "ko": "빛의 쇼에. 안녕. 안녕, 릴리. 안녕, 아빠. 릴리, 사랑아.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,12 +23,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,20 +35,25 @@
       "ko": "아니, 아니, 아니, 아니, 아니. 우리는 그걸 하지 않을 거야. 사실,",
       "tags": {
         "functions": [
-          "F43"
+          "F11"
         ],
-        "situation": "S31",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05",
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -60,20 +63,22 @@
       "ko": "사실, 클레어, 우리는 '아니'라는 말을 그렇게 많이 쓰지 않으려 해.",
       "tags": {
         "functions": [
-          "F04"
+          "F11"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G21"
+        ],
         "flags": []
       }
     },
@@ -83,10 +88,10 @@
       "ko": "우리는 아이들이 그 단어에 반항하는 법을 배운다는 책을 방금 읽었어.",
       "tags": {
         "functions": [
-          "F02"
+          "F05"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -94,7 +99,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,10 +111,10 @@
       "ko": "그래서 우리는 그녀를 새로운 활동으로 유도해. 여기, 우리는 이것을 볼 거야. 릴리, 사랑아.",
       "tags": {
         "functions": [
-          "F36"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -117,7 +122,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,10 +134,10 @@
       "ko": "안녕, 아빠야. 음악 좀 듣고 싶니?",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -140,7 +145,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,10 +157,10 @@
       "ko": "좋아, 자, 여기 있어. 봐, 매 세대마다 아이 양육의 비법을 알았다고 생각해.",
       "tags": {
         "functions": [
-          "F25"
+          "F06"
         ],
-        "situation": "S31",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -163,7 +168,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -175,18 +180,18 @@
       "ko": "최신 이론은 뭐야? 절대 '아니'라고 말하지 마. 나는 이 집에서 매일 '아니'라고 말해. 하지만",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,9 +203,9 @@
       "ko": "밤에는 그녀가 '예' 기계야. 아니. 아, 그녀가 자신의 에너지를 전환하는 것 같지 않고 많은 시간을 쓰고 있는 것 같아.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S09",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -209,7 +214,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -221,10 +226,10 @@
       "ko": "하지만 그녀가 천천히 불빛에서 음악으로 전환하는 걸 보니? 응. 응, 그래. 우리가 단지 '그만해'라고 말했던 시절이 있었다는 게 믿기 어려워.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -232,9 +237,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -244,10 +252,10 @@
       "ko": "쓰레기 처리기. 릴리, 아니, 아니, 아니, 아니, 아니, 아니, 아니, 아니, 아니, 아니, 아니, 아니.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -255,7 +263,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,10 +275,10 @@
       "ko": "자신의 에너지를 재조정하는 것만큼 많은 시간을 사용하는 거야.",
       "tags": {
         "functions": [
-          "F02"
+          "F13"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -278,9 +286,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -290,10 +300,10 @@
       "ko": "하지만 그녀가 조명에서 음악으로 천천히 전환하는 걸 보니?",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -301,7 +311,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -313,18 +323,18 @@
       "ko": "응. 응, 그래. 우리가 단지 그만하라고 말했던 때가 있었다는 게 믿기 어려워.",
       "tags": {
         "functions": [
-          "F12"
+          "F03"
         ],
-        "situation": "S31",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S09",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V05",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -336,18 +346,18 @@
       "ko": "쓰레기 처리기. 릴리, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼.",
       "tags": {
         "functions": [
-          "F43"
+          "F02"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -359,24 +369,23 @@
       "ko": "처분. 릴리, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼, 안 돼.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S09",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "120220c90472df29"
 }

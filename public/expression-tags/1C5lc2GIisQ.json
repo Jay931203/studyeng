@@ -12,24 +12,28 @@
       "ko": "시청해 주셔서 감사합니다. 다음 영상에서 만나요. 안녕!",
       "tags": {
         "functions": [
-          "F25"
+          "F32",
+          "F27"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R3",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "vibe": "V12",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G25"
+        ],
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "e10bee6ad730cfcf"
 }

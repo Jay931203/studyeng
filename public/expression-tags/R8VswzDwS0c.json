@@ -12,10 +12,10 @@
       "ko": "나는 네 자식이 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S34",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,9 +35,9 @@
       "ko": "너 시카고 간다고 했잖아.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S34",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -58,10 +58,10 @@
       "ko": "내 딸은 이번 주말에 나를 못 봐.",
       "tags": {
         "functions": [
-          "F02"
+          "F21"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,9 +81,9 @@
       "ko": "그녀는 스키 타러 가.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -95,7 +95,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,9 +106,9 @@
       "ko": "너 그녀가 네 살이라고 했잖아.",
       "tags": {
         "functions": [
-          "F05"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S34",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -127,55 +129,9 @@
       "ko": "너 거짓말하고 있어.",
       "tags": {
         "functions": [
-          "F56"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "R8VswzDwS0c-6",
-      "en": "She was four when I left.",
-      "ko": "내가 떠날 때 그녀는 네 살이었어.",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "R8VswzDwS0c-7",
-      "en": "Now she's 15.",
-      "ko": "지금은 15살이야.",
-      "tags": {
-        "functions": [
-          "F02"
-        ],
-        "situation": "S10",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -187,7 +143,59 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "R8VswzDwS0c-6",
+      "en": "She was four when I left.",
+      "ko": "내가 떠날 때 그녀는 네 살이었어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S34",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
+      }
+    },
+    {
+      "id": "R8VswzDwS0c-7",
+      "en": "Now she's 15.",
+      "ko": "지금은 15살이야.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S34",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -196,9 +204,9 @@
       "ko": "내 아내는 11년 전에 재혼했어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S34",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -219,10 +227,10 @@
       "ko": "나는 가끔 그레이스를 봐.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,10 +250,10 @@
       "ko": "이해가 안 돼.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A1",
+        "situation": "S34",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -256,7 +264,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -265,9 +275,9 @@
       "ko": "이해하지.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S34",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -279,7 +289,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -288,10 +300,10 @@
       "ko": "때때로 거짓말을 사는 게 더 쉬워.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S34",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -311,10 +323,10 @@
       "ko": "오늘 밤 너를 자유롭게 해줄게, 프랭크.",
       "tags": {
         "functions": [
-          "F39"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -334,10 +346,10 @@
       "ko": "나는 너를 막으려고 하지도 않을 거야.",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -357,20 +369,22 @@
       "ko": "왜냐하면 너 월요일에 돌아올 거라는 걸 알거든.",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
-        "situation": "S50",
+        "situation": "S34",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -380,10 +394,11 @@
       "ko": "응.",
       "tags": {
         "functions": [
-          "F01"
+          "F07",
+          "F53"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S34",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -394,7 +409,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -405,14 +422,14 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S34",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -428,53 +445,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "R8VswzDwS0c-19",
-      "en": "Frank.",
-      "ko": "프랭크.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "R8VswzDwS0c-20",
-      "en": "Nobody's chasing you.",
-      "ko": "아무도 너를 쫓고 있지 않아.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S50",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -486,7 +457,59 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "R8VswzDwS0c-19",
+      "en": "Frank.",
+      "ko": "프랭크.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S34",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "R8VswzDwS0c-20",
+      "en": "Nobody's chasing you.",
+      "ko": "아무도 너를 쫓고 있지 않아.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S34",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -497,11 +520,11 @@
         "functions": [
           "F01"
         ],
-        "situation": "S22",
+        "situation": "S34",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
           "X08"
@@ -518,22 +541,25 @@
       "ko": "탑승권을 가지고 23A 게이트로 가주세요.",
       "tags": {
         "functions": [
-          "F01"
+          "F34"
         ],
-        "situation": "S22",
+        "situation": "S34",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "2b3ea505e4ae93c6"
 }

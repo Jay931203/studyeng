@@ -37,7 +37,7 @@
       "ko": "안녕, 귀여운 아가씨",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -51,7 +51,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -61,7 +63,7 @@
       "tags": {
         "functions": [
           "F06",
-          "F09"
+          "F08"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -84,11 +86,10 @@
       "ko": "내 인생의 목표인데, 분명히 너의 마음을 사로잡았나 보네. 그러니까 효과가 있었어. 세상이 다시 의미가 있어졌어.",
       "tags": {
         "functions": [
-          "F09",
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -108,16 +109,17 @@
       "ko": "금요일에 만나자. 아, 맞아 금요일. 응.",
       "tags": {
         "functions": [
-          "F34"
+          "F52"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -131,7 +133,7 @@
       "ko": "오늘 밤 너를 전에 가본 적 없는 곳으로 데려갈게.",
       "tags": {
         "functions": [
-          "F39"
+          "F43"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -144,7 +146,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -154,39 +158,13 @@
       "ko": "어디냐고? 브로드웨이의 7-일레븐. 내 이름도 아는 거야?",
       "tags": {
         "functions": [
-          "F06",
-          "F01"
+          "F23"
         ],
         "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
-      "id": "TD6NM6tdC84-7",
-      "en": "Know a lot more than you think",
-      "ko": "내가 생각하는 것보다 훨씬 더 많이 알아.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -198,12 +176,37 @@
       }
     },
     {
+      "id": "TD6NM6tdC84-7",
+      "en": "Know a lot more than you think",
+      "ko": "내가 생각하는 것보다 훨씬 더 많이 알아.",
+      "tags": {
+        "functions": [
+          "F13"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G10"
+        ],
+        "flags": []
+      }
+    },
+    {
       "id": "TD6NM6tdC84-8",
       "en": "doubtful very doubtful",
       "ko": "의심스러워, 매우 의심스러워.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -217,7 +220,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -226,24 +231,26 @@
       "ko": "우리는 망했어. 아니, 그런 패배주의적인 태도는 듣고 싶지 않아. 네가 힘을 내는 소리를 듣고 싶어. 우리는 망했어.",
       "tags": {
         "functions": [
-          "F19",
-          "F09"
+          "F23"
         ],
         "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E03",
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G15"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "ab94147c0678042f"
 }

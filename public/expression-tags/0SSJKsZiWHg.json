@@ -12,9 +12,9 @@
       "ko": "이봐, 들어봐, 집세가 필요해.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S48",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -25,7 +25,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -35,20 +37,22 @@
       "ko": "더 이상 기다릴 수 없어. 응.",
       "tags": {
         "functions": [
-          "F52"
+          "F07"
         ],
-        "situation": "S14",
+        "situation": "S48",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -58,10 +62,10 @@
       "ko": "좀 더 시간이 필요해. 아들이 여기 있어.",
       "tags": {
         "functions": [
-          "F52"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -83,7 +87,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
+        "situation": "S48",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -106,8 +110,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S48",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -116,10 +120,15 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "6a2e44c4922c793b"
 }

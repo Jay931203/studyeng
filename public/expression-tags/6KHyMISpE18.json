@@ -15,7 +15,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,10 +35,10 @@
       "ko": "해피 엔딩이죠, 그렇죠?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E01"
@@ -46,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,10 +58,11 @@
       "ko": "그런데 2년 후, 회사의 가치는 5억 달러가 되고 로이 레이먼드는 골든 게이트 브리지에서 뛰어내렸어.",
       "tags": {
         "functions": [
-          "F01"
+          "F32",
+          "F03"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,7 +72,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -79,29 +82,6 @@
       "id": "6KHyMISpE18-3",
       "en": "Poor guy just wanted to buy his wife a pair of thigh highs, you know?",
       "ko": "불쌍한 남자는 아내에게 타이 하이 양말 한 켤레 사주고 싶었던 거야, 알지?",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "6KHyMISpE18-4",
-      "en": "Was that a parable?",
-      "ko": "그게 우화였던 건가?",
       "tags": {
         "functions": [
           "F06"
@@ -122,15 +102,15 @@
       }
     },
     {
-      "id": "6KHyMISpE18-5",
-      "en": "My date's a Victoria's Secret model. That's why she looks familiar to you.",
-      "ko": "내 데이트 상대는 빅토리아 시크릿 모델이야. 그래서 너에게 익숙하게 보이는 거야.",
+      "id": "6KHyMISpE18-4",
+      "en": "Was that a parable?",
+      "ko": "그게 우화였던 건가?",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -145,23 +125,48 @@
       }
     },
     {
+      "id": "6KHyMISpE18-5",
+      "en": "My date's a Victoria's Secret model. That's why she looks familiar to you.",
+      "ko": "내 데이트 상대는 빅토리아 시크릿 모델이야. 그래서 너에게 익숙하게 보이는 거야.",
+      "tags": {
+        "functions": [
+          "F04"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
       "id": "6KHyMISpE18-6",
       "en": "God, don't be impressed by all this. I read your blog.",
       "ko": "제발 이 모든 것에 감명받지 마. 네 블로그 읽었어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,7 +178,7 @@
       "ko": "아, 아, 그건 웹 인사말용이었어.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -199,7 +204,7 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -219,21 +224,25 @@
       "ko": "내가 고등학교 때 사랑했던 소녀가 대학 라크로스 팀의 공동 주장과 사귀었고, 나는 그 소녀를 빼앗고 싶었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G15"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -242,16 +251,16 @@
       "ko": "그래서 나는 다음 큰 아이디어를 생각해내기로 결심했어. 그건 몰랐어.",
       "tags": {
         "functions": [
-          "F09"
+          "F56"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -265,10 +274,10 @@
       "ko": "나프스터는 실패가 아니었어. 나는 음악 산업을 영원히 변화시켰어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,10 +297,10 @@
       "ko": "좋은 사업이었는지는 모르겠지만, 많은 사람들을 화나게 했어.",
       "tags": {
         "functions": [
-          "F12"
+          "F17"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E03"
@@ -301,8 +310,12 @@
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G06"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -314,8 +327,8 @@
           "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -334,22 +347,25 @@
       "ko": "그들은 나를 두려워해, 친구, 그리고 너도 두려워할 거야.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E04"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V12",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "8c1e49083a2febd2"
 }

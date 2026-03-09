@@ -15,7 +15,7 @@
           "F01"
         ],
         "situation": "S45",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,12 +23,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,20 +35,24 @@
       "ko": "난 절대 뒤를 돌아보지 않아, 자기야. 현재에 방해가 되니까.",
       "tags": {
         "functions": [
-          "F09"
+          "F43",
+          "F56"
         ],
         "situation": "S45",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -60,18 +62,18 @@
       "ko": "아무도 날 진지하게 받아들이지 않아. 이제 알겠어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,21 +85,25 @@
       "ko": "여기는 레이디에이터 스프링스가 아니야.",
       "tags": {
         "functions": [
-          "F01"
+          "F02"
         ],
         "situation": "S45",
-        "cefr": "A1",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -106,7 +112,7 @@
       "ko": "맞아, 여기가 맞아.",
       "tags": {
         "functions": [
-          "F07"
+          "F44"
         ],
         "situation": "S45",
         "cefr": "A1",
@@ -117,7 +123,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -138,9 +144,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -152,10 +158,10 @@
       "ko": "여기서 너 자신이 되어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -163,10 +169,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -175,18 +183,18 @@
       "ko": "사람들이 너를 진지하게 받아들이지 않는다면,",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -198,7 +206,7 @@
       "ko": "그들은 변해야 해. 너가 아니라.",
       "tags": {
         "functions": [
-          "F12"
+          "F03"
         ],
         "situation": "S45",
         "cefr": "B1",
@@ -209,7 +217,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -224,15 +232,15 @@
           "F06"
         ],
         "situation": "S45",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -247,15 +255,15 @@
           "F06"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -267,19 +275,21 @@
       "ko": "좋아, 너 들어왔어. 환영해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -290,7 +300,7 @@
       "ko": "상상력이 풍부하고 강한 마음을 가져야 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F36"
         ],
         "situation": "S45",
         "cefr": "B1",
@@ -301,7 +311,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -324,7 +334,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -336,7 +346,7 @@
       "ko": "그리고 누구에게도 네 한계를 정의하게 해서는 안 돼.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "B1",
@@ -347,7 +357,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -359,9 +369,9 @@
       "ko": "너의 유일한 한계는 너의 영혼이야.",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -370,9 +380,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -384,7 +396,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -393,7 +405,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -405,18 +417,18 @@
       "ko": "하지만 두려움 없는 자만이 위대해질 수 있어.",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -428,9 +440,9 @@
       "ko": "나 변하고 있어, 엄마.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -439,7 +451,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -451,10 +463,10 @@
       "ko": "나는 드디어 내가 누구인지 알아가고 있어.",
       "tags": {
         "functions": [
-          "F04"
+          "F02"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -462,10 +474,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -474,9 +488,9 @@
       "ko": "나는 드디어 내가 누구인지 알아가고 있어.",
       "tags": {
         "functions": [
-          "F04"
+          "F03"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -485,7 +499,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -497,20 +511,22 @@
       "ko": "트랙에 나가서 똑같은 옛날 방식을 할 수는 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -520,10 +536,10 @@
       "ko": "그건 통하지 않을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -531,10 +547,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -543,9 +561,9 @@
       "ko": "그럼 바꿔봐. 새로운 걸 시도해.",
       "tags": {
         "functions": [
-          "F36"
+          "F03"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -554,7 +572,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -566,24 +584,26 @@
       "ko": "잘 모르겠어, 샐리, 나...",
       "tags": {
         "functions": [
-          "F06"
+          "F43"
         ],
-        "situation": "S50",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G01",
+          "G17"
+        ],
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "81725fad189e3635"
 }

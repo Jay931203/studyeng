@@ -12,11 +12,10 @@
       "ko": "예약 서비스나 여행사요. 저는 직접 예약했어요. 첫날 밤 보증금도 이미 냈고요.",
       "tags": {
         "functions": [
-          "F01",
-          "F04"
+          "F21"
         ],
         "situation": "S23",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -36,21 +35,24 @@
       "ko": "예약 번호가 있는데 도움이 될까요? 네, 물론이죠. 보여주시겠어요?",
       "tags": {
         "functions": [
-          "F06",
-          "F34"
+          "F34",
+          "F46"
         ],
         "situation": "S23",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E13"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02",
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -72,9 +74,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -83,7 +89,7 @@
       "ko": "알겠습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S23",
         "cefr": "A1",
@@ -97,7 +103,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -106,20 +114,23 @@
       "ko": "예약 시스템에 오류가 있었나 봐요.",
       "tags": {
         "functions": [
-          "F04"
+          "F03",
+          "F14"
         ],
         "situation": "S23",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -129,11 +140,10 @@
       "ko": "싱글룸은 더 이상 없는데 연결된 방 하나가 있어요.",
       "tags": {
         "functions": [
-          "F01",
-          "F04"
+          "F52"
         ],
         "situation": "S23",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -153,18 +163,19 @@
       "ko": "하지만 아이가 있는 가족 옆방이라 시끄러울 수 있어요. 하지만 문제 없어요.",
       "tags": {
         "functions": [
-          "F04"
+          "F08",
+          "F14"
         ],
         "situation": "S23",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -176,17 +187,16 @@
       "ko": "비즈니스 스위트로 업그레이드해 드릴 수 있어요. 전부 자쿠지가 있어요. 와, 좋네요.",
       "tags": {
         "functions": [
-          "F09",
-          "F34"
+          "F38"
         ],
         "situation": "S23",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -200,11 +210,11 @@
       "ko": "그러면 추가 비용이 얼마나 드나요? 물론 추가 비용 없이요. 감사합니다. 천만에요.",
       "tags": {
         "functions": [
-          "F06",
-          "F34"
+          "F27",
+          "F44"
         ],
         "situation": "S23",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -213,7 +223,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -224,11 +236,11 @@
       "ko": "무선 인터넷은 어떻게 해요? 아, 정말 쉬워요.",
       "tags": {
         "functions": [
-          "F06"
+          "F36"
         ],
         "situation": "S23",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -237,7 +249,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -247,11 +261,10 @@
       "ko": "이게 접속 코드와 사용 방법 안내입니다.",
       "tags": {
         "functions": [
-          "F01",
-          "F04"
+          "F01"
         ],
         "situation": "S23",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -271,10 +284,10 @@
       "ko": "문제가 있으시면 언제든지 프런트 데스크에 전화해 주세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F47"
         ],
         "situation": "S23",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -284,7 +297,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -294,20 +309,21 @@
       "ko": "그리고 이건 실내 수영장과 체육관 같은 호텔 시설 목록이에요. 정말 감사합니다.",
       "tags": {
         "functions": [
-          "F01",
-          "F04"
+          "F27"
         ],
         "situation": "S23",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -318,11 +334,10 @@
       "ko": "천만에요. 발렛이 이미 차를 가져갔나요, 아니면 필요하신가요?",
       "tags": {
         "functions": [
-          "F06",
           "F34"
         ],
         "situation": "S23",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -331,10 +346,15 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "68ae2794f492c203"
 }

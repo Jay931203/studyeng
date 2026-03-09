@@ -14,9 +14,9 @@
         "functions": [
           "F27"
         ],
-        "situation": "S14",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -24,9 +24,13 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,13 +39,14 @@
       "ko": "그래서 전체를 다 끝냈나요, 아니면 어디 가야 하나요?",
       "tags": {
         "functions": [
-          "F06"
+          "F23",
+          "F45"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -58,13 +63,14 @@
       "ko": "어디 가야 하지만, 전체도 다 끝냈어요. 아, 좋네요. 당신은요?",
       "tags": {
         "functions": [
-          "F09"
+          "F23"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08",
+          "E15"
         ],
         "expression_types": [
           "X08"
@@ -81,10 +87,11 @@
       "ko": "네.",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F53"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -95,7 +102,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,11 +113,11 @@
       "ko": "이식에 대해 어떻게 생각했어요?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S14",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -127,13 +136,13 @@
       "ko": "에세이 질문이 어려웠어요.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -144,5 +153,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "639dc625ff013e93"
 }

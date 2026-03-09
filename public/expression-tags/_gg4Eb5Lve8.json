@@ -12,9 +12,9 @@
       "ko": "배가 멋지지?",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -26,7 +26,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -35,9 +37,9 @@
       "ko": "응, 아일랜드 배야. 영국 배 아니야? 아니, 아일랜드에서 지었어.",
       "tags": {
         "functions": [
-          "F04"
+          "F07"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -60,7 +62,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -83,7 +85,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -95,7 +97,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -104,9 +108,9 @@
       "ko": "그게 전형적이지.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -118,7 +122,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -129,7 +135,30 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S08",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "_gg4Eb5Lve8-6",
+      "en": "It lets us know where we rank in the scheme of things.",
+      "ko": "우리가 어디에 위치하는지 알려주지.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -142,19 +171,20 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "contains_profanity"
+          "is_narration"
         ]
       }
     },
     {
-      "id": "_gg4Eb5Lve8-6",
-      "en": "It lets us know where we rank in the scheme of things.",
-      "ko": "우리가 어디에 위치하는지 알려주지.",
+      "id": "_gg4Eb5Lve8-7",
+      "en": "Like we could forget? I'm Tommy Ryan. Jack Dawson. Hello. Fabrizio.",
+      "ko": "우리가 잊을 수 있을까? 나는 톰미 라이언이야. 잭 도슨. 안녕. 파브리치오.",
       "tags": {
         "functions": [
-          "F01"
+          "F25",
+          "F36"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -165,31 +195,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "_gg4Eb5Lve8-7",
-      "en": "Like we could forget? I'm Tommy Ryan. Jack Dawson. Hello. Fabrizio.",
-      "ko": "우리가 잊을 수 있을까? 나는 톰미 라이언이야. 잭 도슨. 안녕. 파브리치오.",
-      "tags": {
-        "functions": [
-          "F25",
-          "F26"
+        "grammar_intent": [
+          "G09"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
         "flags": []
       }
     },
@@ -201,7 +209,7 @@
         "functions": [
           "F25"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -213,7 +221,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -224,8 +234,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -245,9 +255,9 @@
       "ko": "아, 잊어버려, 보일.",
       "tags": {
         "functions": [
-          "F50"
+          "F43"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -258,7 +268,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -268,9 +280,9 @@
       "ko": "너는 그냥 천사들이 네 엉덩이에서 날아가서 그녀 옆에 가는 걸 좋아하는 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
-        "situation": "S50",
+        "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -281,7 +293,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -291,10 +305,10 @@
       "ko": "뭐야, 이게?",
       "tags": {
         "functions": [
-          "F06"
+          "F17"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S08",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -304,11 +318,14 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "7e87c53d8c0a4053"
 }

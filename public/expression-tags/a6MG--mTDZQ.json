@@ -15,15 +15,15 @@
           "F06"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,7 +35,7 @@
       "ko": "응, 하지만 그녀는 영화가 있어서 살마 커버를 하고 싶어 해. 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F04"
         ],
         "situation": "S14",
         "cefr": "B2",
@@ -46,9 +46,13 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -58,10 +62,10 @@
       "ko": "그리고 나는 대법원 여성에 대한 기사와 영상을 준비하고 있어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +73,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,7 +85,7 @@
       "ko": "그리고 성형외과 쇼핑에 대한 새로운 초안을 봐야 해. 지루해.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S14",
         "cefr": "B2",
@@ -90,11 +94,15 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -104,10 +112,10 @@
       "ko": "겨울 원더랜드 레이아웃도 그렇고.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +123,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,21 +135,23 @@
       "ko": "아직 멋지지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F15"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -150,19 +160,21 @@
       "ko": "알겠어, 내가 볼게.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -176,15 +188,15 @@
           "F06"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,7 +208,7 @@
       "ko": "잭 포젠이 조각 같은 수트를 만들고 있어서, 테스티노에게 노구치 정원에서 촬영하자고 제안했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S14",
         "cefr": "B2",
@@ -205,9 +217,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,21 +231,23 @@
       "ko": "완벽해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -242,18 +256,18 @@
       "ko": "오늘 누군가 일하러 와서 정말 다행이야.",
       "tags": {
         "functions": [
-          "F15"
+          "F27"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -268,15 +282,15 @@
           "F06"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,10 +302,10 @@
       "ko": "내가 생각한 건 에나멜이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -299,7 +313,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,18 +325,18 @@
       "ko": "음, 팔찌, 펜던트, 귀걸이.",
       "tags": {
         "functions": [
-          "F08"
+          "F52"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,18 +348,18 @@
       "ko": "아니, 우리는 2년 전에 그걸 했어. 다른 건 뭐가 있어?",
       "tags": {
         "functions": [
-          "F11"
+          "F06"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -357,18 +371,18 @@
       "ko": "음, 지금 꽃무늬가 많이 나오고 있어서 촬영을 할까 생각 중이야... 꽃무늬? 봄을 위해.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -380,10 +394,10 @@
       "ko": "혁신적이네.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S14",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -391,10 +405,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -403,10 +419,10 @@
       "ko": "하지만 우리는 산업 공간에서 촬영하는 것도 생각했어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S14",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -414,7 +430,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -426,9 +442,9 @@
       "ko": "꽃무늬의 여성스러움과 더 거칠고 원초적인 배경의 대비를 생각했어...",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S14",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -437,11 +453,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "b4736802d6c27a90"
 }

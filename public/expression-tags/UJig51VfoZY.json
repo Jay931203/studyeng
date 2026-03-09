@@ -12,10 +12,10 @@
       "ko": "그냥 안아.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -37,11 +37,10 @@
       "ko": "안아서 풀자. 응?",
       "tags": {
         "functions": [
-          "F25",
-          "F34"
+          "F35"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -51,7 +50,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -61,10 +62,10 @@
       "ko": "안아서 풀자고?",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -84,13 +85,13 @@
       "ko": "루이사는 엠파나다도 들지 못해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -107,16 +108,16 @@
       "ko": "마리아노의 코는 으깨진 파파야처럼 생겼어. 너 미쳤어?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -132,14 +133,14 @@
         "functions": [
           "F09"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -153,16 +154,17 @@
       "ko": "그리고 화났을 때 뭐가 치료법인지 알아?",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -176,13 +178,13 @@
       "ko": "따뜻한 포옹.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -201,14 +203,14 @@
         "functions": [
           "F35"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -222,10 +224,10 @@
       "ko": "모든 게 완벽했어. 할머니도 행복했고, 가족도 행복했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E01"
@@ -245,9 +247,9 @@
       "ko": "더 나은 언니가 되고 싶어?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -258,7 +260,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -268,20 +272,22 @@
       "ko": "내 인생을 망친 것에 대해 사과해.",
       "tags": {
         "functions": [
-          "F28"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S45",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -291,16 +297,16 @@
       "ko": "계속해.",
       "tags": {
         "functions": [
-          "F50"
+          "F35"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -314,9 +320,9 @@
       "ko": "사과해. 나는",
       "tags": {
         "functions": [
-          "F28"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -327,7 +333,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": [
           "is_fragment"
         ]
@@ -339,9 +347,9 @@
       "ko": "정말로",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -364,13 +372,13 @@
       "ko": "미안해.",
       "tags": {
         "functions": [
-          "F28"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S45",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -389,22 +397,25 @@
       "ko": "네 인생이 너무 좋다는 게.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S45",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "f022f36671b36c88"
 }

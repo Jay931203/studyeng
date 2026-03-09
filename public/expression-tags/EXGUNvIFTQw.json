@@ -12,13 +12,13 @@
       "ko": "곤도르의 아들들, 로한의 형제들, 나는 너희 눈에서 나의 마음을 사로잡을 두려움을 본다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S43",
         "cefr": "B2",
-        "register": "R2",
+        "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -35,13 +35,13 @@
       "ko": "남자의 용기가 실패하는 날이 올지도 모른다. 우리가 친구를 저버리고",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -49,7 +49,9 @@
         "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -58,13 +60,13 @@
       "ko": "모든 우정을 깨뜨리는 날이 올지도 모른다. 하지만 오늘은 그날이 아니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S43",
         "cefr": "B2",
-        "register": "R2",
+        "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -81,13 +83,13 @@
       "ko": "남자의 시대가 무너지는 성벽과 부서진 방패의 시간이 오더라도, 오늘은 그날이 아니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S43",
         "cefr": "B2",
-        "register": "R2",
+        "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -104,13 +106,13 @@
       "ko": "오늘 우리는 싸운다!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S43",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -127,18 +129,18 @@
       "ko": "이 좋은 땅에서 너희가 소중히 여기는 모든 것을 위해, 나는 너희에게 서라고 요청한다! 서쪽의 사람들!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S42",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V05",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,22 +152,23 @@
       "ko": "싸운다! 이 땅에서 소중히 여기는 모든 것을 걸고, 너희에게 명한다!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S43",
         "cefr": "B2",
-        "register": "R2",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V05",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "247e695f1d920f71"
 }

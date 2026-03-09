@@ -14,7 +14,7 @@
         "functions": [
           "F27"
         ],
-        "situation": "S08",
+        "situation": "S44",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -23,10 +23,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -35,9 +39,9 @@
       "ko": "당신이 나에게 더 많은 아이를 원한다고 생각했어요. 저도요.",
       "tags": {
         "functions": [
-          "F09"
+          "F20"
         ],
-        "situation": "S08",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -46,7 +50,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,7 +64,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
+        "situation": "S44",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -69,9 +73,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": []
       }
     },
@@ -81,9 +87,9 @@
       "ko": "깔끔하고 합리적이라고 생각했어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -92,7 +98,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,10 +110,10 @@
       "ko": "성욕을 자극하는 형용사? 분명히 매우 동물적이에요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "C1",
+        "situation": "S02",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +121,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,18 +135,20 @@
         "functions": [
           "F02"
         ],
-        "situation": "S08",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S44",
+        "cefr": "B2",
+        "register": "R3",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16"
+        ],
         "flags": []
       }
     },
@@ -150,9 +158,9 @@
       "ko": "그리고 만약 오토바이를 타고 싶다면, 헬멧으로도 쓸 수 있어요. 음, 저는 좋아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S44",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
@@ -161,9 +169,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -173,9 +183,9 @@
       "ko": "저는 그것에 반대하지 않아요. 그만해요.",
       "tags": {
         "functions": [
-          "F11"
+          "F35"
         ],
-        "situation": "S08",
+        "situation": "S44",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -184,7 +194,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,9 +206,9 @@
       "ko": "떨어지는 벽돌에 대해 충분한 보호를 제공할 것 같아요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S44",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -207,11 +217,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G16"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "860014a2b9e2825a"
 }

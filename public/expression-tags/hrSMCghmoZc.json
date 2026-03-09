@@ -12,23 +12,23 @@
       "ko": "똑같아. 멈춰야 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,10 +37,10 @@
       "ko": "안 돼! 어디로 가는지 알아야 해.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,9 +48,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -60,19 +62,21 @@
       "ko": "답이 있을 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -83,7 +87,7 @@
       "ko": "우리가 못 보는 뭔가가 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
@@ -94,7 +98,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,7 +110,7 @@
       "ko": "너도 나와 같은 걸 보고 있잖아.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S45",
         "cefr": "A2",
@@ -117,7 +121,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,7 +133,7 @@
       "ko": "만약 다른 게 있다면...",
       "tags": {
         "functions": [
-          "F14"
+          "F03"
         ],
         "situation": "S45",
         "cefr": "A2",
@@ -140,12 +144,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -154,10 +156,10 @@
       "ko": "저기!",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -165,10 +167,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -177,7 +181,7 @@
       "ko": "나비! 나비를 따라가!",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
@@ -188,7 +192,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -200,10 +204,10 @@
       "ko": "그게 어디야?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
         "situation": "S45",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -211,7 +215,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -223,7 +227,7 @@
       "ko": "순서가 다 뒤죽박죽이야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
@@ -234,7 +238,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -257,7 +261,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -269,7 +273,7 @@
       "ko": "초가 더 밝아지고 있어!",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S45",
         "cefr": "A2",
@@ -280,10 +284,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -296,18 +302,24 @@
         ],
         "situation": "S45",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05",
+          "X07"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V09",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "8d1219f1bd4f860b"
 }

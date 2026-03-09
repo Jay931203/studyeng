@@ -5,6 +5,7 @@
   "seriesId": "ted-ed",
   "sentenceCount": 12,
   "taggedCount": 12,
+  "transcriptHash": "976071dd2d6806c5",
   "sentences": [
     {
       "id": "FWTNMzK9vG4-0",
@@ -12,21 +13,25 @@
       "ko": "이제 집중할 시간이에요. 컴퓨터를 켜고 휴대폰을 확인하세요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V16",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -35,21 +40,26 @@
       "ko": "좋아하는 유튜브 채널을 확인해볼까요?",
       "tags": {
         "functions": [
-          "F34"
+          "F14"
         ],
-        "situation": "S48",
+        "situation": "S47",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X03",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -58,21 +68,27 @@
       "ko": "사실 저녁을 먼저 만드는 게 좋겠어요.",
       "tags": {
         "functions": [
-          "F37"
+          "F11"
         ],
-        "situation": "S48",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G17",
+          "G21"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -81,21 +97,25 @@
       "ko": "보통 요리를 좋아하지만, 이런 일이 걸려 있으면 즐기기 힘들죠.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E02"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -104,21 +124,27 @@
       "ko": "게다가 꽤 늦었어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F11"
         ],
-        "situation": "S48",
+        "situation": "S47",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "vibe": "V16",
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G21"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -127,21 +153,25 @@
       "ko": "아침에 다시 시도하는 게 좋겠어요.",
       "tags": {
         "functions": [
-          "F37"
+          "F14"
         ],
-        "situation": "S48",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G17"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -150,21 +180,25 @@
       "ko": "이게 바로 미루기의 순환이고, 우리 모두 그런 경험이 있어요.",
       "tags": {
         "functions": [
-          "F04"
+          "F41"
         ],
-        "situation": "S48",
+        "situation": "S47",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G08"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -175,19 +209,23 @@
         "functions": [
           "F06"
         ],
-        "situation": "S48",
+        "situation": "S47",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V12",
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -196,21 +234,25 @@
       "ko": "분명히 말하자면, 어떤 일을 미루는 것이 항상 미루는 것은 아니에요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G19"
+        ],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -219,21 +261,23 @@
       "ko": "책임 있는 시간 관리는 어떤 일이 중요한지, 어떤 일이 기다릴 수 있는지를 결정하는 것을 요구해요.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S48",
+        "situation": "S47",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -242,21 +286,23 @@
       "ko": "미루기는 우리가 하기로 한 일을 아무 이유 없이 피하는 것이에요.",
       "tags": {
         "functions": [
-          "F04"
+          "F49"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "A1",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -265,21 +311,25 @@
       "ko": "하겠다고 해놓고 아무 이유 없이 안 하는 거죠.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S48",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S47",
+        "cefr": "B2",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V16",
+        "power": [
+          "P08"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     }
   ]

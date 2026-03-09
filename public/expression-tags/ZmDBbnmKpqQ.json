@@ -12,7 +12,8 @@
       "ko": "울고 있어, 네가 없어서.",
       "tags": {
         "functions": [
-          "F16"
+          "F16",
+          "F04"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -25,7 +26,9 @@
         ],
         "vibe": "V09",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -37,18 +40,18 @@
       "ko": "아마 그 금발 여자와 함께일 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -62,20 +65,22 @@
       "ko": "항상 나를 의심하게 만들던.",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -87,7 +92,7 @@
       "ko": "그녀는 나보다 훨씬 나이가 많아.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -98,7 +103,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -112,13 +117,13 @@
       "ko": "그녀는 내가 불안해하는 모든 것이야.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -137,10 +142,10 @@
       "ko": "하지만 오늘 여름을 지나갔어.",
       "tags": {
         "functions": [
-          "F03"
+          "F21"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -148,7 +153,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -162,20 +167,23 @@
       "ko": "어떻게 다른 사람을 사랑할 수 있을까?",
       "tags": {
         "functions": [
-          "F09"
+          "F06",
+          "F04"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -187,7 +195,7 @@
       "ko": "우리가 완벽하지 않았다는 건 알아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
@@ -198,7 +206,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -212,13 +220,42 @@
       "ko": "하지만 누구에게도 이런 감정을 느껴본 적이 없어.",
       "tags": {
         "functions": [
-          "F02"
+          "F43"
+        ],
+        "situation": "S46",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V09",
+        "power": [
+          "P10"
+        ],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": [
+          "is_lyrics"
+        ]
+      }
+    },
+    {
+      "id": "ZmDBbnmKpqQ-9",
+      "en": "And I just can't imagine",
+      "ko": "상상할 수가 없어.",
+      "tags": {
+        "functions": [
+          "F01"
         ],
         "situation": "S46",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -232,46 +269,22 @@
       }
     },
     {
-      "id": "ZmDBbnmKpqQ-9",
-      "en": "And I just can't imagine",
-      "ko": "상상할 수가 없어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
       "id": "ZmDBbnmKpqQ-10",
       "en": "How you could be so okay now that I'm gone",
       "ko": "내가 떠난 지금 너가 이렇게 괜찮을 수 있는지.",
       "tags": {
         "functions": [
-          "F18"
+          "F06",
+          "F14"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V09",
         "power": [],
@@ -287,13 +300,13 @@
       "ko": "내게 쓴 그 노래의 의미가 아니었던 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F55"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -312,10 +325,10 @@
       "ko": "영원하다고 했지만, 이제 너의 거리를 혼자 지나가고 있어.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -323,7 +336,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -331,5 +344,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "97b12a4934bd14d4"
 }

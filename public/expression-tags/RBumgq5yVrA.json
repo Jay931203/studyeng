@@ -12,10 +12,10 @@
       "ko": "아직 계신가요? 그렇다면 이 드라이브에 함께해 주셔서 감사합니다.",
       "tags": {
         "functions": [
-          "F34"
+          "F27"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,8 +23,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -37,10 +39,10 @@
       "ko": "아직 계신가요? 그렇다면 이 드라이브에 함께해 주셔서 감사합니다.",
       "tags": {
         "functions": [
-          "F34"
+          "F27"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,13 +50,16 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "51cca46df95bc240"
 }

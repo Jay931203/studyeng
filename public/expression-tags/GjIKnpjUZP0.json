@@ -14,9 +14,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -35,11 +35,62 @@
       "ko": "큰 현금 보상을 받을 수 있습니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F47"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G13"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "GjIKnpjUZP0-2",
+      "en": "Call 505-503-4455 today. Are you kidding me? I can't do this. It's libel. It's defamation.",
+      "ko": "오늘 505-503-4455로 전화하세요. 농담이죠? 이건 할 수 없어요. 명예훼손이에요.",
+      "tags": {
+        "functions": [
+          "F18"
+        ],
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G01",
+          "G07"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "GjIKnpjUZP0-3",
+      "en": "My father you're making a fool of. Jimmy, turn it off. You know you can't do this. Shh.",
+      "ko": "당신이 바보로 만들고 있는 건 내 아버지예요. 지미, 꺼줘. 이건 할 수 없다는 걸 알잖아. 쉿.",
+      "tags": {
+        "functions": [
+          "F58"
+        ],
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -53,64 +104,15 @@
       }
     },
     {
-      "id": "GjIKnpjUZP0-2",
-      "en": "Call 505-503-4455 today. Are you kidding me? I can't do this. It's libel. It's defamation.",
-      "ko": "오늘 505-503-4455로 전화하세요. 농담이죠? 이건 할 수 없어요. 명예훼손이에요.",
-      "tags": {
-        "functions": [
-          "F06",
-          "F01"
-        ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "GjIKnpjUZP0-3",
-      "en": "My father you're making a fool of. Jimmy, turn it off. You know you can't do this. Shh.",
-      "ko": "당신이 바보로 만들고 있는 건 내 아버지예요. 지미, 꺼줘. 이건 할 수 없다는 걸 알잖아. 쉿.",
-      "tags": {
-        "functions": [
-          "F09",
-          "F10",
-          "F11"
-        ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "GjIKnpjUZP0-4",
       "en": "This is a good one.",
       "ko": "이건 괜찮은데.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -130,9 +132,9 @@
       "ko": "나는 식료품을 사기 위해 현금을 인출하러 은행에 갔고,",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -155,18 +157,20 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -176,11 +180,11 @@
       "ko": "네, 안녕하세요. 저는 솔 굿맨입니다.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A1",
-        "register": "R4",
+        "situation": "S27",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -199,18 +203,18 @@
       "ko": "당신이나 가족이 메사 베르데 지점을 방문해서",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -224,14 +228,14 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -245,11 +249,11 @@
       "ko": "그렇다면 큰 현금 보상을 받을 수 있습니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F47"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -258,7 +262,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G13"
+        ],
         "flags": []
       }
     },
@@ -268,20 +274,25 @@
       "ko": "법적으로 이런 걸 운영할 수는 없어요. 아마도요.",
       "tags": {
         "functions": [
+          "F18",
+          "F43",
           "F11"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E03"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V12",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G07"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -293,12 +304,11 @@
       "ko": "하지만, 그들이 뉴멕시코, 애리조나, 유타, 텍사스에서 운영한 후에 싸울 거예요.",
       "tags": {
         "functions": [
-          "F09",
-          "F36"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -317,13 +327,13 @@
       "ko": "뉴멕시코, 애리조나, 유타, 텍사스에서.",
       "tags": {
         "functions": [
-          "F01"
+          "F23"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S27",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -340,11 +350,11 @@
       "ko": "아니, 아니, 아니, 당신이 그렇게 멀리 가기 전에 막을 거예요.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -363,16 +373,17 @@
       "ko": "어떤 사람들은 이를 사전 검열이라고 부를 수 있어요. 알겠어요? 당신이 우리를 막을 수 있어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S27",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -386,16 +397,16 @@
       "ko": "어떤 뉴스 매체가 이를 보도할 거예요. 그들은 무료로 방송할 거예요.",
       "tags": {
         "functions": [
-          "F05"
+          "F23"
         ],
-        "situation": "S36",
+        "situation": "S27",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -409,10 +420,10 @@
       "ko": "나는 안전 금고를 열기 위해 은행에 갔고,",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -432,10 +443,10 @@
       "ko": "그리고 그는 바지를 내린 채로 서 있었어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S27",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -449,5 +460,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "57fb148c849f6ce1"
 }

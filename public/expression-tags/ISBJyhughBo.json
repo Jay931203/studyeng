@@ -12,10 +12,10 @@
       "ko": "윙핏의 슈퍼볼 수프림 플래터를 시도해 보세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -24,7 +24,9 @@
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -35,10 +37,10 @@
       "ko": "48개의 육즙 가득한 버팔로 윙이 단돈 39.99달러. 이제 이야기가 시작되네요.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,9 +60,9 @@
       "ko": "그리고 파티가 정말 뜨거워진다면,",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -81,16 +83,16 @@
       "ko": "윙핏의 테일게이트 축제를 선택하세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F35"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V10",
         "power": [],
@@ -104,10 +106,10 @@
       "ko": "240개의 윙과 다섯 가지 이색 소스,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,10 +129,10 @@
       "ko": "아시안 징과 자메이카 비 스파이시 같은 소스가 포함됩니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,19 +152,21 @@
       "ko": "그리고 랜치 소스 1갤런이 단 89.99달러. 멋지네요, 감사합니다.",
       "tags": {
         "functions": [
-          "F34"
+          "F27"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -173,16 +177,17 @@
       "ko": "하지만 우리는 아마 윙은 충분할 것 같아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F21",
+          "F14"
         ],
-        "situation": "S31",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V10",
         "power": [],
@@ -196,16 +201,16 @@
       "ko": "하지만 윙핏의 새로운 눈물의 쟁반으로 윙을 더 즐길 수 있어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V10",
         "power": [],
@@ -219,18 +224,20 @@
       "ko": "윙핏의 새로운 눈물의 쟁반으로.",
       "tags": {
         "functions": [
-          "F34"
+          "F16",
+          "F23"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E02",
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,13 +249,13 @@
       "ko": "600개의 맛있는 윙과 15가지 매운 소스,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E12"
         ],
         "expression_types": [
           "X08"
@@ -265,10 +272,10 @@
       "ko": "그리고 랜치 소스가 가득 담긴 어린이 풀장이 단 205.99달러.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -288,10 +295,10 @@
       "ko": "여기 사람은 15명 정도밖에 없어요. 그건 필요 없어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -311,10 +318,10 @@
       "ko": "하지만 당신은 원하잖아요, 윙핏의 하드 슬러리 치킨 스무디처럼요.",
       "tags": {
         "functions": [
-          "F09"
+          "F13"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S34",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -324,7 +331,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -334,9 +343,9 @@
       "ko": "윙핏의 하드 슬러리 치킨 스무디.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S31",
+        "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -357,10 +366,10 @@
       "ko": "40개의 액체화된 윙과 80도 그린 알코올이 섞여 있어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -383,7 +392,7 @@
           "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -403,7 +412,7 @@
       "ko": "그리고 더 마시고 싶다면,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -426,13 +435,13 @@
       "ko": "윙핏의 새로운 치킨 카니지 플래터를 시도해 보세요.",
       "tags": {
         "functions": [
-          "F34"
+          "F23"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -449,10 +458,10 @@
       "ko": "3,000개의 매콤한 윙이 검은 계약자 가방에 담겨.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -472,10 +481,10 @@
       "ko": "당신의 창문을 뚫고 바로 킥오프 시간이에요.",
       "tags": {
         "functions": [
-          "F02"
+          "F21"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -489,5 +498,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "abce6cf5fea3f173"
 }

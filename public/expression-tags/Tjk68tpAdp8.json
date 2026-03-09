@@ -12,34 +12,11 @@
       "ko": "더 이상 아버지의 생명을 노리지 마.",
       "tags": {
         "functions": [
-          "F40"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R2",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "Tjk68tpAdp8-1",
-      "en": "What guarantees can I give you, Mike?",
-      "ko": "내가 너에게 어떤 보장을 해줄 수 있을까, 마이크?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -53,23 +30,48 @@
       }
     },
     {
+      "id": "Tjk68tpAdp8-1",
+      "en": "What guarantees can I give you, Mike?",
+      "ko": "내가 너에게 어떤 보장을 해줄 수 있을까, 마이크?",
+      "tags": {
+        "functions": [
+          "F46"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G13"
+        ],
+        "flags": []
+      }
+    },
+    {
       "id": "Tjk68tpAdp8-2",
       "en": "I am the hunted one.",
       "ko": "나는 쫓기는 사람이다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,18 +83,18 @@
       "ko": "기회를 놓쳤어.",
       "tags": {
         "functions": [
-          "F20"
+          "F16"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,9 +106,9 @@
       "ko": "나를 너무 높게 평가하지 마, 애기야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -127,9 +129,9 @@
       "ko": "나는 그렇게 똑똑하지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -150,10 +152,10 @@
       "ko": "내가 원하는 건 휴전이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -163,7 +165,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G15"
+        ],
         "flags": []
       }
     },
@@ -173,13 +177,13 @@
       "ko": "화장실 가야 해.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E15"
         ],
         "expression_types": [
           "X08"
@@ -196,10 +200,10 @@
       "ko": "괜찮아?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S40",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -219,20 +223,24 @@
       "ko": "가고 싶으면 가야지.",
       "tags": {
         "functions": [
-          "F34"
+          "F32"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -242,11 +250,11 @@
       "ko": "나는 그를 깨끗하게 만들었어. 그는 깨끗해.",
       "tags": {
         "functions": [
-          "F08"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -267,7 +275,7 @@
         "functions": [
           "F35"
         ],
-        "situation": "S40",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -288,10 +296,10 @@
       "ko": "나는 천 명의 젊은 아이들을 깨끗하게 만들었어.",
       "tags": {
         "functions": [
-          "F08"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -311,10 +319,10 @@
       "ko": "나는 천 명의 젊은 아이들을 깨끗하게 만들었어.",
       "tags": {
         "functions": [
-          "F08"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R2",
         "emotions": [
           "E09"
@@ -328,5 +336,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "37a7c40de9ba1cae"
 }

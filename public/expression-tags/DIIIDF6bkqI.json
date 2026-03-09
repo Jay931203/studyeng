@@ -12,13 +12,13 @@
       "ko": "여보? 나 왔어.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
@@ -35,11 +35,10 @@
       "ko": "안녕. 손님이야. 미리 연락 못 해서 미안해.",
       "tags": {
         "functions": [
-          "F25",
-          "F34"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -61,7 +60,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -82,10 +81,10 @@
       "ko": "신사분들, 이분은 로라입니다.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -107,8 +106,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -128,10 +127,10 @@
       "ko": "오, 들어온다.",
       "tags": {
         "functions": [
-          "F18"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -142,7 +141,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -151,14 +152,13 @@
       "ko": "안녕, 자기야. 안녕, 친구. 잘 지내고 있어?",
       "tags": {
         "functions": [
-          "F25",
-          "F34"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
@@ -177,8 +177,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -198,9 +198,9 @@
       "ko": "네 얼굴 좀 봐. 오, 세상에.",
       "tags": {
         "functions": [
-          "F18"
+          "F35"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -223,8 +223,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -244,20 +244,24 @@
       "ko": "그녀를 안아보고 알아보는 게 어때?",
       "tags": {
         "functions": [
-          "F36"
+          "F06",
+          "F36",
+          "F40"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -267,10 +271,10 @@
       "ko": "갑자기 찾아와서 미안해.",
       "tags": {
         "functions": [
-          "F28"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -290,10 +294,10 @@
       "ko": "미리 연락했어야 했는데, 당신이 존재하는 줄 몰랐거든.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S01",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -313,16 +317,16 @@
       "ko": "그래, 퓨리가 내가 합류할 때 이걸 설정해줬어.",
       "tags": {
         "functions": [
-          "F05"
+          "F07"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S01",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -336,16 +340,16 @@
       "ko": "쉴드의 파일에는 남기지 않았어, 그렇게 유지하고 싶어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S01",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -359,10 +363,10 @@
       "ko": "여기서 숨어 지내기 좋은 곳이라고 생각해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S01",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -382,18 +386,18 @@
       "ko": "여보, 보고 싶었어.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R5",
+        "situation": "S01",
+        "cefr": "A1",
+        "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -405,10 +409,10 @@
       "ko": "내가 조금 나타샤 같았지?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B1",
+        "situation": "S01",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -422,5 +426,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "a2ec57078006bd0f"
 }

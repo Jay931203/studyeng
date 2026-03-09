@@ -12,20 +12,22 @@
       "ko": "세상에, 내가 더 바보처럼 행동할 수 있었을까?",
       "tags": {
         "functions": [
-          "F09"
+          "F18"
         ],
         "situation": "S09",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -35,10 +37,10 @@
       "ko": "가짜 앞니 세트 없이는 불가능하지.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S09",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -46,7 +48,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,20 +60,22 @@
       "ko": "당신 너무 잘생겼어요. 이렇게 잘생긴 사람과는 일할 수 없어요. 기분 나쁘지 않아요. 아, 전혀 기분 나쁘지 않아요.",
       "tags": {
         "functions": [
-          "F09"
+          "F43"
         ],
         "situation": "S09",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
-        "vibe": "V07",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -81,7 +85,7 @@
       "ko": "외모 부문에서는 드. 웨버와 제가 같은... 종은 아니죠?",
       "tags": {
         "functions": [
-          "F12"
+          "F10"
         ],
         "situation": "S09",
         "cefr": "B2",
@@ -92,9 +96,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -104,10 +110,10 @@
       "ko": "원래는 리그라고 하려 했는데, 종이라는 표현이 훨씬 더 모욕적이네요.",
       "tags": {
         "functions": [
-          "F12"
+          "F02"
         ],
         "situation": "S09",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -115,7 +121,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -127,21 +133,23 @@
       "ko": "이건 최악이야! 완전 말도 안 돼!",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S09",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -150,7 +158,7 @@
       "ko": "여자들이 이 새로운 웨버 남자에게 모두 열광하고 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S09",
         "cefr": "B1",
@@ -161,10 +169,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -173,10 +183,10 @@
       "ko": "나는 여기서 유일한 섹스 심볼이어야 해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S09",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -184,7 +194,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -196,7 +206,7 @@
       "ko": "잠깐, 이거 봐, 이거 봐. 자, 최선을 다해 봐. 너 말고, 저 남자들 중 한 명.",
       "tags": {
         "functions": [
-          "F34"
+          "F38"
         ],
         "situation": "S09",
         "cefr": "B2",
@@ -205,9 +215,9 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,18 +229,18 @@
       "ko": "오, 불독, 너답지 않게 유치하게 행동하고 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S09",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,10 +252,10 @@
       "ko": "인정해, 그 남자는 잘생겼지만 위협을 느낄 이유는 없어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S09",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -253,7 +263,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -265,10 +275,10 @@
       "ko": "고백할게, 그가 그렇게 잘생겼는지 몰랐어.",
       "tags": {
         "functions": [
-          "F64"
+          "F56"
         ],
-        "situation": "S09",
-        "cefr": "B2",
+        "situation": "S40",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -276,7 +286,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,10 +298,10 @@
       "ko": "몰랐다고? 너가 그런 사람이라고?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
         "situation": "S09",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -299,7 +309,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,10 +321,10 @@
       "ko": "도대체 무슨 뜻으로 말하는 거야?",
       "tags": {
         "functions": [
-          "F50"
+          "F06"
         ],
         "situation": "S09",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -322,7 +332,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,18 +344,18 @@
       "ko": "음, 너가 좀, 어...",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
         "situation": "S09",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -357,10 +367,10 @@
       "ko": "참고로 말하자면...",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S09",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -368,11 +378,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "3c99b934ad7d2a4e"
 }

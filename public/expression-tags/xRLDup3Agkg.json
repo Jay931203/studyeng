@@ -14,9 +14,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -35,10 +35,10 @@
       "ko": "당신은 미국 대통령을 테러리스트라고 비난했습니다. 이의 있습니다, 재판장님.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -58,11 +58,11 @@
       "ko": "대답은 '예'입니다. 무엇에 대한 대답이 '예'인가요? 네, 제가",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -83,9 +83,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -104,10 +104,10 @@
       "ko": "배심원 중에 흑인도 있다는 걸 알 수 있었습니다. 감사합니다, 로스코 씨. 그래서 당신의",
       "tags": {
         "functions": [
-          "F02"
+          "F27"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -116,7 +116,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -127,10 +129,10 @@
       "ko": "아는 바에 따르면 시카고 경찰은 윌란스 부인을",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
@@ -150,11 +152,11 @@
       "ko": "딸의 실종 사건의 용의자로 보고 있습니까? PC 용어는 '관심 인물' 아닙니까? 그냥",
       "tags": {
         "functions": [
-          "F06"
+          "F21"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -173,11 +175,11 @@
       "ko": "간단하게 말씀드리겠습니다. 예는 한 번, 아니오 는 두 번 노크하세요.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -196,20 +198,24 @@
       "ko": "아무도 이의 제기 안 하나요? 사실, 제 법정에서는 아무도 노크하지 마세요. 로스코 씨,",
       "tags": {
         "functions": [
-          "F40"
+          "F08"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R2",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -219,11 +225,11 @@
       "ko": "셰릴 윌란스를 살인으로 공개적으로 비난할 때 어떤 증거가 있었나요?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -242,11 +248,11 @@
       "ko": "검사는 배심원을 설득해야 합니다. 저는 논평가일 뿐, 저 자신을 설득하면 됩니다.",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -265,11 +271,11 @@
       "ko": "논평가로서 저는 자신을 설득하면 됩니다. 그래서 자신을 설득하면",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -290,9 +296,9 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -305,5 +311,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "964e6eebf6ffd1f6"
 }

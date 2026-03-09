@@ -12,10 +12,10 @@
       "ko": "CEO를 데려온 적이 없고, 그는 십대였어요.",
       "tags": {
         "functions": [
-          "F01"
+          "F03"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,10 +35,10 @@
       "ko": "나중에 전화해 줘. 알겠어. 고마워.",
       "tags": {
         "functions": [
-          "F34"
+          "F27"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,7 +58,7 @@
       "ko": "괜찮아. 내가 문 열 수 있어.",
       "tags": {
         "functions": [
-          "F44"
+          "F40"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -71,7 +71,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -81,10 +83,10 @@
       "ko": "좋아, 이건 한 시간 이상 걸리지 않을 거야,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -104,10 +106,10 @@
       "ko": "하지만 여기 있을 수 없다면, 베키에게 전화할게,",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -127,10 +129,10 @@
       "ko": "그러면 그녀가 너를 찾아서, 너는 그냥 오면 돼.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -153,13 +155,13 @@
           "F09"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -173,7 +175,7 @@
       "ko": "초밥 좀 사다 줄까?",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -196,13 +198,13 @@
       "ko": "아니, 수은을 너무 많이 먹어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -219,10 +221,10 @@
       "ko": "괜찮아. 나는 괜찮아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,16 +244,17 @@
       "ko": "사실 좀 메스꺼워서...",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -279,8 +282,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "a001ffc94cce9995"
 }

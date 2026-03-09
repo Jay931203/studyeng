@@ -12,10 +12,11 @@
       "ko": "내가 평생 해본 적 없는 게임이야. 무슨 문제야, 친구? 남자답지 못한 거야?",
       "tags": {
         "functions": [
-          "F09"
+          "F21",
+          "F43"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -25,10 +26,10 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
       }
     },
     {
@@ -38,20 +39,22 @@
       "tags": {
         "functions": [
           "F06",
-          "F09"
+          "F04"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -61,11 +64,10 @@
       "ko": "못해? 공을 구멍에 넣기만 하면 되잖아. 그게 얼마나 어려울까? TV에서 봤어.",
       "tags": {
         "functions": [
-          "F04",
-          "F09"
+          "F06"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -85,10 +87,11 @@
       "ko": "맞아. TV처럼 공을 구멍에 넣기만 하면 돼.",
       "tags": {
         "functions": [
-          "F04"
+          "F07",
+          "F13"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -98,7 +101,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -108,10 +113,10 @@
       "ko": "내가 말할게, 네가 먼저 해봐. 제프리, 저 막대기 하나 가져와. 적어도",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -131,19 +136,18 @@
       "ko": "용어는 잘 알고 있네. 선생님, 이게 현명하다고 생각하세요? 말도 안 돼, 제프리.",
       "tags": {
         "functions": [
-          "F09",
-          "F06"
+          "F12"
         ],
-        "situation": "S09",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R2",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -155,10 +159,10 @@
       "ko": "간단한 기하학이야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S09",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -169,8 +173,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "eb5d21a73c8dfffc"
 }

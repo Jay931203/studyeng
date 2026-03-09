@@ -12,10 +12,10 @@
       "ko": "루시, 나 멕시코어 못해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,10 +35,10 @@
       "ko": "나는 멕시코인이 아니야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -62,7 +62,7 @@
         ],
         "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -81,7 +81,7 @@
       "ko": "루시는 엘살바도르 출신이야. 그래서?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -104,7 +104,7 @@
       "ko": "완전히 다른 나라야. 그게 무슨 상관이야?",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -127,13 +127,13 @@
       "ko": "누군가가 네가 선셋 아래에 산다고 생각하면 화내잖아.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -150,54 +150,7 @@
       "ko": "아, 알겠어. 모든 게 내 잘못이네. 내가 항상 틀리잖아? 너 정말 귀찮아.",
       "tags": {
         "functions": [
-          "F20"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03",
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "BEG66-Lro7U-7",
-      "en": "I had an overwhelming sense of ickiness.",
-      "ko": "불쾌한 기분이 들었어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "BEG66-Lro7U-8",
-      "en": "Even though I apologized to Lucy,",
-      "ko": "루시에게 사과했지만,",
-      "tags": {
-        "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -211,9 +164,56 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
+      }
+    },
+    {
+      "id": "BEG66-Lro7U-7",
+      "en": "I had an overwhelming sense of ickiness.",
+      "ko": "불쾌한 기분이 들었어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "BEG66-Lro7U-8",
+      "en": "Even though I apologized to Lucy,",
+      "ko": "루시에게 사과했지만,",
+      "tags": {
+        "functions": [
+          "F28",
+          "F21"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": []
       }
     },
     {
@@ -222,18 +222,18 @@
       "ko": "여전히 뭔가 나를 괴롭혔어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -245,18 +245,18 @@
       "ko": "조쉬가 내가 못됐다고 생각하니까 짜증났어.",
       "tags": {
         "functions": [
-          "F19"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -270,14 +270,14 @@
         "functions": [
           "F06"
         ],
-        "situation": "S06",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -291,7 +291,31 @@
       "ko": "어쨌든, 조쉬가 뭐라고 생각하는지 신경 쓸 필요가 있어?",
       "tags": {
         "functions": [
-          "F09"
+          "F06",
+          "F48"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V02",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "BEG66-Lro7U-13",
+      "en": "Why was I letting it throw me into such turmoil?",
+      "ko": "왜 내가 그렇게 혼란스러워해야 했지?",
+      "tags": {
+        "functions": [
+          "F06"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -309,29 +333,6 @@
       }
     },
     {
-      "id": "BEG66-Lro7U-13",
-      "en": "Why was I letting it throw me into such turmoil?",
-      "ko": "왜 내가 그렇게 혼란스러워해야 했지?",
-      "tags": {
-        "functions": [
-          "F19"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "BEG66-Lro7U-14",
       "en": "Watch out for the bike lane!",
       "ko": "자전거 도로 조심해!",
@@ -339,18 +340,20 @@
         "functions": [
           "F40"
         ],
-        "situation": "S06",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -360,10 +363,10 @@
       "ko": "아, 미안해.",
       "tags": {
         "functions": [
-          "F20"
+          "F28"
         ],
-        "situation": "S06",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -372,9 +375,15 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "power": [
+          "P01"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -385,7 +394,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S06",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -406,16 +415,16 @@
       "ko": "두 개 차선을 다 쓸 수 없어.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S06",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -431,14 +440,14 @@
         "functions": [
           "F35"
         ],
-        "situation": "S06",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -452,10 +461,10 @@
       "ko": "그렇게 빠르지 마!",
       "tags": {
         "functions": [
-          "F35"
+          "F15"
         ],
-        "situation": "S06",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -475,10 +484,10 @@
       "ko": "그들에게 쪽지라도 써야 할까?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S06",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -498,16 +507,16 @@
       "ko": "여기서 세우고 엔진 꺼.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S06",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -523,8 +532,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S06",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -535,7 +544,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -546,8 +557,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S06",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -561,5 +572,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "3ed596f935e02e26"
 }

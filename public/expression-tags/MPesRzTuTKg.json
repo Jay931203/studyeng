@@ -12,10 +12,10 @@
       "ko": "그가 너를 걱정한다는 걸 알면서",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,7 +23,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -35,10 +35,10 @@
       "ko": "그가 좋아하는 일을 해줘",
       "tags": {
         "functions": [
-          "F38"
+          "F35"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,9 +58,9 @@
       "ko": "그를 위해 머리를 스타일링해",
       "tags": {
         "functions": [
-          "F38"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -81,9 +81,9 @@
       "ko": "그를 얻을 수는 없겠지만",
       "tags": {
         "functions": [
-          "F43"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -104,9 +104,9 @@
       "ko": "생각하고 희망하며",
       "tags": {
         "functions": [
-          "F24"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -129,8 +129,8 @@
         "functions": [
           "F24"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -152,99 +152,7 @@
         "functions": [
           "F35"
         ],
-        "situation": "S08",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "MPesRzTuTKg-7",
-      "en": "I can't take it anymore! This man is straight! Who?",
-      "ko": "더 이상 못 참겠어! 이 남자는 이성애자야! 누구?",
-      "tags": {
-        "functions": [
-          "F19"
-        ],
-        "situation": "S39",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "MPesRzTuTKg-8",
-      "en": "You're crazy! I'm as gay as the locker room at the Ice Capades",
-      "ko": "너 미쳤어! 나는 아이스 캐페이드의 탈의실만큼 게이야",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S39",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "MPesRzTuTKg-9",
-      "en": "This is just your pathetic attempt to eliminate the competition",
-      "ko": "이건 단지 경쟁자를 없애려는 너의 비참한 시도야",
-      "tags": {
-        "functions": [
-          "F12"
-        ],
-        "situation": "S39",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "MPesRzTuTKg-10",
-      "en": "And besides",
-      "ko": "게다가",
-      "tags": {
-        "functions": [
-          "F50"
-        ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -260,23 +168,121 @@
       }
     },
     {
+      "id": "MPesRzTuTKg-7",
+      "en": "I can't take it anymore! This man is straight! Who?",
+      "ko": "더 이상 못 참겠어! 이 남자는 이성애자야! 누구?",
+      "tags": {
+        "functions": [
+          "F21"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G01"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "MPesRzTuTKg-8",
+      "en": "You're crazy! I'm as gay as the locker room at the Ice Capades",
+      "ko": "너 미쳤어! 나는 아이스 캐페이드의 탈의실만큼 게이야",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V17",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "MPesRzTuTKg-9",
+      "en": "This is just your pathetic attempt to eliminate the competition",
+      "ko": "이건 단지 경쟁자를 없애려는 너의 비참한 시도야",
+      "tags": {
+        "functions": [
+          "F12",
+          "F58"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "MPesRzTuTKg-10",
+      "en": "And besides",
+      "ko": "게다가",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
       "id": "MPesRzTuTKg-11",
       "en": "I think Jack is the straight one Who?",
       "ko": "잭이 이성애자라고 생각해. 누구?",
       "tags": {
         "functions": [
-          "F12"
+          "F06",
+          "F09"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -288,11 +294,12 @@
       "ko": "이렇게 끔찍한 혐의를 받은 적이 없어! 당신이 감히!",
       "tags": {
         "functions": [
-          "F55"
+          "F17",
+          "F43"
         ],
-        "situation": "S39",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E03"
         ],
@@ -301,7 +308,10 @@
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -311,18 +321,18 @@
       "ko": "당신은 사기꾼이야!",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
-        "situation": "S39",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -334,10 +344,11 @@
       "ko": "그리고 그와 키스한 여자가 5분 안에 올 수 있어! 맞아, 5분이야, 그녀는 삶이 없어! 젠장! 그에게 말해!",
       "tags": {
         "functions": [
-          "F62"
+          "F17",
+          "F04"
         ],
-        "situation": "S39",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E03"
@@ -347,11 +358,15 @@
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06",
+          "G18"
+        ],
         "flags": [
           "contains_profanity"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "2be4a984ffba1574"
 }

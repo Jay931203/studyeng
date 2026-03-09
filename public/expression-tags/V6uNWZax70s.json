@@ -12,10 +12,10 @@
       "ko": "그들이 방금 말한 것.",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -23,12 +23,10 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,10 +35,10 @@
       "ko": "린지, 먼저 헤드폰을 써보자.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -48,7 +46,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,10 +58,10 @@
       "ko": "맞아, 이게 왼쪽이야.",
       "tags": {
         "functions": [
-          "F07"
+          "F10"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,9 +69,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -83,10 +83,10 @@
       "ko": "그리고 음악을 크게 틀 거야.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -94,7 +94,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -106,18 +106,18 @@
       "ko": "이 아이팟은... 와!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,13 +129,13 @@
       "ko": "맞아. 좋지? 하! 좋아.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -152,7 +152,7 @@
       "ko": "좋아.",
       "tags": {
         "functions": [
-          "F01"
+          "F44"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -163,10 +163,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -186,7 +188,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -200,7 +202,7 @@
       "ko": "이건 어렵네. 알겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -211,7 +213,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -226,7 +228,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -234,7 +236,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -257,7 +259,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -271,7 +273,7 @@
       "ko": "라 부 부?",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -282,7 +284,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -297,7 +299,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -305,7 +307,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -317,13 +319,13 @@
       "ko": "맞아! 와!",
       "tags": {
         "functions": [
-          "F09"
+          "F15"
         ],
         "situation": "S34",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -340,13 +342,13 @@
       "ko": "대단해. 와! 너 정말 잘해! 나는 입모양 읽기를 잘해. 너 진짜 잘해.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -363,11 +365,11 @@
       "ko": "나 자신에 대해 뭔가 배우고 있어. 너 입모양 읽기를 잘해. 맞아! 음악이 너무 시끄러워.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -386,10 +388,10 @@
       "ko": "나도 알아. 이 게임을 할 때만 들려서,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -409,11 +411,11 @@
       "ko": "누가 말하는지조차 모르겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -432,13 +434,13 @@
       "ko": "오, 세상에, 너무 시끄러워. 와!",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -455,10 +457,10 @@
       "ko": "알겠어, 처음부터 다시 해볼게. 정말 시끄러워.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -478,7 +480,7 @@
       "ko": "잠깐. 알겠어, 내가 할게.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -501,10 +503,10 @@
       "ko": "그 위쪽 부분을 골라. 알겠어. 오, 세상에. 아, 맙소사.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -518,5 +520,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "146cb61a21469193"
 }

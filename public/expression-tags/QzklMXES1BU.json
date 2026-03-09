@@ -12,20 +12,22 @@
       "ko": "내 차에 뭘 하는 거야?",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V03",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -37,18 +39,18 @@
       "ko": "이리 꺼져, 스푼. 이건 네 일이 아니야.",
       "tags": {
         "functions": [
-          "F35"
+          "F40"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -60,18 +62,18 @@
       "ko": "누구를 스푼이라고 부르냐, 페커우드?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,10 +85,10 @@
       "ko": "이봐, 이봐, 들어봐, 얘들아.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -106,18 +108,19 @@
       "ko": "난 마리화나 중독자랑 엮이고 싶지 않아, 알겠어?",
       "tags": {
         "functions": [
-          "F43"
+          "F35",
+          "F40"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -129,10 +132,10 @@
       "ko": "집에 가서 엄마한테 가라, 소년.",
       "tags": {
         "functions": [
-          "F36"
+          "F35"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -152,10 +155,10 @@
       "ko": "여기서 나가게 해줘!",
       "tags": {
         "functions": [
-          "F34"
+          "F35"
         ],
         "situation": "S50",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -175,7 +178,7 @@
       "ko": "요!",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A1",
@@ -223,10 +226,10 @@
       "ko": "열쇠는 트렁크에 있어. 다시 말해봐.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -246,10 +249,10 @@
       "ko": "열쇠는 여기 있다고 했어.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -269,18 +272,18 @@
       "ko": "이봐, 너, 손 떼.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V03",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -294,30 +297,7 @@
       "ko": "너 잘못된 차에 탄 것 같아, 맥플라이.",
       "tags": {
         "functions": [
-          "F12"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "QzklMXES1BU-13",
-      "en": "George, help me.",
-      "ko": "조지, 도와줘.",
-      "tags": {
-        "functions": [
-          "F34"
+          "F09"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -330,9 +310,35 @@
         ],
         "vibe": "V18",
         "power": [],
+        "grammar_intent": [
+          "G21"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "QzklMXES1BU-13",
+      "en": "George, help me.",
+      "ko": "조지, 도와줘.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E13"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "bfd8ed267bf1d578"
 }

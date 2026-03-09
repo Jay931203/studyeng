@@ -5,6 +5,7 @@
   "seriesId": "the-notebook",
   "sentenceCount": 16,
   "taggedCount": 16,
+  "transcriptHash": "e2829a3e45a7dd81",
   "sentences": [
     {
       "id": "xlK3FkdUv78-0",
@@ -12,13 +13,13 @@
       "ko": "나는 그냥 너에게 끌리고 있었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
@@ -35,18 +36,18 @@
       "ko": "오, 세상에, 그건 정말 멋진 말이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V10",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -58,19 +59,18 @@
       "ko": "그걸 모든 여자에게 쓰는 거야? 아니, 그렇지.",
       "tags": {
         "functions": [
-          "F06",
-          "F09"
+          "F12"
         ],
         "situation": "S08",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -82,18 +82,18 @@
       "ko": "나는 지난 밤에 너와 리본 소녀를 봤어. 오늘 밤 뭐 할 거야? 뭐?",
       "tags": {
         "functions": [
-          "F03"
+          "F06"
         ],
         "situation": "S08",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -105,18 +105,18 @@
       "ko": "아니면 내일 밤, 주말, 뭐든지. 왜? 왜냐면 우리의 데이트야. 무슨 데이트? 네가 동의한 데이트? 아니.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V13",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -128,18 +128,18 @@
       "ko": "응, 너는 그렇게 했어. 너는 약속했고 맹세했어.",
       "tags": {
         "functions": [
-          "F07"
+          "F55"
         ],
         "situation": "S08",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -151,20 +151,22 @@
       "ko": "음, 그게 내 마음을 바꿨나 봐.",
       "tags": {
         "functions": [
-          "F12"
+          "F14"
         ],
         "situation": "S08",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -174,19 +176,21 @@
       "ko": "봐, 나는 네가 거리에서 더러운 남자에게 다가오는 걸 알아. 너는 그를 모르잖아.",
       "tags": {
         "functions": [
-          "F09"
+          "F02"
         ],
         "situation": "S08",
-        "cefr": "B1",
+        "cefr": "C1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E07"
         ],
         "expression_types": [
-          "X08"
+          "X02"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V07",
+        "power": [
+          "P06"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -197,18 +201,18 @@
       "ko": "너는 나를 모르지만, 나는 나를 알아.",
       "tags": {
         "functions": [
-          "F09"
+          "F12"
         ],
         "situation": "S08",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -220,16 +224,16 @@
       "ko": "내가 좋아하는 걸 보면, 나는 그것을 가져.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V07",
         "power": [],
@@ -243,13 +247,13 @@
       "ko": "나는 그것을 사랑해.",
       "tags": {
         "functions": [
-          "F15"
+          "F09"
         ],
         "situation": "S08",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
           "X08"
@@ -266,16 +270,16 @@
       "ko": "나는 그것에 미쳐버려.",
       "tags": {
         "functions": [
-          "F15"
+          "F02"
         ],
         "situation": "S08",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V07",
         "power": [],
@@ -295,12 +299,12 @@
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -312,21 +316,23 @@
       "ko": "음, 너.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S08",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -335,18 +341,18 @@
       "ko": "오, 너 잘한다. 뭐? 너 잘해. 아니. 너 잘해. 아니, 너는 나를 오해하고 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S08",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V18",
+        "vibe": "V07",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -358,21 +364,23 @@
       "ko": "너는. 너는 환상적이야. 나는 보통 이러지 않아. 응, 너는 그래. 미안해. 더 나쁠 수도 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F28"
         ],
         "situation": "S08",
-        "cefr": "B1",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E01",
-          "E02"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V07",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G04",
+          "G17"
+        ],
         "flags": []
       }
     }

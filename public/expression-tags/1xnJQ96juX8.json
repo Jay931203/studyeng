@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,13 +35,13 @@
       "ko": "야, 네가 걔가 친구를 사귀고 활동에 참여하는 걸 걱정했잖아?",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E04"
         ],
         "expression_types": [
           "X08"
@@ -58,10 +58,10 @@
       "ko": "응, 분명히 감추고 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F07"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -70,7 +70,9 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -81,13 +83,13 @@
       "ko": "저 셔츠만 봐도 도움을 요청하는 소리야.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -104,16 +106,16 @@
       "ko": "그가 실제로 행복할 수 있다는 게 그렇게 믿기 힘드니?",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -127,10 +129,10 @@
       "ko": "이곳에서는 그렇지.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -150,10 +152,10 @@
       "ko": "아, 아, 너는 남아야 해.",
       "tags": {
         "functions": [
-          "F38"
+          "F37"
         ],
-        "situation": "S31",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -175,7 +177,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S31",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -198,7 +200,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S31",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -219,16 +221,16 @@
       "ko": "이제, 알다시피, 네 새로운 열정을 받아들이기 좀 힘들어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V18",
         "power": [],
@@ -242,10 +244,34 @@
       "ko": "네가 내게 새로운 환경에 적응하라고 한 사람이 아니었어?",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "1xnJQ96juX8-11",
+      "en": "Yes, I'm just concerned that you're immersing yourself in this lifestyle to avoid feeling the pain you're going through. Oh, will you leave the guy alone? No, thank you.",
+      "ko": "응, 네가 겪고 있는 고통을 피하기 위해 이 생활에 빠져드는 게 걱정돼. 아, 그 남자 좀 내버려 둬! 아니, 고맙지 않아.",
+      "tags": {
+        "functions": [
+          "F27",
+          "F07"
+        ],
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -260,31 +286,6 @@
       }
     },
     {
-      "id": "1xnJQ96juX8-11",
-      "en": "Yes, I'm just concerned that you're immersing yourself in this lifestyle to avoid feeling the pain you're going through. Oh, will you leave the guy alone? No, thank you.",
-      "ko": "응, 네가 겪고 있는 고통을 피하기 위해 이 생활에 빠져드는 게 걱정돼. 아, 그 남자 좀 내버려 둬! 아니, 고맙지 않아.",
-      "tags": {
-        "functions": [
-          "F09",
-          "F19"
-        ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E04",
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "1xnJQ96juX8-12",
       "en": "No, he's obviously having a good time.",
       "ko": "아니, 분명히 즐거운 시간을 보내고 있어.",
@@ -292,7 +293,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -315,7 +316,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -336,9 +337,9 @@
       "ko": "응, 그가 즐거운 시간을 보내면 왜 안 되지?",
       "tags": {
         "functions": [
-          "F10"
+          "F07"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -359,18 +360,19 @@
       "ko": "나도 여기서 행복할 거야. 이곳이 내 스타일이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E01"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
-        "vibe": "V02",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -382,18 +384,18 @@
       "ko": "이 지옥 같은 곳에서 나를 꺼내줘!",
       "tags": {
         "functions": [
-          "F17"
+          "F35"
         ],
-        "situation": "S10",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V03",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -407,8 +409,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -428,32 +430,9 @@
       "ko": "이 가면을 쓰고 살 수 없어. 노력해봤지만 너무 힘들어.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "1xnJQ96juX8-19",
-      "en": "Now, Niles, this place is fine, and you know what they say.",
-      "ko": "이제, 나일스, 이곳은 괜찮고, 그들이 뭐라고 하는지 알잖아.",
-      "tags": {
-        "functions": [
-          "F04"
-        ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -469,27 +448,52 @@
       }
     },
     {
+      "id": "1xnJQ96juX8-19",
+      "en": "Now, Niles, this place is fine, and you know what they say.",
+      "ko": "이제, 나일스, 이곳은 괜찮고, 그들이 뭐라고 하는지 알잖아.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X06",
+          "X04"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "1xnJQ96juX8-20",
       "en": "What doesn't kill you makes you stronger.",
       "ko": "너를 죽이지 않는 것은 너를 더 강하게 만들어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E06"
+          "E12"
         ],
         "expression_types": [
-          "X04"
+          "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "d17d394715b1a6ca"
 }

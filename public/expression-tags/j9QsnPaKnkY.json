@@ -12,11 +12,11 @@
       "ko": "그는 종이를 이렇게 들고 있을 때 매력적이다.",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -35,9 +35,32 @@
       "ko": "코 아래는 좀 쥐 같아진다.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "j9QsnPaKnkY-2",
+      "en": "It's good enough with some eye fucking on the tube.",
+      "ko": "TV에서 눈길을 주는 것만으로도 충분하다.",
+      "tags": {
+        "functions": [
+          "F21"
+        ],
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -53,40 +76,15 @@
       }
     },
     {
-      "id": "j9QsnPaKnkY-2",
-      "en": "It's good enough with some eye fucking on the tube.",
-      "ko": "TV에서 눈길을 주는 것만으로도 충분하다.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
       "id": "j9QsnPaKnkY-3",
       "en": "He smiles at me with his tiny mouth.",
       "ko": "그는 작은 입으로 나에게 미소를 짓는다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -106,13 +104,13 @@
       "ko": "나도 미소를 지어준다.",
       "tags": {
         "functions": [
-          "F10"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -120,7 +118,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -129,9 +129,9 @@
       "ko": "그는 아래를 본다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -143,7 +143,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -152,21 +154,23 @@
       "ko": "나도 아래를 본다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -175,16 +179,16 @@
       "ko": "그리고 우리는 동시에 위를 본다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -198,13 +202,13 @@
       "ko": "작은 킥킥 웃음.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -212,7 +216,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -221,10 +227,10 @@
       "ko": "다른 사람들도 눈치채기 시작한다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -244,10 +250,10 @@
       "ko": "그 순간에 매료되었다. 역겹다.",
       "tags": {
         "functions": [
-          "F09"
+          "F23"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E08"
@@ -267,16 +273,16 @@
       "ko": "지하철이 토트넘 코트 로드에 도착하고 우리는 동시에 일어난다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -290,13 +296,13 @@
       "ko": "나는 토할 것 같아. 그가 나에게 말한다.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -307,5 +313,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "6a467444c3b316f9"
 }

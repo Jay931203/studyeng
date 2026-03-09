@@ -12,23 +12,21 @@
       "ko": "잘했어, 알지? 내가 그걸 예상할 수 있었어. 그래서 나는",
       "tags": {
         "functions": [
-          "F09"
+          "F55"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,20 +35,24 @@
       "ko": "겁먹거나 너와 함께 싸우러 나가거나 할 수 있었지, 건강한 코디와 함께. 이건 아마도",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07"
         ],
-        "vibe": "V13",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06",
+          "G17"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -62,20 +64,25 @@
       "ko": "그렇게 맵지 않을 거야. 아, 그걸 좀 다시 생각해볼래? 오, 이건",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05",
+          "X07"
         ],
-        "vibe": "V13",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V10",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -85,10 +92,10 @@
       "ko": "교활하네. 그 맛이 터져 나와. 이게 그 매운 거지? 진짜 매운 거야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -96,7 +103,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -108,20 +115,22 @@
       "ko": "젠장, 이건 맛도 없네. 계속 오네. 음, 알겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E03"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -133,20 +142,26 @@
       "ko": "후우, 내 입술이 타고 있어. 음, 아냐, 아냐, 아냐. 아마도 마무리해야겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F19"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B2",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E04"
         ],
         "expression_types": [
-          "X08"
+          "X05",
+          "X06",
+          "X07"
         ],
         "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -156,20 +171,22 @@
       "ko": "오, 젠장, 딸꾹질이 오고 있어. 그건 매운 소스 때문에 기침이 나왔어.",
       "tags": {
         "functions": [
-          "F09"
+          "F17"
         ],
-        "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E04"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -181,10 +198,10 @@
       "ko": "와, 와, 와. 그건 얼굴에 주먹을 맞는 것 같아. 더 날카로워.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S31",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -192,11 +209,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P07"
+        ],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "2fb5e715638ac431"
 }

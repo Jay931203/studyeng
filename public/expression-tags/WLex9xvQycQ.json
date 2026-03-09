@@ -1,10 +1,11 @@
 {
   "videoId": "WLex9xvQycQ",
   "category": "entertainment",
-  "title": "Anna Kendrick’s Hilarious British Impression",
+  "title": "Anna Kendrick's Hilarious British Impression",
   "seriesId": "celebrity-interviews",
   "sentenceCount": 14,
   "taggedCount": 14,
+  "transcriptHash": "7ef6f05739b3d439",
   "sentences": [
     {
       "id": "WLex9xvQycQ-0",
@@ -14,18 +15,21 @@
         "functions": [
           "F02"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06",
+          "X07"
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -35,13 +39,13 @@
       "ko": "네, 네, 그런데 호텔에 체크인할 때 있었던 일인데,",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S23",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -60,14 +64,14 @@
         "functions": [
           "F02"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -81,16 +85,16 @@
       "ko": "그래서 '아, 하루 종일 여행했거든요' 하고 따라 했는데,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -106,11 +110,11 @@
         "functions": [
           "F02"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -127,16 +131,16 @@
       "ko": "그래서 천천히 빠져나와야 했죠.",
       "tags": {
         "functions": [
-          "F02"
+          "F57"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -150,13 +154,13 @@
       "ko": "그리고 그게 그 사람 목소리를 과장한 것처럼 들린다는 걸 알지만,",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E07"
         ],
         "expression_types": [
           "X08"
@@ -173,20 +177,22 @@
       "ko": "몇 년 후에 다시 그 나라에 갔는데, 그 사람들이 TV에 나오더라고요.",
       "tags": {
         "functions": [
-          "F03"
+          "F32"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -196,20 +202,22 @@
       "ko": "고글박스에요, 고글박스의 스테프와 돔이었거든요.",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
-        "situation": "S34",
-        "cefr": "B1",
+        "situation": "S31",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -219,13 +227,13 @@
       "ko": "대박.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S31",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -233,7 +241,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -242,20 +252,25 @@
       "ko": "그래서 진짜 그렇게 말하더라고요. 거기가 진짜 호텔인 줄 몰랐어요. 네. 네, 거기 묵었어요.",
       "tags": {
         "functions": [
-          "F02"
+          "F43",
+          "F56",
+          "F11"
         ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S23",
+        "cefr": "B2",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G19"
+        ],
         "flags": []
       }
     },
@@ -265,13 +280,13 @@
       "ko": "네, 그리고 실수로 그 사람들 앞에서 놀린 거죠.",
       "tags": {
         "functions": [
-          "F20"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S31",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -288,19 +303,21 @@
       "ko": "앨런, 그것에 대한 이야기 있죠? 제 아주 좋은 친구가 있는데,",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P01"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -313,19 +330,21 @@
         "functions": [
           "F02"
         ],
-        "situation": "S34",
+        "situation": "S31",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E14"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     }
   ]

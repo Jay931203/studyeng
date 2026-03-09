@@ -12,9 +12,9 @@
       "ko": "알겠어. 알겠어.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -37,7 +37,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -58,9 +58,9 @@
       "ko": "바리, 움직이지 마.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -72,7 +72,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -81,10 +83,10 @@
       "ko": "마브?",
       "tags": {
         "functions": [
-          "F03"
+          "F06"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S01",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -106,10 +108,11 @@
       "ko": "움직이지 마.",
       "tags": {
         "functions": [
-          "F04"
+          "F35",
+          "F40"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S01",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -119,8 +122,12 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G24"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -131,7 +138,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -152,10 +159,10 @@
       "ko": "마브.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S01",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -177,13 +184,13 @@
       "ko": "제기랄!",
       "tags": {
         "functions": [
-          "F18"
+          "F15"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -191,7 +198,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -202,7 +211,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -225,7 +234,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -240,5 +249,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "ad491a0bf9d3769b"
 }

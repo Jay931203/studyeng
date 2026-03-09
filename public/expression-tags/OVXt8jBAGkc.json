@@ -14,8 +14,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -35,13 +35,13 @@
       "ko": "아, 안타깝네.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S40",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -49,7 +49,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -60,7 +62,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -81,9 +83,36 @@
       "ko": "오!",
       "tags": {
         "functions": [
-          "F09"
+          "F18"
         ],
-        "situation": "S40",
+        "situation": "S50",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G07"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "OVXt8jBAGkc-4",
+      "en": "It's a head.",
+      "ko": "머리야.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -101,37 +130,14 @@
       }
     },
     {
-      "id": "OVXt8jBAGkc-4",
-      "en": "It's a head.",
-      "ko": "머리야.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S36",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
       "id": "OVXt8jBAGkc-5",
       "en": "A severed head. Just tea for me, thanks.",
       "ko": "잘린 머리. 나는 차만 마실게, 고마워.",
       "tags": {
         "functions": [
-          "F01"
+          "F27"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -154,14 +160,14 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -177,18 +183,20 @@
         "functions": [
           "F06"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -198,9 +206,9 @@
       "ko": "신경 쓰지 마. 바트의 영안실에서 가져왔어.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -221,10 +229,10 @@
       "ko": "사후 침의 응고를 측정하고 있어.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -244,9 +252,9 @@
       "ko": "택시 기사 사건을 정리한 것 같네.",
       "tags": {
         "functions": [
-          "F04"
+          "F32"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -257,7 +265,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -267,10 +277,10 @@
       "ko": "어, 맞아.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -281,7 +291,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -290,10 +302,10 @@
       "ko": "핑크색 연구. 멋지네.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -313,9 +325,9 @@
       "ko": "음, 핑크색 여자, 핑크색 사건, 핑크색 전화.",
       "tags": {
         "functions": [
-          "F04"
+          "F52"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -336,9 +348,9 @@
       "ko": "핑크색이 많았어.",
       "tags": {
         "functions": [
-          "F01"
+          "F03"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -361,7 +373,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -384,14 +396,14 @@
       "ko": "아니. 왜? 네가 기분 좋을 줄 알았는데.",
       "tags": {
         "functions": [
-          "F11",
-          "F06"
+          "F20",
+          "F21"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -408,9 +420,9 @@
       "ko": "기분 좋다고?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
-        "situation": "S09",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -433,10 +445,10 @@
       "ko": "셜록은 모든 것을, 모든 사람을 몇 초 만에 꿰뚫어 봐.",
       "tags": {
         "functions": [
-          "F01"
+          "F21"
         ],
-        "situation": "S09",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -456,10 +468,11 @@
       "ko": "그런데 정말 놀라운 건 얼마나 장관인지...",
       "tags": {
         "functions": [
-          "F04"
+          "F30",
+          "F21"
         ],
-        "situation": "S09",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -469,9 +482,14 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G03"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "e14617546f0d4f7e"
 }

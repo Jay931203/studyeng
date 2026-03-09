@@ -12,20 +12,21 @@
       "ko": "그들은 그래. 너를 제외하고. 이름이 뭐니? 제시카. 제시카, 멋진 이름이야. 고마워.",
       "tags": {
         "functions": [
-          "F01",
-          "F09"
+          "F27"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -36,11 +37,10 @@
       "ko": "너는 미스터리를 해결하니? 과거에 몇 개 해결한 적 있어.",
       "tags": {
         "functions": [
-          "F06",
-          "F01"
+          "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -60,20 +60,21 @@
       "ko": "좋아. 어디서 왔니? 애틀랜타. 애틀랜타. 그래. 안녕, 여러분. 애틀랜타, 미국에 있는 거야?",
       "tags": {
         "functions": [
-          "F06",
-          "F01"
+          "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -84,11 +85,11 @@
       "ko": "그런 것 같아. 응. 직업이 뭐니? 나는 웨이트리스야. 토끼를 죽인다고?",
       "tags": {
         "functions": [
-          "F01",
-          "F06"
+          "F06",
+          "F09"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -98,7 +99,9 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -108,11 +111,10 @@
       "ko": "뭐라고? 왜 토끼를 죽여? 그들은 부드럽고 포근해. 부드럽고 포근한 게 너를 죽일 수도 있어,",
       "tags": {
         "functions": [
-          "F09",
-          "F12"
+          "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -120,7 +122,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V06",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -132,19 +134,18 @@
       "ko": "그렇지? 토끼를 죽이는 웨이트리스 말고 어떤 종류의 웨이트리스를 하니?",
       "tags": {
         "functions": [
-          "F06",
-          "F01"
+          "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V10",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -156,11 +157,10 @@
       "ko": "그냥 작은 고향 식당이야. 알겠어. 응. 후터스.",
       "tags": {
         "functions": [
-          "F01",
-          "F09"
+          "F07"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -174,5 +174,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "1a4167e24e9b4b80"
 }

@@ -16,32 +16,7 @@
         ],
         "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "RxNs7O6zqbg-1",
-      "en": "For the first time I'm gonna do it. My father wants me to or not carpe",
-      "ko": "처음으로 해볼 거예요. 아버지가 원하시든 아니든, 카르페 디엠.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -55,15 +30,40 @@
       }
     },
     {
-      "id": "RxNs7O6zqbg-2",
-      "en": "I'm in let's go boys. Hustle up in here. That means you don't do indeed be a god",
-      "ko": "나도 할게, 가자 얘들아. 여기서 서두르자. 그건 너희가 정말로 신이 되지 말라는 뜻이야.",
+      "id": "RxNs7O6zqbg-1",
+      "en": "For the first time I'm gonna do it. My father wants me to or not carpe",
+      "ko": "처음으로 해볼 거예요. 아버지가 원하시든 아니든, 카르페 디엠.",
       "tags": {
         "functions": [
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "RxNs7O6zqbg-2",
+      "en": "I'm in let's go boys. Hustle up in here. That means you don't do indeed be a god",
+      "ko": "나도 할게, 가자 얘들아. 여기서 서두르자. 그건 너희가 정말로 신이 되지 말라는 뜻이야.",
+      "tags": {
+        "functions": [
+          "F36"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -73,7 +73,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -110,7 +112,7 @@
         ],
         "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R2",
         "emotions": [
           "E09"
         ],
@@ -143,7 +145,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_period"
+        ]
       }
     },
     {
@@ -152,7 +156,7 @@
       "ko": "그 감정을 나타내는 라틴어는 카르페 디엠.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
@@ -178,7 +182,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -198,21 +202,23 @@
       "ko": "닐, 너 미쳤어.",
       "tags": {
         "functions": [
-          "F17"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V17",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -221,7 +227,7 @@
       "ko": "색소폰은 더 풍부해.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -235,7 +241,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -244,13 +252,14 @@
       "ko": "이봐, 새로 온 애가 뻣뻣해 보인다고 들었어.",
       "tags": {
         "functions": [
-          "F06"
+          "F23",
+          "F05"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -261,5 +270,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "cae9508ac46a8597"
 }

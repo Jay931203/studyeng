@@ -12,34 +12,9 @@
       "ko": "♪ 그들은 나의 일부로 죽고 죽는다... ♪",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "PAvpcjbEdQU-1",
-      "en": "Yo, yo, you're gonna yell.",
-      "ko": "요, 요, 너 소리 지를 거야.",
-      "tags": {
-        "functions": [
-          "F35"
-        ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -55,18 +30,43 @@
       }
     },
     {
+      "id": "PAvpcjbEdQU-1",
+      "en": "Yo, yo, you're gonna yell.",
+      "ko": "요, 요, 너 소리 지를 거야.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X05"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "PAvpcjbEdQU-2",
       "en": "I'm a suicide risk. Do you know? No, it's Morgan Freeman.",
       "ko": "나는 자살 위험이야. 알아? 아니, 모건 프리먼이야.",
       "tags": {
         "functions": [
-          "F19"
+          "F08"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -83,9 +83,9 @@
       "ko": "수집해야 할 뼈가 있어?",
       "tags": {
         "functions": [
-          "F34"
+          "F06"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -106,10 +106,10 @@
       "ko": "내 바지 안에 있는 하나만.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -129,33 +129,11 @@
       "ko": "하하. 나 임신했어. 뭐? 이 블로그에서? 응.",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F62"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "PAvpcjbEdQU-6",
-      "en": "Yeah, it's Bleakers.",
-      "ko": "응, 블리커스야.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S44",
-        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -170,21 +148,48 @@
       }
     },
     {
-      "id": "PAvpcjbEdQU-7",
-      "en": "It's probably just a food baby. Did you have a big lunch?",
-      "ko": "아마 음식 아기일 거야. 점심 많이 먹었어?",
+      "id": "PAvpcjbEdQU-6",
+      "en": "Yeah, it's Bleakers.",
+      "ko": "응, 블리커스야.",
       "tags": {
         "functions": [
-          "F09"
+          "F07",
+          "F53"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "PAvpcjbEdQU-7",
+      "en": "It's probably just a food baby. Did you have a big lunch?",
+      "ko": "아마 음식 아기일 거야. 점심 많이 먹었어?",
+      "tags": {
+        "functions": [
+          "F06",
+          "F14"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -198,13 +203,13 @@
       "ko": "아니, 이건 음식 아기가 아니야, 알겠어?",
       "tags": {
         "functions": [
-          "F12"
+          "F06"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -221,10 +226,10 @@
       "ko": "임신 테스트를 세 번이나 했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -244,10 +249,10 @@
       "ko": "그리고 나는 네 번이나 임신했어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -267,13 +272,13 @@
       "ko": "어떻게 세 번의 임신 테스트를 위해 충분한 소변을 만들었어?",
       "tags": {
         "functions": [
-          "F06"
+          "F21"
         ],
-        "situation": "S44",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E05"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -290,33 +295,10 @@
       "ko": "대단하다.",
       "tags": {
         "functions": [
-          "F12"
+          "F30"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E01"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "PAvpcjbEdQU-13",
-      "en": "I don't know, I drank like 10 tons of Sunny D.",
-      "ko": "모르겠어, 써니 D를 10톤 정도 마셨어.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S44",
-        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -326,7 +308,38 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G03"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "PAvpcjbEdQU-13",
+      "en": "I don't know, I drank like 10 tons of Sunny D.",
+      "ko": "모르겠어, 써니 D를 10톤 정도 마셨어.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -336,19 +349,22 @@
       "ko": "어쨌든, 친구야, 나 임신했다고 말하고 있는데",
       "tags": {
         "functions": [
-          "F09"
+          "F48",
+          "F62"
         ],
-        "situation": "S44",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -359,19 +375,21 @@
       "ko": "너는 너무 태연하게 굴고 있어. 이게 진짜야?",
       "tags": {
         "functions": [
-          "F17"
+          "F06"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V12",
-        "power": [],
+        "vibe": "V18",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -384,17 +402,19 @@
         "functions": [
           "F06"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -405,21 +425,22 @@
       "ko": "불행히도, 그래. 오 마이 갓. 오 젠장.",
       "tags": {
         "functions": [
-          "F05"
+          "F18"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02",
-          "E03"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -431,18 +452,18 @@
       "ko": "포켓타일 해. 좋아, 그게 내가 첫 촬영에서 찾고 있던 감정이었어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S08",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -454,9 +475,9 @@
       "ko": "내가 첫 촬영에서 찾고 있던 감정이었어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S08",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -477,20 +498,24 @@
       "ko": "헤이븐브룩이나 여성 지금으로 갈 거야? 메모가 필요하다는 거 알지.",
       "tags": {
         "functions": [
-          "F06"
+          "F04"
         ],
-        "situation": "S08",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -500,11 +525,11 @@
       "ko": "헤이븐브룩을 위한 부모님의 메모가 필요해. 응, 나도.",
       "tags": {
         "functions": [
-          "F06"
+          "F07"
         ],
-        "situation": "S08",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -517,5 +542,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "1bbad9dc9303679f"
 }

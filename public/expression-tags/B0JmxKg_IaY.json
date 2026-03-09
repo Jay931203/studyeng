@@ -12,11 +12,11 @@
       "ko": "그에게 소지 혐의를 적용할 거야.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -35,11 +35,11 @@
       "ko": "그리고 근무 중 영향을 받았다는 혐의도.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -58,12 +58,11 @@
       "ko": "유죄를 인정하면, 계급과 급여를 잃고 30일 군사 구금을 추천할게. 그건 오레가노였어, 데이브.",
       "tags": {
         "functions": [
-          "F35",
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -84,7 +83,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -96,7 +95,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -105,14 +106,14 @@
       "ko": "그래, 하지만 네 의뢰인은 그걸 마리화나로 생각했어. 내 의뢰인은 바보야.",
       "tags": {
         "functions": [
-          "F09",
-          "F12"
+          "F21",
+          "F58"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -129,10 +130,10 @@
       "ko": "그건 법에 위반되지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F08"
         ],
-        "situation": "S36",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -152,11 +153,11 @@
       "ko": "카페이, 나도 너처럼 대답해야 할 사람들이 있어. 나는 그를 기소할 거야.",
       "tags": {
         "functions": [
-          "F35"
+          "F13"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -165,7 +166,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G10"
+        ],
         "flags": []
       }
     },
@@ -175,11 +178,10 @@
       "ko": "뭐로, 조미료 소지로? 카페이. 데이브, 나는 너를 도우려고 했어.",
       "tags": {
         "functions": [
-          "F09",
-          "F35"
+          "F06"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -199,12 +201,11 @@
       "ko": "하지만 너가 징역형을 요구하면, 나는 기각 신청서를 제출할 거야. 너는 그걸 얻지 못할 거야. 나는 얻을 거야.",
       "tags": {
         "functions": [
-          "F35",
-          "F40"
+          "F01"
         ],
-        "situation": "S36",
+        "situation": "S50",
         "cefr": "B2",
-        "register": "R2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -223,11 +224,11 @@
       "ko": "그리고 MTD가 기각되면, 나는 사전 증거 신청서를 제출할 거야.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -246,11 +247,11 @@
       "ko": "사전 증거 ruling을 얻기 위해. 그리고 그 후에는, 나는 사전 구금에 대해 소송을 제기할 거야.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -269,11 +270,11 @@
       "ko": "사전 구금에 대해.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
-        "register": "R2",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -283,7 +284,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -292,10 +295,10 @@
       "ko": "그리고 너는 다음 3개월 동안 서류 작업 때문에 눈이 멀게 될 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -315,10 +318,10 @@
       "ko": "2급 신호병이 10달러어치 오레가노를 사고 피운 것 때문에.",
       "tags": {
         "functions": [
-          "F01"
+          "F04"
         ],
-        "situation": "S36",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -328,7 +331,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -338,10 +343,11 @@
       "ko": "가자.",
       "tags": {
         "functions": [
-          "F35"
+          "F21",
+          "F36"
         ],
-        "situation": "S36",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -351,7 +357,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -361,7 +369,7 @@
       "ko": "시작하자.",
       "tags": {
         "functions": [
-          "F01"
+          "F36"
         ],
         "situation": "S50",
         "cefr": "A2",
@@ -374,7 +382,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -410,7 +420,7 @@
           "F01"
         ],
         "situation": "S50",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -430,20 +440,24 @@
       "ko": "왜 내가 이걸 동의하는지 모르겠어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -453,18 +467,18 @@
       "ko": "당신은 나이에 비해 지혜가 깊군요. 좋은 아침이에요.",
       "tags": {
         "functions": [
-          "F30"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E07"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V16",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -476,10 +490,10 @@
       "ko": "아침이에요.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S50",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -490,8 +504,11 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "1430d86fa40acf47"
 }

@@ -12,9 +12,9 @@
       "ko": "네, 정말 훌륭해요. 감사합니다. 그래미를 받았어요.",
       "tags": {
         "functions": [
-          "F01"
+          "F27"
         ],
-        "situation": "S34",
+        "situation": "S05",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -35,9 +35,9 @@
       "ko": "네, 연기로 그래미를 받았어요.",
       "tags": {
         "functions": [
-          "F01"
+          "F07"
         ],
-        "situation": "S34",
+        "situation": "S05",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -58,10 +58,10 @@
       "ko": "제 연기로요. 감사합니다.",
       "tags": {
         "functions": [
-          "F01"
+          "F27"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,16 +81,16 @@
       "ko": "자, 시작해볼까요? 준비됐나요?",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E06"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V10",
         "power": [],
@@ -104,9 +104,9 @@
       "ko": "귀여운 강아지의 이름.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S05",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -129,7 +129,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S05",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -152,14 +152,14 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S05",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
         "vibe": "V10",
         "power": [],
@@ -173,9 +173,9 @@
       "ko": "우스꽝스러운 단어.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S05",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -198,7 +198,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
+        "situation": "S05",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -210,7 +210,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -219,9 +221,9 @@
       "ko": "네.",
       "tags": {
         "functions": [
-          "F09"
+          "F07"
         ],
-        "situation": "S34",
+        "situation": "S05",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -233,7 +235,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -242,9 +246,9 @@
       "ko": "형용사.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S05",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -256,7 +260,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -267,11 +273,11 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S05",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
           "X08"
@@ -279,7 +285,9 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -288,9 +296,9 @@
       "ko": "복수형 직업.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S34",
+        "situation": "S05",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -311,10 +319,10 @@
       "ko": "복수형 직업? 말하기도 힘드네요. 좋아요. 복수형 직업.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -334,10 +342,11 @@
       "ko": "위생 엔지니어는 어때요?",
       "tags": {
         "functions": [
+          "F06",
           "F36"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -359,7 +368,7 @@
         "functions": [
           "F06"
         ],
-        "situation": "S34",
+        "situation": "S05",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -382,10 +391,10 @@
       "ko": "좋아요. 큐카드 담당자가,",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -405,13 +414,13 @@
       "ko": "농담하는 거죠?",
       "tags": {
         "functions": [
-          "F17"
+          "F06"
         ],
-        "situation": "S34",
-        "cefr": "A2",
+        "situation": "S05",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E14"
         ],
         "expression_types": [
           "X08"
@@ -422,5 +431,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "bb8d543f2d429a32"
 }

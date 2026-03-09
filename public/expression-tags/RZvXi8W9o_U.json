@@ -12,20 +12,25 @@
       "ko": "손과 발이 무엇인지 알 수는 없지만, 여전히 죽이는 사업이야.",
       "tags": {
         "functions": [
-          "F01"
+          "F18",
+          "F43",
+          "F11"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -35,10 +40,10 @@
       "ko": "플랫폼, 브랜드, 정신과 문화가 최첨단이야.",
       "tags": {
         "functions": [
-          "F02"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -58,13 +63,13 @@
       "ko": "내 생각엔 고칠 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F23"
         ],
         "situation": "S14",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -81,19 +86,21 @@
       "ko": "이런 실수들이 항상 수익을 더 부풀리는 게 웃겨.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E10"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X02"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P11"
+        ],
         "grammar_intent": [],
         "flags": [
           "contains_profanity"
@@ -152,13 +159,13 @@
       "ko": "우리는 몇 년 동안 5천만 달러를 태웠어.",
       "tags": {
         "functions": [
-          "F01"
+          "F23"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -175,10 +182,10 @@
       "ko": "우리는 이걸 세상에서 가장 좋은 것으로 만들 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -201,7 +208,7 @@
           "F06"
         ],
         "situation": "S14",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -221,19 +228,21 @@
       "ko": "항상 말하잖아, 변화를 위해서는 태워야 한다고.",
       "tags": {
         "functions": [
-          "F09"
+          "F52"
         ],
         "situation": "S14",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E09"
+          "E16"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -247,7 +256,7 @@
           "F06"
         ],
         "situation": "S14",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -267,10 +276,10 @@
       "ko": "아빠, 흥미로운 게, 그가 하는 말을 다 듣고 있어,",
       "tags": {
         "functions": [
-          "F02"
+          "F04"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -280,7 +289,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -290,10 +301,10 @@
       "ko": "사실 거의 좋은 제안처럼 들리지만, 난 믿지 않아.",
       "tags": {
         "functions": [
-          "F12"
+          "F08"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -313,7 +324,7 @@
       "ko": "거기서 시간을 좀 보냈는데, 그게 보이지 않아.",
       "tags": {
         "functions": [
-          "F03"
+          "F01"
         ],
         "situation": "S14",
         "cefr": "B1",
@@ -336,10 +347,39 @@
       "ko": "그들이 정확히 뭘 하는지는 모르겠지만, 그들은 가짜야.",
       "tags": {
         "functions": [
-          "F12"
+          "F07",
+          "F10"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G17",
+          "G20"
+        ],
+        "flags": []
+      }
+    },
+    {
+      "id": "RZvXi8W9o_U-15",
+      "en": "Fucking beehives, almond milk, and take another week on that report, Matilda.",
+      "ko": "빌어먹을 벌통, 아몬드 우유, 그리고 그 보고서에 일주일 더 걸려, 마틸다.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S14",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -354,48 +394,23 @@
       }
     },
     {
-      "id": "RZvXi8W9o_U-15",
-      "en": "Fucking beehives, almond milk, and take another week on that report, Matilda.",
-      "ko": "빌어먹을 벌통, 아몬드 우유, 그리고 그 보고서에 일주일 더 걸려, 마틸다.",
-      "tags": {
-        "functions": [
-          "F17"
-        ],
-        "situation": "S14",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V04",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
       "id": "RZvXi8W9o_U-16",
       "en": "It smells wrong, and they're hiding shit.",
       "ko": "뭔가 잘못된 냄새가 나고, 그들은 뭔가 숨기고 있어.",
       "tags": {
         "functions": [
-          "F12"
+          "F01"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E04"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V12",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -409,10 +424,10 @@
       "ko": "숨기는 얘기가 나와서 말인데, 그들의 직원 몇 명을 데리고 나갔어.",
       "tags": {
         "functions": [
-          "F09"
+          "F48"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -434,18 +449,18 @@
       "ko": "그들을 술에 취하게 만들었어.",
       "tags": {
         "functions": [
-          "F09"
+          "F62"
         ],
         "situation": "S14",
-        "cefr": "B2",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -453,5 +468,6 @@
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "0efe7b96045b9229"
 }

@@ -5,6 +5,7 @@
   "seriesId": "movie-soundtracks",
   "sentenceCount": 4,
   "taggedCount": 4,
+  "transcriptHash": "32df94be0624721f",
   "sentences": [
     {
       "id": "kxjwb5cXTI0-0",
@@ -12,20 +13,26 @@
       "ko": "안녕, 잘 가요, 오르부아, 아우프비더제엔, 머물며 첫 샴페인을 맛보고 싶어요.",
       "tags": {
         "functions": [
-          "F25"
+          "F32"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V14",
+        "power": [
+          "P01",
+          "P03"
+        ],
+        "grammar_intent": [
+          "G15",
+          "G25"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -37,7 +44,7 @@
       "ko": "네? 아니요.",
       "tags": {
         "functions": [
-          "F06"
+          "F44"
         ],
         "situation": "S46",
         "cefr": "A1",
@@ -48,11 +55,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
@@ -62,20 +70,24 @@
       "ko": "안녕, 잘 가요, 아우프비더제엔, 안녕히, 뛰어오르며 한숨 쉬고 작별 인사해요.",
       "tags": {
         "functions": [
-          "F25"
+          "F32"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X06"
         ],
-        "vibe": "V07",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V14",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": [
           "is_lyrics"
         ]
@@ -90,7 +102,7 @@
           "F15"
         ],
         "situation": "S46",
-        "cefr": "A2",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E01"
@@ -98,7 +110,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V14",
         "power": [],
         "grammar_intent": [],
         "flags": [

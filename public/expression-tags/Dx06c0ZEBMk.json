@@ -12,10 +12,10 @@
       "ko": "당신은 대단해요. 정말 멋졌어요. 감사합니다. 감사합니다. 감사합니다. 감사합니다. 감사합니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F27"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E01"
@@ -24,7 +24,9 @@
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -38,16 +40,18 @@
           "F27"
         ],
         "situation": "S34",
-        "cefr": "A1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -61,7 +65,7 @@
           "F09"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -69,7 +73,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -79,6 +83,30 @@
       "id": "Dx06c0ZEBMk-3",
       "en": "They were probably a bit nervous, but they probably didn't want to ask her a photo",
       "ko": "아마 조금 긴장했겠지만, 사진을 요청하고 싶지 않았던 것 같아요.",
+      "tags": {
+        "functions": [
+          "F19",
+          "F14"
+        ],
+        "situation": "S34",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "Dx06c0ZEBMk-4",
+      "en": "because they know I get it all the time.",
+      "ko": "왜냐하면 저는 항상 그런 요청을 받거든요.",
       "tags": {
         "functions": [
           "F04"
@@ -92,32 +120,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "Dx06c0ZEBMk-4",
-      "en": "because they know I get it all the time.",
-      "ko": "왜냐하면 저는 항상 그런 요청을 받거든요.",
-      "tags": {
-        "functions": [
-          "F09"
+        "grammar_intent": [
+          "G18"
         ],
-        "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
         "flags": []
       }
     },
@@ -127,10 +134,10 @@
       "ko": "음악 좀 들어볼까요? 해봅시다. 음악 듣고 싶어요?",
       "tags": {
         "functions": [
-          "F34"
+          "F36"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -138,9 +145,11 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -150,7 +159,7 @@
       "ko": "해봅시다.",
       "tags": {
         "functions": [
-          "F34"
+          "F36"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -161,10 +170,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G09"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -173,13 +186,13 @@
       "ko": "정말 대단한 곡이에요. 준비됐나요? 준비됐어요. 신나요. 신나요.",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -196,18 +209,19 @@
       "ko": "당신이 나를 사랑하는 걸 알아요.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
+          "E07",
           "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -219,18 +233,18 @@
       "ko": "당신이 나를 걱정하는 걸 알아요.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E11"
+          "E07"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -242,20 +256,23 @@
       "ko": "언제든지 외치면, 제가 있을게요. 뭐라고요? 당신은 나의 사랑이에요. 당신은 뭐라고요? 당신은 나의 마음이에요.",
       "tags": {
         "functions": [
-          "F31"
+          "F22",
+          "F43"
         ],
         "situation": "S34",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
           "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V02",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -265,20 +282,22 @@
       "ko": "우리는 절대, 절대, 절대 떨어지지 않을 거예요.",
       "tags": {
         "functions": [
-          "F22"
+          "F43"
         ],
         "situation": "S34",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01"
+        ],
         "flags": []
       }
     },
@@ -288,18 +307,18 @@
       "ko": "제가 당신의 연인이 될게요.",
       "tags": {
         "functions": [
-          "F22"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E11"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V07",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -311,10 +330,10 @@
       "ko": "나를 놀게 만들었어요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -322,10 +341,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
-        "flags": []
+        "grammar_intent": [
+          "G14"
+        ],
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -334,7 +357,7 @@
       "ko": "우리는 그냥 친구예요.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -345,10 +368,12 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -371,9 +396,7 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
@@ -385,7 +408,7 @@
           "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -411,16 +434,19 @@
         "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "725b54f7e436a149"
 }

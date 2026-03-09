@@ -12,9 +12,9 @@
       "ko": "좋아, 사람들, 우리는 곤란해. 12시간 36분밖에 없어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -35,9 +35,9 @@
       "ko": "왼쪽, 움직여, 움직여, 움직여!",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -58,10 +58,11 @@
       "ko": "모니카, 너는 이걸 해야 할 것 같아.",
       "tags": {
         "functions": [
+          "F37",
           "F09"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -71,7 +72,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -81,10 +84,10 @@
       "ko": "독일어 자막이야, 미안해, 돼지들 때문이야.",
       "tags": {
         "functions": [
-          "F05"
+          "F28"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -93,8 +96,12 @@
           "X08"
         ],
         "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04"
+        ],
         "flags": []
       }
     },
@@ -104,16 +111,16 @@
       "ko": "그들이 담요에 들어가기를 꺼려해.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -127,9 +134,9 @@
       "ko": "다 계획했어. 내가 울게 할래?",
       "tags": {
         "functions": [
-          "F06"
+          "F39"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -138,7 +145,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -150,9 +157,9 @@
       "ko": "그게 네가 원하는 거야? 내가 우는 걸 보고 싶어?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -161,7 +168,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -173,9 +180,9 @@
       "ko": "알겠어, 내가 말했잖아, 나는 이 일에 관여하지 않아.",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -196,9 +203,9 @@
       "ko": "이 일에 관여하지 않아. 로스, 너가 캐롤과 수잔과 문제를 겪고 있다는 걸 알아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -219,9 +226,9 @@
       "ko": "너를 이해해, 하지만 내가 요리하는 걸 도와주지 않으면",
       "tags": {
         "functions": [
-          "F31"
+          "F42"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -232,7 +239,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
@@ -242,19 +251,21 @@
       "ko": "나는 그 작은 핫도그를 가져다가",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -265,13 +276,13 @@
       "ko": "'로스의 돼지들'이라는 새로운 애피타이저를 만들 거야.",
       "tags": {
         "functions": [
-          "F04"
+          "F23"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -288,9 +299,9 @@
       "ko": "멜론 공을 만들고, 왜 내가 다지기만 하고 있어?",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -311,16 +322,16 @@
       "ko": "멜론 공을 만들 때가 됐어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X04"
         ],
         "vibe": "V18",
         "power": [],
@@ -334,9 +345,9 @@
       "ko": "일정대로 잘 되고 있어. 내 작은 행복한 도우미들이 있어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -357,10 +368,10 @@
       "ko": "무슨 일이야? 아무것도 아니야, 고마워.",
       "tags": {
         "functions": [
-          "F15"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E01"
@@ -368,7 +379,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V13",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -380,9 +391,9 @@
       "ko": "결혼식 취소해줘서 고마워.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -403,9 +414,9 @@
       "ko": "너는 여전히 나에게 돈을 줄 거지?",
       "tags": {
         "functions": [
-          "F05"
+          "F27"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -426,19 +437,21 @@
       "ko": "아니면 좀 덜 이기적인 걸로?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
         "vibe": "V18",
-        "power": [],
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": []
       }
@@ -449,16 +462,16 @@
       "ko": "무슨 일이야? 무슨 일이 있었어?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
@@ -472,9 +485,9 @@
       "ko": "오늘 오후에 부모님이 오지 않겠다고 전화했어.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -495,20 +508,26 @@
       "ko": "세상에, 그들이 재정 문제로 힘들어하는 건 알았지만, 그들은 내 부모야.",
       "tags": {
         "functions": [
-          "F09"
+          "F18",
+          "F23",
+          "F50"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E05",
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07",
+          "G18"
+        ],
         "flags": []
       }
     },
@@ -520,16 +539,16 @@
         "functions": [
           "F09"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -541,20 +560,25 @@
       "ko": "수잔과 큰 싸움을 했어. 내가 결혼식을 취소하자고 했거든.",
       "tags": {
         "functions": [
-          "F31"
+          "F28"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V18",
+        "power": [
+          "P03"
+        ],
+        "grammar_intent": [
+          "G04",
+          "G12"
+        ],
         "flags": []
       }
     },
@@ -564,20 +588,26 @@
       "ko": "그러자 그녀가 말했어, 우리는 그들을 위해 하는 게 아니라 우리를 위해 하는 거라고.",
       "tags": {
         "functions": [
-          "F09"
+          "F36",
+          "F04",
+          "F14"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X07"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09",
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -587,18 +617,18 @@
       "ko": "내가 그걸 이해하지 못한다면, 결혼식을 취소해야 할지도 몰라.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -610,20 +640,22 @@
       "ko": "내가 이 말을 할 줄은 몰랐지만, 수잔이 맞는 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E02"
+          "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
-        "vibe": "V09",
+        "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G17"
+        ],
         "flags": []
       }
     },
@@ -633,20 +665,22 @@
       "ko": "너 그녀를 사랑해?",
       "tags": {
         "functions": [
-          "F34"
+          "F36"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G09"
+        ],
         "flags": []
       }
     },
@@ -656,20 +690,25 @@
       "ko": "너무 감정적으로 말할 필요는 없어.",
       "tags": {
         "functions": [
-          "F09"
+          "F18"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
-        "register": "R4",
+        "register": "R5",
         "emotions": [
-          "E02"
+          "E05"
         ],
         "expression_types": [
-          "X08"
+          "X05"
         ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
+        "vibe": "V11",
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G01",
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -679,18 +718,18 @@
       "ko": "그럼 그게 전부야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S10",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E11"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -702,9 +741,9 @@
       "ko": "조지와 아델라이드가 그걸 받아들이지 못한다면, 그들과는 상관없어.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -725,11 +764,11 @@
       "ko": "내 부모가 너와 결혼하는 걸 원하지 않았다면, 절대 나를 막지 못했을 거야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S16",
-        "cefr": "B1",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -748,9 +787,9 @@
       "ko": "이건 너의 결혼식이야, 해봐.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -771,9 +810,9 @@
       "ko": "맞아, 물론 맞아. 그러니까",
       "tags": {
         "functions": [
-          "F10"
+          "F50"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -784,7 +823,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G18"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -796,9 +837,9 @@
       "ko": "다시 시작해, 다시 시작해. 그녀의 말을 들었지?",
       "tags": {
         "functions": [
-          "F06"
+          "F39"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -819,20 +860,25 @@
       "ko": "절대 나를 막지 못했을 거야.",
       "tags": {
         "functions": [
-          "F12"
+          "F18",
+          "F43",
+          "F11"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "B2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E05"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V11",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G01",
+          "G07"
+        ],
         "flags": []
       }
     },
@@ -842,10 +888,10 @@
       "ko": "이건 너의 결혼식이야, 해봐.",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -867,8 +913,8 @@
         "functions": [
           "F10"
         ],
-        "situation": "S16",
-        "cefr": "B1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -878,7 +924,9 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G20"
+        ],
         "flags": []
       }
     },
@@ -888,9 +936,9 @@
       "ko": "다시 시작이야, 다시 시작이야. 그녀의 말을 들었지?",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S16",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -905,5 +953,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "38cd27fad5667bf7"
 }

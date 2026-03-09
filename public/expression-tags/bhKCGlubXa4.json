@@ -12,20 +12,22 @@
       "ko": "크리스 록과 콤보를 하는 건 정말 싫을 것 같아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": []
       }
     },
@@ -35,13 +37,13 @@
       "ko": "그는 정말 시끄러운 흑인이다.",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -62,7 +64,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -71,7 +73,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -83,13 +85,13 @@
       "ko": "매튜 브로더릭은 17세에 정점에 달했어.",
       "tags": {
         "functions": [
-          "F58"
+          "F23"
         ],
-        "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
-          "E03"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -97,9 +99,7 @@
         "vibe": "V10",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -108,23 +108,23 @@
       "ko": "케빈 베이컨은 라이언 레이놀즈가 헤로인을 엄청 많이 했을 때의 모습 같아.",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
         "vibe": "V10",
-        "power": [],
+        "power": [
+          "P11"
+        ],
         "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
+        "flags": []
       }
     },
     {
@@ -133,35 +133,10 @@
       "ko": "이드리스 엘바는 못생겼어. 말했어. 씨발.",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "contains_profanity"
-        ]
-      }
-    },
-    {
-      "id": "bhKCGlubXa4-6",
-      "en": "They should cast me in all of Dan Levy's parts, because I'm annoying and gay, but not",
-      "ko": "나는 댄 레비의 모든 역할에 캐스팅되어야 해. 나는 짜증나고 게이지만",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -176,15 +151,40 @@
       }
     },
     {
+      "id": "bhKCGlubXa4-6",
+      "en": "They should cast me in all of Dan Levy's parts, because I'm annoying and gay, but not",
+      "ko": "나는 댄 레비의 모든 역할에 캐스팅되어야 해. 나는 짜증나고 게이지만",
+      "tags": {
+        "functions": [
+          "F04"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [
+          "G18"
+        ],
+        "flags": []
+      }
+    },
+    {
       "id": "bhKCGlubXa4-7",
       "en": "completely insufferable, and I'm also hotter than him.",
       "ko": "완전히 참을 수 없는 건 아니고, 그보다 더 매력적이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -206,8 +206,8 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -227,13 +227,13 @@
       "ko": "커스틴 던스트는 주울이 성형수술을 받고 나서 버스에 치인 것 같아.",
       "tags": {
         "functions": [
-          "F58"
+          "F01"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -252,7 +252,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -261,7 +261,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -275,7 +275,7 @@
         "functions": [
           "F27"
         ],
-        "situation": "S34",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -284,10 +284,14 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
-        "power": [],
+        "vibe": "V10",
+        "power": [
+          "P03"
+        ],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -296,22 +300,23 @@
       "ko": "앤드류 가필드는 뚱뚱한 사람의 손 같아, 아니면 기괴한 학교 청소부의 손 같아.",
       "tags": {
         "functions": [
-          "F02"
+          "F23"
         ],
-        "situation": "S34",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V10",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "727ed303ac856cd3"
 }

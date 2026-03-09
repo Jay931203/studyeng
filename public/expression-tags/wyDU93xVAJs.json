@@ -12,11 +12,11 @@
       "ko": "워너 브라더스 스튜디오에서 온 코난입니다!",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
@@ -35,13 +35,13 @@
       "ko": "이게 뭐야?",
       "tags": {
         "functions": [
-          "F09"
+          "F06"
         ],
         "situation": "S34",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -60,7 +60,7 @@
       "ko": "누가 내 눈을 감아줘!",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -83,14 +83,13 @@
       "ko": "이 친구들, 이거 봐! 웃음이 가득해! TV 켜봐.",
       "tags": {
         "functions": [
-          "F25",
-          "F09"
+          "F21"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -107,7 +106,7 @@
       "ko": "딩동, 들어와! 안 돼!",
       "tags": {
         "functions": [
-          "F25"
+          "F45"
         ],
         "situation": "S34",
         "cefr": "A2",
@@ -116,7 +115,7 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V10",
         "power": [],
@@ -130,20 +129,25 @@
       "ko": "다시 자러 가. 화장실 가야 해. 화장실 가야 해.",
       "tags": {
         "functions": [
-          "F34"
+          "F32"
         ],
         "situation": "S34",
-        "cefr": "A2",
-        "register": "R4",
+        "cefr": "B1",
+        "register": "R5",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05"
         ],
         "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
+        "power": [
+          "P05"
+        ],
+        "grammar_intent": [
+          "G25"
+        ],
         "flags": []
       }
     },
@@ -153,13 +157,13 @@
       "ko": "설사를 하기 좋은 곳이지. 정말 그래. 오! 오! 오! 오!",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
         "situation": "S34",
-        "cefr": "A2",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E01"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -176,7 +180,7 @@
       "ko": "오!",
       "tags": {
         "functions": [
-          "F09"
+          "F18"
         ],
         "situation": "S34",
         "cefr": "A1",
@@ -189,11 +193,14 @@
         ],
         "vibe": "V10",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G07"
+        ],
         "flags": [
           "is_fragment"
         ]
       }
     }
-  ]
+  ],
+  "transcriptHash": "0e49050b87266334"
 }

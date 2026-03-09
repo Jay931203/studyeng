@@ -12,9 +12,9 @@
       "ko": "들어봐, 여러분!",
       "tags": {
         "functions": [
-          "F25"
+          "F35"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -35,9 +35,9 @@
       "ko": "이유는 모르겠지만, 나는 군대에 잘 어울려.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -58,10 +58,10 @@
       "ko": "그렇게 어렵지 않아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -81,16 +81,16 @@
       "ko": "침대는 깔끔하게 정리하고, 항상 똑바로 서 있어야 해.",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
         "vibe": "V18",
         "power": [],
@@ -104,9 +104,9 @@
       "ko": "그리고 모든 질문에 이렇게 대답해,",
       "tags": {
         "functions": [
-          "F04"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -127,10 +127,10 @@
       "ko": "예, 훈련소 상사님!",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -141,7 +141,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -152,8 +154,8 @@
         "functions": [
           "F06"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -173,10 +175,10 @@
       "ko": "예, 훈련소 상사님!",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -196,9 +198,9 @@
       "ko": "그건 바닥에 그물만 끌고 가면 돼.",
       "tags": {
         "functions": [
-          "F04"
+          "F06"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -219,10 +221,10 @@
       "ko": "좋은 날에는 100파운드 이상의 새우를 잡을 수 있어.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
@@ -242,9 +244,9 @@
       "ko": "모든 게 잘 되면.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -265,9 +267,9 @@
       "ko": "두 명이서 10시간 동안 새우를 잡아.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -279,7 +281,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -288,9 +292,9 @@
       "ko": "그게 기름값이야.",
       "tags": {
         "functions": [
-          "F09"
+          "F01"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -311,10 +315,10 @@
       "ko": "끝났습니다, 훈련소 상사님!",
       "tags": {
         "functions": [
-          "F07"
+          "F01"
         ],
-        "situation": "S14",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -336,7 +340,7 @@
         "functions": [
           "F35"
         ],
-        "situation": "S14",
+        "situation": "S50",
         "cefr": "A1",
         "register": "R4",
         "emotions": [
@@ -348,7 +352,9 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": []
+        "flags": [
+          "is_fragment"
+        ]
       }
     },
     {
@@ -359,16 +365,16 @@
         "functions": [
           "F06"
         ],
-        "situation": "S42",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V02",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -380,11 +386,11 @@
       "ko": "당신도 말해줘요, 훈련소 상사님.",
       "tags": {
         "functions": [
-          "F50"
+          "F01"
         ],
-        "situation": "S42",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -403,18 +409,18 @@
       "ko": "예수님!",
       "tags": {
         "functions": [
-          "F09"
+          "F15"
         ],
-        "situation": "S42",
-        "cefr": "A2",
+        "situation": "S50",
+        "cefr": "A1",
         "register": "R4",
         "emotions": [
-          "E03"
+          "E09"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V10",
+        "vibe": "V18",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -426,13 +432,13 @@
       "ko": "이건 새로운 회사 기록이야.",
       "tags": {
         "functions": [
-          "F01"
+          "F23"
         ],
-        "situation": "S42",
-        "cefr": "A1",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E08"
         ],
         "expression_types": [
           "X08"
@@ -449,20 +455,22 @@
       "ko": "이렇게 훌륭한 병사를 낭비하지 않는다면,",
       "tags": {
         "functions": [
-          "F12"
+          "F17"
         ],
-        "situation": "S42",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V18",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
           "contains_profanity"
         ]
@@ -474,11 +482,11 @@
       "ko": "너를 OCS에 추천할 거야, 프라이빗 검프.",
       "tags": {
         "functions": [
-          "F34"
+          "F01"
         ],
-        "situation": "S42",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -497,11 +505,11 @@
       "ko": "너는 언젠가 장군이 될 거야, 검프.",
       "tags": {
         "functions": [
-          "F14"
+          "F01"
         ],
-        "situation": "S42",
-        "cefr": "B2",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -520,11 +528,11 @@
       "ko": "이제 무기를 분해하고 계속해.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S42",
-        "cefr": "B1",
-        "register": "R3",
+        "situation": "S50",
+        "cefr": "A2",
+        "register": "R4",
         "emotions": [
           "E09"
         ],
@@ -543,10 +551,10 @@
       "ko": "어쨌든, 내가 말했던 것처럼,",
       "tags": {
         "functions": [
-          "F50"
+          "F48"
         ],
-        "situation": "S42",
-        "cefr": "B2",
+        "situation": "S50",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
           "E09"
@@ -560,5 +568,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "c1fd77d67757430d"
 }

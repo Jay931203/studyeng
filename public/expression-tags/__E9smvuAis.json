@@ -14,7 +14,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "A2",
         "register": "R4",
         "emotions": [
@@ -26,9 +26,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -37,23 +35,21 @@
       "ko": "모든 사람의 취향은 아닐 수 있습니다.",
       "tags": {
         "functions": [
-          "F09"
+          "F14"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X07"
         ],
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -62,9 +58,9 @@
       "ko": "이 거대한 주전자 모양의 건물은 실제로 10층짜리 사무실 건물입니다.",
       "tags": {
         "functions": [
-          "F02"
+          "F08"
         ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -76,9 +72,7 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
       }
     },
     {
@@ -89,32 +83,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
-      }
-    },
-    {
-      "id": "__E9smvuAis-4",
-      "en": "Locals hope the quirky building will become a symbol of the city.",
-      "ko": "지역 주민들은 이 독특한 건물이 도시의 상징이 되기를 바랍니다.",
-      "tags": {
-        "functions": [
-          "F24"
-        ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -126,9 +95,30 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
+      }
+    },
+    {
+      "id": "__E9smvuAis-4",
+      "en": "Locals hope the quirky building will become a symbol of the city.",
+      "ko": "지역 주민들은 이 독특한 건물이 도시의 상징이 되기를 바랍니다.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
       }
     },
     {
@@ -139,32 +129,7 @@
         "functions": [
           "F01"
         ],
-        "situation": "S47",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
-      }
-    },
-    {
-      "id": "__E9smvuAis-6",
-      "en": "It might not be everyone's cup of tea.",
-      "ko": "모든 사람의 취향은 아닐 수 있습니다.",
-      "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S47",
+        "situation": "S50",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
@@ -176,10 +141,32 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
+        "flags": []
+      }
+    },
+    {
+      "id": "__E9smvuAis-6",
+      "en": "It might not be everyone's cup of tea.",
+      "ko": "모든 사람의 취향은 아닐 수 있습니다.",
+      "tags": {
+        "functions": [
+          "F14"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X07"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "8f157f6527de64b1"
 }
