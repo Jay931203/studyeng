@@ -100,6 +100,13 @@ export default function ProfilePage() {
     }
   }
 
+  const premiumOverrideLabel =
+    premiumOverride === 'premium'
+      ? '강제 PRO'
+      : premiumOverride === 'free'
+        ? '강제 FREE'
+        : '없음'
+
   return (
     <AppPage>
       {!authAvailable && (
@@ -279,7 +286,7 @@ export default function ProfilePage() {
                           PRO ACCESS TEST
                         </p>
                         <p className="mt-1 text-xs text-[var(--text-muted)]">
-                          로컬 테스트 전용입니다. 실제 결제 상태는 바뀌지 않습니다.
+                          로컬 테스트 전용입니다. 실제 결제는 유지하고 앱에서만 PRO/FREE를 강제로 적용합니다.
                         </p>
                       </div>
                       <span
@@ -303,7 +310,7 @@ export default function ProfilePage() {
                             : 'bg-[var(--bg-card)] text-[var(--text-secondary)]'
                         }`}
                       >
-                        실제 상태
+                        실제 구독
                       </button>
                       <button
                         type="button"
@@ -314,7 +321,7 @@ export default function ProfilePage() {
                             : 'bg-[var(--bg-card)] text-[var(--text-secondary)]'
                         }`}
                       >
-                        PRO ON
+                        강제 PRO
                       </button>
                       <button
                         type="button"
@@ -325,14 +332,19 @@ export default function ProfilePage() {
                             : 'bg-[var(--bg-card)] text-[var(--text-secondary)]'
                         }`}
                       >
-                        PRO OFF
+                        강제 FREE
                       </button>
                     </div>
 
                     <p className="mt-3 text-xs text-[var(--text-muted)]">
-                      실제 구독 {entitlementPremium ? 'PRO' : 'FREE'} · 현재 앱 적용{' '}
-                      {appliedPremium ? 'PRO' : 'FREE'}
+                      실제 구독 {entitlementPremium ? 'PRO' : 'FREE'} · 앱 적용{' '}
+                      {appliedPremium ? 'PRO' : 'FREE'} · 오버라이드 {premiumOverrideLabel}
                     </p>
+                    {premiumOverride === 'free' && (
+                      <p className="mt-1 text-xs text-[var(--text-muted)]">
+                        강제 FREE는 실제 구독이 있어도 앱을 무료 상태처럼 테스트합니다.
+                      </p>
+                    )}
                   </div>
                 </div>
               </div>
