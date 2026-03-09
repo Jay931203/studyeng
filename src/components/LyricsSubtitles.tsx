@@ -533,9 +533,13 @@ export function LyricsSubtitles({
               }
 
               if (distance > visibilityRadius) return 0
+              if (visibilityRadius >= 3) {
+                if (distance === 1) return 0.78
+                if (distance === 2) return 0.52
+                if (distance === 3) return 0.28
+              }
               if (distance === 1) return 0.45
               if (distance === 2) return 0.22
-              if (distance === 3) return 0.14
               return 0.1
             })()
 
@@ -560,12 +564,18 @@ export function LyricsSubtitles({
                         : 0.89)
               : isJustSaved || isActive || isFrozen
                 ? 1
-                : distance === 1
-                  ? 0.94
-                  : distance === 2
-                    ? 0.9
-                    : distance === 3
-                      ? 0.87
+                : visibilityRadius >= 3
+                  ? distance === 1
+                    ? 0.96
+                    : distance === 2
+                      ? 0.93
+                      : distance === 3
+                        ? 0.9
+                        : 0.87
+                  : distance === 1
+                    ? 0.94
+                    : distance === 2
+                      ? 0.9
                       : 0.85
 
             const flagged = adminActive && videoId
