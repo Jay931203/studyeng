@@ -3,8 +3,8 @@
   "category": "music",
   "title": "Radioactive",
   "seriesId": "rock-anthems",
-  "sentenceCount": 12,
-  "taggedCount": 12,
+  "sentenceCount": 10,
+  "taggedCount": 10,
   "sentences": [
     {
       "id": "ktvTqknDobU-0",
@@ -133,17 +133,17 @@
     },
     {
       "id": "ktvTqknDobU-5",
-      "en": "Welcome to the new age, to the new age",
-      "ko": "새로운 시대에 오신 것을 환영합니다.",
+      "en": "I'm radioactive, radioactive",
+      "ko": "나는 방사능, 방사능이야.",
       "tags": {
         "functions": [
-          "F23"
+          "F01"
         ],
         "situation": "S46",
-        "cefr": "B1",
+        "cefr": "A2",
         "register": "R4",
         "emotions": [
-          "E08"
+          "E09"
         ],
         "expression_types": [
           "X08"
@@ -152,64 +152,13 @@
         "power": [],
         "grammar_intent": [],
         "flags": [
-          "is_lyrics"
+          "is_lyrics",
+          "is_fragment"
         ]
       }
     },
     {
       "id": "ktvTqknDobU-6",
-      "en": "I'm radioactive, radioactive",
-      "ko": "나는 방사능, 방사능이야.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics",
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "ktvTqknDobU-7",
-      "en": "I'm radioactive, radioactive",
-      "ko": "나는 방사능, 방사능이야.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S46",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics",
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "ktvTqknDobU-8",
       "en": "I raise my flag, I dye my clothes",
       "ko": "깃발을 올리고, 옷을 염색해.",
       "tags": {
@@ -234,7 +183,7 @@
       }
     },
     {
-      "id": "ktvTqknDobU-9",
+      "id": "ktvTqknDobU-7",
       "en": "It's a revolution, I suppose",
       "ko": "혁명인 것 같아.",
       "tags": {
@@ -261,7 +210,7 @@
       }
     },
     {
-      "id": "ktvTqknDobU-10",
+      "id": "ktvTqknDobU-8",
       "en": "We're painted red to fit right in",
       "ko": "우리는 잘 어울리도록 빨갛게 칠해져 있어.",
       "tags": {
@@ -286,7 +235,7 @@
       }
     },
     {
-      "id": "ktvTqknDobU-11",
+      "id": "ktvTqknDobU-9",
       "en": "I'm breaking in, shaping up",
       "ko": "나는 침입하고, 변화를 주고 있어.",
       "tags": {
@@ -311,5 +260,5 @@
       }
     }
   ],
-  "transcriptHash": "b70459d6326ad14c"
+  "transcriptHash": "26d2c10b8dcd9841"
 }

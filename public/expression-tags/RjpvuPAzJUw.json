@@ -3,8 +3,8 @@
   "category": "drama",
   "title": "Best Funny Moments Compilation",
   "seriesId": "friends-s1",
-  "sentenceCount": 154,
-  "taggedCount": 0,
+  "sentenceCount": 116,
+  "taggedCount": 116,
   "sentences": [
     {
       "id": "RjpvuPAzJUw-0",
@@ -43,7 +43,7 @@
     {
       "id": "RjpvuPAzJUw-2",
       "en": "You hide my clothes i'm wearing",
-      "ko": "내 옷을 숨겼어, 내가 입고 있어.",
+      "ko": "내 옷을 숨겼어. 내가 입고 있어.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -60,7 +60,7 @@
     {
       "id": "RjpvuPAzJUw-3",
       "en": "Everything you own oh my god",
-      "ko": "세상에.",
+      "ko": "네 옷을 전부, 세상에.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -76,16 +76,22 @@
     },
     {
       "id": "RjpvuPAzJUw-4",
-      "en": "That is so not the opposite of taking",
+      "en": "That is so not the opposite of taking somebody's underwear",
       "ko": "그건 누군가의 속옷을 가져가는 것의 반대가 전혀 아니야.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -93,23 +99,6 @@
     },
     {
       "id": "RjpvuPAzJUw-5",
-      "en": "Somebody's underwear",
-      "ko": "누군가의 속옷.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-6",
       "en": "Look at me i'm chandler could i be wearing any more clothes",
       "ko": "나 좀 봐, 나는 챈들러야. 옷을 더 입을 수 있을까?",
       "tags": {
@@ -126,7 +115,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-7",
+      "id": "RjpvuPAzJUw-6",
       "en": "Maybe if i wasn't going commando",
       "ko": "아마도 속옷 없이 나가지 않았다면.",
       "tags": {
@@ -143,41 +132,30 @@
       }
     },
     {
+      "id": "RjpvuPAzJUw-7",
+      "en": "I'll tell you it's hot with all this stuff on i uh i better not do any i don't know lunges",
+      "ko": "이 모든 걸 입고 있으니 덥다, 런지는 하지 말아야겠다.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
       "id": "RjpvuPAzJUw-8",
-      "en": "I'll tell you it's hot with all this",
-      "ko": "이거 입고 운동은 하지 말아야겠다.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-9",
-      "en": "Stuff on i uh i better not do any i don't know lunges",
-      "ko": "이 모든 걸 입고 있으니 덥다고 말할게.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-10",
       "en": "Okay okay enough enough for the lunching",
       "ko": "좋아, 좋아, 런지 그만.",
       "tags": {
@@ -194,43 +172,32 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-11",
-      "en": "No i'm sick of this okay i've had it up to here with you two neither of you can",
-      "ko": "이제 그만해, 너희 둘 다.",
+      "id": "RjpvuPAzJUw-9",
+      "en": "No i'm sick of this okay i've had it up to here with you two neither of you can come to the party",
+      "ko": "이제 질렸어, 너희 둘 다 파티에 올 수 없어.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-12",
-      "en": "Come to the party",
-      "ko": "파티에 올 수 없어.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-13",
+      "id": "RjpvuPAzJUw-10",
       "en": "Geez what a baby",
-      "ko": "아이고, 정말 아기 같네",
+      "ko": "아이고, 정말 아기 같네.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -245,7 +212,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-14",
+      "id": "RjpvuPAzJUw-11",
       "en": "Yeah ross way to ruin it i was just gonna go get dressed",
       "ko": "그래, 로스, 망쳤네. 나는 그냥 옷을 입으러 가려고 했어.",
       "tags": {
@@ -262,9 +229,9 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-15",
+      "id": "RjpvuPAzJUw-12",
       "en": "Uh",
-      "ko": "어",
+      "ko": "어.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -279,25 +246,31 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-16",
-      "en": "All right we still have a minute and a",
+      "id": "RjpvuPAzJUw-13",
+      "en": "All right we still have a minute and a half left to go and we're down by two",
       "ko": "좋아, 아직 1분 반 남았고 우리는 2점 뒤져 있어.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-17",
-      "en": "Half left to go and we're down by two",
+      "id": "RjpvuPAzJUw-14",
+      "en": "Phoebe you do a button hook again",
       "ko": "피비, 다시 버튼 훅 해.",
       "tags": {
         "functions": [],
@@ -313,42 +286,31 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-18",
-      "en": "Phoebe you do a button hook again",
-      "ko": "레이첼, 너는 길게 가, 제발.",
+      "id": "RjpvuPAzJUw-15",
+      "en": "Rachel you go long no come on don't make me go long use me they never cover me",
+      "ko": "레이첼, 너는 길게 가. 아니, 나를 길게 가게 하지 마, 나를 써, 그들은 절대 나를 막지 않아.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-19",
-      "en": "Rachel you go long no come on don't make",
-      "ko": "나를 길게 가게 하지 마, 나를 써, 그들은 절대 나를 막지 않아.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-20",
-      "en": "Me go long use me they never cover me",
+      "id": "RjpvuPAzJUw-16",
+      "en": "Honey there's a reason",
       "ko": "자기야, 이유가 있어.",
       "tags": {
         "functions": [],
@@ -364,8 +326,8 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-21",
-      "en": "Honey there's a reason",
+      "id": "RjpvuPAzJUw-17",
+      "en": "You know rachel funny thing actually uh",
       "ko": "너도 알다시피 레이첼, 웃긴 게 있어.",
       "tags": {
         "functions": [],
@@ -381,42 +343,31 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-22",
-      "en": "You know rachel funny thing actually uh",
-      "ko": "엔드존은 저 기둥에서 시작해, 그래서.",
+      "id": "RjpvuPAzJUw-18",
+      "en": "The end zone starts that pole so you're five feet short so",
+      "ko": "엔드존은 저 기둥에서 시작해. 너는 5피트가 모자라.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-23",
-      "en": "The end zone starts that pole so you're",
-      "ko": "너는 5피트가 모자라.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-24",
-      "en": "Five feet short so",
+      "id": "RjpvuPAzJUw-19",
+      "en": "We win",
       "ko": "그래서 우리가 이겨.",
       "tags": {
         "functions": [],
@@ -432,42 +383,31 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-25",
-      "en": "We win",
-      "ko": "잠깐, 잠깐, 잠깐, 나한테 설명해줘.",
+      "id": "RjpvuPAzJUw-20",
+      "en": "Wait wait wait wait so explain something to me though if if nobody tagged rachel",
+      "ko": "잠깐, 잠깐, 잠깐, 나한테 설명해줘. 만약 아무도 레이첼을 태그하지 않았다면.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-26",
-      "en": "Wait wait wait wait so explain something",
-      "ko": "만약 아무도 레이첼을 태그하지 않았다면.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-27",
-      "en": "To me though if if nobody tagged rachel",
+      "id": "RjpvuPAzJUw-21",
+      "en": "That was just the pants on the couch",
       "ko": "그냥 소파에 바지가 있었던 거야.",
       "tags": {
         "functions": [],
@@ -483,8 +423,8 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-28",
-      "en": "That was just the pants on the couch",
+      "id": "RjpvuPAzJUw-22",
+      "en": "Um",
       "ko": "음.",
       "tags": {
         "functions": [],
@@ -500,8 +440,8 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-29",
-      "en": "Um",
+      "id": "RjpvuPAzJUw-23",
+      "en": "Hey do you mind if i use your bathroom",
       "ko": "화장실 좀 써도 될까?",
       "tags": {
         "functions": [],
@@ -517,8 +457,8 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-30",
-      "en": "Hey do you mind if i use your bathroom",
+      "id": "RjpvuPAzJUw-24",
+      "en": "Oh",
       "ko": "오.",
       "tags": {
         "functions": [],
@@ -534,8 +474,8 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-31",
-      "en": "Oh",
+      "id": "RjpvuPAzJUw-25",
+      "en": "Hey my favorite part's coming up okay",
       "ko": "내가 제일 좋아하는 부분이 다가오고 있어.",
       "tags": {
         "functions": [],
@@ -551,24 +491,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-32",
-      "en": "Hey my favorite part's coming up okay",
-      "ko": "안녕, 조이, 나 로스야, 도움이 필요해.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-33",
+      "id": "RjpvuPAzJUw-26",
       "en": "Oh my god",
       "ko": "세상에.",
       "tags": {
@@ -585,41 +508,30 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-34",
-      "en": "Hello joey it's ross i need some help",
-      "ko": "어, 챈들러는 여기 없어, 그래도 나를 도와줄 수 있어.",
+      "id": "RjpvuPAzJUw-27",
+      "en": "Hello joey it's ross i need some help uh chandler's not here well you can help me",
+      "ko": "안녕, 조이, 나 로스야, 도움이 필요해. 어, 챈들러는 여기 없어. 그래도 나를 도와줄 수 있어.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-35",
-      "en": "Uh chandler's not here well you can help me",
-      "ko": "좋아.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-36",
+      "id": "RjpvuPAzJUw-28",
       "en": "Okay",
       "ko": "좋아.",
       "tags": {
@@ -636,9 +548,9 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-37",
+      "id": "RjpvuPAzJUw-29",
       "en": "Listen i'm in elizabeth's bathroom nice",
-      "ko": "들어봐, 나는 엘리자베스의 화장실에 있어.",
+      "ko": "들어봐, 나는 엘리자베스의 화장실에 있어. 멋지네.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -653,128 +565,78 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-38",
-      "en": "No i i got really hot in my leather",
-      "ko": "아니, 가죽 바지 때문에 너무 더워서 벗었어.",
+      "id": "RjpvuPAzJUw-30",
+      "en": "No i i got really hot in my leather pants so i took them off but they must have shrunk from the the sweat or",
+      "ko": "아니, 가죽 바지 때문에 너무 더워서 벗었어. 하지만 땀 때문에 줄어든 것 같아.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-39",
-      "en": "Pants so i took them off but they must",
-      "ko": "하지만 땀 때문에 줄어든 것 같아.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-40",
-      "en": "Have shrunk from the the sweat or",
+      "id": "RjpvuPAzJUw-31",
+      "en": "Something or or my legs expanded from the heat",
       "ko": "아니면 열 때문에 내 다리가 부풀어 오른 것 같아.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-41",
-      "en": "Something or or my legs expanded from",
-      "ko": "하지만 조이, 다시 입을 수가 없어.",
+      "id": "RjpvuPAzJUw-32",
+      "en": "But i i can't get them back on joey i can't",
+      "ko": "다시 입을 수가 없어, 조이.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-42",
-      "en": "The heat",
-      "ko": "못하겠어.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-43",
-      "en": "But i i can't get them back on joey i",
-      "ko": "오, 꽤 곤란한 상황이네.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-44",
-      "en": "Can't",
-      "ko": "어, 파우더 같은 거 보여?",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-45",
+      "id": "RjpvuPAzJUw-33",
       "en": "Oh that is quite a situation",
-      "ko": "뭐? 파우더? 응, 파우더 있어.",
+      "ko": "오, 그것 참 난처한 상황이네.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -789,59 +651,54 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-46",
-      "en": "Uh do you see any like powder what",
-      "ko": "좋아, 다리에 좀 뿌려, 수분을 흡수할 거야.",
+      "id": "RjpvuPAzJUw-34",
+      "en": "Uh do you see any like powder what powder yeah yeah i have powder good good okay",
+      "ko": "어, 파우더 같은 거 보여? 뭐? 파우더? 응, 파우더 있어. 좋아.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-47",
-      "en": "Powder yeah yeah i have powder good good okay",
-      "ko": "그러면 바지를 다시 입을 수 있어.",
+      "id": "RjpvuPAzJUw-35",
+      "en": "Sprinkle some of that on your legs it'll absorb some of the moisture and then you can get your pants back on yeah hold on hold on",
+      "ko": "다리에 좀 뿌려, 수분을 흡수할 거야. 그러면 바지를 다시 입을 수 있어. 응, 잠깐만.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-48",
-      "en": "Sprinkle some of that on your legs it'll absorb some of the moisture and then you",
-      "ko": "응, 잠깐만.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-49",
-      "en": "Can get your pants back on yeah hold on hold on",
+      "id": "RjpvuPAzJUw-36",
+      "en": "I",
       "ko": "나는.",
       "tags": {
         "functions": [],
@@ -857,8 +714,8 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-50",
-      "en": "I",
+      "id": "RjpvuPAzJUw-37",
+      "en": "You're not coming on man",
       "ko": "너는 오지 마, 친구.",
       "tags": {
         "functions": [],
@@ -874,26 +731,9 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-51",
-      "en": "You're not coming on man",
-      "ko": "음, 어, 바세린 같은 거 보여?",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-52",
+      "id": "RjpvuPAzJUw-38",
       "en": "Um you see any uh oh vaseline oh",
-      "ko": "오, 로션이 보여, 로션 있어, 그거 괜찮아?",
+      "ko": "음, 어, 바세린 같은 거 보여? 오.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -908,92 +748,53 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-53",
-      "en": "I i see lotion i have lotion will that",
-      "ko": "응, 물론, 그거 좀 발라봐.",
+      "id": "RjpvuPAzJUw-39",
+      "en": "I i see lotion i have lotion will that work yeah sure throw some of that on there hold on",
+      "ko": "오, 로션이 보여, 로션 있어, 그거 괜찮아? 응, 물론, 그거 좀 발라봐. 잠깐만.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-54",
-      "en": "Work yeah sure throw some of that on",
-      "ko": "응, 물론, 그거 좀 발라봐",
+      "id": "RjpvuPAzJUw-40",
+      "en": "Ross you okay they're still they're still not coming on man and the lotion and the powder have made a paste",
+      "ko": "로스, 괜찮아? 아직도 안 오고 있어. 로션과 파우더가 반죽이 됐어.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-55",
-      "en": "There hold on",
-      "ko": "잠깐만",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-56",
-      "en": "Ross you okay they're still they're still not coming",
-      "ko": "로스, 괜찮아? 아직도 안 오고 있어",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-57",
-      "en": "On man and the lotion and the powder have made a paste",
-      "ko": "아, 로션과 파우더가 반죽이 됐어",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-58",
+      "id": "RjpvuPAzJUw-41",
       "en": "Really",
       "ko": "정말?",
       "tags": {
@@ -1010,7 +811,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-59",
+      "id": "RjpvuPAzJUw-42",
       "en": "Uh what color is it",
       "ko": "어떤 색이야?",
       "tags": {
@@ -1027,7 +828,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-60",
+      "id": "RjpvuPAzJUw-43",
       "en": "What difference does that mean",
       "ko": "그게 무슨 상관이야?",
       "tags": {
@@ -1044,41 +845,30 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-61",
-      "en": "Well i'm just if the paste matches the pants you can make yourself a pair of",
-      "ko": "그냥 반죽이 바지랑 맞으면 얼굴 바지를 만들 수 있어",
+      "id": "RjpvuPAzJUw-44",
+      "en": "Well i'm just if the paste matches the pants you can make yourself a pair of face pants and she won't know the",
+      "ko": "그냥 반죽이 바지랑 맞으면 바지를 만들 수 있어. 그녀는 모를 거야.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-62",
-      "en": "Face pants and she won't know the",
-      "ko": "그녀는 모를 거야.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-63",
+      "id": "RjpvuPAzJUw-45",
       "en": "Difference",
       "ko": "차이점.",
       "tags": {
@@ -1095,7 +885,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-64",
+      "id": "RjpvuPAzJUw-46",
       "en": "Joey do you have a minute dude what am i",
       "ko": "조이, 잠깐 시간 있어? 뭐 할 건데?",
       "tags": {
@@ -1112,7 +902,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-65",
+      "id": "RjpvuPAzJUw-47",
       "en": "Gonna uh rachel's here so good luck man let me know how it works out",
       "ko": "레이첼이 여기 있어, 행운을 빌어, 잘 되길 알려줘.",
       "tags": {
@@ -1129,43 +919,32 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-66",
-      "en": "Oh it's joey i have such a problem uh well your",
-      "ko": "오, 조이, 큰 문제가 있어, 음, 네가 말한 대로 타이밍이 정말 좋네",
+      "id": "RjpvuPAzJUw-48",
+      "en": "Oh it's joey i have such a problem uh well your timing couldn't be better i am putting out fires all over the place today",
+      "ko": "오, 조이, 큰 문제가 있어. 네 타이밍이 정말 좋네. 오늘 여기저기서 불을 끄고 있어.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-67",
-      "en": "Timing couldn't be better i am putting out fires all over the place today",
-      "ko": "오늘 여기저기서 불을 끄고 있어",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-68",
+      "id": "RjpvuPAzJUw-49",
       "en": "Come on charlie",
-      "ko": "자, 찰리",
+      "ko": "자, 찰리.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -1180,9 +959,9 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-69",
+      "id": "RjpvuPAzJUw-50",
       "en": "All right okay",
-      "ko": "좋아, 알겠어",
+      "ko": "좋아, 알겠어.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -1197,9 +976,9 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-70",
+      "id": "RjpvuPAzJUw-51",
       "en": "There we go",
-      "ko": "자, 시작하자",
+      "ko": "자, 시작하자.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -1214,9 +993,9 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-71",
+      "id": "RjpvuPAzJUw-52",
       "en": "All right ready yeah turn okay",
-      "ko": "준비됐어? 응, 돌려",
+      "ko": "준비됐어? 응, 돌려.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -1231,9 +1010,9 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-72",
+      "id": "RjpvuPAzJUw-53",
       "en": "Turn turn",
-      "ko": "돌려, 돌려",
+      "ko": "돌려, 돌려.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -1248,9 +1027,9 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-73",
+      "id": "RjpvuPAzJUw-54",
       "en": "I don't think we can turn anymore",
-      "ko": "더 이상 돌릴 수 없을 것 같아",
+      "ko": "더 이상 돌릴 수 없을 것 같아.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -1265,9 +1044,9 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-74",
+      "id": "RjpvuPAzJUw-55",
       "en": "Oh my god i just don't think it's gonna",
-      "ko": "오 마이 갓, 안 맞을 것 같아",
+      "ko": "오 마이 갓, 안 맞을 것 같아.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -1282,9 +1061,9 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-75",
+      "id": "RjpvuPAzJUw-56",
       "en": "Fit oh yeah it will come on up up",
-      "ko": "아, 맞을 거야, 자, 위로",
+      "ko": "아, 맞을 거야. 자, 위로.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -1299,9 +1078,9 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-76",
+      "id": "RjpvuPAzJUw-57",
       "en": "Yes",
-      "ko": "응",
+      "ko": "응.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -1316,9 +1095,9 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-77",
+      "id": "RjpvuPAzJUw-58",
       "en": "Here we go pivot pivot",
-      "ko": "자, 피벗, 피벗",
+      "ko": "자, 피벗, 피벗.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -1333,9 +1112,9 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-78",
+      "id": "RjpvuPAzJUw-59",
       "en": "Pivot pi band",
-      "ko": "피벗, 피밴드",
+      "ko": "피벗, 피밴드.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -1350,9 +1129,9 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-79",
+      "id": "RjpvuPAzJUw-60",
       "en": "Pivot",
-      "ko": "피벗",
+      "ko": "피벗.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -1367,9 +1146,9 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-80",
+      "id": "RjpvuPAzJUw-61",
       "en": "Paper shut up shut up shut up",
-      "ko": "종이, 조용히 해, 조용히 해",
+      "ko": "종이, 조용히 해.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -1384,7 +1163,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-81",
+      "id": "RjpvuPAzJUw-62",
       "en": "Okay i i don't think it's gonna pivot anymore you think",
       "ko": "이제 더 이상 피벗할 수 없을 것 같아, 너는?",
       "tags": {
@@ -1401,9 +1180,9 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-82",
+      "id": "RjpvuPAzJUw-63",
       "en": "All right let's uh let's bring it back down and try again",
-      "ko": "자, 다시 내려서 다시 해보자",
+      "ko": "자, 다시 내려서 다시 해보자.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -1418,9 +1197,9 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-83",
+      "id": "RjpvuPAzJUw-64",
       "en": "Okay yeah i think it's really stuck now",
-      "ko": "응, 이제 정말 꽉 막힌 것 같아",
+      "ko": "응, 이제 정말 꽉 막힌 것 같아.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -1435,9 +1214,9 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-84",
+      "id": "RjpvuPAzJUw-65",
       "en": "I can't believe that didn't work i know",
-      "ko": "이게 안 되다니 믿을 수 없어, 나도",
+      "ko": "이게 안 되다니 믿을 수 없어, 나도.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -1452,9 +1231,9 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-85",
+      "id": "RjpvuPAzJUw-66",
       "en": "Me neither i mean you had a sketch",
-      "ko": "나도, 스케치가 있었잖아",
+      "ko": "나도, 스케치가 있었잖아.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -1469,7 +1248,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-86",
+      "id": "RjpvuPAzJUw-67",
       "en": "Oh now what did you mean when you said pivot",
       "ko": "아, 피벗이라고 했을 때 무슨 뜻이었어?",
       "tags": {
@@ -1486,75 +1265,53 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-87",
-      "en": "Hey you guys uh is monica here no no all",
-      "ko": "야, 여러분, 모니카 여기 있어? 아니, 없어",
+      "id": "RjpvuPAzJUw-68",
+      "en": "Hey you guys uh is monica here no no all right listen um i just bought something i'm not sure she's gonna like it and",
+      "ko": "야, 여러분, 모니카 여기 있어? 아니, 없어. 들어봐, 뭔가 샀는데 그녀가 좋아할지 모르겠어.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-88",
-      "en": "Right listen um i just bought something i'm not sure she's gonna like it and",
-      "ko": "자, 들어봐, 뭔가 샀는데 그녀가 좋아할지 모르겠어",
+      "id": "RjpvuPAzJUw-69",
+      "en": "It's gonna seem a little crazy but this is something i've wanted since i was a",
+      "ko": "좀 미친 것처럼 보일 거야, 하지만 이건 내가 어릴 적부터 원했던 거야.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-89",
-      "en": "It's gonna seem a little crazy but this",
-      "ko": "좀 미친 것처럼 보일 거야, 하지만 이건",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-90",
-      "en": "Is something i've wanted since i was a",
-      "ko": "내가 어릴 적부터 원했던 거야",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-91",
+      "id": "RjpvuPAzJUw-70",
       "en": "Little girl you bought sean cassidy",
       "ko": "숀 캐시디를 샀어?",
       "tags": {
@@ -1571,9 +1328,9 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-92",
+      "id": "RjpvuPAzJUw-71",
       "en": "No i wish okay",
-      "ko": "아니, 그랬으면 좋겠어",
+      "ko": "아니, 그랬으면 좋겠어.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -1588,7 +1345,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-93",
+      "id": "RjpvuPAzJUw-72",
       "en": "My god what what is what what the hell is that",
       "ko": "오 마이 갓, 그게 뭐야? 대체 그게 뭐야?",
       "tags": {
@@ -1605,9 +1362,9 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-94",
+      "id": "RjpvuPAzJUw-73",
       "en": "It's it's a cat that is not a cat",
-      "ko": "그건 고양이인데 고양이가 아니야",
+      "ko": "그건 고양이인데 고양이가 아니야.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -1622,7 +1379,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-95",
+      "id": "RjpvuPAzJUw-74",
       "en": "Yes it is why is it inside out",
       "ko": "네, 그렇습니다. 왜 안쪽이 바깥으로 나와 있죠?",
       "tags": {
@@ -1639,7 +1396,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-96",
+      "id": "RjpvuPAzJUw-75",
       "en": "Excuse me but this is a purebred",
       "ko": "실례지만, 이건 순종입니다.",
       "tags": {
@@ -1656,41 +1413,30 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-97",
-      "en": "Show-quality sphinx cat how much would",
-      "ko": "쇼 품질의 스핑크스 고양이인데, 얼마를",
+      "id": "RjpvuPAzJUw-76",
+      "en": "Show-quality sphinx cat how much would you pay for that well it was a little extravagant but i",
+      "ko": "쇼 품질의 스핑크스 고양이인데, 얼마 주셨나요? 음, 조금 사치였지만,",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-98",
-      "en": "You pay for that well it was a little extravagant but i",
-      "ko": "주셨나요? 음, 조금 사치였지만,",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-99",
+      "id": "RjpvuPAzJUw-77",
       "en": "Got a pretty good deal huh how much thousand bucks",
       "ko": "꽤 좋은 거래였어요. 얼마였죠? 천 달러요.",
       "tags": {
@@ -1707,7 +1453,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-100",
+      "id": "RjpvuPAzJUw-78",
       "en": "On a cat it's not a cat",
       "ko": "고양이에요? 고양이가 아니에요.",
       "tags": {
@@ -1724,41 +1470,30 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-101",
-      "en": "All right listen ball boys my grandmother had one of these when i was",
-      "ko": "자, 들어봐요, 내 할머니가 이걸 키우셨거든요.",
+      "id": "RjpvuPAzJUw-79",
+      "en": "All right listen ball boys my grandmother had one of these when i was a little girl and it was the sweetest thing i mean it was so cute it would sit",
+      "ko": "자, 들어봐요, 내 할머니가 어릴 때 이걸 키우셨거든요. 정말 귀여웠어요. 무릎에 앉아서,",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-102",
-      "en": "A little girl and it was the sweetest thing i mean it was so cute it would sit",
-      "ko": "제가 어릴 때, 정말 귀여웠어요. 무릎에 앉아서 골골거렸죠.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-103",
+      "id": "RjpvuPAzJUw-80",
       "en": "In my lap and just purr all day long and",
       "ko": "하루 종일 골골거렸죠.",
       "tags": {
@@ -1775,7 +1510,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-104",
+      "id": "RjpvuPAzJUw-81",
       "en": "I would drag a shoestring on the ground",
       "ko": "저는 신발 끈을 바닥에 끌었고,",
       "tags": {
@@ -1792,7 +1527,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-105",
+      "id": "RjpvuPAzJUw-82",
       "en": "And it would chase it free cats do that",
       "ko": "그게 쫓아왔어요. 고양이도 그렇게 해요.",
       "tags": {
@@ -1809,7 +1544,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-106",
+      "id": "RjpvuPAzJUw-83",
       "en": "Too you know it's not a cat",
       "ko": "아시죠, 고양이가 아니에요.",
       "tags": {
@@ -1826,7 +1561,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-107",
+      "id": "RjpvuPAzJUw-84",
       "en": "Look you guys i'm really excited about this okay i don't care what you think",
       "ko": "여러분, 저는 이걸 정말 기대하고 있어요. 당신들이 어떻게 생각하든 상관없어요.",
       "tags": {
@@ -1843,7 +1578,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-108",
+      "id": "RjpvuPAzJUw-85",
       "en": "I'm gonna go set up a little litter box for mrs whiskerson",
       "ko": "저는 미세스 위스커슨을 위해 작은 화장실을 마련할 거예요.",
       "tags": {
@@ -1860,7 +1595,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-109",
+      "id": "RjpvuPAzJUw-86",
       "en": "What am i gonna call her fluffy",
       "ko": "그녀를 뭐라고 부를까요? 푹신이요.",
       "tags": {
@@ -1877,7 +1612,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-110",
+      "id": "RjpvuPAzJUw-87",
       "en": "What the hell was that",
       "ko": "그게 뭐였죠?",
       "tags": {
@@ -1894,7 +1629,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-111",
+      "id": "RjpvuPAzJUw-88",
       "en": "You're a freak",
       "ko": "당신은 괴짜예요.",
       "tags": {
@@ -1911,7 +1646,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-112",
+      "id": "RjpvuPAzJUw-89",
       "en": "Perhaps",
       "ko": "아마도요.",
       "tags": {
@@ -1928,41 +1663,30 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-113",
-      "en": "Now i'm curious at what point during",
-      "ko": "이제 궁금한데, 그 소녀 같은 비명 중 어느 시점에서",
+      "id": "RjpvuPAzJUw-90",
+      "en": "Now i'm curious at what point during those girlish screams would you have begun to kick my ass",
+      "ko": "이제 궁금한데, 그 소녀 같은 비명 중 어느 시점에서 당신은 제 엉덩이를 차기 시작했을까요?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-114",
-      "en": "Those girlish screams would you have begun to kick my ass",
-      "ko": "당신은 제 엉덩이를 차기 시작했을까요?",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-115",
+      "id": "RjpvuPAzJUw-91",
       "en": "All right so we weren't prepared",
       "ko": "자, 우리는 준비가 안 되었어요.",
       "tags": {
@@ -1979,58 +1703,30 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-116",
-      "en": "I'm sorry i had to take such drastic",
-      "ko": "죄송해요, 주장을 하기 위해 이렇게 극단적인",
+      "id": "RjpvuPAzJUw-92",
+      "en": "I'm sorry i had to take such drastic measures to make my point but i look i just want you guys to be safe danger",
+      "ko": "죄송해요, 주장을 하기 위해 극단적인 조치를 취해야 했어요. 하지만 여러분이 안전하기를 바래요. 위험해요.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-117",
-      "en": "Measures to make my point but i look i",
-      "ko": "주장을 하기 위해 조치를 취해야 했어요. 하지만, 저는",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-118",
-      "en": "Just want you guys to be safe danger",
-      "ko": "여러분이 안전하기를 바래요. 위험해요.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-119",
+      "id": "RjpvuPAzJUw-93",
       "en": "Unagi",
       "ko": "우나기!",
       "tags": {
@@ -2047,7 +1743,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-120",
+      "id": "RjpvuPAzJUw-94",
       "en": "Ah salmon skin roll",
       "ko": "아, 연어 껍질 롤.",
       "tags": {
@@ -2064,7 +1760,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-121",
+      "id": "RjpvuPAzJUw-95",
       "en": "All right",
       "ko": "좋아요.",
       "tags": {
@@ -2081,7 +1777,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-122",
+      "id": "RjpvuPAzJUw-96",
       "en": "This isn't so bad",
       "ko": "이건 그렇게 나쁘지 않네요.",
       "tags": {
@@ -2098,7 +1794,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-123",
+      "id": "RjpvuPAzJUw-97",
       "en": "I like the flowery smell",
       "ko": "꽃 향기가 좋네요.",
       "tags": {
@@ -2115,7 +1811,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-124",
+      "id": "RjpvuPAzJUw-98",
       "en": "Which is okay because i've got my boat",
       "ko": "괜찮아요, 왜냐하면 저는 배가 있으니까요.",
       "tags": {
@@ -2132,7 +1828,7 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-125",
+      "id": "RjpvuPAzJUw-99",
       "en": "So oh my god",
       "ko": "세상에.",
       "tags": {
@@ -2149,77 +1845,55 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-126",
-      "en": "I told you you were a bath person hey when you get out maybe i can give",
-      "ko": "제가 말했죠, 당신은 목욕하는 사람이라고. 나올 때, 아마도 제가 해줄 수 있어요.",
+      "id": "RjpvuPAzJUw-100",
+      "en": "I told you you were a bath person hey when you get out maybe i can give you a facial i'm gonna need a bigger boat",
+      "ko": "제가 말했죠, 당신은 목욕하는 사람이라고. 나올 때, 얼굴 관리해줄 수 있어요. 더 큰 배가 필요해요.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-127",
-      "en": "You a facial i'm gonna need a bigger boat",
-      "ko": "얼굴 관리해줄 수 있어요. 더 큰 배가 필요해요.",
+      "id": "RjpvuPAzJUw-101",
+      "en": "So how dark do you want to be we have one two or three well uh i like how you",
+      "ko": "얼마나 어두워지고 싶으세요? 하나, 둘, 셋이 있어요. 음, 당신이 어떻게 보이는지 좋아요.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-128",
-      "en": "So how dark do you want to be we have",
-      "ko": "얼마나 어두워지고 싶으세요? 우리는",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-129",
-      "en": "One two or three well uh i like how you",
-      "ko": "하나, 둘, 셋이 있어요. 음, 당신이 좋아하는 게 있어요.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-130",
+      "id": "RjpvuPAzJUw-102",
       "en": "Look what are you puerto rican two i think of two",
-      "ko": "어떻게 보이는지 좋아요. 당신은 푸에르토리코인이죠? 둘이 좋을 것 같아요.",
+      "ko": "당신은 푸에르토리코인이죠? 둘이 좋을 것 같아요.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -2234,94 +1908,55 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-131",
-      "en": "You're gonna face the red light when the",
-      "ko": "빨간 불빛을 마주하게 될 거예요.",
+      "id": "RjpvuPAzJUw-103",
+      "en": "You're gonna face the red light when the red light goes on the spring's about to start so close your eyes when the spring",
+      "ko": "빨간 불빛을 마주하게 될 거예요. 빨간 불이 켜지면 스프링이 시작되니 눈을 감으세요.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-132",
-      "en": "Red light goes on the spring's about to",
-      "ko": "빨간 불이 켜지면 스프링이 시작될 거예요.",
+      "id": "RjpvuPAzJUw-104",
+      "en": "Stops count to five pack yourself down to avoid drip marks then turn around so",
+      "ko": "다섯을 세고, 몸을 낮추고 물방울 자국을 피하고 돌아서세요.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-133",
-      "en": "Start so close your eyes when the spring",
-      "ko": "그러니 스프링이 멈출 때까지 눈을 감으세요.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-134",
-      "en": "Stops count to five pack yourself down",
-      "ko": "다섯을 세고, 몸을 낮추세요.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-135",
-      "en": "To avoid drip marks then turn around so",
-      "ko": "물방울 자국을 피하고 돌아서세요.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-136",
+      "id": "RjpvuPAzJUw-105",
       "en": "We can get your back got it spray count",
-      "ko": "등을 맞았으니 스프레이 카운트 해보자.",
+      "ko": "등을 맞았으니 스프레이 카운트.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -2336,41 +1971,30 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-137",
-      "en": "Pat and turn spray count and pat wow you",
-      "ko": "두드리고 돌리고 스프레이 카운트, 와우.",
+      "id": "RjpvuPAzJUw-106",
+      "en": "Pat and turn spray count and pat wow you cat junk quick well i have a phd",
+      "ko": "두드리고 돌리고 스프레이 카운트. 와우, 빠르네. 나는 박사 학위가 있어.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-138",
-      "en": "Cat junk quick well i have a phd",
-      "ko": "고양이 쓰레기, 빨리, 나는 박사 학위가 있어.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-139",
+      "id": "RjpvuPAzJUw-107",
       "en": "One mississippi two mississippi three",
       "ko": "하나, 미시시피, 둘, 미시시피, 셋.",
       "tags": {
@@ -2387,58 +2011,30 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-140",
-      "en": "You sprayed my front twice you never",
-      "ko": "앞쪽에 두 번 뿌렸잖아, 너는 절대.",
+      "id": "RjpvuPAzJUw-108",
+      "en": "You sprayed my front twice you never turned no i barely even got the three mississippi mississippi i said count to five",
+      "ko": "앞쪽에 두 번 뿌렸잖아, 돌지 않았어. 나는 겨우 셋도 못 세었어. 다섯까지 세라고 했잖아.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-141",
-      "en": "Turned no i barely even got the three",
-      "ko": "돌지 않았어, 나는 겨우 셋도 못 세었어.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-142",
-      "en": "Mississippi mississippi i said count to five",
-      "ko": "미시시피, 미시시피, 다섯까지 세라고 했잖아.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-143",
+      "id": "RjpvuPAzJUw-109",
       "en": "Mississippi leslie",
       "ko": "미시시피, 레슬리.",
       "tags": {
@@ -2455,59 +2051,54 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-144",
-      "en": "How bad is it not that bad yeah but it",
-      "ko": "얼마나 심각해? 그렇게 심각하지 않아, 하지만.",
+      "id": "RjpvuPAzJUw-110",
+      "en": "How bad is it not that bad yeah but it keeps getting darker for the next four",
+      "ko": "얼마나 심각해? 그렇게 심각하지 않아, 하지만 다음 네 시간 동안 점점 어두워져.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-145",
-      "en": "Keeps getting darker for the next four",
-      "ko": "다음 네 시간 동안 점점 어두워져.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-146",
-      "en": "Hours so how dark is it gonna get oh you",
+      "id": "RjpvuPAzJUw-111",
+      "en": "Hours so how dark is it gonna get oh you got sprayed with two twos and i'm a four",
       "ko": "얼마나 어두워질 건데? 오, 너는 두 번 맞았고 나는 네 번이야.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-147",
-      "en": "Got sprayed with two twos and i'm a four",
+      "id": "RjpvuPAzJUw-112",
+      "en": "Yeah but your back's a zero you're gonna want to even that out",
       "ko": "그래도 너의 등은 제로야, 균형을 맞춰야 해.",
       "tags": {
         "functions": [],
@@ -2523,92 +2114,53 @@
       }
     },
     {
-      "id": "RjpvuPAzJUw-148",
-      "en": "Yeah but your back's a zero you're gonna want to even that out",
-      "ko": "정말?",
+      "id": "RjpvuPAzJUw-113",
+      "en": "Really you might want to get back in there okay",
+      "ko": "정말? 다시 들어가는 게 좋을 거야.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-149",
-      "en": "Really",
-      "ko": "다시 들어가는 게 좋을 거야.",
+      "id": "RjpvuPAzJUw-114",
+      "en": "Wait wait a minute there's no light on the back wall how do i know when it's",
+      "ko": "잠깐, 뒷벽에 불이 안 켜져 있어. 어떻게 알아?",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "RjpvuPAzJUw-150",
-      "en": "You might want to get back in there okay",
-      "ko": "잠깐, 잠깐만, 뒷벽에 불이 안 켜져 있어.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-151",
-      "en": "Wait wait a minute there's no light on",
-      "ko": "어떻게 알아?",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-152",
-      "en": "The back wall how do i know when it's",
-      "ko": "같은 일이 또 일어났어, 너는.",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "RjpvuPAzJUw-153",
+      "id": "RjpvuPAzJUw-115",
       "en": "The same thing happened again you got",
       "ko": "똑같은 일이 또 일어났어.",
       "tags": {
@@ -2624,5 +2176,6 @@
         "flags": []
       }
     }
-  ]
+  ],
+  "transcriptHash": "8e084006229870c2"
 }

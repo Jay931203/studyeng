@@ -3,8 +3,8 @@
   "category": "drama",
   "title": "Friends: Ross is Jealous of Rachel's New Coworker",
   "seriesId": "friends-s2",
-  "sentenceCount": 16,
-  "taggedCount": 0,
+  "sentenceCount": 15,
+  "taggedCount": 15,
   "sentences": [
     {
       "id": "w-oGpGf03Ag-0",
@@ -59,16 +59,22 @@
     },
     {
       "id": "w-oGpGf03Ag-3",
-      "en": "I know what's going on here, okay? Mark explained it all to me. He said, this is what you guys",
-      "ko": "여기서 무슨 일이 일어나고 있는지 알아, 마크.",
+      "en": "I know what's going on here, okay? Mark explained it all to me. He said, this is what you guys do.",
+      "ko": "여기서 무슨 일이 일어나고 있는지 알아, 알겠지? 마크가 다 설명해줘. 이게 너희가 하는 짓이라고.",
       "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -76,8 +82,8 @@
     },
     {
       "id": "w-oGpGf03Ag-4",
-      "en": "do.",
-      "ko": "해.",
+      "en": "Yeah, well, if Mark said that, then Mark's an idiot.",
+      "ko": "마크가 그렇게 말했다면, 마크가 바보야.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -93,8 +99,8 @@
     },
     {
       "id": "w-oGpGf03Ag-5",
-      "en": "Yeah, well, if Mark said that, then Mark's an idiot.",
-      "ko": "너희가 하는 일이라고 했어, 그래, 만약 마크가.",
+      "en": "Mark's a genius.",
+      "ko": "마크는 천재야.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -110,23 +116,6 @@
     },
     {
       "id": "w-oGpGf03Ag-6",
-      "en": "Mark's a genius.",
-      "ko": "마크는 천재야, 여기서 무슨 일이 일어나고 있는지 못 보겠어?",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "w-oGpGf03Ag-7",
       "en": "Why? How? How is he a genius?",
       "ko": "왜? 어떻게? 그가 천재인 이유가 뭐야?",
       "tags": {
@@ -143,9 +132,9 @@
       }
     },
     {
-      "id": "w-oGpGf03Ag-8",
+      "id": "w-oGpGf03Ag-7",
       "en": "Look, don't you see what's happening here? Instead of hitting on her right away, he's",
-      "ko": "마크는 천재야, 여기서 무슨 일이 일어나고 있는지 못 보겠어?",
+      "ko": "여기서 무슨 일이 일어나고 있는지 모르겠어? 바로 작업을 거는 대신,",
       "tags": {
         "functions": [],
         "situation": "",
@@ -160,7 +149,7 @@
       }
     },
     {
-      "id": "w-oGpGf03Ag-9",
+      "id": "w-oGpGf03Ag-8",
       "en": "becoming her confidant. Now he's going to be the guy that she goes to to complain about you.",
       "ko": "그녀의 비밀 친구가 되고 있어. 이제 그녀는 너에 대해 불평할 사람으로 그를 찾을 거야.",
       "tags": {
@@ -177,9 +166,26 @@
       }
     },
     {
-      "id": "w-oGpGf03Ag-10",
+      "id": "w-oGpGf03Ag-9",
       "en": "What am I going to do?",
-      "ko": "난 어떻게 해야 하지? 그럼 그녀에게 뮤지컬을 보내는 건 어때?",
+      "ko": "난 어떻게 해야 하지?",
+      "tags": {
+        "functions": [],
+        "situation": "",
+        "cefr": "",
+        "register": "",
+        "emotions": [],
+        "expression_types": [],
+        "vibe": "",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "w-oGpGf03Ag-10",
+      "en": "Well, why don't you send her a musical bug? Oh, no, you already did that.",
+      "ko": "그녀에게 뮤지컬 벌레를 보내는 건 어때? 아, 이미 그렇게 했구나.",
       "tags": {
         "functions": [],
         "situation": "",
@@ -195,23 +201,6 @@
     },
     {
       "id": "w-oGpGf03Ag-11",
-      "en": "Well, why don't you send her a musical bug? Oh, no, you already did that.",
-      "ko": "아, 아니, 이미 그걸 했구나",
-      "tags": {
-        "functions": [],
-        "situation": "",
-        "cefr": "",
-        "register": "",
-        "emotions": [],
-        "expression_types": [],
-        "vibe": "",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "w-oGpGf03Ag-12",
       "en": "All right, look, you're going to have to go there yourself now, okay? Make a few surprise",
       "ko": "자, 이제 너가 직접 가야 해",
       "tags": {
@@ -228,7 +217,7 @@
       }
     },
     {
-      "id": "w-oGpGf03Ag-13",
+      "id": "w-oGpGf03Ag-12",
       "en": "visits. I don't know you guys.",
       "ko": "몇 번 놀라운 방문을 해봐, 난 너희가 어떻게 할지 모르겠어.",
       "tags": {
@@ -245,7 +234,7 @@
       }
     },
     {
-      "id": "w-oGpGf03Ag-14",
+      "id": "w-oGpGf03Ag-13",
       "en": "All right, fine. Don't do anything. Just sit here and talk to us. Meanwhile, she is talking",
       "ko": "자, 좋아, 아무것도 하지 말고 여기 앉아서 이야기해.",
       "tags": {
@@ -262,7 +251,7 @@
       }
     },
     {
-      "id": "w-oGpGf03Ag-15",
+      "id": "w-oGpGf03Ag-14",
       "en": "to him about you, and he's being Mr. Joe sensitive, and she's...",
       "ko": "그동안 그녀는 너에 대해 그와 이야기하고 있고 그는 아주 감성적이야.",
       "tags": {
@@ -279,5 +268,5 @@
       }
     }
   ],
-  "transcriptHash": "2013ed292c845aed"
+  "transcriptHash": "584da961bc1ec83f"
 }

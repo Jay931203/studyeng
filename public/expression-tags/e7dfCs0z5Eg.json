@@ -3,27 +3,21 @@
   "category": "movie",
   "title": "Home Alone (1990) Supermarket Scene",
   "seriesId": "home-alone",
-  "sentenceCount": 13,
-  "taggedCount": 13,
+  "sentenceCount": 12,
+  "taggedCount": 12,
   "sentences": [
     {
       "id": "e7dfCs0z5Eg-0",
-      "en": "May your tears be merry and bright.",
-      "ko": "당신의 눈물이 즐겁고 밝기를 바랍니다.",
+      "en": "May your days be merry and bright.",
+      "ko": "당신의 날들이 즐겁고 밝기를 바랍니다.",
       "tags": {
-        "functions": [
-          "F16"
-        ],
-        "situation": "S01",
+        "functions": [],
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E02"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
+        "emotions": [],
+        "expression_types": [],
+        "vibe": "V12",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -287,31 +281,6 @@
     },
     {
       "id": "e7dfCs0z5Eg-11",
-      "en": "1983.",
-      "ko": "1983년.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S01",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "e7dfCs0z5Eg-12",
       "en": "Okay.",
       "ko": "알겠어요.",
       "tags": {
@@ -336,5 +305,5 @@
       }
     }
   ],
-  "transcriptHash": "1e24c02bf25489dc"
+  "transcriptHash": "5b2ebb61088b861d"
 }

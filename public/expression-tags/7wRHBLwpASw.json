@@ -3,8 +3,8 @@
   "category": "music",
   "title": "ZZ Top - Sharp Dressed Man",
   "seriesId": "rock-anthems",
-  "sentenceCount": 18,
-  "taggedCount": 18,
+  "sentenceCount": 15,
+  "taggedCount": 15,
   "sentences": [
     {
       "id": "7wRHBLwpASw-0",
@@ -316,11 +316,11 @@
     },
     {
       "id": "7wRHBLwpASw-12",
-      "en": "From every girl crazy about as sharp as me",
-      "ko": "나처럼 매력적인 모든 소녀들로부터",
+      "en": "When I step out I'm gonna do you in",
+      "ko": "내가 나가면 너를 매료시킬 거야",
       "tags": {
         "functions": [
-          "F01"
+          "F06"
         ],
         "situation": "S46",
         "cefr": "B1",
@@ -329,10 +329,13 @@
           "E09"
         ],
         "expression_types": [
-          "X08"
+          "X01",
+          "X05"
         ],
-        "vibe": "V17",
-        "power": [],
+        "vibe": "V09",
+        "power": [
+          "P05"
+        ],
         "grammar_intent": [],
         "flags": [
           "is_lyrics"
@@ -341,8 +344,8 @@
     },
     {
       "id": "7wRHBLwpASw-13",
-      "en": "From every girl crazy about as sharp as me",
-      "ko": "나처럼 매력적인 모든 소녀들로부터",
+      "en": "They come running just as fast as they can",
+      "ko": "그들은 가능한 한 빨리 달려와",
       "tags": {
         "functions": [
           "F01"
@@ -356,7 +359,7 @@
         "expression_types": [
           "X08"
         ],
-        "vibe": "V17",
+        "vibe": "V09",
         "power": [],
         "grammar_intent": [],
         "flags": [
@@ -388,85 +391,7 @@
           "is_lyrics"
         ]
       }
-    },
-    {
-      "id": "7wRHBLwpASw-15",
-      "en": "When I step out I'm gonna do you in",
-      "ko": "내가 나가면 너를 매료시킬 거야",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S46",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X01",
-          "X05"
-        ],
-        "vibe": "V09",
-        "power": [
-          "P05"
-        ],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "7wRHBLwpASw-16",
-      "en": "They come running just as fast as they can",
-      "ko": "그들은 가능한 한 빨리 달려와",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S46",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V09",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
-    },
-    {
-      "id": "7wRHBLwpASw-17",
-      "en": "From every girl crazy about as sharp as me",
-      "ko": "나처럼 매력적인 모든 소녀들로부터",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S46",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V17",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_lyrics"
-        ]
-      }
     }
   ],
-  "transcriptHash": "2d28bbbfdda1edc1"
+  "transcriptHash": "d09be97cbfde9d14"
 }

@@ -3,8 +3,8 @@
   "category": "drama",
   "title": "Fleabag's Ending Scene",
   "seriesId": "fleabag",
-  "sentenceCount": 14,
-  "taggedCount": 14,
+  "sentenceCount": 12,
+  "taggedCount": 12,
   "sentences": [
     {
       "id": "B3JXNzZGSJw-0",
@@ -200,87 +200,34 @@
     },
     {
       "id": "B3JXNzZGSJw-8",
-      "en": "Yeah.",
-      "ko": "응.",
+      "en": "Damn.",
+      "ko": "젠장.",
       "tags": {
         "functions": [
-          "F53"
+          "F17"
         ],
         "situation": "S09",
         "cefr": "A1",
         "register": "R5",
         "emotions": [
-          "E09"
+          "E03"
         ],
         "expression_types": [
           "X08"
         ],
-        "vibe": "V02",
+        "vibe": "V12",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G06"
+        ],
         "flags": [
+          "contains_profanity",
           "is_fragment"
         ]
       }
     },
     {
       "id": "B3JXNzZGSJw-9",
-      "en": "Damn.",
-      "ko": "젠장.",
-      "tags": {
-        "functions": [
-          "F17"
-        ],
-        "situation": "S09",
-        "cefr": "A1",
-        "register": "R5",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [
-          "G06"
-        ],
-        "flags": [
-          "contains_profanity",
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "B3JXNzZGSJw-10",
-      "en": "Damn.",
-      "ko": "젠장.",
-      "tags": {
-        "functions": [
-          "F17"
-        ],
-        "situation": "S09",
-        "cefr": "A1",
-        "register": "R5",
-        "emotions": [
-          "E03"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [
-          "G06"
-        ],
-        "flags": [
-          "contains_profanity",
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "B3JXNzZGSJw-11",
       "en": "You know, the worst thing is...",
       "ko": "가장 최악인 건...",
       "tags": {
@@ -303,7 +250,7 @@
       }
     },
     {
-      "id": "B3JXNzZGSJw-12",
+      "id": "B3JXNzZGSJw-10",
       "en": "...that I f***ing love you.",
       "ko": "...내가 너를 미치도록 사랑한다는 거야.",
       "tags": {
@@ -326,7 +273,7 @@
       }
     },
     {
-      "id": "B3JXNzZGSJw-13",
+      "id": "B3JXNzZGSJw-11",
       "en": "I love you.",
       "ko": "사랑해.",
       "tags": {
@@ -353,5 +300,5 @@
       }
     }
   ],
-  "transcriptHash": "743d7cf5871231ab"
+  "transcriptHash": "31ff8ce71f511901"
 }

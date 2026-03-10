@@ -3,8 +3,8 @@
   "category": "movie",
   "title": "Stern Sinking Scene",
   "seriesId": "titanic",
-  "sentenceCount": 15,
-  "taggedCount": 15,
+  "sentenceCount": 10,
+  "taggedCount": 10,
   "sentences": [
     {
       "id": "KMw7BXd9npk-0",
@@ -31,29 +31,6 @@
     },
     {
       "id": "KMw7BXd9npk-1",
-      "en": "Oh, my God!",
-      "ko": "오, 세상에!",
-      "tags": {
-        "functions": [
-          "F15"
-        ],
-        "situation": "S08",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "KMw7BXd9npk-2",
       "en": "What's happened, Jack?",
       "ko": "무슨 일이야, 잭?",
       "tags": {
@@ -76,7 +53,7 @@
       }
     },
     {
-      "id": "KMw7BXd9npk-3",
+      "id": "KMw7BXd9npk-2",
       "en": "I don't know. I don't know.",
       "ko": "모르겠어.",
       "tags": {
@@ -103,7 +80,7 @@
       }
     },
     {
-      "id": "KMw7BXd9npk-4",
+      "id": "KMw7BXd9npk-3",
       "en": "Oh, my God!",
       "ko": "오, 세상에!",
       "tags": {
@@ -126,7 +103,7 @@
       }
     },
     {
-      "id": "KMw7BXd9npk-5",
+      "id": "KMw7BXd9npk-4",
       "en": "Hold on!",
       "ko": "잠깐만!",
       "tags": {
@@ -153,7 +130,7 @@
       }
     },
     {
-      "id": "KMw7BXd9npk-6",
+      "id": "KMw7BXd9npk-5",
       "en": "Oh, my God!",
       "ko": "오, 세상에!",
       "tags": {
@@ -176,7 +153,7 @@
       }
     },
     {
-      "id": "KMw7BXd9npk-7",
+      "id": "KMw7BXd9npk-6",
       "en": "Someone help me!",
       "ko": "누군가 도와줘!",
       "tags": {
@@ -199,7 +176,7 @@
       }
     },
     {
-      "id": "KMw7BXd9npk-8",
+      "id": "KMw7BXd9npk-7",
       "en": "Help!",
       "ko": "도와줘!",
       "tags": {
@@ -218,6 +195,33 @@
         "vibe": "V18",
         "power": [],
         "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "KMw7BXd9npk-8",
+      "en": "Please, help!",
+      "ko": "제발 도와줘!",
+      "tags": {
+        "functions": [
+          "F34"
+        ],
+        "situation": "S08",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E13"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [
+          "G02"
+        ],
         "flags": [
           "is_fragment"
         ]
@@ -247,134 +251,7 @@
           "is_fragment"
         ]
       }
-    },
-    {
-      "id": "KMw7BXd9npk-10",
-      "en": "Help!",
-      "ko": "도와줘!",
-      "tags": {
-        "functions": [
-          "F15"
-        ],
-        "situation": "S08",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "KMw7BXd9npk-11",
-      "en": "Help!",
-      "ko": "도와줘!",
-      "tags": {
-        "functions": [
-          "F15"
-        ],
-        "situation": "S08",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "KMw7BXd9npk-12",
-      "en": "Please, help!",
-      "ko": "제발 도와줘!",
-      "tags": {
-        "functions": [
-          "F34"
-        ],
-        "situation": "S08",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E13"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [
-          "G02"
-        ],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "KMw7BXd9npk-13",
-      "en": "Help!",
-      "ko": "도와줘!",
-      "tags": {
-        "functions": [
-          "F15"
-        ],
-        "situation": "S08",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "KMw7BXd9npk-14",
-      "en": "Help!",
-      "ko": "도와줘!",
-      "tags": {
-        "functions": [
-          "F15"
-        ],
-        "situation": "S08",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
     }
   ],
-  "transcriptHash": "2ab22bab43d1ac2c"
+  "transcriptHash": "f0d8ada573a8bf52"
 }

@@ -8,72 +8,68 @@
   "sentences": [
     {
       "id": "veYR3ZC9wMQ-0",
-      "en": "Now",
-      "ko": "지금",
+      "en": "Now, Mr. Pitts, it's a rather unfortunate name, Mr. Pitts, where are you?",
+      "ko": "다소 불행한 이름이군요. 피츠 씨, 어디 계신가요?",
       "tags": {
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
       "id": "veYR3ZC9wMQ-1",
-      "en": "Mr. Pitts",
-      "ko": "피츠 씨",
+      "en": "Mr. Pitts, will you open your hymnal to page 542?",
+      "ko": "피츠 씨, 542페이지를 펴 주시겠어요?",
       "tags": {
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R2",
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
       "id": "veYR3ZC9wMQ-2",
-      "en": "It's rather unfortunate name. Mr. Pitts. Where are you?",
-      "ko": "다소 불행한 이름이군요. 피츠 씨. 어디 계신가요?",
+      "en": "Read the first stanza of the poem you find there.",
+      "ko": "그곳에 있는 시의 첫 번째 연을 읽으세요.",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "B1",
-        "register": "R2",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -81,22 +77,22 @@
     },
     {
       "id": "veYR3ZC9wMQ-3",
-      "en": "It's the opening note page 542 read the first stanza the poem you find there",
-      "ko": "542페이지 첫 번째 연을 읽으세요. 그곳에 있는 시를 찾아보세요.",
+      "en": "To the virgins to make much of time? Yes, that's the one.",
+      "ko": "시간을 소중히 여겨라, 맞죠?",
       "tags": {
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -104,31 +100,6 @@
     },
     {
       "id": "veYR3ZC9wMQ-4",
-      "en": "The virgins to make much of time yes one",
-      "ko": "시간을 소중히 여겨라, 맞죠?",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
-      }
-    },
-    {
-      "id": "veYR3ZC9wMQ-5",
       "en": "Somewhat appropriate, isn't it?",
       "ko": "다소 적절하네요, 그렇죠?",
       "tags": {
@@ -151,98 +122,115 @@
       }
     },
     {
-      "id": "veYR3ZC9wMQ-6",
-      "en": "Gather you rosebuds while you may old time is still a-flying and this same flower that smiles today tomorrow will be dying",
+      "id": "veYR3ZC9wMQ-5",
+      "en": "Gather ye rosebuds while ye may, Old time is still a-flying, And this same flower that smiles today,",
       "ko": "꽃봉오리를 모아라, 시간이 흘러가고 오늘 웃고 있는 이 꽃이 내일은 시들 것이다.",
       "tags": {
         "functions": [
-          "F47"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "B2",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
-        "grammar_intent": [
-          "G13"
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "veYR3ZC9wMQ-6",
+      "en": "Tomorrow will be dying. Thank you, Mr. Pitts.",
+      "ko": "내일은 시들 것이다. 감사합니다, 피츠 씨.",
+      "tags": {
+        "functions": [
+          "F01"
         ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
+        "power": [],
+        "grammar_intent": [],
         "flags": []
       }
     },
     {
       "id": "veYR3ZC9wMQ-7",
-      "en": "Thank You. Mr. Pitts",
-      "ko": "감사합니다, 피츠 씨.",
+      "en": "Gather ye rosebuds while ye may.",
+      "ko": "꽃봉오리를 모아라, 시간이 있을 때.",
       "tags": {
         "functions": [
-          "F27"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R2",
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
-        "power": [
-          "P03"
-        ],
+        "vibe": "V01",
+        "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
       "id": "veYR3ZC9wMQ-8",
-      "en": "Gather you rosebuds while you may",
-      "ko": "꽃봉오리를 모아라, 시간이 있을 때.",
+      "en": "The Latin term for that sentiment is carpe diem.",
+      "ko": "그 감정을 나타내는 라틴어는 카르페 디엠입니다.",
       "tags": {
         "functions": [
-          "F47"
+          "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
-        "grammar_intent": [
-          "G13"
-        ],
+        "grammar_intent": [],
         "flags": []
       }
     },
     {
       "id": "veYR3ZC9wMQ-9",
-      "en": "Latin term for that sentiment is carpe diem. Who knows what that means?",
-      "ko": "그 감정을 나타내는 라틴어는 카르페 디엠입니다. 그 의미를 아는 사람?",
+      "en": "Now, who knows what that means?",
+      "ko": "그 의미를 아는 사람?",
       "tags": {
         "functions": [
-          "F06"
+          "F01"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -250,22 +238,22 @@
     },
     {
       "id": "veYR3ZC9wMQ-10",
-      "en": "Carpe diem that sees the day very good. Mr. Meeks Meeks another unusual name",
-      "ko": "카르페 디엠, 하루를 붙잡아라. 아주 좋습니다. 미크스 씨, 또 다른 특이한 이름이군요.",
+      "en": "Carpe diem, that's to cease the day. Very good, Mr. Meeks.",
+      "ko": "카르페 디엠, 하루를 붙잡아라. 아주 좋습니다, 미크스 씨.",
       "tags": {
         "functions": [
           "F01"
         ],
-        "situation": "S50",
+        "situation": "S01",
         "cefr": "B1",
-        "register": "R2",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -273,54 +261,50 @@
     },
     {
       "id": "veYR3ZC9wMQ-11",
-      "en": "Sees the day",
-      "ko": "하루를 붙잡아라.",
+      "en": "Meeks, another unusual name.",
+      "ko": "미크스 씨, 또 다른 특이한 이름이군요.",
       "tags": {
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A1",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
       "id": "veYR3ZC9wMQ-12",
-      "en": "Gather you rosebuds while ye may",
-      "ko": "꽃봉오리를 모아라, 시간이 있을 때.",
+      "en": "Cease the day. Gather ye rosebuds while ye may.",
+      "ko": "하루를 붙잡아라. 꽃봉오리를 모아라, 시간이 있을 때.",
       "tags": {
         "functions": [
           "F01"
         ],
-        "situation": "S50",
-        "cefr": "A2",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V18",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_period"
-        ]
+        "flags": []
       }
     }
   ],
-  "transcriptHash": "f26379ee799ee25c"
+  "transcriptHash": "4dbfe924c2726ebb"
 }

@@ -3,27 +3,27 @@
   "category": "entertainment",
   "title": "Will Smith Team Rap",
   "seriesId": "graham-norton",
-  "sentenceCount": 14,
-  "taggedCount": 14,
+  "sentenceCount": 16,
+  "taggedCount": 16,
   "sentences": [
     {
       "id": "ZwS14TiO7Pk-0",
-      "en": "Another passion you share that was music you haven't how you have you collaborated to music together. No, no, no",
-      "ko": "당신이 공유하는 또 다른 열정은 음악입니다. 어떻게 함께 음악을 작업했는지 모르겠어요. 아니, 아니, 아니.",
+      "en": "Another passion you share that was music you haven't how you have you collaborated to music together.",
+      "ko": "두 분이 함께 나누는 또 다른 열정은 음악이죠. 음악으로 함께 작업해 본 적은 없나요?",
       "tags": {
         "functions": [
           "F01"
         ],
-        "situation": "S31",
-        "cefr": "B2",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V10",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -31,6 +31,29 @@
     },
     {
       "id": "ZwS14TiO7Pk-1",
+      "en": "No, no, no",
+      "ko": "아니요, 아니요, 아니요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "ZwS14TiO7Pk-2",
       "en": "No, we never done that before. Yeah, you know, it's like I is, you know",
       "ko": "아니요, 우리는 그런 적이 없어요. 네, 아시죠, 그런 느낌이에요.",
       "tags": {
@@ -56,7 +79,7 @@
       }
     },
     {
-      "id": "ZwS14TiO7Pk-2",
+      "id": "ZwS14TiO7Pk-3",
       "en": "He we have a studio that he works and yeah, you know, he's a very good rapper and I appreciate it",
       "ko": "그는 작업하는 스튜디오가 있고, 네, 그는 정말 좋은 래퍼예요. 고마워요.",
       "tags": {
@@ -79,7 +102,7 @@
       }
     },
     {
-      "id": "ZwS14TiO7Pk-3",
+      "id": "ZwS14TiO7Pk-4",
       "en": "But not yet. Maybe maybe one day we'll do something",
       "ko": "하지만 아직은 아니에요. 언젠가는 뭔가 할지도 몰라요.",
       "tags": {
@@ -104,7 +127,7 @@
       }
     },
     {
-      "id": "ZwS14TiO7Pk-4",
+      "id": "ZwS14TiO7Pk-5",
       "en": "I don't want to force you and you tell me to go away",
       "ko": "당신을 강요하고 싶지 않아요. 나가라고 하면 안 되니까요.",
       "tags": {
@@ -127,7 +150,7 @@
       }
     },
     {
-      "id": "ZwS14TiO7Pk-5",
+      "id": "ZwS14TiO7Pk-6",
       "en": "But I've got some like mics if you could do you want to do a little bit?",
       "ko": "하지만 마이크가 몇 개 있어요. 조금 해볼래요?",
       "tags": {
@@ -153,83 +176,101 @@
       }
     },
     {
-      "id": "ZwS14TiO7Pk-6",
-      "en": "Okay, one two, one, one, one, one. You gotta stand up. You can't sit down and do it. You gotta stand out there.",
-      "ko": "좋아요, 하나, 둘, 하나, 하나, 하나. 일어나야 해요. 앉아서 할 수는 없어요. 저기 서 있어야 해요.",
+      "id": "ZwS14TiO7Pk-7",
+      "en": "Okay, one two, one, one, one, one.",
+      "ko": "좋아요, 하나, 둘, 하나, 하나, 하나.",
       "tags": {
         "functions": [
-          "F35"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "B2",
-        "register": "R5",
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X01",
-          "X05"
+          "X01"
         ],
-        "vibe": "V10",
-        "power": [
-          "P05"
-        ],
+        "vibe": "V01",
+        "power": [],
         "grammar_intent": [],
         "flags": []
       }
     },
     {
-      "id": "ZwS14TiO7Pk-7",
-      "en": "Hello",
-      "ko": "안녕하세요",
-      "tags": {
-        "functions": [
-          "F25"
-        ],
-        "situation": "S31",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
       "id": "ZwS14TiO7Pk-8",
-      "en": "Hello",
-      "ko": "안녕하세요",
+      "en": "You gotta stand up.",
+      "ko": "일어나야 해요.",
       "tags": {
         "functions": [
-          "F25"
+          "F01"
         ],
-        "situation": "S31",
-        "cefr": "A1",
+        "situation": "S01",
+        "cefr": "B1",
         "register": "R4",
         "emotions": [
-          "E09"
+          "E01"
         ],
         "expression_types": [
-          "X08"
+          "X01"
         ],
-        "vibe": "V10",
+        "vibe": "V01",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
       "id": "ZwS14TiO7Pk-9",
+      "en": "You can't sit down and do it. You gotta stand out there.",
+      "ko": "앉아서 할 수는 없어요. 저기 서 있어야 해요.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S01",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E01"
+        ],
+        "expression_types": [
+          "X01"
+        ],
+        "vibe": "V01",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "ZwS14TiO7Pk-10",
+      "en": "Hello",
+      "ko": "안녕하세요.",
+      "tags": {
+        "functions": [
+          "F25"
+        ],
+        "situation": "S31",
+        "cefr": "A1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V10",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_fragment"
+        ]
+      }
+    },
+    {
+      "id": "ZwS14TiO7Pk-11",
       "en": "How you doing there? Hello Like hello",
       "ko": "어떻게 지내세요? 안녕하세요, 안녕하세요.",
       "tags": {
@@ -252,7 +293,7 @@
       }
     },
     {
-      "id": "ZwS14TiO7Pk-10",
+      "id": "ZwS14TiO7Pk-12",
       "en": "Like hello, my name is Jaden and I'm a young fellow like to keep it mellow",
       "ko": "안녕하세요, 제 이름은 제이든이고, 저는 젊은 친구예요. 차분하게 지내고 싶어요.",
       "tags": {
@@ -275,7 +316,7 @@
       }
     },
     {
-      "id": "ZwS14TiO7Pk-11",
+      "id": "ZwS14TiO7Pk-13",
       "en": "I like to make friends and make trends attend the young school dances young",
       "ko": "친구를 사귀고 트렌드를 만들고, 젊은 학교 춤에 참석하고 싶어요.",
       "tags": {
@@ -298,7 +339,7 @@
       }
     },
     {
-      "id": "ZwS14TiO7Pk-12",
+      "id": "ZwS14TiO7Pk-14",
       "en": "Romances girl, this is your chance. It's a long shot",
       "ko": "젊은 로맨스, 이건 당신의 기회예요. 힘든 도전이지만요.",
       "tags": {
@@ -321,7 +362,7 @@
       }
     },
     {
-      "id": "ZwS14TiO7Pk-13",
+      "id": "ZwS14TiO7Pk-15",
       "en": "You be trying to hit your ball, but it's the wrong shot because I'm trying to rock the mic",
       "ko": "당신은 공을 치려고 하지만, 잘못된 샷이에요. 왜냐하면 저는 마이크를 흔들고 싶거든요.",
       "tags": {
@@ -346,5 +387,5 @@
       }
     }
   ],
-  "transcriptHash": "780b8be2475231ca"
+  "transcriptHash": "9ed5a92bc21bf54b"
 }

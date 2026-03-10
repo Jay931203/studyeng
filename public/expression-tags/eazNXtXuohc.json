@@ -3,8 +3,8 @@
   "category": "animation",
   "title": "Spider-Man Into the Spider-Verse - Leap of Faith",
   "seriesId": "spider-verse",
-  "sentenceCount": 15,
-  "taggedCount": 15,
+  "sentenceCount": 13,
+  "taggedCount": 13,
   "sentences": [
     {
       "id": "eazNXtXuohc-0",
@@ -214,64 +214,14 @@
         ],
         "vibe": "V18",
         "power": [],
-        "grammar_intent": [],
+        "grammar_intent": [
+          "G24"
+        ],
         "flags": []
       }
     },
     {
       "id": "eazNXtXuohc-9",
-      "en": "Like, what's up, danger?",
-      "ko": "이봐, 뭐가 어때서, 위험?",
-      "tags": {
-        "functions": [
-          "F25",
-          "F40"
-        ],
-        "situation": "S45",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X06"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [
-          "G24"
-        ],
-        "flags": []
-      }
-    },
-    {
-      "id": "eazNXtXuohc-10",
-      "en": "Like, what's up, danger?",
-      "ko": "이봐, 뭐가 어때서, 위험?",
-      "tags": {
-        "functions": [
-          "F25",
-          "F40"
-        ],
-        "situation": "S45",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X06"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [
-          "G24"
-        ],
-        "flags": []
-      }
-    },
-    {
-      "id": "eazNXtXuohc-11",
       "en": "Made them myself.",
       "ko": "내가 직접 만들었어.",
       "tags": {
@@ -294,7 +244,7 @@
       }
     },
     {
-      "id": "eazNXtXuohc-12",
+      "id": "eazNXtXuohc-10",
       "en": "They fit perfectly.",
       "ko": "딱 맞아.",
       "tags": {
@@ -317,7 +267,7 @@
       }
     },
     {
-      "id": "eazNXtXuohc-13",
+      "id": "eazNXtXuohc-11",
       "en": "Can't stop me now!",
       "ko": "이제 날 막을 수 없어!",
       "tags": {
@@ -340,7 +290,7 @@
       }
     },
     {
-      "id": "eazNXtXuohc-14",
+      "id": "eazNXtXuohc-12",
       "en": "Spider-Man! I better catch him now!",
       "ko": "스파이더맨! 지금 잡아야 해!",
       "tags": {
@@ -365,5 +315,5 @@
       }
     }
   ],
-  "transcriptHash": "351be0fc8bf0e001"
+  "transcriptHash": "84dbc74b34ed9863"
 }

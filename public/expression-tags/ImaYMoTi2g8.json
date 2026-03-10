@@ -3,13 +3,13 @@
   "category": "entertainment",
   "title": "SNL40: Celebrity Jeopardy",
   "seriesId": "snl",
-  "sentenceCount": 12,
-  "taggedCount": 12,
+  "sentenceCount": 11,
+  "taggedCount": 11,
   "sentences": [
     {
       "id": "ImaYMoTi2g8-0",
       "en": "And welcome back to Celebrity Jeopardy!",
-      "ko": "유명인 퀴즈쇼에 다시 오신 것을 환영합니다!",
+      "ko": "유명인 퀴즈쇼에 다시 오신 것을 환영합니다.",
       "tags": {
         "functions": [
           "F01"
@@ -178,22 +178,16 @@
     },
     {
       "id": "ImaYMoTi2g8-7",
-      "en": "Way too early for that.",
+      "en": "Way too early for that. Way too early.",
       "ko": "그건 너무 이른 농담입니다.",
       "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S31",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
+        "functions": [],
+        "situation": "",
+        "cefr": "",
+        "register": "",
+        "emotions": [],
+        "expression_types": [],
+        "vibe": "",
         "power": [],
         "grammar_intent": [],
         "flags": []
@@ -201,31 +195,6 @@
     },
     {
       "id": "ImaYMoTi2g8-8",
-      "en": "Way too early.",
-      "ko": "정말 너무 이릅니다.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S31",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V10",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "ImaYMoTi2g8-9",
       "en": "Next, Justin Bieber at negative $17,000.",
       "ko": "다음은 저스틴 비버, -17,000달러입니다.",
       "tags": {
@@ -248,7 +217,7 @@
       }
     },
     {
-      "id": "ImaYMoTi2g8-10",
+      "id": "ImaYMoTi2g8-9",
       "en": "Yeah, it's like there hasn't been a lot up here, right?",
       "ko": "여기서는 별로 없었던 것 같죠?",
       "tags": {
@@ -271,7 +240,7 @@
       }
     },
     {
-      "id": "ImaYMoTi2g8-11",
+      "id": "ImaYMoTi2g8-10",
       "en": "But there's so much in here and I just want to get it out, girl.",
       "ko": "하지만 여기에는 정말 많은 것이 있고, 그냥 꺼내고 싶어요, 친구.",
       "tags": {
@@ -294,5 +263,5 @@
       }
     }
   ],
-  "transcriptHash": "a31f303c678938bf"
+  "transcriptHash": "b88545c9e347da0a"
 }

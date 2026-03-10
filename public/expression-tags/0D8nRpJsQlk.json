@@ -3,8 +3,8 @@
   "category": "movie",
   "title": "Little Women (2019) - Marriage Is an Economic Proposition Scene",
   "seriesId": "little-women",
-  "sentenceCount": 12,
-  "taggedCount": 12,
+  "sentenceCount": 13,
+  "taggedCount": 13,
   "sentences": [
     {
       "id": "0D8nRpJsQlk-0",
@@ -56,21 +56,15 @@
     },
     {
       "id": "0D8nRpJsQlk-2",
-      "en": "Only movies declare as genius.",
-      "ko": "오직 영화만이 천재라고 선언하죠.",
+      "en": "Only Wilbys declares genius. Men, I suppose. They're cutting down the competition.",
+      "ko": "오직 윌비들만 천재라고 하죠. 남자들, 그런 것 같아요. 경쟁을 줄이고 있네요.",
       "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
+        "functions": [],
+        "situation": "S14",
+        "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "emotions": [],
+        "expression_types": [],
         "vibe": "V12",
         "power": [],
         "grammar_intent": [],
@@ -79,31 +73,6 @@
     },
     {
       "id": "0D8nRpJsQlk-3",
-      "en": "Men, I suppose. Cutting down the competition?",
-      "ko": "남자들, 아닐까요? 경쟁을 줄이려는 건가?",
-      "tags": {
-        "functions": [
-          "F14"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X07"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [
-          "G17"
-        ],
-        "flags": []
-      }
-    },
-    {
-      "id": "0D8nRpJsQlk-4",
       "en": "That's a very complicated argument to make me feel better. Do you, though? Do you feel better?",
       "ko": "나를 기분 좋게 하려는 복잡한 주장 같군요. 그런데, 기분이 나아졌나요?",
       "tags": {
@@ -126,22 +95,33 @@
       }
     },
     {
-      "id": "0D8nRpJsQlk-5",
-      "en": "I do think, male or female, I am of middling talent.",
+      "id": "0D8nRpJsQlk-4",
+      "en": "I do think, male or female, I am of middling talent. Middling talent. Heh.",
       "ko": "남녀를 떠나, 제 재능은 중간 정도라고 생각해요.",
       "tags": {
-        "functions": [
-          "F09"
-        ],
-        "situation": "S50",
+        "functions": [],
+        "situation": "S14",
         "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "emotions": [],
+        "expression_types": [],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "0D8nRpJsQlk-5",
+      "en": "May I ask that your last portrait be of me? All right. Now that you've given up all your foolish, artistic hopes.",
+      "ko": "제 마지막 초상이 저였으면 좋겠어요? 좋아요. 이제 당신의 어리석은 예술적 희망을 포기했으니.",
+      "tags": {
+        "functions": [],
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [],
+        "expression_types": [],
         "vibe": "V12",
         "power": [],
         "grammar_intent": [],
@@ -150,104 +130,23 @@
     },
     {
       "id": "0D8nRpJsQlk-6",
-      "en": "Middling talent.",
-      "ko": "중간 정도의 재능.",
+      "en": "Hm? What are you gonna do with your life?",
+      "ko": "음? 당신은 인생을 어떻게 살 건가요?",
       "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S50",
-        "cefr": "A1",
+        "functions": [],
+        "situation": "S14",
+        "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
+        "emotions": [],
+        "expression_types": [],
         "vibe": "V12",
         "power": [],
         "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
+        "flags": []
       }
     },
     {
       "id": "0D8nRpJsQlk-7",
-      "en": "Then may I ask your last portrait be of me?",
-      "ko": "그럼 마지막 초상화는 저로 해주실 수 있나요?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [
-          "G13"
-        ],
-        "flags": []
-      }
-    },
-    {
-      "id": "0D8nRpJsQlk-8",
-      "en": "All right.",
-      "ko": "알겠어요.",
-      "tags": {
-        "functions": [
-          "F53"
-        ],
-        "situation": "S50",
-        "cefr": "A1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "0D8nRpJsQlk-9",
-      "en": "Now that you've given up all your foolish, artistic hopes, what are you going to do with your life?",
-      "ko": "이제 모든 어리석은 예술적 희망을 포기했으니, 앞으로 어떻게 살 건가요?",
-      "tags": {
-        "functions": [
-          "F06"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V12",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "0D8nRpJsQlk-10",
       "en": "Polish up all my other talents and become an ornament to society.",
       "ko": "다른 재능을 갈고 닦아 사회의 장식이 될 거예요.",
       "tags": {
@@ -270,31 +169,90 @@
       }
     },
     {
-      "id": "0D8nRpJsQlk-11",
-      "en": "That's where Fred Vaughn comes in, I suppose. Don't make fun. I said his name. You're not engaged, I hope.",
-      "ko": "그게 프레드 본과 관련이 있겠군요. 농담하지 마세요. 그의 이름을 언급했어요. 약혼은 안 했겠죠?",
+      "id": "0D8nRpJsQlk-8",
+      "en": "I see. I see. I see.",
+      "ko": "알겠어요. 알겠어요. 알겠어요.",
       "tags": {
-        "functions": [
-          "F19"
-        ],
-        "situation": "S50",
-        "cefr": "B2",
+        "functions": [],
+        "situation": "S14",
+        "cefr": "B1",
         "register": "R4",
-        "emotions": [
-          "E06"
-        ],
-        "expression_types": [
-          "X07"
-        ],
+        "emotions": [],
+        "expression_types": [],
         "vibe": "V12",
         "power": [],
-        "grammar_intent": [
-          "G15",
-          "G17"
-        ],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "0D8nRpJsQlk-9",
+      "en": "I see. I see.",
+      "ko": "알겠어요. 알겠어요.",
+      "tags": {
+        "functions": [],
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [],
+        "expression_types": [],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "0D8nRpJsQlk-10",
+      "en": "I see.",
+      "ko": "알겠어요.",
+      "tags": {
+        "functions": [],
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [],
+        "expression_types": [],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "0D8nRpJsQlk-11",
+      "en": "That's where Fred Vaughan comes in, I suppose. Don't make fun.",
+      "ko": "그게 프레드 본과 관련이 있겠군요. 농담하지 마세요.",
+      "tags": {
+        "functions": [],
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [],
+        "expression_types": [],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "0D8nRpJsQlk-12",
+      "en": "I've said his name. You're not engaged, I hope. No.",
+      "ko": "그의 이름을 언급했어요. 약혼은 안 했겠죠? 아니요.",
+      "tags": {
+        "functions": [],
+        "situation": "S14",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [],
+        "expression_types": [],
+        "vibe": "V12",
+        "power": [],
+        "grammar_intent": [],
         "flags": []
       }
     }
   ],
-  "transcriptHash": "3196583266b40674"
+  "transcriptHash": "1f8564fda6778dcc"
 }

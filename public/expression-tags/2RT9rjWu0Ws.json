@@ -3,8 +3,8 @@
   "category": "movie",
   "title": "Moneyball (2011) - I'm not gonna fire you, Grady!",
   "seriesId": "moneyball",
-  "sentenceCount": 25,
-  "taggedCount": 25,
+  "sentenceCount": 24,
+  "taggedCount": 24,
   "sentences": [
     {
       "id": "2RT9rjWu0Ws-0",
@@ -105,32 +105,6 @@
     },
     {
       "id": "2RT9rjWu0Ws-4",
-      "en": "Yeah.",
-      "ko": "응.",
-      "tags": {
-        "functions": [
-          "F07",
-          "F53"
-        ],
-        "situation": "S50",
-        "cefr": "A2",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "2RT9rjWu0Ws-5",
       "en": "You're unhappy, Grady.",
       "ko": "너 불행해, 그레이디.",
       "tags": {
@@ -155,7 +129,7 @@
       }
     },
     {
-      "id": "2RT9rjWu0Ws-6",
+      "id": "2RT9rjWu0Ws-5",
       "en": "Why?",
       "ko": "왜?",
       "tags": {
@@ -180,7 +154,7 @@
       }
     },
     {
-      "id": "2RT9rjWu0Ws-7",
+      "id": "2RT9rjWu0Ws-6",
       "en": "Wow.",
       "ko": "와.",
       "tags": {
@@ -207,7 +181,7 @@
       }
     },
     {
-      "id": "2RT9rjWu0Ws-8",
+      "id": "2RT9rjWu0Ws-7",
       "en": "May I speak candidly?",
       "ko": "솔직하게 말해도 될까?",
       "tags": {
@@ -232,7 +206,7 @@
       }
     },
     {
-      "id": "2RT9rjWu0Ws-9",
+      "id": "2RT9rjWu0Ws-8",
       "en": "Sure, go ahead.",
       "ko": "물론, 해봐.",
       "tags": {
@@ -259,7 +233,7 @@
       }
     },
     {
-      "id": "2RT9rjWu0Ws-10",
+      "id": "2RT9rjWu0Ws-9",
       "en": "Major League Baseball and its fans,",
       "ko": "메이저 리그 야구와 그 팬들은,",
       "tags": {
@@ -282,9 +256,9 @@
       }
     },
     {
-      "id": "2RT9rjWu0Ws-11",
+      "id": "2RT9rjWu0Ws-10",
       "en": "they're gonna be more than happy",
-      "ko": "너와 구글 소년을 배신하는 데 기꺼이 할 거야.",
+      "ko": "기꺼이",
       "tags": {
         "functions": [
           "F13"
@@ -309,8 +283,31 @@
       }
     },
     {
-      "id": "2RT9rjWu0Ws-12",
+      "id": "2RT9rjWu0Ws-11",
       "en": "to throw you and Google Boy under the bus",
+      "ko": "너와 구글 소년을 배신할 거야",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S50",
+        "cefr": "B1",
+        "register": "R4",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V18",
+        "power": [],
+        "grammar_intent": [],
+        "flags": []
+      }
+    },
+    {
+      "id": "2RT9rjWu0Ws-12",
+      "en": "if you keep doing what you're doing here.",
       "ko": "네가 여기서 하는 걸 계속하면.",
       "tags": {
         "functions": [
@@ -333,29 +330,6 @@
     },
     {
       "id": "2RT9rjWu0Ws-13",
-      "en": "if you keep doing what you're doing here.",
-      "ko": "계속 그렇게 하면.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S50",
-        "cefr": "B1",
-        "register": "R4",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V18",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "2RT9rjWu0Ws-14",
       "en": "You don't put a team together with a computer, Billy.",
       "ko": "컴퓨터로 팀을 구성할 수는 없어, 빌리.",
       "tags": {
@@ -378,7 +352,7 @@
       }
     },
     {
-      "id": "2RT9rjWu0Ws-15",
+      "id": "2RT9rjWu0Ws-14",
       "en": "No?",
       "ko": "아니?",
       "tags": {
@@ -401,7 +375,7 @@
       }
     },
     {
-      "id": "2RT9rjWu0Ws-16",
+      "id": "2RT9rjWu0Ws-15",
       "en": "No. Baseball isn't just numbers.",
       "ko": "아니. 야구는 단순한 숫자가 아니야.",
       "tags": {
@@ -424,7 +398,7 @@
       }
     },
     {
-      "id": "2RT9rjWu0Ws-17",
+      "id": "2RT9rjWu0Ws-16",
       "en": "It's not science.",
       "ko": "과학도 아니고.",
       "tags": {
@@ -449,7 +423,7 @@
       }
     },
     {
-      "id": "2RT9rjWu0Ws-18",
+      "id": "2RT9rjWu0Ws-17",
       "en": "If it was, then anybody could do what we're doing,",
       "ko": "만약 그랬다면, 누구나 우리가 하는 걸 할 수 있을 거야,",
       "tags": {
@@ -472,7 +446,7 @@
       }
     },
     {
-      "id": "2RT9rjWu0Ws-19",
+      "id": "2RT9rjWu0Ws-18",
       "en": "but they can't because they don't know what we know.",
       "ko": "하지만 그들은 우리가 아는 걸 모르기 때문에 할 수 없어.",
       "tags": {
@@ -497,7 +471,7 @@
       }
     },
     {
-      "id": "2RT9rjWu0Ws-20",
+      "id": "2RT9rjWu0Ws-19",
       "en": "They don't have our experience",
       "ko": "그들은 우리의 경험이 없고",
       "tags": {
@@ -522,7 +496,7 @@
       }
     },
     {
-      "id": "2RT9rjWu0Ws-21",
+      "id": "2RT9rjWu0Ws-20",
       "en": "and they don't have our intuition.",
       "ko": "우리의 직관도 없어.",
       "tags": {
@@ -545,7 +519,7 @@
       }
     },
     {
-      "id": "2RT9rjWu0Ws-22",
+      "id": "2RT9rjWu0Ws-21",
       "en": "Okay?",
       "ko": "알겠어?",
       "tags": {
@@ -568,9 +542,9 @@
       }
     },
     {
-      "id": "2RT9rjWu0Ws-23",
+      "id": "2RT9rjWu0Ws-22",
       "en": "Billy, you got a kid in there that's got a degree",
-      "ko": "빌리, 거기 안에 예일대 경제학 학위를 가진 아이가 있어.",
+      "ko": "빌리, 거기 안에 학위를 가진 아이가 있어.",
       "tags": {
         "functions": [
           "F01"
@@ -591,7 +565,7 @@
       }
     },
     {
-      "id": "2RT9rjWu0Ws-24",
+      "id": "2RT9rjWu0Ws-23",
       "en": "in economics from Yale.",
       "ko": "예일대 경제학 학위를 가진.",
       "tags": {
@@ -614,5 +588,5 @@
       }
     }
   ],
-  "transcriptHash": "984037e6e2ac8595"
+  "transcriptHash": "06abc50a53bb210a"
 }

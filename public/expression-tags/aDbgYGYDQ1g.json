@@ -3,8 +3,8 @@
   "category": "drama",
   "title": "Roy kent returns to Richmond “he’s here he’s there he’s every f****** where” - T",
   "seriesId": "ted-lasso",
-  "sentenceCount": 16,
-  "taggedCount": 16,
+  "sentenceCount": 14,
+  "taggedCount": 14,
   "sentences": [
     {
       "id": "aDbgYGYDQ1g-0",
@@ -58,31 +58,6 @@
     },
     {
       "id": "aDbgYGYDQ1g-2",
-      "en": "Dad!",
-      "ko": "아빠!",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S47",
-        "cefr": "A1",
-        "register": "R2",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V02",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_fragment"
-        ]
-      }
-    },
-    {
-      "id": "aDbgYGYDQ1g-3",
       "en": "Yes, I'm here.",
       "ko": "네, 여기 있어.",
       "tags": {
@@ -107,7 +82,7 @@
       }
     },
     {
-      "id": "aDbgYGYDQ1g-4",
+      "id": "aDbgYGYDQ1g-3",
       "en": "Enjoy the game.",
       "ko": "게임 즐겨.",
       "tags": {
@@ -132,7 +107,7 @@
       }
     },
     {
-      "id": "aDbgYGYDQ1g-5",
+      "id": "aDbgYGYDQ1g-4",
       "en": "Fuck you!",
       "ko": "엿먹어!",
       "tags": {
@@ -160,7 +135,7 @@
       }
     },
     {
-      "id": "aDbgYGYDQ1g-6",
+      "id": "aDbgYGYDQ1g-5",
       "en": "Yes, you!",
       "ko": "그래, 너!",
       "tags": {
@@ -185,7 +160,7 @@
       }
     },
     {
-      "id": "aDbgYGYDQ1g-7",
+      "id": "aDbgYGYDQ1g-6",
       "en": "Fuck! Fuck! Fuck!",
       "ko": "젠장! 젠장! 젠장!",
       "tags": {
@@ -212,7 +187,7 @@
       }
     },
     {
-      "id": "aDbgYGYDQ1g-8",
+      "id": "aDbgYGYDQ1g-7",
       "en": "This is like a dance, why it's so fair and fair,",
       "ko": "이건 마치 춤 같아, 왜 이렇게 공정하고 공정한지,",
       "tags": {
@@ -237,7 +212,7 @@
       }
     },
     {
-      "id": "aDbgYGYDQ1g-9",
+      "id": "aDbgYGYDQ1g-8",
       "en": "That me and St. Helena care.",
       "ko": "나와 세인트 헬레나가 신경 쓰는 이유야.",
       "tags": {
@@ -262,7 +237,7 @@
       }
     },
     {
-      "id": "aDbgYGYDQ1g-10",
+      "id": "aDbgYGYDQ1g-9",
       "en": "She comes and goes, everywhere.",
       "ko": "그녀는 어디서나 오고 가.",
       "tags": {
@@ -287,7 +262,7 @@
       }
     },
     {
-      "id": "aDbgYGYDQ1g-11",
+      "id": "aDbgYGYDQ1g-10",
       "en": "She's the one thing I care.",
       "ko": "그녀는 내가 신경 쓰는 유일한 존재야.",
       "tags": {
@@ -307,6 +282,31 @@
         "power": [],
         "grammar_intent": [],
         "flags": []
+      }
+    },
+    {
+      "id": "aDbgYGYDQ1g-11",
+      "en": "She comes and goes, everywhere.",
+      "ko": "그녀는 어디서나 오고 가.",
+      "tags": {
+        "functions": [
+          "F01"
+        ],
+        "situation": "S47",
+        "cefr": "A2",
+        "register": "R2",
+        "emotions": [
+          "E09"
+        ],
+        "expression_types": [
+          "X08"
+        ],
+        "vibe": "V02",
+        "power": [],
+        "grammar_intent": [],
+        "flags": [
+          "is_narration"
+        ]
       }
     },
     {
@@ -334,56 +334,8 @@
     },
     {
       "id": "aDbgYGYDQ1g-13",
-      "en": "She comes and goes, everywhere.",
-      "ko": "그녀는 어디서나 오고 가.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S47",
-        "cefr": "A2",
-        "register": "R2",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V02",
-        "power": [],
-        "grammar_intent": [],
-        "flags": [
-          "is_narration"
-        ]
-      }
-    },
-    {
-      "id": "aDbgYGYDQ1g-14",
-      "en": "She's the one thing I care.",
-      "ko": "그녀는 내가 신경 쓰는 유일한 존재야.",
-      "tags": {
-        "functions": [
-          "F01"
-        ],
-        "situation": "S47",
-        "cefr": "A2",
-        "register": "R2",
-        "emotions": [
-          "E09"
-        ],
-        "expression_types": [
-          "X08"
-        ],
-        "vibe": "V02",
-        "power": [],
-        "grammar_intent": [],
-        "flags": []
-      }
-    },
-    {
-      "id": "aDbgYGYDQ1g-15",
       "en": "Thank you for watching!",
-      "ko": "시청해 주셔서 감사합니다!",
+      "ko": "시청해 주셔서 감사합니다.",
       "tags": {
         "functions": [
           "F27"
@@ -406,5 +358,5 @@
       }
     }
   ],
-  "transcriptHash": "5ab1165b3fecafd0"
+  "transcriptHash": "a3753c60db5cc933"
 }
