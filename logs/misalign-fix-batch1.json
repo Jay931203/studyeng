@@ -1,0 +1,197 @@
+{
+  "total": 38,
+  "fixed": 8,
+  "ok": 30,
+  "details": [
+    {
+      "videoId": "RjpvuPAzJUw",
+      "action": "realigned/merged",
+      "detail": "Merged split en segments and realigned ko translations. Fixed ~40 misaligned entries with shift-by-1 pattern throughout. Friends compilation (clothes, football, leather pants, pivot, sphinx cat, unagi, spray tan)."
+    },
+    {
+      "videoId": "tBFVAb1rcE0",
+      "action": "realigned",
+      "detail": "ko[0] contained merged translation for en[0]+en[1]. Split and shifted remaining ko entries to match their en counterparts. Fight Club plane scene."
+    },
+    {
+      "videoId": "ndTbiDQjbiE",
+      "action": "realigned",
+      "detail": "ko shifted by 1 starting from entry 5. en[5] had 'Depends' content whose ko was missing. Realigned entries 5-13 by shifting ko down and providing new ko for entry 5. Wolf of Wall Street Swiss banker scene."
+    },
+    {
+      "videoId": "opGJR_dBEvY",
+      "action": "realigned",
+      "detail": "ko shifted by 1 from entry 2 onwards due to merged translation in ko[1]. Realigned all 15 entries. Conan O'Brien casting sketch."
+    },
+    {
+      "videoId": "m6uvv1aS5_I",
+      "action": "realigned",
+      "detail": "ko shifted by 1 from entry 7 due to merged ko[6] covering en[6]+en[7]. Realigned 10 entries. South Park teachers trial scene."
+    },
+    {
+      "videoId": "mfqC28HcNjk",
+      "action": "realigned",
+      "detail": "ko shifted by 1 from entry 3 due to merged ko[2] covering en[2]+en[3]. Realigned 9 entries. Friends Cher impersonation scene."
+    },
+    {
+      "videoId": "VsYmwBOYfW8",
+      "action": "realigned",
+      "detail": "ko shifted by 1 for entries 10-12. en[10]='You bloated douchebag' had ko for en[11]. Realigned 3 entries. Jimmy Kimmel Mean Tweets."
+    },
+    {
+      "videoId": "N6J_32cDk9Y",
+      "action": "retranslated",
+      "detail": "ko[15] for 'Plus it's always fun to see Tom faint' had wrong ko (belonged to next entry). Provided correct translation. Parks and Rec Ron Swanson tooth scene."
+    },
+    {
+      "videoId": "vhhgI4tSMwc",
+      "action": "ok",
+      "detail": "TED talk. En split mid-sentence but ko follows each segment. Alignment acceptable."
+    },
+    {
+      "videoId": "WWNrPCakd2I",
+      "action": "ok",
+      "detail": "Fight Club homework scene. Alignment correct."
+    },
+    {
+      "videoId": "qCzWL9OPpwE",
+      "action": "ok",
+      "detail": "Scarlett Johansson/PDD skit. Alignment correct."
+    },
+    {
+      "videoId": "VLgvY9gZIEk",
+      "action": "ok",
+      "detail": "Impractical Jokers gym. Alignment correct."
+    },
+    {
+      "videoId": "l9VViSscQvA",
+      "action": "ok",
+      "detail": "Music rehearsal. Only music markers. OK."
+    },
+    {
+      "videoId": "mIABSdupWdI",
+      "action": "ok",
+      "detail": "Whiplash scene. Alignment correct."
+    },
+    {
+      "videoId": "TAbbJT0ZXmk",
+      "action": "ok",
+      "detail": "Music only. Single entry. OK."
+    },
+    {
+      "videoId": "UM8m0d31GpA",
+      "action": "ok",
+      "detail": "Music only. Single entry. OK."
+    },
+    {
+      "videoId": "vVqCU0iWlFM",
+      "action": "ok",
+      "detail": "Music only. Single entry. OK."
+    },
+    {
+      "videoId": "VVQX5fegiqs",
+      "action": "ok",
+      "detail": "Music only. Single entry. OK."
+    },
+    {
+      "videoId": "WNIPqafd4As",
+      "action": "ok",
+      "detail": "Music only. Single entry. OK."
+    },
+    {
+      "videoId": "XQPy88-E2zo",
+      "action": "ok",
+      "detail": "Music only. Single entry. OK."
+    },
+    {
+      "videoId": "_3C69Qeyyq8",
+      "action": "ok",
+      "detail": "Encanto scene. Short entries with music. Alignment correct."
+    },
+    {
+      "videoId": "m25ZvRAZqnY",
+      "action": "ok",
+      "detail": "Single emoji entry. OK."
+    },
+    {
+      "videoId": "pOe6wi1kjKc",
+      "action": "ok",
+      "detail": "SAG Awards speech. Alignment correct."
+    },
+    {
+      "videoId": "pwS0o75NmSU",
+      "action": "ok",
+      "detail": "Juno movie scene. Alignment correct."
+    },
+    {
+      "videoId": "RcGyVTAoXEU",
+      "action": "ok",
+      "detail": "TED talk stress. Some merged ko but semantically aligned."
+    },
+    {
+      "videoId": "S7Ly-cNBjuc",
+      "action": "ok",
+      "detail": "Will & Grace scene. Alignment correct."
+    },
+    {
+      "videoId": "vooZITJoPaQ",
+      "action": "ok",
+      "detail": "Friends flaw scene. Alignment correct."
+    },
+    {
+      "videoId": "VQRjouwKDlU",
+      "action": "ok",
+      "detail": "Jay Leno English segment. Alignment correct."
+    },
+    {
+      "videoId": "vSukWUG4Amc",
+      "action": "ok",
+      "detail": "Whiplash tempo scene. Alignment correct."
+    },
+    {
+      "videoId": "Vxc_9jNeGkc",
+      "action": "ok",
+      "detail": "Good Place scene. Alignment correct."
+    },
+    {
+      "videoId": "WWEGWathsPc",
+      "action": "ok",
+      "detail": "Try not to laugh challenge. Alignment correct."
+    },
+    {
+      "videoId": "_1nSBXORzdM",
+      "action": "ok",
+      "detail": "Benedict Cumberbatch Grinch challenge. Alignment correct."
+    },
+    {
+      "videoId": "_qTZRD1_ybQ",
+      "action": "ok",
+      "detail": "Music with short applause entry. OK."
+    },
+    {
+      "videoId": "MAioK8ZJhJE",
+      "action": "ok",
+      "detail": "Wolf of Wall Street arrest scene. Alignment correct."
+    },
+    {
+      "videoId": "mhII8J_4Y1g",
+      "action": "ok",
+      "detail": "The Good Place scene. Alignment correct."
+    },
+    {
+      "videoId": "N9QxmhaOPiE",
+      "action": "ok",
+      "detail": "Back to the Future scene. Alignment correct."
+    },
+    {
+      "videoId": "NeSvMWrxh8E",
+      "action": "ok",
+      "detail": "Titanic scene. Short entries. Alignment correct."
+    },
+    {
+      "videoId": "nRpXUhLQG48",
+      "action": "ok",
+      "detail": "Juno movie scene. Alignment correct."
+    }
+  ]
+}

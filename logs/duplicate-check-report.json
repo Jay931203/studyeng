@@ -1,0 +1,45 @@
+{
+  "timestamp": "2026-03-10T02:40:36.058Z",
+  "totalVideos": 2068,
+  "totalSeries": 206,
+  "checks": {
+    "duplicateYoutubeIds": {
+      "count": 0,
+      "items": []
+    },
+    "duplicateTitlesInSeries": {
+      "count": 0,
+      "items": []
+    },
+    "episodeNumberConflicts": {
+      "count": 0,
+      "items": []
+    },
+    "titleQualityIssues": {
+      "count": 1,
+      "items": [
+        {
+          "id": "sherlock-ep12",
+          "youtubeId": "ZTf7DDb6KL0",
+          "title": "Sherlock Saves Mrs Hudson",
+          "seriesId": "sherlock",
+          "seriesTitle": "Sherlock",
+          "issues": [
+            "redundant_series_name"
+          ]
+        }
+      ]
+    },
+    "categoryMismatches": {
+      "count": 0,
+      "items": []
+    }
+  },
+  "summary": {
+    "duplicateYoutubeIds": 0,
+    "duplicateTitlesInSeries": 0,
+    "episodeNumberConflicts": 0,
+    "titleQualityIssues": 1,
+    "categoryMismatches": 0
+  }
+}

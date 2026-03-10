@@ -1,0 +1,5586 @@
+{
+  "summary": {
+    "total": 1804,
+    "clean": 1391,
+    "issues": 413,
+    "critical": 15,
+    "warnings": 176,
+    "minor": 222
+  },
+  "typeCounts": {
+    "too_short": 140,
+    "duplicate": 183,
+    "ko_contaminated": 38,
+    "abnormal_ratio": 45,
+    "missing_ko": 15
+  },
+  "critical": [
+    {
+      "videoId": "2ONo4fpnhII",
+      "issues": [
+        {
+          "type": "missing_ko",
+          "severity": "critical",
+          "detail": "8/8 subtitles missing ko (100%)"
+        },
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "4ZK8Z8hulFg",
+      "issues": [
+        {
+          "type": "missing_ko",
+          "severity": "critical",
+          "detail": "12/12 subtitles missing ko (100%)"
+        }
+      ]
+    },
+    {
+      "videoId": "CtAFtLaIN1k",
+      "issues": [
+        {
+          "type": "missing_ko",
+          "severity": "critical",
+          "detail": "10/10 subtitles missing ko (100%)"
+        }
+      ]
+    },
+    {
+      "videoId": "fh3_g8NJc58",
+      "issues": [
+        {
+          "type": "missing_ko",
+          "severity": "critical",
+          "detail": "6/6 subtitles missing ko (100%)"
+        }
+      ]
+    },
+    {
+      "videoId": "iMIZCpINHCc",
+      "issues": [
+        {
+          "type": "missing_ko",
+          "severity": "critical",
+          "detail": "13/13 subtitles missing ko (100%)"
+        }
+      ]
+    },
+    {
+      "videoId": "ImmaMjeQAqI",
+      "issues": [
+        {
+          "type": "missing_ko",
+          "severity": "critical",
+          "detail": "11/11 subtitles missing ko (100%)"
+        }
+      ]
+    },
+    {
+      "videoId": "MmfmCR4Kta4",
+      "issues": [
+        {
+          "type": "missing_ko",
+          "severity": "critical",
+          "detail": "7/7 subtitles missing ko (100%)"
+        }
+      ]
+    },
+    {
+      "videoId": "pYAnIBWl8z0",
+      "issues": [
+        {
+          "type": "missing_ko",
+          "severity": "critical",
+          "detail": "16/16 subtitles missing ko (100%)"
+        }
+      ]
+    },
+    {
+      "videoId": "QPig73PjDF0",
+      "issues": [
+        {
+          "type": "missing_ko",
+          "severity": "critical",
+          "detail": "15/15 subtitles missing ko (100%)"
+        }
+      ]
+    },
+    {
+      "videoId": "sdgvyJ7R23Y",
+      "issues": [
+        {
+          "type": "missing_ko",
+          "severity": "critical",
+          "detail": "21/21 subtitles missing ko (100%)"
+        }
+      ]
+    },
+    {
+      "videoId": "se50viFJ0AQ",
+      "issues": [
+        {
+          "type": "missing_ko",
+          "severity": "critical",
+          "detail": "9/9 subtitles missing ko (100%)"
+        }
+      ]
+    },
+    {
+      "videoId": "sNrBSslS5RE",
+      "issues": [
+        {
+          "type": "missing_ko",
+          "severity": "critical",
+          "detail": "53/53 subtitles missing ko (100%)"
+        }
+      ]
+    },
+    {
+      "videoId": "wXsNIFK8z7I",
+      "issues": [
+        {
+          "type": "missing_ko",
+          "severity": "critical",
+          "detail": "102/102 subtitles missing ko (100%)"
+        }
+      ]
+    },
+    {
+      "videoId": "yH6C3JbCXxo",
+      "issues": [
+        {
+          "type": "missing_ko",
+          "severity": "critical",
+          "detail": "15/15 subtitles missing ko (100%)"
+        }
+      ]
+    },
+    {
+      "videoId": "ZfaK6ncKynE",
+      "issues": [
+        {
+          "type": "missing_ko",
+          "severity": "critical",
+          "detail": "95/95 subtitles missing ko (100%)"
+        }
+      ]
+    }
+  ],
+  "warnings": [
+    {
+      "videoId": "-0n9wcJJzWA",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "-cgHLSBZzPg",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "-doMNIdooe8",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "-Koj9hvcBMk",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "010KyIQjkTk",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "2 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "01PzN8KPQOo",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "0A20vfx-sO0",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "0mQ_hMx6KTY",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "18-LLjQBGko",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "1C5lc2GIisQ",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "1g7z6Aw4X1M",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "1PY6xIDkIj4",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "4 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "1rJU2ZbRtv0",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "1zOoWSvPVxk",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "1z_GF0KAAkg",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "21Ki96Lsxhc",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "2Vv-BfVoq4g",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 2 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "3ik6EwMNvXg",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "3PmmZwuPObQ",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "3S16b-x5mRA",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "41O_MydqxTU",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "4hX9o6ghEGI",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "4MRU8QBdipg",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "4Y1iErgBrDQ",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "6I-3oTvM-1o",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "6kZBJs527-k",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "2 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "6twwlGOTwXk",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "2 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "6YFmnO_Z9PA",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "7Q-hsgdJCME",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "87JAqBTXk3M",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "AIUaYqSUVps",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "AIuWQ41m7ys",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "Ar3-ymEoJk0",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "arj7oStGLkU",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "bBSvlTYfUrs",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "bHVQXMCux78",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "Bjqmg_7J53s",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 2 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "cdWHFPDUcSk",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "Cf2Gec_2fMY",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "Cy9KkuPmQ_s",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "cYGuWN1OhD8",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "DAYXlC59yWs",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "DbCM6WvB57c",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "Ed4ylzr4CKI",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "eEJWtAMnAlA",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "eiyfwZVAzGw",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "en37fxk4ccM",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "FCmMs10JLw4",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "ffyKY3Dj5ZE",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "2 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "FRvxzdkj_YI",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "fYcDQ11vI0M",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "G2lysk2YXXM",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "12 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "GaoLU6zKaws",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "h7amSrgtINI",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "hAhDBHNwJYQ",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "hFyLq6qNRew",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "2 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "HKvPWuqOGMo",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "HlBYdiXdUa8",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "HwW0RdDjqks",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "HySlYLkFieQ",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "i10aNmmXYsQ",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "i9zjvUywVG8",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 2 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "IA5YlOXJ_PQ",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "iBpgqRbEFVg",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "IiVDtNjORbY",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "iK6Sg-wof7Y",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        },
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "Iz-8CSa9xj8",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "jDnX_WnPMWM",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "JgxtRqdFvxM",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "jjt9Qx9MBPk",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "juGi1Xg5rGc",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "jZda2mqH3_c",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "kb60HrggbeQ",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "Kb_AHBGF5i8",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "5 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "knNrMDqv1jA",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "KSQ8N0EYmqU",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "LDkvRFCm8No",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "lp-EO5I60KA",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 2 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "lP4lH8D07Fc",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "LZNr8XGqByw",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "m25ZvRAZqnY",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "Mhux3FqDQBs",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "MlPd6zWjd_0",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "MokxwHbscQ8",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "mzW4IKb5ZjM",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "n05FK5Ms0wE",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "n2UsRWerBlM",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "NbyHNASFi6U",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 2 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "NfXoVR3hP7M",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "NHXXqlcCxPs",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "nm35CQL3yms",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "NQ6_Sqt_w3Y",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 2 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "NyN9ojKYVIU",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "O-FyxoCXz4Y",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "oklPl95DC8c",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "OOK3lltE3OU",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "ovQshs4Yp7A",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "OXlZ6edCHqI",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "oyEuk8j8imI",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 2 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "P0kcnb-3Tz4",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "Phm9wbFAbp0",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "pnP4KbfbxJ4",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "pPSua1GTUKE",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "pT6It4rnh_o",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "pVz0k5AzM6A",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "Pyr2HB-jlw4",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "Q-VOw3dc3WY",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "Q5bA9iv_X04",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "Q8BWE2gzEvo",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "Qa9YiwYHwZE",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "qaslfx9ysEY",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "qCzWL9OPpwE",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "QOEPYc0pa3g",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "QV43QwvMigU",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "qvJeATp31dw",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "qZzMcRYX44M",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "r6XF_-gDV3E",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "RaZQuvBB9SQ",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "RBumgq5yVrA",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 2 subtitles"
+        },
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "rThE6JTtf8w",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "ruRRcSrLnF0",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "rxqHVoZ0fzc",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "3 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "sDWi81BVnqw",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "Sgaaj9hFAfc",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "sLTRSakuugs",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "sMKoNBRZM1M",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "Sp6yUoB_RiA",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "StZ2f-h6PqQ",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "sXhK_sxxEuQ",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "t2kJ7w0MeVc",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        },
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "t6p2exVZttE",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "TbwroS0YP54",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "tLs9wDZKP-s",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "tO1k2Y3o-iM",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 2 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "TOq0dzxouts",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "tpfOhYRYv80",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "tpIctyqH29Q",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "TUVcZfQe-Kw",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "TVkV2oGPM2k",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "UBX8MWYel3s",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "uEGeggG_W9M",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "Uq9gPaIzbe8",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 2 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "UWt0-dy3s4E",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "uXGE0vuuaDo",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "uzSrfimePfA",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "v4tby3znOy8",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "V6bPomtNnis",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "VegKhno-BK8",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 2 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "ViEjSgM4hIs",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "vlWBa7iqEZg",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "vso2nP4edrk",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "VsYmwBOYfW8",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "vvLZ2t5cm0Y",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "V_rcq49o__I",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "W7_c-R7i8F4",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "wBzwv057GPs",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "wdIUzxWYl8c",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "WIPV1iwzrzg",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "wLaM_GLdZto",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "X1WSH0VzoaM",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 2 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "xBTQqSNA3oQ",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "xLdizYZYH14",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "xLjevzxhZvY",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "xQy1kbbAJnQ",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "xTW_nTPwItw",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "Y6IUuxM_qlw",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "YkgkThdzX-8",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 2 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "yn5oqtmzGMk",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "YpecVts2qqc",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 0 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "YX_OxBfsvbk",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "Z5wLdCM0NOg",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "2 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "Zb8exHKOaK0",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "2 subtitles have non-Korean text in ko field"
+        }
+      ]
+    },
+    {
+      "videoId": "ZTLAx3VDX7g",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "zUOkwbdxyB8",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "zVb1S977b9Q",
+      "issues": [
+        {
+          "type": "too_short",
+          "severity": "warning",
+          "detail": "Only 1 subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "zVeJ5F26uiM",
+      "issues": [
+        {
+          "type": "ko_contaminated",
+          "severity": "warning",
+          "detail": "1 subtitles have non-Korean text in ko field"
+        }
+      ]
+    }
+  ],
+  "minor": [
+    {
+      "videoId": "-FmPPHxl-Wk",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "3 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "-FW9Sqxb-4o",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "6 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "-pYA8Nu2dDM",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "-_zYn-HHcyA",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "5 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "0AhpcCST5xY",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "4 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "0D8nRpJsQlk",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "0EGPLZ2AnIw",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "13wEuXLk958",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "1ipRd0WgB0c",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "1Y5JBB3BG_0",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "221F55VPp2M",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "2G89nIGH53g",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "2M97rPDcPEg",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "2PjZAeiU7uM",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "2RT9rjWu0Ws",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        },
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "2 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "3bReJswiMGM",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "5 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "3bXDzwaMxk8",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "3cX8KLOb0w8",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "3mZj5N-zKRA",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "12 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "3zgdZZmX7r8",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "403jzB62dAs",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "12 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "4aeETEoNfOg",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "4DMUy20QfdM",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "4H6qwPJT9W0",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "4iUtZvRoQOI",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "4PwDFddpo4c",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "3 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "4zTCd-k--7A",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        },
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "56fngopihOo",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "5GL9JoH4Sws",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "5Q1NV57XMzM",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "6WmeHfbWS1w",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "7-MfQB2jqJs",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "72uaaH8YWqw",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "7wRHBLwpASw",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "3 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "7ysdRn5YLTw",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "8DajVKAkL50",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "5 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "8gcRTMr-rlg",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "6 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "8zfNfilNOIE",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "9rGBqeP4pns",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "3 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "aDbgYGYDQ1g",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "AEIn3T6nDAo",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "ajb-YbY3-rw",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "apidUvNbqJA",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "aWIE0PX1uXk",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "5 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "B0JmxKg_IaY",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "B3JXNzZGSJw",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "b8GpG-7q0WU",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "b9gQ-gqVWp4",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "bat8-rxEpdo",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "BDuZqYeNiOA",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "bp6hhq8DdgU",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "bSMxl1V8FSg",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "BTff04cFsRw",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "bYOn3-PhA9c",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "c0KYU2j0TM4",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "3 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "Ce_BXD_ONQ8",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "chfoBK7vpAE",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "cii6ruuycQA",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "cN33Lf-seXU",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "Crt5pspN8II",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "7 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "CX11yw6YL1w",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "DA2ukcfd9Vo",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "dmIFhpQe9Zk",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "3 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "dnRxQ3dcaQk",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "dOxiSsBTHbk",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "Ds0R1eApo9w",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "10 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "DU000lCfmBs",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "DUzEYcR2VtM",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "DW4Q9bdE_BY",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "4 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "DyDfgMOUjCI",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "3 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "e2wm_VRROvA",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "6 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "e3-5YC_oHjE",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "e7dfCs0z5Eg",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "E8k7P_6-joY",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "6 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "E8WaFvwtphY",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "eazNXtXuohc",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "eBzduwzZH-w",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "eIho2S0ZahI",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "4 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "eKq8rtjLxqU",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "eNvUS-6PTbs",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "F02_MVdAqCk",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "3 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "f6YDKF0LVWw",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "4 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "FcP3zSpCHYM",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "fhMlSITt7hU",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "FLTOiQ8gXp4",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "3 consecutive duplicate subtitles"
+        },
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "2 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "fuX1OoBjCQw",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "fyaI4-5849w",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "G-H4Qs-CCIo",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "G7KNmW9a75Y",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "GcaKkWsVtM4",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "gCZBY7a8kqE",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "3 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "GIUhpzv47YQ",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "3 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "gJ_cx3AmCuI",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "GNtS6KzseN8",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "gPoiv0sZ4s4",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "GVuh1lfrEwE",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "hAQELenqVgE",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "hmUyEDG7Jy0",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "3 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "HqTBW90w0_0",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "hrXJe_T6VS4",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "hUktzolvlP4",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "11 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "iCvmsMzlF7o",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "2 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "IEGQfrpnjWk",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "IhuI759LDco",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "ilnl_B11vZ8",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "imW392e6XR0",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "IpwSXWq1wwU",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "irUxaJeJRm0",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "itcSAT_SX9s",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "j4Axr6_RAnw",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "JAEnv1PvBvw",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "JcHICoySTZM",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "JFeaWHDQzQA",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "JmpxAej67qc",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "jQoNILVFFvs",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "jrL_LzX5wv4",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "3 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "k2qgadSvNyU",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "5 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "KMw7BXd9npk",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "5 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "ktvTqknDobU",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "KVkTAhSxV9w",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "12 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "kVm5k99PnBk",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "6 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "l1B1_jQnlFk",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "L81XWiDgmTk",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "l9VViSscQvA",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "Lz3KYrPQaN0",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "5 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "L_PWbnHABsM",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "mfqC28HcNjk",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "MoN9ql6Yymw",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "mR6xnrY7rXI",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "2 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "Msi7QP9BdPw",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "muBWLTBLk30",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "n45R0eF1ctc",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "N6J_32cDk9Y",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "ndTbiDQjbiE",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "NHozn0YXAeE",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "5 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "nlgzL7B8ghM",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "nmcdLOjGVzw",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "nRpXUhLQG48",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "o9Q0kp8CMFQ",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "OPf0YbXqDm0",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "3 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "opGJR_dBEvY",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "2 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "oUiJ8GcRpxk",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "Po6u6iT4YnU",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "pOe6wi1kjKc",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "5 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "ppunAo8ckBc",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "PQleT6BtCbE",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "PW6wfXPeJTw",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "pwS0o75NmSU",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "6 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "qDRORgoZxZU",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "QYh6mYIJG2Y",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "R4rpG-dipYA",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "R6LrS9KGSiM",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "3 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "r7voxxo9rj8",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "Rj1RS3738VE",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "RjpvuPAzJUw",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "6 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "rog8ou-ZepE",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "rPL2ZLFlo4o",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "3 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "RSDmo-gJ8XY",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "s3a4OQR-10M",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "3 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "S7Ly-cNBjuc",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "7 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "S7OWoc-j8qQ",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "sHBLVaIEwj4",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "S_6vjb1cJkE",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "S_JUlXh7sP8",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "T5pvonHjSq0",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "T7LtL1tyomU",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "t9qxT8wI-0I",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "ta31VGaVHrY",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "TAbbJT0ZXmk",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "6 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "tBFVAb1rcE0",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "Tjk68tpAdp8",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "tKEh0zn9OM0",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "TS7TRqGxqCY",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "3 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "UM8m0d31GpA",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "12 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "UnierMA90D4",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "uvY8fdgezLQ",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "vaGf8fmtBr4",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "VakRggxHD_A",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "vhhgI4tSMwc",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "2 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "vooZITJoPaQ",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "vPidnzJXxjI",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "VQRjouwKDlU",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        },
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "VtpzSXuBHac",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "vVqCU0iWlFM",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "12 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "VVQX5fegiqs",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "12 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "Vxc_9jNeGkc",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "vzwoJ10UyO0",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "w2Ww_O3ceKU",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "w323iXW02G4",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "7 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "W5hq7HaFRNM",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "wcW8SvbnJYE",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "WhQapHmaYYE",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "wHUMwXUHQmc",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "wIuBcb2T55Q",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "3 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "WllLql6fduo",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "6 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "WNIPqafd4As",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "6 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "WWEGWathsPc",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "3 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "WyrnL-E61Gc",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "wyx6JDQCslE",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "XB-lb3LkdoI",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "XQPy88-E2zo",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "5 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "XxoN6dFwawM",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "XY5KTVA_2ys",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "ykN0VZiEDr8",
+      "issues": [
+        {
+          "type": "abnormal_ratio",
+          "severity": "minor",
+          "detail": "1 subtitles with abnormal en/ko length ratio"
+        }
+      ]
+    },
+    {
+      "videoId": "ylSho5GHXao",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "YQHsXMglC9A",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "yurPmymbW8o",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "yXnk3n-qNrI",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "yzb726TP-OM",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "Z2eCmhBgsyI",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "ZnZqB5Z75zI",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "zp-eEVkKh60",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "ZPGBceVfV60",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "ZwS14TiO7Pk",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "ZwYy4scOJi8",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "_1nSBXORzdM",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "10 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "_35vuv4htIw",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "_3C69Qeyyq8",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "_mAycORmun8",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "2 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "_nbVTUYVKxg",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "_qTZRD1_ybQ",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "3 consecutive duplicate subtitles"
+        }
+      ]
+    },
+    {
+      "videoId": "_WvgGdivQzE",
+      "issues": [
+        {
+          "type": "duplicate",
+          "severity": "minor",
+          "detail": "1 consecutive duplicate subtitles"
+        }
+      ]
+    }
+  ],
+  "cleanVideoIds": [
+    "-0EiP69JURo",
+    "-4sU_AhRPY0",
+    "-6Up7CG5d6M",
+    "-7OE6bDfM2M",
+    "-8Jan7r4wDs",
+    "-at3oShfXH8",
+    "-bBHT158E0s",
+    "-BskysMshyI",
+    "-c7kOHThKHY",
+    "-e5CtbbZL-k",
+    "-k3ABfmCr2I",
+    "-k6JxfX8asc",
+    "-LqfrY87U-0",
+    "-LWJFwyy9Nw",
+    "-PLCJqiKbjw",
+    "-rDTRuCOs9g",
+    "-RfLt0HiOvw",
+    "-u1vZaIFXHo",
+    "-ViPmcdlfbQ",
+    "-x2_0zs_Xic",
+    "-YzXy3SM-lY",
+    "09R8_2nJtjg",
+    "0aZOOcTt0E4",
+    "0b-H8oQUs1A",
+    "0c2w8i1KOd8",
+    "0cgbqOq6tZw",
+    "0CzTetpGBi8",
+    "0dsvhatg29s",
+    "0Dyl2mpd9F0",
+    "0fMuMs4ouLs",
+    "0FSGPPB39P0",
+    "0FSKTndbwVo",
+    "0h19anH4MdE",
+    "0habxsuXW4g",
+    "0Hrnnt7Mxc0",
+    "0Kvw2BPKjz0",
+    "0mapwWviBEM",
+    "0Nz8YrCC9X8",
+    "0SSJKsZiWHg",
+    "0TIrnxSYSIQ",
+    "0u8KUgUqprw",
+    "0WqBCG_-udw",
+    "10GhbNjRgRs",
+    "15pqpVbhs0c",
+    "1aA1WGON49E",
+    "1bH4sagx8tI",
+    "1BmLvIjyMd4",
+    "1DKFrDtEVWI",
+    "1Ec3rMMLyWg",
+    "1ltymoURNLM",
+    "1lWJXDG2i0A",
+    "1mlFdXpcf9c",
+    "1nCqRmx3Dnw",
+    "1oKHoUfGH00",
+    "1plPyJdXKIY",
+    "1pzV9GoSuys",
+    "1q-EkcmkYfE",
+    "1QQBB3cwNM0",
+    "1RfHsPlFfT0",
+    "1U6-eyq04Zg",
+    "1uRBxyPqkh0",
+    "1WDW8XKEGgU",
+    "1WjwK3kUsyY",
+    "1xnJQ96juX8",
+    "1Ylk2e-x--8",
+    "24E2WNAvQNU",
+    "2bujRZhOt9w",
+    "2cHOV5f9H0c",
+    "2D2TLWLu43Q",
+    "2dh8C_HHE2g",
+    "2DXR7Ny1qNE",
+    "2fR-bXoby6c",
+    "2IaXJSJ6sIQ",
+    "2JkTrIVESVc",
+    "2Q466ZPyNAo",
+    "2RB3edZyeYw",
+    "2RXZj-OUAtI",
+    "2swCX5-GE9E",
+    "2Szzj6XN6pA",
+    "2TAfvMn8_EQ",
+    "2tM1LFFxeKg",
+    "2Tpb1XyqGOQ",
+    "2XKg3lsfxGU",
+    "31N_HM2f9Ks",
+    "389nJrZjK1w",
+    "38FMDG7tiA4",
+    "39O3PNrVO8A",
+    "3bQXPUQqn9Y",
+    "3cEg2HCl50I",
+    "3F8oJh3J1T0",
+    "3fbhVPnhX-4",
+    "3HKOHxHDoGI",
+    "3iAiWIytqdw",
+    "3JWTaaS7LdU",
+    "3mCN6dh16eU",
+    "3MP5qHvuHE0",
+    "3nc6Tf26afI",
+    "3O5oEY1vL1I",
+    "3q0mxPLg39I",
+    "3Q9l8nI0xtA",
+    "3quvRb-vca8",
+    "3S517s7E4wk",
+    "3uwrL9unVek",
+    "3VavIcYEQZs",
+    "3vijLre760w",
+    "436h_1wuAd4",
+    "450p7goxZqg",
+    "46GwJbrMghQ",
+    "46p-IxAVJ74",
+    "47NpZE1Skj0",
+    "4ADCmY6lJ_8",
+    "4ATqJc2MjDY",
+    "4bg2SrTDV08",
+    "4CbYj4K-S2U",
+    "4GSC9wajj8I",
+    "4Jg_1qn5YiI",
+    "4JK_Lg8P7PU",
+    "4KBAXMpklDU",
+    "4m1EFMoRFvY",
+    "4m4xYcLoOgg",
+    "4NRXx6U8ABQ",
+    "4PKr_BVo4hg",
+    "4QIZE708gJ4",
+    "4RaWAQIBZ2I",
+    "4R_SNYsdIvw",
+    "4ts6Ep_KarE",
+    "4V3NOuVctrs",
+    "4v54LRmRpZA",
+    "4WfIbTfpGGc",
+    "4yAQcKhv_5k",
+    "4zKU_HS6npw",
+    "52SG2-g54X4",
+    "5AARjANyhgk",
+    "5dkxJVljyaA",
+    "5E0M6Rh9qpg",
+    "5JD6ejmlpa8",
+    "5kllNkZv82U",
+    "5Kqg31MaysQ",
+    "5M1ZKPCLb4I",
+    "5pXU5xUiSmc",
+    "5s6y4r-xamk",
+    "5TBbuIanjrI",
+    "5ufGLwOPv5M",
+    "5v-Na8Xpwzg",
+    "5VjTswqyHdA",
+    "5Ww5v_CYXBw",
+    "5X-Mrc2l1d0",
+    "5ZeiL-WqZIA",
+    "5_XhWGU_Mg8",
+    "60ItHLz5WEA",
+    "61UL0bKRzhI",
+    "66LnhtnSoKc",
+    "687AZbbH-Jw",
+    "6bnWHRULK-M",
+    "6Cs3Pvmmv0E",
+    "6f4oKjlLYK0",
+    "6gLLwNLYzRA",
+    "6iClgRjmTvc",
+    "6KHyMISpE18",
+    "6l6HSzwjRoo",
+    "6lCG9ScuuLA",
+    "6ovOboVwB7g",
+    "6pJC0FLA3Sk",
+    "6Pkq_eBHXJ4",
+    "6pQgbEEFPq0",
+    "6TBlaUD3ma4",
+    "6tqPK8nJL2U",
+    "6U4-KZSoe6g",
+    "6VF5P7qLaEQ",
+    "6W7yhe1i-sQ",
+    "6Whgn_iE5uc",
+    "6wZuNj9J4H8",
+    "6YNZlXfW6Ho",
+    "6ZUIwj3FgUY",
+    "6ZZI6-zh0GM",
+    "7CVfTd-_qbc",
+    "7dVyEbHRTlU",
+    "7E_WeuKkJ2s",
+    "7FIQQVWNE1U",
+    "7i5CQVfmx-0",
+    "7IwIUYSE5Tg",
+    "7jA-tE-4BYI",
+    "7K3KdgDcdYc",
+    "7NjNOAncIlI",
+    "7OFROViP0J0",
+    "7wtfhZwyrcc",
+    "7xMAO-eBNOE",
+    "7Y01uy-Q1d8",
+    "7yDmGnA8Hw0",
+    "7ZH0oeDv4Es",
+    "7ZVWIELHQQY",
+    "8aDGKxN1nLo",
+    "8dM5QYdTo08",
+    "8fT-l0YYLHI",
+    "8gfipuaIA68",
+    "8hjB6UJ2kMU",
+    "8pDY_9u5Sn0",
+    "8QvfWEb7pDo",
+    "8S0FDjFBj8o",
+    "8SxE_NfUX6w",
+    "8VNTTzQMK48",
+    "8vyLqZYwPL8",
+    "8WYHDfJDPDc",
+    "8XNaPX6MKlU",
+    "8yNdvL2FTDQ",
+    "8zBAw3_AXe8",
+    "90Y92lQOmEI",
+    "983bBbJx0Mk",
+    "9BJUGcy22mY",
+    "9fdAt0ke9w8",
+    "9FnO3igOkOk",
+    "9gk_rl3y_SU",
+    "9GYtgFdXCGE",
+    "9Ht_GI2zOxo",
+    "9JtvfL1mvm0",
+    "9KQm_7Lpt5E",
+    "9OBK8KS8Ims",
+    "9omHSTgIn6g",
+    "9SG3FgGY9ao",
+    "9tqhEE9DVVA",
+    "9uZ-jeZS8d0",
+    "9XGOXYi-LNc",
+    "a0cFQYyK-C4",
+    "A0voQFMhV6I",
+    "a3iIERXZeJE",
+    "a3lcGnMhvsA",
+    "a4Bgv4Bvf5s",
+    "A55wwgPinMk",
+    "A5CJCn6UzkI",
+    "a6738DN4I3s",
+    "a6MG--mTDZQ",
+    "a9cyG_yfh1k",
+    "aA5FgDdRwHI",
+    "AafBunu-k2U",
+    "ABpeLNCuE3w",
+    "Ae829mFAGGE",
+    "AEB6ibtdPZc",
+    "AeJZe6eHBEA",
+    "aFt9C9brQY8",
+    "AGi8jSGpr5U",
+    "AGZiLMGdCE0",
+    "ahSKGi_21xg",
+    "aJOTlE1K90k",
+    "AJzgI6v5wXQ",
+    "AM0MVuEmFGc",
+    "ampLJDK6lYs",
+    "aMuBngVO6QE",
+    "AnDZaIKIXtI",
+    "aPnuxi4S9JQ",
+    "ar0rK_NDErU",
+    "ArHq_mBrEpo",
+    "ArlsU2_cUbg",
+    "ARoCpelSF70",
+    "aRsOBFhNjVM",
+    "aS1esgRV4Rc",
+    "AS38I3esj0o",
+    "AST2-4db4ic",
+    "aSugSGCC12I",
+    "ASVUj89hyg0",
+    "aTL4qIIxg8A",
+    "ATMR5ettHz8",
+    "AU-AqxMUs_o",
+    "auLBLk4ibAk",
+    "AuqEZx6TmfI",
+    "avfVD6Par0M",
+    "aXzVF3XeS8M",
+    "AyMs2xox_hE",
+    "Ayp72KBYk5o",
+    "b-2fnZfK9Lg",
+    "B0bnsYzJqYk",
+    "b2f2Kqt_KcE",
+    "b48AN_8wokU",
+    "B5gzsdPe5rs",
+    "b65C_muXajk",
+    "b8nT5qx_Rbo",
+    "b8o1ZkWBxMk",
+    "B9G71qT5eu4",
+    "bbet0m_dg8w",
+    "bbQh_S2g6CI",
+    "BbXJ3_AQE_o",
+    "Bcn-rzACIHU",
+    "bCQNOdflWbQ",
+    "bEFfgO0bjtw",
+    "BEG66-Lro7U",
+    "BgfB4SjXuys",
+    "BHbksPYwdf8",
+    "bhKCGlubXa4",
+    "bIQgJKJiQRQ",
+    "blMgda_uIok",
+    "BmFbczWrVUw",
+    "Bml8KwCmob8",
+    "bmz9lMP6aQU",
+    "bnVUHWCynig",
+    "BOK22sQ_PTI",
+    "BOt5SmHf2aE",
+    "BPCjC543llU",
+    "bP_FsFnDnzM",
+    "bqsZzZ4kXbg",
+    "br-Dy3puDoc",
+    "bt3X8MJgJWo",
+    "bTeYncx1xmI",
+    "BTivsHlVcGU",
+    "BtK_y1n2ERk",
+    "BtN-goy9VOY",
+    "bV0RAcuG2Ao",
+    "bvjZSqRu41k",
+    "bx7l7X7qy2g",
+    "bYXhA8VG8Lw",
+    "bzE-IMaegzQ",
+    "BzIHyF7UWY4",
+    "C-u5WLJ9Yk4",
+    "C2vVmag1HRY",
+    "C3DlM19x4RQ",
+    "C6MFJwuTZII",
+    "cBd6B_xwQPE",
+    "CbjxifMCNeg",
+    "cdVN4ZiJUTE",
+    "CECCNFXmv5c",
+    "CevxZvSJLk8",
+    "Cf1hKtrA9lg",
+    "cg1rtWXHSKU",
+    "cg2MY3F2iAk",
+    "cgbz2VHWrpE",
+    "CGgtd5NN4xw",
+    "ChqXlyD-5KY",
+    "chyRpj-971o",
+    "cHZl2naX1Xk",
+    "Ch_hoYPPeGc",
+    "cILfj2YkKng",
+    "cISYzA36-ZY",
+    "citbw9n82BM",
+    "cjVQ36NhbMk",
+    "CkbHGH-NnkU",
+    "cKQMUS5iqSI",
+    "cle4jJFoeQg",
+    "cLmCJKT5ssw",
+    "cmkZeTX5fq0",
+    "cmLFCfNrHlo",
+    "cnaeIAEp2pU",
+    "cnCMqr1QRQw",
+    "CO1S9o1u3II",
+    "COD9hcTpGWQ",
+    "Cp-1t9B62zc",
+    "cpOEO2gUekE",
+    "cPYhj2xTCGc",
+    "CqgmozFr_GM",
+    "CR5Jp_ag2M8",
+    "cR9FMrck4gw",
+    "Cu5hhxP_prE",
+    "Cv6tuzHUuuk",
+    "cVsyJvxX48A",
+    "CWRTqMGvdpc",
+    "Cx0xzO73Amo",
+    "CyOmCdtRrgo",
+    "cZAw8qxn0ZE",
+    "D1JZBseDjfU",
+    "D3tYM5zVvJU",
+    "d4ftmOI5NnI",
+    "d7ONQzygvB0",
+    "d8RIS5GJqAg",
+    "d8uTB5XorBw",
+    "D9MS2y2YU_o",
+    "D9tAKLTktY0",
+    "DAhFW_auT20",
+    "dC1yHLp9bWA",
+    "DdjWGbPUmrg",
+    "ddXUQu9RC4U",
+    "DeITUPgQiyY",
+    "desJKYvdq9A",
+    "DGbIzSq4eWA",
+    "dGIGG6QLjLg",
+    "dgMKzky9S4I",
+    "Di8Z7rJ9vnI",
+    "DIIIDF6bkqI",
+    "dJbntFepz0o",
+    "djV11Xbc914",
+    "DkSMrI86NWk",
+    "DLzxrzFCyOs",
+    "dMbnfxwus0s",
+    "DNXGUn0Yrb8",
+    "dOkyKyVFnSs",
+    "DOmIpiTMs2w",
+    "donJlg14_LY",
+    "dqONk48l5vY",
+    "dqT-UlYlg1s",
+    "dQw4w9WgXcQ",
+    "DsNvk7heXgI",
+    "DtRhrfhP5b4",
+    "DvkYRhu-TP0",
+    "dVmOvmH4dL4",
+    "DVrFuGJ2QjQ",
+    "DvtxOzO6OAE",
+    "DVWyxC64FcA",
+    "DwAOHVBKTwg",
+    "Dwiczhta4e0",
+    "Dwnl43ASLBA",
+    "Dx06c0ZEBMk",
+    "dx5jTXNnCZw",
+    "dx7vNdAb5e4",
+    "e-P5IFTqB98",
+    "E1I0hAxGFXw",
+    "e1KEC_3vygc",
+    "E1xEVZ99_S0",
+    "e2zyjbH9zzA",
+    "E3RQVcNUcTA",
+    "e5BFR-E-ae0",
+    "e6Funs6yyEw",
+    "E6LpBIwGyA4",
+    "e7t4pTNZshA",
+    "e9HXmMnUEdE",
+    "E9L-0x92vXk",
+    "EApCLbgAE5E",
+    "eBG7P-K-r1Y",
+    "eBS7QW9d100",
+    "eBz7iUJu9UM",
+    "ecF1y2bI2T4",
+    "ECjYsWLgy3I",
+    "eCKRI2wEw7I",
+    "eD0oskR19oE",
+    "efMQRfmrlA0",
+    "EjW7WzozgI0",
+    "eKUlOEHu7Uc",
+    "eKz5Hida8n4",
+    "ekzHIouo8Q4",
+    "eLbE_05rS1A",
+    "ELZNClmKX1E",
+    "emGzPmmMA3o",
+    "Eo-KmOd3i7s",
+    "Eobm6s5ASVE",
+    "eoL7khWduNI",
+    "ep-ieEG06qg",
+    "Es6PBea8fzM",
+    "eSfoF6MhgLA",
+    "etJ6RmMPGko",
+    "Ev9JVzQey44",
+    "eVFd46qABi0",
+    "EVmLV7swH2k",
+    "ewqfpwXUCP4",
+    "EXGUNvIFTQw",
+    "Exy0UATpXtY",
+    "EZGXCDJATDs",
+    "E_z2PGmUIrE",
+    "F0MvKStmYsI",
+    "f0rQgrt_pVk",
+    "F12gWkbAk6w",
+    "f2O6mQkFiiw",
+    "f36vIp_d2C0",
+    "f5i81RY8S6Q",
+    "f83L0Wd_mKI",
+    "f8JbMvhbvuY",
+    "FaOSCASqLsE",
+    "fbcUl7GhCTg",
+    "fDKTi-jjGCc",
+    "ffxKSjUwKdU",
+    "FGgGLLhbf78",
+    "Fh2ePdEn_jk",
+    "FizqEuhUiB8",
+    "fJ9rUzIMcZQ",
+    "fjoO5927p80",
+    "FK3dav4bA4s",
+    "fLexgOxsZu0",
+    "fLJsdqxnZb0",
+    "FLlR4o8NTX8",
+    "fmohHVMMN_o",
+    "FnBjb5imPLY",
+    "fO4ViYDw2l8",
+    "FoECr2zRWQ8",
+    "fOh8YVlObf4",
+    "fPwDR1Qo1GM",
+    "FQ_gVYpwI68",
+    "fR2CeheI9s0",
+    "fRdQmCaaqUM",
+    "FrkEDe6Ljqs",
+    "FrLequ6dUdM",
+    "FS1Wts11oX0",
+    "FSvNhxKJJyU",
+    "FTQbiNvZqaY",
+    "fWiVN4mtYxo",
+    "fwM3wzWEz80",
+    "fwSNu6SxU-4",
+    "FWTNMzK9vG4",
+    "FxT8VWGkQHg",
+    "fzqXbdlnaEg",
+    "f_kgZFdt5B0",
+    "G-vp0AprzrA",
+    "g3kE0xpO1y8",
+    "G4hXSY1JgNQ",
+    "g4ODPyUxLNw",
+    "G5XKkXVmt3k",
+    "g6o3rEInTII",
+    "g7J_RrBcchQ",
+    "g8rhCeP1SPg",
+    "Gbsw-XxPREA",
+    "gCKjctTWIsw",
+    "GDEVOCTW4qk",
+    "gf-tZ8OAc1U",
+    "GFAbkHlKFGE",
+    "gFr0_ywVdhY",
+    "Ghd2bkIadG4",
+    "GHTQQHwKa7Q",
+    "GjIKnpjUZP0",
+    "gJuNiHitc40",
+    "GkD20ajVxnY",
+    "gKGOG-Pr81E",
+    "gnHCw87Enq4",
+    "gNi_6U5Pm_o",
+    "GNxiVJbqncs",
+    "gO8N3L_aERg",
+    "Goem3yP-__4",
+    "GOfv3rAVOPA",
+    "gOxG6HSicwk",
+    "gpeh1DUAusk",
+    "gQ-she8Xneo",
+    "GQMlWwIXg3M",
+    "gQU3EphIpMY",
+    "GRiC-B6Of9I",
+    "GSu7BGbyJqc",
+    "Gt75VjvRW34",
+    "Gu08f15KnMI",
+    "gvGNWLszAQA",
+    "gWVHses2GCY",
+    "GXJifYl_byU",
+    "Gzi8k9nBrdU",
+    "GzjDUUOLMlY",
+    "H-0RHqDWcJE",
+    "H-2kbp8CFuk",
+    "H14bBuluwB8",
+    "H1nA1wanH2s",
+    "h28p_stPK5Q",
+    "H4oJaGflW5w",
+    "h5lJTcChkoA",
+    "H5v3kku4y6Q",
+    "hA5ezR0Kh80",
+    "hAFuD-S-e_E",
+    "hBaiyzj5wdc",
+    "hCuMWrfXG4E",
+    "HDQ2dTMLVf0",
+    "HE6P2HDYlZs",
+    "hEWsqLKlEr4",
+    "HFNakraGHYk",
+    "HFOJYAZRE4A",
+    "HGDvtNSQvrY",
+    "HhrbbYD5ScI",
+    "HHvTBIKyCq8",
+    "HI4oIuRQ-0M",
+    "HiCnnsHfadU",
+    "HINIK3pIOp4",
+    "hIYZoUg1gg8",
+    "hJCUJLMSEK0",
+    "hKi3-5gO4uE",
+    "hLOheGDwD_0",
+    "hLQl3WQQoQ0",
+    "hNK8FCFpmm4",
+    "Ho6t683GazQ",
+    "hPCnsex4Wlg",
+    "HrIeP798hiQ",
+    "hrSMCghmoZc",
+    "hsm4poTWjMs",
+    "HSPYgwP9R84",
+    "hSSxp_fsrJ0",
+    "hTWKbfoikeg",
+    "hVbyetnjA44",
+    "hVN7TJRRskQ",
+    "HWOYqgrToyk",
+    "hWQy4YuIMOw",
+    "hwUixddbmrQ",
+    "hY-Rzou38k4",
+    "HYOjY7JJDBI",
+    "Hz1Be2zNKgo",
+    "HZ7i3p__ZNE",
+    "hZD3gOSC6GU",
+    "h_bUcNjmuSk",
+    "I-oEuBGgTl0",
+    "I1O5m-R-sdQ",
+    "i3-jlhJgU9U",
+    "i5j1wWY-qus",
+    "I6uGId-a758",
+    "I73sP93-0xA",
+    "i7jX9SR0bfw",
+    "i92HaidDigI",
+    "i9HGwRbMiVY",
+    "i9IA4XFPEnk",
+    "ia2Ph61bYzc",
+    "IA6NaOfwswo",
+    "IaSsii5UpT8",
+    "IbUmdRx0Wm4",
+    "iBYOl-HpPRM",
+    "ifkYHEoe6_k",
+    "iFmNWm60bjA",
+    "IFqVNPwsLNo",
+    "iG9CE55wbtY",
+    "IhuwS5ZLwKY",
+    "IHx72eWXOo8",
+    "ikVIGjzncDs",
+    "ImaYMoTi2g8",
+    "ImIy1TLRdf8",
+    "iQE-eKTrUko",
+    "iqhTTufTsU4",
+    "ISBJyhughBo",
+    "ISJpKRTkvpc",
+    "it-jZnbmRzI",
+    "ITGEGE9v0d0",
+    "IUddr60dDXw",
+    "IUjf1lVOGOo",
+    "iVwXw7gaEzo",
+    "IwREUYN4UtQ",
+    "iwS3Q6B7HJo",
+    "IxiEeCKIX5E",
+    "ixQbCXLUUj8",
+    "IXXxciRUMzE",
+    "I_2D8Eo15wE",
+    "i_NB9j4axxk",
+    "j2OCBBqfDqo",
+    "j5-yKhDd64s",
+    "J6gNJ49IKCA",
+    "j9QsnPaKnkY",
+    "jAgGqQDv32k",
+    "JaNckDLiu3I",
+    "jane6C4rIwc",
+    "JCMPTvty5nQ",
+    "JcP-yeailEM",
+    "Jd3r_Id78ck",
+    "jDuGCJN3394",
+    "je0roKRn3nY",
+    "jeb5UmOrvmM",
+    "JexO-N39Nzg",
+    "JFo6iLDNzX0",
+    "jG7dSXcfVqE",
+    "jgC6VqsC3QY",
+    "JgQVj4iMm8Y",
+    "JGwWNGJdvx8",
+    "jH1RNk8954Q",
+    "jH6JcaCClrE",
+    "jhkwyCW2Dds",
+    "jHPOzQzk9Qo",
+    "jhQ4WVJwz7w",
+    "jjYXNonafzo",
+    "jKIEUdAMtrQ",
+    "JKJExBXRorA",
+    "JmcA9LIIXWw",
+    "JNctAdr7jy4",
+    "Jp26ZDAyekU",
+    "jpj7rqTgy1k",
+    "Jpjq3P47eww",
+    "JQVBfcjx6d4",
+    "JQVmkDUkZT4",
+    "Jr7bRw0NxQ4",
+    "JRfuAukYTKg",
+    "jsZkkqLDFmg",
+    "Ju8Hr50Ckwk",
+    "JWtnJjn6ng0",
+    "jWTVh4ASpO0",
+    "Jx9h3iWudTU",
+    "jyAp2Q_mUvE",
+    "JYqfVE-fykk",
+    "J_lEs4FYkhs",
+    "k2kiyWu_XNc",
+    "k5DGopYRik0",
+    "k5fJmkv02is",
+    "k61kx5L6ZNM",
+    "k6C8SX0mWP0",
+    "k70xBg8en-4",
+    "kCBOtqcLz-w",
+    "kCobcQr3TKQ",
+    "kD3-DKkiVeA",
+    "kDVptPB31ZU",
+    "kE5IzU8KiJ4",
+    "keMF8YzQoRM",
+    "kffacxfA7G4",
+    "KGAAhzreGWw",
+    "KgjX0nzIFTw",
+    "KH55hmX0-Uo",
+    "kjAYxfAwZP4",
+    "KkjRddAy6gY",
+    "KKNCiRWd_j0",
+    "kKXkfLhn6pA",
+    "klaWpWtgxbA",
+    "KldYH188V_U",
+    "KLOyChP2AWA",
+    "kN-q8yX0loc",
+    "knobmUd-r5E",
+    "KnpnYAId6dU",
+    "knro0i2JH44",
+    "kOEDG3j1bjs",
+    "kq9Q9-U0vrc",
+    "Ks-_Mh1QhMc",
+    "KTFjeMITIuY",
+    "kThPuEy8V5M",
+    "kTJczUoc26U",
+    "KtlgYxa6BMU",
+    "KUnA9jb-NpE",
+    "KUPSTQSGb50",
+    "kVcPXzDAu2c",
+    "KvRoU6r7a5Q",
+    "kwUNMdallSU",
+    "KXgt5q3YflE",
+    "kxjwb5cXTI0",
+    "kXYiU_JCYtU",
+    "ky3KiiUK_D0",
+    "kze1JkPl5_8",
+    "k_zin9OQNXU",
+    "l1IchzbtNj0",
+    "L6G0VxscwqE",
+    "l6TGERgrXmA",
+    "L7wCy1IOwOw",
+    "L9d960njfC8",
+    "LABGimhsEys",
+    "LaP28N1xtqY",
+    "LatorN4P9aA",
+    "LbAPwwAXaWM",
+    "LBBni_-tMNs",
+    "lC5lsemxaJo",
+    "LdA46CTeaYo",
+    "lDK9QqIzhwk",
+    "LDY_XyxBu8A",
+    "LebMvhwiov8",
+    "leeoJLBtLIw",
+    "lEXBxijQREo",
+    "LiISYvzuLK4",
+    "LinpRhB4aWU",
+    "lISBP_fPg1s",
+    "lJ83ILGA8yI",
+    "ljaP2etvDc4",
+    "LjhCEhWiKXk",
+    "LjVqEfmnbuc",
+    "LjxulQ1bEWg",
+    "ljzkCBZuHM4",
+    "LK_gkFXhOJI",
+    "LMycxm3fDyE",
+    "lNFbbWOM5FU",
+    "LOM-LGHpMe8",
+    "LORyEX_5czg",
+    "LPquarz16wQ",
+    "LqI6XZwL0KY",
+    "LRXBqCWHUCI",
+    "lumvhHA2psM",
+    "lV8ocbooymE",
+    "lvBmrMEd254",
+    "lxgzbRXQELQ",
+    "LXO7UL84rK0",
+    "LYN9USd9Gpg",
+    "LYOcO4kLbVw",
+    "LZTaXjt2Ggk",
+    "l_NYrWqUR40",
+    "M11SvDtPBhA",
+    "m4qpy87rs6U",
+    "m6uvv1aS5_I",
+    "M6Vfj1TjMvU",
+    "M7Is43K6lrg",
+    "M7KelAaqsCg",
+    "MAioK8ZJhJE",
+    "mATlzmlaSQE",
+    "Mbj26vHDMII",
+    "mBlJ9N7Ehgk",
+    "MDJvZ-zfKyA",
+    "mDUSjBiHYeY",
+    "MdwuW8n3JYA",
+    "MfZEDMsOrCk",
+    "mhII8J_4Y1g",
+    "mIABSdupWdI",
+    "MjSZs_uOWxg",
+    "MkElfR_NPBI",
+    "MoLkabPK3YU",
+    "MPesRzTuTKg",
+    "mpgq0g18Hj4",
+    "MPoggHQ2qIA",
+    "mprGwBFrdrk",
+    "Mqc37ItMefM",
+    "MQJlBpPLHUM",
+    "mRD0-GxqHVo",
+    "MSRcC626prw",
+    "MsWlktW0kj4",
+    "mVqbIUIHRFo",
+    "MwI6-7kE17M",
+    "MWkN3akP3cU",
+    "mwoX_UotKGo",
+    "MxGEVIvSFeY",
+    "MYtjpIwamos",
+    "N16YkjFVAyE",
+    "N2p5uvbQhaY",
+    "n4NVPg2kHv4",
+    "n4RjJKxsamQ",
+    "n7WAkWK7Tjw",
+    "N9QxmhaOPiE",
+    "NbOaWsqF_Y4",
+    "NbuUW9i-mHs",
+    "nByAshpybOo",
+    "nCrjHPBQg9I",
+    "nCwwVjPNloY",
+    "Nc_Tny40JPU",
+    "nDgLncOu4Ug",
+    "nebaBmsafv8",
+    "NeSvMWrxh8E",
+    "nfs8NYg7yQM",
+    "nfWlot6h_JM",
+    "nGt_JGHYEO4",
+    "nGUfj2taniA",
+    "NhkT5Y4yvMg",
+    "NHopJHSlVo4",
+    "NIBUWqSTp90",
+    "NieGl78W4-w",
+    "nITZooG6ij8",
+    "niul8Hy-3wk",
+    "niZKrt4XAZE",
+    "nJ0a8k-l1d0",
+    "njJ41irPjTc",
+    "njtfNPB-YKg",
+    "nJzo5TDfamk",
+    "nJ_htuCMCqM",
+    "nK1jtVhimPA",
+    "nNEb2k_EmMg",
+    "nnp46b6D74Y",
+    "nQJRDIXCcRs",
+    "nrBAHIc7Aco",
+    "nSDgHBxUbVQ",
+    "nTIvTF41FAE",
+    "nW9pqeXofh4",
+    "nWeCJTyho8Y",
+    "Nxe8-9YOnnk",
+    "NxoW7MEWFEY",
+    "o0SV9cBcNVQ",
+    "O11LJaF0dRM",
+    "o1tj2zJ2Wvg",
+    "o3bhQwY0KCY",
+    "O4irXQhgMqg",
+    "O5b0ZxUWNf0",
+    "o6jQo3-iCao",
+    "O6qpa-mRLnI",
+    "O7VaXlMvAvk",
+    "o9rvhmUhPnA",
+    "OA3Txp94pjs",
+    "oB5dctpeI0o",
+    "oCwsZavV0mM",
+    "oetVvR5RQUs",
+    "Of73UiXUvjA",
+    "OFgVQSO_UQs",
+    "Ofkb_7EnunM",
+    "OHE8TUfo7MU",
+    "OiC1rgCPmUQ",
+    "OkktfeAR-Rk",
+    "oLXG6ITzLIo",
+    "OMD8hBsA-RI",
+    "OMOGaugKpzs",
+    "onVhbeY7nLM",
+    "orDUxNZYKdo",
+    "oRD_ccAYLF4",
+    "OrnpSe4OChM",
+    "orr81jQOfYU",
+    "otwYnQ5TOh0",
+    "ouppQFx3v-I",
+    "ou_ZJoutmKQ",
+    "oVDfyc2lh4Q",
+    "OVXt8jBAGkc",
+    "oweYva96e2g",
+    "Oz_njsPDGRs",
+    "p3hQUe0DFrk",
+    "P8k-bSEhEDo",
+    "p9P8CO4UXyA",
+    "PA5dMT6AC7A",
+    "PAFAfhod9TU",
+    "PAvpcjbEdQU",
+    "PboALhmuYws",
+    "PBYpyxVxtP8",
+    "PCNlMKSwWbQ",
+    "PebrOQm_SZQ",
+    "PeMvMNpvB5M",
+    "pESAyJr66QE",
+    "PfPdYYsEfAE",
+    "PGNiXGX2nLU",
+    "pgWZQr7r0l0",
+    "pi6xH4ewMp0",
+    "PIb6AZdTr-A",
+    "PJlmYh27MHg",
+    "Pkh8UtuejGw",
+    "PKpQRjj_WbU",
+    "PlKDQqKh03Y",
+    "PlOx9obQ2yg",
+    "pmGOE6yNA98",
+    "pok8H_KF1FA",
+    "POkQXeTv7-4",
+    "PoyejjJGajk",
+    "ppOVLojanC8",
+    "PRj3ZZ0U97s",
+    "pstVCGyaUBM",
+    "psuRGfAaju4",
+    "Ptn3oMOPDFg",
+    "PVjiKRfKpPI",
+    "pwA5woE6pHw",
+    "pWgyy_rlmag",
+    "PWHfx30U4jk",
+    "PY9HTSBXE8s",
+    "pyttU8uIwE0",
+    "PzKqvUIc-Ms",
+    "Q06tcRae13k",
+    "q2R6jEWzWxM",
+    "q6Egi5V_jNU",
+    "Qb_zvWFNCD8",
+    "qD0_yWgifDM",
+    "QfXFtQXfuRI",
+    "QJLg2cS-Zsw",
+    "QL69yWD8UOY",
+    "QLUyzXhoBik",
+    "qMLkgWqibLc",
+    "QnQe0xW_JY4",
+    "qorBzcjfEmc",
+    "qp0HIF3SfI4",
+    "qp4vlSOOnY4",
+    "Qp57UjkkR2k",
+    "QPBE9DtQI88",
+    "qq6icvSJq9g",
+    "qQGerZE3bhs",
+    "qQkBeOisNM0",
+    "qR7RqNJxQBM",
+    "QRh1CMC3OVw",
+    "qRv7G7WpOoU",
+    "Qs1Qr1bFk0I",
+    "qSSdcU6ND3Y",
+    "qtsNbxgPngA",
+    "Qu5jC6yxhCo",
+    "QviOLP0Et6w",
+    "qvsgGtivCgs",
+    "qvSOgB-JPy0",
+    "qvzE64A28NI",
+    "qW2syroSQTs",
+    "QyrV3UbSdDQ",
+    "QYVc4v1gfgg",
+    "QzklMXES1BU",
+    "QZp2biJul1c",
+    "q_RyYV-wm-k",
+    "R-BnCN5MGk0",
+    "R0G_wyJE3ks",
+    "R0HgBMIK8_A",
+    "r0ov89KPtDQ",
+    "r7qovpFAGrQ",
+    "R8VswzDwS0c",
+    "R8WDDLi_j7Y",
+    "rArzMrhTxF8",
+    "RaS_WXQ9QK0",
+    "RbTFArgiP_4",
+    "RC7hZY3sVxE",
+    "RcGyVTAoXEU",
+    "RcpEeWgIVjw",
+    "rd-0LtV5Axo",
+    "RDocnbkHjhI",
+    "RDrfE9I8_hs",
+    "re5veV2F7eY",
+    "RESwG23_YGw",
+    "RFm9ClqlGuo",
+    "RG3-n9ABoLA",
+    "rGa-cKqXGmk",
+    "RgKAFK5djSk",
+    "rgXESVtWX3U",
+    "rHgfDt9aEh0",
+    "RhMn0GBPKq8",
+    "RHz9rXVt3cQ",
+    "riNDhwFOHzM",
+    "Rk3lcEeoEy8",
+    "rKgRPlkWk6o",
+    "RkP4TJ5jj94",
+    "rLcAQVgMTSY",
+    "RLn5qNngGn4",
+    "rmv6DtuFkWM",
+    "rMz7JBRbmNo",
+    "rnbDA4wKrg0",
+    "rnOqCkwHlQ8",
+    "RnsVaPsDGUY",
+    "rnyNNxSEhA4",
+    "RQSmfzfg2MY",
+    "RRBoPveyETc",
+    "Rtbw8s1MJGo",
+    "rUczpTPATyU",
+    "RUpmfqSLhbs",
+    "RW5gvDk4m3o",
+    "rX6oUNKUbI8",
+    "RXhaspOgDDY",
+    "RxNs7O6zqbg",
+    "rxUm-2x-2dM",
+    "rYEDA3JcQqw",
+    "RZ8Eq_EA4i8",
+    "RZvXi8W9o_U",
+    "RZ_gLHfP5yA",
+    "S4DumJQbcoE",
+    "S4izWsBAjl4",
+    "S6vTI5g198E",
+    "S8O5Ggp_PeI",
+    "s9gAXwYZtfk",
+    "S9Tj4WPCplI",
+    "saalGKY7ifU",
+    "sAnsGZCahlU",
+    "sbCvQbBi2G8",
+    "sD_hanI9jWg",
+    "SEmsRTeQw6I",
+    "SftsLfJDvkc",
+    "sFW15hEqZQk",
+    "shW9i6k8cB0",
+    "Sisqx8vrsOg",
+    "SIYkhb2NjfE",
+    "SJxGytY6gpY",
+    "sKW9kWAIdI0",
+    "sLIqBWDM48E",
+    "sLyFeo48iqw",
+    "sNhhvQGsMEc",
+    "SN_6XVYOtOI",
+    "sOnqjkJTMaA",
+    "SP7BWb1ndpA",
+    "sqA577_IoBk",
+    "SQCSxqScSVQ",
+    "sQLYZ0Uxxvg",
+    "SqOnkiQRCUU",
+    "SR5kfWXfxto",
+    "sRUsY8VYDJw",
+    "ssnlHPFc6qk",
+    "StZcUAPRRac",
+    "sVyQ-fz3VTs",
+    "sWSoYCetG6A",
+    "syMqVXS4Zo4",
+    "SZeyrb8SdSA",
+    "SZpiiixlHWY",
+    "t2oVUxTV4WA",
+    "T3x1tzOuXbQ",
+    "t4QK8RxCAwo",
+    "t4uOxnokGnQ",
+    "t5XNWFw5HVw",
+    "t7bQwwqW-Hc",
+    "t86vvCy1yq0",
+    "TAqo-NZDuys",
+    "TCcDm2fGKXI",
+    "TCfZ0WXeQXs",
+    "TcG157VFbuY",
+    "tcYodQoapMg",
+    "Td67kYY9mdQ",
+    "TD6NM6tdC84",
+    "TDrGHP9Z8vw",
+    "Tedqw0gMuCI",
+    "teT2x1a6hL8",
+    "TeTg_i_f1GI",
+    "TEXFy8u4lsU",
+    "tGMPlHdNatc",
+    "tH0bTpwQL7U",
+    "thlv048VJg4",
+    "TiMuT2BhwO0",
+    "tjA3DZAyCgI",
+    "tjMGuJMIgwM",
+    "tkxRzV3gtDc",
+    "Tm0oAv2moOw",
+    "tMhxJ45wslk",
+    "tMJrQRJFNoA",
+    "tQxYKxeDCg4",
+    "TrBejFsg7zw",
+    "tSOO0PKz6Pc",
+    "tSVeDx9fk60",
+    "TTA2buWlNyM",
+    "TUTAL9LDHRc",
+    "Tv8ISJxiQKk",
+    "tVaWKjTpWxA",
+    "tvKzyYy6qvY",
+    "TvnYmWpD_T8",
+    "TVQgSIlN4no",
+    "tvTRZJ-4EyI",
+    "tWC-R-q85JU",
+    "TWZKw_MgUPI",
+    "tYFaeT0PxIM",
+    "TyKlJbe1frc",
+    "tYm7xeg27Rw",
+    "Tzin1DgexlE",
+    "TZPObK8GRFU",
+    "u-ApxFOpl28",
+    "u-ElPzExvPA",
+    "U0wgVq8THDk",
+    "U2bFG2gJ5oU",
+    "u3ePPA0yzSU",
+    "u3mupIlFIYQ",
+    "u44D3qKKGPU",
+    "U4NPZi2b0aQ",
+    "U63QbnmTVLI",
+    "U7P4zKOgu8U",
+    "u7Uh2tvEBx8",
+    "u876y5CLpsw",
+    "u91kbhjRNZg",
+    "U9DyHthJ6LA",
+    "UaVTIH8mujA",
+    "UaW2U2fqFys",
+    "uAXtO5dMqEI",
+    "uaYJAskFNWc",
+    "uD4izuDMUQA",
+    "udKE1ksKWDE",
+    "uERAggbYGT0",
+    "UF8uR6Z6KLc",
+    "ufDXgypmEAA",
+    "UFyTPCGsDDo",
+    "UgawhhcgL10",
+    "Uh02FXOokTY",
+    "uH1aDCjypKg",
+    "UhinDPlcdLY",
+    "UHwVyplU3Pg",
+    "uIbXvaE39wM",
+    "UIjvqFjWVwk",
+    "uj1navrf-rQ",
+    "UJd4s9ntbS0",
+    "UJig51VfoZY",
+    "ujMxXOHJloI",
+    "uJoMqYumxmA",
+    "uJPI1qu9bE4",
+    "UJtjoQ5TcVI",
+    "uJ_1HMAGb4k",
+    "UmvN3TlGLDg",
+    "UNP03fDSj1U",
+    "UPf-Tkm6lzI",
+    "UqyT8IEBkvY",
+    "Us9-9TFddUw",
+    "uS9wbhUYlGk",
+    "USfeEKLOD0w",
+    "uSKiBZUefRA",
+    "utwenXbh9hA",
+    "UUDKEbX5OQw",
+    "uvX4k_3Cmvs",
+    "Uw2evtnTm2c",
+    "uw63_YyNsF4",
+    "uWRlisQu4fo",
+    "UWuc18xISwI",
+    "UXlihHEMu_U",
+    "uXyxFMbqKYA",
+    "uYM1uQ7QrTc",
+    "UZb2NOHPA2A",
+    "uZrk0st4_x0",
+    "UzWkmAXNVgc",
+    "v-pbGAts_Fg",
+    "v0CmEortbcs",
+    "V0mnsk2jrQw",
+    "v0rC-twlrfg",
+    "v2AC41dglnM",
+    "V3M723634Rc",
+    "v4pi1LxuDHc",
+    "V6E_K8nbz_M",
+    "V6uNWZax70s",
+    "V74AxCqOTvg",
+    "V7VTDQYTe-U",
+    "V9uX_WamuYA",
+    "VaT7IYQgyqo",
+    "Vc0o6lVOyC4",
+    "VcjzHMhBtf0",
+    "vcWehsxBLzs",
+    "vdg9gkmWsEA",
+    "vDuBWmYBCwE",
+    "vetKTtM7YyU",
+    "veYR3ZC9wMQ",
+    "VeZ3vJyW_DQ",
+    "VFMaq3DuMTE",
+    "VFUos9sYbHs",
+    "VG78fq6KAPA",
+    "VHZI9_we5GQ",
+    "vi0Lbjs5ECI",
+    "VJ62EfUKI3w",
+    "VKnNUYknsuQ",
+    "VLgvY9gZIEk",
+    "VlSkPA60ujQ",
+    "vmAuKm4OGW8",
+    "VNJN1aV8YWI",
+    "votcOf5cYCM",
+    "vpvaXmi4G6I",
+    "VqWIZGbtZAk",
+    "vSukWUG4Amc",
+    "vt0i6nuqNEo",
+    "Vt83zQdunBo",
+    "Vu9gzndeCLM",
+    "vVPT0JT1dOw",
+    "VwI6gvZXgMc",
+    "vx2u5uUu3DE",
+    "vxRqPmvGlUY",
+    "vyMggFe9WRQ",
+    "vYn4DtIOKFg",
+    "VYOjWnS4cMY",
+    "vyvu1nWjOlI",
+    "w-oGpGf03Ag",
+    "w1AhrEhQ0mg",
+    "w4sOfI2CTSE",
+    "W5-9mVvPcGs",
+    "w6Q3mHyzn78",
+    "w6XGUhzfutc",
+    "w7UGkviTIpY",
+    "W8r-tXRLazs",
+    "W8_POt2KlfQ",
+    "WaaANll8h18",
+    "wbftlDzIALA",
+    "wbIXmB2ZLmA",
+    "WcIcVapfqXw",
+    "WcYG-5b7448",
+    "wD2cVhC-63I",
+    "wdfoifeXHeY",
+    "WDt_k3ovjFo",
+    "wE6pEsjgdHo",
+    "WEgCvKdwNtA",
+    "wElbSFWgseA",
+    "weU76DGHKU0",
+    "wGGbkhWpzvU",
+    "WGU_4-5RaxU",
+    "whCJ4NLUSB8",
+    "wHDefhJ6ROI",
+    "whF2na8AIbw",
+    "wi5Q3rlQaMI",
+    "WIGz4I56Lc8",
+    "wIrUoTYd9hA",
+    "wizgxRBfVTY",
+    "wk4d7JWn4oA",
+    "WKVxKrrbz1E",
+    "WLDTT9KaSTo",
+    "WLex9xvQycQ",
+    "WNwJXPcrves",
+    "Wo7wjX51JHs",
+    "WOgKIlvjlQ8",
+    "wOI5YguHhr0",
+    "wQ-GmWy_zmM",
+    "WRCCGWEE0JQ",
+    "wrXKBR2JUPE",
+    "wsl5fS7KGZc",
+    "wUJccK4lV74",
+    "wVOUYGCBb18",
+    "WWNrPCakd2I",
+    "wwTPr4RjgAs",
+    "WxfZkMm3wcg",
+    "wXhTHyIgQ_U",
+    "wyDU93xVAJs",
+    "wyqfYJX23lg",
+    "wZFww62w4Wc",
+    "X0FcD0SyhK8",
+    "x2-MCPa_3rU",
+    "X2ArSlj8qXg",
+    "X2FV2E34Bwo",
+    "X3s9RVg2STY",
+    "x7NB4AjQ96A",
+    "XCHKYNFH9Lk",
+    "XDSXKmr1cTM",
+    "XeO3jMZphhs",
+    "XgadSkH_JgM",
+    "xGiBiHocSZM",
+    "XGYxLWUKwWo",
+    "Xh3zD5CB_-Q",
+    "xhM7Mh9T_XE",
+    "Xk6RLMp5WMw",
+    "xkAbs9NT0Lg",
+    "xlK3FkdUv78",
+    "xLZ34J01FG8",
+    "xMPr1pIzF0k",
+    "Xnk4seEHmgw",
+    "xPBBnS4br9w",
+    "xPGdOXstSyk",
+    "xpN-tdrlLIE",
+    "XqSYC_vwhDg",
+    "Xr6uNyo8Qgg",
+    "xRLDup3Agkg",
+    "xs3_hNYAVRw",
+    "XsiiIa6bs9I",
+    "XSQoorx7foI",
+    "XTCMEb4BRJg",
+    "XTvTLGkWYMU",
+    "XTXfcFe4Tbc",
+    "XtYRC00IoUs",
+    "XvgnOqcCYCM",
+    "xVVwNzx7elE",
+    "xxFj4iNmsJE",
+    "XXQaTJsr_xA",
+    "XXYlFuWEuKI",
+    "Xy9IqrKjilg",
+    "XZVHmRvfDHM",
+    "x_Dephm0Z9I",
+    "y2CJ46XkwxA",
+    "Y331RYPpCJc",
+    "y3NLNK72mzI",
+    "Y4ORIIT-W80",
+    "y5-Srk_RT0w",
+    "y5jchMm0Ae8",
+    "y6baRWhZ9sE",
+    "Y6bbMQXQ180",
+    "y8zXl-DLei0",
+    "Y9CKhEZCNS8",
+    "YAzLh7eOSrk",
+    "YBHQbu5rbdQ",
+    "YbwNuyKKzSk",
+    "YcpMVsvK8pk",
+    "yDZyEZsZrto",
+    "ye5BuYf8q4o",
+    "YEFYYHvm7SM",
+    "yEQV2OJVBx4",
+    "Yf7MT1p1VNI",
+    "yfy4and2vPg",
+    "YgJ5ZEn67tk",
+    "YGViIjOCAoY",
+    "yIieWnzBOJA",
+    "YJfyPYLxUDo",
+    "yKNxeF4KMsY",
+    "YLmRvL4xn90",
+    "YltHGKX80Y8",
+    "ylwMWpbv5Fk",
+    "YNktWKx6RY0",
+    "yOgAbKJGrTA",
+    "yoYZf-lBF_U",
+    "ypu-k0yMYgg",
+    "YQHqL2itOXU",
+    "YQZ2UeOTO3I",
+    "yRadWIDAtRI",
+    "yrB-TU5PuAQ",
+    "yr_sHPUzuGQ",
+    "YSvomXlbTUM",
+    "yuXGpUR7fXA",
+    "YUytvAg_hE4",
+    "yu_lC03eCho",
+    "YVLHaqeJzEk",
+    "YvT_gqs5ETk",
+    "YVxOsjwmlLY",
+    "Yy6kbVptkRY",
+    "yy9PuYMU29g",
+    "Z-RMCM0NxaY",
+    "Z2WZrxuwDhs",
+    "z3Ye3IFA7Co",
+    "Z5-NDdyVBJw",
+    "Z5jNVoQIcFQ",
+    "z6mEmsQJZ90",
+    "Z9DHU1toJcU",
+    "z9lBvg5clr0",
+    "zAFcV7zuUDA",
+    "zAjJYkUnTEs",
+    "ZAL0nwCo0h8",
+    "ZAp9tTklmOY",
+    "ZB600rRlPO8",
+    "ZbZndWCq6Gs",
+    "zCHOdyX5HGo",
+    "zE7PKRjrid4",
+    "zejK1XHIDcI",
+    "ZEobUCTpV1M",
+    "ZEWGyyLiqY4",
+    "ZFoLxzVw1Js",
+    "zGekmhnSqY4",
+    "ZhIsAZO5gl0",
+    "zHU6KpcXdV0",
+    "Zi9ivZL7vmA",
+    "zIh5AHxh-Ok",
+    "ZI_hOP_K6MY",
+    "Zi_XLOBDo_Y",
+    "zJP03SgePDA",
+    "zKQBHkzOYvw",
+    "zKuOI156iNU",
+    "zKZMCuppTeo",
+    "ZL_kpirn61I",
+    "ZmDBbnmKpqQ",
+    "ZmNpeXTj2c4",
+    "ZNn6J56J5HE",
+    "znQictYvlLs",
+    "ZoEUYdsrJpw",
+    "zP6eqCOM7tk",
+    "zPcgt4Z9pos",
+    "Zq-6d8Hgchw",
+    "zqZFzzp0IR8",
+    "ZQ_6VUs2VCk",
+    "ZRWeZzN9nmQ",
+    "Zspzm01_Q20",
+    "zSRvmHSgaBg",
+    "ZsvR6XAl1os",
+    "ZszlJQhj4aA",
+    "ZTf7DDb6KL0",
+    "ZU3Xban0Y6A",
+    "zvtUrjfnSnA",
+    "ZvXjl20nB6Q",
+    "Zw2wNTbZE7k",
+    "ZW8zvaTRuGo",
+    "zXCBtGJV2C0",
+    "ZxTVQ8oEAVM",
+    "ZZY-Ytrw2co",
+    "_-0J49_9lwc",
+    "_-jXE-VvZqw",
+    "_21fDo5s0BU",
+    "_4B63QRIO5Q",
+    "_8w9rOpV3gc",
+    "_BMYVDOOQ0E",
+    "_GdEsdEfZvc",
+    "_gg4Eb5Lve8",
+    "_gV2qfRJY94",
+    "_hkoMopfRJU",
+    "_JZom_gVfuw",
+    "_kS7F4VpJa0",
+    "_LWW1ervB2Q",
+    "_MOavH-Eivw",
+    "_nTpsv9PNqo",
+    "_OmdF290gOg",
+    "_oygxA1aaRU",
+    "_qu4ZBCU6Fc",
+    "_R8GtrKtrZ4",
+    "_RchONkTtQ0",
+    "_royauacHzU",
+    "_rW-RHdqy9E",
+    "_Y2CLPWTV1o",
+    "__E9smvuAis"
+  ]
+}
