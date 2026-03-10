@@ -16,6 +16,7 @@ import { useRecommendationStore } from '@/stores/useRecommendationStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { AdminReportButton } from './AdminReportButton'
+import { FeedToggle } from './FeedToggle'
 import { FloatingRemote } from './FloatingRemote'
 import { PremiumModal } from './PremiumModal'
 import { UnifiedControls } from './UnifiedControls'
@@ -26,6 +27,8 @@ interface VideoFeedProps {
   initialVideoId?: string
   initialSeekTime?: number
   initialReviewPhraseId?: string
+  feedMode?: 'clips' | 'shorts'
+  onFeedModeChange?: (mode: 'clips' | 'shorts') => void
 }
 
 interface ShuffleNavigationState {
@@ -43,6 +46,8 @@ export function VideoFeed({
   initialVideoId,
   initialSeekTime,
   initialReviewPhraseId,
+  feedMode,
+  onFeedModeChange,
 }: VideoFeedProps) {
   const router = useRouter()
   const {
@@ -67,6 +72,9 @@ export function VideoFeed({
   const overlayInsetTop = 'max(12px, calc(env(safe-area-inset-top, 0px) + 8px))'
   const repeatIndicatorTop = `calc(${overlayInsetTop} + 44px)`
   const seriesPanelTop = `calc(${overlayInsetTop} + 56px)`
+  const feedToggleBottom = isLandscapeViewport
+    ? 'max(16px, calc(env(safe-area-inset-bottom, 0px) + 12px))'
+    : 'max(88px, calc(env(safe-area-inset-bottom, 0px) + 78px))'
   const [embedBlockedVideoIds, setEmbedBlockedVideoIds] = useState<string[]>(() => {
     return readEmbedBlockedVideoIds()
   })
@@ -657,6 +665,7 @@ export function VideoFeed({
             subtitles={currentVideo.subtitles}
             clipStart={currentVideo.clipStart}
             clipEnd={currentVideo.clipEnd}
+            format={currentVideo.format}
             isLandscapeViewport={isLandscapeViewport}
             useLandscapeSplitLayout={useLandscapeSplitPlayer}
             landscapeVideoPaneWidth={landscapeVideoPaneWidth}
@@ -876,6 +885,14 @@ export function VideoFeed({
           />
         </motion.div>
       </AnimatePresence>
+
+      {feedMode && onFeedModeChange && (
+        <FeedToggle
+          mode={feedMode}
+          onChange={onFeedModeChange}
+          bottomOffset={feedToggleBottom}
+        />
+      )}
 
       <FloatingRemote
         onPrevVideo={canGoPrev ? handlePrevVideo : undefined}

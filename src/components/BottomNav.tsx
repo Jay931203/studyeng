@@ -3,8 +3,10 @@
 import type { ReactNode } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { usePathname, useSearchParams } from 'next/navigation'
+import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { Logo } from './Logo'
+
+type NavTabIcon = 'home' | 'play' | 'bookmark' | 'settings'
 
 type NavTab = {
   href: string
@@ -13,35 +15,34 @@ type NavTab = {
   description?: string
 }
 
-type NavTabIcon = 'home' | 'play' | 'bookmark' | 'settings'
-
 const tabs: readonly NavTab[] = [
   {
     href: '/explore',
     icon: 'home',
-    label: '오늘',
-    description: '추천과 이어보기',
+    label: 'Home',
+    description: 'Browse and discover',
   },
   {
     href: '/shorts',
     icon: 'play',
-    label: '피드',
-    description: '쇼츠와 자막',
+    label: 'Shorts',
+    description: 'Switch between feeds',
   },
   {
     href: '/learning',
     icon: 'bookmark',
-    label: '학습',
-    description: '기록과 복습',
+    label: 'Learn',
+    description: 'Saved phrases and review',
   },
   {
     href: '/profile',
     icon: 'settings',
-    label: '설정',
+    label: 'Settings',
+    description: 'Account and preferences',
   },
 ]
 
-const icons: Record<string, (active: boolean) => ReactNode> = {
+const icons: Record<NavTabIcon, (active: boolean) => ReactNode> = {
   home: (active) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -111,9 +112,24 @@ function isTabActive(pathname: string, href: string, isLegacyShortsAlias: boolea
 
 export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
   const pathname = usePathname()
+  const router = useRouter()
   const searchParams = useSearchParams()
   const isLegacyShortsAlias =
     pathname === '/' && Boolean(searchParams.get('v') || searchParams.get('series'))
+  const isOnShortsPage = pathname === '/shorts' || isLegacyShortsAlias
+  const isShortsMode = isOnShortsPage && searchParams.get('feed') === 'shorts'
+  const currentShortsLabel = isShortsMode ? 'Shorts' : 'Series'
+
+  const getTabHref = (tab: NavTab) => {
+    if (tab.href !== '/shorts') return tab.href
+    if (!isOnShortsPage) return '/shorts?feed=shorts'
+    return isShortsMode ? '/shorts' : '/shorts?feed=shorts'
+  }
+
+  const getTabLabel = (tab: NavTab) => {
+    if (tab.href !== '/shorts') return tab.label
+    return isOnShortsPage ? currentShortsLabel : tab.label
+  }
 
   if (mode === 'rail') {
     return (
@@ -123,14 +139,15 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
         </div>
 
         <nav className="flex flex-1 flex-col items-center gap-2">
-          {tabs.map(({ href, icon, label }) => {
-            const active = isTabActive(pathname, href, isLegacyShortsAlias)
+          {tabs.map((tab) => {
+            const active = isTabActive(pathname, tab.href, isLegacyShortsAlias)
+            const effectiveLabel = getTabLabel(tab)
 
             return (
               <Link
-                key={href}
-                href={href}
-                aria-label={label}
+                key={tab.href}
+                href={getTabHref(tab)}
+                aria-label={effectiveLabel}
                 aria-current={active ? 'page' : undefined}
                 className={`flex w-full flex-col items-center justify-center gap-1 rounded-[20px] px-2 py-3 text-center transition-all ${
                   active
@@ -138,9 +155,9 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
                     : 'text-[var(--nav-inactive)] hover:bg-[var(--bg-secondary)]/45'
                 }`}
               >
-                <div className="relative z-10">{icons[icon](active)}</div>
+                <div className="relative z-10">{icons[tab.icon](active)}</div>
                 <span className="whitespace-nowrap text-[10px] font-medium leading-none">
-                  {label}
+                  {effectiveLabel}
                 </span>
               </Link>
             )
@@ -154,14 +171,15 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
     return (
       <aside className="hidden h-full flex-col rounded-[32px] border border-[var(--border-card)] bg-[var(--bg-card)]/88 p-4 shadow-[var(--card-shadow)] backdrop-blur-xl lg:flex">
         <nav className="flex flex-1 flex-col gap-2">
-          {tabs.map(({ href, icon, label, description }) => {
-            const active = isTabActive(pathname, href, isLegacyShortsAlias)
+          {tabs.map((tab) => {
+            const active = isTabActive(pathname, tab.href, isLegacyShortsAlias)
+            const effectiveLabel = getTabLabel(tab)
 
             return (
               <Link
-                key={href}
-                href={href}
-                aria-label={label}
+                key={tab.href}
+                href={getTabHref(tab)}
+                aria-label={effectiveLabel}
                 aria-current={active ? 'page' : undefined}
                 className={`rounded-2xl border px-4 py-3 transition-all ${
                   active
@@ -177,12 +195,16 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
                         : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
                     }`}
                   >
-                    {icons[icon](active)}
+                    {icons[tab.icon](active)}
                   </div>
                   <div className="min-w-0">
-                    <p className="text-sm font-semibold text-[var(--text-primary)]">{label}</p>
-                    {description ? (
-                      <p className="mt-0.5 text-xs text-[var(--text-muted)]">{description}</p>
+                    <p className="text-sm font-semibold text-[var(--text-primary)]">
+                      {effectiveLabel}
+                    </p>
+                    {tab.description ? (
+                      <p className="mt-0.5 text-xs text-[var(--text-muted)]">
+                        {tab.description}
+                      </p>
                     ) : null}
                   </div>
                 </div>
@@ -190,7 +212,6 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
             )
           })}
         </nav>
-
       </aside>
     )
   }
@@ -198,14 +219,25 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
   return (
     <nav className="safe-area-bottom sticky bottom-0 left-0 right-0 z-50 border-t border-[var(--border-card)] bg-[var(--bg-nav)]/92 backdrop-blur-2xl lg:hidden">
       <div className="grid h-[74px] grid-cols-4 gap-1 px-2 pb-2 pt-1">
-        {tabs.map(({ href, icon, label }) => {
-          const active = isTabActive(pathname, href, isLegacyShortsAlias)
+        {tabs.map((tab) => {
+          const active = isTabActive(pathname, tab.href, isLegacyShortsAlias)
+          const effectiveHref = getTabHref(tab)
+          const effectiveLabel = getTabLabel(tab)
+          const isFeedToggle = tab.href === '/shorts' && active
 
           return (
             <Link
-              key={href}
-              href={href}
-              aria-label={label}
+              key={tab.href}
+              href={effectiveHref}
+              onClick={
+                isFeedToggle
+                  ? (event) => {
+                      event.preventDefault()
+                      router.push(effectiveHref, { scroll: false })
+                    }
+                  : undefined
+              }
+              aria-label={effectiveLabel}
               aria-current={active ? 'page' : undefined}
               className={`relative flex flex-col items-center justify-center gap-1 rounded-[20px] px-1 py-2 transition-all duration-200 active:scale-95 ${
                 active
@@ -226,8 +258,15 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
                 transition={{ type: 'spring', stiffness: 420, damping: 28 }}
                 className="relative z-10"
               >
-                {icons[icon](active)}
+                {icons[tab.icon](active)}
               </motion.div>
+
+              <span
+                className="whitespace-nowrap text-[10px] font-medium leading-none"
+                style={{ color: active ? 'var(--nav-active)' : 'var(--nav-inactive)' }}
+              >
+                {effectiveLabel}
+              </span>
             </Link>
           )
         })}
