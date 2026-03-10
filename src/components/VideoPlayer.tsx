@@ -14,8 +14,11 @@ import { useYouTubePlayer } from '@/hooks/useYouTubePlayer'
 import { useTranscript } from '@/hooks/useTranscript'
 import { useGameTrigger } from '@/hooks/useGameTrigger'
 import { usePlayerStore, seekToRef, playRef, pauseRef } from '@/stores/usePlayerStore'
+import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
+import { useUserStore } from '@/stores/useUserStore'
 import { LyricsSubtitles } from './LyricsSubtitles'
 import { ProgressBar } from './ProgressBar'
+import { SubtitleGame } from './SubtitleGame'
 import type { SubtitleEntry } from '@/data/seed-videos'
 
 interface VideoPlayerProps {
@@ -24,6 +27,7 @@ interface VideoPlayerProps {
   subtitles: SubtitleEntry[]
   clipStart?: number
   clipEnd?: number
+  format?: 'shorts' | 'clip'
   onSavePhrase?: (phrase: SubtitleEntry) => void
   onClipComplete?: () => void
   onVideoErrorSkip?: () => void
@@ -47,6 +51,7 @@ export function VideoPlayer({
   subtitles: propSubtitles,
   clipStart = 0,
   clipEnd = 0,
+  format,
   onSavePhrase,
   onClipComplete,
   onVideoErrorSkip,
@@ -59,6 +64,7 @@ export function VideoPlayer({
   initialSeekTime,
   children,
 }: VideoPlayerProps) {
+  const isShortsFormat = format === 'shorts'
   const containerId = `yt-player-${useId().replace(/:/g, '')}`
 
   const { subtitles: fetchedSubtitles, loading: transcriptLoading } = useTranscript(youtubeId)
@@ -89,6 +95,15 @@ export function VideoPlayer({
   const cycleLandscapeSubtitleLayout = usePlayerStore(
     (state) => state.cycleLandscapeSubtitleLayout,
   )
+  const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
+  const setFreezeSubIndex = usePlayerStore((state) => state.setFreezeSubIndex)
+  const gameActive = usePlayerStore((state) => state.gameActive)
+  const gameSentenceIndex = usePlayerStore((state) => state.gameSentenceIndex)
+  const gameChoices = usePlayerStore((state) => state.gameChoices)
+  const gameCorrectIndex = usePlayerStore((state) => state.gameCorrectIndex)
+  const gameResult = usePlayerStore((state) => state.gameResult)
+  const answerGame = usePlayerStore((state) => state.answerGame)
+  const clearGame = usePlayerStore((state) => state.clearGame)
 
   // Game trigger: watches subtitles and triggers "next line" quiz
   useGameTrigger(youtubeId, subtitles)
@@ -97,6 +112,7 @@ export function VideoPlayer({
   const [showPauseIcon, setShowPauseIcon] = useState(false)
   const [pauseIconType, setPauseIconType] = useState<'play' | 'pause'>('pause')
   const iconTimerRef = useRef<number | null>(null)
+  const gameContinueTimerRef = useRef<number | null>(null)
   const playbackStartedNotifiedRef = useRef(false)
 
   useEffect(() => {
@@ -139,10 +155,15 @@ export function VideoPlayer({
       if (iconTimerRef.current) {
         clearTimeout(iconTimerRef.current)
       }
+      if (gameContinueTimerRef.current) {
+        clearTimeout(gameContinueTimerRef.current)
+      }
     }
   }, [])
 
   const handleTap = () => {
+    if (gameActive) return
+
     const ytPlayer = player.current as
       | (YT.Player & { isMuted?: () => boolean; unMute?: () => void })
       | null
@@ -176,6 +197,44 @@ export function VideoPlayer({
       setShowPauseIcon(false)
     }, 600)
   }
+
+  const handleGameAnswer = (choiceIndex: number) => {
+    answerGame(choiceIndex)
+    const isCorrect = choiceIndex === gameCorrectIndex
+    if (isCorrect) {
+      useUserStore.getState().gainXp(10)
+    }
+    useDailyMissionStore.getState().incrementMission('play-game')
+  }
+
+  const handleGameContinue = () => {
+    if (gameSentenceIndex === null) return
+
+    setFreezeSubIndex(gameSentenceIndex)
+    playRef.current?.()
+
+    if (gameContinueTimerRef.current) {
+      clearTimeout(gameContinueTimerRef.current)
+    }
+
+    gameContinueTimerRef.current = window.setTimeout(() => {
+      setFreezeSubIndex(null)
+      clearGame()
+      playRef.current?.()
+      gameContinueTimerRef.current = null
+    }, 3000)
+  }
+
+  const gamePromptLine =
+    freezeSubIndex !== null && subtitles[freezeSubIndex]
+      ? subtitles[freezeSubIndex].en
+      : gameSentenceIndex !== null && subtitles[gameSentenceIndex - 1]
+        ? subtitles[gameSentenceIndex - 1].en
+        : null
+  const showGameOverlay = !videoError && gameActive && gameChoices.length > 0
+  const gameOverlayInsetBottom = isShortsFormat
+    ? 'max(88px, calc(env(safe-area-inset-bottom, 0px) + 72px))'
+    : '16px'
 
   const subtitleArea = (
     <LyricsSubtitles
@@ -389,9 +448,54 @@ export function VideoPlayer({
           </div>
         </div>
       )}
+
+      {showGameOverlay && (
+        <div
+          className="absolute inset-x-0 z-[25] flex justify-center px-4"
+          style={{ bottom: gameOverlayInsetBottom }}
+          onClick={(event) => event.stopPropagation()}
+          onPointerDown={(event) => event.stopPropagation()}
+          onPointerUp={(event) => event.stopPropagation()}
+        >
+          <SubtitleGame
+            currentLine={gamePromptLine}
+            choices={gameChoices}
+            correctIndex={gameCorrectIndex}
+            result={gameResult}
+            onAnswer={handleGameAnswer}
+            onContinue={handleGameContinue}
+          />
+        </div>
+      )}
+
       {children}
     </div>
   )
+
+  // Shorts format: full-height video with overlay subtitles and progress bar
+  if (isShortsFormat) {
+    return (
+      <div
+        className="relative h-full w-full"
+        style={{ backgroundColor: 'var(--player-surface)' }}
+      >
+        {videoArea}
+
+        {/* Overlay subtitles at the bottom of the video */}
+        {subtitleMode !== 'none' && subtitles.length > 0 && (
+          <ShortsSubtitleOverlay
+            subtitles={subtitles}
+            showKo={subtitleMode === 'en-ko'}
+          />
+        )}
+
+        {/* Progress bar overlaid at the very bottom */}
+        <div className="absolute bottom-0 left-0 right-0 z-[15]">
+          <ProgressBar />
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div
@@ -434,6 +538,52 @@ export function VideoPlayer({
       </div>
 
       {!useLandscapeSplitLayout && progressArea}
+    </div>
+  )
+}
+
+/**
+ * Overlay subtitle display for Shorts format.
+ * Shows the active subtitle as a semi-transparent overlay at the bottom of the video.
+ * Pointer events pass through to the video (tap-to-pause).
+ */
+function ShortsSubtitleOverlay({
+  subtitles,
+  showKo,
+}: {
+  subtitles: SubtitleEntry[]
+  showKo: boolean
+}) {
+  const activeSubIndex = usePlayerStore((state) => state.activeSubIndex)
+  const activeSub = activeSubIndex >= 0 ? subtitles[activeSubIndex] : null
+
+  if (!activeSub) return null
+
+  return (
+    <div
+      className="pointer-events-none absolute bottom-8 left-0 right-0 z-[12] flex justify-center px-4"
+    >
+      <div
+        className="max-w-[92%] rounded-t-xl rounded-b-lg px-5 py-3 text-center backdrop-blur-sm"
+        style={{
+          backgroundColor: 'rgba(0, 0, 0, 0.6)',
+        }}
+      >
+        <p
+          className="text-[15px] font-semibold leading-snug"
+          style={{ color: '#ffffff' }}
+        >
+          {activeSub.en}
+        </p>
+        {showKo && activeSub.ko && (
+          <p
+            className="mt-1 text-[13px] leading-snug"
+            style={{ color: 'rgba(255, 255, 255, 0.7)' }}
+          >
+            {activeSub.ko}
+          </p>
+        )}
+      </div>
     </div>
   )
 }

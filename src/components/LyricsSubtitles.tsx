@@ -1,16 +1,13 @@
 'use client'
 
 import { useRef, useEffect, useCallback, useId, useMemo, useState, type SyntheticEvent } from 'react'
-import { usePlayerStore, playRef } from '@/stores/usePlayerStore'
+import { usePlayerStore } from '@/stores/usePlayerStore'
 import { useAdminStore } from '@/stores/useAdminStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useSettingsStore } from '@/stores/useSettingsStore'
 import { useThemeStore } from '@/stores/useThemeStore'
-import { useUserStore } from '@/stores/useUserStore'
-import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { DoubleTapTip } from './DoubleTapTip'
 import { SaveToast } from './SaveToast'
-import { SubtitleGame } from './SubtitleGame'
 import type { SubtitleEntry } from '@/data/seed-videos'
 
 interface LyricsSubtitlesProps {
@@ -69,11 +66,6 @@ export function LyricsSubtitles({
   const setFreezeSubIndex = usePlayerStore((state) => state.setFreezeSubIndex)
   const gameActive = usePlayerStore((state) => state.gameActive)
   const gameSentenceIndex = usePlayerStore((state) => state.gameSentenceIndex)
-  const gameChoices = usePlayerStore((state) => state.gameChoices)
-  const gameCorrectIndex = usePlayerStore((state) => state.gameCorrectIndex)
-  const gameResult = usePlayerStore((state) => state.gameResult)
-  const answerGame = usePlayerStore((state) => state.answerGame)
-  const clearGame = usePlayerStore((state) => state.clearGame)
   const adminActive = useAdminStore((state) => state.isAdmin && state.adminEnabled)
   const toggleFlag = useAdminStore((state) => state.toggleFlag)
   const flaggedSubtitles = useAdminStore((state) => state.flaggedSubtitles)
@@ -292,43 +284,6 @@ export function LyricsSubtitles({
     showFreezeNotice('FREEZE OFF', 1500)
     haptic(10)
   }, [setFreezeSubIndex, showFreezeNotice])
-
-  // Game answer handler
-  const handleGameAnswer = useCallback(
-    (choiceIndex: number) => {
-      answerGame(choiceIndex)
-      const isCorrect = choiceIndex === gameCorrectIndex
-      if (isCorrect) {
-        useUserStore.getState().gainXp(10)
-      }
-      useDailyMissionStore.getState().incrementMission('play-game')
-    },
-    [answerGame, gameCorrectIndex],
-  )
-
-  // Game continue handler: play the answer sentence then resume
-  const gameContinueTimerRef = useRef<number | null>(null)
-  const handleGameContinue = useCallback(() => {
-    if (gameSentenceIndex === null) return
-
-    // Move freeze to the answer sentence so the user can hear it
-    setFreezeSubIndex(gameSentenceIndex)
-    playRef.current?.()
-
-    // After 3 seconds, clear freeze and game, resume normal playback
-    gameContinueTimerRef.current = window.setTimeout(() => {
-      setFreezeSubIndex(null)
-      clearGame()
-      playRef.current?.()
-    }, 3000)
-  }, [gameSentenceIndex, setFreezeSubIndex, clearGame])
-
-  // Clean up game continue timer
-  useEffect(() => {
-    return () => {
-      if (gameContinueTimerRef.current) clearTimeout(gameContinueTimerRef.current)
-    }
-  }, [])
 
   const handleLineClick = useCallback(
     (sub: SubtitleEntry, idx: number, e: React.MouseEvent) => {
@@ -805,16 +760,6 @@ export function LyricsSubtitles({
           })}
 
           {/* Game quiz UI — shown inline after the frozen subtitle */}
-          {gameActive && gameChoices.length > 0 && (
-            <SubtitleGame
-              choices={gameChoices}
-              correctIndex={gameCorrectIndex}
-              result={gameResult}
-              onAnswer={handleGameAnswer}
-              onContinue={handleGameContinue}
-            />
-          )}
-
           {/* Bottom spacer to allow last item to center */}
           <div className="h-[60px] flex-shrink-0" />
         </div>
