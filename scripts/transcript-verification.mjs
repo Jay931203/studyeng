@@ -144,6 +144,12 @@ for (const file of files) {
   const videoId = file.replace('.json', '')
   const audit = auditFile(videoId)
 
+  // Skip excluded videos
+  if (existing[videoId]?.status === 'excluded') {
+    alreadyVerified++
+    continue
+  }
+
   // If already verified or fully_verified, check hash
   if (existing[videoId]?.status === 'verified' || existing[videoId]?.status === 'fully_verified') {
     if (audit.hash && existing[videoId].hash !== audit.hash) {
