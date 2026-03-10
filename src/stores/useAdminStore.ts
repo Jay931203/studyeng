@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
-import { getCachedUserId } from '@/lib/supabase/sync'
+import { getCachedUserEmail, getCachedUserId } from '@/lib/supabase/sync'
 
 export interface SubtitleFlag {
   videoId: string
@@ -22,6 +22,12 @@ export interface AdminIssue {
   reporterEmail?: string
 }
 
+export interface HiddenVideo {
+  videoId: string
+  hiddenAt: string
+  hiddenBy?: string
+}
+
 interface AdminState {
   isAdmin: boolean
   adminEnabled: boolean
@@ -35,6 +41,11 @@ interface AdminState {
   isFlagged: (videoId: string, entryIndex: number) => boolean
   clearFlags: () => void
   exportFlags: () => string
+  hiddenVideos: HiddenVideo[]
+  hideVideo: (videoId: string) => Promise<boolean>
+  showVideo: (videoId: string) => Promise<boolean>
+  isVideoHidden: (videoId: string) => boolean
+  exportHiddenVideos: () => string
   issues: AdminIssue[]
   addIssue: (
     videoId: string,
@@ -71,6 +82,18 @@ function mergeIssues(currentIssues: AdminIssue[], issuesToRestore: AdminIssue[])
   }
 
   return [...byId.values()].sort((left, right) => right.timestamp - left.timestamp)
+}
+
+function mergeHiddenVideos(currentHiddenVideos: HiddenVideo[], videosToRestore: HiddenVideo[]) {
+  const byVideoId = new Map<string, HiddenVideo>()
+
+  for (const hiddenVideo of [...currentHiddenVideos, ...videosToRestore]) {
+    byVideoId.set(hiddenVideo.videoId, hiddenVideo)
+  }
+
+  return [...byVideoId.values()].sort((left, right) =>
+    right.hiddenAt.localeCompare(left.hiddenAt),
+  )
 }
 
 function withUserId(run: (userId: string) => void) {
@@ -204,6 +227,96 @@ export const useAdminStore = create<AdminState>()(
 
       exportFlags: () => JSON.stringify(get().flaggedSubtitles, null, 2),
 
+      hiddenVideos: [],
+
+      hideVideo: async (videoId) => {
+        if (get().hiddenVideos.some((hiddenVideo) => hiddenVideo.videoId === videoId)) {
+          return true
+        }
+
+        if (!get().isAdminActive()) {
+          set({ adminSyncError: 'Admin access is required.' })
+          return false
+        }
+
+        const userId = withUserId(() => {})
+        if (!userId) {
+          set({ adminSyncError: 'Log in and try again.' })
+          return false
+        }
+
+        const nextHiddenVideo: HiddenVideo = {
+          videoId,
+          hiddenAt: new Date().toISOString(),
+          hiddenBy: userId,
+        }
+
+        set((state) => ({
+          adminSyncError: null,
+          hiddenVideos: mergeHiddenVideos(state.hiddenVideos, [nextHiddenVideo]),
+        }))
+
+        try {
+          const { syncHiddenVideo } = await import('@/lib/supabase/opsSync')
+          const synced = await syncHiddenVideo(userId, nextHiddenVideo)
+          if (!synced) {
+            throw new Error('hidden-video-sync-failed')
+          }
+          return true
+        } catch {
+          set((state) => ({
+            hiddenVideos: state.hiddenVideos.filter((hiddenVideo) => hiddenVideo.videoId !== videoId),
+            adminSyncError: 'Hidden video sync failed. Try again.',
+          }))
+          return false
+        }
+      },
+
+      showVideo: async (videoId) => {
+        const hiddenVideoToRestore = get().hiddenVideos.find(
+          (hiddenVideo) => hiddenVideo.videoId === videoId,
+        )
+        if (!hiddenVideoToRestore) {
+          return true
+        }
+
+        if (!get().isAdminActive()) {
+          set({ adminSyncError: 'Admin access is required.' })
+          return false
+        }
+
+        const userId = withUserId(() => {})
+        if (!userId) {
+          set({ adminSyncError: 'Log in and try again.' })
+          return false
+        }
+
+        set((state) => ({
+          adminSyncError: null,
+          hiddenVideos: state.hiddenVideos.filter((hiddenVideo) => hiddenVideo.videoId !== videoId),
+        }))
+
+        try {
+          const { removeHiddenVideoServer } = await import('@/lib/supabase/opsSync')
+          const removed = await removeHiddenVideoServer(videoId)
+          if (!removed) {
+            throw new Error('hidden-video-delete-failed')
+          }
+          return true
+        } catch {
+          set((state) => ({
+            hiddenVideos: mergeHiddenVideos(state.hiddenVideos, [hiddenVideoToRestore]),
+            adminSyncError: 'Hidden video sync failed. Try again.',
+          }))
+          return false
+        }
+      },
+
+      isVideoHidden: (videoId) =>
+        get().hiddenVideos.some((hiddenVideo) => hiddenVideo.videoId === videoId),
+
+      exportHiddenVideos: () => JSON.stringify(get().hiddenVideos, null, 2),
+
       issues: [],
 
       addIssue: async (videoId, youtubeId, type, description) => {
@@ -215,6 +328,7 @@ export const useAdminStore = create<AdminState>()(
           description,
           timestamp: Date.now(),
           resolved: false,
+          reporterEmail: getCachedUserEmail() ?? undefined,
         }
 
         set((state) => ({
@@ -233,7 +347,10 @@ export const useAdminStore = create<AdminState>()(
 
         try {
           const { syncIssueReport } = await import('@/lib/supabase/opsSync')
-          await syncIssueReport(userId, issue)
+          const synced = await syncIssueReport(userId, issue)
+          if (!synced) {
+            throw new Error('issue-report-sync-failed')
+          }
           return true
         } catch {
           set((state) => ({
@@ -266,7 +383,10 @@ export const useAdminStore = create<AdminState>()(
         void (async () => {
           try {
             const { resolveIssueReportServer } = await import('@/lib/supabase/opsSync')
-            await resolveIssueReportServer(id)
+            const resolved = await resolveIssueReportServer(id)
+            if (!resolved) {
+              throw new Error('issue-report-resolve-failed')
+            }
           } catch {
             if (!issueToRestore) return
             set((state) => ({
@@ -298,7 +418,10 @@ export const useAdminStore = create<AdminState>()(
         void (async () => {
           try {
             const { clearResolvedIssueReportsServer } = await import('@/lib/supabase/opsSync')
-            await clearResolvedIssueReportsServer()
+            const cleared = await clearResolvedIssueReportsServer()
+            if (!cleared) {
+              throw new Error('issue-report-clear-failed')
+            }
           } catch {
             set((state) => ({
               issues: mergeIssues(state.issues, resolvedIssues),
@@ -319,6 +442,7 @@ export const useAdminStore = create<AdminState>()(
             unresolvedIssues: get().issues.filter((issue) => !issue.resolved),
             resolvedIssues: get().issues.filter((issue) => issue.resolved),
             subtitleFlags: get().flaggedSubtitles,
+            hiddenVideos: get().hiddenVideos,
           },
           null,
           2,
@@ -329,6 +453,7 @@ export const useAdminStore = create<AdminState>()(
       partialize: (state) => ({
         adminEnabled: state.adminEnabled,
         flaggedSubtitles: state.flaggedSubtitles,
+        hiddenVideos: state.hiddenVideos,
         issues: state.issues,
       }),
     },

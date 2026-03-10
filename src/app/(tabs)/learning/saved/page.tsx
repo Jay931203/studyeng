@@ -6,7 +6,9 @@ import { useRouter } from 'next/navigation'
 import { SavedPhraseCard } from '@/components/SavedPhraseCard'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import { getCatalogVideoById } from '@/lib/catalog'
+import { createHiddenVideoIdSet, filterHiddenItemsByVideoId } from '@/lib/videoVisibility'
 import { buildShortsUrl } from '@/lib/videoRoutes'
+import { useAdminStore } from '@/stores/useAdminStore'
 import type { SavedPhrase } from '@/stores/usePhraseStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
@@ -36,12 +38,18 @@ export default function SavedPhrasesPage() {
   const router = useRouter()
   const { phrases, removePhrase } = usePhraseStore()
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)
+  const hiddenVideos = useAdminStore((state) => state.hiddenVideos)
+  const hiddenVideoIdSet = useMemo(() => createHiddenVideoIdSet(hiddenVideos), [hiddenVideos])
+  const visiblePhrases = useMemo(
+    () => filterHiddenItemsByVideoId(phrases, hiddenVideoIdSet),
+    [hiddenVideoIdSet, phrases],
+  )
 
   const groupedPhrases = useMemo(() => {
     const groups: { label: string; key: string; phrases: SavedPhrase[] }[] = []
     const seen = new Set<string>()
 
-    for (const phrase of phrases) {
+    for (const phrase of visiblePhrases) {
       const dateKey = getDateKey(phrase.savedAt)
 
       if (!seen.has(dateKey)) {
@@ -58,7 +66,7 @@ export default function SavedPhrasesPage() {
     }
 
     return groups
-  }, [phrases])
+  }, [visiblePhrases])
 
   const handleBack = () => {
     if (typeof window !== 'undefined' && window.history.length > 1) {
@@ -92,7 +100,7 @@ export default function SavedPhrasesPage() {
         </div>
 
         <SurfaceCard className="p-5">
-          {phrases.length === 0 ? (
+          {visiblePhrases.length === 0 ? (
             <div className="rounded-[24px] border border-dashed border-[var(--border-card)] px-5 py-10 text-center">
               <p className="text-sm text-[var(--text-secondary)]">No saved items yet.</p>
             </div>

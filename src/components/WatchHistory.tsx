@@ -8,7 +8,9 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { SurfaceCard } from '@/components/ui/AppPage'
 import { categories, type VideoData } from '@/data/seed-videos'
 import { getCatalogSeriesById, getCatalogVideoById } from '@/lib/catalog'
+import { createHiddenVideoIdSet } from '@/lib/videoVisibility'
 import { buildShortsUrl } from '@/lib/videoRoutes'
+import { useAdminStore } from '@/stores/useAdminStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 
 const categoryLabels = Object.fromEntries(
@@ -40,6 +42,8 @@ export function WatchHistory() {
   const router = useRouter()
   const { watchRecords, viewCounts, watchedVideoIds, removeRecord, clearDeletedFlag } =
     useWatchHistoryStore()
+  const hiddenVideos = useAdminStore((state) => state.hiddenVideos)
+  const hiddenVideoIdSet = useMemo(() => createHiddenVideoIdSet(hiddenVideos), [hiddenVideos])
 
   const groupedByDate = useMemo(() => {
     const records =
@@ -51,6 +55,7 @@ export function WatchHistory() {
     const seen = new Map<string, Set<string>>()
 
     for (const record of records) {
+      if (hiddenVideoIdSet.has(record.videoId)) continue
       const video = getCatalogVideoById(record.videoId)
       if (!video) continue
 
@@ -73,7 +78,7 @@ export function WatchHistory() {
     }
 
     return groups
-  }, [watchRecords, watchedVideoIds])
+  }, [hiddenVideoIdSet, watchRecords, watchedVideoIds])
 
   const totalWatched = groupedByDate.reduce((sum, group) => sum + group.videos.length, 0)
   const allItems = groupedByDate.flatMap((group) =>

@@ -7,7 +7,9 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import { categories } from '@/data/seed-videos'
 import { getCatalogSeriesById, getCatalogVideoById } from '@/lib/catalog'
+import { createHiddenVideoIdSet, filterHiddenVideos } from '@/lib/videoVisibility'
 import { buildShortsUrl } from '@/lib/videoRoutes'
+import { useAdminStore } from '@/stores/useAdminStore'
 import { useLikeStore } from '@/stores/useLikeStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 
@@ -20,13 +22,18 @@ export default function LikedPage() {
   const likes = useLikeStore((s) => s.likes)
   const toggleLike = useLikeStore((s) => s.toggleLike)
   const clearDeletedFlag = useWatchHistoryStore((s) => s.clearDeletedFlag)
+  const hiddenVideos = useAdminStore((state) => state.hiddenVideos)
+  const hiddenVideoIdSet = useMemo(() => createHiddenVideoIdSet(hiddenVideos), [hiddenVideos])
 
   const likedVideos = useMemo(
     () =>
-      Object.keys(likes)
-        .map((id) => getCatalogVideoById(id))
-        .filter(Boolean) as NonNullable<ReturnType<typeof getCatalogVideoById>>[],
-    [likes],
+      filterHiddenVideos(
+        Object.keys(likes)
+          .map((id) => getCatalogVideoById(id))
+          .filter(Boolean) as NonNullable<ReturnType<typeof getCatalogVideoById>>[],
+        hiddenVideoIdSet,
+      ),
+    [hiddenVideoIdSet, likes],
   )
 
   const handleBack = () => {

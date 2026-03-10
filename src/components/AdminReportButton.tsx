@@ -10,16 +10,19 @@ interface AdminReportButtonProps {
 }
 
 const issueTypes: Array<{ value: IssueType; label: string }> = [
-  { value: 'subtitle', label: '자막' },
-  { value: 'video', label: '영상' },
-  { value: 'other', label: '기타' },
+  { value: 'subtitle', label: 'SUBTITLE' },
+  { value: 'video', label: 'VIDEO' },
+  { value: 'other', label: 'OTHER' },
 ]
 
 export function AdminReportButton({ videoId, youtubeId }: AdminReportButtonProps) {
   const addIssue = useAdminStore((state) => state.addIssue)
   const adminSyncError = useAdminStore((state) => state.adminSyncError)
-  const setAdminSyncError = useAdminStore((state) => state.setAdminSyncError)
+  const hideVideo = useAdminStore((state) => state.hideVideo)
+  const hiddenVideos = useAdminStore((state) => state.hiddenVideos)
   const isAdminActive = useAdminStore((state) => state.isAdminActive)
+  const setAdminSyncError = useAdminStore((state) => state.setAdminSyncError)
+  const showVideo = useAdminStore((state) => state.showVideo)
   const unresolvedCount = useAdminStore(
     (state) => state.issues.filter((issue) => !issue.resolved).length,
   )
@@ -28,7 +31,12 @@ export function AdminReportButton({ videoId, youtubeId }: AdminReportButtonProps
   const [type, setType] = useState<IssueType>('subtitle')
   const [description, setDescription] = useState('')
   const [submitting, setSubmitting] = useState(false)
+  const [toggleSubmitting, setToggleSubmitting] = useState(false)
 
+  const hidden = useMemo(
+    () => hiddenVideos.some((item) => item.videoId === videoId),
+    [hiddenVideos, videoId],
+  )
   const submitDisabled = useMemo(
     () => submitting || description.trim().length === 0,
     [description, submitting],
@@ -37,7 +45,7 @@ export function AdminReportButton({ videoId, youtubeId }: AdminReportButtonProps
   if (!isAdminActive()) return null
 
   const closePanel = () => {
-    if (submitting) return
+    if (submitting || toggleSubmitting) return
     setIsOpen(false)
   }
 
@@ -60,6 +68,19 @@ export function AdminReportButton({ videoId, youtubeId }: AdminReportButtonProps
     closePanel()
   }
 
+  const handleToggleHidden = async () => {
+    setToggleSubmitting(true)
+    setAdminSyncError(null)
+
+    if (hidden) {
+      await showVideo(videoId)
+    } else {
+      await hideVideo(videoId)
+    }
+
+    setToggleSubmitting(false)
+  }
+
   return (
     <>
       <motion.button
@@ -69,7 +90,7 @@ export function AdminReportButton({ videoId, youtubeId }: AdminReportButtonProps
           isOpen ? 'bg-red-600 text-white' : 'bg-red-500/90 text-white'
         }`}
         aria-expanded={isOpen}
-        aria-label="이슈 리포트 열기"
+        aria-label="Open admin tools"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +100,7 @@ export function AdminReportButton({ videoId, youtubeId }: AdminReportButtonProps
         >
           <path d="M3.5 2.75a.75.75 0 0 0-1.5 0v14.5a.75.75 0 0 0 1.5 0v-4.392l1.657-.348a6.449 6.449 0 0 1 4.271.572 7.948 7.948 0 0 0 5.965.524l2.078-.64A.75.75 0 0 0 18 11.75V3.885a.75.75 0 0 0-.975-.716l-2.296.707a6.449 6.449 0 0 1-4.848-.426 7.948 7.948 0 0 0-5.259-.704L3.5 3.99V2.75Z" />
         </svg>
-        <span className="text-xs font-semibold">리포트</span>
+        <span className="text-xs font-semibold">ADMIN</span>
         {unresolvedCount > 0 && (
           <span className="absolute -right-1 -top-1 flex min-h-[18px] min-w-[18px] items-center justify-center rounded-full bg-white px-1 text-[10px] font-bold text-red-500">
             {unresolvedCount}
@@ -110,16 +131,16 @@ export function AdminReportButton({ videoId, youtubeId }: AdminReportButtonProps
                 <div className="mb-4 flex items-start justify-between gap-3">
                   <div>
                     <h3 className="text-sm font-semibold text-[var(--text-primary)]">
-                      이슈 리포트
+                      Admin Tools
                     </h3>
                     <p className="mt-1 text-xs leading-relaxed text-[var(--text-muted)]">
-                      자막이나 영상 문제를 운영 이슈로 남깁니다.
+                      Report the current video or hide it from the catalog.
                     </p>
                   </div>
                   <button
                     onClick={closePanel}
                     className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--bg-secondary)] text-[var(--text-muted)]"
-                    aria-label="리포트 닫기"
+                    aria-label="Close admin tools"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -137,6 +158,17 @@ export function AdminReportButton({ videoId, youtubeId }: AdminReportButtonProps
                     Video ID <span className="text-[var(--text-secondary)]">{videoId}</span>
                   </p>
                 </div>
+
+                <button
+                  type="button"
+                  onClick={() => void handleToggleHidden()}
+                  disabled={toggleSubmitting}
+                  className={`mb-3 w-full rounded-2xl py-3 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-40 ${
+                    hidden ? 'bg-emerald-600' : 'bg-red-500'
+                  }`}
+                >
+                  {toggleSubmitting ? 'Saving...' : hidden ? 'SHOW VIDEO' : 'HIDE VIDEO'}
+                </button>
 
                 <div className="mb-3 flex gap-2">
                   {issueTypes.map((issue) => (
@@ -157,7 +189,7 @@ export function AdminReportButton({ videoId, youtubeId }: AdminReportButtonProps
                 <textarea
                   value={description}
                   onChange={(event) => setDescription(event.target.value)}
-                  placeholder="문제를 간단히 적어 주세요."
+                  placeholder="Describe the issue."
                   rows={4}
                   className="w-full resize-none rounded-2xl border border-transparent bg-[var(--bg-secondary)] p-3 text-sm text-[var(--text-primary)] outline-none transition-colors placeholder:text-[var(--text-muted)] focus:border-red-500/30"
                 />
@@ -173,15 +205,15 @@ export function AdminReportButton({ videoId, youtubeId }: AdminReportButtonProps
                     onClick={closePanel}
                     className="flex-1 rounded-2xl bg-[var(--bg-secondary)] py-3 text-sm font-medium text-[var(--text-secondary)]"
                   >
-                    닫기
+                    CLOSE
                   </button>
                   <motion.button
                     whileTap={{ scale: 0.98 }}
-                    onClick={handleSubmit}
+                    onClick={() => void handleSubmit()}
                     disabled={submitDisabled}
                     className="flex-1 rounded-2xl bg-red-500 py-3 text-sm font-semibold text-white transition-colors disabled:cursor-not-allowed disabled:opacity-30"
                   >
-                    {submitting ? '저장 중...' : '등록'}
+                    {submitting ? 'Saving...' : 'REPORT'}
                   </motion.button>
                 </div>
               </div>

@@ -13,7 +13,9 @@ import {
   type CollectionSentence,
 } from '@/lib/collections'
 import { getCatalogVideoById } from '@/lib/catalog'
+import { createHiddenVideoIdSet } from '@/lib/videoVisibility'
 import { buildShortsUrl } from '@/lib/videoRoutes'
+import { useAdminStore } from '@/stores/useAdminStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 
 interface CollectionDetailViewProps {
@@ -30,6 +32,8 @@ interface GroupedVideo {
 export function CollectionDetailView({ collectionId }: CollectionDetailViewProps) {
   const router = useRouter()
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)
+  const hiddenVideos = useAdminStore((state) => state.hiddenVideos)
+  const hiddenVideoIdSet = useMemo(() => createHiddenVideoIdSet(hiddenVideos), [hiddenVideos])
 
   const [detail, setDetail] = useState<CollectionDetailType | null>(null)
   const [loading, setLoading] = useState(true)
@@ -40,8 +44,6 @@ export function CollectionDetailView({ collectionId }: CollectionDetailViewProps
 
   useEffect(() => {
     let cancelled = false
-    setLoading(true)
-    setError(false)
 
     getCollectionDetail(collectionId).then((result) => {
       if (cancelled) return
@@ -68,6 +70,7 @@ export function CollectionDetailView({ collectionId }: CollectionDetailViewProps
 
     const result: GroupedVideo[] = []
     for (const [videoId, sentences] of videoMap) {
+      if (hiddenVideoIdSet.has(videoId)) continue
       const catalogVideo = getCatalogVideoById(videoId)
       result.push({
         videoId,
@@ -78,7 +81,7 @@ export function CollectionDetailView({ collectionId }: CollectionDetailViewProps
     }
 
     return result
-  }, [detail])
+  }, [detail, hiddenVideoIdSet])
 
   const handleBack = useCallback(() => {
     if (typeof window !== 'undefined' && window.history.length > 1) {

@@ -7,7 +7,9 @@ import { series as allSeries, type VideoData } from '@/data/seed-videos'
 import { useViewportLayout } from '@/hooks/useOrientation'
 import { getCatalogVideosBySeries } from '@/lib/catalog'
 import { readEmbedBlockedVideoIds, writeEmbedBlockedVideoIds } from '@/lib/embedBlocklist'
+import { createHiddenVideoIdSet, filterHiddenVideos } from '@/lib/videoVisibility'
 import { buildShortsUrl } from '@/lib/videoRoutes'
+import { useAdminStore } from '@/stores/useAdminStore'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { usePlayerStore } from '@/stores/usePlayerStore'
@@ -16,7 +18,6 @@ import { useRecommendationStore } from '@/stores/useRecommendationStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { AdminReportButton } from './AdminReportButton'
-import { FeedToggle } from './FeedToggle'
 import { FloatingRemote } from './FloatingRemote'
 import { PremiumModal } from './PremiumModal'
 import { UnifiedControls } from './UnifiedControls'
@@ -28,7 +29,6 @@ interface VideoFeedProps {
   initialSeekTime?: number
   initialReviewPhraseId?: string
   feedMode?: 'clips' | 'shorts'
-  onFeedModeChange?: (mode: 'clips' | 'shorts') => void
 }
 
 interface ShuffleNavigationState {
@@ -47,8 +47,8 @@ export function VideoFeed({
   initialSeekTime,
   initialReviewPhraseId,
   feedMode,
-  onFeedModeChange,
 }: VideoFeedProps) {
+  void feedMode
   const router = useRouter()
   const {
     isLandscapeViewport,
@@ -72,9 +72,6 @@ export function VideoFeed({
   const overlayInsetTop = 'max(12px, calc(env(safe-area-inset-top, 0px) + 8px))'
   const repeatIndicatorTop = `calc(${overlayInsetTop} + 44px)`
   const seriesPanelTop = `calc(${overlayInsetTop} + 56px)`
-  const feedToggleBottom = isLandscapeViewport
-    ? 'max(16px, calc(env(safe-area-inset-bottom, 0px) + 12px))'
-    : 'max(88px, calc(env(safe-area-inset-bottom, 0px) + 78px))'
   const [embedBlockedVideoIds, setEmbedBlockedVideoIds] = useState<string[]>(() => {
     return readEmbedBlockedVideoIds()
   })
@@ -107,6 +104,8 @@ export function VideoFeed({
     videoId: null,
   })
   const currentVideoId = videos[currentIndex]?.id
+  const hiddenVideos = useAdminStore((state) => state.hiddenVideos)
+  const hiddenVideoIdSet = useMemo(() => createHiddenVideoIdSet(hiddenVideos), [hiddenVideos])
 
   const savePhrase = usePhraseStore((state) => state.savePhrase)
   const incrementReview = usePhraseStore((state) => state.incrementReview)
@@ -136,8 +135,11 @@ export function VideoFeed({
   const clipEnd = usePlayerStore((state) => state.clipEnd)
   const currentVideo = videos[currentIndex]
   const seriesEpisodes = useMemo(
-    () => (currentVideo?.seriesId ? getCatalogVideosBySeries(currentVideo.seriesId) : []),
-    [currentVideo],
+    () =>
+      currentVideo?.seriesId
+        ? filterHiddenVideos(getCatalogVideosBySeries(currentVideo.seriesId), hiddenVideoIdSet)
+        : [],
+    [currentVideo, hiddenVideoIdSet],
   )
 
   useEffect(() => {
@@ -709,10 +711,8 @@ export function VideoFeed({
           />
 
           <div
-            className="absolute z-10 flex min-w-0 items-center gap-2 rounded-[22px] border px-2.5 py-2 backdrop-blur-md sm:gap-3 sm:px-3"
+            className="absolute z-10 flex min-w-0 items-center gap-2 px-2.5 py-2 sm:gap-3 sm:px-3"
             style={{
-              backgroundColor: 'var(--player-control-bg)',
-              borderColor: 'var(--player-control-border)',
               left: overlayInsetLeft,
               right: overlayInsetRight,
               top: overlayInsetTop,
@@ -885,14 +885,6 @@ export function VideoFeed({
           />
         </motion.div>
       </AnimatePresence>
-
-      {feedMode && onFeedModeChange && (
-        <FeedToggle
-          mode={feedMode}
-          onChange={onFeedModeChange}
-          bottomOffset={feedToggleBottom}
-        />
-      )}
 
       <FloatingRemote
         onPrevVideo={canGoPrev ? handlePrevVideo : undefined}

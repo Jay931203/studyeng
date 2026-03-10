@@ -66,6 +66,7 @@ export async function getCurrentUserId(): Promise<string | null> {
 
 // Cached user id for sync calls (set on login, cleared on logout)
 let _cachedUserId: string | null = null
+let _cachedUserEmail: string | null = null
 
 export function setCachedUserId(id: string | null) {
   _cachedUserId = id
@@ -73,6 +74,14 @@ export function setCachedUserId(id: string | null) {
 
 export function getCachedUserId(): string | null {
   return _cachedUserId
+}
+
+export function setCachedUserEmail(email: string | null) {
+  _cachedUserEmail = email
+}
+
+export function getCachedUserEmail(): string | null {
+  return _cachedUserEmail
 }
 
 // ─── Profile sync ─────────────────────────────────────────────────
@@ -230,9 +239,10 @@ export async function syncLike(userId: string, videoId: string, isLiked: boolean
 }
 
 // ─── Full sync on login (pull server → merge with local) ──────────
-export async function syncOnLogin(userId: string) {
+export async function syncOnLogin(userId: string, email?: string | null) {
   if (!supabase) return
   setCachedUserId(userId)
+  setCachedUserEmail(email ?? null)
 
   try {
     await Promise.all([
@@ -572,6 +582,7 @@ async function pushLikes(userId: string) {
 // ─── Logout cleanup ──────────────────────────────────────────────
 export function onLogout() {
   setCachedUserId(null)
+  setCachedUserEmail(null)
   // Clear all debounce timers
   for (const key of Object.keys(debounceTimers)) {
     clearTimeout(debounceTimers[key])

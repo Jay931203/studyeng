@@ -1,5 +1,10 @@
 import { createClient } from './client'
-import { useAdminStore, type AdminIssue, type SubtitleFlag } from '@/stores/useAdminStore'
+import {
+  useAdminStore,
+  type AdminIssue,
+  type HiddenVideo,
+  type SubtitleFlag,
+} from '@/stores/useAdminStore'
 import {
   useRecommendationStore,
   type VideoBehaviorSignal,
@@ -27,6 +32,12 @@ interface SubtitleFlagRow {
   entry_index: number
   en: string
   flagged_at: string
+}
+
+interface HiddenVideoRow {
+  video_id: string
+  hidden_at: string
+  hidden_by: string | null
 }
 
 interface RecommendationSignalRow {
@@ -77,6 +88,16 @@ function deriveRecentVideoIds(videoSignals: Record<string, VideoBehaviorSignal>)
     .map(([videoId]) => videoId)
 }
 
+function mapHiddenVideos(rows: HiddenVideoRow[]) {
+  return rows
+    .map((row) => ({
+      videoId: row.video_id,
+      hiddenAt: row.hidden_at,
+      hiddenBy: row.hidden_by ?? undefined,
+    }))
+    .sort((left, right) => right.hiddenAt.localeCompare(left.hiddenAt))
+}
+
 export async function resolveAdminAccess(userId: string, email?: string | null) {
   if (!supabase) return null
 
@@ -100,7 +121,7 @@ export async function syncIssueReport(
   issue: SyncedAdminIssue,
   reporterEmail?: string | null,
 ) {
-  if (!supabase) return
+  if (!supabase) return false
   const { error } = await supabase.from('issue_reports').upsert(
     {
       id: issue.id,
@@ -117,11 +138,16 @@ export async function syncIssueReport(
     { onConflict: 'id' },
   )
 
-  if (error) console.warn('[ops-sync] issue report upsert failed:', error.message)
+  if (error) {
+    console.warn('[ops-sync] issue report upsert failed:', error.message)
+    return false
+  }
+
+  return true
 }
 
 export async function resolveIssueReportServer(id: string) {
-  if (!supabase) return
+  if (!supabase) return false
   const { error } = await supabase
     .from('issue_reports')
     .update({
@@ -130,14 +156,73 @@ export async function resolveIssueReportServer(id: string) {
     })
     .eq('id', id)
 
-  if (error) console.warn('[ops-sync] issue report resolve failed:', error.message)
+  if (error) {
+    console.warn('[ops-sync] issue report resolve failed:', error.message)
+    return false
+  }
+
+  return true
 }
 
 export async function clearResolvedIssueReportsServer() {
-  if (!supabase) return
+  if (!supabase) return false
   const { error } = await supabase.from('issue_reports').delete().eq('resolved', true)
 
-  if (error) console.warn('[ops-sync] issue report prune failed:', error.message)
+  if (error) {
+    console.warn('[ops-sync] issue report prune failed:', error.message)
+    return false
+  }
+
+  return true
+}
+
+export async function syncHiddenVideo(userId: string, hiddenVideo: HiddenVideo) {
+  if (!supabase) return false
+  const { error } = await supabase.from('hidden_videos').upsert(
+    {
+      video_id: hiddenVideo.videoId,
+      hidden_by: hiddenVideo.hiddenBy ?? userId,
+      hidden_at: hiddenVideo.hiddenAt,
+    },
+    { onConflict: 'video_id' },
+  )
+
+  if (error) {
+    console.warn('[ops-sync] hidden video upsert failed:', error.message)
+    return false
+  }
+
+  return true
+}
+
+export async function removeHiddenVideoServer(videoId: string) {
+  if (!supabase) return false
+  const { error } = await supabase.from('hidden_videos').delete().eq('video_id', videoId)
+
+  if (error) {
+    console.warn('[ops-sync] hidden video delete failed:', error.message)
+    return false
+  }
+
+  return true
+}
+
+export async function syncPublicOps() {
+  if (!supabase) return
+
+  const { data, error } = await supabase
+    .from('hidden_videos')
+    .select('*')
+    .order('hidden_at', { ascending: false })
+
+  if (error) {
+    console.warn('[ops-sync] hidden videos pull failed:', error.message)
+    return
+  }
+
+  useAdminStore.setState({
+    hiddenVideos: mapHiddenVideos((data ?? []) as HiddenVideoRow[]),
+  })
 }
 
 export async function syncSubtitleFlag(userId: string, flag: SubtitleFlag) {
@@ -212,10 +297,12 @@ async function pullAdminState(userId: string, email?: string | null) {
   }
   const issueQuery = supabase.from('issue_reports').select('*').order('created_at', { ascending: false })
   const flagQuery = supabase.from('subtitle_flags').select('*').order('flagged_at', { ascending: false })
+  const hiddenQuery = supabase.from('hidden_videos').select('*').order('hidden_at', { ascending: false })
 
-  const [issueResponse, flagResponse] = await Promise.all([
+  const [issueResponse, flagResponse, hiddenResponse] = await Promise.all([
     isAdmin ? issueQuery : issueQuery.eq('user_id', userId),
     isAdmin ? flagQuery : flagQuery.eq('user_id', userId),
+    hiddenQuery,
   ])
 
   if (issueResponse.error) {
@@ -230,6 +317,14 @@ async function pullAdminState(userId: string, email?: string | null) {
     console.warn('[ops-sync] subtitle flags pull failed:', flagResponse.error.message)
     useAdminStore.setState({
       adminSyncError: '플래그 목록을 서버에서 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.',
+    })
+    return false
+  }
+
+  if (hiddenResponse.error) {
+    console.warn('[ops-sync] hidden videos pull failed:', hiddenResponse.error.message)
+    useAdminStore.setState({
+      adminSyncError: 'Hidden videos could not be loaded from the server. Try again.',
     })
     return false
   }
@@ -252,6 +347,8 @@ async function pullAdminState(userId: string, email?: string | null) {
     flaggedAt: row.flagged_at,
   }))
 
+  const remoteHiddenVideos = mapHiddenVideos((hiddenResponse.data ?? []) as HiddenVideoRow[])
+
   useAdminStore.setState({
     isAdmin,
     adminSyncError: null,
@@ -259,6 +356,7 @@ async function pullAdminState(userId: string, email?: string | null) {
     flaggedSubtitles: remoteFlags.sort((left, right) =>
       right.flaggedAt.localeCompare(left.flaggedAt),
     ),
+    hiddenVideos: remoteHiddenVideos,
   })
 
   return true
@@ -311,6 +409,7 @@ export async function syncOpsOnLogin(userId: string, email?: string | null) {
   if (!supabase) return
   try {
     await Promise.all([
+      syncPublicOps(),
       pullAdminState(userId, email),
       pullRecommendationSignals(userId),
     ])

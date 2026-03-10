@@ -1,10 +1,12 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { categories } from '@/data/seed-videos'
 import { searchVideos, type SearchResult } from '@/lib/search'
+import { createHiddenVideoIdSet } from '@/lib/videoVisibility'
 import { buildShortsUrl } from '@/lib/videoRoutes'
+import { useAdminStore } from '@/stores/useAdminStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 
 const quickQueries = ['일상 표현', '드라마', '면접 영어', '비즈니스']
@@ -20,6 +22,8 @@ export function SearchBar() {
   const searchIdRef = useRef(0)
   const router = useRouter()
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)
+  const hiddenVideos = useAdminStore((state) => state.hiddenVideos)
+  const hiddenVideoIdSet = useMemo(() => createHiddenVideoIdSet(hiddenVideos), [hiddenVideos])
 
   useEffect(() => {
     if (debounceRef.current) clearTimeout(debounceRef.current)
@@ -29,7 +33,7 @@ export function SearchBar() {
     const currentSearchId = ++searchIdRef.current
 
     debounceRef.current = window.setTimeout(() => {
-      searchVideos(query)
+      searchVideos(query, hiddenVideoIdSet)
         .then((response) => {
           if (searchIdRef.current === currentSearchId) {
             setResults(response)
@@ -46,7 +50,7 @@ export function SearchBar() {
     return () => {
       if (debounceRef.current) clearTimeout(debounceRef.current)
     }
-  }, [query])
+  }, [hiddenVideoIdSet, query])
 
   useEffect(() => {
     return () => {

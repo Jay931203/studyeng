@@ -16,12 +16,15 @@ import { AppPage, SectionHeader, SurfaceCard } from '@/components/ui/AppPage'
 import { useAuth } from '@/hooks/useAuth'
 import {
   catalogSeries,
+  catalogShorts,
   catalogVideos,
   getCatalogSeriesByCategory,
   getCatalogVideosBySeries,
 } from '@/lib/catalog'
 import { recommendVideos } from '@/lib/recommend'
+import { createHiddenVideoIdSet, filterHiddenVideos } from '@/lib/videoVisibility'
 import { buildShortsUrl } from '@/lib/videoRoutes'
+import { useAdminStore } from '@/stores/useAdminStore'
 import { useLikeStore } from '@/stores/useLikeStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
@@ -43,6 +46,7 @@ interface ContinueSeriesCard {
   lastVideo: VideoData | null
   progress: number
   watchedCount: number
+  episodeCount: number
   lastWatchedAt: number
 }
 
@@ -51,6 +55,7 @@ export default function ExplorePage() {
   const router = useRouter()
   const searchParams = useSearchParams()
   const seriesSectionRef = useRef<HTMLElement | null>(null)
+  const hiddenVideos = useAdminStore((state) => state.hiddenVideos)
   const { user } = useAuth()
   const likes = useLikeStore((state) => state.likes)
   const phrases = usePhraseStore((state) => state.phrases)
@@ -74,10 +79,40 @@ export default function ExplorePage() {
   const returnVideoId = searchParams.get('returnVideoId')
   const returnSeriesId = searchParams.get('returnSeriesId')
   const cameFromVideo = Boolean(returnVideoId) && (source === 'video' || source === 'shorts')
+  const hiddenVideoIdSet = useMemo(() => createHiddenVideoIdSet(hiddenVideos), [hiddenVideos])
+  const visibleCatalogVideos = useMemo(
+    () => filterHiddenVideos(catalogVideos, hiddenVideoIdSet),
+    [hiddenVideoIdSet],
+  )
+  const visibleCatalogShorts = useMemo(
+    () => filterHiddenVideos(catalogShorts, hiddenVideoIdSet),
+    [hiddenVideoIdSet],
+  )
+  const visibleCatalogSeries = useMemo(
+    () =>
+      catalogSeries
+        .map((seriesItem) => {
+          const visibleEpisodes = filterHiddenVideos(
+            getCatalogVideosBySeries(seriesItem.id),
+            hiddenVideoIdSet,
+          )
+
+          if (visibleEpisodes.length === 0) return null
+
+          return {
+            ...seriesItem,
+            episodeCount: visibleEpisodes.length,
+          }
+        })
+        .filter((seriesItem): seriesItem is SeriesType => seriesItem !== null),
+    [hiddenVideoIdSet],
+  )
   const selectedSeries = selectedSeriesId
-    ? catalogSeries.find((item) => item.id === selectedSeriesId) ?? null
+    ? visibleCatalogSeries.find((item) => item.id === selectedSeriesId) ?? null
     : null
-  const seriesEpisodes = selectedSeries ? getCatalogVideosBySeries(selectedSeries.id) : []
+  const seriesEpisodes = selectedSeries
+    ? filterHiddenVideos(getCatalogVideosBySeries(selectedSeries.id), hiddenVideoIdSet)
+    : []
   const profileName =
     user?.user_metadata?.full_name ??
     user?.user_metadata?.name ??
@@ -85,15 +120,16 @@ export default function ExplorePage() {
     'PROFILE'
 
   const filteredSeries = useMemo(
-    () => (activeCategory === 'all' ? catalogSeries : getCatalogSeriesByCategory(activeCategory)),
-    [activeCategory],
+    () =>
+      activeCategory === 'all'
+        ? visibleCatalogSeries
+        : getCatalogSeriesByCategory(activeCategory).filter((seriesItem) =>
+            visibleCatalogSeries.some((visibleSeries) => visibleSeries.id === seriesItem.id),
+          ),
+    [activeCategory, visibleCatalogSeries],
   )
   const filteredSeriesVideoCount = useMemo(
-    () =>
-      filteredSeries.reduce(
-        (total, seriesItem) => total + getCatalogVideosBySeries(seriesItem.id).length,
-        0,
-      ),
+    () => filteredSeries.reduce((total, seriesItem) => total + seriesItem.episodeCount, 0),
     [filteredSeries],
   )
   const seriesSectionDescription = `${filteredSeries.length}개 시리즈 · ${filteredSeriesVideoCount}개 영상`
@@ -136,10 +172,11 @@ export default function ExplorePage() {
 
     return Object.entries(watchedEpisodes)
       .map(([seriesId, watchedIds]) => {
-        const seriesItem = catalogSeries.find((item) => item.id === seriesId)
-        if (!seriesItem || watchedIds.length === 0) return null
+        const seriesItem = visibleCatalogSeries.find((item) => item.id === seriesId)
+        const visibleWatchedIds = watchedIds.filter((videoId) => !hiddenVideoIdSet.has(videoId))
+        if (!seriesItem || visibleWatchedIds.length === 0) return null
 
-        const episodes = getCatalogVideosBySeries(seriesId)
+        const episodes = filterHiddenVideos(getCatalogVideosBySeries(seriesId), hiddenVideoIdSet)
         if (episodes.length === 0) return null
 
         const nextVideoId =
@@ -150,7 +187,7 @@ export default function ExplorePage() {
         const nextVideo = episodes.find((video) => video.id === nextVideoId)
         if (!nextVideo) return null
 
-        const lastVideoId = [...watchedIds].sort(
+        const lastVideoId = [...visibleWatchedIds].sort(
           (left, right) => (latestByVideo.get(right) ?? 0) - (latestByVideo.get(left) ?? 0),
         )[0]
         const lastVideo = episodes.find((video) => video.id === lastVideoId) ?? null
@@ -159,18 +196,42 @@ export default function ExplorePage() {
           seriesItem,
           nextVideo,
           lastVideo,
-          progress: getSeriesProgress(seriesId, seriesItem.episodeCount),
-          watchedCount: watchedIds.length,
+          progress: getSeriesProgress(seriesId, episodes.length),
+          watchedCount: visibleWatchedIds.length,
+          episodeCount: episodes.length,
           lastWatchedAt: latestByVideo.get(lastVideoId) ?? 0,
         }
       })
       .filter((item): item is ContinueSeriesCard => item !== null)
       .sort((left, right) => right.lastWatchedAt - left.lastWatchedAt)
       .slice(0, 4)
-  }, [getNextEpisode, getSeriesProgress, watchRecords, watchedEpisodes])
+  }, [
+    getNextEpisode,
+    getSeriesProgress,
+    hiddenVideoIdSet,
+    visibleCatalogSeries,
+    watchRecords,
+    watchedEpisodes,
+  ])
+
+  const shuffledShorts = useMemo(() => {
+    if (visibleCatalogShorts.length === 0) return []
+    const today = new Date()
+    let seed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate()
+    const nextSeed = () => {
+      seed = (seed * 9301 + 49297) % 233280
+      return seed / 233280
+    }
+    const arr = [...visibleCatalogShorts]
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(nextSeed() * (i + 1))
+      ;[arr[i], arr[j]] = [arr[j], arr[i]]
+    }
+    return arr
+  }, [visibleCatalogShorts])
 
   const rankedRecommendations = useMemo(() => {
-    return recommendVideos(catalogVideos, {
+    return recommendVideos(visibleCatalogVideos, {
       watchedEpisodes,
       completionCounts,
       watchRecords,
@@ -190,14 +251,15 @@ export default function ExplorePage() {
     phrases,
     recentVideoIds,
     videoSignals,
+    visibleCatalogVideos,
     viewCounts,
     watchRecords,
     watchedEpisodes,
   ])
 
-  const spotlightVideo = rankedRecommendations[0] ?? catalogVideos[0]
+  const spotlightVideo = rankedRecommendations[0] ?? visibleCatalogVideos[0]
   const spotlightSeries = spotlightVideo?.seriesId
-    ? catalogSeries.find((item) => item.id === spotlightVideo.seriesId) ?? null
+    ? visibleCatalogSeries.find((item) => item.id === spotlightVideo.seriesId) ?? null
     : null
   const recommended = useMemo(() => {
     if (!spotlightVideo) return []
@@ -211,7 +273,7 @@ export default function ExplorePage() {
 
     if (cards.length >= 4) return cards.slice(0, 4)
 
-    for (const video of catalogVideos) {
+    for (const video of visibleCatalogVideos) {
       if (seen.has(video.id)) continue
       seen.add(video.id)
       cards.push(video)
@@ -219,7 +281,7 @@ export default function ExplorePage() {
     }
 
     return cards
-  }, [rankedRecommendations, spotlightVideo])
+  }, [rankedRecommendations, spotlightVideo, visibleCatalogVideos])
 
   if (!spotlightVideo) return null
 
@@ -508,6 +570,49 @@ export default function ExplorePage() {
         </section>
       )}
 
+      {shuffledShorts.length > 0 && (
+        <section className="mb-8 overflow-hidden">
+          <SectionHeader
+            title="Shorts"
+            action={
+              <button
+                onClick={() => router.push('/shorts?feed=shorts')}
+                className="text-sm font-medium text-[var(--accent-text)]"
+              >
+                전체보기
+              </button>
+            }
+          />
+
+          <div className="flex gap-2.5 overflow-x-auto pb-2 no-scrollbar">
+            {shuffledShorts.map((video) => (
+              <motion.button
+                key={video.id}
+                whileTap={{ scale: 0.97 }}
+                onClick={() => router.push(`/shorts?feed=shorts&v=${video.id}`)}
+                className="w-[108px] shrink-0 overflow-hidden rounded-xl text-left"
+              >
+                <div className="relative aspect-[3/5] overflow-hidden rounded-xl">
+                  <Image
+                    src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
+                    alt={video.title}
+                    fill
+                    sizes="108px"
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                  <div className="absolute inset-x-0 bottom-0 p-2">
+                    <p className="line-clamp-2 text-[11px] font-medium leading-tight text-white">
+                      {video.title}
+                    </p>
+                  </div>
+                </div>
+              </motion.button>
+            ))}
+          </div>
+        </section>
+      )}
+
       <section className="mb-8">
         <SectionHeader title="추천" />
         <div className="grid grid-cols-2 gap-3 xl:grid-cols-4">
@@ -552,7 +657,10 @@ export default function ExplorePage() {
 
         <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
           {filteredSeries.map((seriesItem) => {
-            const episodes = getCatalogVideosBySeries(seriesItem.id)
+            const episodes = filterHiddenVideos(
+              getCatalogVideosBySeries(seriesItem.id),
+              hiddenVideoIdSet,
+            )
             const thumbVideo = episodes[0]
 
             return (

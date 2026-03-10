@@ -8,6 +8,8 @@ import type { SavedPhrase } from '@/stores/usePhraseStore'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { type SubtitleEntry } from '@/data/seed-videos'
 import { catalogVideos } from '@/lib/catalog'
+import { createHiddenVideoIdSet, filterHiddenVideos } from '@/lib/videoVisibility'
+import { useAdminStore } from '@/stores/useAdminStore'
 
 type GameType = 'scene-quiz' | 'listening'
 type PhrasePair = {
@@ -53,6 +55,12 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
   const [listeningRounds, setListeningRounds] = useState<PhrasePair[]>([])
   const [loadingTranscripts, setLoadingTranscripts] = useState(true)
   const incrementMission = useDailyMissionStore((s) => s.incrementMission)
+  const hiddenVideos = useAdminStore((state) => state.hiddenVideos)
+  const hiddenVideoIdSet = useMemo(() => createHiddenVideoIdSet(hiddenVideos), [hiddenVideos])
+  const visibleCatalogVideos = useMemo(
+    () => filterHiddenVideos(catalogVideos, hiddenVideoIdSet),
+    [hiddenVideoIdSet],
+  )
 
 
   // Load transcript data from seed videos so new users can also play
@@ -61,7 +69,7 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
 
     async function fetchTranscripts() {
       // Pick 3 random seed videos and load their transcripts
-      const randomVideos = shuffle(catalogVideos).slice(0, 3)
+      const randomVideos = shuffle(visibleCatalogVideos).slice(0, 3)
       const allEntries: SubtitleEntry[] = []
       const allRounds: PhrasePair[] = []
 
@@ -95,7 +103,7 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
 
     fetchTranscripts()
     return () => { cancelled = true }
-  }, [])
+  }, [visibleCatalogVideos])
 
   // Build the usable phrase pool: saved phrases first, then transcript phrases as fallback
   const gamePhrases = useMemo(() => {

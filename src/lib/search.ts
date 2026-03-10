@@ -59,7 +59,10 @@ function findTranscriptMatch(transcript: SubtitleEntry[], query: string) {
  * then loading the remaining transcript files in small batches until enough
  * matches are found.
  */
-export async function searchVideos(query: string): Promise<SearchResult[]> {
+export async function searchVideos(
+  query: string,
+  hiddenVideoIds: Set<string> = new Set(),
+): Promise<SearchResult[]> {
   if (!query.trim()) return []
 
   const q = query.toLowerCase().trim()
@@ -68,6 +71,7 @@ export async function searchVideos(query: string): Promise<SearchResult[]> {
 
   // First pass: title, description, and series name matches (instant)
   for (const video of catalogVideos) {
+    if (hiddenVideoIds.has(video.id)) continue
     if (seen.has(video.id)) continue
     const s = videoSeriesMap.get(video.youtubeId)
     const searchable = [
@@ -83,6 +87,7 @@ export async function searchVideos(query: string): Promise<SearchResult[]> {
 
   // Second pass: in-memory subtitles already bundled with the catalog
   for (const video of catalogVideos) {
+    if (hiddenVideoIds.has(video.id)) continue
     if (seen.has(video.id)) continue
 
     const matchedPhrase = findTranscriptMatch(video.subtitles, q)
@@ -98,6 +103,7 @@ export async function searchVideos(query: string): Promise<SearchResult[]> {
 
   // Third pass: cached transcript JSON files
   for (const video of catalogVideos) {
+    if (hiddenVideoIds.has(video.id)) continue
     if (seen.has(video.id) || !transcriptCache.has(video.youtubeId)) continue
 
     const matchedPhrase = findTranscriptMatch(transcriptCache.get(video.youtubeId) ?? [], q)
@@ -113,7 +119,8 @@ export async function searchVideos(query: string): Promise<SearchResult[]> {
 
   // Final pass: fetch uncached transcript files in bounded batches.
   const uncachedVideos = catalogVideos.filter(
-    (video) => !seen.has(video.id) && !transcriptCache.has(video.youtubeId)
+    (video) =>
+      !hiddenVideoIds.has(video.id) && !seen.has(video.id) && !transcriptCache.has(video.youtubeId)
   )
 
   for (let index = 0; index < uncachedVideos.length && results.length < 10; index += TRANSCRIPT_FETCH_BATCH_SIZE) {

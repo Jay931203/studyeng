@@ -6,8 +6,8 @@ import { sanitizeAppPath } from '@/lib/navigation'
 import { isNative } from '@/lib/platform'
 import { syncBillingOnLogin } from '@/lib/supabase/billingSync'
 import { createClient } from '@/lib/supabase/client'
-import { syncOnLogin, onLogout } from '@/lib/supabase/sync'
-import { syncOpsOnLogin } from '@/lib/supabase/opsSync'
+import { syncOnLogin, onLogout, setCachedUserEmail } from '@/lib/supabase/sync'
+import { syncOpsOnLogin, syncPublicOps } from '@/lib/supabase/opsSync'
 import { useAdminStore } from '@/stores/useAdminStore'
 import type { AuthChangeEvent, Session, User } from '@supabase/supabase-js'
 
@@ -78,6 +78,9 @@ function resetSignedOutState() {
 }
 
 async function syncSignedInUser(user: User) {
+  const userEmail = user.email ?? null
+  setCachedUserEmail(userEmail)
+
   if (syncedUserId === user.id) {
     return
   }
@@ -88,8 +91,8 @@ async function syncSignedInUser(user: User) {
 
   try {
     await Promise.all([
-      syncOnLogin(user.id),
-      syncOpsOnLogin(user.id, user.email ?? null),
+      syncOnLogin(user.id, userEmail),
+      syncOpsOnLogin(user.id, userEmail),
       syncBillingOnLogin(user.id),
     ])
   } catch (error) {
@@ -137,6 +140,8 @@ function ensureAuthInitialized() {
     } = supabase.auth.onAuthStateChange(handleAuthStateChange)
 
     try {
+      await syncPublicOps()
+
       const {
         data: { user },
       } = await supabase.auth.getUser()

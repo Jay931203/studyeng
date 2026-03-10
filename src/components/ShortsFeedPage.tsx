@@ -1,11 +1,13 @@
 'use client'
 
-import { Suspense, useCallback, useEffect, useMemo } from 'react'
+import { Suspense, useEffect, useMemo } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { VideoFeed } from '@/components/VideoFeed'
 import { catalogVideos } from '@/lib/catalog'
 import { recommendVideos, seriesPlaylist } from '@/lib/recommend'
+import { createHiddenVideoIdSet, filterHiddenVideos } from '@/lib/videoVisibility'
 import { buildShortsUrl } from '@/lib/videoRoutes'
+import { useAdminStore } from '@/stores/useAdminStore'
 import { useLikeStore } from '@/stores/useLikeStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { usePlayerStore } from '@/stores/usePlayerStore'
@@ -29,10 +31,9 @@ function cloneVideoSignals(
   )
 }
 
-/** Shuffle an array using Fisher-Yates */
 function shuffleArray<T>(arr: T[]): T[] {
   const result = [...arr]
-  for (let i = result.length - 1; i > 0; i--) {
+  for (let i = result.length - 1; i > 0; i -= 1) {
     const j = Math.floor(Math.random() * (i + 1))
     ;[result[i], result[j]] = [result[j], result[i]]
   }
@@ -42,6 +43,8 @@ function shuffleArray<T>(arr: T[]): T[] {
 function ShortsFeedContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
+  const hiddenVideos = useAdminStore((state) => state.hiddenVideos)
+  const hiddenVideoIdSet = useMemo(() => createHiddenVideoIdSet(hiddenVideos), [hiddenVideos])
   const videoId = searchParams.get('v')
   const seriesId = searchParams.get('series')
   const seekTime = searchParams.get('t')
@@ -50,7 +53,6 @@ function ShortsFeedContent() {
   const feedMode: FeedMode = feedParam === 'shorts' ? 'shorts' : 'clips'
   const setPlaybackOrderMode = usePlayerStore((state) => state.setPlaybackOrderMode)
 
-  // Shorts mode always uses shuffle; clips uses sequence when entering via series link
   const entryPlaybackOrderMode =
     feedMode === 'shorts' ? 'shuffle' : seriesId && videoId ? 'sequence' : 'shuffle'
 
@@ -62,20 +64,17 @@ function ShortsFeedContent() {
 
   useEffect(() => {
     setPlaybackOrderMode(entryPlaybackOrderMode)
-  }, [entryPlaybackOrderMode, setPlaybackOrderMode, seriesId, videoId, feedMode])
+  }, [entryPlaybackOrderMode, feedMode, seriesId, setPlaybackOrderMode, videoId])
 
-  // Filter catalog videos based on feed mode
   const feedVideos = useMemo(() => {
-    if (feedMode === 'shorts') {
-      return catalogVideos.filter((video) => video.format === 'shorts')
-    }
-    // Clips mode: everything that is NOT shorts
-    return catalogVideos.filter((video) => video.format !== 'shorts')
-  }, [feedMode])
+    const baseVideos =
+      feedMode === 'shorts'
+        ? catalogVideos.filter((video) => video.format === 'shorts')
+        : catalogVideos.filter((video) => video.format !== 'shorts')
 
-  // Freeze the recommendation inputs for the current route so that
-  // watch-history or like updates inside the player do not reshuffle
-  // the active shorts feed mid-session.
+    return filterHiddenVideos(baseVideos, hiddenVideoIdSet)
+  }, [feedMode, hiddenVideoIdSet])
+
   const recommendationSnapshot = useMemo(() => {
     void navigationKey
     const { watchedEpisodes, watchRecords, viewCounts, completionCounts } =
@@ -108,49 +107,56 @@ function ShortsFeedContent() {
   const recommended = useMemo(() => {
     const options = recommendationSnapshot
 
-    // Shorts mode: simple shuffle of all shorts videos
     if (feedMode === 'shorts') {
-      if (videoId) {
+      if (videoId && !hiddenVideoIdSet.has(videoId)) {
         const target = feedVideos.find((video) => video.id === videoId)
         if (target) {
           const rest = feedVideos.filter((video) => video.id !== videoId)
           return [target, ...shuffleArray(rest)]
         }
       }
+
       return shuffleArray(feedVideos)
     }
 
-    // Clips mode: use existing recommendation logic
     if (seriesId && videoId) {
-      return seriesPlaylist(seriesId, videoId, options)
+      return filterHiddenVideos(seriesPlaylist(seriesId, videoId, options), hiddenVideoIdSet)
     }
 
-    if (videoId) {
+    if (videoId && !hiddenVideoIdSet.has(videoId)) {
       const target = feedVideos.find((video) => video.id === videoId)
       if (target) {
         const rest = feedVideos.filter((video) => video.id !== videoId)
-        return [
-          target,
-          ...recommendVideos(rest, {
-            ...options,
-            seedVideo: target,
-          }),
-        ]
+        return filterHiddenVideos(
+          [
+            target,
+            ...recommendVideos(rest, {
+              ...options,
+              seedVideo: target,
+            }),
+          ],
+          hiddenVideoIdSet,
+        )
       }
     }
 
-    return recommendVideos(feedVideos, options)
-  }, [videoId, seriesId, feedMode, feedVideos, recommendationSnapshot])
+    return filterHiddenVideos(recommendVideos(feedVideos, options), hiddenVideoIdSet)
+  }, [feedMode, feedVideos, hiddenVideoIdSet, recommendationSnapshot, seriesId, videoId])
 
-  const handleFeedModeChange = useCallback(
-    (nextMode: FeedMode) => {
-      if (nextMode === feedMode) return
-      router.push(nextMode === 'shorts' ? '/shorts?feed=shorts' : '/shorts', {
-        scroll: false,
-      })
-    },
-    [feedMode, router],
-  )
+  useEffect(() => {
+    if (!videoId || !hiddenVideoIdSet.has(videoId)) return
+
+    const fallback = recommended[0]
+    const baseUrl = buildShortsUrl(fallback?.id, fallback?.seriesId)
+    const nextUrl =
+      feedMode === 'shorts'
+        ? baseUrl.includes('?')
+          ? `${baseUrl}&feed=shorts`
+          : `${baseUrl}?feed=shorts`
+        : baseUrl
+
+    router.replace(nextUrl, { scroll: false })
+  }, [feedMode, hiddenVideoIdSet, recommended, router, videoId])
 
   return (
     <VideoFeed
@@ -160,7 +166,6 @@ function ShortsFeedContent() {
       initialSeekTime={seekTime ? parseFloat(seekTime) : undefined}
       initialReviewPhraseId={reviewPhraseId ?? undefined}
       feedMode={feedMode}
-      onFeedModeChange={handleFeedModeChange}
     />
   )
 }

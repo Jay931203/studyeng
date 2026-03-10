@@ -86,6 +86,7 @@ export default function ProfilePage() {
     clearFlags,
     exportReportBundle,
     flaggedSubtitles,
+    hiddenVideos,
     isAdmin,
     isAdminActive,
     issues,
@@ -409,7 +410,7 @@ export default function ProfilePage() {
 
             <div className="rounded-2xl bg-[var(--bg-primary)] p-4">
               <p className="text-sm font-semibold text-red-400">
-                OPEN {unresolvedCount} 쨌 FLAGS {flaggedSubtitles.length}
+                OPEN {unresolvedCount} 쨌 FLAGS {flaggedSubtitles.length} 쨌 HIDDEN {hiddenVideos.length}
               </p>
               <div className="mt-3 flex gap-2">
                 <button
