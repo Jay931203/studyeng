@@ -9,7 +9,6 @@ import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useAdminStore } from '@/stores/useAdminStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 
-const quickQueries = ['일상 표현', '드라마', '면접 영어', '비즈니스']
 const categoryLabels = Object.fromEntries(categories.map((category) => [category.id, category.label]))
 
 export function SearchBar() {
@@ -120,25 +119,6 @@ export function SearchBar() {
           </button>
         )}
       </div>
-
-      <div className="mt-3 flex flex-wrap gap-2">
-        {quickQueries.map((quickQuery) => (
-          <button
-            key={quickQuery}
-            onMouseDown={(event) => event.preventDefault()}
-            onClick={() => {
-              if (blurTimerRef.current) clearTimeout(blurTimerRef.current)
-              setFocused(true)
-              setQuery(quickQuery)
-              inputRef.current?.focus()
-            }}
-            className="rounded-full border border-[var(--border-card)] bg-[var(--bg-secondary)]/35 px-3 py-1.5 text-xs font-medium text-[var(--text-secondary)] transition hover:border-[var(--accent-primary)]/35 hover:text-[var(--text-primary)]"
-          >
-            {quickQuery}
-          </button>
-        ))}
-      </div>
-
       {showDropdown && (
         <div
           id="search-results"

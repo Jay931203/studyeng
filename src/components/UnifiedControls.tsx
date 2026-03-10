@@ -607,13 +607,10 @@ export function UnifiedControls({
           className={
             className ??
             (compact
-              ? 'inline-flex min-w-max items-center gap-0 rounded-full border px-1 py-0.5 backdrop-blur-md'
-              : 'inline-flex min-w-max items-center gap-0.5 rounded-full border px-1.5 py-1 backdrop-blur-md')
+              ? 'inline-flex min-w-max items-center gap-0 rounded-full px-1 py-0.5'
+              : 'inline-flex min-w-max items-center gap-0.5 rounded-full px-1.5 py-1')
           }
-          style={{
-            backgroundColor: 'var(--player-control-bg)',
-            borderColor: 'var(--player-control-border)',
-          }}
+          style={{ backgroundColor: 'transparent', borderColor: 'transparent' }}
         >
           <button
             type="button"

@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest'
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import { BottomNav } from './BottomNav'
 
 const mockUsePathname = vi.fn()
@@ -25,7 +25,9 @@ describe('BottomNav', () => {
     render(<BottomNav />)
 
     expect(screen.getByLabelText('Home')).toBeInTheDocument()
-    expect(screen.getByLabelText('Shorts')).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Toggle feed' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Series' })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: 'Shorts' })).toBeInTheDocument()
     expect(screen.getByLabelText('Learn')).toBeInTheDocument()
     expect(screen.getByLabelText('Settings')).toBeInTheDocument()
   })
@@ -36,15 +38,38 @@ describe('BottomNav', () => {
 
     render(<BottomNav />)
 
-    const shortsLink = screen.getByLabelText('Series')
-    expect(shortsLink.className).toContain('text-[var(--nav-active)]')
+    expect(screen.getByRole('button', { name: 'Series' })).toHaveAttribute('aria-pressed', 'true')
+    expect(screen.getByRole('button', { name: 'Shorts' })).toHaveAttribute('aria-pressed', 'false')
   })
 
-  it('defaults the shorts tab to the Shorts feed when entering from another tab', () => {
+  it('opens the Shorts feed from another tab when the label is pressed', () => {
     mockUsePathname.mockReturnValue('/explore')
 
     render(<BottomNav />)
 
-    expect(screen.getByLabelText('Shorts')).toHaveAttribute('href', '/shorts?feed=shorts')
+    fireEvent.click(screen.getByRole('button', { name: 'Shorts' }))
+
+    expect(mockPush).toHaveBeenCalledWith('/shorts?feed=shorts', { scroll: false })
+  })
+
+  it('shows the bottom feed switcher and highlights Shorts in shorts mode', () => {
+    mockUsePathname.mockReturnValue('/shorts')
+    mockSearchParams = new URLSearchParams('feed=shorts')
+
+    render(<BottomNav />)
+
+    expect(screen.getByRole('button', { name: 'Series' })).toHaveAttribute('aria-pressed', 'false')
+    expect(screen.getByRole('button', { name: 'Shorts' })).toHaveAttribute('aria-pressed', 'true')
+  })
+
+  it('toggles feed when the play button is pressed', () => {
+    mockUsePathname.mockReturnValue('/shorts')
+    mockSearchParams = new URLSearchParams('feed=shorts')
+
+    render(<BottomNav />)
+
+    fireEvent.click(screen.getByRole('button', { name: 'Toggle feed' }))
+
+    expect(mockPush).toHaveBeenCalledWith('/shorts', { scroll: false })
   })
 })

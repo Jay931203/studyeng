@@ -4,6 +4,10 @@ import Image from 'next/image'
 import { useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
+import {
+  LearningFeedFilter,
+  type LearningFeedFilterValue,
+} from '@/components/LearningFeedFilter'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import { categories, type VideoData } from '@/data/seed-videos'
 import { getCatalogSeriesById, getCatalogVideoById } from '@/lib/catalog'
@@ -39,6 +43,7 @@ function getDateKey(timestamp: number): string {
 
 export default function WatchHistoryPage() {
   const router = useRouter()
+  const [filter, setFilter] = useState<LearningFeedFilterValue>('all')
   const { watchRecords, viewCounts, watchedVideoIds, removeRecord, clearAllHistory, clearDeletedFlag } =
     useWatchHistoryStore()
   const [confirmClear, setConfirmClear] = useState(false)
@@ -58,6 +63,8 @@ export default function WatchHistoryPage() {
       if (hiddenVideoIdSet.has(record.videoId)) continue
       const video = getCatalogVideoById(record.videoId)
       if (!video) continue
+      if (filter === 'shorts' && video.format !== 'shorts') continue
+      if (filter === 'series' && video.format === 'shorts') continue
 
       const dateKey = record.watchedAt > 0 ? getDateKey(record.watchedAt) : 'unknown'
       if (!seen.has(dateKey)) {
@@ -78,9 +85,10 @@ export default function WatchHistoryPage() {
     }
 
     return groups
-  }, [hiddenVideoIdSet, watchRecords, watchedVideoIds])
+  }, [filter, hiddenVideoIdSet, watchRecords, watchedVideoIds])
 
   const totalWatched = groupedByDate.reduce((sum, group) => sum + group.videos.length, 0)
+  const hasAnyHistory = watchRecords.length > 0 || watchedVideoIds.length > 0
 
   const handleCloseConfirm = () => {
     setConfirmClear(false)
@@ -134,9 +142,13 @@ export default function WatchHistoryPage() {
         </div>
 
         <SurfaceCard className="p-5">
+          {hasAnyHistory && <LearningFeedFilter value={filter} onChange={setFilter} />}
+
           {totalWatched === 0 ? (
             <div className="flex flex-col items-center justify-center py-20">
-              <p className="text-sm text-[var(--text-muted)]">No watch history yet.</p>
+              <p className="text-sm text-[var(--text-muted)]">
+                {hasAnyHistory ? `No ${filter} history yet.` : 'No watch history yet.'}
+              </p>
             </div>
           ) : (
             groupedByDate.map((group) => (

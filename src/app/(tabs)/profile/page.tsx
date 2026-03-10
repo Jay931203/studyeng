@@ -285,7 +285,7 @@ export default function ProfilePage() {
                 <div>
                   <p className="text-sm font-medium text-[var(--text-primary)]">REMOTE</p>
                   <p className="mt-0.5 text-xs text-[var(--text-muted)]">
-                    Control bubble on the Shorts player.
+                    쇼츠 플레이어 리모컨 표시
                   </p>
                 </div>
                 <button

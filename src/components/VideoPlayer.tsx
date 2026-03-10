@@ -561,7 +561,7 @@ function ShortsSubtitleOverlay({
 
   return (
     <div
-      className="pointer-events-none absolute bottom-8 left-0 right-0 z-[12] flex justify-center px-4"
+      className="pointer-events-none absolute bottom-12 left-0 right-0 z-[12] flex justify-center px-4"
     >
       <div
         className="max-w-[92%] rounded-t-xl rounded-b-lg px-5 py-3 text-center backdrop-blur-sm"

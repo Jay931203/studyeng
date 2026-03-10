@@ -16,6 +16,7 @@ interface FloatingRemoteProps {
   onPrevVideo?: () => void
   onNextVideo?: () => void
   onToggleFreeze?: () => void
+  bottomOffset?: number
 }
 
 const STORAGE_KEY = 'shortee-remote-intro-shown'
@@ -75,6 +76,7 @@ export function FloatingRemote({
   onPrevVideo,
   onNextVideo,
   onToggleFreeze,
+  bottomOffset = 12,
 }: FloatingRemoteProps) {
   const remoteRef = useRef<HTMLDivElement | null>(null)
   const dragResetTimerRef = useRef<number | null>(null)
@@ -281,7 +283,7 @@ export function FloatingRemote({
 
   const positionStyle = {
     right: 'max(12px, calc(env(safe-area-inset-right, 0px) + 8px))',
-    bottom: 'max(12px, calc(env(safe-area-inset-bottom, 0px) + 8px))',
+    bottom: `max(${bottomOffset}px, calc(env(safe-area-inset-bottom, 0px) + 8px))`,
   }
 
   if (!remoteEnabled) {
@@ -291,7 +293,7 @@ export function FloatingRemote({
   return (
     <motion.div
       ref={remoteRef}
-      className="fixed z-30"
+      className="fixed z-[60]"
       style={{
         ...positionStyle,
         x: remoteOffset.x,

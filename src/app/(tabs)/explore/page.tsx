@@ -50,6 +50,8 @@ interface ContinueSeriesCard {
   lastWatchedAt: number
 }
 
+const HOME_THUMBNAIL_BLOCKLIST = new Set(['shorts-HeKbP9BCZXQ'])
+
 export default function ExplorePage() {
   const [activeCategory, setActiveCategory] = useState<'all' | CategoryId>('all')
   const router = useRouter()
@@ -85,7 +87,10 @@ export default function ExplorePage() {
     [hiddenVideoIdSet],
   )
   const visibleCatalogShorts = useMemo(
-    () => filterHiddenVideos(catalogShorts, hiddenVideoIdSet),
+    () =>
+      filterHiddenVideos(catalogShorts, hiddenVideoIdSet).filter(
+        (video) => !HOME_THUMBNAIL_BLOCKLIST.has(video.id),
+      ),
     [hiddenVideoIdSet],
   )
   const visibleCatalogSeries = useMemo(
@@ -230,8 +235,13 @@ export default function ExplorePage() {
     return arr
   }, [visibleCatalogShorts])
 
+  const homeCatalogVideos = useMemo(
+    () => visibleCatalogVideos.filter((video) => !HOME_THUMBNAIL_BLOCKLIST.has(video.id)),
+    [visibleCatalogVideos],
+  )
+
   const rankedRecommendations = useMemo(() => {
-    return recommendVideos(visibleCatalogVideos, {
+    return recommendVideos(homeCatalogVideos, {
       watchedEpisodes,
       completionCounts,
       watchRecords,
@@ -251,13 +261,13 @@ export default function ExplorePage() {
     phrases,
     recentVideoIds,
     videoSignals,
-    visibleCatalogVideos,
+    homeCatalogVideos,
     viewCounts,
     watchRecords,
     watchedEpisodes,
   ])
 
-  const spotlightVideo = rankedRecommendations[0] ?? visibleCatalogVideos[0]
+  const spotlightVideo = rankedRecommendations[0] ?? homeCatalogVideos[0]
   const spotlightSeries = spotlightVideo?.seriesId
     ? visibleCatalogSeries.find((item) => item.id === spotlightVideo.seriesId) ?? null
     : null
@@ -273,7 +283,7 @@ export default function ExplorePage() {
 
     if (cards.length >= 4) return cards.slice(0, 4)
 
-    for (const video of visibleCatalogVideos) {
+    for (const video of homeCatalogVideos) {
       if (seen.has(video.id)) continue
       seen.add(video.id)
       cards.push(video)
@@ -281,7 +291,39 @@ export default function ExplorePage() {
     }
 
     return cards
-  }, [rankedRecommendations, spotlightVideo, visibleCatalogVideos])
+  }, [homeCatalogVideos, rankedRecommendations, spotlightVideo])
+
+  const rotatingSeries = useMemo(() => {
+    const continueSeriesIds = new Set(continueSeries.map((item) => item.seriesItem.id))
+    const spotlightSeriesId = spotlightSeries?.id ?? null
+    const primarySeries = filteredSeries.filter(
+      (seriesItem) => !continueSeriesIds.has(seriesItem.id) && seriesItem.id !== spotlightSeriesId,
+    )
+    const fallbackSeries = filteredSeries.filter(
+      (seriesItem) => continueSeriesIds.has(seriesItem.id) || seriesItem.id === spotlightSeriesId,
+    )
+    const today = new Date()
+    const daySeed =
+      today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate()
+    const userSeedSource = user?.id ?? user?.email ?? 'guest'
+    const categorySeed = activeCategory === 'all' ? 'all' : activeCategory
+
+    const stableScore = (seriesId: string) => {
+      const input = `${daySeed}:${categorySeed}:${userSeedSource}:${seriesId}`
+      let hash = 0
+      for (let index = 0; index < input.length; index += 1) {
+        hash = (hash * 31 + input.charCodeAt(index)) >>> 0
+      }
+      return hash
+    }
+
+    const sortBySeed = (items: SeriesType[]) =>
+      [...items].sort((left, right) => stableScore(left.id) - stableScore(right.id))
+
+    return [...sortBySeed(primarySeries), ...sortBySeed(fallbackSeries)]
+  }, [activeCategory, continueSeries, filteredSeries, spotlightSeries?.id, user?.email, user?.id])
+
+  const visibleSeries = useMemo(() => rotatingSeries.slice(0, 6), [rotatingSeries])
 
   if (!spotlightVideo) return null
 
@@ -466,39 +508,41 @@ export default function ExplorePage() {
         )}
       </div>
 
-      <section className="mb-8 grid gap-4 xl:grid-cols-[1.15fr_0.85fr]">
+      <section className="mb-8 grid gap-4 xl:grid-cols-[1fr_0.74fr]">
         <SurfaceCard className="overflow-hidden">
-          <div className="grid min-h-[240px] lg:grid-cols-[1.02fr_0.98fr]">
-            <div className="order-2 p-6 sm:p-8 lg:order-1 lg:p-10">
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
-                오늘의 추천
-              </p>
-              <h2 className="mt-3 text-3xl font-bold leading-tight text-[var(--text-primary)]">
-                지금 볼 영상
-              </h2>
-              {spotlightSeries && (
-                <p className="mt-2 text-sm text-[var(--text-secondary)]">
-                  {spotlightSeries.title}
-                </p>
-              )}
+          <div className="grid min-h-[212px] lg:grid-cols-[1.02fr_0.98fr]">
+            <div className="order-2 flex flex-col justify-between p-5 sm:p-6 lg:order-1 lg:p-7">
+              <div>
+                <div className="flex flex-wrap items-center gap-2">
+                  <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--accent-text)]">
+                    Recommended
+                  </span>
+                  <span className="rounded-full border border-[var(--border-card)] px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.12em] text-[var(--text-secondary)]">
+                    {categoryLabels[spotlightVideo.category]}
+                  </span>
+                </div>
+                <h2 className="mt-3 line-clamp-2 text-2xl font-bold leading-tight text-[var(--text-primary)] sm:text-[1.75rem]">
+                  {spotlightVideo.title}
+                </h2>
+              </div>
 
-              <div className="mt-6 flex flex-wrap gap-2">
+              <div className="mt-5 flex flex-wrap gap-2">
                 <button
                   onClick={() => openShorts(spotlightVideo.id, spotlightVideo.seriesId)}
-                  className="rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-black"
+                  className="rounded-full border border-[var(--accent-primary)]/24 bg-[var(--accent-glow)] px-5 py-2.5 text-sm font-semibold text-[var(--text-primary)]"
                 >
                   바로 보기
                 </button>
                 <button
                   onClick={scrollToSeriesSection}
-                  className="rounded-full border border-[var(--border-card)] px-5 py-2.5 text-sm font-medium text-[var(--text-secondary)]"
+                  className="rounded-full border border-[var(--border-card)] bg-[var(--bg-card)]/65 px-5 py-2.5 text-sm font-medium text-[var(--text-secondary)]"
                 >
-                  시리즈
+                  시리즈 보기
                 </button>
               </div>
             </div>
 
-            <div className="order-1 relative min-h-[180px] overflow-hidden lg:order-2 lg:min-h-full">
+            <div className="order-1 relative min-h-[168px] overflow-hidden lg:order-2 lg:min-h-full">
               <Image
                 src={`https://img.youtube.com/vi/${spotlightVideo.youtubeId}/hqdefault.jpg`}
                 alt={spotlightVideo.title}
@@ -514,13 +558,16 @@ export default function ExplorePage() {
                     'var(--accent-rainbow-soft, linear-gradient(135deg, rgba(var(--accent-primary-rgb), 0.24), transparent 55%))',
                 }}
               />
-              <div className="absolute inset-x-0 bottom-0 p-6">
-                <div className="inline-flex rounded-full bg-white/12 px-3 py-1 text-xs font-medium text-white backdrop-blur-sm">
-                  {categoryLabels[spotlightVideo.category]}
-                </div>
-                <p className="mt-3 line-clamp-2 text-xl font-semibold text-white">
-                  {spotlightVideo.title}
-                </p>
+              <div className="absolute inset-x-0 bottom-0 p-5">
+                {spotlightSeries ? (
+                  <p className="truncate text-xs font-semibold uppercase tracking-[0.16em] text-white/80">
+                    {spotlightSeries.title}
+                  </p>
+                ) : (
+                  <p className="truncate text-xs font-semibold uppercase tracking-[0.16em] text-white/80">
+                    {categoryLabels[spotlightVideo.category]}
+                  </p>
+                )}
               </div>
             </div>
           </div>
@@ -572,17 +619,7 @@ export default function ExplorePage() {
 
       {shuffledShorts.length > 0 && (
         <section className="mb-8 overflow-hidden">
-          <SectionHeader
-            title="Shorts"
-            action={
-              <button
-                onClick={() => router.push('/shorts?feed=shorts')}
-                className="text-sm font-medium text-[var(--accent-text)]"
-              >
-                전체보기
-              </button>
-            }
-          />
+          <SectionHeader title="쇼츠" />
 
           <div className="flex gap-2.5 overflow-x-auto pb-2 no-scrollbar">
             {shuffledShorts.map((video) => (
@@ -614,7 +651,7 @@ export default function ExplorePage() {
       )}
 
       <section className="mb-8">
-        <SectionHeader title="추천" />
+        <SectionHeader title="추천 영상" />
         <div className="grid grid-cols-2 gap-3 xl:grid-cols-4">
           {recommended.map((video) => (
             <VideoCard
@@ -627,7 +664,25 @@ export default function ExplorePage() {
       </section>
 
       <section ref={seriesSectionRef} className="mb-8">
-        <SectionHeader title="시리즈" description={seriesSectionDescription} />
+        <div className="mb-4">
+          <h2 className="text-2xl font-bold text-[var(--text-primary)]">시리즈</h2>
+          <div className="mt-1 flex items-center justify-between gap-3">
+            <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
+              {seriesSectionDescription}
+            </p>
+            <button
+              type="button"
+              onClick={() => {
+                const query =
+                  activeCategory === 'all' ? '' : `?category=${encodeURIComponent(activeCategory)}`
+                router.push(`/explore/series${query}`)
+              }}
+              className="shrink-0 text-[11px] font-semibold uppercase tracking-[0.08em] text-[var(--accent-text)]"
+            >
+              VIEW ALL
+            </button>
+          </div>
+        </div>
 
         <div className="mb-4 flex gap-2 overflow-x-auto pb-1 no-scrollbar">
           <button
@@ -656,7 +711,7 @@ export default function ExplorePage() {
         </div>
 
         <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
-          {filteredSeries.map((seriesItem) => {
+          {visibleSeries.map((seriesItem) => {
             const episodes = filterHiddenVideos(
               getCatalogVideosBySeries(seriesItem.id),
               hiddenVideoIdSet,

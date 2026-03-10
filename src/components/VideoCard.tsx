@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { categories, type VideoData } from '@/data/seed-videos'
+import { getCatalogSeriesById } from '@/lib/catalog'
 
 interface VideoCardProps {
   video: VideoData
@@ -12,6 +13,7 @@ interface VideoCardProps {
 export function VideoCard({ video, onClick }: VideoCardProps) {
   const categoryLabel =
     categories.find((category) => category.id === video.category)?.label ?? video.category
+  const seriesTitle = video.seriesId ? getCatalogSeriesById(video.seriesId)?.title : null
   const metaLabel = video.seriesId
     ? video.episodeNumber
       ? `EP ${video.episodeNumber}`
@@ -41,6 +43,11 @@ export function VideoCard({ video, onClick }: VideoCardProps) {
           {metaLabel}
         </div>
         <div className="absolute bottom-4 left-4 right-4">
+          {seriesTitle && (
+            <p className="mb-1 truncate text-[11px] font-medium uppercase tracking-[0.08em] text-white/72">
+              {seriesTitle}
+            </p>
+          )}
           <p className="line-clamp-2 text-base font-semibold leading-tight text-white">
             {video.title}
           </p>

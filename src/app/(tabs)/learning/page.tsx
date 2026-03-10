@@ -25,14 +25,14 @@ export default function LearningPage() {
   const router = useRouter()
   const { phrases, removePhrase } = usePhraseStore()
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)
-  const watchedVideoIds = useWatchHistoryStore((s) => s.watchedVideoIds)
-  const viewCounts = useWatchHistoryStore((s) => s.viewCounts)
-  const streakDays = useUserStore((s) => s.streakDays)
-  const likes = useLikeStore((s) => s.likes)
+  const watchedVideoIds = useWatchHistoryStore((state) => state.watchedVideoIds)
+  const viewCounts = useWatchHistoryStore((state) => state.viewCounts)
+  const streakDays = useUserStore((state) => state.streakDays)
+  const likes = useLikeStore((state) => state.likes)
 
   const totalWatched = watchedVideoIds.length
   const totalViews = useMemo(
-    () => Object.values(viewCounts).reduce((sum, c) => sum + c, 0),
+    () => Object.values(viewCounts).reduce((sum, count) => sum + count, 0),
     [viewCounts],
   )
 
@@ -48,7 +48,6 @@ export default function LearningPage() {
     <AppPage>
       <DailyMissions />
       <div className="mt-6 space-y-6">
-        {/* Stats */}
         {totalWatched > 0 && (
           <SurfaceCard className="p-5">
             <div className="mb-4 flex items-center justify-between gap-4">
@@ -75,7 +74,6 @@ export default function LearningPage() {
           </SurfaceCard>
         )}
 
-        {/* Liked */}
         <SurfaceCard className="p-5">
           <div className="mb-4 flex items-center justify-between gap-4">
             <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
@@ -144,7 +142,6 @@ export default function LearningPage() {
           )}
         </SurfaceCard>
 
-        {/* Saved */}
         <SurfaceCard className="p-5">
           <div className="mb-4 flex items-center justify-between gap-4">
             <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">

@@ -1,8 +1,12 @@
 'use client'
 
 import { AnimatePresence } from 'framer-motion'
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
+import {
+  LearningFeedFilter,
+  type LearningFeedFilterValue,
+} from '@/components/LearningFeedFilter'
 import { SavedPhraseCard } from '@/components/SavedPhraseCard'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import { getCatalogVideoById } from '@/lib/catalog'
@@ -36,6 +40,7 @@ function getDateKey(timestamp: number): string {
 
 export default function SavedPhrasesPage() {
   const router = useRouter()
+  const [filter, setFilter] = useState<LearningFeedFilterValue>('all')
   const { phrases, removePhrase } = usePhraseStore()
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)
   const hiddenVideos = useAdminStore((state) => state.hiddenVideos)
@@ -44,12 +49,23 @@ export default function SavedPhrasesPage() {
     () => filterHiddenItemsByVideoId(phrases, hiddenVideoIdSet),
     [hiddenVideoIdSet, phrases],
   )
+  const filteredPhrases = useMemo(
+    () =>
+      visiblePhrases.filter((phrase) => {
+        const video = getCatalogVideoById(phrase.videoId)
+        if (!video) return false
+        if (filter === 'all') return true
+        if (filter === 'shorts') return video.format === 'shorts'
+        return video.format !== 'shorts'
+      }),
+    [filter, visiblePhrases],
+  )
 
   const groupedPhrases = useMemo(() => {
     const groups: { label: string; key: string; phrases: SavedPhrase[] }[] = []
     const seen = new Set<string>()
 
-    for (const phrase of visiblePhrases) {
+    for (const phrase of filteredPhrases) {
       const dateKey = getDateKey(phrase.savedAt)
 
       if (!seen.has(dateKey)) {
@@ -66,7 +82,7 @@ export default function SavedPhrasesPage() {
     }
 
     return groups
-  }, [visiblePhrases])
+  }, [filteredPhrases])
 
   const handleBack = () => {
     if (typeof window !== 'undefined' && window.history.length > 1) {
@@ -100,9 +116,13 @@ export default function SavedPhrasesPage() {
         </div>
 
         <SurfaceCard className="p-5">
-          {visiblePhrases.length === 0 ? (
+          {visiblePhrases.length > 0 && <LearningFeedFilter value={filter} onChange={setFilter} />}
+
+          {groupedPhrases.length === 0 ? (
             <div className="rounded-[24px] border border-dashed border-[var(--border-card)] px-5 py-10 text-center">
-              <p className="text-sm text-[var(--text-secondary)]">No saved items yet.</p>
+              <p className="text-sm text-[var(--text-secondary)]">
+                {visiblePhrases.length === 0 ? 'No saved items yet.' : `No saved ${filter} yet.`}
+              </p>
             </div>
           ) : (
             groupedPhrases.map((group) => (

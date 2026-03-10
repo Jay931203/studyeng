@@ -1,9 +1,13 @@
 'use client'
 
 import Image from 'next/image'
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
+import {
+  LearningFeedFilter,
+  type LearningFeedFilterValue,
+} from '@/components/LearningFeedFilter'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import { categories } from '@/data/seed-videos'
 import { getCatalogSeriesById, getCatalogVideoById } from '@/lib/catalog'
@@ -19,6 +23,7 @@ const categoryLabels = Object.fromEntries(
 
 export default function LikedPage() {
   const router = useRouter()
+  const [filter, setFilter] = useState<LearningFeedFilterValue>('all')
   const likes = useLikeStore((s) => s.likes)
   const toggleLike = useLikeStore((s) => s.toggleLike)
   const clearDeletedFlag = useWatchHistoryStore((s) => s.clearDeletedFlag)
@@ -34,6 +39,15 @@ export default function LikedPage() {
         hiddenVideoIdSet,
       ),
     [hiddenVideoIdSet, likes],
+  )
+  const filteredVideos = useMemo(
+    () =>
+      likedVideos.filter((video) => {
+        if (filter === 'all') return true
+        if (filter === 'shorts') return video.format === 'shorts'
+        return video.format !== 'shorts'
+      }),
+    [filter, likedVideos],
   )
 
   const handleBack = () => {
@@ -68,14 +82,18 @@ export default function LikedPage() {
         </div>
 
         <SurfaceCard className="p-5">
-          {likedVideos.length === 0 ? (
+          {likedVideos.length > 0 && <LearningFeedFilter value={filter} onChange={setFilter} />}
+
+          {filteredVideos.length === 0 ? (
             <div className="flex flex-col items-center justify-center py-20">
-              <p className="text-sm text-[var(--text-muted)]">No liked videos yet.</p>
+              <p className="text-sm text-[var(--text-muted)]">
+                {likedVideos.length === 0 ? 'No liked videos yet.' : `No ${filter} likes yet.`}
+              </p>
             </div>
           ) : (
             <div className="flex flex-col gap-2">
               <AnimatePresence>
-                {likedVideos.map((video) => {
+                {filteredVideos.map((video) => {
                   const categoryLabel = categoryLabels[video.category] ?? ''
                   const seriesTitle = video.seriesId
                     ? getCatalogSeriesById(video.seriesId)?.title

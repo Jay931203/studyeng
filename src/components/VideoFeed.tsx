@@ -890,6 +890,7 @@ export function VideoFeed({
         onPrevVideo={canGoPrev ? handlePrevVideo : undefined}
         onNextVideo={canGoNext ? handleNextVideo : undefined}
         onToggleFreeze={onToggleFreeze}
+        bottomOffset={isLandscapeViewport ? 12 : 92}
       />
 
       {repeatIndicator && (

@@ -7,6 +7,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation'
 import { Logo } from './Logo'
 
 type NavTabIcon = 'home' | 'play' | 'bookmark' | 'settings'
+type FeedOption = 'series' | 'shorts'
 
 type NavTab = {
   href: string
@@ -94,6 +95,66 @@ const icons: Record<NavTabIcon, (active: boolean) => ReactNode> = {
   ),
 }
 
+function FeedBurst({ animationKey }: { animationKey: string | null }) {
+  if (!animationKey) return null
+
+  const particles = [
+    { className: '-top-1 left-1/2', x: 0, y: -8, delay: 0 },
+    { className: 'top-1/2 -right-1', x: 8, y: 0, delay: 0.04 },
+    { className: 'bottom-0 left-0', x: -6, y: 4, delay: 0.08 },
+  ]
+
+  return (
+    <>
+      {particles.map((particle, index) => (
+        <motion.span
+          key={`${animationKey}-${index}`}
+          initial={{ opacity: 0, scale: 0.35, x: 0, y: 0 }}
+          animate={{ opacity: [0, 0.9, 0], scale: [0.35, 1, 0.65], x: particle.x, y: particle.y }}
+          transition={{ duration: 0.42, ease: [0.22, 1, 0.36, 1], delay: particle.delay }}
+          className={`pointer-events-none absolute h-1.5 w-1.5 rounded-full ${particle.className}`}
+          style={{ backgroundColor: 'var(--nav-active)' }}
+        />
+      ))}
+    </>
+  )
+}
+
+function FeedLabel({
+  label,
+  selected,
+  animationKey,
+  onClick,
+}: {
+  label: string
+  selected: boolean
+  animationKey: string | null
+  onClick: () => void
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-label={label}
+      aria-pressed={selected}
+      className="rounded-full px-1 py-0.5 transition-colors"
+      style={{ color: selected ? 'var(--nav-active)' : 'var(--nav-inactive)' }}
+    >
+      <span className="relative inline-flex items-center justify-center">
+        <FeedBurst animationKey={selected ? animationKey : null} />
+        <motion.span
+          key={`${label}-${selected ? animationKey ?? 'on' : 'off'}`}
+          initial={selected ? { scale: 0.92, opacity: 0.72 } : false}
+          animate={selected ? { scale: [1, 1.12, 1], opacity: 1 } : { scale: 1, opacity: 1 }}
+          transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
+        >
+          {label}
+        </motion.span>
+      </span>
+    </button>
+  )
+}
+
 interface BottomNavProps {
   mode?: 'bottom' | 'sidebar' | 'rail'
 }
@@ -118,17 +179,16 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
     pathname === '/' && Boolean(searchParams.get('v') || searchParams.get('series'))
   const isOnShortsPage = pathname === '/shorts' || isLegacyShortsAlias
   const isShortsMode = isOnShortsPage && searchParams.get('feed') === 'shorts'
-  const currentShortsLabel = isShortsMode ? 'Shorts' : 'Series'
+  const activeFeed: FeedOption | null = isOnShortsPage ? (isShortsMode ? 'shorts' : 'series') : null
+  const feedAnimationKey = activeFeed ? `${activeFeed}-entry` : null
+
+  const navigateToFeed = (feed: FeedOption) => {
+    router.push(feed === 'shorts' ? '/shorts?feed=shorts' : '/shorts', { scroll: false })
+  }
 
   const getTabHref = (tab: NavTab) => {
     if (tab.href !== '/shorts') return tab.href
-    if (!isOnShortsPage) return '/shorts?feed=shorts'
-    return isShortsMode ? '/shorts' : '/shorts?feed=shorts'
-  }
-
-  const getTabLabel = (tab: NavTab) => {
-    if (tab.href !== '/shorts') return tab.label
-    return isOnShortsPage ? currentShortsLabel : tab.label
+    return '/shorts?feed=shorts'
   }
 
   if (mode === 'rail') {
@@ -141,13 +201,12 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
         <nav className="flex flex-1 flex-col items-center gap-2">
           {tabs.map((tab) => {
             const active = isTabActive(pathname, tab.href, isLegacyShortsAlias)
-            const effectiveLabel = getTabLabel(tab)
 
             return (
               <Link
                 key={tab.href}
                 href={getTabHref(tab)}
-                aria-label={effectiveLabel}
+                aria-label={tab.label}
                 aria-current={active ? 'page' : undefined}
                 className={`flex w-full flex-col items-center justify-center gap-1 rounded-[20px] px-2 py-3 text-center transition-all ${
                   active
@@ -157,7 +216,7 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
               >
                 <div className="relative z-10">{icons[tab.icon](active)}</div>
                 <span className="whitespace-nowrap text-[10px] font-medium leading-none">
-                  {effectiveLabel}
+                  {tab.label}
                 </span>
               </Link>
             )
@@ -173,13 +232,12 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
         <nav className="flex flex-1 flex-col gap-2">
           {tabs.map((tab) => {
             const active = isTabActive(pathname, tab.href, isLegacyShortsAlias)
-            const effectiveLabel = getTabLabel(tab)
 
             return (
               <Link
                 key={tab.href}
                 href={getTabHref(tab)}
-                aria-label={effectiveLabel}
+                aria-label={tab.label}
                 aria-current={active ? 'page' : undefined}
                 className={`rounded-2xl border px-4 py-3 transition-all ${
                   active
@@ -199,7 +257,7 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
                   </div>
                   <div className="min-w-0">
                     <p className="text-sm font-semibold text-[var(--text-primary)]">
-                      {effectiveLabel}
+                      {tab.label}
                     </p>
                     {tab.description ? (
                       <p className="mt-0.5 text-xs text-[var(--text-muted)]">
@@ -222,22 +280,72 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
         {tabs.map((tab) => {
           const active = isTabActive(pathname, tab.href, isLegacyShortsAlias)
           const effectiveHref = getTabHref(tab)
-          const effectiveLabel = getTabLabel(tab)
-          const isFeedToggle = tab.href === '/shorts' && active
+
+          if (tab.href === '/shorts') {
+            return (
+              <div
+                key={tab.href}
+                className={`flex flex-col items-center justify-center gap-1 rounded-[20px] px-1 py-2 transition-all ${
+                  active ? 'bg-[var(--accent-glow)]' : ''
+                }`}
+              >
+                <motion.button
+                  type="button"
+                  onClick={() => {
+                    if (!activeFeed) {
+                      navigateToFeed('shorts')
+                      return
+                    }
+
+                    navigateToFeed(activeFeed === 'shorts' ? 'series' : 'shorts')
+                  }}
+                  aria-label="Toggle feed"
+                  animate={{ scale: active ? 1 : 0.92, y: active ? -1 : 0 }}
+                  transition={{ type: 'spring', stiffness: 420, damping: 28 }}
+                  className="relative z-10 rounded-full transition-opacity active:scale-95"
+                  style={{ color: active ? 'var(--nav-active)' : 'var(--nav-inactive)' }}
+                >
+                  {icons.play(active)}
+                </motion.button>
+                <div className="flex items-center gap-1 text-[9px] font-medium leading-none">
+                  <FeedLabel
+                    label="Series"
+                    selected={activeFeed === 'series'}
+                    animationKey={feedAnimationKey}
+                    onClick={() => {
+                      if (activeFeed === 'series') return
+                      navigateToFeed('series')
+                    }}
+                  />
+                  <span aria-hidden="true" style={{ color: 'var(--nav-divider)' }}>
+                    |
+                  </span>
+                  <FeedLabel
+                    label="Shorts"
+                    selected={activeFeed === 'shorts'}
+                    animationKey={feedAnimationKey}
+                    onClick={() => {
+                      if (activeFeed === 'shorts') return
+                      navigateToFeed('shorts')
+                    }}
+                  />
+                </div>
+              </div>
+            )
+          }
 
           return (
             <Link
               key={tab.href}
               href={effectiveHref}
               onClick={
-                isFeedToggle
+                active
                   ? (event) => {
                       event.preventDefault()
-                      router.push(effectiveHref, { scroll: false })
                     }
                   : undefined
               }
-              aria-label={effectiveLabel}
+              aria-label={tab.label}
               aria-current={active ? 'page' : undefined}
               className={`relative flex flex-col items-center justify-center gap-1 rounded-[20px] px-1 py-2 transition-all duration-200 active:scale-95 ${
                 active
@@ -265,7 +373,7 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
                 className="whitespace-nowrap text-[10px] font-medium leading-none"
                 style={{ color: active ? 'var(--nav-active)' : 'var(--nav-inactive)' }}
               >
-                {effectiveLabel}
+                {tab.label}
               </span>
             </Link>
           )
