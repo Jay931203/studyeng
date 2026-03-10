@@ -27,6 +27,9 @@ const SEED_VIDEOS_PATH = join(__dirname, '..', 'src', 'data', 'seed-videos.ts')
 const COST_LOG_PATH = join(__dirname, '..', 'whisper-cost-log.json')
 const MANIFEST_PATH = join(__dirname, 'whisper-manifest.json')
 const FFMPEG_LOCATION = resolveFfmpegLocation()
+const TARGET_DURATION = 4
+const MAX_DURATION = 6
+const MAX_TEXT_LENGTH = 120
 
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || process.env.OPEN_API_KEY
 if (!OPENAI_API_KEY) {
@@ -77,8 +80,12 @@ async function main() {
     toProcess = allVideos.filter(video => ids.has(video.youtubeId))
   } else if (idsFile) {
     const batch = await readBatchIds(idsFile)
-    const ids = new Set(Array.isArray(batch) ? batch : batch.valid_ids ?? batch.ids ?? [])
-    toProcess = allVideos.filter(video => ids.has(video.youtubeId))
+    const idsList = Array.isArray(batch) ? batch : batch.valid_ids ?? batch.ids ?? []
+    const ids = new Set(idsList)
+    const seedIds = new Set(allVideos.map(v => v.youtubeId))
+    // Include IDs from file that are NOT in seed-videos as full shorts
+    const extraVideos = idsList.filter(id => !seedIds.has(id)).map(id => ({ youtubeId: id, clipStart: 0, clipEnd: 0 }))
+    toProcess = [...allVideos.filter(video => ids.has(video.youtubeId)), ...extraVideos]
   } else if (specificId) {
     toProcess = allVideos.filter(video => video.youtubeId === specificId)
   }
@@ -136,8 +143,17 @@ async function main() {
         try {
           whisperResult = await transcribeWithOpenAI(audioDownload.audioPath)
         } catch (error) {
-          if (String(error.message).includes('OpenAI API 413')) {
-            audioDownload = await downloadAudio(videoId, tempDir, 'worstaudio[ext=webm]/worstaudio/worstaudio', clipStart, clipEnd)
+          if (
+            String(error.message).includes('OpenAI API 413') ||
+            String(error.message).includes('could not be decoded')
+          ) {
+            audioDownload = await downloadClippedAudioWithYtDlp(
+              videoId,
+              tempDir,
+              'worstaudio[ext=webm]/worstaudio/worstaudio',
+              clipStart,
+              clipEnd,
+            )
             whisperResult = await transcribeWithOpenAI(audioDownload.audioPath)
           } else {
             throw error
@@ -154,32 +170,11 @@ async function main() {
         const audioDurationMin = (whisperResult.duration || 60) / 60
         const cost = audioDurationMin * 0.006
 
-        const entries = whisperResult.segments
-          .filter(segment => segment.text.trim().length > 0)
-          .map(segment => ({
-            start: round2(segment.start + audioDownload.timeOffsetSec),
-            end: round2(segment.end + audioDownload.timeOffsetSec),
-            en: segment.text.trim(),
-            ko: '',
-          }))
-          .filter(entry => entry.start >= clipStart - 1 && entry.start <= clipEnd + 1)
-
-        const merged = []
-        for (const entry of entries) {
-          const duration = entry.end - entry.start
-          if (merged.length > 0 && duration < 1.5 && entry.end - merged[merged.length - 1].start <= 7) {
-            merged[merged.length - 1].en += ' ' + entry.en
-            merged[merged.length - 1].end = entry.end
-          } else {
-            merged.push({ ...entry })
-          }
-        }
-
-        for (const entry of merged) {
-          if (entry.end - entry.start > 7) {
-            entry.end = round2(entry.start + 7)
-          }
-        }
+        const regenerated = regroupWhisperSegments(whisperResult.segments, {
+          clipStart,
+          clipEnd,
+          timeOffsetSec: audioDownload.timeOffsetSec,
+        })
 
         const transcriptPath = join(TRANSCRIPTS_DIR, `${videoId}.json`)
         let koMatched = 0
@@ -187,8 +182,9 @@ async function main() {
           try {
             const existing = JSON.parse(await readFile(transcriptPath, 'utf-8'))
             const koMap = buildKoMap(existing)
-            for (const entry of merged) {
-              const ko = findBestKoMatch(entry.en, koMap)
+            const existingKoEntries = Array.isArray(existing) ? existing.filter(entry => entry?.ko) : []
+            for (const entry of regenerated) {
+              const ko = findBestKoMatch(entry, koMap, existingKoEntries)
               if (ko) {
                 entry.ko = ko
                 koMatched++
@@ -197,7 +193,7 @@ async function main() {
           } catch {}
         }
 
-        await writeFile(transcriptPath, JSON.stringify(merged, null, 2) + '\n', 'utf-8')
+        await writeFile(transcriptPath, JSON.stringify(regenerated, null, 2) + '\n', 'utf-8')
 
         persistQueue = persistQueue.then(async () => {
           await logCost(videoId, audioDurationMin, cost)
@@ -208,7 +204,7 @@ async function main() {
 
         success++
         completed++
-        console.log(`  [${completed}/${toProcess.length}] ${videoId} [${clipStart}-${clipEnd}s]... OK - ${merged.length} entries (${koMatched} ko) $${round2(cost * 10000) / 10000}`)
+        console.log(`  [${completed}/${toProcess.length}] ${videoId} [${clipStart}-${clipEnd}s]... OK - ${regenerated.length} entries (${koMatched} ko) $${round2(cost * 10000) / 10000}`)
         await sleep(2000)
       } catch (error) {
         failed++
@@ -319,16 +315,19 @@ function buildKoMap(entries) {
   return map
 }
 
-function findBestKoMatch(en, koMap) {
+function findBestKoMatch(entry, koMap, existingEntries = []) {
   if (koMap.size === 0) return ''
 
-  const norm = normalize(en)
+  const norm = normalize(entry.en)
   if (koMap.has(norm)) return koMap.get(norm)
 
   for (const [key, ko] of koMap) {
     if (norm.includes(key) && key.length > 10) return ko
     if (key.includes(norm) && norm.length > 10) return ko
   }
+
+  const timeMatched = findTimeAlignedKo(entry, existingEntries)
+  if (timeMatched) return timeMatched
 
   const newWords = new Set(norm.split(/\s+/))
   if (newWords.size < 2) return ''
@@ -348,6 +347,238 @@ function findBestKoMatch(en, koMap) {
   return bestKo
 }
 
+function regroupWhisperSegments(segments, { clipStart, clipEnd, timeOffsetSec }) {
+  const isFullVideo = clipStart === 0 && clipEnd === 0
+  const timed = segments
+    .filter(segment => typeof segment?.text === 'string' && segment.text.trim().length > 0)
+    .map(segment => ({
+      startSec: round2(segment.start + timeOffsetSec),
+      endSec: round2(segment.end + timeOffsetSec),
+      text: normalizeWhisperText(segment.text),
+    }))
+    .filter(segment => segment.text)
+    .filter(segment => isFullVideo || (segment.startSec >= clipStart - 1 && segment.startSec <= clipEnd + 1))
+    .sort((a, b) => a.startSec - b.startSec || a.endSec - b.endSec)
+
+  if (timed.length === 0) {
+    return []
+  }
+
+  if (isFullVideo) {
+    return normalizeGeneratedEntries(groupTimedTextIntoSubtitles(timed))
+      .filter(entry => entry.end > entry.start + 0.2)
+  }
+
+  return normalizeGeneratedEntries(groupTimedTextIntoSubtitles(timed))
+    .map(entry => ({
+      ...entry,
+      start: Math.max(clipStart, entry.start),
+      end: Math.min(clipEnd, entry.end),
+    }))
+    .filter(entry => entry.end > entry.start + 0.2)
+}
+
+function groupTimedTextIntoSubtitles(events) {
+  const subtitles = []
+  let currentTexts = []
+  let segStart = events[0].startSec
+  let segEnd = events[0].endSec
+
+  for (const event of events) {
+    const text = event.text
+    if (!text) continue
+
+    if (currentTexts.length === 0) {
+      segStart = event.startSec
+      segEnd = event.endSec
+      currentTexts.push(text)
+      continue
+    }
+
+    const previousText = currentTexts[currentTexts.length - 1]
+    if (
+      isLikelyProgressiveDuplicate(
+        { startSec: segStart, endSec: segEnd, text: previousText },
+        { startSec: event.startSec, endSec: event.endSec, text },
+        'text',
+      )
+    ) {
+      currentTexts[currentTexts.length - 1] = text.length > previousText.length ? text : previousText
+      segEnd = Math.max(segEnd, event.endSec)
+      continue
+    }
+
+    const potentialDuration = event.endSec - segStart
+    const potentialText = [...currentTexts, text].join(' ')
+
+    if (potentialDuration <= TARGET_DURATION && potentialText.length <= MAX_TEXT_LENGTH) {
+      currentTexts.push(text)
+      segEnd = event.endSec
+      continue
+    }
+
+    if (
+      potentialDuration <= MAX_DURATION &&
+      potentialText.length <= MAX_TEXT_LENGTH &&
+      !endsWithSentenceBoundary(previousText)
+    ) {
+      currentTexts.push(text)
+      segEnd = event.endSec
+      continue
+    }
+
+    subtitles.push(makeEntry(segStart, segEnd, currentTexts))
+    segStart = event.startSec
+    segEnd = event.endSec
+    currentTexts = [text]
+  }
+
+  if (currentTexts.length > 0) {
+    subtitles.push(makeEntry(segStart, segEnd, currentTexts))
+  }
+
+  return subtitles
+}
+
+function normalizeGeneratedEntries(entries) {
+  if (entries.length === 0) return []
+
+  const normalized = []
+  const sorted = [...entries].sort((a, b) => a.start - b.start || a.end - b.end)
+
+  for (const raw of sorted) {
+    const entry = {
+      ...raw,
+      start: round2(Math.max(0, raw.start)),
+      end: round2(Math.max(raw.end, raw.start + 0.2)),
+    }
+
+    const prev = normalized[normalized.length - 1]
+    if (!prev) {
+      normalized.push(entry)
+      continue
+    }
+
+    if (isLikelyProgressiveDuplicate(prev, entry, 'en')) {
+      normalized[normalized.length - 1] = pickMoreCompleteTimedEntry(prev, entry, 'en', {
+        start: Math.min(prev.start, entry.start),
+        end: Math.max(prev.end, entry.end),
+      })
+      continue
+    }
+
+    if (entry.start < prev.end) {
+      entry.start = round2(prev.end)
+    }
+
+    if (entry.end <= entry.start) {
+      entry.end = round2(entry.start + 0.2)
+    }
+
+    normalized.push(entry)
+  }
+
+  return normalized
+}
+
+function makeEntry(start, end, texts) {
+  return {
+    start: round2(start),
+    end: round2(Math.min(Math.max(end, start + 0.8), start + 6.8)),
+    en: texts.join(' ').replace(/\s+/g, ' ').trim(),
+    ko: '',
+  }
+}
+
+function normalizeWhisperText(text) {
+  return String(text || '')
+    .replace(/\s+/g, ' ')
+    .trim()
+}
+
+function findTimeAlignedKo(entry, existingEntries) {
+  const targetCenter = (entry.start + entry.end) / 2
+  let bestDistance = Number.POSITIVE_INFINITY
+  let bestKo = ''
+
+  for (const existing of existingEntries) {
+    if (!existing?.ko) continue
+
+    const existingCenter = (existing.start + existing.end) / 2
+    const distance = Math.abs(targetCenter - existingCenter)
+    if (distance > 1.5) continue
+
+    const similarity = overlapSimilarity(entry.en, existing.en ?? '')
+    if (similarity < 0.25) continue
+
+    if (distance < bestDistance) {
+      bestDistance = distance
+      bestKo = existing.ko
+    }
+  }
+
+  return bestKo
+}
+
+function overlapSimilarity(left, right) {
+  const leftWords = new Set(normalize(left).split(/\s+/).filter(Boolean))
+  const rightWords = new Set(normalize(right).split(/\s+/).filter(Boolean))
+  if (leftWords.size === 0 || rightWords.size === 0) return 0
+
+  let matches = 0
+  for (const word of leftWords) {
+    if (rightWords.has(word)) matches++
+  }
+
+  return matches / Math.max(leftWords.size, rightWords.size)
+}
+
+function normalizeCaptionText(text) {
+  return normalize(text || '')
+}
+
+function getEntryStart(entry) {
+  return entry.startSec ?? entry.start ?? 0
+}
+
+function getEntryEnd(entry) {
+  return entry.endSec ?? entry.end ?? getEntryStart(entry)
+}
+
+function isLikelyProgressiveDuplicate(a, b, textKey) {
+  const aText = normalizeCaptionText(a[textKey])
+  const bText = normalizeCaptionText(b[textKey])
+  if (!aText || !bText) return false
+
+  const startsClose = Math.abs(getEntryStart(a) - getEntryStart(b)) <= 1.0
+  const overlaps = (Math.min(getEntryEnd(a), getEntryEnd(b)) - Math.max(getEntryStart(a), getEntryStart(b))) >= -0.1
+
+  if (!startsClose || !overlaps) return false
+  if (aText === bText) return true
+
+  const [shorter, longer] = aText.length <= bText.length ? [aText, bText] : [bText, aText]
+  if (shorter.length < 12) return false
+
+  return longer.startsWith(shorter)
+}
+
+function pickMoreCompleteTimedEntry(a, b, textKey, overrides = {}) {
+  const aText = normalizeCaptionText(a[textKey])
+  const bText = normalizeCaptionText(b[textKey])
+  const preferred = bText.length > aText.length || (bText.length === aText.length && getEntryEnd(b) > getEntryEnd(a))
+    ? b
+    : a
+
+  return {
+    ...preferred,
+    ...overrides,
+  }
+}
+
+function endsWithSentenceBoundary(text) {
+  return /[.!?]["']?\s*$/.test(text)
+}
+
 function normalize(text) {
   return text.toLowerCase().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, ' ').trim()
 }
@@ -361,14 +592,68 @@ function sleep(ms) {
 }
 
 async function downloadAudio(videoId, tempDir, format, clipStart, clipEnd) {
+  const isFullVideo = clipStart === 0 && clipEnd === 0
+  if (isFullVideo) {
+    return downloadFullAudio(videoId, tempDir, format)
+  }
   if (FFMPEG_LOCATION !== false) {
-    return streamClipAudio(videoId, tempDir, format, clipStart, clipEnd)
+    try {
+      return streamClipAudio(videoId, tempDir, format, clipStart, clipEnd)
+    } catch {
+      return downloadClippedAudioWithYtDlp(videoId, tempDir, format, clipStart, clipEnd)
+    }
   }
 
+  return downloadFullAudio(videoId, tempDir, format)
+}
+
+async function downloadClippedAudioWithYtDlp(videoId, tempDir, format, clipStart, clipEnd) {
+  const downloaded = await downloadFullAudio(videoId, tempDir, format)
+  if (FFMPEG_LOCATION === false) {
+    return downloaded
+  }
+
+  const sectionStart = Math.max(0, round2(clipStart - 1))
+  const sectionDuration = Math.max(1, round2(clipEnd + 1 - sectionStart))
+  const clippedPath = join(tempDir, `${videoId}.clip.mp3`)
+  execFileSync(
+    resolveFfmpegCommand(),
+    [
+      '-y',
+      '-ss',
+      String(sectionStart),
+      '-t',
+      String(sectionDuration),
+      '-i',
+      downloaded.audioPath,
+      '-vn',
+      '-ac',
+      '1',
+      '-ar',
+      '16000',
+      '-c:a',
+      'libmp3lame',
+      '-b:a',
+      '64k',
+      clippedPath,
+    ],
+    {
+      stdio: 'pipe',
+      timeout: 600000,
+    }
+  )
+
+  return {
+    audioPath: clippedPath,
+    timeOffsetSec: sectionStart,
+  }
+}
+
+async function downloadFullAudio(videoId, tempDir, format) {
   const outTemplate = join(tempDir, `${videoId}.%(ext)s`)
   execFileSync(
     'yt-dlp',
-    ['--js-runtimes', 'node', '--extractor-retries', '3', '--retries', '3', '-f', format, '--no-post-overwrites', '-o', outTemplate, `https://www.youtube.com/watch?v=${videoId}`],
+    ['--js-runtimes', 'node', '--remote-components', 'ejs:github', '--extractor-retries', '3', '--retries', '3', '-f', format, '--no-post-overwrites', '-o', outTemplate, `https://www.youtube.com/watch?v=${videoId}`],
     {
       stdio: 'pipe',
       timeout: 600000,
@@ -395,7 +680,7 @@ function streamClipAudio(videoId, tempDir, format, clipStart, clipEnd) {
   const sectionDuration = Math.max(1, round2(clipEnd + 1 - sectionStart))
   const audioUrl = execFileSync(
     'yt-dlp',
-    ['--js-runtimes', 'node', '--extractor-retries', '3', '--retries', '3', '-f', format, '-g', `https://www.youtube.com/watch?v=${videoId}`],
+    ['--js-runtimes', 'node', '--remote-components', 'ejs:github', '--extractor-retries', '3', '--retries', '3', '-f', format, '-g', `https://www.youtube.com/watch?v=${videoId}`],
     {
       encoding: 'utf8',
       stdio: 'pipe',
