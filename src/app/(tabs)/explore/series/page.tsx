@@ -14,6 +14,7 @@ import {
   getCatalogSeriesByCategory,
   getCatalogVideosBySeries,
 } from '@/lib/catalog'
+import { getSeriesSearchTerms, matchesSearchText } from '@/lib/seriesSearch'
 import { createHiddenVideoIdSet, filterHiddenVideos } from '@/lib/videoVisibility'
 import { useAdminStore } from '@/stores/useAdminStore'
 import { useThemeStore } from '@/stores/useThemeStore'
@@ -75,15 +76,10 @@ export default function ExploreSeriesPage() {
     if (!normalizedQuery) return byCategory
 
     return byCategory.filter((seriesItem) => {
-      const haystack = [
-        seriesItem.title,
-        seriesItem.description,
-        categoryLabels[seriesItem.category],
-      ]
-        .join(' ')
-        .toLowerCase()
-
-      return haystack.includes(normalizedQuery)
+      return matchesSearchText(
+        [categoryLabels[seriesItem.category], ...getSeriesSearchTerms(seriesItem)],
+        normalizedQuery,
+      )
     })
   }, [activeCategory, query, visibleCatalogSeries])
 

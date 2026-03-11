@@ -1,5 +1,6 @@
 import { series, type VideoData, type SubtitleEntry } from '@/data/seed-videos'
 import { catalogVideos, getCatalogSeriesById } from '@/lib/catalog'
+import { getSeriesSearchTerms, matchesSearchText } from '@/lib/seriesSearch'
 
 // Build series lookup for search: map youtubeId → Series
 const videoSeriesMap = new Map<string, typeof series[0]>()
@@ -74,12 +75,8 @@ export async function searchVideos(
     if (hiddenVideoIds.has(video.id)) continue
     if (seen.has(video.id)) continue
     const s = videoSeriesMap.get(video.youtubeId)
-    const searchable = [
-      video.title.toLowerCase(),
-      s?.title.toLowerCase() ?? '',
-      s?.description.toLowerCase() ?? '',
-    ].join(' ')
-    if (searchable.includes(q)) {
+    const searchable = [video.title, ...getSeriesSearchTerms(s)]
+    if (matchesSearchText(searchable, q)) {
       results.push({ video, matchType: 'title' })
       seen.add(video.id)
     }
