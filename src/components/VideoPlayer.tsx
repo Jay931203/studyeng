@@ -7,6 +7,7 @@ import {
   useRef,
   useEffect,
   useMemo,
+  useCallback,
   type CSSProperties,
   type ReactNode,
 } from 'react'
@@ -16,8 +17,13 @@ import { useGameTrigger } from '@/hooks/useGameTrigger'
 import { usePlayerStore, seekToRef, playRef, pauseRef } from '@/stores/usePlayerStore'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { useUserStore } from '@/stores/useUserStore'
+import { useSettingsStore } from '@/stores/useSettingsStore'
+import { usePhraseStore } from '@/stores/usePhraseStore'
+import { getPrimingExpressions } from '@/lib/expressionLookup'
 import { LyricsSubtitles } from './LyricsSubtitles'
+import { PrimingCard } from './PrimingCard'
 import { ProgressBar } from './ProgressBar'
+import { SaveToast } from './SaveToast'
 import { SubtitleGame } from './SubtitleGame'
 import type { SubtitleEntry } from '@/data/seed-videos'
 
@@ -107,6 +113,34 @@ export function VideoPlayer({
 
   // Game trigger: watches subtitles and triggers "next line" quiz
   useGameTrigger(youtubeId, subtitles)
+
+  const primingEnabled = useSettingsStore((state) => state.primingEnabled)
+
+  const primingExpressions = useMemo(() => {
+    if (!primingEnabled || !youtubeId) return []
+    return getPrimingExpressions(youtubeId, 3)
+  }, [primingEnabled, youtubeId])
+
+  const videoSessionKey = `${videoId ?? 'video'}:${youtubeId}`
+  const [dismissedPrimingKey, setDismissedPrimingKey] = useState<string | null>(null)
+  const showPriming =
+    primingExpressions.length > 0 && dismissedPrimingKey !== videoSessionKey
+
+  const handlePrimingDismiss = useCallback(() => {
+    setDismissedPrimingKey(videoSessionKey)
+    play()
+  }, [play, videoSessionKey])
+
+  useEffect(() => {
+    setFreezeSubIndex(null)
+  }, [setFreezeSubIndex, videoId, youtubeId])
+
+  // Pause video while priming card is visible
+  useEffect(() => {
+    if (showPriming && playbackStarted) {
+      pause()
+    }
+  }, [showPriming, playbackStarted, pause])
 
   const [overlayVisible, setOverlayVisible] = useState(true)
   const [showPauseIcon, setShowPauseIcon] = useState(false)
@@ -469,6 +503,20 @@ export function VideoPlayer({
       )}
 
       {children}
+
+      {showPriming && (
+        <PrimingCard
+          expressions={primingExpressions.map((ve) => ({
+            canonical: ve.expression.canonical,
+            meaning_ko: ve.expression.meaning_ko,
+            category: ve.expression.category,
+            cefr: ve.expression.cefr,
+            sentenceEn: ve.sentence.en,
+            sentenceKo: ve.sentence.ko,
+          }))}
+          onDismiss={handlePrimingDismiss}
+        />
+      )}
     </div>
   )
 
@@ -485,7 +533,10 @@ export function VideoPlayer({
         {subtitleMode !== 'none' && subtitles.length > 0 && (
           <ShortsSubtitleOverlay
             subtitles={subtitles}
+            videoId={videoId ?? youtubeId}
             showKo={subtitleMode === 'en-ko'}
+            onSavePhrase={onSavePhrase}
+            onSeek={(time) => seekTo(time)}
           />
         )}
 
@@ -549,24 +600,158 @@ export function VideoPlayer({
  */
 function ShortsSubtitleOverlay({
   subtitles,
+  videoId,
   showKo,
+  onSavePhrase,
+  onSeek,
 }: {
   subtitles: SubtitleEntry[]
+  videoId: string
   showKo: boolean
+  onSavePhrase?: (phrase: SubtitleEntry) => void
+  onSeek?: (time: number) => void
 }) {
   const activeSubIndex = usePlayerStore((state) => state.activeSubIndex)
+  const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
+  const setFreezeSubIndex = usePlayerStore((state) => state.setFreezeSubIndex)
+  const phrases = usePhraseStore((state) => state.phrases)
+  const removePhrase = usePhraseStore((state) => state.removePhrase)
   const activeSub = activeSubIndex >= 0 ? subtitles[activeSubIndex] : null
+  const [notice, setNotice] = useState<{
+    message: string
+    tone: 'accent' | 'freeze'
+  } | null>(null)
+  const noticeTimerRef = useRef<number | null>(null)
+  const lastTapRef = useRef(0)
+  const longPressTimerRef = useRef<number | null>(null)
+  const longPressFiredRef = useRef(false)
+  const pointerStartRef = useRef<{ x: number; y: number } | null>(null)
+
+  const savedPhraseId = useMemo(() => {
+    if (!activeSub) return null
+    return (
+      phrases.find((phrase) => phrase.videoId === videoId && phrase.en === activeSub.en)?.id ??
+      phrases.find((phrase) => phrase.en === activeSub.en)?.id ??
+      null
+    )
+  }, [activeSub, phrases, videoId])
+
+  const showNotice = useCallback(
+    (message: string, tone: 'accent' | 'freeze', duration = 1400) => {
+      setNotice({ message, tone })
+      if (noticeTimerRef.current) {
+        window.clearTimeout(noticeTimerRef.current)
+      }
+      noticeTimerRef.current = window.setTimeout(() => {
+        setNotice(null)
+        noticeTimerRef.current = null
+      }, duration)
+    },
+    [],
+  )
+
+  const clearLongPress = useCallback(() => {
+    if (longPressTimerRef.current) {
+      window.clearTimeout(longPressTimerRef.current)
+      longPressTimerRef.current = null
+    }
+  }, [])
+
+  useEffect(() => {
+    return () => {
+      if (noticeTimerRef.current) {
+        window.clearTimeout(noticeTimerRef.current)
+      }
+      if (longPressTimerRef.current) {
+        window.clearTimeout(longPressTimerRef.current)
+      }
+    }
+  }, [])
 
   if (!activeSub) return null
 
   return (
     <div
-      className="pointer-events-none absolute bottom-12 left-0 right-0 z-[12] flex justify-center px-4"
+      className="absolute bottom-12 left-0 right-0 z-[12] flex justify-center px-4"
     >
+      <div className="pointer-events-none absolute -top-11 left-1/2 -translate-x-1/2">
+        <SaveToast
+          show={Boolean(notice)}
+          message={notice?.message ?? ''}
+          placement="inline"
+          tone={notice?.tone ?? 'default'}
+        />
+      </div>
       <div
-        className="max-w-[92%] rounded-t-xl rounded-b-lg px-5 py-3 text-center backdrop-blur-sm"
+        className="pointer-events-auto max-w-[92%] rounded-t-xl rounded-b-lg border px-5 py-3 text-center backdrop-blur-sm transition-transform active:scale-[0.985]"
         style={{
           backgroundColor: 'rgba(0, 0, 0, 0.6)',
+          borderColor:
+            freezeSubIndex === activeSubIndex
+              ? 'rgba(var(--accent-primary-rgb), 0.5)'
+              : 'rgba(255, 255, 255, 0.08)',
+        }}
+        onClick={(event) => {
+          event.stopPropagation()
+
+          if (longPressFiredRef.current) {
+            longPressFiredRef.current = false
+            return
+          }
+
+          const now = Date.now()
+          if (now - lastTapRef.current < 550) {
+            if (savedPhraseId) {
+              removePhrase(savedPhraseId)
+              showNotice('REMOVED', 'accent')
+            } else if (onSavePhrase) {
+              onSavePhrase(activeSub)
+            }
+            lastTapRef.current = 0
+            return
+          }
+
+          lastTapRef.current = now
+
+          if (freezeSubIndex === activeSubIndex) {
+            onSeek?.(activeSub.start)
+          }
+        }}
+        onPointerDown={(event) => {
+          event.stopPropagation()
+          longPressFiredRef.current = false
+          pointerStartRef.current = { x: event.clientX, y: event.clientY }
+          clearLongPress()
+          longPressTimerRef.current = window.setTimeout(() => {
+            longPressFiredRef.current = true
+            if (freezeSubIndex === activeSubIndex) {
+              setFreezeSubIndex(null)
+              showNotice('FREEZE OFF', 'freeze', 1200)
+            } else {
+              setFreezeSubIndex(activeSubIndex)
+              onSeek?.(activeSub.start)
+              showNotice('FREEZE ON', 'freeze', 1800)
+            }
+          }, 500)
+        }}
+        onPointerMove={(event) => {
+          event.stopPropagation()
+          if (!pointerStartRef.current) return
+          const dx = event.clientX - pointerStartRef.current.x
+          const dy = event.clientY - pointerStartRef.current.y
+          if (Math.hypot(dx, dy) > 10) {
+            clearLongPress()
+          }
+        }}
+        onPointerUp={(event) => {
+          event.stopPropagation()
+          pointerStartRef.current = null
+          clearLongPress()
+        }}
+        onPointerCancel={(event) => {
+          event.stopPropagation()
+          pointerStartRef.current = null
+          clearLongPress()
         }}
       >
         <p
@@ -583,6 +768,11 @@ function ShortsSubtitleOverlay({
             {activeSub.ko}
           </p>
         )}
+        <div className="mt-2 flex items-center justify-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/55">
+          <span>{savedPhraseId ? 'Saved' : 'Double Tap Save'}</span>
+          <span className="text-white/25">|</span>
+          <span>{freezeSubIndex === activeSubIndex ? 'Hold Unfreeze' : 'Hold Freeze'}</span>
+        </div>
       </div>
     </div>
   )

@@ -121,14 +121,7 @@ export default function ExploreSeriesPage() {
           </div>
         </div>
 
-        <div
-          className="rounded-[32px] border border-[var(--border-card)] p-3 sm:p-4"
-          style={{
-            background:
-              'var(--accent-rainbow-ui-soft, linear-gradient(135deg, rgba(var(--accent-primary-rgb), 0.16) 0%, rgba(var(--accent-primary-rgb), 0.06) 34%, transparent 78%))',
-          }}
-        >
-          <SurfaceCard className="relative overflow-hidden border-[var(--accent-primary)]/14 p-5 sm:p-6">
+        <SurfaceCard className="relative overflow-hidden border-[var(--accent-primary)]/14 p-5 sm:p-6">
             <div
               aria-hidden="true"
               className="pointer-events-none absolute inset-x-0 top-0 h-24"
@@ -260,8 +253,7 @@ export default function ExploreSeriesPage() {
                 </div>
               )}
             </div>
-          </SurfaceCard>
-        </div>
+        </SurfaceCard>
       </div>
     </AppPage>
   )
