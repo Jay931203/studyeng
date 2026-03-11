@@ -362,107 +362,125 @@ export default function ExplorePage() {
           </p>
         </div>
 
-        <section className="grid min-w-0 items-start gap-6 xl:grid-cols-[0.92fr_1.08fr]">
-          <SurfaceCard className="min-w-0 p-6">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-5">
-              <svg width="100" height="100" viewBox="0 0 100 100" className="shrink-0">
-                <circle
-                  cx="50"
-                  cy="50"
-                  r={radius}
-                  fill="none"
-                  stroke="var(--bg-secondary)"
-                  strokeWidth="8"
-                />
-                <circle
-                  cx="50"
-                  cy="50"
-                  r={radius}
-                  fill="none"
-                  stroke="var(--accent-primary)"
-                  strokeWidth="8"
-                  strokeLinecap="round"
-                  strokeDasharray={circumference}
-                  strokeDashoffset={dashOffset}
-                  transform="rotate(-90 50 50)"
-                  style={{ transition: 'stroke-dashoffset 0.5s ease' }}
-                />
-                <text
-                  x="50"
-                  y="50"
-                  textAnchor="middle"
-                  dominantBaseline="central"
-                  fill="var(--text-primary)"
-                  fontSize="18"
-                  fontWeight="700"
-                >
-                  {progressPct}%
-                </text>
-              </svg>
-
-                <div className="min-w-0 flex-1">
-                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
-                    {categoryLabels[selectedSeries.category]}
-                  </p>
-                  <h2 className="mt-2 text-2xl font-bold text-[var(--text-primary)]">
-                    {selectedSeries.title}
-                  </h2>
-                  <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-                    {selectedSeries.description}
-                  </p>
-                  <p className="mt-3 text-xs text-[var(--text-muted)]">
-                    {selectedSeries.episodeCount} EPISODES
-                  </p>
-                </div>
-              </div>
-
-              <button
-              onClick={() => {
-                const nextId =
-                  getNextEpisode(
-                    selectedSeries.id,
-                    seriesEpisodes.map((video) => video.id),
-                  ) ?? seriesEpisodes[0]?.id
-                openShorts(nextId, selectedSeries.id)
-              }}
-              className="mt-6 w-full rounded-2xl bg-[var(--accent-primary)] py-3.5 text-sm font-semibold text-white"
-            >
-              WATCH NEXT
-            </button>
-          </SurfaceCard>
-
-          <div className="min-w-0 space-y-3">
-            {seriesEpisodes.map((video) => {
-              const views = getViewCount(video.id)
-              return (
-                <motion.button
-                  key={video.id}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => openShorts(video.id, selectedSeries.id)}
-                  className="flex w-full items-center gap-3 rounded-[20px] border border-[var(--border-card)] bg-[var(--bg-card)] p-3 text-left shadow-[var(--card-shadow)]"
-                >
-                  <div className="relative h-[56px] w-[100px] shrink-0 overflow-hidden rounded-xl">
-                    <Image
-                      src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
-                      alt={video.title}
-                      fill
-                      sizes="100px"
-                      className="object-cover"
+        <section
+          className="rounded-[32px] border border-[var(--border-card)] p-3 sm:p-4"
+          style={{
+            background:
+              'var(--accent-rainbow-ui-soft, linear-gradient(135deg, rgba(var(--accent-primary-rgb), 0.16) 0%, rgba(var(--accent-primary-rgb), 0.06) 34%, transparent 78%))',
+          }}
+        >
+          <div className="grid min-w-0 items-start gap-6 xl:grid-cols-[0.92fr_1.08fr]">
+            <SurfaceCard className="relative min-w-0 overflow-hidden border-[var(--accent-primary)]/14 p-6">
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-x-0 top-0 h-24"
+                style={{
+                  background:
+                    'linear-gradient(180deg, var(--accent-glow) 0%, transparent 100%)',
+                }}
+              />
+              <div className="relative">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-5">
+                  <svg width="100" height="100" viewBox="0 0 100 100" className="shrink-0">
+                    <circle
+                      cx="50"
+                      cy="50"
+                      r={radius}
+                      fill="none"
+                      stroke="var(--bg-secondary)"
+                      strokeWidth="8"
                     />
-                  </div>
+                    <circle
+                      cx="50"
+                      cy="50"
+                      r={radius}
+                      fill="none"
+                      stroke="var(--accent-primary)"
+                      strokeWidth="8"
+                      strokeLinecap="round"
+                      strokeDasharray={circumference}
+                      strokeDashoffset={dashOffset}
+                      transform="rotate(-90 50 50)"
+                      style={{ transition: 'stroke-dashoffset 0.5s ease' }}
+                    />
+                    <text
+                      x="50"
+                      y="50"
+                      textAnchor="middle"
+                      dominantBaseline="central"
+                      fill="var(--text-primary)"
+                      fontSize="18"
+                      fontWeight="700"
+                    >
+                      {progressPct}%
+                    </text>
+                  </svg>
 
                   <div className="min-w-0 flex-1">
-                    <p className="truncate text-sm font-semibold text-[var(--text-primary)]">
-                      {video.episodeNumber}. {video.title}
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--accent-text)]">
+                      {categoryLabels[selectedSeries.category]}
                     </p>
-                    <p className="mt-1 flex items-center gap-2 text-xs text-[var(--text-muted)]">
-                      <span>Lv.{video.difficulty}</span>
-                      <span className="font-mono text-[var(--text-secondary)]">&times;{views}</span>
+                    <h2 className="mt-2 text-2xl font-bold text-[var(--text-primary)]">
+                      {selectedSeries.title}
+                    </h2>
+                    <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
+                      {selectedSeries.description}
+                    </p>
+                    <p className="mt-3 text-xs text-[var(--text-muted)]">
+                      {selectedSeries.episodeCount} EPISODES
                     </p>
                   </div>
-                </motion.button>
-              )
-            })}
+                </div>
+
+                <button
+                  onClick={() => {
+                    const nextId =
+                      getNextEpisode(
+                        selectedSeries.id,
+                        seriesEpisodes.map((video) => video.id),
+                      ) ?? seriesEpisodes[0]?.id
+                    openShorts(nextId, selectedSeries.id)
+                  }}
+                  className="mt-6 w-full rounded-2xl bg-[var(--accent-primary)] py-3.5 text-sm font-semibold text-white"
+                >
+                  WATCH NEXT
+                </button>
+              </div>
+            </SurfaceCard>
+
+            <div className="min-w-0 space-y-3">
+              {seriesEpisodes.map((video) => {
+                const views = getViewCount(video.id)
+                return (
+                  <motion.button
+                    key={video.id}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={() => openShorts(video.id, selectedSeries.id)}
+                    className="flex w-full items-center gap-3 rounded-[20px] border border-[var(--border-card)] bg-[var(--bg-card)] p-3 text-left shadow-[var(--card-shadow)]"
+                  >
+                    <div className="relative h-[56px] w-[100px] shrink-0 overflow-hidden rounded-xl">
+                      <Image
+                        src={`https://img.youtube.com/vi/${video.youtubeId}/mqdefault.jpg`}
+                        alt={video.title}
+                        fill
+                        sizes="100px"
+                        className="object-cover"
+                      />
+                    </div>
+
+                    <div className="min-w-0 flex-1">
+                      <p className="truncate text-sm font-semibold text-[var(--text-primary)]">
+                        {video.episodeNumber}. {video.title}
+                      </p>
+                      <p className="mt-1 flex items-center gap-2 text-xs text-[var(--text-muted)]">
+                        <span>Lv.{video.difficulty}</span>
+                        <span className="font-mono text-[var(--text-secondary)]">&times;{views}</span>
+                      </p>
+                    </div>
+                  </motion.button>
+                )
+              })}
+            </div>
           </div>
         </section>
       </AppPage>
