@@ -17,11 +17,8 @@ import { useGameTrigger } from '@/hooks/useGameTrigger'
 import { usePlayerStore, seekToRef, playRef, pauseRef } from '@/stores/usePlayerStore'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { useUserStore } from '@/stores/useUserStore'
-import { useSettingsStore } from '@/stores/useSettingsStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
-import { getPrimingExpressions } from '@/lib/expressionLookup'
 import { LyricsSubtitles } from './LyricsSubtitles'
-import { PrimingCard } from './PrimingCard'
 import { ProgressBar } from './ProgressBar'
 import { SaveToast } from './SaveToast'
 import { SubtitleGame } from './SubtitleGame'
@@ -114,33 +111,9 @@ export function VideoPlayer({
   // Game trigger: watches subtitles and triggers "next line" quiz
   useGameTrigger(youtubeId, subtitles)
 
-  const primingEnabled = useSettingsStore((state) => state.primingEnabled)
-
-  const primingExpressions = useMemo(() => {
-    if (!primingEnabled || !youtubeId) return []
-    return getPrimingExpressions(youtubeId, 3)
-  }, [primingEnabled, youtubeId])
-
-  const videoSessionKey = `${videoId ?? 'video'}:${youtubeId}`
-  const [dismissedPrimingKey, setDismissedPrimingKey] = useState<string | null>(null)
-  const showPriming =
-    primingExpressions.length > 0 && dismissedPrimingKey !== videoSessionKey
-
-  const handlePrimingDismiss = useCallback(() => {
-    setDismissedPrimingKey(videoSessionKey)
-    play()
-  }, [play, videoSessionKey])
-
   useEffect(() => {
     setFreezeSubIndex(null)
   }, [setFreezeSubIndex, videoId, youtubeId])
-
-  // Pause video while priming card is visible
-  useEffect(() => {
-    if (showPriming && playbackStarted) {
-      pause()
-    }
-  }, [showPriming, playbackStarted, pause])
 
   const [overlayVisible, setOverlayVisible] = useState(true)
   const [showPauseIcon, setShowPauseIcon] = useState(false)
@@ -503,20 +476,6 @@ export function VideoPlayer({
       )}
 
       {children}
-
-      {showPriming && (
-        <PrimingCard
-          expressions={primingExpressions.map((ve) => ({
-            canonical: ve.expression.canonical,
-            meaning_ko: ve.expression.meaning_ko,
-            category: ve.expression.category,
-            cefr: ve.expression.cefr,
-            sentenceEn: ve.sentence.en,
-            sentenceKo: ve.sentence.ko,
-          }))}
-          onDismiss={handlePrimingDismiss}
-        />
-      )}
     </div>
   )
 
