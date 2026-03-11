@@ -10,11 +10,14 @@ interface Expression {
   cefr: string
   sentenceEn: string
   sentenceKo: string
+  start?: number
+  end?: number
 }
 
 interface PrimingCardProps {
   expressions: Expression[]
   onDismiss: () => void
+  onPlaySegment?: (start: number, end: number) => void
   videoTitle?: string
 }
 
@@ -47,11 +50,14 @@ function getCefrColor(cefr: string): { bg: string; text: string } {
 function ExpressionCard({
   expr,
   index,
+  onPlaySegment,
 }: {
   expr: Expression
   index: number
+  onPlaySegment?: (start: number, end: number) => void
 }) {
   const [flipped, setFlipped] = useState(false)
+  const [played, setPlayed] = useState(false)
   const cefrColor = getCefrColor(expr.cefr)
   const categoryLabel = CATEGORY_LABELS[expr.category] ?? expr.category
 
@@ -157,13 +163,36 @@ function ExpressionCard({
           >
             {expr.sentenceKo}
           </p>
+          {onPlaySegment && expr.start != null && expr.end != null && (
+            <button
+              type="button"
+              className="mt-3 flex items-center gap-1.5 rounded-full px-3 py-1.5 transition-opacity"
+              style={{
+                backgroundColor: played ? 'rgba(255, 255, 255, 0.05)' : 'rgba(255, 255, 255, 0.1)',
+                opacity: played ? 0.5 : 1,
+              }}
+              onClick={(e) => {
+                e.stopPropagation()
+                if (played) return
+                setPlayed(true)
+                onPlaySegment(expr.start!, expr.end!)
+              }}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-3 w-3" style={{ color: played ? 'rgba(255,255,255,0.4)' : 'var(--accent-text, #5eead4)' }}>
+                <path fillRule="evenodd" d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z" clipRule="evenodd" />
+              </svg>
+              <span className="text-[11px] font-medium" style={{ color: played ? 'rgba(255,255,255,0.4)' : 'rgba(255,255,255,0.7)' }}>
+                {played ? '재생됨' : '들어보기'}
+              </span>
+            </button>
+          )}
         </div>
       </motion.div>
     </motion.div>
   )
 }
 
-export function PrimingCard({ expressions, onDismiss, videoTitle }: PrimingCardProps) {
+export function PrimingCard({ expressions, onDismiss, onPlaySegment, videoTitle }: PrimingCardProps) {
   const visible = expressions.length > 0
   const displayExpressions = expressions.slice(0, 3)
 
@@ -229,7 +258,7 @@ export function PrimingCard({ expressions, onDismiss, videoTitle }: PrimingCardP
             {/* Expression list */}
             <div className="flex flex-col gap-3">
               {displayExpressions.map((expr, index) => (
-                <ExpressionCard key={`${expr.canonical}-${index}`} expr={expr} index={index} />
+                <ExpressionCard key={`${expr.canonical}-${index}`} expr={expr} index={index} onPlaySegment={onPlaySegment} />
               ))}
             </div>
 
@@ -237,10 +266,7 @@ export function PrimingCard({ expressions, onDismiss, videoTitle }: PrimingCardP
             <motion.button
               type="button"
               onClick={handleDismiss}
-              className="mt-6 flex w-full items-center justify-center gap-2.5 rounded-2xl py-3.5 transition-colors"
-              style={{
-                backgroundColor: 'var(--accent-primary, #14b8a6)',
-              }}
+              className="mt-6 flex w-full items-center justify-center gap-2.5 rounded-2xl bg-[var(--accent-primary)] py-3.5 text-white shadow-lg shadow-[var(--accent-glow)] transition-colors"
               whileTap={{ scale: 0.97 }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}

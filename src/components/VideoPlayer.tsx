@@ -531,15 +531,26 @@ export function VideoPlayer({
 
       {showPriming && (
         <PrimingCard
-          expressions={primingExpressions.map((ve) => ({
-            canonical: ve.expression.canonical,
-            meaning_ko: ve.expression.meaning_ko,
-            category: ve.expression.category,
-            cefr: ve.expression.cefr,
-            sentenceEn: ve.sentence.en,
-            sentenceKo: ve.sentence.ko,
-          }))}
+          expressions={primingExpressions.map((ve) => {
+            const sub = subtitles.find((s) => s.en === ve.sentence.en)
+            return {
+              canonical: ve.expression.canonical,
+              meaning_ko: ve.expression.meaning_ko,
+              category: ve.expression.category,
+              cefr: ve.expression.cefr,
+              sentenceEn: ve.sentence.en,
+              sentenceKo: ve.sentence.ko,
+              start: sub?.start,
+              end: sub?.end,
+            }
+          })}
           onDismiss={handlePrimingDismiss}
+          onPlaySegment={(start, end) => {
+            seekTo(start)
+            play()
+            const duration = (end - start) * 1000 + 200
+            setTimeout(() => pause(), duration)
+          }}
         />
       )}
     </div>
