@@ -48,6 +48,25 @@ interface VideoPlayerProps {
   children?: ReactNode
 }
 
+const SIMILAR_CUE_STOPWORDS = new Set([
+  'i', 'me', 'my', 'you', 'your', 'he', 'him', 'his', 'she', 'her', 'it', 'its',
+  'we', 'us', 'our', 'they', 'them', 'their', 'the', 'a', 'an', 'and', 'but', 'or',
+  'so', 'if', 'is', 'am', 'are', 'was', 'were', 'be', 'been', 'being', 'have', 'has',
+  'had', 'do', 'does', 'did', 'will', 'would', 'can', 'could', 'should', 'may', 'might',
+  'shall', 'must', 'in', 'on', 'at', 'to', 'for', 'of', 'with', 'by', 'from', 'up',
+  'out', 'off', 'no', 'not', 'nor', 'as', 'than', 'too', 'very', 'just', 'about',
+  'this', 'that', 'what', 'which', 'who', 'whom', 'how', 'when', 'where', 'why',
+  "it's", "he's", "she's", "i'm", "we're", "they're", "you're", "that's", "there's",
+  "what's", "here's", "let's", "who's", "how's", "where's", "when's",
+  'then', 'now', 'here', 'there', 'all', 'some', 'any', 'each', 'every',
+  'oh', 'yeah', 'yes', 'no', 'okay', 'ok', 'well', 'like', 'right',
+])
+
+function extractSimilarCueTokens(text: string): string[] {
+  return text.toLowerCase().replace(/[^a-z' ]/g, '').split(/\s+/)
+    .filter((word) => word.length > 2 && !SIMILAR_CUE_STOPWORDS.has(word))
+}
+
 const PlayerMount = memo(function PlayerMount({ containerId }: { containerId: string }) {
   return <div id={containerId} className="h-full w-full" />
 })
@@ -139,33 +158,125 @@ export function VideoPlayer({
     if (showPriming && playbackStarted) pause()
   }, [showPriming, playbackStarted, pause])
 
-  // --- Haptic: vibrate when primed expression subtitle becomes active ---
-  const primedSubIndices = useMemo(() => {
-    const set = new Set<number>()
-    for (const ve of primingExpressions) {
-      const idx = subtitles.findIndex(
-        (s) => s.en === ve.sentence.en || s.en.includes(ve.expression.canonical),
-      )
-      if (idx >= 0) set.add(idx)
-    }
-    return set
-  }, [primingExpressions, subtitles])
-
   const vibratedRef = useRef(new Set<number>())
   useEffect(() => { vibratedRef.current = new Set() }, [youtubeId, videoId])
 
   const activeSubForHaptic = usePlayerStore((state) => state.activeSubIndex)
+  const phrases = usePhraseStore((state) => state.phrases)
+  const [cueNotice, setCueNotice] = useState<{
+    message: string
+    tone: 'accent' | 'muted'
+  } | null>(null)
+  const cueNoticeTimerRef = useRef<number | null>(null)
+  const lastSimilarCueRef = useRef<{ token: string; time: number }>({ token: '', time: 0 })
+
+  const showCueNotice = useCallback(
+    (message: string, tone: 'accent' | 'muted', duration = 1100) => {
+      setCueNotice({ message, tone })
+      if (cueNoticeTimerRef.current) {
+        window.clearTimeout(cueNoticeTimerRef.current)
+      }
+      cueNoticeTimerRef.current = window.setTimeout(() => {
+        setCueNotice(null)
+        cueNoticeTimerRef.current = null
+      }, duration)
+    },
+    [],
+  )
+
+  const savedPhraseMap = useMemo(() => {
+    const entries = new Set<string>()
+    for (const phrase of phrases) {
+      entries.add(`${phrase.videoId}::${phrase.en}`)
+    }
+    return entries
+  }, [phrases])
+
+  const similarPhraseTokenSet = useMemo(() => {
+    const tokens = new Set<string>()
+    for (const phrase of phrases) {
+      for (const token of extractSimilarCueTokens(phrase.en)) {
+        tokens.add(token)
+      }
+    }
+    return tokens
+  }, [phrases])
+
+  const primingCueBySubtitleIndex = useMemo(() => {
+    const map = new Map<number, string>()
+    for (const ve of primingExpressions) {
+      const idx = subtitles.findIndex(
+        (subtitle) => subtitle.en === ve.sentence.en || subtitle.en.includes(ve.expression.canonical),
+      )
+      if (idx >= 0 && !map.has(idx)) {
+        map.set(idx, ve.expression.canonical)
+      }
+    }
+    return map
+  }, [primingExpressions, subtitles])
+
+  useEffect(() => {
+    return () => {
+      if (cueNoticeTimerRef.current) {
+        window.clearTimeout(cueNoticeTimerRef.current)
+      }
+    }
+  }, [])
+
   useEffect(() => {
     if (
       activeSubForHaptic >= 0 &&
-      primedSubIndices.has(activeSubForHaptic) &&
+      primingCueBySubtitleIndex.has(activeSubForHaptic) &&
       !vibratedRef.current.has(activeSubForHaptic) &&
       !showPriming
     ) {
       vibratedRef.current.add(activeSubForHaptic)
       triggerHaptic([40, 30, 60])
+      const phrase = primingCueBySubtitleIndex.get(activeSubForHaptic)
+      if (phrase) {
+        const timer = window.setTimeout(() => {
+          showCueNotice(`KEY · ${phrase.toUpperCase()}`, 'accent', 1200)
+        }, 0)
+        return () => window.clearTimeout(timer)
+      }
     }
-  }, [activeSubForHaptic, primedSubIndices, showPriming])
+  }, [activeSubForHaptic, primingCueBySubtitleIndex, showCueNotice, showPriming])
+
+  useEffect(() => {
+    if (activeSubForHaptic < 0 || showPriming) return
+
+    const subtitle = subtitles[activeSubForHaptic]
+    if (!subtitle) return
+    if (primingCueBySubtitleIndex.has(activeSubForHaptic)) return
+    if (savedPhraseMap.has(`${videoId ?? youtubeId}::${subtitle.en}`)) return
+
+    for (const token of extractSimilarCueTokens(subtitle.en)) {
+      if (!similarPhraseTokenSet.has(token)) continue
+
+      const now = Date.now()
+      const lastCue = lastSimilarCueRef.current
+      if (lastCue.token === token && now - lastCue.time < 10_000) {
+        break
+      }
+
+      lastSimilarCueRef.current = { token, time: now }
+      const timer = window.setTimeout(() => {
+        showCueNotice(`SIMILAR · ${token.toUpperCase()}`, 'muted', 900)
+      }, 0)
+      return () => window.clearTimeout(timer)
+      break
+    }
+  }, [
+    activeSubForHaptic,
+    primingCueBySubtitleIndex,
+    savedPhraseMap,
+    showCueNotice,
+    showPriming,
+    similarPhraseTokenSet,
+    subtitles,
+    videoId,
+    youtubeId,
+  ])
 
   const [overlayVisible, setOverlayVisible] = useState(true)
   const [showPauseIcon, setShowPauseIcon] = useState(false)
@@ -411,6 +522,15 @@ export function VideoPlayer({
           </div>
         </div>
       )}
+
+      <div className="pointer-events-none absolute inset-x-0 top-3 z-[22] flex justify-center px-4">
+        <SaveToast
+          show={Boolean(cueNotice)}
+          message={cueNotice?.message ?? ''}
+          placement="inline"
+          tone={cueNotice?.tone ?? 'default'}
+        />
+      </div>
 
       {videoError && (
         <div

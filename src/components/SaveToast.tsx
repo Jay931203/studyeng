@@ -24,9 +24,9 @@ export function SaveToast({
         }
       : tone === 'accent'
         ? {
-            backgroundColor: 'var(--freeze-bg)',
-            borderColor: 'var(--freeze-border)',
-            color: 'var(--freeze-text)',
+            backgroundColor: 'var(--accent-glow)',
+            borderColor: 'rgba(var(--accent-primary-rgb), 0.36)',
+            color: 'var(--accent-text)',
           }
       : tone === 'muted'
         ? {
