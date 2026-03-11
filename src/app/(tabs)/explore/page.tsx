@@ -362,15 +362,8 @@ export default function ExplorePage() {
           </p>
         </div>
 
-        <section
-          className="rounded-[32px] border border-[var(--border-card)] p-3 sm:p-4"
-          style={{
-            background:
-              'var(--accent-rainbow-ui-soft, linear-gradient(135deg, rgba(var(--accent-primary-rgb), 0.16) 0%, rgba(var(--accent-primary-rgb), 0.06) 34%, transparent 78%))',
-          }}
-        >
-          <div className="grid min-w-0 items-start gap-6 xl:grid-cols-[0.92fr_1.08fr]">
-            <SurfaceCard className="relative min-w-0 overflow-hidden border-[var(--accent-primary)]/14 p-6">
+        <section className="grid min-w-0 items-start gap-6 xl:grid-cols-[0.92fr_1.08fr]">
+            <div className="relative min-w-0 overflow-hidden rounded-[28px] border border-[var(--accent-primary)]/14 bg-[var(--bg-card)] shadow-[var(--card-shadow)]">
               <div
                 aria-hidden="true"
                 className="pointer-events-none absolute inset-x-0 top-0 h-24"
@@ -379,7 +372,7 @@ export default function ExplorePage() {
                     'linear-gradient(180deg, var(--accent-glow) 0%, transparent 100%)',
                 }}
               />
-              <div className="relative">
+              <div className="relative p-6">
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:gap-5">
                   <svg width="100" height="100" viewBox="0 0 100 100" className="shrink-0">
                     <circle
@@ -446,7 +439,7 @@ export default function ExplorePage() {
                   WATCH NEXT
                 </button>
               </div>
-            </SurfaceCard>
+            </div>
 
             <div className="min-w-0 space-y-3">
               {seriesEpisodes.map((video) => {
@@ -481,7 +474,6 @@ export default function ExplorePage() {
                 )
               })}
             </div>
-          </div>
         </section>
       </AppPage>
     )
