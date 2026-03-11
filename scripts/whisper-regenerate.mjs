@@ -15,7 +15,7 @@ import { join, dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { execFileSync } from 'child_process'
 import { tmpdir } from 'os'
-import { existsSync, readdirSync, statSync } from 'fs'
+import { existsSync, readdirSync, statSync, mkdirSync } from 'fs'
 import { loadEnv } from './lib/load-env.mjs'
 import { loadSeedData } from './lib/load-seed-data.mjs'
 
@@ -23,6 +23,7 @@ loadEnv()
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const TRANSCRIPTS_DIR = join(__dirname, '..', 'public', 'transcripts')
+const WHISPER_RAW_DIR = join(__dirname, '..', 'logs', 'whisper-raw')
 const SEED_VIDEOS_PATH = join(__dirname, '..', 'src', 'data', 'seed-videos.ts')
 const COST_LOG_PATH = join(__dirname, '..', 'whisper-cost-log.json')
 const MANIFEST_PATH = join(__dirname, 'whisper-manifest.json')
@@ -167,14 +168,25 @@ async function main() {
           continue
         }
 
+        // Save raw Whisper response for future reprocessing
+        await saveWhisperRaw(videoId, whisperResult)
+
+        // Use word-level timestamps if available for more accurate timing
+        const segments = rebuildSegmentsFromWords(whisperResult) || whisperResult.segments
+
         const audioDurationMin = (whisperResult.duration || 60) / 60
         const cost = audioDurationMin * 0.006
 
-        const regenerated = regroupWhisperSegments(whisperResult.segments, {
+        let regenerated = regroupWhisperSegments(segments, {
           clipStart,
           clipEnd,
           timeOffsetSec: audioDownload.timeOffsetSec,
         })
+
+        // Detect uniform timing (broken Whisper) and warn
+        if (regenerated.length >= 5 && hasUniformTiming(regenerated)) {
+          console.log(`    ⚠ Uniform timing detected for ${videoId} — timestamps may be inaccurate`)
+        }
 
         const transcriptPath = join(TRANSCRIPTS_DIR, `${videoId}.json`)
         let koMatched = 0
@@ -268,7 +280,7 @@ async function logCost(videoId, durationMinutes, cost) {
   await writeFile(COST_LOG_PATH, JSON.stringify(log, null, 2) + '\n', 'utf-8')
 }
 
-async function transcribeWithOpenAI(audioPath, retries = 3) {
+async function transcribeWithOpenAI(audioPath, retries = 3, granularity = 'word') {
   const { default: fs } = await import('fs')
 
   for (let attempt = 1; attempt <= retries; attempt++) {
@@ -278,7 +290,10 @@ async function transcribeWithOpenAI(audioPath, retries = 3) {
     formData.append('file', blob, 'audio.webm')
     formData.append('model', 'whisper-1')
     formData.append('response_format', 'verbose_json')
-    formData.append('timestamp_granularities[]', 'segment')
+    formData.append('timestamp_granularities[]', granularity)
+    if (granularity === 'word') {
+      formData.append('timestamp_granularities[]', 'segment')
+    }
     formData.append('language', 'en')
 
     const response = await fetch('https://api.openai.com/v1/audio/transcriptions', {
@@ -345,6 +360,80 @@ function findBestKoMatch(entry, koMap, existingEntries = []) {
   }
 
   return bestKo
+}
+
+/**
+ * Rebuild segments from word-level timestamps for more accurate timing.
+ * Groups words into sentence-like segments based on punctuation and pauses.
+ */
+/**
+ * Save raw Whisper API response for future reprocessing without re-calling API.
+ * Stored in logs/whisper-raw/{videoId}.json
+ */
+async function saveWhisperRaw(videoId, whisperResult) {
+  if (!existsSync(WHISPER_RAW_DIR)) {
+    mkdirSync(WHISPER_RAW_DIR, { recursive: true })
+  }
+  const rawPath = join(WHISPER_RAW_DIR, `${videoId}.json`)
+  await writeFile(rawPath, JSON.stringify({
+    savedAt: new Date().toISOString(),
+    duration: whisperResult.duration,
+    language: whisperResult.language,
+    segments: whisperResult.segments,
+    words: whisperResult.words || null,
+  }, null, 2) + '\n', 'utf-8')
+}
+
+function rebuildSegmentsFromWords(whisperResult) {
+  const words = whisperResult.words
+  if (!words || words.length < 2) return null
+
+  // Check if word timestamps are valid (not all zeros or uniform)
+  const hasValidWordTimestamps = words.some((w, i) =>
+    i > 0 && w.start !== words[i - 1].start && w.start > 0
+  )
+  if (!hasValidWordTimestamps) return null
+
+  const segments = []
+  let currentWords = []
+  let segStart = words[0].start
+
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i]
+    currentWords.push(word.word.trim())
+
+    const isEnd = i === words.length - 1
+    const nextWord = words[i + 1]
+    const gap = nextWord ? nextWord.start - word.end : 0
+    const endsWithPunctuation = /[.!?,;]$/.test(word.word.trim())
+    const currentDuration = word.end - segStart
+
+    // Split on: sentence-ending punctuation, long pauses, or max duration
+    if (isEnd || (endsWithPunctuation && currentDuration >= 1.0) || gap > 0.7 || currentDuration >= 6) {
+      segments.push({
+        start: segStart,
+        end: word.end,
+        text: currentWords.join(' ').trim(),
+      })
+      currentWords = []
+      if (nextWord) segStart = nextWord.start
+    }
+  }
+
+  return segments.length > 0 ? segments : null
+}
+
+/**
+ * Detect uniform timing pattern (broken Whisper timestamps).
+ * Returns true if 80%+ of subtitles have the same duration.
+ */
+function hasUniformTiming(entries) {
+  if (entries.length < 5) return false
+  const durations = entries.map(e => Math.round((e.end - e.start) * 2) / 2) // round to 0.5s
+  const counts = {}
+  for (const d of durations) counts[d] = (counts[d] || 0) + 1
+  const maxCount = Math.max(...Object.values(counts))
+  return maxCount / entries.length >= 0.8
 }
 
 function regroupWhisperSegments(segments, { clipStart, clipEnd, timeOffsetSec }) {

@@ -17,8 +17,12 @@ import { useGameTrigger } from '@/hooks/useGameTrigger'
 import { usePlayerStore, seekToRef, playRef, pauseRef } from '@/stores/usePlayerStore'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { useUserStore } from '@/stores/useUserStore'
+import { useSettingsStore } from '@/stores/useSettingsStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
+import { getPrimingExpressions } from '@/lib/expressionLookup'
+import { triggerHaptic } from '@/lib/haptic'
 import { LyricsSubtitles } from './LyricsSubtitles'
+import { PrimingCard } from './PrimingCard'
 import { ProgressBar } from './ProgressBar'
 import { SaveToast } from './SaveToast'
 import { SubtitleGame } from './SubtitleGame'
@@ -111,9 +115,57 @@ export function VideoPlayer({
   // Game trigger: watches subtitles and triggers "next line" quiz
   useGameTrigger(youtubeId, subtitles)
 
+  // --- Priming card: show key expressions before video plays ---
+  const primingEnabled = useSettingsStore((state) => state.primingEnabled)
+  const primingExpressions = useMemo(() => {
+    if (!primingEnabled || !youtubeId) return []
+    return getPrimingExpressions(youtubeId, 3)
+  }, [primingEnabled, youtubeId])
+
+  const videoSessionKey = `${videoId ?? 'video'}:${youtubeId}`
+  const [dismissedPrimingKey, setDismissedPrimingKey] = useState<string | null>(null)
+  const showPriming = primingExpressions.length > 0 && dismissedPrimingKey !== videoSessionKey
+
+  const handlePrimingDismiss = useCallback(() => {
+    setDismissedPrimingKey(videoSessionKey)
+    play()
+  }, [play, videoSessionKey])
+
   useEffect(() => {
     setFreezeSubIndex(null)
   }, [setFreezeSubIndex, videoId, youtubeId])
+
+  useEffect(() => {
+    if (showPriming && playbackStarted) pause()
+  }, [showPriming, playbackStarted, pause])
+
+  // --- Haptic: vibrate when primed expression subtitle becomes active ---
+  const primedSubIndices = useMemo(() => {
+    const set = new Set<number>()
+    for (const ve of primingExpressions) {
+      const idx = subtitles.findIndex(
+        (s) => s.en === ve.sentence.en || s.en.includes(ve.expression.canonical),
+      )
+      if (idx >= 0) set.add(idx)
+    }
+    return set
+  }, [primingExpressions, subtitles])
+
+  const vibratedRef = useRef(new Set<number>())
+  useEffect(() => { vibratedRef.current = new Set() }, [youtubeId, videoId])
+
+  const activeSubForHaptic = usePlayerStore((state) => state.activeSubIndex)
+  useEffect(() => {
+    if (
+      activeSubForHaptic >= 0 &&
+      primedSubIndices.has(activeSubForHaptic) &&
+      !vibratedRef.current.has(activeSubForHaptic) &&
+      !showPriming
+    ) {
+      vibratedRef.current.add(activeSubForHaptic)
+      triggerHaptic([40, 30, 60])
+    }
+  }, [activeSubForHaptic, primedSubIndices, showPriming])
 
   const [overlayVisible, setOverlayVisible] = useState(true)
   const [showPauseIcon, setShowPauseIcon] = useState(false)
@@ -476,6 +528,20 @@ export function VideoPlayer({
       )}
 
       {children}
+
+      {showPriming && (
+        <PrimingCard
+          expressions={primingExpressions.map((ve) => ({
+            canonical: ve.expression.canonical,
+            meaning_ko: ve.expression.meaning_ko,
+            category: ve.expression.category,
+            cefr: ve.expression.cefr,
+            sentenceEn: ve.sentence.en,
+            sentenceKo: ve.sentence.ko,
+          }))}
+          onDismiss={handlePrimingDismiss}
+        />
+      )}
     </div>
   )
 

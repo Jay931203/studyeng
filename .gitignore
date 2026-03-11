@@ -46,3 +46,28 @@ yarn-error.log*
 next-env.d.ts
 
 /src/generated/prisma
+
+# whisper raw responses (large, local backup only)
+/logs/whisper-raw/
+/logs/
+/docs/.pdca-snapshots/
+
+# local expression extraction intermediates / scratch scripts
+/scripts/expr-chunk-*.json
+/scripts/expr-result-*.json
+/scripts/expr-dict-progress.json
+/scripts/expr-tagged-sentences.json
+/scripts/check-chunk.mjs
+/scripts/extract-expr-1.cjs
+/scripts/extract-expressions.mjs
+/scripts/extract-expressions-2.mjs
+/scripts/fix-komisalign-batch1.mjs
+/scripts/fullcheck-batch2.mjs
+/scripts/retag-batch2.mjs
+/scripts/tag-batch1.mjs
+
+# local Codex / Playwright artifacts
+.codex-next-dev*.log
+.playwright-cli/
+tmp-vercel-inspect.json
+/output/playwright/
