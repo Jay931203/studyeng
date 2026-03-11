@@ -325,7 +325,7 @@ export function PrimingCard({
                     : 'rgba(255, 255, 255, 0.6)',
                 }}
               >
-                {autoStartEnabled ? `Auto ${countdownSeconds}s` : 'Auto Off'}
+                {autoStartEnabled ? 'AUTO ON' : 'AUTO OFF'}
               </button>
             </div>
 
@@ -365,13 +365,15 @@ export function PrimingCard({
               <span className="text-[14px] font-semibold">탭해서 보기</span>
               {autoStartEnabled && (
                 <span className="ml-1 inline-flex items-center gap-2 rounded-full bg-black/15 px-2.5 py-1 text-[11px] font-semibold text-white/90">
-                  <motion.span
-                    className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-white/40 text-[10px] leading-none"
-                    animate={{ rotate: 360 }}
-                    transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
-                  >
-                    {countdownSeconds}
-                  </motion.span>
+                  <span className="relative inline-flex h-5 w-5 items-center justify-center text-[10px] leading-none">
+                    <span className="absolute inset-0 rounded-full border border-white/20" />
+                    <motion.span
+                      className="absolute inset-0 rounded-full border-2 border-transparent border-t-white/95 border-r-white/55"
+                      animate={{ rotate: 360 }}
+                      transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
+                    />
+                    <span className="relative">{countdownSeconds}</span>
+                  </span>
                 </span>
               )}
             </motion.button>
