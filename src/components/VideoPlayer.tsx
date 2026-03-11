@@ -550,7 +550,7 @@ export function VideoPlayer({
             seekTo(start)
             play()
             const duration = (end - start) * 1000 + 200
-            setTimeout(() => pause(), duration)
+            window.setTimeout(() => pause(), duration)
           }}
         />
       )}
@@ -743,6 +743,7 @@ function ShortsSubtitleOverlay({
               showNotice('REMOVED', 'accent')
             } else if (onSavePhrase) {
               onSavePhrase(activeSub)
+              showNotice('SAVED', 'accent')
             }
             lastTapRef.current = 0
             return
