@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useSettingsStore } from '@/stores/useSettingsStore'
 
@@ -211,8 +211,6 @@ export function PrimingCard({
   const setStoredAutoStartEnabled = useSettingsStore((state) => state.setPrimingAutoStartEnabled)
   const [autoStartEnabled, setAutoStartEnabled] = useState(storedAutoStartEnabled)
   const [remainingMs, setRemainingMs] = useState(AUTO_START_COUNTDOWN_MS)
-  const [isPreviewingSegment, setIsPreviewingSegment] = useState(false)
-  const previewTimerRef = useRef<number | null>(null)
   const countdownSeconds = Math.max(1, Math.ceil(remainingMs / 1000))
 
   const handleDismiss = useCallback(() => {
@@ -246,25 +244,9 @@ export function PrimingCard({
     return () => window.clearInterval(timer)
   }, [autoStartEnabled, handleDismiss, remainingMs, visible])
 
-  useEffect(() => {
-    return () => {
-      if (previewTimerRef.current) {
-        window.clearTimeout(previewTimerRef.current)
-      }
-    }
-  }, [])
-
   const handlePreviewSegment = useCallback(
     (start: number, end: number) => {
       onPlaySegment?.(start, end)
-      setIsPreviewingSegment(true)
-      if (previewTimerRef.current) {
-        window.clearTimeout(previewTimerRef.current)
-      }
-      previewTimerRef.current = window.setTimeout(() => {
-        setIsPreviewingSegment(false)
-        previewTimerRef.current = null
-      }, Math.max(700, (end - start) * 1000 + 250))
     },
     [onPlaySegment],
   )
@@ -284,9 +266,7 @@ export function PrimingCard({
         >
           <motion.div
             className="absolute inset-0"
-            style={{
-              backgroundColor: isPreviewingSegment ? 'rgba(0, 0, 0, 0.98)' : 'rgba(0, 0, 0, 0.78)',
-            }}
+            style={{ backgroundColor: 'rgba(0, 0, 0, 0.78)' }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

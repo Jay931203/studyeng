@@ -78,7 +78,7 @@ function getPlanLabel(planKey: string | null | undefined) {
     case 'premium':
       return 'Premium'
     default:
-      return 'Free'
+      return 'FREE plan'
   }
 }
 
@@ -316,7 +316,7 @@ export function BillingManagementCard({
     ? 'Checking membership...'
     : currentPremium
       ? 'Premium active'
-      : 'Free plan'
+      : 'FREE plan'
   const isReady = native ? currentPremium || nativePackages.length > 0 : webBillingReady
   const currentPlan =
     planKey === 'premium_monthly' ? 'monthly' : planKey === 'premium_yearly' ? 'yearly' : null
@@ -578,7 +578,7 @@ export function BillingManagementCard({
           </p>
           <Link
             href="/profile/membership"
-            className="rounded-full bg-[var(--bg-secondary)] px-3 py-1.5 text-xs font-semibold text-[var(--text-primary)]"
+            className="shrink-0 text-[11px] font-semibold uppercase tracking-[0.08em] text-[var(--accent-text)]"
           >
             DETAIL
           </Link>
@@ -597,15 +597,11 @@ export function BillingManagementCard({
                 <p className="mt-1 text-sm text-[var(--text-secondary)]">{currentPlanLabel}</p>
               )}
             </div>
-            <span
-              className={`rounded-full px-2.5 py-1 text-xs font-semibold ${
-                currentPremium
-                  ? 'bg-emerald-500/15 text-emerald-300'
-                  : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
-              }`}
-            >
-              {currentPremium ? 'PRO' : 'FREE'}
-            </span>
+            {currentPremium && (
+              <span className="rounded-full bg-emerald-500/15 px-2.5 py-1 text-xs font-semibold text-emerald-300">
+                PRO
+              </span>
+            )}
           </div>
 
           {!native && status?.entitlement?.currentPeriodEnd && (
