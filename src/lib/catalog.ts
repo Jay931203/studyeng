@@ -24,6 +24,8 @@ const readyVideoIds = new Set(
 
 export const catalogVideos = seedVideos.filter((video) => readyVideoIds.has(video.id))
 
+export const catalogShorts = catalogVideos.filter((video) => video.format === 'shorts')
+
 const videosBySeriesId = new Map<string, VideoData[]>()
 for (const video of catalogVideos) {
   if (!video.seriesId) continue
