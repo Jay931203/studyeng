@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { useSettingsStore } from '@/stores/useSettingsStore'
 
 interface Expression {
   canonical: string
@@ -220,7 +221,9 @@ export function PrimingCard({
 }: PrimingCardProps) {
   const visible = expressions.length > 0
   const displayExpressions = expressions.slice(0, 3)
-  const [autoStartEnabled, setAutoStartEnabled] = useState(true)
+  const storedAutoStartEnabled = useSettingsStore((state) => state.primingAutoStartEnabled)
+  const setStoredAutoStartEnabled = useSettingsStore((state) => state.setPrimingAutoStartEnabled)
+  const [autoStartEnabled, setAutoStartEnabled] = useState(storedAutoStartEnabled)
   const [remainingMs, setRemainingMs] = useState(AUTO_START_COUNTDOWN_MS)
   const countdownSeconds = Math.max(1, Math.ceil(remainingMs / 1000))
 
@@ -235,10 +238,11 @@ export function PrimingCard({
   const toggleAutoStart = useCallback(() => {
     setAutoStartEnabled((enabled) => {
       const nextEnabled = !enabled
+      setStoredAutoStartEnabled(nextEnabled)
       if (nextEnabled) setRemainingMs(AUTO_START_COUNTDOWN_MS)
       return nextEnabled
     })
-  }, [])
+  }, [setStoredAutoStartEnabled])
 
   useEffect(() => {
     if (!visible || !autoStartEnabled) return

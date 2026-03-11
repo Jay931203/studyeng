@@ -531,6 +531,7 @@ export function VideoPlayer({
 
       {showPriming && (
         <PrimingCard
+          key={videoSessionKey}
           expressions={primingExpressions.map((ve) => {
             const sub = subtitles.find((s) => s.en === ve.sentence.en)
             return {
