@@ -21,25 +21,25 @@ const tabs: readonly NavTab[] = [
     href: '/explore',
     icon: 'home',
     label: 'Home',
-    description: 'Browse and discover',
+    description: '탐색과 추천',
   },
   {
     href: '/shorts',
     icon: 'play',
-    label: 'Shorts',
-    description: 'Switch between feeds',
+    label: 'Series & Shorts',
+    description: '시리즈와 쇼츠',
   },
   {
     href: '/learning',
     icon: 'bookmark',
     label: 'Learn',
-    description: 'Saved phrases and review',
+    description: '저장 표현과 복습',
   },
   {
     href: '/profile',
     icon: 'settings',
     label: 'Settings',
-    description: 'Account and preferences',
+    description: '계정과 설정',
   },
 ]
 
