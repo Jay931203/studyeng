@@ -62,7 +62,7 @@ function ExpressionCard({
   onPlaySegment?: (start: number, end: number) => void
 }) {
   const [flipped, setFlipped] = useState(false)
-  const [played, setPlayed] = useState(false)
+  const [playing, setPlaying] = useState(false)
   const cefrColor = getCefrColor(expr.cefr)
   const categoryLabel = CATEGORY_LABELS[expr.category] ?? expr.category
 
@@ -159,20 +159,20 @@ function ExpressionCard({
               type="button"
               className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full transition-opacity"
               style={{
-                backgroundColor: played
-                  ? 'rgba(255, 255, 255, 0.05)'
+                backgroundColor: playing
+                  ? 'rgba(var(--accent-primary-rgb), 0.25)'
                   : 'rgba(255, 255, 255, 0.1)',
-                opacity: played ? 0.5 : 1,
               }}
               onClick={(e) => {
                 e.stopPropagation()
-                if (played) return
                 onInteract?.()
-                setPlayed(true)
+                setPlaying(true)
                 onPlaySegment(expr.start!, expr.end!)
+                const duration = ((expr.end! - expr.start!) * 1000) + 300
+                setTimeout(() => setPlaying(false), duration)
               }}
-              aria-label={played ? 'Preview played' : 'Play preview'}
-              title={played ? 'Preview played' : 'Play preview'}
+              aria-label="Play preview"
+              title="Play preview"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -180,9 +180,9 @@ function ExpressionCard({
                 fill="currentColor"
                 className="h-3.5 w-3.5"
                 style={{
-                  color: played
-                    ? 'rgba(255,255,255,0.4)'
-                    : 'var(--accent-text, #5eead4)',
+                  color: playing
+                    ? 'var(--accent-text, #5eead4)'
+                    : 'rgba(255,255,255,0.7)',
                 }}
               >
                 <path
@@ -255,7 +255,11 @@ export function PrimingCard({
     <AnimatePresence>
       {visible && (
         <motion.div
-          className="absolute inset-0 z-[35] flex flex-col items-center justify-center"
+          className="absolute inset-0 z-[35] grid place-items-center overflow-y-auto px-6"
+          style={{
+            paddingTop: 'max(24px, calc(env(safe-area-inset-top, 0px) + 16px))',
+            paddingBottom: 'max(24px, calc(env(safe-area-inset-bottom, 0px) + 16px))',
+          }}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
@@ -274,7 +278,7 @@ export function PrimingCard({
           />
 
           <motion.div
-            className="relative z-[1] mx-6 w-full max-w-[360px]"
+            className="relative z-[1] w-full max-w-[360px]"
             initial={{ y: 60, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: 40, opacity: 0 }}
@@ -326,7 +330,10 @@ export function PrimingCard({
               </button>
             </div>
 
-            <div className="flex flex-col gap-3">
+            <div
+              className="flex flex-col gap-3 overflow-y-auto pr-1"
+              style={{ maxHeight: 'min(48vh, 360px)' }}
+            >
               {displayExpressions.map((expr, index) => (
                 <ExpressionCard
                   key={`${expr.canonical}-${index}`}
