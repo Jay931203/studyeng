@@ -16,6 +16,7 @@ import {
 } from '@/lib/catalog'
 import { createHiddenVideoIdSet, filterHiddenVideos } from '@/lib/videoVisibility'
 import { useAdminStore } from '@/stores/useAdminStore'
+import { useThemeStore } from '@/stores/useThemeStore'
 
 const categoryLabels: Record<CategoryId, string> = {
   drama: '드라마',
@@ -39,6 +40,7 @@ export default function ExploreSeriesPage() {
   )
   const [query, setQuery] = useState('')
   const hiddenVideos = useAdminStore((state) => state.hiddenVideos)
+  const isRainbowTheme = useThemeStore((state) => state.colorTheme === 'rainbow')
   const hiddenVideoIdSet = useMemo(() => createHiddenVideoIdSet(hiddenVideos), [hiddenVideos])
 
   const visibleCatalogSeries = useMemo(
@@ -121,12 +123,13 @@ export default function ExploreSeriesPage() {
           </div>
         </div>
 
-        <SurfaceCard className="relative overflow-hidden border-[var(--accent-primary)]/14 p-5 sm:p-6">
+        <SurfaceCard className="relative overflow-hidden p-5 sm:p-6">
             <div
               aria-hidden="true"
               className="pointer-events-none absolute inset-x-0 top-0 h-24"
               style={{
-                background: 'linear-gradient(180deg, var(--accent-glow) 0%, transparent 100%)',
+                background:
+                  'var(--accent-rainbow-ui-soft, linear-gradient(180deg, var(--accent-glow) 0%, transparent 100%))',
               }}
             />
             <div className="relative">
@@ -175,11 +178,20 @@ export default function ExploreSeriesPage() {
                 <button
                   type="button"
                   onClick={() => setActiveCategory('all')}
-                  className={`shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-sm ${
+                  className="shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-sm"
+                  style={
                     activeCategory === 'all'
-                      ? 'bg-[var(--accent-primary)] text-white'
-                      : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
-                  }`}
+                      ? {
+                          background: isRainbowTheme
+                            ? 'var(--accent-rainbow-ui)'
+                            : 'var(--accent-primary)',
+                          color: '#ffffff',
+                        }
+                      : {
+                          backgroundColor: 'var(--bg-secondary)',
+                          color: 'var(--text-secondary)',
+                        }
+                  }
                 >
                   전체
                 </button>
@@ -188,11 +200,20 @@ export default function ExploreSeriesPage() {
                     key={categoryId}
                     type="button"
                     onClick={() => setActiveCategory(categoryId)}
-                    className={`shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-sm ${
+                    className="shrink-0 whitespace-nowrap rounded-full px-4 py-2 text-sm"
+                    style={
                       activeCategory === categoryId
-                        ? 'bg-[var(--accent-primary)] text-white'
-                        : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
-                    }`}
+                        ? {
+                            background: isRainbowTheme
+                              ? 'var(--accent-rainbow-ui)'
+                              : 'var(--accent-primary)',
+                            color: '#ffffff',
+                          }
+                        : {
+                            backgroundColor: 'var(--bg-secondary)',
+                            color: 'var(--text-secondary)',
+                          }
+                    }
                   >
                     {categoryLabels[categoryId]}
                   </button>

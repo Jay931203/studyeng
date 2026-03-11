@@ -145,13 +145,7 @@ function ExpressionCard({
             transform: 'rotateX(180deg)',
           }}
         >
-          <p
-            className="text-[10px] font-semibold uppercase tracking-wider"
-            style={{ color: 'var(--accent-text, #5eead4)' }}
-          >
-            Example
-          </p>
-          <p className="mt-2 line-clamp-3 text-[15px] font-semibold leading-snug text-white">
+          <p className="line-clamp-3 pr-10 text-[15px] font-semibold leading-snug text-white">
             {expr.sentenceEn}
           </p>
           <p
@@ -163,7 +157,7 @@ function ExpressionCard({
           {onPlaySegment && expr.start != null && expr.end != null && (
             <button
               type="button"
-              className="mt-3 flex items-center gap-1.5 rounded-full px-3 py-1.5 transition-opacity"
+              className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full transition-opacity"
               style={{
                 backgroundColor: played
                   ? 'rgba(255, 255, 255, 0.05)'
@@ -177,12 +171,14 @@ function ExpressionCard({
                 setPlayed(true)
                 onPlaySegment(expr.start!, expr.end!)
               }}
+              aria-label={played ? 'Preview played' : 'Play preview'}
+              title={played ? 'Preview played' : 'Play preview'}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
                 fill="currentColor"
-                className="h-3 w-3"
+                className="h-3.5 w-3.5"
                 style={{
                   color: played
                     ? 'rgba(255,255,255,0.4)'
@@ -195,16 +191,6 @@ function ExpressionCard({
                   clipRule="evenodd"
                 />
               </svg>
-              <span
-                className="text-[11px] font-medium"
-                style={{
-                  color: played
-                    ? 'rgba(255,255,255,0.4)'
-                    : 'rgba(255,255,255,0.7)',
-                }}
-              >
-                {played ? '재생됨' : '들어보기'}
-              </span>
             </button>
           )}
         </div>
