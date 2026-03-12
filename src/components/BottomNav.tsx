@@ -159,19 +159,7 @@ interface BottomNavProps {
   mode?: 'bottom' | 'sidebar' | 'rail'
 }
 
-function isTabActive(pathname: string, href: string, isLegacyShortsAlias: boolean) {
-  if (href === '/shorts') {
-    return pathname === '/shorts' || isLegacyShortsAlias
-  }
-
-  if (href === '/explore') {
-    return pathname === '/explore'
-  }
-
-  return pathname.startsWith(href)
-}
-
-export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
+function useFeedNavigation() {
   const pathname = usePathname()
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -190,6 +178,86 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
     if (tab.href !== '/shorts') return tab.href
     return '/shorts?feed=shorts'
   }
+
+  return {
+    activeFeed,
+    feedAnimationKey,
+    getTabHref,
+    isLegacyShortsAlias,
+    pathname,
+    navigateToFeed,
+  }
+}
+
+function isTabActive(pathname: string, href: string, isLegacyShortsAlias: boolean) {
+  if (href === '/shorts') {
+    return pathname === '/shorts' || isLegacyShortsAlias
+  }
+
+  if (href === '/explore') {
+    return pathname === '/explore'
+  }
+
+  return pathname.startsWith(href)
+}
+
+export function LandscapeFeedSwitcher() {
+  const { activeFeed, feedAnimationKey, navigateToFeed } = useFeedNavigation()
+
+  if (!activeFeed) return null
+
+  return (
+    <div
+      className="pointer-events-auto flex w-[112px] flex-col items-center gap-2 rounded-[22px] border px-2.5 py-3 shadow-[var(--card-shadow)] backdrop-blur-2xl"
+      style={{
+        backgroundColor: 'color-mix(in srgb, var(--bg-nav) 88%, transparent)',
+        borderColor: 'var(--border-card)',
+      }}
+    >
+      <motion.button
+        type="button"
+        onClick={() => {
+          navigateToFeed(activeFeed === 'shorts' ? 'series' : 'shorts')
+        }}
+        aria-label="Toggle feed"
+        animate={{ scale: 1, y: -1 }}
+        transition={{ type: 'spring', stiffness: 420, damping: 28 }}
+        className="relative z-10 rounded-full transition-opacity active:scale-95"
+        style={{ color: 'var(--nav-active)' }}
+      >
+        {icons.play(true)}
+      </motion.button>
+
+      <div className="flex items-center gap-1 text-[10px] font-medium leading-none">
+        <FeedLabel
+          label="Series"
+          selected={activeFeed === 'series'}
+          animationKey={feedAnimationKey}
+          onClick={() => {
+            if (activeFeed === 'series') return
+            navigateToFeed('series')
+          }}
+        />
+        <span aria-hidden="true" style={{ color: 'var(--nav-divider)' }}>
+          |
+        </span>
+        <FeedLabel
+          label="Shorts"
+          selected={activeFeed === 'shorts'}
+          animationKey={feedAnimationKey}
+          onClick={() => {
+            if (activeFeed === 'shorts') return
+            navigateToFeed('shorts')
+          }}
+        />
+      </div>
+    </div>
+  )
+}
+
+export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
+  const { pathname, isLegacyShortsAlias, activeFeed, feedAnimationKey, navigateToFeed, getTabHref } =
+    useFeedNavigation()
 
   if (mode === 'rail') {
     return (

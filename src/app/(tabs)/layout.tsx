@@ -2,7 +2,7 @@
 
 import { Suspense, useEffect, useState } from 'react'
 import { usePathname, useRouter } from 'next/navigation'
-import { BottomNav } from '@/components/BottomNav'
+import { BottomNav, LandscapeFeedSwitcher } from '@/components/BottomNav'
 import { LogoFull } from '@/components/Logo'
 import { LoginGateModal } from '@/components/LoginGateModal'
 import { AdminActivator } from '@/components/AdminActivator'
@@ -100,6 +100,11 @@ export default function TabsLayout({
           isImmersiveRoute ? 'w-full' : 'w-full'
         }`}
       >
+        {isImmersiveRoute && isLandscapeViewport && (
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-40 flex items-center pl-3">
+            <LandscapeFeedSwitcher />
+          </div>
+        )}
         <main className="flex-1 overflow-hidden">{children}</main>
         {!isImmersiveRoute && <BottomNav />}
         {isImmersiveRoute && !isLandscapeViewport && <BottomNav />}
