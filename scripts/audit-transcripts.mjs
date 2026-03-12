@@ -81,7 +81,7 @@ for (const id of ids) {
       if (!(s.ko || '').trim()) missingKo++
 
       // No punctuation
-      if (en.length > 10 && !/[.!?]$/.test(en.trim())) {
+      if (en.length > 10 && !/[.!?\"')\u2019\u201D♪—]$/.test(en.trim())) {
         noPunct++
         issues.push(`  [punct] seg ${i}: "${en.substring(0, 60)}"`)
       }
