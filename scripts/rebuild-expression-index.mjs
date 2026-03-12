@@ -57,11 +57,16 @@ function norm(text) {
   return (text || '').trim().toLowerCase().replace(/\s+/g, ' ')
 }
 
-// Check if a segment's en text contains expression canonical form
+// Check if a segment's en text contains expression canonical form (word boundary match)
 function containsExpression(segEn, canonical) {
   const normSeg = norm(segEn)
   const normCanonical = norm(canonical)
-  return normSeg.includes(normCanonical)
+  try {
+    const escaped = normCanonical.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    return new RegExp(`\\b${escaped}\\b`).test(normSeg)
+  } catch {
+    return normSeg.includes(normCanonical)
+  }
 }
 
 for (const videoId of videoIds) {
@@ -83,102 +88,85 @@ for (const videoId of videoIds) {
     const oldEn = norm(row.en)
     const canonical = exprEntries[row.exprId]?.canonical || row.exprId
     let matched = false
+    let foundSegIdx = -1
 
-    // Strategy 1: Exact match
+    // Strategy 1: Exact match on en text
     for (let i = 0; i < transcript.length; i++) {
       if (norm(transcript[i].en) === oldEn) {
-        const key = `${row.exprId}:${i}`
-        if (!seen.has(key)) {
-          seen.add(key)
-          newRows.push({
-            exprId: row.exprId,
-            sentenceIdx: i,
-            en: transcript[i].en,
-            ko: transcript[i].ko || '',
-          })
-          if (i === row.sentenceIdx) unchanged++
-          else exactMatches++
-          matched = true
-        }
+        foundSegIdx = i
         break
       }
     }
-    if (matched) continue
 
     // Strategy 2: Old en is substring of a segment (merged case)
-    for (let i = 0; i < transcript.length; i++) {
-      if (norm(transcript[i].en).includes(oldEn) && oldEn.length > 10) {
-        const key = `${row.exprId}:${i}`
-        if (!seen.has(key)) {
-          seen.add(key)
-          newRows.push({
-            exprId: row.exprId,
-            sentenceIdx: i,
-            en: transcript[i].en,
-            ko: transcript[i].ko || '',
-          })
-          substringMatches++
-          matched = true
-        }
-        break
-      }
-    }
-    if (matched) continue
-
-    // Strategy 3: Segment en is substring of old en (split case) - find the one with the expression
-    const candidates = []
-    for (let i = 0; i < transcript.length; i++) {
-      const segNorm = norm(transcript[i].en)
-      if (segNorm.length > 10 && oldEn.includes(segNorm)) {
-        candidates.push(i)
-      }
-    }
-    if (candidates.length > 0) {
-      // Pick the candidate that contains the canonical expression
-      let bestIdx = candidates[0]
-      for (const ci of candidates) {
-        if (containsExpression(transcript[ci].en, canonical)) {
-          bestIdx = ci
+    if (foundSegIdx === -1) {
+      for (let i = 0; i < transcript.length; i++) {
+        if (norm(transcript[i].en).includes(oldEn) && oldEn.length > 10) {
+          foundSegIdx = i
           break
         }
       }
-      const key = `${row.exprId}:${bestIdx}`
+    }
+
+    // Strategy 3: Segment en is substring of old en (split case)
+    if (foundSegIdx === -1) {
+      const candidates = []
+      for (let i = 0; i < transcript.length; i++) {
+        const segNorm = norm(transcript[i].en)
+        if (segNorm.length > 10 && oldEn.includes(segNorm)) {
+          candidates.push(i)
+        }
+      }
+      if (candidates.length > 0) {
+        foundSegIdx = candidates[0]
+        for (const ci of candidates) {
+          if (containsExpression(transcript[ci].en, canonical)) {
+            foundSegIdx = ci
+            break
+          }
+        }
+      }
+    }
+
+    // Validate: does the expression actually appear as a word?
+    if (foundSegIdx !== -1 && containsExpression(transcript[foundSegIdx].en, canonical)) {
+      const key = `${row.exprId}:${foundSegIdx}`
       if (!seen.has(key)) {
         seen.add(key)
         newRows.push({
           exprId: row.exprId,
-          sentenceIdx: bestIdx,
-          en: transcript[bestIdx].en,
-          ko: transcript[bestIdx].ko || '',
+          sentenceIdx: foundSegIdx,
+          en: transcript[foundSegIdx].en,
+          ko: transcript[foundSegIdx].ko || '',
         })
-        reverseSubstringMatches++
+        if (foundSegIdx === row.sentenceIdx) unchanged++
+        else exactMatches++
         matched = true
       }
     }
-    if (matched) continue
 
-    // Strategy 4: Find canonical expression text in any segment
-    for (let i = 0; i < transcript.length; i++) {
-      if (containsExpression(transcript[i].en, canonical)) {
-        const key = `${row.exprId}:${i}`
-        if (!seen.has(key)) {
-          seen.add(key)
-          newRows.push({
-            exprId: row.exprId,
-            sentenceIdx: i,
-            en: transcript[i].en,
-            ko: transcript[i].ko || '',
-          })
-          canonicalMatches++
-          matched = true
+    // Strategy 4: If validation failed, search ALL segments for one containing the expression
+    if (!matched) {
+      for (let i = 0; i < transcript.length; i++) {
+        if (containsExpression(transcript[i].en, canonical)) {
+          const key = `${row.exprId}:${i}`
+          if (!seen.has(key)) {
+            seen.add(key)
+            newRows.push({
+              exprId: row.exprId,
+              sentenceIdx: i,
+              en: transcript[i].en,
+              ko: transcript[i].ko || '',
+            })
+            canonicalMatches++
+            matched = true
+          }
+          break
         }
-        break
       }
     }
-    if (matched) continue
 
-    // No match found - drop this row
-    dropped++
+    if (!matched) dropped++
   }
 
   if (newRows.length > 0) {
