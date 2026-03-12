@@ -8,8 +8,8 @@
  *   - expression-index-v2.json   (~14MB) – videoId -> [{exprId, sentenceIdx, en, ko}]
  */
 
-import expressionEntriesData from "@/data/expression-entries-v2.json";
-import expressionIndexData from "@/data/expression-index-v2.json";
+import expressionEntriesData from "../data/expression-entries-v2.json";
+import expressionIndexData from "../data/expression-index-v2.json";
 
 // ---------------------------------------------------------------------------
 // Types
