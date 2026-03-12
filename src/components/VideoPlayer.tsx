@@ -494,6 +494,32 @@ export function VideoPlayer({
     </div>
   )
 
+  const primingOverlay = showPriming ? (
+    <PrimingCard
+      key={videoSessionKey}
+      expressions={primingExpressions.map((ve) => {
+        const sub = subtitles.find((s) => s.en === ve.sentence.en)
+        return {
+          canonical: ve.expression.canonical,
+          meaning_ko: ve.expression.meaning_ko,
+          category: ve.expression.category,
+          cefr: ve.expression.cefr,
+          sentenceEn: ve.sentence.en,
+          sentenceKo: ve.sentence.ko,
+          start: sub?.start,
+          end: sub?.end,
+        }
+      })}
+      onDismiss={handlePrimingDismiss}
+      onPlaySegment={(start, end) => {
+        seekTo(start)
+        play()
+        const duration = (end - start) * 1000 + 200
+        window.setTimeout(() => pause(), duration)
+      }}
+    />
+  ) : null
+
   const videoArea = (
     <div
       className="relative h-full w-full"
@@ -648,32 +674,6 @@ export function VideoPlayer({
       )}
 
       {children}
-
-      {showPriming && (
-        <PrimingCard
-          key={videoSessionKey}
-          expressions={primingExpressions.map((ve) => {
-            const sub = subtitles.find((s) => s.en === ve.sentence.en)
-            return {
-              canonical: ve.expression.canonical,
-              meaning_ko: ve.expression.meaning_ko,
-              category: ve.expression.category,
-              cefr: ve.expression.cefr,
-              sentenceEn: ve.sentence.en,
-              sentenceKo: ve.sentence.ko,
-              start: sub?.start,
-              end: sub?.end,
-            }
-          })}
-          onDismiss={handlePrimingDismiss}
-          onPlaySegment={(start, end) => {
-            seekTo(start)
-            play()
-            const duration = (end - start) * 1000 + 200
-            window.setTimeout(() => pause(), duration)
-          }}
-        />
-      )}
     </div>
   )
 
@@ -701,51 +701,60 @@ export function VideoPlayer({
         <div className="absolute bottom-0 left-0 right-0 z-[15]">
           <ProgressBar />
         </div>
+
+        {primingOverlay}
       </div>
     )
   }
 
   return (
     <div
-      className={`flex h-full w-full ${useLandscapeSplitLayout ? 'flex-row' : 'flex-col'}`}
+      className="relative h-full w-full"
       style={{ backgroundColor: 'var(--player-surface)' }}
     >
       <div
-        className={`relative ${useLandscapeSplitLayout ? 'h-full flex-shrink-0' : 'flex-1 min-h-0'}`}
-        style={useLandscapeSplitLayout ? { width: landscapeVideoPaneWidth } : undefined}
+        className={`flex h-full w-full ${useLandscapeSplitLayout ? 'flex-row' : 'flex-col'}`}
+        style={{ backgroundColor: 'var(--player-surface)' }}
       >
-        {videoArea}
-      </div>
-
-      {useLandscapeSplitLayout && (
         <div
-          className="h-full w-px flex-shrink-0"
-          style={{ backgroundColor: 'var(--player-divider)' }}
-        />
-      )}
+          className={`relative ${useLandscapeSplitLayout ? 'h-full flex-shrink-0' : 'flex-1 min-h-0'}`}
+          style={useLandscapeSplitLayout ? { width: landscapeVideoPaneWidth } : undefined}
+        >
+          {videoArea}
+        </div>
 
-      <div
-        className={
-          useLandscapeSplitLayout
-            ? 'relative flex min-w-0 flex-1 flex-col'
-            : 'relative flex-shrink-0'
-        }
-        style={{
-          backgroundColor: 'var(--player-surface)',
-          height: isLandscapeViewport ? `${landscapeBottomSubtitleHeight}px` : '176px',
-        }}
-      >
-        {useLandscapeSplitLayout ? (
-          <>
-            <div className="min-h-0 flex-1">{subtitlePanel}</div>
-            {progressArea}
-          </>
-        ) : (
-          subtitlePanel
+        {useLandscapeSplitLayout && (
+          <div
+            className="h-full w-px flex-shrink-0"
+            style={{ backgroundColor: 'var(--player-divider)' }}
+          />
         )}
+
+        <div
+          className={
+            useLandscapeSplitLayout
+              ? 'relative flex min-w-0 flex-1 flex-col'
+              : 'relative flex-shrink-0'
+          }
+          style={{
+            backgroundColor: 'var(--player-surface)',
+            height: isLandscapeViewport ? `${landscapeBottomSubtitleHeight}px` : '176px',
+          }}
+        >
+          {useLandscapeSplitLayout ? (
+            <>
+              <div className="min-h-0 flex-1">{subtitlePanel}</div>
+              {progressArea}
+            </>
+          ) : (
+            subtitlePanel
+          )}
+        </div>
+
+        {!useLandscapeSplitLayout && progressArea}
       </div>
 
-      {!useLandscapeSplitLayout && progressArea}
+      {primingOverlay}
     </div>
   )
 }
