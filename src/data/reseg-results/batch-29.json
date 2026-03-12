@@ -1,0 +1,243 @@
+{
+  "batch": 29,
+  "processedAt": "2026-03-12",
+  "totalFiles": 36,
+  "changedFiles": 13,
+  "unchangedFiles": 23,
+  "details": {
+    "NeSvMWrxh8E": {
+      "changed": true,
+      "segsBefore": 25,
+      "segsAfter": 21,
+      "changes": [
+        "A: Split multi-sentence seg 12.64-16.4 into 2 (peek + not good time)",
+        "A: Split multi-sentence seg 18.28-23.04 into 2 (comfortable + all good)",
+        "G: Merged short fragments 30.12-31.8 + 31.8-33.5 into one clause",
+        "G: Merged fragments 33.5-35.98 + 35.98-37.66 into one clause",
+        "A: Split misaligned ko for 42.22-45.66 (or you try... I swear)",
+        "D: Merged 45.66-49.3 'Hey easy easy' with gap (was only 2 words)",
+        "G: Merged 49.3-52.02 'CEO CFO' (very short) into standalone",
+        "A: Merged 52.02-56.5 into single question about firing CFO"
+      ]
+    },
+    "nfs8NYg7yQM": {
+      "changed": false,
+      "reason": "Lyrics (Rule I) - all segments are lyric lines, properly segmented"
+    },
+    "nfWlot6h_JM": {
+      "changed": false,
+      "reason": "Lyrics (Rule I) - Taylor Swift Shake It Off, lyric segments kept as-is"
+    },
+    "NfXoVR3hP7M": {
+      "changed": true,
+      "segsBefore": 12,
+      "segsAfter": 15,
+      "changes": [
+        "A: Split 21.64-27.64 (6s, 2 sentences: Begonia + Traumatized Woman Alley)",
+        "C: Split long 41.28-48 (6.72s) into single sentence about CBS audience",
+        "A: Split 48-54.64 (6.64s, 2 sentences: most searched + question)",
+        "A: Split 54.64-61.32 (6.68s, 2 sentences: dumb + next search)"
+      ]
+    },
+    "nGt_JGHYEO4": {
+      "changed": false,
+      "reason": "Lyrics (Rule I) - rap lyrics, segments already well-sized"
+    },
+    "nGUfj2taniA": {
+      "changed": false,
+      "reason": "Educational content with reporter narration; segments cross sentence boundaries naturally in narration style, each ~7s max"
+    },
+    "NhkT5Y4yvMg": {
+      "changed": true,
+      "segsBefore": 36,
+      "segsAfter": 31,
+      "changes": [
+        "G: Merged 8.96-13.92 'And colors' (5s gap, only 2 words) - shortened end to 11.44",
+        "G: Merged 23.68-24.96 + 24.96-27.92 (short fragments: 'Well you said' + 'Brought a picnic')",
+        "G: Merged 32.96-34.08 + 34.08-37.2 (short fragments about crisis)",
+        "A: Merged 39.52-41.92 + 41.92-44 (anniversary apology, single thought)",
+        "A: Split 57.76-59.12 off from Ross's interjection"
+      ]
+    },
+    "NHopJHSlVo4": {
+      "changed": true,
+      "segsBefore": 37,
+      "segsAfter": 23,
+      "changes": [
+        "G: Merged many 1.5-3s fragments into natural sentence units throughout entire TED talk",
+        "A: Combined fragmented sentences like 'Everyone please think of your biggest / Personal goal' into full sentences",
+        "A: Reassembled proof/study section from ~15 tiny fragments into 6 coherent segments",
+        "A: Final advice section merged from 8 fragments into 3 natural segments"
+      ]
+    },
+    "NHozn0YXAeE": {
+      "changed": false,
+      "reason": "Lyrics (Rule I) - all segments are lyric lines"
+    },
+    "NHXXqlcCxPs": {
+      "changed": false,
+      "reason": "Fight Club - all segments 2-4s, well-segmented single sentences (9 segments)"
+    },
+    "NIBUWqSTp90": {
+      "changed": false,
+      "reason": "Fight Club - all segments 2-4s, well-segmented single sentences"
+    },
+    "NieGl78W4-w": {
+      "changed": false,
+      "reason": "Dead Poets Society - well-segmented 2-4s dialogue lines"
+    },
+    "nITZooG6ij8": {
+      "changed": true,
+      "segsBefore": 30,
+      "segsAfter": 30,
+      "changes": [
+        "A: Split 0-5.93 (5.93s) into 2 sentences (trouble + 12 hours left)",
+        "G: Merged 12.93-15.04 + 15.04-18.32 (German subtitles + pigs in blankets)",
+        "A: Split 20-26.34 into sentence at natural break (planned out / cry)",
+        "G: Merged 46.34-47.57 + 47.57-51.89 + 51.89-54.2 (hot dogs + pigs in Ross)",
+        "A: Merged 80.69-84.33 (wedding + pay me) into coherent exchange",
+        "A: Merged 84.33-90.59 (selfish + what happened) into natural flow",
+        "A: Split 90.59-94.13 into clear sentence about parents calling"
+      ]
+    },
+    "niul8Hy-3wk": {
+      "changed": false,
+      "reason": "Princess Bride - all segments 2-3s, well-segmented dialogue"
+    },
+    "niZKrt4XAZE": {
+      "changed": true,
+      "segsBefore": 18,
+      "segsAfter": 18,
+      "changes": [
+        "G: Merged 28-31 + 31-33 ('I would prefer loyalty' + 'What was our deal') into one exchange segment"
+      ]
+    },
+    "nJ_htuCMCqM": {
+      "changed": false,
+      "reason": "Dead Poets Society marching scene - all segments 2-4s, natural speech units"
+    },
+    "nJ0a8k-l1d0": {
+      "changed": false,
+      "reason": "Short comedy clips with very short segments, all under 3.5s - Rule B applies"
+    },
+    "njJ41irPjTc": {
+      "changed": false,
+      "reason": "Shawshank Redemption - well-segmented 2-3s dialogue lines"
+    },
+    "njtfNPB-YKg": {
+      "changed": false,
+      "reason": "Breaking Bad (Tuco) - well-segmented 2-6s dialogue, natural exchanges (12 segments)"
+    },
+    "nJzo5TDfamk": {
+      "changed": false,
+      "reason": "Breaking Bad (Tuco) - well-segmented 2-6s dialogue, natural exchanges"
+    },
+    "nK1jtVhimPA": {
+      "changed": true,
+      "segsBefore": 11,
+      "segsAfter": 12,
+      "changes": [
+        "G: Merged 29-31.8 + 31.8-34.6 ('found out not eligible' + 'NCAA tournament') into single sentence",
+        "G: Merged 47.92-49.92 + 49.92-51.72 + 51.72-53.92 into full tournament name",
+        "G: Merged 62.32-65.24 + 65.24-70.2 (met Glendale + championship)",
+        "G: Merged 73.4-76.24 + 76.24-78.32 (finest team + school history)"
+      ]
+    },
+    "nlgzL7B8ghM": {
+      "changed": true,
+      "segsBefore": 6,
+      "segsAfter": 6,
+      "changes": [
+        "C: Shortened 53-91 (38s!) to 53-72 - original had absurdly long end time for short line"
+      ]
+    },
+    "nm35CQL3yms": {
+      "changed": true,
+      "segsBefore": 8,
+      "segsAfter": 8,
+      "changes": [
+        "A: Split 16-20 off 'Disney and Pixar's Inside Out 2' (trailer tag, separate from dialogue)",
+        "G: Merged 30-34 + 34-35 (Disney/Pixar repeated text, consecutive near-duplicate)"
+      ]
+    },
+    "nmcdLOjGVzw": {
+      "changed": false,
+      "reason": "Lyrics (Rule I) - The Migos/popular song, segments are lyric lines"
+    },
+    "nNEb2k_EmMg": {
+      "changed": false,
+      "reason": "Lyrics (Rule I) - Gloria, all segments are well-spaced lyric lines"
+    },
+    "nnp46b6D74Y": {
+      "changed": true,
+      "segsBefore": 21,
+      "segsAfter": 20,
+      "changes": [
+        "H: Removed 'bell rings' (63-65), 'laughter' (65-68), 'music plays' (74-77) - sound effect descriptions, not speech",
+        "G: Merged 87-89 + 89-91 ('Stop why don't your breath' + 'spring on my face') into single sentence"
+      ]
+    },
+    "NQ6_Sqt_w3Y": {
+      "changed": false,
+      "reason": "Only 2 segments, both well-formed single sentences"
+    },
+    "nQJRDIXCcRs": {
+      "changed": true,
+      "segsBefore": 20,
+      "segsAfter": 20,
+      "changes": [
+        "A: Split 57.64-63.96 (6.32s, 3 sentences) into 2 segments at natural break",
+        "A: Split 73.2-76.56 (3.36s, 3 sentences: school + yes you do + stay) into 2 segments"
+      ]
+    },
+    "nrBAHIc7Aco": {
+      "changed": false,
+      "reason": "Sparse segments with large gaps; each segment is already a single sentence"
+    },
+    "nRpXUhLQG48": {
+      "changed": false,
+      "reason": "Juno - well-segmented 2-4s dialogue lines"
+    },
+    "nSDgHBxUbVQ": {
+      "changed": false,
+      "reason": "Lyrics - Ed Sheeran Photograph, well-segmented lyric lines (13 segments)"
+    },
+    "nTIvTF41FAE": {
+      "changed": false,
+      "reason": "Ed Sheeran Photograph - lyrics (Rule I), well-segmented"
+    },
+    "nW9pqeXofh4": {
+      "changed": false,
+      "reason": "Saturday Night Fever - already well-segmented 2-5s dialogue"
+    },
+    "nWeCJTyho8Y": {
+      "changed": false,
+      "reason": "Hidden Figures - sparse segments, each already a single complete sentence"
+    },
+    "Nxe8-9YOnnk": {
+      "changed": true,
+      "segsBefore": 14,
+      "segsAfter": 14,
+      "changes": [
+        "A: Split 45-50 (5s) - separated 'god damn bless America' as complete thought",
+        "G: Merged 60-63 + 63-65 (Lieutenant Dyant story, single narrative flow)"
+      ]
+    },
+    "NxoW7MEWFEY": {
+      "changed": true,
+      "segsBefore": 11,
+      "segsAfter": 14,
+      "changes": [
+        "A: Split 44.76-51.4 (6.64s, multi-sentence: toppings + not paying + what is this) into 2",
+        "A: Split 83.66-88.5 (4.84s, 2 sentences: goddamn keys + found painting) into 2"
+      ]
+    }
+  },
+  "summary": {
+    "splitMultiSentence": 10,
+    "mergedShortFragments": 8,
+    "removedSoundEffects": 1,
+    "lyricsKeptAsIs": 8,
+    "alreadyWellSegmented": 15
+  }
+}

@@ -1,0 +1,576 @@
+{
+  "batch": "fix2-batch-05",
+  "timestamp": "2026-03-12T10:54:38.880Z",
+  "summary": {
+    "filesProcessed": 40,
+    "filesModified": 38,
+    "filesUnchanged": 2,
+    "originalTotalSegments": 550,
+    "finalTotalSegments": 695,
+    "totalSegmentsAdded": 145,
+    "remainingMultiSentenceOver3s": 43,
+    "remainingReason": "all have one split-part under 1.0s minimum duration"
+  },
+  "rules": {
+    "splitWhen": "segment has 2+ sentences AND duration >3s",
+    "minSegmentDuration": "1.0s",
+    "preferredMinDuration": "1.5s",
+    "timingMethod": "proportional by character count, rounded to 1 decimal",
+    "abbreviationsExcluded": [
+      "Dr.",
+      "Mr.",
+      "Mrs.",
+      "Ms.",
+      "St.",
+      "U.S.",
+      "Jr.",
+      "Sr.",
+      "e.g.",
+      "i.e."
+    ],
+    "ellipsisExcluded": true,
+    "musicSkipped": true,
+    "koreanSplit": "matched at sentence boundaries when possible, full-ko-in-first otherwise"
+  },
+  "files": [
+    {
+      "id": "bIQgJKJiQRQ",
+      "originalSegments": 20,
+      "finalSegments": 21,
+      "segmentsAdded": 1,
+      "remainingMultiSentence": 0
+    },
+    {
+      "id": "blMgda_uIok",
+      "originalSegments": 15,
+      "finalSegments": 25,
+      "segmentsAdded": 10,
+      "remainingMultiSentence": 1,
+      "remainingDetails": [
+        {
+          "en": "No butt. Open the door. Uh, no.",
+          "dur": 3.2,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    },
+    {
+      "id": "BmFbczWrVUw",
+      "originalSegments": 9,
+      "finalSegments": 10,
+      "segmentsAdded": 1,
+      "remainingMultiSentence": 0
+    },
+    {
+      "id": "Bml8KwCmob8",
+      "originalSegments": 11,
+      "finalSegments": 16,
+      "segmentsAdded": 5,
+      "remainingMultiSentence": 2,
+      "remainingDetails": [
+        {
+          "en": "Or really just give him a pomegranate enema instead. Just",
+          "dur": 4.5,
+          "reason": "one-part-under-1s"
+        },
+        {
+          "en": "shove a bottle of pomegranate juice up his ass and squeeze it. You'll be amazed",
+          "dur": 4.6,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    },
+    {
+      "id": "BOK22sQ_PTI",
+      "originalSegments": 15,
+      "finalSegments": 21,
+      "segmentsAdded": 6,
+      "remainingMultiSentence": 1,
+      "remainingDetails": [
+        {
+          "en": "Don't you do that. Don't infect him with the idea that it's okay to quit, that i",
+          "dur": 5,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    },
+    {
+      "id": "BOt5SmHf2aE",
+      "originalSegments": 16,
+      "finalSegments": 20,
+      "segmentsAdded": 4,
+      "remainingMultiSentence": 1,
+      "remainingDetails": [
+        {
+          "en": "No spice. Because no immigrants, no spice.",
+          "dur": 3.1,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    },
+    {
+      "id": "bP_FsFnDnzM",
+      "originalSegments": 19,
+      "finalSegments": 22,
+      "segmentsAdded": 3,
+      "remainingMultiSentence": 1,
+      "remainingDetails": [
+        {
+          "en": "Why don't you kill yourself, Walt? What?",
+          "dur": 3.2,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    },
+    {
+      "id": "bqsZzZ4kXbg",
+      "originalSegments": 13,
+      "finalSegments": 19,
+      "segmentsAdded": 6,
+      "remainingMultiSentence": 4,
+      "remainingDetails": [
+        {
+          "en": "You shouldn't use words like that. Says who?",
+          "dur": 4,
+          "reason": "one-part-under-1s"
+        },
+        {
+          "en": "See? The girl in the violet dress?",
+          "dur": 3.4,
+          "reason": "one-part-under-1s"
+        },
+        {
+          "en": "She reminds me to be good, so Father will be proud of me when he returns. Where ",
+          "dur": 6,
+          "reason": "one-part-under-1s"
+        },
+        {
+          "en": "You won't tell? Never.",
+          "dur": 3.4,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    },
+    {
+      "id": "bTeYncx1xmI",
+      "originalSegments": 14,
+      "finalSegments": 16,
+      "segmentsAdded": 2,
+      "remainingMultiSentence": 0
+    },
+    {
+      "id": "BTff04cFsRw",
+      "originalSegments": 6,
+      "finalSegments": 7,
+      "segmentsAdded": 1,
+      "remainingMultiSentence": 0
+    },
+    {
+      "id": "bvjZSqRu41k",
+      "originalSegments": 20,
+      "finalSegments": 27,
+      "segmentsAdded": 7,
+      "remainingMultiSentence": 1,
+      "remainingDetails": [
+        {
+          "en": "Did you just, um, stall them? Stall them?",
+          "dur": 3.2,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    },
+    {
+      "id": "bx7l7X7qy2g",
+      "originalSegments": 7,
+      "finalSegments": 11,
+      "segmentsAdded": 4,
+      "remainingMultiSentence": 0
+    },
+    {
+      "id": "bYXhA8VG8Lw",
+      "originalSegments": 7,
+      "finalSegments": 14,
+      "segmentsAdded": 7,
+      "remainingMultiSentence": 0
+    },
+    {
+      "id": "bzE-IMaegzQ",
+      "originalSegments": 8,
+      "finalSegments": 9,
+      "segmentsAdded": 1,
+      "remainingMultiSentence": 0
+    },
+    {
+      "id": "BzIHyF7UWY4",
+      "originalSegments": 18,
+      "finalSegments": 19,
+      "segmentsAdded": 1,
+      "remainingMultiSentence": 4,
+      "remainingDetails": [
+        {
+          "en": "Probably 2011 or 12. Okay.",
+          "dur": 3.4,
+          "reason": "one-part-under-1s"
+        },
+        {
+          "en": "Under siege era, he's in good shape. No.",
+          "dur": 3.2,
+          "reason": "one-part-under-1s"
+        },
+        {
+          "en": "And you can see his hairline's fucked up in that movie. Yeah.",
+          "dur": 3.6,
+          "reason": "one-part-under-1s"
+        },
+        {
+          "en": "Yeah, that was back in the day when you didn't have to be cut. Yeah.",
+          "dur": 3.6,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    },
+    {
+      "id": "C2vVmag1HRY",
+      "originalSegments": 12,
+      "finalSegments": 17,
+      "segmentsAdded": 5,
+      "remainingMultiSentence": 2,
+      "remainingDetails": [
+        {
+          "en": "Oh, my gosh. Please, just go right through, Mr. Styles.",
+          "dur": 3.8,
+          "reason": "one-part-under-1s"
+        },
+        {
+          "en": "ID? I don't have any ID, but I'm James Corden.",
+          "dur": 3.4,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    },
+    {
+      "id": "C6MFJwuTZII",
+      "originalSegments": 9,
+      "finalSegments": 13,
+      "segmentsAdded": 4,
+      "remainingMultiSentence": 0
+    },
+    {
+      "id": "cBd6B_xwQPE",
+      "originalSegments": 13,
+      "finalSegments": 21,
+      "segmentsAdded": 8,
+      "remainingMultiSentence": 2,
+      "remainingDetails": [
+        {
+          "en": "That was an act. Yeah.",
+          "dur": 3.1,
+          "reason": "one-part-under-1s"
+        },
+        {
+          "en": "We just know there are a lot of directors here tonight. And...",
+          "dur": 4.8,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    },
+    {
+      "id": "CECCNFXmv5c",
+      "originalSegments": 18,
+      "finalSegments": 22,
+      "segmentsAdded": 4,
+      "remainingMultiSentence": 1,
+      "remainingDetails": [
+        {
+          "en": "I do you a favor and take Freddy in when you're having a bad time, and then you ",
+          "dur": 5,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    },
+    {
+      "id": "Ce_BXD_ONQ8",
+      "originalSegments": 20,
+      "finalSegments": 22,
+      "segmentsAdded": 2,
+      "remainingMultiSentence": 6,
+      "remainingDetails": [
+        {
+          "en": "Ain't no sunshine when she's gone. And",
+          "dur": 7,
+          "reason": "one-part-under-1s"
+        },
+        {
+          "en": "Ain't no sunshine when she's gone. And",
+          "dur": 7,
+          "reason": "one-part-under-1s"
+        },
+        {
+          "en": "Ain't no sunshine when she's gone. And",
+          "dur": 7,
+          "reason": "one-part-under-1s"
+        },
+        {
+          "en": "This house just ain't no home. Anytime",
+          "dur": 3.3,
+          "reason": "one-part-under-1s"
+        },
+        {
+          "en": "Ain't no sunshine when she's gone. And",
+          "dur": 7,
+          "reason": "one-part-under-1s"
+        },
+        {
+          "en": "This house just ain't no home. Anytime",
+          "dur": 3.3,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    },
+    {
+      "id": "cgbz2VHWrpE",
+      "originalSegments": 19,
+      "finalSegments": 19,
+      "segmentsAdded": 0,
+      "remainingMultiSentence": 1,
+      "remainingDetails": [
+        {
+          "en": "And the clackers just worship her. The who?",
+          "dur": 4,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    },
+    {
+      "id": "ChqXlyD-5KY",
+      "originalSegments": 10,
+      "finalSegments": 11,
+      "segmentsAdded": 1,
+      "remainingMultiSentence": 1,
+      "remainingDetails": [
+        {
+          "en": "I do know that you've been up to a few things that you probably would rather kee",
+          "dur": 7,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    },
+    {
+      "id": "chyRpj-971o",
+      "originalSegments": 8,
+      "finalSegments": 10,
+      "segmentsAdded": 2,
+      "remainingMultiSentence": 0
+    },
+    {
+      "id": "Ch_hoYPPeGc",
+      "originalSegments": 9,
+      "finalSegments": 10,
+      "segmentsAdded": 1,
+      "remainingMultiSentence": 0
+    },
+    {
+      "id": "cILfj2YkKng",
+      "originalSegments": 16,
+      "finalSegments": 20,
+      "segmentsAdded": 4,
+      "remainingMultiSentence": 0
+    },
+    {
+      "id": "citbw9n82BM",
+      "originalSegments": 20,
+      "finalSegments": 24,
+      "segmentsAdded": 4,
+      "remainingMultiSentence": 2,
+      "remainingDetails": [
+        {
+          "en": "So I know you. They're supposed to be getting married this afternoon,",
+          "dur": 3.1,
+          "reason": "one-part-under-1s"
+        },
+        {
+          "en": "He likes the town, he paints toy soldiers, and he's gay. I am.",
+          "dur": 4.2,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    },
+    {
+      "id": "CkbHGH-NnkU",
+      "originalSegments": 7,
+      "finalSegments": 9,
+      "segmentsAdded": 2,
+      "remainingMultiSentence": 0
+    },
+    {
+      "id": "cKQMUS5iqSI",
+      "originalSegments": 14,
+      "finalSegments": 20,
+      "segmentsAdded": 6,
+      "remainingMultiSentence": 2,
+      "remainingDetails": [
+        {
+          "en": "Neville. No offence, but I really don't care about plants.",
+          "dur": 6,
+          "reason": "one-part-under-1s"
+        },
+        {
+          "en": "Hey! She's only interested in you because she thinks you're the Chosen One.",
+          "dur": 4,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    },
+    {
+      "id": "cle4jJFoeQg",
+      "originalSegments": 13,
+      "finalSegments": 17,
+      "segmentsAdded": 4,
+      "remainingMultiSentence": 0
+    },
+    {
+      "id": "cLmCJKT5ssw",
+      "originalSegments": 21,
+      "finalSegments": 26,
+      "segmentsAdded": 5,
+      "remainingMultiSentence": 0
+    },
+    {
+      "id": "cnaeIAEp2pU",
+      "originalSegments": 16,
+      "finalSegments": 17,
+      "segmentsAdded": 1,
+      "remainingMultiSentence": 0
+    },
+    {
+      "id": "CO1S9o1u3II",
+      "originalSegments": 17,
+      "finalSegments": 17,
+      "segmentsAdded": 0,
+      "remainingMultiSentence": 1,
+      "remainingDetails": [
+        {
+          "en": "When you get back to your home, who supports you? The common people.",
+          "dur": 3.6,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    },
+    {
+      "id": "COD9hcTpGWQ",
+      "originalSegments": 16,
+      "finalSegments": 18,
+      "segmentsAdded": 2,
+      "remainingMultiSentence": 1,
+      "remainingDetails": [
+        {
+          "en": "I said, Africa won the World Cup. Right? Yeah.",
+          "dur": 3.6,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    },
+    {
+      "id": "cpOEO2gUekE",
+      "originalSegments": 7,
+      "finalSegments": 13,
+      "segmentsAdded": 6,
+      "remainingMultiSentence": 4,
+      "remainingDetails": [
+        {
+          "en": "movie. Chris O'Donnell has a potato face.",
+          "dur": 3.6,
+          "reason": "one-part-under-1s"
+        },
+        {
+          "en": "He does. Hashtag potato face. I remember",
+          "dur": 3.4,
+          "reason": "one-part-under-1s"
+        },
+        {
+          "en": "Nick Offerman's hands seem crazy small compared to his head. If",
+          "dur": 5.6,
+          "reason": "one-part-under-1s"
+        },
+        {
+          "en": "a dirty. What in the is up with Amy Poehler's face?",
+          "dur": 5,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    },
+    {
+      "id": "cPYhj2xTCGc",
+      "originalSegments": 14,
+      "finalSegments": 21,
+      "segmentsAdded": 7,
+      "remainingMultiSentence": 0
+    },
+    {
+      "id": "CqgmozFr_GM",
+      "originalSegments": 13,
+      "finalSegments": 21,
+      "segmentsAdded": 8,
+      "remainingMultiSentence": 0
+    },
+    {
+      "id": "cR9FMrck4gw",
+      "originalSegments": 10,
+      "finalSegments": 11,
+      "segmentsAdded": 1,
+      "remainingMultiSentence": 0
+    },
+    {
+      "id": "CtAFtLaIN1k",
+      "originalSegments": 10,
+      "finalSegments": 12,
+      "segmentsAdded": 2,
+      "remainingMultiSentence": 1,
+      "remainingDetails": [
+        {
+          "en": "By Jove! This priceless artifact would look perfect back in my drawing room in T",
+          "dur": 5.5,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    },
+    {
+      "id": "cVsyJvxX48A",
+      "originalSegments": 16,
+      "finalSegments": 22,
+      "segmentsAdded": 6,
+      "remainingMultiSentence": 3,
+      "remainingDetails": [
+        {
+          "en": "Yes? How are you, sir?",
+          "dur": 4.3,
+          "reason": "one-part-under-1s"
+        },
+        {
+          "en": "Oh, hi. Hi. This is my son, Christopher. Hi.",
+          "dur": 3.7,
+          "reason": "one-part-under-1s"
+        },
+        {
+          "en": "I want you to know that I do not take that for granted. No. Come on.",
+          "dur": 4.1,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    },
+    {
+      "id": "CWRTqMGvdpc",
+      "originalSegments": 24,
+      "finalSegments": 25,
+      "segmentsAdded": 1,
+      "remainingMultiSentence": 1,
+      "remainingDetails": [
+        {
+          "en": "Do you know what a duvet is? Comfort.",
+          "dur": 4,
+          "reason": "one-part-under-1s"
+        }
+      ]
+    }
+  ]
+}

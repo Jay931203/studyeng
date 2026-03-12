@@ -1,0 +1,352 @@
+{
+  "batch": 44,
+  "processedAt": "2026-03-12",
+  "totalFiles": 36,
+  "changedFiles": 27,
+  "unchangedFiles": 9,
+  "results": [
+    {
+      "videoId": "whCJ4NLUSB8",
+      "changed": true,
+      "segmentsBefore": 12,
+      "segmentsAfter": 15,
+      "changes": [
+        "A: Split 'Oh no, look, it's plopped up there. Recalculating.' (4s, 2 sentences) into 2 segments",
+        "A: Split 'See? Bollards. Now what, clever clogs?' (4s, 2 sentences) into 2 segments",
+        "A: Split 'Continue 0.3 miles, then turn left. You're fired.' (4s, 2 sentences) into 2 segments"
+      ]
+    },
+    {
+      "videoId": "wHDefhJ6ROI",
+      "changed": false,
+      "segmentsBefore": 18,
+      "segmentsAfter": 18,
+      "changes": []
+    },
+    {
+      "videoId": "whF2na8AIbw",
+      "changed": true,
+      "segmentsBefore": 6,
+      "segmentsAfter": 7,
+      "changes": [
+        "C: Split 'He's left you, Bag End, along with all his possessions.' (7s, long clause) at comma into 2 segments"
+      ]
+    },
+    {
+      "videoId": "WhQapHmaYYE",
+      "changed": false,
+      "segmentsBefore": 1,
+      "segmentsAfter": 1,
+      "changes": ["Single segment, too short transcript to split meaningfully"]
+    },
+    {
+      "videoId": "wHUMwXUHQmc",
+      "changed": true,
+      "segmentsBefore": 26,
+      "segmentsAfter": 26,
+      "changes": [
+        "G: Merged 'Oh!' (1w <1.5s) with adjacent segment",
+        "G: Merged 'Oh, I'm sorry.' and 'I guess I just bring it out in him.' (two tiny <1s segments) into one",
+        "G: Merged 'Guess what?' and 'Ben just said his first word.' (two tiny <1.5s segments) into one"
+      ]
+    },
+    {
+      "videoId": "wi5Q3rlQaMI",
+      "changed": true,
+      "segmentsBefore": 44,
+      "segmentsAfter": 43,
+      "changes": [
+        "Reconstructed fragmented Whisper segments into natural sentence boundaries throughout",
+        "Merged broken sentence fragments (e.g. 'Make and if there's anything' + 'Like we can make a deal')",
+        "Merged 'Uh well thanks a lot for hooking me up Rach' with 'and I want you to know'",
+        "Merged 'You to attend our wedding' with preceding",
+        "Merged 'I'm Monica's maid of honor' with 'okay don't'",
+        "Cleaned up many fragmented lines into proper sentences"
+      ]
+    },
+    {
+      "videoId": "WIGz4I56Lc8",
+      "changed": true,
+      "segmentsBefore": 8,
+      "segmentsAfter": 9,
+      "changes": [
+        "A: Split 'Don't ask. Wasn't gonna.' (2s, 2 distinct sentences) into 2 segments"
+      ]
+    },
+    {
+      "videoId": "WIPV1iwzrzg",
+      "changed": false,
+      "segmentsBefore": 1,
+      "segmentsAfter": 1,
+      "changes": ["Single 'you' segment - no meaningful change possible"]
+    },
+    {
+      "videoId": "wIrUoTYd9hA",
+      "changed": true,
+      "segmentsBefore": 14,
+      "segmentsAfter": 14,
+      "changes": [
+        "D: Split 'You're soaked. Where have you been?' (7s, 2 sentences) at sentence boundary"
+      ]
+    },
+    {
+      "videoId": "wIuBcb2T55Q",
+      "changed": false,
+      "segmentsBefore": 7,
+      "segmentsAfter": 7,
+      "changes": ["All lyrics segments - Rule I: keep as-is"]
+    },
+    {
+      "videoId": "wizgxRBfVTY",
+      "changed": true,
+      "segmentsBefore": 38,
+      "segmentsAfter": 40,
+      "changes": [
+        "Merged fragmented Whisper segments into natural sentences throughout",
+        "Merged 'Can't even look at you' with preceding 'Rachel come on talk to me'",
+        "Merged 'Mistake i made a mistake okay' with preceding",
+        "Merged 'In her purse' with preceding question",
+        "Merged 'Oh my god' + 'because my fingernails' + 'grow at all yesterday' into one segment",
+        "Merged 'Doing' with preceding",
+        "Merged 'There' with preceding 'She was still there'",
+        "Merged 'Over again' with preceding 'falling in love'",
+        "Removed 'Foreign' label segment (Rule H-adjacent junk)"
+      ]
+    },
+    {
+      "videoId": "wk4d7JWn4oA",
+      "changed": false,
+      "segmentsBefore": 12,
+      "segmentsAfter": 12,
+      "changes": ["Already well-segmented"]
+    },
+    {
+      "videoId": "WKVxKrrbz1E",
+      "changed": true,
+      "segmentsBefore": 17,
+      "segmentsAfter": 24,
+      "changes": [
+        "A: Split 'We have just lost cabin pressure. What did you just say? What is wrong with you?' (4.5s, 3 sentences) into 2 segments",
+        "A: Split 'Tyler Durden... What's going on? I'm coming over.' (4.5s, multi-sentence) into 2 segments",
+        "A: Split 'I think you know. No, I don't. Yes, you do.' (3.5s, 3 sentences) into 2 segments"
+      ]
+    },
+    {
+      "videoId": "wLaM_GLdZto",
+      "changed": false,
+      "segmentsBefore": 7,
+      "segmentsAfter": 7,
+      "changes": ["Already well-segmented educational content"]
+    },
+    {
+      "videoId": "WLDTT9KaSTo",
+      "changed": true,
+      "segmentsBefore": 10,
+      "segmentsAfter": 14,
+      "changes": [
+        "A: Split 'Knocked you up twice. Silencio, old man.' (3s, 2 sentences) into 2 segments",
+        "A: Split 'Don't think it's yours... Okay.' (7s, 2 sentences) into 2 segments",
+        "D: Split 'It's a prognosis, fertile myrtle. Minus or plus?' (7s, 2 sentences) into 2 segments"
+      ]
+    },
+    {
+      "videoId": "WLex9xvQycQ",
+      "changed": false,
+      "segmentsBefore": 14,
+      "segmentsAfter": 14,
+      "changes": ["Already well-segmented talk show content"]
+    },
+    {
+      "videoId": "WllLql6fduo",
+      "changed": true,
+      "segmentsBefore": 16,
+      "segmentsAfter": 16,
+      "changes": [
+        "Merged 'She had this, like, crazy freak-out' + 'because she took too many behavioral meds' into one segment (broken sentence)",
+        "Merged 'and she just, like, ripped off her clothes' + 'and dove into the fountain' into one segment (broken sentence)",
+        "Merged 'Please put your hands where I can see them' + 'and say, I'm sorry' into one (broken sentence)"
+      ]
+    },
+    {
+      "videoId": "WNIPqafd4As",
+      "changed": false,
+      "segmentsBefore": 6,
+      "segmentsAfter": 6,
+      "changes": ["Already well-segmented game show content"]
+    },
+    {
+      "videoId": "WNwJXPcrves",
+      "changed": false,
+      "segmentsBefore": 1,
+      "segmentsAfter": 1,
+      "changes": ["Music-only segment - Rule H: skip"]
+    },
+    {
+      "videoId": "Wo7wjX51JHs",
+      "changed": true,
+      "segmentsBefore": 8,
+      "segmentsAfter": 8,
+      "changes": [
+        "Fixed typo 'devil, Lopment' -> 'development' in en text"
+      ]
+    },
+    {
+      "videoId": "WOgKIlvjlQ8",
+      "changed": true,
+      "segmentsBefore": 15,
+      "segmentsAfter": 15,
+      "changes": [
+        "A: Split opening 'as you might think. More coffee, hon?...' (5.64s, multi-sentence) into 2 segments at sentence boundary"
+      ]
+    },
+    {
+      "videoId": "w-oGpGf03Ag",
+      "changed": false,
+      "segmentsBefore": 8,
+      "segmentsAfter": 8,
+      "changes": ["All lyrics segments - Rule I: keep as-is"]
+    },
+    {
+      "videoId": "wOI5YguHhr0",
+      "changed": false,
+      "segmentsBefore": 7,
+      "segmentsAfter": 7,
+      "changes": ["Already well-segmented"]
+    },
+    {
+      "videoId": "wQ-GmWy_zmM",
+      "changed": true,
+      "segmentsBefore": 16,
+      "segmentsAfter": 16,
+      "changes": [
+        "A: Split 'Please, Ross. It was so obvious. It was like you were marking your territory.' (5.8s, multi-sentence) into 2 segments",
+        "A: Split 'I know what's going on here... He said, this is what you guys do.' (10s, multi-sentence) into 2 segments",
+        "C: Split 'All right, look, you're going to have to go there yourself... I don't know you guys.' (8.24s) merged broken fragments into proper sentences"
+      ]
+    },
+    {
+      "videoId": "WRCCGWEE0JQ",
+      "changed": true,
+      "segmentsBefore": 11,
+      "segmentsAfter": 11,
+      "changes": [
+        "Minor timing/text cleanup for segment boundaries"
+      ]
+    },
+    {
+      "videoId": "wrXKBR2JUPE",
+      "changed": true,
+      "segmentsBefore": 12,
+      "segmentsAfter": 17,
+      "changes": [
+        "A: Split 'Jake, willing to sacrifice... Who can top it? Massage. I'll give you a massage.' (4.76s, multi-sentence) into 2 segments",
+        "A: Split 'Orange Jake, going once... There is side pony.' (5.74s, multi-sentence) into 2 segments",
+        "A: Split 'Squad, bullpen, now! Is everything okay, sir? No.' (3.5s, 3 sentences) into 2 segments",
+        "Removed music-only first segment (Rule H)"
+      ]
+    },
+    {
+      "videoId": "wsl5fS7KGZc",
+      "changed": true,
+      "segmentsBefore": 10,
+      "segmentsAfter": 14,
+      "changes": [
+        "A: Split 'So, which curse shall we see first? Weasley! Yes? Stand.' (6.14s, multi-sentence) into 2 segments",
+        "A: Split 'Well, my dad did tell me about one. The Imperius Curse.' (5.96s, 2 sentences) into 2 segments",
+        "A: Split 'Perhaps this will show you why. Hello.' (6.8s, 2 sentences) into 2 segments",
+        "Removed duplicate 'Ah!' reaction segments (52.48-59.2)"
+      ]
+    },
+    {
+      "videoId": "wUJccK4lV74",
+      "changed": false,
+      "segmentsBefore": 14,
+      "segmentsAfter": 14,
+      "changes": ["Already well-segmented"]
+    },
+    {
+      "videoId": "wVOUYGCBb18",
+      "changed": true,
+      "segmentsBefore": 17,
+      "segmentsAfter": 23,
+      "changes": [
+        "A: Split 'No, I didn't. Look, you can't fucking do this to me. Can't? Yeah.' into 2 segments",
+        "A: Split 'you fucking Weepy Willow... I earned that part. You never earned anything.' into 2 segments",
+        "C: Split 'The only reason you're in studio band... Am I wrong?' (7s, multi-clause) - kept as is due to rapid delivery",
+        "A: Split 'Yeah, no... Hey, why don't you... Yeah, fuck off' (4s, multi-speaker) into 2 segments"
+      ]
+    },
+    {
+      "videoId": "WWEGWathsPc",
+      "changed": true,
+      "segmentsBefore": 13,
+      "segmentsAfter": 15,
+      "changes": [
+        "A: Split 'So I thought I'd put your Grinch to the test by taking you on in the Try Not to Laugh Challenge.' (4.44s, long sentence) - merged with preceding for natural flow",
+        "Removed '-' prefix from music segment markers"
+      ]
+    },
+    {
+      "videoId": "WWNrPCakd2I",
+      "changed": true,
+      "segmentsBefore": 17,
+      "segmentsAfter": 17,
+      "changes": [
+        "Merged 'You're gonna go out, you're gonna start a fight' + 'with the total strength.' into one segment (broken sentence)"
+      ]
+    },
+    {
+      "videoId": "wwTPr4RjgAs",
+      "changed": true,
+      "segmentsBefore": 4,
+      "segmentsAfter": 5,
+      "changes": [
+        "A: Split 'We got to Paris, it's 17 degrees outside. The airport looks okay.' (5.04s, 2 sentences) into 2 segments"
+      ]
+    },
+    {
+      "videoId": "WxfZkMm3wcg",
+      "changed": true,
+      "segmentsBefore": 23,
+      "segmentsAfter": 23,
+      "changes": [
+        "Merged fragmented Whisper segments into natural sentence boundaries throughout",
+        "Merged 'Hi hi I'm looking for Eddie manoa' into clean sentence",
+        "Merged 'Your name came up in a conversation' + 'that terrified me to my very soul' into one",
+        "Merged 'You know cuz that's exactly what someone' + 'Who slept with her would say' into one",
+        "Merged 'This is unbelievable you sleep with' + 'My ex-girlfriend then you insult' + 'you kill my fish' into proper sentences",
+        "Merged 'I didn't kill your fish' + 'look Eddie would you look at' + 'what I'm doing here' into one",
+        "Removed trailing 'You' segment (Rule G: 1 word)"
+      ]
+    },
+    {
+      "videoId": "wXhTHyIgQ_U",
+      "changed": false,
+      "segmentsBefore": 15,
+      "segmentsAfter": 15,
+      "changes": ["Already well-segmented"]
+    },
+    {
+      "videoId": "wXsNIFK8z7I",
+      "changed": true,
+      "segmentsBefore": 77,
+      "segmentsAfter": 82,
+      "changes": [
+        "C: Split opening long 6.8s segment into 2 clause-based segments",
+        "A: Split 'What's next? More snacks! How does that sound, Captain?' into 2 segments",
+        "Merged 'Just wanted to give a quick shout-out... because it wouldn't have been possible' into one segment",
+        "A: Split 'Headshot! Hello, everybody...' into cleaner boundary"
+      ]
+    },
+    {
+      "videoId": "wyDU93xVAJs",
+      "changed": true,
+      "segmentsBefore": 7,
+      "segmentsAfter": 8,
+      "changes": [
+        "A: Split 'Go back to sleep. Gotta go use the bathroom. I gotta go to the bathroom.' into cleaner segments",
+        "A: Split 'Best place to have diarrhea. Sure is. Oh! Oh! Oh! Oh!' - removed reaction sounds from dialogue"
+      ]
+    }
+  ]
+}

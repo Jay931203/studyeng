@@ -1,0 +1,202 @@
+{
+  "batch": 28,
+  "timestamp": "2026-03-12T05:55:09.406Z",
+  "totalFiles": 36,
+  "changedFiles": 20,
+  "unchangedFiles": 16,
+  "details": {
+    "MQJlBpPLHUM": {
+      "originalSegments": 16,
+      "newSegments": 17,
+      "changeCount": 1,
+      "changes": [
+        "Split multi-sentence (2 sent, 3.5s): \"I'll get one of my kids to fix it. How did you know?\""
+      ]
+    },
+    "mR6xnrY7rXI": {
+      "originalSegments": 17,
+      "newSegments": 19,
+      "changeCount": 4,
+      "changes": [
+        "Split multi-sentence (2 sent, 4s): \"Carlton, $90 for a pair of socks? That's ridiculous.\"",
+        "Split multi-sentence (2 sent, 4s): \"I can see just fine. Making the print smaller than they used\"",
+        "Split multi-sentence (3 sent, 4s): \"Now, this looks like $300 for a pair of shoes. What's it say\"",
+        "Merged short \"That's ridiculous.\" into previous (pass 2)"
+      ]
+    },
+    "muBWLTBLk30": {
+      "originalSegments": 3,
+      "newSegments": 4,
+      "changeCount": 1,
+      "changes": [
+        "Clause-split long sentence (25s): \"Then put your little hand in mine, there ain't no hill or mo\""
+      ]
+    },
+    "mVqbIUIHRFo": {
+      "originalSegments": 7,
+      "newSegments": 9,
+      "changeCount": 1,
+      "changes": [
+        "Split multi-sentence (3 sent, 6.92s): \"I slot bet Marshall that you did porn, so I win porn. I wish\""
+      ]
+    },
+    "MwI6-7kE17M": {
+      "originalSegments": 15,
+      "newSegments": 16,
+      "changeCount": 2,
+      "changes": [
+        "Merged short fragment \"No. No.\" into previous",
+        "Split multi-sentence (4 sent, 7s): \"And I just... I don't see why I can't love you as you want m\""
+      ]
+    },
+    "MWkN3akP3cU": {
+      "originalSegments": 8,
+      "newSegments": 8,
+      "changeCount": 2,
+      "changes": [
+        "Split multi-sentence (3 sent, 6s): \"Yeah, but maybe I do. Cooties I can handle. Alright.\"",
+        "Merged short fragment \"Fuck.\" into previous"
+      ]
+    },
+    "mwoX_UotKGo": {
+      "originalSegments": 9,
+      "newSegments": 11,
+      "changeCount": 2,
+      "changes": [
+        "Split multi-sentence (2 sent, 4.48s): \"There's no other way. There is one passage.\"",
+        "Split multi-sentence (2 sent, 4.76s): \"It leads into the mountains, but they will not get far. The \""
+      ]
+    },
+    "MYtjpIwamos": {
+      "originalSegments": 6,
+      "newSegments": 6,
+      "changeCount": 2,
+      "changes": [
+        "Split multi-sentence (2 sent, 3.5s): \"Yee-haw! What?\"",
+        "Merged short \"What?\" into previous (pass 2)"
+      ]
+    },
+    "n05FK5Ms0wE": {
+      "originalSegments": 19,
+      "newSegments": 20,
+      "changeCount": 6,
+      "changes": [
+        "Removed duplicate: \"I hope I never see any jerks again.\"",
+        "Split multi-sentence (3 sent, 3.5s): \"He wets the bed. He'll pee all over me. I know it.\"",
+        "Split multi-sentence (3 sent, 3.96s): \"I'm sorry. It's too late. Get upstairs.\"",
+        "Split multi-sentence (3 sent, 3.68s): \"I don't want a new family. I don't want any family. Families\"",
+        "Merged short \"I'm sorry.\" into previous (pass 2)",
+        "Merged short \"Get upstairs.\" into previous (pass 2)"
+      ]
+    },
+    "N16YkjFVAyE": {
+      "originalSegments": 19,
+      "newSegments": 22,
+      "changeCount": 3,
+      "changes": [
+        "Split multi-sentence (2 sent, 3.3s): \"like we were taught. And what happened?\"",
+        "Split multi-sentence (4 sent, 6.42s): \"Was Private Santiago ever late for platoon meetings? Yes, si\"",
+        "Split multi-sentence (3 sent, 4.3s): \"receive a code red? No, sir. Never?\""
+      ]
+    },
+    "N2p5uvbQhaY": {
+      "originalSegments": 14,
+      "newSegments": 19,
+      "changeCount": 4,
+      "changes": [
+        "Split multi-sentence (3 sent, 7s): \"Just give them some examples. Fine. Chipmunk.\"",
+        "Split multi-sentence (2 sent, 5s): \"Someone's going to regionals. It's a special cape.\"",
+        "Split multi-sentence (3 sent, 4s): \"What are you doing? There's rioting in Tunisia. The cape is \"",
+        "Split multi-sentence (3 sent, 4s): \"These people are giving out free iPhones. What? No, no, no.\""
+      ]
+    },
+    "n4NVPg2kHv4": {
+      "originalSegments": 7,
+      "newSegments": 8,
+      "changeCount": 2,
+      "changes": [
+        "Split multi-sentence (4 sent, 7s): \"No, no, no, no, no, no. Nope. Nope. Nope.\"",
+        "Merged short \"Nope.\" into previous (pass 2)"
+      ]
+    },
+    "N6J_32cDk9Y": {
+      "originalSegments": 18,
+      "newSegments": 20,
+      "changeCount": 2,
+      "changes": [
+        "Split multi-sentence (2 sent, 5.28s): \"All right, moving on to recycling. You okay, Ron?\"",
+        "Split multi-sentence (3 sent, 3.36s): \"I'm sorry, everybody. What were we talking about? Recycling?\""
+      ]
+    },
+    "N9QxmhaOPiE": {
+      "originalSegments": 8,
+      "newSegments": 10,
+      "changeCount": 5,
+      "changes": [
+        "Split multi-sentence (4 sent, 7s): \"Whoa, kid, kid, stop, stop. Stop, stop. Hey! I'll get it bac\"",
+        "Merged short fragment \"It's broken.\" into previous",
+        "Split multi-sentence (2 sent, 5s): \"Wow, look at him go. Look out!\"",
+        "Split multi-sentence (2 sent, 4s): \"Come on, come on, come on, come on! What are you doing?\"",
+        "Merged short \"Stop, stop.\" into previous (pass 2)"
+      ]
+    },
+    "NbOaWsqF_Y4": {
+      "originalSegments": 16,
+      "newSegments": 19,
+      "changeCount": 3,
+      "changes": [
+        "Split multi-sentence (2 sent, 5s): \"You build out a stock bar, beer on tap. I mean, they're Germ\"",
+        "Split multi-sentence (2 sent, 4s): \"A few lazy boys with couches. Pool table, I don't know, foos\"",
+        "Split multi-sentence (2 sent, 4s): \"Hell, we could even put up a hoop. Germans play basketball, \""
+      ]
+    },
+    "NbuUW9i-mHs": {
+      "originalSegments": 12,
+      "newSegments": 16,
+      "changeCount": 3,
+      "changes": [
+        "Split multi-sentence (2 sent, 6.6s): \"Violence and war. The insane brutality of ISIS continues. Th\"",
+        "Split multi-sentence (2 sent, 5s): \"human history. How is this possible?\"",
+        "Split multi-sentence (2 sent, 5.36s): \"is an active war between countries. They are either civil wa\""
+      ]
+    },
+    "nByAshpybOo": {
+      "originalSegments": 4,
+      "newSegments": 5,
+      "changeCount": 1,
+      "changes": [
+        "Split multi-sentence (2 sent, 7s): \"I'd like to thank the Academy. I've been waiting a long time\""
+      ]
+    },
+    "Nc_Tny40JPU": {
+      "originalSegments": 21,
+      "newSegments": 23,
+      "changeCount": 2,
+      "changes": [
+        "Split multi-sentence (2 sent, 4s): \"Did you hear that? And let's not go there.\"",
+        "Split multi-sentence (3 sent, 4s): \"Look, I tell you, we're safe. They're never going to find us\""
+      ]
+    },
+    "nCrjHPBQg9I": {
+      "originalSegments": 8,
+      "newSegments": 12,
+      "changeCount": 3,
+      "changes": [
+        "Split multi-sentence (4 sent, 7s): \"cause for this meeting. I think you had some business. Derek\"",
+        "Split multi-sentence (4 sent, 6.26s): \"and that is the only reason... What crap. Just vote. Thank y\"",
+        "Split multi-sentence (4 sent, 7s): \"Would you like me to hand over the gavel for this vote? No. \""
+      ]
+    },
+    "ndTbiDQjbiE": {
+      "originalSegments": 15,
+      "newSegments": 17,
+      "changeCount": 4,
+      "changes": [
+        "Split multi-sentence (3 sent, 7s): \"a US Justice Department investigation, for example? Depends.\"",
+        "Merged short fragment \"Yes.\" into previous",
+        "Split multi-sentence (3 sent, 7s): \"Whether America plans to invade Switzerland in the coming mo\"",
+        "Split multi-sentence (5 sent, 7s): \"Not Croix, not rue de la Croix. Croix. See, this is what I u\""
+      ]
+    }
+  }
+}

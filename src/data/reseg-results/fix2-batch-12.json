@@ -1,0 +1,3335 @@
+{
+  "batch": "fix2-batch-12",
+  "processedAt": "2026-03-12T11:00:23.597Z",
+  "files": [
+    {
+      "videoId": "lV8ocbooymE",
+      "originalSegments": 14,
+      "newSegments": 17,
+      "segmentsSplit": 3,
+      "changes": [
+        {
+          "index": 3,
+          "original": {
+            "start": 39,
+            "end": 43,
+            "en": "Well, we've just had the most wonderful day at the marina. Oh, you got a boat?",
+            "ko": "우리는 마리나에서 정말 멋진 하루를 보냈어요. 아, 보트가 있나요?"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 39,
+              "end": 42,
+              "en": "Well, we've just had the most wonderful day at the marina.",
+              "ko": "우리는 마리나에서 정말 멋진 하루를 보냈어요."
+            },
+            {
+              "start": 42,
+              "end": 43,
+              "en": "Oh, you got a boat?",
+              "ko": "아, 보트가 있나요?"
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "original": {
+            "start": 51,
+            "end": 58,
+            "en": "Not me. Not me.",
+            "ko": "저 아니에요. 저 아니에요."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 51,
+              "end": 54.5,
+              "en": "Not me.",
+              "ko": "저 아니에요."
+            },
+            {
+              "start": 54.5,
+              "end": 58,
+              "en": "Not me.",
+              "ko": "저 아니에요."
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "original": {
+            "start": 59,
+            "end": 66,
+            "en": "Hello. Oh, I can't talk now, Duke. I'm in the Twilight Zone.",
+            "ko": "안녕하세요. 아, 지금은 이야기할 수 없어요, 듀크. 저는 트와일라잇 존에 있어요."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 59,
+              "end": 63,
+              "en": "Hello. Oh, I can't talk now, Duke.",
+              "ko": "안녕하세요. 아, 지금은 이야기할 수 없어요, 듀크."
+            },
+            {
+              "start": 63,
+              "end": 66,
+              "en": "I'm in the Twilight Zone.",
+              "ko": "저는 트와일라잇 존에 있어요."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "lvBmrMEd254",
+      "originalSegments": 9,
+      "newSegments": 13,
+      "segmentsSplit": 3,
+      "changes": [
+        {
+          "index": 0,
+          "original": {
+            "start": 15,
+            "end": 22,
+            "en": "Timmy, Timmy, can you tell me what they are? Gala...",
+            "ko": "팀미, 팀미, 그게 뭐인지 말해줄래? 갈라..."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 15,
+              "end": 21,
+              "en": "Timmy, Timmy, can you tell me what they are?",
+              "ko": "팀미, 팀미, 그게 뭐인지 말해줄래?"
+            },
+            {
+              "start": 21,
+              "end": 22,
+              "en": "Gala...",
+              "ko": "갈라..."
+            }
+          ]
+        },
+        {
+          "index": 1,
+          "original": {
+            "start": 22,
+            "end": 27,
+            "en": "Gala... Uh... Uh... Gala... Uh... Gala-minus.",
+            "ko": "갈라... 어... 어... 갈라... 어... 갈라-마이너스."
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 22,
+              "end": 23.5,
+              "en": "Gala... Uh...",
+              "ko": "갈라... 어..."
+            },
+            {
+              "start": 23.5,
+              "end": 25,
+              "en": "Uh... Gala...",
+              "ko": "어... 갈라..."
+            },
+            {
+              "start": 25,
+              "end": 27,
+              "en": "Uh... Gala-minus.",
+              "ko": "어... 갈라-마이너스."
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "original": {
+            "start": 27,
+            "end": 31,
+            "en": "Are... are those... Meat-eating... Uh...",
+            "ko": "저게... 저게 고기를 먹는... 어..."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 27,
+              "end": 29,
+              "en": "Are... are those...",
+              "ko": "저게..."
+            },
+            {
+              "start": 29,
+              "end": 31,
+              "en": "Meat-eating... Uh...",
+              "ko": "저게 고기를 먹는... 어..."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "Lz3KYrPQaN0",
+      "originalSegments": 3,
+      "newSegments": 4,
+      "segmentsSplit": 1,
+      "changes": [
+        {
+          "index": 0,
+          "original": {
+            "start": 59,
+            "end": 63,
+            "en": "Uh-huh. Uh-huh.",
+            "ko": "응. 응."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 59,
+              "end": 61,
+              "en": "Uh-huh.",
+              "ko": "응."
+            },
+            {
+              "start": 61,
+              "end": 63,
+              "en": "Uh-huh.",
+              "ko": "응."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "LZNr8XGqByw",
+      "originalSegments": 8,
+      "newSegments": 12,
+      "segmentsSplit": 4,
+      "changes": [
+        {
+          "index": 1,
+          "original": {
+            "start": 2.96,
+            "end": 6.16,
+            "en": "Because it can either go both ways. Encounter A.",
+            "ko": "두 가지로 나뉠 수 있거든요. 상황 A."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 3,
+              "end": 5.2,
+              "en": "Because it can either go both ways.",
+              "ko": "두 가지로 나뉠 수 있거든요."
+            },
+            {
+              "start": 5.2,
+              "end": 6.16,
+              "en": "Encounter A.",
+              "ko": "상황 A."
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "original": {
+            "start": 6.16,
+            "end": 9.88,
+            "en": "Bro, it's actually really cool that we have the same backpack. Yeah, man, we're twins.",
+            "ko": "야, 우리 같은 가방이라니 진짜 멋지다. 응, 우리 쌍둥이야."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 6.2,
+              "end": 8.9,
+              "en": "Bro, it's actually really cool that we have the same backpack.",
+              "ko": "야, 우리 같은 가방이라니 진짜 멋지다."
+            },
+            {
+              "start": 8.9,
+              "end": 9.88,
+              "en": "Yeah, man, we're twins.",
+              "ko": "응, 우리 쌍둥이야."
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "original": {
+            "start": 14.92,
+            "end": 18.12,
+            "en": "Word for word, bar for bar. Bro, I've been having this.",
+            "ko": "하나부터 열까지 똑같아. 야, 나 이거 원래부터 가지고 있었거든."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 14.9,
+              "end": 16.5,
+              "en": "Word for word, bar for bar.",
+              "ko": "하나부터 열까지 똑같아."
+            },
+            {
+              "start": 16.5,
+              "end": 18.12,
+              "en": "Bro, I've been having this.",
+              "ko": "야, 나 이거 원래부터 가지고 있었거든."
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "original": {
+            "start": 18.12,
+            "end": 22.04,
+            "en": "You're copying me, if anything. What's next, the shoes? There can only be one.",
+            "ko": "따라 하는 건 니 쪽이야. 다음은 신발까지? 한 명만 있어야 해."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 18.1,
+              "end": 19.7,
+              "en": "You're copying me, if anything.",
+              "ko": "따라 하는 건 니 쪽이야."
+            },
+            {
+              "start": 19.7,
+              "end": 22.04,
+              "en": "What's next, the shoes? There can only be one.",
+              "ko": "다음은 신발까지? 한 명만 있어야 해."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "m4qpy87rs6U",
+      "originalSegments": 21,
+      "newSegments": 25,
+      "segmentsSplit": 3,
+      "changes": [
+        {
+          "index": 14,
+          "original": {
+            "start": 55,
+            "end": 62,
+            "en": "Get that hand sanitizer out. Excuse me, sir. Here you go, sir. Excuse me, sir.",
+            "ko": "손 소독제 꺼내. 실례합니다, 선생님. 여기요, 선생님. 실례합니다, 선생님."
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 55,
+              "end": 57.6,
+              "en": "Get that hand sanitizer out.",
+              "ko": "손 소독제 꺼내."
+            },
+            {
+              "start": 57.6,
+              "end": 60.6,
+              "en": "Excuse me, sir. Here you go, sir.",
+              "ko": "실례합니다, 선생님. 여기요, 선생님."
+            },
+            {
+              "start": 60.6,
+              "end": 62,
+              "en": "Excuse me, sir.",
+              "ko": "실례합니다, 선생님."
+            }
+          ]
+        },
+        {
+          "index": 19,
+          "original": {
+            "start": 71,
+            "end": 76,
+            "en": "It's for you. What's that? Are you nuts? Not nuts.",
+            "ko": "이건 당신 거예요. 뭐라고요? 미쳤어요? 미친 게 아니라."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 71,
+              "end": 73.7,
+              "en": "It's for you. What's that?",
+              "ko": "이건 당신 거예요. 뭐라고요?"
+            },
+            {
+              "start": 73.7,
+              "end": 76,
+              "en": "Are you nuts? Not nuts.",
+              "ko": "미쳤어요? 미친 게 아니라."
+            }
+          ]
+        },
+        {
+          "index": 20,
+          "original": {
+            "start": 76,
+            "end": 81,
+            "en": "No, not your... Not your nuts. Not nuts. Not your nuts.",
+            "ko": "아니, 당신의... 당신의 그게 아니라. 견과류가 아니라. 당신의 그것도 아니라."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 76,
+              "end": 78.8,
+              "en": "No, not your... Not your nuts.",
+              "ko": "아니, 당신의... 당신의 그게 아니라."
+            },
+            {
+              "start": 78.8,
+              "end": 81,
+              "en": "Not nuts. Not your nuts.",
+              "ko": "견과류가 아니라. 당신의 그것도 아니라."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "m6uvv1aS5_I",
+      "originalSegments": 17,
+      "newSegments": 19,
+      "segmentsSplit": 2,
+      "changes": [
+        {
+          "index": 0,
+          "original": {
+            "start": 0,
+            "end": 6,
+            "en": "You're watching HLN Headline News. Headline counts for two letters.",
+            "ko": "당신은 HLN 헤드라인 뉴스를 보고 있습니다. 헤드라인은 두 글자입니다."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 0,
+              "end": 3.1,
+              "en": "You're watching HLN Headline News.",
+              "ko": "당신은 HLN 헤드라인 뉴스를 보고 있습니다."
+            },
+            {
+              "start": 3.1,
+              "end": 6,
+              "en": "Headline counts for two letters.",
+              "ko": "헤드라인은 두 글자입니다."
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "original": {
+            "start": 52,
+            "end": 58,
+            "en": "Uh, wait, uh, uh, Daly, please try and control yourself. Continue, counsel.",
+            "ko": "잠깐만요, 데일리 군, 제발 자제해 보세요. 계속하세요, 변호인."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 52,
+              "end": 56.5,
+              "en": "Uh, wait, uh, uh, Daly, please try and control yourself.",
+              "ko": "잠깐만요, 데일리 군, 제발 자제해 보세요."
+            },
+            {
+              "start": 56.5,
+              "end": 58,
+              "en": "Continue, counsel.",
+              "ko": "계속하세요, 변호인."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "M7Is43K6lrg",
+      "originalSegments": 5,
+      "newSegments": 6,
+      "segmentsSplit": 1,
+      "changes": [
+        {
+          "index": 2,
+          "original": {
+            "start": 55.8,
+            "end": 62,
+            "en": "to thank the Academy for this. I've invited my fellow documentary nominees on the stage",
+            "ko": "이 상에 대해 아카데미에 감사드립니다. 저는 동료 다큐멘터리 후보자들을 무대 위로 초대했습니다."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 55.8,
+              "end": 58,
+              "en": "to thank the Academy for this.",
+              "ko": "이 상에 대해 아카데미에 감사드립니다."
+            },
+            {
+              "start": 58,
+              "end": 62,
+              "en": "I've invited my fellow documentary nominees on the stage",
+              "ko": "저는 동료 다큐멘터리 후보자들을 무대 위로 초대했습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "M7KelAaqsCg",
+      "originalSegments": 23,
+      "newSegments": 29,
+      "segmentsSplit": 5,
+      "changes": [
+        {
+          "index": 0,
+          "original": {
+            "start": 0,
+            "end": 6,
+            "en": "Orange? Who made the console orange? Do I look orange? I didn't touch it. Orange is not my color. Not me.",
+            "ko": "오렌지? 누가 콘솔을 오렌지색으로 만들었지? 내가 오렌지색처럼 보여? 나는 만지지 않았어. 오렌지는 내 색이 아니야. 나 아니야."
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 0,
+              "end": 2.1,
+              "en": "Orange? Who made the console orange?",
+              "ko": "오렌지? 누가 콘솔을 오렌지색으로 만들었지?"
+            },
+            {
+              "start": 2.1,
+              "end": 4.2,
+              "en": "Do I look orange? I didn't touch it.",
+              "ko": "내가 오렌지색처럼 보여? 나는 만지지 않았어."
+            },
+            {
+              "start": 4.2,
+              "end": 6,
+              "en": "Orange is not my color. Not me.",
+              "ko": "오렌지는 내 색이 아니야. 나 아니야."
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "original": {
+            "start": 11.5,
+            "end": 16,
+            "en": "and now here I am, meeting you face-to-face. Okay, how can I help?",
+            "ko": "그리고 이제 이렇게 직접 만나게 되었네요. 어떻게 도와드릴까요?"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 11.5,
+              "end": 14.5,
+              "en": "and now here I am, meeting you face-to-face.",
+              "ko": "그리고 이제 이렇게 직접 만나게 되었네요."
+            },
+            {
+              "start": 14.5,
+              "end": 16,
+              "en": "Okay, how can I help?",
+              "ko": "어떻게 도와드릴까요?"
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "original": {
+            "start": 35,
+            "end": 38.5,
+            "en": "and we are just super jazzed to be here. Where can I put my stuff?",
+            "ko": "여기 오게 되어 정말 신나요. 제 짐은 어디에 두면 될까요?"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 35,
+              "end": 37.2,
+              "en": "and we are just super jazzed to be here.",
+              "ko": "여기 오게 되어 정말 신나요."
+            },
+            {
+              "start": 37.2,
+              "end": 38.5,
+              "en": "Where can I put my stuff?",
+              "ko": "제 짐은 어디에 두면 될까요?"
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "original": {
+            "start": 43,
+            "end": 46.5,
+            "en": "Who the heck are you? I'm Envy.",
+            "ko": "당신은 대체 누구죠? 저는 질투예요."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 43,
+              "end": 45.4,
+              "en": "Who the heck are you?",
+              "ko": "당신은 대체 누구죠?"
+            },
+            {
+              "start": 45.4,
+              "end": 46.5,
+              "en": "I'm Envy.",
+              "ko": "저는 질투예요."
+            }
+          ]
+        },
+        {
+          "index": 21,
+          "original": {
+            "start": 62,
+            "end": 66,
+            "en": "Well, welcome to Headquarters, Embarrassment. Oh, we're doing a fit.",
+            "ko": "본부에 오신 것을 환영합니다, 당황. 아, 우리는 피팅 중이에요."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 62,
+              "end": 64.7,
+              "en": "Well, welcome to Headquarters, Embarrassment.",
+              "ko": "본부에 오신 것을 환영합니다, 당황."
+            },
+            {
+              "start": 64.7,
+              "end": 66,
+              "en": "Oh, we're doing a fit.",
+              "ko": "아, 우리는 피팅 중이에요."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "MAioK8ZJhJE",
+      "originalSegments": 18,
+      "newSegments": 21,
+      "segmentsSplit": 2,
+      "changes": [
+        {
+          "index": 2,
+          "original": {
+            "start": 15,
+            "end": 19,
+            "en": "You kidding me now? Hey! Hey, get the fuck away from me! Hey, turn that camera off!",
+            "ko": "지금 나를 놀리는 거야? 이봐! 이봐, 나한테서 꺼져! 이봐, 그 카메라 꺼!"
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 15,
+              "end": 16.2,
+              "en": "You kidding me now? Hey!",
+              "ko": "지금 나를 놀리는 거야? 이봐!"
+            },
+            {
+              "start": 16.2,
+              "end": 17.8,
+              "en": "Hey, get the fuck away from me!",
+              "ko": "이봐, 나한테서 꺼져!"
+            },
+            {
+              "start": 17.8,
+              "end": 19,
+              "en": "Hey, turn that camera off!",
+              "ko": "이봐, 그 카메라 꺼!"
+            }
+          ]
+        },
+        {
+          "index": 11,
+          "original": {
+            "start": 47,
+            "end": 51,
+            "en": "Rugrat goes and gets busted down in Miami. I'm Swiss, I'm not communist!",
+            "ko": "러그랫은 마이애미에서 체포됐어. 나는 스위스 사람이고, 공산당이 아니야!"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 47,
+              "end": 49.4,
+              "en": "Rugrat goes and gets busted down in Miami.",
+              "ko": "러그랫은 마이애미에서 체포됐어."
+            },
+            {
+              "start": 49.4,
+              "end": 51,
+              "en": "I'm Swiss, I'm not communist!",
+              "ko": "나는 스위스 사람이고, 공산당이 아니야!"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "mATlzmlaSQE",
+      "originalSegments": 15,
+      "newSegments": 20,
+      "segmentsSplit": 5,
+      "changes": [
+        {
+          "index": 0,
+          "original": {
+            "start": 11,
+            "end": 17,
+            "en": "No, I don't. Good enough for me. Where are you going?",
+            "ko": "아니, 나는 안 그래. 나한테는 충분해. 어디 가는 거야?"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 11,
+              "end": 14.6,
+              "en": "No, I don't. Good enough for me.",
+              "ko": "아니, 나는 안 그래. 나한테는 충분해."
+            },
+            {
+              "start": 14.6,
+              "end": 17,
+              "en": "Where are you going?",
+              "ko": "어디 가는 거야?"
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "original": {
+            "start": 28,
+            "end": 33,
+            "en": "Right. He's wasting your precious time so you decided to waste mine. How thoughtful.",
+            "ko": "맞아. 그는 너의 소중한 시간을 낭비하고, 너는 내 시간을 낭비하기로 결정했네. 정말 배려가 깊어."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 28,
+              "end": 32,
+              "en": "Right. He's wasting your precious time so you decided to waste mine.",
+              "ko": "맞아. 그는 너의 소중한 시간을 낭비하고, 너는 내 시간을 낭비하기로 결정했네."
+            },
+            {
+              "start": 32,
+              "end": 33,
+              "en": "How thoughtful.",
+              "ko": "정말 배려가 깊어."
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "original": {
+            "start": 36,
+            "end": 40,
+            "en": "I'm in a wheelchair so I can't examine him all the way up there. Hop down.",
+            "ko": "나는 휠체어에 있어서 저기까지 검사할 수 없어. 뛰어내려."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 36,
+              "end": 39,
+              "en": "I'm in a wheelchair so I can't examine him all the way up there.",
+              "ko": "나는 휠체어에 있어서 저기까지 검사할 수 없어."
+            },
+            {
+              "start": 39,
+              "end": 40,
+              "en": "Hop down.",
+              "ko": "뛰어내려."
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "original": {
+            "start": 41,
+            "end": 45,
+            "en": "My life is just one horror after another. Open.",
+            "ko": "내 인생은 끔찍한 일들로 가득해. 열어봐."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 41,
+              "end": 44,
+              "en": "My life is just one horror after another.",
+              "ko": "내 인생은 끔찍한 일들로 가득해."
+            },
+            {
+              "start": 44,
+              "end": 45,
+              "en": "Open.",
+              "ko": "열어봐."
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "original": {
+            "start": 66,
+            "end": 71,
+            "en": "It's just saline. Hurts like hell when it's injected directly into the muscle. So what do you think? Arm or ass?",
+            "ko": "그냥 식염수야. 근육에 직접 주사하면 정말 아파. 그래서 어떻게 생각해? 팔이야, 엉덩이야?"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 66,
+              "end": 69.5,
+              "en": "It's just saline. Hurts like hell when it's injected directly into the muscle.",
+              "ko": "그냥 식염수야. 근육에 직접 주사하면 정말 아파."
+            },
+            {
+              "start": 69.5,
+              "end": 71,
+              "en": "So what do you think? Arm or ass?",
+              "ko": "그래서 어떻게 생각해? 팔이야, 엉덩이야?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "mBlJ9N7Ehgk",
+      "originalSegments": 16,
+      "newSegments": 17,
+      "segmentsSplit": 1,
+      "changes": [
+        {
+          "index": 7,
+          "original": {
+            "start": 59,
+            "end": 63,
+            "en": "You do that, and I'll put all eight inches of this steel in your ear. All right.",
+            "ko": "그렇게 하면 이 강철 8인치를 네 귀에 꽂을 거야. 알겠어?"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 59,
+              "end": 62,
+              "en": "You do that, and I'll put all eight inches of this steel in your ear.",
+              "ko": "그렇게 하면 이 강철 8인치를 네 귀에 꽂을 거야."
+            },
+            {
+              "start": 62,
+              "end": 63,
+              "en": "All right.",
+              "ko": "알겠어?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "MDJvZ-zfKyA",
+      "originalSegments": 15,
+      "newSegments": 24,
+      "segmentsSplit": 5,
+      "changes": [
+        {
+          "index": 4,
+          "original": {
+            "start": 26,
+            "end": 32,
+            "en": "No! It's too breasty! Is it? Okay. It's not too breasty.",
+            "ko": "아니! 너무 가슴이 드러나! 그래? 괜찮아."
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 26,
+              "end": 28.3,
+              "en": "No! It's too breasty!",
+              "ko": "아니! 너무 가슴이 드러나! 그래? 괜찮아."
+            },
+            {
+              "start": 28.3,
+              "end": 29.6,
+              "en": "Is it? Okay.",
+              "ko": ""
+            },
+            {
+              "start": 29.6,
+              "end": 32,
+              "en": "It's not too breasty.",
+              "ko": ""
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "original": {
+            "start": 43,
+            "end": 50,
+            "en": "Warning. That's a warning. Yes!",
+            "ko": "경고. 경고야. 맞아!"
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 43,
+              "end": 44.9,
+              "en": "Warning.",
+              "ko": "경고."
+            },
+            {
+              "start": 44.9,
+              "end": 49,
+              "en": "That's a warning.",
+              "ko": "경고야."
+            },
+            {
+              "start": 49,
+              "end": 50,
+              "en": "Yes!",
+              "ko": "맞아!"
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "original": {
+            "start": 50,
+            "end": 56,
+            "en": "No. No.",
+            "ko": "아니. 아니야."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 50,
+              "end": 53,
+              "en": "No.",
+              "ko": "아니."
+            },
+            {
+              "start": 53,
+              "end": 56,
+              "en": "No.",
+              "ko": "아니야."
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "original": {
+            "start": 63,
+            "end": 70,
+            "en": "Such a bad boy. This one? Not bad. Or this one?",
+            "ko": "나쁜 남자네. 이거? 나쁘지 않아. 아니면 이거?"
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 63,
+              "end": 65.4,
+              "en": "Such a bad boy.",
+              "ko": "나쁜 남자네."
+            },
+            {
+              "start": 65.4,
+              "end": 68.1,
+              "en": "This one? Not bad.",
+              "ko": "이거? 나쁘지 않아."
+            },
+            {
+              "start": 68.1,
+              "end": 70,
+              "en": "Or this one?",
+              "ko": "아니면 이거?"
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "original": {
+            "start": 70,
+            "end": 76,
+            "en": "Trick question, isn't it? Same dress? No! No? Okay.",
+            "ko": "속임수 질문이지? 같은 드레스? 아니! 아니야? 그래."
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 70,
+              "end": 73.2,
+              "en": "Trick question, isn't it?",
+              "ko": "속임수 질문이지?"
+            },
+            {
+              "start": 73.2,
+              "end": 75,
+              "en": "Same dress? No!",
+              "ko": "같은 드레스? 아니!"
+            },
+            {
+              "start": 75,
+              "end": 76,
+              "en": "No? Okay.",
+              "ko": "아니야? 그래."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "MdwuW8n3JYA",
+      "originalSegments": 4,
+      "newSegments": 9,
+      "segmentsSplit": 3,
+      "changes": [
+        {
+          "index": 1,
+          "original": {
+            "start": 66.76,
+            "end": 73.36,
+            "en": "An aircraft in trouble began shedding parts as it flew over Seahaven just a few moments ago. Oh.",
+            "ko": "비행기가 문제를 겪으며 시헤이븐 상공에서 부품을 떨어뜨렸습니다. 오."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 66.8,
+              "end": 72.4,
+              "en": "An aircraft in trouble began shedding parts as it flew over Seahaven just a few moments ago.",
+              "ko": "비행기가 문제를 겪으며 시헤이븐 상공에서 부품을 떨어뜨렸습니다."
+            },
+            {
+              "start": 72.4,
+              "end": 73.36,
+              "en": "Oh.",
+              "ko": "오."
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "original": {
+            "start": 73.36,
+            "end": 80.36,
+            "en": "Well, luckily no one was hurt. But, hey, how do you feel today? That's good. You thinking of flying somewhere? Nope. Oh, good. This is Classical Fly with Classical Drive.",
+            "ko": "다행히 부상자는 없었습니다. 그런데, 오늘 기분은 어때요? 좋군요. 어딘가 비행기 타고 가고 싶어요? 아니요. 오, 좋습니다. 이것은 클래식 플라이와 클래식 드라이브입니다."
+          },
+          "splitInto": 4,
+          "produced": [
+            {
+              "start": 73.4,
+              "end": 75.9,
+              "en": "Well, luckily no one was hurt. But, hey, how do you feel today?",
+              "ko": "다행히 부상자는 없었습니다. 그런데, 오늘 기분은 어때요?"
+            },
+            {
+              "start": 75.9,
+              "end": 77.7,
+              "en": "That's good. You thinking of flying somewhere?",
+              "ko": "좋군요. 어딘가 비행기 타고 가고 싶어요?"
+            },
+            {
+              "start": 77.7,
+              "end": 78.7,
+              "en": "Nope. Oh, good.",
+              "ko": "아니요. 오, 좋습니다."
+            },
+            {
+              "start": 78.7,
+              "end": 80.36,
+              "en": "This is Classical Fly with Classical Drive.",
+              "ko": "이것은 클래식 플라이와 클래식 드라이브입니다."
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "original": {
+            "start": 80.36,
+            "end": 84.36,
+            "en": "So why don't you forget about the perils of flying, settle back, and let this music calm you down. Classical Drive. So why don't you forget about the perils of flying, settle back, and let this music calm",
+            "ko": "그러니 비행의 위험은 잊고 편안히 앉아 이 음악에 몸을 맡겨보세요. 클래식 드라이브. 그러니 비행의 위험은 잊고 편안히 앉아 이 음악에 몸을 맡겨보세요."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 80.4,
+              "end": 82.3,
+              "en": "So why don't you forget about the perils of flying, settle back, and let this music calm you down.",
+              "ko": "그러니 비행의 위험은 잊고 편안히 앉아 이 음악에 몸을 맡겨보세요."
+            },
+            {
+              "start": 82.3,
+              "end": 84.36,
+              "en": "Classical Drive. So why don't you forget about the perils of flying, settle back, and let this music calm",
+              "ko": "클래식 드라이브. 그러니 비행의 위험은 잊고 편안히 앉아 이 음악에 몸을 맡겨보세요."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "mfqC28HcNjk",
+      "originalSegments": 11,
+      "newSegments": 17,
+      "segmentsSplit": 5,
+      "changes": [
+        {
+          "index": 0,
+          "original": {
+            "start": 28,
+            "end": 33.12,
+            "en": "Hey, you're the freaks. You know, dude, it is a little weird",
+            "ko": "이봐, 너희가 괴짜들이구나. 좀 이상하긴 해."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 28,
+              "end": 30,
+              "en": "Hey, you're the freaks.",
+              "ko": "이봐, 너희가 괴짜들이구나."
+            },
+            {
+              "start": 30,
+              "end": 33.12,
+              "en": "You know, dude, it is a little weird",
+              "ko": "좀 이상하긴 해."
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "original": {
+            "start": 55.32,
+            "end": 60.12,
+            "en": "Ooh, workin' the attitude. Okay, you're good.",
+            "ko": "오, 태도가 멋져. 좋아, 잘했어."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 55.3,
+              "end": 58.1,
+              "en": "Ooh, workin' the attitude.",
+              "ko": "오, 태도가 멋져."
+            },
+            {
+              "start": 58.1,
+              "end": 60.12,
+              "en": "Okay, you're good.",
+              "ko": "좋아, 잘했어."
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "original": {
+            "start": 61.6,
+            "end": 66.64,
+            "en": "I've had a lot of practice. Hey, hey, hey.",
+            "ko": "연습을 많이 했어. 헤이, 헤이, 헤이."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 61.6,
+              "end": 64.9,
+              "en": "I've had a lot of practice.",
+              "ko": "연습을 많이 했어."
+            },
+            {
+              "start": 64.9,
+              "end": 66.64,
+              "en": "Hey, hey, hey.",
+              "ko": "헤이, 헤이, 헤이."
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "original": {
+            "start": 66.64,
+            "end": 73.16,
+            "en": "You're not that great, Mr. Sister. All right?",
+            "ko": "너 그렇게 대단하지 않아, 자매님. 알겠어?"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 66.6,
+              "end": 71.6,
+              "en": "You're not that great, Mr. Sister.",
+              "ko": "너 그렇게 대단하지 않아, 자매님."
+            },
+            {
+              "start": 71.6,
+              "end": 73.16,
+              "en": "All right?",
+              "ko": "알겠어?"
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "original": {
+            "start": 73.16,
+            "end": 79.28,
+            "en": "I do better Cher than you. You think so? Hmm.",
+            "ko": "난 너보다 셔를 더 잘해. 그렇게 생각해? 흠."
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 73.2,
+              "end": 76.6,
+              "en": "I do better Cher than you.",
+              "ko": "난 너보다 셔를 더 잘해."
+            },
+            {
+              "start": 76.6,
+              "end": 78.3,
+              "en": "You think so?",
+              "ko": "그렇게 생각해?"
+            },
+            {
+              "start": 78.3,
+              "end": 79.28,
+              "en": "Hmm.",
+              "ko": "흠."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "MfZEDMsOrCk",
+      "originalSegments": 16,
+      "newSegments": 27,
+      "segmentsSplit": 8,
+      "changes": [
+        {
+          "index": 2,
+          "original": {
+            "start": 33.3,
+            "end": 39.06,
+            "en": "I want to stab with it, you know? Really? Yeah, because you pick up a baseball bat, you want to swing it.",
+            "ko": "찌르고 싶어, 알지? 정말? 응, 야구 방망이를 들면 휘두르고 싶잖아."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 33.3,
+              "end": 35.2,
+              "en": "I want to stab with it, you know?",
+              "ko": "찌르고 싶어, 알지?"
+            },
+            {
+              "start": 35.2,
+              "end": 39.06,
+              "en": "Really? Yeah, because you pick up a baseball bat, you want to swing it.",
+              "ko": "정말? 응, 야구 방망이를 들면 휘두르고 싶잖아."
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "original": {
+            "start": 40.94,
+            "end": 47.94,
+            "en": "When you have a knife, you want to stab, do you not? Yeah, a little bit. Huh? You know what this should have? What should it have?",
+            "ko": "칼을 들면 찌르고 싶지 않니? 응, 조금. 뭐? 이건 뭐가 있어야 할까? 뭐가 있어야 해?"
+          },
+          "splitInto": 4,
+          "produced": [
+            {
+              "start": 40.9,
+              "end": 43.8,
+              "en": "When you have a knife, you want to stab, do you not?",
+              "ko": "칼을 들면 찌르고 싶지 않니?"
+            },
+            {
+              "start": 43.8,
+              "end": 45.1,
+              "en": "Yeah, a little bit. Huh?",
+              "ko": "응, 조금. 뭐?"
+            },
+            {
+              "start": 45.1,
+              "end": 46.8,
+              "en": "You know what this should have?",
+              "ko": "이건 뭐가 있어야 할까?"
+            },
+            {
+              "start": 46.8,
+              "end": 47.94,
+              "en": "What should it have?",
+              "ko": "뭐가 있어야 해?"
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "original": {
+            "start": 49.94,
+            "end": 56.32,
+            "en": "Yeah, a stabbing range where you stab dummies. Wow. You feel good, you feel good. Where would the stabbing range be?",
+            "ko": "응, 더미를 찌르는 찌르기 공간. 와. 기분이 좋고, 기분이 좋고. 찌르기 공간은 어디에 있을까?"
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 49.9,
+              "end": 52.5,
+              "en": "Yeah, a stabbing range where you stab dummies.",
+              "ko": "응, 더미를 찌르는 찌르기 공간."
+            },
+            {
+              "start": 52.5,
+              "end": 54.4,
+              "en": "Wow. You feel good, you feel good.",
+              "ko": "와. 기분이 좋고, 기분이 좋고."
+            },
+            {
+              "start": 54.4,
+              "end": 56.32,
+              "en": "Where would the stabbing range be?",
+              "ko": "찌르기 공간은 어디에 있을까?"
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "original": {
+            "start": 56.32,
+            "end": 60.82,
+            "en": "In the valley. What do you think, Marilyn?",
+            "ko": "계곡에. 어떻게 생각해, 마릴린?"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 56.3,
+              "end": 57.8,
+              "en": "In the valley.",
+              "ko": "계곡에."
+            },
+            {
+              "start": 57.8,
+              "end": 60.82,
+              "en": "What do you think, Marilyn?",
+              "ko": "어떻게 생각해, 마릴린?"
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "original": {
+            "start": 62.62,
+            "end": 67.88,
+            "en": "Yeah, I feel like stabbing someone. Interesting.",
+            "ko": "응, 누군가를 찌르고 싶어. 흥미롭네."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 62.6,
+              "end": 66.5,
+              "en": "Yeah, I feel like stabbing someone.",
+              "ko": "응, 누군가를 찌르고 싶어."
+            },
+            {
+              "start": 66.5,
+              "end": 67.88,
+              "en": "Interesting.",
+              "ko": "흥미롭네."
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "original": {
+            "start": 69.46,
+            "end": 72.76,
+            "en": "This is fantastic food. Thank you. It really is.",
+            "ko": "이건 환상적인 음식이야. 고마워. 정말 그래."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 69.5,
+              "end": 71.2,
+              "en": "This is fantastic food.",
+              "ko": "이건 환상적인 음식이야."
+            },
+            {
+              "start": 71.2,
+              "end": 72.76,
+              "en": "Thank you. It really is.",
+              "ko": "고마워. 정말 그래."
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "original": {
+            "start": 76.22,
+            "end": 81.82,
+            "en": "Really good. What is this, tap? Yes, it is. No filter?",
+            "ko": "정말 맛있어. 이건 수돗물? 응, 맞아. 필터 없어?"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 76.2,
+              "end": 79.5,
+              "en": "Really good. What is this, tap?",
+              "ko": "정말 맛있어. 이건 수돗물?"
+            },
+            {
+              "start": 79.5,
+              "end": 81.82,
+              "en": "Yes, it is. No filter?",
+              "ko": "응, 맞아. 필터 없어?"
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "original": {
+            "start": 84.64,
+            "end": 88.64,
+            "en": "Interesting, I'm surprised you don't have a filter. You have no filter.",
+            "ko": "흥미롭네, 필터가 없다는 게 놀라워. 필터가 없어."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 84.6,
+              "end": 87.5,
+              "en": "Interesting, I'm surprised you don't have a filter.",
+              "ko": "흥미롭네, 필터가 없다는 게 놀라워."
+            },
+            {
+              "start": 87.5,
+              "end": 88.64,
+              "en": "You have no filter.",
+              "ko": "필터가 없어."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "mhII8J_4Y1g",
+      "originalSegments": 22,
+      "newSegments": 26,
+      "segmentsSplit": 4,
+      "changes": [
+        {
+          "index": 7,
+          "original": {
+            "start": 43.68,
+            "end": 47.04,
+            "en": "over and over again in my neighborhood? Why did they help each other",
+            "ko": "계속해서 나아졌을까? 왜 그들은 지구에서 누구에게도 하지 않았던 방식으로"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 43.7,
+              "end": 45.7,
+              "en": "over and over again in my neighborhood?",
+              "ko": "계속해서 나아졌을까?"
+            },
+            {
+              "start": 45.7,
+              "end": 47.04,
+              "en": "Why did they help each other",
+              "ko": "왜 그들은 지구에서 누구에게도 하지 않았던 방식으로"
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "original": {
+            "start": 62.8,
+            "end": 67.64,
+            "en": "Anybody got eyes on Chidi? Help. Help.",
+            "ko": "치디를 본 사람 있어? 도와줘. 도와줘."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 62.8,
+              "end": 66.3,
+              "en": "Anybody got eyes on Chidi?",
+              "ko": "치디를 본 사람 있어?"
+            },
+            {
+              "start": 66.3,
+              "end": 67.64,
+              "en": "Help. Help.",
+              "ko": "도와줘. 도와줘."
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "original": {
+            "start": 68.6,
+            "end": 71.92,
+            "en": "Can someone grab my tiny boyfriend, please? I'm on it.",
+            "ko": "내 작은 남자친구 좀 잡아줄 수 있어? 내가 할게."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 68.6,
+              "end": 70.9,
+              "en": "Can someone grab my tiny boyfriend, please?",
+              "ko": "내 작은 남자친구 좀 잡아줄 수 있어?"
+            },
+            {
+              "start": 70.9,
+              "end": 71.92,
+              "en": "I'm on it.",
+              "ko": "내가 할게."
+            }
+          ]
+        },
+        {
+          "index": 21,
+          "original": {
+            "start": 88.12,
+            "end": 91.32,
+            "en": "Yeah, yeah, the time knife, we've all seen it. Let's get back on.",
+            "ko": "그래, 그래, 시간의 칼, 우리 모두 봤어. 다시 시작하자."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 88.1,
+              "end": 90.3,
+              "en": "Yeah, yeah, the time knife, we've all seen it.",
+              "ko": "그래, 그래, 시간의 칼, 우리 모두 봤어."
+            },
+            {
+              "start": 90.3,
+              "end": 91.32,
+              "en": "Let's get back on.",
+              "ko": "다시 시작하자."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "mIABSdupWdI",
+      "originalSegments": 9,
+      "newSegments": 13,
+      "segmentsSplit": 2,
+      "changes": [
+        {
+          "index": 0,
+          "original": {
+            "start": 0,
+            "end": 4.84,
+            "en": "All right, gang, whiplash. A little under tempo, okay? Neiman, just do your best.",
+            "ko": "좋아, 여러분, 휘몰아치기. 조금 느리게, 알겠지? 네이먼, 최선을 다해봐."
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 0,
+              "end": 1.6,
+              "en": "All right, gang, whiplash.",
+              "ko": "좋아, 여러분, 휘몰아치기."
+            },
+            {
+              "start": 1.6,
+              "end": 3.2,
+              "en": "A little under tempo, okay?",
+              "ko": "조금 느리게, 알겠지?"
+            },
+            {
+              "start": 3.2,
+              "end": 4.84,
+              "en": "Neiman, just do your best.",
+              "ko": "네이먼, 최선을 다해봐."
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "original": {
+            "start": 51.64,
+            "end": 57.44,
+            "en": "Little trouble there. Let's pick it up at 17. Ready?",
+            "ko": "조금 문제가 있었네. 17번부터 다시 해보자. 준비됐어?"
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 51.6,
+              "end": 53.9,
+              "en": "Little trouble there.",
+              "ko": "조금 문제가 있었네."
+            },
+            {
+              "start": 53.9,
+              "end": 56.4,
+              "en": "Let's pick it up at 17.",
+              "ko": "17번부터 다시 해보자."
+            },
+            {
+              "start": 56.4,
+              "end": 57.44,
+              "en": "Ready?",
+              "ko": "준비됐어?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "MlPd6zWjd_0",
+      "originalSegments": 27,
+      "newSegments": 30,
+      "segmentsSplit": 2,
+      "changes": [
+        {
+          "index": 1,
+          "original": {
+            "start": 10.84,
+            "end": 14.84,
+            "en": "Do you mind if I make a FaceTime real quick? Just real quick. I promise you. You´re gonna FaceTime somebody?",
+            "ko": "잠깐만 FaceTime 해도 될까? 정말 잠깐이야. 약속할게. 누군가와 FaceTime 할 거야?"
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 10.8,
+              "end": 12.5,
+              "en": "Do you mind if I make a FaceTime real quick?",
+              "ko": "잠깐만 FaceTime 해도 될까?"
+            },
+            {
+              "start": 12.5,
+              "end": 13.6,
+              "en": "Just real quick. I promise you.",
+              "ko": "정말 잠깐이야. 약속할게."
+            },
+            {
+              "start": 13.6,
+              "end": 14.84,
+              "en": "You´re gonna FaceTime somebody?",
+              "ko": "누군가와 FaceTime 할 거야?"
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "original": {
+            "start": 32.18,
+            "end": 36.18,
+            "en": "He´s gonna be so pumped up that I´m here tonight, man. Wait until he picks up.",
+            "ko": "그가 오늘 밤 내가 여기 있다는 걸 듣고 엄청 신날 거야. 그가 전화를 받을 때까지 기다려봐."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 32.2,
+              "end": 35,
+              "en": "He´s gonna be so pumped up that I´m here tonight, man.",
+              "ko": "그가 오늘 밤 내가 여기 있다는 걸 듣고 엄청 신날 거야."
+            },
+            {
+              "start": 35,
+              "end": 36.18,
+              "en": "Wait until he picks up.",
+              "ko": "그가 전화를 받을 때까지 기다려봐."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "MmfmCR4Kta4",
+      "originalSegments": 7,
+      "newSegments": 8,
+      "segmentsSplit": 1,
+      "changes": [
+        {
+          "index": 6,
+          "original": {
+            "start": 32,
+            "end": 36,
+            "en": "When the English go to heaven. Box death.",
+            "ko": "영국인이 천국에 가면. 상자 죽음."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 32,
+              "end": 35,
+              "en": "When the English go to heaven.",
+              "ko": "영국인이 천국에 가면."
+            },
+            {
+              "start": 35,
+              "end": 36,
+              "en": "Box death.",
+              "ko": "상자 죽음."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "MoLkabPK3YU",
+      "originalSegments": 19,
+      "newSegments": 22,
+      "segmentsSplit": 2,
+      "changes": [
+        {
+          "index": 0,
+          "original": {
+            "start": 0,
+            "end": 6.3,
+            "en": "We've been receiving, but nothing gets out. Is he alive? Oh, yeah. Do you...",
+            "ko": "우리는 메시지를 받고 있지만, 아무것도 나가지 않아. 그가 살아있을까? 아, 그래. 너는..."
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 0,
+              "end": 3.6,
+              "en": "We've been receiving, but nothing gets out.",
+              "ko": "우리는 메시지를 받고 있지만, 아무것도 나가지 않아."
+            },
+            {
+              "start": 3.6,
+              "end": 5.3,
+              "en": "Is he alive? Oh, yeah.",
+              "ko": "그가 살아있을까? 아, 그래."
+            },
+            {
+              "start": 5.3,
+              "end": 6.3,
+              "en": "Do you...",
+              "ko": "너는..."
+            }
+          ]
+        },
+        {
+          "index": 3,
+          "original": {
+            "start": 10.3,
+            "end": 14.3,
+            "en": "We've got years of messages stored. Cool.",
+            "ko": "우리는 수년간의 메시지를 저장해 두었어. 멋지네."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 10.3,
+              "end": 13.3,
+              "en": "We've got years of messages stored.",
+              "ko": "우리는 수년간의 메시지를 저장해 두었어."
+            },
+            {
+              "start": 13.3,
+              "end": 14.3,
+              "en": "Cool.",
+              "ko": "멋지네."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "MoN9ql6Yymw",
+      "originalSegments": 10,
+      "newSegments": 12,
+      "segmentsSplit": 2,
+      "changes": [
+        {
+          "index": 0,
+          "original": {
+            "start": 29,
+            "end": 36,
+            "en": "This loss is a burden that we both share. Two sinners can atone from a lone prayer.",
+            "ko": "이 상실은 우리 둘 다 나누는 짐이야. 두 죄인이 외로운 기도로 속죄할 수 있어."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 29,
+              "end": 32.5,
+              "en": "This loss is a burden that we both share.",
+              "ko": "이 상실은 우리 둘 다 나누는 짐이야."
+            },
+            {
+              "start": 32.5,
+              "end": 36,
+              "en": "Two sinners can atone from a lone prayer.",
+              "ko": "두 죄인이 외로운 기도로 속죄할 수 있어."
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "original": {
+            "start": 45,
+            "end": 52,
+            "en": "There's darkness in the distance. From the way that I've been living.",
+            "ko": "저 멀리 어둠이 있어. 내가 살아온 방식 때문에."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 45,
+              "end": 48.4,
+              "en": "There's darkness in the distance.",
+              "ko": "저 멀리 어둠이 있어."
+            },
+            {
+              "start": 48.4,
+              "end": 52,
+              "en": "From the way that I've been living.",
+              "ko": "내가 살아온 방식 때문에."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "MPesRzTuTKg",
+      "originalSegments": 15,
+      "newSegments": 20,
+      "segmentsSplit": 4,
+      "changes": [
+        {
+          "index": 6,
+          "original": {
+            "start": 49.5,
+            "end": 53.5,
+            "en": "Stop it! Stop it! Stop it! Stop it!",
+            "ko": "그만해! 그만해! 그만해! 그만해!"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 49.5,
+              "end": 51.5,
+              "en": "Stop it! Stop it!",
+              "ko": "그만해! 그만해!"
+            },
+            {
+              "start": 51.5,
+              "end": 53.5,
+              "en": "Stop it! Stop it!",
+              "ko": "그만해! 그만해!"
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "original": {
+            "start": 54.5,
+            "end": 58,
+            "en": "I can't take it anymore! This man is straight! Who?",
+            "ko": "더 이상 못 참겠어! 이 남자는 이성애자야! 누구?"
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 54.5,
+              "end": 55.8,
+              "en": "I can't take it anymore!",
+              "ko": "더 이상 못 참겠어!"
+            },
+            {
+              "start": 55.8,
+              "end": 57,
+              "en": "This man is straight!",
+              "ko": "이 남자는 이성애자야!"
+            },
+            {
+              "start": 57,
+              "end": 58,
+              "en": "Who?",
+              "ko": "누구?"
+            }
+          ]
+        },
+        {
+          "index": 12,
+          "original": {
+            "start": 76,
+            "end": 83,
+            "en": "I have never been accused of something so heinous! How dare you sir!",
+            "ko": "이렇게 끔찍한 혐의를 받은 적이 없어! 당신이 감히!"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 76,
+              "end": 81.2,
+              "en": "I have never been accused of something so heinous!",
+              "ko": "이렇게 끔찍한 혐의를 받은 적이 없어!"
+            },
+            {
+              "start": 81.2,
+              "end": 83,
+              "en": "How dare you sir!",
+              "ko": "당신이 감히!"
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "original": {
+            "start": 85.5,
+            "end": 91.5,
+            "en": "And I have a woman who he made out with who can be here in five minutes That's right, five minutes because she has no life! Damn it! Tell him!",
+            "ko": "그리고 그와 키스한 여자가 5분 안에 올 수 있어! 맞아, 5분이야, 그녀는 삶이 없어! 젠장! 그에게 말해!"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 85.5,
+              "end": 90.5,
+              "en": "And I have a woman who he made out with who can be here in five minutes That's right, five minutes because she has no life!",
+              "ko": "그리고 그와 키스한 여자가 5분 안에 올 수 있어! 맞아, 5분이야, 그녀는 삶이 없어! 젠장! 그에게 말해!"
+            },
+            {
+              "start": 90.5,
+              "end": 91.5,
+              "en": "Damn it! Tell him!",
+              "ko": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "MPoggHQ2qIA",
+      "originalSegments": 18,
+      "newSegments": 27,
+      "segmentsSplit": 7,
+      "changes": [
+        {
+          "index": 2,
+          "original": {
+            "start": 34.12,
+            "end": 39.04,
+            "en": "he'd become the Quaalude King of Bayside. Got any pussy with that thing or what? Yeah, man, of course, man.",
+            "ko": "그는 베이사이드의 퀘일루드 왕이 되었지. 그거랑 같이 여자도 있냐? 그래, 물론이지."
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 34.1,
+              "end": 36,
+              "en": "he'd become the Quaalude King of Bayside.",
+              "ko": "그는 베이사이드의 퀘일루드 왕이 되었지."
+            },
+            {
+              "start": 36,
+              "end": 37.8,
+              "en": "Got any pussy with that thing or what?",
+              "ko": "그거랑 같이 여자도 있냐?"
+            },
+            {
+              "start": 37.8,
+              "end": 39.04,
+              "en": "Yeah, man, of course, man.",
+              "ko": "그래, 물론이지."
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "original": {
+            "start": 44.88,
+            "end": 50.12,
+            "en": "Hey, Zip, tell your sister I was asking about her. Why don't you bring me a pair of her panties",
+            "ko": "이봐, 집, 네 여동생이 나를 궁금해한다고 전해줘. 다음에 올 때 그녀의 팬티 한 쌍 가져다줄래?"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 44.9,
+              "end": 47.7,
+              "en": "Hey, Zip, tell your sister I was asking about her.",
+              "ko": "이봐, 집, 네 여동생이 나를 궁금해한다고 전해줘."
+            },
+            {
+              "start": 47.7,
+              "end": 50.12,
+              "en": "Why don't you bring me a pair of her panties",
+              "ko": "다음에 올 때 그녀의 팬티 한 쌍 가져다줄래?"
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "original": {
+            "start": 52.04,
+            "end": 56.2,
+            "en": "Yeah, man, she said they don't wanna talk to you anymore, man. Get the fuck outta here.",
+            "ko": "그래, 그녀가 더 이상 너와 이야기하고 싶지 않다고 했어. 꺼져."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 52,
+              "end": 55,
+              "en": "Yeah, man, she said they don't wanna talk to you anymore, man.",
+              "ko": "그래, 그녀가 더 이상 너와 이야기하고 싶지 않다고 했어."
+            },
+            {
+              "start": 55,
+              "end": 56.2,
+              "en": "Get the fuck outta here.",
+              "ko": "꺼져."
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "original": {
+            "start": 57.2,
+            "end": 63.8,
+            "en": "Hey, Ma, we got chicken or what? Ma! You listening? It's easier than you think.",
+            "ko": "이봐, 엄마, 치킨 있어? 엄마! 듣고 있어? 생각보다 쉬워."
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 57.2,
+              "end": 60,
+              "en": "Hey, Ma, we got chicken or what?",
+              "ko": "이봐, 엄마, 치킨 있어?"
+            },
+            {
+              "start": 60,
+              "end": 61.5,
+              "en": "Ma! You listening?",
+              "ko": "엄마! 듣고 있어?"
+            },
+            {
+              "start": 61.5,
+              "end": 63.8,
+              "en": "It's easier than you think.",
+              "ko": "생각보다 쉬워."
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "original": {
+            "start": 65.36,
+            "end": 69.04,
+            "en": "they wanna get rich and they wanna get rich quickly. They don't want something for nothing.",
+            "ko": "부자가 되고 싶어하고, 빨리 부자가 되고 싶어해. 아무것도 없이 뭘 원하지 않아."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 65.4,
+              "end": 67.5,
+              "en": "they wanna get rich and they wanna get rich quickly.",
+              "ko": "부자가 되고 싶어하고, 빨리 부자가 되고 싶어해."
+            },
+            {
+              "start": 67.5,
+              "end": 69.04,
+              "en": "They don't want something for nothing.",
+              "ko": "아무것도 없이 뭘 원하지 않아."
+            }
+          ]
+        },
+        {
+          "index": 14,
+          "original": {
+            "start": 75.76,
+            "end": 82.36,
+            "en": "Well, he says that he only wants to make furniture. I don't understand. Has it got to do with anything?",
+            "ko": "그는 가구만 만들고 싶다고 하더라고. 이해가 안 가. 그게 무슨 상관이야?"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 75.8,
+              "end": 79.1,
+              "en": "Well, he says that he only wants to make furniture.",
+              "ko": "그는 가구만 만들고 싶다고 하더라고."
+            },
+            {
+              "start": 79.1,
+              "end": 82.36,
+              "en": "I don't understand. Has it got to do with anything?",
+              "ko": "이해가 안 가. 그게 무슨 상관이야?"
+            }
+          ]
+        },
+        {
+          "index": 15,
+          "original": {
+            "start": 82.36,
+            "end": 85.8,
+            "en": "What the fuck are you talking about? Am I putting words in your mouth or nothing,",
+            "ko": "너 뭐라고 하는 거야? 내가 네 말을 왜곡하고 있는 건 아니고,"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 82.4,
+              "end": 83.9,
+              "en": "What the fuck are you talking about?",
+              "ko": "너 뭐라고 하는 거야?"
+            },
+            {
+              "start": 83.9,
+              "end": 85.8,
+              "en": "Am I putting words in your mouth or nothing,",
+              "ko": "내가 네 말을 왜곡하고 있는 건 아니고,"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "MQJlBpPLHUM",
+      "originalSegments": 16,
+      "newSegments": 18,
+      "segmentsSplit": 2,
+      "changes": [
+        {
+          "index": 0,
+          "original": {
+            "start": 29,
+            "end": 34.5,
+            "en": "I'm not going to anyway, and don't worry about the vase. What vase?",
+            "ko": "어차피 안 갈 거고, 꽃병은 걱정하지 마. 어떤 꽃병?"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 29,
+              "end": 33.5,
+              "en": "I'm not going to anyway, and don't worry about the vase.",
+              "ko": "어차피 안 갈 거고, 꽃병은 걱정하지 마."
+            },
+            {
+              "start": 33.5,
+              "end": 34.5,
+              "en": "What vase?",
+              "ko": "어떤 꽃병?"
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "original": {
+            "start": 44,
+            "end": 47.5,
+            "en": "I'll get one of my kids to fix it. How did you know?",
+            "ko": "내 아이 중 한 명에게 고치게 할게. 어떻게 알았어?"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 44,
+              "end": 46.3,
+              "en": "I'll get one of my kids to fix it.",
+              "ko": "내 아이 중 한 명에게 고치게 할게."
+            },
+            {
+              "start": 46.3,
+              "end": 47.5,
+              "en": "How did you know?",
+              "ko": "어떻게 알았어?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "mR6xnrY7rXI",
+      "originalSegments": 17,
+      "newSegments": 19,
+      "segmentsSplit": 2,
+      "changes": [
+        {
+          "index": 6,
+          "original": {
+            "start": 50,
+            "end": 54,
+            "en": "Carlton, $90 for a pair of socks? That's ridiculous.",
+            "ko": "칼튼, 양말 한 켤레에 90달러? 말도 안 돼."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 50,
+              "end": 52.6,
+              "en": "Carlton, $90 for a pair of socks?",
+              "ko": "칼튼, 양말 한 켤레에 90달러?"
+            },
+            {
+              "start": 52.6,
+              "end": 54,
+              "en": "That's ridiculous.",
+              "ko": "말도 안 돼."
+            }
+          ]
+        },
+        {
+          "index": 16,
+          "original": {
+            "start": 87,
+            "end": 91,
+            "en": "Now, this looks like $300 for a pair of shoes. What's it say? $300 for shoes.",
+            "ko": "자, 이건 신발 한 켤레에 300달러로 보이네. 뭐라고 적혀 있어? 신발 300달러."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 87,
+              "end": 89.4,
+              "en": "Now, this looks like $300 for a pair of shoes.",
+              "ko": "자, 이건 신발 한 켤레에 300달러로 보이네. 뭐라고 적혀 있어? 신발 300달러."
+            },
+            {
+              "start": 89.4,
+              "end": 91,
+              "en": "What's it say? $300 for shoes.",
+              "ko": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "MSRcC626prw",
+      "originalSegments": 4,
+      "newSegments": 9,
+      "segmentsSplit": 2,
+      "changes": [
+        {
+          "index": 0,
+          "original": {
+            "start": 29,
+            "end": 34.44,
+            "en": "I really do but sometimes in life. We have to protect our own heart even if it means ripping it out of our chest",
+            "ko": "정말 그렇지만 때때로 인생에서는 우리의 마음을 지켜야 할 때가 있어. 심지어 그것이 가슴에서 찢어내는 것을 의미하더라도."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 29,
+              "end": 30.7,
+              "en": "I really do but sometimes in life.",
+              "ko": "정말 그렇지만 때때로 인생에서는 우리의 마음을 지켜야 할 때가 있어."
+            },
+            {
+              "start": 30.7,
+              "end": 34.44,
+              "en": "We have to protect our own heart even if it means ripping it out of our chest",
+              "ko": "심지어 그것이 가슴에서 찢어내는 것을 의미하더라도."
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "original": {
+            "start": 59,
+            "end": 66,
+            "en": "I'm still a fan even though it's salty. Hate to see you with some other but know you happy. Hate to see you happy if I'm not the one driving. I'm so mature. I'm so mature. I'm so mature. They got me a therapist. They tell me there's other men. I ain't going one night and I just want you.",
+            "ko": "나는 여전히 팬이야, 비록 짜증나더라도. 다른 사람과 있는 너를 보기 싫어, 하지만 네가 행복한 건 알아. 내가 아닌 네가 행복한 걸 보기 싫어. 나는 정말 성숙해. 나는 정말 성숙해. 나는 정말 성숙해. 그들이 나에게 치료사를 소개해줬어. 그들은 다른 남자들이 있다고 말해. 나는 하룻밤도 보내고 싶지 않아, 오직 너만 원해."
+          },
+          "splitInto": 5,
+          "produced": [
+            {
+              "start": 59,
+              "end": 61.1,
+              "en": "I'm still a fan even though it's salty. Hate to see you with some other but know you happy.",
+              "ko": "나는 여전히 팬이야, 비록 짜증나더라도. 다른 사람과 있는 너를 보기 싫어, 하지만 네가 행복한 건 알아."
+            },
+            {
+              "start": 61.1,
+              "end": 62.6,
+              "en": "Hate to see you happy if I'm not the one driving. I'm so mature.",
+              "ko": "내가 아닌 네가 행복한 걸 보기 싫어. 나는 정말 성숙해."
+            },
+            {
+              "start": 62.6,
+              "end": 63.6,
+              "en": "I'm so mature. I'm so mature.",
+              "ko": "나는 정말 성숙해. 나는 정말 성숙해."
+            },
+            {
+              "start": 63.6,
+              "end": 64.9,
+              "en": "They got me a therapist. They tell me there's other men.",
+              "ko": "그들이 나에게 치료사를 소개해줬어. 그들은 다른 남자들이 있다고 말해."
+            },
+            {
+              "start": 64.9,
+              "end": 66,
+              "en": "I ain't going one night and I just want you.",
+              "ko": "나는 하룻밤도 보내고 싶지 않아, 오직 너만 원해."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "MsWlktW0kj4",
+      "originalSegments": 19,
+      "newSegments": 20,
+      "segmentsSplit": 1,
+      "changes": [
+        {
+          "index": 18,
+          "original": {
+            "start": 69,
+            "end": 73,
+            "en": "You know that for a fact. Yes.",
+            "ko": "그건 사실이야. 맞아."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 69,
+              "end": 72,
+              "en": "You know that for a fact.",
+              "ko": "그건 사실이야."
+            },
+            {
+              "start": 72,
+              "end": 73,
+              "en": "Yes.",
+              "ko": "맞아."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "mVqbIUIHRFo",
+      "originalSegments": 7,
+      "newSegments": 10,
+      "segmentsSplit": 2,
+      "changes": [
+        {
+          "index": 0,
+          "original": {
+            "start": 29,
+            "end": 35.92,
+            "en": "I slot bet Marshall that you did porn, so I win porn. I wish it was born. It would be less embarrassing. I",
+            "ko": "나는 마샬에게 네가 포르노를 찍었다고 내기를 걸었고, 그래서 나는 포르노를 이겼어. 태어났으면 좋겠어. 덜 창피할 텐데."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 29,
+              "end": 32.5,
+              "en": "I slot bet Marshall that you did porn, so I win porn.",
+              "ko": "나는 마샬에게 네가 포르노를 찍었다고 내기를 걸었고, 그래서 나는 포르노를 이겼어."
+            },
+            {
+              "start": 32.5,
+              "end": 35.92,
+              "en": "I wish it was born. It would be less embarrassing. I",
+              "ko": "태어났으면 좋겠어. 덜 창피할 텐데."
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "original": {
+            "start": 73.52,
+            "end": 80.4,
+            "en": "That's you. Yes. I had one minor hit. I had to go all over Canada and sing this song in malls",
+            "ko": "그게 너야. 맞아. 나는 작은 히트를 하나 가졌어. 캐나다 전역을 돌아다니며 쇼핑몰에서 이 노래를 불렀어."
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 73.5,
+              "end": 74.7,
+              "en": "That's you. Yes.",
+              "ko": "그게 너야. 맞아."
+            },
+            {
+              "start": 74.7,
+              "end": 76.2,
+              "en": "I had one minor hit.",
+              "ko": "나는 작은 히트를 하나 가졌어."
+            },
+            {
+              "start": 76.2,
+              "end": 80.4,
+              "en": "I had to go all over Canada and sing this song in malls",
+              "ko": "캐나다 전역을 돌아다니며 쇼핑몰에서 이 노래를 불렀어."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "MwI6-7kE17M",
+      "originalSegments": 15,
+      "newSegments": 17,
+      "segmentsSplit": 2,
+      "changes": [
+        {
+          "index": 12,
+          "original": {
+            "start": 74,
+            "end": 81,
+            "en": "And I just... I don't see why I can't love you as you want me to. I don't know why. You can't?",
+            "ko": "그리고 나는 왜 내가 너를 원하는 대로 사랑할 수 없는지 모르겠어. 왜 안 되는 걸까?"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 74,
+              "end": 78.9,
+              "en": "And I just... I don't see why I can't love you as you want me to.",
+              "ko": "그리고 나는 왜 내가 너를 원하는 대로 사랑할 수 없는지 모르겠어. 왜 안 되는 걸까?"
+            },
+            {
+              "start": 78.9,
+              "end": 81,
+              "en": "I don't know why. You can't?",
+              "ko": ""
+            }
+          ]
+        },
+        {
+          "index": 13,
+          "original": {
+            "start": 81,
+            "end": 86,
+            "en": "No. I can't. I can't change how I feel and...",
+            "ko": "아니. 나는 못해. 내 감정을 바꿀 수 없어..."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 81,
+              "end": 82.3,
+              "en": "No. I can't.",
+              "ko": "아니. 나는 못해."
+            },
+            {
+              "start": 82.3,
+              "end": 86,
+              "en": "I can't change how I feel and...",
+              "ko": "내 감정을 바꿀 수 없어..."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "MWkN3akP3cU",
+      "originalSegments": 8,
+      "newSegments": 11,
+      "segmentsSplit": 2,
+      "changes": [
+        {
+          "index": 1,
+          "original": {
+            "start": 29,
+            "end": 35,
+            "en": "Yeah, but maybe I do. Cooties I can handle. Alright.",
+            "ko": "응, 하지만 아마 나는 있을지도 몰라. 병균은 괜찮아. 좋아."
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 29,
+              "end": 31.5,
+              "en": "Yeah, but maybe I do.",
+              "ko": "응, 하지만 아마 나는 있을지도 몰라."
+            },
+            {
+              "start": 31.5,
+              "end": 34,
+              "en": "Cooties I can handle.",
+              "ko": "병균은 괜찮아."
+            },
+            {
+              "start": 34,
+              "end": 35,
+              "en": "Alright.",
+              "ko": "좋아."
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "original": {
+            "start": 43,
+            "end": 47,
+            "en": "God damn, that's a pretty fucking good milkshake. Told ya.",
+            "ko": "젠장, 이건 정말 맛있는 밀크쉐이크야. 말했잖아."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 43,
+              "end": 46,
+              "en": "God damn, that's a pretty fucking good milkshake.",
+              "ko": "젠장, 이건 정말 맛있는 밀크쉐이크야."
+            },
+            {
+              "start": 46,
+              "end": 47,
+              "en": "Told ya.",
+              "ko": "말했잖아."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "mwoX_UotKGo",
+      "originalSegments": 9,
+      "newSegments": 11,
+      "segmentsSplit": 2,
+      "changes": [
+        {
+          "index": 1,
+          "original": {
+            "start": 44.84,
+            "end": 49.32,
+            "en": "There's no other way. There is one passage.",
+            "ko": "다른 방법은 없습니다. 한 개의 통로가 있습니다."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 44.8,
+              "end": 47.1,
+              "en": "There's no other way.",
+              "ko": "다른 방법은 없습니다."
+            },
+            {
+              "start": 47.1,
+              "end": 49.32,
+              "en": "There is one passage.",
+              "ko": "한 개의 통로가 있습니다."
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "original": {
+            "start": 49.32,
+            "end": 54.08,
+            "en": "It leads into the mountains, but they will not get far. The Uruk-hai are too many.",
+            "ko": "그것은 산으로 이어지지만, 그들은 멀리 가지 못할 것입니다. 우룩하이가 너무 많습니다."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 49.3,
+              "end": 52.6,
+              "en": "It leads into the mountains, but they will not get far.",
+              "ko": "그것은 산으로 이어지지만, 그들은 멀리 가지 못할 것입니다."
+            },
+            {
+              "start": 52.6,
+              "end": 54.08,
+              "en": "The Uruk-hai are too many.",
+              "ko": "우룩하이가 너무 많습니다."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "MYtjpIwamos",
+      "originalSegments": 6,
+      "newSegments": 7,
+      "segmentsSplit": 1,
+      "changes": [
+        {
+          "index": 5,
+          "original": {
+            "start": 11,
+            "end": 14.5,
+            "en": "Yee-haw! What?",
+            "ko": "예-하! 뭐라고?"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 11,
+              "end": 13.2,
+              "en": "Yee-haw!",
+              "ko": "예-하!"
+            },
+            {
+              "start": 13.2,
+              "end": 14.5,
+              "en": "What?",
+              "ko": "뭐라고?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "n05FK5Ms0wE",
+      "originalSegments": 19,
+      "newSegments": 24,
+      "segmentsSplit": 5,
+      "changes": [
+        {
+          "index": 0,
+          "original": {
+            "start": 0,
+            "end": 3.5,
+            "en": "Up. Now, get upstairs. I am upstairs, dummy.",
+            "ko": "이제 가져가세요."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 0,
+              "end": 1.8,
+              "en": "Up. Now, get upstairs.",
+              "ko": "이제 가져가세요."
+            },
+            {
+              "start": 1.8,
+              "end": 3.5,
+              "en": "I am upstairs, dummy.",
+              "ko": ""
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "original": {
+            "start": 7.8,
+            "end": 11.18,
+            "en": "It's scary up there. Don't be silly. Fuller will be up in a little while.",
+            "ko": "거기 무서워. 그럴 필요 없어. 풀러가 곧 올라올 거야."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 7.8,
+              "end": 9.5,
+              "en": "It's scary up there. Don't be silly.",
+              "ko": "거기 무서워. 그럴 필요 없어."
+            },
+            {
+              "start": 9.5,
+              "end": 11.18,
+              "en": "Fuller will be up in a little while.",
+              "ko": "풀러가 곧 올라올 거야."
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "original": {
+            "start": 13.38,
+            "end": 16.88,
+            "en": "He wets the bed. He'll pee all over me. I know it.",
+            "ko": "그는 침대를 젖혀. 나한테 오줌 싸겠지. 난 알아."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 13.4,
+              "end": 15.9,
+              "en": "He wets the bed. He'll pee all over me.",
+              "ko": "그는 침대를 젖혀. 나한테 오줌 싸겠지."
+            },
+            {
+              "start": 15.9,
+              "end": 16.88,
+              "en": "I know it.",
+              "ko": "난 알아."
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "original": {
+            "start": 20.06,
+            "end": 24.02,
+            "en": "I'm sorry. It's too late. Get upstairs.",
+            "ko": "미안해. 너무 늦었어. 위로 올라가."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 20.1,
+              "end": 22.7,
+              "en": "I'm sorry. It's too late.",
+              "ko": "미안해. 너무 늦었어."
+            },
+            {
+              "start": 22.7,
+              "end": 24.02,
+              "en": "Get upstairs.",
+              "ko": "위로 올라가."
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "original": {
+            "start": 31.56,
+            "end": 35.24,
+            "en": "I don't want a new family. I don't want any family. Families suck.",
+            "ko": "새 가족은 원하지 않아. 가족도 원하지 않아. 가족은 최악이야."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 31.6,
+              "end": 33.1,
+              "en": "I don't want a new family.",
+              "ko": "새 가족은 원하지 않아."
+            },
+            {
+              "start": 33.1,
+              "end": 35.24,
+              "en": "I don't want any family. Families suck.",
+              "ko": "가족도 원하지 않아. 가족은 최악이야."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "N16YkjFVAyE",
+      "originalSegments": 19,
+      "newSegments": 23,
+      "segmentsSplit": 3,
+      "changes": [
+        {
+          "index": 0,
+          "original": {
+            "start": 29,
+            "end": 32.3,
+            "en": "like we were taught. And what happened?",
+            "ko": "우리가 배운 대로. 그리고 무슨 일이 있었지?"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 29,
+              "end": 30.7,
+              "en": "like we were taught.",
+              "ko": "우리가 배운 대로."
+            },
+            {
+              "start": 30.7,
+              "end": 32.3,
+              "en": "And what happened?",
+              "ko": "그리고 무슨 일이 있었지?"
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "original": {
+            "start": 46.52,
+            "end": 52.94,
+            "en": "Was Private Santiago ever late for platoon meetings? Yes, sir. Was his barracks ever in disorder? Yes, sir.",
+            "ko": "상병 산티아고는 소대 회의에 늦은 적이 있었나? 예, 그렇습니다. 그의 막사는 항상 어질러져 있었나? 예, 그렇습니다."
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 46.5,
+              "end": 49.5,
+              "en": "Was Private Santiago ever late for platoon meetings?",
+              "ko": "상병 산티아고는 소대 회의에 늦은 적이 있었나?"
+            },
+            {
+              "start": 49.5,
+              "end": 51.9,
+              "en": "Yes, sir. Was his barracks ever in disorder?",
+              "ko": "예, 그렇습니다. 그의 막사는 항상 어질러져 있었나?"
+            },
+            {
+              "start": 51.9,
+              "end": 52.94,
+              "en": "Yes, sir.",
+              "ko": "예, 그렇습니다."
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "original": {
+            "start": 59.14,
+            "end": 63.44,
+            "en": "receive a code red? No, sir. Never?",
+            "ko": "코드 레드를 받은 적이 있나? 아니요, 없습니다. 절대?"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 59.1,
+              "end": 61.6,
+              "en": "receive a code red?",
+              "ko": "코드 레드를 받은 적이 있나?"
+            },
+            {
+              "start": 61.6,
+              "end": 63.44,
+              "en": "No, sir. Never?",
+              "ko": "아니요, 없습니다. 절대?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "N2p5uvbQhaY",
+      "originalSegments": 14,
+      "newSegments": 18,
+      "segmentsSplit": 4,
+      "changes": [
+        {
+          "index": 3,
+          "original": {
+            "start": 37,
+            "end": 44,
+            "en": "Just give them some examples. Fine. Chipmunk.",
+            "ko": "그냥 예시를 줘. 좋아. 다람쥐."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 37,
+              "end": 41.7,
+              "en": "Just give them some examples.",
+              "ko": "그냥 예시를 줘."
+            },
+            {
+              "start": 41.7,
+              "end": 44,
+              "en": "Fine. Chipmunk.",
+              "ko": "좋아. 다람쥐."
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "original": {
+            "start": 50,
+            "end": 55,
+            "en": "Someone's going to regionals. It's a special cape.",
+            "ko": "누군가 지역 대회에 나가게 됐어. 특별한 망토야."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 50,
+              "end": 53,
+              "en": "Someone's going to regionals.",
+              "ko": "누군가 지역 대회에 나가게 됐어."
+            },
+            {
+              "start": 53,
+              "end": 55,
+              "en": "It's a special cape.",
+              "ko": "특별한 망토야."
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "original": {
+            "start": 57,
+            "end": 61,
+            "en": "What are you doing? There's rioting in Tunisia. The cape is premiering.",
+            "ko": "뭐 하고 있어? 튀니지에서 폭동이 일어나고 있어. 망토가 첫선을 보이고 있어."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 57,
+              "end": 59.7,
+              "en": "What are you doing? There's rioting in Tunisia.",
+              "ko": "뭐 하고 있어? 튀니지에서 폭동이 일어나고 있어."
+            },
+            {
+              "start": 59.7,
+              "end": 61,
+              "en": "The cape is premiering.",
+              "ko": "망토가 첫선을 보이고 있어."
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "original": {
+            "start": 68,
+            "end": 72,
+            "en": "These people are giving out free iPhones. What? No, no, no.",
+            "ko": "이 사람들이 무료 아이폰을 나눠주고 있어. 뭐? 안 돼, 안 돼, 안 돼."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 68,
+              "end": 70.9,
+              "en": "These people are giving out free iPhones.",
+              "ko": "이 사람들이 무료 아이폰을 나눠주고 있어."
+            },
+            {
+              "start": 70.9,
+              "end": 72,
+              "en": "What? No, no, no.",
+              "ko": "뭐? 안 돼, 안 돼, 안 돼."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "n4NVPg2kHv4",
+      "originalSegments": 7,
+      "newSegments": 10,
+      "segmentsSplit": 2,
+      "changes": [
+        {
+          "index": 5,
+          "original": {
+            "start": 52.82,
+            "end": 58.82,
+            "en": "just by looking at how the word is spelt. But English isn't like this.",
+            "ko": "단어의 철자를 보고 발음하기 쉬워요. 하지만 영어는 그렇지 않아요."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 52.8,
+              "end": 56.4,
+              "en": "just by looking at how the word is spelt.",
+              "ko": "단어의 철자를 보고 발음하기 쉬워요."
+            },
+            {
+              "start": 56.4,
+              "end": 58.82,
+              "en": "But English isn't like this.",
+              "ko": "하지만 영어는 그렇지 않아요."
+            }
+          ]
+        },
+        {
+          "index": 6,
+          "original": {
+            "start": 58.82,
+            "end": 65.82,
+            "en": "No, no, no, no, no, no. Nope. Nope. Nope.",
+            "ko": "아니, 아니, 아니, 아니, 아니, 아니. 절대 아니에요."
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 58.8,
+              "end": 63,
+              "en": "No, no, no, no, no, no.",
+              "ko": "아니, 아니, 아니, 아니, 아니, 아니. 절대 아니에요."
+            },
+            {
+              "start": 63,
+              "end": 64.8,
+              "en": "Nope. Nope.",
+              "ko": ""
+            },
+            {
+              "start": 64.8,
+              "end": 65.82,
+              "en": "Nope.",
+              "ko": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "N6J_32cDk9Y",
+      "originalSegments": 18,
+      "newSegments": 19,
+      "segmentsSplit": 1,
+      "changes": [
+        {
+          "index": 4,
+          "original": {
+            "start": 10.88,
+            "end": 16.16,
+            "en": "All right, moving on to recycling. You okay, Ron?",
+            "ko": "자, 재활용으로 넘어갑니다. 괜찮아, 론?"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 10.9,
+              "end": 14.7,
+              "en": "All right, moving on to recycling.",
+              "ko": "자, 재활용으로 넘어갑니다."
+            },
+            {
+              "start": 14.7,
+              "end": 16.16,
+              "en": "You okay, Ron?",
+              "ko": "괜찮아, 론?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "N9QxmhaOPiE",
+      "originalSegments": 8,
+      "newSegments": 12,
+      "segmentsSplit": 3,
+      "changes": [
+        {
+          "index": 2,
+          "original": {
+            "start": 42,
+            "end": 49,
+            "en": "Whoa, kid, kid, stop, stop. Stop, stop. Hey! I'll get it back to you, all right?",
+            "ko": "와, 얘야, 얘야, 멈춰, 멈춰. 멈춰, 멈춰. 이봐! 내가 다시 줄게, 알겠지?"
+          },
+          "splitInto": 3,
+          "produced": [
+            {
+              "start": 42,
+              "end": 44.5,
+              "en": "Whoa, kid, kid, stop, stop.",
+              "ko": "와, 얘야, 얘야, 멈춰, 멈춰."
+            },
+            {
+              "start": 44.5,
+              "end": 45.9,
+              "en": "Stop, stop. Hey!",
+              "ko": "멈춰, 멈춰. 이봐!"
+            },
+            {
+              "start": 45.9,
+              "end": 49,
+              "en": "I'll get it back to you, all right?",
+              "ko": "내가 다시 줄게, 알겠지?"
+            }
+          ]
+        },
+        {
+          "index": 4,
+          "original": {
+            "start": 55,
+            "end": 60,
+            "en": "Wow, look at him go. Look out!",
+            "ko": "와, 저기 가는 거 봐. 조심해!"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 55,
+              "end": 58.4,
+              "en": "Wow, look at him go.",
+              "ko": "와, 저기 가는 거 봐."
+            },
+            {
+              "start": 58.4,
+              "end": 60,
+              "en": "Look out!",
+              "ko": "조심해!"
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "original": {
+            "start": 86,
+            "end": 90,
+            "en": "Come on, come on, come on, come on! What are you doing?",
+            "ko": "어서, 어서, 어서, 어서! 뭐 하고 있어?"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 86,
+              "end": 88.6,
+              "en": "Come on, come on, come on, come on!",
+              "ko": "어서, 어서, 어서, 어서!"
+            },
+            {
+              "start": 88.6,
+              "end": 90,
+              "en": "What are you doing?",
+              "ko": "뭐 하고 있어?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "NbOaWsqF_Y4",
+      "originalSegments": 16,
+      "newSegments": 19,
+      "segmentsSplit": 3,
+      "changes": [
+        {
+          "index": 4,
+          "original": {
+            "start": 44,
+            "end": 49,
+            "en": "You build out a stock bar, beer on tap. I mean, they're German, so...",
+            "ko": "재고 바를 만들고, 생맥주도 있어야 해. 독일 사람들이니까..."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 44,
+              "end": 46.9,
+              "en": "You build out a stock bar, beer on tap.",
+              "ko": "재고 바를 만들고, 생맥주도 있어야 해."
+            },
+            {
+              "start": 46.9,
+              "end": 49,
+              "en": "I mean, they're German, so...",
+              "ko": "독일 사람들이니까..."
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "original": {
+            "start": 56,
+            "end": 60,
+            "en": "A few lazy boys with couches. Pool table, I don't know, foosball.",
+            "ko": "몇 개의 라지 보이 의자와 소파, 당구대, 그리고 풋볼도 괜찮아."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 56,
+              "end": 57.8,
+              "en": "A few lazy boys with couches.",
+              "ko": "몇 개의 라지 보이 의자와 소파, 당구대, 그리고 풋볼도 괜찮아."
+            },
+            {
+              "start": 57.8,
+              "end": 60,
+              "en": "Pool table, I don't know, foosball.",
+              "ko": ""
+            }
+          ]
+        },
+        {
+          "index": 8,
+          "original": {
+            "start": 60,
+            "end": 64,
+            "en": "Hell, we could even put up a hoop. Germans play basketball, yeah?",
+            "ko": "심지어 농구대도 설치할 수 있어. 독일 사람들도 농구하잖아?"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 60,
+              "end": 62.1,
+              "en": "Hell, we could even put up a hoop.",
+              "ko": "심지어 농구대도 설치할 수 있어."
+            },
+            {
+              "start": 62.1,
+              "end": 64,
+              "en": "Germans play basketball, yeah?",
+              "ko": "독일 사람들도 농구하잖아?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "videoId": "NbuUW9i-mHs",
+      "originalSegments": 12,
+      "newSegments": 18,
+      "segmentsSplit": 6,
+      "changes": [
+        {
+          "index": 0,
+          "original": {
+            "start": 0,
+            "end": 6.6,
+            "en": "Violence and war. The insane brutality of ISIS continues. The Russians are invading",
+            "ko": "폭력과 전쟁. ISIS의 광기 어린 잔혹함은 계속되고 있고, 러시아는 우크라이나를"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 0,
+              "end": 4.6,
+              "en": "Violence and war. The insane brutality of ISIS continues.",
+              "ko": "폭력과 전쟁. ISIS의 광기 어린 잔혹함은 계속되고 있고, 러시아는 우크라이나를"
+            },
+            {
+              "start": 4.6,
+              "end": 6.6,
+              "en": "The Russians are invading",
+              "ko": ""
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "original": {
+            "start": 11.12,
+            "end": 16.16,
+            "en": "that make you feel gloomy? Well, don't, because if you look at the numbers, war",
+            "ko": "우울하게 느껴지나요? 하지만 그러지 마세요. 숫자를 보면, 전쟁은"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 11.1,
+              "end": 12.8,
+              "en": "that make you feel gloomy?",
+              "ko": "우울하게 느껴지나요? 하지만 그러지 마세요. 숫자를 보면, 전쟁은"
+            },
+            {
+              "start": 12.8,
+              "end": 16.16,
+              "en": "Well, don't, because if you look at the numbers, war",
+              "ko": ""
+            }
+          ]
+        },
+        {
+          "index": 5,
+          "original": {
+            "start": 24.8,
+            "end": 29.8,
+            "en": "human history. How is this possible?",
+            "ko": "살고 있는 것 같습니다. 이게 어떻게 가능할까요?"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 24.8,
+              "end": 26.8,
+              "en": "human history.",
+              "ko": "살고 있는 것 같습니다."
+            },
+            {
+              "start": 26.8,
+              "end": 29.8,
+              "en": "How is this possible?",
+              "ko": "이게 어떻게 가능할까요?"
+            }
+          ]
+        },
+        {
+          "index": 7,
+          "original": {
+            "start": 38.52,
+            "end": 43.52,
+            "en": "caused at least 10,000 people to die since January 2013. Nine conflicts that",
+            "ko": "전 세계에서 네 건이 있었습니다. 1,000명 이상이 목숨을 잃은 분쟁은 아홉 건,"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 38.5,
+              "end": 42.2,
+              "en": "caused at least 10,000 people to die since January 2013.",
+              "ko": "전 세계에서 네 건이 있었습니다."
+            },
+            {
+              "start": 42.2,
+              "end": 43.52,
+              "en": "Nine conflicts that",
+              "ko": "1,000명 이상이 목숨을 잃은 분쟁은 아홉 건,"
+            }
+          ]
+        },
+        {
+          "index": 9,
+          "original": {
+            "start": 48.28,
+            "end": 54.24,
+            "en": "2013. Not really peaceful, but consider this. Of all the conflicts going on, none",
+            "ko": "완전히 평화롭다고는 할 수 없지만, 이것을 생각해 보세요. 지금 벌어지고 있는 분쟁들 가운데"
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 48.3,
+              "end": 51.6,
+              "en": "2013. Not really peaceful, but consider this.",
+              "ko": "완전히 평화롭다고는 할 수 없지만, 이것을 생각해 보세요. 지금 벌어지고 있는 분쟁들 가운데"
+            },
+            {
+              "start": 51.6,
+              "end": 54.24,
+              "en": "Of all the conflicts going on, none",
+              "ko": ""
+            }
+          ]
+        },
+        {
+          "index": 10,
+          "original": {
+            "start": 54.24,
+            "end": 59.6,
+            "en": "is an active war between countries. They are either civil wars or local conflicts.",
+            "ko": "국가 간의 전쟁은 하나도 없습니다. 모두 내전이나 지역 분쟁입니다."
+          },
+          "splitInto": 2,
+          "produced": [
+            {
+              "start": 54.2,
+              "end": 56.5,
+              "en": "is an active war between countries.",
+              "ko": "국가 간의 전쟁은 하나도 없습니다."
+            },
+            {
+              "start": 56.5,
+              "end": 59.6,
+              "en": "They are either civil wars or local conflicts.",
+              "ko": "모두 내전이나 지역 분쟁입니다."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "totalFilesSplit": 40,
+  "totalSegmentsSplit": 118,
+  "totalNewSegments": 147
+}

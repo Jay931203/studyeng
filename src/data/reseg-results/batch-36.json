@@ -1,0 +1,382 @@
+{
+  "batch": 36,
+  "processedAt": "2026-03-12",
+  "totalFiles": 36,
+  "changedFiles": 26,
+  "unchangedFiles": 10,
+  "manualFixes": 4,
+  "details": {
+    "RZvXi8W9o_U": {
+      "changed": false,
+      "segsBefore": 19,
+      "segsAfter": 19,
+      "reason": "All segments properly segmented per rules"
+    },
+    "S_6vjb1cJkE": {
+      "changed": true,
+      "segsBefore": 11,
+      "segsAfter": 9,
+      "changes": [
+        "D: Split 47.82-53.92 (6.1s, clause boundary) into 2 parts",
+        "G: Merged \"you sir\" (0.8s, 2w) into prev at 30.1",
+        "G: Merged \"appreciate that\" (1.32s, 2w) into prev at 51.28",
+        "G: Merged \"So welcome\" (1.16s, 2w) into prev at 74.42"
+      ]
+    },
+    "S_JUlXh7sP8": {
+      "changed": false,
+      "segsBefore": 9,
+      "segsAfter": 9,
+      "reason": "Lyrics (Nightman song from IASIP) - kept as-is per Rule I"
+    },
+    "s3a4OQR-10M": {
+      "changed": false,
+      "segsBefore": 18,
+      "segsAfter": 18,
+      "reason": "All segments properly segmented per rules"
+    },
+    "S4DumJQbcoE": {
+      "changed": true,
+      "segsBefore": 12,
+      "segsAfter": 15,
+      "changes": [
+        "A: Split 29-33.3 (4.3s, 2 sents) into 2 parts",
+        "A: Split 38.8-45.2 (6.4s, 2 sents) into 2 parts",
+        "A: Split 46.5-50.5 (4s, 3 sents) into 3 parts",
+        "A: Split 81.4-87.6 (6.2s, 3 sents) into 3 parts",
+        "G: Merged \"Gone?\" (0.61s, 1w) into prev at 46.5",
+        "G: Merged \"Gone where?\" (1.33s, 2w) into prev at 46.5",
+        "G: Merged \"That sucks.\" (1s, 2w) into prev at 58.3"
+      ]
+    },
+    "S4izWsBAjl4": {
+      "changed": true,
+      "segsBefore": 25,
+      "segsAfter": 28,
+      "changes": [
+        "A: Split 58.5-65.5 (7s, 3 sents) into 3 parts",
+        "A: Split 75.5-80 (4.5s, 4 sents) into 4 parts",
+        "G: Merged \"Yeah, sure.\" (1.24s, 2w) into prev at 61.55",
+        "G: Merged \"Uh-huh.\" (0.52s, 1w) into prev at 75.5"
+      ]
+    },
+    "S6vTI5g198E": {
+      "changed": true,
+      "segsBefore": 14,
+      "segsAfter": 15,
+      "changes": [
+        "D: Split 29-36 (7s, clause boundary) into 2 parts"
+      ]
+    },
+    "S7Ly-cNBjuc": {
+      "changed": true,
+      "segsBefore": 11,
+      "segsAfter": 10,
+      "changes": [
+        "H: Removed music-only segment 55-95"
+      ]
+    },
+    "S7OWoc-j8qQ": {
+      "changed": true,
+      "segsBefore": 7,
+      "segsAfter": 7,
+      "changes": [
+        "Manual: Restored 45-59 as single segment (short dialogue line with visual gag pause)"
+      ]
+    },
+    "S8O5Ggp_PeI": {
+      "changed": true,
+      "segsBefore": 14,
+      "segsAfter": 16,
+      "changes": [
+        "A: Split 35-40 (5s, 2 sents) into 2 parts",
+        "A: Split 40-44 (4s, 3 sents) into 3 parts",
+        "A: Split 70-76 (6s, 2 sents) into 2 parts",
+        "G: Merged \"Extended.\" (1.15s, 1w) into prev at 35",
+        "G: Merged \"Yeah.\" (1s, 1w) into prev at 76"
+      ]
+    },
+    "s9gAXwYZtfk": {
+      "changed": false,
+      "segsBefore": 7,
+      "segsAfter": 7,
+      "reason": "All segments properly segmented per rules"
+    },
+    "S9Tj4WPCplI": {
+      "changed": true,
+      "segsBefore": 5,
+      "segsAfter": 5,
+      "changes": [
+        "A: Split 13.24-16.52 (3.28s, 2 sents) into 2 parts",
+        "A: Split 46.44-51.18 (4.74s, 2 sents) into 2 parts",
+        "G: Merged \"Alright.\" (0.9s, 1w) into prev at 13.24",
+        "G: Merged \"No.\" (0.75s, 1w) into prev at 46.44"
+      ]
+    },
+    "saalGKY7ifU": {
+      "changed": true,
+      "segsBefore": 7,
+      "segsAfter": 5,
+      "changes": [
+        "I: Lyrics (My Heart Will Go On) - fixed mangled Whisper lyric boundaries",
+        "G: Merged fragmented 'you go on Far' and 'on' back into proper lyric lines"
+      ]
+    },
+    "sAnsGZCahlU": {
+      "changed": true,
+      "segsBefore": 11,
+      "segsAfter": 15,
+      "changes": [
+        "A: Split 7-13.8 (6.8s, 2 sents) into 2 parts",
+        "D: Split 13.8-20.8 (7s, clause boundary) into 2 parts",
+        "A: Split 36.68-43.68 (7s, 2 sents) into 2 parts",
+        "A: Split 44.56-50.72 (6.16s, 2 sents) into 2 parts"
+      ]
+    },
+    "sbCvQbBi2G8": {
+      "changed": true,
+      "segsBefore": 23,
+      "segsAfter": 26,
+      "changes": [
+        "A: Split 37.76-42.08 (4.32s, 2 sents) into 2 parts",
+        "A: Split 59.28-62.48 (3.2s, 2 sents) into 2 parts",
+        "A: Split 87.6-91.76 (4.16s, 2 sents) into 2 parts"
+      ]
+    },
+    "sD_hanI9jWg": {
+      "changed": true,
+      "segsBefore": 15,
+      "segsAfter": 17,
+      "changes": [
+        "A: Split 52.9-59.08 (6.18s, 2 sents) into 2 parts",
+        "A: Split 78.72-82.86 (4.14s, 2 sents) into 2 parts"
+      ]
+    },
+    "sdgvyJ7R23Y": {
+      "changed": true,
+      "segsBefore": 21,
+      "segsAfter": 45,
+      "changes": [
+        "A: Split 0-6.36 (6.36s, 3 sents) into 3 parts",
+        "A: Split 6.36-13.16 (6.8s, 3 sents) into 3 parts",
+        "A: Split 15.18-20.6 (5.42s, 2 sents) into 2 parts",
+        "A: Split 20.6-26.34 (5.74s, 3 sents) into 3 parts",
+        "A: Split 26.34-33.14 (6.8s, 3 sents) into 3 parts",
+        "A: Split 39.6-45.68 (6.08s, 2 sents) into 2 parts",
+        "A: Split 45.68-49.88 (4.2s, 2 sents) into 2 parts",
+        "A: Split 55.56-61.96 (6.4s, 2 sents) into 2 parts",
+        "A: Split 61.96-67.72 (5.76s, 3 sents) into 3 parts",
+        "A: Split 67.72-74.52 (6.8s, 3 sents) into 3 parts",
+        "A: Split 75.8-79.52 (3.72s, 2 sents) into 2 parts",
+        "A: Split 79.52-84.4 (4.88s, 2 sents) into 2 parts",
+        "A: Split 84.4-88.96 (4.56s, 3 sents) into 3 parts",
+        "A: Split 88.96-94.12 (5.16s, 3 sents) into 3 parts",
+        "A: Split 104.68-111.48 (6.8s, 4 sents) into 4 parts",
+        "A: Split 114-120.8 (6.8s, 2 sents) into 2 parts",
+        "A: Split 121.64-126.28 (4.64s, 2 sents) into 2 parts",
+        "G: Merged \"To celebrate\" (1.01s, 2w) into prev at 2.59",
+        "G: Merged \"Hmm, well\" (0.76s, 2w) into prev at 9.59",
+        "G: Merged \"Albert, I\" (0.81s, 2w) into prev at 29.38"
+      ]
+    },
+    "sDWi81BVnqw": {
+      "changed": true,
+      "segsBefore": 5,
+      "segsAfter": 5,
+      "changes": [
+        "A: Split 0-6.8 (6.8s, 2 sents) into 2 parts",
+        "G: Merged \"Um...\" (1s, 1w) into prev at 14"
+      ]
+    },
+    "se50viFJ0AQ": {
+      "changed": true,
+      "segsBefore": 9,
+      "segsAfter": 10,
+      "changes": [
+        "A: Split 40.6-44.6 (4s, 3 sents) into 3 parts",
+        "G: Merged \"Mr. Beast!\" (0.75s, 2w) into prev at 33.6"
+      ]
+    },
+    "SEmsRTeQw6I": {
+      "changed": true,
+      "segsBefore": 12,
+      "segsAfter": 18,
+      "changes": [
+        "A: Split 29-33 (4s, 2 sents) into 2 parts",
+        "A: Split 34-38 (4s, 3 sents) into 3 parts",
+        "A: Split 66-70 (4s, 3 sents) into 3 parts",
+        "A: Split 74-80 (6s, 2 sents) into 2 parts"
+      ]
+    },
+    "SftsLfJDvkc": {
+      "changed": true,
+      "segsBefore": 20,
+      "segsAfter": 23,
+      "changes": [
+        "A: Split 62.84-67.24 (4.4s, 3 sents) into 3 parts",
+        "A: Split 75.4-81.84 (6.44s, 4 sents) into 4 parts",
+        "G: Merged \"Astronomer Royal.\" (1.13s, 2w) into prev at 62.84",
+        "G: Merged \"Yes, ma'am.\" (0.89s, 2w) into prev at 78.54"
+      ]
+    },
+    "sFW15hEqZQk": {
+      "changed": true,
+      "segsBefore": 19,
+      "segsAfter": 21,
+      "changes": [
+        "D: Split 0-6.5 (6.5s, clause boundary) into 2 parts",
+        "A: Split 12.5-16.5 (4s, 2 sents) into 2 parts",
+        "A: Split 37.5-41.5 (4s, 2 sents) into 2 parts",
+        "G: Merged \"Listen.\" (0.9s, 1w) into prev at 12.5"
+      ]
+    },
+    "Sgaaj9hFAfc": {
+      "changed": true,
+      "segsBefore": 9,
+      "segsAfter": 12,
+      "changes": [
+        "A: Split 15-19 (4s, 3 sents) into 3 parts",
+        "A: Split 19-23 (4s, 2 sents) into 2 parts",
+        "A: Split 23-27 (4s, 3 sents) into 3 parts",
+        "G: Merged \"Fire away.\" (0.52s, 2w) into prev at 15",
+        "G: Merged \"Probably not.\" (0.81s, 2w) into prev at 23"
+      ]
+    },
+    "sHBLVaIEwj4": {
+      "changed": true,
+      "segsBefore": 13,
+      "segsAfter": 14,
+      "changes": [
+        "A: Split 23.2-29.4 rapid-fire dialogue into natural pairs",
+        "Manual: Fixed 'I'm flexible' repetition gag - kept as 2 segments (gag + punchline)",
+        "Cleaned comma-delimited dialogue separators (.,->) throughout"
+      ]
+    },
+    "shW9i6k8cB0": {
+      "changed": false,
+      "segsBefore": 13,
+      "segsAfter": 13,
+      "reason": "All segments properly segmented per rules"
+    },
+    "Sisqx8vrsOg": {
+      "changed": true,
+      "segsBefore": 16,
+      "segsAfter": 17,
+      "changes": [
+        "A: Split 19-25 (6s, 4 sents) into 4 parts",
+        "A: Split 31-35 (4s, 2 sents) into 2 parts",
+        "G: Merged \"Who?\" (0.53s, 1w) into prev at 19",
+        "G: Merged \"James Lake.\" (1.47s, 2w) into prev at 19",
+        "G: Merged \"Quietly.\" (1.1s, 1w) into prev at 31"
+      ]
+    },
+    "SIYkhb2NjfE": {
+      "changed": true,
+      "segsBefore": 15,
+      "segsAfter": 16,
+      "changes": [
+        "A: Split 1.8-5.6 (3.8s, 2 sents) into 2 parts"
+      ]
+    },
+    "SJxGytY6gpY": {
+      "changed": false,
+      "segsBefore": 26,
+      "segsAfter": 26,
+      "reason": "All segments properly segmented per rules"
+    },
+    "sKW9kWAIdI0": {
+      "changed": false,
+      "segsBefore": 16,
+      "segsAfter": 16,
+      "reason": "All segments properly segmented per rules"
+    },
+    "sLIqBWDM48E": {
+      "changed": true,
+      "segsBefore": 14,
+      "segsAfter": 17,
+      "changes": [
+        "D: Split 17.4-23.4 (6s, clause boundary) into 2 parts",
+        "D: Split 26.4-32.4 (6s, clause boundary) into 2 parts",
+        "A: Split 50.8-55.8 (5s, 2 sents) into 2 parts"
+      ]
+    },
+    "sLTRSakuugs": {
+      "changed": false,
+      "segsBefore": 11,
+      "segsAfter": 11,
+      "reason": "All segments properly segmented per rules"
+    },
+    "sLyFeo48iqw": {
+      "changed": false,
+      "segsBefore": 19,
+      "segsAfter": 19,
+      "reason": "All segments properly segmented per rules"
+    },
+    "sMKoNBRZM1M": {
+      "changed": true,
+      "segsBefore": 1,
+      "segsAfter": 2,
+      "changes": [
+        "D: Split 11-17.12 (6.12s, clause boundary) into 2 parts"
+      ]
+    },
+    "SN_6XVYOtOI": {
+      "changed": false,
+      "segsBefore": 15,
+      "segsAfter": 15,
+      "reason": "All segments properly segmented per rules"
+    },
+    "sNhhvQGsMEc": {
+      "changed": true,
+      "segsBefore": 13,
+      "segsAfter": 16,
+      "changes": [
+        "D: Split 8.56-15.28 (6.72s, clause boundary) into 2 parts",
+        "A: Split 23.84-30.32 (6.48s, 2 sents) into 2 parts",
+        "A: Split 30.32-34.48 (4.16s, 2 sents) into 2 parts"
+      ]
+    },
+    "sNrBSslS5RE": {
+      "changed": true,
+      "segsBefore": 53,
+      "segsAfter": 96,
+      "changes": [
+        "A: Split 0-4.8 (4.8s, 2 sents) into 2 parts",
+        "A: Split 4.8-10.48 (5.68s, 2 sents) into 2 parts",
+        "A: Split 20.48-25.92 (5.44s, 2 sents) into 2 parts",
+        "A: Split 25.92-30.24 (4.32s, 2 sents) into 2 parts",
+        "A: Split 30.24-34.16 (3.92s, 2 sents) into 2 parts",
+        "A: Split 34.16-38.32 (4.16s, 2 sents) into 2 parts",
+        "A: Split 38.32-43.44 (5.12s, 2 sents) into 2 parts",
+        "A: Split 43.44-48.24 (4.8s, 2 sents) into 2 parts",
+        "A: Split 48.24-53.28 (5.04s, 2 sents) into 2 parts",
+        "A: Split 62.72-66.32 (3.6s, 2 sents) into 2 parts",
+        "A: Split 70.88-75.36 (4.48s, 2 sents) into 2 parts",
+        "A: Split 79.76-84.8 (5.04s, 3 sents) into 3 parts",
+        "A: Split 84.8-89.68 (4.88s, 3 sents) into 3 parts",
+        "A: Split 89.68-94.16 (4.48s, 4 sents) into 4 parts",
+        "A: Split 94.16-98.56 (4.4s, 3 sents) into 3 parts",
+        "A: Split 103.6-108.56 (4.96s, 3 sents) into 3 parts",
+        "A: Split 112.4-118.88 (6.48s, 3 sents) into 3 parts",
+        "A: Split 127.2-132.8 (5.6s, 3 sents) into 3 parts",
+        "A: Split 143.44-147.6 (4.16s, 3 sents) into 3 parts",
+        "A: Split 147.6-153.12 (5.52s, 2 sents) into 2 parts",
+        "A: Split 153.12-159.04 (5.92s, 3 sents) into 3 parts",
+        "A: Split 163.04-167.28 (4.24s, 2 sents) into 2 parts",
+        "A: Split 167.28-172.16 (4.88s, 2 sents) into 2 parts",
+        "A: Split 172.16-176.32 (4.16s, 3 sents) into 3 parts",
+        "A: Split 186.4-191.04 (4.64s, 2 sents) into 2 parts",
+        "A: Split 196.72-201.2 (4.48s, 2 sents) into 2 parts",
+        "A: Split 202-206.88 (4.88s, 4 sents) into 4 parts",
+        "A: Split 210.08-213.12 (3.04s, 2 sents) into 2 parts",
+        "A: Split 213.76-217.76 (4s, 3 sents) into 3 parts",
+        "A: Split 217.76-222.96 (5.2s, 2 sents) into 2 parts",
+        "A: Split 227.28-232.16 (4.88s, 2 sents) into 2 parts",
+        "A: Split 232.16-237.2 (5.04s, 2 sents) into 2 parts",
+        "G: Merged \"market.\" (0.5s, 1w) into prev at 108.56",
+        "G: Merged \"Especially\" (0.6s, 1w) into prev at 128.15",
+        "G: Merged \"I'm gonna\" (0.52s, 2w) into prev at 147.6"
+      ]
+    }
+  }
+}

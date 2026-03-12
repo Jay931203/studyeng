@@ -1,0 +1,300 @@
+{
+  "batch": 34,
+  "processedAt": "2026-03-12",
+  "totalFiles": 36,
+  "changedFiles": 20,
+  "unchangedFiles": 16,
+  "details": {
+    "QyrV3UbSdDQ": {
+      "changed": false,
+      "segsBefore": 5,
+      "segsAfter": 5,
+      "reason": "All segments <=3s short exclamations (Rule B/E) - properly segmented"
+    },
+    "QYVc4v1gfgg": {
+      "changed": true,
+      "segsBefore": 13,
+      "segsAfter": 16,
+      "changes": [
+        "A: Split 38.4-44.44 multi-sent (trophy + dance good) into 2 parts",
+        "G: Merged consecutive 'Come on' fragments 49.3-53.02 into one seg",
+        "A: Split 64.9-70.56 multi-sent (let's see + take it away) into 2 parts"
+      ]
+    },
+    "QzklMXES1BU": {
+      "changed": false,
+      "segsBefore": 14,
+      "segsAfter": 14,
+      "reason": "All dialogue segments 2-3s, well-segmented (BTTF scene)"
+    },
+    "QZp2biJul1c": {
+      "changed": false,
+      "segsBefore": 19,
+      "segsAfter": 19,
+      "reason": "Lyrics (Rule I) - all segments are lyric lines, kept as-is"
+    },
+    "qZzMcRYX44M": {
+      "changed": false,
+      "segsBefore": 1,
+      "segsAfter": 1,
+      "reason": "Single 6s segment, one sentence (Rule B) - kept as-is"
+    },
+    "R0G_wyJE3ks": {
+      "changed": true,
+      "segsBefore": 9,
+      "segsAfter": 13,
+      "changes": [
+        "A: Split 37.64-40.92 'No. They say it has no memory.' into 2",
+        "C: Split 47.44-54.44 (7s) long clause at comma into 2 parts",
+        "C: Split 60.84-67.84 (7s) 'fix it up new, take my guests...' into 2 parts"
+      ]
+    },
+    "R0HgBMIK8_A": {
+      "changed": false,
+      "segsBefore": 23,
+      "segsAfter": 23,
+      "reason": "All dialogue 2-3s segments, well-segmented (Hazbin Hotel)"
+    },
+    "r0ov89KPtDQ": {
+      "changed": true,
+      "segsBefore": 12,
+      "segsAfter": 17,
+      "changes": [
+        "Trimmed 0-7 'Problem?' to 0-3 (was 7s for 1 word)",
+        "A: Split 16.6-22.12 'Here we go / We don't have Thai food / We have pizza' into 3 sentences",
+        "A: Split 22.12-27.08 long clause 'Yes, but we all agreed...' into 2",
+        "A: Split 35.4-41.16 multi-sent (rut speech + 'Rut?') into 2"
+      ]
+    },
+    "R4rpG-dipYA": {
+      "changed": true,
+      "segsBefore": 19,
+      "segsAfter": 20,
+      "changes": [
+        "A: Split 25-29 'Know the slang... So let's start.' into 2 sentences"
+      ]
+    },
+    "R6LrS9KGSiM": {
+      "changed": true,
+      "segsBefore": 15,
+      "segsAfter": 14,
+      "changes": [
+        "H: Removed music-only seg 31-48"
+      ]
+    },
+    "r6XF_-gDV3E": {
+      "changed": true,
+      "segsBefore": 6,
+      "segsAfter": 8,
+      "changes": [
+        "A: Split 8-12 multi-sent (she'll find you + don't worry) into 2",
+        "A: Split 17-21 multi-sent (mercury + I'm good) into 2"
+      ]
+    },
+    "r7qovpFAGrQ": {
+      "changed": false,
+      "segsBefore": 17,
+      "segsAfter": 17,
+      "reason": "Lyrics (Rule I) - Old Town Road, all lyric lines kept as-is"
+    },
+    "r7voxxo9rj8": {
+      "changed": false,
+      "segsBefore": 8,
+      "segsAfter": 8,
+      "reason": "Lyrics (Rule I) - all segments are lyric lines, kept as-is"
+    },
+    "R8VswzDwS0c": {
+      "changed": true,
+      "segsBefore": 11,
+      "segsAfter": 21,
+      "changes": [
+        "A: Split 30-33 'I'm not your kid / You said Chicago' into 2",
+        "A: Split 33.86-36.62 'My daughter can't see me / She's going skiing' into 2",
+        "A: Split 38.24-43.22 multi-sent (You said / You're lying / She was 4) into 3",
+        "A: Split 44.06-48.5 'My wife's been remarried / I see Grace' into 2",
+        "A: Split 49.84-54.96 (I don't understand / Sure you do / easier to live) into 3",
+        "Fix: Added punctuation to unpunctuated dialogue lines",
+        "A: Split 62.22-67.34 (I'm not going to stop / I know you'll be back) into 2",
+        "A: Split 68.22-74.08 'How do you know / Look...' into 2"
+      ]
+    },
+    "R8WDDLi_j7Y": {
+      "changed": true,
+      "segsBefore": 13,
+      "segsAfter": 14,
+      "changes": [
+        "A: Split 20-27 multi-sent (white boy leave + How you been) into 2"
+      ]
+    },
+    "rArzMrhTxF8": {
+      "changed": false,
+      "segsBefore": 13,
+      "segsAfter": 13,
+      "reason": "All dialogue segments 2-5s, well-segmented (Breaking Bad)"
+    },
+    "RaS_WXQ9QK0": {
+      "changed": true,
+      "segsBefore": 13,
+      "segsAfter": 13,
+      "changes": [
+        "Fix: Corrected broken ko split on 77.76-81.96 (Cuckoo-ca-chaa / What are you doing / Michael and Wim)"
+      ]
+    },
+    "RaZQuvBB9SQ": {
+      "changed": false,
+      "segsBefore": 1,
+      "segsAfter": 1,
+      "reason": "Single fragment 'the baby with' (0-2s, Rule B) - kept as-is"
+    },
+    "R-BnCN5MGk0": {
+      "changed": true,
+      "segsBefore": 21,
+      "segsAfter": 28,
+      "changes": [
+        "A: Split 9.8-14.2 'When Anne's away / The vote is in an hour' into 2",
+        "A: Split 14.2-17.8 'emergency strategy session / What about the perm?' into 2",
+        "A: Split 49-53.5 'control animals with my mind / Get out' into 2",
+        "A: Split 51.6-58.48 'This is priceless / Come on these aren't even birds' into 2",
+        "A: Split 61-65 'You overcook chicken, also jail / Undercook, overcook' into 2",
+        "A: Split 71.08-77.36 multi-sent (Why does everybody / Because chicken / Cuckoo) into 3"
+      ]
+    },
+    "RbTFArgiP_4": {
+      "changed": false,
+      "segsBefore": 16,
+      "segsAfter": 16,
+      "reason": "Lyrics (Rule I) - Mean Girls musical, lyric lines kept as-is"
+    },
+    "RBumgq5yVrA": {
+      "changed": true,
+      "segsBefore": 1,
+      "segsAfter": 2,
+      "changes": [
+        "A: Split 30-67 multi-sent (Are you still there? / thank you) into 2, adjusted timing for sparse speech"
+      ]
+    },
+    "RC7hZY3sVxE": {
+      "changed": true,
+      "segsBefore": 18,
+      "segsAfter": 22,
+      "changes": [
+        "A: Split 13-17 (I just can't believe this / Hey Dad keep voice down) into 2",
+        "A: Split 41-45 (Always been a whore / I called Dennis / No I'm not gonna be) into 2",
+        "A: Split 51-55 (got a problem? / makes me seem like / You are a whore) into 3"
+      ]
+    },
+    "RcGyVTAoXEU": {
+      "changed": false,
+      "segsBefore": 19,
+      "segsAfter": 19,
+      "reason": "TED talk - all segments 2-5s, well-segmented after automated pass"
+    },
+    "RcpEeWgIVjw": {
+      "changed": true,
+      "segsBefore": 12,
+      "segsAfter": 13,
+      "changes": [
+        "A: Split 51-55 'That's Calvin Klein. Oh my God, he's a dream.' into 2"
+      ]
+    },
+    "rd-0LtV5Axo": {
+      "changed": false,
+      "segsBefore": 18,
+      "segsAfter": 18,
+      "reason": "Lyrics (Rule I) - all segments are lyric lines, kept as-is"
+    },
+    "RDocnbkHjhI": {
+      "changed": true,
+      "segsBefore": 8,
+      "segsAfter": 12,
+      "changes": [
+        "C: Split 20-27 long seg at clause into 2 (courtesy + Mean Tweets intro merged)",
+        "A: Split 31.04-45.04 tweet reading into sentence parts",
+        "Fix: Fixed bad abbreviation split on 'R.W.'s surfer girl'",
+        "A: Split 62.72-69.72 'Coors Light / Thanks Obama' into 2",
+        "A: Split 72.72-79.72 'eyes light up / flashlight / pretty good' into 3"
+      ]
+    },
+    "RDrfE9I8_hs": {
+      "changed": true,
+      "segsBefore": 12,
+      "segsAfter": 14,
+      "changes": [
+        "A: Split 17.88-22.6 multi-sent (correspondence China / You take China) into 2",
+        "A: Split 52.5-57.16 multi-sent (buy from China / China China China) into 2"
+      ]
+    },
+    "-rDTRuCOs9g": {
+      "changed": false,
+      "segsBefore": 17,
+      "segsAfter": 17,
+      "reason": "All dialogue segments 2-4s, well-segmented (Devil Wears Prada)"
+    },
+    "re5veV2F7eY": {
+      "changed": true,
+      "segsBefore": 21,
+      "segsAfter": 23,
+      "changes": [
+        "A: Split 22-27 'Homeschooled interesting / Thanks you're pretty' into 2",
+        "A: Split 27-32 'Thank you. You agree / What? You think you're pretty' into 2"
+      ]
+    },
+    "RESwG23_YGw": {
+      "changed": true,
+      "segsBefore": 10,
+      "segsAfter": 10,
+      "changes": [
+        "Fix: Merged back broken split 'Fine, of course, I... / Of course.' with broken ko, fixed ko text"
+      ]
+    },
+    "-RfLt0HiOvw": {
+      "changed": false,
+      "segsBefore": 11,
+      "segsAfter": 11,
+      "reason": "Lyrics (Rule I) - See You Again, all lyric lines kept as-is"
+    },
+    "RFm9ClqlGuo": {
+      "changed": true,
+      "segsBefore": 17,
+      "segsAfter": 18,
+      "changes": [
+        "A: Split 29-36 'I didn't have to / Who's Jeremy Baramy' into 2",
+        "A: Split 82.2-86.52 'It's Jeremy Baramy / I don't know what to tell you' into 2"
+      ]
+    },
+    "RG3-n9ABoLA": {
+      "changed": false,
+      "segsBefore": 10,
+      "segsAfter": 10,
+      "reason": "Lyrics (Rule I) - Mean Girls musical 'Apex Predator', lyric lines kept as-is"
+    },
+    "rGa-cKqXGmk": {
+      "changed": true,
+      "segsBefore": 8,
+      "segsAfter": 14,
+      "changes": [
+        "A: Split 9-16 long multi-sent (I'm so sorry / tell me / I'm sorry x4) into 2 parts",
+        "A: Split 30-37 (sorry / let me make it up) into 2 parts",
+        "A: Split 46.6-51.52 'It's over. What is.' / 'It's over. What.' into 2",
+        "A: Split 55.1-61.7 multi-sent (I'm done / Nobody showed up / So what?) into 3",
+        "A: Split 65.34-69.68 (go home / see you tomorrow / going home home) into 3"
+      ]
+    },
+    "RgKAFK5djSk": {
+      "changed": false,
+      "segsBefore": 11,
+      "segsAfter": 11,
+      "reason": "Lyrics (Rule I) - See You Again, all lyric lines kept as-is"
+    },
+    "rgXESVtWX3U": {
+      "changed": true,
+      "segsBefore": 22,
+      "segsAfter": 24,
+      "changes": [
+        "A: Split 44-51 multi-sent ($3.64 / That doesn't look right / That's right Artie) into 2",
+        "A: Split 82-89 'weed and strip clubs / on-base percentage' into 2",
+        "Fix: Removed duplicate stuttered 'Well, his on-base percentage' text"
+      ]
+    }
+  }
+}
