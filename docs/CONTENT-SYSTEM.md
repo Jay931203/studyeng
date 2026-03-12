@@ -140,6 +140,84 @@ npm run transcripts:check
 - 빠른 대화 판단: "Ow! Stop!" — 감탄사 연속인지, 독립 문장인지 문맥 판단
 - 노래 vs 대화 구분: 같은 텍스트라도 노래 가사와 대화는 다른 규칙 적용
 
+## Subtitle Processing Pipeline (재현 가능한 파이프라인)
+
+새 영상을 추가하거나 기존 영상 자막을 재처리할 때 아래 순서를 따른다.
+
+### Step 1: Whisper 전사 (영어)
+
+- **도구**: Groq Whisper API (`whisper-large-v3`) 또는 OpenAI Whisper API
+- **스크립트**: `scripts/whisper-regenerate.mjs`
+- **입력**: YouTube ID → yt-dlp로 오디오 다운로드 → Whisper 전사
+- **출력**: `public/transcripts/{youtubeId}.json` (`[{start, end, en, ko:""}]`)
+- **이력 관리**: `scripts/whisper-manifest.json`에 처리 완료 기록 (중복 방지)
+- **주의**: YouTube 자막에 의존하지 않는다. 반드시 Whisper 사용.
+
+### Step 2: 한글 번역
+
+- **도구**: Claude 에이전트 (직접 번역) 또는 OpenAI (`gpt-4o-mini`)
+- **스크립트**: `scripts/generate-transcripts.mjs` (Claude) / `scripts/translate-transcripts-openai.mjs` (OpenAI)
+- **동작**: `ko` 필드가 비어있는 세그먼트만 번역
+- **주의**: Groq LLM 번역 사용 금지 (외국어 혼입 문제)
+
+### Step 3: 재세그멘테이션 (AI 에이전트)
+
+> 스크립트가 아닌 AI 에이전트로 처리. 문장 경계 판단, 약어 구분, ko 분리 등 맥락 판단 필요.
+
+- **규칙**: 위 "Subtitle Segmentation Rules" 섹션의 Cases A-I 적용
+- **실행 방법**:
+  1. 대상 파일 목록 확보 (audit 스크립트로 multi-sentence / punctuation 이슈 탐지)
+  2. 5개 이하 에이전트에 배치 분배 (에이전트당 7-8파일)
+  3. 에이전트 프롬프트에 Cases A-I 전체 규칙 + 타이밍/ko 분리 규칙 포함
+  4. 결과 검토: 에이전트가 보수적으로 처리한 케이스 확인 (특히 짧은 문장 그룹핑)
+- **audit 스크립트**: `scripts/audit-shorts.mjs` (파일 목록만 바꾸면 범용 사용 가능)
+- **주의사항**:
+  - 에이전트가 "1.5초 미만이라 안 쪼갰다"고 하면 → 2-3문장씩 그룹핑하도록 재지시
+  - 한 번에 5개 에이전트까지만 (플랫폼 제한)
+  - 처리 후 반드시 Step 4~6 수행
+
+### Step 4: Expression Index 리빌드
+
+- **스크립트**: `scripts/rebuild-expression-index.mjs`
+- **동작**: 세그멘테이션 변경으로 sentenceIdx가 어긋난 expression-index-v2.json을 재매핑
+- **매칭 전략** (4단계 fallback):
+  1. Exact match: 이전 en 텍스트 === 현재 세그먼트 en
+  2. Substring match: 이전 en이 현재 세그먼트의 부분문자열 (병합 케이스)
+  3. Reverse substring: 현재 세그먼트가 이전 en의 부분문자열 (분할 케이스)
+  4. Canonical match: expression의 canonical form이 세그먼트에 포함
+- **실행**: `node scripts/rebuild-expression-index.mjs` (--dry-run으로 먼저 확인 가능)
+
+### Step 5: 타이밍 검증 & 수정
+
+- **검증 항목**:
+  - overlap: 현재 세그먼트 start < 이전 세그먼트 end
+  - bad order: 세그먼트 start >= end
+  - gap: 인접 세그먼트 간 2초 초과 gap
+- **수정 방법**: overlap 발견 시 현재 세그먼트 start를 이전 세그먼트 end로 snap
+- **검증 스크립트**: Node one-liner로 전체 파일 스캔 (파이프라인 실행 시 매번 확인)
+
+### Step 6: QA Audit
+
+- **검증**: audit 스크립트 재실행으로 잔여 이슈 확인
+  - multi-sentence 세그먼트 잔여 수
+  - 구두점 누락 잔여 수
+  - ko 번역 누락 수
+- **기준**: 잔여 multi-sentence는 Case B (≤3초 빠른 대화)만 허용
+
+### Step 7: Git Push
+
+- **순서**: `git add public/transcripts/ src/data/expression-index-v2.json` → commit → push
+- **주의**: `git add public/transcripts/` (디렉토리 단위, glob 사용 시 argument list too long 에러)
+
+### Pipeline 적용 범위
+
+| 대상 | Step 1 | Step 2 | Step 3 | Step 4 | Step 5 | Step 6 | Step 7 |
+|------|--------|--------|--------|--------|--------|--------|--------|
+| 신규 영상 (clip) | O | O | O | O | O | O | O |
+| 신규 영상 (shorts) | O | O | O | O | O | O | O |
+| 기존 영상 자막 수정 | - | - | O | O | O | O | O |
+| expression 사전 변경 | - | - | - | O | - | - | O |
+
 ## 운영 원칙
 
 - Whisper가 이미 기록된 `youtubeId`는 다시 돌리지 않는다.
