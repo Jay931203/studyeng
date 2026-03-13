@@ -13,6 +13,7 @@ interface Expression {
   sentenceKo: string
   start?: number
   end?: number
+  exprId?: string
 }
 
 interface PrimingCardProps {
@@ -20,6 +21,8 @@ interface PrimingCardProps {
   onDismiss: () => void
   onPlaySegment?: (start: number, end: number) => void
   videoTitle?: string
+  onMarkFamiliar?: (exprId: string) => void
+  familiarCounts?: Record<string, number>
 }
 
 const AUTO_START_COUNTDOWN_MS = 5000
@@ -55,30 +58,40 @@ function ExpressionCard({
   index,
   onInteract,
   onPlaySegment,
+  onMarkFamiliar,
+  familiarCount,
 }: {
   expr: Expression
   index: number
   onInteract?: () => void
   onPlaySegment?: (start: number, end: number) => void
+  onMarkFamiliar?: (exprId: string) => void
+  familiarCount?: number
 }) {
   const [flipped, setFlipped] = useState(false)
   const [playing, setPlaying] = useState(false)
+  const initialCount = familiarCount ?? 0
+  const [currentCount, setCurrentCount] = useState(initialCount)
+  const [dismissed, setDismissed] = useState(false)
   const cefrColor = getCefrColor(expr.cefr)
   const categoryLabel = CATEGORY_LABELS[expr.category] ?? expr.category
 
   return (
     <motion.div
       key={`${expr.canonical}-${index}`}
-      className="cursor-pointer"
+      className="cursor-pointer overflow-hidden"
       style={{ perspective: 800 }}
       initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{
-        delay: 0.1 + index * 0.08,
-        type: 'spring',
-        stiffness: 360,
-        damping: 30,
-      }}
+      animate={
+        dismissed
+          ? { height: 0, opacity: 0, marginTop: 0, marginBottom: 0 }
+          : { y: 0, opacity: 1 }
+      }
+      transition={
+        dismissed
+          ? { duration: 0.3, ease: 'easeInOut' }
+          : { delay: 0.1 + index * 0.08, type: 'spring', stiffness: 360, damping: 30 }
+      }
       onClick={(e) => {
         e.stopPropagation()
         onInteract?.()
@@ -127,12 +140,40 @@ function ExpressionCard({
             >
               {expr.cefr.toUpperCase()}
             </span>
-            <span
-              className="ml-auto text-[10px]"
-              style={{ color: 'rgba(255, 255, 255, 0.3)' }}
+            <button
+              type="button"
+              className="ml-auto flex items-center gap-1 rounded-full px-2 py-1 transition-all"
+              style={{
+                backgroundColor: 'rgba(255, 255, 255, 0.06)',
+              }}
+              onClick={(e) => {
+                e.stopPropagation()
+                onInteract?.()
+                if (currentCount >= 3) return
+                const newCount = currentCount + 1
+                setCurrentCount(newCount)
+                onMarkFamiliar?.(expr.exprId || expr.canonical)
+                if (newCount >= 3) {
+                  setTimeout(() => setDismissed(true), 400)
+                }
+              }}
+              aria-label="익숙해요"
+              title="익숙해요"
             >
-              tap
-            </span>
+              {[0, 1, 2].map((i) => (
+                <span
+                  key={i}
+                  className="inline-block h-[6px] w-[6px] rounded-full transition-all duration-300"
+                  style={{
+                    backgroundColor:
+                      i < currentCount
+                        ? '#4ade80'
+                        : 'rgba(255, 255, 255, 0.15)',
+                    transform: i < currentCount ? 'scale(1.2)' : 'scale(1)',
+                  }}
+                />
+              ))}
+            </button>
           </div>
         </div>
 
@@ -204,6 +245,8 @@ export function PrimingCard({
   onDismiss,
   onPlaySegment,
   videoTitle,
+  onMarkFamiliar,
+  familiarCounts,
 }: PrimingCardProps) {
   const visible = expressions.length > 0
   const displayExpressions = expressions.slice(0, 3)
@@ -341,6 +384,8 @@ export function PrimingCard({
                   index={index}
                   onInteract={pauseAutoStart}
                   onPlaySegment={handlePreviewSegment}
+                  onMarkFamiliar={onMarkFamiliar}
+                  familiarCount={familiarCounts?.[expr.exprId || expr.canonical] ?? 0}
                 />
               ))}
             </div>

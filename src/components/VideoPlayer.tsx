@@ -19,7 +19,9 @@ import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useSettingsStore } from '@/stores/useSettingsStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
-import { getPrimingExpressions } from '@/lib/expressionLookup'
+import { getSmartPrimingExpressions } from '@/lib/expressionLookup'
+import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
+import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { triggerHaptic } from '@/lib/haptic'
 import { LyricsSubtitles } from './LyricsSubtitles'
 import { PrimingCard } from './PrimingCard'
@@ -136,10 +138,13 @@ export function VideoPlayer({
 
   // --- Priming card: show key expressions before video plays ---
   const primingEnabled = useSettingsStore((state) => state.primingEnabled)
+  const userLevel = useOnboardingStore((state) => state.level)
+  const familiarExprs = useFamiliarityStore((state) => state.entries)
+  const markFamiliar = useFamiliarityStore((state) => state.markFamiliar)
   const primingExpressions = useMemo(() => {
     if (!primingEnabled || !youtubeId) return []
-    return getPrimingExpressions(youtubeId, 3)
-  }, [primingEnabled, youtubeId])
+    return getSmartPrimingExpressions(youtubeId, userLevel, familiarExprs, 3)
+  }, [primingEnabled, youtubeId, userLevel, familiarExprs])
 
   const videoSessionKey = `${videoId ?? 'video'}:${youtubeId}`
   const [dismissedPrimingKey, setDismissedPrimingKey] = useState<string | null>(null)
@@ -500,6 +505,7 @@ export function VideoPlayer({
       expressions={primingExpressions.map((ve) => {
         const sub = subtitles.find((s) => s.en === ve.sentence.en)
         return {
+          exprId: ve.expression.id,
           canonical: ve.expression.canonical,
           meaning_ko: ve.expression.meaning_ko,
           category: ve.expression.category,
@@ -511,6 +517,10 @@ export function VideoPlayer({
         }
       })}
       onDismiss={handlePrimingDismiss}
+      onMarkFamiliar={markFamiliar}
+      familiarCounts={Object.fromEntries(
+        Object.entries(familiarExprs).map(([k, v]) => [k, v.count])
+      )}
       onPlaySegment={(start, end) => {
         seekTo(start)
         play()

@@ -203,3 +203,97 @@ export function getPrimingExpressions(
 
   return unique.slice(0, count);
 }
+
+// ---------------------------------------------------------------------------
+// Smart priming (level-aware + familiarity-aware)
+// ---------------------------------------------------------------------------
+
+const LEVEL_CEFR_RANGE: Record<string, string[]> = {
+  beginner: ["A1", "A2", "B1"],
+  intermediate: ["A2", "B1", "B2"],
+  advanced: ["B2", "C1", "C2"],
+};
+
+/**
+ * Smart priming that considers user level and familiarity.
+ *
+ * Expressions are scored (lower = higher priority):
+ *   - Level match bonus:   -200 if expression CEFR falls within user's range
+ *   - learner_value:       essential=0, useful=100, enrichment=200
+ *   - category:            idiom=0 … filler=8
+ *   - Familiarity penalty: count >= 3 → +1000, count 1-2 → +300
+ *
+ * Deduplication: one expression per sentence (best score wins), then one
+ * occurrence per expression id (first wins).
+ *
+ * @param videoId        YouTube video ID
+ * @param userLevel      'beginner' | 'intermediate' | 'advanced'
+ * @param familiarExprs  Record<exprId, { count: number }> from familiarity store
+ * @param count          Max expressions to return (default 3)
+ */
+export function getSmartPrimingExpressions(
+  videoId: string,
+  userLevel: "beginner" | "intermediate" | "advanced",
+  familiarExprs: Record<string, { count: number }>,
+  count: number = 3,
+): VideoExpression[] {
+  const all = getExpressionsForVideo(videoId);
+  if (all.length === 0) return [];
+
+  const allowedCefr = new Set(LEVEL_CEFR_RANGE[userLevel] ?? LEVEL_CEFR_RANGE.intermediate);
+
+  function smartScore(ve: VideoExpression): number {
+    const entry = ve.expression;
+
+    // Base: learner_value + category
+    const valueRank = LEARNER_VALUE_ORDER[entry.learner_value] ?? 9;
+    const categoryRank = CATEGORY_ORDER[entry.category] ?? 9;
+    let score = valueRank * 100 + categoryRank;
+
+    // Level match bonus
+    if (allowedCefr.has(entry.cefr.toUpperCase())) {
+      score -= 200;
+    }
+
+    // Familiarity penalty
+    const familiar = familiarExprs[entry.id];
+    if (familiar) {
+      if (familiar.count >= 3) {
+        score += 1000;
+      } else if (familiar.count >= 1) {
+        score += 300;
+      }
+    }
+
+    return score;
+  }
+
+  // Deduplicate by sentenceIdx: keep the best-scored expression per sentence
+  const bestBySentence = new Map<number, { ve: VideoExpression; score: number }>();
+
+  for (const ve of all) {
+    const idx = ve.sentence.sentenceIdx;
+    const score = smartScore(ve);
+    const existing = bestBySentence.get(idx);
+    if (!existing || score < existing.score) {
+      bestBySentence.set(idx, { ve, score });
+    }
+  }
+
+  const deduped = Array.from(bestBySentence.values());
+  deduped.sort((a, b) => {
+    if (a.score !== b.score) return a.score - b.score;
+    return a.ve.sentence.sentenceIdx - b.ve.sentence.sentenceIdx;
+  });
+
+  // Deduplicate by expression id: same expression in different sentences → keep first
+  const seenExprIds = new Set<string>();
+  const unique: VideoExpression[] = [];
+  for (const { ve } of deduped) {
+    if (seenExprIds.has(ve.expression.id)) continue;
+    seenExprIds.add(ve.expression.id);
+    unique.push(ve);
+  }
+
+  return unique.slice(0, count);
+}
