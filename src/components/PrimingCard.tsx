@@ -138,8 +138,8 @@ function ExpressionCard({
                   className="inline-block h-[5px] w-[5px] rounded-full transition-colors duration-300"
                   style={{
                     backgroundColor: i < count
-                      ? '#4ade80'
-                      : 'rgba(255, 255, 255, 0.12)',
+                      ? 'var(--accent-text, #5eead4)'
+                      : 'rgba(255, 255, 255, 0.25)',
                   }}
                 />
               ))}
