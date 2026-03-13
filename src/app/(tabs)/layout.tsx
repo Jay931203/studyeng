@@ -101,7 +101,13 @@ export default function TabsLayout({
         }`}
       >
         {isImmersiveRoute && isLandscapeViewport && (
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-40 flex items-center pl-3">
+          <div
+            className="absolute z-40"
+            style={{
+              left: 'max(12px, calc(env(safe-area-inset-left, 0px) + 8px))',
+              top: 'max(12px, calc(env(safe-area-inset-top, 0px) + 64px))',
+            }}
+          >
             <LandscapeFeedSwitcher />
           </div>
         )}
