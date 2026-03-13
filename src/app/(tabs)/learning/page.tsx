@@ -22,7 +22,6 @@ import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useLevelStore, getLevelGaugeProgress } from '@/stores/useLevelStore'
 import { useLevelChallengeStore } from '@/stores/useLevelChallengeStore'
 import { LEVEL_LABELS, CEFR_ORDER, displayLevelName } from '@/types/level'
-import type { CefrLevel } from '@/types/level'
 
 const categoryLabels = Object.fromEntries(
   categories.map((category) => [category.id, category.label]),
