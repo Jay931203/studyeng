@@ -15,6 +15,7 @@ import { usePhraseStore } from '@/stores/usePhraseStore'
 import { usePlayerStore } from '@/stores/usePlayerStore'
 import { usePremiumStore } from '@/stores/usePremiumStore'
 import { useRecommendationStore } from '@/stores/useRecommendationStore'
+import { useLevelStore } from '@/stores/useLevelStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { AdminReportButton } from './AdminReportButton'
@@ -488,6 +489,14 @@ export function VideoFeed({
       recordCompletion(currentVideo.id)
       checkAndUpdateStreak()
       incrementMission('watch-videos')
+
+      // Award video XP (absorption) + visible reward XP
+      const levelStore = useLevelStore.getState()
+      const videoXP = levelStore.awardVideoXP(currentVideo.id, 1.0)
+      levelStore.recordVideoCompletion(currentVideo.id, 1.0)
+      if (videoXP > 0) {
+        useUserStore.getState().gainXp(Math.round(videoXP))
+      }
     }
 
     if (repeatMode === 'off') return

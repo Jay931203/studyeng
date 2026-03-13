@@ -16,13 +16,14 @@ import { useTranscript } from '@/hooks/useTranscript'
 import { useGameTrigger } from '@/hooks/useGameTrigger'
 import { usePlayerStore, seekToRef, playRef, pauseRef } from '@/stores/usePlayerStore'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
-import { useUserStore } from '@/stores/useUserStore'
+import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useSettingsStore } from '@/stores/useSettingsStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { getSmartPrimingExpressions } from '@/lib/expressionLookup'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { triggerHaptic } from '@/lib/haptic'
+import { trackEvent, AnalyticsEvents } from '@/lib/analytics'
 import { LyricsSubtitles } from './LyricsSubtitles'
 import { PrimingCard } from './PrimingCard'
 import { ProgressBar } from './ProgressBar'
@@ -302,8 +303,9 @@ export function VideoPlayer({
   useEffect(() => {
     if (!playbackStarted || playbackStartedNotifiedRef.current) return
     playbackStartedNotifiedRef.current = true
+    trackEvent(AnalyticsEvents.VIDEO_WATCH_COMPLETE, { video_id: youtubeId })
     onPlaybackStarted?.()
-  }, [onPlaybackStarted, playbackStarted])
+  }, [onPlaybackStarted, playbackStarted, youtubeId])
 
   useEffect(() => {
     playbackStartedNotifiedRef.current = false
@@ -377,7 +379,7 @@ export function VideoPlayer({
     answerGame(choiceIndex)
     const isCorrect = choiceIndex === gameCorrectIndex
     if (isCorrect) {
-      useUserStore.getState().gainXp(10)
+      useGameProgressStore.getState().addGameXP(10)
     }
     useDailyMissionStore.getState().incrementMission('play-game')
   }

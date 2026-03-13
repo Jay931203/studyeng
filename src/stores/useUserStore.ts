@@ -9,11 +9,13 @@ interface UserState {
   streakDays: number
   lastActivityDate: string | null // ISO string, persisted
   showLevelUp: boolean
+  totalXpEarned: number // lifetime reward XP earned (never resets on level-up)
 
   setUser: (data: { level: number; xp: number; streakDays: number }) => void
   gainXp: (amount: number) => void
   checkAndUpdateStreak: () => void
   dismissLevelUp: () => void
+  getTotalXP: () => number
 }
 
 export const useUserStore = create<UserState>()(persist((set, get) => ({
@@ -22,6 +24,7 @@ export const useUserStore = create<UserState>()(persist((set, get) => ({
   streakDays: 0,
   lastActivityDate: null,
   showLevelUp: false,
+  totalXpEarned: 0,
 
   setUser: (data) => {
     set(data)
@@ -29,18 +32,21 @@ export const useUserStore = create<UserState>()(persist((set, get) => ({
   },
 
   gainXp: (amount) => {
-    const { level, xp } = get()
+    if (amount <= 0) return
+    const { level, xp, totalXpEarned } = get()
     const xpForLevel = level * 100
     const newXp = xp + amount
+    const newTotal = totalXpEarned + amount
 
     if (newXp >= xpForLevel) {
       set({
         level: level + 1,
         xp: newXp - xpForLevel,
         showLevelUp: true,
+        totalXpEarned: newTotal,
       })
     } else {
-      set({ xp: newXp })
+      set({ xp: newXp, totalXpEarned: newTotal })
     }
     debouncedSyncProfile()
   },
@@ -70,4 +76,22 @@ export const useUserStore = create<UserState>()(persist((set, get) => ({
   },
 
   dismissLevelUp: () => set({ showLevelUp: false }),
+
+  /**
+   * Returns total lifetime reward XP earned across all sources.
+   * This is the cumulative sum, not affected by level-up resets.
+   */
+  getTotalXP: () => {
+    const { totalXpEarned, level, xp } = get()
+    // If totalXpEarned is 0 but user has level/xp, compute from those (migration)
+    if (totalXpEarned === 0 && (level > 1 || xp > 0)) {
+      // Sum of XP required for all previous levels + current xp
+      let sum = 0
+      for (let i = 1; i < level; i++) {
+        sum += i * 100
+      }
+      return sum + xp
+    }
+    return totalXpEarned
+  },
 }), { name: 'studyeng-user' }))

@@ -104,6 +104,14 @@ export const useGameProgressStore = create<GameProgressState>()(
         if (actual > 0) {
           set({ dailyGameXP: current + actual, dailyGameXPDate: today })
         }
+
+        // Feed capped amount into visible reward XP
+        if (actual > 0) {
+          // Lazy import to avoid circular dependency at module level
+          const { useUserStore } = require('./useUserStore')
+          useUserStore.getState().gainXp(Math.round(actual))
+        }
+
         return actual
       },
 

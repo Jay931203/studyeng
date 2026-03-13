@@ -7,6 +7,7 @@ import { ViewingStats } from '@/components/ViewingStats'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useLevelStore, getLevelGaugeProgress } from '@/stores/useLevelStore'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
+import { useUserStore } from '@/stores/useUserStore'
 import expressionEntriesData from '@/data/expression-entries-v2.json'
 
 // ---------------------------------------------------------------------------
@@ -91,6 +92,15 @@ export default function StatsPage() {
   const rawScore = useLevelStore((s) => s.rawScore)
   const videoXP = useLevelStore((s) => s.videoXP)
   const familiarEntries = useFamiliarityStore((s) => s.entries)
+  const gameRewardXP = useUserStore((s) => {
+    // Use getTotalXP logic inline for reactivity
+    if (s.totalXpEarned === 0 && (s.level > 1 || s.xp > 0)) {
+      let sum = 0
+      for (let i = 1; i < s.level; i++) sum += i * 100
+      return sum + s.xp
+    }
+    return s.totalXpEarned
+  })
 
   const [showLevelPicker, setShowLevelPicker] = useState(false)
 
@@ -105,7 +115,7 @@ export default function StatsPage() {
   // XP breakdown
   const expressionXP = computeExpressionXP(familiarEntries)
   const totalVideoXP = Object.values(videoXP).reduce((sum, count) => sum + count * 3, 0)
-  const totalXP = Math.round((expressionXP + totalVideoXP) * 10) / 10
+  const totalXP = Math.round((expressionXP + totalVideoXP + gameRewardXP) * 10) / 10
 
   // CEFR breakdown
   const cefrCounts: Record<string, number> = {}
@@ -237,10 +247,16 @@ export default function StatsPage() {
               <p className="text-[11px] uppercase tracking-wide text-[var(--text-muted)]">Total XP</p>
               <p className="text-3xl font-bold text-[var(--text-primary)]">{totalXP}</p>
             </div>
-            <div className="mb-1 flex items-center gap-3 text-xs text-[var(--text-secondary)]">
+            <div className="mb-1 flex flex-wrap items-center gap-3 text-xs text-[var(--text-secondary)]">
               <span>Expressions {expressionXP}</span>
               <span className="text-[var(--text-muted)]">/</span>
               <span>Videos {totalVideoXP}</span>
+              {gameRewardXP > 0 && (
+                <>
+                  <span className="text-[var(--text-muted)]">/</span>
+                  <span>Rewards {gameRewardXP}</span>
+                </>
+              )}
             </div>
           </div>
 

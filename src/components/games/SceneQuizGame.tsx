@@ -3,7 +3,7 @@
 import { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { GameResult } from './GameResult'
-import { useUserStore } from '@/stores/useUserStore'
+import { useGameProgressStore } from '@/stores/useGameProgressStore'
 
 interface SceneQuizGameProps {
   subtitle: { en: string; ko: string }
@@ -108,7 +108,7 @@ export function SceneQuizGame({ subtitle, onComplete }: SceneQuizGameProps) {
   const question = useMemo(() => generateBlankQuestion(subtitle.en), [subtitle])
   const [selected, setSelected] = useState<string | null>(null)
   const [showResult, setShowResult] = useState(false)
-  const gainXp = useUserStore((s) => s.gainXp)
+  const addGameXP = useGameProgressStore((s) => s.addGameXP)
 
   const correctWord = question.blankedWords[question.correctIndex]
     .replace(/[^a-zA-Z']/g, '')
@@ -120,7 +120,7 @@ export function SceneQuizGame({ subtitle, onComplete }: SceneQuizGameProps) {
     if (selected) return
     setSelected(option)
     if (option === correctWord) {
-      gainXp(10)
+      addGameXP(10)
     }
     setTimeout(() => setShowResult(true), 500)
   }

@@ -6,6 +6,7 @@ import { BottomNav, LandscapeFeedSwitcher } from '@/components/BottomNav'
 import { LogoFull } from '@/components/Logo'
 import { LoginGateModal } from '@/components/LoginGateModal'
 import { AdminActivator } from '@/components/AdminActivator'
+import { PushPermissionPrompt } from '@/components/PushPermissionPrompt'
 import { buildPathWithNext } from '@/lib/navigation'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
@@ -119,6 +120,9 @@ export default function TabsLayout({
       <LoginGateModal
         isOpen={showLoginGate}
         onClose={() => setDismissedGuestGateVersion(guestGateVersion)}
+      />
+      <PushPermissionPrompt
+        visible={watchedVideoIds.length >= 1}
       />
       <Suspense fallback={null}>
         <AdminActivator />

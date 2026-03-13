@@ -92,6 +92,12 @@ export const useDailyMissionStore = create<DailyMissionState>()(
           const newCurrent = Math.min(mission.current + amount, mission.target)
           const justCompleted = newCurrent >= mission.target && !mission.completed
 
+          // Award XP reward when mission is just completed
+          if (justCompleted && mission.xpReward > 0) {
+            const { useUserStore } = require('./useUserStore')
+            useUserStore.getState().gainXp(mission.xpReward)
+          }
+
           return {
             ...mission,
             current: newCurrent,
@@ -102,7 +108,10 @@ export const useDailyMissionStore = create<DailyMissionState>()(
         // Check if all missions are now complete for bonus
         const allDone = updatedMissions.every((m) => m.completed)
         if (allDone && !allCompleteBonus) {
-          // 올클리어 시 할인 스토어에 기록
+          // All-clear bonus: award 10 XP
+          const { useUserStore } = require('./useUserStore')
+          useUserStore.getState().gainXp(10)
+
           useDiscountStore.getState().recordDailyCompletion()
           set({ missions: updatedMissions, allCompleteBonus: true })
         } else {

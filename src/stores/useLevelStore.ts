@@ -57,11 +57,11 @@ interface VideoCompletionEntry {
 }
 
 interface LevelState {
-  // Absorption Score
+  // Absorption Score (expression-based only)
   absorptionScore: number
   rawScore: number
 
-  // Video watching XP
+  // Video watching XP (tracked separately, adds to rawScore)
   videoXP: Record<string, number>
 
   // Level history
@@ -85,6 +85,10 @@ interface LevelState {
   declineLevelUp: () => void
   checkLevelUp: (currentLevel: 'beginner' | 'intermediate' | 'advanced') => void
   addManualLevelChange: (from: 'beginner' | 'intermediate' | 'advanced', to: 'beginner' | 'intermediate' | 'advanced', score: number, count: number) => void
+
+  // Getters
+  getVideoXPTotal: () => number
+  getTotalAbsorptionXP: () => number
 }
 
 // ---------------------------------------------------------------------------
@@ -93,7 +97,7 @@ interface LevelState {
 
 const expressionEntries = expressionEntriesData as Record<string, { cefr: string; category: string }>
 
-function computeRawScore(familiarEntries: Record<string, { count: number }>): number {
+function computeExpressionAbsorption(familiarEntries: Record<string, { count: number }>): number {
   let raw = 0
 
   for (const [exprId, entry] of Object.entries(familiarEntries)) {
@@ -114,6 +118,9 @@ function computeRawScore(familiarEntries: Record<string, { count: number }>): nu
 
   return raw
 }
+
+/** @deprecated Use computeExpressionAbsorption instead — kept for backward compat */
+const computeRawScore = computeExpressionAbsorption
 
 function getRecentCompletionRate(log: VideoCompletionEntry[]): number {
   if (log.length === 0) return 0
@@ -184,7 +191,12 @@ export const useLevelStore = create<LevelState>()(
       setHydrated: (h) => set({ hydrated: h }),
 
       recalculateScore: (familiarEntries) => {
-        const raw = computeRawScore(familiarEntries)
+        const expressionAbsorption = computeExpressionAbsorption(familiarEntries)
+
+        // rawScore = expression absorption + cumulative video XP
+        const videoXPTotal = get().getVideoXPTotal()
+        const raw = expressionAbsorption + videoXPTotal
+
         const normalized = Math.min((raw / 500) * 100, 100)
         set({ rawScore: raw, absorptionScore: normalized })
       },
@@ -197,13 +209,21 @@ export const useLevelStore = create<LevelState>()(
         const xpGained = completionRate >= 0.8 ? 3 : Math.round(completionRate * 3 * 10) / 10
         if (xpGained <= 0) return 0
 
-        set((state) => ({
-          videoXP: {
+        set((state) => {
+          const newVideoXP = {
             ...state.videoXP,
             [videoId]: currentAwards + 1,
-          },
-          rawScore: state.rawScore + xpGained,
-        }))
+          }
+          // Recalculate rawScore with new video XP
+          const videoXPTotal = Object.values(newVideoXP).reduce((sum, count) => sum + count * 3, 0)
+          // We don't have familiarEntries here, so just add the delta to rawScore
+          const newRawScore = state.rawScore + xpGained
+
+          return {
+            videoXP: newVideoXP,
+            rawScore: newRawScore,
+          }
+        })
 
         return xpGained
       },
@@ -261,11 +281,6 @@ export const useLevelStore = create<LevelState>()(
         const { pendingLevelUp, rawScore, levelHistory } = get()
         if (!pendingLevelUp) return
 
-        const familiarCount = Object.keys(
-          // We can't call useFamiliarityStore here (circular), use rawScore as proxy
-          {}
-        ).length
-
         const event: LevelEvent = {
           timestamp: new Date().toISOString(),
           from: pendingLevelUp.from,
@@ -297,6 +312,16 @@ export const useLevelStore = create<LevelState>()(
         set((state) => ({
           levelHistory: [...state.levelHistory, event],
         }))
+      },
+
+      // Getters
+      getVideoXPTotal: () => {
+        const videoXP = get().videoXP
+        return Object.values(videoXP).reduce((sum, count) => sum + count * 3, 0)
+      },
+
+      getTotalAbsorptionXP: () => {
+        return get().rawScore
       },
     }),
     {

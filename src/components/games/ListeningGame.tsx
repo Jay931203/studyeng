@@ -3,7 +3,7 @@
 import { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { GameResult } from './GameResult'
-import { useUserStore } from '@/stores/useUserStore'
+import { useGameProgressStore } from '@/stores/useGameProgressStore'
 
 interface ListeningGameProps {
   currentSubtitle: { en: string; ko: string }
@@ -86,7 +86,7 @@ export function ListeningGame({
 
   const [selected, setSelected] = useState<string | null>(null)
   const [showResult, setShowResult] = useState(false)
-  const gainXp = useUserStore((s) => s.gainXp)
+  const addGameXP = useGameProgressStore((s) => s.addGameXP)
 
   const isCorrect = selected === nextSubtitle.en
   const xpEarned = isCorrect ? 10 : 0
@@ -95,7 +95,7 @@ export function ListeningGame({
     if (selected) return
     setSelected(choice)
     if (choice === nextSubtitle.en) {
-      gainXp(10)
+      addGameXP(10)
     }
     setTimeout(() => setShowResult(true), 500)
   }

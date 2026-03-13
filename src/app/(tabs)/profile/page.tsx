@@ -3,7 +3,10 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
+import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { AdminIssuesList } from '@/components/AdminIssuesList'
+import { DeleteAccountModal } from '@/components/DeleteAccountModal'
 import { BillingManagementCard } from '@/components/BillingManagementCard'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import { useAuth } from '@/hooks/useAuth'
@@ -67,7 +70,9 @@ function LegalLink({ href, label }: { href: string; label: string }) {
 }
 
 export default function ProfilePage() {
+  const router = useRouter()
   const { user, loading, authAvailable, signInWithGoogle, signInWithKakao, signOut } = useAuth()
+  const [showDeleteModal, setShowDeleteModal] = useState(false)
   const hapticEnabled = useSettingsStore((state) => state.hapticEnabled)
   const remoteEnabled = useSettingsStore((state) => state.remoteEnabled)
   const setHapticEnabled = useSettingsStore((state) => state.setHapticEnabled)
@@ -472,9 +477,30 @@ export default function ProfilePage() {
         </SurfaceCard>
       </div>
 
+      {user && (
+        <div className="mt-6">
+          <button
+            onClick={() => setShowDeleteModal(true)}
+            className="w-full rounded-2xl bg-[var(--bg-secondary)] py-3 text-sm font-medium text-red-400"
+          >
+            계정 삭제
+          </button>
+        </div>
+      )}
+
       <div className="mt-6">
         <AdminIssuesList />
       </div>
+
+      {showDeleteModal && (
+        <DeleteAccountModal
+          onClose={() => setShowDeleteModal(false)}
+          onDeleted={() => {
+            setShowDeleteModal(false)
+            router.replace('/login')
+          }}
+        />
+      )}
     </AppPage>
   )
 }

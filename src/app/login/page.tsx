@@ -7,6 +7,7 @@ import { Suspense, useEffect, useMemo } from 'react'
 import { Logo, LogoFull } from '@/components/Logo'
 import { useAuth } from '@/hooks/useAuth'
 import { getGuestContinuePath, sanitizeAppPath } from '@/lib/navigation'
+import { trackEvent } from '@/lib/analytics'
 
 function FeatureRow({
   title,
@@ -61,6 +62,7 @@ function LoginPageContent() {
 
   useEffect(() => {
     if (!loading && user) {
+      trackEvent('sign_up', { method: user.app_metadata?.provider ?? 'unknown' })
       router.replace(nextPath)
     }
   }, [loading, nextPath, router, user])

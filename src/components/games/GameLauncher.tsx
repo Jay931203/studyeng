@@ -12,6 +12,7 @@ import { type SubtitleEntry } from '@/data/seed-videos'
 import { catalogVideos } from '@/lib/catalog'
 import { createHiddenVideoIdSet, filterHiddenVideos } from '@/lib/videoVisibility'
 import { useAdminStore } from '@/stores/useAdminStore'
+import { trackEvent, AnalyticsEvents } from '@/lib/analytics'
 
 type GameType = 'scene-quiz' | 'listening' | 'expression-swipe' | 'listen-fill'
 type PhrasePair = {
@@ -145,6 +146,7 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
 
   const launchGame = (type: GameType) => {
     incrementMission('play-game')
+    trackEvent(AnalyticsEvents.GAME_PLAYED, { game_type: type })
     setActiveGame(type)
   }
 

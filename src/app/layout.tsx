@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Noto_Sans_KR, Space_Grotesk } from 'next/font/google'
 import { ThemeProvider } from '@/components/ThemeProvider'
+import { GoogleAnalytics } from '@/components/GoogleAnalytics'
 import './globals.css'
 
 const uiFont = Noto_Sans_KR({
@@ -37,11 +38,13 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'ko_KR',
     siteName: 'Shortee',
+    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'Shortee - Learn English with Shorts' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Shortee - 보다 보면 귀가 먼저 익숙해집니다',
     description: '짧은 장면과 반복으로 영어가 덜 낯설어지는 쇼츠 피드',
+    images: ['/og-image.png'],
   },
 }
 
@@ -142,6 +145,7 @@ export default function RootLayout({
         ` }} />
       </head>
       <body>
+        <GoogleAnalytics />
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

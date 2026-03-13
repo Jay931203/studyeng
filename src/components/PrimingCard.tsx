@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { AnimatePresence, motion, useMotionValue, useTransform, type PanInfo } from 'framer-motion'
 import { useSettingsStore } from '@/stores/useSettingsStore'
 import { triggerHaptic } from '@/lib/haptic'
+import { trackEvent, AnalyticsEvents } from '@/lib/analytics'
 
 interface Expression {
   canonical: string
@@ -325,6 +326,7 @@ export function PrimingCard({
       triggerHaptic([30, 20, 40])
       setDismissedIds((prev) => new Set([...prev, exprId]))
       onMarkFamiliar?.(exprId)
+      trackEvent(AnalyticsEvents.EXPRESSION_FAMILIAR, { expression: expr.canonical })
       // Pause auto start when user interacts
       setAutoStartEnabled(false)
     },
