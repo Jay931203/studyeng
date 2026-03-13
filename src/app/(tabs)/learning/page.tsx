@@ -8,10 +8,13 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { DailyMissions } from '@/components/DailyMissions'
 import { SavedPhraseCard } from '@/components/SavedPhraseCard'
 import { WatchHistory } from '@/components/WatchHistory'
+import { GameLauncher } from '@/components/games/GameLauncher'
 import { AppPage, MetricCard, SurfaceCard } from '@/components/ui/AppPage'
 import { categories } from '@/data/seed-videos'
 import { getCatalogSeriesById, getCatalogVideoById } from '@/lib/catalog'
+import { computeLearningXpSummary } from '@/lib/xpSummary'
 import { buildShortsUrl } from '@/lib/videoRoutes'
+import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useLikeStore } from '@/stores/useLikeStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useUserStore } from '@/stores/useUserStore'
@@ -33,17 +36,38 @@ export default function LearningPage() {
   const router = useRouter()
   const { phrases, removePhrase } = usePhraseStore()
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)
-  const watchedVideoIds = useWatchHistoryStore((state) => state.watchedVideoIds)
   const viewCounts = useWatchHistoryStore((state) => state.viewCounts)
   const streakDays = useUserStore((state) => state.streakDays)
+  const rewardLevel = useUserStore((state) => state.level)
+  const rewardXp = useUserStore((state) => state.xp)
+  const totalXpEarned = useUserStore((state) => state.totalXpEarned)
   const likes = useLikeStore((state) => state.likes)
   const level = useOnboardingStore((s) => s.level)
   const rawScore = useLevelStore((s) => s.rawScore)
+  const videoXp = useLevelStore((s) => s.videoXP)
+  const familiarityEntries = useFamiliarityStore((state) => state.entries)
 
-  const totalWatched = watchedVideoIds.length
   const totalViews = useMemo(
     () => Object.values(viewCounts).reduce((sum, count) => sum + count, 0),
     [viewCounts],
+  )
+  const levelProgress = getLevelGaugeProgress(rawScore, level)
+  const nextLevelLabel =
+    level === 'beginner'
+      ? LEVEL_LABELS.intermediate
+      : level === 'intermediate'
+        ? LEVEL_LABELS.advanced
+        : null
+  const xpSummary = useMemo(
+    () =>
+      computeLearningXpSummary({
+        familiarityEntries,
+        videoXp,
+        totalXpEarned,
+        level: rewardLevel,
+        xp: rewardXp,
+      }),
+    [familiarityEntries, rewardLevel, rewardXp, totalXpEarned, videoXp],
   )
 
   const likedVideos = useMemo(
@@ -58,42 +82,55 @@ export default function LearningPage() {
     <AppPage>
       <DailyMissions />
       <div className="mt-6 space-y-6">
-        {totalWatched > 0 && (
-          <SurfaceCard className="p-5">
-            <div className="mb-4 flex items-center justify-between gap-4">
-              <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-                STATS
-              </p>
-              <Link
-                href="/learning/stats"
-                className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
-              >
-                VIEW ALL
-              </Link>
-            </div>
+        <SurfaceCard className="p-5">
+          <div className="mb-4 flex items-center justify-between gap-4">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+              STATS
+            </p>
+            <Link
+              href="/learning/stats"
+              className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
+            >
+              VIEW ALL
+            </Link>
+          </div>
 
-            <div className="grid grid-cols-4 gap-3">
-              <div className="col-span-1 flex flex-col gap-1.5">
-                <MetricCard label="Level" value={LEVEL_LABELS[level]} className="text-center" />
-                <div className="h-[3px] w-full overflow-hidden rounded-full bg-[var(--border-card)]">
-                  <motion.div
-                    className="h-full rounded-full bg-[var(--accent-primary)]"
-                    initial={{ width: 0 }}
-                    animate={{ width: `${getLevelGaugeProgress(rawScore, level) * 100}%` }}
-                    transition={{ duration: 0.6, ease: 'easeOut' }}
-                  />
-                </div>
-              </div>
-              <MetricCard label="누적 시청" value={`${totalWatched}개`} className="text-center" />
-              <MetricCard label="저장 표현" value={`${phrases.length}개`} className="text-center" />
-              <MetricCard
-                label="연속 루프"
-                value={`${Math.max(streakDays, totalViews > 0 ? 1 : 0)}일`}
-                className="text-center"
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+            <MetricCard
+              label="영어 레벨"
+              value={LEVEL_LABELS[level]}
+              detail={nextLevelLabel ? `Next ${nextLevelLabel}` : 'MAX'}
+              tone="accent"
+              className="text-center"
+            />
+            <MetricCard label="XP" value={xpSummary.totalXp} className="text-center" />
+            <MetricCard label="저장 표현" value={`${phrases.length}개`} className="text-center" />
+            <MetricCard
+              label="연속 학습"
+              value={`${Math.max(streakDays, totalViews > 0 ? 1 : 0)}일`}
+              className="text-center"
+            />
+          </div>
+
+          <div className="mt-4">
+            <div className="mb-1.5 flex items-center justify-between gap-3 text-[11px] text-[var(--text-muted)]">
+              <span>LEVEL PROGRESS</span>
+              <span>
+                {nextLevelLabel ? `${Math.round(levelProgress * 100)}%` : 'MAX LEVEL'}
+              </span>
+            </div>
+            <div className="h-[4px] w-full overflow-hidden rounded-full bg-[var(--border-card)]">
+              <motion.div
+                className="h-full rounded-full bg-[var(--accent-primary)]"
+                initial={{ width: 0 }}
+                animate={{ width: `${levelProgress * 100}%` }}
+                transition={{ duration: 0.6, ease: 'easeOut' }}
               />
             </div>
-          </SurfaceCard>
-        )}
+          </div>
+        </SurfaceCard>
+
+        <GameLauncher phrases={phrases} />
 
         <SurfaceCard className="p-5">
           <div className="mb-4 flex items-center justify-between gap-4">

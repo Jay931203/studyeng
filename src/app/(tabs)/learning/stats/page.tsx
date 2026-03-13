@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import { ViewingStats } from '@/components/ViewingStats'
+import { computeLearningXpSummary } from '@/lib/xpSummary'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useLevelStore, getLevelGaugeProgress } from '@/stores/useLevelStore'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
@@ -51,40 +52,6 @@ const CATEGORY_LABELS: Record<string, string> = {
   filler: 'Filler',
 }
 
-// ---------------------------------------------------------------------------
-// XP Breakdown helpers
-// ---------------------------------------------------------------------------
-
-const CEFR_WEIGHTS: Record<string, number> = {
-  A1: 1, A2: 2, B1: 3, B2: 5, C1: 8, C2: 13,
-}
-
-const CATEGORY_MULTIPLIERS: Record<string, number> = {
-  idiom: 1.5, phrasal_verb: 1.4, collocation: 1.3,
-  fixed_expression: 1.2, sentence_frame: 1.2, discourse_marker: 1.2,
-  slang: 1.0, interjection: 1.0, exclamation: 1.0, filler: 0.8,
-}
-
-function computeExpressionXP(entries: Record<string, { count: number }>): number {
-  let total = 0
-  for (const [exprId, entry] of Object.entries(entries)) {
-    const data = expressionEntries[exprId]
-    if (!data) continue
-    const cefrW = CEFR_WEIGHTS[data.cefr?.toUpperCase()] ?? 1
-    const catM = CATEGORY_MULTIPLIERS[data.category] ?? 1.0
-    let progress = 0
-    if (entry.count >= 3) progress = 1.0
-    else if (entry.count === 2) progress = 0.6
-    else if (entry.count === 1) progress = 0.3
-    total += cefrW * catM * progress
-  }
-  return Math.round(total * 10) / 10
-}
-
-// ---------------------------------------------------------------------------
-// Component
-// ---------------------------------------------------------------------------
-
 export default function StatsPage() {
   const router = useRouter()
   const level = useOnboardingStore((s) => s.level)
@@ -92,15 +59,9 @@ export default function StatsPage() {
   const rawScore = useLevelStore((s) => s.rawScore)
   const videoXP = useLevelStore((s) => s.videoXP)
   const familiarEntries = useFamiliarityStore((s) => s.entries)
-  const gameRewardXP = useUserStore((s) => {
-    // Use getTotalXP logic inline for reactivity
-    if (s.totalXpEarned === 0 && (s.level > 1 || s.xp > 0)) {
-      let sum = 0
-      for (let i = 1; i < s.level; i++) sum += i * 100
-      return sum + s.xp
-    }
-    return s.totalXpEarned
-  })
+  const rewardLevel = useUserStore((s) => s.level)
+  const rewardXp = useUserStore((s) => s.xp)
+  const totalXpEarned = useUserStore((s) => s.totalXpEarned)
 
   const [showLevelPicker, setShowLevelPicker] = useState(false)
 
@@ -112,10 +73,17 @@ export default function StatsPage() {
     router.replace('/learning')
   }
 
-  // XP breakdown
-  const expressionXP = computeExpressionXP(familiarEntries)
-  const totalVideoXP = Object.values(videoXP).reduce((sum, count) => sum + count * 3, 0)
-  const totalXP = Math.round((expressionXP + totalVideoXP + gameRewardXP) * 10) / 10
+  const xpSummary = computeLearningXpSummary({
+    familiarityEntries: familiarEntries,
+    videoXp: videoXP,
+    totalXpEarned,
+    level: rewardLevel,
+    xp: rewardXp,
+  })
+  const expressionXP = xpSummary.expressionXp
+  const totalVideoXP = xpSummary.videoXp
+  const gameRewardXP = xpSummary.rewardXp
+  const totalXP = xpSummary.totalXp
 
   // CEFR breakdown
   const cefrCounts: Record<string, number> = {}
@@ -174,7 +142,7 @@ export default function StatsPage() {
         <SurfaceCard className="p-5">
           <div className="mb-4 flex items-center justify-between">
             <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-              MY LEVEL
+              ENGLISH LEVEL
             </p>
             <button
               onClick={() => setShowLevelPicker((v) => !v)}
@@ -320,7 +288,7 @@ export default function StatsPage() {
               </p>
               <ul className="space-y-1.5 text-sm text-[var(--text-secondary)]">
                 <li>표현 카드를 swipe할 때마다 XP 획득</li>
-                <li>같은 표현 3번 swipe &rarr; "Familiar!" + 풀 XP</li>
+                <li>같은 표현 3번 swipe &rarr; &quot;Familiar!&quot; + 풀 XP</li>
                 <li>어려운 표현(B2+)일수록 더 많은 XP</li>
               </ul>
             </div>

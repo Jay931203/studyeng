@@ -525,7 +525,7 @@ export function VideoFeed({
   ])
 
   const handleNextVideo = useCallback(() => {
-    moveToNextVideo()
+    return moveToNextVideo()
   }, [moveToNextVideo])
 
   const handlePrevVideo = useCallback(() => {

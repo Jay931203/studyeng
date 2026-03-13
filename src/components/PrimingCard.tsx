@@ -117,13 +117,17 @@ function ExpressionCard({
       }}
     >
       <motion.div
-        className="cursor-pointer touch-pan-y"
-        style={{ perspective: 800, x, opacity }}
+        className="cursor-pointer"
+        style={{ perspective: 800, x, opacity, touchAction: 'pan-x' }}
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={0.6}
         onDragStart={() => onInteract?.()}
         onDragEnd={handleDragEnd}
+        onPointerDown={(event) => event.stopPropagation()}
+        onPointerMove={(event) => event.stopPropagation()}
+        onPointerUp={(event) => event.stopPropagation()}
+        onPointerCancel={(event) => event.stopPropagation()}
         onClick={(e) => {
           e.stopPropagation()
           onInteract?.()
@@ -324,13 +328,17 @@ function WordCard({
       }}
     >
       <motion.div
-        className="cursor-pointer touch-pan-y"
-        style={{ perspective: 800, x, opacity }}
+        className="cursor-pointer"
+        style={{ perspective: 800, x, opacity, touchAction: 'pan-x' }}
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={0.6}
         onDragStart={() => onInteract?.()}
         onDragEnd={handleDragEnd}
+        onPointerDown={(event) => event.stopPropagation()}
+        onPointerMove={(event) => event.stopPropagation()}
+        onPointerUp={(event) => event.stopPropagation()}
+        onPointerCancel={(event) => event.stopPropagation()}
         onClick={(e) => {
           e.stopPropagation()
           onInteract?.()
@@ -608,6 +616,10 @@ export function PrimingCard({
               mass: 0.8,
             }}
             onClick={(e) => e.stopPropagation()}
+            onPointerDown={(event) => event.stopPropagation()}
+            onPointerMove={(event) => event.stopPropagation()}
+            onPointerUp={(event) => event.stopPropagation()}
+            onPointerCancel={(event) => event.stopPropagation()}
           >
             <div className="mb-5 flex items-start justify-between gap-3">
               <div className="min-w-0 text-left">
@@ -662,6 +674,10 @@ export function PrimingCard({
             <div
               className="flex flex-col gap-3 overflow-visible pr-1"
               style={{ maxHeight: 'min(60vh, 480px)' }}
+              onPointerDown={(event) => event.stopPropagation()}
+              onPointerMove={(event) => event.stopPropagation()}
+              onPointerUp={(event) => event.stopPropagation()}
+              onPointerCancel={(event) => event.stopPropagation()}
             >
               {visibleExpressions.length > 0 && (
                 <AnimatePresence mode="popLayout">

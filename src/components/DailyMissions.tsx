@@ -1,23 +1,20 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
-import { AnimatePresence, motion } from 'framer-motion'
+import { useEffect, useMemo } from 'react'
+import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
+import { computeLearningXpSummary } from '@/lib/xpSummary'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
-import { useDiscountStore } from '@/stores/useDiscountStore'
+import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
+import { useLevelStore, getLevelGaugeProgress } from '@/stores/useLevelStore'
+import { useOnboardingStore } from '@/stores/useOnboardingStore'
+import { useUserStore } from '@/stores/useUserStore'
 
-interface PaceMilestone {
-  label: string
-  description: string
-  targetRate: number
-  discount: number
-}
-
-const PACE_MILESTONES: PaceMilestone[] = [
-  { label: 'BASE', description: '70%', targetRate: 70, discount: 10 },
-  { label: 'FOCUS', description: '90%', targetRate: 90, discount: 15 },
-  { label: 'TOP', description: '3 months 90%', targetRate: 90, discount: 20 },
-]
+const LEVEL_LABELS = {
+  beginner: 'Beginner',
+  intermediate: 'Intermediate',
+  advanced: 'Advanced',
+} as const
 
 export function DailyMissions() {
   const missions = useDailyMissionStore((state) => state.missions)
@@ -93,9 +90,7 @@ export function DailyMissions() {
                     <motion.div
                       initial={{ width: 0 }}
                       animate={{ width: `${Math.min(progress, 100)}%` }}
-                      className={`h-full rounded-full ${
-                        mission.completed ? 'bg-[var(--accent-primary)]' : 'bg-[var(--accent-primary)]'
-                      }`}
+                      className="h-full rounded-full bg-[var(--accent-primary)]"
                     />
                   </div>
                 </div>
@@ -116,212 +111,85 @@ export function DailyMissions() {
         </div>
       )}
 
-      <LearningPaceCard />
+      <LearningXpCard />
     </div>
   )
 }
 
-function LearningPaceCard() {
+function LearningXpCard() {
   const router = useRouter()
-  const checkAndResetMonthly = useDiscountStore((state) => state.checkAndResetMonthly)
-  const completedDays = useDiscountStore((state) => state.completedDays)
-  const getCompletionRate = useDiscountStore((state) => state.getCompletionRate)
-  const getDaysInCurrentMonth = useDiscountStore((state) => state.getDaysInCurrentMonth)
-  const hasConsecutiveBonus = useDiscountStore((state) => state.hasConsecutiveBonus)
-  const [open, setOpen] = useState(false)
-  const [selectedMilestone, setSelectedMilestone] = useState<string | null>(null)
+  const level = useOnboardingStore((state) => state.level)
+  const rawScore = useLevelStore((state) => state.rawScore)
+  const videoXp = useLevelStore((state) => state.videoXP)
+  const familiarityEntries = useFamiliarityStore((state) => state.entries)
+  const rewardLevel = useUserStore((state) => state.level)
+  const rewardXp = useUserStore((state) => state.xp)
+  const totalXpEarned = useUserStore((state) => state.totalXpEarned)
 
-  useEffect(() => {
-    checkAndResetMonthly()
-  }, [checkAndResetMonthly])
-
-  const completionRate = getCompletionRate()
-  const totalDays = getDaysInCurrentMonth()
-  const completedCount = completedDays.length
-  const hasTopTier = hasConsecutiveBonus()
-  const milestoneStatus = useMemo(
+  const xpSummary = useMemo(
     () =>
-      PACE_MILESTONES.map((milestone) => ({
-        ...milestone,
-        reached: milestone.label === 'TOP' ? hasTopTier : completionRate >= milestone.targetRate,
-      })),
-    [completionRate, hasTopTier],
+      computeLearningXpSummary({
+        familiarityEntries,
+        videoXp,
+        totalXpEarned,
+        level: rewardLevel,
+        xp: rewardXp,
+      }),
+    [familiarityEntries, rewardLevel, rewardXp, totalXpEarned, videoXp],
   )
-  const nextMilestone = PACE_MILESTONES.find((milestone, index) => {
-    if (index === PACE_MILESTONES.length - 1) {
-      return !hasTopTier
-    }
 
-    return completionRate < milestone.targetRate
-  })
-
-  const nextMilestoneText = hasTopTier
-    ? 'TOP'
-    : nextMilestone
-      ? `${nextMilestone.label} ${Math.max(
-          0,
-          Math.ceil((nextMilestone.targetRate / 100) * totalDays) - completedCount,
-        )}`
-      : 'DONE'
-  const highestReachedMilestone =
-    [...milestoneStatus].reverse().find((milestone) => milestone.reached) ?? null
-  const selectedMilestoneInfo =
-    milestoneStatus.find(
-      (milestone) => milestone.label === selectedMilestone && milestone.reached,
-    ) ?? highestReachedMilestone
-  const selectedMilestoneLabel = selectedMilestoneInfo?.label ?? null
+  const progress = getLevelGaugeProgress(rawScore, level)
+  const nextLevelLabel =
+    level === 'beginner'
+      ? LEVEL_LABELS.intermediate
+      : level === 'intermediate'
+        ? LEVEL_LABELS.advanced
+        : 'MAX'
 
   return (
-    <>
-      <div className="mx-4 mb-4">
-        <button
-          onClick={() => setOpen(true)}
-          className="w-full rounded-xl border border-[var(--border-card)] bg-[var(--bg-secondary)]/40 px-3 py-3 text-left transition-colors hover:bg-[var(--bg-secondary)]"
-        >
-          <div className="mb-2 flex items-center justify-between gap-3">
-            <span className="min-w-0 truncate text-xs font-medium text-[var(--text-secondary)]">
-              MONTHLY PACE
-            </span>
-            <span className="shrink-0 text-[10px] text-[var(--text-muted)]">DETAIL</span>
+    <div className="mx-4 mb-4">
+      <button
+        onClick={() => router.push('/learning/stats')}
+        className="w-full rounded-xl border border-[var(--border-card)] bg-[var(--bg-secondary)]/40 px-3 py-3 text-left transition-colors hover:bg-[var(--bg-secondary)]"
+      >
+        <div className="mb-2 flex items-center justify-between gap-3">
+          <span className="min-w-0 truncate text-xs font-medium text-[var(--text-secondary)]">
+            XP STATUS
+          </span>
+          <span className="shrink-0 text-[10px] text-[var(--text-muted)]">DETAIL</span>
+        </div>
+
+        <div className="mb-2 flex items-end justify-between gap-3">
+          <div>
+            <p className="text-[11px] text-[var(--text-muted)]">CURRENT LEVEL</p>
+            <p className="mt-1 text-lg font-semibold text-[var(--text-primary)]">
+              {LEVEL_LABELS[level]}
+            </p>
           </div>
-          <div className="mb-2 h-1.5 overflow-hidden rounded-full bg-[var(--bg-secondary)]">
-            <div
-              className="h-full rounded-full bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)]"
-              style={{ width: `${Math.min(completionRate, 100)}%` }}
-            />
+          <div className="text-right">
+            <p className="text-[11px] text-[var(--text-muted)]">TOTAL XP</p>
+            <p className="mt-1 text-lg font-semibold text-[var(--accent-text)]">
+              {xpSummary.totalXp}
+            </p>
           </div>
-          <div className="flex items-center justify-between gap-3 text-[10px]">
-            <span className="shrink-0 text-[var(--text-muted)]">
-              {completedCount}/{totalDays} ({Math.round(completionRate)}%)
-            </span>
-            <span className="min-w-0 truncate font-medium text-[var(--accent-text)]">
-              {nextMilestoneText}
-            </span>
-          </div>
-        </button>
-      </div>
+        </div>
 
-      <AnimatePresence>
-        {open && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 z-[140] bg-black/60 backdrop-blur-sm"
-              onClick={() => setOpen(false)}
-            />
-            <motion.div
-              initial={{ opacity: 0, y: 20, scale: 0.98 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 20, scale: 0.98 }}
-              className="fixed inset-0 z-[150] flex items-end justify-center px-4 pb-6 sm:items-center"
-              onClick={() => setOpen(false)}
-            >
-              <div
-                className="w-full max-w-md rounded-3xl border border-[var(--border-card)] bg-[var(--bg-card)] p-5 shadow-2xl"
-                onClick={(event) => event.stopPropagation()}
-              >
-                <div className="mb-4 flex items-start justify-between gap-4">
-                  <div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--accent-text)]">
-                      PACE
-                    </p>
-                    <h3 className="mt-2 text-lg font-semibold text-[var(--text-primary)]">
-                      MONTHLY PACE
-                    </h3>
-                  </div>
-                  <button
-                    onClick={() => setOpen(false)}
-                    className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--bg-secondary)] text-[var(--text-muted)]"
-                    aria-label="닫기"
-                  >
-                    ×
-                  </button>
-                </div>
+        <div className="mb-2 h-1.5 overflow-hidden rounded-full bg-[var(--bg-secondary)]">
+          <div
+            className="h-full rounded-full bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)]"
+            style={{ width: `${Math.max(progress * 100, 4)}%` }}
+          />
+        </div>
 
-                <div className="rounded-2xl bg-[var(--bg-secondary)] p-4">
-                  <div className="flex items-end justify-between gap-3">
-                    <div>
-                      <p className="text-xs text-[var(--text-muted)]">RATE</p>
-                      <p className="mt-1 text-2xl font-bold text-[var(--text-primary)]">
-                        {Math.round(completionRate)}%
-                      </p>
-                    </div>
-                    <div className="text-right">
-                      <p className="text-xs text-[var(--text-muted)]">DAYS</p>
-                      <p className="mt-1 text-lg font-semibold text-[var(--accent-text)]">
-                        {completedCount}/{totalDays}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-4 space-y-2">
-                  {milestoneStatus.map((milestone) => {
-                    const selected = selectedMilestoneLabel === milestone.label
-
-                    return (
-                      <div
-                        key={milestone.label}
-                        className="flex items-center justify-between gap-3 rounded-2xl bg-[var(--bg-secondary)] px-4 py-3"
-                      >
-                        <div>
-                          <p className="text-sm font-medium text-[var(--text-primary)]">
-                            {milestone.label}
-                          </p>
-                          <p className="mt-1 text-xs text-[var(--text-muted)]">
-                            {milestone.description} · {milestone.discount}% OFF
-                          </p>
-                        </div>
-                        <button
-                          type="button"
-                          onClick={() => setSelectedMilestone(milestone.label)}
-                          disabled={!milestone.reached}
-                          className={`rounded-full px-3 py-1.5 text-xs font-semibold transition-colors ${
-                            milestone.reached
-                              ? selected
-                                ? 'bg-[var(--accent-primary)] text-white'
-                                : 'bg-[var(--accent-glow)] text-[var(--accent-text)]'
-                              : 'bg-[var(--bg-card)] text-[var(--text-muted)] opacity-60'
-                          }`}
-                        >
-                          {!milestone.reached ? 'LOCKED' : selected ? 'SELECTED' : 'SELECT'}
-                        </button>
-                      </div>
-                    )
-                  })}
-                </div>
-
-                <div className="mt-4 rounded-2xl bg-[var(--bg-secondary)] p-4">
-                  <div className="flex items-center justify-between gap-3">
-                    <div>
-                      <p className="text-xs text-[var(--text-muted)]">SUBSCRIPTION DISCOUNT</p>
-                      <p className="mt-1 text-sm font-semibold text-[var(--text-primary)]">
-                        {selectedMilestoneInfo
-                          ? `${selectedMilestoneInfo.label} · ${selectedMilestoneInfo.discount}% OFF`
-                          : '달성한 목표를 선택하면 활성화됩니다'}
-                      </p>
-                    </div>
-                    <button
-                      type="button"
-                      onClick={() => {
-                        if (!selectedMilestoneInfo) return
-                        setOpen(false)
-                        router.push('/profile')
-                      }}
-                      disabled={!selectedMilestoneInfo}
-                      className="rounded-full bg-[var(--accent-primary)] px-4 py-2 text-xs font-semibold text-white disabled:cursor-not-allowed disabled:opacity-45"
-                    >
-                      구독 할인 받기
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
-    </>
+        <div className="flex items-center justify-between gap-3 text-[10px]">
+          <span className="shrink-0 text-[var(--text-muted)]">
+            Expressions {xpSummary.expressionXp} / Videos {xpSummary.videoXp}
+          </span>
+          <span className="min-w-0 truncate font-medium text-[var(--accent-text)]">
+            {nextLevelLabel === 'MAX' ? 'MAX LEVEL' : `Next ${nextLevelLabel}`}
+          </span>
+        </div>
+      </button>
+    </div>
   )
 }

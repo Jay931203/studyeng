@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useEffect, useMemo } from 'react'
+import { useRouter } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
 import { SceneQuizGame } from './SceneQuizGame'
 import { ListeningGame } from './ListeningGame'
@@ -12,6 +13,7 @@ import { type SubtitleEntry } from '@/data/seed-videos'
 import { catalogVideos } from '@/lib/catalog'
 import { createHiddenVideoIdSet, filterHiddenVideos } from '@/lib/videoVisibility'
 import { useAdminStore } from '@/stores/useAdminStore'
+import { usePlayerStore } from '@/stores/usePlayerStore'
 import { trackEvent, AnalyticsEvents } from '@/lib/analytics'
 
 type GameType = 'scene-quiz' | 'listening' | 'expression-swipe' | 'listen-fill'
@@ -52,12 +54,14 @@ async function loadTranscript(youtubeId: string): Promise<SubtitleEntry[]> {
 }
 
 export function GameLauncher({ phrases }: GameLauncherProps) {
+  const router = useRouter()
   const [activeGame, setActiveGame] = useState<GameType | null>(null)
   const [currentPhraseIdx, setCurrentPhraseIdx] = useState(0)
   const [transcriptPhrases, setTranscriptPhrases] = useState<{ en: string; ko: string }[]>([])
   const [listeningRounds, setListeningRounds] = useState<PhrasePair[]>([])
   const [loadingTranscripts, setLoadingTranscripts] = useState(true)
   const incrementMission = useDailyMissionStore((s) => s.incrementMission)
+  const setGameModeEnabled = usePlayerStore((state) => state.setGameModeEnabled)
   const hiddenVideos = useAdminStore((state) => state.hiddenVideos)
   const hiddenVideoIdSet = useMemo(() => createHiddenVideoIdSet(hiddenVideos), [hiddenVideos])
   const visibleCatalogVideos = useMemo(
@@ -150,10 +154,61 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
     setActiveGame(type)
   }
 
+  const launchShortsQuiz = () => {
+    incrementMission('play-game')
+    setGameModeEnabled(true)
+    trackEvent(AnalyticsEvents.GAME_PLAYED, { game_type: 'subtitle-quiz' })
+    router.push('/shorts')
+  }
+
+  const shortsQuizButton = (
+    <motion.button
+      whileTap={{ scale: 0.985 }}
+      onClick={launchShortsQuiz}
+      className="mb-3 w-full rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-4 text-left shadow-[var(--card-shadow)]"
+    >
+      <div className="flex items-center gap-3">
+        <div
+          className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-2xl"
+          style={{ backgroundColor: 'var(--accent-glow)' }}
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={1.8}
+            className="h-4 w-4"
+            style={{ color: 'var(--accent-text)' }}
+          >
+            <rect x="5.25" y="5.25" width="13.5" height="13.5" rx="3.2" />
+            <circle cx="9.15" cy="9.15" r="1.1" fill="currentColor" stroke="none" />
+            <circle cx="14.85" cy="9.15" r="1.1" fill="currentColor" stroke="none" />
+            <circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none" />
+            <circle cx="9.15" cy="14.85" r="1.1" fill="currentColor" stroke="none" />
+            <circle cx="14.85" cy="14.85" r="1.1" fill="currentColor" stroke="none" />
+          </svg>
+        </div>
+        <div className="min-w-0 flex-1">
+          <span className="block text-sm font-semibold text-[var(--text-primary)]">
+            다음 대사 맞히기
+          </span>
+          <span className="mt-0.5 block text-xs text-[var(--text-muted)]">
+            쇼츠에서 탭 게임 바로 시작
+          </span>
+        </div>
+      </div>
+    </motion.button>
+  )
+
   // Show nothing only when both saved phrases AND transcripts are empty and still loading
   if (!hasPhrases && loadingTranscripts) {
     return (
       <div className="mb-8">
+        <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-[var(--text-secondary)]">
+          게임
+        </h2>
+        {shortsQuizButton}
         <div className="w-full rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-6 text-center shadow-[var(--card-shadow)]">
           <p className="text-[var(--text-muted)] text-sm animate-pulse">
             게임 준비 중...
@@ -163,7 +218,16 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
     )
   }
 
-  if (!hasPhrases) return null
+  if (!hasPhrases) {
+    return (
+      <div className="mb-8">
+        <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-[var(--text-secondary)]">
+          게임
+        </h2>
+        {shortsQuizButton}
+      </div>
+    )
+  }
 
   return (
     <>
@@ -171,6 +235,7 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
         <h2 className="text-[var(--text-secondary)] text-xs font-medium tracking-wide uppercase mb-3">
           게임
         </h2>
+        {shortsQuizButton}
         <div className="grid grid-cols-2 gap-3">
           <motion.button
             whileTap={{ scale: 0.97 }}

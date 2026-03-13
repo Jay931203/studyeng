@@ -41,7 +41,7 @@ interface VideoPlayerProps {
   format?: 'shorts' | 'clip'
   onSavePhrase?: (phrase: SubtitleEntry) => void
   onClipComplete?: () => void
-  onVideoErrorSkip?: () => void
+  onVideoErrorSkip?: () => boolean | void
   onEmbedBlocked?: () => void
   onPlaybackStarted?: () => void
   isLandscapeViewport?: boolean
@@ -156,11 +156,32 @@ export function VideoPlayer({
   const videoSessionKey = `${videoId ?? 'video'}:${youtubeId}`
   const [dismissedPrimingKey, setDismissedPrimingKey] = useState<string | null>(null)
   const showPriming = (primingExpressions.length > 0 || primingWords.length > 0) && dismissedPrimingKey !== videoSessionKey
+  const primingResetTime = initialSeekTime ?? clipStart
+  const primingPreviewTimerRef = useRef<number | null>(null)
+  const autoSkipTimerRef = useRef<number | null>(null)
+  const autoSkipAttemptKeyRef = useRef<string | null>(null)
+
+  const clearPrimingPreview = useCallback(
+    (resume: 'pause' | 'play' = 'pause') => {
+      if (primingPreviewTimerRef.current) {
+        window.clearTimeout(primingPreviewTimerRef.current)
+        primingPreviewTimerRef.current = null
+      }
+
+      seekTo(primingResetTime)
+      if (resume === 'play') {
+        play()
+      } else {
+        pause()
+      }
+    },
+    [pause, play, primingResetTime, seekTo],
+  )
 
   const handlePrimingDismiss = useCallback(() => {
     setDismissedPrimingKey(videoSessionKey)
-    play()
-  }, [play, videoSessionKey])
+    clearPrimingPreview('play')
+  }, [clearPrimingPreview, videoSessionKey])
 
   useEffect(() => {
     setFreezeSubIndex(null)
@@ -177,13 +198,17 @@ export function VideoPlayer({
   const phrases = usePhraseStore((state) => state.phrases)
   const [cueNotice, setCueNotice] = useState<{
     message: string
-    tone: 'accent' | 'muted'
+    tone: 'accent' | 'learning' | 'saved'
   } | null>(null)
   const cueNoticeTimerRef = useRef<number | null>(null)
   const lastSimilarCueRef = useRef<{ token: string; time: number }>({ token: '', time: 0 })
+  const lastSavedCueRef = useRef<{ subtitleKey: string; time: number }>({
+    subtitleKey: '',
+    time: 0,
+  })
 
   const showCueNotice = useCallback(
-    (message: string, tone: 'accent' | 'muted', duration = 1100) => {
+    (message: string, tone: 'accent' | 'learning' | 'saved', duration = 1350) => {
       setCueNotice({ message, tone })
       if (cueNoticeTimerRef.current) {
         window.clearTimeout(cueNoticeTimerRef.current)
@@ -247,7 +272,7 @@ export function VideoPlayer({
       const phrase = primingCueBySubtitleIndex.get(activeSubForHaptic)
       if (phrase) {
         const timer = window.setTimeout(() => {
-          showCueNotice(`KEY · ${phrase.toUpperCase()}`, 'accent', 1200)
+          showCueNotice(`KEY | ${phrase.toUpperCase()}`, 'accent', 1500)
         }, 0)
         return () => window.clearTimeout(timer)
       }
@@ -260,7 +285,21 @@ export function VideoPlayer({
     const subtitle = subtitles[activeSubForHaptic]
     if (!subtitle) return
     if (primingCueBySubtitleIndex.has(activeSubForHaptic)) return
-    if (savedPhraseMap.has(`${videoId ?? youtubeId}::${subtitle.en}`)) return
+    const subtitleKey = `${videoId ?? youtubeId}::${subtitle.en}`
+
+    if (savedPhraseMap.has(subtitleKey)) {
+      const now = Date.now()
+      const lastCue = lastSavedCueRef.current
+      if (lastCue.subtitleKey === subtitleKey && now - lastCue.time < 10_000) {
+        return
+      }
+
+      lastSavedCueRef.current = { subtitleKey, time: now }
+      const timer = window.setTimeout(() => {
+        showCueNotice(`SAVED | ${subtitle.en.slice(0, 28).toUpperCase()}`, 'saved', 1600)
+      }, 0)
+      return () => window.clearTimeout(timer)
+    }
 
     for (const token of extractSimilarCueTokens(subtitle.en)) {
       if (!similarPhraseTokenSet.has(token)) continue
@@ -273,7 +312,7 @@ export function VideoPlayer({
 
       lastSimilarCueRef.current = { token, time: now }
       const timer = window.setTimeout(() => {
-        showCueNotice(`SIMILAR · ${token.toUpperCase()}`, 'muted', 900)
+        showCueNotice(`SIMILAR | ${token.toUpperCase()}`, 'learning', 1300)
       }, 0)
       return () => window.clearTimeout(timer)
       break
@@ -315,7 +354,39 @@ export function VideoPlayer({
 
   useEffect(() => {
     playbackStartedNotifiedRef.current = false
+    autoSkipAttemptKeyRef.current = null
+    if (autoSkipTimerRef.current) {
+      window.clearTimeout(autoSkipTimerRef.current)
+      autoSkipTimerRef.current = null
+    }
+    if (primingPreviewTimerRef.current) {
+      window.clearTimeout(primingPreviewTimerRef.current)
+      primingPreviewTimerRef.current = null
+    }
   }, [videoId, youtubeId, initialSeekTime])
+
+  useEffect(() => {
+    if (!videoError || !onVideoErrorSkip) return
+    if (autoSkipAttemptKeyRef.current === videoSessionKey) return
+
+    autoSkipAttemptKeyRef.current = videoSessionKey
+    autoSkipTimerRef.current = window.setTimeout(() => {
+      const skipped = onVideoErrorSkip()
+      if (skipped !== false) {
+        clearVideoError()
+      } else {
+        autoSkipAttemptKeyRef.current = null
+      }
+      autoSkipTimerRef.current = null
+    }, 900)
+
+    return () => {
+      if (autoSkipTimerRef.current) {
+        window.clearTimeout(autoSkipTimerRef.current)
+        autoSkipTimerRef.current = null
+      }
+    }
+  }, [clearVideoError, onVideoErrorSkip, videoError, videoSessionKey])
 
   useEffect(() => {
     seekToRef.current = seekTo
@@ -340,6 +411,12 @@ export function VideoPlayer({
       }
       if (gameContinueTimerRef.current) {
         clearTimeout(gameContinueTimerRef.current)
+      }
+      if (primingPreviewTimerRef.current) {
+        clearTimeout(primingPreviewTimerRef.current)
+      }
+      if (autoSkipTimerRef.current) {
+        clearTimeout(autoSkipTimerRef.current)
       }
     }
   }, [])
@@ -545,10 +622,18 @@ export function VideoPlayer({
         Object.entries(familiarExprs).map(([k, v]) => [k, v.count])
       )}
       onPlaySegment={(start, end) => {
+        if (primingPreviewTimerRef.current) {
+          window.clearTimeout(primingPreviewTimerRef.current)
+          primingPreviewTimerRef.current = null
+        }
         seekTo(start)
         play()
         const duration = (end - start) * 1000 + 200
-        window.setTimeout(() => pause(), duration)
+        primingPreviewTimerRef.current = window.setTimeout(() => {
+          pause()
+          seekTo(primingResetTime)
+          primingPreviewTimerRef.current = null
+        }, duration)
       }}
     />
   ) : null
@@ -582,7 +667,10 @@ export function VideoPlayer({
         </div>
       )}
 
-      <div className="pointer-events-none absolute inset-x-0 top-3 z-[22] flex justify-center px-4">
+      <div
+        className="pointer-events-none absolute inset-x-0 z-[22] flex justify-center px-4"
+        style={isShortsFormat ? { top: '14px' } : { bottom: '18px' }}
+      >
         <SaveToast
           show={Boolean(cueNotice)}
           message={cueNotice?.message ?? ''}
@@ -626,8 +714,10 @@ export function VideoPlayer({
               <button
                 onClick={(event) => {
                   event.stopPropagation()
-                  clearVideoError()
-                  onVideoErrorSkip()
+                  const skipped = onVideoErrorSkip()
+                  if (skipped !== false) {
+                    clearVideoError()
+                  }
                 }}
                 className="rounded-lg px-4 py-2 text-xs font-medium text-white"
                 style={{ backgroundColor: 'var(--accent-primary)' }}
@@ -818,7 +908,7 @@ function ShortsSubtitleOverlay({
   const activeSub = activeSubIndex >= 0 ? subtitles[activeSubIndex] : null
   const [notice, setNotice] = useState<{
     message: string
-    tone: 'accent' | 'freeze'
+    tone: 'saved' | 'freeze'
   } | null>(null)
   const noticeTimerRef = useRef<number | null>(null)
   const lastTapRef = useRef(0)
@@ -836,7 +926,7 @@ function ShortsSubtitleOverlay({
   }, [activeSub, phrases, videoId])
 
   const showNotice = useCallback(
-    (message: string, tone: 'accent' | 'freeze', duration = 1400) => {
+    (message: string, tone: 'saved' | 'freeze', duration = 1500) => {
       setNotice({ message, tone })
       if (noticeTimerRef.current) {
         window.clearTimeout(noticeTimerRef.current)
@@ -902,10 +992,10 @@ function ShortsSubtitleOverlay({
           if (now - lastTapRef.current < 550) {
             if (savedPhraseId) {
               removePhrase(savedPhraseId)
-              showNotice('REMOVED', 'accent')
+              showNotice('REMOVED', 'saved')
             } else if (onSavePhrase) {
               onSavePhrase(activeSub)
-              showNotice('SAVED', 'accent')
+              showNotice('SAVED', 'saved')
             }
             lastTapRef.current = 0
             return
