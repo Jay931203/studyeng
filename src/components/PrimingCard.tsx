@@ -482,6 +482,25 @@ function WordCard({
   )
 }
 
+type MixedItem =
+  | { type: 'expression'; data: Expression }
+  | { type: 'word'; data: WordItem }
+
+function buildMixedItems(expressions: Expression[], words: WordItem[], max: number): MixedItem[] {
+  const items: MixedItem[] = []
+  let ei = 0
+  let wi = 0
+  // Interleave: expression first, then alternate
+  while (items.length < max && (ei < expressions.length || wi < words.length)) {
+    if (ei < expressions.length && (items.length % 2 === 0 || wi >= words.length)) {
+      items.push({ type: 'expression', data: expressions[ei++] })
+    } else if (wi < words.length) {
+      items.push({ type: 'word', data: words[wi++] })
+    }
+  }
+  return items
+}
+
 export function PrimingCard({
   expressions,
   words,
@@ -491,16 +510,15 @@ export function PrimingCard({
   onMarkFamiliar,
   familiarCounts,
 }: PrimingCardProps) {
-  const displayExpressions = expressions.slice(0, 3)
-  const displayWords = (words ?? []).slice(0, 3)
+  const mixedItems = buildMixedItems(expressions, words ?? [], 3)
   const [dismissedIds, setDismissedIds] = useState<Set<string>>(new Set())
-  const visibleExpressions = displayExpressions.filter(
-    (expr) => !dismissedIds.has(expr.exprId || expr.canonical)
-  )
-  const visibleWords = displayWords.filter(
-    (word) => !dismissedIds.has(word.wordId)
-  )
-  const visible = visibleExpressions.length > 0 || visibleWords.length > 0
+  const visibleItems = mixedItems.filter((item) => {
+    const id = item.type === 'expression'
+      ? (item.data as Expression).exprId || (item.data as Expression).canonical
+      : (item.data as WordItem).wordId
+    return !dismissedIds.has(id)
+  })
+  const visible = visibleItems.length > 0
 
   const storedAutoStartEnabled = useSettingsStore((state) => state.primingAutoStartEnabled)
   const setStoredAutoStartEnabled = useSettingsStore((state) => state.setPrimingAutoStartEnabled)
@@ -514,11 +532,11 @@ export function PrimingCard({
 
   // Auto-dismiss when all cards are swiped
   useEffect(() => {
-    if (dismissedIds.size > 0 && visibleExpressions.length === 0 && visibleWords.length === 0) {
+    if (dismissedIds.size > 0 && visibleItems.length === 0) {
       const timer = setTimeout(() => handleDismiss(), 300)
       return () => clearTimeout(timer)
     }
-  }, [dismissedIds.size, visibleExpressions.length, visibleWords.length, handleDismiss])
+  }, [dismissedIds.size, visibleItems.length, handleDismiss])
 
   const pauseAutoStart = useCallback(() => {
     setAutoStartEnabled(false)
@@ -623,22 +641,12 @@ export function PrimingCard({
           >
             <div className="mb-5 flex items-start justify-between gap-3">
               <div className="min-w-0 text-left">
-                {visibleExpressions.length > 0 && (
-                  <p
-                    className="text-[11px] font-semibold uppercase tracking-[0.12em]"
-                    style={{ color: 'var(--accent-text, #5eead4)' }}
-                  >
-                    Key Expressions
-                  </p>
-                )}
-                {visibleExpressions.length === 0 && visibleWords.length > 0 && (
-                  <p
-                    className="text-[11px] font-semibold uppercase tracking-[0.12em]"
-                    style={{ color: 'var(--accent-text, #5eead4)' }}
-                  >
-                    Key Words
-                  </p>
-                )}
+                <p
+                  className="text-[11px] font-semibold uppercase tracking-[0.12em]"
+                  style={{ color: 'var(--accent-text, #5eead4)' }}
+                >
+                  Key Picks
+                </p>
                 {videoTitle && (
                   <p
                     className="mt-1.5 truncate text-[13px] font-medium"
@@ -679,48 +687,37 @@ export function PrimingCard({
               onPointerUp={(event) => event.stopPropagation()}
               onPointerCancel={(event) => event.stopPropagation()}
             >
-              {visibleExpressions.length > 0 && (
-                <AnimatePresence mode="popLayout">
-                  {visibleExpressions.map((expr, index) => (
-                    <ExpressionCard
-                      key={expr.exprId || expr.canonical}
-                      expr={expr}
-                      index={index}
-                      onInteract={pauseAutoStart}
-                      onPlaySegment={handlePreviewSegment}
-                      onSwipeDismiss={() => handleSwipeDismiss(expr)}
-                      familiarCount={(familiarCounts?.[expr.exprId || expr.canonical] ?? 0) + (dismissedIds.has(expr.exprId || expr.canonical) ? 1 : 0)}
-                    />
-                  ))}
-                </AnimatePresence>
-              )}
-
-              {visibleWords.length > 0 && (
-                <>
-                  <motion.p
-                    className="mt-2 text-[11px] font-semibold uppercase tracking-[0.12em]"
-                    style={{ color: 'var(--accent-text, #5eead4)' }}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.25 }}
-                  >
-                    Key Words
-                  </motion.p>
-                  <AnimatePresence mode="popLayout">
-                    {visibleWords.map((word, index) => (
-                      <WordCard
-                        key={word.wordId}
-                        word={word}
+              <AnimatePresence mode="popLayout">
+                {visibleItems.map((item, index) => {
+                  if (item.type === 'expression') {
+                    const expr = item.data as Expression
+                    const id = expr.exprId || expr.canonical
+                    return (
+                      <ExpressionCard
+                        key={id}
+                        expr={expr}
                         index={index}
                         onInteract={pauseAutoStart}
                         onPlaySegment={handlePreviewSegment}
-                        onSwipeDismiss={() => handleWordSwipeDismiss(word)}
-                        familiarCount={(familiarCounts?.[word.wordId] ?? 0) + (dismissedIds.has(word.wordId) ? 1 : 0)}
+                        onSwipeDismiss={() => handleSwipeDismiss(expr)}
+                        familiarCount={(familiarCounts?.[id] ?? 0) + (dismissedIds.has(id) ? 1 : 0)}
                       />
-                    ))}
-                  </AnimatePresence>
-                </>
-              )}
+                    )
+                  }
+                  const word = item.data as WordItem
+                  return (
+                    <WordCard
+                      key={word.wordId}
+                      word={word}
+                      index={index}
+                      onInteract={pauseAutoStart}
+                      onPlaySegment={handlePreviewSegment}
+                      onSwipeDismiss={() => handleWordSwipeDismiss(word)}
+                      familiarCount={(familiarCounts?.[word.wordId] ?? 0) + (dismissedIds.has(word.wordId) ? 1 : 0)}
+                    />
+                  )
+                })}
+              </AnimatePresence>
             </div>
 
             <motion.button
@@ -745,8 +742,8 @@ export function PrimingCard({
                 />
               </svg>
               <span className="text-[14px] font-semibold">
-                {(visibleExpressions.length + visibleWords.length) < (displayExpressions.length + displayWords.length)
-                  ? `${visibleExpressions.length + visibleWords.length}/${displayExpressions.length + displayWords.length} remaining`
+                {visibleItems.length < mixedItems.length
+                  ? `${visibleItems.length}/${mixedItems.length} remaining`
                   : '탭해서 보기'}
               </span>
               {autoStartEnabled && (
