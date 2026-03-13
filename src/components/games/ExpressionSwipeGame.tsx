@@ -1,7 +1,7 @@
 'use client'
 
-import { useState, useCallback, useMemo, useEffect, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useCallback, useRef } from 'react'
+import { motion, AnimatePresence, type PanInfo } from 'framer-motion'
 import expressionEntries from '@/data/expression-entries-v2.json'
 import expressionIndex from '@/data/expression-index-v2.json'
 import wordEntriesData from '@/data/word-entries.json'
@@ -10,13 +10,10 @@ import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useLevelStore } from '@/stores/useLevelStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
+import { useUserStore } from '@/stores/useUserStore'
 import { triggerHaptic } from '@/lib/haptic'
 import { calculateSessionXP } from '@/lib/xp/sessionXp'
 import { checkGameMilestones, checkStreakMilestones } from '@/stores/useMilestoneStore'
-
-// ---------------------------------------------------------------------------
-// Types
-// ---------------------------------------------------------------------------
 
 interface ExpressionSwipeGameProps {
   onComplete: (correct: boolean) => void
@@ -57,281 +54,49 @@ interface WordIndexMatch {
   surfaceForm: string
 }
 
+interface MeaningCandidate {
+  meaningKo: string
+  cefr: string
+  tag: string
+}
+
+interface ChoiceData {
+  id: string
+  text: string
+  isCorrect: boolean
+}
+
 interface CardData {
   type: 'expression' | 'word'
   exprId: string
   expression: string
-  meaningKo: string
+  actualMeaningKo: string
   cefr: string
   category: string
   contextEn: string | null
+  choices: ChoiceData[]
 }
 
 type GamePhase = 'playing' | 'result'
 
 const CARDS_PER_ROUND = 10
+const DRAG_SUBMIT_THRESHOLD = 74
+const ANSWER_REVEAL_MS = 700
 
 const entries = expressionEntries as Record<string, ExpressionEntry>
 const index = expressionIndex as Record<string, IndexMatch[]>
 const wordEntries = wordEntriesData as Record<string, WordEntry>
 const wordIndex = wordIndexData as Record<string, WordIndexMatch[]>
 
-// ---------------------------------------------------------------------------
-// CEFR filter by user level
-// ---------------------------------------------------------------------------
-
-const CEFR_POOLS: Record<string, { primary: string[]; secondary: string[]; secondaryChance: number }> = {
-  beginner: {
-    primary: ['A1', 'A2'],
-    secondary: ['B1'],
-    secondaryChance: 0.1,
-  },
-  intermediate: {
-    primary: ['B1', 'B2'],
-    secondary: ['A2', 'C1'],
-    secondaryChance: 0.1,
-  },
-  advanced: {
-    primary: ['B2', 'C1', 'C2'],
-    secondary: [],
-    secondaryChance: 0,
-  },
+// CEFR pools: user level +/- 1
+const CEFR_POOLS: Record<string, { primary: string[]; secondary: string[] }> = {
+  A1: { primary: ['A1', 'A2'], secondary: [] },
+  A2: { primary: ['A1', 'A2', 'B1'], secondary: [] },
+  B1: { primary: ['A2', 'B1', 'B2'], secondary: [] },
+  B2: { primary: ['B1', 'B2', 'C1'], secondary: [] },
+  C1: { primary: ['B2', 'C1', 'C2'], secondary: [] },
+  C2: { primary: ['C1', 'C2'], secondary: [] },
 }
-
-function shuffle<T>(arr: T[]): T[] {
-  const a = [...arr]
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1))
-    ;[a[i], a[j]] = [a[j], a[i]]
-  }
-  return a
-}
-
-function getFilteredExpressionIds(level: string): string[] {
-  const pool = CEFR_POOLS[level] ?? CEFR_POOLS.beginner
-  const allCefrs = new Set([...pool.primary, ...pool.secondary])
-
-  return Object.keys(entries).filter((id) => {
-    const entry = entries[id]
-    if (!entry?.cefr) return false
-    return allCefrs.has(entry.cefr.toUpperCase())
-  })
-}
-
-function getFilteredWordIds(level: string): string[] {
-  const pool = CEFR_POOLS[level] ?? CEFR_POOLS.beginner
-  const allCefrs = new Set([...pool.primary, ...pool.secondary])
-
-  return Object.keys(wordEntries).filter((id) => {
-    const entry = wordEntries[id]
-    if (!entry?.cefr) return false
-    return allCefrs.has(entry.cefr.toUpperCase())
-  })
-}
-
-// ---------------------------------------------------------------------------
-// Context sentence lookup (pre-build a reverse index: exprId -> matches)
-// ---------------------------------------------------------------------------
-
-let _contextCache: Record<string, IndexMatch[]> | null = null
-
-function getContextByExprId(): Record<string, IndexMatch[]> {
-  if (_contextCache) return _contextCache
-  const map: Record<string, IndexMatch[]> = {}
-  for (const matches of Object.values(index)) {
-    for (const m of matches) {
-      if (!map[m.exprId]) map[m.exprId] = []
-      map[m.exprId].push(m)
-    }
-  }
-  _contextCache = map
-  return map
-}
-
-function pickContextSentence(exprId: string): string | null {
-  const ctx = getContextByExprId()
-  const matches = ctx[exprId]
-  if (!matches || matches.length === 0) return null
-  const pick = matches[Math.floor(Math.random() * matches.length)]
-  return pick.en
-}
-
-// ---------------------------------------------------------------------------
-// Word context sentence lookup
-// ---------------------------------------------------------------------------
-
-let _wordContextCache: Record<string, WordIndexMatch[]> | null = null
-
-function getWordContextByWordId(): Record<string, WordIndexMatch[]> {
-  if (_wordContextCache) return _wordContextCache
-  const map: Record<string, WordIndexMatch[]> = {}
-  for (const matches of Object.values(wordIndex)) {
-    for (const m of matches) {
-      if (!map[m.wordId]) map[m.wordId] = []
-      map[m.wordId].push(m)
-    }
-  }
-  _wordContextCache = map
-  return map
-}
-
-function pickWordContextSentence(wordId: string): string | null {
-  const ctx = getWordContextByWordId()
-  const matches = ctx[wordId]
-  if (!matches || matches.length === 0) return null
-  const pick = matches[Math.floor(Math.random() * matches.length)]
-  return pick.en
-}
-
-// ---------------------------------------------------------------------------
-// Card selection logic
-// ---------------------------------------------------------------------------
-
-function selectCards(level: string): CardData[] {
-  const gameStore = useGameProgressStore.getState()
-
-  // Determine how many expression vs word cards
-  const expressionCount = Math.round(CARDS_PER_ROUND * 0.7) // 70% expressions
-  const wordCount = CARDS_PER_ROUND - expressionCount         // 30% words
-
-  // --- Expression selection (existing logic) ---
-  let filteredIds = getFilteredExpressionIds(level)
-
-  // If not enough, relax the filter
-  if (filteredIds.length < expressionCount) {
-    filteredIds = Object.keys(entries)
-  }
-
-  const filteredSet = new Set(filteredIds)
-
-  // Categorize by Leitner box (expressions only, no word: prefix)
-  const allBox1 = gameStore.getBox1Expressions()
-  const allBox2 = gameStore.getBox2Expressions()
-  const allBox3 = gameStore.getMasteredExpressions()
-
-  const box1 = allBox1.filter((id) => !id.startsWith('word:') && filteredSet.has(id))
-  const box2 = allBox2.filter((id) => !id.startsWith('word:') && filteredSet.has(id))
-  const box3 = allBox3.filter((id) => !id.startsWith('word:') && filteredSet.has(id))
-  const seenSet = new Set([...box1, ...box2, ...box3])
-  const newExprs = filteredIds.filter((id) => !seenSet.has(id))
-
-  const selectedExprs: string[] = []
-  const usedExprSet = new Set<string>()
-
-  const addUniqueExpr = (source: string[], max: number) => {
-    const shuffled = shuffle(source)
-    let added = 0
-    for (const id of shuffled) {
-      if (added >= max) break
-      if (usedExprSet.has(id)) continue
-      selectedExprs.push(id)
-      usedExprSet.add(id)
-      added++
-    }
-  }
-
-  // Priority: box1 up to 3, box2 up to 2, new fill remaining, box3 10% chance 1
-  addUniqueExpr(box1, 3)
-  addUniqueExpr(box2, 2)
-
-  // Box 3: 10% chance include 1
-  if (Math.random() < 0.1 && box3.length > 0) {
-    addUniqueExpr(box3, 1)
-  }
-
-  // Fill remaining expression slots
-  const exprRemaining = expressionCount - selectedExprs.length
-  if (exprRemaining > 0) {
-    addUniqueExpr(newExprs, exprRemaining)
-  }
-
-  // If still not enough, pull from any available
-  if (selectedExprs.length < expressionCount) {
-    const all = filteredIds.filter((id) => !usedExprSet.has(id))
-    addUniqueExpr(all, expressionCount - selectedExprs.length)
-  }
-
-  // --- Word selection ---
-  let filteredWordIds = getFilteredWordIds(level)
-  if (filteredWordIds.length < wordCount) {
-    filteredWordIds = Object.keys(wordEntries)
-  }
-
-  const wordFilteredSet = new Set(filteredWordIds)
-
-  // Categorize words by Leitner box (word: prefix)
-  const wordBox1 = allBox1.filter((id) => id.startsWith('word:') && wordFilteredSet.has(id.slice(5)))
-  const wordBox2 = allBox2.filter((id) => id.startsWith('word:') && wordFilteredSet.has(id.slice(5)))
-  const wordBox3 = allBox3.filter((id) => id.startsWith('word:') && wordFilteredSet.has(id.slice(5)))
-  const seenWordIds = new Set([...wordBox1, ...wordBox2, ...wordBox3].map((id) => id.slice(5)))
-  const newWords = filteredWordIds.filter((id) => !seenWordIds.has(id))
-
-  const selectedWords: string[] = []
-  const usedWordSet = new Set<string>()
-
-  const addUniqueWord = (source: string[], max: number) => {
-    const shuffled = shuffle(source)
-    let added = 0
-    for (const id of shuffled) {
-      if (added >= max) break
-      // Strip word: prefix if present for dedup
-      const wordId = id.startsWith('word:') ? id.slice(5) : id
-      if (usedWordSet.has(wordId)) continue
-      selectedWords.push(wordId)
-      usedWordSet.add(wordId)
-      added++
-    }
-  }
-
-  addUniqueWord(wordBox1, 1)
-  addUniqueWord(wordBox2, 1)
-
-  const wordRemaining = wordCount - selectedWords.length
-  if (wordRemaining > 0) {
-    addUniqueWord(newWords, wordRemaining)
-  }
-
-  if (selectedWords.length < wordCount) {
-    const allWords = filteredWordIds.filter((id) => !usedWordSet.has(id))
-    addUniqueWord(allWords, wordCount - selectedWords.length)
-  }
-
-  // --- Build card data ---
-  const exprCards: CardData[] = selectedExprs.map((exprId) => {
-    const entry = entries[exprId]
-    return {
-      type: 'expression' as const,
-      exprId,
-      expression: entry?.canonical ?? exprId,
-      meaningKo: entry?.meaning_ko ?? '',
-      cefr: entry?.cefr?.toUpperCase() ?? 'B1',
-      category: entry?.category ?? '',
-      contextEn: pickContextSentence(exprId),
-    }
-  })
-
-  const wordCards: CardData[] = selectedWords.map((wordId) => {
-    const entry = wordEntries[wordId]
-    // Use word-index context or example sentence from word-entries
-    const contextFromIndex = pickWordContextSentence(wordId)
-    const contextEn = contextFromIndex ?? entry?.example_en ?? null
-    return {
-      type: 'word' as const,
-      exprId: `word:${wordId}`,
-      expression: entry?.canonical ?? wordId,
-      meaningKo: entry?.meaning_ko ?? '',
-      cefr: entry?.cefr?.toUpperCase() ?? 'B1',
-      category: entry?.pos ?? '',
-      contextEn,
-    }
-  })
-
-  return shuffle([...exprCards, ...wordCards])
-}
-
-// ---------------------------------------------------------------------------
-// Category display names
-// ---------------------------------------------------------------------------
 
 const CATEGORY_LABELS: Record<string, string> = {
   idiom: 'idiom',
@@ -344,7 +109,6 @@ const CATEGORY_LABELS: Record<string, string> = {
   interjection: 'interjection',
   exclamation: 'exclamation',
   filler: 'filler',
-  // POS labels for words
   verb: 'verb',
   noun: 'noun',
   adjective: 'adjective',
@@ -355,194 +119,507 @@ const CATEGORY_LABELS: Record<string, string> = {
   determiner: 'determiner',
 }
 
-// ---------------------------------------------------------------------------
-// Streak flash
-// ---------------------------------------------------------------------------
+function shuffle<T>(array: T[]): T[] {
+  const arr = [...array]
+  for (let i = arr.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[arr[i], arr[j]] = [arr[j], arr[i]]
+  }
+  return arr
+}
+
+function normalizeMeaning(value?: string | null) {
+  return value?.trim() ?? ''
+}
+
+function getFilteredExpressionIds(level: string): string[] {
+  const pool = CEFR_POOLS[level] ?? CEFR_POOLS.A1
+  const allCefrs = new Set([...pool.primary, ...pool.secondary])
+
+  return Object.keys(entries).filter((id) => {
+    const entry = entries[id]
+    if (!entry?.cefr) return false
+    return allCefrs.has(entry.cefr.toUpperCase())
+  })
+}
+
+function getFilteredWordIds(level: string): string[] {
+  const pool = CEFR_POOLS[level] ?? CEFR_POOLS.A1
+  const allCefrs = new Set([...pool.primary, ...pool.secondary])
+
+  return Object.keys(wordEntries).filter((id) => {
+    const entry = wordEntries[id]
+    if (!entry?.cefr) return false
+    return allCefrs.has(entry.cefr.toUpperCase())
+  })
+}
+
+let expressionContextCache: Record<string, IndexMatch[]> | null = null
+
+function getContextByExprId(): Record<string, IndexMatch[]> {
+  if (expressionContextCache) return expressionContextCache
+  const map: Record<string, IndexMatch[]> = {}
+  for (const matches of Object.values(index)) {
+    for (const match of matches) {
+      if (!map[match.exprId]) map[match.exprId] = []
+      map[match.exprId].push(match)
+    }
+  }
+  expressionContextCache = map
+  return map
+}
+
+function pickContextSentence(exprId: string): string | null {
+  const matches = getContextByExprId()[exprId]
+  if (!matches?.length) return null
+  const pick = matches[Math.floor(Math.random() * matches.length)]
+  return pick.en
+}
+
+let wordContextCache: Record<string, WordIndexMatch[]> | null = null
+
+function getWordContextByWordId(): Record<string, WordIndexMatch[]> {
+  if (wordContextCache) return wordContextCache
+  const map: Record<string, WordIndexMatch[]> = {}
+  for (const matches of Object.values(wordIndex)) {
+    for (const match of matches) {
+      if (!map[match.wordId]) map[match.wordId] = []
+      map[match.wordId].push(match)
+    }
+  }
+  wordContextCache = map
+  return map
+}
+
+function pickWordContextSentence(wordId: string): string | null {
+  const matches = getWordContextByWordId()[wordId]
+  if (!matches?.length) return null
+  const pick = matches[Math.floor(Math.random() * matches.length)]
+  return pick.en
+}
+
+function uniqueCandidates(source: MeaningCandidate[]) {
+  const seen = new Set<string>()
+  const deduped: MeaningCandidate[] = []
+
+  for (const candidate of source) {
+    const meaningKo = normalizeMeaning(candidate.meaningKo)
+    if (!meaningKo || seen.has(meaningKo)) continue
+    seen.add(meaningKo)
+    deduped.push({
+      meaningKo,
+      cefr: candidate.cefr.toUpperCase(),
+      tag: candidate.tag,
+    })
+  }
+
+  return deduped
+}
+
+const expressionMeaningCandidates = uniqueCandidates(
+  Object.values(entries).map((entry) => ({
+    meaningKo: entry.meaning_ko ?? '',
+    cefr: entry.cefr ?? '',
+    tag: entry.category ?? '',
+  })),
+)
+
+const wordMeaningCandidates = uniqueCandidates(
+  Object.values(wordEntries).map((entry) => ({
+    meaningKo: entry.meaning_ko ?? '',
+    cefr: entry.cefr ?? '',
+    tag: entry.pos ?? '',
+  })),
+)
+
+function pickDecoyMeanings(params: {
+  type: 'expression' | 'word'
+  actualMeaningKo: string
+  cefr: string
+  category: string
+}) {
+  const source = params.type === 'word' ? wordMeaningCandidates : expressionMeaningCandidates
+  const actual = normalizeMeaning(params.actualMeaningKo)
+  const used = new Set<string>([actual])
+  const decoys: string[] = []
+
+  const buckets = [
+    source.filter((candidate) => candidate.cefr === params.cefr && candidate.tag === params.category),
+    source.filter((candidate) => candidate.cefr === params.cefr),
+    source.filter((candidate) => candidate.tag === params.category),
+    source,
+  ]
+
+  for (const bucket of buckets) {
+    for (const candidate of shuffle(bucket)) {
+      const meaningKo = normalizeMeaning(candidate.meaningKo)
+      if (!meaningKo || used.has(meaningKo)) continue
+      used.add(meaningKo)
+      decoys.push(meaningKo)
+      if (decoys.length === 3) return decoys
+    }
+  }
+
+  return decoys
+}
+
+function buildChoices(card: Omit<CardData, 'choices'>): ChoiceData[] {
+  const decoys = pickDecoyMeanings({
+    type: card.type,
+    actualMeaningKo: card.actualMeaningKo,
+    cefr: card.cefr,
+    category: card.category,
+  })
+
+  const options = [card.actualMeaningKo, ...decoys].slice(0, 4)
+
+  return shuffle(options).map((text, index) => ({
+    id: `${card.exprId}-${index}`,
+    text,
+    isCorrect: text === card.actualMeaningKo,
+  }))
+}
+
+function selectCards(level: string): CardData[] {
+  const gameStore = useGameProgressStore.getState()
+  const expressionCount = Math.round(CARDS_PER_ROUND * 0.7)
+  const wordCount = CARDS_PER_ROUND - expressionCount
+
+  let filteredExpressionIds = getFilteredExpressionIds(level)
+  if (filteredExpressionIds.length < expressionCount) {
+    filteredExpressionIds = Object.keys(entries)
+  }
+
+  const filteredExpressionSet = new Set(filteredExpressionIds)
+  const allBox1 = gameStore.getBox1Expressions()
+  const allBox2 = gameStore.getBox2Expressions()
+  const allBox3 = gameStore.getMasteredExpressions()
+
+  const expressionBox1 = allBox1.filter((id) => !id.startsWith('word:') && filteredExpressionSet.has(id))
+  const expressionBox2 = allBox2.filter((id) => !id.startsWith('word:') && filteredExpressionSet.has(id))
+  const expressionBox3 = allBox3.filter((id) => !id.startsWith('word:') && filteredExpressionSet.has(id))
+  const seenExpressions = new Set([...expressionBox1, ...expressionBox2, ...expressionBox3])
+  const newExpressions = filteredExpressionIds.filter((id) => !seenExpressions.has(id))
+
+  const selectedExpressionIds: string[] = []
+  const usedExpressionIds = new Set<string>()
+
+  const addUniqueExpressions = (source: string[], max: number) => {
+    let added = 0
+    for (const exprId of shuffle(source)) {
+      if (added >= max) break
+      if (usedExpressionIds.has(exprId)) continue
+      selectedExpressionIds.push(exprId)
+      usedExpressionIds.add(exprId)
+      added += 1
+    }
+  }
+
+  addUniqueExpressions(expressionBox1, 3)
+  addUniqueExpressions(expressionBox2, 2)
+  if (Math.random() < 0.1 && expressionBox3.length > 0) {
+    addUniqueExpressions(expressionBox3, 1)
+  }
+
+  const remainingExpressionSlots = expressionCount - selectedExpressionIds.length
+  if (remainingExpressionSlots > 0) {
+    addUniqueExpressions(newExpressions, remainingExpressionSlots)
+  }
+  if (selectedExpressionIds.length < expressionCount) {
+    addUniqueExpressions(
+      filteredExpressionIds.filter((id) => !usedExpressionIds.has(id)),
+      expressionCount - selectedExpressionIds.length,
+    )
+  }
+
+  let filteredWordIds = getFilteredWordIds(level)
+  if (filteredWordIds.length < wordCount) {
+    filteredWordIds = Object.keys(wordEntries)
+  }
+
+  const filteredWordSet = new Set(filteredWordIds)
+  const wordBox1 = allBox1.filter((id) => id.startsWith('word:') && filteredWordSet.has(id.slice(5)))
+  const wordBox2 = allBox2.filter((id) => id.startsWith('word:') && filteredWordSet.has(id.slice(5)))
+  const wordBox3 = allBox3.filter((id) => id.startsWith('word:') && filteredWordSet.has(id.slice(5)))
+  const seenWordIds = new Set([...wordBox1, ...wordBox2, ...wordBox3].map((id) => id.slice(5)))
+  const newWords = filteredWordIds.filter((id) => !seenWordIds.has(id))
+
+  const selectedWordIds: string[] = []
+  const usedWordIds = new Set<string>()
+
+  const addUniqueWords = (source: string[], max: number) => {
+    let added = 0
+    for (const rawId of shuffle(source)) {
+      if (added >= max) break
+      const wordId = rawId.startsWith('word:') ? rawId.slice(5) : rawId
+      if (usedWordIds.has(wordId)) continue
+      selectedWordIds.push(wordId)
+      usedWordIds.add(wordId)
+      added += 1
+    }
+  }
+
+  addUniqueWords(wordBox1, 1)
+  addUniqueWords(wordBox2, 1)
+  if (Math.random() < 0.1 && wordBox3.length > 0) {
+    addUniqueWords(wordBox3, 1)
+  }
+
+  const remainingWordSlots = wordCount - selectedWordIds.length
+  if (remainingWordSlots > 0) {
+    addUniqueWords(newWords, remainingWordSlots)
+  }
+  if (selectedWordIds.length < wordCount) {
+    addUniqueWords(
+      filteredWordIds.filter((id) => !usedWordIds.has(id)),
+      wordCount - selectedWordIds.length,
+    )
+  }
+
+  const expressionCards = selectedExpressionIds.map((exprId) => {
+    const entry = entries[exprId]
+    const baseCard = {
+      type: 'expression' as const,
+      exprId,
+      expression: entry?.canonical ?? exprId,
+      actualMeaningKo: normalizeMeaning(entry?.meaning_ko ?? ''),
+      cefr: entry?.cefr?.toUpperCase() ?? 'B1',
+      category: entry?.category ?? '',
+      contextEn: pickContextSentence(exprId),
+    }
+
+    return {
+      ...baseCard,
+      choices: buildChoices(baseCard),
+    }
+  })
+
+  const wordCards = selectedWordIds.map((wordId) => {
+    const entry = wordEntries[wordId]
+    const baseCard = {
+      type: 'word' as const,
+      exprId: `word:${wordId}`,
+      expression: entry?.canonical ?? wordId,
+      actualMeaningKo: normalizeMeaning(entry?.meaning_ko ?? ''),
+      cefr: entry?.cefr?.toUpperCase() ?? 'B1',
+      category: entry?.pos ?? '',
+      contextEn: pickWordContextSentence(wordId) ?? entry?.example_en ?? null,
+    }
+
+    return {
+      ...baseCard,
+      choices: buildChoices(baseCard),
+    }
+  })
+
+  return shuffle([...expressionCards, ...wordCards])
+}
 
 function StreakFlash({ streak }: { streak: number }) {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
+      initial={{ opacity: 0, scale: 0.82 }}
       animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.8 }}
-      transition={{ duration: 0.4 }}
-      className="absolute top-16 left-1/2 -translate-x-1/2 pointer-events-none z-50 text-xl font-bold"
-      style={{ color: 'var(--accent-text)' }}
+      exit={{ opacity: 0, scale: 0.82 }}
+      transition={{ duration: 0.35 }}
+      className="pointer-events-none absolute top-16 left-1/2 z-50 -translate-x-1/2 rounded-full border px-4 py-2 text-sm font-bold"
+      style={{
+        color: 'var(--accent-text)',
+        borderColor: 'rgba(var(--accent-primary-rgb), 0.28)',
+        backgroundColor: 'rgba(var(--accent-primary-rgb), 0.16)',
+      }}
     >
-      {streak}x streak!
+      {streak}x combo
     </motion.div>
   )
 }
 
-// ---------------------------------------------------------------------------
-// Main Component
-// ---------------------------------------------------------------------------
-
 export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
-  const level = useOnboardingStore((s) => s.level)
-  const updateLeitner = useGameProgressStore((s) => s.updateLeitner)
-  const updateBestStreak = useGameProgressStore((s) => s.updateBestStreak)
-  const incrementSessionCount = useGameProgressStore((s) => s.incrementSessionCount)
-  const bestStreak = useGameProgressStore((s) => s.bestStreak)
-  const markFamiliar = useFamiliarityStore((s) => s.markFamiliar)
-  const recalculateScore = useLevelStore((s) => s.recalculateScore)
-  const checkLevelUp = useLevelStore((s) => s.checkLevelUp)
+  const level = useOnboardingStore((state) => state.level)
+  const updateLeitner = useGameProgressStore((state) => state.updateLeitner)
+  const updateBestStreak = useGameProgressStore((state) => state.updateBestStreak)
+  const incrementSessionCount = useGameProgressStore((state) => state.incrementSessionCount)
+  const bestStreak = useGameProgressStore((state) => state.bestStreak)
+  const markFamiliar = useFamiliarityStore((state) => state.markFamiliar)
+  const recalculateScore = useLevelStore((state) => state.recalculateScore)
+  const checkLevelUp = useLevelStore((state) => state.checkLevelUp)
 
   const [cards] = useState<CardData[]>(() => selectCards(level))
   const [currentIdx, setCurrentIdx] = useState(0)
   const [phase, setPhase] = useState<GamePhase>('playing')
   const [streak, setStreak] = useState(0)
   const [sessionXPAwarded, setSessionXPAwarded] = useState(0)
-  const [results, setResults] = useState<Array<{ exprId: string; correct: boolean }>>([])
-
-  // Feedback states
+  const [results, setResults] = useState<
+    Array<{
+      exprId: string
+      expression: string
+      selectedMeaningKo: string
+      actualMeaningKo: string
+      correct: boolean
+    }>
+  >([])
   const [flashColor, setFlashColor] = useState<'green' | 'red' | null>(null)
   const [streakFlash, setStreakFlash] = useState<number | null>(null)
   const [isAnimating, setIsAnimating] = useState(false)
   const [slideDir, setSlideDir] = useState<'left' | 'right' | null>(null)
+  const [feedback, setFeedback] = useState<{
+    correct: boolean
+    title: string
+    detail: string
+  } | null>(null)
+  const [selectedChoiceId, setSelectedChoiceId] = useState<string | null>(null)
+  const [draggingChoiceId, setDraggingChoiceId] = useState<string | null>(null)
+  const [bestCombo, setBestCombo] = useState(0)
+  const [sessionStart] = useState(() => Date.now())
 
   const maxStreakRef = useRef(0)
-  const sessionStartRef = useRef(Date.now())
 
   const currentCard = cards[currentIdx] ?? null
 
-  // Complete the round
   const finishRound = useCallback(() => {
     incrementSessionCount('expressionSwipe')
     if (maxStreakRef.current > bestStreak) {
       updateBestStreak(maxStreakRef.current)
     }
 
-    // Award session completion XP (anti-farming: must take >= 2 minutes)
-    const xpAmount = calculateSessionXP('expressionSwipe', sessionStartRef.current)
+    const xpAmount = calculateSessionXP('expressionSwipe', sessionStart)
     if (xpAmount > 0) {
       const actual = useGameProgressStore.getState().addSessionXP(xpAmount)
       setSessionXPAwarded(actual)
     }
 
-    // Streak bonus (once per day, on activity completion)
     const gameStore = useGameProgressStore.getState()
     if (!gameStore.isStreakBonusAwardedToday()) {
-      const { useUserStore } = require('@/stores/useUserStore')
       const userState = useUserStore.getState()
       userState.checkAndUpdateStreak()
       const streakDays = useUserStore.getState().streakDays
-      const totalMonthlyXP = userState.totalXpEarned // approximate
+      const totalMonthlyXP = userState.totalXpEarned
       gameStore.awardStreakBonus(streakDays, totalMonthlyXP)
       checkStreakMilestones(streakDays)
     }
 
-    // Check game milestones
     const totalSessions = useGameProgressStore.getState().getTotalSessions()
     checkGameMilestones(totalSessions)
-
     setPhase('result')
-  }, [incrementSessionCount, bestStreak, updateBestStreak])
+  }, [bestStreak, incrementSessionCount, sessionStart, updateBestStreak])
 
-  // Advance to next card or finish
   const advanceCard = useCallback(() => {
     if (currentIdx + 1 >= cards.length) {
       finishRound()
-    } else {
-      setCurrentIdx((prev) => prev + 1)
-      setSlideDir(null)
+      return
     }
+
+    setCurrentIdx((prev) => prev + 1)
+    setSlideDir(null)
+    setSelectedChoiceId(null)
+    setDraggingChoiceId(null)
+    setFeedback(null)
     setIsAnimating(false)
-  }, [currentIdx, cards.length, finishRound])
+  }, [cards.length, currentIdx, finishRound])
 
-  // Handle answer
-  const handleAnswer = useCallback(
-    (known: boolean) => {
-      if (!currentCard || isAnimating) return
+  const handleChoice = useCallback(
+    (choice: ChoiceData) => {
+      if (!currentCard || isAnimating || selectedChoiceId) return
+
       setIsAnimating(true)
+      setSelectedChoiceId(choice.id)
+      setDraggingChoiceId(null)
 
+      const isCorrect = choice.isCorrect
       const exprId = currentCard.exprId
 
-      // Visual feedback
-      setFlashColor(known ? 'green' : 'red')
-      setSlideDir(known ? 'right' : 'left')
+      setFlashColor(isCorrect ? 'green' : 'red')
+      setSlideDir(isCorrect ? 'right' : 'left')
+      setFeedback({
+        correct: isCorrect,
+        title: isCorrect ? 'GOOD' : 'MISS',
+        detail: isCorrect ? choice.text : `정답: ${currentCard.actualMeaningKo}`,
+      })
 
-      // Haptic
-      triggerHaptic(known ? 40 : [30, 50, 30])
+      triggerHaptic(isCorrect ? 40 : [30, 50, 30])
+      updateLeitner(exprId, isCorrect)
 
-      // Store updates
-      updateLeitner(exprId, known)
-
-      if (known) {
+      if (isCorrect) {
         markFamiliar(exprId)
-
-        // Recalculate Absorption Score (used for content recommendations, not XP)
-        setTimeout(() => {
+        window.setTimeout(() => {
           const updatedEntries = useFamiliarityStore.getState().entries
           recalculateScore(updatedEntries)
           checkLevelUp(level)
         }, 50)
       }
 
-      // Streak
-      const newStreak = known ? streak + 1 : 0
-      setStreak(newStreak)
-      if (newStreak > maxStreakRef.current) {
-        maxStreakRef.current = newStreak
+      const nextStreak = isCorrect ? streak + 1 : 0
+      setStreak(nextStreak)
+      if (nextStreak > maxStreakRef.current) {
+        maxStreakRef.current = nextStreak
+        setBestCombo(nextStreak)
+      }
+      if (isCorrect && [3, 5, 8, 10].includes(nextStreak)) {
+        setStreakFlash(nextStreak)
+        window.setTimeout(() => setStreakFlash(null), 1000)
       }
 
-      // Streak flash at milestones
-      if (known && (newStreak === 5 || newStreak === 10 || newStreak === 15 || newStreak === 20)) {
-        setStreakFlash(newStreak)
-        setTimeout(() => setStreakFlash(null), 1200)
-      }
+      setResults((prev) => [
+        ...prev,
+        {
+          exprId,
+          expression: currentCard.expression,
+          selectedMeaningKo: choice.text,
+          actualMeaningKo: currentCard.actualMeaningKo,
+          correct: isCorrect,
+        },
+      ])
 
-      // Record result
-      setResults((prev) => [...prev, { exprId, correct: known }])
-
-      // Advance after animation
-      setTimeout(() => {
+      window.setTimeout(() => {
         setFlashColor(null)
         advanceCard()
-      }, 300)
+      }, ANSWER_REVEAL_MS)
     },
     [
+      advanceCard,
+      checkLevelUp,
       currentCard,
       isAnimating,
-      updateLeitner,
+      level,
       markFamiliar,
       recalculateScore,
-      checkLevelUp,
-      level,
+      selectedChoiceId,
       streak,
-      advanceCard,
+      updateLeitner,
     ],
   )
 
-  // Result screen data
-  const correctCount = results.filter((r) => r.correct).length
-  const wrongResults = results.filter((r) => !r.correct)
+  const handleChoiceDragEnd = useCallback(
+    (choice: ChoiceData, _event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
+      setDraggingChoiceId(null)
+      if (info.offset.y <= -DRAG_SUBMIT_THRESHOLD || info.velocity.y <= -650) {
+        handleChoice(choice)
+      }
+    },
+    [handleChoice],
+  )
 
-  // Replay wrong ones
+  const correctCount = results.filter((result) => result.correct).length
+  const wrongResults = results.filter((result) => !result.correct)
+
   const handleReplay = useCallback(() => {
-    // This would need a new component instance; simplest: call onComplete to re-mount
     onComplete(false)
   }, [onComplete])
 
   const handleExit = useCallback(() => {
     onComplete(correctCount >= cards.length / 2)
-  }, [onComplete, correctCount, cards.length])
-
-  // ---------------------------------------------------------------------------
-  // Result screen
-  // ---------------------------------------------------------------------------
+  }, [cards.length, correctCount, onComplete])
 
   if (phase === 'result') {
     return (
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        className="flex flex-col items-center h-full px-5 py-8 overflow-y-auto"
+        className="flex h-full flex-col items-center overflow-y-auto px-5 py-8"
       >
-        {/* Score */}
         <div className="mb-6 text-center">
-          <p className="text-sm uppercase tracking-wider mb-2" style={{ color: 'var(--text-muted)' }}>
-            결과
+          <p className="mb-2 text-sm uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>
+            RESULT
           </p>
           <p className="text-5xl font-bold" style={{ color: 'var(--text-primary)' }}>
             {correctCount}
@@ -553,9 +630,8 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
           </p>
         </div>
 
-        {/* Stats */}
         <div
-          className="w-full max-w-sm rounded-2xl border p-4 mb-6 grid grid-cols-2 gap-4"
+          className="mb-6 grid w-full max-w-sm grid-cols-2 gap-4 rounded-2xl border p-4"
           style={{
             backgroundColor: 'var(--bg-card)',
             borderColor: 'var(--border-card)',
@@ -563,228 +639,312 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
           }}
         >
           <div className="text-center">
-            <p className="text-xs mb-1" style={{ color: 'var(--text-muted)' }}>
-              획득 XP
+            <p className="mb-1 text-xs" style={{ color: 'var(--text-muted)' }}>
+              SESSION XP
             </p>
             <p className="text-xl font-bold" style={{ color: 'var(--accent-text)' }}>
               +{sessionXPAwarded}
             </p>
           </div>
           <div className="text-center">
-            <p className="text-xs mb-1" style={{ color: 'var(--text-muted)' }}>
-              최고 연속
+            <p className="mb-1 text-xs" style={{ color: 'var(--text-muted)' }}>
+              BEST COMBO
             </p>
             <p className="text-xl font-bold" style={{ color: 'var(--text-primary)' }}>
-              {maxStreakRef.current}
+              {bestCombo}
             </p>
           </div>
         </div>
 
-        {/* Wrong expressions */}
         {wrongResults.length > 0 && (
-          <div className="w-full max-w-sm mb-6">
-            <p className="text-xs uppercase tracking-wider mb-3" style={{ color: 'var(--text-muted)' }}>
-              다시 볼 표현
+          <div className="mb-6 w-full max-w-sm">
+            <p className="mb-3 text-xs uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>
+              REVIEW
             </p>
             <div className="space-y-2">
-              {wrongResults.map(({ exprId }) => {
-                const isWord = exprId.startsWith('word:')
-                const lookupId = isWord ? exprId.slice(5) : exprId
-                const entry = isWord ? wordEntries[lookupId] : entries[lookupId]
-                return (
-                  <div
-                    key={exprId}
-                    className="rounded-xl border px-4 py-3 flex items-center justify-between"
-                    style={{
-                      backgroundColor: 'var(--bg-card)',
-                      borderColor: 'var(--border-card)',
-                    }}
-                  >
-                    <span className="font-medium" style={{ color: 'var(--text-primary)' }}>
-                      {entry?.canonical ?? lookupId}
-                    </span>
-                    <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>
-                      {entry?.meaning_ko ?? ''}
-                    </span>
-                  </div>
-                )
-              })}
+              {wrongResults.map((result) => (
+                <div
+                  key={`${result.exprId}-${result.selectedMeaningKo}`}
+                  className="rounded-xl border px-4 py-3"
+                  style={{
+                    backgroundColor: 'var(--bg-card)',
+                    borderColor: 'var(--border-card)',
+                  }}
+                >
+                  <p className="font-medium" style={{ color: 'var(--text-primary)' }}>
+                    {result.expression}
+                  </p>
+                  <p className="mt-1 text-xs" style={{ color: 'var(--text-muted)' }}>
+                    내가 고른 뜻: {result.selectedMeaningKo}
+                  </p>
+                  <p className="mt-1 text-sm" style={{ color: 'var(--text-secondary)' }}>
+                    정답: {result.actualMeaningKo}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         )}
 
-        {/* Buttons */}
-        <div className="w-full max-w-sm flex gap-3 mt-auto">
+        <div className="mt-auto flex w-full max-w-sm gap-3">
           {wrongResults.length > 0 && (
             <button
               onClick={handleReplay}
-              className="flex-1 rounded-xl py-3.5 font-medium text-sm border transition-colors active:scale-[0.98]"
+              className="flex-1 rounded-xl border py-3.5 text-sm font-medium transition-colors active:scale-[0.98]"
               style={{
                 backgroundColor: 'var(--bg-secondary)',
                 borderColor: 'var(--border-card)',
                 color: 'var(--text-primary)',
               }}
             >
-              다시 풀기
+              다시 하기
             </button>
           )}
           <button
             onClick={handleExit}
-            className="flex-1 rounded-xl py-3.5 font-medium text-sm transition-colors active:scale-[0.98]"
+            className="flex-1 rounded-xl py-3.5 text-sm font-medium transition-colors active:scale-[0.98]"
             style={{
               backgroundColor: 'var(--accent-primary)',
               color: '#fff',
             }}
           >
-            그만하기
+            끝내기
           </button>
         </div>
       </motion.div>
     )
   }
 
-  // ---------------------------------------------------------------------------
-  // Playing screen
-  // ---------------------------------------------------------------------------
-
   if (!currentCard) {
     return (
-      <div className="flex items-center justify-center h-full">
-        <p style={{ color: 'var(--text-muted)' }}>표현을 불러올 수 없습니다</p>
+      <div className="flex h-full items-center justify-center">
+        <p style={{ color: 'var(--text-muted)' }}>표현을 불러올 수 없습니다.</p>
       </div>
     )
   }
 
+  const dockText = feedback
+    ? feedback.detail
+    : draggingChoiceId
+      ? '여기에 놓으면 정답 제출'
+      : '카드를 탭하거나 위로 끌어 정답 슬롯에 놓으세요'
+
   return (
-    <div className="relative flex flex-col h-full px-5 py-4">
-      {/* Header: progress + streak */}
-      <div className="flex items-center justify-between mb-4">
+    <div className="relative flex h-full flex-col px-5 py-4">
+      <div className="mb-4 flex items-center justify-between">
         <p className="text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
           {currentIdx + 1} / {cards.length}
         </p>
         {streak > 0 && (
           <motion.p
             key={streak}
-            initial={{ scale: 1.3 }}
+            initial={{ scale: 1.24 }}
             animate={{ scale: 1 }}
             transition={{ duration: 0.15 }}
-            className="text-sm font-bold"
-            style={{ color: 'var(--accent-text)' }}
+            className="rounded-full border px-3 py-1 text-sm font-bold"
+            style={{
+              color: 'var(--accent-text)',
+              borderColor: 'rgba(var(--accent-primary-rgb), 0.28)',
+              backgroundColor: 'rgba(var(--accent-primary-rgb), 0.14)',
+            }}
           >
-            {streak}x
+            {streak}x combo
           </motion.p>
         )}
       </div>
 
-      {/* Progress bar */}
       <div
-        className="w-full h-1 rounded-full mb-6 overflow-hidden"
+        className="mb-6 h-1 w-full overflow-hidden rounded-full"
         style={{ backgroundColor: 'var(--bg-secondary)' }}
       >
         <motion.div
           className="h-full rounded-full"
           style={{ backgroundColor: 'var(--accent-primary)' }}
           initial={false}
-          animate={{ width: `${((currentIdx) / cards.length) * 100}%` }}
+          animate={{ width: `${(currentIdx / cards.length) * 100}%` }}
           transition={{ duration: 0.3 }}
         />
       </div>
 
-      {/* Card area */}
-      <div className="flex-1 flex items-center justify-center relative">
-        {/* Flash overlay */}
+      <div className="relative flex flex-1 items-center justify-center">
         <AnimatePresence>
           {flashColor && (
             <motion.div
-              initial={{ opacity: 0.5 }}
+              initial={{ opacity: 0.48 }}
               animate={{ opacity: 0 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-              className="absolute inset-0 rounded-2xl pointer-events-none z-10"
+              transition={{ duration: 0.32 }}
+              className="pointer-events-none absolute inset-0 z-10 rounded-2xl"
               style={{
-                backgroundColor: flashColor === 'green' ? 'rgba(34, 197, 94, 0.15)' : 'rgba(239, 68, 68, 0.15)',
+                backgroundColor:
+                  flashColor === 'green'
+                    ? 'rgba(34, 197, 94, 0.14)'
+                    : 'rgba(239, 68, 68, 0.14)',
               }}
             />
           )}
         </AnimatePresence>
 
-        {/* Streak flash */}
-        <AnimatePresence>{streakFlash && <StreakFlash key={`streak-${streakFlash}`} streak={streakFlash} />}</AnimatePresence>
+        <AnimatePresence>
+          {streakFlash && <StreakFlash key={`streak-${streakFlash}`} streak={streakFlash} />}
+        </AnimatePresence>
 
-        {/* Card */}
+        <AnimatePresence>
+          {feedback && (
+            <motion.div
+              key={`${feedback.title}-${feedback.detail}`}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.18 }}
+              className="pointer-events-none absolute top-4 z-20 flex justify-center"
+            >
+              <div
+                className="rounded-full border px-4 py-2 text-xs font-semibold"
+                style={{
+                  color: feedback.correct ? '#86efac' : '#fca5a5',
+                  borderColor: feedback.correct ? 'rgba(34, 197, 94, 0.24)' : 'rgba(239, 68, 68, 0.24)',
+                  backgroundColor: feedback.correct ? 'rgba(34, 197, 94, 0.12)' : 'rgba(239, 68, 68, 0.12)',
+                }}
+              >
+                {feedback.title}
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
         <AnimatePresence mode="wait">
           <motion.div
-            key={currentCard.exprId + '-' + currentIdx}
-            initial={{ opacity: 0, x: 40 }}
+            key={`${currentCard.exprId}-${currentIdx}`}
+            initial={{ opacity: 0, x: 36 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{
               opacity: 0,
-              x: slideDir === 'right' ? 120 : slideDir === 'left' ? -120 : 0,
-              transition: { duration: 0.25 },
+              x: slideDir === 'right' ? 110 : slideDir === 'left' ? -110 : 0,
+              transition: { duration: 0.24 },
             }}
-            transition={{ duration: 0.25, ease: 'easeOut' }}
-            className="w-full max-w-sm rounded-2xl border p-6 flex flex-col items-center text-center"
-            style={{
-              backgroundColor: 'var(--bg-card)',
-              borderColor: 'var(--border-card)',
-              boxShadow: 'var(--card-shadow)',
-            }}
+            transition={{ duration: 0.24, ease: 'easeOut' }}
+            className="flex w-full max-w-md flex-col"
           >
-            {/* CEFR + category */}
-            <p className="text-xs mb-5" style={{ color: 'var(--text-muted)' }}>
-              {currentCard.cefr}
-              {currentCard.category ? ` \u00B7 ${CATEGORY_LABELS[currentCard.category] ?? currentCard.category}` : ''}
-            </p>
-
-            {/* Expression */}
-            <p className="text-2xl font-bold mb-3 leading-snug" style={{ color: 'var(--text-primary)' }}>
-              {currentCard.expression}
-            </p>
-
-            {/* Korean meaning */}
-            <p className="text-base mb-5" style={{ color: 'var(--text-secondary)' }}>
-              {currentCard.meaningKo}
-            </p>
-
-            {/* Context sentence */}
-            {currentCard.contextEn && (
-              <p
-                className="text-sm leading-relaxed italic px-2 mb-6 max-w-[280px]"
-                style={{ color: 'var(--text-muted)' }}
-              >
-                &ldquo;{currentCard.contextEn}&rdquo;
+            <div
+              className="mb-3 rounded-2xl border px-4 py-3 text-center"
+              style={{
+                borderColor: draggingChoiceId
+                  ? 'rgba(var(--accent-primary-rgb), 0.34)'
+                  : 'var(--border-card)',
+                backgroundColor: draggingChoiceId
+                  ? 'rgba(var(--accent-primary-rgb), 0.12)'
+                  : 'var(--bg-secondary)',
+                boxShadow: draggingChoiceId
+                  ? '0 10px 28px rgba(var(--accent-primary-rgb), 0.14)'
+                  : 'none',
+              }}
+            >
+              <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.22em]" style={{ color: 'var(--accent-text)' }}>
+                Answer Slot
               </p>
-            )}
+              <p className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>
+                {dockText}
+              </p>
+            </div>
 
-            {!currentCard.contextEn && <div className="mb-6" />}
+            <div
+              className="rounded-[28px] border px-6 py-6 text-center"
+              style={{
+                backgroundColor: 'var(--bg-card)',
+                borderColor: 'var(--border-card)',
+                boxShadow: 'var(--card-shadow)',
+              }}
+            >
+              <p
+                className="mb-3 text-[11px] font-semibold uppercase tracking-[0.18em]"
+                style={{ color: 'var(--accent-text)' }}
+              >
+                Meaning Match
+              </p>
+              <p className="mb-2 text-xs" style={{ color: 'var(--text-muted)' }}>
+                {currentCard.cefr}
+                {currentCard.category
+                  ? ` · ${CATEGORY_LABELS[currentCard.category] ?? currentCard.category}`
+                  : ''}
+              </p>
+              <p className="mb-3 text-2xl font-bold leading-snug" style={{ color: 'var(--text-primary)' }}>
+                {currentCard.expression}
+              </p>
+              {currentCard.contextEn ? (
+                <p
+                  className="mx-auto max-w-[320px] text-sm italic leading-relaxed"
+                  style={{ color: 'var(--text-secondary)' }}
+                >
+                  &ldquo;{currentCard.contextEn}&rdquo;
+                </p>
+              ) : (
+                <p className="text-sm" style={{ color: 'var(--text-muted)' }}>
+                  뜻 카드를 골라 위 슬롯으로 올려보세요.
+                </p>
+              )}
+            </div>
 
-            {/* Buttons */}
-            <div className="flex gap-3 w-full">
-              <motion.button
-                whileTap={{ scale: 0.95 }}
-                onClick={() => handleAnswer(false)}
-                disabled={isAnimating}
-                className="flex-1 rounded-xl py-3 font-medium text-sm border transition-colors"
-                style={{
-                  backgroundColor: 'var(--bg-secondary)',
-                  borderColor: 'var(--border-card)',
-                  color: 'var(--text-secondary)',
-                }}
-              >
-                몰라요
-              </motion.button>
-              <motion.button
-                whileTap={{ scale: 0.95 }}
-                onClick={() => handleAnswer(true)}
-                disabled={isAnimating}
-                className="flex-1 rounded-xl py-3 font-medium text-sm transition-colors"
-                style={{
-                  backgroundColor: 'var(--accent-primary)',
-                  color: '#fff',
-                }}
-              >
-                알아요
-              </motion.button>
+            <div className="mt-4 flex items-center justify-between text-[11px] font-medium">
+              <span style={{ color: 'var(--text-muted)' }}>4지선다 뜻 카드</span>
+              <span style={{ color: 'var(--accent-text)' }}>tap or drag up</span>
+            </div>
+
+            <div className="mt-3 grid grid-cols-2 gap-3">
+              {currentCard.choices.map((choice, index) => {
+                const isSelected = selectedChoiceId === choice.id
+                const isCorrectChoice = selectedChoiceId !== null && choice.isCorrect
+                const isWrongSelected = isSelected && !choice.isCorrect
+
+                let backgroundColor = 'var(--bg-card)'
+                let borderColor = 'var(--border-card)'
+                let textColor = 'var(--text-primary)'
+
+                if (selectedChoiceId !== null) {
+                  if (isCorrectChoice) {
+                    backgroundColor = 'rgba(34, 197, 94, 0.14)'
+                    borderColor = 'rgba(34, 197, 94, 0.34)'
+                    textColor = '#ffffff'
+                  } else if (isWrongSelected) {
+                    backgroundColor = 'rgba(239, 68, 68, 0.14)'
+                    borderColor = 'rgba(239, 68, 68, 0.34)'
+                    textColor = '#ffffff'
+                  } else {
+                    backgroundColor = 'var(--bg-secondary)'
+                    textColor = 'var(--text-muted)'
+                  }
+                }
+
+                return (
+                  <motion.button
+                    key={choice.id}
+                    initial={{ opacity: 0, y: 18 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.05, duration: 0.2, ease: 'easeOut' }}
+                    whileTap={{ scale: 0.97 }}
+                    drag={selectedChoiceId ? false : 'y'}
+                    dragConstraints={{ top: -150, bottom: 0 }}
+                    dragElastic={0.18}
+                    whileDrag={{ scale: 1.02 }}
+                    onDragStart={() => setDraggingChoiceId(choice.id)}
+                    onDragEnd={(event, info) => handleChoiceDragEnd(choice, event, info)}
+                    onClick={() => handleChoice(choice)}
+                    disabled={selectedChoiceId !== null || isAnimating}
+                    className="min-h-[96px] rounded-2xl border px-4 py-4 text-left text-sm font-medium transition-all"
+                    style={{ backgroundColor, borderColor, color: textColor }}
+                  >
+                    <div className="mb-2 flex items-center justify-between gap-3">
+                      <span className="text-[10px] font-semibold uppercase tracking-[0.18em]" style={{ color: 'var(--text-muted)' }}>
+                        {String.fromCharCode(65 + index)}
+                      </span>
+                      <span className="text-[10px]" style={{ color: 'var(--text-muted)' }}>
+                        ↑ drag
+                      </span>
+                    </div>
+                    <p className="leading-relaxed">{choice.text}</p>
+                  </motion.button>
+                )
+              })}
             </div>
           </motion.div>
         </AnimatePresence>

@@ -1,0 +1,1321 @@
+{
+  "total_checked": 2570,
+  "issues_found": [
+    {
+      "word": "stick",
+      "current_meaning_ko": "붙이다, 찌르다, 고수하다",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [
+        "Let's just stick to what we know. Yes?",
+        "So you want to be stuck with the nerds and freaks for three more years?",
+        "brothers brought some heat so I said I'm stuck See these girls peepin me I'ma glide and swerve These hoes lookin so hard they straight"
+      ],
+      "issue": "Primary meaning \"막대 (stick/rod) as noun\" not found in meaning_ko - current meaning may be secondary/incomplete",
+      "fix": {
+        "meaning_ko": null,
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "nut",
+      "current_meaning_ko": "견과류, 미치광이(속어)",
+      "current_pos": "noun",
+      "current_register": "casual",
+      "transcript_examples": [
+        "Okay, so accept these nuts.",
+        "he's a tough old nut.",
+        "care okay and we had a soccer game there was a neighbor's birthday party a nut"
+      ],
+      "issue": "A1/A2 word meaning_ko contains slang annotation markers - primary meaning may be missing or secondary",
+      "fix": {
+        "meaning_ko": null,
+        "pos": "noun",
+        "register": "casual"
+      }
+    },
+    {
+      "word": "hanging",
+      "current_meaning_ko": "매달린, 놀고 있는",
+      "current_pos": "adjective",
+      "current_register": "casual",
+      "transcript_examples": [],
+      "issue": "Inflected form of \"hang\" (register: neutral) but tagged as \"casual\" - register should match base word unless meaning diverged",
+      "fix": {
+        "meaning_ko": "매달린, 놀고 있는",
+        "pos": "adjective",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "stopped",
+      "current_meaning_ko": "멈췄다, 중단했다",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"stopped\" is a simple inflection of \"stop\" (멈추다, 그만두다, 정류장) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "멈췄다, 중단했다",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "showing",
+      "current_meaning_ko": "보여주는, 상영",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"showing\" is a simple inflection of \"show\" (보여주다, 나타내다, 쇼) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "보여주는, 상영",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "names",
+      "current_meaning_ko": "이름들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"names\" is a simple inflection of \"name\" (이름, 명칭, 이름을 짓다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "이름들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "helping",
+      "current_meaning_ko": "돕는, 도와주는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"helping\" is a simple inflection of \"help\" (돕다, 도움, 도움이 되다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "돕는, 도와주는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "believing",
+      "current_meaning_ko": "믿는, 신뢰하는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"believing\" is a simple inflection of \"believe\" (믿다, 생각하다, 신뢰하다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "믿는, 신뢰하는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "faces",
+      "current_meaning_ko": "얼굴들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"faces\" is a simple inflection of \"face\" (얼굴, 표정, 직면하다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "얼굴들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "played",
+      "current_meaning_ko": "놀았다, 연주했다",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"played\" is a simple inflection of \"play\" (놀다, 연주하다, 경기하다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "놀았다, 연주했다",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "families",
+      "current_meaning_ko": "가족들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"families\" is a simple inflection of \"family\" (가족, 가정, 일가) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "가족들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "wanting",
+      "current_meaning_ko": "원하는, 바라는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"wanting\" is a simple inflection of \"want\" (원하다, ~하고 싶다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "원하는, 바라는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "jobs",
+      "current_meaning_ko": "직업들, 일자리들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"jobs\" is a simple inflection of \"job\" (직업, 일, 업무) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "직업들, 일자리들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "cares",
+      "current_meaning_ko": "신경 쓰다, 관심 갖다",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"cares\" is a simple inflection of \"care\" (신경 쓰다, 돌보다, 관심) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "신경 쓰다, 관심 갖다",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "changing",
+      "current_meaning_ko": "바꾸는, 변화하는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"changing\" is a simple inflection of \"change\" (바꾸다, 변하다, 변화) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "바꾸는, 변화하는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "opens",
+      "current_meaning_ko": "열다, 개장하다",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"opens\" is a simple inflection of \"open\" (열다, 개방하다, 열린) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "열다, 개장하다",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "buying",
+      "current_meaning_ko": "사는, 구매하는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"buying\" is a simple inflection of \"buy\" (사다, 구매하다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "사는, 구매하는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "loses",
+      "current_meaning_ko": "잃다, 지다, 분실하다",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"loses\" is a simple inflection of \"lose\" (잃다, 지다, 길을 잃다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "잃다, 지다, 분실하다",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "walks",
+      "current_meaning_ko": "걷다, 산책하다",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"walks\" is a simple inflection of \"walk\" (걷다, 산책하다, 걸어가다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "걷다, 산책하다",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "pays",
+      "current_meaning_ko": "지불하다, 보상하다",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"pays\" is a simple inflection of \"pay\" (지불하다, 돈을 내다, 급여) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "지불하다, 보상하다",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "jumped",
+      "current_meaning_ko": "뛰었다, 점프했다",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"jumped\" is a simple inflection of \"jump\" (뛰다, 점프하다, 깜짝 놀라다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "뛰었다, 점프했다",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "checking",
+      "current_meaning_ko": "확인하는, 점검하는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"checking\" is a simple inflection of \"check\" (확인하다, 점검하다, 계산서) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "확인하는, 점검하는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "dies",
+      "current_meaning_ko": "죽다, 사망하다",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"dies\" is a simple inflection of \"die\" (죽다, 사망하다, 사라지다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "죽다, 사망하다",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "tastes",
+      "current_meaning_ko": "맛이 나다, 맛보다",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"tastes\" is a simple inflection of \"taste\" (맛보다, 맛, 취향) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "맛이 나다, 맛보다",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "wishing",
+      "current_meaning_ko": "바라는, 소원하는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"wishing\" is a simple inflection of \"wish\" (바라다, 소원하다, ~했으면 좋겠다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "바라는, 소원하는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "closing",
+      "current_meaning_ko": "닫는, 폐점하는, 마감하는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"closing\" is a simple inflection of \"close\" (닫다, 가까운, 친밀한) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "닫는, 폐점하는, 마감하는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "pulling",
+      "current_meaning_ko": "당기는, 끌어당기는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"pulling\" is a simple inflection of \"pull\" (당기다, 끌다, 빼다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "당기는, 끌어당기는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "wears",
+      "current_meaning_ko": "입다, 쓰다, 착용하다",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"wears\" is a simple inflection of \"wear\" (입다, 착용하다, 닳다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "입다, 쓰다, 착용하다",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "sons",
+      "current_meaning_ko": "아들들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"sons\" is a simple inflection of \"son\" (아들) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "아들들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "pieces",
+      "current_meaning_ko": "조각들, 작품들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"pieces\" is a simple inflection of \"piece\" (조각, 한 개, 작품) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "조각들, 작품들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "groups",
+      "current_meaning_ko": "그룹들, 집단들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"groups\" is a simple inflection of \"group\" (그룹, 집단, 모임) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "그룹들, 집단들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "begins",
+      "current_meaning_ko": "시작하다",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"begins\" is a simple inflection of \"begin\" (시작하다, 개시하다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "시작하다",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "selling",
+      "current_meaning_ko": "파는, 판매하는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"selling\" is a simple inflection of \"sell\" (팔다, 판매하다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "파는, 판매하는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "companies",
+      "current_meaning_ko": "회사들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"companies\" is a simple inflection of \"company\" (회사, 동반, 일행) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "회사들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "meetings",
+      "current_meaning_ko": "회의들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"meetings\" is a simple inflection of \"meeting\" (회의, 만남, 미팅) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "회의들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "planes",
+      "current_meaning_ko": "비행기들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"planes\" is a simple inflection of \"plane\" (비행기, 평면, 수준) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "비행기들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "enjoying",
+      "current_meaning_ko": "즐기고 있는, 만끽하는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"enjoying\" is a simple inflection of \"enjoy\" (즐기다, 누리다, 좋아하다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "즐기고 있는, 만끽하는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "enjoyed",
+      "current_meaning_ko": "즐겼다, 만끽했다",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"enjoyed\" is a simple inflection of \"enjoy\" (즐기다, 누리다, 좋아하다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "즐겼다, 만끽했다",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "kissing",
+      "current_meaning_ko": "키스하는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"kissing\" is a simple inflection of \"kiss\" (키스하다, 입맞추다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "키스하는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "kissed",
+      "current_meaning_ko": "키스했다, 입맞춤했다",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"kissed\" is a simple inflection of \"kiss\" (키스하다, 입맞추다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "키스했다, 입맞춤했다",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "colors",
+      "current_meaning_ko": "색깔들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"colors\" is a simple inflection of \"color\" (색, 색깔, 색칠하다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "색깔들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "puts",
+      "current_meaning_ko": "놓다, 두다 (3인칭)",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"puts\" is a simple inflection of \"put\" (놓다, 두다, 넣다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "놓다, 두다 (3인칭)",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "passed",
+      "current_meaning_ko": "지나갔다, 합격했다, 건넸다",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"passed\" is a simple inflection of \"pass\" (지나가다, 건네다, 합격하다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "지나갔다, 합격했다, 건넸다",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "passing",
+      "current_meaning_ko": "지나가는, 잠깐의",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"passing\" is a simple inflection of \"pass\" (지나가다, 건네다, 합격하다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "지나가는, 잠깐의",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "shirts",
+      "current_meaning_ko": "셔츠들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"shirts\" is a simple inflection of \"shirt\" (셔츠, 윗옷) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "셔츠들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "pretending",
+      "current_meaning_ko": "~인 척하는, 가장하는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"pretending\" is a simple inflection of \"pretend\" (~인 척하다, 가장하다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "~인 척하는, 가장하는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "traveling",
+      "current_meaning_ko": "여행하는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"traveling\" is a simple inflection of \"travel\" (여행하다, 이동하다, 여행) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "여행하는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "deserves",
+      "current_meaning_ko": "~할 자격이 있다, 마땅하다",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"deserves\" is a simple inflection of \"deserve\" (~할 자격이 있다, 마땅하다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "~할 자격이 있다, 마땅하다",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "lawyers",
+      "current_meaning_ko": "변호사들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"lawyers\" is a simple inflection of \"lawyer\" (변호사, 법률가) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "변호사들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "teachers",
+      "current_meaning_ko": "선생님들, 교사들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"teachers\" is a simple inflection of \"teacher\" (선생님, 교사) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "선생님들, 교사들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "rolling",
+      "current_meaning_ko": "구르는, 굴리는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"rolling\" is a simple inflection of \"roll\" (구르다, 굴리다, 말다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "구르는, 굴리는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "lovers",
+      "current_meaning_ko": "연인들, 애호가들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"lovers\" is a simple inflection of \"lover\" (연인, 애인, 애호가) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "연인들, 애호가들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "speeches",
+      "current_meaning_ko": "연설들, 발표들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"speeches\" is a simple inflection of \"speech\" (연설, 발언, 말) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "연설들, 발표들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "added",
+      "current_meaning_ko": "추가했다, 더했다",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"added\" is a simple inflection of \"add\" (추가하다, 더하다, 덧붙이다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "추가했다, 더했다",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "chased",
+      "current_meaning_ko": "추적했다, 쫓았다",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"chased\" is a simple inflection of \"chase\" (쫓다, 추격하다, 뒤쫓다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "추적했다, 쫓았다",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "creating",
+      "current_meaning_ko": "만드는, 창조하는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"creating\" is a simple inflection of \"create\" (만들다, 창조하다, 생성하다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "만드는, 창조하는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "reaching",
+      "current_meaning_ko": "도달하는, 뻗는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"reaching\" is a simple inflection of \"reach\" (도달하다, 닿다, 연락하다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "도달하는, 뻗는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "windows",
+      "current_meaning_ko": "창문들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"windows\" is a simple inflection of \"window\" (창문, 창) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "창문들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "animals",
+      "current_meaning_ko": "동물들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"animals\" is a simple inflection of \"animal\" (동물, 짐승, 야수) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "동물들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "professors",
+      "current_meaning_ko": "교수들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"professors\" is a simple inflection of \"professor\" (교수, 교원) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "교수들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "carried",
+      "current_meaning_ko": "운반했다, 들고 갔다",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"carried\" is a simple inflection of \"carry\" (나르다, 들고 가다, 운반하다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "운반했다, 들고 갔다",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "opinions",
+      "current_meaning_ko": "의견들, 견해들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [
+        "He really likes people that are opinionated. Okay."
+      ],
+      "issue": "Redundant inflected-form entry: \"opinions\" is a simple inflection of \"opinion\" (의견, 견해) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "의견들, 견해들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "stones",
+      "current_meaning_ko": "돌들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"stones\" is a simple inflection of \"stone\" (돌, 보석) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "돌들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "birds",
+      "current_meaning_ko": "새들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"birds\" is a simple inflection of \"bird\" (새) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "새들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "flowers",
+      "current_meaning_ko": "꽃들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"flowers\" is a simple inflection of \"flower\" (꽃) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "꽃들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "shining",
+      "current_meaning_ko": "빛나는, 반짝이는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"shining\" is a simple inflection of \"shine\" (빛나다, 비추다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "빛나는, 반짝이는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "destroyed",
+      "current_meaning_ko": "파괴했다",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [
+        "The water's destroyed most of the data.",
+        "I hope his voice box gets destroyed by a gorilla d***.",
+        "They should all be destroyed."
+      ],
+      "issue": "Redundant inflected-form entry: \"destroyed\" is a simple inflection of \"destroy\" (파괴하다, 멸망시키다, 망치다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "파괴했다",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "wheels",
+      "current_meaning_ko": "바퀴들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [
+        "♪ Hallelujah, we can ride four wheels, you and I ♪",
+        "Gonna be a man in motion underneath this pair of wheels",
+        "It's a board with wheels. He's an absolute dream."
+      ],
+      "issue": "Redundant inflected-form entry: \"wheels\" is a simple inflection of \"wheel\" (바퀴, 핸들, 운전대) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "바퀴들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "staring",
+      "current_meaning_ko": "응시하는, 뚫어지게 보는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [
+        "Start waving at your ass like you're farted while you're staring at the camera.",
+        "Face staring right back at me and guess who woke",
+        "Staring at the ceiling, I've said those words before, but it wasn't a lie"
+      ],
+      "issue": "Redundant inflected-form entry: \"staring\" is a simple inflection of \"stare\" (응시하다, 쳐다보다, 빤히 보다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "응시하는, 뚫어지게 보는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "restaurants",
+      "current_meaning_ko": "식당들, 레스토랑들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"restaurants\" is a simple inflection of \"restaurant\" (레스토랑, 식당) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "식당들, 레스토랑들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "cops",
+      "current_meaning_ko": "경찰들",
+      "current_pos": "noun",
+      "current_register": "casual",
+      "transcript_examples": [
+        "stoop She called the cops, so I'll go it alone",
+        "These cops and lawyers wouldn't dare cross any of you.",
+        "I mean, that's a right that cops in Amsterdam don't have."
+      ],
+      "issue": "Redundant inflected-form entry: \"cops\" is a simple inflection of \"cop\" (경찰, 경관) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "경찰들",
+        "pos": "noun",
+        "register": "casual"
+      }
+    },
+    {
+      "word": "complaining",
+      "current_meaning_ko": "불평하는, 불만을 말하는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"complaining\" is a simple inflection of \"complain\" (불평하다, 항의하다, 호소하다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "불평하는, 불만을 말하는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "screaming",
+      "current_meaning_ko": "비명 지르는, 소리치는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"screaming\" is a simple inflection of \"scream\" (비명을 지르다, 소리치다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "비명 지르는, 소리치는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "events",
+      "current_meaning_ko": "행사들, 사건들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"events\" is a simple inflection of \"event\" (행사, 사건, 이벤트) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "행사들, 사건들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "spreading",
+      "current_meaning_ko": "퍼뜨리는, 확산시키는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "Redundant inflected-form entry: \"spreading\" is a simple inflection of \"spread\" (퍼뜨리다, 펴다, 확산되다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "퍼뜨리는, 확산시키는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "son",
+      "current_meaning_ko": "아들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [
+        "Would you like to meet your son?",
+        "Son of a bitch.",
+        "I got my son up in here."
+      ],
+      "issue": "Redundant inflected-form entry: \"son\" is a simple inflection of \"sons\" (아들들) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "아들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "plants",
+      "current_meaning_ko": "식물들, 공장들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [
+        "You plant your feet, tighten your belly, and tense your back,",
+        "that plants a fire in our hearts and brings peace to our minds.",
+        "The camera pans, the cocktail glass Behind the blind of a plastic plant"
+      ],
+      "issue": "Redundant inflected-form entry: \"plants\" is a simple inflection of \"plant\" (식물, 공장) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "식물들, 공장들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "searching",
+      "current_meaning_ko": "찾고 있는, 수색하는",
+      "current_pos": "verb",
+      "current_register": "neutral",
+      "transcript_examples": [
+        "Searching your pockets, you find something that might help—",
+        "from the dark searching for what's right John Winchester father with",
+        "I've been searching for a trail to follow again"
+      ],
+      "issue": "Redundant inflected-form entry: \"searching\" is a simple inflection of \"search\" (검색하다, 찾다, 수색하다) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "찾고 있는, 수색하는",
+        "pos": "verb",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "clouds",
+      "current_meaning_ko": "구름들",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [
+        "Walking around with my little rain cloud Hanging over my head and",
+        "that collapse from enormous gas clouds under their own gravity.",
+        "A couple of beers quickly turns a cloudy, rainy day into a sunny one."
+      ],
+      "issue": "Redundant inflected-form entry: \"clouds\" is a simple inflection of \"cloud\" (구름) and already in its forms[] array. Consider removing as separate entry.",
+      "fix": {
+        "meaning_ko": "구름들",
+        "pos": "noun",
+        "register": "neutral"
+      }
+    },
+    {
+      "word": "ambiguity",
+      "current_meaning_ko": "모호함, 애매함",
+      "current_pos": "noun",
+      "current_register": "formal",
+      "transcript_examples": [],
+      "issue": "C1/C2 word marked as 'essential' learner_value - advanced words are rarely essential for beginner/intermediate learners",
+      "fix": {
+        "meaning_ko": "모호함, 애매함",
+        "pos": "noun",
+        "register": "formal",
+        "learner_value": "useful"
+      }
+    },
+    {
+      "word": "algorithm",
+      "current_meaning_ko": "알고리즘",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [
+        "Since it's deformed, I can't tell which 2x2 algorithm I'll have to do."
+      ],
+      "issue": "C1/C2 word marked as 'essential' learner_value - advanced words are rarely essential for beginner/intermediate learners",
+      "fix": {
+        "meaning_ko": "알고리즘",
+        "pos": "noun",
+        "register": "neutral",
+        "learner_value": "useful"
+      }
+    },
+    {
+      "word": "legislation",
+      "current_meaning_ko": "법률, 입법",
+      "current_pos": "noun",
+      "current_register": "formal",
+      "transcript_examples": [
+        "Everyone, look at this awesome legislation! Oh my God!"
+      ],
+      "issue": "C1/C2 word marked as 'essential' learner_value - advanced words are rarely essential for beginner/intermediate learners",
+      "fix": {
+        "meaning_ko": "법률, 입법",
+        "pos": "noun",
+        "register": "formal",
+        "learner_value": "useful"
+      }
+    },
+    {
+      "word": "metaphor",
+      "current_meaning_ko": "은유, 비유",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [
+        "Is that, you know, when my hand's on your grease gun? That's very subtle, isn't it? It's a metaphor, Brian. It's just a bit weird, Roger."
+      ],
+      "issue": "C1/C2 word marked as 'essential' learner_value - advanced words are rarely essential for beginner/intermediate learners",
+      "fix": {
+        "meaning_ko": "은유, 비유",
+        "pos": "noun",
+        "register": "neutral",
+        "learner_value": "useful"
+      }
+    },
+    {
+      "word": "nuance",
+      "current_meaning_ko": "뉘앙스, 미묘한 차이",
+      "current_pos": "noun",
+      "current_register": "formal",
+      "transcript_examples": [
+        "musical or comedy truly raised the bar by delivering nuanced, unparalleled performances."
+      ],
+      "issue": "C1/C2 word marked as 'essential' learner_value - advanced words are rarely essential for beginner/intermediate learners",
+      "fix": {
+        "meaning_ko": "뉘앙스, 미묘한 차이",
+        "pos": "noun",
+        "register": "formal",
+        "learner_value": "useful"
+      }
+    },
+    {
+      "word": "amendment",
+      "current_meaning_ko": "수정안, 개정",
+      "current_pos": "noun",
+      "current_register": "formal",
+      "transcript_examples": [
+        "You are piercing the Fifth Amendment right. Mrs. Florek, shut up."
+      ],
+      "issue": "C1/C2 word marked as 'essential' learner_value - advanced words are rarely essential for beginner/intermediate learners",
+      "fix": {
+        "meaning_ko": "수정안, 개정",
+        "pos": "noun",
+        "register": "formal",
+        "learner_value": "useful"
+      }
+    },
+    {
+      "word": "irony",
+      "current_meaning_ko": "아이러니, 반어",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [
+        "Ironic, I gave him love and they end up hating on me"
+      ],
+      "issue": "C1/C2 word marked as 'essential' learner_value - advanced words are rarely essential for beginner/intermediate learners",
+      "fix": {
+        "meaning_ko": "아이러니, 반어",
+        "pos": "noun",
+        "register": "neutral",
+        "learner_value": "useful"
+      }
+    },
+    {
+      "word": "correlation",
+      "current_meaning_ko": "상관관계",
+      "current_pos": "noun",
+      "current_register": "formal",
+      "transcript_examples": [
+        "Zero correlation between being the best"
+      ],
+      "issue": "C1/C2 word marked as 'essential' learner_value - advanced words are rarely essential for beginner/intermediate learners",
+      "fix": {
+        "meaning_ko": "상관관계",
+        "pos": "noun",
+        "register": "formal",
+        "learner_value": "useful"
+      }
+    },
+    {
+      "word": "empathy",
+      "current_meaning_ko": "공감, 감정이입",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [
+        "Empathy or connection no one wants to"
+      ],
+      "issue": "C1/C2 word marked as 'essential' learner_value - advanced words are rarely essential for beginner/intermediate learners",
+      "fix": {
+        "meaning_ko": "공감, 감정이입",
+        "pos": "noun",
+        "register": "neutral",
+        "learner_value": "useful"
+      }
+    },
+    {
+      "word": "explicit",
+      "current_meaning_ko": "명시적인, 분명한",
+      "current_pos": "adjective",
+      "current_register": "neutral",
+      "transcript_examples": [
+        "A steady phenomenon for the reason for this explicit reason to control and"
+      ],
+      "issue": "C1/C2 word marked as 'essential' learner_value - advanced words are rarely essential for beginner/intermediate learners",
+      "fix": {
+        "meaning_ko": "명시적인, 분명한",
+        "pos": "adjective",
+        "register": "neutral",
+        "learner_value": "useful"
+      }
+    },
+    {
+      "word": "infer",
+      "current_meaning_ko": "추론하다, 유추하다",
+      "current_pos": "verb",
+      "current_register": "formal",
+      "transcript_examples": [
+        "Now, I can infer that he's a bit of a gambler."
+      ],
+      "issue": "C1/C2 word marked as 'essential' learner_value - advanced words are rarely essential for beginner/intermediate learners",
+      "fix": {
+        "meaning_ko": "추론하다, 유추하다",
+        "pos": "verb",
+        "register": "formal",
+        "learner_value": "useful"
+      }
+    },
+    {
+      "word": "paradox",
+      "current_meaning_ko": "역설, 모순",
+      "current_pos": "noun",
+      "current_register": "neutral",
+      "transcript_examples": [],
+      "issue": "C1/C2 word marked as 'essential' learner_value - advanced words are rarely essential for beginner/intermediate learners",
+      "fix": {
+        "meaning_ko": "역설, 모순",
+        "pos": "noun",
+        "register": "neutral",
+        "learner_value": "useful"
+      }
+    },
+    {
+      "word": "precedent",
+      "current_meaning_ko": "선례, 판례",
+      "current_pos": "noun",
+      "current_register": "formal",
+      "transcript_examples": [],
+      "issue": "C1/C2 word marked as 'essential' learner_value - advanced words are rarely essential for beginner/intermediate learners",
+      "fix": {
+        "meaning_ko": "선례, 판례",
+        "pos": "noun",
+        "register": "formal",
+        "learner_value": "useful"
+      }
+    },
+    {
+      "word": "resilient",
+      "current_meaning_ko": "회복력 있는, 탄력 있는",
+      "current_pos": "adjective",
+      "current_register": "neutral",
+      "transcript_examples": [
+        "Your resiliency in the face of challenge your sense of humor whatever it is"
+      ],
+      "issue": "C1/C2 word marked as 'essential' learner_value - advanced words are rarely essential for beginner/intermediate learners",
+      "fix": {
+        "meaning_ko": "회복력 있는, 탄력 있는",
+        "pos": "adjective",
+        "register": "neutral",
+        "learner_value": "useful"
+      }
+    },
+    {
+      "word": "sanction",
+      "current_meaning_ko": "제재, 인가",
+      "current_pos": "noun",
+      "current_register": "formal",
+      "transcript_examples": [],
+      "issue": "C1/C2 word marked as 'essential' learner_value - advanced words are rarely essential for beginner/intermediate learners",
+      "fix": {
+        "meaning_ko": "제재, 인가",
+        "pos": "noun",
+        "register": "formal",
+        "learner_value": "useful"
+      }
+    },
+    {
+      "word": "unprecedented",
+      "current_meaning_ko": "전례 없는",
+      "current_pos": "adjective",
+      "current_register": "formal",
+      "transcript_examples": [],
+      "issue": "C1/C2 word marked as 'essential' learner_value - advanced words are rarely essential for beginner/intermediate learners",
+      "fix": {
+        "meaning_ko": "전례 없는",
+        "pos": "adjective",
+        "register": "formal",
+        "learner_value": "useful"
+      }
+    }
+  ],
+  "summary": "Audited all 2570 word entries systematically across 9 categories. Found 95 potential issues. Categories: (1) Missing primary meanings for common words where secondary/slang meaning may be listed instead, (2) POS mismatches where tagged POS does not match most common usage, (3) A1-level words incorrectly tagged as slang/casual register, (4) Inflected forms with register inconsistent with base word, (5) Redundant inflected-form entries that duplicate base words, (6) A1/A2 words undervalued as 'supplementary', (7) C1/C2 words overvalued as 'essential'. Issues are sorted by severity (most critical first)."
+}

@@ -5,12 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useLevelStore } from '@/stores/useLevelStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
-
-const LEVEL_LABELS: Record<string, string> = {
-  beginner: 'Beginner',
-  intermediate: 'Intermediate',
-  advanced: 'Advanced',
-}
+import { displayLevelName } from '@/types/level'
 
 export function LevelUpCelebration() {
   const pendingLevelUp = useLevelStore((s) => s.pendingLevelUp)
@@ -36,8 +31,8 @@ export function LevelUpCelebration() {
 
   if (!pendingLevelUp) return null
 
-  const fromLabel = LEVEL_LABELS[pendingLevelUp.from] ?? pendingLevelUp.from
-  const toLabel = LEVEL_LABELS[pendingLevelUp.to] ?? pendingLevelUp.to
+  const fromLabel = displayLevelName(pendingLevelUp.from)
+  const toLabel = displayLevelName(pendingLevelUp.to)
 
   return (
     <AnimatePresence>

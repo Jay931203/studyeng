@@ -2,6 +2,7 @@ import expressionEntriesData from '@/data/expression-entries-v2.json'
 import expressionIndexData from '@/data/expression-index-v2.json'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
+import type { ChallengeTransition } from '@/types/level'
 
 // ---------------------------------------------------------------------------
 // Types
@@ -49,20 +50,45 @@ const MAX_CATEGORY_RATIO = 0.3
 
 interface CefrDistribution {
   levels: { cefr: string; ratio: number }[]
+  includeContext: boolean
+  relaxCategoryCap?: boolean
+  fallbackCefr?: string
 }
 
-const CHALLENGE_DISTRIBUTIONS: Record<'intermediate' | 'advanced', CefrDistribution> = {
-  intermediate: {
-    levels: [
-      { cefr: 'A2', ratio: 0.5 },
-      { cefr: 'B1', ratio: 0.5 },
-    ],
+const CHALLENGE_DISTRIBUTIONS: Record<ChallengeTransition, CefrDistribution> = {
+  A2: {
+    levels: [{ cefr: 'A2', ratio: 1.0 }],
+    includeContext: true,
   },
-  advanced: {
+  B1: {
     levels: [
-      { cefr: 'B2', ratio: 0.6 },
-      { cefr: 'C1', ratio: 0.4 },
+      { cefr: 'A2', ratio: 0.4 },
+      { cefr: 'B1', ratio: 0.6 },
     ],
+    includeContext: true,
+  },
+  B2: {
+    levels: [
+      { cefr: 'B1', ratio: 0.3 },
+      { cefr: 'B2', ratio: 0.7 },
+    ],
+    includeContext: true,
+  },
+  C1: {
+    levels: [
+      { cefr: 'B2', ratio: 0.3 },
+      { cefr: 'C1', ratio: 0.7 },
+    ],
+    includeContext: false,
+  },
+  C2: {
+    levels: [
+      { cefr: 'C1', ratio: 0.3 },
+      { cefr: 'C2', ratio: 0.7 },
+    ],
+    includeContext: false,
+    relaxCategoryCap: true,
+    fallbackCefr: 'C1',
   },
 }
 
@@ -108,7 +134,7 @@ function pickContextSentence(exprId: string): string | null {
 // ---------------------------------------------------------------------------
 
 export function selectChallengeCards(
-  targetLevel: 'intermediate' | 'advanced',
+  targetLevel: ChallengeTransition,
 ): ChallengeCard[] {
   const distribution = CHALLENGE_DISTRIBUTIONS[targetLevel]
   const familiarityState = useFamiliarityStore.getState()
@@ -170,8 +196,21 @@ export function selectChallengeCards(
     }
   }
 
-  // Category diversity check: no single category > 30%
-  const maxCategoryCount = Math.floor(CHALLENGE_CARD_COUNT * MAX_CATEGORY_RATIO)
+  // C1->C2 fallback: if not enough cards, supplement from fallback CEFR
+  if (distribution.fallbackCefr && selected.length < CHALLENGE_CARD_COUNT) {
+    const fallbackPool = (cefrPools[distribution.fallbackCefr] ?? []).filter((id) => !usedSet.has(id))
+    const shuffledFallback = shuffle(fallbackPool)
+    for (const id of shuffledFallback) {
+      if (selected.length >= CHALLENGE_CARD_COUNT) break
+      selected.push(id)
+      usedSet.add(id)
+    }
+  }
+
+  // Category diversity check
+  const maxCategoryCount = Math.floor(
+    CHALLENGE_CARD_COUNT * (distribution.relaxCategoryCap ? 0.4 : MAX_CATEGORY_RATIO),
+  )
   const categoryCounts: Record<string, number> = {}
   const diverseSelected: string[] = []
   const overflow: string[] = []
@@ -222,9 +261,7 @@ export function selectChallengeCards(
   }
 
   // Build card data
-  // For intermediate challenge: include context sentences
-  // For advanced challenge: no context sentences (harder)
-  const includeContext = targetLevel === 'intermediate'
+  const includeContext = distribution.includeContext
 
   const cards: ChallengeCard[] = diverseSelected.slice(0, CHALLENGE_CARD_COUNT).map((exprId) => {
     const entry = entries[exprId]

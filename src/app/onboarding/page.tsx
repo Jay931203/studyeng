@@ -7,22 +7,38 @@ import { Logo, LogoFull } from '@/components/Logo'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useAuth } from '@/hooks/useAuth'
 import { buildPathWithNext, sanitizeAppPath } from '@/lib/navigation'
+import type { CefrLevel } from '@/types/level'
 
-const LEVELS = [
+const LEVELS: readonly { id: CefrLevel; title: string; desc: string }[] = [
   {
-    id: 'beginner' as const,
-    title: '입문',
+    id: 'A1',
+    title: 'A1 입문',
     desc: '짧은 표현과 쉬운 대사를 중심으로 듣고 싶어요.',
   },
   {
-    id: 'intermediate' as const,
-    title: '중급',
+    id: 'A2',
+    title: 'A2 초급',
+    desc: '기초 표현은 알지만, 자연스럽게 연결해 말하고 싶어요.',
+  },
+  {
+    id: 'B1',
+    title: 'B1 중하급',
     desc: '일상 표현은 이해하고, 말하기도 조금 더 자연스럽게 하고 싶어요.',
   },
   {
-    id: 'advanced' as const,
-    title: '고급',
+    id: 'B2',
+    title: 'B2 중상급',
+    desc: '긴 대화와 다양한 주제를 무리 없이 따라가고 싶어요.',
+  },
+  {
+    id: 'C1',
+    title: 'C1 고급',
     desc: '빠른 영상과 실제 대화도 큰 막힘 없이 따라가고 싶어요.',
+  },
+  {
+    id: 'C2',
+    title: 'C2 마스터',
+    desc: '원어민 수준의 뉘앙스와 표현까지 완벽하게 익히고 싶어요.',
   },
 ] as const
 
@@ -37,7 +53,7 @@ function LoadingScreen() {
 function OnboardingPageContent() {
   const [step, setStep] = useState(0)
   const [selectedLevel, setSelectedLevel] =
-    useState<'beginner' | 'intermediate' | 'advanced'>('beginner')
+    useState<CefrLevel>('A1')
   const { user, loading } = useAuth()
   const hasOnboarded = useOnboardingStore((state) => state.hasOnboarded)
   const hydrated = useOnboardingStore((state) => state.hydrated)

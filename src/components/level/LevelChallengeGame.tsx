@@ -9,6 +9,8 @@ import { useLevelStore, computeXpForSwipe } from '@/stores/useLevelStore'
 import { useLevelChallengeStore } from '@/stores/useLevelChallengeStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { triggerHaptic } from '@/lib/haptic'
+import type { ChallengeTransition } from '@/types/level'
+import { LEVEL_LABELS, displayLevelName } from '@/types/level'
 
 // ---------------------------------------------------------------------------
 // Constants
@@ -16,12 +18,6 @@ import { triggerHaptic } from '@/lib/haptic'
 
 const PASS_THRESHOLD = 16 // 80% of 20
 const CARDS_TOTAL = 20
-
-const LEVEL_LABELS: Record<string, string> = {
-  beginner: 'Beginner',
-  intermediate: 'Intermediate',
-  advanced: 'Advanced',
-}
 
 const CATEGORY_LABELS: Record<string, string> = {
   idiom: 'idiom',
@@ -43,7 +39,7 @@ const CATEGORY_LABELS: Record<string, string> = {
 type GamePhase = 'intro' | 'playing' | 'result'
 
 interface LevelChallengeGameProps {
-  targetLevel: 'intermediate' | 'advanced'
+  targetLevel: ChallengeTransition
   onClose: () => void
 }
 
@@ -98,8 +94,8 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
   const startTimeRef = useRef(Date.now())
 
   const currentCard = cards[currentIdx] ?? null
-  const fromLabel = LEVEL_LABELS[currentLevel] ?? currentLevel
-  const toLabel = LEVEL_LABELS[targetLevel] ?? targetLevel
+  const fromLabel = displayLevelName(currentLevel)
+  const toLabel = displayLevelName(targetLevel)
 
   // ---------------------------------------------------------------------------
   // Start game
@@ -610,7 +606,7 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
               {currentCard.meaningKo}
             </p>
 
-            {/* Context sentence (only for intermediate challenge) */}
+            {/* Context sentence (shown for A2/B1/B2 challenges) */}
             {currentCard.contextEn && (
               <p
                 className="text-sm leading-relaxed italic px-2 mb-6 max-w-[280px]"

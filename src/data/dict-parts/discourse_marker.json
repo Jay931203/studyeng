@@ -1,0 +1,2702 @@
+[
+  {
+    "canonical": "and",
+    "meaning_ko": "그리고",
+    "category": "discourse_marker",
+    "cefr": "A1",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "general"]
+  },
+  {
+    "canonical": "but",
+    "meaning_ko": "하지만",
+    "category": "discourse_marker",
+    "cefr": "A1",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "general"]
+  },
+  {
+    "canonical": "so",
+    "meaning_ko": "그래서",
+    "category": "discourse_marker",
+    "cefr": "A1",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "general"]
+  },
+  {
+    "canonical": "well",
+    "meaning_ko": "음, 글쎄",
+    "category": "discourse_marker",
+    "cefr": "A1",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "filler"]
+  },
+  {
+    "canonical": "OK",
+    "meaning_ko": "좋아, 알겠어",
+    "category": "discourse_marker",
+    "cefr": "A1",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "acknowledgment"]
+  },
+  {
+    "canonical": "yes",
+    "meaning_ko": "네, 응",
+    "category": "discourse_marker",
+    "cefr": "A1",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "acknowledgment"]
+  },
+  {
+    "canonical": "no",
+    "meaning_ko": "아니",
+    "category": "discourse_marker",
+    "cefr": "A1",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "acknowledgment"]
+  },
+  {
+    "canonical": "or",
+    "meaning_ko": "또는",
+    "category": "discourse_marker",
+    "cefr": "A1",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "general"]
+  },
+  {
+    "canonical": "because",
+    "meaning_ko": "왜냐하면",
+    "category": "discourse_marker",
+    "cefr": "A1",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "reasoning"]
+  },
+  {
+    "canonical": "then",
+    "meaning_ko": "그다음에, 그러면",
+    "category": "discourse_marker",
+    "cefr": "A1",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "sequencing"]
+  },
+  {
+    "canonical": "also",
+    "meaning_ko": "또한",
+    "category": "discourse_marker",
+    "cefr": "A1",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "addition"]
+  },
+  {
+    "canonical": "too",
+    "meaning_ko": "~도, 역시",
+    "category": "discourse_marker",
+    "cefr": "A1",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "addition"]
+  },
+  {
+    "canonical": "really",
+    "meaning_ko": "정말, 진짜",
+    "category": "discourse_marker",
+    "cefr": "A1",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "emphasis"]
+  },
+  {
+    "canonical": "right",
+    "meaning_ko": "맞지, 그렇지",
+    "category": "discourse_marker",
+    "cefr": "A1",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "confirmation"]
+  },
+  {
+    "canonical": "oh",
+    "meaning_ko": "오, 아",
+    "category": "discourse_marker",
+    "cefr": "A1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "filler"]
+  },
+  {
+    "canonical": "now",
+    "meaning_ko": "자, 이제",
+    "category": "discourse_marker",
+    "cefr": "A1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "topic_shift"]
+  },
+  {
+    "canonical": "like",
+    "meaning_ko": "~같은, 뭐랄까",
+    "category": "discourse_marker",
+    "cefr": "A1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "filler"]
+  },
+  {
+    "canonical": "first",
+    "meaning_ko": "첫째, 먼저",
+    "category": "discourse_marker",
+    "cefr": "A1",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "sequencing"]
+  },
+  {
+    "canonical": "next",
+    "meaning_ko": "다음에",
+    "category": "discourse_marker",
+    "cefr": "A1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "sequencing"]
+  },
+  {
+    "canonical": "finally",
+    "meaning_ko": "마지막으로",
+    "category": "discourse_marker",
+    "cefr": "A1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "sequencing"]
+  },
+  {
+    "canonical": "actually",
+    "meaning_ko": "사실은",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "correction"]
+  },
+  {
+    "canonical": "anyway",
+    "meaning_ko": "어쨌든",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "topic_shift"]
+  },
+  {
+    "canonical": "I mean",
+    "meaning_ko": "내 말은, 그러니까",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "clarification"]
+  },
+  {
+    "canonical": "you know",
+    "meaning_ko": "있잖아, 알다시피",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "filler"]
+  },
+  {
+    "canonical": "by the way",
+    "meaning_ko": "그런데, 참고로",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "topic_shift"]
+  },
+  {
+    "canonical": "of course",
+    "meaning_ko": "물론",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["conversation", "agreement"]
+  },
+  {
+    "canonical": "for example",
+    "meaning_ko": "예를 들어",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["conversation", "academic", "exemplification"]
+  },
+  {
+    "canonical": "I think",
+    "meaning_ko": "내 생각에는",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "hedging"]
+  },
+  {
+    "canonical": "maybe",
+    "meaning_ko": "아마, 어쩌면",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "hedging"]
+  },
+  {
+    "canonical": "sure",
+    "meaning_ko": "물론이지, 그럼",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "agreement"]
+  },
+  {
+    "canonical": "look",
+    "meaning_ko": "이봐, 있잖아",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "attention"]
+  },
+  {
+    "canonical": "listen",
+    "meaning_ko": "들어봐",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "attention"]
+  },
+  {
+    "canonical": "in fact",
+    "meaning_ko": "사실",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["conversation", "emphasis"]
+  },
+  {
+    "canonical": "after that",
+    "meaning_ko": "그 후에",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "sequencing"]
+  },
+  {
+    "canonical": "at first",
+    "meaning_ko": "처음에는",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "sequencing"]
+  },
+  {
+    "canonical": "at last",
+    "meaning_ko": "마침내",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "sequencing"]
+  },
+  {
+    "canonical": "especially",
+    "meaning_ko": "특히",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "emphasis"]
+  },
+  {
+    "canonical": "instead",
+    "meaning_ko": "대신에",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "contrast"]
+  },
+  {
+    "canonical": "still",
+    "meaning_ko": "그래도, 여전히",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "contrast"]
+  },
+  {
+    "canonical": "though",
+    "meaning_ko": "그래도, ~이긴 하지만",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "contrast"]
+  },
+  {
+    "canonical": "even",
+    "meaning_ko": "심지어",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "emphasis"]
+  },
+  {
+    "canonical": "just",
+    "meaning_ko": "그냥, 단지",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "hedging"]
+  },
+  {
+    "canonical": "exactly",
+    "meaning_ko": "정확히, 바로 그거야",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "agreement"]
+  },
+  {
+    "canonical": "probably",
+    "meaning_ko": "아마도",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "hedging"]
+  },
+  {
+    "canonical": "basically",
+    "meaning_ko": "기본적으로",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "summarizing"]
+  },
+  {
+    "canonical": "seriously",
+    "meaning_ko": "진심으로",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "emphasis"]
+  },
+  {
+    "canonical": "honestly",
+    "meaning_ko": "솔직히",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "emphasis"]
+  },
+  {
+    "canonical": "in the end",
+    "meaning_ko": "결국",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "sequencing"]
+  },
+  {
+    "canonical": "plus",
+    "meaning_ko": "게다가",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "addition"]
+  },
+  {
+    "canonical": "luckily",
+    "meaning_ko": "다행히도",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "evaluation"]
+  },
+  {
+    "canonical": "unfortunately",
+    "meaning_ko": "불행히도",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "evaluation"]
+  },
+  {
+    "canonical": "all right",
+    "meaning_ko": "좋아, 그래",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "acknowledgment"]
+  },
+  {
+    "canonical": "I guess",
+    "meaning_ko": "아마 ~인 것 같아",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "hedging"]
+  },
+  {
+    "canonical": "kind of",
+    "meaning_ko": "약간, 좀",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "hedging"]
+  },
+  {
+    "canonical": "sort of",
+    "meaning_ko": "어느 정도, 약간",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "hedging"]
+  },
+  {
+    "canonical": "I see",
+    "meaning_ko": "알겠어, 그렇구나",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "acknowledgment"]
+  },
+  {
+    "canonical": "let me see",
+    "meaning_ko": "어디 보자",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "filler"]
+  },
+  {
+    "canonical": "hang on",
+    "meaning_ko": "잠깐만",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "filler"]
+  },
+  {
+    "canonical": "wait",
+    "meaning_ko": "잠깐, 기다려",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "attention"]
+  },
+  {
+    "canonical": "what I mean is",
+    "meaning_ko": "내가 말하려는 건",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "clarification"]
+  },
+  {
+    "canonical": "you see",
+    "meaning_ko": "있잖아, 그게",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "explanation"]
+  },
+  {
+    "canonical": "the thing is",
+    "meaning_ko": "문제는, 사실은",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "topic_introduction"]
+  },
+  {
+    "canonical": "as well",
+    "meaning_ko": "~도, 또한",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "addition"]
+  },
+  {
+    "canonical": "that's why",
+    "meaning_ko": "그래서, 그것 때문에",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "reasoning"]
+  },
+  {
+    "canonical": "at least",
+    "meaning_ko": "적어도",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "hedging"]
+  },
+  {
+    "canonical": "for instance",
+    "meaning_ko": "예를 들면",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "exemplification"]
+  },
+  {
+    "canonical": "otherwise",
+    "meaning_ko": "그렇지 않으면",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "contrast"]
+  },
+  {
+    "canonical": "um",
+    "meaning_ko": "음",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "filler"]
+  },
+  {
+    "canonical": "uh",
+    "meaning_ko": "어",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "filler"]
+  },
+  {
+    "canonical": "so basically",
+    "meaning_ko": "그러니까 기본적으로",
+    "category": "discourse_marker",
+    "cefr": "A2",
+    "register": "casual",
+    "learner_value": "enrichment",
+    "theme": ["conversation", "summarizing"]
+  },
+  {
+    "canonical": "however",
+    "meaning_ko": "그러나",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["academic", "writing", "contrast"]
+  },
+  {
+    "canonical": "therefore",
+    "meaning_ko": "그러므로",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["academic", "writing", "reasoning"]
+  },
+  {
+    "canonical": "moreover",
+    "meaning_ko": "게다가, 더욱이",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "formal",
+    "learner_value": "essential",
+    "theme": ["academic", "writing", "addition"]
+  },
+  {
+    "canonical": "furthermore",
+    "meaning_ko": "더 나아가",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "formal",
+    "learner_value": "essential",
+    "theme": ["academic", "writing", "addition"]
+  },
+  {
+    "canonical": "on the other hand",
+    "meaning_ko": "반면에",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["academic", "conversation", "contrast"]
+  },
+  {
+    "canonical": "as a result",
+    "meaning_ko": "그 결과",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["academic", "writing", "consequence"]
+  },
+  {
+    "canonical": "in addition",
+    "meaning_ko": "게다가",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["academic", "writing", "addition"]
+  },
+  {
+    "canonical": "nevertheless",
+    "meaning_ko": "그럼에도 불구하고",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "formal",
+    "learner_value": "essential",
+    "theme": ["academic", "writing", "contrast"]
+  },
+  {
+    "canonical": "on the contrary",
+    "meaning_ko": "오히려, 그와 반대로",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["academic", "conversation", "contrast"]
+  },
+  {
+    "canonical": "in other words",
+    "meaning_ko": "다시 말해서",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["conversation", "academic", "clarification"]
+  },
+  {
+    "canonical": "to be honest",
+    "meaning_ko": "솔직히 말하면",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "emphasis"]
+  },
+  {
+    "canonical": "as far as I know",
+    "meaning_ko": "내가 아는 한",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "hedging"]
+  },
+  {
+    "canonical": "to sum up",
+    "meaning_ko": "요약하자면",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["academic", "presentation", "summarizing"]
+  },
+  {
+    "canonical": "in conclusion",
+    "meaning_ko": "결론적으로",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "summarizing"]
+  },
+  {
+    "canonical": "to begin with",
+    "meaning_ko": "우선, 먼저",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "sequencing"]
+  },
+  {
+    "canonical": "first of all",
+    "meaning_ko": "먼저, 우선",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["conversation", "academic", "sequencing"]
+  },
+  {
+    "canonical": "secondly",
+    "meaning_ko": "둘째로",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["academic", "sequencing"]
+  },
+  {
+    "canonical": "thirdly",
+    "meaning_ko": "셋째로",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["academic", "sequencing"]
+  },
+  {
+    "canonical": "meanwhile",
+    "meaning_ko": "그러는 동안, 한편",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "writing", "sequencing"]
+  },
+  {
+    "canonical": "at the same time",
+    "meaning_ko": "동시에",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "sequencing"]
+  },
+  {
+    "canonical": "similarly",
+    "meaning_ko": "비슷하게",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["academic", "comparison"]
+  },
+  {
+    "canonical": "likewise",
+    "meaning_ko": "마찬가지로",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["academic", "comparison"]
+  },
+  {
+    "canonical": "in contrast",
+    "meaning_ko": "대조적으로",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["academic", "contrast"]
+  },
+  {
+    "canonical": "although",
+    "meaning_ko": "비록 ~이지만",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["conversation", "academic", "concession"]
+  },
+  {
+    "canonical": "even though",
+    "meaning_ko": "비록 ~일지라도",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "concession"]
+  },
+  {
+    "canonical": "despite",
+    "meaning_ko": "~에도 불구하고",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["academic", "writing", "concession"]
+  },
+  {
+    "canonical": "in spite of",
+    "meaning_ko": "~에도 불구하고",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["academic", "concession"]
+  },
+  {
+    "canonical": "as a matter of fact",
+    "meaning_ko": "사실은",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "emphasis"]
+  },
+  {
+    "canonical": "in general",
+    "meaning_ko": "일반적으로",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "generalization"]
+  },
+  {
+    "canonical": "overall",
+    "meaning_ko": "전반적으로",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["academic", "summarizing"]
+  },
+  {
+    "canonical": "according to",
+    "meaning_ko": "~에 따르면",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["academic", "writing", "attribution"]
+  },
+  {
+    "canonical": "apparently",
+    "meaning_ko": "분명히, 보아하니",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "hedging"]
+  },
+  {
+    "canonical": "obviously",
+    "meaning_ko": "분명히, 당연히",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "emphasis"]
+  },
+  {
+    "canonical": "clearly",
+    "meaning_ko": "분명히",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "emphasis"]
+  },
+  {
+    "canonical": "surely",
+    "meaning_ko": "틀림없이, 분명",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "emphasis"]
+  },
+  {
+    "canonical": "indeed",
+    "meaning_ko": "정말로, 실로",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "emphasis"]
+  },
+  {
+    "canonical": "certainly",
+    "meaning_ko": "확실히",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "emphasis"]
+  },
+  {
+    "canonical": "consequently",
+    "meaning_ko": "따라서, 결과적으로",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "consequence"]
+  },
+  {
+    "canonical": "hence",
+    "meaning_ko": "그러므로",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "consequence"]
+  },
+  {
+    "canonical": "thus",
+    "meaning_ko": "따라서, 이렇게",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "consequence"]
+  },
+  {
+    "canonical": "to put it simply",
+    "meaning_ko": "간단히 말하면",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "clarification"]
+  },
+  {
+    "canonical": "after all",
+    "meaning_ko": "결국, 어쨌든",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "reasoning"]
+  },
+  {
+    "canonical": "as I was saying",
+    "meaning_ko": "아까 말했듯이",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "topic_return"]
+  },
+  {
+    "canonical": "speaking of which",
+    "meaning_ko": "그 얘기가 나왔으니",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "topic_shift"]
+  },
+  {
+    "canonical": "needless to say",
+    "meaning_ko": "말할 필요도 없이",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "emphasis"]
+  },
+  {
+    "canonical": "in particular",
+    "meaning_ko": "특히",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["academic", "emphasis"]
+  },
+  {
+    "canonical": "specifically",
+    "meaning_ko": "구체적으로",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["academic", "specification"]
+  },
+  {
+    "canonical": "in short",
+    "meaning_ko": "요컨대",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "summarizing"]
+  },
+  {
+    "canonical": "all in all",
+    "meaning_ko": "대체로, 전체적으로",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "summarizing"]
+  },
+  {
+    "canonical": "on top of that",
+    "meaning_ko": "게다가, 그 위에",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "addition"]
+  },
+  {
+    "canonical": "what's more",
+    "meaning_ko": "게다가",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "addition"]
+  },
+  {
+    "canonical": "in my opinion",
+    "meaning_ko": "내 의견으로는",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["conversation", "academic", "opinion"]
+  },
+  {
+    "canonical": "as far as I'm concerned",
+    "meaning_ko": "내가 보기에는",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "opinion"]
+  },
+  {
+    "canonical": "to tell you the truth",
+    "meaning_ko": "솔직히 말하면",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "emphasis"]
+  },
+  {
+    "canonical": "in any case",
+    "meaning_ko": "어쨌든",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "topic_shift"]
+  },
+  {
+    "canonical": "not to mention",
+    "meaning_ko": "~은 말할 것도 없고",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "addition"]
+  },
+  {
+    "canonical": "no wonder",
+    "meaning_ko": "당연하지, 놀랍지 않게도",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "evaluation"]
+  },
+  {
+    "canonical": "to be fair",
+    "meaning_ko": "공정하게 말하면",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "concession"]
+  },
+  {
+    "canonical": "mind you",
+    "meaning_ko": "알아둬, 그런데 말이야",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "emphasis"]
+  },
+  {
+    "canonical": "I suppose",
+    "meaning_ko": "아마 ~인 것 같아",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "hedging"]
+  },
+  {
+    "canonical": "as I said",
+    "meaning_ko": "내가 말했듯이",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "topic_return"]
+  },
+  {
+    "canonical": "in that case",
+    "meaning_ko": "그런 경우에는",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "reasoning"]
+  },
+  {
+    "canonical": "as a consequence",
+    "meaning_ko": "그 결과로",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "writing", "consequence"]
+  },
+  {
+    "canonical": "to be precise",
+    "meaning_ko": "정확히 말하면",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "enrichment",
+    "theme": ["conversation", "clarification"]
+  },
+  {
+    "canonical": "namely",
+    "meaning_ko": "즉, 다시 말해",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "specification"]
+  },
+  {
+    "canonical": "let me put it this way",
+    "meaning_ko": "이렇게 말해볼게",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "clarification"]
+  },
+  {
+    "canonical": "on the one hand",
+    "meaning_ko": "한편으로는",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "contrast"]
+  },
+  {
+    "canonical": "to be more specific",
+    "meaning_ko": "더 구체적으로 말하면",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "clarification"]
+  },
+  {
+    "canonical": "in the first place",
+    "meaning_ko": "애초에",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "sequencing"]
+  },
+  {
+    "canonical": "as a result of",
+    "meaning_ko": "~의 결과로",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "consequence"]
+  },
+  {
+    "canonical": "aside from that",
+    "meaning_ko": "그것 외에",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "addition"]
+  },
+  {
+    "canonical": "the point is",
+    "meaning_ko": "요점은",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "emphasis"]
+  },
+  {
+    "canonical": "that reminds me",
+    "meaning_ko": "그것 보니 생각나는데",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "topic_shift"]
+  },
+  {
+    "canonical": "in the same way",
+    "meaning_ko": "같은 방식으로",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["academic", "comparison"]
+  },
+  {
+    "canonical": "at the end of the day",
+    "meaning_ko": "결국에는",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "summarizing"]
+  },
+  {
+    "canonical": "as you can see",
+    "meaning_ko": "보시다시피",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["presentation", "academic", "reference"]
+  },
+  {
+    "canonical": "for that reason",
+    "meaning_ko": "그런 이유로",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "reasoning"]
+  },
+  {
+    "canonical": "on second thought",
+    "meaning_ko": "다시 생각해 보니",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "correction"]
+  },
+  {
+    "canonical": "in other respects",
+    "meaning_ko": "다른 면에서는",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "enrichment",
+    "theme": ["academic", "contrast"]
+  },
+  {
+    "canonical": "more importantly",
+    "meaning_ko": "더 중요한 것은",
+    "category": "discourse_marker",
+    "cefr": "B1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "emphasis"]
+  },
+  {
+    "canonical": "having said that",
+    "meaning_ko": "그렇긴 하지만",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["conversation", "academic", "concession"]
+  },
+  {
+    "canonical": "that being said",
+    "meaning_ko": "그렇긴 하지만",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["conversation", "academic", "concession"]
+  },
+  {
+    "canonical": "all things considered",
+    "meaning_ko": "모든 것을 고려하면",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "summarizing"]
+  },
+  {
+    "canonical": "on the whole",
+    "meaning_ko": "대체로, 전반적으로",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "summarizing"]
+  },
+  {
+    "canonical": "by and large",
+    "meaning_ko": "대체로",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "generalization"]
+  },
+  {
+    "canonical": "for what it's worth",
+    "meaning_ko": "참고로 말하자면",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "hedging"]
+  },
+  {
+    "canonical": "granted",
+    "meaning_ko": "인정하건대",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "concession"]
+  },
+  {
+    "canonical": "admittedly",
+    "meaning_ko": "인정하건대",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "concession"]
+  },
+  {
+    "canonical": "regardless",
+    "meaning_ko": "상관없이, 어쨌든",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["conversation", "contrast"]
+  },
+  {
+    "canonical": "in the meantime",
+    "meaning_ko": "그 사이에, 한편",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "sequencing"]
+  },
+  {
+    "canonical": "as it turns out",
+    "meaning_ko": "알고 보니, 결과적으로",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "revelation"]
+  },
+  {
+    "canonical": "to that end",
+    "meaning_ko": "그 목적을 위해",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "purpose"]
+  },
+  {
+    "canonical": "with that in mind",
+    "meaning_ko": "그것을 염두에 두고",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "reasoning"]
+  },
+  {
+    "canonical": "to put it another way",
+    "meaning_ko": "다르게 말하면",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "clarification"]
+  },
+  {
+    "canonical": "as such",
+    "meaning_ko": "그러므로, 그 자체로",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "consequence"]
+  },
+  {
+    "canonical": "in light of",
+    "meaning_ko": "~에 비추어",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "reasoning"]
+  },
+  {
+    "canonical": "in any event",
+    "meaning_ko": "어쨌든, 어떤 경우에도",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "topic_shift"]
+  },
+  {
+    "canonical": "what I'm trying to say is",
+    "meaning_ko": "내가 말하고 싶은 건",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "clarification"]
+  },
+  {
+    "canonical": "for one thing",
+    "meaning_ko": "우선 한 가지는",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "enumeration"]
+  },
+  {
+    "canonical": "for another",
+    "meaning_ko": "또 한 가지는",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "enumeration"]
+  },
+  {
+    "canonical": "that said",
+    "meaning_ko": "그렇긴 하지만",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["conversation", "concession"]
+  },
+  {
+    "canonical": "either way",
+    "meaning_ko": "어느 쪽이든",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "evaluation"]
+  },
+  {
+    "canonical": "above all",
+    "meaning_ko": "무엇보다도",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "emphasis"]
+  },
+  {
+    "canonical": "on balance",
+    "meaning_ko": "전체적으로 보면",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "summarizing"]
+  },
+  {
+    "canonical": "by the same token",
+    "meaning_ko": "같은 이유로, 마찬가지로",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "comparison"]
+  },
+  {
+    "canonical": "in retrospect",
+    "meaning_ko": "돌이켜보면",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "reflection"]
+  },
+  {
+    "canonical": "at any rate",
+    "meaning_ko": "어쨌든, 하여간",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "topic_shift"]
+  },
+  {
+    "canonical": "come to think of it",
+    "meaning_ko": "생각해 보니",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "realization"]
+  },
+  {
+    "canonical": "that is to say",
+    "meaning_ko": "다시 말해서",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "clarification"]
+  },
+  {
+    "canonical": "strictly speaking",
+    "meaning_ko": "엄밀히 말하면",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "precision"]
+  },
+  {
+    "canonical": "broadly speaking",
+    "meaning_ko": "대체로 말하면",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "generalization"]
+  },
+  {
+    "canonical": "roughly speaking",
+    "meaning_ko": "대략적으로 말하면",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "enrichment",
+    "theme": ["conversation", "approximation"]
+  },
+  {
+    "canonical": "so to speak",
+    "meaning_ko": "말하자면",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "hedging"]
+  },
+  {
+    "canonical": "to say the least",
+    "meaning_ko": "최소한으로 말해도",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "understatement"]
+  },
+  {
+    "canonical": "it goes without saying",
+    "meaning_ko": "말할 것도 없이",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "emphasis"]
+  },
+  {
+    "canonical": "as it were",
+    "meaning_ko": "이른바, 말하자면",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["conversation", "academic", "hedging"]
+  },
+  {
+    "canonical": "incidentally",
+    "meaning_ko": "그런데, 덧붙이자면",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "topic_shift"]
+  },
+  {
+    "canonical": "as it happens",
+    "meaning_ko": "공교롭게도",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "revelation"]
+  },
+  {
+    "canonical": "to my mind",
+    "meaning_ko": "내가 보기에",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "enrichment",
+    "theme": ["conversation", "opinion"]
+  },
+  {
+    "canonical": "from my perspective",
+    "meaning_ko": "내 관점에서",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "opinion"]
+  },
+  {
+    "canonical": "with respect to",
+    "meaning_ko": "~에 관하여",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "topic_introduction"]
+  },
+  {
+    "canonical": "with regard to",
+    "meaning_ko": "~에 관하여",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "topic_introduction"]
+  },
+  {
+    "canonical": "as for",
+    "meaning_ko": "~에 관해서는",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["conversation", "topic_shift"]
+  },
+  {
+    "canonical": "in terms of",
+    "meaning_ko": "~의 관점에서",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["conversation", "academic", "specification"]
+  },
+  {
+    "canonical": "in a nutshell",
+    "meaning_ko": "한마디로, 요약하면",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "summarizing"]
+  },
+  {
+    "canonical": "on a side note",
+    "meaning_ko": "여담이지만",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "topic_shift"]
+  },
+  {
+    "canonical": "given that",
+    "meaning_ko": "~을 감안하면",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["conversation", "academic", "reasoning"]
+  },
+  {
+    "canonical": "provided that",
+    "meaning_ko": "~라는 조건 하에",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "condition"]
+  },
+  {
+    "canonical": "in essence",
+    "meaning_ko": "본질적으로",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "summarizing"]
+  },
+  {
+    "canonical": "what's interesting is",
+    "meaning_ko": "흥미로운 건",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "evaluation"]
+  },
+  {
+    "canonical": "the bottom line is",
+    "meaning_ko": "핵심은, 결론은",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "business", "summarizing"]
+  },
+  {
+    "canonical": "long story short",
+    "meaning_ko": "간단히 말하면",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "summarizing"]
+  },
+  {
+    "canonical": "as opposed to",
+    "meaning_ko": "~와 대조적으로",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "contrast"]
+  },
+  {
+    "canonical": "let alone",
+    "meaning_ko": "~은 말할 것도 없고",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "emphasis"]
+  },
+  {
+    "canonical": "assuming that",
+    "meaning_ko": "~라고 가정하면",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "condition"]
+  },
+  {
+    "canonical": "to a certain extent",
+    "meaning_ko": "어느 정도까지는",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "hedging"]
+  },
+  {
+    "canonical": "so far so good",
+    "meaning_ko": "지금까지는 좋아",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "evaluation"]
+  },
+  {
+    "canonical": "conversely",
+    "meaning_ko": "반대로",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "contrast"]
+  },
+  {
+    "canonical": "to that extent",
+    "meaning_ko": "그 정도까지는",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "specification"]
+  },
+  {
+    "canonical": "to recap",
+    "meaning_ko": "요약하자면",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["presentation", "summarizing"]
+  },
+  {
+    "canonical": "in a sense",
+    "meaning_ko": "어떤 의미에서는",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "hedging"]
+  },
+  {
+    "canonical": "fair enough",
+    "meaning_ko": "그 말도 맞아, 충분히 이해해",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "casual",
+    "learner_value": "essential",
+    "theme": ["conversation", "concession"]
+  },
+  {
+    "canonical": "to put it bluntly",
+    "meaning_ko": "노골적으로 말하면",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "directness"]
+  },
+  {
+    "canonical": "when it comes to",
+    "meaning_ko": "~에 관해서라면",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "essential",
+    "theme": ["conversation", "topic_introduction"]
+  },
+  {
+    "canonical": "not only that",
+    "meaning_ko": "그뿐만 아니라",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "addition"]
+  },
+  {
+    "canonical": "it's no coincidence that",
+    "meaning_ko": "~은 우연이 아니다",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "emphasis"]
+  },
+  {
+    "canonical": "funnily enough",
+    "meaning_ko": "웃기게도",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "evaluation"]
+  },
+  {
+    "canonical": "interestingly enough",
+    "meaning_ko": "흥미롭게도",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "evaluation"]
+  },
+  {
+    "canonical": "arguably",
+    "meaning_ko": "틀림없이, 아마도",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "hedging"]
+  },
+  {
+    "canonical": "more to the point",
+    "meaning_ko": "더 중요한 것은",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "emphasis"]
+  },
+  {
+    "canonical": "paradoxically",
+    "meaning_ko": "역설적으로",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "contrast"]
+  },
+  {
+    "canonical": "ironically",
+    "meaning_ko": "아이러니하게도",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "evaluation"]
+  },
+  {
+    "canonical": "predictably",
+    "meaning_ko": "예상대로",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "evaluation"]
+  },
+  {
+    "canonical": "in due course",
+    "meaning_ko": "적절한 때에, 때가 되면",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "business", "sequencing"]
+  },
+  {
+    "canonical": "to be sure",
+    "meaning_ko": "확실히, 분명",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "concession"]
+  },
+  {
+    "canonical": "as things stand",
+    "meaning_ko": "현재 상황에서는",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "evaluation"]
+  },
+  {
+    "canonical": "in much the same way",
+    "meaning_ko": "거의 같은 방식으로",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "writing", "comparison"]
+  },
+  {
+    "canonical": "by contrast",
+    "meaning_ko": "대조적으로",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "contrast"]
+  },
+  {
+    "canonical": "in the event that",
+    "meaning_ko": "만약 ~한다면",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "legal", "condition"]
+  },
+  {
+    "canonical": "on that basis",
+    "meaning_ko": "그것을 근거로",
+    "category": "discourse_marker",
+    "cefr": "B2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "business", "reasoning"]
+  },
+  {
+    "canonical": "be that as it may",
+    "meaning_ko": "그렇다 하더라도",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "concession"]
+  },
+  {
+    "canonical": "notwithstanding",
+    "meaning_ko": "~에도 불구하고",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "legal", "concession"]
+  },
+  {
+    "canonical": "insofar as",
+    "meaning_ko": "~하는 한에 있어서",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "legal", "condition"]
+  },
+  {
+    "canonical": "inasmuch as",
+    "meaning_ko": "~인 만큼, ~이므로",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "legal", "reasoning"]
+  },
+  {
+    "canonical": "by extension",
+    "meaning_ko": "나아가, 확장하면",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "reasoning"]
+  },
+  {
+    "canonical": "to all intents and purposes",
+    "meaning_ko": "사실상, 모든 면에서",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "generalization"]
+  },
+  {
+    "canonical": "in no small measure",
+    "meaning_ko": "적지 않게, 상당히",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "writing", "emphasis"]
+  },
+  {
+    "canonical": "for the sake of argument",
+    "meaning_ko": "논의를 위해서",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "reasoning"]
+  },
+  {
+    "canonical": "as a general rule",
+    "meaning_ko": "일반적으로",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "generalization"]
+  },
+  {
+    "canonical": "by virtue of",
+    "meaning_ko": "~의 덕택으로, ~에 의해",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "legal", "reasoning"]
+  },
+  {
+    "canonical": "on closer inspection",
+    "meaning_ko": "자세히 보면",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "evaluation"]
+  },
+  {
+    "canonical": "in the final analysis",
+    "meaning_ko": "결국",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "summarizing"]
+  },
+  {
+    "canonical": "it stands to reason that",
+    "meaning_ko": "~은 당연하다",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "reasoning"]
+  },
+  {
+    "canonical": "as it stands",
+    "meaning_ko": "현재 상태로는",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "evaluation"]
+  },
+  {
+    "canonical": "for lack of a better word",
+    "meaning_ko": "적절한 표현이 없어서",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "hedging"]
+  },
+  {
+    "canonical": "on the face of it",
+    "meaning_ko": "겉으로 보기에",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "evaluation"]
+  },
+  {
+    "canonical": "if anything",
+    "meaning_ko": "오히려, 어쨌든",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "emphasis"]
+  },
+  {
+    "canonical": "suffice it to say",
+    "meaning_ko": "~라고만 해두자",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "summarizing"]
+  },
+  {
+    "canonical": "it is worth noting that",
+    "meaning_ko": "주목할 만한 것은",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "emphasis"]
+  },
+  {
+    "canonical": "by no means",
+    "meaning_ko": "결코 ~이 아닌",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "emphasis"]
+  },
+  {
+    "canonical": "to a large extent",
+    "meaning_ko": "상당 부분",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["academic", "hedging"]
+  },
+  {
+    "canonical": "it follows that",
+    "meaning_ko": "따라서 ~이 된다",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "reasoning"]
+  },
+  {
+    "canonical": "one might argue that",
+    "meaning_ko": "~라고 주장할 수도 있다",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "hedging"]
+  },
+  {
+    "canonical": "with the benefit of hindsight",
+    "meaning_ko": "지금 와서 돌이켜보면",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "reflection"]
+  },
+  {
+    "canonical": "in a manner of speaking",
+    "meaning_ko": "말하자면",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "consultative",
+    "learner_value": "enrichment",
+    "theme": ["conversation", "hedging"]
+  },
+  {
+    "canonical": "to the best of my knowledge",
+    "meaning_ko": "내가 아는 한에서는",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "hedging"]
+  },
+  {
+    "canonical": "therein lies",
+    "meaning_ko": "거기에 ~이 있다",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "writing", "revelation"]
+  },
+  {
+    "canonical": "in the broader context",
+    "meaning_ko": "더 넓은 맥락에서",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "contextualization"]
+  },
+  {
+    "canonical": "for all that",
+    "meaning_ko": "그럼에도 불구하고",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "concession"]
+  },
+  {
+    "canonical": "failing that",
+    "meaning_ko": "그것이 안 되면",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "alternative"]
+  },
+  {
+    "canonical": "with all due respect",
+    "meaning_ko": "실례지만, 존경을 표하면서",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["conversation", "politeness", "disagreement"]
+  },
+  {
+    "canonical": "in view of the fact that",
+    "meaning_ko": "~라는 사실을 고려하면",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "writing", "reasoning"]
+  },
+  {
+    "canonical": "on reflection",
+    "meaning_ko": "곰곰이 생각해 보니",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "reflection"]
+  },
+  {
+    "canonical": "by way of illustration",
+    "meaning_ko": "설명을 위해",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "writing", "exemplification"]
+  },
+  {
+    "canonical": "in a word",
+    "meaning_ko": "한마디로",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "consultative",
+    "learner_value": "enrichment",
+    "theme": ["conversation", "summarizing"]
+  },
+  {
+    "canonical": "on that note",
+    "meaning_ko": "그 말이 나온 김에",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "casual",
+    "learner_value": "useful",
+    "theme": ["conversation", "topic_shift"]
+  },
+  {
+    "canonical": "putting it mildly",
+    "meaning_ko": "완곡히 말해서",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "consultative",
+    "learner_value": "enrichment",
+    "theme": ["conversation", "understatement"]
+  },
+  {
+    "canonical": "not least",
+    "meaning_ko": "특히, 적지 않게",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "writing", "emphasis"]
+  },
+  {
+    "canonical": "at the risk of",
+    "meaning_ko": "~할 위험을 감수하고",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "hedging"]
+  },
+  {
+    "canonical": "to coin a phrase",
+    "meaning_ko": "표현을 빌리자면",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "consultative",
+    "learner_value": "enrichment",
+    "theme": ["conversation", "hedging"]
+  },
+  {
+    "canonical": "as luck would have it",
+    "meaning_ko": "우연히도, 운 좋게도",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "consultative",
+    "learner_value": "enrichment",
+    "theme": ["conversation", "evaluation"]
+  },
+  {
+    "canonical": "herein",
+    "meaning_ko": "여기에, 이 점에",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "legal", "reference"]
+  },
+  {
+    "canonical": "that notwithstanding",
+    "meaning_ko": "그럼에도 불구하고",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "legal", "concession"]
+  },
+  {
+    "canonical": "leaving aside",
+    "meaning_ko": "~을 제쳐두고",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "consultative",
+    "learner_value": "useful",
+    "theme": ["conversation", "academic", "topic_shift"]
+  },
+  {
+    "canonical": "to digress for a moment",
+    "meaning_ko": "잠깐 옆길로 새면",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "consultative",
+    "learner_value": "enrichment",
+    "theme": ["conversation", "academic", "topic_shift"]
+  },
+  {
+    "canonical": "whichever way you look at it",
+    "meaning_ko": "어떻게 보더라도",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "casual",
+    "learner_value": "enrichment",
+    "theme": ["conversation", "emphasis"]
+  },
+  {
+    "canonical": "upon further reflection",
+    "meaning_ko": "더 깊이 생각해 보면",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "reflection"]
+  },
+  {
+    "canonical": "as a corollary",
+    "meaning_ko": "그에 따른 결과로",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "writing", "consequence"]
+  },
+  {
+    "canonical": "in point of fact",
+    "meaning_ko": "사실은, 실제로",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "emphasis"]
+  },
+  {
+    "canonical": "in the absence of",
+    "meaning_ko": "~이 없는 상황에서",
+    "category": "discourse_marker",
+    "cefr": "C1",
+    "register": "formal",
+    "learner_value": "useful",
+    "theme": ["academic", "writing", "condition"]
+  },
+  {
+    "canonical": "ipso facto",
+    "meaning_ko": "바로 그 사실에 의해",
+    "category": "discourse_marker",
+    "cefr": "C2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "legal", "reasoning"]
+  },
+  {
+    "canonical": "mutatis mutandis",
+    "meaning_ko": "필요한 변경을 가하여",
+    "category": "discourse_marker",
+    "cefr": "C2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "legal", "comparison"]
+  },
+  {
+    "canonical": "inter alia",
+    "meaning_ko": "무엇보다도, 특히",
+    "category": "discourse_marker",
+    "cefr": "C2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "legal", "enumeration"]
+  },
+  {
+    "canonical": "pace",
+    "meaning_ko": "~에게는 실례지만 (반론 시)",
+    "category": "discourse_marker",
+    "cefr": "C2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "disagreement"]
+  },
+  {
+    "canonical": "qua",
+    "meaning_ko": "~로서의, ~자체로서",
+    "category": "discourse_marker",
+    "cefr": "C2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "philosophical", "specification"]
+  },
+  {
+    "canonical": "ceteris paribus",
+    "meaning_ko": "다른 조건이 같다면",
+    "category": "discourse_marker",
+    "cefr": "C2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "economics", "condition"]
+  },
+  {
+    "canonical": "viz.",
+    "meaning_ko": "즉, 다시 말하면",
+    "category": "discourse_marker",
+    "cefr": "C2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "writing", "specification"]
+  },
+  {
+    "canonical": "ergo",
+    "meaning_ko": "고로, 따라서",
+    "category": "discourse_marker",
+    "cefr": "C2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "philosophical", "reasoning"]
+  },
+  {
+    "canonical": "a fortiori",
+    "meaning_ko": "더 강한 이유로, 하물며",
+    "category": "discourse_marker",
+    "cefr": "C2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "legal", "reasoning"]
+  },
+  {
+    "canonical": "ab initio",
+    "meaning_ko": "처음부터",
+    "category": "discourse_marker",
+    "cefr": "C2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "legal", "sequencing"]
+  },
+  {
+    "canonical": "in contradistinction to",
+    "meaning_ko": "~와 대비하여",
+    "category": "discourse_marker",
+    "cefr": "C2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "writing", "contrast"]
+  },
+  {
+    "canonical": "arguendo",
+    "meaning_ko": "논의를 위해 가정하면",
+    "category": "discourse_marker",
+    "cefr": "C2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["legal", "reasoning"]
+  },
+  {
+    "canonical": "per se",
+    "meaning_ko": "그 자체로",
+    "category": "discourse_marker",
+    "cefr": "C2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "specification"]
+  },
+  {
+    "canonical": "pari passu",
+    "meaning_ko": "동등하게, 같은 속도로",
+    "category": "discourse_marker",
+    "cefr": "C2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "legal", "comparison"]
+  },
+  {
+    "canonical": "sub specie aeternitatis",
+    "meaning_ko": "영원의 관점에서",
+    "category": "discourse_marker",
+    "cefr": "C2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "philosophical", "perspective"]
+  },
+  {
+    "canonical": "in the grand scheme of things",
+    "meaning_ko": "큰 그림에서 보면",
+    "category": "discourse_marker",
+    "cefr": "C2",
+    "register": "consultative",
+    "learner_value": "enrichment",
+    "theme": ["conversation", "academic", "perspective"]
+  },
+  {
+    "canonical": "ex hypothesi",
+    "meaning_ko": "가설에 의하면",
+    "category": "discourse_marker",
+    "cefr": "C2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "philosophical", "reasoning"]
+  },
+  {
+    "canonical": "nota bene",
+    "meaning_ko": "특히 주의할 것",
+    "category": "discourse_marker",
+    "cefr": "C2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "writing", "emphasis"]
+  },
+  {
+    "canonical": "quod erat demonstrandum",
+    "meaning_ko": "이것이 증명하고자 한 바이다",
+    "category": "discourse_marker",
+    "cefr": "C2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "mathematical", "conclusion"]
+  },
+  {
+    "canonical": "de facto",
+    "meaning_ko": "사실상",
+    "category": "discourse_marker",
+    "cefr": "C2",
+    "register": "formal",
+    "learner_value": "enrichment",
+    "theme": ["academic", "legal", "specification"]
+  }
+]

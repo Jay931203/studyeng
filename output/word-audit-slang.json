@@ -1,0 +1,171 @@
+{
+  "audit_date": "2026-03-13",
+  "total_slang_informal_entries": 28,
+  "correct": [
+    "fucking",
+    "fuck",
+    "shit",
+    "damn",
+    "ass",
+    "bitch",
+    "dude",
+    "bro",
+    "asshole",
+    "butt",
+    "fart",
+    "vibe",
+    "crap",
+    "bullshit",
+    "pissed",
+    "bastard",
+    "jerk",
+    "homie",
+    "hater",
+    "freaking"
+  ],
+  "needs_fix": [
+    {
+      "word": "suck",
+      "current_meaning": "빨다, 최악이다(속어), 형편없다",
+      "current_register": "slang",
+      "transcript_examples": [
+        "I'm going to ride a worm, and these guys suck.",
+        "Well, that sucks.",
+        "I just said to Matt, losing would suck and winning would be really scary,",
+        "Wait, this sucks?",
+        "My nail beds suck.",
+        "That sucks. I wish there was an undo button for this thing.",
+        "The same reason she visits Mexico once a year and sucks the blood from all the goats for kicks.",
+        "Dude, let me suck off some coffee."
+      ],
+      "suggested_meaning": "형편없다, 최악이다; (원뜻) 빨다",
+      "suggested_register": "informal",
+      "reason": "Transcripts show mixed usage: majority use 'sucks' as informal 'that's bad/terrible' (not hardcore slang), while a few use the literal 'to suck/suckle'. The primary meaning should lead with '형편없다' as that's the dominant usage. Register should be 'informal' rather than 'slang' — 'sucks' is widely accepted casual English, not restricted slang."
+    },
+    {
+      "word": "chill",
+      "current_meaning": "쉬다, 긴장 풀다",
+      "current_register": "slang",
+      "transcript_examples": [
+        "chill (translated as 한기 = cold/chill)",
+        "Ah, chills. Literal chills.",
+        "Ha chills literal chills, it was number five",
+        "Why was he so chill? I'm so confused.",
+        "Just chill out.",
+        "Chill the F out!",
+        "Chill out, man. I told you it was an accident.",
+        "But I chilled.",
+        "I'm generally just pretty chill you know",
+        "Chilling in the night"
+      ],
+      "suggested_meaning": "진정하다, 한기/오한; 여유로운, 편안한",
+      "suggested_register": "informal",
+      "reason": "Transcripts show three distinct usages: (1) 'chill out' = calm down (most common), (2) literal 'chills' = 오한/소름 (physical sensation), (3) adjective 'chill' = relaxed/laid-back. Current meaning '쉬다, 긴장 풀다' misses the very common literal 'chills/cold' meaning and the adjective sense. Register should be 'informal' — 'chill out' is standard informal English, not slang."
+    },
+    {
+      "word": "chick",
+      "current_meaning": "병아리, 여자 (속어)",
+      "current_register": "slang",
+      "transcript_examples": [
+        "Where are these chicks going? (baby birds — literal meaning)",
+        "I met this chick and she just moved right up the block for me (woman)",
+        "You are the popular one, the popular chick (woman)",
+        "The term he used was a chick site. (woman-oriented)",
+        "lookin at me now Like who's that chick (woman)",
+        "You bring some of them chicks around here sometime, huh? (women)",
+        "The chicks are all going nuts over this new Weber guy. (women)",
+        "Hey chick (woman, term of address)",
+        "Chicks cannot hold their smoke (women)",
+        "You're going to pay me to take out some chick. (woman)"
+      ],
+      "suggested_meaning": "여자(구어); 병아리",
+      "suggested_register": "informal",
+      "reason": "9 out of 10 transcript uses mean 'woman/girl' (informal), only 1 uses the literal 'baby bird' meaning. Current entry lists '병아리' first which is misleading for learners — the overwhelmingly dominant usage in natural speech is 'woman'. Also, 'chick' meaning 'woman' is informal rather than slang — it's widely used in everyday casual English."
+    },
+    {
+      "word": "dope",
+      "current_meaning": "멋진, 마약, 바보",
+      "current_register": "slang",
+      "transcript_examples": [
+        "It's called the Galvini variant... it just makes you feel dope. (great/good)",
+        "Deadly! When I play a dope melody (awesome/cool)",
+        "I steal your dope, hmm? (drugs)",
+        "Been bringing no dope to the table (drugs)",
+        "but you don't know jack about slinging dope. (drugs)",
+        "What if your dope was on fire? (drugs)"
+      ],
+      "suggested_meaning": "마약; 멋진(속어)",
+      "suggested_register": "slang",
+      "reason": "Register 'slang' is correct, but the meaning order is wrong. 4 out of 6 transcript uses mean 'drugs/narcotics', while only 2 mean 'cool/awesome'. Current entry lists '멋진' first, but transcript evidence shows the drug meaning is actually more common. '바보' (idiot) does not appear in any transcript usage and should be deprioritized or removed. Suggested reorder: 마약 → 멋진(속어)."
+    },
+    {
+      "word": "booty",
+      "current_meaning": "전리품, 엉덩이",
+      "current_register": "slang",
+      "transcript_examples": [
+        "Booty moving weight like she on the block. (butt)",
+        "You made a decision not to pick the pirate booty up off the floor (pirate treasure/snack brand)",
+        "Cowboy hat from Gucci, wrangler on my booty (butt)",
+        "Booty movin' weight like she on the block (butt)"
+      ],
+      "suggested_meaning": "엉덩이(속어); 전리품",
+      "suggested_register": "slang",
+      "reason": "Register is correct, but meaning order should be flipped. 3 out of 4 transcript uses mean 'butt/behind' (slang), not '전리품' (loot/treasure). The current entry misleadingly lists '전리품' first, but the dominant transcript usage is the body part meaning."
+    },
+    {
+      "word": "bloody",
+      "current_meaning": "피투성이의, 지독한(영국 비속어)",
+      "current_register": "slang",
+      "transcript_examples": [],
+      "suggested_meaning": "피투성이의; 지독한(영국식 강조)",
+      "suggested_register": "informal",
+      "reason": "No transcript occurrences to verify, but 'bloody' as British English intensifier is better classified as 'informal' rather than 'slang'. It's standard British informal speech (like 'damn'), used freely on UK television and in everyday conversation. The literal meaning '피투성이의' is neutral/formal English and appears in many standard contexts."
+    },
+    {
+      "word": "freak",
+      "current_meaning": "괴짜, 광, 기이한 것",
+      "current_register": "slang",
+      "transcript_examples": [
+        "Eddie, you freak! (weirdo, insult)",
+        "One night I was getting freaky. (wild/sexual)",
+        "nerds and freaks for three more years? (outcasts/weirdos)",
+        "Freak. (weirdo/insult)",
+        "I'm not the freaking savior (euphemistic intensifier)",
+        "it almost kind of freaked me (scared/startled)",
+        "It's just, it's freaking me out. (scaring me)",
+        "I'm freaking out. (panicking)",
+        "Dude, that thing is freaky looking. (strange/creepy)"
+      ],
+      "suggested_meaning": "괴짜, 이상한 사람; 겁먹다(freak out), 기이한",
+      "suggested_register": "informal",
+      "reason": "The dominant transcript usage is 'freak out' (to panic/be scared) and 'freak' as 'weirdo' — both are standard informal English, not restricted slang. The current meaning misses the very common 'freak out' verb usage which appears most frequently. Register should be 'informal' as these usages are mainstream casual English."
+    },
+    {
+      "word": "punk",
+      "current_meaning": "펑크, 불량배",
+      "current_register": "slang",
+      "transcript_examples": [
+        "They like the punk and the metal band (punk music genre)",
+        "The Clash, a UK punk band, (punk music genre)",
+        "Don't ever slack up punk you better back up (insult/weakling)",
+        "All right, punk, now I'm gonna... (insult/term of address)",
+        "Me be treated like a punk, you know that's unheard of (weakling/pushover)"
+      ],
+      "suggested_meaning": "펑크(음악 장르); 겁쟁이, 얼간이",
+      "suggested_register": "informal",
+      "reason": "2 out of 5 uses refer to the music genre 'punk' (neutral meaning), while 3 use it as an insult meaning 'weakling/pushover'. Current meaning '불량배' (thug/delinquent) doesn't match either usage well — in transcripts it means either the music genre or a derogatory term for a weak/contemptible person, not a 'thug'. Register should be 'informal' since the music genre sense is completely neutral."
+    }
+  ],
+  "summary": {
+    "total_audited": 28,
+    "correct_count": 20,
+    "needs_fix_count": 8,
+    "no_transcript_data": ["bloody", "freaking"],
+    "common_issues": [
+      "Meaning order doesn't reflect actual transcript frequency (dope, booty, chick)",
+      "Register 'slang' used too broadly — several words are standard 'informal' English (suck, chill, freak, punk, bloody)",
+      "Missing common verb/phrasal forms in meaning (chill out, freak out)",
+      "Some listed meanings never appear in transcripts (dope=바보)"
+    ]
+  }
+}

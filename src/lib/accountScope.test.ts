@@ -50,7 +50,7 @@ describe('accountScope', () => {
       hasSeenWelcome: false,
       hydrated: true,
       interests: [],
-      level: 'beginner',
+      level: 'A1',
       dailyGoal: 5,
     })
   })
@@ -170,7 +170,7 @@ describe('accountScope', () => {
       hasSeenWelcome: true,
       hydrated: true,
       interests: ['drama'],
-      level: 'advanced',
+      level: 'C1',
       dailyGoal: 10,
     })
     useRecommendationStore.setState({

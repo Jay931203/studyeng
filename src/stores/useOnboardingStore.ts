@@ -1,19 +1,21 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { debouncedSyncProfile } from '@/lib/supabase/sync'
+import type { CefrLevel } from '@/types/level'
+import { LEGACY_LEVEL_MIGRATION } from '@/types/level'
 
 interface OnboardingState {
   hasOnboarded: boolean
   hasSeenWelcome: boolean
   hydrated: boolean
   interests: string[]
-  level: 'beginner' | 'intermediate' | 'advanced'
+  level: CefrLevel
   dailyGoal: number
   completeOnboarding: () => void
   markWelcomeSeen: () => void
   setHydrated: (hydrated: boolean) => void
   setInterests: (interests: string[]) => void
-  setLevel: (level: 'beginner' | 'intermediate' | 'advanced') => void
+  setLevel: (level: CefrLevel) => void
   setDailyGoal: (goal: number) => void
 }
 
@@ -24,7 +26,7 @@ export const useOnboardingStore = create<OnboardingState>()(
       hasSeenWelcome: false,
       hydrated: false,
       interests: [],
-      level: 'beginner',
+      level: 'A1',
       dailyGoal: 5,
       completeOnboarding: () => {
         set({ hasOnboarded: true, hasSeenWelcome: true })
@@ -50,6 +52,15 @@ export const useOnboardingStore = create<OnboardingState>()(
       onRehydrateStorage: () => (state) => {
         state?.setHydrated(true)
       },
+      // Migrate old 3-level values to CEFR 6-level
+      migrate: (persisted: unknown) => {
+        const state = persisted as Record<string, unknown>
+        if (state.level && typeof state.level === 'string' && state.level in LEGACY_LEVEL_MIGRATION) {
+          state.level = LEGACY_LEVEL_MIGRATION[state.level]
+        }
+        return state as unknown as OnboardingState
+      },
+      version: 1,
     }
   )
 )

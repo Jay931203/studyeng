@@ -302,7 +302,7 @@ async function pullProfile(userId: string) {
       hasOnboarded: true,
       hasSeenWelcome: true,
       interests: data.interests ?? onboardingState.interests,
-      level: (data.onboarding_level as 'beginner' | 'intermediate' | 'advanced') ?? onboardingState.level,
+      level: (data.onboarding_level as import('@/types/level').CefrLevel) ?? onboardingState.level,
       dailyGoal: data.daily_goal ?? onboardingState.dailyGoal,
     })
   }

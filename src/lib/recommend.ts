@@ -31,7 +31,7 @@ interface RecommendOptions {
   watchedEpisodes?: Record<string, string[]>
   likes?: Record<string, boolean>
   interests?: string[]
-  level?: 'beginner' | 'intermediate' | 'advanced'
+  level?: string
   seedVideo?: VideoData
   watchRecords?: WatchRecord[]
   viewCounts?: Record<string, number>
@@ -67,7 +67,7 @@ interface ScoreContext {
   completionCounts: Record<string, number>
   completionSeriesWeights: Map<string, number>
   interestSet: Set<string>
-  level?: 'beginner' | 'intermediate' | 'advanced'
+  level?: string
   likedCategoryWeights: Map<CategoryId, number>
   likedSeriesWeights: Map<string, number>
   phraseCategoryWeights: Map<CategoryId, number>
@@ -415,20 +415,28 @@ function buildScoreContext(options: RecommendOptions): ScoreContext {
   }
 }
 
-function getDifficultyRange(level: 'beginner' | 'intermediate' | 'advanced'): [number, number] {
+function getDifficultyRange(level: string): [number, number] {
   switch (level) {
-    case 'beginner':
+    case 'A1':
       return [1, 2]
-    case 'intermediate':
+    case 'A2':
+      return [1, 2]
+    case 'B1':
       return [2, 3]
-    case 'advanced':
+    case 'B2':
+      return [2, 4]
+    case 'C1':
       return [3, 5]
+    case 'C2':
+      return [4, 5]
+    default:
+      return [1, 5]
   }
 }
 
 function difficultyPenalty(
   difficulty: number,
-  level?: 'beginner' | 'intermediate' | 'advanced',
+  level?: string,
 ) {
   if (!level) return 0
   const [min, max] = getDifficultyRange(level)

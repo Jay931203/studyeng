@@ -1,5 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
+import type { CefrLevel, ChallengeTransition } from '@/types/level'
+import { CEFR_ORDER, LEGACY_LEVEL_MIGRATION } from '@/types/level'
 
 // ---------------------------------------------------------------------------
 // Types
@@ -7,14 +9,14 @@ import { persist } from 'zustand/middleware'
 
 export interface ChallengeAttempt {
   date: string
-  targetLevel: 'intermediate' | 'advanced'
+  targetLevel: ChallengeTransition
   score: number // number of "알아요" answers
   passed: boolean
 }
 
 interface LevelChallengeState {
   challengeAttempts: ChallengeAttempt[]
-  lastPassedLevel: 'beginner' | 'intermediate' | 'advanced' | null
+  lastPassedLevel: CefrLevel | null
 
   // Hydration
   hydrated: boolean
@@ -22,9 +24,9 @@ interface LevelChallengeState {
 
   // Actions
   recordAttempt: (attempt: Omit<ChallengeAttempt, 'date'>) => void
-  canChallenge: (currentLevel: 'beginner' | 'intermediate' | 'advanced') => boolean
-  getTargetLevel: (currentLevel: 'beginner' | 'intermediate' | 'advanced') => 'intermediate' | 'advanced' | null
-  getAttemptCount: (targetLevel: 'intermediate' | 'advanced') => number
+  canChallenge: (currentLevel: CefrLevel) => boolean
+  getTargetLevel: (currentLevel: CefrLevel) => ChallengeTransition | null
+  getAttemptCount: (targetLevel: ChallengeTransition) => number
 }
 
 // ---------------------------------------------------------------------------
@@ -52,14 +54,14 @@ export const useLevelChallengeStore = create<LevelChallengeState>()(
       },
 
       canChallenge: (currentLevel) => {
-        // Can challenge if not already at max level
-        return currentLevel !== 'advanced'
+        // Can challenge if not already at max level (C2)
+        return currentLevel !== 'C2'
       },
 
       getTargetLevel: (currentLevel) => {
-        if (currentLevel === 'beginner') return 'intermediate'
-        if (currentLevel === 'intermediate') return 'advanced'
-        return null
+        const idx = CEFR_ORDER.indexOf(currentLevel)
+        if (idx < 0 || idx >= CEFR_ORDER.length - 1) return null
+        return CEFR_ORDER[idx + 1] as ChallengeTransition
       },
 
       getAttemptCount: (targetLevel) => {
@@ -71,6 +73,24 @@ export const useLevelChallengeStore = create<LevelChallengeState>()(
       onRehydrateStorage: () => (state) => {
         state?.setHydrated(true)
       },
+      // Migrate old 3-level target values
+      migrate: (persisted: unknown) => {
+        const state = persisted as Record<string, unknown>
+        // Migrate lastPassedLevel
+        if (state.lastPassedLevel && typeof state.lastPassedLevel === 'string' && state.lastPassedLevel in LEGACY_LEVEL_MIGRATION) {
+          state.lastPassedLevel = LEGACY_LEVEL_MIGRATION[state.lastPassedLevel]
+        }
+        // Migrate challengeAttempts targetLevel
+        if (Array.isArray(state.challengeAttempts)) {
+          for (const attempt of state.challengeAttempts) {
+            if (attempt.targetLevel && attempt.targetLevel in LEGACY_LEVEL_MIGRATION) {
+              attempt.targetLevel = LEGACY_LEVEL_MIGRATION[attempt.targetLevel]
+            }
+          }
+        }
+        return state as unknown as LevelChallengeState
+      },
+      version: 1,
     },
   ),
 )

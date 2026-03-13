@@ -63,7 +63,7 @@ export function resetAccountScopedState() {
     hasSeenWelcome: false,
     hydrated: onboardingHydrated,
     interests: [],
-    level: 'beginner',
+    level: 'A1',
     dailyGoal: 5,
   })
 }

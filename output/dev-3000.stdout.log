@@ -1,0 +1,12 @@
+▲ Next.js 16.1.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.110:3000
+- Environments: .env.local, .env
+
+✓ Starting...
+✓ Ready in 1867ms
+○ Compiling / ...
+ HEAD /shorts 200 in 4.4s (compile: 3.3s, proxy.ts: 95ms, render: 1061ms)
+ HEAD / 200 in 4.6s (compile: 4.3s, proxy.ts: 102ms, render: 209ms)
+ GET /shorts?feed=shorts 200 in 780ms (compile: 262ms, proxy.ts: 20ms, render: 499ms)
+✓ Finished filesystem cache database compaction in 11.3s

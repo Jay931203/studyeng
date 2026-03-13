@@ -4,6 +4,8 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import expressionEntriesData from '@/data/expression-entries-v2.json'
 import wordEntriesData from '@/data/word-entries.json'
+import type { CefrLevel } from '@/types/level'
+import { CEFR_ORDER, LEGACY_LEVEL_MIGRATION } from '@/types/level'
 
 // ---------------------------------------------------------------------------
 // Constants
@@ -38,9 +40,12 @@ const POS_MULTIPLIERS: Record<string, number> = {
   noun: 1.0,
 }
 
-const LEVEL_THRESHOLDS = {
-  beginner_to_intermediate: 150,
-  intermediate_to_advanced: 400,
+const LEVEL_THRESHOLDS: Record<string, number> = {
+  A1_to_A2: 60,
+  A2_to_B1: 150,
+  B1_to_B2: 280,
+  B2_to_C1: 400,
+  C1_to_C2: 600,
 }
 
 const MIN_EXPRESSIONS_FOR_LEVELUP = 10
@@ -51,9 +56,9 @@ const MIN_EXPRESSIONS_FOR_LEVELUP = 10
 
 export interface LevelEvent {
   timestamp: string
-  from: 'beginner' | 'intermediate' | 'advanced'
-  to: 'beginner' | 'intermediate' | 'advanced'
-  trigger: 'auto' | 'manual'
+  from: string // CefrLevel or legacy 3-level string for backward compat
+  to: string   // CefrLevel or legacy 3-level string for backward compat
+  trigger: 'auto' | 'manual' | 'challenge'
   absorptionScoreAtChange: number
   expressionCountAtChange: number
 }
@@ -76,7 +81,7 @@ interface LevelState {
   levelHistory: LevelEvent[]
 
   // Pending level-up
-  pendingLevelUp: { from: 'beginner' | 'intermediate' | 'advanced'; to: 'beginner' | 'intermediate' | 'advanced' } | null
+  pendingLevelUp: { from: CefrLevel; to: CefrLevel } | null
 
   // Video completion log (last 20, for level-up trigger condition)
   videoCompletionLog: VideoCompletionEntry[]
@@ -89,10 +94,10 @@ interface LevelState {
   recalculateScore: (familiarEntries: Record<string, { count: number }>) => void
   awardVideoXP: (videoId: string, completionRate: number) => number
   recordVideoCompletion: (videoId: string, completionRate: number) => void
-  acceptLevelUp: (currentLevel: 'beginner' | 'intermediate' | 'advanced') => void
+  acceptLevelUp: (currentLevel: CefrLevel) => void
   declineLevelUp: () => void
-  checkLevelUp: (currentLevel: 'beginner' | 'intermediate' | 'advanced') => void
-  addManualLevelChange: (from: 'beginner' | 'intermediate' | 'advanced', to: 'beginner' | 'intermediate' | 'advanced', score: number, count: number) => void
+  checkLevelUp: (currentLevel: CefrLevel) => void
+  addManualLevelChange: (from: CefrLevel, to: CefrLevel, score: number, count: number) => void
 
   // Getters
   getVideoXPTotal: () => number
@@ -150,23 +155,27 @@ function getRecentCompletionRate(log: VideoCompletionEntry[]): number {
   return sum / log.length
 }
 
-function levelFloor(level: 'beginner' | 'intermediate' | 'advanced'): number {
-  if (level === 'intermediate') return LEVEL_THRESHOLDS.beginner_to_intermediate
-  if (level === 'advanced') return LEVEL_THRESHOLDS.intermediate_to_advanced
-  return 0
+function levelFloor(level: CefrLevel): number {
+  const idx = CEFR_ORDER.indexOf(level)
+  if (idx <= 0) return 0
+  const prevLevel = CEFR_ORDER[idx - 1]
+  const key = `${prevLevel}_to_${level}`
+  return LEVEL_THRESHOLDS[key] ?? 0
 }
 
-function levelCeiling(level: 'beginner' | 'intermediate' | 'advanced'): number {
-  if (level === 'beginner') return LEVEL_THRESHOLDS.beginner_to_intermediate
-  if (level === 'intermediate') return LEVEL_THRESHOLDS.intermediate_to_advanced
-  return Infinity
+function levelCeiling(level: CefrLevel): number {
+  const idx = CEFR_ORDER.indexOf(level)
+  if (idx >= CEFR_ORDER.length - 1) return Infinity // C2 has no ceiling
+  const nextLevel = CEFR_ORDER[idx + 1]
+  const key = `${level}_to_${nextLevel}`
+  return LEVEL_THRESHOLDS[key] ?? Infinity
 }
 
 export function getLevelGaugeProgress(
   rawScore: number,
-  level: 'beginner' | 'intermediate' | 'advanced',
+  level: CefrLevel,
 ): number {
-  if (level === 'advanced') return 1
+  if (level === 'C2') return 1
 
   const floor = levelFloor(level)
   const ceiling = levelCeiling(level)
@@ -272,15 +281,14 @@ export const useLevelStore = create<LevelState>()(
 
         if (!completionOk) return
 
-        let nextLevel: 'beginner' | 'intermediate' | 'advanced' | null = null
+        // Find the next level
+        const idx = CEFR_ORDER.indexOf(currentLevel)
+        if (idx < 0 || idx >= CEFR_ORDER.length - 1) return // already max or unknown
 
-        if (currentLevel === 'beginner' && rawScore >= LEVEL_THRESHOLDS.beginner_to_intermediate) {
-          nextLevel = 'intermediate'
-        } else if (currentLevel === 'intermediate' && rawScore >= LEVEL_THRESHOLDS.intermediate_to_advanced) {
-          nextLevel = 'advanced'
-        }
-
-        if (!nextLevel) return
+        const nextLevel = CEFR_ORDER[idx + 1]
+        const thresholdKey = `${currentLevel}_to_${nextLevel}`
+        const threshold = LEVEL_THRESHOLDS[thresholdKey]
+        if (!threshold || rawScore < threshold) return
 
         // Cooldown: don't trigger again within 60 seconds of last auto level-up
         const lastAuto = levelHistory.filter((e) => e.trigger === 'auto').at(-1)
@@ -344,6 +352,21 @@ export const useLevelStore = create<LevelState>()(
       onRehydrateStorage: () => (state) => {
         state?.setHydrated(true)
       },
+      // Migrate legacy pendingLevelUp values
+      migrate: (persisted: unknown) => {
+        const state = persisted as Record<string, unknown>
+        if (state.pendingLevelUp && typeof state.pendingLevelUp === 'object') {
+          const pending = state.pendingLevelUp as Record<string, string>
+          if (pending.from && pending.from in LEGACY_LEVEL_MIGRATION) {
+            pending.from = LEGACY_LEVEL_MIGRATION[pending.from]
+          }
+          if (pending.to && pending.to in LEGACY_LEVEL_MIGRATION) {
+            pending.to = LEGACY_LEVEL_MIGRATION[pending.to]
+          }
+        }
+        return state as unknown as LevelState
+      },
+      version: 1,
     },
   ),
 )

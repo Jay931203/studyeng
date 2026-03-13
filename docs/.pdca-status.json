@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-03-08T12:57:17.346Z",
+  "lastUpdated": "2026-03-13T14:56:19.052Z",
   "activeFeatures": [
     "studyeng",
     "test",
@@ -22,7 +22,14 @@
     "privacy",
     "history",
     "video-research",
-    "ui"
+    "ui",
+    "series",
+    "stats",
+    "saved",
+    "xp",
+    "levelChallenge",
+    "tier",
+    "level"
   ],
   "primaryFeature": "studyeng",
   "features": {
@@ -35,9 +42,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:11:44.237Z",
-        "lastUpdated": "2026-03-08T12:57:17.346Z"
+        "lastUpdated": "2026-03-13T14:51:12.161Z"
       },
-      "lastFile": "C:\\Users\\박현재\\studyeng\\src\\components\\SavedPhraseCard.tsx"
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\lib\\accountScope.test.ts"
     },
     "test": {
       "phase": "do",
@@ -61,7 +68,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:25:45.494Z",
-        "lastUpdated": "2026-03-08T06:14:47.452Z"
+        "lastUpdated": "2026-03-13T14:51:17.620Z"
       },
       "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\lib\\supabase\\sync.ts"
     },
@@ -87,9 +94,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:32:44.325Z",
-        "lastUpdated": "2026-03-08T12:45:37.580Z"
+        "lastUpdated": "2026-03-13T11:59:07.892Z"
       },
-      "lastFile": "C:\\Users\\박현재\\studyeng\\src\\app\\(tabs)\\layout.tsx"
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\app\\(tabs)\\layout.tsx"
     },
     "explore": {
       "phase": "do",
@@ -100,9 +107,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:32:46.500Z",
-        "lastUpdated": "2026-03-08T12:57:13.132Z"
+        "lastUpdated": "2026-03-13T11:58:59.054Z"
       },
-      "lastFile": "C:\\Users\\박현재\\studyeng\\src\\app\\(tabs)\\explore\\page.tsx"
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\app\\(tabs)\\explore\\loading.tsx"
     },
     "learning": {
       "phase": "do",
@@ -113,9 +120,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:32:47.479Z",
-        "lastUpdated": "2026-03-08T12:56:39.123Z"
+        "lastUpdated": "2026-03-13T14:49:53.547Z"
       },
-      "lastFile": "C:\\Users\\박현재\\studyeng\\src\\app\\(tabs)\\learning\\page.tsx"
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\app\\(tabs)\\learning\\page.tsx"
     },
     "profile": {
       "phase": "do",
@@ -126,9 +133,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:32:48.262Z",
-        "lastUpdated": "2026-03-08T12:56:40.952Z"
+        "lastUpdated": "2026-03-13T11:59:22.156Z"
       },
-      "lastFile": "C:\\Users\\박현재\\studyeng\\src\\app\\(tabs)\\profile\\page.tsx"
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\app\\(tabs)\\profile\\page.tsx"
     },
     "stores": {
       "phase": "do",
@@ -139,9 +146,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:34:15.688Z",
-        "lastUpdated": "2026-03-08T12:46:32.720Z"
+        "lastUpdated": "2026-03-13T14:53:51.691Z"
       },
-      "lastFile": "C:\\Users\\박현재\\studyeng\\src\\stores\\useThemeStore.ts"
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\stores\\useLevelChallengeStore.ts"
     },
     "data": {
       "phase": "do",
@@ -165,9 +172,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:43:56.221Z",
-        "lastUpdated": "2026-03-08T01:26:15.221Z"
+        "lastUpdated": "2026-03-13T14:56:19.052Z"
       },
-      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\components\\games\\ListeningGame.tsx"
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\components\\games\\ExpressionSwipeGame.tsx"
     },
     "login": {
       "phase": "do",
@@ -178,7 +185,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T13:49:42.103Z",
-        "lastUpdated": "2026-03-08T09:24:35.668Z"
+        "lastUpdated": "2026-03-13T12:00:09.349Z"
       },
       "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\app\\login\\page.tsx"
     },
@@ -191,7 +198,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-06T15:06:29.214Z",
-        "lastUpdated": "2026-03-08T09:24:20.354Z"
+        "lastUpdated": "2026-03-13T14:50:27.321Z"
       },
       "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\app\\onboarding\\page.tsx"
     },
@@ -230,9 +237,9 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-07T04:22:14.815Z",
-        "lastUpdated": "2026-03-08T03:21:00.449Z"
+        "lastUpdated": "2026-03-13T10:27:51.796Z"
       },
-      "lastFile": "C:\\Users\\hyunj\\studyeng\\scripts\\prebake-all.js"
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\scripts\\gen-batch6-dict.py"
     },
     "terms": {
       "phase": "do",
@@ -243,7 +250,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-07T08:15:25.408Z",
-        "lastUpdated": "2026-03-08T08:37:45.551Z"
+        "lastUpdated": "2026-03-13T06:37:26.949Z"
       },
       "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\app\\terms\\page.tsx"
     },
@@ -256,7 +263,7 @@
       "documents": {},
       "timestamps": {
         "started": "2026-03-07T08:16:09.221Z",
-        "lastUpdated": "2026-03-08T08:37:43.502Z"
+        "lastUpdated": "2026-03-13T06:37:23.788Z"
       },
       "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\app\\privacy\\page.tsx"
     },
@@ -298,6 +305,97 @@
         "lastUpdated": "2026-03-08T12:55:34.011Z"
       },
       "lastFile": "C:\\Users\\박현재\\studyeng\\src\\components\\ui\\AppPage.tsx"
+    },
+    "series": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-03-13T06:37:35.831Z",
+        "lastUpdated": "2026-03-13T06:39:06.421Z"
+      },
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\app\\(tabs)\\explore\\series\\page.tsx"
+    },
+    "stats": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-03-13T06:57:30.138Z",
+        "lastUpdated": "2026-03-13T14:50:07.791Z"
+      },
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\app\\(tabs)\\learning\\stats\\page.tsx"
+    },
+    "saved": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-03-13T12:16:21.819Z",
+        "lastUpdated": "2026-03-13T13:25:58.590Z"
+      },
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\app\\(tabs)\\learning\\saved\\page.tsx"
+    },
+    "xp": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-03-13T14:10:26.998Z",
+        "lastUpdated": "2026-03-13T14:10:36.242Z"
+      },
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\lib\\xp\\streakBonus.ts"
+    },
+    "levelChallenge": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-03-13T14:10:27.965Z",
+        "lastUpdated": "2026-03-13T14:47:07.063Z"
+      },
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\lib\\levelChallenge\\selectChallengeCards.ts"
+    },
+    "tier": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-03-13T14:11:33.934Z",
+        "lastUpdated": "2026-03-13T14:11:33.934Z"
+      },
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\components\\tier\\TierStatusCard.tsx"
+    },
+    "level": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-03-13T14:11:49.558Z",
+        "lastUpdated": "2026-03-13T14:54:45.440Z"
+      },
+      "lastFile": "C:\\Users\\hyunj\\studyeng\\src\\components\\level\\LevelChallengeGame.tsx"
     }
   },
   "pipeline": {
@@ -308,7 +406,7 @@
   "session": {
     "startedAt": "2026-03-06T12:21:45.757Z",
     "onboardingCompleted": false,
-    "lastActivity": "2026-03-08T12:57:17.346Z"
+    "lastActivity": "2026-03-13T14:56:19.052Z"
   },
   "history": [
     {
@@ -6314,6 +6412,1416 @@
     {
       "timestamp": "2026-03-08T12:57:17.346Z",
       "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:37:18.944Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:37:23.788Z",
+      "feature": "privacy",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:37:26.949Z",
+      "feature": "terms",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:37:34.827Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:37:35.831Z",
+      "feature": "series",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:37:48.941Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:38:06.038Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:38:10.715Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:38:28.418Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:38:30.871Z",
+      "feature": "series",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:38:41.711Z",
+      "feature": "profile",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:39:03.181Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:39:05.197Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:39:06.421Z",
+      "feature": "series",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:39:07.554Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:39:16.536Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:39:20.222Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:39:36.149Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:51:54.601Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:51:59.470Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:56:00.531Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:56:10.457Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:56:21.036Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T06:57:30.138Z",
+      "feature": "stats",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T07:17:33.214Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T07:19:46.388Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T07:21:31.539Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T07:21:36.103Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T07:21:39.703Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T07:21:44.826Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T07:22:02.346Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T07:22:13.113Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T07:22:19.549Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T07:23:09.328Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T07:23:58.715Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T07:24:30.531Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T07:25:02.470Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T07:45:48.433Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T07:45:53.799Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T07:46:00.314Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T07:46:10.112Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T07:46:46.660Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T07:46:54.171Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T10:14:00.468Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T10:14:20.931Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T10:14:38.773Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T10:14:56.802Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T10:15:16.166Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T10:15:20.329Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T10:15:27.552Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T10:15:32.865Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T10:15:41.943Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T10:15:47.987Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T10:16:14.686Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T10:16:22.948Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T10:16:40.837Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T10:27:51.796Z",
+      "feature": "scripts",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:58:50.823Z",
+      "feature": "profile",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:58:53.678Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:58:55.528Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:58:56.237Z",
+      "feature": "(tabs)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:58:56.785Z",
+      "feature": "(tabs)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:58:57.955Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:58:59.054Z",
+      "feature": "explore",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:59:00.339Z",
+      "feature": "stats",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:59:04.705Z",
+      "feature": "profile",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:59:05.888Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:59:07.892Z",
+      "feature": "(tabs)",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:59:08.301Z",
+      "feature": "stats",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:59:09.730Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:59:13.622Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:59:14.401Z",
+      "feature": "stats",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:59:15.689Z",
+      "feature": "profile",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:59:19.615Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:59:22.156Z",
+      "feature": "profile",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:59:25.641Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:59:26.256Z",
+      "feature": "stats",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:59:28.122Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:59:32.136Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:59:34.044Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:59:37.849Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T11:59:42.123Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:00:07.454Z",
+      "feature": "login",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:00:09.349Z",
+      "feature": "login",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:00:47.103Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:16:19.244Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:16:21.819Z",
+      "feature": "saved",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:16:22.778Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:16:30.373Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:16:42.184Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:16:42.369Z",
+      "feature": "saved",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:16:46.561Z",
+      "feature": "saved",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:16:48.720Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:16:53.883Z",
+      "feature": "saved",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:16:54.902Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:17:00.739Z",
+      "feature": "saved",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:17:05.955Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:17:14.607Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:17:19.916Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:17:20.174Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:17:23.955Z",
+      "feature": "saved",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:17:24.947Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:17:28.437Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:17:30.575Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:17:33.882Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:17:35.675Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:17:39.864Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:17:42.993Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:17:47.174Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:17:54.847Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:17:55.203Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:18:00.077Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:18:25.175Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:18:28.936Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:18:33.250Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:18:52.924Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:19:06.132Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:19:10.212Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:19:18.584Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:19:27.202Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:19:40.858Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:20:09.144Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:20:18.236Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T12:20:35.482Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T13:25:58.590Z",
+      "feature": "saved",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T13:42:52.721Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:09:55.708Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:10:26.998Z",
+      "feature": "xp",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:10:27.965Z",
+      "feature": "levelChallenge",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:10:36.242Z",
+      "feature": "xp",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:10:53.510Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:10:59.171Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:11:13.801Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:11:18.632Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:11:25.511Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:11:33.934Z",
+      "feature": "tier",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:11:49.558Z",
+      "feature": "level",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:11:50.699Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:11:50.903Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:11:54.483Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:12:02.879Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:12:10.719Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:12:11.447Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:12:22.072Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:12:22.382Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:12:32.910Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:12:34.123Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:12:41.391Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:12:42.828Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:12:48.559Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:12:54.181Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:12:59.976Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:13:04.495Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:13:07.215Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:13:13.251Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:13:18.881Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:13:24.768Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:13:31.506Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:13:33.793Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:13:35.625Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:13:40.948Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:13:46.738Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:13:52.068Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:13:58.034Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:14:04.689Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:14:10.645Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:14:16.120Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:14:21.167Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:14:25.341Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:14:34.422Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:14:39.754Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:15:15.451Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:25:58.060Z",
+      "feature": "stats",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:27:10.947Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:27:19.322Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:27:33.735Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:27:46.746Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:27:52.946Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:32:33.766Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:33:01.865Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:33:05.560Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:33:10.861Z",
+      "feature": "stats",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:33:15.774Z",
+      "feature": "stats",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:33:20.032Z",
+      "feature": "stats",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:33:23.471Z",
+      "feature": "stats",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:33:36.054Z",
+      "feature": "stats",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:33:42.263Z",
+      "feature": "stats",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:33:50.613Z",
+      "feature": "stats",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:33:55.028Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:34:00.743Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:34:11.323Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:34:27.939Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:34:32.772Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:34:37.160Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:34:49.661Z",
+      "feature": "stats",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:44:30.823Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:44:35.364Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:44:49.607Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:44:54.633Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:44:58.358Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:45:11.494Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:45:21.951Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:46:15.238Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:46:30.199Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:47:07.063Z",
+      "feature": "levelChallenge",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:47:48.119Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:48:30.028Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:48:39.708Z",
+      "feature": "level",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:48:43.951Z",
+      "feature": "level",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:48:48.232Z",
+      "feature": "level",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:48:52.224Z",
+      "feature": "level",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:49:16.224Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:49:21.277Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:49:37.638Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:49:45.465Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:49:53.547Z",
+      "feature": "learning",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:50:01.657Z",
+      "feature": "stats",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:50:07.791Z",
+      "feature": "stats",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:50:22.795Z",
+      "feature": "onboarding",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:50:27.321Z",
+      "feature": "onboarding",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:50:44.577Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:50:49.294Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:50:56.617Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:51:00.611Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:51:07.199Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:51:12.161Z",
+      "feature": "studyeng",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:51:17.620Z",
+      "feature": "supabase",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:52:30.759Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:52:42.929Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:53:40.585Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:53:45.657Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:53:51.691Z",
+      "feature": "stores",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:54:45.440Z",
+      "feature": "level",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:56:07.952Z",
+      "feature": "games",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-13T14:56:19.052Z",
+      "feature": "games",
       "phase": "do",
       "action": "updated"
     }

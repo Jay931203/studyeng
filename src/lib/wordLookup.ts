@@ -10,6 +10,8 @@
 
 import wordEntriesData from "../data/word-entries.json";
 import wordIndexData from "../data/word-index.json";
+import type { CefrLevel } from "@/types/level";
+import { CEFR_ORDER } from "@/types/level";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -55,7 +57,7 @@ const videoIndex = wordIndexData as Record<string, IndexRow[]>;
 // CEFR helpers
 // ---------------------------------------------------------------------------
 
-const CEFR_ORDER: Record<string, number> = {
+const CEFR_ORDER_MAP: Record<string, number> = {
   A1: 0,
   A2: 1,
   B1: 2,
@@ -63,6 +65,19 @@ const CEFR_ORDER: Record<string, number> = {
   C1: 4,
   C2: 5,
 };
+
+// ---------------------------------------------------------------------------
+// Level-to-CEFR range mapping (user level +/- 1)
+// ---------------------------------------------------------------------------
+
+function getCefrRangeForLevel(level: CefrLevel): Set<string> {
+  const idx = CEFR_ORDER.indexOf(level);
+  const result = new Set<string>();
+  for (let i = Math.max(0, idx - 1); i <= Math.min(CEFR_ORDER.length - 1, idx + 1); i++) {
+    result.add(CEFR_ORDER[i]);
+  }
+  return result;
+}
 
 // ---------------------------------------------------------------------------
 // Sorting helpers
@@ -145,11 +160,11 @@ export function getWordsByLevel(
   maxLevel: string = "C2",
 ): VideoWord[] {
   const all = getWordsForVideo(videoId);
-  const minOrder = CEFR_ORDER[minLevel.toUpperCase()] ?? 0;
-  const maxOrder = CEFR_ORDER[maxLevel.toUpperCase()] ?? 5;
+  const minOrder = CEFR_ORDER_MAP[minLevel.toUpperCase()] ?? 0;
+  const maxOrder = CEFR_ORDER_MAP[maxLevel.toUpperCase()] ?? 5;
 
   return all.filter((vw) => {
-    const order = CEFR_ORDER[vw.word.cefr.toUpperCase()] ?? 0;
+    const order = CEFR_ORDER_MAP[vw.word.cefr.toUpperCase()] ?? 0;
     return order >= minOrder && order <= maxOrder;
   });
 }
@@ -158,39 +173,35 @@ export function getWordsByLevel(
 // Smart priming (level-aware + familiarity-aware)
 // ---------------------------------------------------------------------------
 
-const LEVEL_CEFR_RANGE: Record<string, string[]> = {
-  beginner: ["A1", "A2", "B1"],
-  intermediate: ["A2", "B1", "B2"],
-  advanced: ["B2", "C1", "C2"],
-};
-
 /**
  * Smart priming that considers user level and familiarity.
  *
  * Words are scored (lower = higher priority):
- *   - Level match bonus:   -200 if word CEFR falls within user's range
+ *   - Level match bonus:   -200 if word CEFR falls within user's range (level +/- 1)
  *   - learner_value:       essential=0, useful=100, supplementary=200
  *   - POS priority:        verb=0, adjective=1, noun=2, adverb=3, others=4
- *   - Familiarity penalty: count >= 3 → +1000, count 1-2 → +300
+ *   - Familiarity penalty: count >= 3 -> +1000, count 1-2 -> +300
+ *   - Hard floor penalty:  CEFR distance >= 2 -> +500
  *
  * Deduplication: one word per sentence (best score wins), then one
  * occurrence per word id (first wins).
  *
  * @param videoId        YouTube video ID
- * @param userLevel      'beginner' | 'intermediate' | 'advanced'
+ * @param userLevel      CefrLevel (A1-C2)
  * @param familiarWords  Record<wordId, { count: number }> from familiarity store
  * @param count          Max words to return (default 3)
  */
 export function getSmartPrimingWords(
   videoId: string,
-  userLevel: "beginner" | "intermediate" | "advanced",
+  userLevel: CefrLevel,
   familiarWords: Record<string, { count: number }>,
   count: number = 3,
 ): VideoWord[] {
   const all = getWordsForVideo(videoId);
   if (all.length === 0) return [];
 
-  const allowedCefr = new Set(LEVEL_CEFR_RANGE[userLevel] ?? LEVEL_CEFR_RANGE.intermediate);
+  const allowedCefr = getCefrRangeForLevel(userLevel);
+  const userIdx = CEFR_ORDER.indexOf(userLevel);
 
   function smartScore(vw: VideoWord): number {
     const entry = vw.word;
@@ -203,6 +214,13 @@ export function getSmartPrimingWords(
     // Level match bonus
     if (allowedCefr.has(entry.cefr.toUpperCase())) {
       score -= 200;
+    }
+
+    // Hard floor penalty: CEFR distance >= 2
+    const wordIdx = CEFR_ORDER_MAP[entry.cefr.toUpperCase()] ?? 0;
+    const distance = Math.abs(wordIdx - userIdx);
+    if (distance >= 2) {
+      score += 500;
     }
 
     // Familiarity penalty

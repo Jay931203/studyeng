@@ -1,0 +1,5822 @@
+{
+  "analyze": {
+    "id": "analyze",
+    "canonical": "analyze",
+    "pos": "verb",
+    "meaning_ko": "분석하다",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "analyzes",
+      "analyzed",
+      "analyzing",
+      "analysis"
+    ],
+    "example_en": "We need to analyze the data before drawing conclusions.",
+    "example_ko": "결론을 내리기 전에 데이터를 분석해야 한다."
+  },
+  "hypothesis": {
+    "id": "hypothesis",
+    "canonical": "hypothesis",
+    "pos": "noun",
+    "meaning_ko": "가설",
+    "cefr": "B2",
+    "theme": [
+      "science",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "hypotheses",
+      "hypothetical",
+      "hypothesize"
+    ],
+    "example_en": "The scientist tested her hypothesis through experiments.",
+    "example_ko": "그 과학자는 실험을 통해 가설을 검증했다."
+  },
+  "negotiate": {
+    "id": "negotiate",
+    "canonical": "negotiate",
+    "pos": "verb",
+    "meaning_ko": "협상하다",
+    "cefr": "B2",
+    "theme": [
+      "business",
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "negotiates",
+      "negotiated",
+      "negotiating",
+      "negotiation"
+    ],
+    "example_en": "The two countries negotiated a peace agreement.",
+    "example_ko": "두 나라는 평화 협정을 협상했다."
+  },
+  "implement": {
+    "id": "implement",
+    "canonical": "implement",
+    "pos": "verb",
+    "meaning_ko": "실행하다, 구현하다",
+    "cefr": "B2",
+    "theme": [
+      "business",
+      "technology"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "implements",
+      "implemented",
+      "implementing",
+      "implementation"
+    ],
+    "example_en": "The company will implement the new policy next month.",
+    "example_ko": "회사는 다음 달에 새 정책을 시행할 것이다."
+  },
+  "significant": {
+    "id": "significant",
+    "canonical": "significant",
+    "pos": "adjective",
+    "meaning_ko": "중요한, 상당한",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "significantly",
+      "significance",
+      "insignificant"
+    ],
+    "example_en": "There was a significant increase in sales this quarter.",
+    "example_ko": "이번 분기에 매출이 상당히 증가했다."
+  },
+  "strategy": {
+    "id": "strategy",
+    "canonical": "strategy",
+    "pos": "noun",
+    "meaning_ko": "전략",
+    "cefr": "B2",
+    "theme": [
+      "business",
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "strategies",
+      "strategic",
+      "strategically",
+      "strategize"
+    ],
+    "example_en": "We need a clear strategy to enter the market.",
+    "example_ko": "시장에 진입하려면 명확한 전략이 필요하다."
+  },
+  "prevalent": {
+    "id": "prevalent",
+    "canonical": "prevalent",
+    "pos": "adjective",
+    "meaning_ko": "널리 퍼진, 유행하는",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "prevalence"
+    ],
+    "example_en": "Diabetes is increasingly prevalent in developed countries.",
+    "example_ko": "당뇨병은 선진국에서 점점 더 널리 퍼지고 있다."
+  },
+  "substantiate": {
+    "id": "substantiate",
+    "canonical": "substantiate",
+    "pos": "verb",
+    "meaning_ko": "입증하다, 실증하다",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "substantiates",
+      "substantiated",
+      "substantiating",
+      "substantiation"
+    ],
+    "example_en": "The evidence substantiated the original hypothesis.",
+    "example_ko": "증거가 원래의 가설을 입증했다."
+  },
+  "evaluate": {
+    "id": "evaluate",
+    "canonical": "evaluate",
+    "pos": "verb",
+    "meaning_ko": "평가하다",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "business"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "evaluates",
+      "evaluated",
+      "evaluating",
+      "evaluation"
+    ],
+    "example_en": "Teachers evaluate students based on multiple criteria.",
+    "example_ko": "교사들은 여러 기준으로 학생들을 평가한다."
+  },
+  "contribute": {
+    "id": "contribute",
+    "canonical": "contribute",
+    "pos": "verb",
+    "meaning_ko": "기여하다, 공헌하다",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "contributes",
+      "contributed",
+      "contributing",
+      "contribution",
+      "contributor"
+    ],
+    "example_en": "Many factors contribute to climate change.",
+    "example_ko": "많은 요인이 기후 변화에 기여한다."
+  },
+  "establish": {
+    "id": "establish",
+    "canonical": "establish",
+    "pos": "verb",
+    "meaning_ko": "설립하다, 확립하다",
+    "cefr": "B2",
+    "theme": [
+      "business",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "establishes",
+      "established",
+      "establishing",
+      "establishment"
+    ],
+    "example_en": "The university was established in 1850.",
+    "example_ko": "그 대학은 1850년에 설립되었다."
+  },
+  "sufficient": {
+    "id": "sufficient",
+    "canonical": "sufficient",
+    "pos": "adjective",
+    "meaning_ko": "충분한",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "sufficiently",
+      "sufficiency",
+      "insufficient"
+    ],
+    "example_en": "We do not have sufficient evidence to proceed.",
+    "example_ko": "진행하기에 충분한 증거가 없다."
+  },
+  "efficient": {
+    "id": "efficient",
+    "canonical": "efficient",
+    "pos": "adjective",
+    "meaning_ko": "효율적인",
+    "cefr": "B2",
+    "theme": [
+      "business",
+      "technology"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "efficiently",
+      "efficiency",
+      "inefficient"
+    ],
+    "example_en": "Electric cars are more energy efficient than gasoline cars.",
+    "example_ko": "전기차는 가솔린차보다 에너지 효율이 높다."
+  },
+  "perspective": {
+    "id": "perspective",
+    "canonical": "perspective",
+    "pos": "noun",
+    "meaning_ko": "관점, 시각",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "abstract"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "perspectives"
+    ],
+    "example_en": "Try to see the issue from a different perspective.",
+    "example_ko": "다른 관점에서 문제를 바라보도록 해보세요."
+  },
+  "fundamental": {
+    "id": "fundamental",
+    "canonical": "fundamental",
+    "pos": "adjective",
+    "meaning_ko": "근본적인, 기본적인",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "fundamentally",
+      "fundamentals"
+    ],
+    "example_en": "Freedom of speech is a fundamental right.",
+    "example_ko": "언론의 자유는 근본적인 권리이다."
+  },
+  "interpret": {
+    "id": "interpret",
+    "canonical": "interpret",
+    "pos": "verb",
+    "meaning_ko": "해석하다, 통역하다",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "literary"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "interprets",
+      "interpreted",
+      "interpreting",
+      "interpretation",
+      "interpreter"
+    ],
+    "example_en": "Different cultures interpret body language differently.",
+    "example_ko": "다른 문화권은 바디랭귀지를 다르게 해석한다."
+  },
+  "propagate": {
+    "id": "propagate",
+    "canonical": "propagate",
+    "pos": "verb",
+    "meaning_ko": "전파하다, 번식시키다",
+    "cefr": "B2",
+    "theme": [
+      "science",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "propagates",
+      "propagated",
+      "propagating",
+      "propagation"
+    ],
+    "example_en": "Misinformation can propagate rapidly on social media.",
+    "example_ko": "잘못된 정보는 소셜 미디어에서 빠르게 전파될 수 있다."
+  },
+  "pursue": {
+    "id": "pursue",
+    "canonical": "pursue",
+    "pos": "verb",
+    "meaning_ko": "추구하다, 뒤쫓다",
+    "cefr": "B2",
+    "theme": [
+      "abstract"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "pursues",
+      "pursued",
+      "pursuing",
+      "pursuit"
+    ],
+    "example_en": "She decided to pursue a career in medicine.",
+    "example_ko": "그녀는 의학 분야의 경력을 추구하기로 했다."
+  },
+  "modify": {
+    "id": "modify",
+    "canonical": "modify",
+    "pos": "verb",
+    "meaning_ko": "수정하다, 변경하다",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "technology"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "modifies",
+      "modified",
+      "modifying",
+      "modification"
+    ],
+    "example_en": "We need to modify the design to meet safety standards.",
+    "example_ko": "안전 기준을 충족하기 위해 디자인을 수정해야 한다."
+  },
+  "accumulate": {
+    "id": "accumulate",
+    "canonical": "accumulate",
+    "pos": "verb",
+    "meaning_ko": "축적하다, 쌓이다",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "accumulates",
+      "accumulated",
+      "accumulating",
+      "accumulation"
+    ],
+    "example_en": "Snow accumulated on the mountain peaks overnight.",
+    "example_ko": "밤새 산꼭대기에 눈이 쌓였다."
+  },
+  "allocate": {
+    "id": "allocate",
+    "canonical": "allocate",
+    "pos": "verb",
+    "meaning_ko": "할당하다, 배분하다",
+    "cefr": "B2",
+    "theme": [
+      "business",
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "allocates",
+      "allocated",
+      "allocating",
+      "allocation"
+    ],
+    "example_en": "The government allocated funds for education.",
+    "example_ko": "정부는 교육에 자금을 할당했다."
+  },
+  "distinguish": {
+    "id": "distinguish",
+    "canonical": "distinguish",
+    "pos": "verb",
+    "meaning_ko": "구별하다, 식별하다",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "distinguishes",
+      "distinguished",
+      "distinguishing",
+      "distinction",
+      "distinctive"
+    ],
+    "example_en": "It is important to distinguish fact from opinion.",
+    "example_ko": "사실과 의견을 구별하는 것이 중요하다."
+  },
+  "phenomenon": {
+    "id": "phenomenon",
+    "canonical": "phenomenon",
+    "pos": "noun",
+    "meaning_ko": "현상",
+    "cefr": "B2",
+    "theme": [
+      "science",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "phenomena",
+      "phenomenal"
+    ],
+    "example_en": "Climate change is a global phenomenon.",
+    "example_ko": "기후 변화는 전 세계적인 현상이다."
+  },
+  "controversy": {
+    "id": "controversy",
+    "canonical": "controversy",
+    "pos": "noun",
+    "meaning_ko": "논란, 논쟁",
+    "cefr": "B2",
+    "theme": [
+      "politics",
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "controversies",
+      "controversial",
+      "controversially"
+    ],
+    "example_en": "The policy sparked considerable controversy.",
+    "example_ko": "그 정책은 상당한 논란을 일으켰다."
+  },
+  "comprehensive": {
+    "id": "comprehensive",
+    "canonical": "comprehensive",
+    "pos": "adjective",
+    "meaning_ko": "포괄적인, 종합적인",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "business"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "comprehensively"
+    ],
+    "example_en": "The report provides a comprehensive overview of the situation.",
+    "example_ko": "그 보고서는 상황에 대한 포괄적인 개요를 제공한다."
+  },
+  "consequence": {
+    "id": "consequence",
+    "canonical": "consequence",
+    "pos": "noun",
+    "meaning_ko": "결과, 영향",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "consequences",
+      "consequent",
+      "consequently",
+      "consequential"
+    ],
+    "example_en": "Every action has consequences.",
+    "example_ko": "모든 행동에는 결과가 따른다."
+  },
+  "contemporary": {
+    "id": "contemporary",
+    "canonical": "contemporary",
+    "pos": "adjective",
+    "meaning_ko": "현대의, 동시대의",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "literary"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "contemporaries"
+    ],
+    "example_en": "The museum features contemporary art from around the world.",
+    "example_ko": "그 박물관은 전 세계의 현대 미술을 전시한다."
+  },
+  "conventional": {
+    "id": "conventional",
+    "canonical": "conventional",
+    "pos": "adjective",
+    "meaning_ko": "전통적인, 관습적인",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "conventionally",
+      "convention",
+      "unconventional"
+    ],
+    "example_en": "He rejected conventional methods in favor of innovation.",
+    "example_ko": "그는 혁신을 위해 전통적인 방법을 거부했다."
+  },
+  "correspond": {
+    "id": "correspond",
+    "canonical": "correspond",
+    "pos": "verb",
+    "meaning_ko": "일치하다, 서신을 교환하다",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "corresponds",
+      "corresponded",
+      "corresponding",
+      "correspondence"
+    ],
+    "example_en": "The results correspond with our earlier findings.",
+    "example_ko": "결과가 우리의 이전 발견과 일치한다."
+  },
+  "crucial": {
+    "id": "crucial",
+    "canonical": "crucial",
+    "pos": "adjective",
+    "meaning_ko": "결정적인, 중대한",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "crucially"
+    ],
+    "example_en": "Timing is crucial in this negotiation.",
+    "example_ko": "이 협상에서 타이밍이 결정적이다."
+  },
+  "derive": {
+    "id": "derive",
+    "canonical": "derive",
+    "pos": "verb",
+    "meaning_ko": "유래하다, 끌어내다",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "derives",
+      "derived",
+      "deriving",
+      "derivation",
+      "derivative"
+    ],
+    "example_en": "Many English words derive from Latin.",
+    "example_ko": "많은 영어 단어가 라틴어에서 유래한다."
+  },
+  "alleviate": {
+    "id": "alleviate",
+    "canonical": "alleviate",
+    "pos": "verb",
+    "meaning_ko": "완화하다, 경감하다",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "alleviates",
+      "alleviated",
+      "alleviating",
+      "alleviation"
+    ],
+    "example_en": "The medication helps alleviate chronic pain.",
+    "example_ko": "이 약은 만성 통증을 완화하는 데 도움이 된다."
+  },
+  "ensure": {
+    "id": "ensure",
+    "canonical": "ensure",
+    "pos": "verb",
+    "meaning_ko": "보장하다, 확실하게 하다",
+    "cefr": "B2",
+    "theme": [
+      "business",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "ensures",
+      "ensured",
+      "ensuring"
+    ],
+    "example_en": "We must ensure the safety of all passengers.",
+    "example_ko": "모든 승객의 안전을 보장해야 한다."
+  },
+  "fluctuate": {
+    "id": "fluctuate",
+    "canonical": "fluctuate",
+    "pos": "verb",
+    "meaning_ko": "변동하다, 오르내리다",
+    "cefr": "B2",
+    "theme": [
+      "business",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "fluctuates",
+      "fluctuated",
+      "fluctuating",
+      "fluctuation"
+    ],
+    "example_en": "Oil prices fluctuate depending on global demand.",
+    "example_ko": "유가는 세계 수요에 따라 변동한다."
+  },
+  "implication": {
+    "id": "implication",
+    "canonical": "implication",
+    "pos": "noun",
+    "meaning_ko": "함축, 영향, 암시",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "implications",
+      "implicit",
+      "implicitly"
+    ],
+    "example_en": "The new law has serious implications for small businesses.",
+    "example_ko": "새 법은 중소기업에 심각한 영향을 미친다."
+  },
+  "inevitable": {
+    "id": "inevitable",
+    "canonical": "inevitable",
+    "pos": "adjective",
+    "meaning_ko": "불가피한, 필연적인",
+    "cefr": "B2",
+    "theme": [
+      "abstract"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "inevitably",
+      "inevitability"
+    ],
+    "example_en": "Change is inevitable in any growing organization.",
+    "example_ko": "성장하는 조직에서 변화는 불가피하다."
+  },
+  "infrastructure": {
+    "id": "infrastructure",
+    "canonical": "infrastructure",
+    "pos": "noun",
+    "meaning_ko": "인프라, 기반 시설",
+    "cefr": "B2",
+    "theme": [
+      "politics",
+      "technology"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "infrastructures",
+      "infrastructural"
+    ],
+    "example_en": "The country needs to invest in its transportation infrastructure.",
+    "example_ko": "그 나라는 교통 인프라에 투자해야 한다."
+  },
+  "inherent": {
+    "id": "inherent",
+    "canonical": "inherent",
+    "pos": "adjective",
+    "meaning_ko": "내재된, 고유한",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "inherently"
+    ],
+    "example_en": "There are inherent risks in any investment.",
+    "example_ko": "모든 투자에는 내재된 위험이 있다."
+  },
+  "initiative": {
+    "id": "initiative",
+    "canonical": "initiative",
+    "pos": "noun",
+    "meaning_ko": "계획, 주도권, 진취성",
+    "cefr": "B2",
+    "theme": [
+      "business",
+      "politics"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "initiatives"
+    ],
+    "example_en": "The government launched an initiative to reduce pollution.",
+    "example_ko": "정부는 오염을 줄이기 위한 계획을 시작했다."
+  },
+  "innovation": {
+    "id": "innovation",
+    "canonical": "innovation",
+    "pos": "noun",
+    "meaning_ko": "혁신",
+    "cefr": "B2",
+    "theme": [
+      "business",
+      "technology"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "innovations",
+      "innovative",
+      "innovate",
+      "innovator"
+    ],
+    "example_en": "Technological innovation drives economic growth.",
+    "example_ko": "기술 혁신이 경제 성장을 이끈다."
+  },
+  "intervention": {
+    "id": "intervention",
+    "canonical": "intervention",
+    "pos": "noun",
+    "meaning_ko": "개입, 중재",
+    "cefr": "B2",
+    "theme": [
+      "politics",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "interventions",
+      "intervene"
+    ],
+    "example_en": "Military intervention was controversial.",
+    "example_ko": "군사 개입은 논란이 되었다."
+  },
+  "migrate": {
+    "id": "migrate",
+    "canonical": "migrate",
+    "pos": "verb",
+    "meaning_ko": "이주하다, 이동하다",
+    "cefr": "B2",
+    "theme": [
+      "science",
+      "politics"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "migrates",
+      "migrated",
+      "migrating",
+      "migration",
+      "migrant"
+    ],
+    "example_en": "Birds migrate south for the winter.",
+    "example_ko": "새들은 겨울에 남쪽으로 이동한다."
+  },
+  "minimize": {
+    "id": "minimize",
+    "canonical": "minimize",
+    "pos": "verb",
+    "meaning_ko": "최소화하다",
+    "cefr": "B2",
+    "theme": [
+      "business",
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "minimizes",
+      "minimized",
+      "minimizing",
+      "minimum",
+      "minimal"
+    ],
+    "example_en": "We should minimize waste in production.",
+    "example_ko": "생산 과정에서 낭비를 최소화해야 한다."
+  },
+  "obtain": {
+    "id": "obtain",
+    "canonical": "obtain",
+    "pos": "verb",
+    "meaning_ko": "얻다, 획득하다",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "obtains",
+      "obtained",
+      "obtaining",
+      "obtainable"
+    ],
+    "example_en": "You must obtain permission before using the data.",
+    "example_ko": "데이터를 사용하기 전에 허가를 받아야 한다."
+  },
+  "outcome": {
+    "id": "outcome",
+    "canonical": "outcome",
+    "pos": "noun",
+    "meaning_ko": "결과, 성과",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "business"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "outcomes"
+    ],
+    "example_en": "The outcome of the election surprised everyone.",
+    "example_ko": "선거 결과는 모두를 놀라게 했다."
+  },
+  "perceive": {
+    "id": "perceive",
+    "canonical": "perceive",
+    "pos": "verb",
+    "meaning_ko": "인지하다, 감지하다",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "perceives",
+      "perceived",
+      "perceiving",
+      "perception"
+    ],
+    "example_en": "She is perceived as a strong leader.",
+    "example_ko": "그녀는 강한 지도자로 인식된다."
+  },
+  "predominant": {
+    "id": "predominant",
+    "canonical": "predominant",
+    "pos": "adjective",
+    "meaning_ko": "지배적인, 주된",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "predominantly",
+      "predominance",
+      "predominate"
+    ],
+    "example_en": "English is the predominant language in international business.",
+    "example_ko": "영어는 국제 비즈니스에서 지배적인 언어이다."
+  },
+  "preliminary": {
+    "id": "preliminary",
+    "canonical": "preliminary",
+    "pos": "adjective",
+    "meaning_ko": "예비의, 사전의",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "business"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "preliminaries"
+    ],
+    "example_en": "The preliminary results look promising.",
+    "example_ko": "예비 결과가 유망해 보인다."
+  },
+  "proceed": {
+    "id": "proceed",
+    "canonical": "proceed",
+    "pos": "verb",
+    "meaning_ko": "진행하다, 계속하다",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "business"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "proceeds",
+      "proceeded",
+      "proceeding",
+      "procedure"
+    ],
+    "example_en": "Please proceed to the next question.",
+    "example_ko": "다음 질문으로 진행해 주세요."
+  },
+  "proportion": {
+    "id": "proportion",
+    "canonical": "proportion",
+    "pos": "noun",
+    "meaning_ko": "비율, 비례",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "proportions",
+      "proportional",
+      "proportionally",
+      "disproportionate"
+    ],
+    "example_en": "A large proportion of the budget goes to healthcare.",
+    "example_ko": "예산의 상당 비율이 의료에 사용된다."
+  },
+  "regulate": {
+    "id": "regulate",
+    "canonical": "regulate",
+    "pos": "verb",
+    "meaning_ko": "규제하다, 조절하다",
+    "cefr": "B2",
+    "theme": [
+      "politics",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "regulates",
+      "regulated",
+      "regulating",
+      "regulation",
+      "regulatory"
+    ],
+    "example_en": "The government regulates the financial industry.",
+    "example_ko": "정부가 금융 산업을 규제한다."
+  },
+  "simulate": {
+    "id": "simulate",
+    "canonical": "simulate",
+    "pos": "verb",
+    "meaning_ko": "모의 실험하다, 시뮬레이션하다",
+    "cefr": "B2",
+    "theme": [
+      "science",
+      "technology"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "simulates",
+      "simulated",
+      "simulating",
+      "simulation",
+      "simulator"
+    ],
+    "example_en": "The software can simulate real-world conditions.",
+    "example_ko": "이 소프트웨어는 실제 상황을 시뮬레이션할 수 있다."
+  },
+  "sustain": {
+    "id": "sustain",
+    "canonical": "sustain",
+    "pos": "verb",
+    "meaning_ko": "지속하다, 유지하다",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "sustains",
+      "sustained",
+      "sustaining",
+      "sustainable",
+      "sustainability"
+    ],
+    "example_en": "We need sustainable solutions for energy production.",
+    "example_ko": "에너지 생산을 위한 지속 가능한 해결책이 필요하다."
+  },
+  "trigger": {
+    "id": "trigger",
+    "canonical": "trigger",
+    "pos": "verb",
+    "meaning_ko": "촉발하다, 유발하다",
+    "cefr": "B2",
+    "theme": [
+      "science",
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "triggers",
+      "triggered",
+      "triggering"
+    ],
+    "example_en": "The earthquake triggered a massive tsunami.",
+    "example_ko": "지진이 대규모 쓰나미를 촉발했다."
+  },
+  "undermine": {
+    "id": "undermine",
+    "canonical": "undermine",
+    "pos": "verb",
+    "meaning_ko": "약화시키다, 훼손하다",
+    "cefr": "B2",
+    "theme": [
+      "politics",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "undermines",
+      "undermined",
+      "undermining"
+    ],
+    "example_en": "Corruption undermines public trust in government.",
+    "example_ko": "부패는 정부에 대한 국민의 신뢰를 약화시킨다."
+  },
+  "valid": {
+    "id": "valid",
+    "canonical": "valid",
+    "pos": "adjective",
+    "meaning_ko": "유효한, 타당한",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "validity",
+      "validate",
+      "validation",
+      "invalid"
+    ],
+    "example_en": "Your passport is no longer valid.",
+    "example_ko": "여권이 더 이상 유효하지 않다."
+  },
+  "voluntary": {
+    "id": "voluntary",
+    "canonical": "voluntary",
+    "pos": "adjective",
+    "meaning_ko": "자발적인",
+    "cefr": "B2",
+    "theme": [
+      "politics",
+      "abstract"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "voluntarily",
+      "volunteer"
+    ],
+    "example_en": "Participation in the survey is voluntary.",
+    "example_ko": "설문 참여는 자발적이다."
+  },
+  "welfare": {
+    "id": "welfare",
+    "canonical": "welfare",
+    "pos": "noun",
+    "meaning_ko": "복지, 안녕",
+    "cefr": "B2",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [],
+    "example_en": "The government introduced new welfare programs.",
+    "example_ko": "정부는 새로운 복지 프로그램을 도입했다."
+  },
+  "yield": {
+    "id": "yield",
+    "canonical": "yield",
+    "pos": "verb",
+    "meaning_ko": "산출하다, 양보하다",
+    "cefr": "B2",
+    "theme": [
+      "business",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "yields",
+      "yielded",
+      "yielding"
+    ],
+    "example_en": "The investment yielded a 15% return.",
+    "example_ko": "그 투자는 15%의 수익을 산출했다."
+  },
+  "bureaucracy": {
+    "id": "bureaucracy",
+    "canonical": "bureaucracy",
+    "pos": "noun",
+    "meaning_ko": "관료제, 관료주의",
+    "cefr": "B2",
+    "theme": [
+      "politics"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "bureaucracies",
+      "bureaucratic",
+      "bureaucrat"
+    ],
+    "example_en": "Excessive bureaucracy slows down decision-making.",
+    "example_ko": "과도한 관료주의는 의사결정을 느리게 만든다."
+  },
+  "criteria": {
+    "id": "criteria",
+    "canonical": "criteria",
+    "pos": "noun",
+    "meaning_ko": "기준 (복수형)",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "business"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "criterion"
+    ],
+    "example_en": "Applicants must meet all the criteria.",
+    "example_ko": "지원자는 모든 기준을 충족해야 한다."
+  },
+  "deficit": {
+    "id": "deficit",
+    "canonical": "deficit",
+    "pos": "noun",
+    "meaning_ko": "적자, 결손",
+    "cefr": "B2",
+    "theme": [
+      "business",
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "deficits"
+    ],
+    "example_en": "The country faces a growing budget deficit.",
+    "example_ko": "그 나라는 늘어나는 재정 적자에 직면해 있다."
+  },
+  "demographic": {
+    "id": "demographic",
+    "canonical": "demographic",
+    "pos": "adjective",
+    "meaning_ko": "인구 통계의",
+    "cefr": "B2",
+    "theme": [
+      "politics",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "demographics",
+      "demographically",
+      "demography"
+    ],
+    "example_en": "Demographic changes are reshaping the workforce.",
+    "example_ko": "인구 통계적 변화가 노동력을 재편하고 있다."
+  },
+  "dimension": {
+    "id": "dimension",
+    "canonical": "dimension",
+    "pos": "noun",
+    "meaning_ko": "차원, 측면",
+    "cefr": "B2",
+    "theme": [
+      "science",
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "dimensions",
+      "dimensional"
+    ],
+    "example_en": "We need to consider every dimension of this problem.",
+    "example_ko": "이 문제의 모든 측면을 고려해야 한다."
+  },
+  "domestic": {
+    "id": "domestic",
+    "canonical": "domestic",
+    "pos": "adjective",
+    "meaning_ko": "국내의, 가정의",
+    "cefr": "B2",
+    "theme": [
+      "politics",
+      "business"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "domestically"
+    ],
+    "example_en": "Domestic demand for electric vehicles is rising.",
+    "example_ko": "전기차에 대한 국내 수요가 증가하고 있다."
+  },
+  "dominant": {
+    "id": "dominant",
+    "canonical": "dominant",
+    "pos": "adjective",
+    "meaning_ko": "지배적인, 우세한",
+    "cefr": "B2",
+    "theme": [
+      "science",
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "dominance",
+      "dominate",
+      "domination"
+    ],
+    "example_en": "The company holds a dominant position in the market.",
+    "example_ko": "그 회사는 시장에서 지배적인 위치를 차지한다."
+  },
+  "elaborate": {
+    "id": "elaborate",
+    "canonical": "elaborate",
+    "pos": "verb",
+    "meaning_ko": "상세히 설명하다",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "elaborates",
+      "elaborated",
+      "elaborating",
+      "elaboration"
+    ],
+    "example_en": "Could you elaborate on your proposal?",
+    "example_ko": "제안을 좀 더 자세히 설명해 주시겠어요?"
+  },
+  "empirical": {
+    "id": "empirical",
+    "canonical": "empirical",
+    "pos": "adjective",
+    "meaning_ko": "경험적인, 실증적인",
+    "cefr": "B2",
+    "theme": [
+      "science",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "empirically"
+    ],
+    "example_en": "The claim is supported by empirical evidence.",
+    "example_ko": "그 주장은 실증적 증거로 뒷받침된다."
+  },
+  "exploit": {
+    "id": "exploit",
+    "canonical": "exploit",
+    "pos": "verb",
+    "meaning_ko": "착취하다, 이용하다",
+    "cefr": "B2",
+    "theme": [
+      "politics",
+      "business"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "exploits",
+      "exploited",
+      "exploiting",
+      "exploitation"
+    ],
+    "example_en": "Some companies exploit cheap labor overseas.",
+    "example_ko": "일부 기업은 해외의 저렴한 노동력을 착취한다."
+  },
+  "framework": {
+    "id": "framework",
+    "canonical": "framework",
+    "pos": "noun",
+    "meaning_ko": "체계, 틀, 프레임워크",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "business"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "frameworks"
+    ],
+    "example_en": "We need a legal framework for AI regulation.",
+    "example_ko": "AI 규제를 위한 법적 체계가 필요하다."
+  },
+  "coherent": {
+    "id": "coherent",
+    "canonical": "coherent",
+    "pos": "adjective",
+    "meaning_ko": "일관된, 논리 정연한",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "coherently",
+      "coherence",
+      "incoherent"
+    ],
+    "example_en": "Present your argument in a coherent manner.",
+    "example_ko": "논증을 일관된 방식으로 제시하세요."
+  },
+  "commodity": {
+    "id": "commodity",
+    "canonical": "commodity",
+    "pos": "noun",
+    "meaning_ko": "상품, 원자재",
+    "cefr": "B2",
+    "theme": [
+      "business"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "commodities"
+    ],
+    "example_en": "Oil is the most traded commodity in the world.",
+    "example_ko": "석유는 세계에서 가장 많이 거래되는 원자재이다."
+  },
+  "compensate": {
+    "id": "compensate",
+    "canonical": "compensate",
+    "pos": "verb",
+    "meaning_ko": "보상하다, 보충하다",
+    "cefr": "B2",
+    "theme": [
+      "business",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "compensates",
+      "compensated",
+      "compensating",
+      "compensation"
+    ],
+    "example_en": "The company must compensate employees for overtime.",
+    "example_ko": "회사는 직원들에게 초과 근무에 대해 보상해야 한다."
+  },
+  "advocate": {
+    "id": "advocate",
+    "canonical": "advocate",
+    "pos": "verb",
+    "meaning_ko": "옹호하다, 주장하다",
+    "cefr": "B2",
+    "theme": [
+      "politics",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "advocates",
+      "advocated",
+      "advocating",
+      "advocacy"
+    ],
+    "example_en": "She advocates for equal rights in education.",
+    "example_ko": "그녀는 교육에서의 평등권을 옹호한다."
+  },
+  "analogy": {
+    "id": "analogy",
+    "canonical": "analogy",
+    "pos": "noun",
+    "meaning_ko": "유사, 비유",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "literary"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "analogies",
+      "analogous"
+    ],
+    "example_en": "He drew an analogy between the brain and a computer.",
+    "example_ko": "그는 뇌와 컴퓨터 사이의 비유를 들었다."
+  },
+  "autonomous": {
+    "id": "autonomous",
+    "canonical": "autonomous",
+    "pos": "adjective",
+    "meaning_ko": "자율적인, 자치의",
+    "cefr": "B2",
+    "theme": [
+      "politics",
+      "technology"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "autonomously",
+      "autonomy"
+    ],
+    "example_en": "Autonomous vehicles are becoming more common.",
+    "example_ko": "자율 주행 차량이 더 보편화되고 있다."
+  },
+  "bias": {
+    "id": "bias",
+    "canonical": "bias",
+    "pos": "noun",
+    "meaning_ko": "편견, 편향",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "politics"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "biases",
+      "biased",
+      "unbiased"
+    ],
+    "example_en": "We must eliminate bias in the hiring process.",
+    "example_ko": "채용 과정에서 편견을 제거해야 한다."
+  },
+  "comply": {
+    "id": "comply",
+    "canonical": "comply",
+    "pos": "verb",
+    "meaning_ko": "준수하다, 따르다",
+    "cefr": "B2",
+    "theme": [
+      "business",
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "complies",
+      "complied",
+      "complying",
+      "compliance",
+      "compliant"
+    ],
+    "example_en": "All companies must comply with data protection laws.",
+    "example_ko": "모든 회사는 데이터 보호법을 준수해야 한다."
+  },
+  "consensus": {
+    "id": "consensus",
+    "canonical": "consensus",
+    "pos": "noun",
+    "meaning_ko": "합의, 의견 일치",
+    "cefr": "B2",
+    "theme": [
+      "politics",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [],
+    "example_en": "The committee reached a consensus on the issue.",
+    "example_ko": "위원회는 그 문제에 대해 합의에 도달했다."
+  },
+  "constraint": {
+    "id": "constraint",
+    "canonical": "constraint",
+    "pos": "noun",
+    "meaning_ko": "제약, 제한",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "business"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "constraints",
+      "constrain",
+      "constrained"
+    ],
+    "example_en": "Budget constraints forced us to cut the project.",
+    "example_ko": "예산 제약으로 프로젝트를 중단해야 했다."
+  },
+  "depict": {
+    "id": "depict",
+    "canonical": "depict",
+    "pos": "verb",
+    "meaning_ko": "묘사하다, 그리다",
+    "cefr": "B2",
+    "theme": [
+      "literary",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "depicts",
+      "depicted",
+      "depicting",
+      "depiction"
+    ],
+    "example_en": "The painting depicts a scene from rural life.",
+    "example_ko": "그 그림은 시골 생활의 한 장면을 묘사한다."
+  },
+  "diverse": {
+    "id": "diverse",
+    "canonical": "diverse",
+    "pos": "adjective",
+    "meaning_ko": "다양한",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "politics"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "diversity",
+      "diversify",
+      "diversification"
+    ],
+    "example_en": "Our team is culturally diverse.",
+    "example_ko": "우리 팀은 문화적으로 다양하다."
+  },
+  "eligible": {
+    "id": "eligible",
+    "canonical": "eligible",
+    "pos": "adjective",
+    "meaning_ko": "자격이 있는",
+    "cefr": "B2",
+    "theme": [
+      "business",
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "eligibility",
+      "ineligible"
+    ],
+    "example_en": "Only residents are eligible to vote.",
+    "example_ko": "거주민만 투표할 자격이 있다."
+  },
+  "ethical": {
+    "id": "ethical",
+    "canonical": "ethical",
+    "pos": "adjective",
+    "meaning_ko": "윤리적인",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "abstract"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "ethically",
+      "ethics",
+      "unethical"
+    ],
+    "example_en": "The company faces serious ethical questions about AI.",
+    "example_ko": "그 회사는 AI에 대한 심각한 윤리적 문제에 직면해 있다."
+  },
+  "forecast": {
+    "id": "forecast",
+    "canonical": "forecast",
+    "pos": "verb",
+    "meaning_ko": "예측하다",
+    "cefr": "B2",
+    "theme": [
+      "business",
+      "science"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "forecasts",
+      "forecasted",
+      "forecasting"
+    ],
+    "example_en": "Economists forecast slower growth next year.",
+    "example_ko": "경제학자들은 내년에 성장이 둔화될 것으로 예측한다."
+  },
+  "imply": {
+    "id": "imply",
+    "canonical": "imply",
+    "pos": "verb",
+    "meaning_ko": "암시하다, 내포하다",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "implies",
+      "implied",
+      "implying"
+    ],
+    "example_en": "Are you implying that I made a mistake?",
+    "example_ko": "내가 실수했다는 것을 암시하는 건가요?"
+  },
+  "incentive": {
+    "id": "incentive",
+    "canonical": "incentive",
+    "pos": "noun",
+    "meaning_ko": "동기, 인센티브, 장려금",
+    "cefr": "B2",
+    "theme": [
+      "business",
+      "politics"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "incentives",
+      "incentivize"
+    ],
+    "example_en": "Tax incentives encourage businesses to invest.",
+    "example_ko": "세금 인센티브가 기업의 투자를 장려한다."
+  },
+  "indicate": {
+    "id": "indicate",
+    "canonical": "indicate",
+    "pos": "verb",
+    "meaning_ko": "나타내다, 가리키다",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "indicates",
+      "indicated",
+      "indicating",
+      "indication",
+      "indicator"
+    ],
+    "example_en": "Research indicates that exercise improves mental health.",
+    "example_ko": "연구는 운동이 정신 건강을 개선한다고 나타낸다."
+  },
+  "integrity": {
+    "id": "integrity",
+    "canonical": "integrity",
+    "pos": "noun",
+    "meaning_ko": "성실, 진실성, 무결성",
+    "cefr": "B2",
+    "theme": [
+      "abstract",
+      "business"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [],
+    "example_en": "She is known for her integrity and honesty.",
+    "example_ko": "그녀는 성실함과 정직함으로 알려져 있다."
+  },
+  "legitimate": {
+    "id": "legitimate",
+    "canonical": "legitimate",
+    "pos": "adjective",
+    "meaning_ko": "합법적인, 정당한",
+    "cefr": "B2",
+    "theme": [
+      "politics",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "legitimately",
+      "legitimacy",
+      "illegitimate"
+    ],
+    "example_en": "They raised legitimate concerns about privacy.",
+    "example_ko": "그들은 프라이버시에 대한 정당한 우려를 제기했다."
+  },
+  "methodology": {
+    "id": "methodology",
+    "canonical": "methodology",
+    "pos": "noun",
+    "meaning_ko": "방법론",
+    "cefr": "B2",
+    "theme": [
+      "science",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "methodologies",
+      "methodological"
+    ],
+    "example_en": "The research methodology needs to be clearly described.",
+    "example_ko": "연구 방법론을 명확하게 기술해야 한다."
+  },
+  "mutual": {
+    "id": "mutual",
+    "canonical": "mutual",
+    "pos": "adjective",
+    "meaning_ko": "상호의, 공동의",
+    "cefr": "B2",
+    "theme": [
+      "abstract",
+      "business"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "mutually"
+    ],
+    "example_en": "The agreement was based on mutual respect.",
+    "example_ko": "그 합의는 상호 존중에 기반했다."
+  },
+  "objective": {
+    "id": "objective",
+    "canonical": "objective",
+    "pos": "noun",
+    "meaning_ko": "목표, 목적",
+    "cefr": "B2",
+    "theme": [
+      "business",
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "objectives",
+      "objectively",
+      "objectivity"
+    ],
+    "example_en": "Our primary objective is customer satisfaction.",
+    "example_ko": "우리의 주요 목표는 고객 만족이다."
+  },
+  "persistent": {
+    "id": "persistent",
+    "canonical": "persistent",
+    "pos": "adjective",
+    "meaning_ko": "지속적인, 끈질긴",
+    "cefr": "B2",
+    "theme": [
+      "abstract"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "persistently",
+      "persistence",
+      "persist"
+    ],
+    "example_en": "Persistent effort is the key to success.",
+    "example_ko": "끈질긴 노력이 성공의 열쇠이다."
+  },
+  "exemption": {
+    "id": "exemption",
+    "canonical": "exemption",
+    "pos": "noun",
+    "meaning_ko": "면제, 면세",
+    "cefr": "B2",
+    "theme": [
+      "politics",
+      "business"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "exemptions",
+      "exempt"
+    ],
+    "example_en": "Charities receive tax exemptions from the government.",
+    "example_ko": "자선단체는 정부로부터 세금 면제를 받는다."
+  },
+  "prohibit": {
+    "id": "prohibit",
+    "canonical": "prohibit",
+    "pos": "verb",
+    "meaning_ko": "금지하다",
+    "cefr": "B2",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "prohibits",
+      "prohibited",
+      "prohibiting",
+      "prohibition"
+    ],
+    "example_en": "Smoking is prohibited in all public buildings.",
+    "example_ko": "모든 공공건물에서 흡연이 금지되어 있다."
+  },
+  "substantial": {
+    "id": "substantial",
+    "canonical": "substantial",
+    "pos": "adjective",
+    "meaning_ko": "상당한, 실질적인",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "business"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "substantially"
+    ],
+    "example_en": "There has been a substantial improvement in quality.",
+    "example_ko": "품질에 상당한 개선이 있었다."
+  },
+  "transparent": {
+    "id": "transparent",
+    "canonical": "transparent",
+    "pos": "adjective",
+    "meaning_ko": "투명한, 명백한",
+    "cefr": "B2",
+    "theme": [
+      "politics",
+      "abstract"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "transparently",
+      "transparency"
+    ],
+    "example_en": "The government should be more transparent about spending.",
+    "example_ko": "정부는 지출에 대해 더 투명해야 한다."
+  },
+  "conducive": {
+    "id": "conducive",
+    "canonical": "conducive",
+    "pos": "adjective",
+    "meaning_ko": "도움이 되는, 유리한",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [],
+    "example_en": "A quiet environment is conducive to concentration.",
+    "example_ko": "조용한 환경은 집중에 도움이 된다."
+  },
+  "thesis": {
+    "id": "thesis",
+    "canonical": "thesis",
+    "pos": "noun",
+    "meaning_ko": "논문, 논제",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "theses"
+    ],
+    "example_en": "She defended her doctoral thesis last week.",
+    "example_ko": "그녀는 지난주에 박사 논문을 심사받았다."
+  },
+  "decline": {
+    "id": "decline",
+    "canonical": "decline",
+    "pos": "verb",
+    "meaning_ko": "감소하다, 거절하다",
+    "cefr": "B2",
+    "theme": [
+      "business",
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "declines",
+      "declined",
+      "declining"
+    ],
+    "example_en": "Sales have declined steadily over the past year.",
+    "example_ko": "매출이 지난 1년간 꾸준히 감소했다."
+  },
+  "supplement": {
+    "id": "supplement",
+    "canonical": "supplement",
+    "pos": "noun",
+    "meaning_ko": "보충제, 보충물",
+    "cefr": "B2",
+    "theme": [
+      "science"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "supplements",
+      "supplementary",
+      "supplemental"
+    ],
+    "example_en": "She takes vitamin supplements daily.",
+    "example_ko": "그녀는 매일 비타민 보충제를 복용한다."
+  },
+  "reluctant": {
+    "id": "reluctant",
+    "canonical": "reluctant",
+    "pos": "adjective",
+    "meaning_ko": "꺼리는, 주저하는",
+    "cefr": "B2",
+    "theme": [
+      "emotion",
+      "abstract"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "reluctantly",
+      "reluctance"
+    ],
+    "example_en": "He was reluctant to share his personal information.",
+    "example_ko": "그는 개인 정보를 공유하는 것을 꺼렸다."
+  },
+  "appropriate": {
+    "id": "appropriate",
+    "canonical": "appropriate",
+    "pos": "adjective",
+    "meaning_ko": "적절한",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "appropriately",
+      "inappropriate",
+      "appropriateness"
+    ],
+    "example_en": "Please wear appropriate clothing for the interview.",
+    "example_ko": "면접에 적절한 복장을 입어주세요."
+  },
+  "external": {
+    "id": "external",
+    "canonical": "external",
+    "pos": "adjective",
+    "meaning_ko": "외부의",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "business"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "externally"
+    ],
+    "example_en": "The company hired an external consultant.",
+    "example_ko": "회사는 외부 컨설턴트를 고용했다."
+  },
+  "paradigm": {
+    "id": "paradigm",
+    "canonical": "paradigm",
+    "pos": "noun",
+    "meaning_ko": "패러다임, 전형",
+    "cefr": "C1",
+    "theme": [
+      "science",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "paradigms",
+      "paradigmatic"
+    ],
+    "example_en": "This discovery shifted the scientific paradigm.",
+    "example_ko": "이 발견은 과학적 패러다임을 바꿨다."
+  },
+  "consolidate": {
+    "id": "consolidate",
+    "canonical": "consolidate",
+    "pos": "verb",
+    "meaning_ko": "통합하다, 강화하다",
+    "cefr": "C1",
+    "theme": [
+      "business",
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "consolidates",
+      "consolidated",
+      "consolidating",
+      "consolidation"
+    ],
+    "example_en": "The merger consolidated the two companies into one.",
+    "example_ko": "합병으로 두 회사가 하나로 통합되었다."
+  },
+  "ambiguity": {
+    "id": "ambiguity",
+    "canonical": "ambiguity",
+    "pos": "noun",
+    "meaning_ko": "모호함, 애매함",
+    "cefr": "C1",
+    "theme": [
+      "abstract",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "ambiguities",
+      "ambiguous",
+      "ambiguously"
+    ],
+    "example_en": "Legal language should avoid ambiguity.",
+    "example_ko": "법률 용어는 모호함을 피해야 한다."
+  },
+  "rhetoric": {
+    "id": "rhetoric",
+    "canonical": "rhetoric",
+    "pos": "noun",
+    "meaning_ko": "수사학, 미사여구",
+    "cefr": "C1",
+    "theme": [
+      "literary",
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "rhetorical",
+      "rhetorically"
+    ],
+    "example_en": "His speech was full of empty rhetoric.",
+    "example_ko": "그의 연설은 빈 미사여구로 가득했다."
+  },
+  "algorithm": {
+    "id": "algorithm",
+    "canonical": "algorithm",
+    "pos": "noun",
+    "meaning_ko": "알고리즘",
+    "cefr": "C1",
+    "theme": [
+      "technology",
+      "science"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "algorithms",
+      "algorithmic"
+    ],
+    "example_en": "Social media algorithms determine what you see.",
+    "example_ko": "소셜 미디어 알고리즘이 당신이 보는 것을 결정한다."
+  },
+  "catalyst": {
+    "id": "catalyst",
+    "canonical": "catalyst",
+    "pos": "noun",
+    "meaning_ko": "촉매, 촉진제",
+    "cefr": "C1",
+    "theme": [
+      "science",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "catalysts",
+      "catalyze",
+      "catalytic"
+    ],
+    "example_en": "The protest served as a catalyst for reform.",
+    "example_ko": "그 시위는 개혁의 촉매 역할을 했다."
+  },
+  "legislation": {
+    "id": "legislation",
+    "canonical": "legislation",
+    "pos": "noun",
+    "meaning_ko": "법률, 입법",
+    "cefr": "C1",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "legislative",
+      "legislator",
+      "legislature",
+      "legislate"
+    ],
+    "example_en": "New legislation was passed to protect the environment.",
+    "example_ko": "환경을 보호하기 위한 새로운 법률이 통과되었다."
+  },
+  "contempt": {
+    "id": "contempt",
+    "canonical": "contempt",
+    "pos": "noun",
+    "meaning_ko": "경멸, 모욕",
+    "cefr": "C1",
+    "theme": [
+      "emotion",
+      "abstract"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "contemptuous",
+      "contemptuously"
+    ],
+    "example_en": "She looked at him with undisguised contempt.",
+    "example_ko": "그녀는 숨기지 않는 경멸의 눈빛으로 그를 바라봤다."
+  },
+  "metaphor": {
+    "id": "metaphor",
+    "canonical": "metaphor",
+    "pos": "noun",
+    "meaning_ko": "은유, 비유",
+    "cefr": "C1",
+    "theme": [
+      "literary",
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "metaphors",
+      "metaphorical",
+      "metaphorically"
+    ],
+    "example_en": "Life is often described through the metaphor of a journey.",
+    "example_ko": "삶은 종종 여정이라는 은유로 묘사된다."
+  },
+  "nuance": {
+    "id": "nuance",
+    "canonical": "nuance",
+    "pos": "noun",
+    "meaning_ko": "뉘앙스, 미묘한 차이",
+    "cefr": "C1",
+    "theme": [
+      "abstract",
+      "literary"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "nuances",
+      "nuanced"
+    ],
+    "example_en": "The translation failed to capture the nuance of the original.",
+    "example_ko": "번역이 원문의 뉘앙스를 포착하지 못했다."
+  },
+  "amendment": {
+    "id": "amendment",
+    "canonical": "amendment",
+    "pos": "noun",
+    "meaning_ko": "수정안, 개정",
+    "cefr": "C1",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "amendments",
+      "amend"
+    ],
+    "example_en": "The First Amendment protects freedom of speech.",
+    "example_ko": "수정헌법 제1조는 언론의 자유를 보호한다."
+  },
+  "resentment": {
+    "id": "resentment",
+    "canonical": "resentment",
+    "pos": "noun",
+    "meaning_ko": "분노, 원한",
+    "cefr": "C1",
+    "theme": [
+      "emotion"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "resent",
+      "resentful",
+      "resentfully"
+    ],
+    "example_en": "Years of unfair treatment bred deep resentment.",
+    "example_ko": "수년간의 불공평한 대우가 깊은 분노를 낳았다."
+  },
+  "allegory": {
+    "id": "allegory",
+    "canonical": "allegory",
+    "pos": "noun",
+    "meaning_ko": "우화, 풍유",
+    "cefr": "C1",
+    "theme": [
+      "literary"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "allegories",
+      "allegorical",
+      "allegorically"
+    ],
+    "example_en": "Animal Farm is an allegory for totalitarianism.",
+    "example_ko": "동물농장은 전체주의에 대한 우화이다."
+  },
+  "jurisdiction": {
+    "id": "jurisdiction",
+    "canonical": "jurisdiction",
+    "pos": "noun",
+    "meaning_ko": "관할권, 사법권",
+    "cefr": "C1",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "jurisdictions",
+      "jurisdictional"
+    ],
+    "example_en": "This case falls outside our jurisdiction.",
+    "example_ko": "이 사건은 우리 관할권 밖이다."
+  },
+  "euphoria": {
+    "id": "euphoria",
+    "canonical": "euphoria",
+    "pos": "noun",
+    "meaning_ko": "행복감, 도취감",
+    "cefr": "C1",
+    "theme": [
+      "emotion"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "euphoric"
+    ],
+    "example_en": "The team was filled with euphoria after winning.",
+    "example_ko": "팀은 우승 후 도취감에 휩싸였다."
+  },
+  "irony": {
+    "id": "irony",
+    "canonical": "irony",
+    "pos": "noun",
+    "meaning_ko": "아이러니, 반어",
+    "cefr": "C1",
+    "theme": [
+      "literary"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "ironies",
+      "ironic",
+      "ironically"
+    ],
+    "example_en": "The irony is that the fire station burned down.",
+    "example_ko": "아이러니하게도 소방서가 불에 탔다."
+  },
+  "genome": {
+    "id": "genome",
+    "canonical": "genome",
+    "pos": "noun",
+    "meaning_ko": "게놈, 유전체",
+    "cefr": "C1",
+    "theme": [
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "genomes",
+      "genomic",
+      "genomics"
+    ],
+    "example_en": "Scientists mapped the entire human genome.",
+    "example_ko": "과학자들이 인간 게놈 전체를 지도화했다."
+  },
+  "ambivalent": {
+    "id": "ambivalent",
+    "canonical": "ambivalent",
+    "pos": "adjective",
+    "meaning_ko": "양가적인, 갈등하는",
+    "cefr": "C1",
+    "theme": [
+      "emotion",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "ambivalence"
+    ],
+    "example_en": "She felt ambivalent about leaving her hometown.",
+    "example_ko": "그녀는 고향을 떠나는 것에 대해 양가감정을 느꼈다."
+  },
+  "interpolate": {
+    "id": "interpolate",
+    "canonical": "interpolate",
+    "pos": "verb",
+    "meaning_ko": "삽입하다, 보간하다",
+    "cefr": "C1",
+    "theme": [
+      "science",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "interpolates",
+      "interpolated",
+      "interpolating",
+      "interpolation"
+    ],
+    "example_en": "Scientists interpolate missing data points from known values.",
+    "example_ko": "과학자들은 알려진 값에서 누락된 데이터 포인트를 보간한다."
+  },
+  "arbitrary": {
+    "id": "arbitrary",
+    "canonical": "arbitrary",
+    "pos": "adjective",
+    "meaning_ko": "임의의, 자의적인",
+    "cefr": "C1",
+    "theme": [
+      "academic",
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "arbitrarily",
+      "arbitrariness"
+    ],
+    "example_en": "The decision seemed completely arbitrary.",
+    "example_ko": "그 결정은 완전히 자의적으로 보였다."
+  },
+  "articulate": {
+    "id": "articulate",
+    "canonical": "articulate",
+    "pos": "verb",
+    "meaning_ko": "명확히 표현하다",
+    "cefr": "C1",
+    "theme": [
+      "academic",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "articulates",
+      "articulated",
+      "articulating",
+      "articulation"
+    ],
+    "example_en": "She articulated her vision for the company clearly.",
+    "example_ko": "그녀는 회사에 대한 비전을 명확히 표현했다."
+  },
+  "austerity": {
+    "id": "austerity",
+    "canonical": "austerity",
+    "pos": "noun",
+    "meaning_ko": "긴축, 검소",
+    "cefr": "C1",
+    "theme": [
+      "politics",
+      "business"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "austere"
+    ],
+    "example_en": "The government imposed austerity measures to reduce debt.",
+    "example_ko": "정부는 부채를 줄이기 위해 긴축 조치를 시행했다."
+  },
+  "benevolent": {
+    "id": "benevolent",
+    "canonical": "benevolent",
+    "pos": "adjective",
+    "meaning_ko": "자비로운, 선의의",
+    "cefr": "C1",
+    "theme": [
+      "abstract",
+      "emotion"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "benevolently",
+      "benevolence"
+    ],
+    "example_en": "The benevolent leader was loved by all.",
+    "example_ko": "자비로운 지도자는 모두에게 사랑받았다."
+  },
+  "coerce": {
+    "id": "coerce",
+    "canonical": "coerce",
+    "pos": "verb",
+    "meaning_ko": "강요하다, 강압하다",
+    "cefr": "C1",
+    "theme": [
+      "politics",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "coerces",
+      "coerced",
+      "coercing",
+      "coercion",
+      "coercive"
+    ],
+    "example_en": "No one should be coerced into signing a contract.",
+    "example_ko": "아무도 계약서에 서명하도록 강요받아서는 안 된다."
+  },
+  "complacent": {
+    "id": "complacent",
+    "canonical": "complacent",
+    "pos": "adjective",
+    "meaning_ko": "안주하는, 자기만족적인",
+    "cefr": "C1",
+    "theme": [
+      "abstract",
+      "emotion"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "complacently",
+      "complacency"
+    ],
+    "example_en": "We must not become complacent about safety.",
+    "example_ko": "안전에 대해 안주해서는 안 된다."
+  },
+  "concede": {
+    "id": "concede",
+    "canonical": "concede",
+    "pos": "verb",
+    "meaning_ko": "인정하다, 양보하다",
+    "cefr": "C1",
+    "theme": [
+      "politics",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "concedes",
+      "conceded",
+      "conceding",
+      "concession"
+    ],
+    "example_en": "He conceded that his opponent had a valid point.",
+    "example_ko": "그는 상대방의 주장이 타당하다고 인정했다."
+  },
+  "condone": {
+    "id": "condone",
+    "canonical": "condone",
+    "pos": "verb",
+    "meaning_ko": "묵인하다, 용납하다",
+    "cefr": "C1",
+    "theme": [
+      "abstract",
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "condones",
+      "condoned",
+      "condoning"
+    ],
+    "example_en": "The school does not condone bullying of any kind.",
+    "example_ko": "학교는 어떤 종류의 괴롭힘도 용납하지 않는다."
+  },
+  "connotation": {
+    "id": "connotation",
+    "canonical": "connotation",
+    "pos": "noun",
+    "meaning_ko": "함축, 내포적 의미",
+    "cefr": "C1",
+    "theme": [
+      "literary",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "connotations",
+      "connote",
+      "connotative"
+    ],
+    "example_en": "The word home has warm connotations.",
+    "example_ko": "home이라는 단어는 따뜻한 함축을 가진다."
+  },
+  "constituent": {
+    "id": "constituent",
+    "canonical": "constituent",
+    "pos": "noun",
+    "meaning_ko": "구성 요소, 유권자",
+    "cefr": "C1",
+    "theme": [
+      "politics",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "constituents",
+      "constituency"
+    ],
+    "example_en": "The senator met with her constituents to hear their concerns.",
+    "example_ko": "상원의원은 유권자들의 우려를 듣기 위해 만났다."
+  },
+  "converge": {
+    "id": "converge",
+    "canonical": "converge",
+    "pos": "verb",
+    "meaning_ko": "수렴하다, 합류하다",
+    "cefr": "C1",
+    "theme": [
+      "science",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "converges",
+      "converged",
+      "converging",
+      "convergence"
+    ],
+    "example_en": "Several trends are converging to reshape the industry.",
+    "example_ko": "여러 트렌드가 수렴하며 산업을 재편하고 있다."
+  },
+  "correlation": {
+    "id": "correlation",
+    "canonical": "correlation",
+    "pos": "noun",
+    "meaning_ko": "상관관계",
+    "cefr": "C1",
+    "theme": [
+      "science",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "correlations",
+      "correlate",
+      "correlated"
+    ],
+    "example_en": "There is a strong correlation between poverty and crime.",
+    "example_ko": "빈곤과 범죄 사이에는 강한 상관관계가 있다."
+  },
+  "cynical": {
+    "id": "cynical",
+    "canonical": "cynical",
+    "pos": "adjective",
+    "meaning_ko": "냉소적인",
+    "cefr": "C1",
+    "theme": [
+      "emotion",
+      "abstract"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "cynically",
+      "cynicism",
+      "cynic"
+    ],
+    "example_en": "Voters have become increasingly cynical about politics.",
+    "example_ko": "유권자들은 정치에 대해 점점 더 냉소적이 되었다."
+  },
+  "detrimental": {
+    "id": "detrimental",
+    "canonical": "detrimental",
+    "pos": "adjective",
+    "meaning_ko": "해로운, 불리한",
+    "cefr": "C1",
+    "theme": [
+      "academic",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "detrimentally",
+      "detriment"
+    ],
+    "example_en": "Excessive screen time is detrimental to children's health.",
+    "example_ko": "과도한 화면 시간은 아이들의 건강에 해롭다."
+  },
+  "dichotomy": {
+    "id": "dichotomy",
+    "canonical": "dichotomy",
+    "pos": "noun",
+    "meaning_ko": "이분법, 양분",
+    "cefr": "C1",
+    "theme": [
+      "academic",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "dichotomies",
+      "dichotomous"
+    ],
+    "example_en": "The dichotomy between rich and poor continues to grow.",
+    "example_ko": "부유한 자와 가난한 자 사이의 양분이 계속 커지고 있다."
+  },
+  "discrepancy": {
+    "id": "discrepancy",
+    "canonical": "discrepancy",
+    "pos": "noun",
+    "meaning_ko": "불일치, 차이",
+    "cefr": "C1",
+    "theme": [
+      "academic",
+      "business"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "discrepancies"
+    ],
+    "example_en": "There was a discrepancy between the two reports.",
+    "example_ko": "두 보고서 사이에 불일치가 있었다."
+  },
+  "disseminate": {
+    "id": "disseminate",
+    "canonical": "disseminate",
+    "pos": "verb",
+    "meaning_ko": "유포하다, 보급하다",
+    "cefr": "C1",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "disseminates",
+      "disseminated",
+      "disseminating",
+      "dissemination"
+    ],
+    "example_en": "The organization disseminates health information globally.",
+    "example_ko": "그 기관은 건강 정보를 전 세계에 보급한다."
+  },
+  "diverge": {
+    "id": "diverge",
+    "canonical": "diverge",
+    "pos": "verb",
+    "meaning_ko": "갈라지다, 분기하다",
+    "cefr": "C1",
+    "theme": [
+      "science",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "diverges",
+      "diverged",
+      "diverging",
+      "divergence",
+      "divergent"
+    ],
+    "example_en": "Expert opinions diverge on this issue.",
+    "example_ko": "이 문제에 대해 전문가 의견이 갈라진다."
+  },
+  "elicit": {
+    "id": "elicit",
+    "canonical": "elicit",
+    "pos": "verb",
+    "meaning_ko": "이끌어내다, 유발하다",
+    "cefr": "C1",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "elicits",
+      "elicited",
+      "eliciting"
+    ],
+    "example_en": "The question elicited a surprising response.",
+    "example_ko": "그 질문은 놀라운 반응을 이끌어냈다."
+  },
+  "eloquent": {
+    "id": "eloquent",
+    "canonical": "eloquent",
+    "pos": "adjective",
+    "meaning_ko": "웅변적인, 유창한",
+    "cefr": "C1",
+    "theme": [
+      "literary",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "eloquently",
+      "eloquence"
+    ],
+    "example_en": "She gave an eloquent speech on human rights.",
+    "example_ko": "그녀는 인권에 대한 유창한 연설을 했다."
+  },
+  "empathy": {
+    "id": "empathy",
+    "canonical": "empathy",
+    "pos": "noun",
+    "meaning_ko": "공감, 감정이입",
+    "cefr": "C1",
+    "theme": [
+      "emotion",
+      "abstract"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "empathize",
+      "empathetic",
+      "empathic"
+    ],
+    "example_en": "Good leaders show empathy toward their team.",
+    "example_ko": "좋은 리더는 팀에 대한 공감을 보여준다."
+  },
+  "encompass": {
+    "id": "encompass",
+    "canonical": "encompass",
+    "pos": "verb",
+    "meaning_ko": "포함하다, 포괄하다",
+    "cefr": "C1",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "encompasses",
+      "encompassed",
+      "encompassing"
+    ],
+    "example_en": "The project encompasses several different research areas.",
+    "example_ko": "이 프로젝트는 여러 연구 분야를 포괄한다."
+  },
+  "endeavor": {
+    "id": "endeavor",
+    "canonical": "endeavor",
+    "pos": "noun",
+    "meaning_ko": "노력, 시도",
+    "cefr": "C1",
+    "theme": [
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "endeavors",
+      "endeavored"
+    ],
+    "example_en": "Scientific endeavor has improved human life immensely.",
+    "example_ko": "과학적 노력이 인간의 삶을 크게 향상시켰다."
+  },
+  "exacerbate": {
+    "id": "exacerbate",
+    "canonical": "exacerbate",
+    "pos": "verb",
+    "meaning_ko": "악화시키다",
+    "cefr": "C1",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "exacerbates",
+      "exacerbated",
+      "exacerbating",
+      "exacerbation"
+    ],
+    "example_en": "The drought exacerbated the food shortage.",
+    "example_ko": "가뭄이 식량 부족을 악화시켰다."
+  },
+  "exemplify": {
+    "id": "exemplify",
+    "canonical": "exemplify",
+    "pos": "verb",
+    "meaning_ko": "예시하다, 전형이 되다",
+    "cefr": "C1",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "exemplifies",
+      "exemplified",
+      "exemplifying"
+    ],
+    "example_en": "Her career exemplifies dedication and hard work.",
+    "example_ko": "그녀의 경력은 헌신과 노력의 전형이다."
+  },
+  "excerpt": {
+    "id": "excerpt",
+    "canonical": "excerpt",
+    "pos": "noun",
+    "meaning_ko": "발췌, 인용문",
+    "cefr": "C1",
+    "theme": [
+      "literary",
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "excerpts",
+      "excerpted"
+    ],
+    "example_en": "He read an excerpt from the novel.",
+    "example_ko": "그는 소설에서 발췌한 부분을 읽었다."
+  },
+  "expedite": {
+    "id": "expedite",
+    "canonical": "expedite",
+    "pos": "verb",
+    "meaning_ko": "촉진하다, 신속히 처리하다",
+    "cefr": "C1",
+    "theme": [
+      "business"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "expedites",
+      "expedited",
+      "expediting",
+      "expeditious"
+    ],
+    "example_en": "We need to expedite the approval process.",
+    "example_ko": "승인 절차를 신속히 처리해야 한다."
+  },
+  "explicit": {
+    "id": "explicit",
+    "canonical": "explicit",
+    "pos": "adjective",
+    "meaning_ko": "명시적인, 분명한",
+    "cefr": "C1",
+    "theme": [
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "explicitly"
+    ],
+    "example_en": "The instructions were not explicit enough.",
+    "example_ko": "지침이 충분히 명시적이지 않았다."
+  },
+  "fallacy": {
+    "id": "fallacy",
+    "canonical": "fallacy",
+    "pos": "noun",
+    "meaning_ko": "오류, 오류 추리",
+    "cefr": "C1",
+    "theme": [
+      "academic",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "fallacies",
+      "fallacious"
+    ],
+    "example_en": "The argument is based on a logical fallacy.",
+    "example_ko": "그 주장은 논리적 오류에 기반한다."
+  },
+  "feasible": {
+    "id": "feasible",
+    "canonical": "feasible",
+    "pos": "adjective",
+    "meaning_ko": "실현 가능한",
+    "cefr": "C1",
+    "theme": [
+      "business",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "feasibility",
+      "infeasible"
+    ],
+    "example_en": "Is it feasible to complete the project by December?",
+    "example_ko": "12월까지 프로젝트를 완료하는 것이 실현 가능한가?"
+  },
+  "fiscal": {
+    "id": "fiscal",
+    "canonical": "fiscal",
+    "pos": "adjective",
+    "meaning_ko": "재정의, 세금의",
+    "cefr": "C1",
+    "theme": [
+      "politics",
+      "business"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "fiscally"
+    ],
+    "example_en": "The country must address its fiscal deficit.",
+    "example_ko": "그 나라는 재정 적자를 해결해야 한다."
+  },
+  "formidable": {
+    "id": "formidable",
+    "canonical": "formidable",
+    "pos": "adjective",
+    "meaning_ko": "강력한, 만만찮은",
+    "cefr": "C1",
+    "theme": [
+      "abstract"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "formidably"
+    ],
+    "example_en": "She is a formidable opponent in debate.",
+    "example_ko": "그녀는 토론에서 만만찮은 상대이다."
+  },
+  "futile": {
+    "id": "futile",
+    "canonical": "futile",
+    "pos": "adjective",
+    "meaning_ko": "무익한, 헛된",
+    "cefr": "C1",
+    "theme": [
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "futilely",
+      "futility"
+    ],
+    "example_en": "Resistance was futile against such overwhelming force.",
+    "example_ko": "그런 압도적인 힘 앞에서 저항은 무의미했다."
+  },
+  "hegemony": {
+    "id": "hegemony",
+    "canonical": "hegemony",
+    "pos": "noun",
+    "meaning_ko": "패권",
+    "cefr": "C1",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "hegemonies",
+      "hegemonic"
+    ],
+    "example_en": "The country sought to maintain its economic hegemony.",
+    "example_ko": "그 나라는 경제적 패권을 유지하려 했다."
+  },
+  "ideological": {
+    "id": "ideological",
+    "canonical": "ideological",
+    "pos": "adjective",
+    "meaning_ko": "이데올로기적인",
+    "cefr": "C1",
+    "theme": [
+      "politics",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "ideologically",
+      "ideology",
+      "ideologies"
+    ],
+    "example_en": "The debate revealed deep ideological divisions.",
+    "example_ko": "토론은 깊은 이데올로기적 분열을 드러냈다."
+  },
+  "impede": {
+    "id": "impede",
+    "canonical": "impede",
+    "pos": "verb",
+    "meaning_ko": "방해하다, 저해하다",
+    "cefr": "C1",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "impedes",
+      "impeded",
+      "impeding",
+      "impediment"
+    ],
+    "example_en": "Corruption impedes economic development.",
+    "example_ko": "부패가 경제 발전을 저해한다."
+  },
+  "indictment": {
+    "id": "indictment",
+    "canonical": "indictment",
+    "pos": "noun",
+    "meaning_ko": "기소, 고발",
+    "cefr": "C1",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "indictments",
+      "indict"
+    ],
+    "example_en": "The grand jury issued an indictment against the CEO.",
+    "example_ko": "대배심이 CEO에 대한 기소를 했다."
+  },
+  "infer": {
+    "id": "infer",
+    "canonical": "infer",
+    "pos": "verb",
+    "meaning_ko": "추론하다, 유추하다",
+    "cefr": "C1",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "infers",
+      "inferred",
+      "inferring",
+      "inference"
+    ],
+    "example_en": "We can infer from the data that the trend will continue.",
+    "example_ko": "데이터에서 그 추세가 계속될 것으로 추론할 수 있다."
+  },
+  "innate": {
+    "id": "innate",
+    "canonical": "innate",
+    "pos": "adjective",
+    "meaning_ko": "타고난, 선천적인",
+    "cefr": "C1",
+    "theme": [
+      "science",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "innately"
+    ],
+    "example_en": "Humans have an innate capacity for language.",
+    "example_ko": "인간은 언어에 대한 타고난 능력이 있다."
+  },
+  "juxtapose": {
+    "id": "juxtapose",
+    "canonical": "juxtapose",
+    "pos": "verb",
+    "meaning_ko": "병치하다, 나란히 놓다",
+    "cefr": "C1",
+    "theme": [
+      "literary",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "juxtaposes",
+      "juxtaposed",
+      "juxtaposing",
+      "juxtaposition"
+    ],
+    "example_en": "The artist juxtaposed images of war and peace.",
+    "example_ko": "그 예술가는 전쟁과 평화의 이미지를 병치했다."
+  },
+  "lament": {
+    "id": "lament",
+    "canonical": "lament",
+    "pos": "verb",
+    "meaning_ko": "한탄하다, 애도하다",
+    "cefr": "C1",
+    "theme": [
+      "emotion",
+      "literary"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "laments",
+      "lamented",
+      "lamenting",
+      "lamentable"
+    ],
+    "example_en": "Critics lament the decline of print journalism.",
+    "example_ko": "비평가들은 인쇄 저널리즘의 쇠퇴를 한탄한다."
+  },
+  "litigation": {
+    "id": "litigation",
+    "canonical": "litigation",
+    "pos": "noun",
+    "meaning_ko": "소송",
+    "cefr": "C1",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "litigate",
+      "litigant",
+      "litigious"
+    ],
+    "example_en": "The company settled to avoid costly litigation.",
+    "example_ko": "회사는 비용이 많이 드는 소송을 피하기 위해 합의했다."
+  },
+  "mandate": {
+    "id": "mandate",
+    "canonical": "mandate",
+    "pos": "noun",
+    "meaning_ko": "명령, 위임, 권한",
+    "cefr": "C1",
+    "theme": [
+      "politics",
+      "business"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "mandates",
+      "mandated",
+      "mandatory"
+    ],
+    "example_en": "The election gave her a clear mandate for reform.",
+    "example_ko": "선거가 그녀에게 개혁에 대한 명확한 권한을 부여했다."
+  },
+  "mitigate": {
+    "id": "mitigate",
+    "canonical": "mitigate",
+    "pos": "verb",
+    "meaning_ko": "완화하다, 경감하다",
+    "cefr": "C1",
+    "theme": [
+      "academic",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "mitigates",
+      "mitigated",
+      "mitigating",
+      "mitigation"
+    ],
+    "example_en": "Steps were taken to mitigate the environmental damage.",
+    "example_ko": "환경 피해를 완화하기 위한 조치가 취해졌다."
+  },
+  "nostalgia": {
+    "id": "nostalgia",
+    "canonical": "nostalgia",
+    "pos": "noun",
+    "meaning_ko": "향수, 그리움",
+    "cefr": "C1",
+    "theme": [
+      "emotion"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "nostalgic",
+      "nostalgically"
+    ],
+    "example_en": "The old photographs filled her with nostalgia.",
+    "example_ko": "오래된 사진들이 그녀를 향수로 가득 채웠다."
+  },
+  "obsolete": {
+    "id": "obsolete",
+    "canonical": "obsolete",
+    "pos": "adjective",
+    "meaning_ko": "구식의, 쓸모없는",
+    "cefr": "C1",
+    "theme": [
+      "technology",
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "obsolescence"
+    ],
+    "example_en": "Smartphones have made traditional maps obsolete.",
+    "example_ko": "스마트폰이 전통적인 지도를 구식으로 만들었다."
+  },
+  "paradox": {
+    "id": "paradox",
+    "canonical": "paradox",
+    "pos": "noun",
+    "meaning_ko": "역설, 모순",
+    "cefr": "C1",
+    "theme": [
+      "academic",
+      "abstract"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "paradoxes",
+      "paradoxical",
+      "paradoxically"
+    ],
+    "example_en": "It is a paradox that wealthier nations often have higher depression rates.",
+    "example_ko": "더 부유한 나라가 종종 더 높은 우울증 비율을 가진다는 것은 역설이다."
+  },
+  "permeate": {
+    "id": "permeate",
+    "canonical": "permeate",
+    "pos": "verb",
+    "meaning_ko": "스며들다, 침투하다",
+    "cefr": "C1",
+    "theme": [
+      "science",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "permeates",
+      "permeated",
+      "permeating",
+      "permeation"
+    ],
+    "example_en": "Technology has permeated every aspect of daily life.",
+    "example_ko": "기술이 일상생활의 모든 측면에 스며들었다."
+  },
+  "perpetuate": {
+    "id": "perpetuate",
+    "canonical": "perpetuate",
+    "pos": "verb",
+    "meaning_ko": "영속시키다, 지속시키다",
+    "cefr": "C1",
+    "theme": [
+      "academic",
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "perpetuates",
+      "perpetuated",
+      "perpetuating",
+      "perpetual",
+      "perpetually"
+    ],
+    "example_en": "Stereotypes perpetuate inequality in society.",
+    "example_ko": "고정관념이 사회의 불평등을 영속시킨다."
+  },
+  "plausible": {
+    "id": "plausible",
+    "canonical": "plausible",
+    "pos": "adjective",
+    "meaning_ko": "그럴듯한, 타당한",
+    "cefr": "C1",
+    "theme": [
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "plausibly",
+      "plausibility",
+      "implausible"
+    ],
+    "example_en": "His explanation was plausible but not convincing.",
+    "example_ko": "그의 설명은 그럴듯했지만 설득력이 없었다."
+  },
+  "pragmatic": {
+    "id": "pragmatic",
+    "canonical": "pragmatic",
+    "pos": "adjective",
+    "meaning_ko": "실용적인",
+    "cefr": "C1",
+    "theme": [
+      "abstract",
+      "business"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "pragmatically",
+      "pragmatism",
+      "pragmatist"
+    ],
+    "example_en": "We need a pragmatic approach to solve this problem.",
+    "example_ko": "이 문제를 해결하기 위해 실용적인 접근이 필요하다."
+  },
+  "precedent": {
+    "id": "precedent",
+    "canonical": "precedent",
+    "pos": "noun",
+    "meaning_ko": "선례, 판례",
+    "cefr": "C1",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "precedents",
+      "unprecedented"
+    ],
+    "example_en": "This ruling sets an important legal precedent.",
+    "example_ko": "이 판결은 중요한 법적 선례를 세운다."
+  },
+  "predispose": {
+    "id": "predispose",
+    "canonical": "predispose",
+    "pos": "verb",
+    "meaning_ko": "~하기 쉽게 하다, 성향을 갖게 하다",
+    "cefr": "C1",
+    "theme": [
+      "science",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "predisposes",
+      "predisposed",
+      "predisposing",
+      "predisposition"
+    ],
+    "example_en": "Genetics may predispose some people to certain diseases.",
+    "example_ko": "유전이 일부 사람들을 특정 질병에 걸리기 쉽게 할 수 있다."
+  },
+  "proliferate": {
+    "id": "proliferate",
+    "canonical": "proliferate",
+    "pos": "verb",
+    "meaning_ko": "급증하다, 확산하다",
+    "cefr": "C1",
+    "theme": [
+      "academic",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "proliferates",
+      "proliferated",
+      "proliferating",
+      "proliferation"
+    ],
+    "example_en": "Fake news has proliferated on social media.",
+    "example_ko": "가짜 뉴스가 소셜 미디어에서 급증했다."
+  },
+  "proprietary": {
+    "id": "proprietary",
+    "canonical": "proprietary",
+    "pos": "adjective",
+    "meaning_ko": "독점적인, 소유권의",
+    "cefr": "C1",
+    "theme": [
+      "business",
+      "technology"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [],
+    "example_en": "The company uses proprietary software.",
+    "example_ko": "그 회사는 독점 소프트웨어를 사용한다."
+  },
+  "rationale": {
+    "id": "rationale",
+    "canonical": "rationale",
+    "pos": "noun",
+    "meaning_ko": "근거, 이유",
+    "cefr": "C1",
+    "theme": [
+      "academic",
+      "business"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "rationales"
+    ],
+    "example_en": "What is the rationale behind this decision?",
+    "example_ko": "이 결정의 근거는 무엇인가?"
+  },
+  "reconcile": {
+    "id": "reconcile",
+    "canonical": "reconcile",
+    "pos": "verb",
+    "meaning_ko": "화해하다, 조화시키다",
+    "cefr": "C1",
+    "theme": [
+      "abstract",
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "reconciles",
+      "reconciled",
+      "reconciling",
+      "reconciliation"
+    ],
+    "example_en": "It is hard to reconcile these conflicting viewpoints.",
+    "example_ko": "이러한 상충하는 관점들을 조화시키기 어렵다."
+  },
+  "repercussion": {
+    "id": "repercussion",
+    "canonical": "repercussion",
+    "pos": "noun",
+    "meaning_ko": "영향, 반향",
+    "cefr": "C1",
+    "theme": [
+      "academic",
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "repercussions"
+    ],
+    "example_en": "The scandal had serious political repercussions.",
+    "example_ko": "그 스캔들은 심각한 정치적 영향을 미쳤다."
+  },
+  "resilient": {
+    "id": "resilient",
+    "canonical": "resilient",
+    "pos": "adjective",
+    "meaning_ko": "회복력 있는, 탄력 있는",
+    "cefr": "C1",
+    "theme": [
+      "abstract",
+      "science"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "resilience",
+      "resiliency"
+    ],
+    "example_en": "Children are remarkably resilient in the face of adversity.",
+    "example_ko": "어린이들은 역경 앞에서 놀라울 정도로 회복력이 있다."
+  },
+  "sanction": {
+    "id": "sanction",
+    "canonical": "sanction",
+    "pos": "noun",
+    "meaning_ko": "제재, 인가",
+    "cefr": "C1",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "sanctions",
+      "sanctioned",
+      "sanctioning"
+    ],
+    "example_en": "The UN imposed sanctions on the country.",
+    "example_ko": "유엔이 그 나라에 제재를 부과했다."
+  },
+  "scrutiny": {
+    "id": "scrutiny",
+    "canonical": "scrutiny",
+    "pos": "noun",
+    "meaning_ko": "면밀한 조사, 정밀 검사",
+    "cefr": "C1",
+    "theme": [
+      "politics",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "scrutinize",
+      "scrutinized"
+    ],
+    "example_en": "The proposal came under intense public scrutiny.",
+    "example_ko": "그 제안은 대중의 면밀한 조사를 받았다."
+  },
+  "sovereignty": {
+    "id": "sovereignty",
+    "canonical": "sovereignty",
+    "pos": "noun",
+    "meaning_ko": "주권",
+    "cefr": "C1",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "sovereign"
+    ],
+    "example_en": "The treaty threatened national sovereignty.",
+    "example_ko": "그 조약은 국가 주권을 위협했다."
+  },
+  "speculate": {
+    "id": "speculate",
+    "canonical": "speculate",
+    "pos": "verb",
+    "meaning_ko": "추측하다, 투기하다",
+    "cefr": "C1",
+    "theme": [
+      "academic",
+      "business"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "speculates",
+      "speculated",
+      "speculating",
+      "speculation",
+      "speculative"
+    ],
+    "example_en": "Analysts speculate that the market will recover.",
+    "example_ko": "분석가들은 시장이 회복될 것이라고 추측한다."
+  },
+  "stigma": {
+    "id": "stigma",
+    "canonical": "stigma",
+    "pos": "noun",
+    "meaning_ko": "낙인, 오명",
+    "cefr": "C1",
+    "theme": [
+      "abstract",
+      "politics"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "stigmas",
+      "stigmatize",
+      "stigmatized"
+    ],
+    "example_en": "There is still a stigma attached to mental illness.",
+    "example_ko": "정신 질환에 대한 낙인이 여전히 존재한다."
+  },
+  "subordinate": {
+    "id": "subordinate",
+    "canonical": "subordinate",
+    "pos": "adjective",
+    "meaning_ko": "하위의, 부수적인",
+    "cefr": "C1",
+    "theme": [
+      "business",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "subordinates",
+      "subordination"
+    ],
+    "example_en": "Personal interests should be subordinate to the public good.",
+    "example_ko": "개인적 이익은 공익에 부수적이어야 한다."
+  },
+  "subsidize": {
+    "id": "subsidize",
+    "canonical": "subsidize",
+    "pos": "verb",
+    "meaning_ko": "보조금을 지급하다",
+    "cefr": "C1",
+    "theme": [
+      "politics",
+      "business"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "subsidizes",
+      "subsidized",
+      "subsidizing",
+      "subsidy",
+      "subsidies"
+    ],
+    "example_en": "The government subsidizes renewable energy projects.",
+    "example_ko": "정부가 재생 에너지 프로젝트에 보조금을 지급한다."
+  },
+  "supersede": {
+    "id": "supersede",
+    "canonical": "supersede",
+    "pos": "verb",
+    "meaning_ko": "대체하다, 대신하다",
+    "cefr": "C1",
+    "theme": [
+      "academic",
+      "technology"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "supersedes",
+      "superseded",
+      "superseding"
+    ],
+    "example_en": "Digital technology has superseded analog methods.",
+    "example_ko": "디지털 기술이 아날로그 방식을 대체했다."
+  },
+  "tangible": {
+    "id": "tangible",
+    "canonical": "tangible",
+    "pos": "adjective",
+    "meaning_ko": "실체가 있는, 구체적인",
+    "cefr": "C1",
+    "theme": [
+      "abstract",
+      "business"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "tangibly",
+      "intangible"
+    ],
+    "example_en": "We need tangible results, not just promises.",
+    "example_ko": "약속이 아니라 구체적인 결과가 필요하다."
+  },
+  "trajectory": {
+    "id": "trajectory",
+    "canonical": "trajectory",
+    "pos": "noun",
+    "meaning_ko": "궤적, 추이",
+    "cefr": "C1",
+    "theme": [
+      "science",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "trajectories"
+    ],
+    "example_en": "The company is on an upward trajectory.",
+    "example_ko": "그 회사는 상승 궤도에 있다."
+  },
+  "transcend": {
+    "id": "transcend",
+    "canonical": "transcend",
+    "pos": "verb",
+    "meaning_ko": "초월하다",
+    "cefr": "C1",
+    "theme": [
+      "abstract",
+      "literary"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "transcends",
+      "transcended",
+      "transcending",
+      "transcendence",
+      "transcendent"
+    ],
+    "example_en": "Great art transcends cultural boundaries.",
+    "example_ko": "위대한 예술은 문화적 경계를 초월한다."
+  },
+  "ubiquitous": {
+    "id": "ubiquitous",
+    "canonical": "ubiquitous",
+    "pos": "adjective",
+    "meaning_ko": "어디에나 있는, 편재하는",
+    "cefr": "C1",
+    "theme": [
+      "technology",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "ubiquitously",
+      "ubiquity"
+    ],
+    "example_en": "Smartphones have become ubiquitous in modern life.",
+    "example_ko": "스마트폰은 현대 생활에서 어디에나 있다."
+  },
+  "unilateral": {
+    "id": "unilateral",
+    "canonical": "unilateral",
+    "pos": "adjective",
+    "meaning_ko": "일방적인",
+    "cefr": "C1",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "unilaterally",
+      "bilateral",
+      "multilateral"
+    ],
+    "example_en": "The president made a unilateral decision without consulting congress.",
+    "example_ko": "대통령은 의회와 상의 없이 일방적인 결정을 내렸다."
+  },
+  "unprecedented": {
+    "id": "unprecedented",
+    "canonical": "unprecedented",
+    "pos": "adjective",
+    "meaning_ko": "전례 없는",
+    "cefr": "C1",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [],
+    "example_en": "The pandemic caused unprecedented disruption to the economy.",
+    "example_ko": "팬데믹은 경제에 전례 없는 혼란을 초래했다."
+  },
+  "viable": {
+    "id": "viable",
+    "canonical": "viable",
+    "pos": "adjective",
+    "meaning_ko": "실행 가능한, 생존 가능한",
+    "cefr": "C1",
+    "theme": [
+      "business",
+      "science"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "viability",
+      "nonviable"
+    ],
+    "example_en": "We need to find a commercially viable solution.",
+    "example_ko": "상업적으로 실행 가능한 해결책을 찾아야 한다."
+  },
+  "volatile": {
+    "id": "volatile",
+    "canonical": "volatile",
+    "pos": "adjective",
+    "meaning_ko": "변동성이 큰, 불안정한",
+    "cefr": "C1",
+    "theme": [
+      "business",
+      "science"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "volatility"
+    ],
+    "example_en": "The stock market has been extremely volatile this year.",
+    "example_ko": "올해 주식시장은 극도로 변동성이 컸다."
+  },
+  "inflammatory": {
+    "id": "inflammatory",
+    "canonical": "inflammatory",
+    "pos": "adjective",
+    "meaning_ko": "선동적인, 염증성의",
+    "cefr": "C1",
+    "theme": [
+      "politics",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "inflammation",
+      "inflame"
+    ],
+    "example_en": "His inflammatory remarks ignited public outrage.",
+    "example_ko": "그의 선동적인 발언이 대중의 분노를 촉발했다."
+  },
+  "insurgent": {
+    "id": "insurgent",
+    "canonical": "insurgent",
+    "pos": "noun",
+    "meaning_ko": "반란군, 반체제 인사",
+    "cefr": "C1",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "insurgents",
+      "insurgency"
+    ],
+    "example_en": "Insurgents attacked the military base at dawn.",
+    "example_ko": "반란군이 새벽에 군사 기지를 공격했다."
+  },
+  "circumscribe": {
+    "id": "circumscribe",
+    "canonical": "circumscribe",
+    "pos": "verb",
+    "meaning_ko": "제한하다, 한정하다",
+    "cefr": "C1",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "circumscribes",
+      "circumscribed",
+      "circumscribing"
+    ],
+    "example_en": "Their freedom was circumscribed by strict regulations.",
+    "example_ko": "그들의 자유는 엄격한 규제에 의해 제한되었다."
+  },
+  "disposition": {
+    "id": "disposition",
+    "canonical": "disposition",
+    "pos": "noun",
+    "meaning_ko": "기질, 성향, 처분",
+    "cefr": "C1",
+    "theme": [
+      "abstract",
+      "emotion"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "dispositions"
+    ],
+    "example_en": "She has a cheerful disposition.",
+    "example_ko": "그녀는 쾌활한 기질을 가지고 있다."
+  },
+  "adjudicate": {
+    "id": "adjudicate",
+    "canonical": "adjudicate",
+    "pos": "verb",
+    "meaning_ko": "판결하다, 심판하다",
+    "cefr": "C1",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "adjudicates",
+      "adjudicated",
+      "adjudicating",
+      "adjudication"
+    ],
+    "example_en": "The court will adjudicate the dispute.",
+    "example_ko": "법원이 그 분쟁을 판결할 것이다."
+  },
+  "acquiesce": {
+    "id": "acquiesce",
+    "canonical": "acquiesce",
+    "pos": "verb",
+    "meaning_ko": "묵묵히 따르다, 묵인하다",
+    "cefr": "C2",
+    "theme": [
+      "abstract",
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "acquiesces",
+      "acquiesced",
+      "acquiescing",
+      "acquiescence"
+    ],
+    "example_en": "She acquiesced to their demands reluctantly.",
+    "example_ko": "그녀는 마지못해 그들의 요구에 따랐다."
+  },
+  "anachronism": {
+    "id": "anachronism",
+    "canonical": "anachronism",
+    "pos": "noun",
+    "meaning_ko": "시대착오",
+    "cefr": "C2",
+    "theme": [
+      "literary",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "anachronisms",
+      "anachronistic"
+    ],
+    "example_en": "The monarchy is seen by some as an anachronism.",
+    "example_ko": "군주제는 일부에 의해 시대착오로 여겨진다."
+  },
+  "antithesis": {
+    "id": "antithesis",
+    "canonical": "antithesis",
+    "pos": "noun",
+    "meaning_ko": "정반대, 대조",
+    "cefr": "C2",
+    "theme": [
+      "literary",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "antitheses",
+      "antithetical"
+    ],
+    "example_en": "His behavior was the antithesis of what we expected.",
+    "example_ko": "그의 행동은 우리가 예상한 것의 정반대였다."
+  },
+  "apocryphal": {
+    "id": "apocryphal",
+    "canonical": "apocryphal",
+    "pos": "adjective",
+    "meaning_ko": "출처 불명의, 진위 의심스러운",
+    "cefr": "C2",
+    "theme": [
+      "literary"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [],
+    "example_en": "The story is probably apocryphal.",
+    "example_ko": "그 이야기는 아마 출처가 불분명하다."
+  },
+  "bellicose": {
+    "id": "bellicose",
+    "canonical": "bellicose",
+    "pos": "adjective",
+    "meaning_ko": "호전적인",
+    "cefr": "C2",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "bellicosity"
+    ],
+    "example_en": "The bellicose rhetoric increased tensions between the nations.",
+    "example_ko": "호전적인 수사가 양국 간 긴장을 고조시켰다."
+  },
+  "capitulate": {
+    "id": "capitulate",
+    "canonical": "capitulate",
+    "pos": "verb",
+    "meaning_ko": "항복하다, 굴복하다",
+    "cefr": "C2",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "capitulates",
+      "capitulated",
+      "capitulating",
+      "capitulation"
+    ],
+    "example_en": "The government refused to capitulate to terrorist demands.",
+    "example_ko": "정부는 테러리스트의 요구에 굴복하기를 거부했다."
+  },
+  "cogent": {
+    "id": "cogent",
+    "canonical": "cogent",
+    "pos": "adjective",
+    "meaning_ko": "설득력 있는, 타당한",
+    "cefr": "C2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "cogently",
+      "cogency"
+    ],
+    "example_en": "She presented a cogent argument for reform.",
+    "example_ko": "그녀는 개혁에 대한 설득력 있는 주장을 제시했다."
+  },
+  "conflate": {
+    "id": "conflate",
+    "canonical": "conflate",
+    "pos": "verb",
+    "meaning_ko": "합치다, 혼동하다",
+    "cefr": "C2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "conflates",
+      "conflated",
+      "conflating",
+      "conflation"
+    ],
+    "example_en": "People often conflate correlation with causation.",
+    "example_ko": "사람들은 종종 상관관계와 인과관계를 혼동한다."
+  },
+  "conundrum": {
+    "id": "conundrum",
+    "canonical": "conundrum",
+    "pos": "noun",
+    "meaning_ko": "난제, 수수께끼",
+    "cefr": "C2",
+    "theme": [
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "conundrums"
+    ],
+    "example_en": "Balancing growth with sustainability presents a conundrum.",
+    "example_ko": "성장과 지속 가능성의 균형은 난제를 제시한다."
+  },
+  "dearth": {
+    "id": "dearth",
+    "canonical": "dearth",
+    "pos": "noun",
+    "meaning_ko": "부족, 결핍",
+    "cefr": "C2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [],
+    "example_en": "There is a dearth of qualified teachers in rural areas.",
+    "example_ko": "농촌 지역에는 자격을 갖춘 교사가 부족하다."
+  },
+  "debacle": {
+    "id": "debacle",
+    "canonical": "debacle",
+    "pos": "noun",
+    "meaning_ko": "대실패, 대참사",
+    "cefr": "C2",
+    "theme": [
+      "abstract"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "debacles"
+    ],
+    "example_en": "The product launch was an utter debacle.",
+    "example_ko": "제품 출시는 완전한 대실패였다."
+  },
+  "deleterious": {
+    "id": "deleterious",
+    "canonical": "deleterious",
+    "pos": "adjective",
+    "meaning_ko": "해로운",
+    "cefr": "C2",
+    "theme": [
+      "science",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "deleteriously"
+    ],
+    "example_en": "Pollution has deleterious effects on public health.",
+    "example_ko": "오염은 공중 보건에 해로운 영향을 미친다."
+  },
+  "diatribe": {
+    "id": "diatribe",
+    "canonical": "diatribe",
+    "pos": "noun",
+    "meaning_ko": "통렬한 비판, 장광설",
+    "cefr": "C2",
+    "theme": [
+      "literary"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "diatribes"
+    ],
+    "example_en": "He launched into a diatribe against the media.",
+    "example_ko": "그는 미디어에 대한 통렬한 비판을 쏟아냈다."
+  },
+  "didactic": {
+    "id": "didactic",
+    "canonical": "didactic",
+    "pos": "adjective",
+    "meaning_ko": "교훈적인, 가르치려 드는",
+    "cefr": "C2",
+    "theme": [
+      "literary",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "didactically",
+      "didacticism"
+    ],
+    "example_en": "The novel was too didactic to be enjoyable.",
+    "example_ko": "그 소설은 너무 교훈적이라 즐기기 어려웠다."
+  },
+  "disingenuous": {
+    "id": "disingenuous",
+    "canonical": "disingenuous",
+    "pos": "adjective",
+    "meaning_ko": "불성실한, 위선적인",
+    "cefr": "C2",
+    "theme": [
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "disingenuously",
+      "disingenuousness"
+    ],
+    "example_en": "It would be disingenuous to claim we did not know.",
+    "example_ko": "우리가 몰랐다고 주장하는 것은 위선적일 것이다."
+  },
+  "egregious": {
+    "id": "egregious",
+    "canonical": "egregious",
+    "pos": "adjective",
+    "meaning_ko": "지독한, 터무니없는",
+    "cefr": "C2",
+    "theme": [
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "egregiously"
+    ],
+    "example_en": "This was an egregious violation of human rights.",
+    "example_ko": "이것은 지독한 인권 침해였다."
+  },
+  "enervate": {
+    "id": "enervate",
+    "canonical": "enervate",
+    "pos": "verb",
+    "meaning_ko": "기력을 빼다, 약화시키다",
+    "cefr": "C2",
+    "theme": [
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "enervates",
+      "enervated",
+      "enervating",
+      "enervation"
+    ],
+    "example_en": "The tropical heat enervated the travelers.",
+    "example_ko": "열대의 더위가 여행자들의 기력을 빼앗았다."
+  },
+  "ephemeral": {
+    "id": "ephemeral",
+    "canonical": "ephemeral",
+    "pos": "adjective",
+    "meaning_ko": "덧없는, 일시적인",
+    "cefr": "C2",
+    "theme": [
+      "literary",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "ephemerally",
+      "ephemerality"
+    ],
+    "example_en": "Fame can be ephemeral in the age of social media.",
+    "example_ko": "소셜 미디어 시대에 명성은 덧없을 수 있다."
+  },
+  "equivocal": {
+    "id": "equivocal",
+    "canonical": "equivocal",
+    "pos": "adjective",
+    "meaning_ko": "모호한, 애매한",
+    "cefr": "C2",
+    "theme": [
+      "academic",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "equivocally",
+      "equivocate",
+      "equivocation",
+      "unequivocal"
+    ],
+    "example_en": "The results of the study were equivocal.",
+    "example_ko": "연구 결과는 모호했다."
+  },
+  "erudite": {
+    "id": "erudite",
+    "canonical": "erudite",
+    "pos": "adjective",
+    "meaning_ko": "박식한, 학식 있는",
+    "cefr": "C2",
+    "theme": [
+      "literary",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "erudition"
+    ],
+    "example_en": "She is an erudite scholar of medieval history.",
+    "example_ko": "그녀는 중세 역사에 박식한 학자이다."
+  },
+  "exonerate": {
+    "id": "exonerate",
+    "canonical": "exonerate",
+    "pos": "verb",
+    "meaning_ko": "무죄를 입증하다, 면책하다",
+    "cefr": "C2",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "exonerates",
+      "exonerated",
+      "exonerating",
+      "exoneration"
+    ],
+    "example_en": "DNA evidence exonerated the wrongly convicted man.",
+    "example_ko": "DNA 증거가 억울하게 유죄 판결을 받은 남성의 무죄를 입증했다."
+  },
+  "facetious": {
+    "id": "facetious",
+    "canonical": "facetious",
+    "pos": "adjective",
+    "meaning_ko": "익살맞은, 농담하는",
+    "cefr": "C2",
+    "theme": [
+      "abstract"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "facetiously",
+      "facetiousness"
+    ],
+    "example_en": "I was being facetious. I did not actually mean it.",
+    "example_ko": "농담이었어요. 진심이 아니었습니다."
+  },
+  "garrulous": {
+    "id": "garrulous",
+    "canonical": "garrulous",
+    "pos": "adjective",
+    "meaning_ko": "수다스러운",
+    "cefr": "C2",
+    "theme": [
+      "literary"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "garrulously",
+      "garrulity"
+    ],
+    "example_en": "The garrulous old man talked for hours.",
+    "example_ko": "수다스러운 노인은 몇 시간이나 이야기했다."
+  },
+  "harbinger": {
+    "id": "harbinger",
+    "canonical": "harbinger",
+    "pos": "noun",
+    "meaning_ko": "전조, 선구자",
+    "cefr": "C2",
+    "theme": [
+      "literary"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "harbingers"
+    ],
+    "example_en": "The robin is often seen as a harbinger of spring.",
+    "example_ko": "울새는 종종 봄의 전조로 여겨진다."
+  },
+  "iconoclast": {
+    "id": "iconoclast",
+    "canonical": "iconoclast",
+    "pos": "noun",
+    "meaning_ko": "인습 타파주의자",
+    "cefr": "C2",
+    "theme": [
+      "literary",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "iconoclasts",
+      "iconoclastic",
+      "iconoclasm"
+    ],
+    "example_en": "She was an iconoclast who challenged every tradition.",
+    "example_ko": "그녀는 모든 전통에 도전한 인습 타파주의자였다."
+  },
+  "impervious": {
+    "id": "impervious",
+    "canonical": "impervious",
+    "pos": "adjective",
+    "meaning_ko": "영향 받지 않는, 침투하지 못하는",
+    "cefr": "C2",
+    "theme": [
+      "abstract",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "imperviously"
+    ],
+    "example_en": "He seemed impervious to criticism.",
+    "example_ko": "그는 비판에 영향을 받지 않는 것처럼 보였다."
+  },
+  "incorrigible": {
+    "id": "incorrigible",
+    "canonical": "incorrigible",
+    "pos": "adjective",
+    "meaning_ko": "교정할 수 없는, 구제 불능의",
+    "cefr": "C2",
+    "theme": [
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "incorrigibly"
+    ],
+    "example_en": "He is an incorrigible optimist.",
+    "example_ko": "그는 구제 불능의 낙관주의자이다."
+  },
+  "inexorable": {
+    "id": "inexorable",
+    "canonical": "inexorable",
+    "pos": "adjective",
+    "meaning_ko": "막을 수 없는, 가차 없는",
+    "cefr": "C2",
+    "theme": [
+      "abstract",
+      "literary"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "inexorably"
+    ],
+    "example_en": "The inexorable march of technology continues.",
+    "example_ko": "기술의 막을 수 없는 진보가 계속된다."
+  },
+  "insidious": {
+    "id": "insidious",
+    "canonical": "insidious",
+    "pos": "adjective",
+    "meaning_ko": "교활한, 서서히 퍼지는",
+    "cefr": "C2",
+    "theme": [
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "insidiously",
+      "insidiousness"
+    ],
+    "example_en": "Misinformation is an insidious threat to democracy.",
+    "example_ko": "잘못된 정보는 민주주의에 대한 교활한 위협이다."
+  },
+  "magnanimous": {
+    "id": "magnanimous",
+    "canonical": "magnanimous",
+    "pos": "adjective",
+    "meaning_ko": "관대한, 도량이 큰",
+    "cefr": "C2",
+    "theme": [
+      "abstract",
+      "emotion"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "magnanimously",
+      "magnanimity"
+    ],
+    "example_en": "In victory, she was magnanimous toward her opponents.",
+    "example_ko": "승리에서 그녀는 상대방에게 관대했다."
+  },
+  "mercurial": {
+    "id": "mercurial",
+    "canonical": "mercurial",
+    "pos": "adjective",
+    "meaning_ko": "변덕스러운",
+    "cefr": "C2",
+    "theme": [
+      "literary",
+      "emotion"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "mercurially"
+    ],
+    "example_en": "His mercurial temperament made him unpredictable.",
+    "example_ko": "그의 변덕스러운 기질은 그를 예측 불가능하게 만들었다."
+  },
+  "nefarious": {
+    "id": "nefarious",
+    "canonical": "nefarious",
+    "pos": "adjective",
+    "meaning_ko": "극악무도한, 사악한",
+    "cefr": "C2",
+    "theme": [
+      "literary"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "nefariously",
+      "nefariousness"
+    ],
+    "example_en": "The villain's nefarious plot was finally exposed.",
+    "example_ko": "악당의 사악한 음모가 마침내 드러났다."
+  },
+  "obfuscate": {
+    "id": "obfuscate",
+    "canonical": "obfuscate",
+    "pos": "verb",
+    "meaning_ko": "혼란시키다, 모호하게 하다",
+    "cefr": "C2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "obfuscates",
+      "obfuscated",
+      "obfuscating",
+      "obfuscation"
+    ],
+    "example_en": "Politicians sometimes obfuscate the truth with complex language.",
+    "example_ko": "정치인들은 때때로 복잡한 언어로 진실을 모호하게 한다."
+  },
+  "onerous": {
+    "id": "onerous",
+    "canonical": "onerous",
+    "pos": "adjective",
+    "meaning_ko": "부담이 큰, 번거로운",
+    "cefr": "C2",
+    "theme": [
+      "business",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "onerously"
+    ],
+    "example_en": "The regulations placed onerous requirements on small businesses.",
+    "example_ko": "규제가 중소기업에 부담이 큰 요건을 부과했다."
+  },
+  "panacea": {
+    "id": "panacea",
+    "canonical": "panacea",
+    "pos": "noun",
+    "meaning_ko": "만병통치약",
+    "cefr": "C2",
+    "theme": [
+      "abstract",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "panaceas"
+    ],
+    "example_en": "Technology is not a panacea for all social problems.",
+    "example_ko": "기술이 모든 사회 문제의 만병통치약은 아니다."
+  },
+  "pernicious": {
+    "id": "pernicious",
+    "canonical": "pernicious",
+    "pos": "adjective",
+    "meaning_ko": "악영향을 끼치는, 해악적인",
+    "cefr": "C2",
+    "theme": [
+      "academic",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "perniciously",
+      "perniciousness"
+    ],
+    "example_en": "The pernicious effects of racism persist in society.",
+    "example_ko": "인종차별의 해악적인 영향이 사회에 지속된다."
+  },
+  "pertinent": {
+    "id": "pertinent",
+    "canonical": "pertinent",
+    "pos": "adjective",
+    "meaning_ko": "적절한, 관련된",
+    "cefr": "C2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "pertinently",
+      "pertinence",
+      "impertinent"
+    ],
+    "example_en": "Please limit your comments to pertinent topics.",
+    "example_ko": "관련된 주제에 대해서만 의견을 말씀해 주세요."
+  },
+  "polemical": {
+    "id": "polemical",
+    "canonical": "polemical",
+    "pos": "adjective",
+    "meaning_ko": "논쟁적인",
+    "cefr": "C2",
+    "theme": [
+      "literary",
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "polemic",
+      "polemics",
+      "polemically"
+    ],
+    "example_en": "His polemical essay provoked heated debate.",
+    "example_ko": "그의 논쟁적인 에세이는 뜨거운 토론을 불러일으켰다."
+  },
+  "preemptive": {
+    "id": "preemptive",
+    "canonical": "preemptive",
+    "pos": "adjective",
+    "meaning_ko": "선제적인",
+    "cefr": "C2",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "preemptively",
+      "preempt"
+    ],
+    "example_en": "The military launched a preemptive strike.",
+    "example_ko": "군대가 선제 공격을 감행했다."
+  },
+  "quagmire": {
+    "id": "quagmire",
+    "canonical": "quagmire",
+    "pos": "noun",
+    "meaning_ko": "수렁, 곤경",
+    "cefr": "C2",
+    "theme": [
+      "abstract",
+      "politics"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "quagmires"
+    ],
+    "example_en": "The country found itself in a political quagmire.",
+    "example_ko": "그 나라는 정치적 수렁에 빠졌다."
+  },
+  "recalcitrant": {
+    "id": "recalcitrant",
+    "canonical": "recalcitrant",
+    "pos": "adjective",
+    "meaning_ko": "반항적인, 다루기 힘든",
+    "cefr": "C2",
+    "theme": [
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "recalcitrance"
+    ],
+    "example_en": "The recalcitrant student refused to follow any rules.",
+    "example_ko": "반항적인 학생은 어떤 규칙도 따르기를 거부했다."
+  },
+  "repudiate": {
+    "id": "repudiate",
+    "canonical": "repudiate",
+    "pos": "verb",
+    "meaning_ko": "거부하다, 부인하다",
+    "cefr": "C2",
+    "theme": [
+      "politics",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "repudiates",
+      "repudiated",
+      "repudiating",
+      "repudiation"
+    ],
+    "example_en": "The government repudiated the allegations of corruption.",
+    "example_ko": "정부는 부패 혐의를 부인했다."
+  },
+  "spurious": {
+    "id": "spurious",
+    "canonical": "spurious",
+    "pos": "adjective",
+    "meaning_ko": "거짓된, 가짜의",
+    "cefr": "C2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "spuriously",
+      "spuriousness"
+    ],
+    "example_en": "The court rejected the spurious claims.",
+    "example_ko": "법원은 거짓된 주장들을 기각했다."
+  },
+  "surreptitious": {
+    "id": "surreptitious",
+    "canonical": "surreptitious",
+    "pos": "adjective",
+    "meaning_ko": "은밀한, 몰래 하는",
+    "cefr": "C2",
+    "theme": [
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "surreptitiously"
+    ],
+    "example_en": "She took a surreptitious glance at his phone.",
+    "example_ko": "그녀는 그의 전화기를 몰래 흘끗 보았다."
+  },
+  "tautology": {
+    "id": "tautology",
+    "canonical": "tautology",
+    "pos": "noun",
+    "meaning_ko": "동어 반복, 유어 반복",
+    "cefr": "C2",
+    "theme": [
+      "academic",
+      "literary"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "tautologies",
+      "tautological"
+    ],
+    "example_en": "Saying free gift is a tautology.",
+    "example_ko": "무료 선물이라고 말하는 것은 동어 반복이다."
+  },
+  "tenable": {
+    "id": "tenable",
+    "canonical": "tenable",
+    "pos": "adjective",
+    "meaning_ko": "옹호할 수 있는, 방어 가능한",
+    "cefr": "C2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "untenable",
+      "tenability"
+    ],
+    "example_en": "His position became increasingly untenable.",
+    "example_ko": "그의 입장은 점점 더 방어할 수 없게 되었다."
+  },
+  "truculent": {
+    "id": "truculent",
+    "canonical": "truculent",
+    "pos": "adjective",
+    "meaning_ko": "호전적인, 거친",
+    "cefr": "C2",
+    "theme": [
+      "literary",
+      "emotion"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "truculently",
+      "truculence"
+    ],
+    "example_en": "His truculent attitude made negotiation impossible.",
+    "example_ko": "그의 호전적인 태도가 협상을 불가능하게 만들었다."
+  },
+  "vacillate": {
+    "id": "vacillate",
+    "canonical": "vacillate",
+    "pos": "verb",
+    "meaning_ko": "망설이다, 동요하다",
+    "cefr": "C2",
+    "theme": [
+      "abstract",
+      "emotion"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "vacillates",
+      "vacillated",
+      "vacillating",
+      "vacillation"
+    ],
+    "example_en": "She vacillated between accepting and rejecting the offer.",
+    "example_ko": "그녀는 제안을 수락할지 거절할지 망설였다."
+  },
+  "verisimilitude": {
+    "id": "verisimilitude",
+    "canonical": "verisimilitude",
+    "pos": "noun",
+    "meaning_ko": "사실성, 핍진성",
+    "cefr": "C2",
+    "theme": [
+      "literary"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [],
+    "example_en": "The film achieved remarkable verisimilitude in its depiction of war.",
+    "example_ko": "그 영화는 전쟁 묘사에서 놀라운 사실성을 달성했다."
+  },
+  "vicissitude": {
+    "id": "vicissitude",
+    "canonical": "vicissitude",
+    "pos": "noun",
+    "meaning_ko": "변천, 부침",
+    "cefr": "C2",
+    "theme": [
+      "literary",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "vicissitudes"
+    ],
+    "example_en": "The company survived the vicissitudes of the market.",
+    "example_ko": "그 회사는 시장의 부침을 견뎌냈다."
+  },
+  "vitriolic": {
+    "id": "vitriolic",
+    "canonical": "vitriolic",
+    "pos": "adjective",
+    "meaning_ko": "신랄한, 독설적인",
+    "cefr": "C2",
+    "theme": [
+      "literary",
+      "emotion"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "vitriol"
+    ],
+    "example_en": "The debate descended into vitriolic personal attacks.",
+    "example_ko": "토론이 신랄한 인신 공격으로 변질되었다."
+  },
+  "zealous": {
+    "id": "zealous",
+    "canonical": "zealous",
+    "pos": "adjective",
+    "meaning_ko": "열성적인, 열정적인",
+    "cefr": "C2",
+    "theme": [
+      "abstract",
+      "emotion"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "zealously",
+      "zeal",
+      "zealot",
+      "zealotry"
+    ],
+    "example_en": "She is a zealous defender of civil liberties.",
+    "example_ko": "그녀는 시민 자유의 열성적인 수호자이다."
+  },
+  "acrimonious": {
+    "id": "acrimonious",
+    "canonical": "acrimonious",
+    "pos": "adjective",
+    "meaning_ko": "신랄한, 격앙된",
+    "cefr": "C2",
+    "theme": [
+      "emotion",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "acrimoniously",
+      "acrimony"
+    ],
+    "example_en": "The divorce was long and acrimonious.",
+    "example_ko": "이혼은 길고 격앙된 것이었다."
+  },
+  "ameliorate": {
+    "id": "ameliorate",
+    "canonical": "ameliorate",
+    "pos": "verb",
+    "meaning_ko": "개선하다, 향상시키다",
+    "cefr": "C2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "ameliorates",
+      "ameliorated",
+      "ameliorating",
+      "amelioration"
+    ],
+    "example_en": "The program aims to ameliorate living conditions for refugees.",
+    "example_ko": "이 프로그램은 난민들의 생활 조건을 개선하는 것을 목표로 한다."
+  },
+  "capricious": {
+    "id": "capricious",
+    "canonical": "capricious",
+    "pos": "adjective",
+    "meaning_ko": "변덕스러운, 제멋대로인",
+    "cefr": "C2",
+    "theme": [
+      "literary",
+      "emotion"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "capriciously",
+      "capriciousness",
+      "caprice"
+    ],
+    "example_en": "The capricious weather made planning outdoor events difficult.",
+    "example_ko": "변덕스러운 날씨가 야외 행사 계획을 어렵게 만들었다."
+  },
+  "chicanery": {
+    "id": "chicanery",
+    "canonical": "chicanery",
+    "pos": "noun",
+    "meaning_ko": "속임수, 궤변",
+    "cefr": "C2",
+    "theme": [
+      "politics",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [],
+    "example_en": "The election was marred by political chicanery.",
+    "example_ko": "선거는 정치적 속임수로 얼룩졌다."
+  },
+  "loquacious": {
+    "id": "loquacious",
+    "canonical": "loquacious",
+    "pos": "adjective",
+    "meaning_ko": "말이 많은, 수다스러운",
+    "cefr": "C2",
+    "theme": [
+      "literary"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "loquaciously",
+      "loquacity"
+    ],
+    "example_en": "The loquacious host kept guests entertained all evening.",
+    "example_ko": "말이 많은 호스트가 저녁 내내 손님들을 즐겁게 했다."
+  },
+  "perfunctory": {
+    "id": "perfunctory",
+    "canonical": "perfunctory",
+    "pos": "adjective",
+    "meaning_ko": "형식적인, 건성의",
+    "cefr": "C2",
+    "theme": [
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "perfunctorily"
+    ],
+    "example_en": "He gave a perfunctory nod and continued working.",
+    "example_ko": "그는 형식적으로 고개를 끄덕이고 계속 일했다."
+  },
+  "promulgate": {
+    "id": "promulgate",
+    "canonical": "promulgate",
+    "pos": "verb",
+    "meaning_ko": "공포하다, 널리 알리다",
+    "cefr": "C2",
+    "theme": [
+      "politics",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "promulgates",
+      "promulgated",
+      "promulgating",
+      "promulgation"
+    ],
+    "example_en": "The new regulations were promulgated last week.",
+    "example_ko": "새 규정이 지난주에 공포되었다."
+  },
+  "sycophant": {
+    "id": "sycophant",
+    "canonical": "sycophant",
+    "pos": "noun",
+    "meaning_ko": "아첨꾼",
+    "cefr": "C2",
+    "theme": [
+      "literary",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "sycophants",
+      "sycophantic",
+      "sycophancy"
+    ],
+    "example_en": "He surrounded himself with sycophants who never disagreed.",
+    "example_ko": "그는 결코 반대하지 않는 아첨꾼들로 자신을 둘러쌌다."
+  },
+  "tendentious": {
+    "id": "tendentious",
+    "canonical": "tendentious",
+    "pos": "adjective",
+    "meaning_ko": "편향된, 특정 견해를 지지하는",
+    "cefr": "C2",
+    "theme": [
+      "academic",
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "tendentiously",
+      "tendentiousness"
+    ],
+    "example_en": "The report was criticized for being tendentious.",
+    "example_ko": "그 보고서는 편향적이라는 비판을 받았다."
+  },
+  "adjacent": {
+    "id": "adjacent",
+    "canonical": "adjacent",
+    "pos": "adjective",
+    "meaning_ko": "인접한, 이웃한",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "adjacency"
+    ],
+    "example_en": "The hotel is adjacent to the train station.",
+    "example_ko": "호텔은 기차역에 인접해 있다."
+  },
+  "aggregate": {
+    "id": "aggregate",
+    "canonical": "aggregate",
+    "pos": "noun",
+    "meaning_ko": "총합, 집합체",
+    "cefr": "B2",
+    "theme": [
+      "business",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "aggregates",
+      "aggregated",
+      "aggregating",
+      "aggregation"
+    ],
+    "example_en": "The aggregate cost exceeded our budget.",
+    "example_ko": "총비용이 예산을 초과했다."
+  },
+  "assert": {
+    "id": "assert",
+    "canonical": "assert",
+    "pos": "verb",
+    "meaning_ko": "주장하다, 단언하다",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "essential",
+    "forms": [
+      "asserts",
+      "asserted",
+      "asserting",
+      "assertion",
+      "assertive"
+    ],
+    "example_en": "She asserted her right to speak at the meeting.",
+    "example_ko": "그녀는 회의에서 발언할 권리를 주장했다."
+  },
+  "chronic": {
+    "id": "chronic",
+    "canonical": "chronic",
+    "pos": "adjective",
+    "meaning_ko": "만성적인, 고질적인",
+    "cefr": "B2",
+    "theme": [
+      "science",
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "chronically"
+    ],
+    "example_en": "Chronic stress can lead to serious health problems.",
+    "example_ko": "만성 스트레스는 심각한 건강 문제를 초래할 수 있다."
+  },
+  "conform": {
+    "id": "conform",
+    "canonical": "conform",
+    "pos": "verb",
+    "meaning_ko": "순응하다, 따르다",
+    "cefr": "B2",
+    "theme": [
+      "abstract",
+      "politics"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "conforms",
+      "conformed",
+      "conforming",
+      "conformity",
+      "conformist"
+    ],
+    "example_en": "Students were expected to conform to strict rules.",
+    "example_ko": "학생들은 엄격한 규칙을 따를 것으로 기대되었다."
+  },
+  "contemplate": {
+    "id": "contemplate",
+    "canonical": "contemplate",
+    "pos": "verb",
+    "meaning_ko": "숙고하다, 생각하다",
+    "cefr": "B2",
+    "theme": [
+      "abstract"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "contemplates",
+      "contemplated",
+      "contemplating",
+      "contemplation"
+    ],
+    "example_en": "She contemplated changing careers.",
+    "example_ko": "그녀는 직업을 바꾸는 것을 숙고했다."
+  },
+  "contradict": {
+    "id": "contradict",
+    "canonical": "contradict",
+    "pos": "verb",
+    "meaning_ko": "모순되다, 반박하다",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "contradicts",
+      "contradicted",
+      "contradicting",
+      "contradiction",
+      "contradictory"
+    ],
+    "example_en": "The evidence contradicts his testimony.",
+    "example_ko": "증거가 그의 증언과 모순된다."
+  },
+  "deteriorate": {
+    "id": "deteriorate",
+    "canonical": "deteriorate",
+    "pos": "verb",
+    "meaning_ko": "악화되다, 저하되다",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "deteriorates",
+      "deteriorated",
+      "deteriorating",
+      "deterioration"
+    ],
+    "example_en": "Air quality continues to deteriorate in major cities.",
+    "example_ko": "대도시에서 대기질이 계속 악화되고 있다."
+  },
+  "diminish": {
+    "id": "diminish",
+    "canonical": "diminish",
+    "pos": "verb",
+    "meaning_ko": "줄어들다, 감소시키다",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "diminishes",
+      "diminished",
+      "diminishing"
+    ],
+    "example_en": "Nothing can diminish his achievements.",
+    "example_ko": "아무것도 그의 업적을 줄일 수 없다."
+  },
+  "displace": {
+    "id": "displace",
+    "canonical": "displace",
+    "pos": "verb",
+    "meaning_ko": "대체하다, 이동시키다",
+    "cefr": "B2",
+    "theme": [
+      "politics",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "displaces",
+      "displaced",
+      "displacing",
+      "displacement"
+    ],
+    "example_en": "Millions of people were displaced by the conflict.",
+    "example_ko": "수백만 명이 분쟁으로 이주했다."
+  },
+  "preclude": {
+    "id": "preclude",
+    "canonical": "preclude",
+    "pos": "verb",
+    "meaning_ko": "배제하다, 불가능하게 하다",
+    "cefr": "B2",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "precludes",
+      "precluded",
+      "precluding",
+      "preclusion"
+    ],
+    "example_en": "Bad weather precluded any outdoor activities.",
+    "example_ko": "악천후가 모든 야외 활동을 불가능하게 했다."
+  },
+  "erode": {
+    "id": "erode",
+    "canonical": "erode",
+    "pos": "verb",
+    "meaning_ko": "침식하다, 약화시키다",
+    "cefr": "B2",
+    "theme": [
+      "science",
+      "abstract"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "erodes",
+      "eroded",
+      "eroding",
+      "erosion"
+    ],
+    "example_en": "Public trust in institutions has been eroded.",
+    "example_ko": "제도에 대한 국민의 신뢰가 약화되었다."
+  },
+  "fragment": {
+    "id": "fragment",
+    "canonical": "fragment",
+    "pos": "noun",
+    "meaning_ko": "파편, 단편",
+    "cefr": "B2",
+    "theme": [
+      "science",
+      "literary"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "fragments",
+      "fragmented",
+      "fragmentation"
+    ],
+    "example_en": "Only fragments of the original manuscript survive.",
+    "example_ko": "원본 필사본의 단편만 남아 있다."
+  },
+  "marginalize": {
+    "id": "marginalize",
+    "canonical": "marginalize",
+    "pos": "verb",
+    "meaning_ko": "소외시키다, 주변화하다",
+    "cefr": "B2",
+    "theme": [
+      "politics",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "marginalizes",
+      "marginalized",
+      "marginalizing",
+      "marginalization"
+    ],
+    "example_en": "Minority groups are often marginalized in society.",
+    "example_ko": "소수 집단은 종종 사회에서 소외된다."
+  },
+  "skeptical": {
+    "id": "skeptical",
+    "canonical": "skeptical",
+    "pos": "adjective",
+    "meaning_ko": "회의적인",
+    "cefr": "B2",
+    "theme": [
+      "academic",
+      "abstract"
+    ],
+    "register": "neutral",
+    "learner_value": "essential",
+    "forms": [
+      "skeptically",
+      "skepticism",
+      "skeptic"
+    ],
+    "example_en": "Scientists remain skeptical about the findings.",
+    "example_ko": "과학자들은 그 발견에 대해 여전히 회의적이다."
+  },
+  "abdicate": {
+    "id": "abdicate",
+    "canonical": "abdicate",
+    "pos": "verb",
+    "meaning_ko": "퇴위하다, 포기하다",
+    "cefr": "C1",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "abdicates",
+      "abdicated",
+      "abdicating",
+      "abdication"
+    ],
+    "example_en": "The king abdicated the throne in favor of his son.",
+    "example_ko": "왕은 아들에게 양위하여 퇴위했다."
+  },
+  "assimilate": {
+    "id": "assimilate",
+    "canonical": "assimilate",
+    "pos": "verb",
+    "meaning_ko": "동화하다, 흡수하다",
+    "cefr": "C1",
+    "theme": [
+      "politics",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "assimilates",
+      "assimilated",
+      "assimilating",
+      "assimilation"
+    ],
+    "example_en": "Immigrants often struggle to assimilate into a new culture.",
+    "example_ko": "이민자들은 종종 새로운 문화에 동화되기 위해 고군분투한다."
+  },
+  "attrition": {
+    "id": "attrition",
+    "canonical": "attrition",
+    "pos": "noun",
+    "meaning_ko": "소모, 마찰, 감원",
+    "cefr": "C1",
+    "theme": [
+      "business",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "attritional"
+    ],
+    "example_en": "The company reduced staff through natural attrition.",
+    "example_ko": "회사는 자연 감원을 통해 직원을 줄였다."
+  },
+  "clandestine": {
+    "id": "clandestine",
+    "canonical": "clandestine",
+    "pos": "adjective",
+    "meaning_ko": "비밀의, 은밀한",
+    "cefr": "C1",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "clandestinely"
+    ],
+    "example_en": "The government ran clandestine operations abroad.",
+    "example_ko": "정부는 해외에서 비밀 작전을 수행했다."
+  },
+  "circumvent": {
+    "id": "circumvent",
+    "canonical": "circumvent",
+    "pos": "verb",
+    "meaning_ko": "우회하다, 회피하다",
+    "cefr": "C1",
+    "theme": [
+      "business",
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "circumvents",
+      "circumvented",
+      "circumventing",
+      "circumvention"
+    ],
+    "example_en": "They found ways to circumvent the regulations.",
+    "example_ko": "그들은 규제를 우회하는 방법을 찾았다."
+  },
+  "corroborate": {
+    "id": "corroborate",
+    "canonical": "corroborate",
+    "pos": "verb",
+    "meaning_ko": "뒷받침하다, 확증하다",
+    "cefr": "C1",
+    "theme": [
+      "academic",
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "corroborates",
+      "corroborated",
+      "corroborating",
+      "corroboration"
+    ],
+    "example_en": "Witnesses corroborated the victim's account.",
+    "example_ko": "증인들이 피해자의 진술을 확증했다."
+  },
+  "delineate": {
+    "id": "delineate",
+    "canonical": "delineate",
+    "pos": "verb",
+    "meaning_ko": "서술하다, 윤곽을 그리다",
+    "cefr": "C1",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "delineates",
+      "delineated",
+      "delineating",
+      "delineation"
+    ],
+    "example_en": "The report delineates the responsibilities of each department.",
+    "example_ko": "보고서는 각 부서의 책임을 서술한다."
+  },
+  "deplore": {
+    "id": "deplore",
+    "canonical": "deplore",
+    "pos": "verb",
+    "meaning_ko": "한탄하다, 개탄하다",
+    "cefr": "C1",
+    "theme": [
+      "politics",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "deplores",
+      "deplored",
+      "deploring",
+      "deplorable"
+    ],
+    "example_en": "Human rights groups deplore the use of torture.",
+    "example_ko": "인권 단체들은 고문의 사용을 개탄한다."
+  },
+  "deprecate": {
+    "id": "deprecate",
+    "canonical": "deprecate",
+    "pos": "verb",
+    "meaning_ko": "반대하다, 비난하다",
+    "cefr": "C1",
+    "theme": [
+      "academic",
+      "technology"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "deprecates",
+      "deprecated",
+      "deprecating",
+      "deprecation"
+    ],
+    "example_en": "The old method has been deprecated in favor of a new approach.",
+    "example_ko": "이전 방법은 새로운 접근 방식을 위해 폐기되었다."
+  },
+  "emancipate": {
+    "id": "emancipate",
+    "canonical": "emancipate",
+    "pos": "verb",
+    "meaning_ko": "해방하다",
+    "cefr": "C1",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "emancipates",
+      "emancipated",
+      "emancipating",
+      "emancipation"
+    ],
+    "example_en": "The movement sought to emancipate enslaved people.",
+    "example_ko": "그 운동은 노예화된 사람들을 해방하고자 했다."
+  },
+  "extrapolate": {
+    "id": "extrapolate",
+    "canonical": "extrapolate",
+    "pos": "verb",
+    "meaning_ko": "추정하다, 외삽하다",
+    "cefr": "C1",
+    "theme": [
+      "science",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "extrapolates",
+      "extrapolated",
+      "extrapolating",
+      "extrapolation"
+    ],
+    "example_en": "We can extrapolate future trends from current data.",
+    "example_ko": "현재 데이터에서 미래 추세를 추정할 수 있다."
+  },
+  "galvanize": {
+    "id": "galvanize",
+    "canonical": "galvanize",
+    "pos": "verb",
+    "meaning_ko": "자극하다, 활기를 불어넣다",
+    "cefr": "C1",
+    "theme": [
+      "politics",
+      "abstract"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "galvanizes",
+      "galvanized",
+      "galvanizing"
+    ],
+    "example_en": "The crisis galvanized the community into action.",
+    "example_ko": "위기가 지역사회를 행동하도록 자극했다."
+  },
+  "homogeneous": {
+    "id": "homogeneous",
+    "canonical": "homogeneous",
+    "pos": "adjective",
+    "meaning_ko": "동질적인, 균일한",
+    "cefr": "C1",
+    "theme": [
+      "science",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "homogeneously",
+      "homogeneity",
+      "heterogeneous"
+    ],
+    "example_en": "The population is not culturally homogeneous.",
+    "example_ko": "인구가 문화적으로 동질적이지 않다."
+  },
+  "indiscriminate": {
+    "id": "indiscriminate",
+    "canonical": "indiscriminate",
+    "pos": "adjective",
+    "meaning_ko": "무차별적인",
+    "cefr": "C1",
+    "theme": [
+      "politics",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "indiscriminately"
+    ],
+    "example_en": "The attack was indiscriminate, killing civilians and soldiers alike.",
+    "example_ko": "공격은 무차별적이었고, 민간인과 군인을 가리지 않고 사살했다."
+  },
+  "jurisprudence": {
+    "id": "jurisprudence",
+    "canonical": "jurisprudence",
+    "pos": "noun",
+    "meaning_ko": "법학, 판례법",
+    "cefr": "C1",
+    "theme": [
+      "politics"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [],
+    "example_en": "She is an expert in constitutional jurisprudence.",
+    "example_ko": "그녀는 헌법 법학 전문가이다."
+  },
+  "meticulous": {
+    "id": "meticulous",
+    "canonical": "meticulous",
+    "pos": "adjective",
+    "meaning_ko": "꼼꼼한, 세심한",
+    "cefr": "C1",
+    "theme": [
+      "abstract"
+    ],
+    "register": "neutral",
+    "learner_value": "useful",
+    "forms": [
+      "meticulously",
+      "meticulousness"
+    ],
+    "example_en": "She is meticulous about keeping accurate records.",
+    "example_ko": "그녀는 정확한 기록을 유지하는 데 꼼꼼하다."
+  },
+  "ostensible": {
+    "id": "ostensible",
+    "canonical": "ostensible",
+    "pos": "adjective",
+    "meaning_ko": "표면상의, 겉보기의",
+    "cefr": "C1",
+    "theme": [
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "ostensibly"
+    ],
+    "example_en": "The ostensible reason for the meeting was budget planning.",
+    "example_ko": "회의의 표면상 이유는 예산 계획이었다."
+  },
+  "precipitate": {
+    "id": "precipitate",
+    "canonical": "precipitate",
+    "pos": "verb",
+    "meaning_ko": "촉발하다, 재촉하다",
+    "cefr": "C1",
+    "theme": [
+      "academic",
+      "science"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "precipitates",
+      "precipitated",
+      "precipitating",
+      "precipitation"
+    ],
+    "example_en": "The scandal precipitated his resignation.",
+    "example_ko": "스캔들이 그의 사임을 촉발했다."
+  },
+  "rescind": {
+    "id": "rescind",
+    "canonical": "rescind",
+    "pos": "verb",
+    "meaning_ko": "취소하다, 철회하다",
+    "cefr": "C1",
+    "theme": [
+      "politics",
+      "business"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "rescinds",
+      "rescinded",
+      "rescinding"
+    ],
+    "example_en": "The company rescinded the job offer.",
+    "example_ko": "회사는 채용 제안을 철회했다."
+  },
+  "vindicate": {
+    "id": "vindicate",
+    "canonical": "vindicate",
+    "pos": "verb",
+    "meaning_ko": "입증하다, 정당화하다",
+    "cefr": "C1",
+    "theme": [
+      "politics",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "vindicates",
+      "vindicated",
+      "vindicating",
+      "vindication"
+    ],
+    "example_en": "The court ruling vindicated her decision.",
+    "example_ko": "법원 판결이 그녀의 결정을 정당화했다."
+  },
+  "efficacy": {
+    "id": "efficacy",
+    "canonical": "efficacy",
+    "pos": "noun",
+    "meaning_ko": "효능, 유효성",
+    "cefr": "C1",
+    "theme": [
+      "science",
+      "academic"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "efficacious"
+    ],
+    "example_en": "The efficacy of the vaccine was proven in clinical trials.",
+    "example_ko": "백신의 효능이 임상 시험에서 입증되었다."
+  },
+  "propensity": {
+    "id": "propensity",
+    "canonical": "propensity",
+    "pos": "noun",
+    "meaning_ko": "성향, 경향",
+    "cefr": "C1",
+    "theme": [
+      "academic",
+      "abstract"
+    ],
+    "register": "formal",
+    "learner_value": "useful",
+    "forms": [
+      "propensities"
+    ],
+    "example_en": "He has a propensity for taking unnecessary risks.",
+    "example_ko": "그는 불필요한 위험을 감수하는 성향이 있다."
+  }
+}

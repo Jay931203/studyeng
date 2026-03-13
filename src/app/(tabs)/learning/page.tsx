@@ -10,13 +10,10 @@ import { SavedPhraseCard } from '@/components/SavedPhraseCard'
 import { WatchHistory } from '@/components/WatchHistory'
 import { GameLauncher } from '@/components/games/GameLauncher'
 import { LevelChallengeGame } from '@/components/level/LevelChallengeGame'
-import { TierStatusCard } from '@/components/tier/TierStatusCard'
 import { AppPage, MetricCard, SurfaceCard } from '@/components/ui/AppPage'
 import { categories } from '@/data/seed-videos'
 import { getCatalogSeriesById, getCatalogVideoById } from '@/lib/catalog'
-import { computeLearningXpSummary } from '@/lib/xpSummary'
 import { buildShortsUrl } from '@/lib/videoRoutes'
-import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useLikeStore } from '@/stores/useLikeStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useUserStore } from '@/stores/useUserStore'
@@ -24,16 +21,12 @@ import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useLevelStore, getLevelGaugeProgress } from '@/stores/useLevelStore'
 import { useLevelChallengeStore } from '@/stores/useLevelChallengeStore'
+import { LEVEL_LABELS, CEFR_ORDER, displayLevelName } from '@/types/level'
+import type { CefrLevel } from '@/types/level'
 
 const categoryLabels = Object.fromEntries(
   categories.map((category) => [category.id, category.label]),
 ) as Record<string, string>
-
-const LEVEL_LABELS = {
-  beginner: 'Beginner',
-  intermediate: 'Intermediate',
-  advanced: 'Advanced',
-} as const
 
 export default function LearningPage() {
   const router = useRouter()
@@ -41,14 +34,10 @@ export default function LearningPage() {
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)
   const viewCounts = useWatchHistoryStore((state) => state.viewCounts)
   const streakDays = useUserStore((state) => state.streakDays)
-  const rewardLevel = useUserStore((state) => state.level)
-  const rewardXp = useUserStore((state) => state.xp)
-  const totalXpEarned = useUserStore((state) => state.totalXpEarned)
+  const totalXP = useUserStore((state) => state.getTotalXP())
   const likes = useLikeStore((state) => state.likes)
   const level = useOnboardingStore((s) => s.level)
   const rawScore = useLevelStore((s) => s.rawScore)
-  const videoXp = useLevelStore((s) => s.videoXP)
-  const familiarityEntries = useFamiliarityStore((state) => state.entries)
   const canChallenge = useLevelChallengeStore((s) => s.canChallenge)
   const getTargetLevel = useLevelChallengeStore((s) => s.getTargetLevel)
   const getAttemptCount = useLevelChallengeStore((s) => s.getAttemptCount)
@@ -60,24 +49,9 @@ export default function LearningPage() {
     [viewCounts],
   )
   const levelProgress = getLevelGaugeProgress(rawScore, level)
-  const nextLevelLabel =
-    level === 'beginner'
-      ? LEVEL_LABELS.intermediate
-      : level === 'intermediate'
-        ? LEVEL_LABELS.advanced
-        : null
-  const xpSummary = useMemo(
-    () =>
-      computeLearningXpSummary({
-        familiarityEntries,
-        videoXp,
-        totalXpEarned,
-        level: rewardLevel,
-        xp: rewardXp,
-      }),
-    [familiarityEntries, rewardLevel, rewardXp, totalXpEarned, videoXp],
-  )
-
+  const levelIdx = CEFR_ORDER.indexOf(level)
+  const nextLevel = levelIdx < CEFR_ORDER.length - 1 ? CEFR_ORDER[levelIdx + 1] : null
+  const nextLevelLabel = nextLevel ? LEVEL_LABELS[nextLevel] : null
   const likedVideos = useMemo(
     () =>
       Object.keys(likes)
@@ -111,7 +85,7 @@ export default function LearningPage() {
               tone="accent"
               className="text-center"
             />
-            <MetricCard label="XP" value={xpSummary.totalXp} className="text-center" />
+            <MetricCard label="XP" value={totalXP} className="text-center" />
             <MetricCard label="저장 표현" value={`${phrases.length}개`} className="text-center" />
             <MetricCard
               label="연속 학습"
@@ -122,7 +96,7 @@ export default function LearningPage() {
 
           <div className="mt-4">
             <div className="mb-1.5 flex items-center justify-between gap-3 text-[11px] text-[var(--text-muted)]">
-              <span>LEVEL PROGRESS</span>
+              <span>CHALLENGE READINESS</span>
               <span>
                 {nextLevelLabel ? `${Math.round(levelProgress * 100)}%` : 'MAX LEVEL'}
               </span>
@@ -138,14 +112,12 @@ export default function LearningPage() {
           </div>
         </SurfaceCard>
 
-        <TierStatusCard />
-
         {/* Level Challenge Card */}
         {canChallenge(level) && (() => {
           const target = getTargetLevel(level)
           if (!target) return null
           const attempts = getAttemptCount(target)
-          const targetLabel = target === 'intermediate' ? 'Intermediate' : 'Advanced'
+          const targetLabel = displayLevelName(target)
           return (
             <SurfaceCard className="p-5">
               <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">

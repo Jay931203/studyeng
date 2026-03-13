@@ -107,10 +107,14 @@ const CATEGORY_LABELS: Record<string, string> = {
 // CEFR filter
 // ---------------------------------------------------------------------------
 
+// CEFR range per level: user level +/- 1
 const CEFR_BY_LEVEL: Record<string, Set<string>> = {
-  beginner: new Set(['A1', 'A2', 'B1']),
-  intermediate: new Set(['B1', 'B2']),
-  advanced: new Set(['B2', 'C1', 'C2']),
+  A1: new Set(['A1', 'A2']),
+  A2: new Set(['A1', 'A2', 'B1']),
+  B1: new Set(['A2', 'B1', 'B2']),
+  B2: new Set(['B1', 'B2', 'C1']),
+  C1: new Set(['B2', 'C1', 'C2']),
+  C2: new Set(['C1', 'C2']),
 }
 
 // ---------------------------------------------------------------------------
@@ -320,7 +324,7 @@ function applyWordBlank(
 // ---------------------------------------------------------------------------
 
 function selectQuestions(level: string): QuestionData[] {
-  const cefrSet = CEFR_BY_LEVEL[level] ?? CEFR_BY_LEVEL.beginner
+  const cefrSet = CEFR_BY_LEVEL[level] ?? CEFR_BY_LEVEL.A1
 
   // Determine split: 50% expressions, 50% words
   const exprTarget = Math.round(QUESTIONS_PER_ROUND * 0.5)

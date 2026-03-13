@@ -1,25 +1,14 @@
 {
   "version": "1.0",
-  "enabled": true,
+  "enabled": false,
   "teamName": "",
   "feature": "studyeng",
   "pdcaPhase": "do",
   "orchestrationPattern": "leader",
   "ctoAgent": "opus",
-  "startedAt": "2026-03-08T06:57:34.376Z",
-  "lastUpdated": "2026-03-08T06:59:50.790Z",
-  "teammates": [
-    {
-      "name": "a163f467b255e5f28",
-      "role": "frontend-developer",
-      "model": "sonnet",
-      "status": "completed",
-      "currentTask": null,
-      "taskId": null,
-      "startedAt": "2026-03-08T06:57:34.378Z",
-      "lastActivityAt": "2026-03-08T06:59:50.744Z"
-    }
-  ],
+  "startedAt": "2026-03-13T14:37:45.842Z",
+  "lastUpdated": "2026-03-13T14:57:57.902Z",
+  "teammates": [],
   "progress": {
     "totalTasks": 0,
     "completedTasks": 0,
@@ -28,5 +17,5 @@
     "pendingTasks": 0
   },
   "recentMessages": [],
-  "sessionId": "26d464b2-681f-4fed-8c0b-2dd921280178"
+  "sessionId": "6c5b7f63-efb3-425a-9052-7a1086588e5f"
 }

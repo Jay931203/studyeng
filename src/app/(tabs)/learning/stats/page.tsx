@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import { ViewingStats } from '@/components/ViewingStats'
@@ -14,25 +13,17 @@ import { useMilestoneStore } from '@/stores/useMilestoneStore'
 // Types
 // ---------------------------------------------------------------------------
 
-type Level = 'beginner' | 'intermediate' | 'advanced'
-
-const LEVEL_LABELS: Record<Level, string> = {
-  beginner: 'Beginner',
-  intermediate: 'Intermediate',
-  advanced: 'Advanced',
-}
+import { LEVEL_LABELS } from '@/types/level'
+import type { CefrLevel } from '@/types/level'
 
 export default function StatsPage() {
   const router = useRouter()
   const level = useOnboardingStore((s) => s.level)
-  const setLevel = useOnboardingStore((s) => s.setLevel)
   const videoXPTotal = useLevelStore((s) => s.getVideoXPTotal())
   const totalXP = useUserStore((s) => s.getTotalXP())
   const streakDays = useUserStore((s) => s.streakDays)
   const totalSessions = useGameProgressStore((s) => s.getTotalSessions())
   const achievedMilestones = useMilestoneStore((s) => Object.keys(s.achieved).length)
-
-  const [showLevelPicker, setShowLevelPicker] = useState(false)
 
   const handleBack = () => {
     if (typeof window !== 'undefined' && window.history.length > 1) {
@@ -67,41 +58,10 @@ export default function StatsPage() {
 
         {/* ENGLISH LEVEL */}
         <SurfaceCard className="p-5">
-          <div className="mb-4 flex items-center justify-between">
-            <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-              ENGLISH LEVEL
-            </p>
-            <button
-              onClick={() => setShowLevelPicker((v) => !v)}
-              className="rounded-full border border-[var(--border-card)] px-3 py-1 text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)] transition-colors hover:text-[var(--text-primary)]"
-            >
-              CHANGE
-            </button>
-          </div>
+          <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+            ENGLISH LEVEL
+          </p>
 
-          {/* Level picker */}
-          {showLevelPicker && (
-            <div className="mb-4 grid grid-cols-3 gap-2">
-              {(['beginner', 'intermediate', 'advanced'] as Level[]).map((l) => (
-                <button
-                  key={l}
-                  onClick={() => {
-                    setLevel(l)
-                    setShowLevelPicker(false)
-                  }}
-                  className={`rounded-xl border py-2.5 text-[12px] font-semibold transition-all ${
-                    level === l
-                      ? 'border-[var(--accent-primary)] bg-[var(--accent-primary)] text-white'
-                      : 'border-[var(--border-card)] text-[var(--text-secondary)]'
-                  }`}
-                >
-                  {LEVEL_LABELS[l]}
-                </button>
-              ))}
-            </div>
-          )}
-
-          {/* Current level display */}
           <span className="text-2xl font-bold text-[var(--text-primary)]">
             {LEVEL_LABELS[level]}
           </span>
@@ -137,10 +97,11 @@ export default function StatsPage() {
             HOW XP WORKS
           </p>
           <ul className="space-y-1.5 text-sm text-[var(--text-secondary)]">
-            <li>게임 한 판 완료: +12~15 XP</li>
-            <li>영상 시청 완료: +3 XP</li>
-            <li>연속 출석 보너스: +2~20 XP/일</li>
-            <li>마일스톤 달성: 1회 보너스</li>
+            <li>게임 한 판 완료: +12~15 XP (일일 최대 40 XP)</li>
+            <li>영상 시청 완료: +3 XP (영상당 최대 10회)</li>
+            <li>연속 출석 보너스: 영상/게임 완주 시 +2~20 XP</li>
+            <li>데일리 미션 완료: 미션별 XP 보상</li>
+            <li>마일스톤 달성: 1회 보너스 XP</li>
           </ul>
         </SurfaceCard>
 
