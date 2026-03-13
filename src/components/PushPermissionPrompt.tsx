@@ -1,5 +1,6 @@
 'use client'
 
+import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 import { usePushStore } from '@/stores/usePushStore'
 import { useUserStore } from '@/stores/useUserStore'
@@ -29,17 +30,22 @@ export function PushPermissionPrompt({ visible, onClose }: Props) {
   useEffect(() => {
     if (visible && shouldShowPrompt()) {
       // Small delay so the prompt doesn't appear instantly on video end
-      const t = setTimeout(() => setShow(true), 800)
-      return () => clearTimeout(t)
+      const t = window.setTimeout(() => setShow(true), 800)
+      return () => window.clearTimeout(t)
     }
-    setShow(false)
+
+    const t = window.setTimeout(() => setShow(false), 0)
+    return () => window.clearTimeout(t)
   }, [visible, shouldShowPrompt])
 
   // Auto-hide if permission already resolved
   useEffect(() => {
     if (permission === 'granted' || permission === 'denied') {
-      setShow(false)
+      const t = window.setTimeout(() => setShow(false), 0)
+      return () => window.clearTimeout(t)
     }
+
+    return undefined
   }, [permission])
 
   const handleAllow = async () => {
@@ -64,13 +70,25 @@ export function PushPermissionPrompt({ visible, onClose }: Props) {
       : null
 
   return (
-    <div
+    <motion.div
       role="dialog"
       aria-modal="true"
       aria-label="Push notification permission"
-      className="fixed inset-x-0 bottom-20 z-50 flex justify-center px-4"
+      initial={{ opacity: 0, y: -18, scale: 0.98 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      exit={{ opacity: 0, y: -10, scale: 0.98 }}
+      transition={{ duration: 0.22, ease: 'easeOut' }}
+      className="fixed inset-x-0 z-50 flex justify-center px-4"
+      style={{ top: 'max(16px, env(safe-area-inset-top))' }}
     >
-      <div className="w-full max-w-sm rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-5 shadow-xl">
+      <div
+        className="w-full max-w-sm rounded-2xl border p-5 shadow-xl"
+        style={{
+          borderColor: 'var(--border-card)',
+          backgroundColor: 'var(--bg-primary)',
+          boxShadow: '0 14px 32px rgba(0, 0, 0, 0.34)',
+        }}
+      >
         {/* Icon row */}
         <div className="mb-3 flex items-center gap-3">
           <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--accent-primary)]/15">
@@ -119,6 +137,6 @@ export function PushPermissionPrompt({ visible, onClose }: Props) {
           </button>
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
