@@ -518,9 +518,6 @@ export function VideoPlayer({
       })}
       onDismiss={handlePrimingDismiss}
       onMarkFamiliar={markFamiliar}
-      familiarCounts={Object.fromEntries(
-        Object.entries(familiarExprs).map(([k, v]) => [k, v.count])
-      )}
       onPlaySegment={(start, end) => {
         seekTo(start)
         play()
