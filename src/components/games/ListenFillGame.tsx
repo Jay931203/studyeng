@@ -4,6 +4,8 @@ import { useState, useCallback, useMemo, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import expressionEntries from '@/data/expression-entries-v2.json'
 import expressionIndex from '@/data/expression-index-v2.json'
+import wordEntriesData from '@/data/word-entries.json'
+import wordIndexData from '@/data/word-index.json'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useLevelStore, computeXpForSwipe } from '@/stores/useLevelStore'
@@ -26,6 +28,17 @@ interface ExpressionEntry {
   [key: string]: unknown
 }
 
+interface WordEntry {
+  id: string
+  canonical: string
+  pos: string
+  meaning_ko: string
+  cefr: string
+  example_en?: string
+  example_ko?: string
+  [key: string]: unknown
+}
+
 interface IndexMatch {
   exprId: string
   sentenceIdx: number
@@ -33,7 +46,16 @@ interface IndexMatch {
   ko: string
 }
 
+interface WordIndexMatch {
+  wordId: string
+  sentenceIdx: number
+  en: string
+  ko: string
+  surfaceForm: string
+}
+
 interface QuestionData {
+  type: 'expression' | 'word'
   exprId: string
   videoId: string
   sentenceIdx: number
@@ -54,6 +76,8 @@ const QUESTIONS_PER_ROUND = 8
 
 const entries = expressionEntries as Record<string, ExpressionEntry>
 const index = expressionIndex as Record<string, IndexMatch[]>
+const wordEntries = wordEntriesData as Record<string, WordEntry>
+const wordIndex = wordIndexData as Record<string, WordIndexMatch[]>
 
 // ---------------------------------------------------------------------------
 // Constants
@@ -87,6 +111,15 @@ const CATEGORY_LABELS: Record<string, string> = {
   interjection: 'interjection',
   exclamation: 'exclamation',
   filler: 'filler',
+  // POS labels for words
+  verb: 'verb',
+  noun: 'noun',
+  adjective: 'adjective',
+  adverb: 'adverb',
+  preposition: 'preposition',
+  conjunction: 'conjunction',
+  pronoun: 'pronoun',
+  determiner: 'determiner',
 }
 
 // ---------------------------------------------------------------------------
@@ -157,6 +190,40 @@ function buildPool(): PoolEntry[] {
 }
 
 // ---------------------------------------------------------------------------
+// Word pool
+// ---------------------------------------------------------------------------
+
+interface WordPoolEntry {
+  wordId: string
+  videoId: string
+  sentenceIdx: number
+  en: string
+  ko: string
+  surfaceForm: string
+}
+
+let _wordPoolCache: WordPoolEntry[] | null = null
+
+function buildWordPool(): WordPoolEntry[] {
+  if (_wordPoolCache) return _wordPoolCache
+  const pool: WordPoolEntry[] = []
+  for (const [videoId, matches] of Object.entries(wordIndex)) {
+    for (const m of matches) {
+      pool.push({
+        wordId: m.wordId,
+        videoId,
+        sentenceIdx: m.sentenceIdx,
+        en: m.en,
+        ko: m.ko,
+        surfaceForm: m.surfaceForm,
+      })
+    }
+  }
+  _wordPoolCache = pool
+  return pool
+}
+
+// ---------------------------------------------------------------------------
 // Distractor generation
 // ---------------------------------------------------------------------------
 
@@ -201,31 +268,100 @@ function generateDistractors(
 }
 
 // ---------------------------------------------------------------------------
+// Word distractor generation
+// ---------------------------------------------------------------------------
+
+function generateWordDistractors(
+  correctWordId: string,
+  correctCefr: string,
+): string[] {
+  const correctEntry = wordEntries[correctWordId]
+  const correctSurface = correctEntry?.canonical ?? correctWordId
+
+  // Gather same-CEFR words first, then others
+  const sameCefr: string[] = []
+  const otherCefr: string[] = []
+
+  for (const [id, entry] of Object.entries(wordEntries)) {
+    if (id === correctWordId) continue
+    const canonical = entry.canonical ?? id
+    if (canonical === correctSurface) continue
+    if (entry.cefr?.toUpperCase() === correctCefr) {
+      sameCefr.push(canonical)
+    } else {
+      otherCefr.push(canonical)
+    }
+  }
+
+  const candidates = shuffle(sameCefr)
+  if (candidates.length < 3) {
+    candidates.push(...shuffle(otherCefr))
+  }
+
+  const seen = new Set<string>([correctSurface])
+  const result: string[] = []
+  for (const c of candidates) {
+    if (result.length >= 3) break
+    if (seen.has(c)) continue
+    seen.add(c)
+    result.push(c)
+  }
+
+  return result
+}
+
+// ---------------------------------------------------------------------------
+// Word blank application (uses surfaceForm for exact match)
+// ---------------------------------------------------------------------------
+
+function applyWordBlank(
+  sentence: string,
+  surfaceForm: string,
+): { before: string; after: string } | null {
+  const idx = sentence.indexOf(surfaceForm)
+  if (idx === -1) {
+    // Fallback: case-insensitive search
+    const lowerIdx = sentence.toLowerCase().indexOf(surfaceForm.toLowerCase())
+    if (lowerIdx === -1) return null
+    return {
+      before: sentence.slice(0, lowerIdx),
+      after: sentence.slice(lowerIdx + surfaceForm.length),
+    }
+  }
+  return {
+    before: sentence.slice(0, idx),
+    after: sentence.slice(idx + surfaceForm.length),
+  }
+}
+
+// ---------------------------------------------------------------------------
 // Question selection
 // ---------------------------------------------------------------------------
 
 function selectQuestions(level: string): QuestionData[] {
   const cefrSet = CEFR_BY_LEVEL[level] ?? CEFR_BY_LEVEL.beginner
-  const pool = buildPool()
 
-  // Filter pool by CEFR
+  // Determine split: 50% expressions, 50% words
+  const exprTarget = Math.round(QUESTIONS_PER_ROUND * 0.5)
+  const wordTarget = QUESTIONS_PER_ROUND - exprTarget
+
+  // --- Expression questions ---
+  const pool = buildPool()
   let filtered = pool.filter((p) => {
     const entry = entries[p.exprId]
     if (!entry?.cefr) return false
     return cefrSet.has(entry.cefr.toUpperCase())
   })
-
-  // Fallback: use all if not enough
-  if (filtered.length < QUESTIONS_PER_ROUND) {
+  if (filtered.length < exprTarget) {
     filtered = pool
   }
 
-  const shuffled = shuffle(filtered)
-  const questions: QuestionData[] = []
+  const shuffledExpr = shuffle(filtered)
+  const exprQuestions: QuestionData[] = []
   const usedExprIds = new Set<string>()
 
-  for (const item of shuffled) {
-    if (questions.length >= QUESTIONS_PER_ROUND) break
+  for (const item of shuffledExpr) {
+    if (exprQuestions.length >= exprTarget) break
     if (usedExprIds.has(item.exprId)) continue
 
     const entry = entries[item.exprId]
@@ -240,7 +376,8 @@ function selectQuestions(level: string): QuestionData[] {
     const distractors = generateDistractors(item.exprId, entry.category)
     const choices = shuffle([canonical, ...distractors])
 
-    questions.push({
+    exprQuestions.push({
+      type: 'expression',
       exprId: item.exprId,
       videoId: item.videoId,
       sentenceIdx: item.sentenceIdx,
@@ -256,25 +393,131 @@ function selectQuestions(level: string): QuestionData[] {
     })
   }
 
-  return questions
+  // --- Word questions ---
+  const wordPool = buildWordPool()
+  let filteredWords = wordPool.filter((p) => {
+    const entry = wordEntries[p.wordId]
+    if (!entry?.cefr) return false
+    return cefrSet.has(entry.cefr.toUpperCase())
+  })
+  if (filteredWords.length < wordTarget) {
+    filteredWords = wordPool
+  }
+
+  const shuffledWords = shuffle(filteredWords)
+  const wordQuestions: QuestionData[] = []
+  const usedWordIds = new Set<string>()
+
+  for (const item of shuffledWords) {
+    if (wordQuestions.length >= wordTarget) break
+    if (usedWordIds.has(item.wordId)) continue
+
+    const entry = wordEntries[item.wordId]
+    if (!entry) continue
+
+    const blank = applyWordBlank(item.en, item.surfaceForm)
+    if (!blank) continue
+
+    usedWordIds.add(item.wordId)
+
+    const cefr = entry.cefr?.toUpperCase() ?? 'B1'
+    const distractors = generateWordDistractors(item.wordId, cefr)
+    // Use surfaceForm as the correct answer (matches what was blanked)
+    const choices = shuffle([item.surfaceForm, ...distractors])
+
+    wordQuestions.push({
+      type: 'word',
+      exprId: `word:${item.wordId}`,
+      videoId: item.videoId,
+      sentenceIdx: item.sentenceIdx,
+      en: item.en,
+      ko: item.ko,
+      expression: item.surfaceForm,
+      meaningKo: entry.meaning_ko ?? '',
+      cefr,
+      category: entry.pos ?? '',
+      before: blank.before,
+      after: blank.after,
+      choices,
+    })
+  }
+
+  // Fill up with more expressions if not enough word questions
+  if (wordQuestions.length < wordTarget) {
+    const extraExprNeeded = wordTarget - wordQuestions.length
+    for (const item of shuffledExpr) {
+      if (exprQuestions.length + extraExprNeeded <= exprQuestions.length) break
+      if (usedExprIds.has(item.exprId)) continue
+
+      const entry = entries[item.exprId]
+      if (!entry) continue
+
+      const canonical = entry.canonical ?? item.exprId
+      const blank = applyBlank(item.en, canonical)
+      if (!blank) continue
+
+      usedExprIds.add(item.exprId)
+
+      const distractors = generateDistractors(item.exprId, entry.category)
+      const choices = shuffle([canonical, ...distractors])
+
+      exprQuestions.push({
+        type: 'expression',
+        exprId: item.exprId,
+        videoId: item.videoId,
+        sentenceIdx: item.sentenceIdx,
+        en: item.en,
+        ko: item.ko,
+        expression: canonical,
+        meaningKo: entry.meaning_ko ?? '',
+        cefr: entry.cefr?.toUpperCase() ?? 'B1',
+        category: entry.category ?? '',
+        before: blank.before,
+        after: blank.after,
+        choices,
+      })
+
+      if (exprQuestions.length >= exprTarget + (wordTarget - wordQuestions.length)) break
+    }
+  }
+
+  return shuffle([...exprQuestions, ...wordQuestions])
 }
 
 // ---------------------------------------------------------------------------
 // XP calculation for listen & fill
 // ---------------------------------------------------------------------------
 
+const POS_MULTIPLIERS: Record<string, number> = {
+  verb: 1.3,
+  adjective: 1.2,
+  adverb: 1.1,
+  noun: 1.0,
+}
+
 function computeListenFillXp(
   exprId: string,
   replaysUsed: number,
 ): number {
-  const entry = entries[exprId]
-  if (!entry) return 0
+  let cefrWeight: number
+  let multiplier: number
 
-  const cefrWeight = CEFR_WEIGHTS[entry.cefr?.toUpperCase()] ?? 1
-  const catMultiplier = CATEGORY_MULTIPLIERS[entry.category] ?? 1.0
+  if (exprId.startsWith('word:')) {
+    const wordKey = exprId.slice(5)
+    const wordEntry = wordEntries[wordKey]
+    if (!wordEntry) return 0
+    cefrWeight = CEFR_WEIGHTS[wordEntry.cefr?.toUpperCase()] ?? 1
+    multiplier = POS_MULTIPLIERS[wordEntry.pos] ?? 0.9
+  } else {
+    const entry = entries[exprId]
+    if (!entry) return 0
+    cefrWeight = CEFR_WEIGHTS[entry.cefr?.toUpperCase()] ?? 1
+    multiplier = CATEGORY_MULTIPLIERS[entry.category] ?? 1.0
+  }
+
   const replayMultiplier = replaysUsed <= 1 ? 1.5 : 0.8
 
-  return Math.round(cefrWeight * catMultiplier * replayMultiplier * 10) / 10
+  return Math.round(cefrWeight * multiplier * replayMultiplier * 10) / 10
 }
 
 // ---------------------------------------------------------------------------
@@ -695,7 +938,9 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
             </p>
             <div className="space-y-2">
               {results.map(({ exprId, correct }) => {
-                const entry = entries[exprId]
+                const isWord = exprId.startsWith('word:')
+                const lookupId = isWord ? exprId.slice(5) : exprId
+                const entry = isWord ? wordEntries[lookupId] : entries[lookupId]
                 return (
                   <div
                     key={exprId}
@@ -742,7 +987,7 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
                         className="font-medium text-sm"
                         style={{ color: 'var(--text-primary)' }}
                       >
-                        {entry?.canonical ?? exprId}
+                        {entry?.canonical ?? lookupId}
                       </span>
                     </div>
                     <span

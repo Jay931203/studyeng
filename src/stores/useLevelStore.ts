@@ -3,6 +3,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import expressionEntriesData from '@/data/expression-entries-v2.json'
+import wordEntriesData from '@/data/word-entries.json'
 
 // ---------------------------------------------------------------------------
 // Constants
@@ -28,6 +29,13 @@ const CATEGORY_MULTIPLIERS: Record<string, number> = {
   interjection: 1.0,
   exclamation: 1.0,
   filler: 0.8,
+}
+
+const POS_MULTIPLIERS: Record<string, number> = {
+  verb: 1.3,
+  adjective: 1.2,
+  adverb: 1.1,
+  noun: 1.0,
 }
 
 const LEVEL_THRESHOLDS = {
@@ -57,7 +65,7 @@ interface VideoCompletionEntry {
 }
 
 interface LevelState {
-  // Absorption Score (expression-based only)
+  // Absorption Score (expression + word based)
   absorptionScore: number
   rawScore: number
 
@@ -96,16 +104,27 @@ interface LevelState {
 // ---------------------------------------------------------------------------
 
 const expressionEntries = expressionEntriesData as Record<string, { cefr: string; category: string }>
+const wordEntries = wordEntriesData as Record<string, { cefr: string; pos: string }>
 
-function computeExpressionAbsorption(familiarEntries: Record<string, { count: number }>): number {
+function computeAbsorption(familiarEntries: Record<string, { count: number }>): number {
   let raw = 0
 
-  for (const [exprId, entry] of Object.entries(familiarEntries)) {
-    const exprData = expressionEntries[exprId]
-    if (!exprData) continue
+  for (const [id, entry] of Object.entries(familiarEntries)) {
+    let cefrWeight: number
+    let multiplier: number
 
-    const cefrWeight = CEFR_WEIGHTS[exprData.cefr?.toUpperCase()] ?? 1
-    const catMultiplier = CATEGORY_MULTIPLIERS[exprData.category] ?? 1.0
+    if (id.startsWith('word:')) {
+      const wordKey = id.slice(5) // strip 'word:' prefix
+      const wordData = wordEntries[wordKey]
+      if (!wordData) continue
+      cefrWeight = CEFR_WEIGHTS[wordData.cefr?.toUpperCase()] ?? 1
+      multiplier = POS_MULTIPLIERS[wordData.pos] ?? 0.9
+    } else {
+      const exprData = expressionEntries[id]
+      if (!exprData) continue
+      cefrWeight = CEFR_WEIGHTS[exprData.cefr?.toUpperCase()] ?? 1
+      multiplier = CATEGORY_MULTIPLIERS[exprData.category] ?? 1.0
+    }
 
     // swipe progress based on count
     let swipeProgress = 0
@@ -113,14 +132,17 @@ function computeExpressionAbsorption(familiarEntries: Record<string, { count: nu
     else if (entry.count === 2) swipeProgress = 0.6
     else if (entry.count === 1) swipeProgress = 0.3
 
-    raw += cefrWeight * catMultiplier * swipeProgress
+    raw += cefrWeight * multiplier * swipeProgress
   }
 
   return raw
 }
 
-/** @deprecated Use computeExpressionAbsorption instead — kept for backward compat */
-const computeRawScore = computeExpressionAbsorption
+/** @deprecated Alias kept for backward compat */
+const computeExpressionAbsorption = computeAbsorption
+
+/** @deprecated Use computeAbsorption instead — kept for backward compat */
+const computeRawScore = computeAbsorption
 
 function getRecentCompletionRate(log: VideoCompletionEntry[]): number {
   if (log.length === 0) return 0
@@ -158,11 +180,21 @@ export function computeXpForSwipe(
   exprId: string,
   newCount: number, // count AFTER this swipe
 ): number {
-  const exprData = expressionEntries[exprId]
-  if (!exprData) return 0
+  let cefrWeight: number
+  let multiplier: number
 
-  const cefrWeight = CEFR_WEIGHTS[exprData.cefr?.toUpperCase()] ?? 1
-  const catMultiplier = CATEGORY_MULTIPLIERS[exprData.category] ?? 1.0
+  if (exprId.startsWith('word:')) {
+    const wordKey = exprId.slice(5)
+    const wordData = wordEntries[wordKey]
+    if (!wordData) return 0
+    cefrWeight = CEFR_WEIGHTS[wordData.cefr?.toUpperCase()] ?? 1
+    multiplier = POS_MULTIPLIERS[wordData.pos] ?? 0.9
+  } else {
+    const exprData = expressionEntries[exprId]
+    if (!exprData) return 0
+    cefrWeight = CEFR_WEIGHTS[exprData.cefr?.toUpperCase()] ?? 1
+    multiplier = CATEGORY_MULTIPLIERS[exprData.category] ?? 1.0
+  }
 
   // XP delta for this specific swipe step
   let stepXP = 0
@@ -170,7 +202,7 @@ export function computeXpForSwipe(
   else if (newCount === 2) stepXP = 0.3
   else if (newCount >= 3) stepXP = 0.4
 
-  return Math.round(cefrWeight * catMultiplier * stepXP * 10) / 10
+  return Math.round(cefrWeight * multiplier * stepXP * 10) / 10
 }
 
 // ---------------------------------------------------------------------------
@@ -191,7 +223,7 @@ export const useLevelStore = create<LevelState>()(
       setHydrated: (h) => set({ hydrated: h }),
 
       recalculateScore: (familiarEntries) => {
-        const expressionAbsorption = computeExpressionAbsorption(familiarEntries)
+        const expressionAbsorption = computeAbsorption(familiarEntries)
 
         // rawScore = expression absorption + cumulative video XP
         const videoXPTotal = get().getVideoXPTotal()

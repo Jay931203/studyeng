@@ -20,6 +20,7 @@ import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useSettingsStore } from '@/stores/useSettingsStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { getSmartPrimingExpressions } from '@/lib/expressionLookup'
+import { getSmartPrimingWords } from '@/lib/wordLookup'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { triggerHaptic } from '@/lib/haptic'
@@ -147,9 +148,14 @@ export function VideoPlayer({
     return getSmartPrimingExpressions(youtubeId, userLevel, familiarExprs, 3)
   }, [primingEnabled, youtubeId, userLevel, familiarExprs])
 
+  const primingWords = useMemo(() => {
+    if (!primingEnabled || !youtubeId) return []
+    return getSmartPrimingWords(youtubeId, userLevel, familiarExprs, 3)
+  }, [primingEnabled, youtubeId, userLevel, familiarExprs])
+
   const videoSessionKey = `${videoId ?? 'video'}:${youtubeId}`
   const [dismissedPrimingKey, setDismissedPrimingKey] = useState<string | null>(null)
-  const showPriming = primingExpressions.length > 0 && dismissedPrimingKey !== videoSessionKey
+  const showPriming = (primingExpressions.length > 0 || primingWords.length > 0) && dismissedPrimingKey !== videoSessionKey
 
   const handlePrimingDismiss = useCallback(() => {
     setDismissedPrimingKey(videoSessionKey)
@@ -514,6 +520,21 @@ export function VideoPlayer({
           cefr: ve.expression.cefr,
           sentenceEn: ve.sentence.en,
           sentenceKo: ve.sentence.ko,
+          start: sub?.start,
+          end: sub?.end,
+        }
+      })}
+      words={primingWords.map((vw) => {
+        const sub = subtitles.find((s) => s.en === vw.sentence.en)
+        return {
+          wordId: `word:${vw.word.id}`,
+          canonical: vw.word.canonical,
+          meaning_ko: vw.word.meaning_ko,
+          pos: vw.word.pos,
+          cefr: vw.word.cefr,
+          sentenceEn: vw.sentence.en,
+          sentenceKo: vw.sentence.ko,
+          surfaceForm: vw.surfaceForm,
           start: sub?.start,
           end: sub?.end,
         }

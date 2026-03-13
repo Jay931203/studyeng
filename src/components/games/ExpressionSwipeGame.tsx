@@ -4,6 +4,8 @@ import { useState, useCallback, useMemo, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import expressionEntries from '@/data/expression-entries-v2.json'
 import expressionIndex from '@/data/expression-index-v2.json'
+import wordEntriesData from '@/data/word-entries.json'
+import wordIndexData from '@/data/word-index.json'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useLevelStore, computeXpForSwipe } from '@/stores/useLevelStore'
@@ -27,6 +29,17 @@ interface ExpressionEntry {
   [key: string]: unknown
 }
 
+interface WordEntry {
+  id: string
+  canonical: string
+  pos: string
+  meaning_ko: string
+  cefr: string
+  example_en?: string
+  example_ko?: string
+  [key: string]: unknown
+}
+
 interface IndexMatch {
   exprId: string
   sentenceIdx: number
@@ -34,7 +47,16 @@ interface IndexMatch {
   ko: string
 }
 
+interface WordIndexMatch {
+  wordId: string
+  sentenceIdx: number
+  en: string
+  ko: string
+  surfaceForm: string
+}
+
 interface CardData {
+  type: 'expression' | 'word'
   exprId: string
   expression: string
   meaningKo: string
@@ -49,6 +71,8 @@ const CARDS_PER_ROUND = 10
 
 const entries = expressionEntries as Record<string, ExpressionEntry>
 const index = expressionIndex as Record<string, IndexMatch[]>
+const wordEntries = wordEntriesData as Record<string, WordEntry>
+const wordIndex = wordIndexData as Record<string, WordIndexMatch[]>
 
 // ---------------------------------------------------------------------------
 // CEFR filter by user level
@@ -92,6 +116,17 @@ function getFilteredExpressionIds(level: string): string[] {
   })
 }
 
+function getFilteredWordIds(level: string): string[] {
+  const pool = CEFR_POOLS[level] ?? CEFR_POOLS.beginner
+  const allCefrs = new Set([...pool.primary, ...pool.secondary])
+
+  return Object.keys(wordEntries).filter((id) => {
+    const entry = wordEntries[id]
+    if (!entry?.cefr) return false
+    return allCefrs.has(entry.cefr.toUpperCase())
+  })
+}
+
 // ---------------------------------------------------------------------------
 // Context sentence lookup (pre-build a reverse index: exprId -> matches)
 // ---------------------------------------------------------------------------
@@ -120,69 +155,150 @@ function pickContextSentence(exprId: string): string | null {
 }
 
 // ---------------------------------------------------------------------------
+// Word context sentence lookup
+// ---------------------------------------------------------------------------
+
+let _wordContextCache: Record<string, WordIndexMatch[]> | null = null
+
+function getWordContextByWordId(): Record<string, WordIndexMatch[]> {
+  if (_wordContextCache) return _wordContextCache
+  const map: Record<string, WordIndexMatch[]> = {}
+  for (const matches of Object.values(wordIndex)) {
+    for (const m of matches) {
+      if (!map[m.wordId]) map[m.wordId] = []
+      map[m.wordId].push(m)
+    }
+  }
+  _wordContextCache = map
+  return map
+}
+
+function pickWordContextSentence(wordId: string): string | null {
+  const ctx = getWordContextByWordId()
+  const matches = ctx[wordId]
+  if (!matches || matches.length === 0) return null
+  const pick = matches[Math.floor(Math.random() * matches.length)]
+  return pick.en
+}
+
+// ---------------------------------------------------------------------------
 // Card selection logic
 // ---------------------------------------------------------------------------
 
 function selectCards(level: string): CardData[] {
   const gameStore = useGameProgressStore.getState()
-  const familiarityStore = useFamiliarityStore.getState()
 
+  // Determine how many expression vs word cards
+  const expressionCount = Math.round(CARDS_PER_ROUND * 0.7) // 70% expressions
+  const wordCount = CARDS_PER_ROUND - expressionCount         // 30% words
+
+  // --- Expression selection (existing logic) ---
   let filteredIds = getFilteredExpressionIds(level)
 
   // If not enough, relax the filter
-  if (filteredIds.length < CARDS_PER_ROUND) {
+  if (filteredIds.length < expressionCount) {
     filteredIds = Object.keys(entries)
   }
 
   const filteredSet = new Set(filteredIds)
 
-  // Categorize
-  const box1 = gameStore.getBox1Expressions().filter((id) => filteredSet.has(id))
-  const box2 = gameStore.getBox2Expressions().filter((id) => filteredSet.has(id))
-  const box3 = gameStore.getMasteredExpressions().filter((id) => filteredSet.has(id))
+  // Categorize by Leitner box (expressions only, no word: prefix)
+  const allBox1 = gameStore.getBox1Expressions()
+  const allBox2 = gameStore.getBox2Expressions()
+  const allBox3 = gameStore.getMasteredExpressions()
+
+  const box1 = allBox1.filter((id) => !id.startsWith('word:') && filteredSet.has(id))
+  const box2 = allBox2.filter((id) => !id.startsWith('word:') && filteredSet.has(id))
+  const box3 = allBox3.filter((id) => !id.startsWith('word:') && filteredSet.has(id))
   const seenSet = new Set([...box1, ...box2, ...box3])
   const newExprs = filteredIds.filter((id) => !seenSet.has(id))
 
-  const selected: string[] = []
-  const usedSet = new Set<string>()
+  const selectedExprs: string[] = []
+  const usedExprSet = new Set<string>()
 
-  const addUnique = (source: string[], max: number) => {
+  const addUniqueExpr = (source: string[], max: number) => {
     const shuffled = shuffle(source)
     let added = 0
     for (const id of shuffled) {
       if (added >= max) break
-      if (usedSet.has(id)) continue
-      selected.push(id)
-      usedSet.add(id)
+      if (usedExprSet.has(id)) continue
+      selectedExprs.push(id)
+      usedExprSet.add(id)
       added++
     }
   }
 
-  // Priority: box1 up to 4, box2 up to 3, new fill remaining, box3 10% chance 1
-  addUnique(box1, 4)
-  addUnique(box2, 3)
+  // Priority: box1 up to 3, box2 up to 2, new fill remaining, box3 10% chance 1
+  addUniqueExpr(box1, 3)
+  addUniqueExpr(box2, 2)
 
   // Box 3: 10% chance include 1
   if (Math.random() < 0.1 && box3.length > 0) {
-    addUnique(box3, 1)
+    addUniqueExpr(box3, 1)
   }
 
-  // Fill remaining with new expressions
-  const remaining = CARDS_PER_ROUND - selected.length
-  if (remaining > 0) {
-    addUnique(newExprs, remaining)
+  // Fill remaining expression slots
+  const exprRemaining = expressionCount - selectedExprs.length
+  if (exprRemaining > 0) {
+    addUniqueExpr(newExprs, exprRemaining)
   }
 
   // If still not enough, pull from any available
-  if (selected.length < CARDS_PER_ROUND) {
-    const all = filteredIds.filter((id) => !usedSet.has(id))
-    addUnique(all, CARDS_PER_ROUND - selected.length)
+  if (selectedExprs.length < expressionCount) {
+    const all = filteredIds.filter((id) => !usedExprSet.has(id))
+    addUniqueExpr(all, expressionCount - selectedExprs.length)
   }
 
-  // Build card data
-  const cards: CardData[] = shuffle(selected).map((exprId) => {
+  // --- Word selection ---
+  let filteredWordIds = getFilteredWordIds(level)
+  if (filteredWordIds.length < wordCount) {
+    filteredWordIds = Object.keys(wordEntries)
+  }
+
+  const wordFilteredSet = new Set(filteredWordIds)
+
+  // Categorize words by Leitner box (word: prefix)
+  const wordBox1 = allBox1.filter((id) => id.startsWith('word:') && wordFilteredSet.has(id.slice(5)))
+  const wordBox2 = allBox2.filter((id) => id.startsWith('word:') && wordFilteredSet.has(id.slice(5)))
+  const wordBox3 = allBox3.filter((id) => id.startsWith('word:') && wordFilteredSet.has(id.slice(5)))
+  const seenWordIds = new Set([...wordBox1, ...wordBox2, ...wordBox3].map((id) => id.slice(5)))
+  const newWords = filteredWordIds.filter((id) => !seenWordIds.has(id))
+
+  const selectedWords: string[] = []
+  const usedWordSet = new Set<string>()
+
+  const addUniqueWord = (source: string[], max: number) => {
+    const shuffled = shuffle(source)
+    let added = 0
+    for (const id of shuffled) {
+      if (added >= max) break
+      // Strip word: prefix if present for dedup
+      const wordId = id.startsWith('word:') ? id.slice(5) : id
+      if (usedWordSet.has(wordId)) continue
+      selectedWords.push(wordId)
+      usedWordSet.add(wordId)
+      added++
+    }
+  }
+
+  addUniqueWord(wordBox1, 1)
+  addUniqueWord(wordBox2, 1)
+
+  const wordRemaining = wordCount - selectedWords.length
+  if (wordRemaining > 0) {
+    addUniqueWord(newWords, wordRemaining)
+  }
+
+  if (selectedWords.length < wordCount) {
+    const allWords = filteredWordIds.filter((id) => !usedWordSet.has(id))
+    addUniqueWord(allWords, wordCount - selectedWords.length)
+  }
+
+  // --- Build card data ---
+  const exprCards: CardData[] = selectedExprs.map((exprId) => {
     const entry = entries[exprId]
     return {
+      type: 'expression' as const,
       exprId,
       expression: entry?.canonical ?? exprId,
       meaningKo: entry?.meaning_ko ?? '',
@@ -192,7 +308,23 @@ function selectCards(level: string): CardData[] {
     }
   })
 
-  return cards
+  const wordCards: CardData[] = selectedWords.map((wordId) => {
+    const entry = wordEntries[wordId]
+    // Use word-index context or example sentence from word-entries
+    const contextFromIndex = pickWordContextSentence(wordId)
+    const contextEn = contextFromIndex ?? entry?.example_en ?? null
+    return {
+      type: 'word' as const,
+      exprId: `word:${wordId}`,
+      expression: entry?.canonical ?? wordId,
+      meaningKo: entry?.meaning_ko ?? '',
+      cefr: entry?.cefr?.toUpperCase() ?? 'B1',
+      category: entry?.pos ?? '',
+      contextEn,
+    }
+  })
+
+  return shuffle([...exprCards, ...wordCards])
 }
 
 // ---------------------------------------------------------------------------
@@ -210,6 +342,15 @@ const CATEGORY_LABELS: Record<string, string> = {
   interjection: 'interjection',
   exclamation: 'exclamation',
   filler: 'filler',
+  // POS labels for words
+  verb: 'verb',
+  noun: 'noun',
+  adjective: 'adjective',
+  adverb: 'adverb',
+  preposition: 'preposition',
+  conjunction: 'conjunction',
+  pronoun: 'pronoun',
+  determiner: 'determiner',
 }
 
 // ---------------------------------------------------------------------------
@@ -449,7 +590,9 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
             </p>
             <div className="space-y-2">
               {wrongResults.map(({ exprId }) => {
-                const entry = entries[exprId]
+                const isWord = exprId.startsWith('word:')
+                const lookupId = isWord ? exprId.slice(5) : exprId
+                const entry = isWord ? wordEntries[lookupId] : entries[lookupId]
                 return (
                   <div
                     key={exprId}
@@ -460,7 +603,7 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
                     }}
                   >
                     <span className="font-medium" style={{ color: 'var(--text-primary)' }}>
-                      {entry?.canonical ?? exprId}
+                      {entry?.canonical ?? lookupId}
                     </span>
                     <span className="text-sm" style={{ color: 'var(--text-secondary)' }}>
                       {entry?.meaning_ko ?? ''}

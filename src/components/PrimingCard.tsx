@@ -18,8 +18,22 @@ interface Expression {
   exprId?: string
 }
 
+interface WordItem {
+  wordId: string
+  canonical: string
+  meaning_ko: string
+  pos: string
+  cefr: string
+  sentenceEn: string
+  sentenceKo: string
+  surfaceForm?: string
+  start?: number
+  end?: number
+}
+
 interface PrimingCardProps {
   expressions: Expression[]
+  words?: WordItem[]
   onDismiss: () => void
   onPlaySegment?: (start: number, end: number) => void
   videoTitle?: string
@@ -253,8 +267,216 @@ function ExpressionCard({
   )
 }
 
+const POS_LABELS: Record<string, string> = {
+  noun: 'noun',
+  verb: 'verb',
+  adj: 'adj',
+  adv: 'adv',
+  prep: 'prep',
+  conj: 'conj',
+  det: 'det',
+  pron: 'pron',
+  intj: 'intj',
+}
+
+function WordCard({
+  word,
+  index,
+  onInteract,
+  onPlaySegment,
+  onSwipeDismiss,
+  familiarCount,
+}: {
+  word: WordItem
+  index: number
+  onInteract?: () => void
+  onPlaySegment?: (start: number, end: number) => void
+  onSwipeDismiss?: () => void
+  familiarCount?: number
+}) {
+  const [flipped, setFlipped] = useState(false)
+  const [playing, setPlaying] = useState(false)
+  const cefrColor = getCefrColor(word.cefr)
+  const posLabel = POS_LABELS[word.pos] ?? word.pos
+  const count = familiarCount ?? 0
+
+  const x = useMotionValue(0)
+  const opacity = useTransform(x, [-SWIPE_THRESHOLD * 2, 0, SWIPE_THRESHOLD * 2], [0.3, 1, 0.3])
+
+  const handleDragEnd = (_: unknown, info: PanInfo) => {
+    if (Math.abs(info.offset.x) > SWIPE_THRESHOLD) {
+      onSwipeDismiss?.()
+    }
+  }
+
+  return (
+    <motion.div
+      layout
+      initial={{ y: 20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ x: 400, opacity: 0, height: 0, marginBottom: 0 }}
+      transition={{
+        layout: { type: 'spring', stiffness: 400, damping: 30 },
+        delay: 0.1 + index * 0.08,
+        type: 'spring',
+        stiffness: 360,
+        damping: 30,
+      }}
+    >
+      <motion.div
+        className="cursor-pointer touch-pan-y"
+        style={{ perspective: 800, x, opacity }}
+        drag="x"
+        dragConstraints={{ left: 0, right: 0 }}
+        dragElastic={0.6}
+        onDragStart={() => onInteract?.()}
+        onDragEnd={handleDragEnd}
+        onClick={(e) => {
+          e.stopPropagation()
+          onInteract?.()
+          setFlipped((current) => !current)
+        }}
+      >
+        <motion.div
+          className="relative min-h-[96px]"
+          style={{ transformStyle: 'preserve-3d' }}
+          animate={{ rotateX: flipped ? 180 : 0 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 35 }}
+        >
+          {/* Front face */}
+          <div
+            className="relative rounded-2xl border px-5 py-3.5"
+            style={{
+              backgroundColor: 'rgba(255, 255, 255, 0.05)',
+              borderColor: 'rgba(255, 255, 255, 0.07)',
+              backfaceVisibility: 'hidden',
+            }}
+          >
+            {/* Familiarity gauge */}
+            <div className="absolute right-4 top-3.5 flex items-center gap-[3px]">
+              {[0, 1, 2].map((i) => (
+                <span
+                  key={i}
+                  className="inline-block h-[5px] w-[5px] rounded-full transition-colors duration-300"
+                  style={{
+                    backgroundColor: i < count
+                      ? 'var(--accent-text, #5eead4)'
+                      : 'rgba(255, 255, 255, 0.25)',
+                  }}
+                />
+              ))}
+            </div>
+            <p className="pr-12 text-[16px] font-bold leading-snug text-white">
+              {word.canonical}
+            </p>
+            <p
+              className="mt-0.5 text-[13px] leading-snug"
+              style={{ color: 'rgba(255, 255, 255, 0.55)' }}
+            >
+              {word.meaning_ko}
+            </p>
+            <div className="mt-2 flex items-center gap-1.5">
+              <span
+                className="rounded-full px-2 py-[3px] text-[10px] font-semibold leading-none"
+                style={{
+                  backgroundColor: 'rgba(255, 255, 255, 0.08)',
+                  color: 'rgba(255, 255, 255, 0.6)',
+                }}
+              >
+                {posLabel}
+              </span>
+              <span
+                className="rounded-full px-2 py-[3px] text-[10px] font-bold leading-none uppercase"
+                style={{
+                  backgroundColor: cefrColor.bg,
+                  color: cefrColor.text,
+                }}
+              >
+                {word.cefr.toUpperCase()}
+              </span>
+              <span
+                className="ml-auto text-[10px]"
+                style={{ color: 'rgba(255, 255, 255, 0.3)' }}
+              >
+                tap
+              </span>
+            </div>
+          </div>
+
+          {/* Back face */}
+          <div
+            className="absolute inset-0 overflow-y-auto rounded-2xl border px-5 py-3.5"
+            style={{
+              backgroundColor: 'rgba(255, 255, 255, 0.09)',
+              borderColor: 'rgba(255, 255, 255, 0.12)',
+              backfaceVisibility: 'hidden',
+              transform: 'rotateX(180deg)',
+            }}
+          >
+            <p className="line-clamp-3 pr-10 text-[15px] font-semibold leading-snug text-white">
+              {word.sentenceEn}
+            </p>
+            <p
+              className="mt-1.5 line-clamp-2 text-[13px] leading-snug"
+              style={{ color: 'rgba(255, 255, 255, 0.55)' }}
+            >
+              {word.sentenceKo}
+            </p>
+            {onPlaySegment && word.start != null && word.end != null && (
+              <button
+                type="button"
+                className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full transition-opacity"
+                style={{
+                  backgroundColor: playing
+                    ? 'rgba(var(--accent-primary-rgb), 0.25)'
+                    : 'rgba(255, 255, 255, 0.1)',
+                }}
+                onClick={(e) => {
+                  e.stopPropagation()
+                  onInteract?.()
+                  setPlaying(true)
+                  onPlaySegment(word.start!, word.end!)
+                  const duration = ((word.end! - word.start!) * 1000) + 300
+                  setTimeout(() => setPlaying(false), duration)
+                }}
+                aria-label="Play preview"
+                title="Play preview"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  className="h-3.5 w-3.5"
+                  style={{
+                    color: playing
+                      ? 'var(--accent-text, #5eead4)'
+                      : 'rgba(255,255,255,0.7)',
+                  }}
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+            )}
+            <span
+              className="absolute bottom-3 right-4 text-[10px]"
+              style={{ color: 'rgba(255, 255, 255, 0.25)' }}
+            >
+              already know? swipe
+            </span>
+          </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
+  )
+}
+
 export function PrimingCard({
   expressions,
+  words,
   onDismiss,
   onPlaySegment,
   videoTitle,
@@ -262,11 +484,15 @@ export function PrimingCard({
   familiarCounts,
 }: PrimingCardProps) {
   const displayExpressions = expressions.slice(0, 3)
+  const displayWords = (words ?? []).slice(0, 3)
   const [dismissedIds, setDismissedIds] = useState<Set<string>>(new Set())
   const visibleExpressions = displayExpressions.filter(
     (expr) => !dismissedIds.has(expr.exprId || expr.canonical)
   )
-  const visible = visibleExpressions.length > 0
+  const visibleWords = displayWords.filter(
+    (word) => !dismissedIds.has(word.wordId)
+  )
+  const visible = visibleExpressions.length > 0 || visibleWords.length > 0
 
   const storedAutoStartEnabled = useSettingsStore((state) => state.primingAutoStartEnabled)
   const setStoredAutoStartEnabled = useSettingsStore((state) => state.setPrimingAutoStartEnabled)
@@ -280,11 +506,11 @@ export function PrimingCard({
 
   // Auto-dismiss when all cards are swiped
   useEffect(() => {
-    if (dismissedIds.size > 0 && visibleExpressions.length === 0) {
+    if (dismissedIds.size > 0 && visibleExpressions.length === 0 && visibleWords.length === 0) {
       const timer = setTimeout(() => handleDismiss(), 300)
       return () => clearTimeout(timer)
     }
-  }, [dismissedIds.size, visibleExpressions.length, handleDismiss])
+  }, [dismissedIds.size, visibleExpressions.length, visibleWords.length, handleDismiss])
 
   const pauseAutoStart = useCallback(() => {
     setAutoStartEnabled(false)
@@ -333,6 +559,17 @@ export function PrimingCard({
     [onMarkFamiliar],
   )
 
+  const handleWordSwipeDismiss = useCallback(
+    (word: WordItem) => {
+      triggerHaptic([30, 20, 40])
+      setDismissedIds((prev) => new Set([...prev, word.wordId]))
+      onMarkFamiliar?.(word.wordId)
+      trackEvent(AnalyticsEvents.EXPRESSION_FAMILIAR, { expression: word.canonical })
+      setAutoStartEnabled(false)
+    },
+    [onMarkFamiliar],
+  )
+
   return (
     <AnimatePresence>
       {visible && (
@@ -374,12 +611,22 @@ export function PrimingCard({
           >
             <div className="mb-5 flex items-start justify-between gap-3">
               <div className="min-w-0 text-left">
-                <p
-                  className="text-[11px] font-semibold uppercase tracking-[0.12em]"
-                  style={{ color: 'var(--accent-text, #5eead4)' }}
-                >
-                  Key Expressions
-                </p>
+                {visibleExpressions.length > 0 && (
+                  <p
+                    className="text-[11px] font-semibold uppercase tracking-[0.12em]"
+                    style={{ color: 'var(--accent-text, #5eead4)' }}
+                  >
+                    Key Expressions
+                  </p>
+                )}
+                {visibleExpressions.length === 0 && visibleWords.length > 0 && (
+                  <p
+                    className="text-[11px] font-semibold uppercase tracking-[0.12em]"
+                    style={{ color: 'var(--accent-text, #5eead4)' }}
+                  >
+                    Key Words
+                  </p>
+                )}
                 {videoTitle && (
                   <p
                     className="mt-1.5 truncate text-[13px] font-medium"
@@ -414,21 +661,50 @@ export function PrimingCard({
 
             <div
               className="flex flex-col gap-3 overflow-visible pr-1"
-              style={{ maxHeight: 'min(48vh, 360px)' }}
+              style={{ maxHeight: 'min(60vh, 480px)' }}
             >
-              <AnimatePresence mode="popLayout">
-                {visibleExpressions.map((expr, index) => (
-                  <ExpressionCard
-                    key={expr.exprId || expr.canonical}
-                    expr={expr}
-                    index={index}
-                    onInteract={pauseAutoStart}
-                    onPlaySegment={handlePreviewSegment}
-                    onSwipeDismiss={() => handleSwipeDismiss(expr)}
-                    familiarCount={(familiarCounts?.[expr.exprId || expr.canonical] ?? 0) + (dismissedIds.has(expr.exprId || expr.canonical) ? 1 : 0)}
-                  />
-                ))}
-              </AnimatePresence>
+              {visibleExpressions.length > 0 && (
+                <AnimatePresence mode="popLayout">
+                  {visibleExpressions.map((expr, index) => (
+                    <ExpressionCard
+                      key={expr.exprId || expr.canonical}
+                      expr={expr}
+                      index={index}
+                      onInteract={pauseAutoStart}
+                      onPlaySegment={handlePreviewSegment}
+                      onSwipeDismiss={() => handleSwipeDismiss(expr)}
+                      familiarCount={(familiarCounts?.[expr.exprId || expr.canonical] ?? 0) + (dismissedIds.has(expr.exprId || expr.canonical) ? 1 : 0)}
+                    />
+                  ))}
+                </AnimatePresence>
+              )}
+
+              {visibleWords.length > 0 && (
+                <>
+                  <motion.p
+                    className="mt-2 text-[11px] font-semibold uppercase tracking-[0.12em]"
+                    style={{ color: 'var(--accent-text, #5eead4)' }}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.25 }}
+                  >
+                    Key Words
+                  </motion.p>
+                  <AnimatePresence mode="popLayout">
+                    {visibleWords.map((word, index) => (
+                      <WordCard
+                        key={word.wordId}
+                        word={word}
+                        index={index}
+                        onInteract={pauseAutoStart}
+                        onPlaySegment={handlePreviewSegment}
+                        onSwipeDismiss={() => handleWordSwipeDismiss(word)}
+                        familiarCount={(familiarCounts?.[word.wordId] ?? 0) + (dismissedIds.has(word.wordId) ? 1 : 0)}
+                      />
+                    ))}
+                  </AnimatePresence>
+                </>
+              )}
             </div>
 
             <motion.button
@@ -453,8 +729,8 @@ export function PrimingCard({
                 />
               </svg>
               <span className="text-[14px] font-semibold">
-                {visibleExpressions.length < displayExpressions.length
-                  ? `${visibleExpressions.length}/${displayExpressions.length} remaining`
+                {(visibleExpressions.length + visibleWords.length) < (displayExpressions.length + displayWords.length)
+                  ? `${visibleExpressions.length + visibleWords.length}/${displayExpressions.length + displayWords.length} remaining`
                   : '탭해서 보기'}
               </span>
               {autoStartEnabled && (
