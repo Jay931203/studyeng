@@ -105,7 +105,7 @@ export default function TabsLayout({
             className="absolute z-40"
             style={{
               left: 'max(12px, calc(env(safe-area-inset-left, 0px) + 8px))',
-              top: 'max(12px, calc(env(safe-area-inset-top, 0px) + 64px))',
+              bottom: 'max(14px, calc(env(safe-area-inset-bottom, 0px) + 10px))',
             }}
           >
             <LandscapeFeedSwitcher />
