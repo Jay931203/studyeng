@@ -20,9 +20,9 @@ import { useAdminStore } from '@/stores/useAdminStore'
 import { useThemeStore } from '@/stores/useThemeStore'
 
 const categoryLabels: Record<CategoryId, string> = {
+  daily: '일상',
   drama: '드라마',
   movie: '영화',
-  daily: '일상',
   entertainment: '예능',
   music: '음악',
   animation: '애니',

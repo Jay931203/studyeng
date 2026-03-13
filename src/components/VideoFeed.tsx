@@ -122,6 +122,7 @@ export function VideoFeed({
   const incrementDailyView = usePremiumStore((state) => state.incrementDailyView)
   const canSaveMorePhrases = usePremiumStore((state) => state.canSaveMorePhrases)
   const incrementSavedPhrases = usePremiumStore((state) => state.incrementSavedPhrases)
+  const initTrial = usePremiumStore((state) => state.initTrial)
   const checkAndUpdateStreak = useUserStore((state) => state.checkAndUpdateStreak)
   const incrementMission = useDailyMissionStore((state) => state.incrementMission)
   const repeatMode = usePlayerStore((state) => state.repeatMode)
@@ -145,6 +146,10 @@ export function VideoFeed({
   useEffect(() => {
     writeEmbedBlockedVideoIds(embedBlockedVideoIds)
   }, [embedBlockedVideoIds])
+
+  // Initialize 7-day free trial on first app use
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => { initTrial() }, [])
 
   const findPlayableIndex = useCallback(
     (startIndex: number, step: 1 | -1) => {

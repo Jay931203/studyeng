@@ -11,6 +11,7 @@ import { useAdminStore } from '@/stores/useAdminStore'
 import { usePremiumStore } from '@/stores/usePremiumStore'
 import { usePlayerStore } from '@/stores/usePlayerStore'
 import { useSettingsStore } from '@/stores/useSettingsStore'
+import { usePushStore } from '@/stores/usePushStore'
 import {
   useThemeStore,
   type ThemeAccent,
@@ -73,6 +74,10 @@ export default function ProfilePage() {
   const setRemoteEnabled = useSettingsStore((state) => state.setRemoteEnabled)
   const gameModeEnabled = usePlayerStore((state) => state.gameModeEnabled)
   const setGameModeEnabled = usePlayerStore((state) => state.setGameModeEnabled)
+  const pushPermission = usePushStore((state) => state.permission)
+  const pushSubscribe = usePushStore((state) => state.subscribe)
+  const pushUnsubscribe = usePushStore((state) => state.unsubscribe)
+  const pushEnabled = pushPermission === 'granted'
   const appliedPremium = usePremiumStore((state) => state.isPremium)
   const entitlementPremium = usePremiumStore((state) => state.entitlementPremium)
   const premiumOverride = usePremiumStore((state) => state.premiumOverride)
@@ -281,6 +286,7 @@ export default function ProfilePage() {
                   />
                 </button>
               </div>
+
               <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
                 <div>
                   <p className="text-sm font-medium text-[var(--text-primary)]">REMOTE</p>
@@ -299,6 +305,32 @@ export default function ProfilePage() {
                   <span
                     className={`absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white transition-transform ${
                       remoteEnabled ? 'translate-x-5' : ''
+                    }`}
+                  />
+                </button>
+              </div>
+
+              <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
+                <div>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">NOTIFICATIONS</p>
+                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">
+                    {pushPermission === 'denied'
+                      ? '브라우저 설정에서 알림을 허용해주세요'
+                      : '스트릭 리마인더 알림'}
+                  </p>
+                </div>
+                <button
+                  onClick={() => (pushEnabled ? pushUnsubscribe() : pushSubscribe())}
+                  disabled={pushPermission === 'denied'}
+                  className={`relative h-6 w-11 rounded-full disabled:opacity-40 ${
+                    pushEnabled ? 'bg-[var(--accent-primary)]' : 'bg-[var(--bg-secondary)]'
+                  }`}
+                  role="switch"
+                  aria-checked={pushEnabled}
+                >
+                  <span
+                    className={`absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white transition-transform ${
+                      pushEnabled ? 'translate-x-5' : ''
                     }`}
                   />
                 </button>
@@ -410,7 +442,7 @@ export default function ProfilePage() {
 
             <div className="rounded-2xl bg-[var(--bg-primary)] p-4">
               <p className="text-sm font-semibold text-red-400">
-                OPEN {unresolvedCount} 쨌 FLAGS {flaggedSubtitles.length} 쨌 HIDDEN {hiddenVideos.length}
+                OPEN {unresolvedCount} / FLAGS {flaggedSubtitles.length} / HIDDEN {hiddenVideos.length}
               </p>
               <div className="mt-3 flex gap-2">
                 <button

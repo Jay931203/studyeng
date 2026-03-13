@@ -3,8 +3,9 @@ import { persist } from 'zustand/middleware'
 import { isPremiumEnforcementEnabled } from '@/lib/billing'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 
-const FREE_DAILY_VIEW_LIMIT = 5
+const FREE_DAILY_VIEW_LIMIT = 10
 const FREE_SAVED_PHRASES_LIMIT = 20
+const TRIAL_DURATION_MS = 7 * 24 * 60 * 60 * 1000
 
 export type PremiumOverride = 'inherit' | 'premium' | 'free'
 
@@ -24,6 +25,7 @@ interface PremiumState {
   dailyViewCount: number
   lastViewDate: string | null
   savedPhrasesUsed: number
+  trialEndsAt: number | null
 
   incrementDailyView: () => boolean
   canViewMore: () => boolean
@@ -34,6 +36,9 @@ interface PremiumState {
   resetState: () => void
   incrementSavedPhrases: () => void
   getDailyViewsRemaining: () => number
+  isInTrial: () => boolean
+  getTrialDaysRemaining: () => number
+  initTrial: () => void
 }
 
 function resolvePremiumAccess(
@@ -54,10 +59,34 @@ export const usePremiumStore = create<PremiumState>()(
       dailyViewCount: 0,
       lastViewDate: null,
       savedPhrasesUsed: 0,
+      trialEndsAt: null,
+
+      isInTrial: () => {
+        const state = get()
+        return state.trialEndsAt !== null && Date.now() < state.trialEndsAt
+      },
+
+      getTrialDaysRemaining: () => {
+        const state = get()
+        if (state.trialEndsAt === null) return 0
+        const msLeft = state.trialEndsAt - Date.now()
+        if (msLeft <= 0) return 0
+        return Math.ceil(msLeft / (24 * 60 * 60 * 1000))
+      },
+
+      initTrial: () => {
+        const state = get()
+        if (state.trialEndsAt === null) {
+          set({ trialEndsAt: Date.now() + TRIAL_DURATION_MS })
+        }
+      },
 
       incrementDailyView: () => {
         const state = get()
         if (!isPremiumEnforcementEnabled() || state.isPremium) return true
+
+        // Trial users pass
+        if (state.trialEndsAt !== null && Date.now() < state.trialEndsAt) return true
 
         const today = getTodayString()
 
@@ -78,6 +107,9 @@ export const usePremiumStore = create<PremiumState>()(
       canViewMore: () => {
         const state = get()
         if (!isPremiumEnforcementEnabled() || state.isPremium) return true
+
+        // Trial users can always watch
+        if (state.trialEndsAt !== null && Date.now() < state.trialEndsAt) return true
 
         const today = getTodayString()
         if (state.lastViewDate !== today) return true
@@ -113,6 +145,7 @@ export const usePremiumStore = create<PremiumState>()(
           dailyViewCount: 0,
           lastViewDate: null,
           savedPhrasesUsed: 0,
+          trialEndsAt: null,
         }),
 
       incrementSavedPhrases: () => {
@@ -124,6 +157,9 @@ export const usePremiumStore = create<PremiumState>()(
       getDailyViewsRemaining: () => {
         const state = get()
         if (!isPremiumEnforcementEnabled() || state.isPremium) return Infinity
+
+        // Trial users have unlimited views
+        if (state.trialEndsAt !== null && Date.now() < state.trialEndsAt) return Infinity
 
         const today = getTodayString()
         if (state.lastViewDate !== today) return FREE_DAILY_VIEW_LIMIT

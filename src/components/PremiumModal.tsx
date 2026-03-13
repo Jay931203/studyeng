@@ -2,10 +2,10 @@
 
 import { useEffect, useMemo, useState } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
-import { getBillingConfig, type BillingPlan } from '@/lib/billing'
+import { type BillingPlan } from '@/lib/billing'
 import { isNative } from '@/lib/platform'
 import { useAuth } from '@/hooks/useAuth'
-import { usePremiumStore } from '@/stores/usePremiumStore'
+import { usePremiumStore, FREE_DAILY_VIEW_LIMIT } from '@/stores/usePremiumStore'
 import { ModalFeatureList, ModalHeader, ModalShell } from '@/components/ui/ModalShell'
 import type { PurchasesPackage } from '@revenuecat/purchases-typescript-internal-esm'
 
@@ -15,13 +15,16 @@ interface PremiumModalProps {
   trigger?: 'video-limit' | 'phrase-limit'
 }
 
-interface BillingReadinessPayload {
-  enabled: boolean
-}
-
-const triggerMessages: Record<'video-limit' | 'phrase-limit', string> = {
-  'video-limit': '오늘 무료 영상 시청 한도를 모두 사용했습니다.',
-  'phrase-limit': '무료 문장 저장 한도를 모두 사용했습니다.',
+function getTriggerMessage(
+  trigger: 'video-limit' | 'phrase-limit',
+  trialDaysRemaining: number,
+  inTrial: boolean,
+): string {
+  if (trigger === 'phrase-limit') return '무료 문장 저장 한도를 모두 사용했습니다.'
+  if (inTrial && trialDaysRemaining > 0) {
+    return `무료 체험 ${trialDaysRemaining}일 남았습니다. 이후 하루 ${FREE_DAILY_VIEW_LIMIT}개 제한이 적용됩니다.`
+  }
+  return `오늘 무료 영상 시청 한도(${FREE_DAILY_VIEW_LIMIT}개)를 모두 사용했습니다.`
 }
 
 const PLAN_DETAILS: Record<
@@ -48,14 +51,16 @@ export function PremiumModal({
 }: PremiumModalProps) {
   const pathname = usePathname()
   const searchParams = useSearchParams()
-  const { enabled: billingEnabled } = getBillingConfig()
   const { user } = useAuth()
   const setPremiumEntitlement = usePremiumStore((s) => s.setPremiumEntitlement)
+  const isInTrialFn = usePremiumStore((s) => s.isInTrial as (() => boolean) | undefined)
+  const getTrialDaysRemainingFn = usePremiumStore((s) => s.getTrialDaysRemaining as (() => number) | undefined)
+  const inTrial = isInTrialFn ? isInTrialFn() : false
+  const trialDaysRemaining = getTrialDaysRemainingFn ? getTrialDaysRemainingFn() : 0
   const [selectedPlan, setSelectedPlan] = useState<BillingPlan>('yearly')
   const [submitting, setSubmitting] = useState(false)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const [nativePackages, setNativePackages] = useState<PurchasesPackage[]>([])
-  const [webBillingReady, setWebBillingReady] = useState(false)
   const native = isNative()
   const nextPath = useMemo(() => {
     const query = searchParams.toString()
@@ -88,42 +93,6 @@ export function PremiumModal({
     return () => { cancelled = true }
   }, [isOpen, native, setPremiumEntitlement])
 
-  useEffect(() => {
-    if (native || !isOpen) return
-
-    if (!billingEnabled) {
-      setWebBillingReady(false)
-      return
-    }
-
-    let cancelled = false
-
-    const loadBillingReady = async () => {
-      try {
-        const response = await fetch('/api/billing/status', { cache: 'no-store' })
-        if (!response.ok) {
-          throw new Error('billing-status-failed')
-        }
-
-        const payload = (await response.json()) as BillingReadinessPayload
-        if (!cancelled) {
-          setWebBillingReady(Boolean(payload.enabled))
-        }
-      } catch (error) {
-        console.warn('[billing] billing readiness fetch failed:', error)
-        if (!cancelled) {
-          setWebBillingReady(false)
-        }
-      }
-    }
-
-    void loadBillingReady()
-
-    return () => {
-      cancelled = true
-    }
-  }, [billingEnabled, isOpen, native])
-
   const handleNativePurchase = async (pkg: PurchasesPackage) => {
     setSubmitting(true)
     setErrorMessage(null)
@@ -150,8 +119,6 @@ export function PremiumModal({
   }
 
   const handleWebCheckout = async () => {
-    if (!webBillingReady) return
-
     if (!user) {
       window.location.assign(`/login?next=${encodeURIComponent(nextPath || '/profile')}`)
       return
@@ -189,8 +156,6 @@ export function PremiumModal({
   }
 
   const handleCheckout = () => {
-    if (!isReady) return
-
     if (!user) {
       window.location.assign(`/login?next=${encodeURIComponent(nextPath || '/profile')}`)
       return
@@ -208,20 +173,18 @@ export function PremiumModal({
     }
   }
 
-  const isReady = native ? nativePackages.length > 0 : webBillingReady
-
   return (
     <ModalShell isOpen={isOpen} onClose={onClose} position="bottom">
       <div className="mb-2 text-center text-sm text-[var(--text-muted)]">
-        {triggerMessages[trigger]}
+        {getTriggerMessage(trigger, trialDaysRemaining, inTrial)}
       </div>
       <ModalHeader
         eyebrow="Premium"
-        title={isReady ? '제한 없이 이어보기' : '결제 준비 중입니다'}
+        title="제한 없이 이어보기"
         description={
-          isReady
-            ? '프리미엄으로 업그레이드하면 모든 기능을 제한 없이 이용할 수 있습니다.'
-            : '결제 연동이 준비되면 프리미엄 구독을 시작할 수 있습니다.'
+          inTrial && trialDaysRemaining > 0
+            ? '무료 체험 중 — 업그레이드하면 체험 후에도 무제한으로 이용할 수 있습니다.'
+            : '프리미엄으로 업그레이드하면 모든 기능을 제한 없이 이용할 수 있습니다.'
         }
         onClose={onClose}
       />
@@ -235,92 +198,83 @@ export function PremiumModal({
         ]}
       />
 
-      {isReady ? (
-        <div className="mb-5 grid gap-3">
-          {native && nativePackages.length > 0
-            ? nativePackages.map((pkg) => {
-                const isYearly = pkg.packageType === 'ANNUAL'
-                const selected =
-                  (selectedPlan === 'yearly' && isYearly) ||
-                  (selectedPlan === 'monthly' && !isYearly)
+      <div className="mb-5 grid gap-3">
+        {native && nativePackages.length > 0
+          ? nativePackages.map((pkg) => {
+              const isYearly = pkg.packageType === 'ANNUAL'
+              const selected =
+                (selectedPlan === 'yearly' && isYearly) ||
+                (selectedPlan === 'monthly' && !isYearly)
 
-                return (
-                  <button
-                    key={pkg.identifier}
-                    onClick={() => setSelectedPlan(isYearly ? 'yearly' : 'monthly')}
-                    className={`rounded-2xl border px-4 py-4 text-left transition-colors ${
-                      selected
-                        ? 'border-[var(--accent-primary)] bg-[var(--accent-glow)]'
-                        : 'border-[var(--border-card)] bg-[var(--bg-secondary)]/35'
-                    }`}
-                  >
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
-                        <p className="text-sm font-semibold text-[var(--text-primary)]">
-                          {isYearly ? '연간 플랜' : '월간 플랜'}
-                        </p>
-                        <p className="mt-1 text-xs text-[var(--text-secondary)]">
-                          {pkg.product.description}
-                        </p>
-                      </div>
-                      {isYearly && (
-                        <span className="rounded-full bg-emerald-500/15 px-2 py-1 text-[10px] font-semibold text-emerald-300">
-                          추천
-                        </span>
-                      )}
+              return (
+                <button
+                  key={pkg.identifier}
+                  onClick={() => setSelectedPlan(isYearly ? 'yearly' : 'monthly')}
+                  className={`rounded-2xl border px-4 py-4 text-left transition-colors ${
+                    selected
+                      ? 'border-[var(--accent-primary)] bg-[var(--accent-glow)]'
+                      : 'border-[var(--border-card)] bg-[var(--bg-secondary)]/35'
+                  }`}
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <p className="text-sm font-semibold text-[var(--text-primary)]">
+                        {isYearly ? '연간 플랜' : '월간 플랜'}
+                      </p>
+                      <p className="mt-1 text-xs text-[var(--text-secondary)]">
+                        {pkg.product.description}
+                      </p>
                     </div>
-                    <p className="mt-3 text-lg font-bold text-[var(--text-primary)]">
-                      {pkg.product.priceString}
-                    </p>
-                  </button>
-                )
-              })
-            : (['yearly', 'monthly'] as BillingPlan[]).map((plan) => {
-                const details = PLAN_DETAILS[plan]
-                const selected = selectedPlan === plan
+                    {isYearly && (
+                      <span className="rounded-full bg-emerald-500/15 px-2 py-1 text-[10px] font-semibold text-emerald-300">
+                        추천
+                      </span>
+                    )}
+                  </div>
+                  <p className="mt-3 text-lg font-bold text-[var(--text-primary)]">
+                    {pkg.product.priceString}
+                  </p>
+                </button>
+              )
+            })
+          : (['yearly', 'monthly'] as BillingPlan[]).map((plan) => {
+              const details = PLAN_DETAILS[plan]
+              const selected = selectedPlan === plan
 
-                return (
-                  <button
-                    key={plan}
-                    onClick={() => setSelectedPlan(plan)}
-                    className={`rounded-2xl border px-4 py-4 text-left transition-colors ${
-                      selected
-                        ? 'border-[var(--accent-primary)] bg-[var(--accent-glow)]'
-                        : 'border-[var(--border-card)] bg-[var(--bg-secondary)]/35'
-                    }`}
-                  >
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
-                        <p className="text-sm font-semibold text-[var(--text-primary)]">
-                          {details.label}
-                        </p>
-                        <p className="mt-1 text-xs text-[var(--text-secondary)]">
-                          {details.detail}
-                        </p>
-                      </div>
-                      {details.highlight && (
-                        <span className="rounded-full bg-emerald-500/15 px-2 py-1 text-[10px] font-semibold text-emerald-300">
-                          추천
-                        </span>
-                      )}
+              return (
+                <button
+                  key={plan}
+                  onClick={() => setSelectedPlan(plan)}
+                  className={`rounded-2xl border px-4 py-4 text-left transition-colors ${
+                    selected
+                      ? 'border-[var(--accent-primary)] bg-[var(--accent-glow)]'
+                      : 'border-[var(--border-card)] bg-[var(--bg-secondary)]/35'
+                  }`}
+                >
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <p className="text-sm font-semibold text-[var(--text-primary)]">
+                        {details.label}
+                      </p>
+                      <p className="mt-1 text-xs text-[var(--text-secondary)]">
+                        {details.detail}
+                      </p>
                     </div>
-                    <p className="mt-3 text-lg font-bold text-[var(--text-primary)]">
-                      {details.price}
-                    </p>
-                  </button>
-                )
-              })}
-        </div>
-      ) : (
-        <div className="mb-5 rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-4 py-3">
-          <p className="text-sm font-semibold text-[var(--text-secondary)]">현재는 무료 운영 중</p>
-          <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">
-            결제 연동이 준비되면 프리미엄 구독을 시작할 수 있습니다.
-          </p>
-        </div>
-      )}
+                    {details.highlight && (
+                      <span className="rounded-full bg-emerald-500/15 px-2 py-1 text-[10px] font-semibold text-emerald-300">
+                        추천
+                      </span>
+                    )}
+                  </div>
+                  <p className="mt-3 text-lg font-bold text-[var(--text-primary)]">
+                    {details.price}
+                  </p>
+                </button>
+              )
+            })}
+      </div>
 
-      {isReady && !native && !user && (
+      {!native && !user && (
         <div className="mb-4 rounded-2xl border border-sky-500/20 bg-sky-500/10 px-4 py-3">
           <p className="text-sm font-semibold text-sky-300">로그인 후 결제</p>
           <p className="mt-1 text-xs leading-relaxed text-sky-100/80">
@@ -337,15 +291,15 @@ export function PremiumModal({
 
       <button
         onClick={handleCheckout}
-        disabled={!isReady || submitting}
+        disabled={submitting}
         className="w-full rounded-2xl bg-[var(--accent-primary)] py-4 text-base font-bold text-white disabled:cursor-not-allowed disabled:opacity-50"
       >
-        {!isReady
-          ? '출시 준비 중'
-          : submitting
-            ? '결제 연결 중...'
-            : !native && !user
-              ? '로그인 후 구독 시작'
+        {submitting
+          ? '결제 연결 중...'
+          : !native && !user
+            ? '로그인 후 구독 시작'
+            : inTrial
+              ? '7일 무료 체험 후 구독'
               : '프리미엄 시작'}
       </button>
       <button

@@ -106,7 +106,7 @@ export default function TermsPage() {
         </Section>
 
         <Section title="제7조 (문의)">
-          <p>서비스 문의: support@studyeng.app</p>
+          <p>서비스 문의: support@shortee.app</p>
         </Section>
       </div>
     </div>

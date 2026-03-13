@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useMemo } from 'react'
 import { useRouter } from 'next/navigation'
-import { AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import { DailyMissions } from '@/components/DailyMissions'
 import { SavedPhraseCard } from '@/components/SavedPhraseCard'
 import { WatchHistory } from '@/components/WatchHistory'
@@ -16,10 +16,18 @@ import { useLikeStore } from '@/stores/useLikeStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
+import { useOnboardingStore } from '@/stores/useOnboardingStore'
+import { useLevelStore, getLevelGaugeProgress } from '@/stores/useLevelStore'
 
 const categoryLabels = Object.fromEntries(
   categories.map((category) => [category.id, category.label]),
 ) as Record<string, string>
+
+const LEVEL_LABELS = {
+  beginner: 'Beginner',
+  intermediate: 'Intermediate',
+  advanced: 'Advanced',
+} as const
 
 export default function LearningPage() {
   const router = useRouter()
@@ -29,6 +37,8 @@ export default function LearningPage() {
   const viewCounts = useWatchHistoryStore((state) => state.viewCounts)
   const streakDays = useUserStore((state) => state.streakDays)
   const likes = useLikeStore((state) => state.likes)
+  const level = useOnboardingStore((s) => s.level)
+  const rawScore = useLevelStore((s) => s.rawScore)
 
   const totalWatched = watchedVideoIds.length
   const totalViews = useMemo(
@@ -62,7 +72,18 @@ export default function LearningPage() {
               </Link>
             </div>
 
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-4 gap-3">
+              <div className="col-span-1 flex flex-col gap-1.5">
+                <MetricCard label="Level" value={LEVEL_LABELS[level]} className="text-center" />
+                <div className="h-[3px] w-full overflow-hidden rounded-full bg-[var(--border-card)]">
+                  <motion.div
+                    className="h-full rounded-full bg-[var(--accent-primary)]"
+                    initial={{ width: 0 }}
+                    animate={{ width: `${getLevelGaugeProgress(rawScore, level) * 100}%` }}
+                    transition={{ duration: 0.6, ease: 'easeOut' }}
+                  />
+                </div>
+              </div>
               <MetricCard label="누적 시청" value={`${totalWatched}개`} className="text-center" />
               <MetricCard label="저장 표현" value={`${phrases.length}개`} className="text-center" />
               <MetricCard

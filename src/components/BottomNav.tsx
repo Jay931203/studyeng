@@ -32,7 +32,7 @@ const tabs: readonly NavTab[] = [
   {
     href: '/learning',
     icon: 'bookmark',
-    label: 'Learn',
+    label: 'My',
     description: '저장 표현과 복습',
   },
   {

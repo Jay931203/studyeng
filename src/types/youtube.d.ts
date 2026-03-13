@@ -75,4 +75,11 @@ declare namespace YT {
 interface Window {
   YT: YT
   onYouTubeIframeAPIReady: () => void
+  // Google Analytics 4
+  dataLayer: unknown[]
+  gtag: (
+    command: 'event' | 'config' | 'js' | 'set',
+    targetOrDate: string | Date,
+    params?: Record<string, string | number | boolean>
+  ) => void
 }

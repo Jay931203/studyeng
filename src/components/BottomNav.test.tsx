@@ -28,7 +28,7 @@ describe('BottomNav', () => {
     expect(screen.getByRole('button', { name: 'Toggle feed' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Series' })).toBeInTheDocument()
     expect(screen.getByRole('button', { name: 'Shorts' })).toBeInTheDocument()
-    expect(screen.getByLabelText('Learn')).toBeInTheDocument()
+    expect(screen.getByLabelText('My')).toBeInTheDocument()
     expect(screen.getByLabelText('Settings')).toBeInTheDocument()
   })
 

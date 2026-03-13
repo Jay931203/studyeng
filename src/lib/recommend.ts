@@ -1,6 +1,10 @@
 import recommendationManifestData from '@/data/recommendation-manifest.json'
 import type { VideoData, CategoryId } from '@/data/seed-videos'
-import { getVideosBySeries, seedVideos } from '@/data/seed-videos'
+import { seedVideos } from '@/data/seed-videos'
+
+function getVideosBySeries(seriesId: string): import('@/data/seed-videos').VideoData[] {
+  return seedVideos.filter((video) => video.seriesId === seriesId)
+}
 
 interface WatchRecord {
   videoId: string

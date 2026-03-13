@@ -96,7 +96,7 @@ export default function PrivacyPage() {
         </section>
 
         <section className="border-t border-[var(--border-card)] pt-6">
-          <p className="text-xs text-[var(--text-muted)]">문의: privacy@studyeng.app</p>
+          <p className="text-xs text-[var(--text-muted)]">문의: privacy@shortee.app</p>
         </section>
       </div>
     </div>
