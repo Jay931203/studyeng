@@ -4,6 +4,8 @@ import { useState, useEffect, useMemo } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { SceneQuizGame } from './SceneQuizGame'
 import { ListeningGame } from './ListeningGame'
+import { ExpressionSwipeGame } from './ExpressionSwipeGame'
+import { ListenFillGame } from './ListenFillGame'
 import type { SavedPhrase } from '@/stores/usePhraseStore'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { type SubtitleEntry } from '@/data/seed-videos'
@@ -11,7 +13,7 @@ import { catalogVideos } from '@/lib/catalog'
 import { createHiddenVideoIdSet, filterHiddenVideos } from '@/lib/videoVisibility'
 import { useAdminStore } from '@/stores/useAdminStore'
 
-type GameType = 'scene-quiz' | 'listening'
+type GameType = 'scene-quiz' | 'listening' | 'expression-swipe' | 'listen-fill'
 type PhrasePair = {
   sourceVideoId: string
   current: { en: string; ko: string }
@@ -167,11 +169,11 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
         <h2 className="text-[var(--text-secondary)] text-xs font-medium tracking-wide uppercase mb-3">
           게임
         </h2>
-        <div className="flex gap-3">
+        <div className="grid grid-cols-2 gap-3">
           <motion.button
             whileTap={{ scale: 0.97 }}
             onClick={() => launchGame('scene-quiz')}
-            className="flex-1 rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-4 text-left shadow-[var(--card-shadow)]"
+            className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-4 text-left shadow-[var(--card-shadow)]"
           >
             <div className="flex items-center gap-3">
               <div
@@ -193,7 +195,7 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
             whileTap={{ scale: 0.97 }}
             onClick={() => launchGame('listening')}
             disabled={listeningRounds.length === 0}
-            className="flex-1 rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-4 text-left shadow-[var(--card-shadow)]"
+            className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-4 text-left shadow-[var(--card-shadow)]"
           >
             <div className="flex items-center gap-3">
               <div
@@ -211,11 +213,53 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
               </div>
             </div>
           </motion.button>
+
+          <motion.button
+            whileTap={{ scale: 0.97 }}
+            onClick={() => launchGame('expression-swipe')}
+            className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-4 text-left shadow-[var(--card-shadow)]"
+          >
+            <div className="flex items-center gap-3">
+              <div
+                className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl"
+                style={{ backgroundColor: 'var(--accent-glow)' }}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" style={{ color: 'var(--accent-text)' }}>
+                  <path d="M5.566 4.657A4.505 4.505 0 016.75 4.5h10.5c.41 0 .806.055 1.183.157A3 3 0 0015.75 3h-7.5a3 3 0 00-2.684 1.657zM2.25 12a3 3 0 013-3h13.5a3 3 0 013 3v6a3 3 0 01-3 3H5.25a3 3 0 01-3-3v-6zM5.25 7.5c-.41 0-.806.055-1.184.157A3 3 0 016.75 6h10.5a3 3 0 012.683 1.657A4.505 4.505 0 0018.75 7.5H5.25z" />
+                </svg>
+              </div>
+              <div>
+                <span className="text-[var(--text-primary)] font-semibold text-sm block">표현 알아보기</span>
+                <span className="text-[var(--text-muted)] text-xs block mt-0.5">알아요 / 몰라요</span>
+              </div>
+            </div>
+          </motion.button>
+
+          <motion.button
+            whileTap={{ scale: 0.97 }}
+            onClick={() => launchGame('listen-fill')}
+            className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-4 text-left shadow-[var(--card-shadow)]"
+          >
+            <div className="flex items-center gap-3">
+              <div
+                className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-xl"
+                style={{ backgroundColor: 'var(--bg-secondary)' }}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4" style={{ color: 'var(--text-secondary)' }}>
+                  <path d="M12 2a7 7 0 00-7 7v1.07A5.5 5.5 0 003 15v1a3 3 0 003 3h1a1 1 0 001-1v-5a1 1 0 00-1-1H6v-3a6 6 0 1112 0v3h-1a1 1 0 00-1 1v5a1 1 0 001 1h1a3 3 0 003-3v-1a5.5 5.5 0 00-2-4.93V9a7 7 0 00-7-7z" />
+                </svg>
+              </div>
+              <div>
+                <span className="text-[var(--text-primary)] font-semibold text-sm block">듣고 채우기</span>
+                <span className="text-[var(--text-muted)] text-xs block mt-0.5">빈칸 맞추기</span>
+              </div>
+            </div>
+          </motion.button>
         </div>
       </div>
 
       <AnimatePresence>
-        {activeGame && ((activeGame === 'scene-quiz' && currentPhrase) || (activeGame === 'listening' && currentListeningRound)) && (
+        {activeGame && ((activeGame === 'scene-quiz' && currentPhrase) || (activeGame === 'listening' && currentListeningRound) || activeGame === 'expression-swipe' || activeGame === 'listen-fill') && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -249,6 +293,12 @@ export function GameLauncher({ phrases }: GameLauncherProps) {
                 }
                 onComplete={handleComplete}
               />
+            )}
+            {activeGame === 'expression-swipe' && (
+              <ExpressionSwipeGame onComplete={handleComplete} />
+            )}
+            {activeGame === 'listen-fill' && (
+              <ListenFillGame onComplete={handleComplete} />
             )}
           </motion.div>
         )}

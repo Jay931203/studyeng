@@ -225,8 +225,9 @@ export const useLevelStore = create<LevelState>()(
         // Already pending
         if (pendingLevelUp) return
 
-        // Minimum expressions check (proxy: if rawScore > 5, at least 10 swipes happened)
-        const totalSwipes = Object.keys(expressionEntries).length // just a guard
+        // Must have watched at least 5 videos to level up
+        if (videoCompletionLog.length < 5) return
+
         if (rawScore < 5) return // too early
 
         // Check completion rate condition
