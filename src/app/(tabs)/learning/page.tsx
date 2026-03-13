@@ -2,13 +2,15 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
 import { DailyMissions } from '@/components/DailyMissions'
 import { SavedPhraseCard } from '@/components/SavedPhraseCard'
 import { WatchHistory } from '@/components/WatchHistory'
 import { GameLauncher } from '@/components/games/GameLauncher'
+import { LevelChallengeGame } from '@/components/level/LevelChallengeGame'
+import { TierStatusCard } from '@/components/tier/TierStatusCard'
 import { AppPage, MetricCard, SurfaceCard } from '@/components/ui/AppPage'
 import { categories } from '@/data/seed-videos'
 import { getCatalogSeriesById, getCatalogVideoById } from '@/lib/catalog'
@@ -21,6 +23,7 @@ import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useLevelStore, getLevelGaugeProgress } from '@/stores/useLevelStore'
+import { useLevelChallengeStore } from '@/stores/useLevelChallengeStore'
 
 const categoryLabels = Object.fromEntries(
   categories.map((category) => [category.id, category.label]),
@@ -46,6 +49,11 @@ export default function LearningPage() {
   const rawScore = useLevelStore((s) => s.rawScore)
   const videoXp = useLevelStore((s) => s.videoXP)
   const familiarityEntries = useFamiliarityStore((state) => state.entries)
+  const canChallenge = useLevelChallengeStore((s) => s.canChallenge)
+  const getTargetLevel = useLevelChallengeStore((s) => s.getTargetLevel)
+  const getAttemptCount = useLevelChallengeStore((s) => s.getAttemptCount)
+
+  const [showChallenge, setShowChallenge] = useState(false)
 
   const totalViews = useMemo(
     () => Object.values(viewCounts).reduce((sum, count) => sum + count, 0),
@@ -129,6 +137,45 @@ export default function LearningPage() {
             </div>
           </div>
         </SurfaceCard>
+
+        <TierStatusCard />
+
+        {/* Level Challenge Card */}
+        {canChallenge(level) && (() => {
+          const target = getTargetLevel(level)
+          if (!target) return null
+          const attempts = getAttemptCount(target)
+          const targetLabel = target === 'intermediate' ? 'Intermediate' : 'Advanced'
+          return (
+            <SurfaceCard className="p-5">
+              <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+                LEVEL CHALLENGE
+              </p>
+              <div className="flex items-center justify-between gap-4">
+                <div className="min-w-0 flex-1">
+                  <p className="text-sm font-medium text-[var(--text-primary)]">
+                    {LEVEL_LABELS[level]} {'\u2192'} {targetLabel}
+                  </p>
+                  <p className="mt-1 text-xs text-[var(--text-muted)]">
+                    20장 중 16장 이상 알면 레벨업
+                    {attempts > 0 ? ` \u00B7 ${attempts}회 도전` : ''}
+                  </p>
+                </div>
+                <motion.button
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setShowChallenge(true)}
+                  className="shrink-0 rounded-xl px-5 py-2.5 text-sm font-semibold text-white"
+                  style={{
+                    backgroundColor: 'var(--accent-primary)',
+                    boxShadow: '0 2px 12px var(--accent-glow)',
+                  }}
+                >
+                  도전
+                </motion.button>
+              </div>
+            </SurfaceCard>
+          )
+        })()}
 
         <GameLauncher phrases={phrases} />
 
@@ -244,6 +291,39 @@ export default function LearningPage() {
 
         <WatchHistory />
       </div>
+
+      {/* Level Challenge fullscreen overlay */}
+      <AnimatePresence>
+        {showChallenge && (() => {
+          const target = getTargetLevel(level)
+          if (!target) return null
+          return (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="fixed inset-0 z-[120]"
+              style={{ backgroundColor: 'var(--bg-primary)' }}
+            >
+              <button
+                onClick={() => setShowChallenge(false)}
+                className="absolute right-4 top-4 z-[130] flex h-8 w-8 items-center justify-center rounded-full"
+                style={{
+                  backgroundColor: 'var(--bg-secondary)',
+                  color: 'var(--text-secondary)',
+                }}
+              >
+                {'\u2715'}
+              </button>
+              <LevelChallengeGame
+                targetLevel={target}
+                onClose={() => setShowChallenge(false)}
+              />
+            </motion.div>
+          )
+        })()}
+      </AnimatePresence>
     </AppPage>
   )
 }

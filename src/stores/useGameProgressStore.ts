@@ -1,5 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
+import { DAILY_SESSION_XP_CAP } from '@/lib/xp/sessionXp'
+import { getStreakBonusXP, applyMonthlyStreakCap } from '@/lib/xp/streakBonus'
 
 interface LeitnerEntry {
   box: 1 | 2 | 3
@@ -7,7 +9,7 @@ interface LeitnerEntry {
   consecutiveCorrect: number
 }
 
-const DAILY_GAME_XP_CAP = 30
+const DAILY_GAME_XP_CAP = 40
 
 interface GameProgressState {
   leitner: { [exprId: string]: LeitnerEntry }
@@ -18,6 +20,16 @@ interface GameProgressState {
   }
   dailyGameXP: number
   dailyGameXPDate: string
+
+  // Session XP tracking (separate from per-card game XP)
+  dailySessionXP: number
+  dailySessionXPDate: string
+
+  // Streak bonus tracking (once per day)
+  streakBonusDate: string
+  monthlyStreakXP: number
+  monthlyStreakXPMonth: string // YYYY-MM format
+
   hydrated: boolean
   setHydrated: (h: boolean) => void
   updateLeitner: (exprId: string, correct: boolean) => void
@@ -29,6 +41,18 @@ interface GameProgressState {
   getBox1Expressions: () => string[]
   getBox2Expressions: () => string[]
   getMasteredExpressions: () => string[]
+
+  /** Add session completion XP (capped at DAILY_SESSION_XP_CAP per day). Returns actual XP awarded. */
+  addSessionXP: (amount: number) => number
+
+  /** Record that streak bonus was awarded today. Returns actual XP awarded after monthly cap. */
+  awardStreakBonus: (streakDays: number, totalMonthlyXP: number) => number
+
+  /** Whether streak bonus has already been awarded today */
+  isStreakBonusAwardedToday: () => boolean
+
+  /** Get total game sessions across all types */
+  getTotalSessions: () => number
 }
 
 export const useGameProgressStore = create<GameProgressState>()(
@@ -42,6 +66,11 @@ export const useGameProgressStore = create<GameProgressState>()(
       },
       dailyGameXP: 0,
       dailyGameXPDate: '',
+      dailySessionXP: 0,
+      dailySessionXPDate: '',
+      streakBonusDate: '',
+      monthlyStreakXP: 0,
+      monthlyStreakXPMonth: '',
       hydrated: false,
       setHydrated: (h) => set({ hydrated: h }),
 
@@ -135,6 +164,70 @@ export const useGameProgressStore = create<GameProgressState>()(
       getMasteredExpressions: () => {
         const leitner = get().leitner
         return Object.keys(leitner).filter((id) => leitner[id].box === 3)
+      },
+
+      addSessionXP: (amount) => {
+        const today = new Date().toISOString().slice(0, 10)
+        const state = get()
+        const current = state.dailySessionXPDate === today ? state.dailySessionXP : 0
+        const remaining = Math.max(0, DAILY_SESSION_XP_CAP - current)
+        const actual = Math.min(amount, remaining)
+
+        if (actual > 0) {
+          set({ dailySessionXP: current + actual, dailySessionXPDate: today })
+
+          // Award via useUserStore
+          const { useUserStore } = require('./useUserStore')
+          useUserStore.getState().gainXp(Math.round(actual))
+        }
+
+        return actual
+      },
+
+      awardStreakBonus: (streakDays, totalMonthlyXP) => {
+        const today = new Date().toISOString().slice(0, 10)
+        const currentMonth = today.slice(0, 7) // YYYY-MM
+        const state = get()
+
+        // Already awarded today
+        if (state.streakBonusDate === today) return 0
+
+        const proposed = getStreakBonusXP(streakDays)
+        if (proposed <= 0) return 0
+
+        // Monthly streak XP tracking
+        const monthlyStreakSoFar = state.monthlyStreakXPMonth === currentMonth
+          ? state.monthlyStreakXP
+          : 0
+
+        const actual = applyMonthlyStreakCap(monthlyStreakSoFar, totalMonthlyXP, proposed)
+        if (actual <= 0) {
+          // Still mark as awarded today even if capped to 0
+          set({ streakBonusDate: today })
+          return 0
+        }
+
+        set({
+          streakBonusDate: today,
+          monthlyStreakXP: monthlyStreakSoFar + actual,
+          monthlyStreakXPMonth: currentMonth,
+        })
+
+        // Award via useUserStore
+        const { useUserStore } = require('./useUserStore')
+        useUserStore.getState().gainXp(Math.round(actual))
+
+        return actual
+      },
+
+      isStreakBonusAwardedToday: () => {
+        const today = new Date().toISOString().slice(0, 10)
+        return get().streakBonusDate === today
+      },
+
+      getTotalSessions: () => {
+        const sessions = get().totalSessions
+        return sessions.expressionSwipe + sessions.listenAndFill
       },
     }),
     {

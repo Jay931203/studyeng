@@ -176,33 +176,16 @@ export function getLevelGaugeProgress(
   return (clamped - floor) / (ceiling - floor)
 }
 
+/**
+ * @deprecated Swipe XP has been removed. Individual card swipes no longer award XP.
+ * XP is now awarded per completed game session instead (see src/lib/xp/sessionXp.ts).
+ * Kept for backward compatibility — always returns 0.
+ */
 export function computeXpForSwipe(
-  exprId: string,
-  newCount: number, // count AFTER this swipe
+  _exprId: string,
+  _newCount: number,
 ): number {
-  let cefrWeight: number
-  let multiplier: number
-
-  if (exprId.startsWith('word:')) {
-    const wordKey = exprId.slice(5)
-    const wordData = wordEntries[wordKey]
-    if (!wordData) return 0
-    cefrWeight = CEFR_WEIGHTS[wordData.cefr?.toUpperCase()] ?? 1
-    multiplier = POS_MULTIPLIERS[wordData.pos] ?? 0.9
-  } else {
-    const exprData = expressionEntries[exprId]
-    if (!exprData) return 0
-    cefrWeight = CEFR_WEIGHTS[exprData.cefr?.toUpperCase()] ?? 1
-    multiplier = CATEGORY_MULTIPLIERS[exprData.category] ?? 1.0
-  }
-
-  // XP delta for this specific swipe step
-  let stepXP = 0
-  if (newCount === 1) stepXP = 0.3
-  else if (newCount === 2) stepXP = 0.3
-  else if (newCount >= 3) stepXP = 0.4
-
-  return Math.round(cefrWeight * multiplier * stepXP * 10) / 10
+  return 0
 }
 
 // ---------------------------------------------------------------------------

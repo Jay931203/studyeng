@@ -8,8 +8,10 @@ import wordEntriesData from '@/data/word-entries.json'
 import wordIndexData from '@/data/word-index.json'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
-import { useLevelStore, computeXpForSwipe } from '@/stores/useLevelStore'
+import { useLevelStore } from '@/stores/useLevelStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
+import { calculateSessionXP } from '@/lib/xp/sessionXp'
+import { checkGameMilestones, checkStreakMilestones } from '@/stores/useMilestoneStore'
 
 // ---------------------------------------------------------------------------
 // Types
@@ -78,27 +80,6 @@ const entries = expressionEntries as Record<string, ExpressionEntry>
 const index = expressionIndex as Record<string, IndexMatch[]>
 const wordEntries = wordEntriesData as Record<string, WordEntry>
 const wordIndex = wordIndexData as Record<string, WordIndexMatch[]>
-
-// ---------------------------------------------------------------------------
-// Constants
-// ---------------------------------------------------------------------------
-
-const CEFR_WEIGHTS: Record<string, number> = {
-  A1: 1, A2: 2, B1: 3, B2: 5, C1: 8, C2: 13,
-}
-
-const CATEGORY_MULTIPLIERS: Record<string, number> = {
-  idiom: 1.5,
-  phrasal_verb: 1.4,
-  collocation: 1.3,
-  fixed_expression: 1.2,
-  sentence_frame: 1.2,
-  discourse_marker: 1.2,
-  slang: 1.0,
-  interjection: 1.0,
-  exclamation: 1.0,
-  filler: 0.8,
-}
 
 const CATEGORY_LABELS: Record<string, string> = {
   idiom: 'idiom',
@@ -485,42 +466,6 @@ function selectQuestions(level: string): QuestionData[] {
 }
 
 // ---------------------------------------------------------------------------
-// XP calculation for listen & fill
-// ---------------------------------------------------------------------------
-
-const POS_MULTIPLIERS: Record<string, number> = {
-  verb: 1.3,
-  adjective: 1.2,
-  adverb: 1.1,
-  noun: 1.0,
-}
-
-function computeListenFillXp(
-  exprId: string,
-  replaysUsed: number,
-): number {
-  let cefrWeight: number
-  let multiplier: number
-
-  if (exprId.startsWith('word:')) {
-    const wordKey = exprId.slice(5)
-    const wordEntry = wordEntries[wordKey]
-    if (!wordEntry) return 0
-    cefrWeight = CEFR_WEIGHTS[wordEntry.cefr?.toUpperCase()] ?? 1
-    multiplier = POS_MULTIPLIERS[wordEntry.pos] ?? 0.9
-  } else {
-    const entry = entries[exprId]
-    if (!entry) return 0
-    cefrWeight = CEFR_WEIGHTS[entry.cefr?.toUpperCase()] ?? 1
-    multiplier = CATEGORY_MULTIPLIERS[entry.category] ?? 1.0
-  }
-
-  const replayMultiplier = replaysUsed <= 1 ? 1.5 : 0.8
-
-  return Math.round(cefrWeight * multiplier * replayMultiplier * 10) / 10
-}
-
-// ---------------------------------------------------------------------------
 // YouTube IFrame API hook
 // ---------------------------------------------------------------------------
 
@@ -644,24 +589,6 @@ function useYouTubePlayer(
 }
 
 // ---------------------------------------------------------------------------
-// Floating XP component
-// ---------------------------------------------------------------------------
-
-function FloatingXP({ xp }: { xp: number }) {
-  return (
-    <motion.div
-      initial={{ opacity: 1, y: 0 }}
-      animate={{ opacity: 0, y: -40 }}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
-      className="absolute top-0 left-1/2 -translate-x-1/2 pointer-events-none z-50 text-lg font-bold"
-      style={{ color: 'var(--accent-text)' }}
-    >
-      +{xp} XP
-    </motion.div>
-  )
-}
-
-// ---------------------------------------------------------------------------
 // Expression info popup
 // ---------------------------------------------------------------------------
 
@@ -736,7 +663,6 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
   const incrementSessionCount = useGameProgressStore((s) => s.incrementSessionCount)
   const updateLeitner = useGameProgressStore((s) => s.updateLeitner)
   const markFamiliar = useFamiliarityStore((s) => s.markFamiliar)
-  const getFamiliarCount = useFamiliarityStore((s) => s.getFamiliarCount)
   const recalculateScore = useLevelStore((s) => s.recalculateScore)
   const checkLevelUp = useLevelStore((s) => s.checkLevelUp)
 
@@ -748,16 +674,17 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
   const [questions] = useState<QuestionData[]>(() => selectQuestions(level))
   const [currentIdx, setCurrentIdx] = useState(0)
   const [phase, setPhase] = useState<GamePhase>('playing')
-  const [roundXP, setRoundXP] = useState(0)
+  const [sessionXPAwarded, setSessionXPAwarded] = useState(0)
   const [results, setResults] = useState<
-    Array<{ exprId: string; correct: boolean; xp: number }>
+    Array<{ exprId: string; correct: boolean }>
   >([])
+
+  const sessionStartRef = useRef(Date.now())
 
   // Per-question state
   const [selected, setSelected] = useState<string | null>(null)
   const [replaysUsed, setReplaysUsed] = useState(0)
   const [showPopup, setShowPopup] = useState(false)
-  const [floatingXP, setFloatingXP] = useState<number | null>(null)
   const [isAdvancing, setIsAdvancing] = useState(false)
 
   // Transcript timing for current question
@@ -810,15 +737,10 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
       // Update Leitner
       updateLeitner(currentQ.exprId, correct)
 
-      let xpGained = 0
       if (correct) {
-        const rawXP = computeListenFillXp(currentQ.exprId, replaysUsed)
-        xpGained = useGameProgressStore.getState().addGameXP(rawXP)
         markFamiliar(currentQ.exprId)
-        if (xpGained > 0) setFloatingXP(xpGained)
-        setRoundXP((prev) => prev + xpGained)
 
-        // Recalculate after state settles
+        // Recalculate Absorption Score (used for content recommendations, not XP)
         setTimeout(() => {
           const updatedEntries = useFamiliarityStore.getState().entries
           recalculateScore(updatedEntries)
@@ -829,7 +751,7 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
       // Record result
       setResults((prev) => [
         ...prev,
-        { exprId: currentQ.exprId, correct, xp: xpGained },
+        { exprId: currentQ.exprId, correct },
       ])
 
       // Show popup after 0.8s
@@ -841,13 +763,36 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
         setTimeout(() => {
           if (currentIdx + 1 >= questions.length) {
             incrementSessionCount('listenAndFill')
+
+            // Award session completion XP
+            const xpAmount = calculateSessionXP('listenAndFill', sessionStartRef.current)
+            if (xpAmount > 0) {
+              const actual = useGameProgressStore.getState().addSessionXP(xpAmount)
+              setSessionXPAwarded(actual)
+            }
+
+            // Streak bonus (once per day)
+            const gameStore = useGameProgressStore.getState()
+            if (!gameStore.isStreakBonusAwardedToday()) {
+              const { useUserStore } = require('@/stores/useUserStore')
+              const userState = useUserStore.getState()
+              userState.checkAndUpdateStreak()
+              const streakDays = useUserStore.getState().streakDays
+              const totalMonthlyXP = userState.totalXpEarned
+              gameStore.awardStreakBonus(streakDays, totalMonthlyXP)
+              checkStreakMilestones(streakDays)
+            }
+
+            // Check game milestones
+            const totalSessions = useGameProgressStore.getState().getTotalSessions()
+            checkGameMilestones(totalSessions)
+
             setPhase('result')
           } else {
             setCurrentIdx((prev) => prev + 1)
             setSelected(null)
             setReplaysUsed(0)
             setShowPopup(false)
-            setFloatingXP(null)
             setIsAdvancing(false)
           }
         }, 100)
@@ -857,7 +802,6 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
       selected,
       currentQ,
       isAdvancing,
-      replaysUsed,
       currentIdx,
       questions.length,
       updateLeitner,
@@ -922,7 +866,7 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
               획득 XP
             </p>
             <p className="text-xl font-bold" style={{ color: 'var(--accent-text)' }}>
-              +{Math.round(roundXP * 10) / 10}
+              +{sessionXPAwarded}
             </p>
           </div>
         </div>
@@ -1084,12 +1028,6 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
 
       {/* Main content area */}
       <div className="flex-1 flex flex-col items-center relative">
-        <AnimatePresence>
-          {floatingXP !== null && floatingXP > 0 && (
-            <FloatingXP key={`xp-${currentIdx}`} xp={floatingXP} />
-          )}
-        </AnimatePresence>
-
         {/* Play button or fallback */}
         <div className="mb-6">
           {audioAvailable && !ytFailed ? (

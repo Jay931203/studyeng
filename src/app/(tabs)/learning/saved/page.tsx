@@ -237,7 +237,7 @@ export default function SavedPhrasesPage() {
   const familiarExpressions = useMemo(() => {
     const entries = expressionEntriesData as Record<string, any>
     return Object.entries(familiarEntries)
-      .filter(([_, data]) => data.count > 0)
+      .filter(([key, data]) => !key.startsWith('word:') && data.count > 0)
       .map(([exprId, data]) => ({
         exprId,
         entry: entries[exprId],

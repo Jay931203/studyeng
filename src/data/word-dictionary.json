@@ -183,21 +183,6 @@
     "example_ko": "내가 가장 좋아하는 동물은 돌고래이다."
   },
   {
-    "id": "animals",
-    "canonical": "animals",
-    "pos": "noun",
-    "meaning_ko": "동물들",
-    "cefr": "A1",
-    "theme": [
-      "nature"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "Children love watching animals at the zoo.",
-    "example_ko": "아이들은 동물원에서 동물 보는 걸 좋아한다."
-  },
-  {
     "id": "another",
     "canonical": "another",
     "pos": "determiner",
@@ -699,26 +684,6 @@
     "example_ko": "이것은 놀라운 일의 시작에 불과하다."
   },
   {
-    "id": "begins",
-    "canonical": "begins",
-    "pos": "verb",
-    "meaning_ko": "시작하다",
-    "cefr": "A1",
-    "theme": [
-      "time"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "begin",
-      "begins",
-      "began",
-      "begun"
-    ],
-    "example_en": "The movie begins at eight.",
-    "example_ko": "영화는 8시에 시작한다."
-  },
-  {
     "id": "best",
     "canonical": "best",
     "pos": "adjective",
@@ -822,21 +787,6 @@
     ],
     "example_en": "A bird was singing in the tree.",
     "example_ko": "새 한 마리가 나무에서 노래하고 있었다."
-  },
-  {
-    "id": "birds",
-    "canonical": "birds",
-    "pos": "noun",
-    "meaning_ko": "새들",
-    "cefr": "A1",
-    "theme": [
-      "nature"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "The birds are singing in the morning.",
-    "example_ko": "아침에 새들이 노래하고 있다."
   },
   {
     "id": "birthday",
@@ -1307,22 +1257,6 @@
     "example_ko": "새 노트북을 사고 싶어."
   },
   {
-    "id": "buying",
-    "canonical": "buying",
-    "pos": "verb",
-    "meaning_ko": "사는, 구매하는",
-    "cefr": "A1",
-    "theme": [
-      "money",
-      "daily_life"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "She's buying groceries for dinner.",
-    "example_ko": "그녀는 저녁용 식료품을 사고 있다."
-  },
-  {
     "id": "bye",
     "canonical": "bye",
     "pos": "interjection",
@@ -1772,26 +1706,6 @@
     "example_ko": "하늘에 먹구름이 몰려오고 있어."
   },
   {
-    "id": "clouds",
-    "canonical": "clouds",
-    "pos": "noun",
-    "meaning_ko": "구름들",
-    "cefr": "A1",
-    "theme": [
-      "weather",
-      "nature"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "cloud",
-      "clouds",
-      "cloudy"
-    ],
-    "example_en": "Dark clouds filled the sky.",
-    "example_ko": "어두운 구름이 하늘을 가득 채웠다."
-  },
-  {
     "id": "coat",
     "canonical": "coat",
     "pos": "noun",
@@ -1865,22 +1779,6 @@
     ],
     "example_en": "What color is your car?",
     "example_ko": "네 차는 무슨 색이야?"
-  },
-  {
-    "id": "colors",
-    "canonical": "colors",
-    "pos": "noun",
-    "meaning_ko": "색깔들",
-    "cefr": "A1",
-    "theme": [
-      "art",
-      "daily_life"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "What colors do you like?",
-    "example_ko": "어떤 색을 좋아해?"
   },
   {
     "id": "come",
@@ -2197,26 +2095,6 @@
     ],
     "example_en": "There are too many papers on my desk.",
     "example_ko": "내 책상 위에 서류가 너무 많다."
-  },
-  {
-    "id": "dies",
-    "canonical": "dies",
-    "pos": "verb",
-    "meaning_ko": "죽다, 사망하다",
-    "cefr": "A1",
-    "theme": [
-      "abstract"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "die",
-      "dies",
-      "died",
-      "dying"
-    ],
-    "example_en": "The flower dies without water.",
-    "example_ko": "꽃은 물 없이 죽는다."
   },
   {
     "id": "dinner",
@@ -2612,47 +2490,6 @@
     "example_ko": "영어 말하기 실력을 향상시키고 싶어요."
   },
   {
-    "id": "enjoyed",
-    "canonical": "enjoyed",
-    "pos": "verb",
-    "meaning_ko": "즐겼다, 만끽했다",
-    "cefr": "A1",
-    "theme": [
-      "emotion"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "enjoy",
-      "enjoys",
-      "enjoyed",
-      "enjoying"
-    ],
-    "example_en": "We really enjoyed the trip.",
-    "example_ko": "우리는 여행을 정말 즐겼다."
-  },
-  {
-    "id": "enjoying",
-    "canonical": "enjoying",
-    "pos": "verb",
-    "meaning_ko": "즐기고 있는, 만끽하는",
-    "cefr": "A1",
-    "theme": [
-      "emotion",
-      "daily_life"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "enjoy",
-      "enjoys",
-      "enjoyed",
-      "enjoying"
-    ],
-    "example_en": "Are you enjoying the party?",
-    "example_ko": "파티 즐기고 있어?"
-  },
-  {
     "id": "evening",
     "canonical": "evening",
     "pos": "noun",
@@ -2786,38 +2623,6 @@
     ],
     "example_en": "She has a beautiful face.",
     "example_ko": "그녀는 예쁜 얼굴을 가졌다."
-  },
-  {
-    "id": "faces",
-    "canonical": "faces",
-    "pos": "noun",
-    "meaning_ko": "얼굴들",
-    "cefr": "A1",
-    "theme": [
-      "body",
-      "social"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "I saw many familiar faces at the party.",
-    "example_ko": "파티에서 많은 익숙한 얼굴들을 봤다."
-  },
-  {
-    "id": "families",
-    "canonical": "families",
-    "pos": "noun",
-    "meaning_ko": "가족들",
-    "cefr": "A1",
-    "theme": [
-      "family",
-      "social"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "Many families gathered in the park.",
-    "example_ko": "많은 가족들이 공원에 모였다."
   },
   {
     "id": "family",
@@ -3155,21 +2960,6 @@
     ],
     "example_en": "He gave her a beautiful flower.",
     "example_ko": "그는 그녀에게 아름다운 꽃을 줬다."
-  },
-  {
-    "id": "flowers",
-    "canonical": "flowers",
-    "pos": "noun",
-    "meaning_ko": "꽃들",
-    "cefr": "A1",
-    "theme": [
-      "nature"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "He bought her flowers for her birthday.",
-    "example_ko": "그는 그녀의 생일에 꽃을 사줬다."
   },
   {
     "id": "food",
@@ -3807,22 +3597,6 @@
     "example_ko": "이거 옮기는 거 도와줄래?"
   },
   {
-    "id": "helping",
-    "canonical": "helping",
-    "pos": "verb",
-    "meaning_ko": "돕는, 도와주는",
-    "cefr": "A1",
-    "theme": [
-      "social",
-      "daily_life"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "Thank you for helping me.",
-    "example_ko": "도와줘서 고마워."
-  },
-  {
     "id": "hey",
     "canonical": "hey",
     "pos": "interjection",
@@ -4168,24 +3942,6 @@
     "example_ko": "지난달에 새 직장을 구했어."
   },
   {
-    "id": "jobs",
-    "canonical": "jobs",
-    "pos": "noun",
-    "meaning_ko": "직업들, 일자리들",
-    "cefr": "A1",
-    "theme": [
-      "work"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "job",
-      "jobs"
-    ],
-    "example_en": "There aren't many jobs available.",
-    "example_ko": "일자리가 많지 않다."
-  },
-  {
     "id": "juice",
     "canonical": "juice",
     "pos": "noun",
@@ -4203,27 +3959,6 @@
     ],
     "example_en": "Would you like some orange juice?",
     "example_ko": "오렌지 주스 좀 드실래요?"
-  },
-  {
-    "id": "jumped",
-    "canonical": "jumped",
-    "pos": "verb",
-    "meaning_ko": "뛰었다, 점프했다",
-    "cefr": "A1",
-    "theme": [
-      "body",
-      "sports"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "jump",
-      "jumps",
-      "jumped",
-      "jumping"
-    ],
-    "example_en": "The cat jumped onto the table.",
-    "example_ko": "고양이가 탁자 위로 뛰어올랐다."
   },
   {
     "id": "key",
@@ -5276,22 +5011,6 @@
     "example_ko": "이름이 뭐예요?"
   },
   {
-    "id": "names",
-    "canonical": "names",
-    "pos": "noun",
-    "meaning_ko": "이름들",
-    "cefr": "A1",
-    "theme": [
-      "social",
-      "communication"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "Write your names on the paper.",
-    "example_ko": "종이에 이름을 적으세요."
-  },
-  {
     "id": "near",
     "canonical": "near",
     "pos": "adverb",
@@ -5640,26 +5359,6 @@
     "example_ko": "문 좀 열어줘."
   },
   {
-    "id": "opens",
-    "canonical": "opens",
-    "pos": "verb",
-    "meaning_ko": "열다, 개장하다",
-    "cefr": "A1",
-    "theme": [
-      "daily_life"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "open",
-      "opens",
-      "opened",
-      "opening"
-    ],
-    "example_en": "The store opens at nine.",
-    "example_ko": "가게는 9시에 연다."
-  },
-  {
     "id": "orange",
     "canonical": "orange",
     "pos": "noun",
@@ -5857,26 +5556,6 @@
     ],
     "example_en": "Are you coming to the birthday party on Saturday?",
     "example_ko": "토요일 생일 파티에 올 거야?"
-  },
-  {
-    "id": "pays",
-    "canonical": "pays",
-    "pos": "verb",
-    "meaning_ko": "지불하다, 보상하다",
-    "cefr": "A1",
-    "theme": [
-      "money"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "pay",
-      "pays",
-      "paid",
-      "paying"
-    ],
-    "example_en": "Crime never pays.",
-    "example_ko": "범죄는 절대 이득이 되지 않는다."
   },
   {
     "id": "pen",
@@ -6118,24 +5797,6 @@
     "example_ko": "비행기가 안전하게 착륙했다."
   },
   {
-    "id": "planes",
-    "canonical": "planes",
-    "pos": "noun",
-    "meaning_ko": "비행기들",
-    "cefr": "A1",
-    "theme": [
-      "travel"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "plane",
-      "planes"
-    ],
-    "example_en": "I'm afraid of planes.",
-    "example_ko": "나는 비행기가 무섭다."
-  },
-  {
     "id": "plant",
     "canonical": "plant",
     "pos": "noun",
@@ -6153,26 +5814,6 @@
     ],
     "example_en": "She watered the plant every morning.",
     "example_ko": "그녀는 매일 아침 식물에 물을 줬다."
-  },
-  {
-    "id": "plants",
-    "canonical": "plants",
-    "pos": "noun",
-    "meaning_ko": "식물들, 공장들",
-    "cefr": "A1",
-    "theme": [
-      "nature"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "plant",
-      "plants",
-      "planted",
-      "planting"
-    ],
-    "example_en": "She waters her plants every morning.",
-    "example_ko": "그녀는 매일 아침 식물에 물을 준다."
   },
   {
     "id": "plate",
@@ -6212,22 +5853,6 @@
     ],
     "example_en": "Do you want to play basketball?",
     "example_ko": "농구하고 싶어?"
-  },
-  {
-    "id": "played",
-    "canonical": "played",
-    "pos": "verb",
-    "meaning_ko": "놀았다, 연주했다",
-    "cefr": "A1",
-    "theme": [
-      "entertainment",
-      "sports"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "We played soccer after school.",
-    "example_ko": "방과 후에 축구를 했다."
   },
   {
     "id": "please",
@@ -6339,21 +5964,6 @@
     ],
     "example_en": "Stop putting off your homework.",
     "example_ko": "숙제를 미루지 마."
-  },
-  {
-    "id": "puts",
-    "canonical": "puts",
-    "pos": "verb",
-    "meaning_ko": "놓다, 두다 (3인칭)",
-    "cefr": "A1",
-    "theme": [
-      "daily_life"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "She puts the keys on the table.",
-    "example_ko": "그녀는 열쇠를 테이블 위에 놓는다."
   },
   {
     "id": "question",
@@ -6525,25 +6135,6 @@
     ],
     "example_en": "Let's go to that new Italian restaurant.",
     "example_ko": "새로 생긴 이탈리안 식당에 가자."
-  },
-  {
-    "id": "restaurants",
-    "canonical": "restaurants",
-    "pos": "noun",
-    "meaning_ko": "식당들, 레스토랑들",
-    "cefr": "A1",
-    "theme": [
-      "food",
-      "travel"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "restaurant",
-      "restaurants"
-    ],
-    "example_en": "There are many good restaurants nearby.",
-    "example_ko": "근처에 좋은 식당이 많다."
   },
   {
     "id": "rice",
@@ -6884,21 +6475,6 @@
     "example_ko": "그는 흰 셔츠에 파란 넥타이를 매고 있었다."
   },
   {
-    "id": "shirts",
-    "canonical": "shirts",
-    "pos": "noun",
-    "meaning_ko": "셔츠들",
-    "cefr": "A1",
-    "theme": [
-      "clothing"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "I need to iron my shirts.",
-    "example_ko": "셔츠를 다려야 해."
-  },
-  {
     "id": "shoe",
     "canonical": "shoe",
     "pos": "noun",
@@ -7032,28 +6608,6 @@
     ],
     "example_en": "I take a shower every morning.",
     "example_ko": "나는 매일 아침 샤워를 한다."
-  },
-  {
-    "id": "showing",
-    "canonical": "showing",
-    "pos": "verb",
-    "meaning_ko": "보여주는, 상영",
-    "cefr": "A1",
-    "theme": [
-      "communication",
-      "entertainment"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "show",
-      "shows",
-      "showed",
-      "shown",
-      "showing"
-    ],
-    "example_en": "What's showing at the cinema?",
-    "example_ko": "영화관에서 뭐 상영해?"
   },
   {
     "id": "sing",
@@ -7406,24 +6960,6 @@
     "example_ko": "가끔은 그냥 앉아서 아무것도 안 하는 게 좋아요."
   },
   {
-    "id": "son",
-    "canonical": "son",
-    "pos": "noun",
-    "meaning_ko": "아들",
-    "cefr": "A1",
-    "theme": [
-      "family"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "son",
-      "sons"
-    ],
-    "example_en": "Their son is starting college next fall.",
-    "example_ko": "그들의 아들이 다음 가을에 대학에 들어가요."
-  },
-  {
     "id": "song",
     "canonical": "song",
     "pos": "noun",
@@ -7441,24 +6977,6 @@
     ],
     "example_en": "This is my favorite song of all time.",
     "example_ko": "이 노래는 내가 가장 좋아하는 노래예요."
-  },
-  {
-    "id": "sons",
-    "canonical": "sons",
-    "pos": "noun",
-    "meaning_ko": "아들들",
-    "cefr": "A1",
-    "theme": [
-      "family"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "son",
-      "sons"
-    ],
-    "example_en": "They have three sons.",
-    "example_ko": "그들에게는 아들이 세 명 있다."
   },
   {
     "id": "soon",
@@ -7662,22 +7180,6 @@
     ],
     "example_en": "Please stop talking during the movie.",
     "example_ko": "영화 중에 말 좀 그만해."
-  },
-  {
-    "id": "stopped",
-    "canonical": "stopped",
-    "pos": "verb",
-    "meaning_ko": "멈췄다, 중단했다",
-    "cefr": "A1",
-    "theme": [
-      "daily_life",
-      "time"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "The bus stopped at the corner.",
-    "example_ko": "버스가 모퉁이에서 멈췄다."
   },
   {
     "id": "store",
@@ -8038,25 +7540,6 @@
     ],
     "example_en": "My teacher is really nice.",
     "example_ko": "우리 선생님은 정말 착해."
-  },
-  {
-    "id": "teachers",
-    "canonical": "teachers",
-    "pos": "noun",
-    "meaning_ko": "선생님들, 교사들",
-    "cefr": "A1",
-    "theme": [
-      "education",
-      "work"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "teacher",
-      "teachers"
-    ],
-    "example_en": "The teachers went on strike.",
-    "example_ko": "선생님들이 파업에 들어갔다."
   },
   {
     "id": "television",
@@ -8760,27 +8243,6 @@
     "example_ko": "저녁 식사 후에 공원에서 산책하는 걸 좋아해요."
   },
   {
-    "id": "walks",
-    "canonical": "walks",
-    "pos": "verb",
-    "meaning_ko": "걷다, 산책하다",
-    "cefr": "A1",
-    "theme": [
-      "daily_life",
-      "health"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "walk",
-      "walks",
-      "walked",
-      "walking"
-    ],
-    "example_en": "She walks to school every day.",
-    "example_ko": "그녀는 매일 학교에 걸어간다."
-  },
-  {
     "id": "wall",
     "canonical": "wall",
     "pos": "noun",
@@ -8920,28 +8382,6 @@
     ],
     "example_en": "There are many ways to solve this problem.",
     "example_ko": "이 문제를 해결하는 방법은 많다."
-  },
-  {
-    "id": "wears",
-    "canonical": "wears",
-    "pos": "verb",
-    "meaning_ko": "입다, 쓰다, 착용하다",
-    "cefr": "A1",
-    "theme": [
-      "clothing",
-      "daily_life"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "wear",
-      "wears",
-      "wore",
-      "worn",
-      "wearing"
-    ],
-    "example_en": "She always wears a hat.",
-    "example_ko": "그녀는 항상 모자를 쓴다."
   },
   {
     "id": "weather",
@@ -9107,24 +8547,6 @@
     ],
     "example_en": "Please open the window, it's hot in here.",
     "example_ko": "창문 좀 열어줘, 여기 더워."
-  },
-  {
-    "id": "windows",
-    "canonical": "windows",
-    "pos": "noun",
-    "meaning_ko": "창문들",
-    "cefr": "A1",
-    "theme": [
-      "housing"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "window",
-      "windows"
-    ],
-    "example_en": "Open the windows to let in fresh air.",
-    "example_ko": "신선한 공기를 넣기 위해 창문을 열어라."
   },
   {
     "id": "winter",
@@ -9535,26 +8957,6 @@
     "forms": [],
     "example_en": "I actually enjoyed the movie a lot.",
     "example_ko": "사실 그 영화 정말 재밌었어."
-  },
-  {
-    "id": "added",
-    "canonical": "added",
-    "pos": "verb",
-    "meaning_ko": "추가했다, 더했다",
-    "cefr": "A2",
-    "theme": [
-      "daily_life"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "add",
-      "adds",
-      "added",
-      "adding"
-    ],
-    "example_en": "She added sugar to her coffee.",
-    "example_ko": "그녀는 커피에 설탕을 넣었다."
   },
   {
     "id": "address",
@@ -10460,27 +9862,6 @@
     "example_ko": "네가 그걸 했다니 믿을 수가 없어!"
   },
   {
-    "id": "believing",
-    "canonical": "believing",
-    "pos": "verb",
-    "meaning_ko": "믿는, 신뢰하는",
-    "cefr": "A2",
-    "theme": [
-      "abstract",
-      "emotion"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "believe",
-      "believes",
-      "believed",
-      "believing"
-    ],
-    "example_en": "Keep believing in yourself.",
-    "example_ko": "자기 자신을 계속 믿어."
-  },
-  {
     "id": "bell",
     "canonical": "bell",
     "pos": "noun",
@@ -11251,38 +10632,6 @@
     "example_ko": "지시 사항을 주의 깊게 들어 주세요."
   },
   {
-    "id": "cares",
-    "canonical": "cares",
-    "pos": "verb",
-    "meaning_ko": "신경 쓰다, 관심 갖다",
-    "cefr": "A2",
-    "theme": [
-      "emotion",
-      "social"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "Nobody cares about that anymore.",
-    "example_ko": "더 이상 아무도 그건 신경 안 써."
-  },
-  {
-    "id": "carried",
-    "canonical": "carried",
-    "pos": "verb",
-    "meaning_ko": "운반했다, 들고 갔다",
-    "cefr": "A2",
-    "theme": [
-      "daily_life",
-      "body"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "He carried the heavy box upstairs.",
-    "example_ko": "그는 무거운 상자를 위층으로 옮겼다."
-  },
-  {
     "id": "carry",
     "canonical": "carry",
     "pos": "verb",
@@ -11448,22 +10797,6 @@
     "example_ko": "올해 많은 변화가 있었다."
   },
   {
-    "id": "changing",
-    "canonical": "changing",
-    "pos": "verb",
-    "meaning_ko": "바꾸는, 변화하는",
-    "cefr": "A2",
-    "theme": [
-      "abstract",
-      "daily_life"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "The world is constantly changing.",
-    "example_ko": "세상은 끊임없이 변하고 있다."
-  },
-  {
     "id": "chapter",
     "canonical": "chapter",
     "pos": "noun",
@@ -11521,22 +10854,6 @@
     ],
     "example_en": "Let me check my schedule and get back to you.",
     "example_ko": "일정을 확인하고 다시 연락할게요."
-  },
-  {
-    "id": "checking",
-    "canonical": "checking",
-    "pos": "verb",
-    "meaning_ko": "확인하는, 점검하는",
-    "cefr": "A2",
-    "theme": [
-      "daily_life",
-      "work"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "I'm checking my email right now.",
-    "example_ko": "지금 이메일을 확인하고 있어."
   },
   {
     "id": "cheek",
@@ -11797,27 +11114,6 @@
     "example_ko": "우리는 산 정상까지 올라갔다."
   },
   {
-    "id": "closing",
-    "canonical": "closing",
-    "pos": "verb",
-    "meaning_ko": "닫는, 폐점하는, 마감하는",
-    "cefr": "A2",
-    "theme": [
-      "daily_life",
-      "business"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "close",
-      "closes",
-      "closed",
-      "closing"
-    ],
-    "example_en": "The store is closing in ten minutes.",
-    "example_ko": "가게가 10분 후에 문을 닫는다."
-  },
-  {
     "id": "club",
     "canonical": "club",
     "pos": "noun",
@@ -12002,27 +11298,6 @@
     ],
     "example_en": "She always complains about the food here.",
     "example_ko": "그녀는 항상 여기 음식에 대해 불평한다."
-  },
-  {
-    "id": "complaining",
-    "canonical": "complaining",
-    "pos": "verb",
-    "meaning_ko": "불평하는, 불만을 말하는",
-    "cefr": "A2",
-    "theme": [
-      "communication",
-      "emotion"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "complain",
-      "complains",
-      "complained",
-      "complaining"
-    ],
-    "example_en": "Stop complaining and do something!",
-    "example_ko": "불평 그만하고 뭔가 해!"
   },
   {
     "id": "concert",
@@ -12485,22 +11760,6 @@
     ],
     "example_en": "She wants to create a new app.",
     "example_ko": "그녀는 새 앱을 만들고 싶어 한다."
-  },
-  {
-    "id": "creating",
-    "canonical": "creating",
-    "pos": "verb",
-    "meaning_ko": "만드는, 창조하는",
-    "cefr": "A2",
-    "theme": [
-      "work",
-      "art"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "She's creating a new website.",
-    "example_ko": "그녀는 새 웹사이트를 만들고 있다."
   },
   {
     "id": "cross",
@@ -15033,25 +14292,6 @@
     "example_ko": "학생 한 무리가 박물관을 방문했다."
   },
   {
-    "id": "groups",
-    "canonical": "groups",
-    "pos": "noun",
-    "meaning_ko": "그룹들, 집단들",
-    "cefr": "A2",
-    "theme": [
-      "social"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "group",
-      "groups",
-      "grouped"
-    ],
-    "example_en": "We split into smaller groups.",
-    "example_ko": "우리는 더 작은 그룹으로 나뉘었다."
-  },
-  {
     "id": "grow",
     "canonical": "grow",
     "pos": "verb",
@@ -15268,7 +14508,7 @@
     "theme": [
       "daily_life"
     ],
-    "register": "casual",
+    "register": "neutral",
     "learner_value": "useful",
     "forms": [],
     "example_en": "There's a lamp hanging from the ceiling.",
@@ -16358,48 +15598,6 @@
     "example_ko": "그녀는 그의 뺨에 키스했다."
   },
   {
-    "id": "kissed",
-    "canonical": "kissed",
-    "pos": "verb",
-    "meaning_ko": "키스했다, 입맞춤했다",
-    "cefr": "A2",
-    "theme": [
-      "emotion",
-      "social"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "kiss",
-      "kisses",
-      "kissed",
-      "kissing"
-    ],
-    "example_en": "He kissed her goodbye.",
-    "example_ko": "그는 그녀에게 작별 키스를 했다."
-  },
-  {
-    "id": "kissing",
-    "canonical": "kissing",
-    "pos": "verb",
-    "meaning_ko": "키스하는",
-    "cefr": "A2",
-    "theme": [
-      "emotion",
-      "social"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "kiss",
-      "kisses",
-      "kissed",
-      "kissing"
-    ],
-    "example_en": "They were caught kissing.",
-    "example_ko": "그들은 키스하다 들켰다."
-  },
-  {
     "id": "knee",
     "canonical": "knee",
     "pos": "noun",
@@ -17034,27 +16232,6 @@
     "example_ko": "길을 잃은 것 같아. 도와줄래?"
   },
   {
-    "id": "loses",
-    "canonical": "loses",
-    "pos": "verb",
-    "meaning_ko": "잃다, 지다, 분실하다",
-    "cefr": "A2",
-    "theme": [
-      "abstract",
-      "sports"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "lose",
-      "loses",
-      "lost",
-      "losing"
-    ],
-    "example_en": "He always loses his keys.",
-    "example_ko": "그는 항상 열쇠를 잃어버린다."
-  },
-  {
     "id": "loud",
     "canonical": "loud",
     "pos": "adjective",
@@ -17471,21 +16648,6 @@
     ],
     "example_en": "I have a meeting at three o'clock.",
     "example_ko": "3시에 회의가 있어."
-  },
-  {
-    "id": "meetings",
-    "canonical": "meetings",
-    "pos": "noun",
-    "meaning_ko": "회의들",
-    "cefr": "A2",
-    "theme": [
-      "work"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "I have three meetings today.",
-    "example_ko": "오늘 회의가 세 개 있다."
   },
   {
     "id": "member",
@@ -18074,7 +17236,7 @@
     "id": "nut",
     "canonical": "nut",
     "pos": "noun",
-    "meaning_ko": "견과류, 미치광이(속어)",
+    "meaning_ko": "견과류, 미치광이",
     "cefr": "A2",
     "theme": [
       "food",
@@ -18425,27 +17587,6 @@
     "example_ko": "소금 좀 건네줄래?"
   },
   {
-    "id": "passed",
-    "canonical": "passed",
-    "pos": "verb",
-    "meaning_ko": "지나갔다, 합격했다, 건넸다",
-    "cefr": "A2",
-    "theme": [
-      "time",
-      "daily_life"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "pass",
-      "passes",
-      "passed",
-      "passing"
-    ],
-    "example_en": "Two years have passed since then.",
-    "example_ko": "그때부터 2년이 지났다."
-  },
-  {
     "id": "passenger",
     "canonical": "passenger",
     "pos": "noun",
@@ -18462,27 +17603,6 @@
     ],
     "example_en": "All passengers must fasten their seat belts.",
     "example_ko": "모든 승객은 안전벨트를 매야 합니다."
-  },
-  {
-    "id": "passing",
-    "canonical": "passing",
-    "pos": "verb",
-    "meaning_ko": "지나가는, 잠깐의",
-    "cefr": "A2",
-    "theme": [
-      "time",
-      "daily_life"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "pass",
-      "passes",
-      "passed",
-      "passing"
-    ],
-    "example_en": "A passing car splashed water on me.",
-    "example_ko": "지나가는 차가 물을 튀겼다."
   },
   {
     "id": "past",
@@ -18655,22 +17775,6 @@
     ],
     "example_en": "My grandmother makes the best apple pie.",
     "example_ko": "할머니가 최고의 사과파이를 만드신다."
-  },
-  {
-    "id": "pieces",
-    "canonical": "pieces",
-    "pos": "noun",
-    "meaning_ko": "조각들, 작품들",
-    "cefr": "A2",
-    "theme": [
-      "abstract",
-      "art"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "The vase broke into pieces.",
-    "example_ko": "꽃병이 조각들로 부서졌다."
   },
   {
     "id": "pilot",
@@ -19140,27 +18244,6 @@
     "example_ko": "기계를 시작하려면 버튼을 눌러라."
   },
   {
-    "id": "pretending",
-    "canonical": "pretending",
-    "pos": "verb",
-    "meaning_ko": "~인 척하는, 가장하는",
-    "cefr": "A2",
-    "theme": [
-      "communication",
-      "social"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "pretend",
-      "pretends",
-      "pretended",
-      "pretending"
-    ],
-    "example_en": "Stop pretending you don't care.",
-    "example_ko": "관심 없는 척하지 마."
-  },
-  {
     "id": "pretty",
     "canonical": "pretty",
     "pos": "adverb",
@@ -19334,22 +18417,6 @@
     ],
     "example_en": "Pull the door to open it, don't push.",
     "example_ko": "문을 열려면 당기세요, 밀지 마세요."
-  },
-  {
-    "id": "pulling",
-    "canonical": "pulling",
-    "pos": "verb",
-    "meaning_ko": "당기는, 끌어당기는",
-    "cefr": "A2",
-    "theme": [
-      "daily_life",
-      "body"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "Stop pulling my hair!",
-    "example_ko": "내 머리카락 잡아당기지 마!"
   },
   {
     "id": "push",
@@ -19548,22 +18615,6 @@
     ],
     "example_en": "There was a rat in the kitchen.",
     "example_ko": "부엌에 쥐가 있었다."
-  },
-  {
-    "id": "reaching",
-    "canonical": "reaching",
-    "pos": "verb",
-    "meaning_ko": "도달하는, 뻗는",
-    "cefr": "A2",
-    "theme": [
-      "body",
-      "abstract"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "She's reaching for the top shelf.",
-    "example_ko": "그녀가 맨 위 선반에 손을 뻗고 있다."
   },
   {
     "id": "real",
@@ -20258,27 +19309,6 @@
     "example_ko": "그녀는 거미를 보고 비명을 질렀다."
   },
   {
-    "id": "screaming",
-    "canonical": "screaming",
-    "pos": "verb",
-    "meaning_ko": "비명 지르는, 소리치는",
-    "cefr": "A2",
-    "theme": [
-      "emotion",
-      "communication"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "scream",
-      "screams",
-      "screamed",
-      "screaming"
-    ],
-    "example_en": "The children were screaming with joy.",
-    "example_ko": "아이들이 기뻐서 소리를 질렀다."
-  },
-  {
     "id": "screen",
     "canonical": "screen",
     "pos": "noun",
@@ -20317,22 +19347,6 @@
     ],
     "example_en": "I searched everywhere for my keys.",
     "example_ko": "열쇠를 어디나 찾아봤다."
-  },
-  {
-    "id": "searching",
-    "canonical": "searching",
-    "pos": "verb",
-    "meaning_ko": "찾고 있는, 수색하는",
-    "cefr": "A2",
-    "theme": [
-      "daily_life",
-      "abstract"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "I've been searching for my keys all day.",
-    "example_ko": "하루 종일 열쇠를 찾고 있었다."
   },
   {
     "id": "season",
@@ -20443,22 +19457,6 @@
     ],
     "example_en": "They sell fresh bread every morning.",
     "example_ko": "그들은 매일 아침 신선한 빵을 판다."
-  },
-  {
-    "id": "selling",
-    "canonical": "selling",
-    "pos": "verb",
-    "meaning_ko": "파는, 판매하는",
-    "cefr": "A2",
-    "theme": [
-      "business",
-      "money"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "They're selling fresh fruit at the market.",
-    "example_ko": "시장에서 신선한 과일을 팔고 있다."
   },
   {
     "id": "serious",
@@ -20687,26 +19685,6 @@
     ],
     "example_en": "The sun is shining brightly today.",
     "example_ko": "오늘 태양이 밝게 빛나고 있다."
-  },
-  {
-    "id": "shining",
-    "canonical": "shining",
-    "pos": "verb",
-    "meaning_ko": "빛나는, 반짝이는",
-    "cefr": "A2",
-    "theme": [
-      "nature"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "shine",
-      "shines",
-      "shone",
-      "shining"
-    ],
-    "example_en": "The sun was shining brightly.",
-    "example_ko": "태양이 밝게 빛나고 있었다."
   },
   {
     "id": "ship",
@@ -21598,7 +20576,7 @@
     "id": "stick",
     "canonical": "stick",
     "pos": "verb",
-    "meaning_ko": "붙이다, 찌르다, 고수하다",
+    "meaning_ko": "막대, 붙이다, 찌르다, 고수하다",
     "cefr": "A2",
     "theme": [
       "daily_life"
@@ -21647,21 +20625,6 @@
     ],
     "example_en": "He threw a stone into the water.",
     "example_ko": "그는 물에 돌을 던졌다."
-  },
-  {
-    "id": "stones",
-    "canonical": "stones",
-    "pos": "noun",
-    "meaning_ko": "돌들",
-    "cefr": "A2",
-    "theme": [
-      "nature"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "The path was covered with stones.",
-    "example_ko": "길이 돌로 덮여 있었다."
   },
   {
     "id": "storm",
@@ -22105,21 +21068,6 @@
     ],
     "example_en": "This cake tastes absolutely delicious!",
     "example_ko": "이 케이크 맛이 정말 훌륭해요!"
-  },
-  {
-    "id": "tastes",
-    "canonical": "tastes",
-    "pos": "verb",
-    "meaning_ko": "맛이 나다, 맛보다",
-    "cefr": "A2",
-    "theme": [
-      "food"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "This soup tastes delicious.",
-    "example_ko": "이 수프 맛있다."
   },
   {
     "id": "teach",
@@ -22760,21 +21708,6 @@
     "example_ko": "나는 여행하며 새로운 곳을 탐험하는 것을 좋아한다."
   },
   {
-    "id": "traveling",
-    "canonical": "traveling",
-    "pos": "verb",
-    "meaning_ko": "여행하는",
-    "cefr": "A2",
-    "theme": [
-      "travel"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "I love traveling to new places.",
-    "example_ko": "새로운 곳으로 여행하는 것을 좋아해."
-  },
-  {
     "id": "trick",
     "canonical": "trick",
     "pos": "noun",
@@ -23240,22 +22173,6 @@
     "example_ko": "보통 아침 7시에 일어나요."
   },
   {
-    "id": "wanting",
-    "canonical": "wanting",
-    "pos": "verb",
-    "meaning_ko": "원하는, 바라는",
-    "cefr": "A2",
-    "theme": [
-      "emotion",
-      "abstract"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "I keep wanting to check my phone.",
-    "example_ko": "자꾸 폰을 확인하고 싶어진다."
-  },
-  {
     "id": "war",
     "canonical": "war",
     "pos": "noun",
@@ -23464,22 +22381,6 @@
     "example_ko": "그는 운전대를 꽉 잡았다."
   },
   {
-    "id": "wheels",
-    "canonical": "wheels",
-    "pos": "noun",
-    "meaning_ko": "바퀴들",
-    "cefr": "A2",
-    "theme": [
-      "travel",
-      "daily_life"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "The wheels of the car were spinning.",
-    "example_ko": "차의 바퀴가 돌고 있었다."
-  },
-  {
     "id": "whether",
     "canonical": "whether",
     "pos": "conjunction",
@@ -23666,26 +22567,6 @@
     ],
     "example_en": "I wish I could speak five languages.",
     "example_ko": "다섯 개 언어를 할 수 있으면 좋겠어요."
-  },
-  {
-    "id": "wishing",
-    "canonical": "wishing",
-    "pos": "verb",
-    "meaning_ko": "바라는, 소원하는",
-    "cefr": "A2",
-    "theme": [
-      "emotion"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [
-      "wish",
-      "wishes",
-      "wished",
-      "wishing"
-    ],
-    "example_en": "I keep wishing things were different.",
-    "example_ko": "상황이 달랐으면 하고 계속 바란다."
   },
   {
     "id": "wonderful",
@@ -26050,26 +24931,6 @@
     "example_ko": "개가 마당에서 고양이를 쫓고 있었다."
   },
   {
-    "id": "chased",
-    "canonical": "chased",
-    "pos": "verb",
-    "meaning_ko": "추적했다, 쫓았다",
-    "cefr": "B1",
-    "theme": [
-      "daily_life"
-    ],
-    "register": "neutral",
-    "learner_value": "useful",
-    "forms": [
-      "chase",
-      "chases",
-      "chased",
-      "chasing"
-    ],
-    "example_en": "The dog chased the cat up a tree.",
-    "example_ko": "개가 고양이를 쫓아 나무 위로 올라갔다."
-  },
-  {
     "id": "cheat",
     "canonical": "cheat",
     "pos": "verb",
@@ -26128,7 +24989,7 @@
     "id": "chick",
     "canonical": "chick",
     "pos": "noun",
-    "meaning_ko": "병아리, 여자 (속어)",
+    "meaning_ko": "여자(비격식); 병아리",
     "cefr": "B1",
     "theme": [
       "nature",
@@ -26146,13 +25007,13 @@
     "id": "chill",
     "canonical": "chill",
     "pos": "verb",
-    "meaning_ko": "쉬다, 긴장 풀다",
+    "meaning_ko": "진정하다, 쉬다; 오한, 소름",
     "cefr": "B1",
     "theme": [
       "emotion",
       "daily_life"
     ],
-    "register": "slang",
+    "register": "informal",
     "learner_value": "useful",
     "forms": [
       "chills",
@@ -26344,22 +25205,6 @@
     ],
     "example_en": "This community has been here for generations.",
     "example_ko": "이 공동체는 여러 세대 동안 이곳에 있었다."
-  },
-  {
-    "id": "companies",
-    "canonical": "companies",
-    "pos": "noun",
-    "meaning_ko": "회사들",
-    "cefr": "B1",
-    "theme": [
-      "business",
-      "work"
-    ],
-    "register": "neutral",
-    "learner_value": "essential",
-    "forms": [],
-    "example_en": "Many companies are hiring right now.",
-    "example_ko": "많은 회사들이 지금 채용 중이다."
   },
   {
     "id": "competition",
@@ -26697,22 +25542,6 @@
     ],
     "example_en": "I couldn't convince him to stay.",
     "example_ko": "그에게 남으라고 설득할 수 없었다."
-  },
-  {
-    "id": "cops",
-    "canonical": "cops",
-    "pos": "noun",
-    "meaning_ko": "경찰들",
-    "cefr": "B1",
-    "theme": [
-      "law",
-      "social"
-    ],
-    "register": "casual",
-    "learner_value": "useful",
-    "forms": [],
-    "example_en": "The cops arrived within minutes.",
-    "example_ko": "경찰이 몇 분 만에 도착했다."
   },
   {
     "id": "courage",
@@ -27288,27 +26117,6 @@
     "example_ko": "넌 이것보다 더 나은 걸 받을 자격이 있어."
   },
   {
-    "id": "deserves",
-    "canonical": "deserves",
-    "pos": "verb",
-    "meaning_ko": "~할 자격이 있다, 마땅하다",
-    "cefr": "B1",
-    "theme": [
-      "abstract",
-      "social"
-    ],
-    "register": "neutral",
-    "learner_value": "useful",
-    "forms": [
-      "deserve",
-      "deserves",
-      "deserved",
-      "deserving"
-    ],
-    "example_en": "She deserves a second chance.",
-    "example_ko": "그녀는 두 번째 기회를 받을 자격이 있다."
-  },
-  {
     "id": "design",
     "canonical": "design",
     "pos": "noun",
@@ -27361,22 +26169,6 @@
     ],
     "example_en": "The fire destroyed the entire building.",
     "example_ko": "화재가 건물 전체를 파괴했다."
-  },
-  {
-    "id": "destroyed",
-    "canonical": "destroyed",
-    "pos": "verb",
-    "meaning_ko": "파괴했다",
-    "cefr": "B1",
-    "theme": [
-      "abstract",
-      "military"
-    ],
-    "register": "neutral",
-    "learner_value": "useful",
-    "forms": [],
-    "example_en": "The fire destroyed the building.",
-    "example_ko": "화재가 건물을 파괴했다."
   },
   {
     "id": "detective",
@@ -28216,25 +27008,6 @@
     ],
     "example_en": "It was the biggest event of the year.",
     "example_ko": "그것은 올해 최대 행사였다."
-  },
-  {
-    "id": "events",
-    "canonical": "events",
-    "pos": "noun",
-    "meaning_ko": "행사들, 사건들",
-    "cefr": "B1",
-    "theme": [
-      "social",
-      "entertainment"
-    ],
-    "register": "neutral",
-    "learner_value": "useful",
-    "forms": [
-      "event",
-      "events"
-    ],
-    "example_en": "We organize community events.",
-    "example_ko": "우리는 지역 사회 행사를 조직한다."
   },
   {
     "id": "evil",
@@ -30503,22 +29276,6 @@
     "example_ko": "모든 사람은 법을 따라야 해요."
   },
   {
-    "id": "lawyers",
-    "canonical": "lawyers",
-    "pos": "noun",
-    "meaning_ko": "변호사들",
-    "cefr": "B1",
-    "theme": [
-      "law",
-      "work"
-    ],
-    "register": "neutral",
-    "learner_value": "useful",
-    "forms": [],
-    "example_en": "The lawyers presented their case.",
-    "example_ko": "변호사들이 소송 사건을 발표했다."
-  },
-  {
     "id": "lay",
     "canonical": "lay",
     "pos": "verb",
@@ -30856,25 +29613,6 @@
     ],
     "example_en": "She's a true music lover.",
     "example_ko": "그녀는 진정한 음악 애호가야."
-  },
-  {
-    "id": "lovers",
-    "canonical": "lovers",
-    "pos": "noun",
-    "meaning_ko": "연인들, 애호가들",
-    "cefr": "B1",
-    "theme": [
-      "emotion",
-      "social"
-    ],
-    "register": "neutral",
-    "learner_value": "useful",
-    "forms": [
-      "lover",
-      "lovers"
-    ],
-    "example_en": "The film is about two young lovers.",
-    "example_ko": "그 영화는 두 젊은 연인에 관한 것이다."
   },
   {
     "id": "luxury",
@@ -31983,26 +30721,6 @@
     "example_ko": "내 의견으로는 이것이 최선의 선택이다."
   },
   {
-    "id": "opinions",
-    "canonical": "opinions",
-    "pos": "noun",
-    "meaning_ko": "의견들, 견해들",
-    "cefr": "B1",
-    "theme": [
-      "communication",
-      "abstract"
-    ],
-    "register": "neutral",
-    "learner_value": "useful",
-    "forms": [
-      "opinion",
-      "opinions",
-      "opinionated"
-    ],
-    "example_en": "Everyone has different opinions.",
-    "example_ko": "모두 다른 의견을 가지고 있다."
-  },
-  {
     "id": "opportunity",
     "canonical": "opportunity",
     "pos": "noun",
@@ -33077,25 +31795,6 @@
     "example_ko": "그녀는 매우 전문적인 태도를 가지고 있다."
   },
   {
-    "id": "professors",
-    "canonical": "professors",
-    "pos": "noun",
-    "meaning_ko": "교수들",
-    "cefr": "B1",
-    "theme": [
-      "education",
-      "work"
-    ],
-    "register": "neutral",
-    "learner_value": "useful",
-    "forms": [
-      "professor",
-      "professors"
-    ],
-    "example_en": "The professors met for a conference.",
-    "example_ko": "교수들이 학회를 위해 모였다."
-  },
-  {
     "id": "profile",
     "canonical": "profile",
     "pos": "noun",
@@ -34052,27 +32751,6 @@
     ],
     "example_en": "She played the leading role in the movie.",
     "example_ko": "그녀는 그 영화에서 주연을 맡았다."
-  },
-  {
-    "id": "rolling",
-    "canonical": "rolling",
-    "pos": "verb",
-    "meaning_ko": "구르는, 굴리는",
-    "cefr": "B1",
-    "theme": [
-      "body",
-      "daily_life"
-    ],
-    "register": "neutral",
-    "learner_value": "useful",
-    "forms": [
-      "roll",
-      "rolls",
-      "rolled",
-      "rolling"
-    ],
-    "example_en": "Tears were rolling down her cheeks.",
-    "example_ko": "눈물이 그녀의 볼을 타고 흘렀다."
   },
   {
     "id": "romance",
@@ -35231,25 +33909,6 @@
     "example_ko": "그는 놀라운 연설을 했어."
   },
   {
-    "id": "speeches",
-    "canonical": "speeches",
-    "pos": "noun",
-    "meaning_ko": "연설들, 발표들",
-    "cefr": "B1",
-    "theme": [
-      "communication",
-      "politics"
-    ],
-    "register": "neutral",
-    "learner_value": "useful",
-    "forms": [
-      "speech",
-      "speeches"
-    ],
-    "example_en": "He gave one of the best speeches ever.",
-    "example_ko": "그는 역대 최고의 연설 중 하나를 했다."
-  },
-  {
     "id": "spending",
     "canonical": "spending",
     "pos": "noun",
@@ -35344,26 +34003,6 @@
     "example_ko": "소식이 빠르게 퍼졌다."
   },
   {
-    "id": "spreading",
-    "canonical": "spreading",
-    "pos": "verb",
-    "meaning_ko": "퍼뜨리는, 확산시키는",
-    "cefr": "B1",
-    "theme": [
-      "communication",
-      "daily_life"
-    ],
-    "register": "neutral",
-    "learner_value": "useful",
-    "forms": [
-      "spread",
-      "spreads",
-      "spreading"
-    ],
-    "example_en": "Stop spreading rumors.",
-    "example_ko": "소문을 퍼뜨리지 마."
-  },
-  {
     "id": "spy",
     "canonical": "spy",
     "pos": "noun",
@@ -35439,22 +34078,6 @@
     ],
     "example_en": "Don't stare at people, it's rude.",
     "example_ko": "사람들을 쳐다보지 마, 무례하잖아."
-  },
-  {
-    "id": "staring",
-    "canonical": "staring",
-    "pos": "verb",
-    "meaning_ko": "응시하는, 뚫어지게 보는",
-    "cefr": "B1",
-    "theme": [
-      "body",
-      "emotion"
-    ],
-    "register": "neutral",
-    "learner_value": "useful",
-    "forms": [],
-    "example_en": "Why are you staring at me?",
-    "example_ko": "왜 나를 뚫어지게 봐?"
   },
   {
     "id": "statement",
@@ -35704,7 +34327,7 @@
       "emotion",
       "daily_life"
     ],
-    "register": "slang",
+    "register": "informal",
     "learner_value": "useful",
     "forms": [
       "suck",
@@ -38035,7 +36658,7 @@
     "theme": [
       "emotion"
     ],
-    "register": "slang",
+    "register": "informal",
     "learner_value": "useful",
     "forms": [
       "bloodier",
@@ -39511,7 +38134,7 @@
     "id": "dope",
     "canonical": "dope",
     "pos": "noun",
-    "meaning_ko": "멋진, 마약, 바보",
+    "meaning_ko": "마약; 멋진(속어)",
     "cefr": "B2",
     "theme": [
       "social"
@@ -40323,13 +38946,13 @@
     "id": "freak",
     "canonical": "freak",
     "pos": "noun",
-    "meaning_ko": "괴짜, 광, 기이한 것",
+    "meaning_ko": "겁먹다(freak out); 괴짜, 광팬",
     "cefr": "B2",
     "theme": [
       "social",
       "emotion"
     ],
-    "register": "slang",
+    "register": "informal",
     "learner_value": "useful",
     "forms": [
       "freak",
@@ -42332,13 +40955,13 @@
     "id": "punk",
     "canonical": "punk",
     "pos": "noun",
-    "meaning_ko": "펑크, 불량배",
+    "meaning_ko": "펑크(음악); 겁쟁이, 양아치",
     "cefr": "B2",
     "theme": [
       "music",
       "culture"
     ],
-    "register": "slang",
+    "register": "informal",
     "learner_value": "supplementary",
     "forms": [
       "punks"
@@ -44149,7 +42772,7 @@
       "science"
     ],
     "register": "neutral",
-    "learner_value": "essential",
+    "learner_value": "useful",
     "forms": [
       "algorithms",
       "algorithmic"
@@ -44226,7 +42849,7 @@
       "academic"
     ],
     "register": "formal",
-    "learner_value": "essential",
+    "learner_value": "useful",
     "forms": [
       "ambiguities",
       "ambiguous",
@@ -44263,7 +42886,7 @@
       "politics"
     ],
     "register": "formal",
-    "learner_value": "essential",
+    "learner_value": "useful",
     "forms": [
       "amendments",
       "amend"
@@ -44464,7 +43087,7 @@
     "id": "booty",
     "canonical": "booty",
     "pos": "noun",
-    "meaning_ko": "전리품, 엉덩이",
+    "meaning_ko": "엉덩이; 전리품",
     "cefr": "C1",
     "theme": [
       "body"
@@ -44797,7 +43420,7 @@
       "academic"
     ],
     "register": "formal",
-    "learner_value": "essential",
+    "learner_value": "useful",
     "forms": [
       "correlations",
       "correlate",
@@ -45146,7 +43769,7 @@
       "abstract"
     ],
     "register": "neutral",
-    "learner_value": "essential",
+    "learner_value": "useful",
     "forms": [
       "empathize",
       "empathetic",
@@ -45297,7 +43920,7 @@
       "academic"
     ],
     "register": "neutral",
-    "learner_value": "essential",
+    "learner_value": "useful",
     "forms": [
       "explicitly"
     ],
@@ -45693,7 +44316,7 @@
       "academic"
     ],
     "register": "formal",
-    "learner_value": "essential",
+    "learner_value": "useful",
     "forms": [
       "infers",
       "inferred",
@@ -45789,7 +44412,7 @@
       "literary"
     ],
     "register": "neutral",
-    "learner_value": "essential",
+    "learner_value": "useful",
     "forms": [
       "ironies",
       "ironic",
@@ -45883,7 +44506,7 @@
       "politics"
     ],
     "register": "formal",
-    "learner_value": "essential",
+    "learner_value": "useful",
     "forms": [
       "legislative",
       "legislator",
@@ -45997,7 +44620,7 @@
       "academic"
     ],
     "register": "neutral",
-    "learner_value": "essential",
+    "learner_value": "useful",
     "forms": [
       "metaphors",
       "metaphorical",
@@ -46111,7 +44734,7 @@
       "literary"
     ],
     "register": "formal",
-    "learner_value": "essential",
+    "learner_value": "useful",
     "forms": [
       "nuances",
       "nuanced"
@@ -46184,7 +44807,7 @@
       "abstract"
     ],
     "register": "neutral",
-    "learner_value": "essential",
+    "learner_value": "useful",
     "forms": [
       "paradoxes",
       "paradoxical",
@@ -46285,7 +44908,7 @@
       "politics"
     ],
     "register": "formal",
-    "learner_value": "essential",
+    "learner_value": "useful",
     "forms": [
       "precedents",
       "unprecedented"
@@ -46595,7 +45218,7 @@
       "science"
     ],
     "register": "neutral",
-    "learner_value": "essential",
+    "learner_value": "useful",
     "forms": [
       "resilience",
       "resiliency"
@@ -46632,7 +45255,7 @@
       "politics"
     ],
     "register": "formal",
-    "learner_value": "essential",
+    "learner_value": "useful",
     "forms": [
       "sanctions",
       "sanctioned",
@@ -46944,7 +45567,7 @@
       "academic"
     ],
     "register": "formal",
-    "learner_value": "essential",
+    "learner_value": "useful",
     "forms": [],
     "example_en": "The pandemic caused unprecedented disruption to the economy.",
     "example_ko": "팬데믹은 경제에 전례 없는 혼란을 초래했다."

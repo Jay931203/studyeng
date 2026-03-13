@@ -8,9 +8,11 @@ import wordEntriesData from '@/data/word-entries.json'
 import wordIndexData from '@/data/word-index.json'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
-import { useLevelStore, computeXpForSwipe } from '@/stores/useLevelStore'
+import { useLevelStore } from '@/stores/useLevelStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { triggerHaptic } from '@/lib/haptic'
+import { calculateSessionXP } from '@/lib/xp/sessionXp'
+import { checkGameMilestones, checkStreakMilestones } from '@/stores/useMilestoneStore'
 
 // ---------------------------------------------------------------------------
 // Types
@@ -354,24 +356,6 @@ const CATEGORY_LABELS: Record<string, string> = {
 }
 
 // ---------------------------------------------------------------------------
-// Floating XP text
-// ---------------------------------------------------------------------------
-
-function FloatingXP({ xp }: { xp: number }) {
-  return (
-    <motion.div
-      initial={{ opacity: 1, y: 0 }}
-      animate={{ opacity: 0, y: -40 }}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
-      className="absolute top-1/2 left-1/2 -translate-x-1/2 pointer-events-none z-50 text-lg font-bold"
-      style={{ color: 'var(--accent-text)' }}
-    >
-      +{xp} XP
-    </motion.div>
-  )
-}
-
-// ---------------------------------------------------------------------------
 // Streak flash
 // ---------------------------------------------------------------------------
 
@@ -401,8 +385,6 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
   const incrementSessionCount = useGameProgressStore((s) => s.incrementSessionCount)
   const bestStreak = useGameProgressStore((s) => s.bestStreak)
   const markFamiliar = useFamiliarityStore((s) => s.markFamiliar)
-  const familiarEntries = useFamiliarityStore((s) => s.entries)
-  const getFamiliarCount = useFamiliarityStore((s) => s.getFamiliarCount)
   const recalculateScore = useLevelStore((s) => s.recalculateScore)
   const checkLevelUp = useLevelStore((s) => s.checkLevelUp)
 
@@ -410,17 +392,17 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
   const [currentIdx, setCurrentIdx] = useState(0)
   const [phase, setPhase] = useState<GamePhase>('playing')
   const [streak, setStreak] = useState(0)
-  const [roundXP, setRoundXP] = useState(0)
+  const [sessionXPAwarded, setSessionXPAwarded] = useState(0)
   const [results, setResults] = useState<Array<{ exprId: string; correct: boolean }>>([])
 
   // Feedback states
   const [flashColor, setFlashColor] = useState<'green' | 'red' | null>(null)
-  const [floatingXP, setFloatingXP] = useState<number | null>(null)
   const [streakFlash, setStreakFlash] = useState<number | null>(null)
   const [isAnimating, setIsAnimating] = useState(false)
   const [slideDir, setSlideDir] = useState<'left' | 'right' | null>(null)
 
   const maxStreakRef = useRef(0)
+  const sessionStartRef = useRef(Date.now())
 
   const currentCard = cards[currentIdx] ?? null
 
@@ -430,6 +412,30 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
     if (maxStreakRef.current > bestStreak) {
       updateBestStreak(maxStreakRef.current)
     }
+
+    // Award session completion XP (anti-farming: must take >= 2 minutes)
+    const xpAmount = calculateSessionXP('expressionSwipe', sessionStartRef.current)
+    if (xpAmount > 0) {
+      const actual = useGameProgressStore.getState().addSessionXP(xpAmount)
+      setSessionXPAwarded(actual)
+    }
+
+    // Streak bonus (once per day, on activity completion)
+    const gameStore = useGameProgressStore.getState()
+    if (!gameStore.isStreakBonusAwardedToday()) {
+      const { useUserStore } = require('@/stores/useUserStore')
+      const userState = useUserStore.getState()
+      userState.checkAndUpdateStreak()
+      const streakDays = useUserStore.getState().streakDays
+      const totalMonthlyXP = userState.totalXpEarned // approximate
+      gameStore.awardStreakBonus(streakDays, totalMonthlyXP)
+      checkStreakMilestones(streakDays)
+    }
+
+    // Check game milestones
+    const totalSessions = useGameProgressStore.getState().getTotalSessions()
+    checkGameMilestones(totalSessions)
+
     setPhase('result')
   }, [incrementSessionCount, bestStreak, updateBestStreak])
 
@@ -462,16 +468,10 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
       // Store updates
       updateLeitner(exprId, known)
 
-      let xpGained = 0
       if (known) {
         markFamiliar(exprId)
-        const newCount = getFamiliarCount(exprId) + 1
-        const rawXP = computeXpForSwipe(exprId, newCount)
-        xpGained = useGameProgressStore.getState().addGameXP(rawXP)
-        setRoundXP((prev) => prev + xpGained)
-        if (xpGained > 0) setFloatingXP(xpGained)
 
-        // Recalculate score after short delay
+        // Recalculate Absorption Score (used for content recommendations, not XP)
         setTimeout(() => {
           const updatedEntries = useFamiliarityStore.getState().entries
           recalculateScore(updatedEntries)
@@ -498,7 +498,6 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
       // Advance after animation
       setTimeout(() => {
         setFlashColor(null)
-        setFloatingXP(null)
         advanceCard()
       }, 300)
     },
@@ -507,7 +506,6 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
       isAnimating,
       updateLeitner,
       markFamiliar,
-      getFamiliarCount,
       recalculateScore,
       checkLevelUp,
       level,
@@ -569,7 +567,7 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
               획득 XP
             </p>
             <p className="text-xl font-bold" style={{ color: 'var(--accent-text)' }}>
-              +{Math.round(roundXP * 10) / 10}
+              +{sessionXPAwarded}
             </p>
           </div>
           <div className="text-center">
@@ -708,11 +706,6 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
               }}
             />
           )}
-        </AnimatePresence>
-
-        {/* Floating XP */}
-        <AnimatePresence>
-          {floatingXP !== null && floatingXP > 0 && <FloatingXP key={`xp-${currentIdx}`} xp={floatingXP} />}
         </AnimatePresence>
 
         {/* Streak flash */}

@@ -291,8 +291,8 @@ export function UnifiedControls({
     ? 'relative flex h-7 w-7 items-center justify-center rounded-full transition-colors'
     : 'relative flex h-8 w-8 items-center justify-center rounded-full transition-colors'
   const playbackBadgeClassName = compact
-    ? 'pointer-events-none absolute -bottom-1 -right-1 min-w-[22px] rounded-full px-1 py-[1px] text-[8px] font-bold leading-none'
-    : 'pointer-events-none absolute -bottom-1 -right-1 min-w-[24px] rounded-full px-1.5 py-[2px] text-[9px] font-bold leading-none'
+    ? 'pointer-events-none absolute -bottom-1.5 -right-2 min-w-[28px] rounded-full px-1.5 py-[2px] text-[9px] font-bold leading-none text-center whitespace-nowrap'
+    : 'pointer-events-none absolute -bottom-1.5 -right-2 min-w-[30px] rounded-full px-2 py-[2px] text-[10px] font-bold leading-none text-center whitespace-nowrap'
   const playbackChipClassName = compact
     ? 'h-7 rounded-full px-2.5 text-[10px] font-semibold transition-colors'
     : 'h-8 rounded-full px-3 text-[11px] font-semibold transition-colors'
