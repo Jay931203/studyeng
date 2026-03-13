@@ -78,7 +78,7 @@ function getPlanLabel(planKey: string | null | undefined) {
     case 'premium':
       return 'Premium'
     default:
-      return 'FREE plan'
+      return 'FREE'
   }
 }
 
@@ -316,7 +316,7 @@ export function BillingManagementCard({
     ? 'Checking membership...'
     : currentPremium
       ? 'Premium active'
-      : 'FREE plan'
+      : 'FREE'
   const isReady = native ? currentPremium || nativePackages.length > 0 : webBillingReady
   const currentPlan =
     planKey === 'premium_monthly' ? 'monthly' : planKey === 'premium_yearly' ? 'yearly' : null
