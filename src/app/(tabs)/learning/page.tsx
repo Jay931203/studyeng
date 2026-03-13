@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
-import { DailyMissions } from '@/components/DailyMissions'
+import { TodayDashboard } from '@/components/DailyMissions'
 import { SavedPhraseCard } from '@/components/SavedPhraseCard'
 import { WatchHistory } from '@/components/WatchHistory'
 import { GameLauncher } from '@/components/games/GameLauncher'
@@ -62,7 +62,7 @@ export default function LearningPage() {
 
   return (
     <AppPage>
-      <DailyMissions />
+      <TodayDashboard />
       <div className="mt-6 space-y-6">
         <SurfaceCard className="p-5">
           <div className="mb-4 flex items-center justify-between gap-4">
