@@ -149,7 +149,7 @@ export default function LearningPage() {
           )
         })()}
 
-        <GameLauncher phrases={phrases} />
+        <GameLauncher />
 
         <SurfaceCard className="p-5">
           <div className="mb-4 flex items-center justify-between gap-4">
