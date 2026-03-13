@@ -61,22 +61,25 @@ function ExpressionCard({
   onInteract,
   onPlaySegment,
   onSwipeDismiss,
+  familiarCount,
 }: {
   expr: Expression
   index: number
   onInteract?: () => void
   onPlaySegment?: (start: number, end: number) => void
   onSwipeDismiss?: () => void
+  familiarCount?: number
 }) {
   const [flipped, setFlipped] = useState(false)
   const [playing, setPlaying] = useState(false)
   const cefrColor = getCefrColor(expr.cefr)
   const categoryLabel = CATEGORY_LABELS[expr.category] ?? expr.category
 
-  // Swipe gesture
+  const count = familiarCount ?? 0
+
+  // Swipe gesture — purely horizontal, no rotation
   const x = useMotionValue(0)
   const opacity = useTransform(x, [-SWIPE_THRESHOLD * 2, 0, SWIPE_THRESHOLD * 2], [0.3, 1, 0.3])
-  const rotate = useTransform(x, [-200, 0, 200], [-8, 0, 8])
 
   const handleDragEnd = (_: unknown, info: PanInfo) => {
     if (Math.abs(info.offset.x) > SWIPE_THRESHOLD) {
@@ -89,7 +92,7 @@ function ExpressionCard({
       layout
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      exit={{ x: 300, opacity: 0, height: 0, marginBottom: 0 }}
+      exit={{ x: 400, opacity: 0, height: 0, marginBottom: 0 }}
       transition={{
         layout: { type: 'spring', stiffness: 400, damping: 30 },
         delay: 0.1 + index * 0.08,
@@ -100,7 +103,7 @@ function ExpressionCard({
     >
       <motion.div
         className="cursor-pointer touch-pan-y"
-        style={{ perspective: 800, x, opacity, rotate }}
+        style={{ perspective: 800, x, opacity }}
         drag="x"
         dragConstraints={{ left: 0, right: 0 }}
         dragElastic={0.6}
@@ -120,14 +123,28 @@ function ExpressionCard({
         >
           {/* Front face */}
           <div
-            className="rounded-2xl border px-5 py-4"
+            className="relative rounded-2xl border px-5 py-4"
             style={{
               backgroundColor: 'rgba(255, 255, 255, 0.06)',
               borderColor: 'rgba(255, 255, 255, 0.08)',
               backfaceVisibility: 'hidden',
             }}
           >
-            <p className="text-[17px] font-bold leading-snug text-white">
+            {/* Familiarity gauge — top right */}
+            <div className="absolute right-4 top-4 flex items-center gap-[3px]">
+              {[0, 1, 2].map((i) => (
+                <span
+                  key={i}
+                  className="inline-block h-[5px] w-[5px] rounded-full transition-colors duration-300"
+                  style={{
+                    backgroundColor: i < count
+                      ? '#4ade80'
+                      : 'rgba(255, 255, 255, 0.12)',
+                  }}
+                />
+              ))}
+            </div>
+            <p className="pr-12 text-[17px] font-bold leading-snug text-white">
               {expr.canonical}
             </p>
             <p
@@ -226,7 +243,7 @@ function ExpressionCard({
               className="absolute bottom-3 right-4 text-[10px]"
               style={{ color: 'rgba(255, 255, 255, 0.25)' }}
             >
-              swipe to dismiss
+              swipe
             </span>
           </div>
         </motion.div>
@@ -241,6 +258,7 @@ export function PrimingCard({
   onPlaySegment,
   videoTitle,
   onMarkFamiliar,
+  familiarCounts,
 }: PrimingCardProps) {
   const displayExpressions = expressions.slice(0, 3)
   const [dismissedIds, setDismissedIds] = useState<Set<string>>(new Set())
@@ -405,6 +423,7 @@ export function PrimingCard({
                     onInteract={pauseAutoStart}
                     onPlaySegment={handlePreviewSegment}
                     onSwipeDismiss={() => handleSwipeDismiss(expr)}
+                    familiarCount={(familiarCounts?.[expr.exprId || expr.canonical] ?? 0) + (dismissedIds.has(expr.exprId || expr.canonical) ? 1 : 0)}
                   />
                 ))}
               </AnimatePresence>
