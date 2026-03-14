@@ -416,21 +416,22 @@ function buildScoreContext(options: RecommendOptions): ScoreContext {
 }
 
 function getDifficultyRange(level: string): [number, number] {
+  // 6-level difficulty: 1=A1, 2=A2, 3=B1, 4=B2, 5=C1, 6=C2
   switch (level) {
     case 'A1':
       return [1, 2]
     case 'A2':
-      return [1, 2]
+      return [1, 3]
     case 'B1':
-      return [2, 3]
-    case 'B2':
       return [2, 4]
-    case 'C1':
+    case 'B2':
       return [3, 5]
+    case 'C1':
+      return [4, 6]
     case 'C2':
-      return [4, 5]
+      return [5, 6]
     default:
-      return [1, 5]
+      return [1, 6]
   }
 }
 

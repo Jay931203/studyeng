@@ -226,7 +226,7 @@ export function ViewingStats() {
       if (!video) continue
       const views = viewCounts[id] ?? 1
       if (video.difficulty <= 2) easy += views
-      else if (video.difficulty <= 3) medium += views
+      else if (video.difficulty <= 4) medium += views
       else hard += views
     }
 
