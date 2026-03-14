@@ -14,7 +14,7 @@ const ERROR_MESSAGES: Record<string, string> = {
   'entitlement-failed': 'Could not apply premium access.',
 }
 
-export function RedeemCodeCard({ onRedeemed }: { onRedeemed?: () => void }) {
+function useRedeemCode(onRedeemed?: () => void) {
   const { user } = useAuth()
   const setPremiumEntitlement = usePremiumStore((state) => state.setPremiumEntitlement)
   const [code, setCode] = useState('')
@@ -67,9 +67,20 @@ export function RedeemCodeCard({ onRedeemed }: { onRedeemed?: () => void }) {
     }
   }
 
+  return { user, code, setCode, submitting, result, handleRedeem }
+}
+
+function RedeemCodeUI({ code, setCode, handleRedeem, submitting, user, result }: {
+  code: string
+  setCode: (v: string) => void
+  handleRedeem: () => void
+  submitting: boolean
+  user: unknown
+  result: { success: boolean; message: string } | null
+}) {
   return (
-    <SurfaceCard className="p-6">
-      <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+    <>
+      <p className="mb-3 text-xs font-semibold uppercase tracking-[0.06em] text-[var(--text-muted)]">
         REDEEM CODE
       </p>
 
@@ -81,7 +92,7 @@ export function RedeemCodeCard({ onRedeemed }: { onRedeemed?: () => void }) {
           onKeyDown={(event) => event.key === 'Enter' && handleRedeem()}
           placeholder="Enter code"
           disabled={!user || submitting}
-          className="min-w-0 flex-1 rounded-2xl bg-[var(--bg-primary)] px-4 py-3 text-sm font-medium text-[var(--text-primary)] placeholder-[var(--text-muted)] outline-none disabled:opacity-50"
+          className="min-w-0 flex-1 rounded-2xl bg-[var(--bg-secondary)]/30 px-4 py-3 text-sm font-medium text-[var(--text-primary)] placeholder-[var(--text-muted)] outline-none disabled:opacity-50"
           maxLength={20}
         />
         <button
@@ -110,6 +121,22 @@ export function RedeemCodeCard({ onRedeemed }: { onRedeemed?: () => void }) {
           {result.message}
         </div>
       )}
+    </>
+  )
+}
+
+/** Standalone card version */
+export function RedeemCodeCard({ onRedeemed }: { onRedeemed?: () => void }) {
+  const props = useRedeemCode(onRedeemed)
+  return (
+    <SurfaceCard className="p-6">
+      <RedeemCodeUI {...props} />
     </SurfaceCard>
   )
+}
+
+/** Embeddable section (no wrapper) for use inside BillingManagementCard */
+export function RedeemCodeSection({ onRedeemed }: { onRedeemed?: () => void }) {
+  const props = useRedeemCode(onRedeemed)
+  return <RedeemCodeUI {...props} />
 }

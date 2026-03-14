@@ -1,14 +1,11 @@
 'use client'
 
-import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { BillingManagementCard } from '@/components/BillingManagementCard'
-import { RedeemCodeCard } from '@/components/RedeemCodeCard'
 import { AppPage } from '@/components/ui/AppPage'
 
 export default function ProfileMembershipPage() {
   const router = useRouter()
-  const [refreshKey, setRefreshKey] = useState(0)
 
   const handleBack = () => {
     if (typeof window !== 'undefined' && window.history.length > 1) {
@@ -39,13 +36,12 @@ export default function ProfileMembershipPage() {
           </button>
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-              MEMBERSHIP
+              SUBSCRIPTION
             </p>
           </div>
         </div>
 
-        <BillingManagementCard mode="detail" refreshKey={refreshKey} />
-        <RedeemCodeCard onRedeemed={() => setRefreshKey((value) => value + 1)} />
+        <BillingManagementCard mode="detail" />
       </div>
     </AppPage>
   )

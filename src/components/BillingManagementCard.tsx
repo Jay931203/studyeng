@@ -9,6 +9,7 @@ import { getPlatform, isNative } from '@/lib/platform'
 import { useAuth } from '@/hooks/useAuth'
 import { usePremiumStore } from '@/stores/usePremiumStore'
 import { SurfaceCard } from '@/components/ui/AppPage'
+import { RedeemCodeSection } from './RedeemCodeCard'
 
 interface BillingStatusPayload {
   enabled: boolean
@@ -135,7 +136,7 @@ function PlanTile({
       className={`rounded-2xl border px-4 py-4 text-left transition-colors ${
         selected
           ? 'border-[var(--accent-primary)] bg-[var(--accent-glow)]'
-          : 'border-[var(--border-card)] bg-[var(--bg-primary)]'
+          : 'border-[var(--border-card)] bg-[var(--bg-secondary)]/30'
       }`}
     >
       <div className="flex items-start justify-between gap-3">
@@ -574,7 +575,7 @@ export function BillingManagementCard({
       {!isDetail && (
         <div className="mb-4 flex items-center justify-between gap-3">
           <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-            MEMBERSHIP
+            SUBSCRIPTION
           </p>
           <Link
             href="/profile/membership"
@@ -655,18 +656,18 @@ export function BillingManagementCard({
               )}
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-2">
+            <div className="divide-y divide-[var(--border-card)]/40">
               {membershipSummaryItems.map((item) => (
-                <div key={item.label} className="rounded-2xl bg-[var(--bg-secondary)]/30 px-4 py-3">
-                  <p className="text-[11px] font-semibold text-[var(--text-muted)]">
-                    {item.label}
-                  </p>
-                  <p className="mt-1 text-sm font-semibold text-[var(--text-primary)]">
-                    {item.value}
-                  </p>
-                  {item.detail && (
-                    <p className="mt-1 text-xs text-[var(--text-secondary)]">{item.detail}</p>
-                  )}
+                <div key={item.label} className="flex items-center justify-between py-2.5">
+                  <span className="text-xs text-[var(--text-muted)]">{item.label}</span>
+                  <div className="text-right">
+                    <span className="text-sm font-medium text-[var(--text-primary)]">
+                      {item.value}
+                    </span>
+                    {item.detail && (
+                      <p className="text-[10px] text-[var(--text-secondary)]">{item.detail}</p>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
@@ -674,7 +675,7 @@ export function BillingManagementCard({
             <div className="space-y-3">
               <div className="flex items-center justify-between gap-3">
                 <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--text-muted)]">
-                  SUBSCRIPTION OPTIONS
+                  OPTIONS
                 </p>
                 {currentPlan && (
                   <p className="text-xs text-[var(--text-secondary)]">
@@ -725,6 +726,8 @@ export function BillingManagementCard({
                 {restoring ? 'RESTORING...' : 'RESTORE PURCHASE'}
               </button>
             )}
+
+            <RedeemCodeSection />
           </>
         )}
 
