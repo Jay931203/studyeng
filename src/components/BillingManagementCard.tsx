@@ -363,7 +363,6 @@ export function BillingManagementCard({
       ? `Exp ${String(status.paymentMethod.expMonth).padStart(2, '0')}/${String(status.paymentMethod.expYear).slice(-2)}`
       : null
   const membershipSummaryItems = [
-    { label: 'Status', value: currentStatusLabel, detail: null as string | null },
     ...(currentPremium
       ? [{ label: 'Plan', value: currentPlanLabel, detail: null as string | null }]
       : []),
