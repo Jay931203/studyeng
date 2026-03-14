@@ -2,6 +2,7 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { DAILY_SESSION_XP_CAP } from '@/lib/xp/sessionXp'
 import { getStreakBonusXP, applyMonthlyStreakCap } from '@/lib/xp/streakBonus'
+import { useUserStore } from './useUserStore'
 
 interface LeitnerEntry {
   box: 1 | 2 | 3
@@ -136,9 +137,7 @@ export const useGameProgressStore = create<GameProgressState>()(
 
         // Feed capped amount into visible reward XP
         if (actual > 0) {
-          // Lazy import to avoid circular dependency at module level
-          const { useUserStore } = require('./useUserStore')
-          useUserStore.getState().gainXp(Math.round(actual))
+          useUserStore.getState().gainXp(Math.round(actual), 'Game mastery XP')
         }
 
         return actual
@@ -176,9 +175,7 @@ export const useGameProgressStore = create<GameProgressState>()(
         if (actual > 0) {
           set({ dailySessionXP: current + actual, dailySessionXPDate: today })
 
-          // Award via useUserStore
-          const { useUserStore } = require('./useUserStore')
-          useUserStore.getState().gainXp(Math.round(actual))
+          useUserStore.getState().gainXp(Math.round(actual), 'Game session XP')
         }
 
         return actual
@@ -213,9 +210,7 @@ export const useGameProgressStore = create<GameProgressState>()(
           monthlyStreakXPMonth: currentMonth,
         })
 
-        // Award via useUserStore
-        const { useUserStore } = require('./useUserStore')
-        useUserStore.getState().gainXp(Math.round(actual))
+        useUserStore.getState().gainXp(Math.round(actual), 'Streak bonus')
 
         return actual
       },

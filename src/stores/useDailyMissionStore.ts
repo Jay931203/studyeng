@@ -2,6 +2,7 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { useOnboardingStore } from './useOnboardingStore'
 import { useDiscountStore } from './useDiscountStore'
+import { useUserStore } from './useUserStore'
 
 export interface DailyMission {
   id: string
@@ -94,8 +95,7 @@ export const useDailyMissionStore = create<DailyMissionState>()(
 
           // Award XP reward when mission is just completed
           if (justCompleted && mission.xpReward > 0) {
-            const { useUserStore } = require('./useUserStore')
-            useUserStore.getState().gainXp(mission.xpReward)
+            useUserStore.getState().gainXp(mission.xpReward, `Daily mission: ${mission.title}`)
           }
 
           return {
@@ -109,8 +109,7 @@ export const useDailyMissionStore = create<DailyMissionState>()(
         const allDone = updatedMissions.every((m) => m.completed)
         if (allDone && !allCompleteBonus) {
           // All-clear bonus: award 10 XP
-          const { useUserStore } = require('./useUserStore')
-          useUserStore.getState().gainXp(10)
+          useUserStore.getState().gainXp(10, 'Daily mission bonus')
 
           useDiscountStore.getState().recordDailyCompletion()
           set({ missions: updatedMissions, allCompleteBonus: true })

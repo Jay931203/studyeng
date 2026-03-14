@@ -3,6 +3,13 @@ import { persist } from 'zustand/middleware'
 import { shouldUpdateStreak } from '@/lib/gamification'
 import { debouncedSyncProfile } from '@/lib/supabase/sync'
 
+export interface XpHistoryEvent {
+  id: string
+  amount: number
+  reason: string
+  createdAt: string
+}
+
 interface UserState {
   level: number
   xp: number
@@ -10,9 +17,10 @@ interface UserState {
   lastActivityDate: string | null // ISO string, persisted
   showLevelUp: boolean
   totalXpEarned: number // lifetime reward XP earned (never resets on level-up)
+  xpHistory: XpHistoryEvent[]
 
   setUser: (data: { level: number; xp: number; streakDays: number }) => void
-  gainXp: (amount: number) => void
+  gainXp: (amount: number, reason?: string) => void
   checkAndUpdateStreak: () => void
   dismissLevelUp: () => void
   getTotalXP: () => number
@@ -25,18 +33,26 @@ export const useUserStore = create<UserState>()(persist((set, get) => ({
   lastActivityDate: null,
   showLevelUp: false,
   totalXpEarned: 0,
+  xpHistory: [],
 
   setUser: (data) => {
     set(data)
     debouncedSyncProfile()
   },
 
-  gainXp: (amount) => {
+  gainXp: (amount, reason = 'XP reward') => {
     if (amount <= 0) return
-    const { level, xp, totalXpEarned } = get()
+    const { level, xp, totalXpEarned, xpHistory } = get()
     const xpForLevel = level * 100
     const newXp = xp + amount
     const newTotal = totalXpEarned + amount
+    const event: XpHistoryEvent = {
+      id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+      amount,
+      reason,
+      createdAt: new Date().toISOString(),
+    }
+    const nextHistory = [event, ...xpHistory].slice(0, 80)
 
     if (newXp >= xpForLevel) {
       set({
@@ -44,10 +60,14 @@ export const useUserStore = create<UserState>()(persist((set, get) => ({
         xp: newXp - xpForLevel,
         showLevelUp: true,
         totalXpEarned: newTotal,
+        xpHistory: nextHistory,
       })
     } else {
-      set({ xp: newXp, totalXpEarned: newTotal })
+      set({ xp: newXp, totalXpEarned: newTotal, xpHistory: nextHistory })
     }
+    void import('./useTierStore').then(({ useTierStore }) => {
+      useTierStore.getState().recalculateTier()
+    })
     debouncedSyncProfile()
   },
 

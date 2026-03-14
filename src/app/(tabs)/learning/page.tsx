@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useEffect, useMemo } from 'react'
+import { useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import { AnimatePresence } from 'framer-motion'
 import { TodayDashboard } from '@/components/DailyMissions'
@@ -16,7 +16,6 @@ import { getStreakProgress } from '@/lib/learningDashboard'
 import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useLikeStore } from '@/stores/useLikeStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
-import { TIER_NAMES, useTierStore } from '@/stores/useTierStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
@@ -31,17 +30,10 @@ export default function LearningPage() {
   const { phrases, removePhrase } = usePhraseStore()
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)
   const viewCounts = useWatchHistoryStore((state) => state.viewCounts)
+  const watchedVideoIds = useWatchHistoryStore((state) => state.watchedVideoIds)
   const streakDays = useUserStore((state) => state.streakDays)
   const likes = useLikeStore((state) => state.likes)
   const level = useOnboardingStore((state) => state.level)
-  const currentTier = useTierStore((state) => state.currentTier)
-  const getTierProgress = useTierStore((state) => state.getTierProgress)
-  const getNextTierXp = useTierStore((state) => state.getNextTierXp)
-  const recalculateTier = useTierStore((state) => state.recalculateTier)
-
-  useEffect(() => {
-    recalculateTier()
-  }, [recalculateTier])
 
   const totalViews = useMemo(
     () => Object.values(viewCounts).reduce((sum, count) => sum + count, 0),
@@ -53,8 +45,6 @@ export default function LearningPage() {
   const nextLevelLabel = nextLevel ? LEVEL_LABELS[nextLevel] : null
   const effectiveStreakDays = Math.max(streakDays, totalViews > 0 ? 1 : 0)
   const streakProgress = getStreakProgress(effectiveStreakDays)
-  const tierProgress = getTierProgress()
-  const nextTierXp = getNextTierXp()
 
   const likedVideos = useMemo(
     () =>
@@ -90,21 +80,16 @@ export default function LearningPage() {
               accent
             />
 
-            <OverviewProgressCard
-              label="Tier Status"
-              value={TIER_NAMES[currentTier]}
-              detail={
-                tierProgress.next !== null
-                  ? `${nextTierXp.toLocaleString()} XP to ${TIER_NAMES[tierProgress.next]}`
-                  : 'Champion tier active'
-              }
-              progress={tierProgress.progress}
-            />
-
             <OverviewStatCard
               label="Saved Expressions"
               value={phrases.length}
               detail={`${likedVideos.length} liked videos`}
+            />
+
+            <OverviewStatCard
+              label="Completed Videos"
+              value={watchedVideoIds.length}
+              detail={`${totalViews} total views`}
             />
 
             <OverviewProgressCard

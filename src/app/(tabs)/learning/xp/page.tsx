@@ -5,19 +5,27 @@ import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import {
+  buildMilestoneMissions,
+  buildMonthlyXpTrend,
   DAILY_VIDEO_XP_TARGET,
+  getMilestoneSummary,
+  getStreakBonusProgress,
   getStreakProgress,
+  getTierStatusDetail,
   getTodayIsoDate,
   getTodayMilestoneSummary,
   MILESTONE_EXPLAINER,
+  MONTHLY_ACTIVITY_EXPLAINER,
 } from '@/lib/learningDashboard'
 import { DAILY_SESSION_XP_CAP } from '@/lib/xp/sessionXp'
 import { getStreakBonusXP } from '@/lib/xp/streakBonus'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
+import { useLevelChallengeStore } from '@/stores/useLevelChallengeStore'
 import { useLevelStore } from '@/stores/useLevelStore'
 import { useMilestoneStore } from '@/stores/useMilestoneStore'
-import { TIER_NAMES, type TierLevel, useTierStore } from '@/stores/useTierStore'
+import { MONTHLY_ACTIVE_THRESHOLD, TIER_NAMES, type TierLevel, useTierStore } from '@/stores/useTierStore'
 import { useUserStore } from '@/stores/useUserStore'
+import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 
 const TIER_COLORS: Record<TierLevel, { bg: string; text: string; bar: string }> = {
   0: {
@@ -35,26 +43,34 @@ export default function XPPage() {
   const router = useRouter()
   const totalXP = useUserStore((state) => state.getTotalXP())
   const streakDays = useUserStore((state) => state.streakDays)
+  const xpHistory = useUserStore((state) => state.xpHistory)
   const dailySessionXP = useGameProgressStore((state) => state.dailySessionXP)
   const dailySessionXPDate = useGameProgressStore((state) => state.dailySessionXPDate)
   const streakBonusDate = useGameProgressStore((state) => state.streakBonusDate)
+  const totalGameSessions = useGameProgressStore((state) => state.getTotalSessions())
   const dailyVideoXP = useLevelStore((state) => state.getDailyVideoXP())
   const videoXPTotal = useLevelStore((state) => state.getVideoXPTotal())
   const achievedMilestones = useMilestoneStore((state) => state.achieved)
   const currentTier = useTierStore((state) => state.currentTier)
+  const monthlyXpHistory = useTierStore((state) => state.monthlyXpHistory)
   const recalculateTier = useTierStore((state) => state.recalculateTier)
   const getTierProgress = useTierStore((state) => state.getTierProgress)
   const getNextTierXp = useTierStore((state) => state.getNextTierXp)
   const getCurrentMonthXp = useTierStore((state) => state.getCurrentMonthXp)
   const getCurrentDiscount = useTierStore((state) => state.getCurrentDiscount)
+  const completionCounts = useWatchHistoryStore((state) => state.completionCounts)
+  const challengeAttempts = useLevelChallengeStore((state) => state.challengeAttempts)
 
   useEffect(() => {
     recalculateTier()
   }, [recalculateTier])
 
   const today = getTodayIsoDate()
+  const completedVideos = Object.values(completionCounts).filter((count) => count > 0).length
   const gameXpToday = dailySessionXPDate === today ? dailySessionXP : 0
-  const streakBonusToday = streakBonusDate === today ? getStreakBonusXP(streakDays) : 0
+  const streakBonusAwardedToday = streakBonusDate === today
+  const streakBonusToday = streakBonusAwardedToday ? getStreakBonusXP(streakDays) : 0
+  const streakBonusProgress = getStreakBonusProgress(streakDays, streakBonusAwardedToday)
   const todayMilestones = getTodayMilestoneSummary(achievedMilestones, today)
   const todayTotal = gameXpToday + dailyVideoXP + streakBonusToday + todayMilestones.xp
   const gameXpPct = Math.min((gameXpToday / DAILY_SESSION_XP_CAP) * 100, 100)
@@ -64,6 +80,17 @@ export default function XPPage() {
     (sum, entry) => sum + (entry.xpAwarded ?? 0),
     0,
   )
+  const milestoneMissions = buildMilestoneMissions(
+    {
+      completedVideos,
+      totalGameSessions,
+      streakDays,
+      passedLevelChallenge: challengeAttempts.some((attempt) => attempt.passed),
+      currentTier,
+    },
+    achievedMilestones,
+  )
+  const milestoneSummary = getMilestoneSummary(milestoneMissions)
 
   const { next, progress } = getTierProgress()
   const nextTierXp = getNextTierXp()
@@ -72,6 +99,7 @@ export default function XPPage() {
   const tierName = TIER_NAMES[currentTier]
   const colors = TIER_COLORS[currentTier]
   const isChampion = currentTier === 4
+  const monthlyTrend = buildMonthlyXpTrend(monthlyXpHistory)
 
   const handleBack = () => {
     if (typeof window !== 'undefined' && window.history.length > 1) {
@@ -109,7 +137,7 @@ export default function XPPage() {
           </p>
           <p className="text-3xl font-bold text-[var(--text-primary)]">{totalXP}</p>
           <p className="mt-2 text-sm text-[var(--text-secondary)]">
-            Games, videos, streak bonuses, and milestone rewards accumulate here.
+            Games, videos, streak bonuses, and claimed milestones accumulate here.
           </p>
           <div className="mt-4 space-y-2.5">
             <InfoRow label="Video XP Total" value={`${videoXPTotal} XP`} />
@@ -139,24 +167,42 @@ export default function XPPage() {
               value={`${dailyVideoXP}/${DAILY_VIDEO_XP_TARGET} XP`}
               progress={videoXpPct}
             />
-            <InfoRow
-              label="Milestones"
-              value={
-                todayMilestones.count > 0
-                  ? `${todayMilestones.count} unlocked - +${todayMilestones.xp} XP`
-                  : '0 unlocked - 0 XP'
-              }
-            />
-            <InfoRow
+            <ProgressRow
               label="Streak Bonus"
-              value={streakBonusToday > 0 ? `+${streakBonusToday} XP` : '0 XP'}
-              accent={streakBonusToday > 0}
+              value={
+                streakBonusToday > 0
+                  ? `${streakBonusToday}/${streakBonusToday} XP`
+                  : streakDays > 0
+                    ? `0/${getStreakBonusXP(streakDays)} XP`
+                    : 'Locked'
+              }
+              progress={streakBonusProgress.progress * 100}
             />
           </div>
+        </SurfaceCard>
 
-          <p className="mt-4 text-[11px] leading-relaxed text-[var(--text-muted)]">
-            {MILESTONE_EXPLAINER}
-          </p>
+        <SurfaceCard className="p-5">
+          <div className="flex items-start justify-between gap-4">
+            <div>
+              <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+                MILESTONES
+              </p>
+              <p className="mt-2 text-sm text-[var(--text-secondary)]">
+                {MILESTONE_EXPLAINER}
+              </p>
+              <div className="mt-3 space-y-1 text-sm text-[var(--text-secondary)]">
+                <p>{milestoneSummary.readyCount} ready to claim</p>
+                <p>{milestoneSummary.claimedCount} already claimed</p>
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={() => router.push('/learning/milestones')}
+              className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
+            >
+              OPEN
+            </button>
+          </div>
         </SurfaceCard>
 
         <SurfaceCard className="p-5">
@@ -191,7 +237,7 @@ export default function XPPage() {
                 />
               </div>
               <p className="mt-1.5 text-[10px] text-[var(--text-muted)]">
-                {nextTierXp.toLocaleString()} XP to {TIER_NAMES[next]}
+                {getTierStatusDetail(nextTierXp, next)}
               </p>
             </div>
           ) : (
@@ -227,15 +273,63 @@ export default function XPPage() {
         </SurfaceCard>
 
         <SurfaceCard className="p-5">
-          <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-            HOW XP WORKS
+          <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+            RECENT ACTIVITY
           </p>
-          <ul className="space-y-1.5 text-sm text-[var(--text-secondary)]">
-            <li>Game sessions award XP up to {DAILY_SESSION_XP_CAP} XP per day.</li>
-            <li>Completed videos award XP up to {DAILY_VIDEO_XP_TARGET} XP per day.</li>
-            <li>Streak bonuses add extra XP when the daily streak condition is met.</li>
-            <li>Milestones are one-time bonuses for first clears, streak records, and tier unlocks.</li>
-          </ul>
+          {xpHistory.length === 0 ? (
+            <p className="text-sm text-[var(--text-secondary)]">No XP activity recorded yet.</p>
+          ) : (
+            <div className="space-y-3">
+              {xpHistory.slice(0, 8).map((event) => (
+                <div key={event.id} className="flex items-center justify-between gap-3">
+                  <div className="min-w-0">
+                    <p className="truncate text-sm font-medium text-[var(--text-primary)]">{event.reason}</p>
+                    <p className="mt-1 text-[11px] text-[var(--text-muted)]">
+                      {new Date(event.createdAt).toLocaleString('en-US', {
+                        month: 'short',
+                        day: 'numeric',
+                        hour: 'numeric',
+                        minute: '2-digit',
+                      })}
+                    </p>
+                  </div>
+                  <span className="text-sm font-semibold text-[var(--accent-text)]">+{event.amount} XP</span>
+                </div>
+              ))}
+            </div>
+          )}
+        </SurfaceCard>
+
+        <SurfaceCard className="p-5">
+          <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+            MONTHLY ACTIVITY
+          </p>
+          <p className="mb-4 text-sm text-[var(--text-secondary)]">
+            {MONTHLY_ACTIVITY_EXPLAINER}
+          </p>
+          <div className="space-y-3">
+            {monthlyTrend.map((point) => (
+              <div key={point.key}>
+                <div className="mb-1 flex items-center justify-between text-[11px]">
+                  <span className="text-[var(--text-secondary)]">{point.label}</span>
+                  <span className="font-medium text-[var(--text-primary)]">
+                    {point.xp.toLocaleString()} / {MONTHLY_ACTIVE_THRESHOLD} XP
+                  </span>
+                </div>
+                <div className="h-1.5 overflow-hidden rounded-full bg-[var(--bg-secondary)]">
+                  <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: `${point.progress * 100}%` }}
+                    transition={{ duration: 0.4, ease: 'easeOut' }}
+                    className={`h-full rounded-full ${point.active ? 'bg-emerald-500' : 'bg-amber-500'}`}
+                  />
+                </div>
+                <p className="mt-1 text-[10px] text-[var(--text-muted)]">
+                  {point.active ? 'Active month' : 'Below retention threshold'}
+                </p>
+              </div>
+            ))}
+          </div>
         </SurfaceCard>
       </div>
     </AppPage>
@@ -245,18 +339,14 @@ export default function XPPage() {
 function InfoRow({
   label,
   value,
-  accent = false,
 }: {
   label: string
   value: string
-  accent?: boolean
 }) {
   return (
     <div className="flex items-center justify-between">
       <span className="text-sm text-[var(--text-secondary)]">{label}</span>
-      <span className={`text-sm font-medium ${accent ? 'text-[var(--accent-text)]' : 'text-[var(--text-primary)]'}`}>
-        {value}
-      </span>
+      <span className="text-sm font-medium text-[var(--text-primary)]">{value}</span>
     </div>
   )
 }

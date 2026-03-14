@@ -1,36 +1,118 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
+import { useUserStore } from './useUserStore'
 
-// ---------------------------------------------------------------------------
-// Milestone definitions
-// ---------------------------------------------------------------------------
+export type MilestoneMetric = 'videos' | 'games' | 'streak' | 'challenge' | 'tier'
 
 export interface MilestoneDefinition {
   id: string
   xp: number
   label: string
+  description: string
+  target: number
+  metric: MilestoneMetric
 }
 
 export const MILESTONES: MilestoneDefinition[] = [
-  { id: 'first_video_complete', xp: 20, label: 'First video completed' },
-  { id: 'videos_10', xp: 30, label: '10 videos completed' },
-  { id: 'videos_50', xp: 50, label: '50 videos completed' },
-  { id: 'videos_100', xp: 80, label: '100 videos completed' },
-  { id: 'first_game_complete', xp: 15, label: 'First game completed' },
-  { id: 'games_20', xp: 30, label: '20 games completed' },
-  { id: 'streak_7', xp: 25, label: '7-day streak' },
-  { id: 'streak_30', xp: 60, label: '30-day streak' },
-  { id: 'first_level_challenge_pass', xp: 40, label: 'First Level Challenge passed' },
-  { id: 'tier_learner', xp: 20, label: 'Learner tier reached' },
-  { id: 'tier_regular', xp: 30, label: 'Regular tier reached' },
-  { id: 'tier_dedicated', xp: 40, label: 'Dedicated tier reached' },
+  {
+    id: 'first_video_complete',
+    xp: 20,
+    label: 'First video complete',
+    description: 'Finish 1 video all the way through.',
+    target: 1,
+    metric: 'videos',
+  },
+  {
+    id: 'videos_10',
+    xp: 30,
+    label: '10 videos complete',
+    description: 'Finish 10 different videos.',
+    target: 10,
+    metric: 'videos',
+  },
+  {
+    id: 'videos_50',
+    xp: 50,
+    label: '50 videos complete',
+    description: 'Finish 50 different videos.',
+    target: 50,
+    metric: 'videos',
+  },
+  {
+    id: 'videos_100',
+    xp: 80,
+    label: '100 videos complete',
+    description: 'Finish 100 different videos.',
+    target: 100,
+    metric: 'videos',
+  },
+  {
+    id: 'first_game_complete',
+    xp: 15,
+    label: 'First game clear',
+    description: 'Complete your first learning game.',
+    target: 1,
+    metric: 'games',
+  },
+  {
+    id: 'games_20',
+    xp: 30,
+    label: '20 games clear',
+    description: 'Complete 20 learning game sessions.',
+    target: 20,
+    metric: 'games',
+  },
+  {
+    id: 'streak_7',
+    xp: 25,
+    label: '7-day streak',
+    description: 'Keep learning for 7 days in a row.',
+    target: 7,
+    metric: 'streak',
+  },
+  {
+    id: 'streak_30',
+    xp: 60,
+    label: '30-day streak',
+    description: 'Keep learning for 30 days in a row.',
+    target: 30,
+    metric: 'streak',
+  },
+  {
+    id: 'first_level_challenge_pass',
+    xp: 40,
+    label: 'First level challenge pass',
+    description: 'Pass a level challenge once.',
+    target: 1,
+    metric: 'challenge',
+  },
+  {
+    id: 'tier_learner',
+    xp: 20,
+    label: 'Learner tier reached',
+    description: 'Reach Learner tier in monthly XP.',
+    target: 1,
+    metric: 'tier',
+  },
+  {
+    id: 'tier_regular',
+    xp: 30,
+    label: 'Regular tier reached',
+    description: 'Reach Regular tier in monthly XP.',
+    target: 2,
+    metric: 'tier',
+  },
+  {
+    id: 'tier_dedicated',
+    xp: 40,
+    label: 'Dedicated tier reached',
+    description: 'Reach Dedicated tier in monthly XP.',
+    target: 3,
+    metric: 'tier',
+  },
 ]
 
-// ---------------------------------------------------------------------------
-// Store
-// ---------------------------------------------------------------------------
-
-interface AchievedEntry {
+export interface AchievedEntry {
   achievedAt: number
   xpAwarded: number
 }
@@ -39,14 +121,8 @@ interface MilestoneState {
   achieved: Record<string, AchievedEntry>
   hydrated: boolean
   setHydrated: (h: boolean) => void
-
-  /**
-   * Check a milestone condition and award XP if not already achieved.
-   * Returns the XP awarded (0 if already achieved or milestone not found).
-   */
+  claimMilestone: (milestoneId: string, ready: boolean) => number
   checkAndAward: (milestoneId: string, condition: boolean) => number
-
-  /** Check if a milestone has been achieved */
   isAchieved: (milestoneId: string) => boolean
 }
 
@@ -57,11 +133,11 @@ export const useMilestoneStore = create<MilestoneState>()(
       hydrated: false,
       setHydrated: (h) => set({ hydrated: h }),
 
-      checkAndAward: (milestoneId, condition) => {
-        if (!condition) return 0
+      claimMilestone: (milestoneId, ready) => {
+        if (!ready) return 0
         if (get().achieved[milestoneId]) return 0
 
-        const def = MILESTONES.find((m) => m.id === milestoneId)
+        const def = MILESTONES.find((milestone) => milestone.id === milestoneId)
         if (!def) return 0
 
         const entry: AchievedEntry = {
@@ -76,12 +152,15 @@ export const useMilestoneStore = create<MilestoneState>()(
           },
         }))
 
-        // Award XP via useUserStore (lazy import to avoid circular deps)
-        const { useUserStore } = require('./useUserStore')
-        useUserStore.getState().gainXp(def.xp)
+        useUserStore
+          .getState()
+          .gainXp(def.xp, `Milestone claim: ${def.label}`)
 
         return def.xp
       },
+
+      // Deprecated: milestone rewards are now claimed from the milestones page.
+      checkAndAward: () => 0,
 
       isAchieved: (milestoneId) => {
         return !!get().achieved[milestoneId]
@@ -96,35 +175,15 @@ export const useMilestoneStore = create<MilestoneState>()(
   ),
 )
 
-// ---------------------------------------------------------------------------
-// Convenience: check multiple milestones after an activity
-// ---------------------------------------------------------------------------
-
-/**
- * Check video-related milestones based on total video completion count.
- */
+// Deprecated compatibility no-ops. Milestones are now claimed explicitly.
 export function checkVideoMilestones(totalVideosCompleted: number): void {
-  const store = useMilestoneStore.getState()
-  store.checkAndAward('first_video_complete', totalVideosCompleted >= 1)
-  store.checkAndAward('videos_10', totalVideosCompleted >= 10)
-  store.checkAndAward('videos_50', totalVideosCompleted >= 50)
-  store.checkAndAward('videos_100', totalVideosCompleted >= 100)
+  void totalVideosCompleted
 }
 
-/**
- * Check game-related milestones based on total game session count.
- */
 export function checkGameMilestones(totalGameSessions: number): void {
-  const store = useMilestoneStore.getState()
-  store.checkAndAward('first_game_complete', totalGameSessions >= 1)
-  store.checkAndAward('games_20', totalGameSessions >= 20)
+  void totalGameSessions
 }
 
-/**
- * Check streak-related milestones.
- */
 export function checkStreakMilestones(streakDays: number): void {
-  const store = useMilestoneStore.getState()
-  store.checkAndAward('streak_7', streakDays >= 7)
-  store.checkAndAward('streak_30', streakDays >= 30)
+  void streakDays
 }
