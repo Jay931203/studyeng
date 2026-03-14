@@ -131,6 +131,7 @@ export function VideoFeed({
   const incrementRepeatCount = usePlayerStore((state) => state.incrementRepeatCount)
   const resetRepeatCount = usePlayerStore((state) => state.resetRepeatCount)
   const playbackOrderMode = usePlayerStore((state) => state.playbackOrderMode)
+  const feedSwipeLocked = usePlayerStore((state) => state.feedSwipeLocked)
   const setIsSwiping = usePlayerStore((state) => state.setIsSwiping)
   const currentTime = usePlayerStore((state) => state.currentTime)
   const clipStart = usePlayerStore((state) => state.clipStart)
@@ -634,6 +635,7 @@ export function VideoFeed({
         hasAlternativePlayableVideo
       : findSeriesNavigationTarget(1) !== null || findPlayableIndex(currentIndex + 1, 1) >= 0
   const showHeaderHomeButton = isLandscapeViewport
+  const canDragFeed = !feedSwipeLocked && !showSeriesEpisodes && videos.length > 1
 
   const seriesInfo = currentVideo.seriesId
     ? allSeries.find((series) => series.id === currentVideo.seriesId)
@@ -656,12 +658,16 @@ export function VideoFeed({
           animate={{ y: 0 }}
           exit={{ y: direction > 0 ? '-100%' : '100%' }}
           transition={{ type: 'tween', duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-          drag="y"
+          drag={canDragFeed ? 'y' : false}
           dragConstraints={{ top: 0, bottom: 0 }}
-          dragElastic={0.15}
-          onDragStart={() => setIsSwiping(true)}
+          dragElastic={canDragFeed ? 0.15 : 0}
+          onDragStart={() => {
+            if (!canDragFeed) return
+            setIsSwiping(true)
+          }}
           onDragEnd={(...args) => {
             setIsSwiping(false)
+            if (!canDragFeed) return
             handleDragEnd(...args)
           }}
           className="absolute inset-0"

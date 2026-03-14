@@ -27,6 +27,8 @@ interface PlayerState {
   currentRepeatCount: number
   /** True while the user is swiping between videos */
   isSwiping: boolean
+  /** Blocks parent feed swipe while an interactive overlay is open */
+  feedSwipeLocked: boolean
   /** Index of the subtitle currently frozen for looping, or null */
   freezeSubIndex: number | null
 
@@ -55,6 +57,7 @@ interface PlayerState {
   incrementRepeatCount: () => void
   resetRepeatCount: () => void
   setIsSwiping: (swiping: boolean) => void
+  setFeedSwipeLocked: (locked: boolean) => void
   setFreezeSubIndex: (idx: number | null) => void
 
   // Game actions
@@ -107,6 +110,7 @@ export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
   repeatMode: 'off',
   currentRepeatCount: 0,
   isSwiping: false,
+  feedSwipeLocked: false,
   freezeSubIndex: null,
 
   // Game state defaults
@@ -187,6 +191,10 @@ export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
 
   setIsSwiping: (swiping) => {
     if (get().isSwiping !== swiping) set({ isSwiping: swiping })
+  },
+
+  setFeedSwipeLocked: (locked) => {
+    if (get().feedSwipeLocked !== locked) set({ feedSwipeLocked: locked })
   },
 
   setFreezeSubIndex: (idx) => {

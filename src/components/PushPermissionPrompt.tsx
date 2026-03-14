@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
+import { isNative } from '@/lib/platform'
 import { usePushStore } from '@/stores/usePushStore'
 import { useUserStore } from '@/stores/useUserStore'
 
@@ -21,6 +22,7 @@ interface Props {
 }
 
 export function PushPermissionPrompt({ visible, onClose }: Props) {
+  const native = isNative()
   const { shouldShowPrompt, subscribe, dismiss, permission } = usePushStore()
   const streakDays = useUserStore((state) => state.streakDays)
 
@@ -28,6 +30,8 @@ export function PushPermissionPrompt({ visible, onClose }: Props) {
   const [loading, setLoading] = useState(false)
 
   useEffect(() => {
+    if (native) return
+
     if (visible && shouldShowPrompt()) {
       // Small delay so the prompt doesn't appear instantly on video end
       const t = window.setTimeout(() => setShow(true), 800)
@@ -36,7 +40,7 @@ export function PushPermissionPrompt({ visible, onClose }: Props) {
 
     const t = window.setTimeout(() => setShow(false), 0)
     return () => window.clearTimeout(t)
-  }, [visible, shouldShowPrompt])
+  }, [native, visible, shouldShowPrompt])
 
   // Auto-hide if permission already resolved
   useEffect(() => {
@@ -62,7 +66,7 @@ export function PushPermissionPrompt({ visible, onClose }: Props) {
     onClose?.()
   }
 
-  if (!show) return null
+  if (native || !show) return null
 
   const streakLine =
     streakDays > 0

@@ -127,6 +127,7 @@ export function VideoPlayer({
   )
   const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
   const setFreezeSubIndex = usePlayerStore((state) => state.setFreezeSubIndex)
+  const setFeedSwipeLocked = usePlayerStore((state) => state.setFeedSwipeLocked)
   const gameActive = usePlayerStore((state) => state.gameActive)
   const gameSentenceIndex = usePlayerStore((state) => state.gameSentenceIndex)
   const gameChoices = usePlayerStore((state) => state.gameChoices)
@@ -495,6 +496,15 @@ export function VideoPlayer({
   const gameOverlayInsetBottom = isShortsFormat
     ? 'max(88px, calc(env(safe-area-inset-bottom, 0px) + 72px))'
     : '16px'
+
+  useEffect(() => {
+    const shouldLockFeedSwipe = showPriming || showGameOverlay
+    setFeedSwipeLocked(shouldLockFeedSwipe)
+
+    return () => {
+      setFeedSwipeLocked(false)
+    }
+  }, [setFeedSwipeLocked, showGameOverlay, showPriming])
 
   const subtitleArea = (
     <LyricsSubtitles

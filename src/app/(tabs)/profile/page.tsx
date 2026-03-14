@@ -471,6 +471,7 @@ export default function ProfilePage() {
         <SurfaceCard className="overflow-hidden p-6">
           <SectionLabel label="LEGAL" />
           <div className="-mx-6 -mb-6 overflow-hidden">
+            <LegalLink href="/support" label="SUPPORT" />
             <LegalLink href="/terms" label="TERMS" />
             <LegalLink href="/privacy" label="PRIVACY" />
           </div>

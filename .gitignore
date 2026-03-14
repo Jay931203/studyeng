@@ -71,3 +71,13 @@ next-env.d.ts
 .playwright-cli/
 tmp-vercel-inspect.json
 /output/playwright/
+
+# capacitor native local artifacts
+/android/.gradle/
+/android/build/
+/android/local.properties
+/android/app/build/
+/ios/App/build/
+/ios/App/App.xcworkspace/xcuserdata/
+/ios/App/App.xcodeproj/xcuserdata/
+/ios/DerivedData/
