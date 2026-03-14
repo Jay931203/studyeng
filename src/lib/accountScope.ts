@@ -67,6 +67,7 @@ export function resetAccountScopedState() {
   })
   useTierStore.setState({
     currentTier: 0,
+    benefitTier: 0,
     monthlyXpHistory: {},
     championMonths: 0,
     championLegacy: false,

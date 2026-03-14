@@ -36,7 +36,7 @@ export default function XpHistoryPage() {
             </svg>
           </button>
           <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-            XP HISTORY
+            XP 기록
           </p>
         </div>
 

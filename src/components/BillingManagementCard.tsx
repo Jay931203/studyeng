@@ -5,9 +5,16 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import type { PurchasesPackage } from '@revenuecat/purchases-typescript-internal-esm'
 import { getBillingConfig, type BillingPlan } from '@/lib/billing'
+import { getBenefitStatusLine } from '@/lib/learningDashboard'
 import { getPlatform, isNative } from '@/lib/platform'
 import { useAuth } from '@/hooks/useAuth'
 import { usePremiumStore } from '@/stores/usePremiumStore'
+import {
+  MONTHLY_ACTIVE_THRESHOLD,
+  TIER_NAMES,
+  YEARLY_BASE_SAVINGS_PERCENT,
+  useTierStore,
+} from '@/stores/useTierStore'
 import { SurfaceCard } from '@/components/ui/AppPage'
 import { RedeemCodeSection } from './RedeemCodeCard'
 
@@ -47,21 +54,21 @@ const ANDROID_APP_ID = 'com.studyeng.app'
 const WEB_PLAN_OPTIONS: Record<BillingPlan, PlanOption> = {
   yearly: {
     id: 'yearly',
-    label: 'YEARLY',
-    detail: '장기 학습자를 위한 최적의 요금제',
-    price: 'KRW 79,900 / year',
-    highlight: 'BEST VALUE',
+    label: '연간',
+    detail: '기본가가 가장 크게 할인되는 플랜',
+    price: '79,900원 / 년',
+    highlight: '추천',
   },
   monthly: {
     id: 'monthly',
-    label: 'MONTHLY',
-    detail: '부담 없이 시작하고 싶다면',
-    price: 'KRW 9,900 / month',
+    label: '월간',
+    detail: '가볍게 시작하고 다음 달 혜택을 바로 반영',
+    price: '9,900원 / 월',
   },
 }
 
 function formatDate(value: string | null) {
-  if (!value) return 'Unavailable'
+  if (!value) return '없음'
 
   return new Intl.DateTimeFormat('ko-KR', {
     year: 'numeric',
@@ -73,11 +80,11 @@ function formatDate(value: string | null) {
 function getPlanLabel(planKey: string | null | undefined) {
   switch (planKey) {
     case 'premium_yearly':
-      return 'Premium Yearly'
+      return '프리미엄 연간'
     case 'premium_monthly':
-      return 'Premium Monthly'
+      return '프리미엄 월간'
     case 'premium':
-      return 'Premium'
+      return '프리미엄'
     default:
       return 'FREE'
   }
@@ -103,6 +110,18 @@ function getStoreManagementUrl() {
     default:
       return null
   }
+}
+
+function getPlanBenefitDetail(
+  plan: BillingPlan,
+  monthlyDiscount: number,
+  yearlyRenewalDiscount: number,
+) {
+  if (plan === 'yearly') {
+    return `월간 12회 대비 약 ${YEARLY_BASE_SAVINGS_PERCENT}% 저렴 · 다음 연간 갱신 ${yearlyRenewalDiscount}% 적용`
+  }
+
+  return `현재 혜택 기준 다음 달 결제 ${monthlyDiscount}% 적용`
 }
 
 function formatCardBrand(brand: string | null | undefined) {
@@ -154,7 +173,7 @@ function PlanTile({
                 : 'bg-emerald-500/15 text-emerald-300'
             }`}
           >
-            {current ? 'CURRENT' : option.highlight}
+            {current ? '현재' : option.highlight}
           </span>
         )}
       </div>
@@ -174,6 +193,7 @@ export function BillingManagementCard({
   const { user } = useAuth()
   const entitlementPremium = usePremiumStore((state) => state.entitlementPremium)
   const setPremiumEntitlement = usePremiumStore((state) => state.setPremiumEntitlement)
+  const getBenefitSnapshot = useTierStore((state) => state.getBenefitSnapshot)
   const [selectedPlan, setSelectedPlan] = useState<BillingPlan>('yearly')
   const [loading, setLoading] = useState(false)
   const [managing, setManaging] = useState(false)
@@ -278,7 +298,7 @@ export function BillingManagementCard({
       } catch (error) {
         console.warn('[billing] status fetch failed:', error)
         if (!cancelled) {
-          setErrorMessage('Could not load membership status.')
+          setErrorMessage('구독 상태를 불러오지 못했습니다.')
         }
       } finally {
         if (!cancelled) {
@@ -304,6 +324,7 @@ export function BillingManagementCard({
   }, [status?.entitlement?.planKey])
 
   const currentPremium = native ? entitlementPremium : status?.isPremium ?? false
+  const benefitSnapshot = getBenefitSnapshot()
   const entitlementSource = native ? (currentPremium ? 'revenuecat' : 'free') : status?.entitlement?.source ?? 'free'
   const webBillingReady = status?.enabled ?? false
   const hasManagedSubscription =
@@ -312,11 +333,11 @@ export function BillingManagementCard({
     native ? currentPremium : currentPremium && entitlementSource === 'stripe'
   const hasCodeAccess = currentPremium && entitlementSource === 'code'
   const planKey = status?.entitlement?.planKey ?? (currentPremium ? 'premium' : 'free')
-  const currentPlanLabel = loading ? 'Checking membership...' : getPlanLabel(planKey)
+  const currentPlanLabel = loading ? '상태 확인 중...' : getPlanLabel(planKey)
   const currentStatusLabel = loading
-    ? 'Checking membership...'
+    ? '상태 확인 중...'
     : currentPremium
-      ? 'Premium active'
+      ? '프리미엄 사용 중'
       : 'FREE'
   const isReady = native ? currentPremium || nativePackages.length > 0 : webBillingReady
   const currentPlan =
@@ -327,59 +348,89 @@ export function BillingManagementCard({
       ? ''
       : hasManagedSubscription
         ? native
-          ? `Manage in ${getStoreLabel()}`
-          : 'Manage in subscription portal'
+          ? `${getStoreLabel()}에서 관리`
+          : '구독 포털에서 관리'
         : hasCodeAccess
-          ? 'Code access only'
+          ? '코드로 이용 중'
           : user
-            ? 'Ready to subscribe'
-            : 'Log in to subscribe'
+            ? '구독 가능'
+            : '로그인 후 구독 가능'
   const scheduleLabel =
     native && currentPremium
-      ? 'Renewal'
+      ? '갱신'
       : !native && status?.entitlement?.currentPeriodEnd
         ? status.entitlement.cancelAtPeriodEnd
-          ? 'Access ends'
-          : 'Next billing'
-        : 'Schedule'
+          ? '이용 종료'
+          : '다음 결제'
+        : '일정'
   const scheduleValue =
     native && currentPremium
-      ? `Check in ${getStoreLabel()}`
+      ? `${getStoreLabel()}에서 확인`
       : !native && status?.entitlement?.currentPeriodEnd
         ? formatDate(status.entitlement.currentPeriodEnd)
         : ''
   const paymentMethodLabel = hasBillingPaymentMethod
     ? native
-      ? `${getStoreLabel()} billing`
+      ? `${getStoreLabel()} 결제`
       : status?.paymentMethod?.last4
         ? `${formatCardBrand(status.paymentMethod.brand)} •••• ${status.paymentMethod.last4}`
-        : 'Payment method unavailable'
+        : '결제 수단 없음'
     : ''
   const paymentMethodDetail =
     !native &&
     hasBillingPaymentMethod &&
     status?.paymentMethod?.expMonth &&
     status?.paymentMethod?.expYear
-      ? `Exp ${String(status.paymentMethod.expMonth).padStart(2, '0')}/${String(status.paymentMethod.expYear).slice(-2)}`
+      ? `만료 ${String(status.paymentMethod.expMonth).padStart(2, '0')}/${String(status.paymentMethod.expYear).slice(-2)}`
       : null
+  const benefitItems = [
+    {
+      label: '잠금 등급',
+      value: TIER_NAMES[benefitSnapshot.unlockedTier],
+      detail: '누적 XP 기준으로 해제된 최고 등급',
+    },
+    {
+      label: '적용 혜택',
+      value: TIER_NAMES[benefitSnapshot.benefitTier],
+      detail:
+        benefitSnapshot.benefitTier < benefitSnapshot.unlockedTier
+          ? '최근 활동 부족으로 낮아진 혜택 상태'
+          : '현재 구독 할인에 적용되는 혜택 상태',
+    },
+    {
+      label: '다음 월간 결제',
+      value: `${benefitSnapshot.monthlyDiscount}% 할인`,
+      detail: '월간 플랜에는 다음 결제일부터 바로 반영',
+    },
+    {
+      label: '다음 연간 갱신',
+      value: `${benefitSnapshot.yearlyRenewalDiscount}% 할인`,
+      detail: '연간은 현재 기간이 끝난 뒤 다음 갱신 때 반영',
+    },
+    {
+      label: '월간 활동',
+      value: `${benefitSnapshot.currentMonthXp.toLocaleString()} / ${MONTHLY_ACTIVE_THRESHOLD} XP`,
+      detail: '이번 달 활동 XP 기준',
+    },
+  ]
   const membershipSummaryItems = [
     ...(currentPremium
-      ? [{ label: 'Plan', value: currentPlanLabel, detail: null as string | null }]
+      ? [{ label: '플랜', value: currentPlanLabel, detail: null as string | null }]
       : []),
     ...(hasBillingPaymentMethod
-      ? [{ label: 'Payment', value: paymentMethodLabel, detail: paymentMethodDetail }]
+      ? [{ label: '결제 수단', value: paymentMethodLabel, detail: paymentMethodDetail }]
       : []),
     ...(hasCodeAccess
       ? [
           {
-            label: 'Access',
-            value: 'Redeemed code',
-            detail: 'Billing starts only when you subscribe.',
+            label: '이용 방식',
+            value: '코드 이용 중',
+            detail: '자동 결제는 구독을 시작한 뒤에만 이어집니다.',
           },
         ]
       : []),
-    { label: 'Manage', value: managementLabel || 'N/A', detail: null as string | null },
-    { label: scheduleLabel, value: scheduleValue || 'N/A', detail: null as string | null },
+    { label: '관리', value: managementLabel || '없음', detail: null as string | null },
+    { label: scheduleLabel, value: scheduleValue || '없음', detail: null as string | null },
   ]
 
   const planOptions = useMemo(() => {
@@ -397,20 +448,37 @@ export function BillingManagementCard({
         const yearly = pkg.packageType === 'ANNUAL'
         return {
           id: yearly ? 'yearly' : 'monthly',
-          label: yearly ? 'YEARLY' : 'MONTHLY',
-          detail:
-            pkg.product.description ||
-            (yearly
-              ? `Subscribe yearly through ${getStoreLabel()}.`
-              : `Subscribe monthly through ${getStoreLabel()}.`),
+          label: yearly ? '연간' : '월간',
+          detail: getPlanBenefitDetail(
+            yearly ? 'yearly' : 'monthly',
+            benefitSnapshot.monthlyDiscount,
+            benefitSnapshot.yearlyRenewalDiscount,
+          ),
           price: pkg.product.priceString,
-          highlight: yearly ? 'BEST VALUE' : undefined,
+          highlight: yearly ? '추천' : undefined,
         } satisfies PlanOption
       })
     }
 
-    return [WEB_PLAN_OPTIONS.yearly, WEB_PLAN_OPTIONS.monthly]
-  }, [native, nativePackages])
+    return [
+      {
+        ...WEB_PLAN_OPTIONS.yearly,
+        detail: getPlanBenefitDetail(
+          'yearly',
+          benefitSnapshot.monthlyDiscount,
+          benefitSnapshot.yearlyRenewalDiscount,
+        ),
+      },
+      {
+        ...WEB_PLAN_OPTIONS.monthly,
+        detail: getPlanBenefitDetail(
+          'monthly',
+          benefitSnapshot.monthlyDiscount,
+          benefitSnapshot.yearlyRenewalDiscount,
+        ),
+      },
+    ]
+  }, [benefitSnapshot.monthlyDiscount, benefitSnapshot.yearlyRenewalDiscount, native, nativePackages])
 
   const handlePortal = async () => {
     setManaging(true)
@@ -427,7 +495,7 @@ export function BillingManagementCard({
       window.location.assign(payload.url)
     } catch (error) {
       console.warn('[billing] portal launch failed:', error)
-      setErrorMessage('Could not open the subscription portal.')
+      setErrorMessage('구독 포털을 열지 못했습니다.')
       setManaging(false)
     }
   }
@@ -444,11 +512,11 @@ export function BillingManagementCard({
       updateNativeStatus(restored)
 
       if (!restored) {
-        setErrorMessage('No restorable purchase was found.')
+        setErrorMessage('복원할 구매 내역을 찾지 못했습니다.')
       }
     } catch (error) {
       console.warn('[billing] restore failed:', error)
-      setErrorMessage('Purchase restore failed.')
+      setErrorMessage('구매 복원에 실패했습니다.')
     } finally {
       setRestoring(false)
     }
@@ -461,7 +529,7 @@ export function BillingManagementCard({
       ) ?? nativePackages[0]
 
     if (!pkg) {
-      setErrorMessage('Membership plans are still loading.')
+      setErrorMessage('구독 플랜을 불러오는 중입니다.')
       return
     }
 
@@ -478,7 +546,7 @@ export function BillingManagementCard({
       const purchaseError = error as { code?: string; userCancelled?: boolean }
       if (!purchaseError.userCancelled && purchaseError.code !== 'PURCHASE_CANCELLED') {
         console.warn('[billing] checkout failed:', error)
-        setErrorMessage('Could not start the store checkout.')
+        setErrorMessage('스토어 결제를 시작하지 못했습니다.')
       }
     } finally {
       setSubmitting(false)
@@ -519,7 +587,7 @@ export function BillingManagementCard({
       window.location.assign(payload.url)
     } catch (error) {
       console.warn('[billing] checkout start failed:', error)
-      setErrorMessage('Could not start checkout.')
+      setErrorMessage('결제 세션을 시작하지 못했습니다.')
     } finally {
       setSubmitting(false)
     }
@@ -528,7 +596,7 @@ export function BillingManagementCard({
   const handleOpenStore = () => {
     const url = getStoreManagementUrl()
     if (!url) {
-      setErrorMessage('This device cannot open the store subscription page.')
+      setErrorMessage('이 기기에서는 스토어 구독 관리 페이지를 열 수 없습니다.')
       return
     }
 
@@ -559,14 +627,14 @@ export function BillingManagementCard({
   }
 
   const primaryLabel = (() => {
-    if (!isReady) return 'BILLING SOON'
-    if (submitting) return 'PROCESSING...'
-    if (managing) return 'OPENING...'
+    if (!isReady) return '결제 준비 중'
+    if (submitting) return '처리 중...'
+    if (managing) return '열어보는 중...'
     if (hasManagedSubscription) {
-      return native ? `MANAGE IN ${getStoreLabel().toUpperCase()}` : 'MANAGE SUBSCRIPTION'
+      return native ? `${getStoreLabel()}에서 관리` : '구독 관리'
     }
-    if (!user) return 'LOG IN TO SUBSCRIBE'
-    return 'START SUBSCRIPTION'
+    if (!user) return '로그인 후 구독'
+    return '구독 시작'
   })()
 
   return (
@@ -574,13 +642,13 @@ export function BillingManagementCard({
       {!isDetail && (
         <div className="mb-4 flex items-center justify-between gap-3">
           <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-            SUBSCRIPTION
+            구독
           </p>
           <Link
             href="/profile/membership"
             className="shrink-0 text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
           >
-            DETAIL
+            상세 보기
           </Link>
         </div>
       )}
@@ -596,41 +664,45 @@ export function BillingManagementCard({
                 <p className="mt-1 text-sm text-[var(--text-secondary)]">{currentPlanLabel}</p>
               )}
 
+              <p className="mt-2 text-xs text-[var(--text-secondary)]">
+                {getBenefitStatusLine(benefitSnapshot)}
+              </p>
+
               {!native && status?.entitlement?.currentPeriodEnd && (
                 <p className="mt-2 text-xs text-[var(--text-secondary)]">
-                  {status.entitlement.cancelAtPeriodEnd ? 'Access ends' : 'Next billing'}{' '}
+                  {status.entitlement.cancelAtPeriodEnd ? '이용 종료' : '다음 결제'}{' '}
                   {formatDate(status.entitlement.currentPeriodEnd)}
                 </p>
               )}
 
               {hasBillingPaymentMethod && (
                 <p className="mt-2 text-xs text-[var(--text-secondary)]">
-                  Payment {paymentMethodLabel}
+                  결제 수단 {paymentMethodLabel}
                   {paymentMethodDetail ? ` · ${paymentMethodDetail}` : ''}
                 </p>
               )}
 
               {!native && hasCodeAccess && (
                 <p className="mt-2 text-xs text-[var(--text-secondary)]">
-                  Premium is active from a redeemed code. Billing starts only when you subscribe.
+                  코드로 프리미엄을 사용 중입니다. 자동 결제는 구독을 시작한 뒤에만 이어집니다.
                 </p>
               )}
 
               {!native && !user && webBillingReady && (
                 <p className="mt-2 text-xs text-[var(--text-secondary)]">
-                  Log in to manage billing and attach premium access to your account.
+                  로그인하면 구독 상태와 프리미엄 이용 권한을 계정에 연결할 수 있습니다.
                 </p>
               )}
 
               {!native && billingEnabled && !webBillingReady && (
                 <p className="mt-2 text-xs text-[var(--text-secondary)]">
-                  Billing is still being finalized on the server.
+                  서버 쪽 결제 설정이 아직 마무리 중입니다.
                 </p>
               )}
 
               {native && currentPremium && (
                 <p className="mt-2 text-xs text-[var(--text-secondary)]">
-                  Plan changes and billing management happen in {getStoreLabel()}.
+                  플랜 변경과 결제 관리는 {getStoreLabel()}에서 진행됩니다.
                 </p>
               )}
             </div>
@@ -646,7 +718,7 @@ export function BillingManagementCard({
           <>
             <div className="space-y-3">
               <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--text-muted)]">
-                STATUS
+                상태
               </p>
               <div className="flex items-start justify-between gap-3">
                 <div>
@@ -682,13 +754,38 @@ export function BillingManagementCard({
             </div>
 
             <div className="space-y-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--text-muted)]">
+                혜택
+              </p>
+              <div className="divide-y divide-[var(--border-card)]/40">
+                {benefitItems.map((item) => (
+                  <div key={item.label} className="flex items-center justify-between py-2.5">
+                    <span className="text-xs text-[var(--text-muted)]">{item.label}</span>
+                    <div className="text-right">
+                      <span className="text-sm font-medium text-[var(--text-primary)]">
+                        {item.value}
+                      </span>
+                      {item.detail && (
+                        <p className="text-[10px] text-[var(--text-secondary)]">{item.detail}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <p className="text-xs text-[var(--text-secondary)]">
+                월간 12회 기준 대비 연간 기본가는 약 {YEARLY_BASE_SAVINGS_PERCENT}% 더 저렴합니다.
+                완료된 월 기준으로 {MONTHLY_ACTIVE_THRESHOLD} XP 미만이 2개월 연속 이어지면 다음 달 혜택 단계가 내려갑니다.
+              </p>
+            </div>
+
+            <div className="space-y-3">
               <div className="flex items-center justify-between gap-3">
                 <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--text-muted)]">
-                  OPTIONS
+                  옵션
                 </p>
                 {currentPlan && (
                   <p className="text-xs text-[var(--text-secondary)]">
-                    Current {currentPlan === 'yearly' ? 'Yearly' : 'Monthly'}
+                    현재 {currentPlan === 'yearly' ? '연간' : '월간'}
                   </p>
                 )}
               </div>
@@ -708,10 +805,10 @@ export function BillingManagementCard({
               {(hasManagedSubscription || hasCodeAccess) && (
                 <p className="text-xs text-[var(--text-secondary)]">
                   {hasCodeAccess
-                    ? 'Your current access comes from a code. Start a subscription whenever you want billing to continue automatically.'
+                    ? '지금은 코드로 이용 중입니다. 자동 결제로 이어가고 싶을 때만 구독을 시작하면 됩니다.'
                     : native
-                    ? `Change plans in ${getStoreLabel()}.`
-                    : 'Billing cycle changes and payment method updates happen in the subscription portal.'}
+                    ? `${getStoreLabel()}에서 플랜을 변경할 수 있습니다.`
+                    : '결제 주기 변경과 결제 수단 수정은 구독 포털에서 진행됩니다.'}
                 </p>
               )}
             </div>
@@ -732,7 +829,7 @@ export function BillingManagementCard({
                 disabled={restoring}
                 className="w-full rounded-2xl bg-[var(--bg-secondary)] px-4 py-3 text-sm font-semibold text-[var(--text-primary)] disabled:cursor-not-allowed disabled:opacity-50"
               >
-                {restoring ? 'RESTORING...' : 'RESTORE PURCHASE'}
+                {restoring ? '복원 중...' : '구매 복원'}
               </button>
             )}
 

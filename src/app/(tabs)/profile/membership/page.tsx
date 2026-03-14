@@ -36,7 +36,7 @@ export default function ProfileMembershipPage() {
           </button>
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-              SUBSCRIPTION
+              구독
             </p>
           </div>
         </div>

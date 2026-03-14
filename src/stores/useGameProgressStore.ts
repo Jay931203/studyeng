@@ -142,7 +142,7 @@ export const useGameProgressStore = create<GameProgressState>()(
 
         // Feed capped amount into visible reward XP
         if (actual > 0) {
-          useUserStore.getState().gainXp(Math.round(actual), 'Game mastery XP')
+          useUserStore.getState().gainXp(Math.round(actual), '게임 숙련 XP')
         }
 
         return actual
@@ -182,7 +182,7 @@ export const useGameProgressStore = create<GameProgressState>()(
         if (actual > 0) {
           set({ dailySessionXP: current + actual, dailySessionXPDate: today })
 
-          useUserStore.getState().gainXp(Math.round(actual), 'Game session XP')
+          useUserStore.getState().gainXp(Math.round(actual), '게임 완료 XP')
         }
 
         return actual
@@ -219,7 +219,7 @@ export const useGameProgressStore = create<GameProgressState>()(
           monthlyStreakXPMonth: currentMonth,
         })
 
-        useUserStore.getState().gainXp(Math.round(actual), 'Streak bonus')
+        useUserStore.getState().gainXp(Math.round(actual), '연속 학습 보너스')
 
         return actual
       },

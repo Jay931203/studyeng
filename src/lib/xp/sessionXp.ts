@@ -11,7 +11,7 @@ const SESSION_XP: Record<string, number> = {
 const MIN_SESSION_DURATION_MS = 120_000
 
 /** Daily cap for visible game XP across all game sources */
-export const DAILY_SESSION_XP_CAP = 20
+export const DAILY_SESSION_XP_CAP = 15
 
 /**
  * Calculate XP for completing a game session.

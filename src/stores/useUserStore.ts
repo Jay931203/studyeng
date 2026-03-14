@@ -46,7 +46,7 @@ export const useUserStore = create<UserState>()(persist((set, get) => ({
     debouncedSyncProfile()
   },
 
-  gainXp: (amount, reason = 'XP reward') => {
+  gainXp: (amount, reason = 'XP 보상') => {
     if (amount <= 0) return
     const { level, xp, totalXpEarned, xpHistory } = get()
     const xpForLevel = getXpForLevel(level)

@@ -6,11 +6,30 @@ import { useUserStore } from '@/stores/useUserStore'
 
 export const TIER_THRESHOLDS = [0, 350, 800, 1500, 2200, 3000] as const
 export const TIER_NAMES = ['Explorer', 'Learner', 'Regular', 'Dedicated', 'Champion', 'Legend'] as const
-export const TIER_DISCOUNTS = [0, 10, 20, 30, 40, 50] as const
+export const MONTHLY_PLAN_DISCOUNTS = [0, 10, 20, 30, 40, 50] as const
+export const YEARLY_PLAN_RENEWAL_DISCOUNTS = [0, 5, 8, 10, 12, 15] as const
+export const TIER_DISCOUNTS = MONTHLY_PLAN_DISCOUNTS
 export const MONTHLY_ACTIVE_THRESHOLD = 300
+export const YEARLY_BASE_SAVINGS_PERCENT = 33
 
 export type TierLevel = 0 | 1 | 2 | 3 | 4 | 5
 export type TierName = (typeof TIER_NAMES)[number]
+export type BillingBenefitPlan = 'monthly' | 'yearly'
+export type BenefitStatus = 'safe' | 'warning' | 'reduced'
+
+export interface BenefitSnapshot {
+  unlockedTier: TierLevel
+  benefitTier: TierLevel
+  status: BenefitStatus
+  currentMonthXp: number
+  currentMonthActive: boolean
+  completedInactiveMonths: number
+  nextTier: TierLevel | null
+  nextTierXp: number
+  monthlyDiscount: number
+  yearlyRenewalDiscount: number
+  yearlyBaseSavingsPercent: number
+}
 
 const MAX_TIER = (TIER_THRESHOLDS.length - 1) as TierLevel
 
@@ -34,12 +53,12 @@ function tierFromXp(totalXp: number): TierLevel {
   return 0
 }
 
-function countConsecutiveInactiveMonths(
+function countCompletedInactiveMonths(
   monthlyXpHistory: Record<string, number>,
-  fromMonth: string,
+  currentMonth: string,
 ): number {
   let count = 0
-  let month = getPrevMonth(fromMonth)
+  let month = getPrevMonth(currentMonth)
 
   for (let index = 0; index < 12; index += 1) {
     const xp = monthlyXpHistory[month] ?? 0
@@ -51,8 +70,60 @@ function countConsecutiveInactiveMonths(
   return count
 }
 
+function getBenefitTier(
+  unlockedTier: TierLevel,
+  monthlyXpHistory: Record<string, number>,
+  currentMonth: string,
+): TierLevel {
+  const completedInactiveMonths = countCompletedInactiveMonths(monthlyXpHistory, currentMonth)
+  if (completedInactiveMonths <= 1) return unlockedTier
+
+  const penalty = completedInactiveMonths - 1
+  return Math.max(0, unlockedTier - penalty) as TierLevel
+}
+
+function buildBenefitSnapshot(
+  unlockedTier: TierLevel,
+  benefitTier: TierLevel,
+  monthlyXpHistory: Record<string, number>,
+): BenefitSnapshot {
+  const currentMonth = getCurrentMonthString()
+  const currentMonthXp = monthlyXpHistory[currentMonth] ?? 0
+  const currentMonthActive = currentMonthXp >= MONTHLY_ACTIVE_THRESHOLD
+  const completedInactiveMonths = countCompletedInactiveMonths(monthlyXpHistory, currentMonth)
+  const nextTier = unlockedTier >= MAX_TIER ? null : ((unlockedTier + 1) as TierLevel)
+  const totalXp = useUserStore.getState().getTotalXP()
+  const nextTierXp =
+    nextTier === null ? 0 : Math.max(0, TIER_THRESHOLDS[nextTier] - totalXp)
+
+  let status: BenefitStatus = 'safe'
+  if (benefitTier < unlockedTier) {
+    status = 'reduced'
+  } else if (
+    (unlockedTier > 0 || Object.keys(monthlyXpHistory).length > 0) &&
+    (!currentMonthActive || completedInactiveMonths === 1)
+  ) {
+    status = 'warning'
+  }
+
+  return {
+    unlockedTier,
+    benefitTier,
+    status,
+    currentMonthXp,
+    currentMonthActive,
+    completedInactiveMonths,
+    nextTier,
+    nextTierXp,
+    monthlyDiscount: MONTHLY_PLAN_DISCOUNTS[benefitTier],
+    yearlyRenewalDiscount: YEARLY_PLAN_RENEWAL_DISCOUNTS[benefitTier],
+    yearlyBaseSavingsPercent: YEARLY_BASE_SAVINGS_PERCENT,
+  }
+}
+
 interface TierState {
   currentTier: TierLevel
+  benefitTier: TierLevel
   monthlyXpHistory: Record<string, number>
   championMonths: number
   championLegacy: boolean
@@ -65,31 +136,19 @@ interface TierState {
   addMonthlyXp: (xp: number) => void
   applyDecay: () => void
   getCurrentDiscount: () => number
+  getPlanDiscount: (plan: BillingBenefitPlan) => number
   getNextTierXp: () => number
   getTierProgress: () => { current: TierLevel; next: TierLevel | null; progress: number }
   getCurrentMonthXp: () => number
   getTierName: () => TierName
-}
-
-function getUnlockedTier(totalXp: number) {
-  return tierFromXp(totalXp)
-}
-
-function getEffectiveTier(
-  unlockedTier: TierLevel,
-  monthlyXpHistory: Record<string, number>,
-  currentMonth: string,
-) {
-  const inactiveMonths = countConsecutiveInactiveMonths(monthlyXpHistory, currentMonth)
-  if (inactiveMonths >= 3) return 0 as TierLevel
-  if (inactiveMonths <= 0) return unlockedTier
-  return Math.max(0, unlockedTier - inactiveMonths) as TierLevel
+  getBenefitSnapshot: () => BenefitSnapshot
 }
 
 export const useTierStore = create<TierState>()(
   persist(
     (set, get) => ({
       currentTier: 0,
+      benefitTier: 0,
       monthlyXpHistory: {},
       championMonths: 0,
       championLegacy: false,
@@ -99,35 +158,19 @@ export const useTierStore = create<TierState>()(
 
       recalculateTier: () => {
         const totalXp = useUserStore.getState().getTotalXP()
-        const unlockedTier = getUnlockedTier(totalXp)
-        const {
-          currentTier,
-          monthlyXpHistory,
-          tierAtMonthStart,
-          tierMonthStartMonth,
-        } = get()
+        const unlockedTier = tierFromXp(totalXp)
         const currentMonth = getCurrentMonthString()
-
-        let monthStartTier = tierAtMonthStart
-        let monthStartMonth = tierMonthStartMonth
-
-        if (monthStartMonth !== currentMonth) {
-          monthStartTier = currentTier
-          monthStartMonth = currentMonth
-        }
-
-        let effectiveTier = getEffectiveTier(unlockedTier, monthlyXpHistory, currentMonth)
-        if (effectiveTier > monthStartTier + 1) {
-          effectiveTier = Math.min(effectiveTier, monthStartTier + 1) as TierLevel
-        }
+        const monthlyXpHistory = get().monthlyXpHistory
+        const benefitTier = getBenefitTier(unlockedTier, monthlyXpHistory, currentMonth)
 
         set({
-          currentTier: effectiveTier,
+          currentTier: unlockedTier,
+          benefitTier,
           lastTierUpdateDate: new Date().toISOString().slice(0, 10),
-          tierAtMonthStart: monthStartTier,
-          tierMonthStartMonth: monthStartMonth,
-          championMonths: effectiveTier === MAX_TIER ? 1 : 0,
-          championLegacy: false,
+          tierAtMonthStart: unlockedTier,
+          tierMonthStartMonth: currentMonth,
+          championMonths: unlockedTier === MAX_TIER ? Math.max(get().championMonths, 1) : 0,
+          championLegacy: unlockedTier === MAX_TIER ? get().championLegacy : false,
         })
       },
 
@@ -157,11 +200,18 @@ export const useTierStore = create<TierState>()(
       },
 
       getCurrentDiscount: () => {
-        return TIER_DISCOUNTS[get().currentTier]
+        return MONTHLY_PLAN_DISCOUNTS[get().benefitTier]
+      },
+
+      getPlanDiscount: (plan) => {
+        const tier = get().benefitTier
+        return plan === 'yearly'
+          ? YEARLY_PLAN_RENEWAL_DISCOUNTS[tier]
+          : MONTHLY_PLAN_DISCOUNTS[tier]
       },
 
       getNextTierXp: () => {
-        const { currentTier } = get()
+        const currentTier = get().currentTier
         if (currentTier >= MAX_TIER) return 0
 
         const totalXp = useUserStore.getState().getTotalXP()
@@ -170,7 +220,7 @@ export const useTierStore = create<TierState>()(
       },
 
       getTierProgress: () => {
-        const { currentTier } = get()
+        const currentTier = get().currentTier
         if (currentTier >= MAX_TIER) {
           return { current: currentTier, next: null, progress: 1 }
         }
@@ -179,9 +229,8 @@ export const useTierStore = create<TierState>()(
         const currentThreshold = TIER_THRESHOLDS[currentTier]
         const nextThreshold = TIER_THRESHOLDS[currentTier + 1]
         const range = nextThreshold - currentThreshold
-        const progress = range > 0
-          ? Math.min(1, Math.max(0, (totalXp - currentThreshold) / range))
-          : 1
+        const progress =
+          range > 0 ? Math.min(1, Math.max(0, (totalXp - currentThreshold) / range)) : 1
 
         return {
           current: currentTier,
@@ -197,6 +246,11 @@ export const useTierStore = create<TierState>()(
 
       getTierName: () => {
         return TIER_NAMES[get().currentTier]
+      },
+
+      getBenefitSnapshot: () => {
+        const state = get()
+        return buildBenefitSnapshot(state.currentTier, state.benefitTier, state.monthlyXpHistory)
       },
     }),
     { name: 'studyeng-tier' },

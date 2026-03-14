@@ -501,7 +501,7 @@ export function VideoFeed({
         const videoXP = levelStore.awardVideoXP(currentVideo.id, 1.0)
         levelStore.recordVideoCompletion(currentVideo.id, 1.0)
         if (videoXP > 0) {
-          useUserStore.getState().gainXp(Math.round(videoXP), 'Video completion XP')
+          useUserStore.getState().gainXp(Math.round(videoXP), '영상 완료 XP')
         }
 
         const gameStore = useGameProgressStore.getState()

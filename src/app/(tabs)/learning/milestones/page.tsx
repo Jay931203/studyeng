@@ -85,9 +85,9 @@ export default function MilestonesPage() {
         <SurfaceCard className="p-5">
           <p className="text-sm text-[var(--text-secondary)]">{MILESTONE_EXPLAINER}</p>
           <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
-            <SummaryStat label="수령 가능" value={summary.readyCount} />
+            <SummaryStat label="바로 수령 가능" value={summary.readyCount} />
             <SummaryStat label="수령 완료" value={summary.claimedCount} />
-            <SummaryStat label="획득한 XP" value={`${summary.claimedXp} XP`} />
+            <SummaryStat label="누적 수령 XP" value={`${summary.claimedXp} XP`} />
           </div>
         </SurfaceCard>
 
@@ -109,7 +109,7 @@ export default function MilestonesPage() {
 
         <MilestoneSection
           title="수령 완료"
-          description="이미 전체 XP에 반영된 보상입니다."
+          description="이미 총 XP에 반영된 보상입니다."
           missions={claimed}
         />
       </div>
@@ -165,9 +165,7 @@ function MilestoneSection({
                 <div className="min-w-0">
                   <p className="text-sm font-semibold text-[var(--text-primary)]">{mission.label}</p>
                   <p className="mt-1 text-sm text-[var(--text-secondary)]">{mission.description}</p>
-                  <p className="mt-2 text-[11px] text-[var(--text-muted)]">
-                    {mission.statusLabel}
-                  </p>
+                  <p className="mt-2 text-[11px] text-[var(--text-muted)]">{mission.statusLabel}</p>
                 </div>
                 <div className="shrink-0 text-right">
                   <p className="text-sm font-semibold text-[var(--accent-text)]">+{mission.xp} XP</p>

@@ -1,4 +1,10 @@
-import { MONTHLY_ACTIVE_THRESHOLD, TIER_NAMES, type TierLevel } from '@/stores/useTierStore'
+import {
+  MONTHLY_ACTIVE_THRESHOLD,
+  TIER_NAMES,
+  YEARLY_BASE_SAVINGS_PERCENT,
+  type BenefitSnapshot,
+  type TierLevel,
+} from '@/stores/useTierStore'
 import { MILESTONES, type AchievedEntry, type MilestoneDefinition } from '@/stores/useMilestoneStore'
 
 export const DAILY_VIDEO_XP_TARGET = 15
@@ -66,16 +72,16 @@ export function getStreakBonusProgress(streakDays: number, streakAwardedToday: b
     return {
       progress: 0,
       valueLabel: '잠김',
-      detail: '연속 학습을 시작하면 일일 보너스가 열립니다.',
+      detail: '오늘 첫 영상 또는 게임을 완료하면 연속 학습 보너스가 열립니다.',
     }
   }
 
   return {
     progress: streakAwardedToday ? 1 : 0,
-    valueLabel: streakAwardedToday ? '수령 완료' : '수령 가능',
+    valueLabel: streakAwardedToday ? '오늘 적립 완료' : '오늘 적립 가능',
     detail: streakAwardedToday
-      ? '오늘의 연속 학습 보너스를 이미 받았습니다.'
-      : '오늘 세션을 완료하면 연속 학습 보너스를 받을 수 있습니다.',
+      ? '오늘은 이미 연속 학습 보너스를 받았습니다.'
+      : '오늘 첫 영상 또는 게임 완료 시 1회만 적립됩니다.',
   }
 }
 
@@ -164,11 +170,26 @@ export function buildMonthlyXpTrend(
 }
 
 export const MILESTONE_EXPLAINER =
-  '마일스톤은 영상 완료, 게임 완료, 연속 학습 기록, 챌린지 클리어, 티어 해금 때 직접 수령하는 XP 보상입니다.'
+  '마일스톤은 영상 완료, 게임 완료, 연속 학습 기록, 챌린지 통과, 등급 달성 보상을 직접 수령하는 XP 보상입니다.'
 
-export const MONTHLY_ACTIVITY_EXPLAINER = `월간 활동 XP가 ${MONTHLY_ACTIVE_THRESHOLD} XP 아래로 내려가면 비활성 상태로 계산되어 현재 티어 유지에 불리할 수 있습니다.`
+export const MONTHLY_ACTIVITY_EXPLAINER = `완료된 월 기준으로 ${MONTHLY_ACTIVE_THRESHOLD} XP 미만이 2개월 연속 이어지면 다음 달 혜택 단계가 1단계 낮아집니다. 연간 플랜은 기본가 자체가 월간 12회 대비 약 ${YEARLY_BASE_SAVINGS_PERCENT}% 저렴하고, 갱신 할인은 별도로 더해집니다.`
 
 export function getTierStatusDetail(nextTierXp: number, nextTier: TierLevel | null) {
-  if (nextTier === null) return '최상위 티어 유지 중'
+  if (nextTier === null) return '최상위 등급을 잠금 해제했습니다.'
   return `${TIER_NAMES[nextTier]}까지 ${nextTierXp.toLocaleString()} XP 남음`
+}
+
+export function getBenefitStatusLine(snapshot: BenefitSnapshot) {
+  if (snapshot.status === 'reduced') {
+    return `${TIER_NAMES[snapshot.unlockedTier]} 잠금 유지 · 현재 ${TIER_NAMES[snapshot.benefitTier]} 혜택 적용`
+  }
+
+  if (snapshot.status === 'warning') {
+    if (!snapshot.currentMonthActive) {
+      return `이번 달 ${MONTHLY_ACTIVE_THRESHOLD} XP를 채우면 ${TIER_NAMES[snapshot.benefitTier]} 혜택을 안정적으로 유지합니다.`
+    }
+    return `최근 1개월이 기준 미달입니다. 이번 달도 ${MONTHLY_ACTIVE_THRESHOLD} XP 미만이면 다음 달 혜택이 내려갑니다.`
+  }
+
+  return `다음 월간 ${snapshot.monthlyDiscount}% · 연간 갱신 ${snapshot.yearlyRenewalDiscount}%`
 }

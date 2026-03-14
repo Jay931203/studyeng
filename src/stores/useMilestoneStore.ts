@@ -49,7 +49,7 @@ export const MILESTONES: MilestoneDefinition[] = [
   {
     id: 'first_game_complete',
     xp: 15,
-    label: '첫 게임 클리어',
+    label: '첫 게임 완료',
     description: '학습 게임을 처음으로 완료하세요.',
     target: 1,
     metric: 'games',
@@ -57,7 +57,7 @@ export const MILESTONES: MilestoneDefinition[] = [
   {
     id: 'games_20',
     xp: 30,
-    label: '게임 20회 클리어',
+    label: '게임 20회 완료',
     description: '학습 게임 세션을 20회 완료하세요.',
     target: 20,
     metric: 'games',
@@ -168,14 +168,11 @@ export const useMilestoneStore = create<MilestoneState>()(
           },
         }))
 
-        useUserStore
-          .getState()
-          .gainXp(def.xp, `Milestone claim: ${def.label}`)
+        useUserStore.getState().gainXp(def.xp, `마일스톤 수령 · ${def.label}`)
 
         return def.xp
       },
 
-      // Deprecated: milestone rewards are now claimed from the milestones page.
       checkAndAward: () => 0,
 
       isAchieved: (milestoneId) => {
@@ -191,7 +188,6 @@ export const useMilestoneStore = create<MilestoneState>()(
   ),
 )
 
-// Deprecated compatibility no-ops. Milestones are now claimed explicitly.
 export function checkVideoMilestones(totalVideosCompleted: number): void {
   void totalVideosCompleted
 }

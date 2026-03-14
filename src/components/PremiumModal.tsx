@@ -6,6 +6,7 @@ import { type BillingPlan } from '@/lib/billing'
 import { isNative } from '@/lib/platform'
 import { useAuth } from '@/hooks/useAuth'
 import { usePremiumStore, FREE_DAILY_VIEW_LIMIT } from '@/stores/usePremiumStore'
+import { YEARLY_BASE_SAVINGS_PERCENT, useTierStore } from '@/stores/useTierStore'
 import { ModalFeatureList, ModalHeader, ModalShell } from '@/components/ui/ModalShell'
 import type { PurchasesPackage } from '@revenuecat/purchases-typescript-internal-esm'
 
@@ -44,6 +45,18 @@ const PLAN_DETAILS: Record<
   },
 }
 
+function getPlanOptionDetail(
+  plan: BillingPlan,
+  monthlyDiscount: number,
+  yearlyRenewalDiscount: number,
+) {
+  if (plan === 'yearly') {
+    return `월간 12회 대비 약 ${YEARLY_BASE_SAVINGS_PERCENT}% 저렴 · 다음 연간 갱신 ${yearlyRenewalDiscount}% 추가`
+  }
+
+  return `현재 혜택 기준 다음 달 결제 ${monthlyDiscount}% 적용`
+}
+
 export function PremiumModal({
   isOpen,
   onClose,
@@ -53,6 +66,7 @@ export function PremiumModal({
   const searchParams = useSearchParams()
   const { user } = useAuth()
   const setPremiumEntitlement = usePremiumStore((s) => s.setPremiumEntitlement)
+  const getBenefitSnapshot = useTierStore((state) => state.getBenefitSnapshot)
   const isInTrialFn = usePremiumStore((s) => s.isInTrial as (() => boolean) | undefined)
   const getTrialDaysRemainingFn = usePremiumStore((s) => s.getTrialDaysRemaining as (() => number) | undefined)
   const inTrial = isInTrialFn ? isInTrialFn() : false
@@ -62,6 +76,7 @@ export function PremiumModal({
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
   const [nativePackages, setNativePackages] = useState<PurchasesPackage[]>([])
   const native = isNative()
+  const benefitSnapshot = getBenefitSnapshot()
   const nextPath = useMemo(() => {
     const query = searchParams.toString()
     return query ? `${pathname}?${query}` : pathname
@@ -184,7 +199,7 @@ export function PremiumModal({
         description={
           inTrial && trialDaysRemaining > 0
             ? '무료 체험 중 — 업그레이드하면 체험 후에도 무제한으로 이용할 수 있습니다.'
-            : '프리미엄으로 업그레이드하면 모든 기능을 제한 없이 이용할 수 있습니다.'
+            : `프리미엄으로 업그레이드하면 모든 기능을 제한 없이 이용할 수 있고, 현재 등급 기준 다음 월간 ${benefitSnapshot.monthlyDiscount}% · 연간 갱신 ${benefitSnapshot.yearlyRenewalDiscount}% 혜택이 이어집니다.`
         }
         onClose={onClose}
       />
@@ -197,6 +212,10 @@ export function PremiumModal({
           '광고 없이 학습',
         ]}
       />
+
+      <p className="mb-4 text-center text-xs text-[var(--text-secondary)]">
+        연간 플랜은 기본가가 이미 더 낮고, 등급 혜택은 다음 연간 갱신 때 추가로 반영됩니다.
+      </p>
 
       <div className="mb-5 grid gap-3">
         {native && nativePackages.length > 0
@@ -222,7 +241,7 @@ export function PremiumModal({
                         {isYearly ? '연간 플랜' : '월간 플랜'}
                       </p>
                       <p className="mt-1 text-xs text-[var(--text-secondary)]">
-                        {pkg.product.description}
+                        {getPlanOptionDetail(isYearly ? 'yearly' : 'monthly', benefitSnapshot.monthlyDiscount, benefitSnapshot.yearlyRenewalDiscount)}
                       </p>
                     </div>
                     {isYearly && (
@@ -257,7 +276,7 @@ export function PremiumModal({
                         {details.label}
                       </p>
                       <p className="mt-1 text-xs text-[var(--text-secondary)]">
-                        {details.detail}
+                        {getPlanOptionDetail(plan, benefitSnapshot.monthlyDiscount, benefitSnapshot.yearlyRenewalDiscount)}
                       </p>
                     </div>
                     {details.highlight && (

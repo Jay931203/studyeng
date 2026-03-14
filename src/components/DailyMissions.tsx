@@ -5,8 +5,8 @@ import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import {
   DAILY_VIDEO_XP_TARGET,
+  getBenefitStatusLine,
   getStreakBonusProgress,
-  getTierStatusDetail,
   getTodayIsoDate,
 } from '@/lib/learningDashboard'
 import { DAILY_SESSION_XP_CAP } from '@/lib/xp/sessionXp'
@@ -15,9 +15,11 @@ import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useLevelStore } from '@/stores/useLevelStore'
 import {
   MONTHLY_ACTIVE_THRESHOLD,
-  TIER_DISCOUNTS,
+  MONTHLY_PLAN_DISCOUNTS,
   TIER_NAMES,
   TIER_THRESHOLDS,
+  YEARLY_BASE_SAVINGS_PERCENT,
+  YEARLY_PLAN_RENEWAL_DISCOUNTS,
   useTierStore,
 } from '@/stores/useTierStore'
 import { useUserStore } from '@/stores/useUserStore'
@@ -31,18 +33,15 @@ export function TodayDashboard() {
   const streakBonusDate = useGameProgressStore((state) => state.streakBonusDate)
   const dailyStreakBonusXP = useGameProgressStore((state) => state.dailyStreakBonusXP)
   const dailyVideoXP = useLevelStore((state) => state.getDailyVideoXP())
-  const currentTier = useTierStore((state) => state.currentTier)
-  const getTierProgress = useTierStore((state) => state.getTierProgress)
-  const getNextTierXp = useTierStore((state) => state.getNextTierXp)
+  const getBenefitSnapshot = useTierStore((state) => state.getBenefitSnapshot)
 
   const today = getTodayIsoDate()
+  const benefitSnapshot = getBenefitSnapshot()
   const gameXpToday = getDailyTotalGameXP()
   const gameXpPct = Math.min((gameXpToday / DAILY_SESSION_XP_CAP) * 100, 100)
   const videoXpPct = Math.min((dailyVideoXP / DAILY_VIDEO_XP_TARGET) * 100, 100)
   const streakBonusToday = streakBonusDate === today ? dailyStreakBonusXP : 0
   const streakBonusProgress = getStreakBonusProgress(streakDays, streakBonusDate === today)
-  const tierProgress = getTierProgress()
-  const nextTierXp = getNextTierXp()
   const todayTotal = gameXpToday + dailyVideoXP + streakBonusToday
 
   return (
@@ -57,7 +56,7 @@ export function TodayDashboard() {
             onClick={() => router.push('/learning/xp')}
             className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
           >
-            DETAIL
+            상세 보기
           </button>
         </div>
 
@@ -69,8 +68,8 @@ export function TodayDashboard() {
           />
           <InfoBlock
             label="등급 상태"
-            title={TIER_NAMES[currentTier]}
-            detail={getTierStatusDetail(nextTierXp, tierProgress.next)}
+            title={TIER_NAMES[benefitSnapshot.benefitTier]}
+            detail={getBenefitStatusLine(benefitSnapshot)}
             onClick={() => setShowTierGuide(true)}
           />
         </div>
@@ -86,7 +85,7 @@ export function TodayDashboard() {
             label="게임"
             value={`${gameXpToday}/${DAILY_SESSION_XP_CAP} XP`}
             progress={gameXpPct}
-            detail="집중 학습 보상, 하루 최대 20 XP"
+            detail="집중 학습 보상, 하루 최대 15 XP"
           />
           <ProgressRow
             label="영상"
@@ -125,10 +124,10 @@ export function TodayDashboard() {
             <div className="mb-4 flex items-center justify-between gap-3">
               <div>
                 <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-                  TIER GUIDE
+                  혜택 안내
                 </p>
                 <p className="mt-1 text-sm text-[var(--text-secondary)]">
-                  누적 XP로 등급이 올라가고, 다음 달 구독 할인 폭도 함께 커집니다.
+                  등급 잠금은 누적 XP로 결정되고, 실제 구독 혜택은 최근 월간 활동에 따라 적용됩니다.
                 </p>
               </div>
               <button
@@ -148,9 +147,14 @@ export function TodayDashboard() {
                 >
                   <div className="flex items-center justify-between gap-3">
                     <p className="text-sm font-semibold text-[var(--text-primary)]">{tierName}</p>
-                    <span className="text-xs font-medium text-[var(--accent-text)]">
-                      다음 달 {TIER_DISCOUNTS[index]}% 할인
-                    </span>
+                    <div className="text-right">
+                      <p className="text-xs font-medium text-[var(--accent-text)]">
+                        월간 {MONTHLY_PLAN_DISCOUNTS[index]}%
+                      </p>
+                      <p className="text-[10px] text-[var(--text-muted)]">
+                        연간 갱신 {YEARLY_PLAN_RENEWAL_DISCOUNTS[index]}%
+                      </p>
+                    </div>
                   </div>
                   <p className="mt-1 text-[11px] text-[var(--text-muted)]">
                     {index === 0
@@ -162,8 +166,10 @@ export function TodayDashboard() {
             </div>
 
             <p className="mt-4 text-[11px] leading-relaxed text-[var(--text-muted)]">
-              월간 활동 XP가 {MONTHLY_ACTIVE_THRESHOLD} XP 아래로 떨어지면 비활성 상태로 간주되어
-              현재 등급 유지에 불리할 수 있습니다.
+              연간 플랜은 기본가가 이미 월간 12회 대비 약 {YEARLY_BASE_SAVINGS_PERCENT}% 저렴합니다.
+              완료된 월 기준으로 {MONTHLY_ACTIVE_THRESHOLD} XP 미만이 2개월 연속 이어지면 다음 달
+              혜택 단계가 1단계 낮아집니다. 이번 달에 {MONTHLY_ACTIVE_THRESHOLD} XP를 채우면 위험
+              상태를 바로 해소할 수 있습니다.
             </p>
           </div>
         </div>
@@ -226,7 +232,7 @@ function InfoBlock({
         <span className="text-[11px] text-[var(--text-secondary)]">{label}</span>
         {onClick ? (
           <span className="text-[10px] font-medium uppercase tracking-wide text-[var(--text-muted)]">
-            INFO
+            안내
           </span>
         ) : null}
       </div>

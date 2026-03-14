@@ -108,7 +108,7 @@ export default function ProfilePage() {
     user?.user_metadata?.full_name ??
     user?.user_metadata?.name ??
     user?.email?.split('@')[0] ??
-    'Guest'
+    '게스트'
 
   const copyBundle = async () => {
     const json = exportReportBundle()
@@ -132,7 +132,7 @@ export default function ProfilePage() {
     <AppPage>
       {!authAvailable && (
         <section className="mb-6 rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-5 py-4">
-          <p className="text-sm font-semibold text-[var(--text-secondary)]">LOGIN DISABLED</p>
+          <p className="text-sm font-semibold text-[var(--text-secondary)]">로그인 비활성화</p>
         </section>
       )}
 
@@ -142,7 +142,7 @@ export default function ProfilePage() {
             animate={{ opacity: 1, y: 0 }}
             className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-6 shadow-[var(--card-shadow)]"
           >
-            <SectionLabel label="ACCOUNT" />
+            <SectionLabel label="계정" />
             <div className="flex items-center gap-4">
               <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-[var(--accent-primary)] to-[var(--accent-secondary)] text-2xl font-bold text-white">
                 {user?.user_metadata?.avatar_url ? (
@@ -164,7 +164,7 @@ export default function ProfilePage() {
                   {profileName}
                 </p>
                 <p className="mt-1 truncate text-sm text-[var(--text-secondary)]">
-                  {user?.email ?? 'Guest'}
+                  {user?.email ?? '게스트'}
                 </p>
               </div>
             </div>
@@ -175,7 +175,7 @@ export default function ProfilePage() {
                   onClick={signOut}
                   className="w-full rounded-2xl bg-[var(--bg-secondary)] py-3 text-sm font-medium text-[var(--text-primary)]"
                 >
-                  LOG OUT
+                  로그아웃
                 </button>
               ) : (
                 <div className="grid gap-3">
@@ -184,14 +184,14 @@ export default function ProfilePage() {
                     disabled={!authAvailable}
                     className="w-full rounded-2xl bg-white py-3 text-sm font-medium text-black disabled:cursor-not-allowed disabled:opacity-50"
                   >
-                    GOOGLE
+                    Google로 계속
                   </button>
                   <button
                     onClick={() => signInWithKakao('/profile')}
                     disabled={!authAvailable}
                     className="w-full rounded-2xl bg-[#FEE500] py-3 text-sm font-medium text-[#191919] disabled:cursor-not-allowed disabled:opacity-50"
                   >
-                    KAKAO
+                    Kakao로 계속
                   </button>
                 </div>
               )}
@@ -201,18 +201,18 @@ export default function ProfilePage() {
           <BillingManagementCard />
 
           <SurfaceCard className="p-6">
-            <SectionLabel label="SETTINGS" />
+            <SectionLabel label="설정" />
 
             <div className="divide-y divide-[var(--border-card)]/40">
               <div className="px-1 py-4">
                 <div className="mb-4">
-                  <p className="text-sm font-medium text-[var(--text-primary)]">THEME</p>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">테마</p>
                 </div>
 
                 <div className="flex flex-wrap items-center gap-6">
                   <div className="flex items-center gap-4">
                     <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">
-                      BACKGROUND
+                      배경
                     </p>
                     <div className="flex min-h-10 items-center gap-3">
                       {BACKGROUND_OPTIONS.map((option) => (
@@ -231,7 +231,7 @@ export default function ProfilePage() {
                   </div>
 
                   <div className="flex items-center gap-4">
-                    <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">COLOR</p>
+                    <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">색상</p>
                     <div className="flex min-h-10 items-center gap-3">
                       {COLOR_OPTIONS.map((option) => (
                         <button
@@ -252,7 +252,7 @@ export default function ProfilePage() {
 
               <div className="flex items-center justify-between px-1 py-3">
                 <div>
-                  <p className="text-sm font-medium text-[var(--text-primary)]">GAME MODE</p>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">게임 모드</p>
                   <p className="mt-0.5 text-xs text-[var(--text-muted)]">시청 중 게임 등장</p>
                 </div>
                 <button
@@ -273,8 +273,8 @@ export default function ProfilePage() {
 
               <div className="flex items-center justify-between px-1 py-3">
                 <div>
-                  <p className="text-sm font-medium text-[var(--text-primary)]">HAPTIC</p>
-                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">Freeze, 저장, 유사 표현 등장 시 진동</p>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">진동</p>
+                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">고정, 저장, 유사 표현 등장 시 진동</p>
                 </div>
                 <button
                   onClick={() => setHapticEnabled(!hapticEnabled)}
@@ -294,7 +294,7 @@ export default function ProfilePage() {
 
               <div className="flex items-center justify-between px-1 py-3">
                 <div>
-                  <p className="text-sm font-medium text-[var(--text-primary)]">REMOTE</p>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">리모컨</p>
                   <p className="mt-0.5 text-xs text-[var(--text-muted)]">
                     쇼츠 플레이어 리모컨 표시
                   </p>
@@ -317,7 +317,7 @@ export default function ProfilePage() {
 
               <div className="flex items-center justify-between px-1 py-3">
                 <div>
-                  <p className="text-sm font-medium text-[var(--text-primary)]">NOTIFICATIONS</p>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">알림</p>
                   <p className="mt-0.5 text-xs text-[var(--text-muted)]">
                     {pushPermission === 'denied'
                       ? '브라우저 설정에서 알림을 허용해주세요'
@@ -469,11 +469,11 @@ export default function ProfilePage() {
         )}
 
         <SurfaceCard className="overflow-hidden p-6">
-          <SectionLabel label="LEGAL" />
+          <SectionLabel label="법률 및 지원" />
           <div className="-mx-6 -mb-6 overflow-hidden">
-            <LegalLink href="/support" label="SUPPORT" />
-            <LegalLink href="/terms" label="TERMS" />
-            <LegalLink href="/privacy" label="PRIVACY" />
+            <LegalLink href="/support" label="지원" />
+            <LegalLink href="/terms" label="이용약관" />
+            <LegalLink href="/privacy" label="개인정보처리방침" />
           </div>
         </SurfaceCard>
       </div>
