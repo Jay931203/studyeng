@@ -19273,18 +19273,6 @@ export const seedVideos: VideoData[] = ([
     subtitles: [],
   },
   {
-    id: 'the-incredibles-ep7',
-    youtubeId: 't5v2qBBD-gE',
-    title: '100 Mile Dash',
-    category: 'animation',
-    difficulty: 1,
-    clipStart: 30,
-    clipEnd: 90,
-    seriesId: 'the-incredibles',
-    episodeNumber: 7,
-    subtitles: [],
-  },
-  {
     id: 'the-incredibles-ep8',
     youtubeId: 'UWt0-dy3s4E',
     title: 'Life\'s Incredible Again',
@@ -22477,18 +22465,6 @@ export const seedVideos: VideoData[] = ([
   },
 
   // --- The Shawshank Redemption 시리즈 ---
-  {
-    id: 'shawshank-01',
-    youtubeId: 'qFLw26BjDZs',
-    title: 'Andy Plays the Opera',
-    category: 'movie',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 60,
-    seriesId: 'shawshank',
-    episodeNumber: 19,
-    subtitles: [],
-  },
 
   // --- Legally Blonde 시리즈 ---
 
@@ -25539,18 +25515,6 @@ export const seedVideos: VideoData[] = ([
     format: 'shorts',
     subtitles: [],
   },
-  {
-    id: 'shorts-HeKbP9BCZXQ',
-    youtubeId: 'HeKbP9BCZXQ',
-    title: 'Giving iPhones Instead of Candy on Halloween',
-    category: 'daily',
-    difficulty: 1,
-    clipStart: 0,
-    clipEnd: 0,
-    format: 'shorts',
-    subtitles: [],
-  },
-
 ] as unknown as VideoData[])
 
 // Helper functions
