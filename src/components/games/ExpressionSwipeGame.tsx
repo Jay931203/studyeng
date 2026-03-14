@@ -492,8 +492,7 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
       const userState = useUserStore.getState()
       userState.checkAndUpdateStreak()
       const streakDays = useUserStore.getState().streakDays
-      const totalMonthlyXP = userState.totalXpEarned
-      gameStore.awardStreakBonus(streakDays, totalMonthlyXP)
+      gameStore.awardStreakBonus(streakDays)
       checkStreakMilestones(streakDays)
     }
 

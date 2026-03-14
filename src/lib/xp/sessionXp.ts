@@ -3,15 +3,15 @@
 // ---------------------------------------------------------------------------
 
 const SESSION_XP: Record<string, number> = {
-  expressionSwipe: 12,
-  listenAndFill: 15,
+  expressionSwipe: 8,
+  listenAndFill: 10,
 }
 
 /** Minimum session duration in ms (2 minutes). Sessions faster than this get 0 XP. */
 const MIN_SESSION_DURATION_MS = 120_000
 
-/** Daily cap for session XP */
-export const DAILY_SESSION_XP_CAP = 40
+/** Daily cap for visible game XP across all game sources */
+export const DAILY_SESSION_XP_CAP = 20
 
 /**
  * Calculate XP for completing a game session.

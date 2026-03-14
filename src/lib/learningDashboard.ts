@@ -169,6 +169,6 @@ export const MILESTONE_EXPLAINER =
 export const MONTHLY_ACTIVITY_EXPLAINER = `Monthly activity below ${MONTHLY_ACTIVE_THRESHOLD} XP counts as inactive and can put your tier status at risk.`
 
 export function getTierStatusDetail(nextTierXp: number, nextTier: TierLevel | null) {
-  if (nextTier === null) return 'Champion tier active'
+  if (nextTier === null) return 'Top tier active'
   return `${nextTierXp.toLocaleString()} XP to ${TIER_NAMES[nextTier]}`
 }

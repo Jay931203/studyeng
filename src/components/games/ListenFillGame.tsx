@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback, useMemo, useEffect, useRef } from 'react'
+import { useState, useCallback, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import expressionEntries from '@/data/expression-entries-v2.json'
 import expressionIndex from '@/data/expression-index-v2.json'
@@ -10,6 +10,7 @@ import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useLevelStore } from '@/stores/useLevelStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
+import { useUserStore } from '@/stores/useUserStore'
 import { calculateSessionXP } from '@/lib/xp/sessionXp'
 import { checkGameMilestones, checkStreakMilestones } from '@/stores/useMilestoneStore'
 
@@ -188,6 +189,14 @@ interface WordPoolEntry {
 }
 
 let _wordPoolCache: WordPoolEntry[] | null = null
+
+type SegmentPlayer = YT.Player & {
+  loadVideoById: (
+    videoId: string,
+    startSeconds?: number,
+    suggestedQuality?: string,
+  ) => void
+}
 
 function buildWordPool(): WordPoolEntry[] {
   if (_wordPoolCache) return _wordPoolCache
@@ -565,7 +574,8 @@ function useYouTubePlayer(
       if (!player || !ready) return
 
       try {
-        ;(player as any).loadVideoById({ videoId, startSeconds: start })
+        const segmentPlayer = player as SegmentPlayer
+        segmentPlayer.loadVideoById(videoId, start)
         player.playVideo()
 
         const poll = setInterval(() => {
@@ -683,7 +693,7 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
     Array<{ exprId: string; correct: boolean }>
   >([])
 
-  const sessionStartRef = useRef(Date.now())
+  const sessionStartRef = useRef(0)
 
   // Per-question state
   const [selected, setSelected] = useState<string | null>(null)
@@ -693,31 +703,46 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
 
   // Transcript timing for current question
   const [segmentTiming, setSegmentTiming] = useState<{
+    videoId: string
+    sentenceIdx: number
     start: number
     end: number
   } | null>(null)
-  const [timingLoaded, setTimingLoaded] = useState(false)
-
   const currentQ = questions[currentIdx] ?? null
 
   // Load transcript timing when question changes
   useEffect(() => {
     if (!currentQ) return
-    setTimingLoaded(false)
-    setSegmentTiming(null)
+    let cancelled = false
 
     loadTranscript(currentQ.videoId).then((transcript) => {
+      if (cancelled) {
+        return
+      }
       if (!transcript) {
-        setTimingLoaded(true)
+        setSegmentTiming(null)
         return
       }
       const seg = transcript[currentQ.sentenceIdx]
       if (seg) {
-        setSegmentTiming({ start: seg.start, end: seg.end })
+        setSegmentTiming({
+          videoId: currentQ.videoId,
+          sentenceIdx: currentQ.sentenceIdx,
+          start: seg.start,
+          end: seg.end,
+        })
+        return
       }
-      setTimingLoaded(true)
+      setSegmentTiming(null)
     })
+    return () => {
+      cancelled = true
+    }
   }, [currentQ])
+
+  useEffect(() => {
+    sessionStartRef.current = Date.now()
+  }, [])
 
   // Play audio
   const handlePlay = useCallback(() => {
@@ -727,7 +752,12 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
   }, [currentQ, segmentTiming, replaysUsed, playSegment])
 
   // Whether audio is available
-  const audioAvailable = ytReady && !ytFailed && segmentTiming !== null
+  const audioAvailable =
+    ytReady &&
+    !ytFailed &&
+    segmentTiming !== null &&
+    segmentTiming.videoId === currentQ?.videoId &&
+    segmentTiming.sentenceIdx === currentQ?.sentenceIdx
   const remainingPlays = 3 - replaysUsed
 
   // Handle choice selection
@@ -778,12 +808,10 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
             // Streak bonus (once per day)
             const gameStore = useGameProgressStore.getState()
             if (!gameStore.isStreakBonusAwardedToday()) {
-              const { useUserStore } = require('@/stores/useUserStore')
               const userState = useUserStore.getState()
               userState.checkAndUpdateStreak()
               const streakDays = useUserStore.getState().streakDays
-              const totalMonthlyXP = userState.totalXpEarned
-              gameStore.awardStreakBonus(streakDays, totalMonthlyXP)
+              gameStore.awardStreakBonus(streakDays)
               checkStreakMilestones(streakDays)
             }
 

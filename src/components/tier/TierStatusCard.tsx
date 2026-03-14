@@ -40,6 +40,11 @@ const TIER_COLORS: Record<TierLevel, { bg: string; text: string; bar: string }> 
     text: 'text-amber-400',
     bar: 'bg-amber-500',
   },
+  5: {
+    bg: 'bg-rose-500/10',
+    text: 'text-rose-300',
+    bar: 'bg-rose-500',
+  },
 }
 
 export function TierStatusCard() {
@@ -84,7 +89,7 @@ export function TierStatusCard() {
         <div className="min-w-0 flex-1">
           <div className="flex items-center gap-2">
             <p className={`text-base font-bold ${colors.text}`}>{tierName}</p>
-            {championLegacy && currentTier === 4 && (
+            {championLegacy && currentTier === 5 && (
               <span className="rounded-full bg-amber-500/15 px-2 py-0.5 text-[10px] font-semibold text-amber-400">
                 Legacy
               </span>

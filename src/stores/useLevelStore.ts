@@ -49,6 +49,7 @@ const LEVEL_THRESHOLDS: Record<string, number> = {
 }
 
 const MIN_EXPRESSIONS_FOR_LEVELUP = 10
+const DAILY_VIDEO_XP_CAP = 15
 
 // ---------------------------------------------------------------------------
 // Types
@@ -76,6 +77,7 @@ interface LevelState {
 
   // Video watching XP (tracked separately, adds to rawScore)
   videoXP: Record<string, number>
+  videoAwardCounts: Record<string, number>
 
   // Daily video XP tracking
   dailyVideoXP: number
@@ -212,6 +214,7 @@ export const useLevelStore = create<LevelState>()(
       absorptionScore: 0,
       rawScore: 0,
       videoXP: {},
+      videoAwardCounts: {},
       dailyVideoXP: 0,
       dailyVideoXPDate: '',
       levelHistory: [],
@@ -233,30 +236,37 @@ export const useLevelStore = create<LevelState>()(
       },
 
       awardVideoXP: (videoId, completionRate) => {
-        const currentAwards = get().videoXP[videoId] ?? 0
+        const currentAwards = get().videoAwardCounts[videoId] ?? 0
         if (currentAwards >= 10) return 0
 
         // Base XP proportional to completion, full at >80%
-        const xpGained = completionRate >= 0.8 ? 3 : Math.round(completionRate * 3 * 10) / 10
-        if (xpGained <= 0) return 0
-
+        const proposedXp = completionRate >= 0.8 ? 3 : Math.round(completionRate * 3 * 10) / 10
         const today = new Date().toISOString().slice(0, 10)
+        const currentDailyVideoXP = get().dailyVideoXPDate === today ? get().dailyVideoXP : 0
+        const remaining = Math.max(0, DAILY_VIDEO_XP_CAP - currentDailyVideoXP)
+        const xpGained = Math.min(proposedXp, remaining)
+        if (xpGained <= 0) return 0
 
         set((state) => {
           const newVideoXP = {
             ...state.videoXP,
+            [videoId]: (state.videoXP[videoId] ?? 0) + xpGained,
+          }
+          const newVideoAwardCounts = {
+            ...state.videoAwardCounts,
             [videoId]: currentAwards + 1,
           }
           // We don't have familiarEntries here, so just add the delta to rawScore
           const newRawScore = state.rawScore + xpGained
 
           // Track daily video XP
-          const currentDailyVideoXP = state.dailyVideoXPDate === today ? state.dailyVideoXP : 0
+          const nextDailyVideoXP = state.dailyVideoXPDate === today ? state.dailyVideoXP : 0
 
           return {
             videoXP: newVideoXP,
+            videoAwardCounts: newVideoAwardCounts,
             rawScore: newRawScore,
-            dailyVideoXP: currentDailyVideoXP + xpGained,
+            dailyVideoXP: nextDailyVideoXP + xpGained,
             dailyVideoXPDate: today,
           }
         })
@@ -352,7 +362,7 @@ export const useLevelStore = create<LevelState>()(
       // Getters
       getVideoXPTotal: () => {
         const videoXP = get().videoXP
-        return Object.values(videoXP).reduce((sum, count) => sum + count * 3, 0)
+        return Object.values(videoXP).reduce((sum, value) => sum + value, 0)
       },
 
       getTotalAbsorptionXP: () => {

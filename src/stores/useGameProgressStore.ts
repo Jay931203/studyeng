@@ -3,6 +3,7 @@ import { persist } from 'zustand/middleware'
 import { DAILY_SESSION_XP_CAP } from '@/lib/xp/sessionXp'
 import { getStreakBonusXP, applyMonthlyStreakCap } from '@/lib/xp/streakBonus'
 import { useUserStore } from './useUserStore'
+import { useTierStore } from './useTierStore'
 
 interface LeitnerEntry {
   box: 1 | 2 | 3
@@ -10,7 +11,7 @@ interface LeitnerEntry {
   consecutiveCorrect: number
 }
 
-const DAILY_GAME_XP_CAP = 40
+const DAILY_GAME_XP_CAP = DAILY_SESSION_XP_CAP
 
 interface GameProgressState {
   leitner: { [exprId: string]: LeitnerEntry }
@@ -28,6 +29,7 @@ interface GameProgressState {
 
   // Streak bonus tracking (once per day)
   streakBonusDate: string
+  dailyStreakBonusXP: number
   monthlyStreakXP: number
   monthlyStreakXPMonth: string // YYYY-MM format
 
@@ -47,13 +49,14 @@ interface GameProgressState {
   addSessionXP: (amount: number) => number
 
   /** Record that streak bonus was awarded today. Returns actual XP awarded after monthly cap. */
-  awardStreakBonus: (streakDays: number, totalMonthlyXP: number) => number
+  awardStreakBonus: (streakDays: number) => number
 
   /** Whether streak bonus has already been awarded today */
   isStreakBonusAwardedToday: () => boolean
 
   /** Get total game sessions across all types */
   getTotalSessions: () => number
+  getDailyTotalGameXP: () => number
 }
 
 export const useGameProgressStore = create<GameProgressState>()(
@@ -70,6 +73,7 @@ export const useGameProgressStore = create<GameProgressState>()(
       dailySessionXP: 0,
       dailySessionXPDate: '',
       streakBonusDate: '',
+      dailyStreakBonusXP: 0,
       monthlyStreakXP: 0,
       monthlyStreakXPMonth: '',
       hydrated: false,
@@ -128,7 +132,8 @@ export const useGameProgressStore = create<GameProgressState>()(
         const today = new Date().toISOString().slice(0, 10)
         const state = get()
         const current = state.dailyGameXPDate === today ? state.dailyGameXP : 0
-        const remaining = Math.max(0, DAILY_GAME_XP_CAP - current)
+        const currentSession = state.dailySessionXPDate === today ? state.dailySessionXP : 0
+        const remaining = Math.max(0, DAILY_GAME_XP_CAP - current - currentSession)
         const actual = Math.min(amount, remaining)
 
         if (actual > 0) {
@@ -146,8 +151,9 @@ export const useGameProgressStore = create<GameProgressState>()(
       getDailyGameXPRemaining: () => {
         const today = new Date().toISOString().slice(0, 10)
         const state = get()
-        if (state.dailyGameXPDate !== today) return DAILY_GAME_XP_CAP
-        return Math.max(0, DAILY_GAME_XP_CAP - state.dailyGameXP)
+        const masteryXp = state.dailyGameXPDate === today ? state.dailyGameXP : 0
+        const sessionXp = state.dailySessionXPDate === today ? state.dailySessionXP : 0
+        return Math.max(0, DAILY_GAME_XP_CAP - masteryXp - sessionXp)
       },
 
       getBox1Expressions: () => {
@@ -169,7 +175,8 @@ export const useGameProgressStore = create<GameProgressState>()(
         const today = new Date().toISOString().slice(0, 10)
         const state = get()
         const current = state.dailySessionXPDate === today ? state.dailySessionXP : 0
-        const remaining = Math.max(0, DAILY_SESSION_XP_CAP - current)
+        const currentMastery = state.dailyGameXPDate === today ? state.dailyGameXP : 0
+        const remaining = Math.max(0, DAILY_SESSION_XP_CAP - current - currentMastery)
         const actual = Math.min(amount, remaining)
 
         if (actual > 0) {
@@ -181,7 +188,7 @@ export const useGameProgressStore = create<GameProgressState>()(
         return actual
       },
 
-      awardStreakBonus: (streakDays, totalMonthlyXP) => {
+      awardStreakBonus: (streakDays) => {
         const today = new Date().toISOString().slice(0, 10)
         const currentMonth = today.slice(0, 7) // YYYY-MM
         const state = get()
@@ -192,6 +199,7 @@ export const useGameProgressStore = create<GameProgressState>()(
         const proposed = getStreakBonusXP(streakDays)
         if (proposed <= 0) return 0
 
+        const totalMonthlyXP = useTierStore.getState().getCurrentMonthXp()
         // Monthly streak XP tracking
         const monthlyStreakSoFar = state.monthlyStreakXPMonth === currentMonth
           ? state.monthlyStreakXP
@@ -200,12 +208,13 @@ export const useGameProgressStore = create<GameProgressState>()(
         const actual = applyMonthlyStreakCap(monthlyStreakSoFar, totalMonthlyXP, proposed)
         if (actual <= 0) {
           // Still mark as awarded today even if capped to 0
-          set({ streakBonusDate: today })
+          set({ streakBonusDate: today, dailyStreakBonusXP: 0 })
           return 0
         }
 
         set({
           streakBonusDate: today,
+          dailyStreakBonusXP: actual,
           monthlyStreakXP: monthlyStreakSoFar + actual,
           monthlyStreakXPMonth: currentMonth,
         })
@@ -223,6 +232,14 @@ export const useGameProgressStore = create<GameProgressState>()(
       getTotalSessions: () => {
         const sessions = get().totalSessions
         return sessions.expressionSwipe + sessions.listenAndFill
+      },
+
+      getDailyTotalGameXP: () => {
+        const today = new Date().toISOString().slice(0, 10)
+        const state = get()
+        const sessionXp = state.dailySessionXPDate === today ? state.dailySessionXP : 0
+        const masteryXp = state.dailyGameXPDate === today ? state.dailyGameXP : 0
+        return sessionXp + masteryXp
       },
     }),
     {

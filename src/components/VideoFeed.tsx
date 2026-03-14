@@ -16,6 +16,7 @@ import { usePlayerStore } from '@/stores/usePlayerStore'
 import { usePremiumStore } from '@/stores/usePremiumStore'
 import { useRecommendationStore } from '@/stores/useRecommendationStore'
 import { useLevelStore } from '@/stores/useLevelStore'
+import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { AdminReportButton } from './AdminReportButton'
@@ -493,12 +494,18 @@ export function VideoFeed({
 
       // Award video XP (absorption) + visible reward XP
       const levelStore = useLevelStore.getState()
-      const videoXP = levelStore.awardVideoXP(currentVideo.id, 1.0)
-      levelStore.recordVideoCompletion(currentVideo.id, 1.0)
-      if (videoXP > 0) {
-        useUserStore.getState().gainXp(Math.round(videoXP), 'Video completion XP')
+        const videoXP = levelStore.awardVideoXP(currentVideo.id, 1.0)
+        levelStore.recordVideoCompletion(currentVideo.id, 1.0)
+        if (videoXP > 0) {
+          useUserStore.getState().gainXp(Math.round(videoXP), 'Video completion XP')
+        }
+
+        const gameStore = useGameProgressStore.getState()
+        if (!gameStore.isStreakBonusAwardedToday()) {
+          const streakDays = useUserStore.getState().streakDays
+          gameStore.awardStreakBonus(streakDays)
+        }
       }
-    }
 
     if (repeatMode === 'off') return
 

@@ -26,6 +26,10 @@ interface UserState {
   getTotalXP: () => number
 }
 
+function getXpForLevel(level: number) {
+  return 400 + Math.max(level - 1, 0) * 50
+}
+
 export const useUserStore = create<UserState>()(persist((set, get) => ({
   level: 1,
   xp: 0,
@@ -43,7 +47,7 @@ export const useUserStore = create<UserState>()(persist((set, get) => ({
   gainXp: (amount, reason = 'XP reward') => {
     if (amount <= 0) return
     const { level, xp, totalXpEarned, xpHistory } = get()
-    const xpForLevel = level * 100
+    const xpForLevel = getXpForLevel(level)
     const newXp = xp + amount
     const newTotal = totalXpEarned + amount
     const event: XpHistoryEvent = {
@@ -66,6 +70,7 @@ export const useUserStore = create<UserState>()(persist((set, get) => ({
       set({ xp: newXp, totalXpEarned: newTotal, xpHistory: nextHistory })
     }
     void import('./useTierStore').then(({ useTierStore }) => {
+      useTierStore.getState().addMonthlyXp(amount)
       useTierStore.getState().recalculateTier()
     })
     debouncedSyncProfile()
@@ -108,7 +113,7 @@ export const useUserStore = create<UserState>()(persist((set, get) => ({
       // Sum of XP required for all previous levels + current xp
       let sum = 0
       for (let i = 1; i < level; i++) {
-        sum += i * 100
+        sum += getXpForLevel(i)
       }
       return sum + xp
     }

@@ -463,7 +463,7 @@ export function VideoPlayer({
     answerGame(choiceIndex)
     const isCorrect = choiceIndex === gameCorrectIndex
     if (isCorrect) {
-      useGameProgressStore.getState().addGameXP(10)
+      useGameProgressStore.getState().addGameXP(5)
     }
     useDailyMissionStore.getState().incrementMission('play-game')
   }

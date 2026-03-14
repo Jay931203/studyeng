@@ -9,10 +9,10 @@
 export function getStreakBonusXP(streakDays: number): number {
   if (streakDays <= 0) return 0
   if (streakDays <= 2) return 2
-  if (streakDays <= 6) return 5
-  if (streakDays <= 13) return 10
-  if (streakDays <= 29) return 15
-  return 20 // 30+ days
+  if (streakDays <= 6) return 4
+  if (streakDays <= 13) return 6
+  if (streakDays <= 29) return 8
+  return 10 // 30+ days
 }
 
 /**

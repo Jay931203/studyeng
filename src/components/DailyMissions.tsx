@@ -26,9 +26,9 @@ import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 export function TodayDashboard() {
   const router = useRouter()
   const streakDays = useUserStore((state) => state.streakDays)
-  const dailySessionXP = useGameProgressStore((state) => state.dailySessionXP)
-  const dailySessionXPDate = useGameProgressStore((state) => state.dailySessionXPDate)
+  const getDailyTotalGameXP = useGameProgressStore((state) => state.getDailyTotalGameXP)
   const streakBonusDate = useGameProgressStore((state) => state.streakBonusDate)
+  const dailyStreakBonusXP = useGameProgressStore((state) => state.dailyStreakBonusXP)
   const totalGameSessions = useGameProgressStore((state) => state.getTotalSessions())
   const dailyVideoXP = useLevelStore((state) => state.getDailyVideoXP())
   const achievedMilestones = useMilestoneStore((state) => state.achieved)
@@ -40,10 +40,10 @@ export function TodayDashboard() {
 
   const today = getTodayIsoDate()
   const completedVideos = Object.values(completionCounts).filter((count) => count > 0).length
-  const gameXpToday = dailySessionXPDate === today ? dailySessionXP : 0
+  const gameXpToday = getDailyTotalGameXP()
   const gameXpPct = Math.min((gameXpToday / DAILY_SESSION_XP_CAP) * 100, 100)
   const videoXpPct = Math.min((dailyVideoXP / DAILY_VIDEO_XP_TARGET) * 100, 100)
-  const streakBonusToday = streakBonusDate === today ? getStreakBonusXP(streakDays) : 0
+  const streakBonusToday = streakBonusDate === today ? dailyStreakBonusXP : 0
   const streakBonusProgress = getStreakBonusProgress(streakDays, streakBonusDate === today)
   const todayMilestones = getTodayMilestoneSummary(achievedMilestones, today)
   const streak = getStreakProgress(streakDays)

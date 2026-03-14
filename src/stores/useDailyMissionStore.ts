@@ -2,7 +2,6 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { useOnboardingStore } from './useOnboardingStore'
 import { useDiscountStore } from './useDiscountStore'
-import { useUserStore } from './useUserStore'
 
 export interface DailyMission {
   id: string
@@ -35,7 +34,7 @@ function getDefaultMissions(): DailyMission[] {
       target: dailyGoal,
       current: 0,
       completed: false,
-      xpReward: 10,
+      xpReward: 0,
     },
     {
       id: 'play-game',
@@ -44,7 +43,7 @@ function getDefaultMissions(): DailyMission[] {
       target: 1,
       current: 0,
       completed: false,
-      xpReward: 10,
+      xpReward: 0,
     },
     {
       id: 'save-phrase',
@@ -53,7 +52,7 @@ function getDefaultMissions(): DailyMission[] {
       target: 1,
       current: 0,
       completed: false,
-      xpReward: 5,
+      xpReward: 0,
     },
   ]
 }
@@ -84,6 +83,7 @@ export const useDailyMissionStore = create<DailyMissionState>()(
       },
 
       incrementMission: (id: string, amount: number = 1) => {
+        get().checkAndResetDaily()
         const { missions, allCompleteBonus } = get()
 
         const updatedMissions = missions.map((mission) => {
@@ -92,11 +92,6 @@ export const useDailyMissionStore = create<DailyMissionState>()(
 
           const newCurrent = Math.min(mission.current + amount, mission.target)
           const justCompleted = newCurrent >= mission.target && !mission.completed
-
-          // Award XP reward when mission is just completed
-          if (justCompleted && mission.xpReward > 0) {
-            useUserStore.getState().gainXp(mission.xpReward, `Daily mission: ${mission.title}`)
-          }
 
           return {
             ...mission,
@@ -108,9 +103,6 @@ export const useDailyMissionStore = create<DailyMissionState>()(
         // Check if all missions are now complete for bonus
         const allDone = updatedMissions.every((m) => m.completed)
         if (allDone && !allCompleteBonus) {
-          // All-clear bonus: award 10 XP
-          useUserStore.getState().gainXp(10, 'Daily mission bonus')
-
           useDiscountStore.getState().recordDailyCompletion()
           set({ missions: updatedMissions, allCompleteBonus: true })
         } else {

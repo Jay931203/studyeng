@@ -95,7 +95,7 @@ export function ListeningGame({
     if (selected) return
     setSelected(choice)
     if (choice === nextSubtitle.en) {
-      addGameXP(10)
+      addGameXP(8)
     }
     setTimeout(() => setShowResult(true), 500)
   }

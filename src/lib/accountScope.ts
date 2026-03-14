@@ -3,12 +3,17 @@ import { useBookmarkStore } from '@/stores/useBookmarkStore'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { useDiscountStore } from '@/stores/useDiscountStore'
 import { useLikeStore } from '@/stores/useLikeStore'
+import { useLevelChallengeStore } from '@/stores/useLevelChallengeStore'
+import { useLevelStore } from '@/stores/useLevelStore'
+import { useMilestoneStore } from '@/stores/useMilestoneStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { usePremiumStore } from '@/stores/usePremiumStore'
 import { useRecommendationStore } from '@/stores/useRecommendationStore'
+import { useTierStore } from '@/stores/useTierStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
+import { useGameProgressStore } from '@/stores/useGameProgressStore'
 
 const ACCOUNT_OWNER_STORAGE_KEY = 'studyeng-account-owner'
 
@@ -57,6 +62,51 @@ export function resetAccountScopedState() {
     streakDays: 0,
     lastActivityDate: null,
     showLevelUp: false,
+    totalXpEarned: 0,
+    xpHistory: [],
+  })
+  useTierStore.setState({
+    currentTier: 0,
+    monthlyXpHistory: {},
+    championMonths: 0,
+    championLegacy: false,
+    lastTierUpdateDate: '',
+    tierAtMonthStart: 0,
+    tierMonthStartMonth: '',
+  })
+  useMilestoneStore.setState({
+    achieved: {},
+  })
+  useGameProgressStore.setState({
+    leitner: {},
+    bestStreak: 0,
+    totalSessions: {
+      expressionSwipe: 0,
+      listenAndFill: 0,
+    },
+    dailyGameXP: 0,
+    dailyGameXPDate: '',
+    dailySessionXP: 0,
+    dailySessionXPDate: '',
+    streakBonusDate: '',
+    dailyStreakBonusXP: 0,
+    monthlyStreakXP: 0,
+    monthlyStreakXPMonth: '',
+  })
+  useLevelStore.setState({
+    absorptionScore: 0,
+    rawScore: 0,
+    videoXP: {},
+    videoAwardCounts: {},
+    dailyVideoXP: 0,
+    dailyVideoXPDate: '',
+    levelHistory: [],
+    pendingLevelUp: null,
+    videoCompletionLog: [],
+  })
+  useLevelChallengeStore.setState({
+    challengeAttempts: [],
+    lastPassedLevel: null,
   })
   useOnboardingStore.setState({
     hasOnboarded: false,

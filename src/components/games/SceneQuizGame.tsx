@@ -120,7 +120,7 @@ export function SceneQuizGame({ subtitle, onComplete }: SceneQuizGameProps) {
     if (selected) return
     setSelected(option)
     if (option === correctWord) {
-      addGameXP(10)
+      addGameXP(8)
     }
     setTimeout(() => setShowResult(true), 500)
   }

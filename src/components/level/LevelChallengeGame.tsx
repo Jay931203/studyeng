@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useCallback, useRef } from 'react'
+import { useState, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { selectChallengeCards, type ChallengeCard } from '@/lib/levelChallenge/selectChallengeCards'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
@@ -10,7 +10,7 @@ import { useLevelChallengeStore } from '@/stores/useLevelChallengeStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { triggerHaptic } from '@/lib/haptic'
 import type { ChallengeTransition } from '@/types/level'
-import { LEVEL_LABELS, displayLevelName } from '@/types/level'
+import { displayLevelName } from '@/types/level'
 
 // ---------------------------------------------------------------------------
 // Constants
@@ -91,8 +91,6 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
   const [slideDir, setSlideDir] = useState<'left' | 'right' | null>(null)
   const [showCelebration, setShowCelebration] = useState(false)
 
-  const startTimeRef = useRef(Date.now())
-
   const currentCard = cards[currentIdx] ?? null
   const fromLabel = displayLevelName(currentLevel)
   const toLabel = displayLevelName(targetLevel)
@@ -102,7 +100,6 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
   // ---------------------------------------------------------------------------
 
   const handleStart = useCallback(() => {
-    startTimeRef.current = Date.now()
     setPhase('playing')
   }, [])
 
@@ -113,8 +110,8 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
   const finishRound = useCallback(() => {
     incrementSessionCount('expressionSwipe')
 
-    // Award session XP (+12 XP for completing 20 cards)
-    const sessionXP = useGameProgressStore.getState().addGameXP(12)
+    // Award challenge completion XP.
+    const sessionXP = useGameProgressStore.getState().addGameXP(10)
     setRoundXP((prev) => prev + sessionXP)
 
     const passed = knownCount >= PASS_THRESHOLD
@@ -365,7 +362,7 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
                 <span className="shrink-0 text-xs font-bold" style={{ color: 'var(--text-muted)' }}>
                   02
                 </span>
-                <span>{PASS_THRESHOLD}장 이상 "알아요" 선택 시 레벨업 (80%)</span>
+                <span>{PASS_THRESHOLD}장 이상 알고 있으면 다음 레벨에 도전합니다. (80%)</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="shrink-0 text-xs font-bold" style={{ color: 'var(--text-muted)' }}>

@@ -37,6 +37,7 @@ const TIER_COLORS: Record<TierLevel, { bg: string; text: string; bar: string }> 
   2: { bg: 'bg-sky-500/10', text: 'text-sky-400', bar: 'bg-sky-500' },
   3: { bg: 'bg-violet-500/10', text: 'text-violet-400', bar: 'bg-violet-500' },
   4: { bg: 'bg-amber-500/10', text: 'text-amber-400', bar: 'bg-amber-500' },
+  5: { bg: 'bg-rose-500/10', text: 'text-rose-300', bar: 'bg-rose-500' },
 }
 
 export default function XPPage() {
@@ -44,9 +45,9 @@ export default function XPPage() {
   const totalXP = useUserStore((state) => state.getTotalXP())
   const streakDays = useUserStore((state) => state.streakDays)
   const xpHistory = useUserStore((state) => state.xpHistory)
-  const dailySessionXP = useGameProgressStore((state) => state.dailySessionXP)
-  const dailySessionXPDate = useGameProgressStore((state) => state.dailySessionXPDate)
+  const getDailyTotalGameXP = useGameProgressStore((state) => state.getDailyTotalGameXP)
   const streakBonusDate = useGameProgressStore((state) => state.streakBonusDate)
+  const dailyStreakBonusXP = useGameProgressStore((state) => state.dailyStreakBonusXP)
   const totalGameSessions = useGameProgressStore((state) => state.getTotalSessions())
   const dailyVideoXP = useLevelStore((state) => state.getDailyVideoXP())
   const videoXPTotal = useLevelStore((state) => state.getVideoXPTotal())
@@ -67,9 +68,9 @@ export default function XPPage() {
 
   const today = getTodayIsoDate()
   const completedVideos = Object.values(completionCounts).filter((count) => count > 0).length
-  const gameXpToday = dailySessionXPDate === today ? dailySessionXP : 0
+  const gameXpToday = getDailyTotalGameXP()
   const streakBonusAwardedToday = streakBonusDate === today
-  const streakBonusToday = streakBonusAwardedToday ? getStreakBonusXP(streakDays) : 0
+  const streakBonusToday = streakBonusAwardedToday ? dailyStreakBonusXP : 0
   const streakBonusProgress = getStreakBonusProgress(streakDays, streakBonusAwardedToday)
   const todayMilestones = getTodayMilestoneSummary(achievedMilestones, today)
   const todayTotal = gameXpToday + dailyVideoXP + streakBonusToday + todayMilestones.xp
@@ -98,7 +99,7 @@ export default function XPPage() {
   const discount = getCurrentDiscount()
   const tierName = TIER_NAMES[currentTier]
   const colors = TIER_COLORS[currentTier]
-  const isChampion = currentTier === 4
+  const isChampion = currentTier === 5
   const monthlyTrend = buildMonthlyXpTrend(monthlyXpHistory)
 
   const handleBack = () => {
@@ -241,7 +242,7 @@ export default function XPPage() {
               </p>
             </div>
           ) : (
-            <p className="mt-2 text-[10px] text-[var(--text-muted)]">Champion tier is active.</p>
+            <p className="mt-2 text-[10px] text-[var(--text-muted)]">Top tier is active.</p>
           )}
         </SurfaceCard>
 

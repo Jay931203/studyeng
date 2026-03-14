@@ -60,17 +60,16 @@ export function GameLauncher() {
 
   const handleComplete = (correct: boolean) => {
     void correct
+    incrementMission('play-game')
     setActiveGame(null)
   }
 
   const launchGame = (type: GameType) => {
-    incrementMission('play-game')
     trackEvent(AnalyticsEvents.GAME_PLAYED, { game_type: type })
     setActiveGame(type)
   }
 
   const launchShortsQuiz = () => {
-    incrementMission('play-game')
     setGameModeEnabled(true)
     trackEvent(AnalyticsEvents.GAME_PLAYED, { game_type: 'subtitle-quiz' })
     router.push('/shorts')
