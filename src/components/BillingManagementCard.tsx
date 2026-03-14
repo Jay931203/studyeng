@@ -578,7 +578,7 @@ export function BillingManagementCard({
           </p>
           <Link
             href="/profile/membership"
-            className="shrink-0 text-[11px] font-semibold uppercase tracking-[0.08em] text-[var(--accent-text)]"
+            className="shrink-0 text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
           >
             DETAIL
           </Link>
@@ -586,15 +586,52 @@ export function BillingManagementCard({
       )}
 
       <div className="space-y-4">
-        <div className="rounded-2xl bg-[var(--bg-primary)] px-4 py-4">
+        {!isDetail && (
           <div className="flex items-start justify-between gap-3">
             <div>
-              <p className="text-xs font-semibold text-[var(--text-muted)]">CURRENT STATUS</p>
-              <p className="mt-1 text-lg font-semibold text-[var(--text-primary)]">
+              <p className="text-lg font-semibold text-[var(--text-primary)]">
                 {currentStatusLabel}
               </p>
               {shouldShowPlanLabel && (
                 <p className="mt-1 text-sm text-[var(--text-secondary)]">{currentPlanLabel}</p>
+              )}
+
+              {!native && status?.entitlement?.currentPeriodEnd && (
+                <p className="mt-2 text-xs text-[var(--text-secondary)]">
+                  {status.entitlement.cancelAtPeriodEnd ? 'Access ends' : 'Next billing'}{' '}
+                  {formatDate(status.entitlement.currentPeriodEnd)}
+                </p>
+              )}
+
+              {hasBillingPaymentMethod && (
+                <p className="mt-2 text-xs text-[var(--text-secondary)]">
+                  Payment {paymentMethodLabel}
+                  {paymentMethodDetail ? ` · ${paymentMethodDetail}` : ''}
+                </p>
+              )}
+
+              {!native && hasCodeAccess && (
+                <p className="mt-2 text-xs text-[var(--text-secondary)]">
+                  Premium is active from a redeemed code. Billing starts only when you subscribe.
+                </p>
+              )}
+
+              {!native && !user && webBillingReady && (
+                <p className="mt-2 text-xs text-[var(--text-secondary)]">
+                  Log in to manage billing and attach premium access to your account.
+                </p>
+              )}
+
+              {!native && billingEnabled && !webBillingReady && (
+                <p className="mt-2 text-xs text-[var(--text-secondary)]">
+                  Billing is still being finalized on the server.
+                </p>
+              )}
+
+              {native && currentPremium && (
+                <p className="mt-2 text-xs text-[var(--text-secondary)]">
+                  Plan changes and billing management happen in {getStoreLabel()}.
+                </p>
               )}
             </div>
             {currentPremium && (
@@ -603,68 +640,35 @@ export function BillingManagementCard({
               </span>
             )}
           </div>
-
-          {!native && status?.entitlement?.currentPeriodEnd && (
-            <p className="mt-3 text-xs text-[var(--text-secondary)]">
-              {status.entitlement.cancelAtPeriodEnd ? 'Access ends' : 'Next billing'}{' '}
-              {formatDate(status.entitlement.currentPeriodEnd)}
-            </p>
-          )}
-
-          {hasBillingPaymentMethod && (
-            <p className="mt-3 text-xs text-[var(--text-secondary)]">
-              Payment {paymentMethodLabel}
-              {paymentMethodDetail ? ` · ${paymentMethodDetail}` : ''}
-            </p>
-          )}
-
-          {!native && hasCodeAccess && (
-            <p className="mt-3 text-xs text-[var(--text-secondary)]">
-              Premium is active from a redeemed code. Billing starts only when you subscribe.
-            </p>
-          )}
-
-          {!native && !user && webBillingReady && (
-            <p className="mt-3 text-xs text-[var(--text-secondary)]">
-              Log in to manage billing and attach premium access to your account.
-            </p>
-          )}
-
-          {!native && billingEnabled && !webBillingReady && (
-            <p className="mt-3 text-xs text-[var(--text-secondary)]">
-              Billing is still being finalized on the server.
-            </p>
-          )}
-
-          {native && currentPremium && (
-            <p className="mt-3 text-xs text-[var(--text-secondary)]">
-              Plan changes and billing management happen in {getStoreLabel()}.
-            </p>
-          )}
-
-        </div>
+        )}
 
         {isDetail && (
           <>
-            <div className="rounded-2xl bg-[var(--bg-primary)] px-4 py-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--text-muted)]">
-                DETAILS
+            <div className="flex items-start justify-between gap-3">
+              <p className="text-lg font-semibold text-[var(--text-primary)]">
+                {currentStatusLabel}
               </p>
-              <div className="mt-3 grid gap-3 sm:grid-cols-2">
-                {membershipSummaryItems.map((item) => (
-                  <div key={item.label} className="rounded-2xl bg-[var(--bg-card)] px-4 py-3">
-                    <p className="text-[11px] font-semibold text-[var(--text-muted)]">
-                      {item.label}
-                    </p>
-                    <p className="mt-1 text-sm font-semibold text-[var(--text-primary)]">
-                      {item.value}
-                    </p>
-                    {item.detail && (
-                      <p className="mt-1 text-xs text-[var(--text-secondary)]">{item.detail}</p>
-                    )}
-                  </div>
-                ))}
-              </div>
+              {currentPremium && (
+                <span className="rounded-full bg-emerald-500/15 px-2.5 py-1 text-xs font-semibold text-emerald-300">
+                  PRO
+                </span>
+              )}
+            </div>
+
+            <div className="grid gap-3 sm:grid-cols-2">
+              {membershipSummaryItems.map((item) => (
+                <div key={item.label} className="rounded-2xl bg-[var(--bg-secondary)]/30 px-4 py-3">
+                  <p className="text-[11px] font-semibold text-[var(--text-muted)]">
+                    {item.label}
+                  </p>
+                  <p className="mt-1 text-sm font-semibold text-[var(--text-primary)]">
+                    {item.value}
+                  </p>
+                  {item.detail && (
+                    <p className="mt-1 text-xs text-[var(--text-secondary)]">{item.detail}</p>
+                  )}
+                </div>
+              ))}
             </div>
 
             <div className="space-y-3">

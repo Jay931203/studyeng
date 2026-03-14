@@ -203,8 +203,8 @@ export default function ProfilePage() {
           <SurfaceCard className="p-6">
             <SectionLabel label="SETTINGS" />
 
-            <div className="space-y-4">
-              <div className="rounded-2xl bg-[var(--bg-primary)] px-4 py-4">
+            <div className="divide-y divide-[var(--border-card)]/40">
+              <div className="px-1 py-4">
                 <div className="mb-4">
                   <p className="text-sm font-medium text-[var(--text-primary)]">THEME</p>
                 </div>
@@ -221,7 +221,7 @@ export default function ProfilePage() {
                           onClick={() => setBackgroundTheme(option.id)}
                           className={`h-10 w-10 rounded-full ${option.swatchClass} ${
                             backgroundTheme === option.id
-                              ? 'ring-2 ring-[var(--accent-primary)] ring-offset-2 ring-offset-[var(--bg-primary)]'
+                              ? 'ring-2 ring-[var(--accent-primary)] ring-offset-2 ring-offset-[var(--bg-card)]'
                               : ''
                           }`}
                           aria-label={`Set background theme to ${option.id}`}
@@ -239,7 +239,7 @@ export default function ProfilePage() {
                           onClick={() => setColorTheme(option.id)}
                           className={`h-10 w-10 rounded-full ${option.swatchClass} ${
                             colorTheme === option.id
-                              ? 'ring-2 ring-[var(--accent-primary)] ring-offset-2 ring-offset-[var(--bg-primary)]'
+                              ? 'ring-2 ring-[var(--accent-primary)] ring-offset-2 ring-offset-[var(--bg-card)]'
                               : ''
                           }`}
                           aria-label={`Set color theme to ${option.id}`}
@@ -250,7 +250,7 @@ export default function ProfilePage() {
                 </div>
               </div>
 
-              <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
+              <div className="flex items-center justify-between px-1 py-3">
                 <div>
                   <p className="text-sm font-medium text-[var(--text-primary)]">GAME MODE</p>
                   <p className="mt-0.5 text-xs text-[var(--text-muted)]">시청 중 게임 등장</p>
@@ -271,7 +271,7 @@ export default function ProfilePage() {
                 </button>
               </div>
 
-              <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
+              <div className="flex items-center justify-between px-1 py-3">
                 <div>
                   <p className="text-sm font-medium text-[var(--text-primary)]">HAPTIC</p>
                   <p className="mt-0.5 text-xs text-[var(--text-muted)]">Freeze, 저장, 유사 표현 등장 시 진동</p>
@@ -292,7 +292,7 @@ export default function ProfilePage() {
                 </button>
               </div>
 
-              <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
+              <div className="flex items-center justify-between px-1 py-3">
                 <div>
                   <p className="text-sm font-medium text-[var(--text-primary)]">REMOTE</p>
                   <p className="mt-0.5 text-xs text-[var(--text-muted)]">
@@ -315,7 +315,7 @@ export default function ProfilePage() {
                 </button>
               </div>
 
-              <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
+              <div className="flex items-center justify-between px-1 py-3">
                 <div>
                   <p className="text-sm font-medium text-[var(--text-primary)]">NOTIFICATIONS</p>
                   <p className="mt-0.5 text-xs text-[var(--text-muted)]">
@@ -347,8 +347,8 @@ export default function ProfilePage() {
             <SurfaceCard className="p-6">
               <SectionLabel label="ADMIN SETTINGS" />
 
-              <div className="space-y-3">
-                <div className="flex items-center justify-between rounded-2xl bg-[var(--bg-primary)] px-4 py-3">
+              <div className="divide-y divide-[var(--border-card)]/40">
+                <div className="flex items-center justify-between px-1 py-3">
                   <div>
                     <p className="text-sm font-medium text-[var(--text-primary)]">ADMIN MODE</p>
                   </div>
@@ -368,7 +368,7 @@ export default function ProfilePage() {
                   </button>
                 </div>
 
-                <div className="rounded-2xl bg-[var(--bg-primary)] px-4 py-4">
+                <div className="px-1 py-4">
                   <div>
                     <div className="flex items-start justify-between gap-3">
                       <div>

@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ExpressionSwipeGame } from './ExpressionSwipeGame'
 import { ListenFillGame } from './ListenFillGame'
+import { SurfaceCard } from '@/components/ui/AppPage'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { usePlayerStore } from '@/stores/usePlayerStore'
 import { trackEvent, AnalyticsEvents } from '@/lib/analytics'
@@ -77,15 +78,17 @@ export function GameLauncher() {
 
   return (
     <>
-      <div className="mb-8">
-        <h2 className="mb-3 text-xs font-medium uppercase tracking-wide text-[var(--text-secondary)]">
-          게임
-        </h2>
+      <SurfaceCard className="p-5">
+        <div className="mb-4 flex items-center justify-between gap-4">
+          <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+            GAMES
+          </p>
+        </div>
 
         <motion.button
           whileTap={{ scale: 0.985 }}
           onClick={launchShortsQuiz}
-          className="mb-3 w-full rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-4 text-left shadow-[var(--card-shadow)]"
+          className="mb-3 w-full rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)]/45 p-4 text-left"
         >
           <div className="flex items-center gap-3">
             <div
@@ -145,7 +148,7 @@ export function GameLauncher() {
             }
           />
         </div>
-      </div>
+      </SurfaceCard>
 
       <AnimatePresence>
         {activeGame && (
