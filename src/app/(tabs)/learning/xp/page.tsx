@@ -8,9 +8,12 @@ import { useUserStore } from '@/stores/useUserStore'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useLevelStore } from '@/stores/useLevelStore'
 import { useMilestoneStore } from '@/stores/useMilestoneStore'
-import { useTierStore, TIER_NAMES, TIER_DISCOUNTS, type TierLevel } from '@/stores/useTierStore'
+import { useTierStore, TIER_NAMES, type TierLevel } from '@/stores/useTierStore'
+import { DAILY_SESSION_XP_CAP } from '@/lib/xp/sessionXp'
+import { getStreakBonusXP } from '@/lib/xp/streakBonus'
 
-// Tier color mapping
+const DAILY_VIDEO_XP_TARGET = 15
+
 const TIER_COLORS: Record<TierLevel, { bg: string; text: string; bar: string }> = {
   0: { bg: 'bg-[var(--bg-secondary)]', text: 'text-[var(--text-secondary)]', bar: 'bg-[var(--text-muted)]' },
   1: { bg: 'bg-emerald-500/10', text: 'text-emerald-400', bar: 'bg-emerald-500' },
@@ -21,23 +24,35 @@ const TIER_COLORS: Record<TierLevel, { bg: string; text: string; bar: string }> 
 
 export default function XPPage() {
   const router = useRouter()
-  const totalXP = useUserStore((s) => s.getTotalXP())
-  const streakDays = useUserStore((s) => s.streakDays)
-  const totalSessions = useGameProgressStore((s) => s.getTotalSessions())
-  const videoXPTotal = useLevelStore((s) => s.getVideoXPTotal())
-  const achievedMilestones = useMilestoneStore((s) => s.achieved)
+  const totalXP = useUserStore((state) => state.getTotalXP())
+  const streakDays = useUserStore((state) => state.streakDays)
+  const dailySessionXP = useGameProgressStore((state) => state.dailySessionXP)
+  const dailySessionXPDate = useGameProgressStore((state) => state.dailySessionXPDate)
+  const streakBonusDate = useGameProgressStore((state) => state.streakBonusDate)
+  const dailyVideoXP = useLevelStore((state) => state.getDailyVideoXP())
+  const videoXPTotal = useLevelStore((state) => state.getVideoXPTotal())
+  const achievedMilestones = useMilestoneStore((state) => state.achieved)
 
-  // Tier data
-  const currentTier = useTierStore((s) => s.currentTier)
-  const recalculateTier = useTierStore((s) => s.recalculateTier)
-  const getTierProgress = useTierStore((s) => s.getTierProgress)
-  const getNextTierXp = useTierStore((s) => s.getNextTierXp)
-  const getCurrentMonthXp = useTierStore((s) => s.getCurrentMonthXp)
-  const getCurrentDiscount = useTierStore((s) => s.getCurrentDiscount)
+  const currentTier = useTierStore((state) => state.currentTier)
+  const recalculateTier = useTierStore((state) => state.recalculateTier)
+  const getTierProgress = useTierStore((state) => state.getTierProgress)
+  const getNextTierXp = useTierStore((state) => state.getNextTierXp)
+  const getCurrentMonthXp = useTierStore((state) => state.getCurrentMonthXp)
+  const getCurrentDiscount = useTierStore((state) => state.getCurrentDiscount)
 
   useEffect(() => {
     recalculateTier()
   }, [recalculateTier])
+
+  const today = new Date().toISOString().slice(0, 10)
+  const gameXpToday = dailySessionXPDate === today ? dailySessionXP : 0
+  const streakBonusToday = streakBonusDate === today ? getStreakBonusXP(streakDays) : 0
+  const gameXpPct = Math.min((gameXpToday / DAILY_SESSION_XP_CAP) * 100, 100)
+  const videoXpPct = Math.min((dailyVideoXP / DAILY_VIDEO_XP_TARGET) * 100, 100)
+  const milestoneXP = Object.values(achievedMilestones).reduce(
+    (sum, entry) => sum + (entry.xpAwarded ?? 0),
+    0,
+  )
 
   const { progress, next } = getTierProgress()
   const nextTierXp = getNextTierXp()
@@ -46,12 +61,6 @@ export default function XPPage() {
   const tierName = TIER_NAMES[currentTier]
   const colors = TIER_COLORS[currentTier]
   const isChampion = currentTier === 4
-
-  // Calculate milestone XP
-  const milestoneXP = Object.values(achievedMilestones).reduce(
-    (sum, entry) => sum + (entry.xpAwarded ?? 0),
-    0,
-  )
 
   const handleBack = () => {
     if (typeof window !== 'undefined' && window.history.length > 1) {
@@ -64,7 +73,6 @@ export default function XPPage() {
   return (
     <AppPage>
       <div className="mx-auto max-w-3xl space-y-4">
-        {/* Header */}
         <div className="mb-6 flex items-center gap-3">
           <button
             onClick={handleBack}
@@ -84,28 +92,43 @@ export default function XPPage() {
           </p>
         </div>
 
-        {/* XP OVERVIEW */}
         <SurfaceCard className="p-5">
           <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-            XP OVERVIEW
+            TOTAL XP
           </p>
-
-          {/* Total XP */}
-          <div className="mb-5">
-            <p className="text-[11px] uppercase tracking-wide text-[var(--text-muted)]">Total XP</p>
-            <p className="text-3xl font-bold text-[var(--text-primary)]">{totalXP}</p>
-          </div>
-
-          {/* Breakdown */}
-          <div className="space-y-2.5">
-            <XPRow label="Games" value={`${totalSessions}회 완료`} />
-            <XPRow label="Videos" value={`${videoXPTotal} XP`} />
-            <XPRow label="Streak" value={`${streakDays}일 연속`} />
-            <XPRow label="Milestones" value={`${milestoneXP} XP`} />
+          <p className="text-3xl font-bold text-[var(--text-primary)]">{totalXP}</p>
+          <p className="mt-2 text-sm text-[var(--text-secondary)]">
+            Games, videos, streak bonuses, and milestone rewards accumulate here.
+          </p>
+          <div className="mt-4 space-y-2.5">
+            <InfoRow label="Video XP Total" value={`${videoXPTotal} XP`} />
+            <InfoRow label="Milestones" value={`${milestoneXP} XP`} />
           </div>
         </SurfaceCard>
 
-        {/* TIER STATUS */}
+        <SurfaceCard className="p-5">
+          <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+            TODAY&apos;S BREAKDOWN
+          </p>
+          <div className="space-y-3.5">
+            <ProgressRow
+              label="Games"
+              value={`${gameXpToday}/${DAILY_SESSION_XP_CAP} XP`}
+              progress={gameXpPct}
+            />
+            <ProgressRow
+              label="Videos"
+              value={`${dailyVideoXP}/${DAILY_VIDEO_XP_TARGET} XP`}
+              progress={videoXpPct}
+            />
+            <InfoRow
+              label="Streak Bonus"
+              value={streakBonusToday > 0 ? `+${streakBonusToday} XP` : '0 XP'}
+              accent={streakBonusToday > 0}
+            />
+          </div>
+        </SurfaceCard>
+
         <SurfaceCard className="p-5">
           <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
             TIER STATUS
@@ -113,9 +136,7 @@ export default function XPPage() {
 
           <div className="flex items-center justify-between gap-3">
             <div className="flex items-center gap-2">
-              <span
-                className={`rounded-md px-2 py-0.5 text-[11px] font-bold ${colors.bg} ${colors.text}`}
-              >
+              <span className={`rounded-md px-2 py-0.5 text-[11px] font-bold ${colors.bg} ${colors.text}`}>
                 {tierName}
               </span>
               {discount > 0 && (
@@ -124,9 +145,7 @@ export default function XPPage() {
                 </span>
               )}
             </div>
-            <span className="text-[11px] text-[var(--text-muted)]">
-              이번 달 {monthlyXp.toLocaleString()} XP
-            </span>
+            <span className="text-[11px] text-[var(--text-muted)]">이번 달 {monthlyXp.toLocaleString()} XP</span>
           </div>
 
           {!isChampion && next !== null && (
@@ -147,22 +166,20 @@ export default function XPPage() {
 
           {isChampion && (
             <p className="mt-2 text-[10px] text-[var(--text-muted)]">
-              Champion -- 40% 할인 적용 중
+              Champion tier is active.
             </p>
           )}
         </SurfaceCard>
 
-        {/* HOW XP WORKS */}
         <SurfaceCard className="p-5">
           <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
             HOW XP WORKS
           </p>
           <ul className="space-y-1.5 text-sm text-[var(--text-secondary)]">
-            <li>게임 한 판 완료: +12~15 XP (일일 최대 40 XP)</li>
-            <li>영상 시청 완료: +3 XP (영상당 최대 10회)</li>
-            <li>연속 출석 보너스: 영상/게임 완주 시 +2~20 XP</li>
-            <li>데일리 미션 완료: 미션별 XP 보상</li>
-            <li>마일스톤 달성: 1회 보너스 XP</li>
+            <li>게임 세션 완료: +12~15 XP, 하루 최대 40 XP</li>
+            <li>영상 시청 완료: +3 XP, 오늘 표시 타깃은 15 XP</li>
+            <li>연속 학습 보너스: streak 조건 달성 시 추가 XP</li>
+            <li>마일스톤 달성: 1회성 보너스 XP</li>
           </ul>
         </SurfaceCard>
       </div>
@@ -170,15 +187,48 @@ export default function XPPage() {
   )
 }
 
-// ---------------------------------------------------------------------------
-// Sub-components
-// ---------------------------------------------------------------------------
-
-function XPRow({ label, value }: { label: string; value: string }) {
+function InfoRow({
+  label,
+  value,
+  accent = false,
+}: {
+  label: string
+  value: string
+  accent?: boolean
+}) {
   return (
     <div className="flex items-center justify-between">
       <span className="text-sm text-[var(--text-secondary)]">{label}</span>
-      <span className="text-sm font-medium text-[var(--text-primary)]">{value}</span>
+      <span className={`text-sm font-medium ${accent ? 'text-[var(--accent-text)]' : 'text-[var(--text-primary)]'}`}>
+        {value}
+      </span>
+    </div>
+  )
+}
+
+function ProgressRow({
+  label,
+  value,
+  progress,
+}: {
+  label: string
+  value: string
+  progress: number
+}) {
+  return (
+    <div>
+      <div className="mb-1 flex items-center justify-between text-[11px]">
+        <span className="text-[var(--text-secondary)]">{label}</span>
+        <span className="font-medium text-[var(--text-primary)]">{value}</span>
+      </div>
+      <div className="h-1.5 overflow-hidden rounded-full bg-[var(--bg-secondary)]">
+        <motion.div
+          initial={{ width: 0 }}
+          animate={{ width: `${Math.max(progress, 0)}%` }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          className="h-full rounded-full bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)]"
+        />
+      </div>
     </div>
   )
 }

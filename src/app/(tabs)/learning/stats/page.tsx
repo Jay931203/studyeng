@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
@@ -12,27 +12,38 @@ import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useMilestoneStore } from '@/stores/useMilestoneStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { useLevelStore } from '@/stores/useLevelStore'
-import { useLevelChallengeStore } from '@/stores/useLevelChallengeStore'
 import { LEVEL_LABELS, CEFR_ORDER } from '@/types/level'
 import type { CefrLevel, ChallengeTransition } from '@/types/level'
 
 export default function StatsPage() {
   const router = useRouter()
-  const level = useOnboardingStore((s) => s.level)
-  const setLevel = useOnboardingStore((s) => s.setLevel)
-  const streakDays = useUserStore((s) => s.streakDays)
-  const totalSessions = useGameProgressStore((s) => s.getTotalSessions())
-  const achievedMilestones = useMilestoneStore((s) => Object.keys(s.achieved).length)
-  const viewCounts = useWatchHistoryStore((s) => s.viewCounts)
-  const watchedVideoIds = useWatchHistoryStore((s) => s.watchedVideoIds)
-  const rawScore = useLevelStore((s) => s.rawScore)
-  const addManualLevelChange = useLevelStore((s) => s.addManualLevelChange)
+  const level = useOnboardingStore((state) => state.level)
+  const setLevel = useOnboardingStore((state) => state.setLevel)
+  const streakDays = useUserStore((state) => state.streakDays)
+  const totalSessions = useGameProgressStore((state) => state.getTotalSessions())
+  const achievedMilestones = useMilestoneStore((state) => Object.keys(state.achieved).length)
+  const viewCounts = useWatchHistoryStore((state) => state.viewCounts)
+  const watchedVideoIds = useWatchHistoryStore((state) => state.watchedVideoIds)
+  const rawScore = useLevelStore((state) => state.rawScore)
+  const addManualLevelChange = useLevelStore((state) => state.addManualLevelChange)
 
   const [showLevelPicker, setShowLevelPicker] = useState(false)
+  const [selectedLevel, setSelectedLevel] = useState<CefrLevel>(level)
   const [challengeTarget, setChallengeTarget] = useState<ChallengeTransition | null>(null)
 
   const totalWatched = watchedVideoIds.length
-  const totalViews = Object.values(viewCounts).reduce((sum, c) => sum + c, 0)
+  const totalViews = Object.values(viewCounts).reduce((sum, count) => sum + count, 0)
+
+  const currentIdx = CEFR_ORDER.indexOf(level)
+  const selectedIdx = CEFR_ORDER.indexOf(selectedLevel)
+  const selectionIsCurrent = selectedLevel === level
+  const selectionIsHigher = selectedIdx > currentIdx
+
+  const pickerHelperText = useMemo(() => {
+    if (selectionIsCurrent) return '현재 레벨입니다.'
+    if (selectionIsHigher) return '선택 후 하단 Challenge 버튼으로 도전합니다.'
+    return '낮은 레벨로는 바로 변경됩니다.'
+  }, [selectionIsCurrent, selectionIsHigher])
 
   const handleBack = () => {
     if (typeof window !== 'undefined' && window.history.length > 1) {
@@ -42,32 +53,33 @@ export default function StatsPage() {
     router.replace('/learning')
   }
 
-  const handleLevelSelect = (selectedLevel: CefrLevel) => {
-    const currentIdx = CEFR_ORDER.indexOf(level)
-    const selectedIdx = CEFR_ORDER.indexOf(selectedLevel)
+  const openLevelPicker = () => {
+    setSelectedLevel(level)
+    setShowLevelPicker(true)
+  }
 
-    if (selectedLevel === level) {
-      // Same level, just close
+  const handleLevelAction = () => {
+    if (selectionIsCurrent) {
       setShowLevelPicker(false)
       return
     }
 
-    if (selectedIdx < currentIdx) {
-      // Downgrade: instant, no challenge needed
-      addManualLevelChange(level, selectedLevel, rawScore, 0)
-      setLevel(selectedLevel)
-      setShowLevelPicker(false)
-    } else {
-      // Upgrade: trigger Level Challenge
+    if (selectionIsHigher) {
       setShowLevelPicker(false)
       setChallengeTarget(selectedLevel as ChallengeTransition)
+      return
     }
+
+    addManualLevelChange(level, selectedLevel, rawScore, 0)
+    setLevel(selectedLevel)
+    setShowLevelPicker(false)
   }
+
+  const actionLabel = selectionIsCurrent ? 'CURRENT LEVEL' : selectionIsHigher ? 'CHALLENGE' : 'APPLY LEVEL'
 
   return (
     <AppPage>
       <div className="mx-auto max-w-3xl space-y-4">
-        {/* Header */}
         <div className="mb-6 flex items-center gap-3">
           <button
             onClick={handleBack}
@@ -87,19 +99,16 @@ export default function StatsPage() {
           </p>
         </div>
 
-        {/* ENGLISH LEVEL — clickable to open picker */}
         <SurfaceCard className="p-5">
           <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
             ENGLISH LEVEL
           </p>
 
           <button
-            onClick={() => setShowLevelPicker(true)}
-            className="flex items-center gap-2 rounded-xl px-0 py-0 transition-opacity active:opacity-70"
+            onClick={openLevelPicker}
+            className="flex items-center gap-2 rounded-xl px-0 py-0 text-left transition-opacity active:opacity-70"
           >
-            <span className="text-2xl font-bold text-[var(--text-primary)]">
-              {LEVEL_LABELS[level]}
-            </span>
+            <span className="text-2xl font-bold text-[var(--text-primary)]">{LEVEL_LABELS[level]}</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -114,11 +123,10 @@ export default function StatsPage() {
             </svg>
           </button>
           <p className="mt-1.5 text-xs text-[var(--text-muted)]">
-            탭하여 레벨 변경
+            레벨을 선택한 뒤 적용하거나 도전할 수 있습니다.
           </p>
         </SurfaceCard>
 
-        {/* MY SUMMARY */}
         <SurfaceCard className="p-5">
           <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
             MY SUMMARY
@@ -128,16 +136,14 @@ export default function StatsPage() {
             <SummaryRow label="연속 학습" value={`${Math.max(streakDays, totalViews > 0 ? 1 : 0)}일`} />
             <SummaryRow label="게임 플레이" value={`${totalSessions}회`} />
             <SummaryRow label="마일스톤 달성" value={`${achievedMilestones}개`} />
-            <SummaryRow label="누적 시청" value={`${totalWatched}개`} />
+            <SummaryRow label="시청한 영상" value={`${totalWatched}개`} />
             <SummaryRow label="총 조회수" value={`${totalViews}회`} />
           </div>
         </SurfaceCard>
 
-        {/* VIEWING STATS */}
         <ViewingStats />
       </div>
 
-      {/* Level Picker Modal */}
       <AnimatePresence>
         {showLevelPicker && (
           <motion.div
@@ -147,7 +153,6 @@ export default function StatsPage() {
             transition={{ duration: 0.2 }}
             className="fixed inset-0 z-[100] flex items-end justify-center sm:items-center"
           >
-            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -156,7 +161,6 @@ export default function StatsPage() {
               onClick={() => setShowLevelPicker(false)}
             />
 
-            {/* Sheet */}
             <motion.div
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
@@ -166,54 +170,66 @@ export default function StatsPage() {
               style={{ backgroundColor: 'var(--bg-card)' }}
             >
               <p className="mb-5 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-                레벨 선택
+                LEVEL SELECTOR
               </p>
 
               <div className="space-y-1.5">
                 {CEFR_ORDER.map((cefrLevel) => {
+                  const isSelected = cefrLevel === selectedLevel
                   const isCurrent = cefrLevel === level
-                  const cefrIdx = CEFR_ORDER.indexOf(cefrLevel)
-                  const currentIdx = CEFR_ORDER.indexOf(level)
-                  const isHigher = cefrIdx > currentIdx
+                  const isHigher = CEFR_ORDER.indexOf(cefrLevel) > currentIdx
 
                   return (
                     <button
                       key={cefrLevel}
-                      onClick={() => handleLevelSelect(cefrLevel)}
-                      className={`flex w-full items-center justify-between rounded-xl px-4 py-3 text-left transition-colors ${
-                        isCurrent
-                          ? 'border border-[var(--accent-primary)]/30 bg-[var(--accent-primary)]/10'
-                          : 'border border-transparent hover:bg-[var(--bg-secondary)]'
-                      }`}
+                      type="button"
+                      onClick={() => setSelectedLevel(cefrLevel)}
+                      className="flex w-full items-center justify-between rounded-xl border px-4 py-3 text-left transition-colors"
+                      style={{
+                        borderColor: isSelected ? 'rgba(var(--accent-primary-rgb), 0.28)' : 'var(--border-card)',
+                        backgroundColor: isSelected ? 'var(--bg-secondary)' : 'var(--bg-card)',
+                      }}
                     >
                       <span
-                        className={`text-sm font-medium ${
-                          isCurrent ? 'text-[var(--accent-text)]' : 'text-[var(--text-primary)]'
-                        }`}
+                        className="text-sm font-medium"
+                        style={{ color: isSelected ? 'var(--accent-text)' : 'var(--text-primary)' }}
                       >
                         {LEVEL_LABELS[cefrLevel]}
                       </span>
                       <span className="text-xs text-[var(--text-muted)]">
-                        {isCurrent ? '현재' : isHigher ? 'Challenge' : ''}
+                        {isCurrent ? 'Current' : isHigher ? 'Challenge' : 'Switch'}
                       </span>
                     </button>
                   )
                 })}
               </div>
 
-              <button
-                onClick={() => setShowLevelPicker(false)}
-                className="mt-5 w-full rounded-xl py-3 text-sm font-medium text-[var(--text-secondary)] transition-colors"
-                style={{ backgroundColor: 'var(--bg-secondary)' }}
-              >
-                닫기
-              </button>
+              <p className="mt-4 text-xs text-[var(--text-muted)]">{pickerHelperText}</p>
+
+              <div className="mt-5 flex gap-3">
+                <button
+                  type="button"
+                  onClick={() => setShowLevelPicker(false)}
+                  className="flex-1 rounded-xl py-3 text-sm font-medium text-[var(--text-secondary)]"
+                  style={{ backgroundColor: 'var(--bg-secondary)' }}
+                >
+                  CLOSE
+                </button>
+                <button
+                  type="button"
+                  onClick={handleLevelAction}
+                  disabled={selectionIsCurrent}
+                  className="flex-1 rounded-xl py-3 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-45"
+                  style={{ backgroundColor: 'var(--accent-primary)' }}
+                >
+                  {actionLabel}
+                </button>
+              </div>
             </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
 
-      {/* Level Challenge fullscreen overlay */}
       <AnimatePresence>
         {challengeTarget && (
           <motion.div
@@ -244,10 +260,6 @@ export default function StatsPage() {
     </AppPage>
   )
 }
-
-// ---------------------------------------------------------------------------
-// Sub-components
-// ---------------------------------------------------------------------------
 
 function SummaryRow({ label, value }: { label: string; value: string }) {
   return (

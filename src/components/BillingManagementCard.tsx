@@ -645,15 +645,25 @@ export function BillingManagementCard({
 
         {isDetail && (
           <>
-            <div className="flex items-start justify-between gap-3">
-              <p className="text-lg font-semibold text-[var(--text-primary)]">
-                {currentStatusLabel}
+            <div className="space-y-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--text-muted)]">
+                STATUS
               </p>
-              {currentPremium && (
-                <span className="rounded-full bg-emerald-500/15 px-2.5 py-1 text-xs font-semibold text-emerald-300">
-                  PRO
-                </span>
-              )}
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <p className="text-lg font-semibold text-[var(--text-primary)]">
+                    {currentStatusLabel}
+                  </p>
+                  {shouldShowPlanLabel && (
+                    <p className="mt-1 text-sm text-[var(--text-secondary)]">{currentPlanLabel}</p>
+                  )}
+                </div>
+                {currentPremium && (
+                  <span className="rounded-full bg-emerald-500/15 px-2.5 py-1 text-xs font-semibold text-emerald-300">
+                    PRO
+                  </span>
+                )}
+              </div>
             </div>
 
             <div className="divide-y divide-[var(--border-card)]/40">
