@@ -19,7 +19,6 @@ import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
-import { useLevelStore, getLevelGaugeProgress } from '@/stores/useLevelStore'
 import { useLevelChallengeStore } from '@/stores/useLevelChallengeStore'
 import { LEVEL_LABELS, CEFR_ORDER, displayLevelName } from '@/types/level'
 
@@ -36,7 +35,6 @@ export default function LearningPage() {
   const totalXP = useUserStore((state) => state.getTotalXP())
   const likes = useLikeStore((state) => state.likes)
   const level = useOnboardingStore((s) => s.level)
-  const rawScore = useLevelStore((s) => s.rawScore)
   const canChallenge = useLevelChallengeStore((s) => s.canChallenge)
   const getTargetLevel = useLevelChallengeStore((s) => s.getTargetLevel)
   const getAttemptCount = useLevelChallengeStore((s) => s.getAttemptCount)
@@ -47,7 +45,6 @@ export default function LearningPage() {
     () => Object.values(viewCounts).reduce((sum, count) => sum + count, 0),
     [viewCounts],
   )
-  const levelProgress = getLevelGaugeProgress(rawScore, level)
   const levelIdx = CEFR_ORDER.indexOf(level)
   const nextLevel = levelIdx < CEFR_ORDER.length - 1 ? CEFR_ORDER[levelIdx + 1] : null
   const nextLevelLabel = nextLevel ? LEVEL_LABELS[nextLevel] : null
@@ -91,23 +88,6 @@ export default function LearningPage() {
               value={`${Math.max(streakDays, totalViews > 0 ? 1 : 0)}일`}
               className="text-center"
             />
-          </div>
-
-          <div className="mt-4">
-            <div className="mb-1.5 flex items-center justify-between gap-3 text-[11px] text-[var(--text-muted)]">
-              <span>CHALLENGE READINESS</span>
-              <span>
-                {nextLevelLabel ? `${Math.round(levelProgress * 100)}%` : 'MAX LEVEL'}
-              </span>
-            </div>
-            <div className="h-[4px] w-full overflow-hidden rounded-full bg-[var(--border-card)]">
-              <motion.div
-                className="h-full rounded-full bg-[var(--accent-primary)]"
-                initial={{ width: 0 }}
-                animate={{ width: `${levelProgress * 100}%` }}
-                transition={{ duration: 0.6, ease: 'easeOut' }}
-              />
-            </div>
           </div>
         </SurfaceCard>
 

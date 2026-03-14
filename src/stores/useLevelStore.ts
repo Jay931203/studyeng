@@ -77,6 +77,10 @@ interface LevelState {
   // Video watching XP (tracked separately, adds to rawScore)
   videoXP: Record<string, number>
 
+  // Daily video XP tracking
+  dailyVideoXP: number
+  dailyVideoXPDate: string
+
   // Level history
   levelHistory: LevelEvent[]
 
@@ -102,6 +106,7 @@ interface LevelState {
   // Getters
   getVideoXPTotal: () => number
   getTotalAbsorptionXP: () => number
+  getDailyVideoXP: () => number
 }
 
 // ---------------------------------------------------------------------------
@@ -207,6 +212,8 @@ export const useLevelStore = create<LevelState>()(
       absorptionScore: 0,
       rawScore: 0,
       videoXP: {},
+      dailyVideoXP: 0,
+      dailyVideoXPDate: '',
       levelHistory: [],
       pendingLevelUp: null,
       videoCompletionLog: [],
@@ -233,19 +240,24 @@ export const useLevelStore = create<LevelState>()(
         const xpGained = completionRate >= 0.8 ? 3 : Math.round(completionRate * 3 * 10) / 10
         if (xpGained <= 0) return 0
 
+        const today = new Date().toISOString().slice(0, 10)
+
         set((state) => {
           const newVideoXP = {
             ...state.videoXP,
             [videoId]: currentAwards + 1,
           }
-          // Recalculate rawScore with new video XP
-          const videoXPTotal = Object.values(newVideoXP).reduce((sum, count) => sum + count * 3, 0)
           // We don't have familiarEntries here, so just add the delta to rawScore
           const newRawScore = state.rawScore + xpGained
+
+          // Track daily video XP
+          const currentDailyVideoXP = state.dailyVideoXPDate === today ? state.dailyVideoXP : 0
 
           return {
             videoXP: newVideoXP,
             rawScore: newRawScore,
+            dailyVideoXP: currentDailyVideoXP + xpGained,
+            dailyVideoXPDate: today,
           }
         })
 
@@ -345,6 +357,12 @@ export const useLevelStore = create<LevelState>()(
 
       getTotalAbsorptionXP: () => {
         return get().rawScore
+      },
+
+      getDailyVideoXP: () => {
+        const today = new Date().toISOString().slice(0, 10)
+        const state = get()
+        return state.dailyVideoXPDate === today ? state.dailyVideoXP : 0
       },
     }),
     {
