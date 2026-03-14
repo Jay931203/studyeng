@@ -2,23 +2,25 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import { AnimatePresence } from 'framer-motion'
 import { TodayDashboard } from '@/components/DailyMissions'
 import { SavedPhraseCard } from '@/components/SavedPhraseCard'
 import { WatchHistory } from '@/components/WatchHistory'
 import { GameLauncher } from '@/components/games/GameLauncher'
-import { AppPage, MetricCard, SurfaceCard } from '@/components/ui/AppPage'
+import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import { categories } from '@/data/seed-videos'
 import { getCatalogSeriesById, getCatalogVideoById } from '@/lib/catalog'
+import { getStreakProgress } from '@/lib/learningDashboard'
 import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useLikeStore } from '@/stores/useLikeStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
+import { TIER_NAMES, useTierStore } from '@/stores/useTierStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
-import { LEVEL_LABELS, CEFR_ORDER } from '@/types/level'
+import { CEFR_ORDER, LEVEL_LABELS } from '@/types/level'
 
 const categoryLabels = Object.fromEntries(
   categories.map((category) => [category.id, category.label]),
@@ -30,17 +32,30 @@ export default function LearningPage() {
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)
   const viewCounts = useWatchHistoryStore((state) => state.viewCounts)
   const streakDays = useUserStore((state) => state.streakDays)
-  const totalXP = useUserStore((state) => state.getTotalXP())
   const likes = useLikeStore((state) => state.likes)
-  const level = useOnboardingStore((s) => s.level)
+  const level = useOnboardingStore((state) => state.level)
+  const currentTier = useTierStore((state) => state.currentTier)
+  const getTierProgress = useTierStore((state) => state.getTierProgress)
+  const getNextTierXp = useTierStore((state) => state.getNextTierXp)
+  const recalculateTier = useTierStore((state) => state.recalculateTier)
+
+  useEffect(() => {
+    recalculateTier()
+  }, [recalculateTier])
 
   const totalViews = useMemo(
     () => Object.values(viewCounts).reduce((sum, count) => sum + count, 0),
     [viewCounts],
   )
+
   const levelIdx = CEFR_ORDER.indexOf(level)
   const nextLevel = levelIdx < CEFR_ORDER.length - 1 ? CEFR_ORDER[levelIdx + 1] : null
   const nextLevelLabel = nextLevel ? LEVEL_LABELS[nextLevel] : null
+  const effectiveStreakDays = Math.max(streakDays, totalViews > 0 ? 1 : 0)
+  const streakProgress = getStreakProgress(effectiveStreakDays)
+  const tierProgress = getTierProgress()
+  const nextTierXp = getNextTierXp()
+
   const likedVideos = useMemo(
     () =>
       Object.keys(likes)
@@ -52,6 +67,7 @@ export default function LearningPage() {
   return (
     <AppPage>
       <TodayDashboard />
+
       <div className="mt-6 space-y-6">
         <SurfaceCard className="p-5">
           <div className="mb-4 flex items-center justify-between gap-4">
@@ -66,20 +82,40 @@ export default function LearningPage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-            <MetricCard
-              label="영어 레벨"
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
+            <OverviewStatCard
+              label="Level"
               value={LEVEL_LABELS[level]}
-              detail={nextLevelLabel ? `Next ${nextLevelLabel}` : 'MAX'}
-              tone="accent"
-              className="text-center"
+              detail={nextLevelLabel ? `Next ${nextLevelLabel}` : 'Maximum level reached'}
+              accent
             />
-            <MetricCard label="XP" value={totalXP} className="text-center" />
-            <MetricCard label="저장 표현" value={`${phrases.length}개`} className="text-center" />
-            <MetricCard
-              label="연속 학습"
-              value={`${Math.max(streakDays, totalViews > 0 ? 1 : 0)}일`}
-              className="text-center"
+
+            <OverviewProgressCard
+              label="Tier Status"
+              value={TIER_NAMES[currentTier]}
+              detail={
+                tierProgress.next !== null
+                  ? `${nextTierXp.toLocaleString()} XP to ${TIER_NAMES[tierProgress.next]}`
+                  : 'Champion tier active'
+              }
+              progress={tierProgress.progress}
+            />
+
+            <OverviewStatCard
+              label="Saved Expressions"
+              value={phrases.length}
+              detail={`${likedVideos.length} liked videos`}
+            />
+
+            <OverviewProgressCard
+              label="Streak"
+              value={`${effectiveStreakDays} days`}
+              detail={
+                streakProgress.remaining > 0
+                  ? `${streakProgress.remaining} days to ${streakProgress.target}-day milestone`
+                  : `${streakProgress.target}-day milestone reached`
+              }
+              progress={streakProgress.progress}
             />
           </div>
         </SurfaceCard>
@@ -199,5 +235,64 @@ export default function LearningPage() {
         <WatchHistory />
       </div>
     </AppPage>
+  )
+}
+
+function OverviewStatCard({
+  label,
+  value,
+  detail,
+  accent = false,
+}: {
+  label: string
+  value: string | number
+  detail: string
+  accent?: boolean
+}) {
+  return (
+    <div
+      className="rounded-2xl border px-4 py-3"
+      style={{
+        borderColor: accent ? 'rgba(var(--accent-primary-rgb), 0.2)' : 'var(--border-card)',
+        backgroundColor: accent ? 'var(--accent-glow)' : 'var(--bg-secondary)',
+      }}
+    >
+      <p className="text-xs text-[var(--text-muted)]">{label}</p>
+      <p className="mt-2 text-lg font-semibold text-[var(--text-primary)]">{value}</p>
+      <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">{detail}</p>
+    </div>
+  )
+}
+
+function OverviewProgressCard({
+  label,
+  value,
+  detail,
+  progress,
+}: {
+  label: string
+  value: string
+  detail: string
+  progress: number
+}) {
+  return (
+    <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-4 py-3">
+      <div className="flex items-start justify-between gap-3">
+        <div>
+          <p className="text-xs text-[var(--text-muted)]">{label}</p>
+          <p className="mt-2 text-lg font-semibold text-[var(--text-primary)]">{value}</p>
+        </div>
+        <span className="text-xs font-medium text-[var(--accent-text)]">
+          {Math.round(progress * 100)}%
+        </span>
+      </div>
+      <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">{detail}</p>
+      <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-[var(--bg-card)]">
+        <div
+          className="h-full rounded-full bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)]"
+          style={{ width: `${Math.max(progress, 0) * 100}%` }}
+        />
+      </div>
+    </div>
   )
 }

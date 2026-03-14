@@ -4,18 +4,27 @@ import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
-import { useUserStore } from '@/stores/useUserStore'
+import {
+  DAILY_VIDEO_XP_TARGET,
+  getStreakProgress,
+  getTodayIsoDate,
+  getTodayMilestoneSummary,
+  MILESTONE_EXPLAINER,
+} from '@/lib/learningDashboard'
+import { DAILY_SESSION_XP_CAP } from '@/lib/xp/sessionXp'
+import { getStreakBonusXP } from '@/lib/xp/streakBonus'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useLevelStore } from '@/stores/useLevelStore'
 import { useMilestoneStore } from '@/stores/useMilestoneStore'
-import { useTierStore, TIER_NAMES, type TierLevel } from '@/stores/useTierStore'
-import { DAILY_SESSION_XP_CAP } from '@/lib/xp/sessionXp'
-import { getStreakBonusXP } from '@/lib/xp/streakBonus'
-
-const DAILY_VIDEO_XP_TARGET = 15
+import { TIER_NAMES, type TierLevel, useTierStore } from '@/stores/useTierStore'
+import { useUserStore } from '@/stores/useUserStore'
 
 const TIER_COLORS: Record<TierLevel, { bg: string; text: string; bar: string }> = {
-  0: { bg: 'bg-[var(--bg-secondary)]', text: 'text-[var(--text-secondary)]', bar: 'bg-[var(--text-muted)]' },
+  0: {
+    bg: 'bg-[var(--bg-secondary)]',
+    text: 'text-[var(--text-secondary)]',
+    bar: 'bg-[var(--text-muted)]',
+  },
   1: { bg: 'bg-emerald-500/10', text: 'text-emerald-400', bar: 'bg-emerald-500' },
   2: { bg: 'bg-sky-500/10', text: 'text-sky-400', bar: 'bg-sky-500' },
   3: { bg: 'bg-violet-500/10', text: 'text-violet-400', bar: 'bg-violet-500' },
@@ -32,7 +41,6 @@ export default function XPPage() {
   const dailyVideoXP = useLevelStore((state) => state.getDailyVideoXP())
   const videoXPTotal = useLevelStore((state) => state.getVideoXPTotal())
   const achievedMilestones = useMilestoneStore((state) => state.achieved)
-
   const currentTier = useTierStore((state) => state.currentTier)
   const recalculateTier = useTierStore((state) => state.recalculateTier)
   const getTierProgress = useTierStore((state) => state.getTierProgress)
@@ -44,17 +52,20 @@ export default function XPPage() {
     recalculateTier()
   }, [recalculateTier])
 
-  const today = new Date().toISOString().slice(0, 10)
+  const today = getTodayIsoDate()
   const gameXpToday = dailySessionXPDate === today ? dailySessionXP : 0
   const streakBonusToday = streakBonusDate === today ? getStreakBonusXP(streakDays) : 0
+  const todayMilestones = getTodayMilestoneSummary(achievedMilestones, today)
+  const todayTotal = gameXpToday + dailyVideoXP + streakBonusToday + todayMilestones.xp
   const gameXpPct = Math.min((gameXpToday / DAILY_SESSION_XP_CAP) * 100, 100)
   const videoXpPct = Math.min((dailyVideoXP / DAILY_VIDEO_XP_TARGET) * 100, 100)
+  const streakProgress = getStreakProgress(streakDays)
   const milestoneXP = Object.values(achievedMilestones).reduce(
     (sum, entry) => sum + (entry.xpAwarded ?? 0),
     0,
   )
 
-  const { progress, next } = getTierProgress()
+  const { next, progress } = getTierProgress()
   const nextTierXp = getNextTierXp()
   const monthlyXp = getCurrentMonthXp()
   const discount = getCurrentDiscount()
@@ -102,14 +113,21 @@ export default function XPPage() {
           </p>
           <div className="mt-4 space-y-2.5">
             <InfoRow label="Video XP Total" value={`${videoXPTotal} XP`} />
-            <InfoRow label="Milestones" value={`${milestoneXP} XP`} />
+            <InfoRow label="Milestone XP Total" value={`${milestoneXP} XP`} />
+            <InfoRow label="Current Month XP" value={`${monthlyXp.toLocaleString()} XP`} />
           </div>
         </SurfaceCard>
 
         <SurfaceCard className="p-5">
-          <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-            TODAY&apos;S BREAKDOWN
-          </p>
+          <div className="mb-4 flex items-center justify-between gap-3">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+              TODAY&apos;S BREAKDOWN
+            </p>
+            <span className="text-sm font-semibold text-[var(--text-primary)]">
+              +{todayTotal} XP
+            </span>
+          </div>
+
           <div className="space-y-3.5">
             <ProgressRow
               label="Games"
@@ -122,11 +140,23 @@ export default function XPPage() {
               progress={videoXpPct}
             />
             <InfoRow
+              label="Milestones"
+              value={
+                todayMilestones.count > 0
+                  ? `${todayMilestones.count} unlocked - +${todayMilestones.xp} XP`
+                  : '0 unlocked - 0 XP'
+              }
+            />
+            <InfoRow
               label="Streak Bonus"
               value={streakBonusToday > 0 ? `+${streakBonusToday} XP` : '0 XP'}
               accent={streakBonusToday > 0}
             />
           </div>
+
+          <p className="mt-4 text-[11px] leading-relaxed text-[var(--text-muted)]">
+            {MILESTONE_EXPLAINER}
+          </p>
         </SurfaceCard>
 
         <SurfaceCard className="p-5">
@@ -141,14 +171,16 @@ export default function XPPage() {
               </span>
               {discount > 0 && (
                 <span className="text-[11px] font-medium text-[var(--text-secondary)]">
-                  {discount}% 할인
+                  {discount}% off
                 </span>
               )}
             </div>
-            <span className="text-[11px] text-[var(--text-muted)]">이번 달 {monthlyXp.toLocaleString()} XP</span>
+            <span className="text-[11px] text-[var(--text-muted)]">
+              {monthlyXp.toLocaleString()} XP this month
+            </span>
           </div>
 
-          {!isChampion && next !== null && (
+          {!isChampion && next !== null ? (
             <div className="mt-3">
               <div className="h-[3px] w-full overflow-hidden rounded-full bg-[var(--border-card)]">
                 <motion.div
@@ -159,16 +191,39 @@ export default function XPPage() {
                 />
               </div>
               <p className="mt-1.5 text-[10px] text-[var(--text-muted)]">
-                다음 등급까지 {nextTierXp.toLocaleString()} XP
+                {nextTierXp.toLocaleString()} XP to {TIER_NAMES[next]}
               </p>
             </div>
+          ) : (
+            <p className="mt-2 text-[10px] text-[var(--text-muted)]">Champion tier is active.</p>
           )}
+        </SurfaceCard>
 
-          {isChampion && (
-            <p className="mt-2 text-[10px] text-[var(--text-muted)]">
-              Champion tier is active.
-            </p>
-          )}
+        <SurfaceCard className="p-5">
+          <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+            STREAK STATUS
+          </p>
+          <div className="flex items-center justify-between gap-3">
+            <div>
+              <p className="text-2xl font-bold text-[var(--text-primary)]">{streakDays}</p>
+              <p className="mt-1 text-xs text-[var(--text-muted)]">consecutive days</p>
+            </div>
+            <div className="text-right text-[11px] text-[var(--text-secondary)]">
+              {streakProgress.remaining > 0 ? (
+                <p>{streakProgress.remaining} days to {streakProgress.target}-day milestone</p>
+              ) : (
+                <p>{streakProgress.target}-day milestone reached</p>
+              )}
+            </div>
+          </div>
+          <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-[var(--bg-secondary)]">
+            <motion.div
+              initial={{ width: 0 }}
+              animate={{ width: `${Math.max(streakProgress.progress, 0) * 100}%` }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+              className="h-full rounded-full bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)]"
+            />
+          </div>
         </SurfaceCard>
 
         <SurfaceCard className="p-5">
@@ -176,10 +231,10 @@ export default function XPPage() {
             HOW XP WORKS
           </p>
           <ul className="space-y-1.5 text-sm text-[var(--text-secondary)]">
-            <li>게임 세션 완료: +12~15 XP, 하루 최대 40 XP</li>
-            <li>영상 시청 완료: +3 XP, 오늘 표시 타깃은 15 XP</li>
-            <li>연속 학습 보너스: streak 조건 달성 시 추가 XP</li>
-            <li>마일스톤 달성: 1회성 보너스 XP</li>
+            <li>Game sessions award XP up to {DAILY_SESSION_XP_CAP} XP per day.</li>
+            <li>Completed videos award XP up to {DAILY_VIDEO_XP_TARGET} XP per day.</li>
+            <li>Streak bonuses add extra XP when the daily streak condition is met.</li>
+            <li>Milestones are one-time bonuses for first clears, streak records, and tier unlocks.</li>
           </ul>
         </SurfaceCard>
       </div>
