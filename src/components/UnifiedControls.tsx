@@ -724,16 +724,6 @@ export function UnifiedControls({
             >
               <path d="M4.755 10.059a7.5 7.5 0 0112.548-3.364l1.903 1.903H14.25a.75.75 0 000 1.5h6a.75.75 0 00.75-.75v-6a.75.75 0 00-1.5 0v3.068l-1.903-1.903A9 9 0 003.306 9.67a.75.75 0 101.45.388zm14.49 3.882a7.5 7.5 0 01-12.548 3.364l-1.903-1.903H9.75a.75.75 0 000-1.5h-6a.75.75 0 00-.75.75v6a.75.75 0 001.5 0v-3.068l1.903 1.903A9 9 0 0020.694 14.33a.75.75 0 10-1.45-.388z" />
             </svg>
-            <span
-              className={playbackBadgeClassName}
-              style={{
-                backgroundColor: playbackOptionsActive ? 'var(--accent-glow)' : 'var(--player-panel)',
-                color: playbackOptionsActive ? 'var(--accent-text)' : 'var(--player-text)',
-                border: '1px solid var(--player-control-border)',
-              }}
-            >
-              {playbackBadgeSummaryLabel}
-            </span>
           </button>
 
           {isLooping && (

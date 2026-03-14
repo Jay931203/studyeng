@@ -48,14 +48,14 @@ const WEB_PLAN_OPTIONS: Record<BillingPlan, PlanOption> = {
   yearly: {
     id: 'yearly',
     label: 'YEARLY',
-    detail: 'Best value for learners staying in the routine long term.',
+    detail: '장기 학습자를 위한 최적의 요금제',
     price: 'KRW 79,900 / year',
     highlight: 'BEST VALUE',
   },
   monthly: {
     id: 'monthly',
     label: 'MONTHLY',
-    detail: 'Lower commitment if you want to start small.',
+    detail: '부담 없이 시작하고 싶다면',
     price: 'KRW 9,900 / month',
   },
 }
@@ -378,8 +378,8 @@ export function BillingManagementCard({
           },
         ]
       : []),
-    { label: 'Manage', value: managementLabel, detail: null as string | null },
-    { label: scheduleLabel, value: scheduleValue, detail: null as string | null },
+    { label: 'Manage', value: managementLabel || 'N/A', detail: null as string | null },
+    { label: scheduleLabel, value: scheduleValue || 'N/A', detail: null as string | null },
   ]
 
   const planOptions = useMemo(() => {

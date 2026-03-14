@@ -272,15 +272,19 @@ function ExpressionCard({
 }
 
 const POS_LABELS: Record<string, string> = {
-  noun: 'noun',
-  verb: 'verb',
-  adj: 'adj',
-  adv: 'adv',
-  prep: 'prep',
+  noun: '명사',
+  verb: '동사',
+  adj: '형용사',
+  adv: '부사',
+  prep: '전치사',
   conj: 'conj',
   det: 'det',
-  pron: 'pron',
+  pron: '대명사',
   intj: 'intj',
+  adjective: '형용사',
+  adverb: '부사',
+  preposition: '전치사',
+  pronoun: '대명사',
 }
 
 function WordCard({

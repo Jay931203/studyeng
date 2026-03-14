@@ -126,8 +126,8 @@ function FamiliarWordCard({
   onReset: () => void
 }) {
   const posLabels: Record<string, string> = {
-    noun: 'n.', verb: 'v.', adjective: 'adj.', adverb: 'adv.',
-    preposition: 'prep.', conjunction: 'conj.', pronoun: 'pron.',
+    noun: '명사', verb: '동사', adjective: '형용사', adverb: '부사',
+    preposition: '전치사', conjunction: 'conj.', pronoun: '대명사',
     interjection: 'int.', determiner: 'det.',
   }
 
