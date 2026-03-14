@@ -65,17 +65,17 @@ export function getStreakBonusProgress(streakDays: number, streakAwardedToday: b
   if (streakDays <= 0) {
     return {
       progress: 0,
-      valueLabel: 'Locked',
-      detail: 'Start a streak to unlock the daily bonus.',
+      valueLabel: '잠김',
+      detail: '연속 학습을 시작하면 일일 보너스가 열립니다.',
     }
   }
 
   return {
     progress: streakAwardedToday ? 1 : 0,
-    valueLabel: streakAwardedToday ? 'Claimed' : 'Ready',
+    valueLabel: streakAwardedToday ? '수령 완료' : '수령 가능',
     detail: streakAwardedToday
-      ? 'Today streak bonus already collected.'
-      : 'Complete a session today to collect the streak bonus.',
+      ? '오늘의 연속 학습 보너스를 이미 받았습니다.'
+      : '오늘 세션을 완료하면 연속 학습 보너스를 받을 수 있습니다.',
   }
 }
 
@@ -112,7 +112,7 @@ export function buildMilestoneMissions(
       progress,
       claimed,
       ready,
-      statusLabel: claimed ? 'Claimed' : ready ? 'Ready to claim' : `${Math.min(current, def.target)}/${def.target}`,
+      statusLabel: claimed ? '수령 완료' : ready ? '지금 수령 가능' : `${Math.min(current, def.target)}/${def.target}`,
     }
   })
 }
@@ -136,7 +136,7 @@ export function getMilestoneSummary(missions: MilestoneMission[]) {
 function formatMonthLabel(monthKey: string) {
   const [year, month] = monthKey.split('-').map(Number)
   const date = new Date(year, month - 1, 1)
-  return new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric' }).format(date)
+  return new Intl.DateTimeFormat('ko-KR', { month: 'short', year: 'numeric' }).format(date)
 }
 
 export function buildMonthlyXpTrend(
@@ -164,11 +164,11 @@ export function buildMonthlyXpTrend(
 }
 
 export const MILESTONE_EXPLAINER =
-  'Milestones are manual XP claims for video clears, game clears, streak records, challenge clears, and tier unlocks.'
+  '마일스톤은 영상 완료, 게임 완료, 연속 학습 기록, 챌린지 클리어, 티어 해금 때 직접 수령하는 XP 보상입니다.'
 
-export const MONTHLY_ACTIVITY_EXPLAINER = `Monthly activity below ${MONTHLY_ACTIVE_THRESHOLD} XP counts as inactive and can put your tier status at risk.`
+export const MONTHLY_ACTIVITY_EXPLAINER = `월간 활동 XP가 ${MONTHLY_ACTIVE_THRESHOLD} XP 아래로 내려가면 비활성 상태로 계산되어 현재 티어 유지에 불리할 수 있습니다.`
 
 export function getTierStatusDetail(nextTierXp: number, nextTier: TierLevel | null) {
-  if (nextTier === null) return 'Top tier active'
-  return `${nextTierXp.toLocaleString()} XP to ${TIER_NAMES[nextTier]}`
+  if (nextTier === null) return '최상위 티어 유지 중'
+  return `${TIER_NAMES[nextTier]}까지 ${nextTierXp.toLocaleString()} XP 남음`
 }

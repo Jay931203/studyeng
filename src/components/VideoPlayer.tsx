@@ -468,24 +468,6 @@ export function VideoPlayer({
     useDailyMissionStore.getState().incrementMission('play-game')
   }
 
-  const handleGameContinue = () => {
-    if (gameSentenceIndex === null) return
-
-    setFreezeSubIndex(gameSentenceIndex)
-    playRef.current?.()
-
-    if (gameContinueTimerRef.current) {
-      clearTimeout(gameContinueTimerRef.current)
-    }
-
-    gameContinueTimerRef.current = window.setTimeout(() => {
-      setFreezeSubIndex(null)
-      clearGame()
-      playRef.current?.()
-      gameContinueTimerRef.current = null
-    }, 3000)
-  }
-
   const gamePromptLine =
     freezeSubIndex !== null && subtitles[freezeSubIndex]
       ? subtitles[freezeSubIndex].en
@@ -505,6 +487,29 @@ export function VideoPlayer({
       setFeedSwipeLocked(false)
     }
   }, [setFeedSwipeLocked, showGameOverlay, showPriming])
+
+  useEffect(() => {
+    if (gameResult === null) return
+
+    if (gameContinueTimerRef.current) {
+      clearTimeout(gameContinueTimerRef.current)
+    }
+
+    const resumeDelay = gameResult === 'wrong' ? 1900 : 1500
+    gameContinueTimerRef.current = window.setTimeout(() => {
+      setFreezeSubIndex(null)
+      clearGame()
+      playRef.current?.()
+      gameContinueTimerRef.current = null
+    }, resumeDelay)
+
+    return () => {
+      if (gameContinueTimerRef.current) {
+        clearTimeout(gameContinueTimerRef.current)
+        gameContinueTimerRef.current = null
+      }
+    }
+  }, [clearGame, gameResult, setFreezeSubIndex])
 
   const subtitleArea = (
     <LyricsSubtitles
@@ -801,7 +806,6 @@ export function VideoPlayer({
             correctIndex={gameCorrectIndex}
             result={gameResult}
             onAnswer={handleGameAnswer}
-            onContinue={handleGameContinue}
           />
         </div>
       )}

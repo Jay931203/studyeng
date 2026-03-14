@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback, useRef } from 'react'
+import { useState, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 interface SubtitleGameProps {
@@ -8,7 +8,6 @@ interface SubtitleGameProps {
   correctIndex: number
   result: 'correct' | 'wrong' | null
   onAnswer: (choiceIndex: number) => void
-  onContinue: () => void
   currentLine?: string | null
   className?: string
 }
@@ -18,12 +17,10 @@ export function SubtitleGame({
   correctIndex,
   result,
   onAnswer,
-  onContinue,
   currentLine,
   className,
 }: SubtitleGameProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
-  const continueTimerRef = useRef<number | null>(null)
 
   const handleChoiceClick = useCallback(
     (idx: number) => {
@@ -33,26 +30,6 @@ export function SubtitleGame({
     },
     [result, onAnswer],
   )
-
-  // Auto-continue after answering
-  useEffect(() => {
-    if (result === null) return
-
-    continueTimerRef.current = window.setTimeout(() => {
-      onContinue()
-    }, 1500)
-
-    return () => {
-      if (continueTimerRef.current) clearTimeout(continueTimerRef.current)
-    }
-  }, [result, onContinue])
-
-  // Cleanup on unmount
-  useEffect(() => {
-    return () => {
-      if (continueTimerRef.current) clearTimeout(continueTimerRef.current)
-    }
-  }, [])
 
   return (
     <AnimatePresence>

@@ -134,23 +134,23 @@ export default function XPPage() {
 
         <SurfaceCard className="p-5">
           <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-            TOTAL XP
+            총 XP
           </p>
           <p className="text-3xl font-bold text-[var(--text-primary)]">{totalXP}</p>
           <p className="mt-2 text-sm text-[var(--text-secondary)]">
-            Games, videos, streak bonuses, and claimed milestones accumulate here.
+            게임, 영상, 연속 학습 보너스, 마일스톤 수령 XP가 모두 여기에 누적됩니다.
           </p>
           <div className="mt-4 space-y-2.5">
-            <InfoRow label="Video XP Total" value={`${videoXPTotal} XP`} />
-            <InfoRow label="Milestone XP Total" value={`${milestoneXP} XP`} />
-            <InfoRow label="Current Month XP" value={`${monthlyXp.toLocaleString()} XP`} />
+            <InfoRow label="영상 누적 XP" value={`${videoXPTotal} XP`} />
+            <InfoRow label="마일스톤 누적 XP" value={`${milestoneXP} XP`} />
+            <InfoRow label="이번 달 XP" value={`${monthlyXp.toLocaleString()} XP`} />
           </div>
         </SurfaceCard>
 
         <SurfaceCard className="p-5">
           <div className="mb-4 flex items-center justify-between gap-3">
             <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-              TODAY&apos;S BREAKDOWN
+              오늘의 XP
             </p>
             <span className="text-sm font-semibold text-[var(--text-primary)]">
               +{todayTotal} XP
@@ -159,23 +159,23 @@ export default function XPPage() {
 
           <div className="space-y-3.5">
             <ProgressRow
-              label="Games"
+              label="게임"
               value={`${gameXpToday}/${DAILY_SESSION_XP_CAP} XP`}
               progress={gameXpPct}
             />
             <ProgressRow
-              label="Videos"
+              label="영상"
               value={`${dailyVideoXP}/${DAILY_VIDEO_XP_TARGET} XP`}
               progress={videoXpPct}
             />
             <ProgressRow
-              label="Streak Bonus"
+              label="연속 학습 보너스"
               value={
                 streakBonusToday > 0
                   ? `${streakBonusToday}/${streakBonusToday} XP`
                   : streakDays > 0
                     ? `0/${getStreakBonusXP(streakDays)} XP`
-                    : 'Locked'
+                    : '잠김'
               }
               progress={streakBonusProgress.progress * 100}
             />
@@ -186,14 +186,14 @@ export default function XPPage() {
           <div className="flex items-start justify-between gap-4">
             <div>
               <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-                MILESTONES
+                마일스톤
               </p>
               <p className="mt-2 text-sm text-[var(--text-secondary)]">
                 {MILESTONE_EXPLAINER}
               </p>
               <div className="mt-3 space-y-1 text-sm text-[var(--text-secondary)]">
-                <p>{milestoneSummary.readyCount} ready to claim</p>
-                <p>{milestoneSummary.claimedCount} already claimed</p>
+                <p>{milestoneSummary.readyCount}개 바로 수령 가능</p>
+                <p>{milestoneSummary.claimedCount}개 이미 수령 완료</p>
               </div>
             </div>
             <button
@@ -201,14 +201,14 @@ export default function XPPage() {
               onClick={() => router.push('/learning/milestones')}
               className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
             >
-              OPEN
+              상세 보기
             </button>
           </div>
         </SurfaceCard>
 
         <SurfaceCard className="p-5">
           <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-            TIER STATUS
+            티어 상태
           </p>
 
           <div className="flex items-center justify-between gap-3">
@@ -218,12 +218,12 @@ export default function XPPage() {
               </span>
               {discount > 0 && (
                 <span className="text-[11px] font-medium text-[var(--text-secondary)]">
-                  {discount}% off
+                  {discount}% 할인
                 </span>
               )}
             </div>
             <span className="text-[11px] text-[var(--text-muted)]">
-              {monthlyXp.toLocaleString()} XP this month
+              이번 달 {monthlyXp.toLocaleString()} XP
             </span>
           </div>
 
@@ -242,24 +242,24 @@ export default function XPPage() {
               </p>
             </div>
           ) : (
-            <p className="mt-2 text-[10px] text-[var(--text-muted)]">Top tier is active.</p>
+            <p className="mt-2 text-[10px] text-[var(--text-muted)]">현재 최상위 티어를 유지하고 있습니다.</p>
           )}
         </SurfaceCard>
 
         <SurfaceCard className="p-5">
           <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-            STREAK STATUS
+            연속 학습
           </p>
           <div className="flex items-center justify-between gap-3">
             <div>
               <p className="text-2xl font-bold text-[var(--text-primary)]">{streakDays}</p>
-              <p className="mt-1 text-xs text-[var(--text-muted)]">consecutive days</p>
+              <p className="mt-1 text-xs text-[var(--text-muted)]">연속 학습 일수</p>
             </div>
             <div className="text-right text-[11px] text-[var(--text-secondary)]">
               {streakProgress.remaining > 0 ? (
-                <p>{streakProgress.remaining} days to {streakProgress.target}-day milestone</p>
+                <p>{streakProgress.target}일 마일스톤까지 {streakProgress.remaining}일 남음</p>
               ) : (
-                <p>{streakProgress.target}-day milestone reached</p>
+                <p>{streakProgress.target}일 마일스톤 달성</p>
               )}
             </div>
           </div>
@@ -275,10 +275,10 @@ export default function XPPage() {
 
         <SurfaceCard className="p-5">
           <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-            RECENT ACTIVITY
+            최근 XP 기록
           </p>
           {xpHistory.length === 0 ? (
-            <p className="text-sm text-[var(--text-secondary)]">No XP activity recorded yet.</p>
+            <p className="text-sm text-[var(--text-secondary)]">아직 기록된 XP 활동이 없습니다.</p>
           ) : (
             <div className="space-y-3">
               {xpHistory.slice(0, 8).map((event) => (
@@ -286,7 +286,7 @@ export default function XPPage() {
                   <div className="min-w-0">
                     <p className="truncate text-sm font-medium text-[var(--text-primary)]">{event.reason}</p>
                     <p className="mt-1 text-[11px] text-[var(--text-muted)]">
-                      {new Date(event.createdAt).toLocaleString('en-US', {
+                      {new Date(event.createdAt).toLocaleString('ko-KR', {
                         month: 'short',
                         day: 'numeric',
                         hour: 'numeric',
@@ -303,7 +303,7 @@ export default function XPPage() {
 
         <SurfaceCard className="p-5">
           <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-            MONTHLY ACTIVITY
+            월간 활동
           </p>
           <p className="mb-4 text-sm text-[var(--text-secondary)]">
             {MONTHLY_ACTIVITY_EXPLAINER}
@@ -326,7 +326,7 @@ export default function XPPage() {
                   />
                 </div>
                 <p className="mt-1 text-[10px] text-[var(--text-muted)]">
-                  {point.active ? 'Active month' : 'Below retention threshold'}
+                  {point.active ? '활동 기준을 유지한 달' : '유지 기준 아래인 달'}
                 </p>
               </div>
             ))}

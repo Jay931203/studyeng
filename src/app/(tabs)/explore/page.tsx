@@ -629,7 +629,7 @@ export default function ExplorePage() {
 
       {shuffledShorts.length > 0 && (
         <section className="mb-8 overflow-hidden">
-          <SectionHeader title="쇼츠" />
+          <SectionHeader title="쇼츠" description={`${shuffledShorts.length}개의 영상`} />
 
           <div className="flex gap-2.5 overflow-x-auto pb-2 no-scrollbar">
             {shuffledShorts.map((video) => (
