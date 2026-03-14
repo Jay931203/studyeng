@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useRouter } from 'next/navigation'
 import {
@@ -12,11 +13,18 @@ import { DAILY_SESSION_XP_CAP } from '@/lib/xp/sessionXp'
 import { getStreakBonusXP } from '@/lib/xp/streakBonus'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useLevelStore } from '@/stores/useLevelStore'
-import { TIER_NAMES, useTierStore } from '@/stores/useTierStore'
+import {
+  MONTHLY_ACTIVE_THRESHOLD,
+  TIER_DISCOUNTS,
+  TIER_NAMES,
+  TIER_THRESHOLDS,
+  useTierStore,
+} from '@/stores/useTierStore'
 import { useUserStore } from '@/stores/useUserStore'
 
 export function TodayDashboard() {
   const router = useRouter()
+  const [showTierGuide, setShowTierGuide] = useState(false)
   const totalXP = useUserStore((state) => state.getTotalXP())
   const streakDays = useUserStore((state) => state.streakDays)
   const getDailyTotalGameXP = useGameProgressStore((state) => state.getDailyTotalGameXP)
@@ -42,7 +50,7 @@ export function TodayDashboard() {
       <div className="px-5 pb-4 pt-5">
         <div className="flex items-center justify-between gap-4">
           <span className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-            TODAY&apos;S XP
+            MY XP
           </span>
           <button
             type="button"
@@ -63,6 +71,7 @@ export function TodayDashboard() {
             label="등급 상태"
             title={TIER_NAMES[currentTier]}
             detail={getTierStatusDetail(nextTierXp, tierProgress.next)}
+            onClick={() => setShowTierGuide(true)}
           />
         </div>
 
@@ -77,11 +86,13 @@ export function TodayDashboard() {
             label="게임"
             value={`${gameXpToday}/${DAILY_SESSION_XP_CAP} XP`}
             progress={gameXpPct}
+            detail="집중 학습 보상, 하루 최대 20 XP"
           />
           <ProgressRow
             label="영상"
             value={`${dailyVideoXP}/${DAILY_VIDEO_XP_TARGET} XP`}
             progress={videoXpPct}
+            detail="시청 완료 보상, 하루 최대 15 XP"
           />
           <ProgressRow
             label="연속 학습 보너스"
@@ -95,12 +106,68 @@ export function TodayDashboard() {
             progress={streakBonusProgress.progress * 100}
             detail={
               streakDays > 0
-                ? `${streakDays}일 연속 학습 기준 보너스, 하루 1회만 적립`
-                : '연속 학습을 시작하면 보너스가 열립니다.'
+                ? `오늘 첫 영상 또는 게임 완료 시 1회 적립 · 현재 ${streakDays}일 기준`
+                : '오늘 첫 영상 또는 게임을 완료하면 연속 학습이 시작됩니다.'
             }
           />
         </div>
       </div>
+
+      {showTierGuide && (
+        <div
+          className="fixed inset-0 z-[120] flex items-center justify-center bg-black/60 px-4"
+          onClick={() => setShowTierGuide(false)}
+        >
+          <div
+            className="w-full max-w-md rounded-3xl border border-[var(--border-card)] bg-[var(--bg-primary)] p-5 shadow-[var(--card-shadow)]"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="mb-4 flex items-center justify-between gap-3">
+              <div>
+                <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+                  TIER GUIDE
+                </p>
+                <p className="mt-1 text-sm text-[var(--text-secondary)]">
+                  누적 XP로 등급이 올라가고, 다음 달 구독 할인 폭도 함께 커집니다.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setShowTierGuide(false)}
+                className="rounded-full bg-[var(--bg-secondary)] px-2.5 py-1 text-xs font-semibold text-[var(--text-secondary)]"
+              >
+                닫기
+              </button>
+            </div>
+
+            <div className="space-y-2">
+              {TIER_NAMES.map((tierName, index) => (
+                <div
+                  key={tierName}
+                  className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] px-4 py-3"
+                >
+                  <div className="flex items-center justify-between gap-3">
+                    <p className="text-sm font-semibold text-[var(--text-primary)]">{tierName}</p>
+                    <span className="text-xs font-medium text-[var(--accent-text)]">
+                      다음 달 {TIER_DISCOUNTS[index]}% 할인
+                    </span>
+                  </div>
+                  <p className="mt-1 text-[11px] text-[var(--text-muted)]">
+                    {index === 0
+                      ? `${TIER_THRESHOLDS[0]} XP부터 시작`
+                      : `${TIER_THRESHOLDS[index].toLocaleString()} XP 이상`}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            <p className="mt-4 text-[11px] leading-relaxed text-[var(--text-muted)]">
+              월간 활동 XP가 {MONTHLY_ACTIVE_THRESHOLD} XP 아래로 떨어지면 비활성 상태로 간주되어
+              현재 등급 유지에 불리할 수 있습니다.
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
@@ -141,19 +208,31 @@ function InfoBlock({
   label,
   title,
   detail,
+  onClick,
 }: {
   label: string
   title: string
   detail: string
+  onClick?: () => void
 }) {
+  const Element = onClick ? 'button' : 'div'
+
   return (
-    <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)]/30 px-4 py-3">
+    <Element
+      {...(onClick ? { type: 'button', onClick } : {})}
+      className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)]/30 px-4 py-3 text-left"
+    >
       <div className="mb-1.5 flex items-center justify-between gap-3">
         <span className="text-[11px] text-[var(--text-secondary)]">{label}</span>
+        {onClick ? (
+          <span className="text-[10px] font-medium uppercase tracking-wide text-[var(--text-muted)]">
+            INFO
+          </span>
+        ) : null}
       </div>
       <p className="text-sm font-semibold text-[var(--text-primary)]">{title}</p>
       <p className="mt-1 text-[11px] text-[var(--text-muted)]">{detail}</p>
-    </div>
+    </Element>
   )
 }
 

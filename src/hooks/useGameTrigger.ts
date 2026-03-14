@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { usePlayerStore, pauseRef } from '@/stores/usePlayerStore'
+import { usePlayerStore } from '@/stores/usePlayerStore'
 import type { SubtitleEntry } from '@/data/seed-videos'
 
 interface ExpressionSentence {
@@ -205,8 +205,9 @@ export function useGameTrigger(
     triggeredForVideoRef.current = youtubeId
 
     // Freeze on the current subtitle (one before game sentence)
+    // Do not pause the player here: keeping playback alive lets the frozen line
+    // loop naturally, which matches the rest of the freeze-mode behavior.
     setFreezeSubIndex(triggerAt)
-    pauseRef.current?.()
 
     // Haptic feedback for game trigger
     try { navigator.vibrate?.(15) } catch { /* unsupported */ }

@@ -175,6 +175,11 @@ function pickContextSentence(exprId: string): string | null {
   return pick.en
 }
 
+function hasExpressionSupportContext(exprId: string) {
+  const matches = getContextByExprId()[exprId]
+  return Boolean(matches?.length)
+}
+
 let wordContextCache: Record<string, WordIndexMatch[]> | null = null
 
 function getWordContextByWordId(): Record<string, WordIndexMatch[]> {
@@ -290,18 +295,18 @@ function selectCards(level: string): CardData[] {
   const defaultExpressionCount = Math.round(CARDS_PER_ROUND * 0.7)
   const defaultWordCount = CARDS_PER_ROUND - defaultExpressionCount
 
+  let filteredExpressionIds = getFilteredExpressionIds(level).filter((id) => hasExpressionSupportContext(id))
+  if (filteredExpressionIds.length < defaultExpressionCount) {
+    filteredExpressionIds = Object.keys(entries).filter((id) => hasExpressionSupportContext(id))
+  }
+
   let filteredWordIds = getFilteredWordIds(level).filter((id) => hasWordSupportContext(id))
   if (filteredWordIds.length < defaultWordCount) {
     filteredWordIds = Object.keys(wordEntries).filter((id) => hasWordSupportContext(id))
   }
 
-  const wordCount = Math.min(defaultWordCount, filteredWordIds.length)
-  const expressionCount = CARDS_PER_ROUND - wordCount
-
-  let filteredExpressionIds = getFilteredExpressionIds(level)
-  if (filteredExpressionIds.length < expressionCount) {
-    filteredExpressionIds = Object.keys(entries)
-  }
+  const expressionCount = Math.min(defaultExpressionCount, filteredExpressionIds.length)
+  const wordCount = Math.min(CARDS_PER_ROUND - expressionCount, filteredWordIds.length)
 
   const filteredExpressionSet = new Set(filteredExpressionIds)
   const allBox1 = gameStore.getBox1Expressions()

@@ -480,6 +480,9 @@ export function VideoPlayer({
   const gameOverlayInsetBottom = isShortsFormat
     ? 'max(88px, calc(env(safe-area-inset-bottom, 0px) + 72px))'
     : '16px'
+  const cueNoticeInsetBottom = isShortsFormat
+    ? 'max(132px, calc(env(safe-area-inset-bottom, 0px) + 124px))'
+    : '18px'
 
   useEffect(() => {
     const shouldLockFeedSwipe = showPriming || showGameOverlay
@@ -698,7 +701,7 @@ export function VideoPlayer({
 
       <div
         className="pointer-events-none absolute inset-x-0 z-[22] flex justify-center px-4"
-        style={isShortsFormat ? { top: '14px' } : { bottom: '18px' }}
+        style={{ bottom: cueNoticeInsetBottom }}
       >
         <SaveToast
           show={Boolean(cueNotice)}

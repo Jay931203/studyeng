@@ -10,6 +10,8 @@ export interface XpHistoryEvent {
   createdAt: string
 }
 
+const XP_HISTORY_LIMIT = 240
+
 interface UserState {
   level: number
   xp: number
@@ -56,7 +58,7 @@ export const useUserStore = create<UserState>()(persist((set, get) => ({
       reason,
       createdAt: new Date().toISOString(),
     }
-    const nextHistory = [event, ...xpHistory].slice(0, 80)
+    const nextHistory = [event, ...xpHistory].slice(0, XP_HISTORY_LIMIT)
 
     if (newXp >= xpForLevel) {
       set({

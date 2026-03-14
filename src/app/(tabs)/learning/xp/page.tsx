@@ -3,6 +3,7 @@
 import { useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
+import { XpHistoryFeed } from '@/components/learning/XpHistoryFeed'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import {
   buildMilestoneMissions,
@@ -280,31 +281,19 @@ export default function XPPage() {
         </SurfaceCard>
 
         <SurfaceCard className="p-5">
-          <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-            최근 XP 기록
-          </p>
-          {xpHistory.length === 0 ? (
-            <p className="text-sm text-[var(--text-secondary)]">아직 기록된 XP 활동이 없습니다.</p>
-          ) : (
-            <div className="space-y-3">
-              {xpHistory.slice(0, 8).map((event) => (
-                <div key={event.id} className="flex items-center justify-between gap-3">
-                  <div className="min-w-0">
-                    <p className="truncate text-sm font-medium text-[var(--text-primary)]">{event.reason}</p>
-                    <p className="mt-1 text-[11px] text-[var(--text-muted)]">
-                      {new Date(event.createdAt).toLocaleString('ko-KR', {
-                        month: 'short',
-                        day: 'numeric',
-                        hour: 'numeric',
-                        minute: '2-digit',
-                      })}
-                    </p>
-                  </div>
-                  <span className="text-sm font-semibold text-[var(--accent-text)]">+{event.amount} XP</span>
-                </div>
-              ))}
-            </div>
-          )}
+          <div className="mb-4 flex items-center justify-between gap-3">
+            <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+              최근 XP 기록
+            </p>
+            <button
+              type="button"
+              onClick={() => router.push('/learning/xp/history')}
+              className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
+            >
+              DETAIL
+            </button>
+          </div>
+          <XpHistoryFeed events={xpHistory} limit={8} />
         </SurfaceCard>
 
         <SurfaceCard className="p-5">
