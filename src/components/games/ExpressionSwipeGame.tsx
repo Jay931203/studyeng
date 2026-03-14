@@ -197,6 +197,12 @@ function pickWordContextSentence(wordId: string): string | null {
   return pick.en
 }
 
+function hasWordSupportContext(wordId: string) {
+  const transcriptMatches = getWordContextByWordId()[wordId]
+  if (transcriptMatches?.length) return true
+  return Boolean(wordEntries[wordId]?.example_en?.trim())
+}
+
 function uniqueCandidates(source: MeaningCandidate[]) {
   const seen = new Set<string>()
   const deduped: MeaningCandidate[] = []
@@ -281,8 +287,16 @@ function buildChoices(card: Omit<CardData, 'choices'>): ChoiceData[] {
 
 function selectCards(level: string): CardData[] {
   const gameStore = useGameProgressStore.getState()
-  const expressionCount = Math.round(CARDS_PER_ROUND * 0.7)
-  const wordCount = CARDS_PER_ROUND - expressionCount
+  const defaultExpressionCount = Math.round(CARDS_PER_ROUND * 0.7)
+  const defaultWordCount = CARDS_PER_ROUND - defaultExpressionCount
+
+  let filteredWordIds = getFilteredWordIds(level).filter((id) => hasWordSupportContext(id))
+  if (filteredWordIds.length < defaultWordCount) {
+    filteredWordIds = Object.keys(wordEntries).filter((id) => hasWordSupportContext(id))
+  }
+
+  const wordCount = Math.min(defaultWordCount, filteredWordIds.length)
+  const expressionCount = CARDS_PER_ROUND - wordCount
 
   let filteredExpressionIds = getFilteredExpressionIds(level)
   if (filteredExpressionIds.length < expressionCount) {
@@ -329,11 +343,6 @@ function selectCards(level: string): CardData[] {
       filteredExpressionIds.filter((id) => !usedExpressionIds.has(id)),
       expressionCount - selectedExpressionIds.length,
     )
-  }
-
-  let filteredWordIds = getFilteredWordIds(level)
-  if (filteredWordIds.length < wordCount) {
-    filteredWordIds = Object.keys(wordEntries)
   }
 
   const filteredWordSet = new Set(filteredWordIds)
@@ -709,7 +718,11 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
     )
   }
 
-  const supportText = currentCard.contextEn ?? '가장 자연스러운 뜻을 탭해 고르세요.'
+  const supportText =
+    currentCard.contextEn ??
+    (currentCard.type === 'word'
+      ? '예문이 준비된 단어만 출제됩니다.'
+      : '가장 자연스러운 뜻을 탭해 고르세요.')
 
   return (
     <div className="relative flex h-full flex-col px-5 pb-5 pt-3">

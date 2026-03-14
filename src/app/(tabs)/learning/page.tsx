@@ -12,11 +12,9 @@ import { GameLauncher } from '@/components/games/GameLauncher'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import { categories } from '@/data/seed-videos'
 import { getCatalogSeriesById, getCatalogVideoById } from '@/lib/catalog'
-import { getStreakProgress } from '@/lib/learningDashboard'
 import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useLikeStore } from '@/stores/useLikeStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
-import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { CEFR_ORDER, LEVEL_LABELS } from '@/types/level'
@@ -31,7 +29,6 @@ export default function LearningPage() {
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)
   const viewCounts = useWatchHistoryStore((state) => state.viewCounts)
   const watchedVideoIds = useWatchHistoryStore((state) => state.watchedVideoIds)
-  const streakDays = useUserStore((state) => state.streakDays)
   const likes = useLikeStore((state) => state.likes)
   const level = useOnboardingStore((state) => state.level)
 
@@ -43,9 +40,6 @@ export default function LearningPage() {
   const levelIdx = CEFR_ORDER.indexOf(level)
   const nextLevel = levelIdx < CEFR_ORDER.length - 1 ? CEFR_ORDER[levelIdx + 1] : null
   const nextLevelLabel = nextLevel ? LEVEL_LABELS[nextLevel] : null
-  const effectiveStreakDays = Math.max(streakDays, totalViews > 0 ? 1 : 0)
-  const streakProgress = getStreakProgress(effectiveStreakDays)
-
   const likedVideos = useMemo(
     () =>
       Object.keys(likes)
@@ -62,7 +56,7 @@ export default function LearningPage() {
         <SurfaceCard className="p-5">
           <div className="mb-4 flex items-center justify-between gap-4">
             <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-              STATS
+              개요
             </p>
             <Link
               href="/learning/stats"
@@ -72,35 +66,24 @@ export default function LearningPage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-4">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
             <OverviewStatCard
-              label="Level"
+              label="레벨"
               value={LEVEL_LABELS[level]}
-              detail={nextLevelLabel ? `Next ${nextLevelLabel}` : 'Maximum level reached'}
+              detail={nextLevelLabel ? `다음 단계 ${nextLevelLabel}` : '현재 최고 레벨'}
               accent
             />
 
             <OverviewStatCard
-              label="Saved Expressions"
+              label="저장 표현"
               value={phrases.length}
-              detail={`${likedVideos.length} liked videos`}
+              detail={`좋아요한 영상 ${likedVideos.length}개`}
             />
 
             <OverviewStatCard
-              label="Completed Videos"
+              label="완료한 영상"
               value={watchedVideoIds.length}
-              detail={`${totalViews} total views`}
-            />
-
-            <OverviewProgressCard
-              label="Streak"
-              value={`${effectiveStreakDays} days`}
-              detail={
-                streakProgress.remaining > 0
-                  ? `${streakProgress.remaining} days to ${streakProgress.target}-day milestone`
-                  : `${streakProgress.target}-day milestone reached`
-              }
-              progress={streakProgress.progress}
+              detail={`전체 재생 ${totalViews}회`}
             />
           </div>
         </SurfaceCard>
@@ -124,7 +107,7 @@ export default function LearningPage() {
 
           {likedVideos.length === 0 ? (
             <div className="rounded-[24px] border border-dashed border-[var(--border-card)] px-5 py-8 text-center">
-              <p className="text-sm text-[var(--text-secondary)]">No liked videos yet.</p>
+              <p className="text-sm text-[var(--text-secondary)]">아직 좋아요한 영상이 없습니다.</p>
             </div>
           ) : (
             <div className="flex flex-col gap-2">
@@ -192,7 +175,7 @@ export default function LearningPage() {
 
           {phrases.length === 0 ? (
             <div className="rounded-[24px] border border-dashed border-[var(--border-card)] px-5 py-8 text-center">
-              <p className="text-sm text-[var(--text-secondary)]">No saved items yet.</p>
+              <p className="text-sm text-[var(--text-secondary)]">아직 저장한 표현이 없습니다.</p>
             </div>
           ) : (
             <div className="flex flex-col gap-3">
@@ -245,39 +228,6 @@ function OverviewStatCard({
       <p className="text-xs text-[var(--text-muted)]">{label}</p>
       <p className="mt-2 text-lg font-semibold text-[var(--text-primary)]">{value}</p>
       <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">{detail}</p>
-    </div>
-  )
-}
-
-function OverviewProgressCard({
-  label,
-  value,
-  detail,
-  progress,
-}: {
-  label: string
-  value: string
-  detail: string
-  progress: number
-}) {
-  return (
-    <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-4 py-3">
-      <div className="flex items-start justify-between gap-3">
-        <div>
-          <p className="text-xs text-[var(--text-muted)]">{label}</p>
-          <p className="mt-2 text-lg font-semibold text-[var(--text-primary)]">{value}</p>
-        </div>
-        <span className="text-xs font-medium text-[var(--accent-text)]">
-          {Math.round(progress * 100)}%
-        </span>
-      </div>
-      <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">{detail}</p>
-      <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-[var(--bg-card)]">
-        <div
-          className="h-full rounded-full bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)]"
-          style={{ width: `${Math.max(progress, 0) * 100}%` }}
-        />
-      </div>
     </div>
   )
 }

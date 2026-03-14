@@ -699,6 +699,7 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
   const [selected, setSelected] = useState<string | null>(null)
   const [replaysUsed, setReplaysUsed] = useState(0)
   const [showPopup, setShowPopup] = useState(false)
+  const [showSentenceHint, setShowSentenceHint] = useState(false)
   const [isAdvancing, setIsAdvancing] = useState(false)
 
   // Transcript timing for current question
@@ -1132,12 +1133,14 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
 
         {/* Sentence with blank */}
         <AnimatePresence mode="wait">
-          <motion.div
+          <motion.button
+            type="button"
             key={currentQ.exprId + '-' + currentIdx}
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
             transition={{ duration: 0.25, ease: 'easeOut' }}
+            onClick={() => setShowSentenceHint((prev) => !prev)}
             className="w-full max-w-sm rounded-2xl border p-5 mb-6 text-center"
             style={{
               backgroundColor: 'var(--bg-card)',
@@ -1146,33 +1149,63 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
             }}
           >
             <p
-              className="text-base leading-relaxed font-medium"
-              style={{ color: 'var(--text-primary)' }}
+              className="mb-3 text-[11px] font-semibold uppercase tracking-[0.18em]"
+              style={{ color: 'var(--accent-text)' }}
             >
-              {currentQ.before}
-              {selected ? (
-                <span
-                  className="font-bold px-1 py-0.5 rounded mx-0.5 inline-block"
-                  style={{
-                    color: isCorrect ? '#22c55e' : '#ef4444',
-                    backgroundColor: isCorrect
-                      ? 'rgba(34, 197, 94, 0.1)'
-                      : 'rgba(239, 68, 68, 0.1)',
-                  }}
-                >
-                  {currentQ.expression}
-                </span>
-              ) : (
-                <span
-                  className="inline-block border-b-2 mx-1 min-w-[80px]"
-                  style={{ borderColor: 'var(--accent-primary)' }}
-                >
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                </span>
-              )}
-              {currentQ.after}
+              {showSentenceHint ? '한글 힌트' : '예문'}
             </p>
-          </motion.div>
+
+            {showSentenceHint ? (
+              <div className="space-y-3">
+                <p
+                  className="text-base leading-relaxed font-medium"
+                  style={{ color: 'var(--text-primary)' }}
+                >
+                  {currentQ.ko}
+                </p>
+                <div className="rounded-xl border px-3 py-2" style={{ borderColor: 'var(--border-card)', backgroundColor: 'var(--bg-secondary)' }}>
+                  <p className="text-[11px] uppercase tracking-[0.16em]" style={{ color: 'var(--text-muted)' }}>
+                    뜻
+                  </p>
+                  <p className="mt-1 text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
+                    {currentQ.meaningKo || currentQ.expression}
+                  </p>
+                </div>
+              </div>
+            ) : (
+              <p
+                className="text-base leading-relaxed font-medium"
+                style={{ color: 'var(--text-primary)' }}
+              >
+                {currentQ.before}
+                {selected ? (
+                  <span
+                    className="font-bold px-1 py-0.5 rounded mx-0.5 inline-block"
+                    style={{
+                      color: isCorrect ? '#22c55e' : '#ef4444',
+                      backgroundColor: isCorrect
+                        ? 'rgba(34, 197, 94, 0.1)'
+                        : 'rgba(239, 68, 68, 0.1)',
+                    }}
+                  >
+                    {currentQ.expression}
+                  </span>
+                ) : (
+                  <span
+                    className="inline-block border-b-2 mx-1 min-w-[80px]"
+                    style={{ borderColor: 'var(--accent-primary)' }}
+                  >
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  </span>
+                )}
+                {currentQ.after}
+              </p>
+            )}
+
+            <p className="mt-3 text-[11px]" style={{ color: 'var(--text-muted)' }}>
+              탭하면 한글 힌트와 뜻을 볼 수 있습니다.
+            </p>
+          </motion.button>
         </AnimatePresence>
 
         {/* 4 choices */}

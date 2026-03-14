@@ -46,6 +46,7 @@ interface VideoPlayerProps {
   onPlaybackStarted?: () => void
   isLandscapeViewport?: boolean
   useLandscapeSplitLayout?: boolean
+  useLandscapeOverlaySubtitles?: boolean
   landscapeVideoPaneWidth?: string
   landscapeBottomSubtitleHeight?: number
   initialSeekTime?: number
@@ -89,6 +90,7 @@ export function VideoPlayer({
   onPlaybackStarted,
   isLandscapeViewport = false,
   useLandscapeSplitLayout = false,
+  useLandscapeOverlaySubtitles = false,
   landscapeVideoPaneWidth = '62%',
   landscapeBottomSubtitleHeight = 184,
   initialSeekTime,
@@ -526,7 +528,9 @@ export function VideoPlayer({
       ? '우측'
       : landscapeSubtitleLayout === 'bottom'
         ? '하단'
-        : '자동'
+        : landscapeSubtitleLayout === 'overlay'
+          ? '오버레이'
+          : '자동'
   const showLandscapeSubtitleLayoutToggle =
     isLandscapeViewport && subtitleMode !== 'none' && subtitles.length > 0
   const subtitleToggleInsetTop = isLandscapeViewport
@@ -536,57 +540,67 @@ export function VideoPlayer({
     ? 'max(12px, calc(env(safe-area-inset-right, 0px) + 8px))'
     : '12px'
 
+  const subtitleLayoutToggleButton = showLandscapeSubtitleLayoutToggle ? (
+    <button
+      type="button"
+      onClick={(event) => {
+        event.stopPropagation()
+        cycleLandscapeSubtitleLayout()
+      }}
+      className="flex h-7 items-center gap-1.5 rounded-full border px-2.5 text-[10px] font-semibold backdrop-blur-md transition-colors sm:h-8 sm:text-[11px]"
+      style={{
+        backgroundColor: 'var(--player-control-bg)',
+        borderColor: 'var(--player-control-border)',
+        color: 'var(--player-text)',
+      }}
+      aria-label={`Landscape subtitle layout: ${landscapeSubtitleLayoutLabel}`}
+      title={`Landscape subtitle layout: ${landscapeSubtitleLayoutLabel}`}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={1.8}
+        className="h-3 w-3 sm:h-3.5 sm:w-3.5"
+      >
+        {landscapeSubtitleLayout === 'side' ? (
+          <>
+            <rect x="3.5" y="5" width="11" height="14" rx="2" />
+            <rect x="16.5" y="5" width="4" height="14" rx="1.5" />
+          </>
+        ) : landscapeSubtitleLayout === 'bottom' ? (
+          <>
+            <rect x="3.5" y="5" width="17" height="10" rx="2" />
+            <rect x="3.5" y="17" width="17" height="2.5" rx="1.25" />
+          </>
+        ) : landscapeSubtitleLayout === 'overlay' ? (
+          <>
+            <rect x="3.5" y="5" width="17" height="14" rx="2" />
+            <path d="M6.5 13.5h11" />
+            <path d="M8 16.5h8" />
+          </>
+        ) : (
+          <>
+            <path d="M3.5 7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3.5a2 2 0 0 1-2 2h-11a2 2 0 0 1-2-2V7Z" />
+            <path d="M3.5 17.5h10" />
+            <path d="M18 5h2.5a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H18" />
+            <path d="M15.5 17.5h5.5" />
+          </>
+        )}
+      </svg>
+      <span>{landscapeSubtitleLayoutLabel}</span>
+    </button>
+  ) : null
+
   const subtitlePanel = (
     <div className="relative h-full">
-      {showLandscapeSubtitleLayoutToggle && (
+      {!useLandscapeOverlaySubtitles && subtitleLayoutToggleButton && (
         <div
           className="absolute z-30"
           style={{ right: subtitleToggleInsetRight, top: subtitleToggleInsetTop }}
         >
-          <button
-            type="button"
-            onClick={(event) => {
-              event.stopPropagation()
-              cycleLandscapeSubtitleLayout()
-            }}
-            className="flex h-7 items-center gap-1.5 rounded-full border px-2.5 text-[10px] font-semibold backdrop-blur-md transition-colors sm:h-8 sm:text-[11px]"
-            style={{
-              backgroundColor: 'var(--player-control-bg)',
-              borderColor: 'var(--player-control-border)',
-              color: 'var(--player-text)',
-            }}
-            aria-label={`Landscape subtitle layout: ${landscapeSubtitleLayoutLabel}`}
-            title={`Landscape subtitle layout: ${landscapeSubtitleLayoutLabel}`}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={1.8}
-              className="h-3 w-3 sm:h-3.5 sm:w-3.5"
-            >
-              {landscapeSubtitleLayout === 'side' ? (
-                <>
-                  <rect x="3.5" y="5" width="11" height="14" rx="2" />
-                  <rect x="16.5" y="5" width="4" height="14" rx="1.5" />
-                </>
-              ) : landscapeSubtitleLayout === 'bottom' ? (
-                <>
-                  <rect x="3.5" y="5" width="17" height="10" rx="2" />
-                  <rect x="3.5" y="17" width="17" height="2.5" rx="1.25" />
-                </>
-              ) : (
-                <>
-                  <path d="M3.5 7a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3.5a2 2 0 0 1-2 2h-11a2 2 0 0 1-2-2V7Z" />
-                  <path d="M3.5 17.5h10" />
-                  <path d="M18 5h2.5a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H18" />
-                  <path d="M15.5 17.5h5.5" />
-                </>
-              )}
-            </svg>
-            <span>{landscapeSubtitleLayoutLabel}</span>
-          </button>
+          {subtitleLayoutToggleButton}
         </div>
       )}
       {subtitleArea}
@@ -811,6 +825,16 @@ export function VideoPlayer({
       )}
 
       {children}
+
+      {useLandscapeOverlaySubtitles && subtitleLayoutToggleButton && (
+        <div
+          className="absolute z-[26]"
+          style={{ right: subtitleToggleInsetRight, top: subtitleToggleInsetTop }}
+          onClick={(event) => event.stopPropagation()}
+        >
+          {subtitleLayoutToggleButton}
+        </div>
+      )}
     </div>
   )
 
@@ -835,6 +859,34 @@ export function VideoPlayer({
         )}
 
         {/* Progress bar overlaid at the very bottom */}
+        <div className="absolute bottom-0 left-0 right-0 z-[15]">
+          <ProgressBar />
+        </div>
+
+        {primingOverlay}
+      </div>
+    )
+  }
+
+  if (useLandscapeOverlaySubtitles) {
+    return (
+      <div
+        className="relative h-full w-full"
+        style={{ backgroundColor: 'var(--player-surface)' }}
+      >
+        {videoArea}
+
+        {subtitleMode !== 'none' && subtitles.length > 0 && (
+          <ShortsSubtitleOverlay
+            subtitles={subtitles}
+            videoId={videoId ?? youtubeId}
+            showKo={subtitleMode === 'en-ko'}
+            onSavePhrase={onSavePhrase}
+            onSeek={(time) => seekTo(time)}
+            bottomOffset="24px"
+          />
+        )}
+
         <div className="absolute bottom-0 left-0 right-0 z-[15]">
           <ProgressBar />
         </div>
@@ -907,12 +959,14 @@ function ShortsSubtitleOverlay({
   showKo,
   onSavePhrase,
   onSeek,
+  bottomOffset = '48px',
 }: {
   subtitles: SubtitleEntry[]
   videoId: string
   showKo: boolean
   onSavePhrase?: (phrase: SubtitleEntry) => void
   onSeek?: (time: number) => void
+  bottomOffset?: string
 }) {
   const activeSubIndex = usePlayerStore((state) => state.activeSubIndex)
   const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
@@ -975,7 +1029,8 @@ function ShortsSubtitleOverlay({
 
   return (
     <div
-      className="absolute bottom-12 left-0 right-0 z-[12] flex justify-center px-4"
+      className="absolute left-0 right-0 z-[12] flex justify-center px-4"
+      style={{ bottom: bottomOffset }}
     >
       <div className="pointer-events-none absolute -top-11 left-1/2 -translate-x-1/2">
         <SaveToast

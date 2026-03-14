@@ -13,7 +13,6 @@ import {
   getStreakProgress,
   getTierStatusDetail,
   getTodayIsoDate,
-  getTodayMilestoneSummary,
   MILESTONE_EXPLAINER,
   MONTHLY_ACTIVITY_EXPLAINER,
 } from '@/lib/learningDashboard'
@@ -72,8 +71,7 @@ export default function XPPage() {
   const streakBonusAwardedToday = streakBonusDate === today
   const streakBonusToday = streakBonusAwardedToday ? dailyStreakBonusXP : 0
   const streakBonusProgress = getStreakBonusProgress(streakDays, streakBonusAwardedToday)
-  const todayMilestones = getTodayMilestoneSummary(achievedMilestones, today)
-  const todayTotal = gameXpToday + dailyVideoXP + streakBonusToday + todayMilestones.xp
+  const todayTotal = gameXpToday + dailyVideoXP + streakBonusToday
   const gameXpPct = Math.min((gameXpToday / DAILY_SESSION_XP_CAP) * 100, 100)
   const videoXpPct = Math.min((dailyVideoXP / DAILY_VIDEO_XP_TARGET) * 100, 100)
   const streakProgress = getStreakProgress(streakDays)
@@ -178,6 +176,11 @@ export default function XPPage() {
                     : '잠김'
               }
               progress={streakBonusProgress.progress * 100}
+              detail={
+                streakDays > 0
+                  ? `${streakDays}일 연속 학습 기준, 하루 1회만 적립`
+                  : '연속 학습을 시작하면 보너스가 열립니다.'
+              }
             />
           </div>
         </SurfaceCard>
@@ -271,6 +274,9 @@ export default function XPPage() {
               className="h-full rounded-full bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)]"
             />
           </div>
+          <p className="mt-2 text-[11px] text-[var(--text-muted)]">
+            이 섹션은 연속 기록 진행도입니다. 위 보너스 바와 별개로 다음 마일스톤까지 얼마나 남았는지 보여줍니다.
+          </p>
         </SurfaceCard>
 
         <SurfaceCard className="p-5">
@@ -356,10 +362,12 @@ function ProgressRow({
   label,
   value,
   progress,
+  detail,
 }: {
   label: string
   value: string
   progress: number
+  detail?: string
 }) {
   return (
     <div>
@@ -375,6 +383,9 @@ function ProgressRow({
           className="h-full rounded-full bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)]"
         />
       </div>
+      {detail ? (
+        <p className="mt-1 text-[10px] text-[var(--text-muted)]">{detail}</p>
+      ) : null}
     </div>
   )
 }

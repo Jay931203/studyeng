@@ -2,7 +2,7 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
 type SubtitleMode = 'none' | 'en' | 'en-ko'
-type LandscapeSubtitleLayout = 'auto' | 'side' | 'bottom'
+type LandscapeSubtitleLayout = 'auto' | 'side' | 'bottom' | 'overlay'
 type PlaybackOrderMode = 'sequence' | 'shuffle'
 
 type RepeatMode = 'off' | 'x2' | 'x3'
@@ -69,7 +69,7 @@ interface PlayerState {
 }
 
 const subtitleCycle: SubtitleMode[] = ['none', 'en', 'en-ko']
-const landscapeSubtitleLayoutCycle: LandscapeSubtitleLayout[] = ['auto', 'side', 'bottom']
+const landscapeSubtitleLayoutCycle: LandscapeSubtitleLayout[] = ['auto', 'side', 'bottom', 'overlay']
 
 /**
  * Shared mutable ref for high-frequency currentTime updates.

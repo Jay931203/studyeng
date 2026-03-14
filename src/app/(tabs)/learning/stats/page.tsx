@@ -7,7 +7,6 @@ import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import { ViewingStats } from '@/components/ViewingStats'
 import { LevelChallengeGame } from '@/components/level/LevelChallengeGame'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
-import { useUserStore } from '@/stores/useUserStore'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useMilestoneStore } from '@/stores/useMilestoneStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
@@ -19,7 +18,6 @@ export default function StatsPage() {
   const router = useRouter()
   const level = useOnboardingStore((state) => state.level)
   const setLevel = useOnboardingStore((state) => state.setLevel)
-  const streakDays = useUserStore((state) => state.streakDays)
   const totalSessions = useGameProgressStore((state) => state.getTotalSessions())
   const achievedMilestones = useMilestoneStore((state) => Object.keys(state.achieved).length)
   const viewCounts = useWatchHistoryStore((state) => state.viewCounts)
@@ -133,7 +131,6 @@ export default function StatsPage() {
           </p>
 
           <div className="space-y-2.5">
-            <SummaryRow label="연속 학습" value={`${Math.max(streakDays, totalViews > 0 ? 1 : 0)}일`} />
             <SummaryRow label="게임 플레이" value={`${totalSessions}회`} />
             <SummaryRow label="마일스톤 달성" value={`${achievedMilestones}개`} />
             <SummaryRow label="시청한 영상" value={`${totalWatched}개`} />
