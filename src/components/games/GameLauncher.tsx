@@ -154,13 +154,18 @@ export function GameLauncher() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-[120]"
-            style={{ backgroundColor: 'var(--bg-primary)' }}
+            className="fixed inset-0 z-[120] overflow-hidden"
+            style={{
+              backgroundColor: 'var(--bg-primary)',
+              paddingTop: 'calc(env(safe-area-inset-top, 0px) + 2.75rem)',
+              paddingBottom: 'calc(env(safe-area-inset-bottom, 0px) + 0.75rem)',
+            }}
           >
             <button
               onClick={() => setActiveGame(null)}
-              className="absolute right-4 top-4 z-[130] flex h-8 w-8 items-center justify-center rounded-full"
+              className="absolute right-4 z-[130] flex h-8 w-8 items-center justify-center rounded-full"
               style={{
+                top: 'calc(env(safe-area-inset-top, 0px) + 0.75rem)',
                 backgroundColor: 'var(--bg-secondary)',
                 color: 'var(--text-secondary)',
               }}

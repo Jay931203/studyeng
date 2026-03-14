@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useCallback, useRef } from 'react'
-import { motion, AnimatePresence, type PanInfo } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import expressionEntries from '@/data/expression-entries-v2.json'
 import expressionIndex from '@/data/expression-index-v2.json'
 import wordEntriesData from '@/data/word-entries.json'
@@ -80,7 +80,6 @@ interface CardData {
 type GamePhase = 'playing' | 'result'
 
 const CARDS_PER_ROUND = 10
-const DRAG_SUBMIT_THRESHOLD = 74
 const ANSWER_REVEAL_MS = 700
 
 const entries = expressionEntries as Record<string, ExpressionEntry>
@@ -422,8 +421,9 @@ function StreakFlash({ streak }: { streak: number }) {
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.82 }}
       transition={{ duration: 0.35 }}
-      className="pointer-events-none absolute top-16 left-1/2 z-50 -translate-x-1/2 rounded-full border px-4 py-2 text-sm font-bold"
+      className="pointer-events-none absolute left-1/2 z-50 -translate-x-1/2 rounded-full border px-4 py-2 text-sm font-bold"
       style={{
+        top: 'calc(env(safe-area-inset-top, 0px) + 4.5rem)',
         color: 'var(--accent-text)',
         borderColor: 'rgba(var(--accent-primary-rgb), 0.28)',
         backgroundColor: 'rgba(var(--accent-primary-rgb), 0.16)',
@@ -468,7 +468,6 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
     detail: string
   } | null>(null)
   const [selectedChoiceId, setSelectedChoiceId] = useState<string | null>(null)
-  const [draggingChoiceId, setDraggingChoiceId] = useState<string | null>(null)
   const [bestCombo, setBestCombo] = useState(0)
   const [sessionStart] = useState(() => Date.now())
 
@@ -512,7 +511,6 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
     setCurrentIdx((prev) => prev + 1)
     setSlideDir(null)
     setSelectedChoiceId(null)
-    setDraggingChoiceId(null)
     setFeedback(null)
     setIsAnimating(false)
   }, [cards.length, currentIdx, finishRound])
@@ -523,7 +521,6 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
 
       setIsAnimating(true)
       setSelectedChoiceId(choice.id)
-      setDraggingChoiceId(null)
 
       const isCorrect = choice.isCorrect
       const exprId = currentCard.exprId
@@ -587,16 +584,6 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
       streak,
       updateLeitner,
     ],
-  )
-
-  const handleChoiceDragEnd = useCallback(
-    (choice: ChoiceData, _event: MouseEvent | TouchEvent | PointerEvent, info: PanInfo) => {
-      setDraggingChoiceId(null)
-      if (info.offset.y <= -DRAG_SUBMIT_THRESHOLD || info.velocity.y <= -650) {
-        handleChoice(choice)
-      }
-    },
-    [handleChoice],
   )
 
   const correctCount = results.filter((result) => result.correct).length
@@ -723,14 +710,10 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
     )
   }
 
-  const dockText = feedback
-    ? feedback.detail
-    : draggingChoiceId
-      ? '여기에 놓으면 정답 제출'
-      : '카드를 탭하거나 위로 끌어 정답 슬롯에 놓으세요'
+  const supportText = currentCard.contextEn ?? '가장 자연스러운 뜻을 탭해 고르세요.'
 
   return (
-    <div className="relative flex h-full flex-col px-5 py-4">
+    <div className="relative flex h-full flex-col px-5 pb-5 pt-3">
       <div className="mb-4 flex items-center justify-between">
         <p className="text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
           {currentIdx + 1} / {cards.length}
@@ -827,28 +810,6 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
             className="flex w-full max-w-md flex-col"
           >
             <div
-              className="mb-3 rounded-2xl border px-4 py-3 text-center"
-              style={{
-                borderColor: draggingChoiceId
-                  ? 'rgba(var(--accent-primary-rgb), 0.34)'
-                  : 'var(--border-card)',
-                backgroundColor: draggingChoiceId
-                  ? 'rgba(var(--accent-primary-rgb), 0.12)'
-                  : 'var(--bg-secondary)',
-                boxShadow: draggingChoiceId
-                  ? '0 10px 28px rgba(var(--accent-primary-rgb), 0.14)'
-                  : 'none',
-              }}
-            >
-              <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.22em]" style={{ color: 'var(--accent-text)' }}>
-                Answer Slot
-              </p>
-              <p className="text-sm font-medium" style={{ color: 'var(--text-primary)' }}>
-                {dockText}
-              </p>
-            </div>
-
-            <div
               className="rounded-[28px] border px-6 py-6 text-center"
               style={{
                 backgroundColor: 'var(--bg-card)',
@@ -871,23 +832,12 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
               <p className="mb-3 text-2xl font-bold leading-snug" style={{ color: 'var(--text-primary)' }}>
                 {currentCard.expression}
               </p>
-              {currentCard.contextEn ? (
-                <p
-                  className="mx-auto max-w-[320px] text-sm italic leading-relaxed"
-                  style={{ color: 'var(--text-secondary)' }}
-                >
-                  &ldquo;{currentCard.contextEn}&rdquo;
-                </p>
-              ) : (
-                <p className="text-sm" style={{ color: 'var(--text-muted)' }}>
-                  뜻 카드를 골라 위 슬롯으로 올려보세요.
-                </p>
-              )}
-            </div>
-
-            <div className="mt-4 flex items-center justify-between text-[11px] font-medium">
-              <span style={{ color: 'var(--text-muted)' }}>4지선다 뜻 카드</span>
-              <span style={{ color: 'var(--accent-text)' }}>tap or drag up</span>
+              <p
+                className="mx-auto min-h-[44px] max-w-[320px] text-sm leading-relaxed"
+                style={{ color: currentCard.contextEn ? 'var(--text-secondary)' : 'var(--text-muted)' }}
+              >
+                {currentCard.contextEn ? `"${currentCard.contextEn}"` : supportText}
+              </p>
             </div>
 
             <div className="mt-3 grid grid-cols-2 gap-3">
@@ -922,23 +872,17 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.05, duration: 0.2, ease: 'easeOut' }}
                     whileTap={{ scale: 0.97 }}
-                    drag={selectedChoiceId ? false : 'y'}
-                    dragConstraints={{ top: -150, bottom: 0 }}
-                    dragElastic={0.18}
-                    whileDrag={{ scale: 1.02 }}
-                    onDragStart={() => setDraggingChoiceId(choice.id)}
-                    onDragEnd={(event, info) => handleChoiceDragEnd(choice, event, info)}
                     onClick={() => handleChoice(choice)}
                     disabled={selectedChoiceId !== null || isAnimating}
                     className="min-h-[96px] rounded-2xl border px-4 py-4 text-left text-sm font-medium transition-all"
                     style={{ backgroundColor, borderColor, color: textColor }}
                   >
-                    <div className="mb-2 flex items-center justify-between gap-3">
-                      <span className="text-[10px] font-semibold uppercase tracking-[0.18em]" style={{ color: 'var(--text-muted)' }}>
+                    <div className="mb-2">
+                      <span
+                        className="text-[10px] font-semibold uppercase tracking-[0.18em]"
+                        style={{ color: 'var(--text-muted)' }}
+                      >
                         {String.fromCharCode(65 + index)}
-                      </span>
-                      <span className="text-[10px]" style={{ color: 'var(--text-muted)' }}>
-                        ↑ drag
                       </span>
                     </div>
                     <p className="leading-relaxed">{choice.text}</p>
