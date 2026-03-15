@@ -8,7 +8,8 @@ import { getBillingConfig, type BillingPlan } from '@/lib/billing'
 import {
   formatDiscountText,
   formatWon,
-  MONTHLY_BASE_PRICE,
+  MONTHLY_REFERENCE_PRICE,
+  YEARLY_BASE_SAVINGS_PERCENT,
   YEARLY_REFERENCE_PRICE,
   getMonthlyDiscountedPrice,
   getYearlyRenewalPrice,
@@ -20,7 +21,6 @@ import { usePremiumStore } from '@/stores/usePremiumStore'
 import {
   MONTHLY_ACTIVE_THRESHOLD,
   TIER_NAMES,
-  YEARLY_BASE_SAVINGS_PERCENT,
   useTierStore,
 } from '@/stores/useTierStore'
 import { SurfaceCard } from '@/components/ui/AppPage'
@@ -75,6 +75,7 @@ const WEB_PLAN_OPTIONS: Record<BillingPlan, PlanOption> = {
     label: '월간',
     detail: '지금 바로 시작하기 좋은 월간 플랜입니다.',
     price: '9,900원 / 월',
+    comparePrice: '12,000원',
   },
 }
 
@@ -448,7 +449,7 @@ export function BillingManagementCard({
           price: yearly
             ? `${formatWon(getYearlyRenewalPrice(benefitSnapshot.yearlyRenewalDiscount))} / 년`
             : `${formatWon(getMonthlyDiscountedPrice(benefitSnapshot.monthlyDiscount))} / 월`,
-          comparePrice: yearly ? formatWon(YEARLY_REFERENCE_PRICE) : formatWon(MONTHLY_BASE_PRICE),
+          comparePrice: yearly ? formatWon(YEARLY_REFERENCE_PRICE) : formatWon(MONTHLY_REFERENCE_PRICE),
           subdetail: yearly
             ? `기본 ${YEARLY_BASE_SAVINGS_PERCENT}% + ${formatDiscountText(`${TIER_NAMES[benefitSnapshot.benefitTier]} 추가 할인`, benefitSnapshot.yearlyRenewalDiscount)}`
             : formatDiscountText(`${TIER_NAMES[benefitSnapshot.benefitTier]} 추가 할인`, benefitSnapshot.monthlyDiscount),
@@ -475,7 +476,7 @@ export function BillingManagementCard({
           TIER_NAMES[benefitSnapshot.benefitTier],
         ),
         price: `${formatWon(getMonthlyDiscountedPrice(benefitSnapshot.monthlyDiscount))} / 월`,
-        comparePrice: formatWon(MONTHLY_BASE_PRICE),
+        comparePrice: formatWon(MONTHLY_REFERENCE_PRICE),
         subdetail: formatDiscountText(`${TIER_NAMES[benefitSnapshot.benefitTier]} 추가 할인`, benefitSnapshot.monthlyDiscount),
       },
     ]

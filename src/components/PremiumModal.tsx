@@ -8,13 +8,14 @@ import {
   formatWon,
   getMonthlyDiscountedPrice,
   getYearlyRenewalPrice,
-  MONTHLY_BASE_PRICE,
+  MONTHLY_REFERENCE_PRICE,
+  YEARLY_BASE_SAVINGS_PERCENT,
   YEARLY_REFERENCE_PRICE,
 } from '@/lib/billingPricing'
 import { isNative } from '@/lib/platform'
 import { useAuth } from '@/hooks/useAuth'
 import { usePremiumStore, FREE_DAILY_VIEW_LIMIT } from '@/stores/usePremiumStore'
-import { TIER_NAMES, YEARLY_BASE_SAVINGS_PERCENT, useTierStore } from '@/stores/useTierStore'
+import { TIER_NAMES, useTierStore } from '@/stores/useTierStore'
 import { ModalFeatureList, ModalHeader, ModalShell } from '@/components/ui/ModalShell'
 import type { PurchasesPackage } from '@revenuecat/purchases-typescript-internal-esm'
 
@@ -51,6 +52,7 @@ const PLAN_DETAILS: Record<
     label: '월간 플랜',
     detail: '지금 바로 시작하기 좋은 월간 플랜입니다.',
     price: '9,900원 / 월',
+    comparePrice: formatWon(MONTHLY_REFERENCE_PRICE),
   },
 }
 
@@ -265,7 +267,9 @@ export function PremiumModal({
                   </div>
                   <div className="mt-3 flex items-baseline gap-2">
                     <span className="text-xs text-[var(--text-muted)] line-through">
-                      {isYearly ? formatWon(YEARLY_REFERENCE_PRICE) : formatWon(MONTHLY_BASE_PRICE)}
+                      {isYearly
+                        ? formatWon(YEARLY_REFERENCE_PRICE)
+                        : formatWon(MONTHLY_REFERENCE_PRICE)}
                     </span>
                     <p className="text-lg font-bold text-[var(--text-primary)]">
                       {isYearly

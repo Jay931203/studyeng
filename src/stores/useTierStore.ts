@@ -2,6 +2,7 @@
 
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
+import { YEARLY_BASE_SAVINGS_PERCENT } from '@/lib/billingPricing'
 import { useUserStore } from '@/stores/useUserStore'
 
 export const TIER_THRESHOLDS = [0, 350, 800, 1500, 2200, 3000] as const
@@ -10,7 +11,6 @@ export const MONTHLY_PLAN_DISCOUNTS = [0, 10, 20, 30, 40, 50] as const
 export const YEARLY_PLAN_RENEWAL_DISCOUNTS = [0, 5, 8, 10, 12, 15] as const
 export const TIER_DISCOUNTS = MONTHLY_PLAN_DISCOUNTS
 export const MONTHLY_ACTIVE_THRESHOLD = 300
-export const YEARLY_BASE_SAVINGS_PERCENT = 33
 
 export type TierLevel = 0 | 1 | 2 | 3 | 4 | 5
 export type TierName = (typeof TIER_NAMES)[number]

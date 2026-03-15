@@ -13,7 +13,8 @@ import {
   formatWon,
   getMonthlyDiscountedPrice,
   getYearlyRenewalPrice,
-  MONTHLY_BASE_PRICE,
+  MONTHLY_REFERENCE_PRICE,
+  YEARLY_BASE_SAVINGS_PERCENT,
   YEARLY_REFERENCE_PRICE,
 } from '@/lib/billingPricing'
 import { DAILY_SESSION_XP_CAP } from '@/lib/xp/sessionXp'
@@ -203,7 +204,7 @@ export function TodayDashboard() {
                     <div className="mt-2 grid grid-cols-[1fr_1fr] gap-2 text-[11px]">
                       <CompactPrice
                         label="월간 최종가"
-                        original={formatWon(MONTHLY_BASE_PRICE)}
+                        original={formatWon(MONTHLY_REFERENCE_PRICE)}
                         current={formatWon(getMonthlyDiscountedPrice(monthlyDiscount))}
                         detail={formatDiscountText('추가 할인', monthlyDiscount)}
                       />
@@ -211,7 +212,7 @@ export function TodayDashboard() {
                         label="연간 최종가"
                         original={formatWon(YEARLY_REFERENCE_PRICE)}
                         current={formatWon(getYearlyRenewalPrice(yearlyDiscount))}
-                        detail={`기본 33% + ${formatDiscountText('추가 할인', yearlyDiscount)}`}
+                        detail={`기본 ${YEARLY_BASE_SAVINGS_PERCENT}% + ${formatDiscountText('추가 할인', yearlyDiscount)}`}
                       />
                     </div>
                   </div>
