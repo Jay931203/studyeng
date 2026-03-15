@@ -155,14 +155,6 @@ export default function LearningPage() {
                         <span className="text-xs text-[var(--text-muted)]">{categoryLabel}</span>
                         <span className="text-[10px] text-[var(--text-muted)]">&middot;</span>
                         <span className="text-xs text-[var(--text-muted)]">Lv.{video.difficulty}</span>
-                        {count > 0 && (
-                          <>
-                            <span className="text-[10px] text-[var(--text-muted)]">&middot;</span>
-                            <span className="text-xs font-medium text-[var(--text-muted)]">
-                              x{count > 99 ? '99+' : count}
-                            </span>
-                          </>
-                        )}
                       </div>
                     </div>
                   </button>
