@@ -119,8 +119,18 @@ function ExpressionCard({
     >
       <motion.div
         className="cursor-pointer"
-        style={{ perspective: 800, x, opacity, touchAction: 'pan-x', userSelect: 'none' }}
+        style={{
+          perspective: 800,
+          x,
+          opacity,
+          touchAction: 'none',
+          userSelect: 'none',
+          WebkitUserSelect: 'none',
+        }}
         drag="x"
+        dragDirectionLock
+        dragPropagation={false}
+        dragSnapToOrigin
         dragElastic={0.6}
         dragMomentum={false}
         onDragStart={() => {
@@ -137,6 +147,7 @@ function ExpressionCard({
         onPointerMove={(event) => event.stopPropagation()}
         onPointerUp={(event) => event.stopPropagation()}
         onPointerCancel={(event) => event.stopPropagation()}
+        onMouseDownCapture={(event) => event.stopPropagation()}
         onClick={(e) => {
           e.stopPropagation()
           if (didDragRef.current) {
@@ -232,45 +243,45 @@ function ExpressionCard({
             >
               {expr.sentenceKo}
             </p>
-            {onPlaySegment && expr.start != null && expr.end != null && (
-              <button
-                type="button"
-                className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full transition-opacity"
+            <button
+              type="button"
+              disabled={!onPlaySegment || expr.start == null || expr.end == null}
+              className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full transition-opacity disabled:cursor-not-allowed disabled:opacity-45"
+              style={{
+                backgroundColor: playing
+                  ? 'rgba(var(--accent-primary-rgb), 0.25)'
+                  : 'rgba(255, 255, 255, 0.1)',
+              }}
+              onClick={(e) => {
+                e.stopPropagation()
+                if (!onPlaySegment || expr.start == null || expr.end == null) return
+                onInteract?.()
+                setPlaying(true)
+                onPlaySegment(expr.start, expr.end)
+                const duration = ((expr.end - expr.start) * 1000) + 300
+                setTimeout(() => setPlaying(false), duration)
+              }}
+              aria-label="Play preview"
+              title={!onPlaySegment || expr.start == null || expr.end == null ? 'Preview unavailable' : 'Play preview'}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="h-3.5 w-3.5"
                 style={{
-                  backgroundColor: playing
-                    ? 'rgba(var(--accent-primary-rgb), 0.25)'
-                    : 'rgba(255, 255, 255, 0.1)',
+                  color: playing
+                    ? 'var(--accent-text, #5eead4)'
+                    : 'rgba(255,255,255,0.7)',
                 }}
-                onClick={(e) => {
-                  e.stopPropagation()
-                  onInteract?.()
-                  setPlaying(true)
-                  onPlaySegment(expr.start!, expr.end!)
-                  const duration = ((expr.end! - expr.start!) * 1000) + 300
-                  setTimeout(() => setPlaying(false), duration)
-                }}
-                aria-label="Play preview"
-                title="Play preview"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="h-3.5 w-3.5"
-                  style={{
-                    color: playing
-                      ? 'var(--accent-text, #5eead4)'
-                      : 'rgba(255,255,255,0.7)',
-                  }}
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-            )}
+                <path
+                  fillRule="evenodd"
+                  d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
             <span
               className="absolute bottom-3 right-4 text-[10px]"
               style={{ color: 'rgba(255, 255, 255, 0.25)' }}
@@ -347,8 +358,18 @@ function WordCard({
     >
       <motion.div
         className="cursor-pointer"
-        style={{ perspective: 800, x, opacity, touchAction: 'pan-x', userSelect: 'none' }}
+        style={{
+          perspective: 800,
+          x,
+          opacity,
+          touchAction: 'none',
+          userSelect: 'none',
+          WebkitUserSelect: 'none',
+        }}
         drag="x"
+        dragDirectionLock
+        dragPropagation={false}
+        dragSnapToOrigin
         dragElastic={0.6}
         dragMomentum={false}
         onDragStart={() => {
@@ -365,6 +386,7 @@ function WordCard({
         onPointerMove={(event) => event.stopPropagation()}
         onPointerUp={(event) => event.stopPropagation()}
         onPointerCancel={(event) => event.stopPropagation()}
+        onMouseDownCapture={(event) => event.stopPropagation()}
         onClick={(e) => {
           e.stopPropagation()
           if (didDragRef.current) {
@@ -460,45 +482,45 @@ function WordCard({
             >
               {word.sentenceKo}
             </p>
-            {onPlaySegment && word.start != null && word.end != null && (
-              <button
-                type="button"
-                className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full transition-opacity"
+            <button
+              type="button"
+              disabled={!onPlaySegment || word.start == null || word.end == null}
+              className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full transition-opacity disabled:cursor-not-allowed disabled:opacity-45"
+              style={{
+                backgroundColor: playing
+                  ? 'rgba(var(--accent-primary-rgb), 0.25)'
+                  : 'rgba(255, 255, 255, 0.1)',
+              }}
+              onClick={(e) => {
+                e.stopPropagation()
+                if (!onPlaySegment || word.start == null || word.end == null) return
+                onInteract?.()
+                setPlaying(true)
+                onPlaySegment(word.start, word.end)
+                const duration = ((word.end - word.start) * 1000) + 300
+                setTimeout(() => setPlaying(false), duration)
+              }}
+              aria-label="Play preview"
+              title={!onPlaySegment || word.start == null || word.end == null ? 'Preview unavailable' : 'Play preview'}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                className="h-3.5 w-3.5"
                 style={{
-                  backgroundColor: playing
-                    ? 'rgba(var(--accent-primary-rgb), 0.25)'
-                    : 'rgba(255, 255, 255, 0.1)',
+                  color: playing
+                    ? 'var(--accent-text, #5eead4)'
+                    : 'rgba(255,255,255,0.7)',
                 }}
-                onClick={(e) => {
-                  e.stopPropagation()
-                  onInteract?.()
-                  setPlaying(true)
-                  onPlaySegment(word.start!, word.end!)
-                  const duration = ((word.end! - word.start!) * 1000) + 300
-                  setTimeout(() => setPlaying(false), duration)
-                }}
-                aria-label="Play preview"
-                title="Play preview"
               >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="h-3.5 w-3.5"
-                  style={{
-                    color: playing
-                      ? 'var(--accent-text, #5eead4)'
-                      : 'rgba(255,255,255,0.7)',
-                  }}
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </button>
-            )}
+                <path
+                  fillRule="evenodd"
+                  d="M4.5 5.653c0-1.426 1.529-2.33 2.779-1.643l11.54 6.348c1.295.712 1.295 2.573 0 3.285L7.28 19.991c-1.25.687-2.779-.217-2.779-1.643V5.653z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </button>
             <span
               className="absolute bottom-3 right-4 text-[10px]"
               style={{ color: 'rgba(255, 255, 255, 0.25)' }}

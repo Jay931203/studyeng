@@ -6,23 +6,18 @@ import { usePathname } from 'next/navigation'
 import type { PurchasesPackage } from '@revenuecat/purchases-typescript-internal-esm'
 import { getBillingConfig, type BillingPlan } from '@/lib/billing'
 import {
-  formatDiscountText,
   formatWon,
-  MONTHLY_REFERENCE_PRICE,
-  YEARLY_BASE_SAVINGS_PERCENT,
-  YEARLY_REFERENCE_PRICE,
   getMonthlyDiscountedPrice,
+  getSavingsPercent,
   getYearlyRenewalPrice,
+  MONTHLY_REFERENCE_PRICE,
+  YEARLY_REFERENCE_PRICE,
 } from '@/lib/billingPricing'
 import { getBenefitStatusLine } from '@/lib/learningDashboard'
 import { getPlatform, isNative } from '@/lib/platform'
 import { useAuth } from '@/hooks/useAuth'
 import { usePremiumStore } from '@/stores/usePremiumStore'
-import {
-  MONTHLY_ACTIVE_THRESHOLD,
-  TIER_NAMES,
-  useTierStore,
-} from '@/stores/useTierStore'
+import { MONTHLY_ACTIVE_THRESHOLD, TIER_NAMES, useTierStore } from '@/stores/useTierStore'
 import { SurfaceCard } from '@/components/ui/AppPage'
 import { RedeemCodeSection } from './RedeemCodeCard'
 
@@ -48,9 +43,9 @@ interface PlanOption {
   id: BillingPlan
   label: string
   detail: string
+  comparePrice: string
   price: string
-  comparePrice?: string
-  subdetail?: string
+  savingsText: string
   highlight?: string
 }
 
@@ -61,42 +56,24 @@ interface BillingManagementCardProps {
 
 const ANDROID_APP_ID = 'com.studyeng.app'
 
-const WEB_PLAN_OPTIONS: Record<BillingPlan, PlanOption> = {
+const WEB_PLAN_OPTIONS: Record<BillingPlan, Omit<PlanOption, 'detail' | 'comparePrice' | 'price' | 'savingsText'>> = {
   yearly: {
     id: 'yearly',
     label: '연간',
-    detail: '월간 12회 대비 기본 할인에 등급 혜택이 더해집니다.',
-    price: '79,900원 / 년',
-    comparePrice: '118,800원',
     highlight: '추천',
   },
   monthly: {
     id: 'monthly',
     label: '월간',
-    detail: '지금 바로 시작하기 좋은 월간 플랜입니다.',
-    price: '9,900원 / 월',
-    comparePrice: '12,000원',
   },
-}
-
-function formatDate(value: string | null) {
-  if (!value) return '없음'
-
-  return new Intl.DateTimeFormat('ko-KR', {
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
-  }).format(new Date(value))
 }
 
 function getPlanLabel(planKey: string | null | undefined) {
   switch (planKey) {
     case 'premium_yearly':
-      return '프리미엄 연간'
+      return '연간'
     case 'premium_monthly':
-      return '프리미엄 월간'
-    case 'premium':
-      return '프리미엄'
+      return '월간'
     default:
       return 'FREE'
   }
@@ -122,14 +99,6 @@ function getStoreManagementUrl() {
     default:
       return null
   }
-}
-
-function getPlanBenefitDetail(plan: BillingPlan, tierName: string) {
-  if (plan === 'yearly') {
-    return `${tierName} 등급 기준 연간 최종가`
-  }
-
-  return `${tierName} 등급 기준 월간 최종가`
 }
 
 function formatCardBrand(brand: string | null | undefined) {
@@ -172,9 +141,7 @@ function PlanTile({
           <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">
             {option.detail}
           </p>
-          {option.subdetail ? (
-            <p className="mt-1 text-[11px] text-[var(--text-muted)]">{option.subdetail}</p>
-          ) : null}
+          <p className="mt-1 text-[11px] text-[var(--text-muted)]">{option.savingsText}</p>
         </div>
         {(current || option.highlight) && (
           <span
@@ -189,9 +156,7 @@ function PlanTile({
         )}
       </div>
       <div className="mt-3 flex items-baseline gap-2">
-        {option.comparePrice ? (
-          <span className="text-xs text-[var(--text-muted)] line-through">{option.comparePrice}</span>
-        ) : null}
+        <span className="text-xs text-[var(--text-muted)] line-through">{option.comparePrice}</span>
         <p className="text-base font-bold text-[var(--text-primary)]">{option.price}</p>
       </div>
     </button>
@@ -210,6 +175,7 @@ export function BillingManagementCard({
   const entitlementPremium = usePremiumStore((state) => state.entitlementPremium)
   const setPremiumEntitlement = usePremiumStore((state) => state.setPremiumEntitlement)
   const getBenefitSnapshot = useTierStore((state) => state.getBenefitSnapshot)
+  const benefitSnapshot = getBenefitSnapshot()
   const [selectedPlan, setSelectedPlan] = useState<BillingPlan>('yearly')
   const [loading, setLoading] = useState(false)
   const [managing, setManaging] = useState(false)
@@ -236,7 +202,7 @@ export function BillingManagementCard({
           : null,
       })
     },
-    [nativePackages.length]
+    [nativePackages.length],
   )
 
   useEffect(() => {
@@ -340,51 +306,20 @@ export function BillingManagementCard({
   }, [status?.entitlement?.planKey])
 
   const currentPremium = native ? entitlementPremium : status?.isPremium ?? false
-  const benefitSnapshot = getBenefitSnapshot()
   const entitlementSource = native ? (currentPremium ? 'revenuecat' : 'free') : status?.entitlement?.source ?? 'free'
   const webBillingReady = status?.enabled ?? false
   const hasManagedSubscription =
     native ? currentPremium : currentPremium && entitlementSource === 'stripe'
   const hasBillingPaymentMethod =
     native ? currentPremium : currentPremium && entitlementSource === 'stripe'
-  const hasCodeAccess = currentPremium && entitlementSource === 'code'
   const planKey = status?.entitlement?.planKey ?? (currentPremium ? 'premium' : 'free')
   const currentPlanLabel = loading ? '상태 확인 중...' : getPlanLabel(planKey)
-  const currentStatusLabel = loading
-    ? '상태 확인 중...'
-    : currentPremium
-      ? '프리미엄 사용 중'
-      : 'FREE'
+  const currentStatusLabel = loading ? '상태 확인 중...' : currentPremium ? 'Premium active' : 'FREE'
   const isReady = native ? currentPremium || nativePackages.length > 0 : webBillingReady
   const currentPlan =
     planKey === 'premium_monthly' ? 'monthly' : planKey === 'premium_yearly' ? 'yearly' : null
   const shouldShowPlanLabel = currentPremium && currentPlanLabel !== currentStatusLabel
-  const managementLabel =
-    !native && !webBillingReady
-      ? ''
-      : hasManagedSubscription
-        ? native
-          ? `${getStoreLabel()}에서 관리`
-          : '구독 포털에서 관리'
-        : hasCodeAccess
-          ? '코드로 이용 중'
-          : user
-            ? '구독 가능'
-            : '로그인 후 구독 가능'
-  const scheduleLabel =
-    native && currentPremium
-      ? '갱신'
-      : !native && status?.entitlement?.currentPeriodEnd
-        ? status.entitlement.cancelAtPeriodEnd
-          ? '이용 종료'
-          : '다음 결제'
-        : '일정'
-  const scheduleValue =
-    native && currentPremium
-      ? `${getStoreLabel()}에서 확인`
-      : !native && status?.entitlement?.currentPeriodEnd
-        ? formatDate(status.entitlement.currentPeriodEnd)
-        : ''
+
   const paymentMethodLabel = hasBillingPaymentMethod
     ? native
       ? `${getStoreLabel()} 결제`
@@ -392,6 +327,7 @@ export function BillingManagementCard({
         ? `${formatCardBrand(status.paymentMethod.brand)} •••• ${status.paymentMethod.last4}`
         : '결제 수단 없음'
     : ''
+
   const paymentMethodDetail =
     !native &&
     hasBillingPaymentMethod &&
@@ -399,94 +335,34 @@ export function BillingManagementCard({
     status?.paymentMethod?.expYear
       ? `만료 ${String(status.paymentMethod.expMonth).padStart(2, '0')}/${String(status.paymentMethod.expYear).slice(-2)}`
       : null
-  const benefitItems = [
-    {
-      label: '이번 달 활동',
-      value: `${benefitSnapshot.currentMonthXp.toLocaleString()} / ${MONTHLY_ACTIVE_THRESHOLD} XP`,
-      detail: '300 XP를 채우면 현재 잠금 등급 혜택을 유지하거나 복구할 수 있습니다.',
-    },
-  ]
-  const membershipSummaryItems = [
-    ...(currentPremium
-      ? [{ label: '플랜', value: currentPlanLabel, detail: null as string | null }]
-      : []),
-    ...(hasBillingPaymentMethod
-      ? [{ label: '결제 수단', value: paymentMethodLabel, detail: paymentMethodDetail }]
-      : []),
-    ...(hasCodeAccess
-      ? [
-          {
-            label: '이용 방식',
-            value: '코드 이용 중',
-            detail: '자동 결제는 구독을 시작한 뒤에만 이어집니다.',
-          },
-        ]
-      : []),
-    { label: '관리', value: managementLabel || '없음', detail: null as string | null },
-    { label: scheduleLabel, value: scheduleValue || '없음', detail: null as string | null },
-  ]
 
-  const planOptions = useMemo(() => {
-    if (native && nativePackages.length > 0) {
-      const preferred = nativePackages
-        .filter((pkg) => pkg.packageType === 'ANNUAL' || pkg.packageType === 'MONTHLY')
-        .sort((left, right) => {
-          const order = (pkg: PurchasesPackage) => (pkg.packageType === 'ANNUAL' ? 0 : 1)
-          return order(left) - order(right)
-        })
-
-      const source = preferred.length > 0 ? preferred : nativePackages.slice(0, 2)
-
-      return source.map((pkg) => {
-        const yearly = pkg.packageType === 'ANNUAL'
-        return {
-          id: yearly ? 'yearly' : 'monthly',
-          label: yearly ? '연간' : '월간',
-          detail: getPlanBenefitDetail(
-            yearly ? 'yearly' : 'monthly',
-            TIER_NAMES[benefitSnapshot.benefitTier],
-          ),
-          price: yearly
-            ? `${formatWon(getYearlyRenewalPrice(benefitSnapshot.yearlyRenewalDiscount))} / 년`
-            : `${formatWon(getMonthlyDiscountedPrice(benefitSnapshot.monthlyDiscount))} / 월`,
-          comparePrice: yearly ? formatWon(YEARLY_REFERENCE_PRICE) : formatWon(MONTHLY_REFERENCE_PRICE),
-          subdetail: yearly
-            ? `기본 ${YEARLY_BASE_SAVINGS_PERCENT}% + ${formatDiscountText(`${TIER_NAMES[benefitSnapshot.benefitTier]} 추가 할인`, benefitSnapshot.yearlyRenewalDiscount)}`
-            : formatDiscountText(`${TIER_NAMES[benefitSnapshot.benefitTier]} 추가 할인`, benefitSnapshot.monthlyDiscount),
-          highlight: yearly ? '추천' : undefined,
-        } satisfies PlanOption
-      })
-    }
+  const monthlyPrice = getMonthlyDiscountedPrice(benefitSnapshot.monthlyDiscount)
+  const yearlyPrice = getYearlyRenewalPrice(
+    benefitSnapshot.yearlyRenewalDiscount,
+    benefitSnapshot.monthlyDiscount,
+  )
+  const planOptions = useMemo<PlanOption[]>(() => {
+    const tierName = TIER_NAMES[benefitSnapshot.benefitTier]
+    const monthlySavings = getSavingsPercent(MONTHLY_REFERENCE_PRICE, monthlyPrice)
+    const yearlySavings = getSavingsPercent(YEARLY_REFERENCE_PRICE, yearlyPrice)
 
     return [
       {
         ...WEB_PLAN_OPTIONS.yearly,
-        detail: getPlanBenefitDetail(
-          'yearly',
-          TIER_NAMES[benefitSnapshot.benefitTier],
-        ),
-        price: `${formatWon(getYearlyRenewalPrice(benefitSnapshot.yearlyRenewalDiscount))} / 년`,
+        detail: `${tierName} 혜택 적용`,
         comparePrice: formatWon(YEARLY_REFERENCE_PRICE),
-        subdetail: `기본 ${YEARLY_BASE_SAVINGS_PERCENT}% + ${formatDiscountText(`${TIER_NAMES[benefitSnapshot.benefitTier]} 추가 할인`, benefitSnapshot.yearlyRenewalDiscount)}`,
+        price: `${formatWon(yearlyPrice)} / 년`,
+        savingsText: `총 ${yearlySavings}% 할인`,
       },
       {
         ...WEB_PLAN_OPTIONS.monthly,
-        detail: getPlanBenefitDetail(
-          'monthly',
-          TIER_NAMES[benefitSnapshot.benefitTier],
-        ),
-        price: `${formatWon(getMonthlyDiscountedPrice(benefitSnapshot.monthlyDiscount))} / 월`,
+        detail: `${tierName} 혜택 적용`,
         comparePrice: formatWon(MONTHLY_REFERENCE_PRICE),
-        subdetail: formatDiscountText(`${TIER_NAMES[benefitSnapshot.benefitTier]} 추가 할인`, benefitSnapshot.monthlyDiscount),
+        price: `${formatWon(monthlyPrice)} / 월`,
+        savingsText: `총 ${monthlySavings}% 할인`,
       },
     ]
-  }, [
-    benefitSnapshot.benefitTier,
-    benefitSnapshot.monthlyDiscount,
-    benefitSnapshot.yearlyRenewalDiscount,
-    native,
-    nativePackages,
-  ])
+  }, [benefitSnapshot.benefitTier, monthlyPrice, yearlyPrice])
 
   const handlePortal = async () => {
     setManaging(true)
@@ -503,7 +379,7 @@ export function BillingManagementCard({
       window.location.assign(payload.url)
     } catch (error) {
       console.warn('[billing] portal launch failed:', error)
-      setErrorMessage('구독 포털을 열지 못했습니다.')
+      setErrorMessage('구독 관리 페이지를 열지 못했습니다.')
       setManaging(false)
     }
   }
@@ -637,11 +513,11 @@ export function BillingManagementCard({
   const primaryLabel = (() => {
     if (!isReady) return '결제 준비 중'
     if (submitting) return '처리 중...'
-    if (managing) return '열어보는 중...'
+    if (managing) return '이동 중...'
     if (hasManagedSubscription) {
       return native ? `${getStoreLabel()}에서 관리` : '구독 관리'
     }
-    if (!user) return '로그인 후 구독'
+    if (!user) return '로그인하고 구독'
     return '구독 시작'
   })()
 
@@ -654,15 +530,15 @@ export function BillingManagementCard({
           </p>
           <Link
             href="/profile/membership"
-            className="shrink-0 text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
+            className="shrink-0 text-[11px] font-medium text-[var(--text-muted)]"
           >
             상세보기
           </Link>
         </div>
       )}
 
-      <div className="space-y-4">
-        {!isDetail && (
+      {!isDetail && (
+        <div className="space-y-3">
           <div className="flex items-start justify-between gap-3">
             <div>
               <p className="text-lg font-semibold text-[var(--text-primary)]">
@@ -671,48 +547,9 @@ export function BillingManagementCard({
               {shouldShowPlanLabel && (
                 <p className="mt-1 text-sm text-[var(--text-secondary)]">{currentPlanLabel}</p>
               )}
-
               <p className="mt-2 text-xs text-[var(--text-secondary)]">
                 {getBenefitStatusLine(benefitSnapshot)}
               </p>
-
-              {!native && status?.entitlement?.currentPeriodEnd && (
-                <p className="mt-2 text-xs text-[var(--text-secondary)]">
-                  {status.entitlement.cancelAtPeriodEnd ? '이용 종료' : '다음 결제'}{' '}
-                  {formatDate(status.entitlement.currentPeriodEnd)}
-                </p>
-              )}
-
-              {hasBillingPaymentMethod && (
-                <p className="mt-2 text-xs text-[var(--text-secondary)]">
-                  결제 수단 {paymentMethodLabel}
-                  {paymentMethodDetail ? ` · ${paymentMethodDetail}` : ''}
-                </p>
-              )}
-
-              {!native && hasCodeAccess && (
-                <p className="mt-2 text-xs text-[var(--text-secondary)]">
-                  코드로 프리미엄을 사용 중입니다. 자동 결제는 구독을 시작한 뒤에만 이어집니다.
-                </p>
-              )}
-
-              {!native && !user && webBillingReady && (
-                <p className="mt-2 text-xs text-[var(--text-secondary)]">
-                  로그인하면 구독 상태와 프리미엄 이용 권한을 계정에 연결할 수 있습니다.
-                </p>
-              )}
-
-              {!native && billingEnabled && !webBillingReady && (
-                <p className="mt-2 text-xs text-[var(--text-secondary)]">
-                  서버 쪽 결제 설정이 아직 마무리 중입니다.
-                </p>
-              )}
-
-              {native && currentPremium && (
-                <p className="mt-2 text-xs text-[var(--text-secondary)]">
-                  플랜 변경과 결제 관리는 {getStoreLabel()}에서 진행됩니다.
-                </p>
-              )}
             </div>
             {currentPremium && (
               <span className="rounded-full bg-emerald-500/15 px-2.5 py-1 text-xs font-semibold text-emerald-300">
@@ -720,157 +557,153 @@ export function BillingManagementCard({
               </span>
             )}
           </div>
-        )}
 
-        {isDetail && (
-          <>
-            <div className="space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--text-muted)]">
-                상태
-              </p>
-              <div className="flex items-start justify-between gap-3">
-                <div>
-                  <p className="text-lg font-semibold text-[var(--text-primary)]">
-                    {currentStatusLabel}
-                  </p>
-                  {shouldShowPlanLabel && (
-                    <p className="mt-1 text-sm text-[var(--text-secondary)]">{currentPlanLabel}</p>
-                  )}
+          <div className="grid gap-3 sm:grid-cols-2">
+            {planOptions.map((option) => (
+              <div
+                key={option.id}
+                className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)]/30 px-4 py-3"
+              >
+                <p className="text-[11px] text-[var(--text-secondary)]">{option.label}</p>
+                <div className="mt-1 flex items-center gap-2">
+                  <span className="text-[11px] text-[var(--text-muted)] line-through">{option.comparePrice}</span>
+                  <span className="text-sm font-semibold text-[var(--text-primary)]">{option.price}</span>
                 </div>
-                {currentPremium && (
-                  <span className="rounded-full bg-emerald-500/15 px-2.5 py-1 text-xs font-semibold text-emerald-300">
-                    PRO
-                  </span>
+                <p className="mt-1 text-[10px] text-[var(--text-muted)]">{option.savingsText}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {isDetail && (
+        <div className="space-y-5">
+          <section className="space-y-3">
+            <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--text-muted)]">
+              상태
+            </p>
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <p className="text-lg font-semibold text-[var(--text-primary)]">{currentStatusLabel}</p>
+                {shouldShowPlanLabel && (
+                  <p className="mt-1 text-sm text-[var(--text-secondary)]">{currentPlanLabel}</p>
                 )}
               </div>
-            </div>
-
-            <div className="divide-y divide-[var(--border-card)]/40">
-              {membershipSummaryItems.map((item) => (
-                <div key={item.label} className="flex items-center justify-between py-2.5">
-                  <span className="text-xs text-[var(--text-muted)]">{item.label}</span>
-                  <div className="text-right">
-                    <span className="text-sm font-medium text-[var(--text-primary)]">
-                      {item.value}
-                    </span>
-                    {item.detail && (
-                      <p className="text-[10px] text-[var(--text-secondary)]">{item.detail}</p>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className="space-y-3">
-              <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--text-muted)]">
-                혜택
-              </p>
-              <div className="rounded-2xl border border-[var(--accent-primary)] bg-[var(--accent-glow)] px-4 py-3">
-                <div className="flex items-center justify-between gap-3">
-                  <div>
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-                      현재 혜택
-                    </p>
-                    <p className="mt-1 text-base font-semibold text-[var(--accent-primary)]">
-                      {TIER_NAMES[benefitSnapshot.benefitTier]}
-                    </p>
-                  </div>
-                  {benefitSnapshot.benefitTier < benefitSnapshot.unlockedTier ? (
-                    <span className="rounded-full bg-[var(--bg-secondary)] px-2.5 py-1 text-[10px] font-semibold text-[var(--text-secondary)]">
-                      잠금 등급 {TIER_NAMES[benefitSnapshot.unlockedTier]}
-                    </span>
-                  ) : null}
-                </div>
-                <p className="mt-2 text-xs text-[var(--text-secondary)]">
-                  {getBenefitStatusLine(benefitSnapshot)}
-                </p>
-              </div>
-              <div className="divide-y divide-[var(--border-card)]/40">
-                {benefitItems.map((item) => (
-                  <div key={item.label} className="flex items-center justify-between py-2.5">
-                    <span className="text-xs text-[var(--text-muted)]">{item.label}</span>
-                    <div className="text-right">
-                      <span className="text-sm font-medium text-[var(--text-primary)]">
-                        {item.value}
-                      </span>
-                      {item.detail ? (
-                        <p className="text-[10px] text-[var(--text-secondary)]">{item.detail}</p>
-                      ) : null}
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <p className="text-xs text-[var(--text-secondary)]">
-                완료된 월 기준으로 {MONTHLY_ACTIVE_THRESHOLD} XP 미만이 2개월 연속 이어지면 적용 혜택이 1단계 낮아집니다.
-                이번 달 {MONTHLY_ACTIVE_THRESHOLD} XP를 채우면 잠금 등급 혜택으로 바로 복구할 수 있습니다.
-              </p>
-            </div>
-
-            <div className="space-y-3">
-              <div className="flex items-center justify-between gap-3">
-                <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--text-muted)]">
-                  옵션
-                </p>
-                {currentPlan && (
-                  <p className="text-xs text-[var(--text-secondary)]">
-                    현재 {currentPlan === 'yearly' ? '연간' : '월간'}
-                  </p>
-                )}
-              </div>
-
-              <div className="grid gap-3">
-                {planOptions.map((option) => (
-                  <PlanTile
-                    key={option.id}
-                    option={option}
-                    selected={selectedPlan === option.id}
-                    current={currentPlan === option.id}
-                    onClick={() => setSelectedPlan(option.id)}
-                  />
-                ))}
-              </div>
-
-              {(hasManagedSubscription || hasCodeAccess) && (
-                <p className="text-xs text-[var(--text-secondary)]">
-                  {hasCodeAccess
-                    ? '지금은 코드로 이용 중입니다. 자동 결제로 이어가고 싶을 때만 구독을 시작하면 됩니다.'
-                    : native
-                    ? `${getStoreLabel()}에서 플랜을 변경할 수 있습니다.`
-                    : '결제 주기 변경과 결제 수단 수정은 구독 포털에서 진행됩니다.'}
-                </p>
+              {currentPremium && (
+                <span className="rounded-full bg-emerald-500/15 px-2.5 py-1 text-xs font-semibold text-emerald-300">
+                  PRO
+                </span>
               )}
             </div>
 
+            <div className="divide-y divide-[var(--border-card)]/40">
+              {currentPremium && (
+                <SummaryRow label="플랜" value={currentPlanLabel} />
+              )}
+              {hasBillingPaymentMethod && (
+                <SummaryRow
+                  label="결제 수단"
+                  value={paymentMethodLabel}
+                  detail={paymentMethodDetail}
+                />
+              )}
+            </div>
+          </section>
+
+          <section className="space-y-3">
+            <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--text-muted)]">
+              혜택
+            </p>
+            <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)]/30 px-4 py-3">
+              <p className="text-[11px] text-[var(--text-secondary)]">현재 적용 혜택</p>
+              <p className="mt-1 text-base font-semibold text-[var(--text-primary)]">
+                {TIER_NAMES[benefitSnapshot.benefitTier]}
+              </p>
+              <p className="mt-2 text-xs text-[var(--text-secondary)]">
+                {getBenefitStatusLine(benefitSnapshot)}
+              </p>
+              <p className="mt-2 text-[11px] text-[var(--text-muted)]">
+                이번 달 {benefitSnapshot.currentMonthXp.toLocaleString()} / {MONTHLY_ACTIVE_THRESHOLD} XP
+              </p>
+            </div>
+          </section>
+
+          <section className="space-y-3">
+            <div className="flex items-center justify-between gap-3">
+              <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--text-muted)]">
+                옵션
+              </p>
+              {currentPlan && (
+                <p className="text-xs text-[var(--text-secondary)]">현재 {currentPlanLabel}</p>
+              )}
+            </div>
+
+            <div className="grid gap-3">
+              {planOptions.map((option) => (
+                <PlanTile
+                  key={option.id}
+                  option={option}
+                  selected={selectedPlan === option.id}
+                  current={currentPlan === option.id}
+                  onClick={() => setSelectedPlan(option.id)}
+                />
+              ))}
+            </div>
+
+            <p className="text-xs text-[var(--text-secondary)]">
+              연간 최종가는 항상 월간 최종가 12회보다 낮게 맞춰집니다.
+            </p>
+          </section>
+
+          <button
+            type="button"
+            onClick={handlePrimaryAction}
+            disabled={!isReady || submitting || managing}
+            className="w-full rounded-2xl bg-[var(--accent-primary)] py-3.5 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            {primaryLabel}
+          </button>
+
+          {native && (
             <button
               type="button"
-              onClick={handlePrimaryAction}
-              disabled={!isReady || submitting || managing}
-              className="w-full rounded-2xl bg-[var(--accent-primary)] py-3.5 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-50"
+              onClick={handleRestore}
+              disabled={restoring}
+              className="w-full rounded-2xl bg-[var(--bg-secondary)] px-4 py-3 text-sm font-semibold text-[var(--text-primary)] disabled:cursor-not-allowed disabled:opacity-50"
             >
-              {primaryLabel}
+              {restoring ? '복원 중...' : '구매 복원'}
             </button>
+          )}
 
-            {native && (
-              <button
-                type="button"
-                onClick={handleRestore}
-                disabled={restoring}
-                className="w-full rounded-2xl bg-[var(--bg-secondary)] px-4 py-3 text-sm font-semibold text-[var(--text-primary)] disabled:cursor-not-allowed disabled:opacity-50"
-              >
-                {restoring ? '복원 중...' : '구매 복원'}
-              </button>
-            )}
+          <RedeemCodeSection />
+        </div>
+      )}
 
-            <RedeemCodeSection />
-          </>
-        )}
-
-        {errorMessage && (
-          <div className="rounded-2xl border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">
-            {errorMessage}
-          </div>
-        )}
-      </div>
+      {errorMessage && (
+        <div className="mt-4 rounded-2xl border border-red-500/20 bg-red-500/10 px-4 py-3 text-sm text-red-200">
+          {errorMessage}
+        </div>
+      )}
     </SurfaceCard>
+  )
+}
+
+function SummaryRow({
+  label,
+  value,
+  detail,
+}: {
+  label: string
+  value: string
+  detail?: string | null
+}) {
+  return (
+    <div className="flex items-center justify-between py-2.5">
+      <span className="text-xs text-[var(--text-muted)]">{label}</span>
+      <div className="text-right">
+        <span className="text-sm font-medium text-[var(--text-primary)]">{value}</span>
+        {detail ? <p className="text-[10px] text-[var(--text-secondary)]">{detail}</p> : null}
+      </div>
+    </div>
   )
 }

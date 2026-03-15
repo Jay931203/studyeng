@@ -273,7 +273,7 @@ export function PremiumModal({
                     </span>
                     <p className="text-lg font-bold text-[var(--text-primary)]">
                       {isYearly
-                        ? `${formatWon(getYearlyRenewalPrice(benefitSnapshot.yearlyRenewalDiscount))} / 년`
+                        ? `${formatWon(getYearlyRenewalPrice(benefitSnapshot.yearlyRenewalDiscount, benefitSnapshot.monthlyDiscount))} / 년`
                         : `${formatWon(getMonthlyDiscountedPrice(benefitSnapshot.monthlyDiscount))} / 월`}
                     </p>
                   </div>
@@ -323,7 +323,7 @@ export function PremiumModal({
                     ) : null}
                     <p className="text-lg font-bold text-[var(--text-primary)]">
                       {plan === 'yearly'
-                        ? `${formatWon(getYearlyRenewalPrice(benefitSnapshot.yearlyRenewalDiscount))} / 년`
+                        ? `${formatWon(getYearlyRenewalPrice(benefitSnapshot.yearlyRenewalDiscount, benefitSnapshot.monthlyDiscount))} / 년`
                         : `${formatWon(getMonthlyDiscountedPrice(benefitSnapshot.monthlyDiscount))} / 월`}
                     </p>
                   </div>

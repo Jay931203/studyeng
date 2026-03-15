@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, type ReactNode } from 'react'
 import { useRouter } from 'next/navigation'
 import { motion } from 'framer-motion'
 import { XpHistoryFeed } from '@/components/learning/XpHistoryFeed'
@@ -14,10 +14,12 @@ import {
   MONTHLY_ACTIVITY_EXPLAINER,
 } from '@/lib/learningDashboard'
 import {
-  formatDiscountText,
   formatWon,
   getMonthlyDiscountedPrice,
+  getSavingsPercent,
   getYearlyRenewalPrice,
+  MONTHLY_REFERENCE_PRICE,
+  YEARLY_REFERENCE_PRICE,
 } from '@/lib/billingPricing'
 import { DAILY_SESSION_XP_CAP } from '@/lib/xp/sessionXp'
 import { getStreakBonusXP } from '@/lib/xp/streakBonus'
@@ -69,7 +71,7 @@ export default function XPPage() {
   const today = getTodayIsoDate()
   const completedVideos = Object.values(completionCounts).filter((count) => count > 0).length
   const gameXpToday = getDailyTotalGameXP()
-  const streakTarget = getStreakBonusXP(Math.max(streakDays, 1))
+  const streakTarget = streakDays > 0 ? getStreakBonusXP(streakDays) : 10
   const streakBonusAwardedToday = streakBonusDate === today
   const streakBonusToday = streakBonusAwardedToday ? dailyStreakBonusXP : 0
   const todayTotal = gameXpToday + dailyVideoXP + streakBonusToday
@@ -94,6 +96,13 @@ export default function XPPage() {
   const { next, progress } = getTierProgress()
   const tierColors = TIER_COLORS[benefitSnapshot.benefitTier]
   const currentMonthProgress = Math.min(benefitSnapshot.currentMonthXp / MONTHLY_ACTIVE_THRESHOLD, 1)
+  const monthlyPrice = getMonthlyDiscountedPrice(benefitSnapshot.monthlyDiscount)
+  const yearlyPrice = getYearlyRenewalPrice(
+    benefitSnapshot.yearlyRenewalDiscount,
+    benefitSnapshot.monthlyDiscount,
+  )
+  const monthlySavings = getSavingsPercent(MONTHLY_REFERENCE_PRICE, monthlyPrice)
+  const yearlySavings = getSavingsPercent(YEARLY_REFERENCE_PRICE, yearlyPrice)
 
   const handleBack = () => {
     if (typeof window !== 'undefined' && window.history.length > 1) {
@@ -130,43 +139,43 @@ export default function XPPage() {
             혜택 상태
           </p>
 
-          <div className="flex flex-wrap items-center gap-2">
-            <span className={`rounded-full px-3 py-1 text-xs font-semibold ${tierColors.bg} ${tierColors.text}`}>
-              {TIER_NAMES[benefitSnapshot.benefitTier]} 혜택 적용 중
-            </span>
-            {benefitSnapshot.benefitTier < benefitSnapshot.unlockedTier ? (
-              <span className="rounded-full bg-[var(--bg-secondary)] px-3 py-1 text-xs font-medium text-[var(--text-secondary)]">
-                잠금 등급 {TIER_NAMES[benefitSnapshot.unlockedTier]}
-              </span>
-            ) : null}
-          </div>
+          <span className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold ${tierColors.bg} ${tierColors.text}`}>
+            {TIER_NAMES[benefitSnapshot.benefitTier]}
+          </span>
 
           <p className="mt-3 text-sm text-[var(--text-secondary)]">
             {getBenefitStatusLine(benefitSnapshot)}
           </p>
 
-          <div className="mt-4 space-y-2.5">
-            <InfoRow
+          <div className="mt-4 grid gap-3 sm:grid-cols-2">
+            <PriceInfoBlock
               label="월간 최종가"
-              value={formatWon(getMonthlyDiscountedPrice(benefitSnapshot.monthlyDiscount))}
-              detail={formatDiscountText('월간 추가 할인', benefitSnapshot.monthlyDiscount)}
+              original={formatWon(MONTHLY_REFERENCE_PRICE)}
+              current={formatWon(monthlyPrice)}
+              detail={`총 ${monthlySavings}% 할인`}
             />
-            <InfoRow
+            <PriceInfoBlock
               label="연간 최종가"
-              value={formatWon(getYearlyRenewalPrice(benefitSnapshot.yearlyRenewalDiscount))}
-              detail={formatDiscountText('연간 갱신 할인', benefitSnapshot.yearlyRenewalDiscount)}
+              original={formatWon(YEARLY_REFERENCE_PRICE)}
+              current={formatWon(yearlyPrice)}
+              detail={`총 ${yearlySavings}% 할인`}
             />
+          </div>
+
+          <div className="mt-4 space-y-2.5">
             <InfoRow
               label="이번 달 활동"
               value={`${benefitSnapshot.currentMonthXp.toLocaleString()} / ${MONTHLY_ACTIVE_THRESHOLD} XP`}
-              detail="이번 달 300 XP를 채우면 현재 잠금 등급 혜택을 유지하거나 복구할 수 있습니다."
+              detail="이번 달 300 XP를 채우면 잠금된 최고 혜택으로 바로 복구할 수 있습니다."
             />
           </div>
 
           {next !== null ? (
             <div className="mt-4">
               <div className="mb-1.5 flex items-center justify-between gap-3 text-[11px] text-[var(--text-muted)]">
-                <span>{TIER_NAMES[currentTier]} → {TIER_NAMES[next]}</span>
+                <span>
+                  {TIER_NAMES[currentTier]} → {TIER_NAMES[next]}
+                </span>
                 <span>{Math.round(progress * 100)}%</span>
               </div>
               <div className="h-[4px] w-full overflow-hidden rounded-full bg-[var(--border-card)]">
@@ -178,27 +187,22 @@ export default function XPPage() {
                 />
               </div>
               <p className="mt-1.5 text-[11px] text-[var(--text-muted)]">
-                다음 잠금 등급까지 {benefitSnapshot.nextTierXp.toLocaleString()} XP 남음
+                다음 등급까지 {benefitSnapshot.nextTierXp.toLocaleString()} XP 남음
               </p>
             </div>
           ) : (
             <p className="mt-4 text-[11px] text-[var(--text-muted)]">
-              최상위 잠금 등급에 도달했습니다. 혜택은 이번 달 활동만 유지하면 그대로 이어집니다.
+              최고 등급 혜택을 유지 중입니다. 이번 달 활동만 채우면 그대로 이어집니다.
             </p>
           )}
         </SurfaceCard>
 
-        <section className="px-1">
-          <div>
-            <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-              총 XP
-            </p>
-            <p className="mt-3 text-3xl font-bold text-[var(--text-primary)]">
-              {totalXP.toLocaleString()}
-            </p>
-            <p className="mt-2 text-sm text-[var(--text-secondary)]">
-              게임, 영상, 연속 학습 보너스, 마일스톤 수령 XP가 모두 여기에 누적됩니다.
-            </p>
+        <section className="grid gap-4 px-1 sm:grid-cols-2">
+          <StatSection
+            title="총 XP"
+            value={`${totalXP.toLocaleString()} XP`}
+            detail="게임, 영상, 출석 · 연속 학습, 마일스톤 수령 XP가 모두 누적됩니다."
+          >
             <div className="mt-4 border-t border-[var(--border-card)] pt-4">
               <div className="space-y-2.5">
                 <InfoRow label="영상 누적 XP" value={`${videoXPTotal} XP`} />
@@ -209,65 +213,54 @@ export default function XPPage() {
                 />
               </div>
             </div>
-          </div>
+          </StatSection>
 
-          <div className="mt-6 border-t border-[var(--border-card)] pt-5">
-            <div className="mb-4 flex items-center justify-between gap-3">
-              <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-                오늘 적립
-              </p>
-              <span className="text-sm font-semibold text-[var(--text-primary)]">
-                +{todayTotal} XP
-              </span>
-            </div>
-
-            <div className="space-y-3.5">
+          <StatSection
+            title="오늘 적립"
+            value={`+${todayTotal} XP`}
+            detail="오늘 실제로 적립된 XP 기준입니다."
+          >
+            <div className="mt-4 space-y-3.5">
               <ProgressRow
                 label="게임"
                 value={`${gameXpToday}/${DAILY_SESSION_XP_CAP} XP`}
                 progress={gameXpPct}
-                detail="하루 최대 15 XP · 게임 세션 완료 기준으로 적립됩니다."
+                detail="게임 완료 기준으로 적립됩니다."
               />
               <ProgressRow
                 label="영상"
                 value={`${dailyVideoXP}/${DAILY_VIDEO_XP_TARGET} XP`}
                 progress={videoXpPct}
-                detail="하루 최대 15 XP · 영상 완료 기준으로 적립됩니다."
+                detail="영상 완료 기준으로 적립됩니다."
               />
               <ProgressRow
-                label="연속 학습 보너스"
-                value={
-                  streakBonusToday > 0
-                    ? `${streakBonusToday}/${streakTarget} XP`
-                    : streakDays > 0
-                      ? `0/${streakTarget} XP`
-                      : '잠김'
-                }
+                label="출석 · 연속 학습"
+                value={`${streakBonusToday}/${streakTarget} XP`}
                 progress={streakBonusPct}
                 detail={
                   streakDays > 0
-                    ? `오늘 첫 영상 또는 게임 완료 시 ${streakTarget} XP · 현재 ${streakDays}일 연속 학습`
-                    : '오늘 첫 영상 또는 게임을 완료하면 연속 학습 보너스가 시작됩니다.'
+                    ? `오늘 첫 영상 또는 게임 완료 시 ${streakTarget} XP 적립 · 현재 ${streakDays}일 연속`
+                    : '오늘 첫 영상 또는 게임 완료 시 10 XP부터 시작됩니다.'
                 }
               />
             </div>
-          </div>
+          </StatSection>
         </section>
 
         <SurfaceCard className="p-5">
-          <div className="flex items-start justify-between gap-4">
+          <div className="flex items-center justify-between gap-3">
             <div>
               <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
                 마일스톤
               </p>
               <p className="mt-2 text-sm text-[var(--text-secondary)]">
-                마일스톤 보상은 자동 적립이 아니라, 달성 뒤 직접 수령하는 구조입니다.
+                마일스톤 보상은 자동 적립이 아니라, 조건 달성 뒤 직접 수령하는 구조입니다.
               </p>
             </div>
             <button
               type="button"
               onClick={() => router.push('/learning/milestones')}
-              className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
+              className="text-[11px] font-medium text-[var(--text-muted)]"
             >
               상세보기
             </button>
@@ -288,7 +281,7 @@ export default function XPPage() {
             <button
               type="button"
               onClick={() => router.push('/learning/xp/history')}
-              className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
+              className="text-[11px] font-medium text-[var(--text-muted)]"
             >
               상세보기
             </button>
@@ -309,7 +302,7 @@ export default function XPPage() {
             <button
               type="button"
               onClick={() => router.push('/learning/xp/activity')}
-              className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
+              className="text-[11px] font-medium text-[var(--text-muted)]"
             >
               상세보기
             </button>
@@ -332,8 +325,8 @@ export default function XPPage() {
             </div>
             <p className="text-[11px] text-[var(--text-muted)]">
               {benefitSnapshot.currentMonthActive
-                ? `${TIER_NAMES[benefitSnapshot.benefitTier]} 혜택 유지 기준을 충족했습니다.`
-                : `${MONTHLY_ACTIVE_THRESHOLD - benefitSnapshot.currentMonthXp} XP 더 모으면 혜택 유지 기준을 채웁니다.`}
+                ? `${TIER_NAMES[benefitSnapshot.benefitTier]} 혜택 유지 기준을 이미 채웠습니다.`
+                : `${MONTHLY_ACTIVE_THRESHOLD - benefitSnapshot.currentMonthXp} XP 더 모으면 이번 달 기준을 채웁니다.`}
             </p>
           </div>
         </SurfaceCard>
@@ -403,6 +396,52 @@ function SummaryBox({
     <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)]/30 px-4 py-3">
       <p className="text-[11px] text-[var(--text-secondary)]">{label}</p>
       <p className="mt-1 text-lg font-semibold text-[var(--text-primary)]">{value}</p>
+    </div>
+  )
+}
+
+function PriceInfoBlock({
+  label,
+  original,
+  current,
+  detail,
+}: {
+  label: string
+  original: string
+  current: string
+  detail: string
+}) {
+  return (
+    <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)]/30 px-4 py-3">
+      <p className="text-[11px] text-[var(--text-secondary)]">{label}</p>
+      <div className="mt-1 flex items-center gap-2">
+        <span className="text-[11px] text-[var(--text-muted)] line-through">{original}</span>
+        <span className="text-sm font-semibold text-[var(--text-primary)]">{current}</span>
+      </div>
+      <p className="mt-1 text-[10px] text-[var(--text-muted)]">{detail}</p>
+    </div>
+  )
+}
+
+function StatSection({
+  title,
+  value,
+  detail,
+  children,
+}: {
+  title: string
+  value: string
+  detail: string
+  children: ReactNode
+}) {
+  return (
+    <div>
+      <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+        {title}
+      </p>
+      <p className="mt-3 text-3xl font-bold text-[var(--text-primary)]">{value}</p>
+      <p className="mt-2 text-sm text-[var(--text-secondary)]">{detail}</p>
+      {children}
     </div>
   )
 }

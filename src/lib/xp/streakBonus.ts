@@ -8,5 +8,5 @@
  */
 export function getStreakBonusXP(streakDays: number): number {
   if (streakDays <= 0) return 0
-  return 10
+  return Math.min(streakDays, 7) * 10
 }
