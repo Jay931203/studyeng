@@ -160,23 +160,6 @@ export function UnifiedControls({
   useEffect(() => {
     if (!showPlaybackOptions && !showMenu) return
 
-    const handlePointerDown = (event: PointerEvent) => {
-      const target = event.target as Node
-
-      const insidePlayback =
-        playbackTriggerRef.current?.contains(target) ||
-        playbackPanelRef.current?.contains(target)
-      const insideMenu = menuTriggerRef.current?.contains(target) || menuPanelRef.current?.contains(target)
-
-      if (!insidePlayback) {
-        setShowPlaybackOptions(false)
-      }
-
-      if (!insideMenu) {
-        setShowMenu(false)
-      }
-    }
-
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         setShowPlaybackOptions(false)
@@ -184,10 +167,8 @@ export function UnifiedControls({
       }
     }
 
-    window.addEventListener('pointerdown', handlePointerDown)
     window.addEventListener('keydown', handleKeyDown)
     return () => {
-      window.removeEventListener('pointerdown', handlePointerDown)
       window.removeEventListener('keydown', handleKeyDown)
     }
   }, [showMenu, showPlaybackOptions])
@@ -296,6 +277,27 @@ export function UnifiedControls({
   const playbackChipClassName = compact
     ? 'h-7 rounded-full px-2.5 text-[10px] font-semibold transition-colors'
     : 'h-8 rounded-full px-3 text-[11px] font-semibold transition-colors'
+
+  const popoverBackdrop =
+    (showPlaybackOptions || showMenu) && typeof document !== 'undefined'
+      ? createPortal(
+          <AnimatePresence>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 z-[120] bg-transparent"
+              onPointerDown={(event) => {
+                event.preventDefault()
+                event.stopPropagation()
+                setShowPlaybackOptions(false)
+                setShowMenu(false)
+              }}
+            />
+          </AnimatePresence>,
+          document.body,
+        )
+      : null
 
   const playbackPopover =
     showPlaybackOptions && playbackPosition && typeof document !== 'undefined'
@@ -881,6 +883,7 @@ export function UnifiedControls({
         </div>
       </div>
 
+      {popoverBackdrop}
       {playbackPopover}
       {moreMenuPopover}
       {reportDialog}
