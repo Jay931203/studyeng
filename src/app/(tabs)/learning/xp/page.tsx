@@ -127,23 +127,6 @@ export default function XPPage() {
 
         <SurfaceCard className="p-5">
           <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-            총 XP
-          </p>
-          <p className="text-3xl font-bold text-[var(--text-primary)]">{totalXP.toLocaleString()}</p>
-          <p className="mt-2 text-sm text-[var(--text-secondary)]">
-            게임, 영상, 연속 학습 보너스, 마일스톤 수령 XP가 모두 여기에 누적됩니다.
-          </p>
-          <div className="mt-4 border-t border-[var(--border-card)] pt-4">
-            <div className="space-y-2.5">
-              <InfoRow label="영상 누적 XP" value={`${videoXPTotal} XP`} />
-              <InfoRow label="마일스톤 누적 XP" value={`${milestoneXP} XP`} />
-              <InfoRow label="이번 달 활동 XP" value={`${benefitSnapshot.currentMonthXp.toLocaleString()} XP`} />
-            </div>
-          </div>
-        </SurfaceCard>
-
-        <SurfaceCard className="p-5">
-          <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
             혜택 상태
           </p>
 
@@ -205,45 +188,71 @@ export default function XPPage() {
           )}
         </SurfaceCard>
 
-        <SurfaceCard className="p-5">
-          <div className="mb-4 flex items-center justify-between gap-3">
+        <section className="px-1">
+          <div>
             <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-              오늘 적립
+              총 XP
             </p>
-            <span className="text-sm font-semibold text-[var(--text-primary)]">+{todayTotal} XP</span>
+            <p className="mt-3 text-3xl font-bold text-[var(--text-primary)]">
+              {totalXP.toLocaleString()}
+            </p>
+            <p className="mt-2 text-sm text-[var(--text-secondary)]">
+              게임, 영상, 연속 학습 보너스, 마일스톤 수령 XP가 모두 여기에 누적됩니다.
+            </p>
+            <div className="mt-4 border-t border-[var(--border-card)] pt-4">
+              <div className="space-y-2.5">
+                <InfoRow label="영상 누적 XP" value={`${videoXPTotal} XP`} />
+                <InfoRow label="마일스톤 누적 XP" value={`${milestoneXP} XP`} />
+                <InfoRow
+                  label="이번 달 활동 XP"
+                  value={`${benefitSnapshot.currentMonthXp.toLocaleString()} XP`}
+                />
+              </div>
+            </div>
           </div>
 
-          <div className="space-y-3.5">
-            <ProgressRow
-              label="게임"
-              value={`${gameXpToday}/${DAILY_SESSION_XP_CAP} XP`}
-              progress={gameXpPct}
-              detail="하루 최대 15 XP · 게임 세션 완료 기준으로 적립됩니다."
-            />
-            <ProgressRow
-              label="영상"
-              value={`${dailyVideoXP}/${DAILY_VIDEO_XP_TARGET} XP`}
-              progress={videoXpPct}
-              detail="하루 최대 15 XP · 영상 완료 기준으로 적립됩니다."
-            />
-            <ProgressRow
-              label="연속 학습 보너스"
-              value={
-                streakBonusToday > 0
-                  ? `${streakBonusToday}/${streakTarget} XP`
-                  : streakDays > 0
-                    ? `0/${streakTarget} XP`
-                    : '잠김'
-              }
-              progress={streakBonusPct}
-              detail={
-                streakDays > 0
-                  ? `오늘 첫 영상 또는 게임 완료 시 ${streakTarget} XP · 현재 ${streakDays}일 연속 학습`
-                  : '오늘 첫 영상 또는 게임을 완료하면 연속 학습 보너스가 시작됩니다.'
-              }
-            />
+          <div className="mt-6 border-t border-[var(--border-card)] pt-5">
+            <div className="mb-4 flex items-center justify-between gap-3">
+              <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+                오늘 적립
+              </p>
+              <span className="text-sm font-semibold text-[var(--text-primary)]">
+                +{todayTotal} XP
+              </span>
+            </div>
+
+            <div className="space-y-3.5">
+              <ProgressRow
+                label="게임"
+                value={`${gameXpToday}/${DAILY_SESSION_XP_CAP} XP`}
+                progress={gameXpPct}
+                detail="하루 최대 15 XP · 게임 세션 완료 기준으로 적립됩니다."
+              />
+              <ProgressRow
+                label="영상"
+                value={`${dailyVideoXP}/${DAILY_VIDEO_XP_TARGET} XP`}
+                progress={videoXpPct}
+                detail="하루 최대 15 XP · 영상 완료 기준으로 적립됩니다."
+              />
+              <ProgressRow
+                label="연속 학습 보너스"
+                value={
+                  streakBonusToday > 0
+                    ? `${streakBonusToday}/${streakTarget} XP`
+                    : streakDays > 0
+                      ? `0/${streakTarget} XP`
+                      : '잠김'
+                }
+                progress={streakBonusPct}
+                detail={
+                  streakDays > 0
+                    ? `오늘 첫 영상 또는 게임 완료 시 ${streakTarget} XP · 현재 ${streakDays}일 연속 학습`
+                    : '오늘 첫 영상 또는 게임을 완료하면 연속 학습 보너스가 시작됩니다.'
+                }
+              />
+            </div>
           </div>
-        </SurfaceCard>
+        </section>
 
         <SurfaceCard className="p-5">
           <div className="flex items-start justify-between gap-4">

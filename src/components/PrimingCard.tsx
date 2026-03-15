@@ -120,8 +120,8 @@ function ExpressionCard({
         className="cursor-pointer"
         style={{ perspective: 800, x, opacity, touchAction: 'pan-x' }}
         drag="x"
-        dragConstraints={{ left: 0, right: 0 }}
         dragElastic={0.6}
+        dragMomentum={false}
         onDragStart={() => onInteract?.()}
         onDragEnd={handleDragEnd}
         onPointerDown={(event) => event.stopPropagation()}
@@ -335,8 +335,8 @@ function WordCard({
         className="cursor-pointer"
         style={{ perspective: 800, x, opacity, touchAction: 'pan-x' }}
         drag="x"
-        dragConstraints={{ left: 0, right: 0 }}
         dragElastic={0.6}
+        dragMomentum={false}
         onDragStart={() => onInteract?.()}
         onDragEnd={handleDragEnd}
         onPointerDown={(event) => event.stopPropagation()}

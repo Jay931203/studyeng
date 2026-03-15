@@ -43,24 +43,6 @@ export default function SupportPage() {
             <li>계정 삭제는 프로필 페이지 하단에서 직접 진행할 수 있습니다.</li>
           </ul>
         </section>
-
-        <section className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-5">
-          <h2 className="text-base font-bold text-[var(--text-primary)]">정책</h2>
-          <div className="mt-3 flex flex-col gap-3">
-            <Link
-              href="/terms"
-              className="rounded-xl bg-[var(--bg-secondary)] px-4 py-3 text-[var(--text-primary)]"
-            >
-              이용약관
-            </Link>
-            <Link
-              href="/privacy"
-              className="rounded-xl bg-[var(--bg-secondary)] px-4 py-3 text-[var(--text-primary)]"
-            >
-              개인정보처리방침
-            </Link>
-          </div>
-        </section>
       </div>
     </div>
   )
