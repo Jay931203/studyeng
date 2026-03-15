@@ -6,10 +6,12 @@ interface SettingsState {
   remoteEnabled: boolean
   primingEnabled: boolean
   primingAutoStartEnabled: boolean
+  subtitleGuidesEnabled: boolean
   setHapticEnabled: (enabled: boolean) => void
   setRemoteEnabled: (enabled: boolean) => void
   setPrimingEnabled: (enabled: boolean) => void
   setPrimingAutoStartEnabled: (enabled: boolean) => void
+  setSubtitleGuidesEnabled: (enabled: boolean) => void
 }
 
 export const useSettingsStore = create<SettingsState>()(
@@ -19,10 +21,12 @@ export const useSettingsStore = create<SettingsState>()(
       remoteEnabled: true,
       primingEnabled: true,
       primingAutoStartEnabled: true,
+      subtitleGuidesEnabled: true,
       setHapticEnabled: (hapticEnabled) => set({ hapticEnabled }),
       setRemoteEnabled: (remoteEnabled) => set({ remoteEnabled }),
       setPrimingEnabled: (primingEnabled) => set({ primingEnabled }),
       setPrimingAutoStartEnabled: (primingAutoStartEnabled) => set({ primingAutoStartEnabled }),
+      setSubtitleGuidesEnabled: (subtitleGuidesEnabled) => set({ subtitleGuidesEnabled }),
     }),
     { name: 'studyeng-settings' },
   ),

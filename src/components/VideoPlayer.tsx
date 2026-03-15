@@ -72,6 +72,28 @@ function extractSimilarCueTokens(text: string): string[] {
     .filter((word) => word.length > 2 && !SIMILAR_CUE_STOPWORDS.has(word))
 }
 
+function normalizeSubtitleText(text: string) {
+  return text.toLowerCase().replace(/[^\w\s']/g, '').replace(/\s+/g, ' ').trim()
+}
+
+function findPrimingSubtitle(
+  subtitles: SubtitleEntry[],
+  sentenceEn: string,
+  keyword?: string,
+) {
+  const normalizedSentence = normalizeSubtitleText(sentenceEn)
+  const normalizedKeyword = keyword ? normalizeSubtitleText(keyword) : ''
+
+  return subtitles.find((subtitle) => {
+    const normalizedSubtitle = normalizeSubtitleText(subtitle.en)
+    return (
+      normalizedSubtitle === normalizedSentence ||
+      (normalizedKeyword.length > 0 &&
+        (normalizedSubtitle.includes(normalizedKeyword) || normalizedKeyword.includes(normalizedSubtitle)))
+    )
+  })
+}
+
 const PlayerMount = memo(function PlayerMount({ containerId }: { containerId: string }) {
   return <div id={containerId} className="h-full w-full" />
 })
@@ -245,9 +267,12 @@ export function VideoPlayer({
   const primingCueBySubtitleIndex = useMemo(() => {
     const map = new Map<number, string>()
     for (const ve of primingExpressions) {
-      const idx = subtitles.findIndex(
-        (subtitle) => subtitle.en === ve.sentence.en || subtitle.en.includes(ve.expression.canonical),
+      const matchedSubtitle = findPrimingSubtitle(
+        subtitles,
+        ve.sentence.en,
+        ve.expression.canonical,
       )
+      const idx = matchedSubtitle ? subtitles.indexOf(matchedSubtitle) : -1
       if (idx >= 0 && !map.has(idx)) {
         map.set(idx, ve.expression.canonical)
       }
@@ -620,7 +645,7 @@ export function VideoPlayer({
     <PrimingCard
       key={videoSessionKey}
       expressions={primingExpressions.map((ve) => {
-        const sub = subtitles.find((s) => s.en === ve.sentence.en)
+        const sub = findPrimingSubtitle(subtitles, ve.sentence.en, ve.expression.canonical)
         return {
           exprId: ve.expression.id,
           canonical: ve.expression.canonical,
@@ -634,7 +659,7 @@ export function VideoPlayer({
         }
       })}
       words={primingWords.map((vw) => {
-        const sub = subtitles.find((s) => s.en === vw.sentence.en)
+        const sub = findPrimingSubtitle(subtitles, vw.sentence.en, vw.word.canonical)
         return {
           wordId: `word:${vw.word.id}`,
           canonical: vw.word.canonical,
@@ -967,6 +992,7 @@ function ShortsSubtitleOverlay({
   const activeSubIndex = usePlayerStore((state) => state.activeSubIndex)
   const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
   const setFreezeSubIndex = usePlayerStore((state) => state.setFreezeSubIndex)
+  const subtitleGuidesEnabled = useSettingsStore((state) => state.subtitleGuidesEnabled)
   const phrases = usePhraseStore((state) => state.phrases)
   const removePhrase = usePhraseStore((state) => state.removePhrase)
   const activeSub = activeSubIndex >= 0 ? subtitles[activeSubIndex] : null
@@ -1123,11 +1149,13 @@ function ShortsSubtitleOverlay({
             {activeSub.ko}
           </p>
         )}
-        <div className="mt-2 flex items-center justify-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/55">
-          <span>{savedPhraseId ? 'Saved' : 'Double Tap Save'}</span>
-          <span className="text-white/25">|</span>
-          <span>{freezeSubIndex === activeSubIndex ? 'Hold Unfreeze' : 'Hold Freeze'}</span>
-        </div>
+        {subtitleGuidesEnabled && (
+          <div className="mt-2 flex items-center justify-center gap-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/55">
+            <span>{savedPhraseId ? 'Saved' : 'Double Tap Save'}</span>
+            <span className="text-white/25">|</span>
+            <span>{freezeSubIndex === activeSubIndex ? 'Hold Unfreeze' : 'Hold Freeze'}</span>
+          </div>
+        )}
       </div>
     </div>
   )

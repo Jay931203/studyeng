@@ -60,6 +60,7 @@ export function LyricsSubtitles({
   visibleLineCount = 3,
 }: LyricsSubtitlesProps) {
   const isRainbowTheme = useThemeStore((state) => state.colorTheme === 'rainbow')
+  const subtitleGuidesEnabled = useSettingsStore((state) => state.subtitleGuidesEnabled)
   const subtitleMode = usePlayerStore((state) => state.subtitleMode)
   const activeSubIndex = usePlayerStore((state) => state.activeSubIndex)
   const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
@@ -437,7 +438,7 @@ export function LyricsSubtitles({
       className="w-full h-full z-10 pointer-events-auto relative"
       onClick={(e) => e.stopPropagation()}
     >
-      <DoubleTapTip />
+      {subtitleGuidesEnabled && <DoubleTapTip />}
 
       <div className="pointer-events-none absolute inset-x-0 top-3 z-20 flex justify-center px-4">
         <SaveToast
@@ -764,6 +765,21 @@ export function LyricsSubtitles({
           <div className="h-[60px] flex-shrink-0" />
         </div>
       </div>
+
+      {subtitleGuidesEnabled && (
+        <div className="pointer-events-none absolute inset-x-0 bottom-3 z-20 flex justify-center px-4">
+          <div
+            className="rounded-full border px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] backdrop-blur-sm"
+            style={{
+              backgroundColor: 'var(--player-chip-bg)',
+              borderColor: 'var(--player-chip-border)',
+              color: 'var(--player-muted)',
+            }}
+          >
+            Double Tap Save | Hold Freeze
+          </div>
+        </div>
+      )}
     </div>
   )
 }

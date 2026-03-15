@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, useMotionValue, useTransform, type PanInfo } from 'framer-motion'
 import { useSettingsStore } from '@/stores/useSettingsStore'
 import { triggerHaptic } from '@/lib/haptic'
@@ -42,7 +42,7 @@ interface PrimingCardProps {
 }
 
 const AUTO_START_COUNTDOWN_MS = 5000
-const SWIPE_THRESHOLD = 80
+const SWIPE_THRESHOLD = 56
 
 const CATEGORY_LABELS: Record<string, string> = {
   phrasal_verb: '구동사',
@@ -87,6 +87,7 @@ function ExpressionCard({
 }) {
   const [flipped, setFlipped] = useState(false)
   const [playing, setPlaying] = useState(false)
+  const didDragRef = useRef(false)
   const cefrColor = getCefrColor(expr.cefr)
   const categoryLabel = CATEGORY_LABELS[expr.category] ?? expr.category
 
@@ -97,7 +98,7 @@ function ExpressionCard({
   const opacity = useTransform(x, [-SWIPE_THRESHOLD * 2, 0, SWIPE_THRESHOLD * 2], [0.3, 1, 0.3])
 
   const handleDragEnd = (_: unknown, info: PanInfo) => {
-    if (Math.abs(info.offset.x) > SWIPE_THRESHOLD) {
+    if (Math.abs(info.offset.x) > SWIPE_THRESHOLD || Math.abs(info.velocity.x) > 420) {
       onSwipeDismiss?.()
     }
   }
@@ -118,18 +119,30 @@ function ExpressionCard({
     >
       <motion.div
         className="cursor-pointer"
-        style={{ perspective: 800, x, opacity, touchAction: 'pan-x' }}
+        style={{ perspective: 800, x, opacity, touchAction: 'pan-x', userSelect: 'none' }}
         drag="x"
         dragElastic={0.6}
         dragMomentum={false}
-        onDragStart={() => onInteract?.()}
-        onDragEnd={handleDragEnd}
+        onDragStart={() => {
+          didDragRef.current = true
+          onInteract?.()
+        }}
+        onDragEnd={(_, info) => {
+          handleDragEnd(_, info)
+          window.setTimeout(() => {
+            didDragRef.current = false
+          }, 0)
+        }}
         onPointerDown={(event) => event.stopPropagation()}
         onPointerMove={(event) => event.stopPropagation()}
         onPointerUp={(event) => event.stopPropagation()}
         onPointerCancel={(event) => event.stopPropagation()}
         onClick={(e) => {
           e.stopPropagation()
+          if (didDragRef.current) {
+            didDragRef.current = false
+            return
+          }
           onInteract?.()
           setFlipped((current) => !current)
         }}
@@ -304,6 +317,7 @@ function WordCard({
 }) {
   const [flipped, setFlipped] = useState(false)
   const [playing, setPlaying] = useState(false)
+  const didDragRef = useRef(false)
   const cefrColor = getCefrColor(word.cefr)
   const posLabel = POS_LABELS[word.pos] ?? word.pos
   const count = familiarCount ?? 0
@@ -312,7 +326,7 @@ function WordCard({
   const opacity = useTransform(x, [-SWIPE_THRESHOLD * 2, 0, SWIPE_THRESHOLD * 2], [0.3, 1, 0.3])
 
   const handleDragEnd = (_: unknown, info: PanInfo) => {
-    if (Math.abs(info.offset.x) > SWIPE_THRESHOLD) {
+    if (Math.abs(info.offset.x) > SWIPE_THRESHOLD || Math.abs(info.velocity.x) > 420) {
       onSwipeDismiss?.()
     }
   }
@@ -333,18 +347,30 @@ function WordCard({
     >
       <motion.div
         className="cursor-pointer"
-        style={{ perspective: 800, x, opacity, touchAction: 'pan-x' }}
+        style={{ perspective: 800, x, opacity, touchAction: 'pan-x', userSelect: 'none' }}
         drag="x"
         dragElastic={0.6}
         dragMomentum={false}
-        onDragStart={() => onInteract?.()}
-        onDragEnd={handleDragEnd}
+        onDragStart={() => {
+          didDragRef.current = true
+          onInteract?.()
+        }}
+        onDragEnd={(_, info) => {
+          handleDragEnd(_, info)
+          window.setTimeout(() => {
+            didDragRef.current = false
+          }, 0)
+        }}
         onPointerDown={(event) => event.stopPropagation()}
         onPointerMove={(event) => event.stopPropagation()}
         onPointerUp={(event) => event.stopPropagation()}
         onPointerCancel={(event) => event.stopPropagation()}
         onClick={(e) => {
           e.stopPropagation()
+          if (didDragRef.current) {
+            didDragRef.current = false
+            return
+          }
           onInteract?.()
           setFlipped((current) => !current)
         }}

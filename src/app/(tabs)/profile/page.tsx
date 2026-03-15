@@ -75,8 +75,10 @@ export default function ProfilePage() {
   const [showDeleteModal, setShowDeleteModal] = useState(false)
   const hapticEnabled = useSettingsStore((state) => state.hapticEnabled)
   const remoteEnabled = useSettingsStore((state) => state.remoteEnabled)
+  const subtitleGuidesEnabled = useSettingsStore((state) => state.subtitleGuidesEnabled)
   const setHapticEnabled = useSettingsStore((state) => state.setHapticEnabled)
   const setRemoteEnabled = useSettingsStore((state) => state.setRemoteEnabled)
+  const setSubtitleGuidesEnabled = useSettingsStore((state) => state.setSubtitleGuidesEnabled)
   const gameModeEnabled = usePlayerStore((state) => state.gameModeEnabled)
   const setGameModeEnabled = usePlayerStore((state) => state.setGameModeEnabled)
   const pushPermission = usePushStore((state) => state.permission)
@@ -310,6 +312,29 @@ export default function ProfilePage() {
                   <span
                     className={`absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white transition-transform ${
                       remoteEnabled ? 'translate-x-5' : ''
+                    }`}
+                  />
+                </button>
+              </div>
+
+              <div className="flex items-center justify-between px-1 py-3">
+                <div>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">자막 안내</p>
+                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">
+                    쇼츠/시리즈 자막 하단 안내 문구
+                  </p>
+                </div>
+                <button
+                  onClick={() => setSubtitleGuidesEnabled(!subtitleGuidesEnabled)}
+                  className={`relative h-6 w-11 rounded-full ${
+                    subtitleGuidesEnabled ? 'bg-[var(--accent-primary)]' : 'bg-[var(--bg-secondary)]'
+                  }`}
+                  role="switch"
+                  aria-checked={subtitleGuidesEnabled}
+                >
+                  <span
+                    className={`absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white transition-transform ${
+                      subtitleGuidesEnabled ? 'translate-x-5' : ''
                     }`}
                   />
                 </button>
