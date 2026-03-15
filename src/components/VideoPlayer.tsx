@@ -46,7 +46,7 @@ interface VideoPlayerProps {
   onPlaybackStarted?: () => void
   isLandscapeViewport?: boolean
   useLandscapeSplitLayout?: boolean
-  useLandscapeOverlaySubtitles?: boolean
+  useOverlaySubtitles?: boolean
   landscapeVideoPaneWidth?: string
   landscapeBottomSubtitleHeight?: number
   initialSeekTime?: number
@@ -112,7 +112,7 @@ export function VideoPlayer({
   onPlaybackStarted,
   isLandscapeViewport = false,
   useLandscapeSplitLayout = false,
-  useLandscapeOverlaySubtitles = false,
+  useOverlaySubtitles = false,
   landscapeVideoPaneWidth = '62%',
   landscapeBottomSubtitleHeight = 184,
   initialSeekTime,
@@ -146,8 +146,12 @@ export function VideoPlayer({
   const isPlaying = usePlayerStore((state) => state.isPlaying)
   const subtitleMode = usePlayerStore((state) => state.subtitleMode)
   const landscapeSubtitleLayout = usePlayerStore((state) => state.landscapeSubtitleLayout)
+  const portraitSubtitleLayout = usePlayerStore((state) => state.portraitSubtitleLayout)
   const cycleLandscapeSubtitleLayout = usePlayerStore(
     (state) => state.cycleLandscapeSubtitleLayout,
+  )
+  const cyclePortraitSubtitleLayout = usePlayerStore(
+    (state) => state.cyclePortraitSubtitleLayout,
   )
   const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
   const setFreezeSubIndex = usePlayerStore((state) => state.setFreezeSubIndex)
@@ -544,16 +548,19 @@ export function VideoPlayer({
     />
   )
 
-  const landscapeSubtitleLayoutLabel =
-    landscapeSubtitleLayout === 'side'
+  const subtitleLayoutLabel = isLandscapeViewport
+    ? landscapeSubtitleLayout === 'side'
       ? '우측'
       : landscapeSubtitleLayout === 'bottom'
         ? '하단'
         : landscapeSubtitleLayout === 'overlay'
           ? '오버레이'
           : '자동'
-  const showLandscapeSubtitleLayoutToggle =
-    isLandscapeViewport && subtitleMode !== 'none' && subtitles.length > 0
+    : portraitSubtitleLayout === 'overlay'
+      ? '오버레이'
+      : '하단'
+  const showSubtitleLayoutToggle =
+    !isShortsFormat && subtitleMode !== 'none' && subtitles.length > 0
   const subtitleToggleInsetTop = isLandscapeViewport
     ? 'max(12px, calc(env(safe-area-inset-top, 0px) + 8px))'
     : '12px'
@@ -561,7 +568,7 @@ export function VideoPlayer({
     ? 'max(12px, calc(env(safe-area-inset-right, 0px) + 8px))'
     : '12px'
 
-  const subtitleLayoutToggleButton = showLandscapeSubtitleLayoutToggle ? (
+  const subtitleLayoutToggleButton = showSubtitleLayoutToggle ? (
     <button
       type="button"
       onPointerDown={(event) => {
@@ -575,7 +582,11 @@ export function VideoPlayer({
       onClick={(event) => {
         suppressVideoTap()
         event.stopPropagation()
-        cycleLandscapeSubtitleLayout()
+        if (isLandscapeViewport) {
+          cycleLandscapeSubtitleLayout()
+        } else {
+          cyclePortraitSubtitleLayout()
+        }
       }}
       className="flex h-7 items-center gap-1.5 rounded-full border px-2.5 text-[10px] font-semibold backdrop-blur-md transition-colors sm:h-8 sm:text-[11px]"
       style={{
@@ -583,8 +594,8 @@ export function VideoPlayer({
         borderColor: 'var(--player-control-border)',
         color: 'var(--player-text)',
       }}
-      aria-label={`Landscape subtitle layout: ${landscapeSubtitleLayoutLabel}`}
-      title={`Landscape subtitle layout: ${landscapeSubtitleLayoutLabel}`}
+      aria-label={`Subtitle layout: ${subtitleLayoutLabel}`}
+      title={`Subtitle layout: ${subtitleLayoutLabel}`}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -594,21 +605,22 @@ export function VideoPlayer({
         strokeWidth={1.8}
         className="h-3 w-3 sm:h-3.5 sm:w-3.5"
       >
-        {landscapeSubtitleLayout === 'side' ? (
+        {isLandscapeViewport && landscapeSubtitleLayout === 'side' ? (
           <>
             <rect x="3.5" y="5" width="11" height="14" rx="2" />
             <rect x="16.5" y="5" width="4" height="14" rx="1.5" />
           </>
-        ) : landscapeSubtitleLayout === 'bottom' ? (
-          <>
-            <rect x="3.5" y="5" width="17" height="10" rx="2" />
-            <rect x="3.5" y="17" width="17" height="2.5" rx="1.25" />
-          </>
-        ) : landscapeSubtitleLayout === 'overlay' ? (
+        ) : (isLandscapeViewport && landscapeSubtitleLayout === 'overlay') ||
+          (!isLandscapeViewport && portraitSubtitleLayout === 'overlay') ? (
           <>
             <rect x="3.5" y="5" width="17" height="14" rx="2" />
             <path d="M6.5 13.5h11" />
             <path d="M8 16.5h8" />
+          </>
+        ) : landscapeSubtitleLayout === 'bottom' || !isLandscapeViewport ? (
+          <>
+            <rect x="3.5" y="5" width="17" height="10" rx="2" />
+            <rect x="3.5" y="17" width="17" height="2.5" rx="1.25" />
           </>
         ) : (
           <>
@@ -619,13 +631,13 @@ export function VideoPlayer({
           </>
         )}
       </svg>
-      <span>{landscapeSubtitleLayoutLabel}</span>
+      <span>{subtitleLayoutLabel}</span>
     </button>
   ) : null
 
   const subtitlePanel = (
     <div className="relative h-full">
-      {!useLandscapeOverlaySubtitles && subtitleLayoutToggleButton && (
+      {!useOverlaySubtitles && subtitleLayoutToggleButton && (
         <div
           className="absolute z-30"
           style={{ right: subtitleToggleInsetRight, top: subtitleToggleInsetTop }}
@@ -856,7 +868,7 @@ export function VideoPlayer({
 
       {children}
 
-      {useLandscapeOverlaySubtitles && subtitleLayoutToggleButton && (
+      {useOverlaySubtitles && subtitleLayoutToggleButton && (
         <div
           className="absolute z-[26]"
           style={{ right: subtitleToggleInsetRight, top: subtitleToggleInsetTop }}
@@ -924,7 +936,7 @@ export function VideoPlayer({
         >
           {videoArea}
 
-          {useLandscapeOverlaySubtitles && subtitleMode !== 'none' && subtitles.length > 0 && (
+          {useOverlaySubtitles && subtitleMode !== 'none' && subtitles.length > 0 && (
             <ShortsSubtitleOverlay
               subtitles={subtitles}
               videoId={videoId ?? youtubeId}
@@ -935,21 +947,21 @@ export function VideoPlayer({
             />
           )}
 
-          {useLandscapeOverlaySubtitles && (
+          {useOverlaySubtitles && (
             <div className="absolute bottom-0 left-0 right-0 z-[15]">
               <ProgressBar />
             </div>
           )}
         </div>
 
-        {useLandscapeSplitLayout && !useLandscapeOverlaySubtitles && (
+        {useLandscapeSplitLayout && !useOverlaySubtitles && (
           <div
             className="h-full w-px flex-shrink-0"
             style={{ backgroundColor: 'var(--player-divider)' }}
           />
         )}
 
-        {!useLandscapeOverlaySubtitles && (
+        {!useOverlaySubtitles && (
           <>
             <div
               className={

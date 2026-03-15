@@ -562,6 +562,7 @@ export function PrimingCard({
   onMarkFamiliar,
   familiarCounts,
 }: PrimingCardProps) {
+  const guideHintsEnabled = useSettingsStore((state) => state.subtitleGuidesEnabled)
   const mixedItems = buildMixedItems(expressions, words ?? [], 3)
   const [dismissedIds, setDismissedIds] = useState<Set<string>>(new Set())
   const visibleItems = mixedItems.filter((item) => {
@@ -749,13 +750,13 @@ export function PrimingCard({
                         key={id}
                         expr={expr}
                         index={index}
-                        onInteract={pauseAutoStart}
-                        onPlaySegment={handlePreviewSegment}
-                        onSwipeDismiss={() => handleSwipeDismiss(expr)}
-                        familiarCount={(familiarCounts?.[id] ?? 0) + (dismissedIds.has(id) ? 1 : 0)}
-                      />
-                    )
-                  }
+                      onInteract={pauseAutoStart}
+                      onPlaySegment={handlePreviewSegment}
+                      onSwipeDismiss={() => handleSwipeDismiss(expr)}
+                      familiarCount={(familiarCounts?.[id] ?? 0) + (dismissedIds.has(id) ? 1 : 0)}
+                    />
+                  )
+                }
                   const word = item.data as WordItem
                   return (
                     <WordCard
