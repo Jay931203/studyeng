@@ -652,7 +652,18 @@ export function VideoFeed({
   const handleFeedPointerDown = useCallback(
     (event: ReactPointerEvent<HTMLDivElement>) => {
       if (!canDragFeed) return
-      if (event.pointerType === 'mouse') return
+      if (event.button !== 0) return
+
+      const target = event.target as HTMLElement | null
+      if (
+        target?.closest(
+          'button, a, input, textarea, select, [role="button"], [data-no-feed-drag="true"]',
+        )
+      ) {
+        return
+      }
+
+      if (event.pointerType === 'mouse' && event.buttons !== 1) return
       feedDragControls.start(event)
     },
     [canDragFeed, feedDragControls],

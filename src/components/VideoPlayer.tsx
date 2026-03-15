@@ -223,17 +223,13 @@ export function VideoPlayer({
   const phrases = usePhraseStore((state) => state.phrases)
   const [cueNotice, setCueNotice] = useState<{
     message: string
-    tone: 'accent' | 'learning' | 'saved'
+    tone: 'accent' | 'learning'
   } | null>(null)
   const cueNoticeTimerRef = useRef<number | null>(null)
   const lastSimilarCueRef = useRef<{ token: string; time: number }>({ token: '', time: 0 })
-  const lastSavedCueRef = useRef<{ subtitleKey: string; time: number }>({
-    subtitleKey: '',
-    time: 0,
-  })
 
   const showCueNotice = useCallback(
-    (message: string, tone: 'accent' | 'learning' | 'saved', duration = 1350) => {
+    (message: string, tone: 'accent' | 'learning', duration = 1350) => {
       setCueNotice({ message, tone })
       if (cueNoticeTimerRef.current) {
         window.clearTimeout(cueNoticeTimerRef.current)
@@ -315,19 +311,7 @@ export function VideoPlayer({
     if (primingCueBySubtitleIndex.has(activeSubForHaptic)) return
     const subtitleKey = `${videoId ?? youtubeId}::${subtitle.en}`
 
-    if (savedPhraseMap.has(subtitleKey)) {
-      const now = Date.now()
-      const lastCue = lastSavedCueRef.current
-      if (lastCue.subtitleKey === subtitleKey && now - lastCue.time < 10_000) {
-        return
-      }
-
-      lastSavedCueRef.current = { subtitleKey, time: now }
-      const timer = window.setTimeout(() => {
-        showCueNotice(`SAVED | ${subtitle.en.slice(0, 28).toUpperCase()}`, 'saved', 1600)
-      }, 0)
-      return () => window.clearTimeout(timer)
-    }
+    if (savedPhraseMap.has(subtitleKey)) return
 
     for (const token of extractSimilarCueTokens(subtitle.en)) {
       if (!similarPhraseTokenSet.has(token)) continue
