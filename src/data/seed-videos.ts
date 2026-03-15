@@ -39965,7 +39965,7 @@ export const seedVideos = defineSeedVideos([
     clipEnd: 0,
     format: 'shorts',
     subtitles: [],
-  }
+  },
 ])
 
 // Helper functions
