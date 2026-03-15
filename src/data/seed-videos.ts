@@ -37434,7 +37434,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-pRGXjJllkhM',
     youtubeId: 'pRGXjJllkhM',
-    title: 'Welcome to Bean's Driving School!',
+    title: `Welcome to Bean's Driving School!`,
     category: 'entertainment',
     difficulty: 1,
     clipStart: 0,
@@ -37577,7 +37577,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts--_WGnyzfy18',
     youtubeId: '-_WGnyzfy18',
-    title: 'bad day to be a denny's #TheoVon',
+    title: `bad day to be a denny's #TheoVon`,
     category: 'entertainment',
     difficulty: 5,
     clipStart: 0,
@@ -37654,7 +37654,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-lv2K8cyqxCg',
     youtubeId: 'lv2K8cyqxCg',
-    title: 'The ever nerve-wracking 'shovel ceremony.' #Digman',
+    title: `The ever nerve-wracking 'shovel ceremony.' #Digman`,
     category: 'entertainment',
     difficulty: 5,
     clipStart: 0,
@@ -37742,7 +37742,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-savEbCxTFeg',
     youtubeId: 'savEbCxTFeg',
-    title: 'We're gonna have a high, high-end year. #BroadCity',
+    title: `We're gonna have a high, high-end year. #BroadCity`,
     category: 'entertainment',
     difficulty: 5,
     clipStart: 0,
@@ -37753,7 +37753,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-mi3wZWgbSOU',
     youtubeId: 'mi3wZWgbSOU',
-    title: 'Jennifer Garner Gets EXCITED About Cadbury's Chocolate',
+    title: `Jennifer Garner Gets EXCITED About Cadbury's Chocolate`,
     category: 'entertainment',
     difficulty: 4,
     clipStart: 0,
@@ -37841,7 +37841,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-cRx1gYUXL2U',
     youtubeId: 'cRx1gYUXL2U',
-    title: 'Mr Bean's Picnic At The Park',
+    title: `Mr Bean's Picnic At The Park`,
     category: 'entertainment',
     difficulty: 1,
     clipStart: 0,
@@ -37984,7 +37984,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-pj1WhhWqIgs',
     youtubeId: 'pj1WhhWqIgs',
-    title: 'Rollin' with the big dogs. #Digman',
+    title: `Rollin' with the big dogs. #Digman`,
     category: 'entertainment',
     difficulty: 5,
     clipStart: 0,
@@ -38072,7 +38072,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-Ho-fCuFV5u0',
     youtubeId: 'Ho-fCuFV5u0',
-    title: 'Mr Bean's Painting Miracle',
+    title: `Mr Bean's Painting Miracle`,
     category: 'entertainment',
     difficulty: 2,
     clipStart: 0,
@@ -38116,7 +38116,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-_eTdj9Hxp8c',
     youtubeId: '_eTdj9Hxp8c',
-    title: 'You're going to let me take this baby? #RosebudBaker #PeteDavidson',
+    title: `You're going to let me take this baby? #RosebudBaker #PeteDavidson`,
     category: 'entertainment',
     difficulty: 5,
     clipStart: 0,
@@ -38149,7 +38149,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-U97U9x7qklE',
     youtubeId: 'U97U9x7qklE',
-    title: 'Very 'hot in 2004' of you. #BroadCity',
+    title: `Very 'hot in 2004' of you. #BroadCity`,
     category: 'entertainment',
     difficulty: 5,
     clipStart: 0,
@@ -38171,7 +38171,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-Vh4i002BhSM',
     youtubeId: 'Vh4i002BhSM',
-    title: 'Everyone's pregnant with something. #KrollShow',
+    title: `Everyone's pregnant with something. #KrollShow`,
     category: 'entertainment',
     difficulty: 5,
     clipStart: 0,
@@ -38292,7 +38292,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-B-j8Ys-oFqQ',
     youtubeId: 'B-j8Ys-oFqQ',
-    title: 'They don't hand out promotions to just anyone. #digman',
+    title: `They don't hand out promotions to just anyone. #digman`,
     category: 'entertainment',
     difficulty: 4,
     clipStart: 0,
@@ -38523,7 +38523,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-GM9w6CPrt00',
     youtubeId: 'GM9w6CPrt00',
-    title: 'They're going to Hollywood. #KrollShow',
+    title: `They're going to Hollywood. #KrollShow`,
     category: 'entertainment',
     difficulty: 4,
     clipStart: 0,
@@ -38589,7 +38589,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-OlvkI_MoQSs',
     youtubeId: 'OlvkI_MoQSs',
-    title: 'don't just take their word for it  see reminders of him in theaters NOW!',
+    title: `don't just take their word for it  see reminders of him in theaters NOW!`,
     category: 'movie',
     difficulty: 5,
     clipStart: 0,
@@ -38677,7 +38677,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-27gc-MuAfo4',
     youtubeId: '27gc-MuAfo4',
-    title: 'You're in my reality tv show. #Scream7',
+    title: `You're in my reality tv show. #Scream7`,
     category: 'movie',
     difficulty: 2,
     clipStart: 0,
@@ -38875,7 +38875,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-hsc2x24Nkmk',
     youtubeId: 'hsc2x24Nkmk',
-    title: 'I'm coming for your streaks.  Try the #Scream7 Lens on Snapchat. Link in description!',
+    title: `I'm coming for your streaks.  Try the #Scream7 Lens on Snapchat. Link in description!`,
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -38919,7 +38919,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts--HNBvqV-kpE',
     youtubeId: '-HNBvqV-kpE',
-    title: 'hold your friends close because I'm coming for all of you. #Scream7',
+    title: `hold your friends close because I'm coming for all of you. #Scream7`,
     category: 'movie',
     difficulty: 3,
     clipStart: 0,
@@ -38930,7 +38930,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-_oooroXIBv0',
     youtubeId: '_oooroXIBv0',
-    title: 'that's a wrap on the reminders of him tour   thank you for having us, dallas!',
+    title: `that's a wrap on the reminders of him tour   thank you for having us, dallas!`,
     category: 'movie',
     difficulty: 4,
     clipStart: 0,
@@ -39194,7 +39194,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-v6iutpxVg3s',
     youtubeId: 'v6iutpxVg3s',
-    title: 'Joey's got big boy money now',
+    title: `Joey's got big boy money now`,
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -39205,7 +39205,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-0V1Byj3PEcg',
     youtubeId: '0V1Byj3PEcg',
-    title: 'Ron doesn't appreciate your disrespect',
+    title: `Ron doesn't appreciate your disrespect`,
     category: 'drama',
     difficulty: 4,
     clipStart: 0,
@@ -39227,7 +39227,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-sCQFJHLa3oU',
     youtubeId: 'sCQFJHLa3oU',
-    title: 'That's why they call it Chew not Swallow',
+    title: `That's why they call it Chew not Swallow`,
     category: 'drama',
     difficulty: 4,
     clipStart: 0,
@@ -39249,7 +39249,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-FD4P8VCdiL0',
     youtubeId: 'FD4P8VCdiL0',
-    title: 'Donna, DON'T look down the barrel of your gun',
+    title: `Donna, DON'T look down the barrel of your gun`,
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -39260,7 +39260,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-fqmIOF4ycME',
     youtubeId: 'fqmIOF4ycME',
-    title: 'Michael's request borders on corruption',
+    title: `Michael's request borders on corruption`,
     category: 'drama',
     difficulty: 4,
     clipStart: 0,
@@ -39381,7 +39381,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-ArTo8dDeKz4',
     youtubeId: 'ArTo8dDeKz4',
-    title: 'I'm sorry... what are you asking? - The Office US',
+    title: `I'm sorry... what are you asking? - The Office US`,
     category: 'drama',
     difficulty: 4,
     clipStart: 0,
@@ -39392,7 +39392,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-xix47Nb0c_Q',
     youtubeId: 'xix47Nb0c_Q',
-    title: 'Who else wants to know Angela's secret? - The Office US',
+    title: `Who else wants to know Angela's secret? - The Office US`,
     category: 'drama',
     difficulty: 5,
     clipStart: 0,
@@ -39403,7 +39403,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-ehjgFPk_Y2U',
     youtubeId: 'ehjgFPk_Y2U',
-    title: 'Andy discovers Ron's secret!',
+    title: `Andy discovers Ron's secret!`,
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -39414,7 +39414,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-EjiekA9GTok',
     youtubeId: 'EjiekA9GTok',
-    title: 'Joey's audition for King Kong',
+    title: `Joey's audition for King Kong`,
     category: 'drama',
     difficulty: 3,
     clipStart: 0,
@@ -39557,7 +39557,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-DgXuM3TQLcM',
     youtubeId: 'DgXuM3TQLcM',
-    title: 'Who's Hotter? Pam or Karen? - The Office US',
+    title: `Who's Hotter? Pam or Karen? - The Office US`,
     category: 'drama',
     difficulty: 5,
     clipStart: 0,
@@ -39601,7 +39601,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-qECuO896sII',
     youtubeId: 'qECuO896sII',
-    title: 'Can I get a drum roll for Michael's dad reveal?',
+    title: `Can I get a drum roll for Michael's dad reveal?`,
     category: 'drama',
     difficulty: 2,
     clipStart: 0,
@@ -39766,7 +39766,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-Z8yyyb4wNiI',
     youtubeId: 'Z8yyyb4wNiI',
-    title: 'What if Rapunzel's mother had drank a potion from the wrong flower?',
+    title: `What if Rapunzel's mother had drank a potion from the wrong flower?`,
     category: 'animation',
     difficulty: 2,
     clipStart: 0,
@@ -39777,7 +39777,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-7mrUU9bA6-E',
     youtubeId: '7mrUU9bA6-E',
-    title: 'Here's to all the magical adventures to come in 2026.',
+    title: `Here's to all the magical adventures to come in 2026.`,
     category: 'animation',
     difficulty: 2,
     clipStart: 0,
@@ -39843,7 +39843,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-BPaR15bY7Wk',
     youtubeId: 'BPaR15bY7Wk',
-    title: 'We are PAWsitive you're in for a WILDE time!',
+    title: `We are PAWsitive you're in for a WILDE time!`,
     category: 'animation',
     difficulty: 2,
     clipStart: 0,
@@ -39854,7 +39854,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-jF571PgcuK4',
     youtubeId: 'jF571PgcuK4',
-    title: 'Bobby does Piper's DITL voiceover #Hoppers',
+    title: `Bobby does Piper's DITL voiceover #Hoppers`,
     category: 'animation',
     difficulty: 2,
     clipStart: 0,
@@ -40041,7 +40041,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-z-Fpi3iLZaE',
     youtubeId: 'z-Fpi3iLZaE',
-    title: 'Pixar's Up from Storyboard to Final Animation...',
+    title: `Pixar's Up from Storyboard to Final Animation...`,
     category: 'animation',
     difficulty: 2,
     clipStart: 0,
@@ -40063,7 +40063,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-fvhsuFCH3tM',
     youtubeId: 'fvhsuFCH3tM',
-    title: 'unhinged, laugh out loud hilarious, and Pixar's funniest movie...',
+    title: `unhinged, laugh out loud hilarious, and Pixar's funniest movie...`,
     category: 'animation',
     difficulty: 2,
     clipStart: 0,
@@ -40074,7 +40074,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-kn38mNs3GcY',
     youtubeId: 'kn38mNs3GcY',
-    title: 'When you're a Princess, there's no such thing as a bad hair day.',
+    title: `When you're a Princess, there's no such thing as a bad hair day.`,
     category: 'animation',
     difficulty: 2,
     clipStart: 0,
@@ -40151,7 +40151,7 @@ export const seedVideos = defineSeedVideos([
   {
     id: 'shorts-fFguvgqSehw',
     youtubeId: 'fFguvgqSehw',
-    title: 'Don't miss out! #Hoppers',
+    title: `Don't miss out! #Hoppers`,
     category: 'animation',
     difficulty: 2,
     clipStart: 0,
