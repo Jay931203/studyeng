@@ -348,7 +348,7 @@ const ko = {
   viewingStats: {
     dayLabels: ['일', '월', '화', '수', '목', '금', '토'],
   },
-} as const
+}
 
 export type LocaleStrings = typeof ko
 export default ko

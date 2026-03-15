@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useCallback, useMemo } from 'react'
 import { useLocaleStore } from '@/stores/useLocaleStore'
 import { getLocaleStrings, type LocaleStrings } from './index'
 
@@ -33,7 +33,7 @@ export function useTranslation() {
   const locale = useLocaleStore((state) => state.locale)
   const strings = useMemo(() => getLocaleStrings(locale), [locale])
 
-  function t<K extends TranslationKey>(key: K): PathValue<LocaleStrings, K> {
+  const t = useCallback(<K extends TranslationKey>(key: K): PathValue<LocaleStrings, K> => {
     const parts = key.split('.')
     let current: unknown = strings
 
@@ -43,7 +43,7 @@ export function useTranslation() {
     }
 
     return (current ?? key) as PathValue<LocaleStrings, K>
-  }
+  }, [strings])
 
   return { t, locale, strings } as const
 }

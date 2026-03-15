@@ -10,7 +10,6 @@ import {
 } from '@/lib/learningDashboard'
 import {
   formatPrice,
-  formatWon,
   getMonthlyDiscountedPrice,
   getSavingsPercent,
   getYearlyRenewalPrice,

@@ -16,7 +16,8 @@ export const YEARLY_BASE_SAVINGS_PERCENT = Math.round(
 
 export function formatPrice(value: number, locale: 'ko' | 'ja' = 'ko'): string {
   if (locale === 'ja') {
-    return `¥${Math.round(value * 0.11).toLocaleString()}`
+    const jpy = Math.max(0, Math.round(value * 0.11))
+    return `¥${new Intl.NumberFormat('ja-JP').format(jpy)}`
   }
   return `${new Intl.NumberFormat('ko-KR').format(Math.max(0, Math.round(value)))}원`
 }

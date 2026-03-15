@@ -21,7 +21,7 @@ export function AnswerBurst({
   burstKey,
   show,
 }: {
-  burstKey: number
+  burstKey: number | string
   show: boolean
 }) {
   return (

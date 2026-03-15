@@ -2,11 +2,13 @@
 
 import { useState, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { AnswerBurst } from './games/AnswerBurst'
 
 interface SubtitleGameProps {
   choices: string[]
   correctIndex: number
   result: 'correct' | 'wrong' | null
+  xpAwarded?: number
   onAnswer: (choiceIndex: number) => void
   currentLine?: string | null
   className?: string
@@ -16,6 +18,7 @@ export function SubtitleGame({
   choices,
   correctIndex,
   result,
+  xpAwarded = 0,
   onAnswer,
   currentLine,
   className,
@@ -46,6 +49,8 @@ export function SubtitleGame({
           borderColor: 'var(--player-control-border)',
         }}
       >
+        <AnswerBurst burstKey={`${selectedIndex ?? 'idle'}-${result ?? 'pending'}`} show={result === 'correct'} />
+
         {currentLine && (
           <div
             className="mb-3 rounded-2xl border px-3 py-2 text-left"
@@ -103,8 +108,21 @@ export function SubtitleGame({
                   backgroundColor: bgColor,
                   borderColor: borderColor,
                   color: textColor,
+                  boxShadow:
+                    answered && isCorrect
+                      ? '0 0 0 1px rgba(34, 197, 94, 0.3), 0 0 28px rgba(34, 197, 94, 0.22)'
+                      : undefined,
                 }}
                 whileTap={!answered ? { scale: 0.97 } : undefined}
+                animate={
+                  answered && isCorrect
+                    ? {
+                        scale: [1, 1.02, 1],
+                        borderColor: ['rgba(34, 197, 94, 0.5)', 'rgba(74, 222, 128, 0.9)', 'rgba(34, 197, 94, 0.5)'],
+                      }
+                    : undefined
+                }
+                transition={answered && isCorrect ? { duration: 0.45 } : undefined}
                 layout
               >
                 <span className="line-clamp-2">{choice}</span>
@@ -114,16 +132,29 @@ export function SubtitleGame({
         </div>
 
         {result !== null && (
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="mt-3 text-[10px] font-semibold"
+          <motion.div
+            initial={{ opacity: 0, y: 4 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mt-3 rounded-2xl border px-3 py-2"
             style={{
               color: result === 'correct' ? 'rgb(34, 197, 94)' : 'rgb(239, 68, 68)',
+              borderColor: result === 'correct' ? 'rgba(34, 197, 94, 0.24)' : 'rgba(239, 68, 68, 0.24)',
+              backgroundColor: result === 'correct' ? 'rgba(34, 197, 94, 0.1)' : 'rgba(239, 68, 68, 0.1)',
             }}
           >
-            {result === 'correct' ? 'Correct!' : 'Wrong...'}
-          </motion.p>
+            <p className="text-[11px] font-semibold">
+              {result === 'correct'
+                ? xpAwarded > 0
+                  ? `정답! +${xpAwarded} XP`
+                  : '정답!'
+                : '오답'}
+            </p>
+            {result === 'wrong' && (
+              <p className="mt-1 text-[10px] font-medium text-white/78">
+                정답: {choices[correctIndex]}
+              </p>
+            )}
+          </motion.div>
         )}
       </motion.div>
     </AnimatePresence>
