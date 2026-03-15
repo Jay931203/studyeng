@@ -1,9 +1,8 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { DAILY_SESSION_XP_CAP } from '@/lib/xp/sessionXp'
-import { getStreakBonusXP, applyMonthlyStreakCap } from '@/lib/xp/streakBonus'
+import { getStreakBonusXP } from '@/lib/xp/streakBonus'
 import { useUserStore } from './useUserStore'
-import { useTierStore } from './useTierStore'
 
 interface LeitnerEntry {
   box: 1 | 2 | 3
@@ -196,21 +195,12 @@ export const useGameProgressStore = create<GameProgressState>()(
         // Already awarded today
         if (state.streakBonusDate === today) return 0
 
-        const proposed = getStreakBonusXP(streakDays)
-        if (proposed <= 0) return 0
+        const actual = getStreakBonusXP(streakDays)
+        if (actual <= 0) return 0
 
-        const totalMonthlyXP = useTierStore.getState().getCurrentMonthXp()
-        // Monthly streak XP tracking
         const monthlyStreakSoFar = state.monthlyStreakXPMonth === currentMonth
           ? state.monthlyStreakXP
           : 0
-
-        const actual = applyMonthlyStreakCap(monthlyStreakSoFar, totalMonthlyXP, proposed)
-        if (actual <= 0) {
-          // Still mark as awarded today even if capped to 0
-          set({ streakBonusDate: today, dailyStreakBonusXP: 0 })
-          return 0
-        }
 
         set({
           streakBonusDate: today,

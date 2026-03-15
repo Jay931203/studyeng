@@ -6,9 +6,14 @@ import { useRouter } from 'next/navigation'
 import {
   DAILY_VIDEO_XP_TARGET,
   getBenefitStatusLine,
-  getStreakBonusProgress,
   getTodayIsoDate,
 } from '@/lib/learningDashboard'
+import {
+  formatDiscountText,
+  formatWon,
+  getMonthlyDiscountedPrice,
+  getYearlyRenewalPrice,
+} from '@/lib/billingPricing'
 import { DAILY_SESSION_XP_CAP } from '@/lib/xp/sessionXp'
 import { getStreakBonusXP } from '@/lib/xp/streakBonus'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
@@ -18,7 +23,6 @@ import {
   MONTHLY_PLAN_DISCOUNTS,
   TIER_NAMES,
   TIER_THRESHOLDS,
-  YEARLY_BASE_SAVINGS_PERCENT,
   YEARLY_PLAN_RENEWAL_DISCOUNTS,
   useTierStore,
 } from '@/stores/useTierStore'
@@ -38,11 +42,12 @@ export function TodayDashboard() {
   const today = getTodayIsoDate()
   const benefitSnapshot = getBenefitSnapshot()
   const gameXpToday = getDailyTotalGameXP()
+  const streakTarget = getStreakBonusXP(Math.max(streakDays, 1))
+  const streakBonusToday = streakBonusDate === today ? dailyStreakBonusXP : 0
+  const todayTotal = gameXpToday + dailyVideoXP + streakBonusToday
   const gameXpPct = Math.min((gameXpToday / DAILY_SESSION_XP_CAP) * 100, 100)
   const videoXpPct = Math.min((dailyVideoXP / DAILY_VIDEO_XP_TARGET) * 100, 100)
-  const streakBonusToday = streakBonusDate === today ? dailyStreakBonusXP : 0
-  const streakBonusProgress = getStreakBonusProgress(streakDays, streakBonusDate === today)
-  const todayTotal = gameXpToday + dailyVideoXP + streakBonusToday
+  const streakBonusPct = streakTarget > 0 ? Math.min((streakBonusToday / streakTarget) * 100, 100) : 0
 
   return (
     <div className="mb-8 min-w-0 overflow-hidden rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] text-left shadow-[var(--card-shadow)]">
@@ -70,6 +75,7 @@ export function TodayDashboard() {
             label="등급 상태"
             title={TIER_NAMES[benefitSnapshot.benefitTier]}
             detail={getBenefitStatusLine(benefitSnapshot)}
+            titleClassName="text-[var(--accent-primary)]"
             onClick={() => setShowTierGuide(true)}
           />
         </div>
@@ -78,35 +84,35 @@ export function TodayDashboard() {
           +{todayTotal}
           <span className="ml-1 text-sm font-medium text-[var(--text-muted)]">XP</span>
         </p>
-        <p className="mt-1 text-xs text-[var(--text-muted)]">오늘 실제로 쌓인 XP만 합산해서 보여줍니다.</p>
+        <p className="mt-1 text-xs text-[var(--text-muted)]">오늘 실제로 적립된 XP만 합산해서 보여줍니다.</p>
 
         <div className="mt-4 space-y-3">
           <ProgressRow
             label="게임"
             value={`${gameXpToday}/${DAILY_SESSION_XP_CAP} XP`}
             progress={gameXpPct}
-            detail="집중 학습 보상, 하루 최대 15 XP"
+            detail="하루 최대 15 XP · 게임 세션 완료 기준으로 적립됩니다."
           />
           <ProgressRow
             label="영상"
             value={`${dailyVideoXP}/${DAILY_VIDEO_XP_TARGET} XP`}
             progress={videoXpPct}
-            detail="시청 완료 보상, 하루 최대 15 XP"
+            detail="하루 최대 15 XP · 영상 완료 기준으로 적립됩니다."
           />
           <ProgressRow
             label="연속 학습 보너스"
             value={
               streakBonusToday > 0
-                ? `${streakBonusToday}/${streakBonusToday} XP`
+                ? `${streakBonusToday}/${streakTarget} XP`
                 : streakDays > 0
-                  ? `0/${getStreakBonusXP(streakDays)} XP`
+                  ? `0/${streakTarget} XP`
                   : '잠김'
             }
-            progress={streakBonusProgress.progress * 100}
+            progress={streakBonusPct}
             detail={
               streakDays > 0
-                ? `오늘 첫 영상 또는 게임 완료 시 1회 적립 · 현재 ${streakDays}일 기준`
-                : '오늘 첫 영상 또는 게임을 완료하면 연속 학습이 시작됩니다.'
+                ? `오늘 첫 영상 또는 게임 완료 시 10 XP · 현재 ${streakDays}일 연속 학습`
+                : '오늘 첫 영상 또는 게임을 완료하면 연속 학습 보너스가 시작됩니다.'
             }
           />
         </div>
@@ -127,7 +133,7 @@ export function TodayDashboard() {
                   혜택 안내
                 </p>
                 <p className="mt-1 text-sm text-[var(--text-secondary)]">
-                  등급 잠금은 누적 XP로 결정되고, 실제 구독 혜택은 최근 월간 활동에 따라 적용됩니다.
+                  혜택은 누적 XP로 잠기고, 월간 활동이 부족하면 적용 혜택만 내려갑니다.
                 </p>
               </div>
               <button
@@ -139,37 +145,80 @@ export function TodayDashboard() {
               </button>
             </div>
 
+            <div className="mb-4 rounded-2xl border border-[var(--accent-primary)] bg-[var(--accent-glow)] px-4 py-3">
+              <p className="text-[11px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+                현재 적용 혜택
+              </p>
+              <p className="mt-1 text-base font-semibold text-[var(--accent-primary)]">
+                {TIER_NAMES[benefitSnapshot.benefitTier]}
+              </p>
+              <p className="mt-1 text-[11px] text-[var(--text-secondary)]">
+                {getBenefitStatusLine(benefitSnapshot)}
+              </p>
+            </div>
+
             <div className="space-y-2">
-              {TIER_NAMES.map((tierName, index) => (
-                <div
-                  key={tierName}
-                  className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] px-4 py-3"
-                >
-                  <div className="flex items-center justify-between gap-3">
-                    <p className="text-sm font-semibold text-[var(--text-primary)]">{tierName}</p>
-                    <div className="text-right">
-                      <p className="text-xs font-medium text-[var(--accent-text)]">
-                        월간 {MONTHLY_PLAN_DISCOUNTS[index]}%
-                      </p>
-                      <p className="text-[10px] text-[var(--text-muted)]">
-                        연간 갱신 {YEARLY_PLAN_RENEWAL_DISCOUNTS[index]}%
-                      </p>
+              {TIER_NAMES.map((tierName, index) => {
+                const monthlyDiscount = MONTHLY_PLAN_DISCOUNTS[index]
+                const yearlyDiscount = YEARLY_PLAN_RENEWAL_DISCOUNTS[index]
+                const isCurrent = index === benefitSnapshot.benefitTier
+                const isUnlocked = index <= benefitSnapshot.unlockedTier
+
+                return (
+                  <div
+                    key={tierName}
+                    className={`rounded-2xl border px-4 py-3 ${
+                      isCurrent
+                        ? 'border-[var(--accent-primary)] bg-[var(--accent-glow)]'
+                        : 'border-[var(--border-card)] bg-[var(--bg-card)]'
+                    }`}
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div>
+                        <p
+                          className={`text-sm font-semibold ${
+                            isCurrent ? 'text-[var(--accent-primary)]' : 'text-[var(--text-primary)]'
+                          }`}
+                        >
+                          {tierName}
+                        </p>
+                        <p className="mt-1 text-[11px] text-[var(--text-muted)]">
+                          {index === 0
+                            ? '0 XP부터 시작'
+                            : `${TIER_THRESHOLDS[index].toLocaleString()} XP 이상`}
+                        </p>
+                      </div>
+                      {isCurrent ? (
+                        <span className="rounded-full bg-[var(--accent-primary)] px-2 py-1 text-[10px] font-semibold text-white">
+                          현재 혜택
+                        </span>
+                      ) : isUnlocked ? (
+                        <span className="rounded-full bg-[var(--bg-secondary)] px-2 py-1 text-[10px] font-semibold text-[var(--text-secondary)]">
+                          잠금 완료
+                        </span>
+                      ) : null}
+                    </div>
+
+                    <div className="mt-3 grid grid-cols-2 gap-2">
+                      <GuidePrice
+                        label="월간 예상가"
+                        value={formatWon(getMonthlyDiscountedPrice(monthlyDiscount))}
+                        detail={formatDiscountText('추가 할인', monthlyDiscount)}
+                      />
+                      <GuidePrice
+                        label="연간 갱신가"
+                        value={formatWon(getYearlyRenewalPrice(yearlyDiscount))}
+                        detail={formatDiscountText('갱신 할인', yearlyDiscount)}
+                      />
                     </div>
                   </div>
-                  <p className="mt-1 text-[11px] text-[var(--text-muted)]">
-                    {index === 0
-                      ? `${TIER_THRESHOLDS[0]} XP부터 시작`
-                      : `${TIER_THRESHOLDS[index].toLocaleString()} XP 이상`}
-                  </p>
-                </div>
-              ))}
+                )
+              })}
             </div>
 
             <p className="mt-4 text-[11px] leading-relaxed text-[var(--text-muted)]">
-              연간 플랜은 기본가가 이미 월간 12회 대비 약 {YEARLY_BASE_SAVINGS_PERCENT}% 저렴합니다.
-              완료된 월 기준으로 {MONTHLY_ACTIVE_THRESHOLD} XP 미만이 2개월 연속 이어지면 다음 달
-              혜택 단계가 1단계 낮아집니다. 이번 달에 {MONTHLY_ACTIVE_THRESHOLD} XP를 채우면 위험
-              상태를 바로 해소할 수 있습니다.
+              완료된 월 기준으로 {MONTHLY_ACTIVE_THRESHOLD} XP 미만이 2개월 연속 이어지면 적용 혜택이 1단계 낮아집니다.
+              이번 달 {MONTHLY_ACTIVE_THRESHOLD} XP를 채우면 원래 잠금 등급 혜택으로 바로 복구됩니다.
             </p>
           </div>
         </div>
@@ -215,11 +264,13 @@ function InfoBlock({
   title,
   detail,
   onClick,
+  titleClassName,
 }: {
   label: string
   title: string
   detail: string
   onClick?: () => void
+  titleClassName?: string
 }) {
   const Element = onClick ? 'button' : 'div'
 
@@ -236,9 +287,27 @@ function InfoBlock({
           </span>
         ) : null}
       </div>
-      <p className="text-sm font-semibold text-[var(--text-primary)]">{title}</p>
+      <p className={`text-sm font-semibold ${titleClassName ?? 'text-[var(--text-primary)]'}`}>{title}</p>
       <p className="mt-1 text-[11px] text-[var(--text-muted)]">{detail}</p>
     </Element>
+  )
+}
+
+function GuidePrice({
+  label,
+  value,
+  detail,
+}: {
+  label: string
+  value: string
+  detail: string
+}) {
+  return (
+    <div className="rounded-2xl bg-[var(--bg-primary)]/70 px-3 py-2">
+      <p className="text-[10px] text-[var(--text-muted)]">{label}</p>
+      <p className="mt-1 text-sm font-semibold text-[var(--text-primary)]">{value}</p>
+      <p className="mt-1 text-[10px] text-[var(--text-muted)]">{detail}</p>
+    </div>
   )
 }
 

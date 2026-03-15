@@ -75,6 +75,11 @@ function getBenefitTier(
   monthlyXpHistory: Record<string, number>,
   currentMonth: string,
 ): TierLevel {
+  const currentMonthXp = monthlyXpHistory[currentMonth] ?? 0
+  if (currentMonthXp >= MONTHLY_ACTIVE_THRESHOLD) {
+    return unlockedTier
+  }
+
   const completedInactiveMonths = countCompletedInactiveMonths(monthlyXpHistory, currentMonth)
   if (completedInactiveMonths <= 1) return unlockedTier
 
@@ -101,7 +106,7 @@ function buildBenefitSnapshot(
     status = 'reduced'
   } else if (
     (unlockedTier > 0 || Object.keys(monthlyXpHistory).length > 0) &&
-    (!currentMonthActive || completedInactiveMonths === 1)
+    !currentMonthActive
   ) {
     status = 'warning'
   }

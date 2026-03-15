@@ -5,6 +5,12 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 import { usePathname } from 'next/navigation'
 import type { PurchasesPackage } from '@revenuecat/purchases-typescript-internal-esm'
 import { getBillingConfig, type BillingPlan } from '@/lib/billing'
+import {
+  formatDiscountText,
+  formatWon,
+  getMonthlyDiscountedPrice,
+  getYearlyRenewalPrice,
+} from '@/lib/billingPricing'
 import { getBenefitStatusLine } from '@/lib/learningDashboard'
 import { getPlatform, isNative } from '@/lib/platform'
 import { useAuth } from '@/hooks/useAuth'
@@ -385,32 +391,19 @@ export function BillingManagementCard({
       : null
   const benefitItems = [
     {
-      label: '잠금 등급',
-      value: TIER_NAMES[benefitSnapshot.unlockedTier],
-      detail: '누적 XP 기준으로 해제된 최고 등급',
-    },
-    {
-      label: '적용 혜택',
-      value: TIER_NAMES[benefitSnapshot.benefitTier],
-      detail:
-        benefitSnapshot.benefitTier < benefitSnapshot.unlockedTier
-          ? '최근 활동 부족으로 낮아진 혜택 상태'
-          : '현재 구독 할인에 적용되는 혜택 상태',
-    },
-    {
       label: '다음 월간 결제',
-      value: `${benefitSnapshot.monthlyDiscount}% 할인`,
-      detail: '월간 플랜에는 다음 결제일부터 바로 반영',
+      value: formatWon(getMonthlyDiscountedPrice(benefitSnapshot.monthlyDiscount)),
+      detail: formatDiscountText('월간 추가 할인', benefitSnapshot.monthlyDiscount),
     },
     {
       label: '다음 연간 갱신',
-      value: `${benefitSnapshot.yearlyRenewalDiscount}% 할인`,
-      detail: '연간은 현재 기간이 끝난 뒤 다음 갱신 때 반영',
+      value: formatWon(getYearlyRenewalPrice(benefitSnapshot.yearlyRenewalDiscount)),
+      detail: formatDiscountText('연간 갱신 할인', benefitSnapshot.yearlyRenewalDiscount),
     },
     {
-      label: '월간 활동',
+      label: '이번 달 활동',
       value: `${benefitSnapshot.currentMonthXp.toLocaleString()} / ${MONTHLY_ACTIVE_THRESHOLD} XP`,
-      detail: '이번 달 활동 XP 기준',
+      detail: '300 XP를 채우면 현재 잠금 등급 혜택을 유지하거나 복구할 수 있습니다.',
     },
   ]
   const membershipSummaryItems = [
@@ -757,6 +750,26 @@ export function BillingManagementCard({
               <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--text-muted)]">
                 혜택
               </p>
+              <div className="rounded-2xl border border-[var(--accent-primary)] bg-[var(--accent-glow)] px-4 py-3">
+                <div className="flex items-center justify-between gap-3">
+                  <div>
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
+                      현재 혜택
+                    </p>
+                    <p className="mt-1 text-base font-semibold text-[var(--accent-primary)]">
+                      {TIER_NAMES[benefitSnapshot.benefitTier]}
+                    </p>
+                  </div>
+                  {benefitSnapshot.benefitTier < benefitSnapshot.unlockedTier ? (
+                    <span className="rounded-full bg-[var(--bg-secondary)] px-2.5 py-1 text-[10px] font-semibold text-[var(--text-secondary)]">
+                      잠금 등급 {TIER_NAMES[benefitSnapshot.unlockedTier]}
+                    </span>
+                  ) : null}
+                </div>
+                <p className="mt-2 text-xs text-[var(--text-secondary)]">
+                  {getBenefitStatusLine(benefitSnapshot)}
+                </p>
+              </div>
               <div className="divide-y divide-[var(--border-card)]/40">
                 {benefitItems.map((item) => (
                   <div key={item.label} className="flex items-center justify-between py-2.5">
@@ -773,8 +786,8 @@ export function BillingManagementCard({
                 ))}
               </div>
               <p className="text-xs text-[var(--text-secondary)]">
-                월간 12회 기준 대비 연간 기본가는 약 {YEARLY_BASE_SAVINGS_PERCENT}% 더 저렴합니다.
-                완료된 월 기준으로 {MONTHLY_ACTIVE_THRESHOLD} XP 미만이 2개월 연속 이어지면 다음 달 혜택 단계가 내려갑니다.
+                완료된 월 기준으로 {MONTHLY_ACTIVE_THRESHOLD} XP 미만이 2개월 연속 이어지면 적용 혜택이 1단계 낮아집니다.
+                이번 달 {MONTHLY_ACTIVE_THRESHOLD} XP를 채우면 잠금 등급 혜택으로 바로 복구할 수 있습니다.
               </p>
             </div>
 
