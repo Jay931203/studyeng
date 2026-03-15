@@ -4,7 +4,7 @@ import { Suspense, useEffect, useMemo } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { VideoFeed } from '@/components/VideoFeed'
 import { catalogVideos } from '@/lib/catalog'
-import { recommendVideos, seriesPlaylist } from '@/lib/recommend'
+import { getLevelAwareCandidateVideos, recommendVideos, seriesPlaylist } from '@/lib/recommend'
 import { createHiddenVideoIdSet, filterHiddenVideos } from '@/lib/videoVisibility'
 import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useAdminStore } from '@/stores/useAdminStore'
@@ -107,17 +107,22 @@ function ShortsFeedContent() {
 
   const recommended = useMemo(() => {
     const options = recommendationSnapshot
+    const levelAwareFeedVideos = getLevelAwareCandidateVideos(feedVideos, options.level, {
+      minimumPoolSize: feedMode === 'shorts' ? 24 : 30,
+      nearbyPoolRatio: 0.2,
+      minimumNearbyCount: feedMode === 'shorts' ? 5 : 6,
+    })
 
     if (feedMode === 'shorts') {
       if (videoId && !hiddenVideoIdSet.has(videoId)) {
         const target = feedVideos.find((video) => video.id === videoId)
         if (target) {
-          const rest = feedVideos.filter((video) => video.id !== videoId)
+          const rest = levelAwareFeedVideos.filter((video) => video.id !== videoId)
           return [target, ...shuffleArray(rest)]
         }
       }
 
-      return shuffleArray(feedVideos)
+      return shuffleArray(levelAwareFeedVideos)
     }
 
     if (playlistMode && seriesId && videoId) {
@@ -127,7 +132,7 @@ function ShortsFeedContent() {
     if (videoId && !hiddenVideoIdSet.has(videoId)) {
       const target = feedVideos.find((video) => video.id === videoId)
       if (target) {
-        const rest = feedVideos.filter((video) => video.id !== videoId)
+        const rest = levelAwareFeedVideos.filter((video) => video.id !== videoId)
         return filterHiddenVideos(
           [
             target,
@@ -141,7 +146,7 @@ function ShortsFeedContent() {
       }
     }
 
-    return filterHiddenVideos(recommendVideos(feedVideos, options), hiddenVideoIdSet)
+    return filterHiddenVideos(recommendVideos(levelAwareFeedVideos, options), hiddenVideoIdSet)
   }, [feedMode, feedVideos, hiddenVideoIdSet, playlistMode, recommendationSnapshot, seriesId, videoId])
 
   useEffect(() => {

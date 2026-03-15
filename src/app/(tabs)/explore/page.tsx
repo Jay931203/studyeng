@@ -21,7 +21,7 @@ import {
   getCatalogSeriesByCategory,
   getCatalogVideosBySeries,
 } from '@/lib/catalog'
-import { recommendVideos } from '@/lib/recommend'
+import { getLevelAwareCandidateVideos, recommendVideos } from '@/lib/recommend'
 import { createHiddenVideoIdSet, filterHiddenVideos } from '@/lib/videoVisibility'
 import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useAdminStore } from '@/stores/useAdminStore'
@@ -231,25 +231,38 @@ export default function ExplorePage() {
   ])
 
   const shuffledShorts = useMemo(() => {
-    if (visibleCatalogShorts.length === 0) return []
+    const candidateShorts = getLevelAwareCandidateVideos(visibleCatalogShorts, level, {
+      minimumPoolSize: 18,
+      nearbyPoolRatio: 0.2,
+      minimumNearbyCount: 4,
+    })
+
+    if (candidateShorts.length === 0) return []
     const today = new Date()
     let seed = today.getFullYear() * 10000 + (today.getMonth() + 1) * 100 + today.getDate()
     const nextSeed = () => {
       seed = (seed * 9301 + 49297) % 233280
       return seed / 233280
     }
-    const arr = [...visibleCatalogShorts]
+    const arr = [...candidateShorts]
     for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(nextSeed() * (i + 1))
       ;[arr[i], arr[j]] = [arr[j], arr[i]]
     }
     return arr
-  }, [visibleCatalogShorts])
+  }, [level, visibleCatalogShorts])
 
-  const homeCatalogVideos = useMemo(
-    () => visibleCatalogVideos.filter((video) => !HOME_THUMBNAIL_BLOCKLIST.has(video.id)),
-    [visibleCatalogVideos],
-  )
+  const homeCatalogVideos = useMemo(() => {
+    const visibleVideos = visibleCatalogVideos.filter(
+      (video) => !HOME_THUMBNAIL_BLOCKLIST.has(video.id),
+    )
+
+    return getLevelAwareCandidateVideos(visibleVideos, level, {
+      minimumPoolSize: 28,
+      nearbyPoolRatio: 0.2,
+      minimumNearbyCount: 6,
+    })
+  }, [level, visibleCatalogVideos])
 
   const rankedRecommendations = useMemo(() => {
     return recommendVideos(homeCatalogVideos, {

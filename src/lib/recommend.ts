@@ -89,6 +89,12 @@ interface ScoredVideo {
   video: VideoData
 }
 
+interface LevelCandidateOptions {
+  minimumPoolSize?: number
+  nearbyPoolRatio?: number
+  minimumNearbyCount?: number
+}
+
 const STOPWORDS = new Set([
   'a',
   'an',
@@ -415,7 +421,7 @@ function buildScoreContext(options: RecommendOptions): ScoreContext {
   }
 }
 
-function getDifficultyRange(level: string): [number, number] {
+export function getDifficultyRange(level: string): [number, number] {
   // 6-level difficulty: 1=A1, 2=A2, 3=B1, 4=B2, 5=C1, 6=C2
   switch (level) {
     case 'A1':
@@ -443,6 +449,53 @@ function difficultyPenalty(
   const [min, max] = getDifficultyRange(level)
   if (difficulty >= min && difficulty <= max) return 0
   return difficulty < min ? min - difficulty : difficulty - max
+}
+
+export function getLevelAwareCandidateVideos(
+  videos: VideoData[],
+  level?: string,
+  options: LevelCandidateOptions = {},
+) {
+  if (!level) return videos
+
+  const {
+    minimumPoolSize = 24,
+    nearbyPoolRatio = 0.25,
+    minimumNearbyCount = 6,
+  } = options
+
+  const inRange: VideoData[] = []
+  const nearbyRange: VideoData[] = []
+  const farRange: VideoData[] = []
+
+  for (const video of videos) {
+    const penalty = difficultyPenalty(video.difficulty, level)
+    if (penalty === 0) {
+      inRange.push(video)
+    } else if (penalty === 1) {
+      nearbyRange.push(video)
+    } else {
+      farRange.push(video)
+    }
+  }
+
+  if (inRange.length === 0) {
+    return nearbyRange.length > 0 ? [...nearbyRange, ...farRange] : videos
+  }
+
+  if (inRange.length >= minimumPoolSize) {
+    const nearbyLimit = Math.min(
+      nearbyRange.length,
+      Math.max(minimumNearbyCount, Math.ceil(inRange.length * nearbyPoolRatio)),
+    )
+    return [...inRange, ...nearbyRange.slice(0, nearbyLimit)]
+  }
+
+  if (inRange.length + nearbyRange.length >= minimumPoolSize) {
+    return [...inRange, ...nearbyRange]
+  }
+
+  return [...inRange, ...nearbyRange, ...farRange]
 }
 
 function tokenOverlapScore(leftTokens: string[] = [], rightTokens: string[] = []) {

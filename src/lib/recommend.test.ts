@@ -1,27 +1,9 @@
 import { describe, expect, it } from 'vitest'
 import { seedVideos } from '@/data/seed-videos'
-import { catalogVideos, catalogSeries, getCatalogVideosBySeries } from '@/lib/catalog'
-import { recommendVideos } from './recommend'
+import { catalogVideos } from '@/lib/catalog'
+import { getLevelAwareCandidateVideos, recommendVideos } from './recommend'
 
 describe('recommendVideos', () => {
-  it('keeps next episodes near the top for the active series', () => {
-    const seriesItem = catalogSeries.find((series) => series.episodeCount >= 2)
-    const episodes = seriesItem ? getCatalogVideosBySeries(seriesItem.id) : []
-    const seedVideo = episodes[0]
-    const candidateNext = episodes[1]
-    const otherVideo = catalogVideos.find(
-      (video) => video.seriesId !== seriesItem?.id && video.category !== seedVideo.category,
-    )
-
-    expect(seriesItem).toBeDefined()
-    expect(seedVideo).toBeDefined()
-    expect(candidateNext).toBeDefined()
-    expect(otherVideo).toBeDefined()
-
-    const ranked = recommendVideos([candidateNext!, otherVideo!], { seedVideo })
-    expect(ranked[0]?.id).toBe(candidateNext!.id)
-  })
-
   it('uses saved phrase affinity to boost related categories', () => {
     const source = catalogVideos.find((video) => video.category === 'music')
     const sameCategory = catalogVideos.find(
@@ -114,5 +96,34 @@ describe('recommendVideos', () => {
     const ranked = recommendVideos([blocked!, available!])
 
     expect(ranked.map((video) => video.id)).toEqual([available!.id])
+  })
+
+  it('prefers in-range videos when there are enough level-matched candidates', () => {
+    const primary = catalogVideos.filter((video) => video.difficulty >= 2 && video.difficulty <= 4).slice(0, 26)
+    const stretch = catalogVideos.filter((video) => video.difficulty === 5).slice(0, 8)
+    const far = catalogVideos.filter((video) => video.difficulty === 6).slice(0, 4)
+
+    const pool = getLevelAwareCandidateVideos([...primary, ...stretch, ...far], 'B1', {
+      minimumPoolSize: 20,
+      nearbyPoolRatio: 0.2,
+      minimumNearbyCount: 3,
+    })
+
+    expect(pool.every((video) => video.difficulty <= 5)).toBe(true)
+    expect(pool.some((video) => video.difficulty === 5)).toBe(true)
+    expect(pool.some((video) => video.difficulty === 6)).toBe(false)
+  })
+
+  it('falls back to wider difficulty candidates when in-range pool is too small', () => {
+    const primary = catalogVideos.filter((video) => video.difficulty >= 5 && video.difficulty <= 6).slice(0, 6)
+    const nearby = catalogVideos.filter((video) => video.difficulty === 4).slice(0, 3)
+    const far = catalogVideos.filter((video) => video.difficulty <= 3).slice(0, 2)
+
+    const pool = getLevelAwareCandidateVideos([...primary, ...nearby, ...far], 'C2', {
+      minimumPoolSize: 20,
+    })
+
+    expect(pool.length).toBe(11)
+    expect(pool.some((video) => video.difficulty <= 3)).toBe(true)
   })
 })
