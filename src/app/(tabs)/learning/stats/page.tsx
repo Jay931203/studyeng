@@ -40,11 +40,35 @@ const TRANSLATIONS = {
     challengeHint: '選択後、下部のChallengeボタンで挑戦します。',
     lowerLevelHint: '低いレベルにはすぐ変更されます。',
   },
+  'zh-TW': {
+    levelHint: '\u9078\u64C7\u7B49\u7D1A\u5F8C\u53EF\u4EE5\u5957\u7528\u6216\u6311\u6230\u3002',
+    gamePlays: '\u904A\u6232\u904A\u73A9',
+    milestonesAchieved: '\u9054\u6210\u91CC\u7A0B\u7891',
+    videosWatched: '\u89C0\u770B\u5F71\u7247',
+    totalViews: '\u7E3D\u89C0\u770B\u6B21\u6578',
+    count: (n: number) => `${n}\u6B21`,
+    items: (n: number) => `${n}\u500B`,
+    currentLevel: '\u76EE\u524D\u7B49\u7D1A\u3002',
+    challengeHint: '\u9078\u64C7\u5F8C\u9EDE\u64CA\u4E0B\u65B9 Challenge \u6309\u9215\u9032\u884C\u6311\u6230\u3002',
+    lowerLevelHint: '\u8F03\u4F4E\u7B49\u7D1A\u5C07\u76F4\u63A5\u8B8A\u66F4\u3002',
+  },
+  vi: {
+    levelHint: 'Ch\u1ECDn c\u1EA5p \u0111\u1ED9 r\u1ED3i \u00E1p d\u1EE5ng ho\u1EB7c th\u1EED th\u00E1ch.',
+    gamePlays: 'L\u01B0\u1EE3t ch\u01A1i game',
+    milestonesAchieved: 'C\u1ED9t m\u1ED1c \u0111\u1EA1t \u0111\u01B0\u1EE3c',
+    videosWatched: 'Video \u0111\u00E3 xem',
+    totalViews: 'T\u1ED5ng l\u01B0\u1EE3t xem',
+    count: (n: number) => `${n} l\u1EA7n`,
+    items: (n: number) => `${n}`,
+    currentLevel: 'C\u1EA5p \u0111\u1ED9 hi\u1EC7n t\u1EA1i.',
+    challengeHint: 'Ch\u1ECDn xong, nh\u1EA5n n\u00FAt Challenge b\u00EAn d\u01B0\u1EDBi \u0111\u1EC3 th\u1EED th\u00E1ch.',
+    lowerLevelHint: 'C\u1EA5p \u0111\u1ED9 th\u1EA5p h\u01A1n s\u1EBD \u0111\u01B0\u1EE3c \u00E1p d\u1EE5ng ngay.',
+  },
 } as const
 
 export default function StatsPage() {
   const locale = useLocaleStore((s) => s.locale)
-  const T = TRANSLATIONS[locale === 'ja' ? 'ja' : 'ko']
+  const T = TRANSLATIONS[locale as keyof typeof TRANSLATIONS] ?? TRANSLATIONS.ko
   const router = useRouter()
   const level = useOnboardingStore((state) => state.level)
   const setLevel = useOnboardingStore((state) => state.setLevel)

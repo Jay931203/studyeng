@@ -444,7 +444,7 @@ export function LyricsSubtitles({
     }
   }, [])
 
-  const showKo = subtitleMode === 'en-ko'
+  const showTranslation = subtitleMode === 'en-ko'
   const visibilityRadius = Math.max(1, Math.floor(visibleLineCount / 2))
   const activeNotice =
     justSavedIdx !== null
@@ -770,7 +770,7 @@ export function LyricsSubtitles({
                   >
                     <>
                       <span>{sub.en}</span>
-                      {(isActive || isFrozen) && showKo && getLocalizedSubtitle(sub, locale) && (
+                      {(isActive || isFrozen) && showTranslation && getLocalizedSubtitle(sub, locale) && (
                         <p
                           className="mt-0.5 text-xs"
                           style={{ color: isFrozen ? 'var(--freeze-icon)' : 'var(--accent-text)' }}

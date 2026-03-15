@@ -29,6 +29,21 @@ export function getLocalizedExample(
 }
 
 /**
+ * Get localized sentence from a priming card item (expression or word).
+ * Fields use sentenceKo / sentenceJa / sentenceZhTW / sentenceVi naming.
+ * Falls back to Korean if the target locale translation is missing.
+ */
+export function getLocalizedSentence(
+  entry: { sentenceKo?: string; sentenceJa?: string; sentenceZhTW?: string; sentenceVi?: string },
+  locale: SupportedLocale,
+): string {
+  if (locale === 'ja' && entry.sentenceJa) return entry.sentenceJa
+  if (locale === 'zh-TW' && entry.sentenceZhTW) return entry.sentenceZhTW
+  if (locale === 'vi' && entry.sentenceVi) return entry.sentenceVi
+  return entry.sentenceKo ?? ''
+}
+
+/**
  * Get localized subtitle text from a transcript segment.
  * Falls back to Korean if the target locale translation is missing.
  */

@@ -17,7 +17,6 @@ import {
 import { getSeriesSearchTerms, matchesSearchText } from '@/lib/seriesSearch'
 import { createHiddenVideoIdSet, filterHiddenVideos } from '@/lib/videoVisibility'
 import { useAdminStore } from '@/stores/useAdminStore'
-import { useThemeStore } from '@/stores/useThemeStore'
 
 const categoryLabels: Record<CategoryId, string> = {
   daily: '일상',
@@ -41,7 +40,6 @@ export default function ExploreSeriesPage() {
   )
   const [query, setQuery] = useState('')
   const hiddenVideos = useAdminStore((state) => state.hiddenVideos)
-  const isRainbowTheme = useThemeStore((state) => state.colorTheme === 'rainbow')
   const hiddenVideoIdSet = useMemo(() => createHiddenVideoIdSet(hiddenVideos), [hiddenVideos])
 
   const visibleCatalogSeries = useMemo(
@@ -87,16 +85,6 @@ export default function ExploreSeriesPage() {
     () => filteredSeries.reduce((total, seriesItem) => total + seriesItem.episodeCount, 0),
     [filteredSeries],
   )
-  const pageBackground = isRainbowTheme
-    ? [
-        'radial-gradient(circle at 10% 10%, rgba(255, 90, 200, 0.14), transparent 20%)',
-        'radial-gradient(circle at 85% 14%, rgba(83, 215, 255, 0.16), transparent 22%)',
-        'radial-gradient(circle at 72% 78%, rgba(255, 216, 74, 0.12), transparent 20%)',
-        'radial-gradient(circle at 18% 82%, rgba(124, 77, 255, 0.14), transparent 22%)',
-        'var(--accent-rainbow-soft)',
-      ].join(', ')
-    : 'linear-gradient(180deg, var(--accent-glow) 0%, transparent 38%)'
-
   const handleBack = () => {
     if (typeof window !== 'undefined' && window.history.length > 1) {
       router.back()
@@ -109,11 +97,6 @@ export default function ExploreSeriesPage() {
   return (
     <AppPage>
       <div className="relative -mx-4 -mt-6 min-h-full px-4 pt-6 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 lg:pt-8">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0"
-          style={{ background: pageBackground }}
-        />
         <div className="relative mx-auto max-w-6xl">
         <div className="mb-6 flex items-center gap-3">
           <button
@@ -193,9 +176,7 @@ export default function ExploreSeriesPage() {
                   style={
                     activeCategory === 'all'
                       ? {
-                          background: isRainbowTheme
-                            ? 'var(--accent-rainbow-ui)'
-                            : 'var(--accent-primary)',
+                          backgroundColor: 'var(--accent-primary)',
                           color: '#ffffff',
                         }
                       : {
@@ -215,9 +196,7 @@ export default function ExploreSeriesPage() {
                     style={
                       activeCategory === categoryId
                         ? {
-                            background: isRainbowTheme
-                              ? 'var(--accent-rainbow-ui)'
-                              : 'var(--accent-primary)',
+                            backgroundColor: 'var(--accent-primary)',
                             color: '#ffffff',
                           }
                         : {

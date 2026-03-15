@@ -6,9 +6,171 @@ import { createPortal } from 'react-dom'
 import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useAdminStore, type IssueType } from '@/stores/useAdminStore'
 import { useLikeStore } from '@/stores/useLikeStore'
+import { useLocaleStore, type SupportedLocale } from '@/stores/useLocaleStore'
 import { usePlayerStore } from '@/stores/usePlayerStore'
 import { useThemeStore } from '@/stores/useThemeStore'
 import { SaveToast } from './SaveToast'
+
+const LOCALE_ABBREV: Record<SupportedLocale, string> = {
+  ko: 'Ko', ja: '\u65E5', 'zh-TW': '\u4E2D', vi: 'Vi',
+}
+
+const TRANSLATIONS: Record<SupportedLocale, {
+  sequential: string
+  shuffle: string
+  shareText: string
+  shareTextWithTitle: (title: string) => string
+  sharedSheet: string
+  linkCopied: string
+  reportSubmitted: string
+  repeat: string
+  nextPlay: string
+  share: string
+  reportIssue: string
+  reportTitle: string
+  closeReport: string
+  close: string
+  submitting: string
+  submit: string
+  placeholder: string
+  subtitleLabel: string
+  videoLabel: string
+  otherLabel: string
+  subtitleMode: string
+  playbackSpeed: string
+  playbackOptions: string
+  loopOff: string
+  gameModeOn: string
+  gameModeOff: string
+  moreMenu: string
+  likeOn: string
+  likeOff: string
+}> = {
+  ko: {
+    sequential: '\uC21C\uCC28',
+    shuffle: '\uB79C\uB364',
+    shareText: 'Shortee\uC5D0\uC11C \uC601\uC0C1 \uB2E4\uC2DC \uBCF4\uAE30',
+    shareTextWithTitle: (t) => `${t} - Shortee\uC5D0\uC11C \uC601\uC0C1 \uB2E4\uC2DC \uBCF4\uAE30`,
+    sharedSheet: '\uACF5\uC720 \uC2DC\uD2B8\uB97C \uC5F4\uC5C8\uC5B4\uC694',
+    linkCopied: '\uB9C1\uD06C\uB97C \uBCF5\uC0AC\uD588\uC5B4\uC694',
+    reportSubmitted: '\uC2E0\uACE0\uAC00 \uC811\uC218\uB410\uC5B4\uC694',
+    repeat: '\uBC18\uBCF5',
+    nextPlay: '\uB2E4\uC74C \uC7AC\uC0DD',
+    share: '\uACF5\uC720\uD558\uAE30',
+    reportIssue: '\uC774\uC0C1 \uC2E0\uACE0',
+    reportTitle: '\uD604\uC7AC \uC601\uC0C1 \uBB38\uC81C \uC2E0\uACE0',
+    closeReport: '\uC2E0\uACE0 \uB2EB\uAE30',
+    close: '\uB2EB\uAE30',
+    submitting: '\uC811\uC218 \uC911...',
+    submit: '\uC2E0\uACE0\uD558\uAE30',
+    placeholder: '\uBB38\uC81C\uB97C \uAC04\uB2E8\uD788 \uC801\uC5B4\uC8FC\uC138\uC694',
+    subtitleLabel: '\uC790\uB9C9',
+    videoLabel: '\uC601\uC0C1',
+    otherLabel: '\uAE30\uD0C0',
+    subtitleMode: '\uC790\uB9C9 \uBAA8\uB4DC',
+    playbackSpeed: '\uC7AC\uC0DD \uC18D\uB3C4',
+    playbackOptions: '\uC7AC\uC0DD \uC635\uC158',
+    loopOff: '\uAD6C\uAC04 \uBC18\uBCF5 \uD574\uC81C',
+    gameModeOn: '\uAC8C\uC784 \uBAA8\uB4DC \uB044\uAE30',
+    gameModeOff: '\uAC8C\uC784 \uBAA8\uB4DC \uCF1C\uAE30',
+    moreMenu: '\uB354\uBCF4\uAE30 \uBA54\uB274',
+    likeOn: '\uC88B\uC544\uC694 \uCDE8\uC18C',
+    likeOff: '\uC88B\uC544\uC694',
+  },
+  ja: {
+    sequential: '\u9806\u756A',
+    shuffle: '\u30E9\u30F3\u30C0\u30E0',
+    shareText: 'Shortee\u3067\u52D5\u753B\u3092\u898B\u308B',
+    shareTextWithTitle: (t) => `${t} - Shortee\u3067\u52D5\u753B\u3092\u898B\u308B`,
+    sharedSheet: '\u5171\u6709\u30B7\u30FC\u30C8\u3092\u958B\u304D\u307E\u3057\u305F',
+    linkCopied: '\u30EA\u30F3\u30AF\u3092\u30B3\u30D4\u30FC\u3057\u307E\u3057\u305F',
+    reportSubmitted: '\u5831\u544A\u3092\u53D7\u3051\u4ED8\u3051\u307E\u3057\u305F',
+    repeat: '\u30EA\u30D4\u30FC\u30C8',
+    nextPlay: '\u6B21\u306E\u518D\u751F',
+    share: '\u5171\u6709',
+    reportIssue: '\u554F\u984C\u3092\u5831\u544A',
+    reportTitle: '\u3053\u306E\u52D5\u753B\u306E\u554F\u984C\u3092\u5831\u544A',
+    closeReport: '\u5831\u544A\u3092\u9589\u3058\u308B',
+    close: '\u9589\u3058\u308B',
+    submitting: '\u9001\u4FE1\u4E2D...',
+    submit: '\u5831\u544A\u3059\u308B',
+    placeholder: '\u554F\u984C\u3092\u7C21\u5358\u306B\u8A18\u8FF0\u3057\u3066\u304F\u3060\u3055\u3044',
+    subtitleLabel: '\u5B57\u5E55',
+    videoLabel: '\u52D5\u753B',
+    otherLabel: '\u305D\u306E\u4ED6',
+    subtitleMode: '\u5B57\u5E55\u30E2\u30FC\u30C9',
+    playbackSpeed: '\u518D\u751F\u901F\u5EA6',
+    playbackOptions: '\u518D\u751F\u30AA\u30D7\u30B7\u30E7\u30F3',
+    loopOff: '\u30EB\u30FC\u30D7\u89E3\u9664',
+    gameModeOn: '\u30B2\u30FC\u30E0\u30E2\u30FC\u30C9OFF',
+    gameModeOff: '\u30B2\u30FC\u30E0\u30E2\u30FC\u30C9ON',
+    moreMenu: '\u30E1\u30CB\u30E5\u30FC',
+    likeOn: '\u3044\u3044\u306D\u53D6\u6D88',
+    likeOff: '\u3044\u3044\u306D',
+  },
+  'zh-TW': {
+    sequential: '\u9806\u5E8F',
+    shuffle: '\u96A8\u6A5F',
+    shareText: '\u5728Shortee\u89C0\u770B\u5F71\u7247',
+    shareTextWithTitle: (t) => `${t} - \u5728Shortee\u89C0\u770B\u5F71\u7247`,
+    sharedSheet: '\u5DF2\u958B\u555F\u5206\u4EAB',
+    linkCopied: '\u5DF2\u8907\u88FD\u9023\u7D50',
+    reportSubmitted: '\u5DF2\u63D0\u4EA4\u6AA2\u8209',
+    repeat: '\u91CD\u8907',
+    nextPlay: '\u4E0B\u4E00\u500B\u64AD\u653E',
+    share: '\u5206\u4EAB',
+    reportIssue: '\u6AA2\u8209\u554F\u984C',
+    reportTitle: '\u6AA2\u8209\u9019\u500B\u5F71\u7247\u7684\u554F\u984C',
+    closeReport: '\u95DC\u9589\u6AA2\u8209',
+    close: '\u95DC\u9589',
+    submitting: '\u63D0\u4EA4\u4E2D...',
+    submit: '\u6AA2\u8209',
+    placeholder: '\u8ACB\u7C21\u8981\u63CF\u8FF0\u554F\u984C',
+    subtitleLabel: '\u5B57\u5E55',
+    videoLabel: '\u5F71\u7247',
+    otherLabel: '\u5176\u4ED6',
+    subtitleMode: '\u5B57\u5E55\u6A21\u5F0F',
+    playbackSpeed: '\u64AD\u653E\u901F\u5EA6',
+    playbackOptions: '\u64AD\u653E\u9078\u9805',
+    loopOff: '\u53D6\u6D88\u5FAA\u74B0',
+    gameModeOn: '\u95DC\u9589\u904A\u6232\u6A21\u5F0F',
+    gameModeOff: '\u958B\u555F\u904A\u6232\u6A21\u5F0F',
+    moreMenu: '\u66F4\u591A',
+    likeOn: '\u53D6\u6D88\u559C\u6B61',
+    likeOff: '\u559C\u6B61',
+  },
+  vi: {
+    sequential: 'Tu\u1EA7n t\u1EF1',
+    shuffle: 'Ng\u1EABu nhi\u00EAn',
+    shareText: 'Xem video tr\u00EAn Shortee',
+    shareTextWithTitle: (t) => `${t} - Xem video tr\u00EAn Shortee`,
+    sharedSheet: '\u0110\u00E3 m\u1EDF chia s\u1EBB',
+    linkCopied: '\u0110\u00E3 sao ch\u00E9p li\u00EAn k\u1EBFt',
+    reportSubmitted: '\u0110\u00E3 g\u1EEDi b\u00E1o c\u00E1o',
+    repeat: 'L\u1EB7p l\u1EA1i',
+    nextPlay: 'Ph\u00E1t ti\u1EBFp',
+    share: 'Chia s\u1EBB',
+    reportIssue: 'B\u00E1o c\u00E1o',
+    reportTitle: 'B\u00E1o c\u00E1o v\u1EA5n \u0111\u1EC1 video n\u00E0y',
+    closeReport: '\u0110\u00F3ng b\u00E1o c\u00E1o',
+    close: '\u0110\u00F3ng',
+    submitting: '\u0110ang g\u1EEDi...',
+    submit: 'G\u1EEDi b\u00E1o c\u00E1o',
+    placeholder: 'M\u00F4 t\u1EA3 ng\u1EAFn g\u1ECDn v\u1EA5n \u0111\u1EC1',
+    subtitleLabel: 'Ph\u1EE5 \u0111\u1EC1',
+    videoLabel: 'Video',
+    otherLabel: 'Kh\u00E1c',
+    subtitleMode: 'Ch\u1EBF \u0111\u1ED9 ph\u1EE5 \u0111\u1EC1',
+    playbackSpeed: 'T\u1ED1c \u0111\u1ED9 ph\u00E1t',
+    playbackOptions: 'T\u00F9y ch\u1ECDn ph\u00E1t',
+    loopOff: 'T\u1EAFt l\u1EB7p',
+    gameModeOn: 'T\u1EAFt game',
+    gameModeOff: 'B\u1EADt game',
+    moreMenu: 'Th\u00EAm',
+    likeOn: 'B\u1ECF th\u00EDch',
+    likeOff: 'Th\u00EDch',
+  },
+}
 
 const SPEEDS = [0.75, 1.0, 1.25, 1.5]
 const REPEAT_OPTIONS = [
@@ -17,14 +179,9 @@ const REPEAT_OPTIONS = [
   { value: 'x3', label: '3x' },
 ] as const
 const PLAYBACK_ORDER_OPTIONS = [
-  { value: 'sequence', label: '순차' },
-  { value: 'shuffle', label: '랜덤' },
+  { value: 'sequence' },
+  { value: 'shuffle' },
 ] as const
-const REPORT_TYPE_OPTIONS: Array<{ value: IssueType; label: string }> = [
-  { value: 'subtitle', label: '자막' },
-  { value: 'video', label: '영상' },
-  { value: 'other', label: '기타' },
-]
 
 const VIEWPORT_MARGIN = 16
 const POPUP_GAP = 10
@@ -68,6 +225,8 @@ export function UnifiedControls({
   className,
   compact = false,
 }: UnifiedControlsProps) {
+  const locale = useLocaleStore((s) => s.locale)
+  const t = TRANSLATIONS[locale]
   const isRainbowTheme = useThemeStore((state) => state.colorTheme === 'rainbow')
   const {
     subtitleMode,
@@ -180,8 +339,8 @@ export function UnifiedControls({
 
       const shareUrl = `${window.location.origin}${buildShortsUrl(videoId)}`
       const shareText = videoTitle
-        ? `${videoTitle} - Shortee에서 영상 다시 보기`
-        : 'Shortee에서 영상 다시 보기'
+        ? t.shareTextWithTitle(videoTitle)
+        : t.shareText
 
       if (typeof navigator !== 'undefined' && navigator.share) {
         try {
@@ -190,7 +349,7 @@ export function UnifiedControls({
             text: shareText,
             url: shareUrl,
           })
-          showToast('공유 시트를 열었어요')
+          showToast(t.sharedSheet)
           return
         } catch {
           // Fall through to clipboard copy.
@@ -210,9 +369,9 @@ export function UnifiedControls({
         document.body.removeChild(textarea)
       }
 
-      showToast('링크를 복사했어요')
+      showToast(t.linkCopied)
     },
-    [showToast, videoId, videoTitle],
+    [showToast, t, videoId, videoTitle],
   )
 
   const handleSubmitReport = useCallback(async () => {
@@ -234,7 +393,7 @@ export function UnifiedControls({
     setReportDescription('')
     setReportType('subtitle')
     setShowReportDialog(false)
-    showToast('신고가 접수됐어요')
+    showToast(t.reportSubmitted)
   }, [
     addIssue,
     reportDescription,
@@ -242,15 +401,16 @@ export function UnifiedControls({
     reportType,
     setAdminSyncError,
     showToast,
+    t,
     videoId,
     youtubeId,
   ])
 
-  const subtitleLabel = subtitleMode === 'none' ? 'Off' : subtitleMode === 'en' ? 'En' : 'En/Ko'
+  const subtitleLabel = subtitleMode === 'none' ? 'Off' : subtitleMode === 'en' ? 'En' : `En/${LOCALE_ABBREV[locale]}`
   const speedLabel = playbackRate === 1 ? '1x' : `${playbackRate}x`
   const speedActive = playbackRate !== 1
   const repeatLabel = repeatMode === 'off' ? '1x' : repeatMode === 'x2' ? '2x' : '3x'
-  const playbackOrderLabel = playbackOrderMode === 'shuffle' ? '랜덤' : '순차'
+  const playbackOrderLabel = playbackOrderMode === 'shuffle' ? t.shuffle : t.sequential
   const playbackSummaryLabel = `${repeatLabel} · ${playbackOrderLabel}`
   const playbackOptionsActive = repeatMode !== 'off' || playbackOrderMode !== 'sequence'
   const playbackOrderBadgeLabel = playbackOrderMode === 'shuffle' ? 'R' : 'S'
@@ -271,9 +431,6 @@ export function UnifiedControls({
   const playbackTriggerClassName = compact
     ? 'relative flex h-7 w-7 items-center justify-center rounded-full transition-colors'
     : 'relative flex h-8 w-8 items-center justify-center rounded-full transition-colors'
-  const playbackBadgeClassName = compact
-    ? 'pointer-events-none absolute -bottom-1.5 -right-2 min-w-[28px] rounded-full px-1.5 py-[2px] text-[9px] font-bold leading-none text-center whitespace-nowrap'
-    : 'pointer-events-none absolute -bottom-1.5 -right-2 min-w-[30px] rounded-full px-2 py-[2px] text-[10px] font-bold leading-none text-center whitespace-nowrap'
   const playbackChipClassName = compact
     ? 'h-7 rounded-full px-2.5 text-[10px] font-semibold transition-colors'
     : 'h-8 rounded-full px-3 text-[11px] font-semibold transition-colors'
@@ -319,7 +476,7 @@ export function UnifiedControls({
               }}
               onPointerDownCapture={(event) => event.stopPropagation()}
               role="dialog"
-              aria-label="재생 옵션"
+              aria-label={t.playbackOptions}
             >
               <p
                 className="text-[10px] font-semibold uppercase tracking-[0.18em]"
@@ -329,7 +486,7 @@ export function UnifiedControls({
               </p>
               <div className="mt-3">
                 <p className="text-[11px] font-semibold" style={{ color: 'var(--player-text)' }}>
-                  반복
+                  {t.repeat}
                 </p>
                 <div className="mt-2 grid grid-cols-3 gap-1.5">
                   {REPEAT_OPTIONS.map((option) => {
@@ -357,7 +514,7 @@ export function UnifiedControls({
 
               <div className="mt-3">
                 <p className="text-[11px] font-semibold" style={{ color: 'var(--player-text)' }}>
-                  다음 재생
+                  {t.nextPlay}
                 </p>
                 <div className="mt-2 grid grid-cols-2 gap-1.5">
                   {PLAYBACK_ORDER_OPTIONS.map((option) => {
@@ -408,7 +565,7 @@ export function UnifiedControls({
               }}
               onPointerDownCapture={(event) => event.stopPropagation()}
               role="dialog"
-              aria-label="더보기 메뉴"
+              aria-label={t.moreMenu}
             >
               <button
                 type="button"
@@ -434,7 +591,7 @@ export function UnifiedControls({
                     d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15m0-3l-3-3m0 0l-3 3m3-3v12"
                   />
                 </svg>
-                <span>공유하기</span>
+                <span>{t.share}</span>
               </button>
 
               <button
@@ -456,7 +613,7 @@ export function UnifiedControls({
                 >
                   <path d="M3.5 2.75a.75.75 0 0 0-1.5 0v14.5a.75.75 0 0 0 1.5 0v-4.392l1.657-.348a6.449 6.449 0 0 1 4.271.572 7.948 7.948 0 0 0 5.965.524l2.078-.64A.75.75 0 0 0 18 11.75V3.885a.75.75 0 0 0-.975-.716l-2.296.707a6.449 6.449 0 0 1-4.848-.426 7.948 7.948 0 0 0-5.259-.704L3.5 3.99V2.75Z" />
                 </svg>
-                <span>이상 신고</span>
+                <span>{t.reportIssue}</span>
               </button>
             </motion.div>
           </AnimatePresence>,
@@ -500,7 +657,7 @@ export function UnifiedControls({
                       Report
                     </p>
                     <h3 className="mt-2 text-base font-semibold" style={{ color: 'var(--player-text)' }}>
-                      현재 영상 문제 신고
+                      {t.reportTitle}
                     </h3>
                   </div>
                   <button
@@ -511,7 +668,7 @@ export function UnifiedControls({
                     }}
                     className="flex h-8 w-8 items-center justify-center rounded-full"
                     style={{ backgroundColor: 'var(--player-panel)', color: 'var(--player-muted)' }}
-                    aria-label="신고 닫기"
+                    aria-label={t.closeReport}
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -532,7 +689,11 @@ export function UnifiedControls({
                 </div>
 
                 <div className="mb-3 flex gap-2">
-                  {REPORT_TYPE_OPTIONS.map((option) => {
+                  {([
+                    { value: 'subtitle' as IssueType, label: t.subtitleLabel },
+                    { value: 'video' as IssueType, label: t.videoLabel },
+                    { value: 'other' as IssueType, label: t.otherLabel },
+                  ]).map((option) => {
                     const active = reportType === option.value
                     return (
                       <button
@@ -554,7 +715,7 @@ export function UnifiedControls({
                 <textarea
                   value={reportDescription}
                   onChange={(event) => setReportDescription(event.target.value)}
-                  placeholder="문제를 간단히 적어주세요"
+                  placeholder={t.placeholder}
                   rows={4}
                   className="w-full resize-none rounded-2xl border p-3 text-sm outline-none transition-colors"
                   style={{
@@ -580,7 +741,7 @@ export function UnifiedControls({
                     className="flex-1 rounded-2xl py-3 text-sm font-medium"
                     style={{ backgroundColor: 'var(--player-panel)', color: 'var(--player-muted)' }}
                   >
-                    닫기
+                    {t.close}
                   </button>
                   <button
                     type="button"
@@ -589,7 +750,7 @@ export function UnifiedControls({
                     className="flex-1 rounded-2xl py-3 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-40"
                     style={{ backgroundColor: 'var(--accent-primary)' }}
                   >
-                    {reportSubmitting ? '접수 중...' : '신고하기'}
+                    {reportSubmitting ? t.submitting : t.submit}
                   </button>
                 </div>
               </motion.div>
@@ -622,7 +783,7 @@ export function UnifiedControls({
             }}
             className={`${controlClassName} ${compact ? 'px-1.5 font-semibold' : 'px-2 font-semibold'}`}
             style={{ color: 'var(--player-text)' }}
-            aria-label="자막 모드"
+            aria-label={t.subtitleMode}
           >
             {subtitleLabel}
           </button>
@@ -642,7 +803,7 @@ export function UnifiedControls({
                 }
               }}
               className={iconButtonClassName}
-              aria-label={liked ? '좋아요 취소' : '좋아요'}
+              aria-label={liked ? t.likeOn : t.likeOff}
             >
               <motion.svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -695,7 +856,7 @@ export function UnifiedControls({
             }}
             className={`${controlClassName} ${compact ? 'px-1 font-bold' : 'px-1.5 font-bold'}`}
             style={{ color: speedActive ? 'var(--accent-text)' : 'var(--player-text)' }}
-            aria-label="재생 속도"
+            aria-label={t.playbackSpeed}
           >
             {speedLabel}
           </button>
@@ -712,7 +873,7 @@ export function UnifiedControls({
             style={{
               color: playbackOptionsActive ? 'var(--accent-text)' : 'var(--player-text)',
             }}
-            aria-label="재생 옵션"
+            aria-label={t.playbackOptions}
             aria-expanded={showPlaybackOptions}
             aria-haspopup="dialog"
             title={playbackBadgeSummaryLabel}
@@ -737,8 +898,8 @@ export function UnifiedControls({
               }}
               className={iconButtonClassName}
               style={{ color: 'var(--accent-text)' }}
-              aria-label="구간 반복 해제"
-              title="구간 반복 해제"
+              aria-label={t.loopOff}
+              title={t.loopOff}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -764,8 +925,8 @@ export function UnifiedControls({
             }}
             className={iconButtonClassName}
             style={{ color: gameModeEnabled ? 'var(--freeze-icon)' : 'var(--player-text)' }}
-            aria-label={gameModeEnabled ? '게임 모드 끄기' : '게임 모드 켜기'}
-            title={gameModeEnabled ? '게임 모드 ON' : '게임 모드 OFF'}
+            aria-label={gameModeEnabled ? t.gameModeOn : t.gameModeOff}
+            title={gameModeEnabled ? 'Game ON' : 'Game OFF'}
           >
             <motion.svg
               xmlns="http://www.w3.org/2000/svg"
@@ -867,7 +1028,7 @@ export function UnifiedControls({
             }}
             className={iconButtonClassName}
             style={{ color: 'var(--player-text)' }}
-            aria-label="더보기 메뉴"
+            aria-label={t.moreMenu}
             aria-expanded={showMenu}
             aria-haspopup="dialog"
           >

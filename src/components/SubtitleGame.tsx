@@ -3,6 +3,14 @@
 import { useState, useCallback } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { AnswerBurst } from './games/AnswerBurst'
+import { useLocaleStore, type SupportedLocale } from '@/stores/useLocaleStore'
+
+const TRANSLATIONS: Record<SupportedLocale, { correct: string; wrong: string; correctAnswer: string }> = {
+  ko: { correct: '정답!', wrong: '오답', correctAnswer: '정답:' },
+  ja: { correct: '正解!', wrong: '不正解', correctAnswer: '正解:' },
+  'zh-TW': { correct: '正確!', wrong: '錯誤', correctAnswer: '正確答案:' },
+  vi: { correct: 'Đúng!', wrong: 'Sai', correctAnswer: 'Đáp án:' },
+}
 
 interface SubtitleGameProps {
   choices: string[]
@@ -23,6 +31,8 @@ export function SubtitleGame({
   currentLine,
   className,
 }: SubtitleGameProps) {
+  const locale = useLocaleStore((s) => s.locale)
+  const t = TRANSLATIONS[locale]
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
 
   const handleChoiceClick = useCallback(
@@ -145,13 +155,13 @@ export function SubtitleGame({
             <p className="text-[11px] font-semibold">
               {result === 'correct'
                 ? xpAwarded > 0
-                  ? `정답! +${xpAwarded} XP`
-                  : '정답!'
-                : '오답'}
+                  ? `${t.correct} +${xpAwarded} XP`
+                  : t.correct
+                : t.wrong}
             </p>
             {result === 'wrong' && (
               <p className="mt-1 text-[10px] font-medium text-white/78">
-                정답: {choices[correctIndex]}
+                {t.correctAnswer} {choices[correctIndex]}
               </p>
             )}
           </motion.div>

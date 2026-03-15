@@ -1,3 +1,5 @@
+export type SupportedLocale = 'ko' | 'ja' | 'zh-TW' | 'vi'
+
 export const MONTHLY_BASE_PRICE = 9900
 export const MONTHLY_REFERENCE_PRICE = 12000
 export const YEARLY_BASE_PRICE = 79900
@@ -14,10 +16,18 @@ export const YEARLY_BASE_SAVINGS_PERCENT = Math.round(
   ((YEARLY_REFERENCE_PRICE - YEARLY_BASE_PRICE) / YEARLY_REFERENCE_PRICE) * 100,
 )
 
-export function formatPrice(value: number, locale: 'ko' | 'ja' = 'ko'): string {
+export function formatPrice(value: number, locale: SupportedLocale = 'ko'): string {
   if (locale === 'ja') {
     const jpy = Math.max(0, Math.round(value * 0.11))
     return `¥${new Intl.NumberFormat('ja-JP').format(jpy)}`
+  }
+  if (locale === 'zh-TW') {
+    const twd = Math.max(0, Math.round(value * 0.024))
+    return `NT$${new Intl.NumberFormat('zh-TW').format(twd)}`
+  }
+  if (locale === 'vi') {
+    const vnd = Math.max(0, Math.round(value * 18.5))
+    return `${new Intl.NumberFormat('vi-VN').format(vnd)}\u20AB`
   }
   return `${new Intl.NumberFormat('ko-KR').format(Math.max(0, Math.round(value)))}원`
 }
@@ -65,7 +75,8 @@ export function getSavingsPercent(referencePrice: number, currentPrice: number) 
   )
 }
 
-export function formatDiscountText(label: string, discountPercent: number, locale: 'ko' | 'ja' = 'ko') {
-  const none = locale === 'ja' ? 'なし' : '없음'
+export function formatDiscountText(label: string, discountPercent: number, locale: SupportedLocale = 'ko') {
+  const noneMap: Record<string, string> = { ko: '없음', ja: 'なし', 'zh-TW': '無', vi: 'Không' }
+  const none = noneMap[locale] ?? '없음'
   return discountPercent > 0 ? `${label} ${discountPercent}%` : `${label} ${none}`
 }

@@ -94,6 +94,68 @@ const TRANSLATIONS = {
     footerNote:
       '完了した月基準で300 XP未満が2ヶ月連続すると、適用特典が1段階下がります。今月300 XPを達成するとロック中の最高特典にすぐ戻ります。',
   },
+  'zh-TW': {
+    details: '查看詳情',
+    tierStatus: '等級狀態',
+    benefitGuide: '福利指南',
+    totalXp: '總 XP',
+    cumulativeXp: '累計學習獎勵 XP',
+    todayEarned: '今日獲得',
+    todayEarnedDetail: '今日實際獲得的 XP',
+    games: '遊戲',
+    gameDetail: '以遊戲完成為基準進行累計。',
+    videos: '影片',
+    videoDetail: '以影片完成為基準進行累計。',
+    streakLabel: '出席・連續學習',
+    streakDetailActive: (target: number, days: number) =>
+      `今日完成第一部影片或遊戲時可獲得 ${target} XP・目前已連續 ${days} 天`,
+    streakDetailNew: '今日完成第一部影片或遊戲時，從 10 XP 開始累計。',
+    close: '關閉',
+    benefitGuideDescription:
+      '透過累計 XP 解鎖等級，本月達到 300 XP 即可維持或立即恢復目前已鎖定的等級福利。',
+    currentBenefit: '目前適用福利',
+    monthlyFinalPrice: '月費最終價',
+    yearlyFinalPrice: '年費最終價',
+    thisMonth: (current: number, threshold: number) =>
+      `本月 ${current.toLocaleString()} / ${threshold} XP`,
+    joinNow: '加入即刻開始',
+    xpFrom: (threshold: number) => `${threshold.toLocaleString()} XP 起`,
+    current: '目前',
+    totalDiscount: (percent: number) => `共 ${percent}% 折扣`,
+    footerNote:
+      '若連續兩個月未達 300 XP，適用福利將降一級。本月達到 300 XP 即可立即恢復至最高已解鎖福利。',
+  },
+  vi: {
+    details: 'Xem chi tiết',
+    tierStatus: 'Trạng thái hạng',
+    benefitGuide: 'Hướng dẫn quyền lợi',
+    totalXp: 'Tổng XP',
+    cumulativeXp: 'XP thưởng học tập tích lũy',
+    todayEarned: 'Hôm nay nhận được',
+    todayEarnedDetail: 'XP thực tế nhận được hôm nay',
+    games: 'Trò chơi',
+    gameDetail: 'Được tích lũy khi hoàn thành trò chơi.',
+    videos: 'Video',
+    videoDetail: 'Được tích lũy khi hoàn thành video.',
+    streakLabel: 'Điểm danh & Học liên tục',
+    streakDetailActive: (target: number, days: number) =>
+      `Nhận ${target} XP khi hoàn thành video hoặc trò chơi đầu tiên hôm nay - Hiện tại ${days} ngày liên tục`,
+    streakDetailNew: 'Bắt đầu từ 10 XP khi hoàn thành video hoặc trò chơi đầu tiên hôm nay.',
+    close: 'Đóng',
+    benefitGuideDescription:
+      'Mở khóa hạng bằng XP tích lũy. Đạt 300 XP trong tháng này để duy trì hoặc khôi phục ngay quyền lợi hạng đã khóa.',
+    currentBenefit: 'Quyền lợi đang áp dụng',
+    monthlyFinalPrice: 'Giá cuối tháng',
+    yearlyFinalPrice: 'Giá cuối năm',
+    thisMonth: (current: number, threshold: number) =>
+      `Tháng này ${current.toLocaleString()} / ${threshold} XP`,
+    joinNow: 'Bắt đầu ngay khi đăng ký',
+    xpFrom: (threshold: number) => `Từ ${threshold.toLocaleString()} XP`,
+    current: 'Hiện tại',
+    totalDiscount: (percent: number) => `Giảm tổng ${percent}%`,
+    footerNote:
+      'Nếu 2 tháng liên tiếp không đạt 300 XP, quyền lợi sẽ bị hạ 1 cấp. Đạt 300 XP trong tháng này để khôi phục ngay quyền lợi cao nhất đã mở khóa.',
+  },
 } as const
 
 type LocaleKey = keyof typeof TRANSLATIONS

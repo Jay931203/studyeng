@@ -16,6 +16,7 @@ import { getCatalogVideosBySeries } from '@/lib/catalog'
 import { readEmbedBlockedVideoIds, writeEmbedBlockedVideoIds } from '@/lib/embedBlocklist'
 import { createHiddenVideoIdSet, filterHiddenVideos } from '@/lib/videoVisibility'
 import { buildShortsUrl } from '@/lib/videoRoutes'
+import { getLocalizedSubtitle } from '@/lib/localeUtils'
 import { useAdminStore } from '@/stores/useAdminStore'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
@@ -24,6 +25,7 @@ import { usePremiumStore } from '@/stores/usePremiumStore'
 import { useRecommendationStore } from '@/stores/useRecommendationStore'
 import { useLevelStore } from '@/stores/useLevelStore'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { difficultyToCefrLevel } from '@/types/level'
@@ -60,6 +62,7 @@ export function VideoFeed({
 }: VideoFeedProps) {
   void feedMode
   const router = useRouter()
+  const locale = useLocaleStore((s) => s.locale)
   const {
     isLandscapeViewport,
     isCompactViewport,
@@ -776,7 +779,7 @@ export function VideoFeed({
                 videoId: currentVideo.id,
                 videoTitle: currentVideo.title,
                 en: phrase.en,
-                ko: phrase.ko,
+                ko: getLocalizedSubtitle(phrase, locale),
                 timestampStart: phrase.start,
                 timestampEnd: phrase.end,
               })

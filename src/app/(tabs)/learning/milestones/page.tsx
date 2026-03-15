@@ -49,11 +49,43 @@ const TRANSLATIONS = {
     claimedLabel: '受取済み',
     inProgressLabel: '進行中',
   },
+  'zh-TW': {
+    milestones: '\u91CC\u7A0B\u7891',
+    readyToClaim: '\u53EF\u7ACB\u5373\u9818\u53D6',
+    claimed: '\u5DF2\u9818\u53D6',
+    accumulatedXp: '\u7D2F\u8A08\u9818\u53D6 XP',
+    claimableNow: '\u7ACB\u5373\u9818\u53D6',
+    claimableNowDesc: '\u5DF2\u6EFF\u8DB3\u689D\u4EF6\uFF0C\u53EF\u4EE5\u7ACB\u5373\u9818\u53D6\u7684\u734E\u52F5\u3002',
+    claimXp: '\u9818\u53D6 XP',
+    inProgress: '\u9032\u884C\u4E2D',
+    inProgressDesc: '\u518D\u52AA\u529B\u4E00\u4E0B\u5C31\u80FD\u89E3\u9396\u7684\u734E\u52F5\u3002',
+    claimedTitle: '\u5DF2\u9818\u53D6',
+    claimedDesc: '\u5DF2\u7D93\u8A08\u5165\u7E3D XP \u7684\u734E\u52F5\u3002',
+    noItems: '\u9084\u6C92\u6709\u76F8\u95DC\u9805\u76EE\u3002',
+    claimedLabel: '\u5DF2\u9818\u53D6',
+    inProgressLabel: '\u9032\u884C\u4E2D',
+  },
+  vi: {
+    milestones: 'C\u1ED9t m\u1ED1c',
+    readyToClaim: 'C\u00F3 th\u1EC3 nh\u1EADn ngay',
+    claimed: '\u0110\u00E3 nh\u1EADn',
+    accumulatedXp: 'XP t\u00EDch l\u0169y \u0111\u00E3 nh\u1EADn',
+    claimableNow: 'Nh\u1EADn ngay',
+    claimableNowDesc: 'Ph\u1EA7n th\u01B0\u1EDFng \u0111\u00E3 \u0111\u1EE7 \u0111i\u1EC1u ki\u1EC7n, c\u00F3 th\u1EC3 nh\u1EADn ngay.',
+    claimXp: 'Nh\u1EADn XP',
+    inProgress: '\u0110ang ti\u1EBFn h\u00E0nh',
+    inProgressDesc: 'Ph\u1EA7n th\u01B0\u1EDFng s\u1EBD m\u1EDF kh\u00F3a khi ho\u00E0n th\u00E0nh th\u00EAm.',
+    claimedTitle: '\u0110\u00E3 nh\u1EADn',
+    claimedDesc: 'Ph\u1EA7n th\u01B0\u1EDFng \u0111\u00E3 \u0111\u01B0\u1EE3c t\u00EDnh v\u00E0o t\u1ED5ng XP.',
+    noItems: 'Ch\u01B0a c\u00F3 m\u1EE5c n\u00E0o.',
+    claimedLabel: '\u0110\u00E3 nh\u1EADn',
+    inProgressLabel: '\u0110ang ti\u1EBFn h\u00E0nh',
+  },
 } as const
 
 export default function MilestonesPage() {
   const locale = useLocaleStore((s) => s.locale)
-  const T = TRANSLATIONS[locale === 'ja' ? 'ja' : 'ko']
+  const T = TRANSLATIONS[locale as keyof typeof TRANSLATIONS] ?? TRANSLATIONS.ko
   const router = useRouter()
   const streakDays = useUserStore((state) => state.streakDays)
   const totalGameSessions = useGameProgressStore((state) => state.getTotalSessions())

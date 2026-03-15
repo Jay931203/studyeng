@@ -11,6 +11,8 @@ import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useLevelStore } from '@/stores/useLevelStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useUserStore } from '@/stores/useUserStore'
+import { useLocaleStore, type SupportedLocale } from '@/stores/useLocaleStore'
+import { getLocalizedMeaning } from '@/lib/localeUtils'
 import { calculateSessionXP } from '@/lib/xp/sessionXp'
 import { checkGameMilestones, checkStreakMilestones } from '@/stores/useMilestoneStore'
 
@@ -74,6 +76,77 @@ interface QuestionData {
 }
 
 type GamePhase = 'playing' | 'result'
+
+const LF_TRANSLATIONS = {
+  ko: {
+    result: '결과',
+    earnedXP: '획득 XP',
+    learnedExpressions: '학습한 표현',
+    exit: '그만하기',
+    loadError: '문제를 불러올 수 없습니다',
+    quit: '나가기',
+    listen: '듣기',
+    playsRemaining: (n: number) => `${n}회 남음`,
+    playsDone: '재생 완료',
+    nativeHint: '힌트',
+    sentenceLabel: '예문',
+    nativeHintLabel: '힌트',
+    meaningLabel: '뜻',
+    tapHint: '탭하면 힌트와 뜻을 볼 수 있습니다.',
+  },
+  ja: {
+    result: '結果',
+    earnedXP: '獲得XP',
+    learnedExpressions: '学習した表現',
+    exit: '終了',
+    loadError: '問題を読み込めません',
+    quit: '退出',
+    listen: '聞く',
+    playsRemaining: (n: number) => `残り${n}回`,
+    playsDone: '再生完了',
+    nativeHint: 'ヒント',
+    sentenceLabel: '例文',
+    nativeHintLabel: 'ヒント',
+    meaningLabel: '意味',
+    tapHint: 'タップするとヒントと意味が表示されます。',
+  },
+  'zh-TW': {
+    result: '結果',
+    earnedXP: '獲得XP',
+    learnedExpressions: '學習的表達',
+    exit: '結束',
+    loadError: '無法載入題目',
+    quit: '退出',
+    listen: '聽',
+    playsRemaining: (n: number) => `剩餘${n}次`,
+    playsDone: '播放完畢',
+    nativeHint: '提示',
+    sentenceLabel: '例句',
+    nativeHintLabel: '提示',
+    meaningLabel: '意思',
+    tapHint: '點擊查看提示和意思。',
+  },
+  vi: {
+    result: 'Ket qua',
+    earnedXP: 'XP nhan duoc',
+    learnedExpressions: 'Bieu thuc da hoc',
+    exit: 'Ket thuc',
+    loadError: 'Khong the tai cau hoi',
+    quit: 'Thoat',
+    listen: 'Nghe',
+    playsRemaining: (n: number) => `Con ${n} luot`,
+    playsDone: 'Het luot nghe',
+    nativeHint: 'Goi y',
+    sentenceLabel: 'Vi du',
+    nativeHintLabel: 'Goi y',
+    meaningLabel: 'Nghia',
+    tapHint: 'Nhan de xem goi y va nghia.',
+  },
+} as const
+
+function getLfT(locale: SupportedLocale) {
+  return LF_TRANSLATIONS[locale] ?? LF_TRANSLATIONS.ko
+}
 
 const QUESTIONS_PER_ROUND = 8
 
@@ -332,7 +405,7 @@ function applyWordBlank(
 // Question selection
 // ---------------------------------------------------------------------------
 
-function selectQuestions(level: string): QuestionData[] {
+function selectQuestions(level: string, locale: SupportedLocale): QuestionData[] {
   const cefrSet = CEFR_BY_LEVEL[level] ?? CEFR_BY_LEVEL.A1
 
   // Determine split: 50% expressions, 50% words
@@ -378,7 +451,7 @@ function selectQuestions(level: string): QuestionData[] {
       en: item.en,
       ko: item.ko,
       expression: canonical,
-      meaningKo: entry.meaning_ko ?? '',
+      meaningKo: getLocalizedMeaning(entry as Record<string, unknown>, locale),
       cefr: entry.cefr?.toUpperCase() ?? 'B1',
       category: entry.category ?? '',
       before: blank.before,
@@ -427,7 +500,7 @@ function selectQuestions(level: string): QuestionData[] {
       en: item.en,
       ko: item.ko,
       expression: item.surfaceForm,
-      meaningKo: entry.meaning_ko ?? '',
+      meaningKo: getLocalizedMeaning(entry as Record<string, unknown>, locale),
       cefr,
       category: entry.pos ?? '',
       before: blank.before,
@@ -463,7 +536,7 @@ function selectQuestions(level: string): QuestionData[] {
         en: item.en,
         ko: item.ko,
         expression: canonical,
-        meaningKo: entry.meaning_ko ?? '',
+        meaningKo: getLocalizedMeaning(entry as Record<string, unknown>, locale),
         cefr: entry.cefr?.toUpperCase() ?? 'B1',
         category: entry.category ?? '',
         before: blank.before,
@@ -608,12 +681,12 @@ function useYouTubePlayer(
 
 function ExpressionPopup({
   expression,
-  meaningKo,
+  meaning,
   cefr,
   category,
 }: {
   expression: string
-  meaningKo: string
+  meaning: string
   cefr: string
   category: string
 }) {
@@ -634,7 +707,7 @@ function ExpressionPopup({
         {expression}
       </p>
       <p className="text-sm mb-1" style={{ color: 'var(--text-secondary)' }}>
-        {meaningKo}
+        {meaning}
       </p>
       <p className="text-xs" style={{ color: 'var(--text-muted)' }}>
         {cefr}
@@ -673,6 +746,8 @@ async function loadTranscript(
 // ---------------------------------------------------------------------------
 
 export function ListenFillGame({ onComplete }: ListenFillGameProps) {
+  const locale = useLocaleStore((s) => s.locale)
+  const T = getLfT(locale)
   const level = useOnboardingStore((s) => s.level)
   const incrementSessionCount = useGameProgressStore((s) => s.incrementSessionCount)
   const updateLeitner = useGameProgressStore((s) => s.updateLeitner)
@@ -685,7 +760,7 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
   const { ready: ytReady, failed: ytFailed, playSegment } = useYouTubePlayer(playerContainerRef)
 
   // Game state
-  const [questions] = useState<QuestionData[]>(() => selectQuestions(level))
+  const [questions] = useState<QuestionData[]>(() => selectQuestions(level, locale))
   const [currentIdx, setCurrentIdx] = useState(0)
   const [phase, setPhase] = useState<GamePhase>('playing')
   const [sessionXPAwarded, setSessionXPAwarded] = useState(0)
@@ -871,7 +946,7 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
             className="text-sm uppercase tracking-wider mb-2"
             style={{ color: 'var(--text-muted)' }}
           >
-            결과
+            {T.result}
           </p>
           <p className="text-5xl font-bold" style={{ color: 'var(--text-primary)' }}>
             {correctCount}
@@ -896,7 +971,7 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
         >
           <div className="text-center">
             <p className="text-xs mb-1" style={{ color: 'var(--text-muted)' }}>
-              획득 XP
+              {T.earnedXP}
             </p>
             <p className="text-xl font-bold" style={{ color: 'var(--accent-text)' }}>
               +{sessionXPAwarded}
@@ -911,7 +986,7 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
               className="text-xs uppercase tracking-wider mb-3"
               style={{ color: 'var(--text-muted)' }}
             >
-              학습한 표현
+              {T.learnedExpressions}
             </p>
             <div className="space-y-2">
               {results.map(({ exprId, correct }) => {
@@ -971,7 +1046,7 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
                       className="text-xs"
                       style={{ color: 'var(--text-secondary)' }}
                     >
-                      {entry?.meaning_ko ?? ''}
+                      {entry ? getLocalizedMeaning(entry as Record<string, unknown>, locale) : ''}
                     </span>
                   </div>
                 )
@@ -990,7 +1065,7 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
               color: '#fff',
             }}
           >
-            그만하기
+            {T.exit}
           </button>
         </div>
       </motion.div>
@@ -1004,7 +1079,7 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
   if (!currentQ) {
     return (
       <div className="flex items-center justify-center h-full">
-        <p style={{ color: 'var(--text-muted)' }}>문제를 불러올 수 없습니다</p>
+        <p style={{ color: 'var(--text-muted)' }}>{T.loadError}</p>
       </div>
     )
   }
@@ -1041,7 +1116,7 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
             backgroundColor: 'var(--bg-secondary)',
           }}
         >
-          나가기
+          {T.quit}
         </button>
       </div>
 
@@ -1095,15 +1170,15 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
                     clipRule="evenodd"
                   />
                 </svg>
-                듣기
+                {T.listen}
               </motion.button>
               <span
                 className="text-xs"
                 style={{ color: 'var(--text-muted)' }}
               >
                 {remainingPlays > 0
-                  ? `${remainingPlays}회 남음`
-                  : '재생 완료'}
+                  ? T.playsRemaining(remainingPlays)
+                  : T.playsDone}
               </span>
             </div>
           ) : (
@@ -1119,7 +1194,7 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
                 className="text-xs mb-1"
                 style={{ color: 'var(--text-muted)' }}
               >
-                한국어 힌트
+                {T.nativeHint}
               </p>
               <p
                 className="text-sm font-medium"
@@ -1152,7 +1227,7 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
               className="mb-3 text-[11px] font-semibold uppercase tracking-[0.18em]"
               style={{ color: 'var(--accent-text)' }}
             >
-              {showSentenceHint ? '한글 힌트' : '예문'}
+              {showSentenceHint ? T.nativeHintLabel : T.sentenceLabel}
             </p>
 
             {showSentenceHint ? (
@@ -1165,7 +1240,7 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
                 </p>
                 <div className="rounded-xl border px-3 py-2" style={{ borderColor: 'var(--border-card)', backgroundColor: 'var(--bg-secondary)' }}>
                   <p className="text-[11px] uppercase tracking-[0.16em]" style={{ color: 'var(--text-muted)' }}>
-                    뜻
+                    {T.meaningLabel}
                   </p>
                   <p className="mt-1 text-sm font-medium" style={{ color: 'var(--text-secondary)' }}>
                     {currentQ.meaningKo || currentQ.expression}
@@ -1203,7 +1278,7 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
             )}
 
             <p className="mt-3 text-[11px]" style={{ color: 'var(--text-muted)' }}>
-              탭하면 한글 힌트와 뜻을 볼 수 있습니다.
+              {T.tapHint}
             </p>
           </motion.button>
         </AnimatePresence>
@@ -1270,7 +1345,7 @@ export function ListenFillGame({ onComplete }: ListenFillGameProps) {
           {showPopup && (
             <ExpressionPopup
               expression={currentQ.expression}
-              meaningKo={currentQ.meaningKo}
+              meaning={currentQ.meaningKo}
               cefr={currentQ.cefr}
               category={currentQ.category}
             />

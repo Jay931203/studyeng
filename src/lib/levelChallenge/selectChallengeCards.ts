@@ -2,6 +2,8 @@ import expressionEntriesData from '@/data/expression-entries-v2.json'
 import expressionIndexData from '@/data/expression-index-v2.json'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
+import { getLocalizedMeaning } from '@/lib/localeUtils'
+import type { SupportedLocale } from '@/stores/useLocaleStore'
 import type { ChallengeTransition } from '@/types/level'
 
 // ---------------------------------------------------------------------------
@@ -28,7 +30,7 @@ export interface ChallengeCard {
   type: 'expression'
   exprId: string
   expression: string
-  meaningKo: string
+  meaning: string
   cefr: string
   category: string
   contextEn: string | null
@@ -135,6 +137,7 @@ function pickContextSentence(exprId: string): string | null {
 
 export function selectChallengeCards(
   targetLevel: ChallengeTransition,
+  locale: SupportedLocale = 'ko',
 ): ChallengeCard[] {
   const distribution = CHALLENGE_DISTRIBUTIONS[targetLevel]
   const familiarityState = useFamiliarityStore.getState()
@@ -269,7 +272,7 @@ export function selectChallengeCards(
       type: 'expression' as const,
       exprId,
       expression: entry?.canonical ?? exprId,
-      meaningKo: entry?.meaning_ko ?? '',
+      meaning: entry ? getLocalizedMeaning(entry, locale) : '',
       cefr: entry?.cefr?.toUpperCase() ?? 'B1',
       category: entry?.category ?? '',
       contextEn: includeContext ? pickContextSentence(exprId) : null,

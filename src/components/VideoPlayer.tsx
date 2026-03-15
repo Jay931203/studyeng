@@ -53,6 +53,24 @@ const TRANSLATIONS = {
     nextVideo: '次の動画',
     loadingSubtitles: '字幕読み込み中',
   },
+  'zh-TW': {
+    side: '右側',
+    bottom: '底部',
+    overlay: '覆蓋',
+    auto: '自動',
+    retry: '重試',
+    nextVideo: '下一個影片',
+    loadingSubtitles: '字幕載入中',
+  },
+  vi: {
+    side: 'Bên phải',
+    bottom: 'Phía dưới',
+    overlay: 'Lớp phủ',
+    auto: 'Tự động',
+    retry: 'Thử lại',
+    nextVideo: 'Video tiếp theo',
+    loadingSubtitles: 'Đang tải phụ đề',
+  },
 } as const
 
 interface VideoPlayerProps {
@@ -143,7 +161,7 @@ export function VideoPlayer({
 }: VideoPlayerProps) {
   const isShortsFormat = format === 'shorts'
   const locale = useLocaleStore((s) => s.locale)
-  const T = TRANSLATIONS[locale === 'ja' ? 'ja' : 'ko']
+  const T = TRANSLATIONS[locale in TRANSLATIONS ? (locale as keyof typeof TRANSLATIONS) : 'ko']
   const containerId = `yt-player-${useId().replace(/:/g, '')}`
 
   const { subtitles: fetchedSubtitles, loading: transcriptLoading } = useTranscript(youtubeId)
@@ -939,7 +957,7 @@ export function VideoPlayer({
           <ShortsSubtitleOverlay
             subtitles={subtitles}
             videoId={videoId ?? youtubeId}
-            showKo={subtitleMode === 'en-ko'}
+            showTranslation={subtitleMode === 'en-ko'}
             onSavePhrase={onSavePhrase}
             onSeek={(time) => seekTo(time)}
           />
@@ -974,7 +992,7 @@ export function VideoPlayer({
             <ShortsSubtitleOverlay
               subtitles={subtitles}
               videoId={videoId ?? youtubeId}
-              showKo={subtitleMode === 'en-ko'}
+              showTranslation={subtitleMode === 'en-ko'}
               onSavePhrase={onSavePhrase}
               onSeek={(time) => seekTo(time)}
               bottomOffset={isLandscapeViewport ? '24px' : '56px'}
@@ -1036,14 +1054,14 @@ export function VideoPlayer({
 function ShortsSubtitleOverlay({
   subtitles,
   videoId,
-  showKo,
+  showTranslation,
   onSavePhrase,
   onSeek,
   bottomOffset = '48px',
 }: {
   subtitles: SubtitleEntry[]
   videoId: string
-  showKo: boolean
+  showTranslation: boolean
   onSavePhrase?: (phrase: SubtitleEntry) => void
   onSeek?: (time: number) => void
   bottomOffset?: string
@@ -1202,7 +1220,7 @@ function ShortsSubtitleOverlay({
         >
           {activeSub.en}
         </p>
-        {showKo && getLocalizedSubtitle(activeSub, locale) && (
+        {showTranslation && getLocalizedSubtitle(activeSub, locale) && (
           <p
             className="mt-1 text-[13px] leading-snug"
             style={{ color: 'rgba(255, 255, 255, 0.7)' }}

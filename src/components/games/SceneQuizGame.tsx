@@ -4,9 +4,18 @@ import { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { GameResult } from './GameResult'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
+import { useLocaleStore, type SupportedLocale } from '@/stores/useLocaleStore'
+import { getLocalizedSubtitle } from '@/lib/localeUtils'
+
+const TRANSLATIONS: Record<SupportedLocale, { prompt: string }> = {
+  ko: { prompt: '빈칸에 들어갈 단어는?' },
+  ja: { prompt: '空欄に入る単語は？' },
+  'zh-TW': { prompt: '填入空格的單字是？' },
+  vi: { prompt: 'Tu dien vao cho trong la gi?' },
+}
 
 interface SceneQuizGameProps {
-  subtitle: { en: string; ko: string }
+  subtitle: { en: string; ko?: string; ja?: string; zhTW?: string; vi?: string }
   onComplete: (correct: boolean) => void
 }
 
@@ -105,6 +114,8 @@ function generateBlankQuestion(sentence: string): BlankQuestion {
 }
 
 export function SceneQuizGame({ subtitle, onComplete }: SceneQuizGameProps) {
+  const locale = useLocaleStore((s) => s.locale)
+  const t = TRANSLATIONS[locale]
   const question = useMemo(() => generateBlankQuestion(subtitle.en), [subtitle])
   const [selected, setSelected] = useState<string | null>(null)
   const [showResult, setShowResult] = useState(false)
@@ -193,7 +204,7 @@ export function SceneQuizGame({ subtitle, onComplete }: SceneQuizGameProps) {
   return (
     <div className="flex flex-col items-center justify-center h-full px-6">
       <p className="mb-8 text-xs uppercase tracking-wider text-[var(--text-muted)]">
-        빈칸에 들어갈 단어는?
+        {t.prompt}
       </p>
 
       {/* Sentence with blanks */}
@@ -209,7 +220,7 @@ export function SceneQuizGame({ subtitle, onComplete }: SceneQuizGameProps) {
           transition={{ duration: 0.2, ease: 'easeOut' }}
           className="mb-8 text-center text-sm text-[var(--text-muted)]"
         >
-          {subtitle.ko}
+          {getLocalizedSubtitle(subtitle, locale)}
         </motion.p>
       )}
 

@@ -1,6 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 
+/** 'en-ko' is a legacy key name; it actually means 'en + localized translation' */
 type SubtitleMode = 'none' | 'en' | 'en-ko'
 type LandscapeSubtitleLayout = 'auto' | 'side' | 'bottom' | 'overlay'
 type PortraitSubtitleLayout = 'bottom' | 'overlay'

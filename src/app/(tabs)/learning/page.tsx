@@ -45,6 +45,30 @@ const TRANSLATIONS = {
     noLikedVideos: 'お気に入りの動画はまだありません。',
     noSavedExpressions: '保存した表現はまだありません。',
   },
+  'zh-TW': {
+    viewDetails: '查看詳情',
+    level: '等級',
+    nextLevel: (name: string) => `下一階段 ${name}`,
+    maxLevel: '目前最高等級',
+    savedExpressions: '已儲存表達',
+    likedVideos: (n: number) => `喜歡的影片 ${n}部`,
+    completedVideos: '已完成影片',
+    totalPlays: (n: number) => `總播放 ${n}次`,
+    noLikedVideos: '還沒有喜歡的影片。',
+    noSavedExpressions: '還沒有儲存的表達。',
+  },
+  vi: {
+    viewDetails: 'Xem chi ti\u1EBFt',
+    level: 'C\u1EA5p \u0111\u1ED9',
+    nextLevel: (name: string) => `C\u1EA5p \u0111\u1ED9 ti\u1EBFp theo ${name}`,
+    maxLevel: 'C\u1EA5p \u0111\u1ED9 cao nh\u1EA5t hi\u1EC7n t\u1EA1i',
+    savedExpressions: 'Bi\u1EC3u th\u1EE9c \u0111\u00E3 l\u01B0u',
+    likedVideos: (n: number) => `Video y\u00EAu th\u00EDch ${n}`,
+    completedVideos: 'Video \u0111\u00E3 ho\u00E0n th\u00E0nh',
+    totalPlays: (n: number) => `T\u1ED5ng l\u01B0\u1EE3t ph\u00E1t ${n}`,
+    noLikedVideos: 'Ch\u01B0a c\u00F3 video y\u00EAu th\u00EDch.',
+    noSavedExpressions: 'Ch\u01B0a c\u00F3 bi\u1EC3u th\u1EE9c \u0111\u00E3 l\u01B0u.',
+  },
 } as const
 
 const categoryLabels = Object.fromEntries(
@@ -53,7 +77,7 @@ const categoryLabels = Object.fromEntries(
 
 export default function LearningPage() {
   const locale = useLocaleStore((s) => s.locale)
-  const T = TRANSLATIONS[locale === 'ja' ? 'ja' : 'ko']
+  const T = TRANSLATIONS[locale as keyof typeof TRANSLATIONS] ?? TRANSLATIONS.ko
   const router = useRouter()
   const { phrases, removePhrase } = usePhraseStore()
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)

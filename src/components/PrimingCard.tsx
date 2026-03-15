@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, useMotionValue, useTransform, type PanInfo } from 'framer-motion'
 import { useSettingsStore } from '@/stores/useSettingsStore'
 import { useLocaleStore } from '@/stores/useLocaleStore'
-import { getLocalizedMeaning } from '@/lib/localeUtils'
+import { getLocalizedMeaning, getLocalizedSentence } from '@/lib/localeUtils'
 import { triggerHaptic } from '@/lib/haptic'
 import { trackEvent, AnalyticsEvents } from '@/lib/analytics'
 
@@ -12,11 +12,15 @@ interface Expression {
   canonical: string
   meaning_ko: string
   meaning_ja?: string
+  meaning_zhTW?: string
+  meaning_vi?: string
   category: string
   cefr: string
   sentenceEn: string
   sentenceKo: string
   sentenceJa?: string
+  sentenceZhTW?: string
+  sentenceVi?: string
   start?: number
   end?: number
   exprId?: string
@@ -27,11 +31,15 @@ interface WordItem {
   canonical: string
   meaning_ko: string
   meaning_ja?: string
+  meaning_zhTW?: string
+  meaning_vi?: string
   pos: string
   cefr: string
   sentenceEn: string
   sentenceKo: string
   sentenceJa?: string
+  sentenceZhTW?: string
+  sentenceVi?: string
   surfaceForm?: string
   start?: number
   end?: number
@@ -73,6 +81,28 @@ const CATEGORY_LABELS: Record<string, Record<string, string>> = {
     exclamation: '感嘆',
     filler: 'フィラー',
   },
+  'zh-TW': {
+    phrasal_verb: '片語動詞',
+    idiom: '慣用語',
+    collocation: '搭配詞',
+    fixed_expression: '表達',
+    discourse_marker: '話語',
+    slang: '俚語',
+    hedging: '委婉語',
+    exclamation: '感嘆詞',
+    filler: '填充詞',
+  },
+  vi: {
+    phrasal_verb: 'Cụm động từ',
+    idiom: 'Thành ngữ',
+    collocation: 'Kết hợp từ',
+    fixed_expression: 'Biểu thức',
+    discourse_marker: 'Diễn ngôn',
+    slang: 'Tiếng lóng',
+    hedging: 'Uyển ngữ',
+    exclamation: 'Thán từ',
+    filler: 'Từ đệm',
+  },
 }
 
 function getCefrColor(cefr: string): { bg: string; text: string } {
@@ -95,6 +125,8 @@ function ExpressionCard({
   onInteract,
   onPlaySegment,
   onSwipeDismiss,
+  onNavigatePrev,
+  onNavigateNext,
   familiarCount,
   showHints,
   showSwipeHint,
@@ -104,12 +136,14 @@ function ExpressionCard({
   onInteract?: () => void
   onPlaySegment?: (start: number, end: number) => void
   onSwipeDismiss?: () => void
+  onNavigatePrev?: () => void
+  onNavigateNext?: () => void
   familiarCount?: number
   showHints?: boolean
   showSwipeHint?: boolean
 }) {
   const locale = useLocaleStore((s) => s.locale)
-  const langKey = locale === 'ja' ? 'ja' : 'ko'
+  const langKey = locale === 'zh-TW' || locale === 'vi' || locale === 'ja' ? locale : 'ko'
   const [flipped, setFlipped] = useState(false)
   const [playing, setPlaying] = useState(false)
   const didDragRef = useRef(false)
@@ -123,8 +157,18 @@ function ExpressionCard({
   const opacity = useTransform(x, [-SWIPE_THRESHOLD * 2, 0, SWIPE_THRESHOLD * 2], [0.3, 1, 0.3])
 
   const handleDragEnd = (_: unknown, info: PanInfo) => {
-    if (Math.abs(info.offset.x) > SWIPE_THRESHOLD || Math.abs(info.velocity.x) > 240) {
+    const absOffset = Math.abs(info.offset.x)
+    const absVelocity = Math.abs(info.velocity.x)
+    // Strong swipe = dismiss as familiar
+    if (absOffset > SWIPE_THRESHOLD * 2.5 || absVelocity > 400) {
       onSwipeDismiss?.()
+    // Lighter swipe = navigate between cards
+    } else if (absOffset > SWIPE_THRESHOLD || absVelocity > 200) {
+      if (info.offset.x > 0) {
+        onNavigatePrev?.()
+      } else {
+        onNavigateNext?.()
+      }
     }
   }
 
@@ -267,7 +311,7 @@ function ExpressionCard({
               className="mt-1.5 line-clamp-2 text-[13px] leading-snug"
               style={{ color: 'rgba(255, 255, 255, 0.55)' }}
             >
-              {(locale === 'ja' && expr.sentenceJa) ? expr.sentenceJa : expr.sentenceKo}
+              {getLocalizedSentence(expr, locale)}
             </p>
             <button
               type="button"
@@ -325,7 +369,7 @@ function ExpressionCard({
           style={{ color: 'rgba(255, 255, 255, 0.5)' }}
         >
           <span aria-hidden="true">←</span>
-          <span>{locale === 'ja' ? '知ってたらスワイプ' : '익숙하면 밀어서 넘기기'}</span>
+          <span>{{ ja: '知ってたらスワイプ', 'zh-TW': '熟悉就滑動跳過', vi: 'Quen rồi thì vuốt qua', ko: '익숙하면 밀어서 넘기기' }[locale] ?? '익숙하면 밀어서 넘기기'}</span>
           <span aria-hidden="true">→</span>
         </div>
       )}
@@ -364,6 +408,36 @@ const POS_LABELS: Record<string, Record<string, string>> = {
     preposition: '前置詞',
     pronoun: '代名詞',
   },
+  'zh-TW': {
+    noun: '名詞',
+    verb: '動詞',
+    adj: '形容詞',
+    adv: '副詞',
+    prep: '介詞',
+    conj: 'conj',
+    det: 'det',
+    pron: '代名詞',
+    intj: 'intj',
+    adjective: '形容詞',
+    adverb: '副詞',
+    preposition: '介詞',
+    pronoun: '代名詞',
+  },
+  vi: {
+    noun: 'Danh từ',
+    verb: 'Động từ',
+    adj: 'Tính từ',
+    adv: 'Trạng từ',
+    prep: 'Giới từ',
+    conj: 'conj',
+    det: 'det',
+    pron: 'Đại từ',
+    intj: 'intj',
+    adjective: 'Tính từ',
+    adverb: 'Trạng từ',
+    preposition: 'Giới từ',
+    pronoun: 'Đại từ',
+  },
 }
 
 function WordCard({
@@ -372,6 +446,8 @@ function WordCard({
   onInteract,
   onPlaySegment,
   onSwipeDismiss,
+  onNavigatePrev,
+  onNavigateNext,
   familiarCount,
   showHints,
   showSwipeHint,
@@ -381,12 +457,14 @@ function WordCard({
   onInteract?: () => void
   onPlaySegment?: (start: number, end: number) => void
   onSwipeDismiss?: () => void
+  onNavigatePrev?: () => void
+  onNavigateNext?: () => void
   familiarCount?: number
   showHints?: boolean
   showSwipeHint?: boolean
 }) {
   const locale = useLocaleStore((s) => s.locale)
-  const langKey = locale === 'ja' ? 'ja' : 'ko'
+  const langKey = locale === 'zh-TW' || locale === 'vi' || locale === 'ja' ? locale : 'ko'
   const [flipped, setFlipped] = useState(false)
   const [playing, setPlaying] = useState(false)
   const didDragRef = useRef(false)
@@ -398,8 +476,18 @@ function WordCard({
   const opacity = useTransform(x, [-SWIPE_THRESHOLD * 2, 0, SWIPE_THRESHOLD * 2], [0.3, 1, 0.3])
 
   const handleDragEnd = (_: unknown, info: PanInfo) => {
-    if (Math.abs(info.offset.x) > SWIPE_THRESHOLD || Math.abs(info.velocity.x) > 240) {
+    const absOffset = Math.abs(info.offset.x)
+    const absVelocity = Math.abs(info.velocity.x)
+    // Strong swipe = dismiss as familiar
+    if (absOffset > SWIPE_THRESHOLD * 2.5 || absVelocity > 400) {
       onSwipeDismiss?.()
+    // Lighter swipe = navigate between cards
+    } else if (absOffset > SWIPE_THRESHOLD || absVelocity > 200) {
+      if (info.offset.x > 0) {
+        onNavigatePrev?.()
+      } else {
+        onNavigateNext?.()
+      }
     }
   }
 
@@ -542,7 +630,7 @@ function WordCard({
               className="mt-1.5 line-clamp-2 text-[13px] leading-snug"
               style={{ color: 'rgba(255, 255, 255, 0.55)' }}
             >
-              {(locale === 'ja' && word.sentenceJa) ? word.sentenceJa : word.sentenceKo}
+              {getLocalizedSentence(word, locale)}
             </p>
             <button
               type="button"
@@ -600,7 +688,7 @@ function WordCard({
           style={{ color: 'rgba(255, 255, 255, 0.5)' }}
         >
           <span aria-hidden="true">←</span>
-          <span>{locale === 'ja' ? '知ってたらスワイプ' : '익숙하면 밀어서 넘기기'}</span>
+          <span>{{ ja: '知ってたらスワイプ', 'zh-TW': '熟悉就滑動跳過', vi: 'Quen rồi thì vuốt qua', ko: '익숙하면 밀어서 넘기기' }[locale] ?? '익숙하면 밀어서 넘기기'}</span>
           <span aria-hidden="true">→</span>
         </div>
       )}
@@ -640,6 +728,7 @@ export function PrimingCard({
   const guideHintsEnabled = useSettingsStore((state) => state.subtitleGuidesEnabled)
   const mixedItems = buildMixedItems(expressions, words ?? [], 3)
   const [dismissedIds, setDismissedIds] = useState<Set<string>>(new Set())
+  const [currentCardIndex, setCurrentCardIndex] = useState(0)
   const visibleItems = mixedItems.filter((item) => {
     const id = item.type === 'expression'
       ? (item.data as Expression).exprId || (item.data as Expression).canonical
@@ -647,6 +736,23 @@ export function PrimingCard({
     return !dismissedIds.has(id)
   })
   const visible = visibleItems.length > 0
+
+  // Clamp index when items get dismissed
+  useEffect(() => {
+    if (currentCardIndex >= visibleItems.length && visibleItems.length > 0) {
+      setCurrentCardIndex(visibleItems.length - 1)
+    }
+  }, [currentCardIndex, visibleItems.length])
+
+  const goToPrevCard = useCallback(() => {
+    setCurrentCardIndex((i) => Math.max(0, i - 1))
+    triggerHaptic([15])
+  }, [])
+
+  const goToNextCard = useCallback(() => {
+    setCurrentCardIndex((i) => Math.min(visibleItems.length - 1, i + 1))
+    triggerHaptic([15])
+  }, [visibleItems.length])
 
   const storedAutoStartEnabled = useSettingsStore((state) => state.primingAutoStartEnabled)
   const setStoredAutoStartEnabled = useSettingsStore((state) => state.setPrimingAutoStartEnabled)
@@ -807,49 +913,93 @@ export function PrimingCard({
               </button>
             </div>
 
+            {/* Horizontal swipe card carousel */}
             <div
-              className="flex flex-col gap-3 overflow-visible pr-1"
-              style={{ maxHeight: 'min(60vh, 480px)' }}
+              className="overflow-visible"
               onPointerDown={(event) => event.stopPropagation()}
               onPointerMove={(event) => event.stopPropagation()}
               onPointerUp={(event) => event.stopPropagation()}
               onPointerCancel={(event) => event.stopPropagation()}
             >
-              <AnimatePresence mode="popLayout">
+              <AnimatePresence mode="wait">
                 {visibleItems.map((item, index) => {
+                  if (index !== currentCardIndex) return null
                   if (item.type === 'expression') {
                     const expr = item.data as Expression
                     const id = expr.exprId || expr.canonical
                     return (
-                      <ExpressionCard
+                      <motion.div
                         key={id}
-                        expr={expr}
-                      index={index}
-                      onInteract={pauseAutoStart}
-                      onPlaySegment={handlePreviewSegment}
-                      onSwipeDismiss={() => handleSwipeDismiss(expr)}
-                      familiarCount={(familiarCounts?.[id] ?? 0) + (dismissedIds.has(id) ? 1 : 0)}
-                      showHints={guideHintsEnabled}
-                      showSwipeHint={guideHintsEnabled && index === 0}
-                    />
-                  )
-                }
+                        initial={{ x: 60, opacity: 0 }}
+                        animate={{ x: 0, opacity: 1 }}
+                        exit={{ x: -60, opacity: 0 }}
+                        transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                      >
+                        <ExpressionCard
+                          expr={expr}
+                          index={0}
+                          onInteract={pauseAutoStart}
+                          onPlaySegment={handlePreviewSegment}
+                          onSwipeDismiss={() => handleSwipeDismiss(expr)}
+                          onNavigatePrev={currentCardIndex > 0 ? goToPrevCard : undefined}
+                          onNavigateNext={currentCardIndex < visibleItems.length - 1 ? goToNextCard : undefined}
+                          familiarCount={(familiarCounts?.[id] ?? 0) + (dismissedIds.has(id) ? 1 : 0)}
+                          showHints={guideHintsEnabled}
+                          showSwipeHint={false}
+                        />
+                      </motion.div>
+                    )
+                  }
                   const word = item.data as WordItem
                   return (
-                    <WordCard
+                    <motion.div
                       key={word.wordId}
-                      word={word}
-                      index={index}
-                      onInteract={pauseAutoStart}
-                      onPlaySegment={handlePreviewSegment}
-                      onSwipeDismiss={() => handleWordSwipeDismiss(word)}
-                      familiarCount={(familiarCounts?.[word.wordId] ?? 0) + (dismissedIds.has(word.wordId) ? 1 : 0)}
-                      showHints={guideHintsEnabled}
-                      showSwipeHint={guideHintsEnabled && index === 0}
-                    />
+                      initial={{ x: 60, opacity: 0 }}
+                      animate={{ x: 0, opacity: 1 }}
+                      exit={{ x: -60, opacity: 0 }}
+                      transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                    >
+                      <WordCard
+                        word={word}
+                        index={0}
+                        onInteract={pauseAutoStart}
+                        onPlaySegment={handlePreviewSegment}
+                        onSwipeDismiss={() => handleWordSwipeDismiss(word)}
+                        onNavigatePrev={currentCardIndex > 0 ? goToPrevCard : undefined}
+                        onNavigateNext={currentCardIndex < visibleItems.length - 1 ? goToNextCard : undefined}
+                        familiarCount={(familiarCounts?.[word.wordId] ?? 0) + (dismissedIds.has(word.wordId) ? 1 : 0)}
+                        showHints={guideHintsEnabled}
+                        showSwipeHint={false}
+                      />
+                    </motion.div>
                   )
                 })}
               </AnimatePresence>
+
+              {/* Dot indicators */}
+              {visibleItems.length > 1 && (
+                <div className="mt-4 flex items-center justify-center gap-2">
+                  {visibleItems.map((_, i) => (
+                    <button
+                      key={i}
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        setCurrentCardIndex(i)
+                        pauseAutoStart()
+                      }}
+                      className="h-[6px] rounded-full transition-all duration-200"
+                      style={{
+                        width: i === currentCardIndex ? 18 : 6,
+                        backgroundColor: i === currentCardIndex
+                          ? 'var(--accent-text, #5eead4)'
+                          : 'rgba(255, 255, 255, 0.25)',
+                      }}
+                      aria-label={`Card ${i + 1} of ${visibleItems.length}`}
+                    />
+                  ))}
+                </div>
+              )}
             </div>
 
             <motion.button
@@ -874,9 +1024,7 @@ export function PrimingCard({
                 />
               </svg>
               <span className="text-[14px] font-semibold">
-                {visibleItems.length < mixedItems.length
-                  ? `${visibleItems.length}/${mixedItems.length} remaining`
-                  : locale === 'ja' ? 'タップして見る' : '탭해서 보기'}
+                {{ ja: 'タップして見る', 'zh-TW': '點擊查看', vi: 'Nhấn để xem', ko: '탭해서 보기' }[locale] ?? '탭해서 보기'}
               </span>
               {autoStartEnabled && (
                 <span className="ml-1 inline-flex items-center gap-2 rounded-full bg-black/15 px-2.5 py-1 text-[11px] font-semibold text-white/90">

@@ -44,6 +44,36 @@ const TRANSLATIONS = {
     goBack: '戻る',
     later: 'あとで再挑戦',
   },
+  'zh-TW': {
+    startChallenge: '開始挑戰',
+    expressionCards: (n: number) => `${n}張表達卡`,
+    passRequirement: (n: number) => `認識${n}張以上即可進入下一級 (80%)`,
+    retryAnytime: '失敗也能立即再挑戰',
+    dontKnow: '不知道',
+    know: '知道',
+    loadError: '無法載入表達',
+    earnedXp: '獲得 XP',
+    missedExpressions: '不認識的表達',
+    needMore: (n: number) => `需要${n}張以上 (80%)`,
+    retryNow: '立即再挑戰',
+    goBack: '返回',
+    later: '稍後再試',
+  },
+  vi: {
+    startChallenge: 'Bắt đầu thử thách',
+    expressionCards: (n: number) => `${n} thẻ biểu thức`,
+    passRequirement: (n: number) => `Biết ${n} thẻ trở lên sẽ lên cấp (80%)`,
+    retryAnytime: 'Thất bại vẫn có thể thử lại ngay',
+    dontKnow: 'Không biết',
+    know: 'Biết',
+    loadError: 'Không thể tải biểu thức',
+    earnedXp: 'XP nhận được',
+    missedExpressions: 'Biểu thức chưa biết',
+    needMore: (n: number) => `Cần biết ${n} thẻ trở lên (80%)`,
+    retryNow: 'Thử lại ngay',
+    goBack: 'Quay lại',
+    later: 'Thử lại sau',
+  },
 } as const
 
 // ---------------------------------------------------------------------------
@@ -101,7 +131,7 @@ function FloatingXP({ xp }: { xp: number }) {
 
 export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameProps) {
   const locale = useLocaleStore((s) => s.locale)
-  const T = TRANSLATIONS[locale === 'ja' ? 'ja' : 'ko']
+  const T = TRANSLATIONS[locale] ?? TRANSLATIONS.ko
   const currentLevel = useOnboardingStore((s) => s.level)
   const setLevel = useOnboardingStore((s) => s.setLevel)
   const updateLeitner = useGameProgressStore((s) => s.updateLeitner)
@@ -114,11 +144,11 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
   const recordAttempt = useLevelChallengeStore((s) => s.recordAttempt)
 
   const [phase, setPhase] = useState<GamePhase>('intro')
-  const [cards] = useState<ChallengeCard[]>(() => selectChallengeCards(targetLevel))
+  const [cards] = useState<ChallengeCard[]>(() => selectChallengeCards(targetLevel, locale))
   const [currentIdx, setCurrentIdx] = useState(0)
   const [knownCount, setKnownCount] = useState(0)
   const [roundXP, setRoundXP] = useState(0)
-  const [results, setResults] = useState<Array<{ exprId: string; expression: string; meaningKo: string; correct: boolean }>>([])
+  const [results, setResults] = useState<Array<{ exprId: string; expression: string; meaning: string; correct: boolean }>>([])
 
   // Feedback states
   const [flashColor, setFlashColor] = useState<'green' | 'red' | null>(null)
@@ -235,7 +265,7 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
         {
           exprId,
           expression: currentCard.expression,
-          meaningKo: currentCard.meaningKo,
+          meaning: currentCard.meaning,
           correct: known,
         },
       ])
@@ -492,7 +522,7 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
               {T.missedExpressions}
             </p>
             <div className="space-y-2">
-              {missedResults.map(({ exprId, expression, meaningKo }) => (
+              {missedResults.map(({ exprId, expression, meaning }) => (
                 <div
                   key={exprId}
                   className="rounded-xl border px-4 py-3 flex items-center justify-between"
@@ -505,7 +535,7 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
                     {expression}
                   </span>
                   <span className="text-sm ml-2 text-right" style={{ color: 'var(--text-secondary)' }}>
-                    {meaningKo}
+                    {meaning}
                   </span>
                 </div>
               ))}
@@ -636,7 +666,7 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
 
             {/* Korean meaning */}
             <p className="text-base mb-5" style={{ color: 'var(--text-secondary)' }}>
-              {currentCard.meaningKo}
+              {currentCard.meaning}
             </p>
 
             {/* Context sentence (shown for A2/B1/B2 challenges) */}

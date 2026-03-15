@@ -23,9 +23,14 @@ import { ModalFeatureList, ModalHeader, ModalShell } from '@/components/ui/Modal
 import type { PurchasesPackage } from '@revenuecat/purchases-typescript-internal-esm'
 
 type BillingLocale = 'ko' | 'ja'
+type TranslationLocale = SupportedLocale
 
 function toBillingLocale(locale: SupportedLocale): BillingLocale {
   return locale === 'ja' ? 'ja' : 'ko'
+}
+
+function toTranslationLocale(locale: SupportedLocale): TranslationLocale {
+  return locale
 }
 
 const TRANSLATIONS = {
@@ -97,9 +102,77 @@ const TRANSLATIONS = {
     premiumStart: 'プレミアム開始',
     continueBrowsing: '引き続き閲覧する',
   },
+  'zh-TW': {
+    yearlyPlan: '年費方案',
+    monthlyPlan: '月費方案',
+    yearlyDetail: '與月費12期相比，基本折扣再加上等級優惠。',
+    monthlyDetail: '立即開始的月費方案。',
+    perYear: '/ 年',
+    perMonth: '/ 月',
+    recommend: '推薦',
+    tierYearlyFinal: '等級年費最終價',
+    tierMonthlyFinal: '等級月費最終價',
+    base: '基本',
+    additionalDiscount: '額外折扣',
+    phraseLimitReached: '已達免費句子儲存上限。',
+    trialRemaining: (days: number) =>
+      `免費試用剩餘 ${days} 天。之後每日限制 ${FREE_DAILY_VIEW_LIMIT} 部影片。`,
+    dailyLimitReached: `今日免費影片觀看上限(${FREE_DAILY_VIEW_LIMIT}部)已用完。`,
+    title: '無限暢看',
+    descriptionTrial: '免費試用中 -- 升級後試用結束後仍可無限使用。',
+    descriptionFull: '升級至 Premium 即可無限使用所有功能，目前等級優惠將於下個計費週期生效。',
+    featureUnlimitedVideos: '無限觀看影片',
+    featureUnlimitedPhrases: '無限儲存句子',
+    featureAllGames: '所有複習遊戲',
+    featureNoAds: '無廣告學習',
+    yearlyNote: '年費方案基本價格更優惠，等級優惠將於下次年費續約時額外反映。',
+    loginRequired: '登入後付款',
+    loginRequiredDetail: '付款權限與訂閱狀態依帳號管理。',
+    errorPayment: '付款失敗，請重新嘗試。',
+    errorCheckout: '無法啟動付款，請稍後再試。',
+    connecting: '連線付款中...',
+    loginAndSubscribe: '登入後開始訂閱',
+    trialStart: '7天免費試用後訂閱',
+    premiumStart: '開始 Premium',
+    continueBrowsing: '繼續瀏覽',
+  },
+  vi: {
+    yearlyPlan: 'G\u00f3i h\u00e0ng n\u0103m',
+    monthlyPlan: 'G\u00f3i h\u00e0ng th\u00e1ng',
+    yearlyDetail: 'So v\u1edbi 12 k\u1ef3 h\u00e0ng th\u00e1ng, gi\u1ea3m gi\u00e1 c\u01a1 b\u1ea3n c\u1ed9ng th\u00eam \u01b0u \u0111\u00e3i h\u1ea1ng.',
+    monthlyDetail: 'G\u00f3i h\u00e0ng th\u00e1ng \u0111\u1ec3 b\u1eaft \u0111\u1ea7u ngay.',
+    perYear: '/ n\u0103m',
+    perMonth: '/ th\u00e1ng',
+    recommend: '\u0110\u1ec1 xu\u1ea5t',
+    tierYearlyFinal: 'Gi\u00e1 cu\u1ed1i h\u00e0ng n\u0103m theo h\u1ea1ng',
+    tierMonthlyFinal: 'Gi\u00e1 cu\u1ed1i h\u00e0ng th\u00e1ng theo h\u1ea1ng',
+    base: 'C\u01a1 b\u1ea3n',
+    additionalDiscount: 'Gi\u1ea3m th\u00eam',
+    phraseLimitReached: 'B\u1ea1n \u0111\u00e3 d\u00f9ng h\u1ebft gi\u1edbi h\u1ea1n l\u01b0u c\u00e2u mi\u1ec5n ph\u00ed.',
+    trialRemaining: (days: number) =>
+      `C\u00f2n ${days} ng\u00e0y d\u00f9ng th\u1eed mi\u1ec5n ph\u00ed. Sau \u0111\u00f3 gi\u1edbi h\u1ea1n ${FREE_DAILY_VIEW_LIMIT} video/ng\u00e0y.`,
+    dailyLimitReached: `B\u1ea1n \u0111\u00e3 d\u00f9ng h\u1ebft gi\u1edbi h\u1ea1n xem video mi\u1ec5n ph\u00ed h\u00f4m nay (${FREE_DAILY_VIEW_LIMIT} video).`,
+    title: 'Xem kh\u00f4ng gi\u1edbi h\u1ea1n',
+    descriptionTrial: '\u0110ang d\u00f9ng th\u1eed mi\u1ec5n ph\u00ed -- n\u00e2ng c\u1ea5p \u0111\u1ec3 ti\u1ebfp t\u1ee5c s\u1eed d\u1ee5ng kh\u00f4ng gi\u1edbi h\u1ea1n sau khi h\u1ebft h\u1ea1n.',
+    descriptionFull: 'N\u00e2ng c\u1ea5p l\u00ean Premium \u0111\u1ec3 s\u1eed d\u1ee5ng t\u1ea5t c\u1ea3 t\u00ednh n\u0103ng kh\u00f4ng gi\u1edbi h\u1ea1n. \u01afu \u0111\u00e3i h\u1ea1ng hi\u1ec7n t\u1ea1i s\u1ebd \u0111\u01b0\u1ee3c \u00e1p d\u1ee5ng t\u1eeb chu k\u1ef3 thanh to\u00e1n ti\u1ebfp theo.',
+    featureUnlimitedVideos: 'Xem video kh\u00f4ng gi\u1edbi h\u1ea1n',
+    featureUnlimitedPhrases: 'L\u01b0u c\u00e2u kh\u00f4ng gi\u1edbi h\u1ea1n',
+    featureAllGames: 'T\u1ea5t c\u1ea3 tr\u00f2 ch\u01a1i \u00f4n t\u1eadp',
+    featureNoAds: 'H\u1ecdc kh\u00f4ng qu\u1ea3ng c\u00e1o',
+    yearlyNote: 'G\u00f3i h\u00e0ng n\u0103m c\u00f3 gi\u00e1 c\u01a1 b\u1ea3n r\u1ebb h\u01a1n, \u01b0u \u0111\u00e3i h\u1ea1ng s\u1ebd \u0111\u01b0\u1ee3c c\u1ed9ng th\u00eam khi gia h\u1ea1n h\u00e0ng n\u0103m.',
+    loginRequired: '\u0110\u0103ng nh\u1eadp \u0111\u1ec3 thanh to\u00e1n',
+    loginRequiredDetail: 'Quy\u1ec1n thanh to\u00e1n v\u00e0 tr\u1ea1ng th\u00e1i \u0111\u0103ng k\u00fd \u0111\u01b0\u1ee3c qu\u1ea3n l\u00fd theo t\u00e0i kho\u1ea3n.',
+    errorPayment: 'Thanh to\u00e1n th\u1ea5t b\u1ea1i. Vui l\u00f2ng th\u1eed l\u1ea1i.',
+    errorCheckout: 'Kh\u00f4ng th\u1ec3 b\u1eaft \u0111\u1ea7u phi\u00ean thanh to\u00e1n. Vui l\u00f2ng th\u1eed l\u1ea1i sau.',
+    connecting: '\u0110ang k\u1ebft n\u1ed1i thanh to\u00e1n...',
+    loginAndSubscribe: '\u0110\u0103ng nh\u1eadp v\u00e0 b\u1eaft \u0111\u1ea7u \u0111\u0103ng k\u00fd',
+    trialStart: '\u0110\u0103ng k\u00fd sau 7 ng\u00e0y d\u00f9ng th\u1eed mi\u1ec5n ph\u00ed',
+    premiumStart: 'B\u1eaft \u0111\u1ea7u Premium',
+    continueBrowsing: 'Ti\u1ebfp t\u1ee5c xem',
+  },
 } as const
 
-type PremiumTranslations = typeof TRANSLATIONS[BillingLocale]
+type PremiumTranslations = typeof TRANSLATIONS[TranslationLocale]
 
 interface PremiumModalProps {
   isOpen: boolean
@@ -163,8 +236,10 @@ export function PremiumModal({
   const getTrialDaysRemainingFn = usePremiumStore((s) => s.getTrialDaysRemaining as (() => number) | undefined)
   const inTrial = isInTrialFn ? isInTrialFn() : false
   const trialDaysRemaining = getTrialDaysRemainingFn ? getTrialDaysRemainingFn() : 0
-  const locale = toBillingLocale(useLocaleStore((s) => s.locale))
-  const t = TRANSLATIONS[locale]
+  const rawLocale = useLocaleStore((s) => s.locale)
+  const locale = toBillingLocale(rawLocale)
+  const tLocale = toTranslationLocale(rawLocale)
+  const t = TRANSLATIONS[tLocale]
   const [selectedPlan, setSelectedPlan] = useState<BillingPlan>('yearly')
   const [submitting, setSubmitting] = useState(false)
   const [errorMessage, setErrorMessage] = useState<string | null>(null)

@@ -12,6 +12,7 @@ import { useLevelStore } from '@/stores/useLevelStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useLocaleStore, type SupportedLocale } from '@/stores/useLocaleStore'
+import { getLocalizedMeaning } from '@/lib/localeUtils'
 import { triggerHaptic } from '@/lib/haptic'
 import { calculateSessionXP } from '@/lib/xp/sessionXp'
 import { checkGameMilestones, checkStreakMilestones } from '@/stores/useMilestoneStore'
@@ -35,10 +36,28 @@ const TRANSLATIONS = {
     myChoice: '選んだ意味',
     correctAnswer: '正解',
   },
+  'zh-TW': {
+    replay: '重新挑戰',
+    finish: '結束',
+    loadError: '無法載入表達',
+    wordFallback: '只出題有例句的單字',
+    exprFallback: '點擊選擇最自然的意思',
+    myChoice: '我選的意思',
+    correctAnswer: '正確答案',
+  },
+  vi: {
+    replay: 'Thử lại',
+    finish: 'Kết thúc',
+    loadError: 'Không thể tải biểu thức',
+    wordFallback: 'Chỉ những từ có ví dụ',
+    exprFallback: 'Nhấn để chọn nghĩa phù hợp nhất',
+    myChoice: 'Nghĩa tôi chọn',
+    correctAnswer: 'Đáp án đúng',
+  },
 } as const
 
 function getT(locale: SupportedLocale) {
-  return TRANSLATIONS[locale === 'ja' ? 'ja' : 'ko']
+  return TRANSLATIONS[locale] ?? TRANSLATIONS.ko
 }
 
 interface ExpressionSwipeGameProps {
@@ -96,7 +115,7 @@ interface CardData {
   type: 'expression' | 'word'
   exprId: string
   expression: string
-  actualMeaningKo: string
+  actualMeaning: string
   cefr: string
   category: string
   contextEn: string | null
@@ -252,30 +271,41 @@ function uniqueCandidates(source: MeaningCandidate[]) {
   return deduped
 }
 
-const expressionMeaningCandidates = uniqueCandidates(
-  Object.values(entries).map((entry) => ({
-    meaningKo: entry.meaning_ko ?? '',
-    cefr: entry.cefr ?? '',
-    tag: entry.category ?? '',
-  })),
-)
+const meaningCandidateCache: Record<string, { expression: MeaningCandidate[]; word: MeaningCandidate[] }> = {}
 
-const wordMeaningCandidates = uniqueCandidates(
-  Object.values(wordEntries).map((entry) => ({
-    meaningKo: entry.meaning_ko ?? '',
-    cefr: entry.cefr ?? '',
-    tag: entry.pos ?? '',
-  })),
-)
+function getMeaningCandidates(locale: SupportedLocale) {
+  if (meaningCandidateCache[locale]) return meaningCandidateCache[locale]
+
+  const expression = uniqueCandidates(
+    Object.values(entries).map((entry) => ({
+      meaningKo: getLocalizedMeaning(entry as Record<string, unknown>, locale),
+      cefr: entry.cefr ?? '',
+      tag: entry.category ?? '',
+    })),
+  )
+
+  const word = uniqueCandidates(
+    Object.values(wordEntries).map((entry) => ({
+      meaningKo: getLocalizedMeaning(entry as Record<string, unknown>, locale),
+      cefr: entry.cefr ?? '',
+      tag: entry.pos ?? '',
+    })),
+  )
+
+  meaningCandidateCache[locale] = { expression, word }
+  return meaningCandidateCache[locale]
+}
 
 function pickDecoyMeanings(params: {
   type: 'expression' | 'word'
-  actualMeaningKo: string
+  actualMeaning: string
   cefr: string
   category: string
+  locale: SupportedLocale
 }) {
-  const source = params.type === 'word' ? wordMeaningCandidates : expressionMeaningCandidates
-  const actual = normalizeMeaning(params.actualMeaningKo)
+  const candidates = getMeaningCandidates(params.locale)
+  const source = params.type === 'word' ? candidates.word : candidates.expression
+  const actual = normalizeMeaning(params.actualMeaning)
   const used = new Set<string>([actual])
   const decoys: string[] = []
 
@@ -299,24 +329,25 @@ function pickDecoyMeanings(params: {
   return decoys
 }
 
-function buildChoices(card: Omit<CardData, 'choices'>): ChoiceData[] {
+function buildChoices(card: Omit<CardData, 'choices'>, locale: SupportedLocale): ChoiceData[] {
   const decoys = pickDecoyMeanings({
     type: card.type,
-    actualMeaningKo: card.actualMeaningKo,
+    actualMeaning: card.actualMeaning,
     cefr: card.cefr,
     category: card.category,
+    locale,
   })
 
-  const options = [card.actualMeaningKo, ...decoys].slice(0, 4)
+  const options = [card.actualMeaning, ...decoys].slice(0, 4)
 
   return shuffle(options).map((text, index) => ({
     id: `${card.exprId}-${index}`,
     text,
-    isCorrect: text === card.actualMeaningKo,
+    isCorrect: text === card.actualMeaning,
   }))
 }
 
-function selectCards(level: string): CardData[] {
+function selectCards(level: string, locale: SupportedLocale): CardData[] {
   const gameStore = useGameProgressStore.getState()
   const defaultExpressionCount = Math.round(CARDS_PER_ROUND * 0.7)
   const defaultWordCount = CARDS_PER_ROUND - defaultExpressionCount
@@ -421,7 +452,7 @@ function selectCards(level: string): CardData[] {
       type: 'expression' as const,
       exprId,
       expression: entry?.canonical ?? exprId,
-      actualMeaningKo: normalizeMeaning(entry?.meaning_ko ?? ''),
+      actualMeaning: normalizeMeaning(entry ? getLocalizedMeaning(entry as Record<string, unknown>, locale) : ''),
       cefr: entry?.cefr?.toUpperCase() ?? 'B1',
       category: entry?.category ?? '',
       contextEn: pickContextSentence(exprId),
@@ -429,7 +460,7 @@ function selectCards(level: string): CardData[] {
 
     return {
       ...baseCard,
-      choices: buildChoices(baseCard),
+      choices: buildChoices(baseCard, locale),
     }
   })
 
@@ -439,7 +470,7 @@ function selectCards(level: string): CardData[] {
       type: 'word' as const,
       exprId: `word:${wordId}`,
       expression: entry?.canonical ?? wordId,
-      actualMeaningKo: normalizeMeaning(entry?.meaning_ko ?? ''),
+      actualMeaning: normalizeMeaning(entry ? getLocalizedMeaning(entry as Record<string, unknown>, locale) : ''),
       cefr: entry?.cefr?.toUpperCase() ?? 'B1',
       category: entry?.pos ?? '',
       contextEn: pickWordContextSentence(wordId) ?? entry?.example_en ?? null,
@@ -447,7 +478,7 @@ function selectCards(level: string): CardData[] {
 
     return {
       ...baseCard,
-      choices: buildChoices(baseCard),
+      choices: buildChoices(baseCard, locale),
     }
   })
 
@@ -486,7 +517,7 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
   const recalculateScore = useLevelStore((state) => state.recalculateScore)
   const checkLevelUp = useLevelStore((state) => state.checkLevelUp)
 
-  const [cards] = useState<CardData[]>(() => selectCards(level))
+  const [cards] = useState<CardData[]>(() => selectCards(level, locale))
   const [currentIdx, setCurrentIdx] = useState(0)
   const [phase, setPhase] = useState<GamePhase>('playing')
   const [streak, setStreak] = useState(0)
@@ -495,8 +526,8 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
     Array<{
       exprId: string
       expression: string
-      selectedMeaningKo: string
-      actualMeaningKo: string
+      selectedMeaning: string
+      actualMeaning: string
       correct: boolean
     }>
   >([])
@@ -571,7 +602,7 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
       setFeedback({
         correct: isCorrect,
         title: isCorrect ? 'GOOD' : 'MISS',
-        detail: isCorrect ? choice.text : `${T.correctAnswer}: ${currentCard.actualMeaningKo}`,
+        detail: isCorrect ? choice.text : `${T.correctAnswer}: ${currentCard.actualMeaning}`,
       })
 
       triggerHaptic(isCorrect ? 40 : [30, 50, 30])
@@ -602,8 +633,8 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
         {
           exprId,
           expression: currentCard.expression,
-          selectedMeaningKo: choice.text,
-          actualMeaningKo: currentCard.actualMeaningKo,
+          selectedMeaning: choice.text,
+          actualMeaning: currentCard.actualMeaning,
           correct: isCorrect,
         },
       ])
@@ -692,7 +723,7 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
             <div className="space-y-2">
               {wrongResults.map((result) => (
                 <div
-                  key={`${result.exprId}-${result.selectedMeaningKo}`}
+                  key={`${result.exprId}-${result.selectedMeaning}`}
                   className="rounded-xl border px-4 py-3"
                   style={{
                     backgroundColor: 'var(--bg-card)',
@@ -703,10 +734,10 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
                     {result.expression}
                   </p>
                   <p className="mt-1 text-xs" style={{ color: 'var(--text-muted)' }}>
-                    {T.myChoice}: {result.selectedMeaningKo}
+                    {T.myChoice}: {result.selectedMeaning}
                   </p>
                   <p className="mt-1 text-sm" style={{ color: 'var(--text-secondary)' }}>
-                    {T.correctAnswer}: {result.actualMeaningKo}
+                    {T.correctAnswer}: {result.actualMeaning}
                   </p>
                 </div>
               ))}

@@ -217,10 +217,22 @@ function LegalLink({ href, label }: { href: string; label: string }) {
   )
 }
 
+const LOCALE_OPTIONS: Array<{
+  id: SupportedLocale
+  native: string
+  english: string
+}> = [
+  { id: 'ko', native: '한국어', english: 'Korean' },
+  { id: 'ja', native: '日本語', english: 'Japanese' },
+  { id: 'zh-TW', native: '繁體中文', english: 'Chinese' },
+  { id: 'vi', native: 'Tiếng Việt', english: 'Vietnamese' },
+]
+
 export default function ProfilePage() {
   const router = useRouter()
   const { user, loading, authAvailable, signInWithGoogle, signInWithKakao, signOut } = useAuth()
   const [showDeleteModal, setShowDeleteModal] = useState(false)
+  const [showLanguageModal, setShowLanguageModal] = useState(false)
   const hapticEnabled = useSettingsStore((state) => state.hapticEnabled)
   const remoteEnabled = useSettingsStore((state) => state.remoteEnabled)
   const subtitleGuidesEnabled = useSettingsStore((state) => state.subtitleGuidesEnabled)
@@ -357,32 +369,33 @@ export default function ProfilePage() {
             <SectionLabel label={T.settings} />
 
             <div className="divide-y divide-[var(--border-card)]/40">
-              <div className="flex items-center justify-between px-1 py-3">
-                <div>
+              <button
+                className="flex w-full items-center justify-between px-1 py-3"
+                onClick={() => setShowLanguageModal(true)}
+              >
+                <div className="text-left">
                   <p className="text-sm font-medium text-[var(--text-primary)]">Language / 言語</p>
                   <p className="mt-0.5 text-xs text-[var(--text-muted)]">{T.translateLang}</p>
                 </div>
-                <div className="flex gap-1 rounded-xl bg-[var(--bg-secondary)] p-1">
-                  {([
-                    { id: 'ko' as SupportedLocale, label: '한국어' },
-                    { id: 'ja' as SupportedLocale, label: '日本語' },
-                    { id: 'zh-TW' as SupportedLocale, label: '繁體中文' },
-                    { id: 'vi' as SupportedLocale, label: 'Tiếng Việt' },
-                  ]).map((option) => (
-                    <button
-                      key={option.id}
-                      onClick={() => setLocale(option.id)}
-                      className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition-colors ${
-                        locale === option.id
-                          ? 'bg-[var(--accent-primary)] text-white'
-                          : 'text-[var(--text-secondary)]'
-                      }`}
-                    >
-                      {option.label}
-                    </button>
-                  ))}
+                <div className="flex items-center gap-1.5">
+                  <span className="text-sm font-medium text-[var(--text-secondary)]">
+                    {LOCALE_OPTIONS.find((o) => o.id === locale)?.native}
+                  </span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    className="h-4 w-4 text-[var(--text-muted)]"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M7.22 4.22a.75.75 0 011.06 0l5.25 5.25a.75.75 0 010 1.06l-5.25 5.25a.75.75 0 01-1.06-1.06L11.94 10 7.22 5.28a.75.75 0 010-1.06z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
                 </div>
-              </div>
+              </button>
 
               <div className="px-1 py-4">
                 <div className="mb-4">
@@ -695,6 +708,66 @@ export default function ProfilePage() {
       <div className="mt-6">
         <AdminIssuesList />
       </div>
+
+      {showLanguageModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-end justify-center bg-black/60 px-4 pb-8 sm:items-center sm:pb-0"
+          onClick={() => setShowLanguageModal(false)}
+        >
+          <motion.div
+            initial={{ y: 120, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ type: 'spring', damping: 28, stiffness: 340 }}
+            className="w-full max-w-sm rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-6 shadow-xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 className="text-base font-bold text-[var(--text-primary)]">
+              Language / 言語
+            </h2>
+            <p className="mt-1 text-xs text-[var(--text-muted)]">{T.translateLang}</p>
+
+            <div className="mt-5 divide-y divide-[var(--border-card)]/40">
+              {LOCALE_OPTIONS.map((option) => {
+                const selected = locale === option.id
+                return (
+                  <button
+                    key={option.id}
+                    onClick={() => {
+                      setLocale(option.id)
+                      setShowLanguageModal(false)
+                    }}
+                    className="flex w-full items-center justify-between px-2 py-3.5 text-left"
+                  >
+                    <div>
+                      <p className={`text-sm font-semibold ${selected ? 'text-[var(--accent-primary)]' : 'text-[var(--text-primary)]'}`}>
+                        {option.native}
+                      </p>
+                      <p className="mt-0.5 text-xs text-[var(--text-muted)]">
+                        {option.english}
+                      </p>
+                    </div>
+                    {selected && (
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        className="h-5 w-5 text-[var(--accent-primary)]"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                          clipRule="evenodd"
+                        />
+                      </svg>
+                    )}
+                  </button>
+                )
+              })}
+            </div>
+          </motion.div>
+        </div>
+      )}
 
       {showDeleteModal && (
         <DeleteAccountModal

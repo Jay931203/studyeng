@@ -28,6 +28,22 @@ const TRANSLATIONS = {
     listenFill: '聞いて埋める',
     listenFillDesc: '音声の空欄を当てる',
   },
+  'zh-TW': {
+    nextLineGuess: '猜下一句台詞',
+    startFromShortsPlayer: '在短影片播放器中直接開始',
+    meaningMatch: '意思配對',
+    meaningMatchDesc: '選擇表達的意思',
+    listenFill: '聽力填空',
+    listenFillDesc: '音頻填空',
+  },
+  vi: {
+    nextLineGuess: 'Đoán câu thoại tiếp theo',
+    startFromShortsPlayer: 'Bắt đầu ngay trong trình phát Shorts',
+    meaningMatch: 'Ghép nghĩa',
+    meaningMatchDesc: 'Chọn nghĩa của cụm từ',
+    listenFill: 'Nghe và điền',
+    listenFillDesc: 'Điền từ nghe được',
+  },
 } as const
 
 type GameType = 'expression-swipe' | 'listen-fill'
@@ -75,7 +91,7 @@ function GameCard({
 export function GameLauncher() {
   const router = useRouter()
   const locale = useLocaleStore((s) => s.locale)
-  const T = TRANSLATIONS[locale === 'ja' ? 'ja' : 'ko']
+  const T = TRANSLATIONS[locale]
   const [activeGame, setActiveGame] = useState<GameType | null>(null)
   const incrementMission = useDailyMissionStore((state) => state.incrementMission)
   const setGameModeEnabled = usePlayerStore((state) => state.setGameModeEnabled)
