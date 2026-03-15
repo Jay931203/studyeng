@@ -1,1076 +1,1364 @@
 [
   {
     "start": 2.62,
-    "end": 8.64,
-    "en": "Let's start with the big idea of scaling laws and the scaling hypothesis What is it what is its",
+    "end": 6.22,
+    "en": "Let's start with the big idea of scaling laws and the scaling hypothesis.",
     "ko": "스케일링 법칙과 스케일링 가설의 큰 아이디어부터 시작해보자. 그게 뭐고, 역사와 현재 상황은 어떤지."
   },
   {
-    "start": 8.64,
-    "end": 14.72,
-    "en": "history and where do we stand today So I can only describe it as it relates to kind of my",
+    "start": 6.78,
+    "end": 10.24,
+    "en": "What is it, what is its history, and where do we stand today?",
+    "ko": "스케일링 법칙과 스케일링 가설의 큰 아이디어부터 시작해보자. 그게 뭐고, 역사와 현재 상황은 어떤지."
+  },
+  {
+    "start": 10.74,
+    "end": 16.18,
+    "en": "So I can only describe it as it relates to kind of my own experience, but I've been in",
     "ko": "내 경험과 관련해서만 설명할 수 있지만, 나는 AI 분야에서 약 10년을 일해왔고, 그걸 아주 일찍부터 눈치챘어."
   },
   {
-    "start": 14.72,
+    "start": 16.18,
     "end": 21.06,
-    "en": "own experience but I've been in the AI field for about 10 years and it was something I noticed very early on",
+    "en": "the AI field for about 10 years, and it was something I noticed very early on.",
     "ko": "2014년 말에 앤드류 응과 함께 바이두에서 일할 때 AI 세계에 처음 들어갔고, 거의 10년 전 일이야."
   },
   {
     "start": 21.14,
-    "end": 27.24,
-    "en": "So I first joined the AI world when I was working at Baidu with Andrew Ng in late 2014 which",
+    "end": 26.94,
+    "en": "So I first joined the AI world when I was working at Baidu with Andrew Ng in late 2014,",
     "ko": "우리가 처음 작업한 것은 음성 인식 시스템이었어."
   },
   {
-    "start": 27.24,
+    "start": 26.94,
+    "end": 29.38,
+    "en": "which is almost exactly 10 years ago now.",
+    "ko": "우리가 처음 작업한 것은 음성 인식 시스템이었어."
+  },
+  {
+    "start": 30.04,
     "end": 33.34,
-    "en": "is almost exactly 10 years ago now And the first thing we worked on was speech recognition systems",
+    "en": "And the first thing we worked on was speech recognition systems.",
     "ko": "그 당시 딥러닝은 새로운 것이었고, 많은 발전이 있었지만, 모두가 항상 말했지."
   },
   {
     "start": 33.8,
-    "end": 40.08,
-    "en": "And in those days I think deep learning was a new thing it had made lots of progress but everyone was always saying",
+    "end": 38.14,
+    "en": "And in those days, I think deep learning was a new thing, it had made lots of progress,",
     "ko": "우리가 성공하기 위해 필요한 알고리즘이 없다고, 우리는 아주 작은 부분만 맞추고 있다고."
   },
   {
-    "start": 40.22,
-    "end": 46.4,
-    "en": "we don't have the algorithms we need to succeed we're only matching a tiny tiny",
+    "start": 38.28,
+    "end": 44.48,
+    "en": "but everyone was always saying, we don't have the algorithms we need to succeed, we're only",
+    "ko": "우리가 성공하기 위해 필요한 알고리즘이 없다고, 우리는 아주 작은 부분만 맞추고 있다고."
+  },
+  {
+    "start": 44.92,
+    "end": 50,
+    "en": "matching a tiny, tiny fraction, there's so much we need to kind of discover algorithmically,",
     "ko": "우리가 인간의 뇌를 맞추는 방법을 알고리즘적으로 발견해야 할 게 너무 많다고."
   },
   {
-    "start": 46.4,
-    "end": 52.5,
-    "en": "fraction there's so much we need to kind of discover algorithmically we haven't found the picture of how to match the",
-    "ko": "어떤 면에서는 운이 좋았던 것 같아. 나는 거의 초보자였으니까."
-  },
-  {
-    "start": 52.5,
-    "end": 53.3,
-    "en": "human brain",
+    "start": 50.06,
+    "end": 52.8,
+    "en": "we haven't found the picture of how to match the human brain.",
     "ko": "우리가 음성을 위해 사용하던 순환 신경망을 보면서, 더 크게 만들고 층을 더 추가하면 어떨까 생각했어."
   },
   {
     "start": 54.52,
-    "end": 60.8,
-    "en": "And when you know in some ways it was fortunate I was kind of you know you can have almost beginner's luck right I was like a",
+    "end": 59.96,
+    "en": "And when, you know, in some ways it was fortunate, I was kind of, you know, you can have almost beginner's luck, right?",
     "ko": "데이터도 함께 스케일업하면 좋겠다고 생각했지. 이건 독립적인 다이얼처럼 보였어."
   },
   {
-    "start": 60.8,
-    "end": 66.92,
-    "en": "newcomer to the field And you know I looked at the neural net that we were using for speech the recurrent neural networks and",
+    "start": 59.96,
+    "end": 61.9,
+    "en": "I was like a newcomer to the field.",
+    "ko": "데이터도 함께 스케일업하면 좋겠다고 생각했지. 이건 독립적인 다이얼처럼 보였어."
+  },
+  {
+    "start": 62.2,
+    "end": 66.24,
+    "en": "And you know, I looked at the neural net that we were using for speech, the recurrent neural",
     "ko": "모델이 더 많은 데이터를 받고, 더 커지고, 더 오랫동안 훈련할수록 점점 더 잘하는 걸 봤어."
   },
   {
-    "start": 66.92,
-    "end": 72.98,
-    "en": "I said I don't know what if you make them bigger and give them more layers And what if you scale up the data along with this right I just saw",
+    "start": 66.32,
+    "end": 69.9,
+    "en": "networks, and I said, I don't know, what if you make them bigger and give them more layers?",
+    "ko": "모델이 더 많은 데이터를 받고, 더 커지고, 더 오랫동안 훈련할수록 점점 더 잘하는 걸 봤어."
+  },
+  {
+    "start": 70.08,
+    "end": 72.44,
+    "en": "And what if you scale up the data along with this, right?",
     "ko": "그 당시에는 정확하게 측정하지 않았지만, 동료들과 함께 비공식적으로 느낀 게 있었어."
   },
   {
-    "start": 72.98,
-    "end": 79.4,
-    "en": "these as like independent dials that you could turn And I noticed that the model started to do better and better as",
+    "start": 72.44,
+    "end": 76.12,
+    "en": "I just saw these as like independent dials that you could turn.",
+    "ko": "그 당시에는 정확하게 측정하지 않았지만, 동료들과 함께 비공식적으로 느낀 게 있었어."
+  },
+  {
+    "start": 76.22,
+    "end": 80.96,
+    "en": "And I noticed that the model started to do better and better as you gave them more data,",
     "ko": "더 많은 데이터와 컴퓨팅, 훈련을 넣을수록 모델이 더 잘 작동한다는 거였어."
   },
   {
-    "start": 79.4,
+    "start": 80.96,
     "end": 84.68,
-    "en": "you gave them more data as you made the models larger as you trained them for longer",
+    "en": "as you made the models larger, as you trained them for longer.",
     "ko": "처음에는 이게 음성 인식 시스템에만 해당되는 건 아닐까 생각했어."
   },
   {
     "start": 85.74,
-    "end": 91.74,
-    "en": "And I didn't measure things precisely in those days but along with colleagues we very",
+    "end": 91.92,
+    "en": "And I didn't measure things precisely in those days, but along with colleagues, we very much",
     "ko": "그건 특정한 특성이거나 특정한 분야일 수도 있다고."
   },
   {
-    "start": 91.74,
-    "end": 98.34,
-    "en": "much got the informal sense that the more data and the more compute and the more training you put into these",
+    "start": 91.92,
+    "end": 97.12,
+    "en": "got the informal sense that the more data and the more compute and the more training",
     "ko": "2017년에 GPT 1의 결과를 처음 봤을 때, 언어가 아마도 우리가 할 수 있는 분야라는 걸 깨달았어."
   },
   {
-    "start": 98.34,
-    "end": 104.4,
-    "en": "models the better they perform And so initially my thinking was hey maybe that is just true for",
-    "ko": "우리는 수조 개의 언어 데이터를 얻을 수 있고, 그걸 훈련할 수 있어."
+    "start": 97.12,
+    "end": 99.84,
+    "en": "you put into these models, the better they perform.",
+    "ko": "2017년에 GPT 1의 결과를 처음 봤을 때, 언어가 아마도 우리가 할 수 있는 분야라는 걸 깨달았어."
   },
   {
-    "start": 104.4,
-    "end": 110.46,
-    "en": "speech recognition systems right Maybe that's just one particular quirk one particular area I think it",
+    "start": 100.46,
+    "end": 106.04,
+    "en": "And so initially my thinking was, hey, maybe that is just true for speech recognition systems, right?",
     "ko": "그 당시 우리가 훈련하던 모델은 정말 작았어. 1개에서 8개의 GPU로 훈련할 수 있었지."
   },
   {
-    "start": 110.46,
-    "end": 116.74,
-    "en": "wasn't until 2017 when I first saw the results from GPT 1 that it",
+    "start": 106.04,
+    "end": 109.6,
+    "en": "Maybe that's just one particular quirk, one particular area.",
+    "ko": "그 당시 우리가 훈련하던 모델은 정말 작았어. 1개에서 8개의 GPU로 훈련할 수 있었지."
+  },
+  {
+    "start": 109.6,
+    "end": 116.84,
+    "en": "I think it wasn't until 2017 when I first saw the results from GPT-1 that it clicked",
     "ko": "지금은 수천 개의 GPU에서 수십만 개로 훈련하고 있어."
   },
   {
-    "start": 116.74,
-    "end": 123.02,
-    "en": "clicked for me that language is probably the area in which we can do this We can get trillions of words",
+    "start": 116.84,
+    "end": 120.36,
+    "en": "for me that language is probably the area in which we can do this.",
     "ko": "그 두 가지를 함께 봤을 때, 비슷한 의견을 가진 몇몇 사람들도 있었어."
   },
   {
-    "start": 123.02,
-    "end": 129.54,
-    "en": "of language data We can train on them And the models we were training in those days were tiny You could train them on",
+    "start": 120.54,
+    "end": 124.1,
+    "en": "We can get trillions of words of language data.",
+    "ko": "그 두 가지를 함께 봤을 때, 비슷한 의견을 가진 몇몇 사람들도 있었어."
+  },
+  {
+    "start": 124.34,
+    "end": 128.14,
+    "en": "We can train on them. And the models we were training in those days were tiny.",
     "ko": "일리아 수츠케버 같은 사람들 말이야. 그는 아마도 처음이었을 거야."
   },
   {
-    "start": 129.54,
-    "end": 135.72,
-    "en": "one to eight GPUs whereas you know now we train jobs on tens of thousands soon going to hundreds of thousands of",
+    "start": 128.22,
+    "end": 133.18,
+    "en": "You could train them on one to eight GPUs, whereas, you know, now we train jobs on tens",
+    "ko": "일리아 수츠케버 같은 사람들 말이야. 그는 아마도 처음이었을 거야."
+  },
+  {
+    "start": 133.2,
+    "end": 136.3,
+    "en": "of thousands, soon going to hundreds of thousands of GPUs.",
     "ko": "비슷한 시기에 몇몇 사람들이 비슷한 의견을 갖게 되었던 것 같아."
   },
   {
-    "start": 135.72,
-    "end": 141.92,
-    "en": "GPUs And so when I saw those two things together and you know there were a few people like Ilya",
+    "start": 136.3,
+    "end": 141.68,
+    "en": "And so when I saw those two things together, and, you know, there were a few people like",
     "ko": "리치 서튼의 쓴 교훈도 있었고, 고린이 스케일링 가설에 대해 썼어."
   },
   {
-    "start": 141.92,
-    "end": 148.34,
-    "en": "Sutskever who you've interviewed who had somewhat similar views right He might've been the first one although I think a",
-    "ko": "2014년과 2017년 사이에 나에게 정말로 확신이 생겼던 것 같아."
+    "start": 141.68,
+    "end": 145.7,
+    "en": "Ilya Sutskever, who you've interviewed, who had somewhat similar views, right?",
+    "ko": "리치 서튼의 쓴 교훈도 있었고, 고린이 스케일링 가설에 대해 썼어."
   },
   {
-    "start": 148.34,
-    "end": 154.48,
-    "en": "few people came to similar views around the same time right There was you know Rich Sutton's bitter lesson There was",
+    "start": 145.7,
+    "end": 151.4,
+    "en": "He might've been the first one, although I think a few people came to similar views around the same time, right?",
     "ko": "모델을 스케일업하면 정말로 광범위한 인지 작업을 할 수 있을 거라는 믿음이 생겼어."
   },
   {
-    "start": 154.66,
-    "end": 161.42,
-    "en": "Gorin wrote about the scaling hypothesis But I think somewhere between 2014 and 2017 was",
+    "start": 151.4,
+    "end": 153.7,
+    "en": "There was, you know, Rich Sutton's bitter lesson.",
+    "ko": "모델을 스케일업하면 정말로 광범위한 인지 작업을 할 수 있을 거라는 믿음이 생겼어."
+  },
+  {
+    "start": 153.94,
+    "end": 156.64,
+    "en": "There was, Gorin wrote about the scaling hypothesis.",
+    "ko": "모델을 스케일업하면 정말로 광범위한 인지 작업을 할 수 있을 거라는 믿음이 생겼어."
+  },
+  {
+    "start": 156.78,
+    "end": 163.12,
+    "en": "But I think somewhere between 2014 and 2017 was when it really clicked for me, when I",
     "ko": "스케일링의 모든 단계에서 항상 논란이 있어."
   },
   {
-    "start": 161.42,
-    "end": 168,
-    "en": "when it really clicked for me when I really got conviction that hey we're going to be able to do these incredibly wide",
+    "start": 163.12,
+    "end": 168.44,
+    "en": "really got conviction that, hey, we're going to be able to do these incredibly wide cognitive",
     "ko": "처음 그걸 들었을 때, 솔직히 내가 틀린 거라고 생각했어."
   },
   {
-    "start": 168,
-    "end": 174.12,
-    "en": "cognitive tasks if we just scale up the models And at every stage of",
+    "start": 168.52,
+    "end": 171.66,
+    "en": "tasks if we just scale up the models.",
     "ko": "모든 전문가들이 상황을 나보다 잘 알고 있다고 생각했지."
   },
   {
-    "start": 174.12,
-    "end": 180.2,
-    "en": "scaling there are always arguments And you know when I first heard them honestly I thought probably I'm the one who's wrong And you",
+    "start": 172.24,
+    "end": 175.7,
+    "en": "And at every stage of scaling, there are always arguments.",
+    "ko": "모든 전문가들이 상황을 나보다 잘 알고 있다고 생각했지."
+  },
+  {
+    "start": 176,
+    "end": 179.82,
+    "en": "And you know, when I first heard them, honestly, I thought, probably I'm the one who's wrong.",
     "ko": "촘스키의 주장도 있었고, 구문론은 얻을 수 있지만 의미론은 얻을 수 없다는 거였어."
   },
   {
-    "start": 180.2,
-    "end": 186.34,
-    "en": "know all these experts in the field are right They know the situation better than I do right There's you know the Chomsky argument",
+    "start": 179.88,
+    "end": 182.12,
+    "en": "And, you know, all these experts in the field are right.",
+    "ko": "촘스키의 주장도 있었고, 구문론은 얻을 수 있지만 의미론은 얻을 수 없다는 거였어."
+  },
+  {
+    "start": 182.2,
+    "end": 184.86,
+    "en": "They know the situation better than I do, right?",
     "ko": "문장을 이해할 수는 있지만, 단락을 이해할 수는 없다는 생각이었지."
   },
   {
-    "start": 186.34,
-    "end": 192.42,
-    "en": "about like you can get syntactics but you can't get semantics There was this idea oh you can make a sentence make sense",
+    "start": 184.86,
+    "end": 189.76,
+    "en": "There's, you know, the Chomsky argument about like, you can get syntactics, but you can't get semantics.",
     "ko": "우리가 오늘 가지고 있는 최신 주장은 데이터가 부족해지거나 품질이 충분하지 않다는 거야."
   },
   {
-    "start": 192.5,
-    "end": 198.58,
-    "en": "but you can't make a paragraph make sense The latest one we have today is you know we're going to run",
+    "start": 189.76,
+    "end": 194.32,
+    "en": "There was this idea, oh, you can make a sentence make sense, but you can't make a paragraph make sense.",
     "ko": "모델이 추론할 수 없다는 주장도 있었고."
   },
   {
-    "start": 198.58,
-    "end": 204.7,
-    "en": "out of data or the data isn't high quality enough or models can't reason And each time every time we",
+    "start": 194.5,
+    "end": 199.68,
+    "en": "The latest one we have today is, you know, we're going to run out of data or the data",
+    "ko": "모델이 추론할 수 없다는 주장도 있었고."
+  },
+  {
+    "start": 199.68,
+    "end": 202.44,
+    "en": "isn't high quality enough or models can't reason.",
     "ko": "매번 우리는 방법을 찾거나 스케일링이 해결책이 되더라고."
   },
   {
-    "start": 204.7,
-    "end": 210.92,
-    "en": "managed to we managed to either find a way around or scaling just is the way around Sometimes it's one",
+    "start": 202.64,
+    "end": 208.2,
+    "en": "And each time, every time we managed to, we managed to either find a way around or scaling",
+    "ko": "매번 우리는 방법을 찾거나 스케일링이 해결책이 되더라고."
+  },
+  {
+    "start": 208.2,
+    "end": 212.04,
+    "en": "just is the way around. Sometimes it's one, sometimes it's the other.",
     "ko": "가끔은 하나, 가끔은 다른 방법이었어."
   },
   {
-    "start": 211.1,
-    "end": 212.04,
-    "en": "sometimes it's the other",
-    "ko": "지금 이 시점에서, 여전히 불확실하다고 생각해."
-  },
-  {
     "start": 212.82,
-    "end": 219.48,
-    "en": "And so I'm now at this point I still think you know it's always quite uncertain We have nothing but",
+    "end": 217.96,
+    "en": "And so I'm now at this point, I still think, you know, it's always quite uncertain.",
     "ko": "다음 몇 년이 지난 10년과 비슷할 거라는 건 유도 추론 외엔 아무것도 없지."
   },
   {
-    "start": 219.48,
-    "end": 225.78,
-    "en": "inductive inference to tell us that the next few years are going to be like the next the last 10 years But I've",
+    "start": 217.96,
+    "end": 222.38,
+    "en": "We have nothing but inductive inference to tell us that the next few years are going",
+    "ko": "다음 몇 년이 지난 10년과 비슷할 거라는 건 유도 추론 외엔 아무것도 없지."
+  },
+  {
+    "start": 222.38,
+    "end": 224.6,
+    "en": "to be like the next, the last 10 years.",
     "ko": "하지만 나는 그 영화를 여러 번 봤고, 그 이야기를 여러 번 경험했어."
   },
   {
-    "start": 225.78,
-    "end": 232.58,
-    "en": "seen the movie enough times I've seen the story happen for enough times to really believe that",
+    "start": 225.1,
+    "end": 227.48,
+    "en": "But I've seen the movie enough times.",
+    "ko": "하지만 나는 그 영화를 여러 번 봤고, 그 이야기를 여러 번 경험했어."
+  },
+  {
+    "start": 227.62,
+    "end": 233.42,
+    "en": "I've seen the story happen for enough times to really believe that probably the scaling",
     "ko": "그래서 아마도 스케일링은 계속될 거라고 믿어."
   },
   {
-    "start": 232.58,
-    "end": 238.92,
-    "en": "probably the scaling is going to continue and that there's some magic to it that we haven't really explained on a theoretical basis",
+    "start": 233.42,
+    "end": 239.14,
+    "en": "is going to continue and that there's some magic to it that we haven't really explained on a theoretical basis yet.",
     "ko": "아직 이론적으로 설명하지 못한 마법 같은 게 있다고 생각해."
   },
   {
-    "start": 238.92,
+    "start": 239.5,
     "end": 245.22,
-    "en": "yet And of course the scaling here is bigger networks bigger data bigger compute",
+    "en": "And of course, the scaling here is bigger networks, bigger data, bigger compute.",
     "ko": "그리고 물론 여기서 스케일링은 더 큰 네트워크, 더 큰 데이터, 더 큰 컴퓨팅을 의미해."
   },
   {
     "start": 245.5,
-    "end": 250.94,
-    "en": "Yes In particular linear scaling up of bigger networks",
+    "end": 246.3,
+    "en": "Yes.",
+    "ko": ""
+  },
+  {
+    "start": 246.3,
+    "end": 253.88,
+    "en": "In particular, linear scaling up of bigger networks, bigger training times and more and",
     "ko": "특히 더 큰 네트워크의 선형 확장에 대해 이야기해."
   },
   {
-    "start": 251.84,
-    "end": 258.3,
-    "en": "bigger training times and more and more data So all of these things almost like a",
+    "start": 254.92,
+    "end": 259.96,
+    "en": "more data. So all of these things, almost like a chemical reaction, you know, you have three ingredients",
     "ko": "더 긴 훈련 시간과 점점 더 많은 데이터가 필요해. 이 모든 것들이 마치"
   },
   {
-    "start": 258.3,
-    "end": 264.42,
-    "en": "chemical reaction you know you have three ingredients in the chemical reaction and you need to linearly scale up the three ingredients If you scale up",
+    "start": 259.96,
+    "end": 263.7,
+    "en": "in the chemical reaction and you need to linearly scale up the three ingredients.",
     "ko": "화학 반응처럼, 세 가지 재료가 필요하고 세 가지 재료를 선형적으로 확장해야 해. 하나만 확장하면"
   },
   {
-    "start": 264.42,
-    "end": 270.56,
-    "en": "one not the others you run out of the other reagents and the reaction stops But if you scale up everything",
+    "start": 263.78,
+    "end": 268.72,
+    "en": "If you scale up one, not the others, you run out of the other reagents and the reaction stops.",
     "ko": "다른 재료가 부족해져서 반응이 멈춰. 하지만 모든 것을 확장하면"
   },
   {
-    "start": 270.56,
-    "end": 276.96,
-    "en": "everything in series then the reaction can proceed And of course now that you have this kind of empirical science",
+    "start": 268.88,
+    "end": 273.9,
+    "en": "But if you scale up everything, everything in series, then the reaction can proceed.",
+    "ko": "다른 재료가 부족해져서 반응이 멈춰. 하지만 모든 것을 확장하면"
+  },
+  {
+    "start": 273.9,
+    "end": 278.88,
+    "en": "And of course, now that you have this kind of empirical science slash art, you can apply",
     "ko": "연속적으로 반응이 진행될 수 있어. 이제 이런 경험적 과학"
   },
   {
-    "start": 276.96,
-    "end": 283.1,
-    "en": "slash art you can apply to other more nuanced things like scaling",
+    "start": 278.88,
+    "end": 286.06,
+    "en": "to other more nuanced things like scaling laws applied to interpretability or scaling",
     "ko": "혹은 예술을 다른 더 미묘한 것들에 적용할 수 있어, 예를 들어"
   },
   {
-    "start": 283.1,
-    "end": 289.18,
-    "en": "laws applied to interpretability or scaling laws applied to post training or just seeing how does",
+    "start": 286.06,
+    "end": 290.18,
+    "en": "laws applied to post-training or just seeing how does this thing scale.",
     "ko": "해석 가능성에 적용되는 확장 법칙이나 훈련 후에 적용되는 확장 법칙, 또는 이게 어떻게"
   },
   {
-    "start": 289.18,
-    "end": 295.42,
-    "en": "this thing scale But the big scaling law I guess the underlying scaling hypothesis has to do with big",
+    "start": 290.4,
+    "end": 295.86,
+    "en": "But the big scaling law, I guess the underlying scaling hypothesis has to do with big networks,",
     "ko": "확장되는지 보는 것과 같은 것들. 하지만 큰 확장 법칙은 기본적으로"
   },
   {
-    "start": 295.42,
-    "end": 301.5,
-    "en": "networks big data leads to intelligence Yeah we've documented scaling laws in",
+    "start": 296.14,
+    "end": 298.12,
+    "en": "big data leads to intelligence.",
     "ko": "큰 네트워크와 큰 데이터가 지능으로 이어진다는 거야. 우리는"
   },
   {
-    "start": 301.5,
-    "end": 307.5,
-    "en": "lots of domains other than language right So initially the paper we did that first showed",
+    "start": 298.12,
+    "end": 304.14,
+    "en": "Yeah, we've documented scaling laws in lots of domains other than language, right?",
+    "ko": "큰 네트워크와 큰 데이터가 지능으로 이어진다는 거야. 우리는"
+  },
+  {
+    "start": 304.14,
+    "end": 309.76,
+    "en": "So initially, the paper we did that first showed it was in early 2020, where we first",
     "ko": "언어 외에도 많은 분야에서 확장 법칙을 문서화했어. 처음으로"
   },
   {
-    "start": 307.5,
-    "end": 314.08,
-    "en": "it was in early 2020 where we first showed it for language There was then some work late in 2020 where",
+    "start": 309.76,
+    "end": 310.66,
+    "en": "showed it for language.",
     "ko": "이걸 보여준 논문은 2020년 초였고, 그때 언어에 대해 처음으로"
   },
   {
-    "start": 314.08,
-    "end": 317.32,
-    "en": "we showed the same thing for other modalities like images",
-    "ko": "이걸 보여줬어. 그리고 2020년 말에는"
+    "start": 310.82,
+    "end": 316.38,
+    "en": "There was then some work late in 2020, where we showed the same thing for other modalities",
+    "ko": "이걸 보여준 논문은 2020년 초였고, 그때 언어에 대해 처음으로"
   },
   {
-    "start": 318.08,
-    "end": 321.16,
-    "en": "video text to image image to text",
+    "start": 316.38,
+    "end": 323.58,
+    "en": "like images, video, text to image, image to text, math, that they all had the same pattern.",
     "ko": "이미지와 같은 다른 양식에 대해서도 같은 것을 보여줬지."
   },
   {
-    "start": 322,
-    "end": 328.02,
-    "en": "math that they all had the same pattern And you're right Now there are other stages like post training or there are new types",
+    "start": 323.66,
+    "end": 329.16,
+    "en": "And you're right. Now there are other stages like post-training or there are new types of reasoning models.",
     "ko": "비디오, 텍스트-이미지, 이미지-텍스트, 수학 모두 같은 패턴을 가졌어. 맞아."
   },
   {
-    "start": 328.02,
-    "end": 334.68,
-    "en": "of reasoning models And in all of those cases that we've measured we see similar",
-    "ko": "이제 훈련 후 단계나 새로운 유형의 추론 모델이 있어. 우리가 측정한 모든 경우에서"
-  },
-  {
-    "start": 334.68,
+    "start": 329.76,
     "end": 336.18,
-    "en": "types of scaling laws",
+    "en": "And in all of those cases that we've measured, we see similar types of scaling laws.",
     "ko": "유사한 유형의 확장 법칙을 봤어."
   },
   {
     "start": 336.88,
-    "end": 343.06,
-    "en": "A bit of a philosophical question but what's your intuition about why bigger is better in terms of network",
+    "end": 342.08,
+    "en": "A bit of a philosophical question, but what's your intuition about why bigger is better",
     "ko": "조금 철학적인 질문이지만, 네트워크 크기와 데이터 크기에 대해 왜 더 큰 게 더 나은지에 대한 직관이 뭐야?"
   },
   {
-    "start": 343.06,
+    "start": 342.08,
     "end": 344.4,
-    "en": "size and data size",
+    "en": "in terms of network size and data size?",
     "ko": "왜 더 지능적인 모델로 이어지는 걸까? 나는 이전 경력에서"
   },
   {
     "start": 345.22,
-    "end": 351.42,
-    "en": "Why does it lead to more intelligent models So in my previous career as a",
+    "end": 348.72,
+    "en": "Why does it lead to more intelligent models?",
     "ko": "생물물리학자로서 물리학을 전공하고 대학원에서 생물물리학을 했어. 그래서 내가 아는 물리학에 대해"
   },
   {
-    "start": 351.42,
-    "end": 357.48,
-    "en": "biophysicist so I did physics undergrad and then biophysics in grad school So I think back to what I know as",
+    "start": 348.72,
+    "end": 354.54,
+    "en": "So in my previous career as a biophysicist, so I did physics undergrad and then biophysics",
+    "ko": "생물물리학자로서 물리학을 전공하고 대학원에서 생물물리학을 했어. 그래서 내가 아는 물리학에 대해"
+  },
+  {
+    "start": 355.02,
+    "end": 359.86,
+    "en": "in grad school. So I think back to what I know as a physicist, which is actually much less than what some",
     "ko": "생각해보면, Anthropic의 동료들보다 훨씬 적은 지식이야. 1/f 잡음이라는 개념이 있어."
   },
   {
-    "start": 357.48,
-    "end": 363.48,
-    "en": "a physicist which is actually much less than what some of my colleagues at Anthropic have in terms of",
+    "start": 359.86,
+    "end": 367.48,
+    "en": "of my colleagues at Anthropic have in terms of expertise in physics, there's this concept",
     "ko": "1/x 분포도 마찬가지야."
   },
   {
-    "start": 363.48,
-    "end": 369.64,
-    "en": "expertise in physics there's this concept called the 1 over f noise and",
-    "ko": "자연적인 과정들을 합치면 가우시안이 나오듯이, 서로 다른 분포를 가진 자연적인 과정들을 합치면"
-  },
-  {
-    "start": 369.64,
-    "end": 370.98,
-    "en": "1 over x distributions",
+    "start": 367.48,
+    "end": 375.48,
+    "en": "called the 1 over f noise and 1 over x distributions, where often just like if you add up a bunch",
     "ko": "가우시안이 아닌, 다양한 스케일을 가진 자연적인 과정에서 나오는 것들을 보면"
   },
   {
-    "start": 372.02,
-    "end": 378.02,
-    "en": "where often just like if you add up a bunch of natural processes you",
+    "start": 376.58,
+    "end": 378.7,
+    "en": "of natural processes, you get a Gaussian.",
     "ko": "온도 잡음의 분포가 주파수의 역수로 간다는 거야. 어떤 자연적인 수렴 분포가 있어."
   },
   {
-    "start": 378.02,
-    "end": 384.16,
-    "en": "get a Gaussian If you add up a bunch of kind of differently distributed natural processes if you",
-    "ko": "많은 것들이 자연적인 과정에 의해 생성되면, 좁게 분포된 가우시안이 아니라"
-  },
-  {
-    "start": 384.16,
+    "start": 379.32,
     "end": 385.24,
-    "en": "like",
+    "en": "If you add up a bunch of kind of differently distributed natural processes, if you like",
     "ko": "크고 작은 변동들이 전기 잡음으로 이어지는 걸 보면, 이들은 역수 분포를 가져."
   },
   {
-    "start": 385.96,
-    "end": 392.1,
-    "en": "take a probe and hook it up to a resistor the distribution of the thermal noise in",
+    "start": 386.22,
+    "end": 392.42,
+    "en": "take a probe and hook it up to a resistor, the distribution of the thermal noise in the",
     "ko": "그래서 이제 물리적 세계나 언어의 패턴을 생각해. 언어의 패턴을 생각하면"
   },
   {
-    "start": 392.1,
+    "start": 392.42,
     "end": 396.78,
-    "en": "the resistor goes as 1 over the frequency It's some kind of natural convergent distribution",
+    "en": "resistor goes as 1 over the frequency. It's some kind of natural convergent distribution.",
     "ko": "정말 간단한 패턴들이 있어. 어떤 단어들은 다른 단어들보다 훨씬 더 흔해."
   },
   {
     "start": 399.38,
-    "end": 405.74,
-    "en": "And I think what it amounts to is that if you look at a lot of things that are produced by some natural",
+    "end": 404.84,
+    "en": "And I think what it amounts to is that if you look at a lot of things that are produced",
     "ko": "기본적인 명사-동사 구조가 있고, 명사와 동사가 일치해야 해."
   },
   {
-    "start": 405.74,
-    "end": 411.88,
-    "en": "process that has a lot of different scales not a Gaussian which is kind of narrowly distributed but if",
+    "start": 404.84,
+    "end": 409.72,
+    "en": "by some natural process that has a lot of different scales, not a Gaussian, which is",
+    "ko": "기본적인 명사-동사 구조가 있고, 명사와 동사가 일치해야 해."
+  },
+  {
+    "start": 409.72,
+    "end": 415.22,
+    "en": "kind of narrowly distributed, but if I look at kind of like large and small fluctuations",
     "ko": "그리고 더 높은 수준의 문장 구조가 있어. 문단의 주제 구조도 있어."
   },
   {
-    "start": 411.88,
-    "end": 418.68,
-    "en": "I look at kind of like large and small fluctuations that lead to electrical noise they",
+    "start": 415.38,
+    "end": 421.88,
+    "en": "that lead to electrical noise, they have this decaying 1 over x distribution.",
     "ko": "이런 회귀 구조가 있다는 사실을 생각해보면, 네트워크가 커질수록"
   },
   {
-    "start": 418.82,
-    "end": 424.9,
-    "en": "have this decaying 1 over x distribution And so now I think of like patterns in the physical",
+    "start": 422.02,
+    "end": 427.26,
+    "en": "And so now I think of like patterns in the physical world or in language.",
     "ko": "정말 간단한 상관관계와 패턴을 먼저 포착해. 그리고"
   },
   {
-    "start": 424.9,
+    "start": 427.34,
     "end": 431.16,
-    "en": "world or in language If I think about the patterns in language there are some really simple patterns",
+    "en": "If I think about the patterns in language, there are some really simple patterns.",
     "ko": "다른 패턴의 긴 꼬리가 있어. 만약 그 긴 꼬리가 물리적 과정에서의 1/f 잡음처럼"
   },
   {
     "start": 431.58,
-    "end": 437.62,
-    "en": "Some words are much more common than others like the Then there's basic noun verb structure Then there's the",
+    "end": 433.7,
+    "en": "Some words are much more common than others like the.",
     "ko": "매끄럽다면, 네트워크가 커질수록 그 분포를 더 많이 포착할 수 있을 거야."
   },
   {
-    "start": 437.62,
-    "end": 444,
-    "en": "fact that you know nouns and verbs have to agree They have to coordinate And there's the higher level sentence structure Then there's the thematic",
+    "start": 434.26,
+    "end": 436.5,
+    "en": "Then there's basic noun verb structure.",
+    "ko": "매끄럽다면, 네트워크가 커질수록 그 분포를 더 많이 포착할 수 있을 거야."
+  },
+  {
+    "start": 437.04,
+    "end": 440.9,
+    "en": "Then there's the fact that, you know, nouns and verbs have to agree. They have to coordinate.",
     "ko": "명사와 동사가 일치해야 한다는 사실, 서로 조화를 이루어야 해. 그리고 더 높은 수준의 문장 구조가 있어."
   },
   {
-    "start": 444,
-    "end": 450,
-    "en": "structure of paragraphs And so the fact that there's this regressing structure you can imagine that as you",
+    "start": 441.24,
+    "end": 445.2,
+    "en": "And there's the higher level sentence structure. Then there's the thematic structure of paragraphs.",
+    "ko": "명사와 동사가 일치해야 한다는 사실, 서로 조화를 이루어야 해. 그리고 더 높은 수준의 문장 구조가 있어."
+  },
+  {
+    "start": 445.38,
+    "end": 450.18,
+    "en": "And so the fact that there's this regressing structure, you can imagine that as you make",
     "ko": "단락의 구조도 마찬가지야. 그래서 이런 퇴행적인 구조가 있다는 사실을 상상할 수 있어."
   },
   {
-    "start": 450,
-    "end": 456.26,
-    "en": "make the networks larger first they capture the really simple correlations the really simple patterns And",
+    "start": 450.18,
+    "end": 455.34,
+    "en": "the networks larger, first they capture the really simple correlations, the really simple",
     "ko": "네트워크를 더 크게 만들면, 정말 간단한 상관관계와 패턴을 먼저 포착해."
   },
   {
-    "start": 456.26,
-    "end": 462.54,
-    "en": "there's this long tail of other patterns And if that long tail of other patterns is really smooth like",
+    "start": 455.34,
+    "end": 458.18,
+    "en": "patterns. And there's this long tail of other patterns.",
+    "ko": "네트워크를 더 크게 만들면, 정말 간단한 상관관계와 패턴을 먼저 포착해."
+  },
+  {
+    "start": 458.18,
+    "end": 463.52,
+    "en": "And if that long tail of other patterns is really smooth, like it is with the 1 over",
     "ko": "그리고 다른 패턴의 긴 꼬리가 있어. 만약 그 긴 꼬리가 정말 부드럽다면,"
   },
   {
-    "start": 462.54,
-    "end": 468.56,
-    "en": "it is with the 1 over f noise in physical processes like resistors then you can imagine",
+    "start": 463.52,
+    "end": 470.14,
+    "en": "f noise in physical processes like resistors, then you can imagine as you make the network",
     "ko": "물리적 과정에서의 1/f 잡음처럼, 상상할 수 있어."
   },
   {
-    "start": 468.56,
-    "end": 474.76,
-    "en": "as you make the network larger it's kind of capturing more and more of that distribution And so that",
+    "start": 470.14,
+    "end": 473.32,
+    "en": "larger, it's kind of capturing more and more of that distribution.",
     "ko": "네트워크를 더 크게 만들면, 그 분포의 더 많은 부분을 포착하게 돼."
   },
   {
-    "start": 474.76,
-    "end": 479.1,
-    "en": "smoothness gets reflected in how well the models are at predicting and how well they perform",
+    "start": 473.56,
+    "end": 478.38,
+    "en": "And so that smoothness gets reflected in how well the models are at predicting and how",
+    "ko": "네트워크를 더 크게 만들면, 그 분포의 더 많은 부분을 포착하게 돼."
+  },
+  {
+    "start": 478.38,
+    "end": 482.8,
+    "en": "well they perform. Language is an evolved process, right?",
     "ko": "모델이 예측하는 능력과 성능이 얼마나 좋은지에 따라 매끄러움이 반영돼."
   },
   {
-    "start": 479.94,
-    "end": 486,
-    "en": "Language is an evolved process right We've developed language We have common words",
+    "start": 482.8,
+    "end": 486.98,
+    "en": "We've developed language. We have common words and less common words.",
     "ko": "언어는 발전된 과정이야. 우리는 언어를 발전시켰고, 공통된 단어들이 있어."
   },
   {
-    "start": 486,
-    "end": 492.02,
-    "en": "and less common words We have common expressions and less common expressions We have ideas cliches",
+    "start": 486.98,
+    "end": 489.64,
+    "en": "We have common expressions and less common expressions.",
     "ko": "그리고 덜 흔한 단어들도 있고, 공통된 표현과 덜 흔한 표현도 있어. 우리는 아이디어와 클리셰가 있어."
   },
   {
-    "start": 492.02,
-    "end": 498.08,
-    "en": "that are expressed frequently and we have novel ideas And that process has developed has evolved with",
+    "start": 490.22,
+    "end": 494.74,
+    "en": "We have ideas, cliches that are expressed frequently, and we have novel ideas.",
+    "ko": "그리고 덜 흔한 단어들도 있고, 공통된 표현과 덜 흔한 표현도 있어. 우리는 아이디어와 클리셰가 있어."
+  },
+  {
+    "start": 494.88,
+    "end": 499.86,
+    "en": "And that process has developed, has evolved with humans over millions of years.",
     "ko": "자주 표현되는 것들이 있고, 새로운 아이디어도 있어. 이 과정은 수백만 년 동안 인간과 함께 발전해왔어."
   },
   {
-    "start": 498.08,
-    "end": 504.34,
-    "en": "humans over millions of years And so the guess and this is pure speculation would be",
+    "start": 500,
+    "end": 507,
+    "en": "And so the guess, and this is pure speculation, would be that there's some kind of long",
     "ko": "그래서 추측하건대, 이러한 아이디어의 분포에는 긴 꼬리 분포가 있을 거야."
   },
   {
-    "start": 504.34,
+    "start": 507,
     "end": 510.46,
-    "en": "that there's some kind of long tail distribution of the distribution of these ideas",
+    "en": "tail distribution of the distribution of these ideas.",
     "ko": "긴 꼬리가 있지만, 네가 쌓아올리는 개념의 계층의 높이도 있어. 네트워크가 클수록 더 높은 용량을 가질 거야."
   },
   {
     "start": 510.6,
-    "end": 516.7,
-    "en": "So there's the long tail but also there's the height of the hierarchy of concepts that you're building up So the bigger",
+    "end": 515.8,
+    "en": "So there's the long tail, but also there's the height of the hierarchy of concepts that you're building up.",
     "ko": "작은 네트워크를 가지면 공통적인 것만 얻을 수 있어."
   },
   {
-    "start": 516.7,
+    "start": 515.8,
+    "end": 519.98,
+    "en": "So the bigger the network, presumably you have a higher capacity to...",
+    "ko": "작은 네트워크를 가지면 공통적인 것만 얻을 수 있어."
+  },
+  {
+    "start": 520.02,
     "end": 522.92,
-    "en": "the network presumably you have a higher capacity to If you have a small network you only get the common stuff right",
+    "en": "If you have a small network, you only get the common stuff, right?",
     "ko": "작은 신경망을 사용하면 문장에 동사, 형용사, 명사가 있어야 한다는 걸 잘 이해해."
   },
   {
     "start": 523.2,
-    "end": 529.26,
-    "en": "If I take a tiny neural network it's very good at understanding that a sentence has to have verb",
+    "end": 528.08,
+    "en": "If I take a tiny neural network, it's very good at understanding that a sentence has",
     "ko": "하지만 그 동사, 형용사, 명사가 무엇이어야 하는지 결정하는 데는 형편없어."
   },
   {
-    "start": 529.3,
-    "end": 535.4,
-    "en": "adjective noun right But it's terrible at deciding what those verb adjective and noun should be and whether they should",
+    "start": 528.08,
+    "end": 530.76,
+    "en": "to have verb, adjective, noun, right?",
+    "ko": "하지만 그 동사, 형용사, 명사가 무엇이어야 하는지 결정하는 데는 형편없어."
+  },
+  {
+    "start": 530.76,
+    "end": 535.92,
+    "en": "But it's terrible at deciding what those verb, adjective, and noun should be and whether they should make sense.",
     "ko": "그게 의미가 있어야 하는지 여부도 잘 모르고."
   },
   {
-    "start": 535.4,
+    "start": 536.24,
+    "end": 538.74,
+    "en": "If I make it just a little bigger, it gets good at that.",
+    "ko": "조금만 더 키우면 그걸 잘하게 돼. 그러면 갑자기 문장에는 잘하지만 단락에는 서툴러."
+  },
+  {
+    "start": 538.94,
     "end": 541.9,
-    "en": "make sense If I make it just a little bigger it gets good at that Then suddenly it's good at the sentences but it's not good at the",
+    "en": "Then suddenly it's good at the sentences, but it's not good at the paragraphs.",
     "ko": "조금만 더 키우면 그걸 잘하게 돼. 그러면 갑자기 문장에는 잘하지만 단락에는 서툴러."
   },
   {
     "start": 541.9,
-    "end": 548.16,
-    "en": "paragraphs And so these rarer and more complex patterns get picked up as I add more capacity",
+    "end": 548.86,
+    "en": "And so these rarer and more complex patterns get picked up as I add more capacity to the",
     "ko": "그래서 더 많은 용량을 추가하면 더 희귀하고 복잡한 패턴을 잡아낼 수 있어."
   },
   {
-    "start": 548.16,
-    "end": 554.96,
-    "en": "to the Well the natural question then is what's the ceiling of this Like how complicated and",
+    "start": 549.3,
+    "end": 552.4,
+    "en": "Well, the natural question then is, what's the ceiling of this?",
     "ko": "그럼 자연스러운 질문은 이게 얼마나 복잡한지, 현실 세계의 한계가 무엇인지야."
   },
   {
-    "start": 555.1,
+    "start": 552.8,
+    "end": 556.76,
+    "en": "Like how complicated and complex is the real world?",
+    "ko": "그럼 자연스러운 질문은 이게 얼마나 복잡한지, 현실 세계의 한계가 무엇인지야."
+  },
+  {
+    "start": 557.26,
     "end": 561.3,
-    "en": "complex is the real world How much stuff is there to learn I don't think any of us knows the answer to that",
+    "en": "How much stuff is there to learn? I don't think any of us knows the answer to that question.",
     "ko": "배울 게 얼마나 많은지, 그 질문에 대한 답은 아무도 모른다고 생각해."
   },
   {
-    "start": 561.3,
-    "end": 562.1,
-    "en": "question",
-    "ko": "내 강한 직감은 인간 수준 아래에는 한계가 없다는 거야."
-  },
-  {
     "start": 562.4,
-    "end": 568.72,
-    "en": "My strong instinct would be that there's no ceiling below the level of humans right We humans are able to",
+    "end": 567,
+    "en": "My strong instinct would be that there's no ceiling below the level of humans, right?",
     "ko": "우리는 다양한 패턴을 이해할 수 있어. 그래서 모델을 계속 확장하면"
   },
   {
-    "start": 568.72,
-    "end": 574.92,
-    "en": "understand these various patterns And so that makes me think that if we continue to scale up",
+    "start": 567,
+    "end": 569.8,
+    "en": "We humans are able to understand these various patterns.",
+    "ko": "우리는 다양한 패턴을 이해할 수 있어. 그래서 모델을 계속 확장하면"
+  },
+  {
+    "start": 569.8,
+    "end": 577.8,
+    "en": "And so that makes me think that if we continue to scale up these models to kind of develop",
     "ko": "우리가 인간과 도달한 수준에 최소한 도달할 수 있을 거라고 생각해."
   },
   {
-    "start": 574.92,
-    "end": 581.4,
-    "en": "these models to kind of develop new methods for training them and scaling them up that",
+    "start": 577.92,
+    "end": 582.62,
+    "en": "new methods for training them and scaling them up, that will at least get to the level",
     "ko": "그 다음 질문은 인간보다 얼마나 더 이해할 수 있는지야."
   },
   {
-    "start": 581.4,
-    "end": 587.62,
-    "en": "will at least get to the level that we've gotten to with humans There's then a question of how much more is it",
+    "start": 582.62,
+    "end": 584.2,
+    "en": "that we've gotten to with humans.",
     "ko": "인간보다 더 똑똑하고 더 지각할 수 있는 가능성이 얼마나 될까?"
   },
   {
-    "start": 587.62,
-    "end": 594.34,
-    "en": "possible to understand than humans do How much is it possible to be smarter and more perceptive than humans I",
+    "start": 584.64,
+    "end": 589.1,
+    "en": "There's then a question of how much more is it possible to understand than humans do?",
+    "ko": "인간보다 더 똑똑하고 더 지각할 수 있는 가능성이 얼마나 될까?"
+  },
+  {
+    "start": 589.3,
+    "end": 593.28,
+    "en": "How much is it possible to be smarter and more perceptive than humans?",
     "ko": "내 생각엔 답은 분야에 따라 다를 거야. 생물학 같은 분야를 보면,"
   },
   {
-    "start": 594.34,
-    "end": 600.7,
-    "en": "would guess the answer has got to be domain dependent If I look at an area like biology",
+    "start": 593.74,
+    "end": 598.26,
+    "en": "I would guess the answer has got to be domain dependent.",
+    "ko": "내 생각엔 답은 분야에 따라 다를 거야. 생물학 같은 분야를 보면,"
+  },
+  {
+    "start": 598.26,
+    "end": 604.6,
+    "en": "If I look at an area like biology and I wrote this essay, Machines of Loving Grace, it seems",
     "ko": "나는 '사랑의 기계들'이라는 에세이를 썼는데, 인간이 생물학의 복잡성을 이해하는 데 힘들어하는 것 같아."
   },
   {
-    "start": 600.7,
-    "end": 606.82,
-    "en": "and I wrote this essay Machines of Loving Grace it seems to me that humans are",
+    "start": 604.6,
+    "end": 609.58,
+    "en": "to me that humans are struggling to understand the complexity of biology, right?",
     "ko": "스탠포드나 하버드, 버클리 같은 곳에 가면 면역 체계나 대사 경로를 연구하는 부서가 있어."
   },
   {
-    "start": 606.82,
-    "end": 613.32,
-    "en": "struggling to understand the complexity of biology right If you go to Stanford or to Harvard or to Berkeley you",
+    "start": 609.58,
+    "end": 616.04,
+    "en": "If you go to Stanford or to Harvard or to Berkeley, you have whole departments of folks",
     "ko": "각 사람은 그 중의 아주 작은 부분만 이해하고 전문화돼."
   },
   {
-    "start": 613.32,
-    "end": 619.52,
-    "en": "have whole departments of folks trying to study the immune system or metabolic",
+    "start": 616.04,
+    "end": 623.12,
+    "en": "trying to study the immune system or metabolic pathways, and each person understands only",
     "ko": "그들은 다른 인간의 지식과 결합하는 데 어려움을 겪고 있어."
   },
   {
-    "start": 619.52,
-    "end": 625.72,
-    "en": "pathways and each person understands only a tiny bit part of it specializes and",
+    "start": 623.12,
+    "end": 627.9,
+    "en": "a tiny bit part of it, specializes, and they're struggling to combine their knowledge with",
     "ko": "그래서 AI가 더 똑똑해질 여지가 많다고 직감해."
   },
   {
-    "start": 625.72,
-    "end": 631.76,
-    "en": "they're struggling to combine their knowledge with that of other humans And so I have an instinct that there's a",
+    "start": 627.9,
+    "end": 629.34,
+    "en": "that of other humans.",
     "ko": "물리적 세계의 재료나 인간 간의 갈등을 다루는 것 같은 걸 생각해보면,"
   },
   {
-    "start": 631.76,
-    "end": 638.16,
-    "en": "lot of room at the top for AIs to get smarter If I think of something like materials in",
+    "start": 629.56,
+    "end": 634.46,
+    "en": "And so I have an instinct that there's a lot of room at the top for AIs to get smarter.",
+    "ko": "물리적 세계의 재료나 인간 간의 갈등을 다루는 것 같은 걸 생각해보면,"
+  },
+  {
+    "start": 634.6,
+    "end": 642.6,
+    "en": "If I think of something like materials in the physical world or addressing conflicts",
     "ko": "이 문제들 중 일부는 해결하기 어려운 것이지만, 훨씬 더 어려울 수 있어."
   },
   {
-    "start": 638.16,
-    "end": 644.24,
-    "en": "the physical world or addressing conflicts between humans or something",
+    "start": 643,
+    "end": 647.56,
+    "en": "between humans or something like that, I mean, it may be there's only some of these problems",
     "ko": "어떤 것들은 잘할 수 있는 한계가 있을 거야. 음성 인식처럼,"
   },
   {
-    "start": 644.24,
+    "start": 647.56,
     "end": 649.62,
-    "en": "like that I mean it may be there's only some of these problems are not intractable but much harder",
+    "en": "are not intractable, but much harder.",
     "ko": "내가 네 말을 얼마나 잘 들을 수 있는지 한계가 있어."
   },
   {
     "start": 650.34,
-    "end": 656.5,
-    "en": "And it may be that there's only so well you can do with some of these things right Just like with speech recognition there's",
+    "end": 655.16,
+    "en": "And it may be that there's only so well you can do with some of these things, right?",
     "ko": "그래서 어떤 분야에서는 인간이 이룬 것과 매우 가까운 한계가 있을 거야."
   },
   {
-    "start": 656.5,
-    "end": 663.3,
-    "en": "only so clear I can hear your speech So I think in some areas there may be ceilings that",
+    "start": 655.16,
+    "end": 658.8,
+    "en": "Just like with speech recognition, there's only so clear I can hear your speech.",
+    "ko": "그래서 어떤 분야에서는 인간이 이룬 것과 매우 가까운 한계가 있을 거야."
+  },
+  {
+    "start": 658.86,
+    "end": 665.16,
+    "en": "So I think in some areas there may be ceilings that are very close to what humans have done.",
     "ko": "다른 분야에서는 그 한계가 매우 멀리 있을 수 있어. 우리는 이 시스템을 만들 때만 알게 될 거야."
   },
   {
-    "start": 663.44,
-    "end": 669.5,
-    "en": "are very close to what humans have done In other areas those ceilings may be very far away And I think we'll only find out",
+    "start": 665.28,
+    "end": 667.8,
+    "en": "In other areas, those ceilings may be very far away.",
     "ko": "미리 아는 건 매우 어려워. 우리는 추측할 수 있지만 확신할 수는 없어."
   },
   {
-    "start": 669.5,
+    "start": 668.1,
     "end": 670.62,
-    "en": "when we build these systems",
+    "en": "And I think we'll only find out when we build these systems.",
     "ko": "어떤 분야에서는 한계가 인간의 관료제와 관련이 있을 수 있어."
   },
   {
     "start": 671.36,
-    "end": 677.48,
-    "en": "It's very hard to know in advance We can speculate but we can't be sure And in some domains the ceiling might have to",
+    "end": 674.48,
+    "en": "It's very hard to know in advance. We can speculate, but we can't be sure.",
     "ko": "인간이 기본적으로 루프의 일부가 되어야 해. 그게 한계의 원인이야."
   },
   {
-    "start": 677.48,
-    "end": 684.02,
-    "en": "do with human bureaucracies and things like this as you write about So humans fundamentally have to be part of the loop That's",
+    "start": 674.76,
+    "end": 680.16,
+    "en": "And in some domains, the ceiling might have to do with human bureaucracies and things like this, as you write about.",
     "ko": "지능의 한계가 아닐 수도 있어. 이론적으로 기술은 매우 빠르게 변화할 수 있어."
   },
   {
-    "start": 684.02,
-    "end": 688.92,
-    "en": "the cause of the ceiling not maybe the limits of the intelligence Yeah I think in many cases",
+    "start": 680.44,
+    "end": 683.04,
+    "en": "So humans fundamentally have to be part of the loop.",
+    "ko": "지능의 한계가 아닐 수도 있어. 이론적으로 기술은 매우 빠르게 변화할 수 있어."
+  },
+  {
+    "start": 683.04,
+    "end": 687,
+    "en": "That's the cause of the ceiling, not maybe the limits of the intelligence.",
+    "ko": "지능의 한계가 아닐 수도 있어. 이론적으로 기술은 매우 빠르게 변화할 수 있어."
+  },
+  {
+    "start": 687.16,
+    "end": 693.64,
+    "en": "Yeah, I think in many cases, in theory, technology could change very fast.",
     "ko": "예를 들어 생물학과 관련된 모든 것들이 있을 수 있어."
   },
   {
-    "start": 689.88,
-    "end": 696.18,
-    "en": "in theory technology could change very fast For example all the things that we might invent",
-    "ko": "하지만 기억해, 우리는 이러한 것들을 인간에게 실제로 적용하기 위해 임상 시험 시스템을 거쳐야 해."
-  },
-  {
-    "start": 696.18,
+    "start": 693.88,
     "end": 697.88,
-    "en": "with respect to biology",
+    "en": "For example, all the things that we might invent with respect to biology.",
     "ko": "그건 불필요하고 관료적인 것들과 관련된 것들이 섞여 있어."
   },
   {
     "start": 698.72,
-    "end": 704.86,
-    "en": "But remember there's a clinical trial system that we have to go through to actually administer these",
+    "end": 704.5,
+    "en": "But remember, there's a clinical trial system that we have to go through to actually administer",
     "ko": "하지만 기억해, 실제로 이걸 인간에게 적용하기 위해서는 임상 시험 시스템을 거쳐야 해."
   },
   {
-    "start": 704.86,
-    "end": 711.26,
-    "en": "things to humans I think that's a mixture of things that are unnecessary and bureaucratic and things that kind of",
+    "start": 704.5,
+    "end": 705.64,
+    "en": "these things to humans.",
+    "ko": "하지만 기억해, 실제로 이걸 인간에게 적용하기 위해서는 임상 시험 시스템을 거쳐야 해."
+  },
+  {
+    "start": 705.72,
+    "end": 710.64,
+    "en": "I think that's a mixture of things that are unnecessary and bureaucratic and things that",
     "ko": "그건 불필요하고 관료적인 것들과 그런 것들이 섞인 것 같아."
   },
   {
-    "start": 711.26,
-    "end": 717.46,
-    "en": "protect the integrity of society And the whole challenge is that it's hard to tell what's going on It's hard to tell which",
+    "start": 710.64,
+    "end": 712.92,
+    "en": "kind of protect the integrity of society.",
+    "ko": "그건 불필요하고 관료적인 것들과 그런 것들이 섞인 것 같아."
+  },
+  {
+    "start": 713.08,
+    "end": 716.58,
+    "en": "And the whole challenge is that it's hard to tell what's going on.",
     "ko": "사회의 온전함을 지키는 거야. 그리고 전체적인 도전은 상황을 파악하기 힘들다는 거지."
   },
   {
-    "start": 717.46,
-    "end": 723.5,
-    "en": "is which My view is definitely I think in terms of drug development my view is",
+    "start": 716.82,
+    "end": 717.86,
+    "en": "It's hard to tell which is which.",
+    "ko": "사회의 온전함을 지키는 거야. 그리고 전체적인 도전은 상황을 파악하기 힘들다는 거지."
+  },
+  {
+    "start": 718.02,
+    "end": 724.12,
+    "en": "My view is definitely, I think, in terms of drug development, my view is that we're too",
     "ko": "어떤 게 어떤 건지 구분하기 어려워. 내 생각은 확실해."
   },
   {
-    "start": 723.5,
-    "end": 730.02,
-    "en": "that we're too slow and we're too conservative But certainly if you get these things wrong it's possible to",
+    "start": 724.12,
+    "end": 725.56,
+    "en": "slow and we're too conservative.",
     "ko": "약물 개발 측면에서 내 생각은 우리가 너무 느리고 보수적이라는 거야."
   },
   {
-    "start": 730.02,
-    "end": 736.04,
-    "en": "risk people's lives by being too reckless And so at least some of these human",
+    "start": 725.72,
+    "end": 732.92,
+    "en": "But certainly, if you get these things wrong, it's possible to risk people's lives by being",
+    "ko": "약물 개발 측면에서 내 생각은 우리가 너무 느리고 보수적이라는 거야."
+  },
+  {
+    "start": 732.92,
+    "end": 738.9,
+    "en": "too reckless. And so at least some of these human institutions are, in fact, protecting people.",
     "ko": "하지만 분명히 이런 것들을 잘못하면 사람들의 생명을 위험에 빠뜨릴 수 있어."
   },
   {
-    "start": 736.04,
-    "end": 742.34,
-    "en": "institutions are in fact protecting people So it's all about finding the balance I strongly suspect",
+    "start": 738.9,
+    "end": 741.26,
+    "en": "So it's all about finding the balance.",
     "ko": "그래서 적어도 일부 인간 기관들은 사람들을 보호하고 있어."
   },
   {
-    "start": 742.34,
-    "end": 748.44,
-    "en": "that balance is kind of more on the side of pushing to make things happen faster but there is a balance If we do hit",
+    "start": 741.5,
+    "end": 745.76,
+    "en": "I strongly suspect that balance is kind of more on the side of pushing to make things",
+    "ko": "그래서 적어도 일부 인간 기관들은 사람들을 보호하고 있어."
+  },
+  {
+    "start": 745.76,
+    "end": 747.38,
+    "en": "happen faster, but there is a balance.",
     "ko": "모든 건 균형을 찾는 거야. 나는 그 균형이 더 빨리 진행하는 쪽에 있다고 강하게 의심해."
   },
   {
-    "start": 748.44,
-    "end": 749.24,
-    "en": "a limit",
+    "start": 747.94,
+    "end": 754.3,
+    "en": "If we do hit a limit, if we do hit a slowdown in the scaling laws, what do you think would",
     "ko": "하지만 균형이 있어. 만약 우리가 한계에 도달하면,"
   },
   {
-    "start": 750.24,
-    "end": 756.38,
-    "en": "if we do hit a slowdown in the scaling laws what do you think would be the reason Is it compute limited data",
+    "start": 754.3,
+    "end": 756.7,
+    "en": "be the reason? Is it compute limited, data limited?",
     "ko": "우리가 확장 법칙에서 둔화에 도달하면, 이유가 뭐라고 생각해?"
   },
   {
-    "start": 756.38,
-    "end": 762.42,
-    "en": "limited Is it something else ideal limited So a few things Now we're talking about hitting",
+    "start": 757.34,
+    "end": 761.12,
+    "en": "Is it something else, ideal limited? So a few things.",
     "ko": "계산이 제한된 건가, 데이터가 제한된 건가, 아니면 다른 무언가가 제한된 건가?"
   },
   {
-    "start": 762.42,
-    "end": 768.46,
-    "en": "the limit before we get to the level of humans and the skill of humans So I think one",
+    "start": 761.18,
+    "end": 766.36,
+    "en": "Now we're talking about hitting the limit before we get to the level of humans and the skill of humans.",
     "ko": "몇 가지가 있어. 이제 우리는 인간 수준과 인간의 기술에 도달하기 전에 한계에 도달하는 것에 대해 이야기하고 있어."
   },
   {
-    "start": 768.46,
-    "end": 774.48,
-    "en": "that's popular today and I think could be a limit that we run into like most of the limits I",
-    "ko": "오늘날 인기 있는 것 중 하나는 우리가 마주칠 수 있는 한계일 것 같아. 대부분의 한계에 대해 나는 반대할 거야."
+    "start": 767.02,
+    "end": 773.68,
+    "en": "So I think one that's popular today, and I think could be a limit that we run into, like",
+    "ko": "몇 가지가 있어. 이제 우리는 인간 수준과 인간의 기술에 도달하기 전에 한계에 도달하는 것에 대해 이야기하고 있어."
   },
   {
-    "start": 774.48,
-    "end": 780.76,
-    "en": "would bet against it but it's definitely possible is we simply run out of data There's only so much data on the internet And",
+    "start": 773.68,
+    "end": 778.34,
+    "en": "most of the limits, I would bet against it, but it's definitely possible, is we simply run out of data.",
     "ko": "하지만 확실히 가능한 건, 우리는 단순히 데이터가 바닥날 수 있다는 거야."
   },
   {
-    "start": 780.76,
-    "end": 786.84,
-    "en": "there's issues with the quality of the data right You can get hundreds of trillions of words on the internet but",
+    "start": 778.58,
+    "end": 782.76,
+    "en": "There's only so much data on the internet. And there's issues with the quality of the data, right?",
+    "ko": "하지만 확실히 가능한 건, 우리는 단순히 데이터가 바닥날 수 있다는 거야."
+  },
+  {
+    "start": 782.76,
+    "end": 789.18,
+    "en": "You can get hundreds of trillions of words on the internet, but a lot of it is repetitive",
     "ko": "인터넷에는 한정된 데이터만 있어. 데이터의 질에도 문제가 있어."
   },
   {
-    "start": 786.84,
-    "end": 793.28,
-    "en": "a lot of it is repetitive or it's search engine optimization drivel",
+    "start": 789.42,
+    "end": 795.4,
+    "en": "or it's search engine optimization drivel, or maybe in the future it'll even be text",
     "ko": "인터넷에는 수백 조 개의 단어가 있지만, 많은 부분이 반복적이거나 검색 엔진 최적화 쓰레기야."
   },
   {
-    "start": 793.42,
+    "start": 795.4,
     "end": 796.78,
-    "en": "or maybe in the future it'll even be text generated by AIs itself",
+    "en": "generated by AIs itself.",
     "ko": "아마 미래에는 AI가 생성한 텍스트일 수도 있어."
   },
   {
     "start": 797.88,
-    "end": 804,
-    "en": "And so I think there are limits to what can be produced in this way That",
+    "end": 803.36,
+    "en": "And so I think there are limits to what can be produced in this way.",
     "ko": "그래서 이런 방식으로 생산할 수 있는 것에는 한계가 있다고 생각해."
   },
   {
-    "start": 804,
-    "end": 810.64,
-    "en": "said we and I would guess other companies are working on ways to make data synthetic where",
+    "start": 803.64,
+    "end": 809.6,
+    "en": "That said, we, and I would guess other companies, are working on ways to make data synthetic,",
+    "ko": "그래서 이런 방식으로 생산할 수 있는 것에는 한계가 있다고 생각해."
+  },
+  {
+    "start": 810.06,
+    "end": 816.58,
+    "en": "where you can use the model to generate more data of the type that you have already, or",
     "ko": "그렇지만 우리는, 그리고 다른 회사들도 이미 가지고 있는 데이터 유형으로 더 많은 데이터를 생성할 수 있는 방법을 연구하고 있어."
   },
   {
-    "start": 810.64,
-    "end": 816.86,
-    "en": "you can use the model to generate more data of the type that you have already or even",
+    "start": 816.58,
+    "end": 818.5,
+    "en": "even generate data from scratch.",
     "ko": "모델을 사용해서 데이터를 합성할 수 있는 방법을 찾고 있어."
   },
   {
-    "start": 816.86,
-    "end": 823.1,
-    "en": "generate data from scratch If you think about what was done with DeepMind's AlphaGo Zero they",
+    "start": 818.58,
+    "end": 824.42,
+    "en": "If you think about what was done with DeepMind's AlphaGo Zero, they managed to get a bot all",
     "ko": "DeepMind의 AlphaGo Zero에서 했던 일을 생각해보면,"
   },
   {
-    "start": 823.1,
-    "end": 829.1,
-    "en": "managed to get a bot all the way from no ability to play Go whatsoever to above human level just",
+    "start": 824.42,
+    "end": 830.02,
+    "en": "the way from no ability to play Go whatsoever to above human level just by playing against",
     "ko": "그들은 바둑을 전혀 할 수 없는 봇을 스스로 대결하면서 인간 수준 이상으로 끌어올렸어."
   },
   {
-    "start": 829.1,
-    "end": 835.62,
-    "en": "by playing against itself There was no example data from humans required in the AlphaGo Zero version",
+    "start": 830.02,
+    "end": 835.96,
+    "en": "itself. There was no example data from humans required in the AlphaGo Zero version of it.",
     "ko": "AlphaGo Zero 버전에서는 인간의 예시 데이터가 필요하지 않았어."
   },
   {
-    "start": 835.62,
-    "end": 841.88,
-    "en": "of it The other direction of course is these reasoning models that do chain of thought and stop to think and",
+    "start": 836.2,
+    "end": 840.84,
+    "en": "The other direction, of course, is these reasoning models that do chain of thought and stop to",
     "ko": "물론 다른 방향은 사고의 연쇄를 하고 스스로의 생각을 반성하는 추론 모델들이야."
   },
   {
-    "start": 841.88,
+    "start": 840.84,
+    "end": 843.08,
+    "en": "think and reflect on their own thinking.",
+    "ko": "물론 다른 방향은 사고의 연쇄를 하고 스스로의 생각을 반성하는 추론 모델들이야."
+  },
+  {
+    "start": 843.18,
     "end": 847.88,
-    "en": "reflect on their own thinking In a way that's another kind of synthetic data coupled with reinforcement learning",
+    "en": "In a way, that's another kind of synthetic data coupled with reinforcement learning.",
     "ko": "그건 강화 학습과 결합된 또 다른 종류의 합성 데이터야."
   },
   {
     "start": 848,
-    "end": 854.2,
-    "en": "So my guess is with one of those methods we'll get around the data limitation or there may be other sources of data that",
+    "end": 852.52,
+    "en": "So my guess is with one of those methods, we'll get around the data limitation, or there",
     "ko": "내 생각에는 그런 방법 중 하나로 데이터 제한을 극복할 수 있을 거야."
   },
   {
-    "start": 854.2,
+    "start": 852.74,
     "end": 855.14,
-    "en": "are available",
+    "en": "may be other sources of data that are available.",
     "ko": "또는 다른 데이터 소스가 있을 수도 있어."
   },
   {
-    "start": 856.18,
-    "end": 862.42,
-    "en": "We could just observe that even if there's no problem with data as we start to scale models up they just stop getting",
+    "start": 856.4,
+    "end": 860.7,
+    "en": "We could just observe that even if there's no problem with data, as we start to scale",
     "ko": "데이터에 문제가 없더라도 모델을 확장하기 시작하면 더 이상 개선되지 않는 걸 관찰할 수 있어."
   },
   {
-    "start": 862.42,
-    "end": 868.46,
-    "en": "better It seemed to be a reliable observation that they've gotten better That could just stop at",
+    "start": 860.7,
+    "end": 862.62,
+    "en": "models up, they just stop getting better.",
+    "ko": "데이터에 문제가 없더라도 모델을 확장하기 시작하면 더 이상 개선되지 않는 걸 관찰할 수 있어."
+  },
+  {
+    "start": 863.06,
+    "end": 866.84,
+    "en": "It seemed to be a reliable observation that they've gotten better.",
     "ko": "그들이 개선되었다는 건 신뢰할 수 있는 관찰이었어. 어떤 이유로 그게 멈출 수 있어."
   },
   {
-    "start": 868.46,
+    "start": 867.12,
     "end": 870.36,
-    "en": "some point for a reason we don't understand",
+    "en": "That could just stop at some point for a reason we don't understand.",
     "ko": "답은 우리가 새로운 아키텍처를 발명해야 한다는 것일 수 있어."
   },
   {
     "start": 871.74,
     "end": 877.42,
-    "en": "The answer could be that we need to invent some new architecture",
+    "en": "The answer could be that we need to invent some new architecture.",
     "ko": "과거에는 모델의 수치적 안정성 문제로 보였던 것들이 평준화되는 것처럼 보였어."
   },
   {
-    "start": 878.18,
-    "end": 881.32,
-    "en": "There have been problems in the past with",
+    "start": 878.42,
+    "end": 884.34,
+    "en": "There have been problems in the past with, say, numerical stability of models where it",
     "ko": "하지만 우리가 올바른 차단 해제를 찾았을 때, 실제로 그렇게 되지 않았어."
   },
   {
-    "start": 882.14,
-    "end": 888.94,
-    "en": "say numerical stability of models where it looked like things were leveling off but actually when we",
+    "start": 884.34,
+    "end": 890.36,
+    "en": "looked like things were leveling off, but actually when we found the right unblocker,",
     "ko": "그래서 아마 새로운 최적화 방법이나 새로운 기술이 필요할 거야."
   },
   {
-    "start": 888.96,
-    "end": 895.14,
-    "en": "found the right unblocker they didn't end up doing so So perhaps there's some new optimization method",
+    "start": 890.38,
+    "end": 891.54,
+    "en": "they didn't end up doing so.",
     "ko": "지금까지 그런 증거는 보지 못했지만, 만약 일이 둔화된다면 그게 한 이유일 수 있어."
   },
   {
-    "start": 895.14,
-    "end": 901.2,
-    "en": "or some new technique we need to unblock things I've seen no evidence of that so far but if things were",
-    "ko": "계산의 한계는 뭐야?"
+    "start": 891.7,
+    "end": 898.52,
+    "en": "So perhaps there's some new optimization method or some new technique we need to unblock things.",
+    "ko": "지금까지 그런 증거는 보지 못했지만, 만약 일이 둔화된다면 그게 한 이유일 수 있어."
   },
   {
-    "start": 901.2,
-    "end": 906.28,
-    "en": "to slow down that perhaps could be one reason What about the limits of compute",
+    "start": 898.6,
+    "end": 903.76,
+    "en": "I've seen no evidence of that so far, but if things were to slow down, that perhaps could be one reason.",
     "ko": "더 크고 더 큰 데이터 센터를 만드는 데 드는 비용이야."
   },
   {
-    "start": 907.4,
-    "end": 913.6,
-    "en": "meaning the expensive nature of building bigger and bigger data centers So right now I",
+    "start": 904.76,
+    "end": 911.66,
+    "en": "What about the limits of compute, meaning the expensive nature of building bigger and",
+    "ko": "더 크고 더 큰 데이터 센터를 만드는 데 드는 비용이야."
+  },
+  {
+    "start": 911.66,
+    "end": 912.46,
+    "en": "bigger data centers?",
     "ko": "지금 대부분의 최전선 모델 회사들은 대략 10억 규모에서 운영하고 있을 거야."
   },
   {
-    "start": 913.6,
-    "end": 920.4,
-    "en": "think most of the frontier model companies I would guess are operating in roughly 1",
+    "start": 912.56,
+    "end": 918.28,
+    "en": "So right now, I think most of the frontier model companies, I would guess, are operating",
+    "ko": "지금 대부분의 최전선 모델 회사들은 대략 10억 규모에서 운영하고 있을 거야."
+  },
+  {
+    "start": 918.3,
+    "end": 923.3,
+    "en": "in roughly $1 billion scale, plus or minus a factor of three.",
     "ko": "그 모델들이 지금 존재하거나 훈련되고 있어."
   },
   {
-    "start": 920.78,
-    "end": 927.44,
-    "en": "billion scale plus or minus a factor of three Those are the models that exist now or are being trained now I",
+    "start": 923.38,
+    "end": 926.5,
+    "en": "Those are the models that exist now or are being trained now.",
     "ko": "내 생각에 내년에는 몇 억으로 갈 거고, 2026년에는 100억 이상으로 갈 거야."
   },
   {
-    "start": 927.44,
-    "end": 934.24,
-    "en": "think next year we're going to go to a few billion and then 2026 we may go to above",
+    "start": 927.34,
+    "end": 934.32,
+    "en": "I think next year, we're going to go to a few billion, and then 2026, we may go to above",
     "ko": "아마 2027년에는 1000억 클러스터를 만들겠다는 야망이 있을 거야."
   },
   {
     "start": 934.68,
-    "end": 941.48,
-    "en": "10 billion and probably by 2027 their ambitions to build 100 billion",
+    "end": 941.98,
+    "en": "$10 billion, and probably by 2027, their ambitions to build $100 billion clusters.",
     "ko": "나는 그 모든 일이 실제로 일어날 거라고 생각해."
   },
   {
-    "start": 941.48,
-    "end": 947.5,
-    "en": "clusters I think all of that actually will happen There's a lot of determination to build the compute to do",
+    "start": 942.38,
+    "end": 944.42,
+    "en": "I think all of that actually will happen.",
     "ko": "계산 능력을 구축하려는 결단력이 많아."
   },
   {
-    "start": 947.5,
-    "end": 953.58,
-    "en": "it within this country and I would guess that it actually does happen Now if we get to 100 billion",
+    "start": 944.86,
+    "end": 949.66,
+    "en": "There's a lot of determination to build the compute to do it within this country, and",
+    "ko": "계산 능력을 구축하려는 결단력이 많아."
+  },
+  {
+    "start": 949.66,
+    "end": 951.38,
+    "en": "I would guess that it actually does happen.",
     "ko": "이 나라 안에서 실제로 일어나는 것 같아. 이제 1000억에 도달하면"
   },
   {
-    "start": 953.96,
-    "end": 960.02,
-    "en": "that's still not enough compute that's still not enough scale then either we need even more scale or we",
+    "start": 951.38,
+    "end": 956.18,
+    "en": "Now, if we get to $100 billion, that's still not enough compute, that's still not enough",
+    "ko": "이 나라 안에서 실제로 일어나는 것 같아. 이제 1000억에 도달하면"
+  },
+  {
+    "start": 956.18,
+    "end": 961.88,
+    "en": "scale, then either we need even more scale or we need to develop some way of doing it",
     "ko": "그건 여전히 부족해. 더 많은 규모가 필요해. 아니면"
   },
   {
-    "start": 960.02,
-    "end": 966.14,
-    "en": "need to develop some way of doing it more efficiently of shifting the curve I think between all of these one of the",
+    "start": 961.88,
+    "end": 963.36,
+    "en": "more efficiently, of shifting the curve.",
     "ko": "더 효율적으로 할 방법을 개발해야 해. 곡선을 바꾸는 방법이 필요해."
   },
   {
-    "start": 966.14,
-    "end": 972.26,
-    "en": "reasons I'm bullish about powerful AI happening so fast is just that if you extrapolate the next few",
+    "start": 963.82,
+    "end": 969.26,
+    "en": "I think between all of these, one of the reasons I'm bullish about powerful AI happening so",
+    "ko": "더 효율적으로 할 방법을 개발해야 해. 곡선을 바꾸는 방법이 필요해."
+  },
+  {
+    "start": 969.26,
+    "end": 974.2,
+    "en": "fast is just that if you extrapolate the next few points on the curve, we're very quickly",
     "ko": "내가 강력한 AI가 이렇게 빠르게 발전할 것이라고 생각하는 이유 중 하나는"
   },
   {
-    "start": 972.26,
-    "end": 978.32,
-    "en": "points on the curve we're very quickly getting towards human level ability right Some of the new models",
+    "start": 974.2,
+    "end": 977.06,
+    "en": "getting towards human-level ability, right?",
     "ko": "곡선의 다음 몇 포인트를 추정해보면, 우리는 인간 수준의 능력에 빠르게 다가가고 있어."
   },
   {
-    "start": 978.32,
-    "end": 984.38,
-    "en": "that we developed some reasoning models that have come from other companies they're starting to get to what I would call",
-    "ko": "우리가 개발한 새로운 모델들 중 일부는 다른 회사에서 온 추론 모델들이야."
+    "start": 977.06,
+    "end": 981.6,
+    "en": "Some of the new models that we developed, some reasoning models that have come from",
+    "ko": "곡선의 다음 몇 포인트를 추정해보면, 우리는 인간 수준의 능력에 빠르게 다가가고 있어."
   },
   {
-    "start": 984.38,
-    "end": 990.44,
-    "en": "the PhD or professional level right If you look at their coding ability the latest model",
+    "start": 981.6,
+    "end": 986.68,
+    "en": "other companies, they're starting to get to what I would call the PhD or professional level, right?",
     "ko": "그들은 내가 말하는 박사 또는 전문 수준에 도달하기 시작했어."
   },
   {
-    "start": 990.44,
-    "end": 991.24,
-    "en": "we released",
+    "start": 986.68,
+    "end": 994.26,
+    "en": "If you look at their coding ability, the latest model we released, SONNET 3.5, the new or",
     "ko": "그들의 코딩 능력을 보면, 우리가 방금 출시한 최신 모델인"
   },
   {
-    "start": 991.96,
-    "end": 998.26,
-    "en": "SONNET 3 5 the new or updated version it gets something like 50 on SWEBench and",
+    "start": 994.26,
+    "end": 999.48,
+    "en": "updated version, it gets something like 50% on SWEBench, and SWEBench is an example of",
     "ko": "SONNET 3.5는 SWEBench에서 50점 정도를 기록했어."
   },
   {
-    "start": 998.26,
-    "end": 1004.26,
-    "en": "SWEBench is an example of a bunch of professional real world software engineering tasks At the",
+    "start": 999.48,
+    "end": 1003.02,
+    "en": "a bunch of professional real-world software engineering tasks.",
     "ko": "SWEBench는 여러 전문적인 실제 소프트웨어 엔지니어링 작업의 예시야."
   },
   {
-    "start": 1004.26,
-    "end": 1010.46,
-    "en": "beginning of the year I think the state of the art was 3 or 4 So in 10 months we've gone",
+    "start": 1003.02,
+    "end": 1008.66,
+    "en": "At the beginning of the year, I think the state-of-the-art was 3% or 4%.",
+    "ko": "SWEBench는 여러 전문적인 실제 소프트웨어 엔지니어링 작업의 예시야."
+  },
+  {
+    "start": 1008.66,
+    "end": 1013.14,
+    "en": "So in 10 months, we've gone from 3% to 50% on this task.",
     "ko": "연초에 최첨단 수준은 3이나 4였던 것 같아. 그래서 10개월 만에"
   },
   {
-    "start": 1010.46,
-    "end": 1016.46,
-    "en": "from 3 to 50 on this task And I think in another year we'll probably be at 90 I mean",
+    "start": 1013.36,
+    "end": 1015.92,
+    "en": "And I think in another year, we'll probably be at 90%.",
     "ko": "이 작업에서 3에서 50으로 상승했어. 그리고 내 생각에 내년에는 아마 90에 이를 거야."
   },
   {
-    "start": 1016.46,
-    "end": 1022.62,
-    "en": "I don't know but it might even be less than that We've seen similar things in graduate",
+    "start": 1015.92,
+    "end": 1019.64,
+    "en": "I mean, I don't know, but it might even be less than that.",
+    "ko": "이 작업에서 3에서 50으로 상승했어. 그리고 내 생각에 내년에는 아마 90에 이를 거야."
+  },
+  {
+    "start": 1020.18,
+    "end": 1026.08,
+    "en": "We've seen similar things in graduate-level math, physics, and biology from models like",
     "ko": "내가 잘 모르겠지만, 그보다 낮을 수도 있어."
   },
   {
-    "start": 1022.62,
+    "start": 1026.32,
     "end": 1027.12,
-    "en": "level math physics and biology from models like OpenAI's O1",
-    "ko": "우리는 OpenAI의 O1 같은 모델에서 대학 수준의 수학, 물리학, 생물학에서도 비슷한 것을 봤어."
+    "en": "OpenAI's O1.",
+    "ko": ""
   },
   {
     "start": 1028.62,
-    "end": 1034.8,
-    "en": "So if we just continue to extrapolate this right in terms of skill that we have I",
+    "end": 1034.9,
+    "en": "So if we just continue to extrapolate this, right, in terms of skill that we have, I think",
     "ko": "그러니까 우리가 가진 기술 측면에서 계속 추정해보면,"
   },
   {
-    "start": 1034.8,
-    "end": 1041.34,
-    "en": "think if we extrapolate the straight curve within a few years we will get to these models being above",
+    "start": 1034.9,
+    "end": 1040.32,
+    "en": "if we extrapolate the straight curve, within a few years, we will get to these models being",
     "ko": "몇 년 안에 이 모델들이 인간의 최고 전문 수준을 넘어설 거라고 생각해."
   },
   {
-    "start": 1041.34,
-    "end": 1047.36,
-    "en": "the highest professional level in terms of humans Now will that curve continue You've pointed to and I've pointed to a",
+    "start": 1040.78,
+    "end": 1043.78,
+    "en": "above the highest professional level in terms of humans.",
+    "ko": "몇 년 안에 이 모델들이 인간의 최고 전문 수준을 넘어설 거라고 생각해."
+  },
+  {
+    "start": 1043.86,
+    "end": 1045.04,
+    "en": "Now, will that curve continue?",
     "ko": "그 곡선이 계속 이어질지는 모르겠어. 너도 지적했듯이"
   },
   {
-    "start": 1047.36,
-    "end": 1053.52,
-    "en": "lot of possible reasons why that might not happen But if the extrapolation curve continues that",
-    "ko": "그렇지 않을 이유가 많아. 하지만 추정 곡선이 계속 이어진다면"
+    "start": 1045.7,
+    "end": 1050.62,
+    "en": "You've pointed to and I've pointed to a lot of possible reasons why that might not happen.",
+    "ko": "그 곡선이 계속 이어질지는 모르겠어. 너도 지적했듯이"
   },
   {
-    "start": 1053.52,
+    "start": 1050.7,
     "end": 1054.54,
-    "en": "is the trajectory we're on",
+    "en": "But if the extrapolation curve continues, that is the trajectory we're on.",
     "ko": "그게 우리가 가고 있는 궤도야."
   }
 ]

@@ -1,1076 +1,1298 @@
 [
   {
     "start": 2.7,
-    "end": 8.8,
-    "en": "Is there a problem that just haunts you it sits there in the dark corners you know twin prime conjecture Riemann",
+    "end": 8.46,
+    "en": "Is there a problem that just haunts you, it sits there in the dark corners, you know, twin prime conjecture,",
     "ko": "너를 괴롭히는 문제가 있어? 어둠 속 구석에 자리 잡고 있는 그런 거."
   },
   {
-    "start": 8.8,
-    "end": 9.6,
-    "en": "hypothesis",
+    "start": 8.78,
+    "end": 11.06,
+    "en": "Riemann hypothesis, global conjecture?",
     "ko": "리만 가설."
   },
   {
-    "start": 10.28,
-    "end": 16.44,
-    "en": "global conjecture Twin prime again so I mean the problem is like the Riemann hypothesis those are so",
+    "start": 11.38,
+    "end": 17.06,
+    "en": "Twin prime, again, so I mean, the problem is like the Riemann hypothesis, those are so far out of reach.",
     "ko": "쌍둥이 소수 추측, 다시 말해 그 문제는 리만 가설처럼 너무 멀리 있어."
   },
   {
-    "start": 16.44,
-    "end": 22.48,
-    "en": "far out of reach Oh you think so Yeah there's no even viable strategy like even if I",
+    "start": 17.68,
+    "end": 23.48,
+    "en": "Oh, you think so? Yeah, there's no even viable strategy, like even if I activate all the cheats",
     "ko": "그래, 그렇게 생각해? 응, 이 문제에 대해 내가 아는 모든 치트를 활성화해도 방법이 없어."
   },
   {
-    "start": 22.48,
-    "end": 29.22,
-    "en": "activate all the cheats that I know of in this problem like there's just still no way to get me to be like",
+    "start": 23.48,
+    "end": 27.94,
+    "en": "that I know of in this problem, like there's just still no way to get me to be,",
     "ko": "그건..."
   },
   {
-    "start": 29.22,
-    "end": 30.02,
-    "en": "it's",
+    "start": 28.62,
+    "end": 33.7,
+    "en": "like it's, I think it needs a breakthrough",
     "ko": "다른 수학 분야에서 혁신이 일어나야 할 것 같아. 누군가가 그게 이 문제에 유용하다고 인식해야 해."
   },
   {
-    "start": 31.76,
-    "end": 37.82,
-    "en": "I think it needs a breakthrough in another area of mathematics to happen first and for someone to recognize that",
+    "start": 33.7,
+    "end": 39.62,
+    "en": "in another area of mathematics to happen first, and for someone to recognize that that would be a useful thing",
     "ko": "그래서 잠깐 물러나서 소수에 대해 이야기해보자."
   },
   {
-    "start": 37.82,
-    "end": 44.06,
-    "en": "that would be a useful thing to transport into this problem So we should maybe step back for a",
+    "start": 39.62,
+    "end": 45.4,
+    "en": "to transport into this problem. So we should maybe step back for a little bit and just talk about prime numbers.",
     "ko": "소수는 수학의 원자라고 불려. 이 원자들이 제공하는 구조에 대해 말해줄래?"
   },
   {
-    "start": 44.06,
-    "end": 50.36,
-    "en": "little bit and just talk about prime numbers So they're often referred to as the atoms of mathematics Can you just",
+    "start": 45.98,
+    "end": 49,
+    "en": "So they're often referred to as the atoms of mathematics.",
     "ko": "자연수는 두 가지 기본 연산이 있어."
   },
   {
-    "start": 50.36,
-    "end": 56.42,
-    "en": "speak to the structure that these atoms provide So the natural numbers have two basic operations",
+    "start": 49.46,
+    "end": 53.68,
+    "en": "Can you just speak to the structure that these atoms provide?",
     "ko": "덧셈과 곱셈."
   },
   {
-    "start": 56.88,
+    "start": 53.68,
     "end": 58.02,
-    "en": "addition and multiplication",
+    "en": "So the natural numbers have two basic operations, addition and multiplication.",
     "ko": "자연수를 생성하고 싶다면 두 가지 방법 중 하나를 선택할 수 있어. 하나로 시작해서 계속 더해가면 자연수가 생성돼."
   },
   {
     "start": 59.56,
+    "end": 62.74,
+    "en": "So if you want to generate the natural numbers, you can do one of two things. You can just start with one",
+    "ko": "덧셈으로는 아주 쉽게 생성할 수 있어. 1, 2, 3, 4, 5."
+  },
+  {
+    "start": 62.74,
     "end": 65.62,
-    "en": "So if you want to generate the natural numbers you can do one of two things You can just start with one and add one to itself over and over again and that generates you the natural numbers",
+    "en": "and add one to itself over and over again, and that generates you the natural numbers.",
     "ko": "덧셈으로는 아주 쉽게 생성할 수 있어. 1, 2, 3, 4, 5."
   },
   {
     "start": 66.08,
     "end": 68.34,
-    "en": "So additively they're very easy to generate one two three four five",
+    "en": "So additively, they're very easy to generate, one, two, three, four, five.",
     "ko": "혹은 소수를 사용해서 곱셈으로 생성하고 싶다면 2, 3, 5, 7 같은 모든 소수를 곱하면 돼."
   },
   {
     "start": 69.06,
+    "end": 72.74,
+    "en": "Or you can take the prime number, if you want to generate multiplicatively, you can take all the prime numbers,",
+    "ko": "그렇게 하면 자연수를 모두 얻을 수 있어, 아마 1을 제외하고."
+  },
+  {
+    "start": 72.82,
     "end": 74.86,
-    "en": "Or you can take the prime number if you want to generate multiplicatively you can take all the prime numbers two three five seven and multiply them all together",
+    "en": "two, three, five, seven, and multiply them all together.",
     "ko": "그렇게 하면 자연수를 모두 얻을 수 있어, 아마 1을 제외하고."
   },
   {
     "start": 76,
     "end": 79.48,
-    "en": "And together that gives you all the natural numbers except maybe for one",
+    "en": "And together, that gives you all the natural numbers, except maybe for one.",
     "ko": "자연수를 덧셈 관점과 곱셈 관점에서 생각할 수 있는 두 가지 방법이 있어."
   },
   {
     "start": 80.22,
-    "end": 85.8,
-    "en": "So there are these two separate ways of thinking about the natural numbers from an additive point of view and a multiplicative point of view",
+    "end": 84.4,
+    "en": "So there are these two separate ways of thinking about the natural numbers, from an additive point of view",
     "ko": "따로따로 보면 그렇게 나쁘지 않아."
   },
   {
-    "start": 86.98,
+    "start": 84.4,
     "end": 88.58,
-    "en": "And separately they're not so bad",
+    "en": "and a multiplicative point of view. And separately, they're not so bad.",
     "ko": "덧셈만 관련된 자연수에 대한 질문은 상대적으로 쉽게 풀 수 있어."
   },
   {
     "start": 89.42,
-    "end": 95.54,
-    "en": "So any question about the natural numbers that only involves addition is relatively easy to solve And any question that only involves",
+    "end": 94.08,
+    "en": "So any question about the natural numbers that only involves addition is relatively easy to solve.",
     "ko": "곱셈만 관련된 질문도 상대적으로 쉽게 풀 수 있어."
   },
   {
-    "start": 95.54,
+    "start": 94.58,
+    "end": 97.38,
+    "en": "And any question that only involves multiplication is relatively easy to solve.",
+    "ko": "하지만 두 가지를 결합하면 갑자기 매우 복잡해져."
+  },
+  {
+    "start": 98.5,
     "end": 101.12,
-    "en": "multiplication is relatively easy to solve But what has been frustrating is that you combine the two together",
+    "en": "But what has been frustrating is that you combine the two together,",
     "ko": "하지만 두 가지를 결합하면 갑자기 매우 복잡해져."
   },
   {
     "start": 102.7,
-    "end": 108.98,
-    "en": "and suddenly you get this extremely rich I mean we know that there are statements in number theory that are actually as undecidable There",
+    "end": 106.32,
+    "en": "and suddenly you get this extremely rich, I mean, we know that there are statements",
     "ko": "우리는 수론에서 실제로 결정할 수 없는 명제가 있다는 걸 알고 있어."
   },
   {
-    "start": 108.98,
+    "start": 106.32,
+    "end": 108.42,
+    "en": "in number theory that are actually as undecidable.",
+    "ko": "우리는 수론에서 실제로 결정할 수 없는 명제가 있다는 걸 알고 있어."
+  },
+  {
+    "start": 108.82,
+    "end": 112.46,
+    "en": "There are certain polynomials in some number of variables. Is there a solution in the natural numbers?",
+    "ko": "몇 개의 변수로 이루어진 특정 다항식이 자연수에 해가 있는지 여부는 결정할 수 없는 명제에 따라 달라."
+  },
+  {
+    "start": 112.98,
     "end": 115.26,
-    "en": "are certain polynomials in some number of variables Is there a solution in the natural numbers And the answer depends on an undecidable statement",
+    "en": "And the answer depends on an undecidable statement,",
     "ko": "몇 개의 변수로 이루어진 특정 다항식이 자연수에 해가 있는지 여부는 결정할 수 없는 명제에 따라 달라."
   },
   {
     "start": 115.9,
     "end": 119.94,
-    "en": "like whether the axioms of mathematics are consistent or not",
+    "en": "like whether the axioms of mathematics are consistent or not.",
     "ko": "수학의 공리가 일관된지 아닌지 같은 거."
   },
   {
     "start": 123.2,
-    "end": 129.36,
-    "en": "But even the simplest problems that combine something multiplicative such as the primes with something additive such as shifting by",
+    "end": 128.54,
+    "en": "But even the simplest problems that combine something multiplicative, such as the primes, with something additive,",
     "ko": "가장 간단한 문제조차도 곱셈적인 것과 덧셈적인 것을 결합하면 어려워."
   },
   {
-    "start": 129.36,
-    "end": 134.72,
-    "en": "two Separately we understand both of them well but if you ask when you shift the prime by two",
+    "start": 128.62,
+    "end": 133.32,
+    "en": "such as shifting by two. Separately, we understand both of them well, but if you ask,",
     "ko": "따로따로는 잘 이해하지만, 소수를 2만큼 이동했을 때 또 다른 소수를 얻을 수 있는 빈도는?"
   },
   {
-    "start": 135.5,
+    "start": 133.64,
     "end": 137.72,
-    "en": "can you get a how often can you get another prime",
+    "en": "when you shift the prime by two, can you get a, how often can you get another prime?",
     "ko": "두 가지를 연결하는 게 정말 힘들어."
   },
   {
     "start": 139.16,
+    "end": 142.12,
+    "en": "It's been amazingly hard to relate the two.",
+    "ko": "쌍둥이 소수 추측은 바로 그거야."
+  },
+  {
+    "start": 142.12,
     "end": 145.26,
-    "en": "It's been amazingly hard to relate the two And we should say that the twin prime conjecture is just that",
+    "en": "And we should say that the twin prime conjecture is just that.",
     "ko": "쌍둥이 소수 추측은 바로 그거야."
   },
   {
     "start": 146.22,
     "end": 149.88,
-    "en": "It posits that there are infinitely many pairs of prime numbers that differ by two",
+    "en": "It posits that there are infinitely many pairs of prime numbers that differ by two.",
     "ko": "2만큼 차이나는 소수 쌍이 무한히 많다고 주장해."
   },
   {
     "start": 151.22,
-    "end": 157.44,
-    "en": "Now the interesting thing is that you have been very successful at pushing forward the field in",
+    "end": 157,
+    "en": "Now, the interesting thing is that you have been very successful at pushing forward the field",
     "ko": "재미있는 건, 너가 이 복잡한 질문에 대한 답을 찾는 데 매우 성공적이었다는 거야."
   },
   {
-    "start": 157.44,
-    "end": 159.04,
-    "en": "answering these complicated questions",
+    "start": 157,
+    "end": 161.54,
+    "en": "in answering these complicated questions of this variety,",
     "ko": "너가 언급한 그린-타일 정리처럼, 소수는 어떤 길이의 산술 수열을 포함한다는 걸 증명했어."
   },
   {
-    "start": 160.26,
-    "end": 166.62,
-    "en": "of this variety like you mentioned the Green Tile Theorem It proves that prime numbers contain arithmetic",
+    "start": 161.62,
+    "end": 165.74,
+    "en": "like you mentioned the Green Tile Theorem. It proves that prime numbers",
     "ko": "그런 걸 증명할 수 있다니 정말 놀라워."
   },
   {
-    "start": 166.62,
-    "end": 172.74,
-    "en": "progressions of any length Which is mind blowing that you could prove something like that Right Yeah so what we've realized",
+    "start": 165.74,
+    "end": 167.8,
+    "en": "contain arithmetic progressions of any length.",
+    "ko": "그런 걸 증명할 수 있다니 정말 놀라워."
+  },
+  {
+    "start": 168.44,
+    "end": 170.92,
+    "en": "Which is mind-blowing that you could prove something like that. Right.",
     "ko": "그래서 우리가 이 연구 덕분에 깨달은 건, 서로 다른 패턴이 서로 다른 수준의 불변성을 가진다는 거야."
   },
   {
-    "start": 172.74,
-    "end": 179.54,
-    "en": "because of this type of research is that different patterns have different levels of",
+    "start": 171.1,
+    "end": 176.98,
+    "en": "Yeah, so what we've realized because of this type of research is that different patterns",
     "ko": "쌍둥이 소수 문제가 어려운 이유는, 세상에 있는 모든 소수를 가져오면 3, 5, 7, 11 같은 것들이 있어."
   },
   {
-    "start": 179.54,
-    "end": 180.34,
-    "en": "indestructibility",
+    "start": 176.98,
+    "end": 180.16,
+    "en": "have different levels of indestructibility.",
     "ko": "그 중에 쌍둥이 소수가 있어. 11과 13이 쌍둥이 소수 쌍이야."
   },
   {
     "start": 181.64,
-    "end": 187.94,
-    "en": "So what makes the twin prime problem hard is that if you take all the primes in the world you know three five seven 11 so",
+    "end": 185.44,
+    "en": "So what makes the twin prime problem hard is that if you take all the primes in the world,",
     "ko": "하지만 원한다면 쉽게 쌍둥이를 없앨 수 있어."
   },
   {
-    "start": 187.94,
-    "end": 193.96,
-    "en": "forth there are some twins in there 11 and 13 is a pair of twin primes and so forth But you could",
+    "start": 185.58,
+    "end": 189.42,
+    "en": "you know, three, five, seven, 11, so forth, there are some twins in there,",
     "ko": "쌍둥이는 나타나고 무한히 많지만, 사실 꽤 드물어."
   },
   {
-    "start": 193.96,
+    "start": 189.46,
+    "end": 192.4,
+    "en": "11 and 13 is a pair of twin primes and so forth.",
+    "ko": "쌍둥이는 나타나고 무한히 많지만, 사실 꽤 드물어."
+  },
+  {
+    "start": 192.74,
     "end": 195.42,
-    "en": "easily if you wanted to",
+    "en": "But you could easily, if you wanted to,",
     "ko": "처음에는 꽤 많지만, 백만, 조로 가면 점점 더 희귀해져."
   },
   {
     "start": 196.4,
     "end": 200.2,
-    "en": "redact the primes to get rid of these twins",
+    "en": "redact the primes to get rid of these twins,",
     "ko": "누군가 소수 데이터베이스에 접근할 수 있다면, 몇 개의 소수를 삭제할 수 있어."
   },
   {
     "start": 201.22,
     "end": 204.62,
-    "en": "the twins they show up and there are infinitely many of them but they're actually reasonably sparse",
+    "en": "the twins, they show up and there are infinitely many of them, but they're actually reasonably sparse.",
     "ko": ""
   },
   {
     "start": 205.44,
-    "end": 211.54,
-    "en": "There's not I mean initially there's quite a few but once you got to the millions trillions they become rarer and rarer And you could",
+    "end": 209.16,
+    "en": "There's not, I mean, initially there's quite a few, but once you got to the millions, trillions,",
     "ko": ""
   },
   {
-    "start": 211.54,
-    "end": 217.66,
-    "en": "actually just if someone was given access to the database of primes you just edit out a few primes here",
+    "start": 209.5,
+    "end": 214.5,
+    "en": "they become rarer and rarer. And you could actually just, if someone was given access",
     "ko": ""
   },
   {
-    "start": 217.66,
-    "end": 223.7,
-    "en": "and there they could make the twin prime conjecture false by just removing like 0 01 of the primes or something Just",
+    "start": 214.5,
+    "end": 217.94,
+    "en": "to the database of primes, you just edit out a few primes here and there,",
+    "ko": ""
+  },
+  {
+    "start": 218.38,
+    "end": 222.7,
+    "en": "they could make the twin prime conjecture false by just removing like 0.01% of the primes or something.",
     "ko": "거기서 쌍둥이 소수 추측을 틀리게 만들 수 있어. 소수 몇 개만 없애면 돼."
   },
   {
-    "start": 223.7,
-    "end": 230.4,
-    "en": "well chosen to do this And so you could present a",
+    "start": 223.3,
+    "end": 226.72,
+    "en": "Just well-chosen to do this.",
+    "ko": "거기서 쌍둥이 소수 추측을 틀리게 만들 수 있어. 소수 몇 개만 없애면 돼."
+  },
+  {
+    "start": 227.52,
+    "end": 231.86,
+    "en": "And so you could present a censored database of the primes,",
     "ko": "잘 선택된 방법이야. 그래서"
   },
   {
-    "start": 230.4,
-    "end": 236.52,
-    "en": "censored database of the primes which passes all of the statistical tests of the primes you know it obeys things",
+    "start": 231.98,
+    "end": 237.24,
+    "en": "which passes all of the statistical tests of the primes, you know, it obeys things like the prime number theorem",
     "ko": "소수의 검열된 데이터베이스를 제시할 수 있어. 모든 통계 테스트를 통과하고"
   },
   {
-    "start": 236.52,
+    "start": 237.24,
     "end": 240.56,
-    "en": "like the prime number theorem and other things about the primes but doesn't contain any twin primes anymore",
+    "en": "and other things about the primes, but doesn't contain any twin primes anymore.",
     "ko": "소수 정리 같은 것들을 따르지만, 더 이상 쌍둥이 소수는 포함되지 않아."
   },
   {
     "start": 241.42,
-    "end": 247.7,
-    "en": "And this is a real obstacle to the twin prime conjecture It means that any proof strategy to",
+    "end": 243.9,
+    "en": "And this is a real obstacle to the twin prime conjecture.",
     "ko": "이건 쌍둥이 소수 추측에 진짜 장애물이야. 실제 소수에서 쌍둥이 소수를 찾기 위한"
   },
   {
-    "start": 247.7,
-    "end": 254.02,
-    "en": "actually find twin primes in the actual primes must fail when applied to these slightly edited",
+    "start": 244.26,
+    "end": 250.18,
+    "en": "It means that any proof strategy to actually find twin primes in the actual primes",
+    "ko": "이건 쌍둥이 소수 추측에 진짜 장애물이야. 실제 소수에서 쌍둥이 소수를 찾기 위한"
+  },
+  {
+    "start": 250.34,
+    "end": 254.32,
+    "en": "must fail when applied to these slightly edited primes.",
     "ko": "어떤 증명 전략도 이 약간 수정된 소수에 적용하면 실패해야 해."
   },
   {
-    "start": 254.02,
-    "end": 260.32,
-    "en": "primes And so it must be some very subtle delicate feature of the primes that",
+    "start": 255.04,
+    "end": 259.52,
+    "en": "And so it must be some very subtle, delicate feature of the primes",
     "ko": "그래서 소수의 아주 미세한 특징이 있어."
   },
   {
-    "start": 260.32,
-    "end": 261.96,
-    "en": "you can't just get from like",
+    "start": 259.88,
+    "end": 264.2,
+    "en": "that you can't just get from like aggregate statistical analysis.",
     "ko": "그냥 통계 분석으로는 알 수 없어."
   },
   {
-    "start": 262.94,
-    "end": 269.12,
-    "en": "aggregate statistical analysis Okay so that's out Yeah On the other hand ethnic progressions has turned out to be",
+    "start": 264.62,
+    "end": 269.84,
+    "en": "Okay, so that's out. Yeah. On the other hand, ethnic progressions has turned out to be much more robust.",
     "ko": "그래서 그건 안 돼. 반면에, 정수의 진행은 훨씬 더 강력해."
   },
   {
-    "start": 269.12,
-    "end": 275.36,
-    "en": "much more robust Like you can take the primes and you can eliminate 99 of the primes actually and you can take",
+    "start": 270.42,
+    "end": 273.82,
+    "en": "Like you can take the primes and you can eliminate 99% of the primes actually,",
     "ko": "소수를 가져와서 실제로 99%를 없앨 수 있어."
   },
   {
-    "start": 275.36,
-    "end": 280.68,
-    "en": "any 99 that you want And it turns out and another thing we proved is that you still get ethnic progressions",
+    "start": 274.28,
+    "end": 279.16,
+    "en": "and you can take any 99% that you want. And it turns out, and another thing we proved is that",
     "ko": "원하는 99개를 선택할 수 있어. 그리고 또 하나 우리가 증명한 건"
   },
   {
-    "start": 281.72,
-    "end": 288.14,
-    "en": "Ethnic progressions are much you know they're like cockroaches Of arbitrary length Yes yes That's crazy",
+    "start": 279.16,
+    "end": 284.32,
+    "en": "you still get ethnic progressions. Ethnic progressions are much, you know, they're like cockroaches.",
+    "ko": ""
+  },
+  {
+    "start": 284.64,
+    "end": 288.62,
+    "en": "Of arbitrary length. Yes, yes. That's crazy. Yeah.",
     "ko": "여전히 정수의 진행이 생긴다는 거야."
   },
   {
-    "start": 288.42,
-    "end": 294.76,
-    "en": "Yeah So for people who don't know ethnic progressions is a sequence of numbers that differ by some",
+    "start": 289.28,
+    "end": 295.24,
+    "en": "So for people who don't know, ethnic progressions is a sequence of numbers that differ by some fixed amount.",
     "ko": "정수의 진행은 마치 바퀴벌레처럼 무한히 길 수 있어."
   },
   {
-    "start": 294.76,
-    "end": 300.94,
-    "en": "fixed amount Yeah It's again like it's an infinite monkey type phenomenon For any fixed length of your set you don't",
+    "start": 295.3,
+    "end": 298.16,
+    "en": "Yeah. It's again like, it's an infinite monkey type phenomenon.",
     "ko": "그래, 그건 미쳤어."
   },
   {
-    "start": 300.94,
+    "start": 298.64,
+    "end": 302,
+    "en": "For any fixed length of your set, you don't get arbitrary length progressions.",
+    "ko": "그래, 그건 미쳤어."
+  },
+  {
+    "start": 302.08,
     "end": 307.38,
-    "en": "get arbitrary length progressions You only get quite short progressions But you're saying twin primes not an infinite monkey phenomenon",
+    "en": "You only get quite short progressions. But you're saying twin primes, not an infinite monkey phenomenon.",
     "ko": "정수의 진행은 일정한 양만큼 차이가 나는 숫자의 수열이야."
   },
   {
     "start": 307.74,
-    "end": 308.74,
-    "en": "I mean it's a very subtle",
+    "end": 311.16,
+    "en": "I mean, it's a very subtle, it's still an infinite monkey phenomenon.",
     "ko": "무한한 원숭이 현상 같은 거지. 고정된 길이의 집합에 대해"
   },
   {
-    "start": 309.44,
+    "start": 311.36,
     "end": 315.88,
-    "en": "it's still an infinite monkey phenomenon Right yeah If the primes were really genuinely random if the primes were generated by",
+    "en": "Right, yeah. If the primes were really genuinely random, if the primes were generated by monkeys,",
     "ko": "임의의 길이의 진행은 얻지 못해. 짧은 진행만 얻을 수 있어."
   },
   {
-    "start": 315.88,
-    "end": 316.68,
-    "en": "monkeys",
-    "ko": "하지만 쌍둥이 소수는 무한한 원숭이 현상이 아니라고?"
-  },
-  {
     "start": 316.92,
-    "end": 323.4,
-    "en": "then yes in fact the infinite monkey theorem would Oh but you're saying that twin prime is it",
+    "end": 319.28,
+    "en": "then yes, in fact, the infinite monkey theorem would.",
     "ko": "아주 미세한 차이가 있어."
   },
   {
-    "start": 323.4,
-    "end": 329.82,
-    "en": "doesn't you can't use the same tools Like it doesn't appear random almost Well we don't know Yeah",
+    "start": 319.48,
+    "end": 325.44,
+    "en": "Oh, but you're saying that twin prime is, it doesn't, you can't use the same tools.",
+    "ko": ""
+  },
+  {
+    "start": 325.82,
+    "end": 328.68,
+    "en": "Like it doesn't appear random almost. Well, we don't know.",
     "ko": "여전히 무한한 원숭이 현상이야. 만약 소수가 진짜 무작위라면"
   },
   {
-    "start": 329.82,
-    "end": 335.92,
-    "en": "we believe the primes behave like a random set And so the reason why we care about the twin prime conjecture is it's a",
-    "ko": "소수가 원숭이에 의해 생성된다면"
+    "start": 329.3,
+    "end": 332.82,
+    "en": "Yeah, we believe the primes behave like a random set.",
+    "ko": "여전히 무한한 원숭이 현상이야. 만약 소수가 진짜 무작위라면"
   },
   {
-    "start": 335.92,
+    "start": 333,
     "end": 338.48,
-    "en": "test case for whether we can genuinely",
+    "en": "And so the reason why we care about the twin prime conjecture is it's a test case for whether we can genuinely,",
     "ko": "그렇다면 사실 무한한 원숭이 정리가 성립해."
   },
   {
     "start": 339.3,
     "end": 343.3,
-    "en": "confidently say with 0 chance of error that the primes behave like a random set",
+    "en": "confidently say with 0% chance of error that the primes behave like a random set.",
     "ko": "하지만 쌍둥이 소수는 같은 도구를 사용할 수 없어."
   },
   {
     "start": 344.1,
     "end": 349.78,
-    "en": "Okay Random versions of the primes we know contain twins at least with 100 probability",
+    "en": "Okay. Random versions of the primes we know contain twins, at least with 100% probability,",
     "ko": "거의 무작위처럼 보이지 않아. 우리는 잘 모르지만."
   },
   {
     "start": 350.84,
     "end": 353.56,
-    "en": "or probably tending to 100 as you go out further and further",
+    "en": "or probably tending to 100% as you go out further and further.",
     "ko": "소수가 무작위 집합처럼 행동한다고 믿어. 그래서 쌍둥이 소수 추측이 중요한 이유는"
   },
   {
     "start": 355.18,
-    "end": 361.74,
-    "en": "Yeah So the primes we believe that they're random The reason why ethnic progressions are indestructible is that",
+    "end": 357.26,
+    "en": "Yeah. So the primes, we believe that they're random.",
     "ko": "소수가 진짜 무작위 집합처럼 행동한다고 0%의 오류 가능성으로 확신할 수 있는지에 대한 테스트 케이스야."
   },
   {
-    "start": 361.74,
-    "end": 368.32,
-    "en": "regardless of whether your set looks random or looks structured like periodic in both cases ethnic",
+    "start": 357.88,
+    "end": 363.44,
+    "en": "The reason why ethnic progressions are indestructible is that regardless of whether your set looks random",
+    "ko": "소수가 진짜 무작위 집합처럼 행동한다고 0%의 오류 가능성으로 확신할 수 있는지에 대한 테스트 케이스야."
+  },
+  {
+    "start": 363.44,
+    "end": 368.92,
+    "en": "or looks structured, like periodic, in both cases, ethnic progressions appear,",
     "ko": "무작위 버전의 소수는 최소한 100% 확률로 쌍둥이를 포함한다고 알려져 있어."
   },
   {
-    "start": 368.32,
-    "end": 370.56,
-    "en": "progressions appear but for different reasons",
-    "ko": "더 멀리 나가면 100%에 가까워져."
+    "start": 369.44,
+    "end": 373.48,
+    "en": "but for different reasons. And this is basically all the ways in which the thing,",
+    "ko": ""
   },
   {
-    "start": 371.52,
-    "end": 377.6,
-    "en": "And this is basically all the ways in which the thing there are many proofs of these sort of ethnic progression type theorems and they're all",
+    "start": 373.68,
+    "end": 377.04,
+    "en": "there are many proofs of these sort of ethnic progression type theorems,",
     "ko": "그래, 우리는 소수가 무작위라고 믿어. 정수의 진행이 파괴될 수 없는 이유는"
   },
   {
-    "start": 377.6,
-    "end": 383.7,
-    "en": "proven by some sort of dichotomy where your set is either structured or random And in both cases you can say something and then you put the two",
+    "start": 377.06,
+    "end": 380.92,
+    "en": "and they're all proven by some sort of dichotomy where your set is either structured or random.",
     "ko": "당신의 집합이 무작위로 보이든 구조적으로 보이든 상관없이 정수의 진행이 나타나기 때문이야."
   },
   {
-    "start": 383.7,
-    "end": 384.5,
-    "en": "together",
-    "ko": "하지만 다른 이유로 나타나."
+    "start": 381.02,
+    "end": 383.98,
+    "en": "And in both cases, you can say something and then you put the two together.",
+    "ko": "당신의 집합이 무작위로 보이든 구조적으로 보이든 상관없이 정수의 진행이 나타나기 때문이야."
   },
   {
     "start": 385.18,
-    "end": 391.42,
-    "en": "But in twin primes if the primes are random then you're happy you win But if your primes are structured they",
+    "end": 389.56,
+    "en": "But in twin primes, if the primes are random, then you're happy, you win.",
     "ko": "이건 기본적으로 이 정수 진행 유형의 정리들에 대한 여러 증명 방법이야."
   },
   {
-    "start": 391.42,
+    "start": 389.76,
     "end": 395.54,
-    "en": "could be structured in a specific way that eliminates the twins",
+    "en": "But if your primes are structured, they could be structured in a specific way that eliminates the twins.",
     "ko": "이들은 모두 당신의 집합이 구조적이거나 무작위일 때 어떤 식으로든 증명돼."
   },
   {
     "start": 396.26,
-    "end": 402.32,
-    "en": "And we can't rule out that one conspiracy And yet you were able to make a Zanderstrand progress",
+    "end": 398.44,
+    "en": "And we can't rule out that one conspiracy.",
     "ko": "두 가지를 합치면"
   },
   {
-    "start": 402.32,
-    "end": 408.44,
-    "en": "on the K tuple version Right yeah So the one funny thing about conspiracies is that any one conspiracy theory",
+    "start": 398.94,
+    "end": 403.94,
+    "en": "And yet you were able to make a Zanderstrand progress on the K-tuple version.",
     "ko": "하지만 쌍둥이 소수에서 소수가 무작위라면 당신은 행복해."
   },
   {
-    "start": 408.44,
-    "end": 414.5,
-    "en": "is really hard to disprove That if you believe the world is run by lizards you say here's some evidence that",
+    "start": 404.16,
+    "end": 409.76,
+    "en": "Right, yeah. So the one funny thing about conspiracies is that any one conspiracy theory is really hard to disprove.",
+    "ko": "하지만 쌍둥이 소수에서 소수가 무작위라면 당신은 행복해."
+  },
+  {
+    "start": 410.22,
+    "end": 415.52,
+    "en": "That if you believe the world is run by lizards, you say, here's some evidence that it's not run by lizards.",
     "ko": "하지만 소수가 구조적이라면 쌍둥이를 없애는 특정한 방식으로 구조화될 수 있어."
   },
   {
-    "start": 414.5,
-    "end": 420.86,
-    "en": "it's not run by lizards Well that evidence was planted by the lizards Yeah You may have encountered this",
+    "start": 415.72,
+    "end": 418,
+    "en": "Well, that evidence was planted by the lizards. Yeah.",
     "ko": "그 음모를 배제할 수는 없어."
   },
   {
-    "start": 420.86,
+    "start": 418.54,
+    "end": 421.3,
+    "en": "You may have encountered this kind of phenomenon.",
+    "ko": "그 음모를 배제할 수는 없어."
+  },
+  {
+    "start": 421.62,
     "end": 425.18,
-    "en": "kind of phenomenon Yeah so there's almost no way",
+    "en": "Yeah, so there's almost no way",
     "ko": "그런데도 당신은 K-튜플 버전에서 진전을 이룰 수 있었어."
   },
   {
     "start": 426.34,
-    "end": 432.6,
-    "en": "to definitively rule out a conspiracy And the same is true in mathematics that a conspiracy that is solely devoted to",
+    "end": 432.26,
+    "en": "to definitively rule out a conspiracy. And the same is true in mathematics, that a conspiracy that is solely devoted",
     "ko": "그래, 음모에 대한 재미있는 점은 어떤 음모 이론도 반증하기가 정말 어렵다는 거야."
   },
   {
-    "start": 432.6,
-    "end": 438.7,
-    "en": "eliminating twin primes you have to also infiltrate other areas of mathematics But it could be",
+    "start": 432.26,
+    "end": 436.74,
+    "en": "to eliminating twin primes, you have to also infiltrate other areas of mathematics.",
     "ko": "세상이 도마뱀에 의해 운영된다고 믿는다면, 도마뱀에 의해 운영되지 않는다는 증거를 제시해도"
   },
   {
-    "start": 438.7,
-    "end": 444.9,
-    "en": "made consistent at least as far as we know But there's a weird phenomenon that you can make one",
+    "start": 437.36,
+    "end": 440.08,
+    "en": "But it could be made consistent, at least as far as we know.",
     "ko": "우리가 아는 한 일관성이 있어 But 이상한 현상이 있어."
   },
   {
-    "start": 444.9,
+    "start": 440.74,
+    "end": 446.58,
+    "en": "But there's a weird phenomenon that you can make one conspiracy rule out other conspiracies.",
+    "ko": "우리가 아는 한 일관성이 있어 But 이상한 현상이 있어."
+  },
+  {
+    "start": 447.04,
     "end": 450.42,
-    "en": "conspiracy rule out other conspiracies So you know if the world is run by lizards it can also be run by aliens",
+    "en": "So, you know, if the world is run by lizards, it can also be run by aliens.",
     "ko": "음모가 다른 음모를 배제할 수 있어. 그러니까 만약 세상이 도마뱀에 의해 운영된다면 외계인에 의해서도 운영될 수 있어."
   },
   {
     "start": 451.66,
     "end": 457,
-    "en": "Right right So one unreasonable thing is hard to disprove but more than one there are tools",
+    "en": "Right, right. So one unreasonable thing is hard to disprove, but more than one, there are tools.",
     "ko": "맞아 맞아. 그래서 하나의 비합리적인 건 반박하기 힘든데, 여러 개가 있으면 도구가 있어."
   },
   {
     "start": 458.3,
-    "end": 464.58,
-    "en": "So yeah so for example we know there's infinitely many primes that are no two which are so there are infinite pairs",
+    "end": 463.64,
+    "en": "So yeah, so for example, we know there's infinitely many primes that are, no two, which are,",
     "ko": "예를 들어서 소수가 무한히 많다는 걸 아는데, 두 개가 서로 다를 수 있어."
   },
   {
-    "start": 464.58,
-    "end": 470.62,
-    "en": "of primes which differ by at most 246 actually is the code So there's like a bound",
+    "start": 463.64,
+    "end": 469.28,
+    "en": "so there are infinite pairs of primes which differ by at most 246, actually, is the code.",
     "ko": "소수의 차이가 최대 246인 쌍이 무한히 있어. 그래서 경계가 있어."
   },
   {
-    "start": 471.62,
-    "end": 477.74,
-    "en": "Yes right So like there's twin primes there's a thing called cousin primes that differ by four There's",
+    "start": 469.42,
+    "end": 472.32,
+    "en": "So there's like a bound. Yes, right.",
+    "ko": ""
+  },
+  {
+    "start": 472.86,
+    "end": 477.06,
+    "en": "So like, there's twin primes, there's a thing called cousin primes that differ by four.",
     "ko": "맞아 맞아. 그래서 쌍둥이 소수도 있고, 4만큼 차이나는 사촌 소수도 있어."
   },
   {
-    "start": 477.74,
-    "end": 481.9,
-    "en": "a thing called sexy primes that differ by six What are sexy primes Primes that differ by six",
+    "start": 477.58,
+    "end": 480.72,
+    "en": "There's a thing called sexy primes that differ by six. What are sexy primes?",
     "ko": "6만큼 차이나는 섹시 소수라는 것도 있어. 섹시 소수는 6만큼 차이나는 소수야."
   },
   {
-    "start": 482.82,
+    "start": 481.2,
     "end": 485.84,
-    "en": "The name is much less it's called so it's much less exciting than the name suggests",
+    "en": "Primes that differ by six. The name is much less, it's called so it's much less exciting than the name suggests.",
     "ko": "이름이 그렇게 흥미롭지 않아. 이름이 암시하는 것보다 덜 흥미로워."
   },
   {
     "start": 487.8,
-    "end": 493.8,
-    "en": "So you can make a conspiracy rule out one of these but like once you have like 50 of them it turns out that you can't rule out all of them at",
+    "end": 492.1,
+    "en": "So you can make a conspiracy rule out one of these, but like, once you have like 50 of them,",
     "ko": "이 음모 중 하나를 배제할 수 있지만, 50개가 있으면 모두 배제할 수 없다는 게 밝혀져."
   },
   {
-    "start": 493.8,
+    "start": 492.14,
+    "end": 496.82,
+    "en": "it turns out that you can't rule out all of them at once. It just, it requires too much energy somehow",
+    "ko": "이 음모 중 하나를 배제할 수 있지만, 50개가 있으면 모두 배제할 수 없다는 게 밝혀져."
+  },
+  {
+    "start": 496.82,
     "end": 500.2,
-    "en": "once It just it requires too much energy somehow in this conspiracy space How do you do the bound part",
+    "en": "in this conspiracy space. How do you do the bound part?",
     "ko": "한 번에 너무 많은 에너지가 필요해. 이 음모 공간에서 경계 부분을 어떻게 해?"
   },
   {
     "start": 500.38,
-    "end": 506.52,
-    "en": "How do you develop a bound for the difference between the primes Okay so That there's an infinite number of",
+    "end": 503.9,
+    "en": "How do you develop a bound for the difference between the primes?",
     "ko": "소수 간의 차이에 대한 경계를 어떻게 개발해? 알겠어."
   },
   {
-    "start": 506.84,
-    "end": 511.02,
-    "en": "So it's ultimately based on what's called the pigeonhole principle So the pigeonhole principle",
+    "start": 504.12,
+    "end": 509.02,
+    "en": "Okay, so- That there's an infinite number of. So it's ultimately based on what's called the pigeonhole principle.",
     "ko": "결국 비둘기집 원리에 기반해. 비둘기집 원리는..."
   },
   {
-    "start": 511.76,
-    "end": 517.76,
-    "en": "it's a statement that if you have a number of pigeons and they all have to go into pigeonholes and you have more pigeons than pigeonholes then one of the",
+    "start": 509.82,
+    "end": 513.32,
+    "en": "So the pigeonhole principle, it's a statement that if you have a number of pigeons",
+    "ko": "결국 비둘기집 원리에 기반해. 비둘기집 원리는..."
+  },
+  {
+    "start": 513.34,
+    "end": 517.98,
+    "en": "and they all have to go into pigeonholes and you have more pigeons than pigeonholes, then one of the pigeonholes",
     "ko": "비둘기가 있고, 비둘기집이 더 많으면, 하나의 비둘기집에 적어도 두 마리의 비둘기가 있어야 해."
   },
   {
-    "start": 517.76,
+    "start": 517.98,
     "end": 521.26,
-    "en": "pigeonholes has to have at least two pigeons in it So there has to be two pigeons that are close together",
+    "en": "has to have at least two pigeons in it. So there has to be two pigeons that are close together.",
     "ko": "그래서 서로 가까운 두 마리 비둘기가 있어야 해."
   },
   {
     "start": 522.04,
     "end": 525.64,
-    "en": "So for instance if you have a hundred numbers and they all range from one to a thousand",
+    "en": "So for instance, if you have a hundred numbers and they all range from one to a thousand,",
     "ko": "예를 들어서 100개의 숫자가 있고, 1부터 1000까지 범위가 있다면..."
   },
   {
     "start": 526.94,
-    "end": 532.94,
-    "en": "two of them have to be at most 10 apart because you can divide up the numbers from one to a hundred into 100 pigeonholes",
+    "end": 530.66,
+    "en": "two of them have to be at most 10 apart because you can divide up the numbers",
     "ko": "두 숫자는 최대 10만큼 차이나야 해. 1부터 100까지 숫자를 100개의 비둘기집으로 나눌 수 있으니까."
   },
   {
-    "start": 533.46,
-    "end": 539.78,
-    "en": "Let's say if you have 101 numbers 101 numbers then two of them have to be distance less than 10 apart because two",
+    "start": 530.66,
+    "end": 532.94,
+    "en": "from one to a hundred into 100 pigeonholes.",
+    "ko": "두 숫자는 최대 10만큼 차이나야 해. 1부터 100까지 숫자를 100개의 비둘기집으로 나눌 수 있으니까."
+  },
+  {
+    "start": 533.58,
+    "end": 539.14,
+    "en": "Let's say if you have 101 numbers, 101 numbers, then two of them have to be distance less than 10 apart",
     "ko": "101개의 숫자가 있다면, 두 숫자는 10보다 적게 차이나야 해."
   },
   {
-    "start": 539.78,
-    "end": 545.88,
-    "en": "of them have to belong to the same pigeonhole So it's a basic feature of a",
-    "ko": "같은 비둘기집에 속해야 하니까. 이건 수학의 기본 원리야."
+    "start": 539.14,
+    "end": 541.08,
+    "en": "because two of them have to belong to the same pigeonhole.",
+    "ko": "101개의 숫자가 있다면, 두 숫자는 10보다 적게 차이나야 해."
   },
   {
-    "start": 545.88,
+    "start": 541.6,
     "end": 546.78,
-    "en": "basic principle in mathematics",
+    "en": "So it's a basic feature of a basic principle in mathematics.",
     "ko": "그래서 소수와는 직접적으로 잘 작동하지 않아. 소수가 점점 드물어지거든."
   },
   {
     "start": 547.78,
-    "end": 553.8,
-    "en": "So it doesn't quite work with the primes directly because the primes get sparser and sparser as you go out that there are fewer",
+    "end": 552.92,
+    "en": "So it doesn't quite work with the primes directly because the primes get sparser and sparser as you go out,",
     "ko": "소수의 수가 점점 줄어들어. 하지만 숫자에 가중치를 부여하는 방법이 있어."
   },
   {
-    "start": 553.8,
-    "end": 560.54,
-    "en": "and fewer numbers of prime But it turns out that there's a way to assign weights to numbers So",
+    "start": 553.24,
+    "end": 558.24,
+    "en": "that there are fewer and fewer numbers of prime. But it turns out that there's a way to assign weights",
     "ko": "거의 소수인 숫자들이 있어."
   },
   {
-    "start": 560.54,
+    "start": 558.68,
     "end": 562.54,
-    "en": "there are numbers that are kind of almost prime",
-    "ko": "그들은 자신과 1 외에는 인수가 없지만, 인수가 아주 적어."
+    "en": "to numbers. So there are numbers that are kind of almost prime,",
+    "ko": "거의 소수인 숫자들이 있어."
   },
   {
     "start": 563.38,
     "end": 568.44,
-    "en": "but they don't have no factors at all other than themselves and one but they have very few factors",
+    "en": "but they don't have no factors at all other than themselves and one, but they have very few factors.",
     "ko": "거의 소수를 소수보다 훨씬 잘 이해하고 있어."
   },
   {
     "start": 569.52,
     "end": 572.66,
-    "en": "And it turns out that we understand almost primes a lot better than we understand primes",
+    "en": "And it turns out that we understand almost primes a lot better than we understand primes.",
     "ko": "예를 들어서 쌍둥이 거의 소수가 있다는 게 오랫동안 알려져 있었어."
   },
   {
     "start": 574.22,
     "end": 577.46,
-    "en": "And so for example it was known for a long time that there were twin almost primes",
+    "en": "And so, for example, it was known for a long time that there were twin almost primes.",
     "ko": "이건 정리되었어. 그래서 거의 소수는 우리가 이해하는 것 중 하나야."
   },
   {
     "start": 578.26,
     "end": 581,
-    "en": "This has been worked out So almost primes are something we kind of understand",
+    "en": "This has been worked out. So almost primes are something we kind of understand.",
     "ko": "적절한 거의 소수 집합에 집중할 수 있어."
   },
   {
     "start": 581.74,
     "end": 586.06,
-    "en": "So you can actually restrict attention to a suitable set of almost primes",
+    "en": "So you can actually restrict attention to a suitable set of almost primes.",
     "ko": "소수는 전체적으로 드물지만, 거의 소수는 덜 드물어."
   },
   {
     "start": 588.48,
-    "end": 594.5,
-    "en": "And whereas the primes are very sparse overall relative to the almost primes they actually are",
+    "end": 593.28,
+    "en": "And whereas the primes are very sparse overall, relative to the almost primes,",
     "ko": "소수의 밀도가 1인 거의 소수 집합을 설정할 수 있어."
   },
   {
-    "start": 594.5,
+    "start": 593.48,
     "end": 599.02,
-    "en": "much less sparse You can set up a set of almost primes where the primes have a density like say 1",
+    "en": "they actually are much less sparse. You can set up a set of almost primes where the primes have a density like, say, 1%.",
     "ko": "그렇게 하면 비둘기집 원리를 적용해서 100과 100만큼 차이나는 소수 쌍이 있다는 걸 증명할 수 있어."
   },
   {
     "start": 599.98,
-    "end": 606.64,
-    "en": "And that gives you a shot at proving by applying some sort of pigeonhole principle that there's pairs of primes that are just only 100 and 100",
+    "end": 605.16,
+    "en": "And that gives you a shot at proving, by applying some sort of pigeonhole principle, that there's pairs of primes",
     "ko": "하지만 쌍둥이 소수 추측을 증명하려면 거의 소수 안의 소수 밀도를 50까지 올려야 해."
   },
   {
-    "start": 606.64,
-    "end": 607.44,
-    "en": "apart",
+    "start": 605.16,
+    "end": 609.06,
+    "en": "that are just only 100 and 100 apart. But in order to prove the twin prime conjecture,",
     "ko": "50까지 가면 쌍둥이 소수를 얻을 수 있어. 하지만 안타깝게도 장벽이 있어."
   },
   {
-    "start": 607.44,
+    "start": 609.2,
     "end": 613.16,
-    "en": "But in order to prove the twin prime conjecture you need to get the density of primes inside the almost primes up to a threshold of 50",
+    "en": "you need to get the density of primes inside the almost primes up to a threshold of 50%.",
     "ko": "어떤 좋은 거의 소수 집합을 선택하든 소수의 밀도가 50을 넘을 수 없어."
   },
   {
     "start": 614.16,
     "end": 618.16,
-    "en": "Once you get up to 50 you would get twin primes But unfortunately there are barriers",
+    "en": "Once you get up to 50%, you would get twin primes. But unfortunately, there are barriers.",
     "ko": "이걸 패리티 장벽이라고 해."
   },
   {
     "start": 619.32,
-    "end": 625.84,
-    "en": "We know that no matter what kind of good set of almost primes you pick the density of primes can never get above 50 It's",
+    "end": 625.26,
+    "en": "We know that no matter what kind of good set of almost primes you pick, the density of primes can never get above 50%.",
     "ko": "그래서 이 장벽을 뚫는 방법을 찾고 싶어."
   },
   {
-    "start": 625.84,
-    "end": 626.64,
-    "en": "called the parity barrier",
+    "start": 625.44,
+    "end": 629.98,
+    "en": "It's called the parity barrier. And I would love to find, yeah, so one of my long-term dreams",
     "ko": "이걸 뚫으면 쌍둥이 소수 추측뿐만 아니라 여러 수론 문제들이 열릴 거야."
   },
   {
-    "start": 627.84,
-    "end": 631.2,
-    "en": "And I would love to find yeah so one of my long term dreams is to find a way to breach that barrier",
-    "ko": "현재의 기술로는 이 이론적 패리티 장벽을 넘는 게 필요해."
+    "start": 629.98,
+    "end": 634.12,
+    "en": "is to find a way to breach that barrier. Because it would open up not only the twin prime conjecture,",
+    "ko": ""
   },
   {
-    "start": 631.94,
+    "start": 634.62,
     "end": 638.12,
-    "en": "Because it would open up not only the twin prime conjecture the go back conjecture and many other problems in number theory are currently blocked",
+    "en": "the go-back conjecture, and many other problems in number theory are currently blocked",
     "ko": "빛의 속도로 빨리 가는 것과 같아. 그래서 우리는 쌍둥이 소수 추측을 말해야 해."
   },
   {
     "start": 639.2,
-    "end": 641.06,
-    "en": "because our current techniques would require",
+    "end": 644.36,
+    "en": "because our current techniques would require going beyond this theoretical parity barrier.",
     "ko": "수학 역사에서 가장 큰 문제 중 하나야. 돌아가기 추측도 마찬가지야."
   },
   {
-    "start": 641.76,
-    "end": 647.76,
-    "en": "going beyond this theoretical parity barrier It's like going fast in the speed of light Yeah so we should",
+    "start": 644.48,
+    "end": 648.88,
+    "en": "It's like going fast in the speed of light. Yeah, so we should say a twin prime conjecture,",
     "ko": ""
   },
   {
-    "start": 647.76,
+    "start": 649.54,
     "end": 652.68,
-    "en": "say a twin prime conjecture one of the biggest problems in the history of mathematics go back conjecture also",
+    "en": "one of the biggest problems in the history of mathematics, go-back conjecture also.",
     "ko": ""
   },
   {
     "start": 653.54,
     "end": 655.74,
-    "en": "They feel like next door neighbors",
+    "en": "They feel like next-door neighbors.",
     "ko": "옆집 이웃 같아"
   },
   {
     "start": 656.82,
-    "end": 661.26,
-    "en": "Is there been days when you felt you saw the path Oh yeah",
+    "end": 660.08,
+    "en": "Is there been days when you felt you saw the path?",
     "ko": "길을 봤다고 느낀 날이 있었어? 오, 그래"
   },
   {
-    "start": 663.06,
+    "start": 660.56,
     "end": 665.76,
-    "en": "Yeah sometimes you try something and it works super well",
+    "en": "Oh, yeah. Yeah, sometimes you try something and it works super well.",
     "ko": "가끔 뭔가 시도해보면 잘 되기도 해"
   },
   {
     "start": 666.9,
-    "end": 673.02,
-    "en": "You again get the sense of methodical smell we talked about earlier You learn from experience when things are going",
+    "end": 670.16,
+    "en": "You, again, get the sense of methodical smell we talked about earlier.",
     "ko": "아까 얘기한 방법적인 냄새가 다시 느껴져 경험에서 배우게 돼"
   },
   {
-    "start": 673.02,
+    "start": 670.88,
+    "end": 673.6,
+    "en": "You learn from experience when things are going too well.",
+    "ko": "아까 얘기한 방법적인 냄새가 다시 느껴져 경험에서 배우게 돼"
+  },
+  {
+    "start": 675.14,
     "end": 677.84,
-    "en": "too well Yeah Because there are certain difficulties that you sort of have to encounter",
+    "en": "Yeah. Because there are certain difficulties that you sort of have to encounter.",
     "ko": "너무 잘 될 때는 특정한 어려움이 있어야 해"
   },
   {
     "start": 679.98,
-    "end": 686.08,
-    "en": "I think the way a colleague of mine put it is that you know like if you are on the streets of New York and you",
+    "end": 685.76,
+    "en": "I think the way a colleague of mine put it is that, you know, like if you are on the streets of New York",
     "ko": "내 동료가 말한 것처럼, 뉴욕 거리에서 눈가리개를 하고 차를 타고"
   },
   {
-    "start": 686.08,
-    "end": 691.84,
-    "en": "put on a blindfold and you put on a car and after some hours the blindfold is off and you're in Beijing",
+    "start": 685.76,
+    "end": 689.72,
+    "en": "and you put on a blindfold and you put on a car and after some hours,",
     "ko": "몇 시간 후에 눈가리개를 벗었더니 베이징에 있었어"
   },
   {
-    "start": 693.54,
-    "end": 699.6,
-    "en": "You know I mean that was too easy somehow Like there was no ocean being crossed Even if you don't know exactly what",
+    "start": 690.26,
+    "end": 695.64,
+    "en": "the blindfold is off and you're in Beijing. You know, I mean, that was too easy somehow.",
+    "ko": ""
+  },
+  {
+    "start": 695.8,
+    "end": 701.7,
+    "en": "Like there was no ocean being crossed. Even if you don't know exactly what, what was done,",
     "ko": "너무 쉬운 것 같아, 바다를 건너지 않았잖아"
   },
   {
-    "start": 700.56,
-    "end": 706.98,
-    "en": "what was done you're suspecting that there's something that wasn't right But is that still in the back of your head to",
+    "start": 702.14,
+    "end": 704.2,
+    "en": "you're suspecting that there's something that wasn't right.",
     "ko": "무엇이 잘못됐는지 모르겠지만 뭔가 이상하다고 의심해"
   },
   {
-    "start": 707.48,
-    "end": 713.58,
-    "en": "do you return to these to the prime do you return to the prime numbers every once in a while to see Yeah when I have nothing",
+    "start": 704.5,
+    "end": 709.08,
+    "en": "But is that still in the back of your head to, do you return to these, to the prime,",
+    "ko": ""
+  },
+  {
+    "start": 709.2,
+    "end": 712.54,
+    "en": "do you return to the prime numbers every once in a while to see?",
     "ko": "가끔 소수에 돌아가서 확인해?"
   },
   {
-    "start": 713.58,
-    "end": 719.6,
-    "en": "better to do which is less and less than 10 times which is I get busy with so many things these days But yeah when I have free time and I'm",
+    "start": 712.76,
+    "end": 715.56,
+    "en": "Yeah, when I have nothing better to do, which is less and less than 10 times,",
     "ko": "응, 할 일이 없을 때 가끔 해"
   },
   {
-    "start": 719.6,
-    "end": 725.76,
-    "en": "not and I'm too frustrated to work on my sort of real research projects and I also don't want to do my administrative",
+    "start": 715.72,
+    "end": 717.8,
+    "en": "which is, I get busy with so many things these days.",
+    "ko": "응, 할 일이 없을 때 가끔 해"
+  },
+  {
+    "start": 717.84,
+    "end": 722.2,
+    "en": "But yeah, when I have free time and I'm not, and I'm too frustrated to work on my",
     "ko": "요즘은 할 일이 많아서 10번도 안 돼"
   },
   {
-    "start": 725.76,
+    "start": 722.46,
+    "end": 725.98,
+    "en": "sort of real research projects, and I also don't want to do my administrative stuff",
+    "ko": "요즘은 할 일이 많아서 10번도 안 돼"
+  },
+  {
+    "start": 725.98,
     "end": 727.98,
-    "en": "stuff or I don't want to do some errands for my family",
+    "en": "or I don't want to do some errands for my family.",
     "ko": "자유 시간이 있을 때, 내 연구 프로젝트가 너무 답답할 때"
   },
   {
     "start": 729.6,
     "end": 732.22,
-    "en": "I can play with these things for fun",
+    "en": "I can play with these things for fun.",
     "ko": "행정 업무나 가족 심부름은 하고 싶지 않아"
   },
   {
     "start": 732.98,
+    "end": 736.1,
+    "en": "And usually you get nowhere. Yeah, you have to learn to just say, okay, fine.",
+    "ko": "재미로 이런 것들 가지고 놀 수 있어"
+  },
+  {
+    "start": 736.16,
     "end": 739.12,
-    "en": "And usually you get nowhere Yeah you have to learn to just say okay fine Once again nothing happened I will move on",
+    "en": "Once again, nothing happened. I will move on.",
     "ko": "재미로 이런 것들 가지고 놀 수 있어"
   },
   {
     "start": 739.98,
-    "end": 742.52,
-    "en": "Yeah very occasionally one of these problems I actually solved",
+    "end": 744.54,
+    "en": "Yeah, very occasionally, one of these problems I actually solved, or sometimes, as you say,",
     "ko": "보통은 아무것도 안 돼, 그냥 괜찮다고 말해야 해"
   },
   {
-    "start": 743.54,
-    "end": 749.8,
-    "en": "or sometimes as you say you think you solved it and then you're euphoric for maybe 15 minutes and then you think",
+    "start": 744.64,
+    "end": 750.54,
+    "en": "you think you solved it and then you're euphoric for maybe 15 minutes and then you think I should check this",
     "ko": "가끔 이런 문제를 해결하기도 해"
   },
   {
-    "start": 749.8,
-    "end": 755.82,
-    "en": "I should check this because this is too easy too good to be true and it usually is What's your gut say about when",
+    "start": 750.54,
+    "end": 753.64,
+    "en": "because this is too easy, too good to be true and it usually is.",
     "ko": "혹은 해결했다고 생각하고 15분 정도 기분이 좋다가"
   },
   {
-    "start": 755.82,
-    "end": 762.1,
-    "en": "these problems would be solved Twin Prime and GoBot Prime I think we'll keep",
+    "start": 754.2,
+    "end": 759.48,
+    "en": "What's your gut say about when these problems would be solved, Twin Prime and GoBot?",
     "ko": "이건 너무 쉬워서 확인해봐야겠다고 생각해"
   },
   {
-    "start": 762.1,
+    "start": 759.76,
     "end": 763.24,
-    "en": "getting more partial results",
+    "en": "Prime, I think we'll keep getting more partial results.",
     "ko": "너의 직감은 이 문제들이 언제 해결될 것 같아?"
   },
   {
     "start": 765.26,
     "end": 769.68,
-    "en": "It does need at least one this parity barrier is the biggest remaining obstacle",
+    "en": "It does need at least one, this parity barrier is the biggest remaining obstacle.",
     "ko": "쌍소수와 고봇 소수는 점점 부분 결과가 나올 것 같아"
   },
   {
     "start": 770.82,
     "end": 774.3,
-    "en": "There are simpler versions of the conjecture where we are getting really close",
+    "en": "There are simpler versions of the conjecture where we are getting really close.",
     "ko": "최소한 하나는 필요해, 이 짝수 문제는 남은 큰 장애물이야"
   },
   {
     "start": 775.9,
-    "end": 781.9,
-    "en": "So I think we will in 10 years we will have many more much closer results We may not",
+    "end": 781.56,
+    "en": "So I think we will, in 10 years, we will have many more, much closer results.",
     "ko": "우리가 정말 가까워지고 있는 더 간단한 버전의 추측이 있어"
   },
   {
-    "start": 781.9,
+    "start": 781.62,
     "end": 785.5,
-    "en": "have the whole thing Yeah so Twin Primes is somewhat close",
+    "en": "We may not have the whole thing. Yeah, so Twin Primes is somewhat close.",
     "ko": "10년 후에는 훨씬 더 가까운 결과가 많아질 거야"
   },
   {
-    "start": 786.28,
-    "end": 792.48,
-    "en": "Riemann Hypothesis I have no I mean it has happened by accident I think So the Riemann Hypothesis is a kind",
+    "start": 786.3,
+    "end": 789.96,
+    "en": "Riemann Hypothesis, I have no, I mean, it has happened by accident, I think.",
     "ko": "전체를 가질 수는 없겠지만, 쌍소수는 어느 정도 가까워"
   },
   {
-    "start": 792.48,
+    "start": 790.48,
+    "end": 796.18,
+    "en": "So the Riemann Hypothesis is a kind of more general conjecture about the distribution of prime numbers, right?",
+    "ko": "리만 가설은 우연히 발생한 것 같아"
+  },
+  {
+    "start": 796.18,
     "end": 798.68,
-    "en": "of more general conjecture about the distribution of prime numbers right Right yeah it's sort of viewed multiplicatively",
+    "en": "Right, yeah, it's sort of viewed multiplicatively.",
     "ko": "리만 가설은 우연히 발생한 것 같아"
   },
   {
     "start": 798.98,
-    "end": 805.56,
-    "en": "Like for questions only involving multiplication no addition the primes really do behave as randomly as you could hope So",
+    "end": 802.82,
+    "en": "Like for questions only involving multiplication, no addition, the primes really do behave",
     "ko": "리만 가설은 소수 분포에 대한 좀 더 일반적인 추측이야"
   },
   {
-    "start": 805.56,
+    "start": 802.96,
+    "end": 807.24,
+    "en": "as randomly as you could hope. So there's a phenomenon in probability",
+    "ko": "리만 가설은 소수 분포에 대한 좀 더 일반적인 추측이야"
+  },
+  {
+    "start": 807.24,
     "end": 811.34,
-    "en": "there's a phenomenon in probability called square root cancellation that you know like if you want to poll",
+    "en": "called square root cancellation that, you know, like if you want to poll,",
     "ko": "곱셈만 관련된 질문에서는 소수가 정말 무작위처럼 행동해"
   },
   {
     "start": 812.06,
-    "end": 818.16,
-    "en": "say America up on some issue and you ask one or two voters you may have sampled a bad sample",
+    "end": 816.64,
+    "en": "say, America up on some issue and you ask one or two voters,",
     "ko": "확률에서 제곱근 상쇄 현상이 있어"
   },
   {
-    "start": 818.16,
-    "end": 824.36,
-    "en": "and then you get a really imprecise measurement of the full average But if you sample more and",
+    "start": 816.92,
+    "end": 822.46,
+    "en": "you may have sampled a bad sample and then you get a really imprecise measurement of the full average.",
     "ko": "미국에서 어떤 문제에 대해 여론조사를 하고"
   },
   {
-    "start": 824.36,
-    "end": 830.52,
-    "en": "more people the accuracy gets better and better And the accuracy improves like the square root of the number of people you",
+    "start": 822.56,
+    "end": 826.26,
+    "en": "But if you sample more and more people, the accuracy gets better and better.",
     "ko": "한두 명의 유권자에게 물어보면 잘못된 샘플일 수 있어"
   },
   {
-    "start": 830.52,
+    "start": 826.32,
+    "end": 831.26,
+    "en": "And the accuracy improves like the square root of the number of people you sampled.",
+    "ko": "한두 명의 유권자에게 물어보면 잘못된 샘플일 수 있어"
+  },
+  {
+    "start": 831.72,
     "end": 835.24,
-    "en": "sampled So if you sample a thousand people you can get like a 2 3 margin of error",
+    "en": "So if you sample a thousand people, you can get like a 2%, 3% margin of error.",
     "ko": "그럼 전체 평균을 매우 부정확하게 측정하게 돼"
   },
   {
     "start": 835.98,
-    "end": 841.98,
-    "en": "So in the same sense if you measure the primes in a certain multiplicative sense there's a certain type of statistic you can",
+    "end": 839.34,
+    "en": "So in the same sense, if you measure the primes in a certain multiplicative sense,",
     "ko": "더 많은 사람을 샘플링하면 정확도가 점점 좋아져"
   },
   {
-    "start": 841.98,
-    "end": 848.14,
-    "en": "measure and it's called the Riemann zeta function and it fluctuates up and down But in some sense as you keep averaging more",
+    "start": 839.4,
+    "end": 843.6,
+    "en": "there's a certain type of statistic you can measure and it's called the Riemann zeta function",
     "ko": "정확도는 샘플링한 사람 수의 제곱근에 비례해"
   },
   {
-    "start": 848.14,
-    "end": 854.28,
-    "en": "and more if you sample more and more the fluctuation should go down as if they were random And there's a very precise way to quantify that And",
+    "start": 843.6,
+    "end": 849.46,
+    "en": "and it fluctuates up and down. But in some sense, as you keep averaging more and more, if you sample more and more,",
+    "ko": "정확도는 샘플링한 사람 수의 제곱근에 비례해"
+  },
+  {
+    "start": 849.5,
+    "end": 853.74,
+    "en": "the fluctuation should go down as if they were random. And there's a very precise way to quantify that.",
     "ko": "천 명을 샘플링하면 2-3%의 오차 범위를 가질 수 있어"
   },
   {
-    "start": 854.28,
+    "start": 854.06,
     "end": 858.08,
-    "en": "the Riemann hypothesis is a very elegant way that captures this",
+    "en": "And the Riemann hypothesis is a very elegant way that captures this.",
     "ko": "같은 의미로 소수를 특정 곱셈적 의미로 측정하면"
   },
   {
     "start": 859.16,
-    "end": 865.58,
-    "en": "But as with many other ways in mathematics we have very few tools to show that something really genuinely behaves really",
+    "end": 862.76,
+    "en": "But as with many other ways in mathematics, we have very few tools to show",
     "ko": "리만 제타 함수라는 특정 통계를 측정할 수 있어"
   },
   {
-    "start": 865.58,
+    "start": 862.76,
+    "end": 865.76,
+    "en": "that something really genuinely behaves really random.",
+    "ko": "리만 제타 함수라는 특정 통계를 측정할 수 있어"
+  },
+  {
+    "start": 866.28,
     "end": 871.88,
-    "en": "random And this is actually not just a little bit random but it's asking that it behaves as random as a actually random set",
+    "en": "And this is actually not just a little bit random, but it's asking that it behaves as random as a actually random set,",
     "ko": "이건 위아래로 변동해, 하지만 더 많이 평균을 내면"
   },
   {
     "start": 872.14,
-    "end": 873.62,
-    "en": "this square root cancellation",
+    "end": 877.74,
+    "en": "this square root cancellation. And we know here, because of things related to the parity problem,",
     "ko": "샘플링을 더 많이 할수록 변동이 줄어들어야 해"
   },
   {
-    "start": 874.68,
-    "end": 880.76,
-    "en": "And we know here because of things related to the parity problem most of us usual techniques cannot hope",
-    "ko": "무작위처럼 행동해야 해, 이를 정량화하는 방법이 있어"
+    "start": 878.06,
+    "end": 882.06,
+    "en": "most of us usual techniques cannot hope to settle this question.",
+    "ko": ""
   },
   {
-    "start": 881.04,
+    "start": 883.5,
     "end": 885.14,
-    "en": "to settle this question The proof has to come out of left field",
+    "en": "The proof has to come out of left field.",
     "ko": "이 질문을 해결하려면 증명이 예상치 못한 곳에서 나와야 해."
   },
   {
     "start": 887.22,
     "end": 892.02,
-    "en": "Yeah but what that is no one has any serious proposal",
+    "en": "Yeah, but what that is, no one has any serious proposal.",
     "ko": "응, 근데 그게 뭔지는 아무도 진지한 제안이 없어."
   },
   {
     "start": 893.42,
-    "end": 898.48,
-    "en": "Yeah and there's various ways to sort of as I said you can modify the primes a little bit and you can destroy the Riemann hypothesis",
+    "end": 896.94,
+    "en": "Yeah, and there's various ways to sort of, as I said, you can modify the primes a little bit",
     "ko": "응, 그리고 여러 가지 방법이 있어. 내가 말했듯이 소수를 조금 수정할 수 있고 리만 가설을 무너뜨릴 수 있어."
   },
   {
-    "start": 899.84,
-    "end": 906.04,
-    "en": "So it has to be very delicate You can't apply something that has huge margins of error It has to just barely",
+    "start": 896.94,
+    "end": 901.56,
+    "en": "and you can destroy the Riemann hypothesis. So it has to be very delicate.",
+    "ko": ""
+  },
+  {
+    "start": 902.18,
+    "end": 904.5,
+    "en": "You can't apply something that has huge margins of error.",
     "ko": "그래서 아주 섬세해야 해. 큰 오차 범위를 가진 걸 적용할 수 없어. 거의 맞아야 해."
   },
   {
-    "start": 906.04,
-    "end": 906.84,
-    "en": "work",
+    "start": 905.06,
+    "end": 906.44,
+    "en": "It has to just barely work.",
     "ko": "작동해야 해."
   },
   {
     "start": 908.54,
-    "end": 914.82,
-    "en": "And there's all these pitfalls that you have to dodge very adeptly The prime numbers is just",
+    "end": 912.84,
+    "en": "And there's all these pitfalls that you have to dodge very adeptly.",
     "ko": "그리고 피해야 할 함정이 많아. 소수는 정말 매력적이야."
   },
   {
-    "start": 914.82,
+    "start": 913.42,
+    "end": 915.86,
+    "en": "The prime numbers is just fascinating. Yeah, yeah, yeah.",
+    "ko": "응, 응, 응. 소수에 대해 가장 신비로운 건 뭐라고 생각해?"
+  },
+  {
+    "start": 915.9,
     "end": 920.54,
-    "en": "fascinating Yeah yeah yeah What to you is most mysterious about the prime numbers",
+    "en": "What to you is most mysterious about the prime numbers?",
     "ko": "응, 응, 응. 소수에 대해 가장 신비로운 건 뭐라고 생각해?"
   },
   {
     "start": 922.62,
-    "end": 928.64,
-    "en": "That's a good question So conjecturally we have a good model of them I mean as I said I mean they have certain",
+    "end": 926.32,
+    "en": "That's a good question. So conjecturally, we have a good model of them.",
     "ko": "좋은 질문이야. 추측적으로 우리는 그들에 대한 좋은 모델을 가지고 있어. 내가 말했듯이, 그들은 특정한 패턴을 가지고 있어."
   },
   {
-    "start": 928.64,
-    "end": 934.72,
-    "en": "patterns like the primes are usually odd for instance but apart from these obvious patterns they behave very randomly And just assuming",
+    "start": 926.48,
+    "end": 930.6,
+    "en": "I mean, as I said, I mean, they have certain patterns, like the primes are usually odd, for instance,",
+    "ko": ""
+  },
+  {
+    "start": 931.1,
+    "end": 933.92,
+    "en": "but apart from these obvious patterns, they behave very randomly.",
     "ko": "예를 들어 소수는 보통 홀수야. 하지만 이런 명백한 패턴 외에도 그들은 매우 무작위로 행동해. 그냥 그렇게 행동한다고 가정하면,"
   },
   {
-    "start": 934.72,
+    "start": 934.18,
     "end": 938.26,
-    "en": "that they behave so there's something called the Kramer random model of the primes",
+    "en": "And just assuming that they behave, so there's something called the Kramer random model of the primes,",
     "ko": "소수의 크레이머 랜덤 모델이라는 게 있어."
   },
   {
     "start": 939.06,
-    "end": 945.26,
-    "en": "that after a certain point primes just behave like a random set And there's various slight modifications to this model but this",
+    "end": 941.56,
+    "en": "that after a certain point, primes just behave like a random set.",
     "ko": "어느 시점 이후 소수는 그냥 무작위 집합처럼 행동해. 이 모델에 약간의 수정이 있지만,"
   },
   {
-    "start": 945.26,
-    "end": 951.26,
-    "en": "has been a very good model It matches the numerics It tells us what to predict Like I can tell you with complete certainty the",
+    "start": 942.2,
+    "end": 946.24,
+    "en": "And there's various slight modifications to this model, but this has been a very good model.",
+    "ko": "어느 시점 이후 소수는 그냥 무작위 집합처럼 행동해. 이 모델에 약간의 수정이 있지만,"
+  },
+  {
+    "start": 946.44,
+    "end": 949.44,
+    "en": "It matches the numerics. It tells us what to predict.",
     "ko": "이 모델은 아주 좋은 모델이야. 수치와 잘 맞아. 예측할 수 있는 걸 알려줘. 나는 리만 추측이 참이라는 걸 확실히 말할 수 있어."
   },
   {
-    "start": 951.26,
-    "end": 957.68,
-    "en": "Riemann conjecture is true The random model gives overwhelming odds it is true I just can't prove it Most of our",
+    "start": 949.48,
+    "end": 952.1,
+    "en": "Like I can tell you with complete certainty the Riemann conjecture is true.",
+    "ko": "이 모델은 아주 좋은 모델이야. 수치와 잘 맞아. 예측할 수 있는 걸 알려줘. 나는 리만 추측이 참이라는 걸 확실히 말할 수 있어."
+  },
+  {
+    "start": 952.66,
+    "end": 956.36,
+    "en": "The random model gives overwhelming odds it is true. I just can't prove it.",
     "ko": "랜덤 모델은 그것이 참일 확률이 압도적으로 높다고 말해. 하지만 증명할 수는 없어. 우리 수학의 대부분은 패턴이 있는 것들을 해결하는 데 최적화되어 있어."
   },
   {
-    "start": 957.68,
+    "start": 956.36,
     "end": 961.58,
-    "en": "mathematics is optimized for solving things with patterns in them",
+    "en": "Most of our mathematics is optimized for solving things with patterns in them.",
     "ko": "소수는 이런 반패턴을 가지고 있어."
   },
   {
     "start": 962.92,
-    "end": 964.86,
-    "en": "And the primes have this anti pattern",
+    "end": 968.54,
+    "en": "And the primes have this anti-pattern, as do almost everything, really.",
     "ko": "거의 모든 것이 그렇지. 하지만 우리는 그걸 증명할 수 없어."
   },
   {
-    "start": 966.02,
-    "end": 969.96,
-    "en": "as do almost everything really But we can't prove that",
-    "ko": "응, 소수가 무작위로 행동하는 게 신비롭지 않다고 생각해. 그들이 비밀 패턴을 가질 이유가 없으니까."
-  },
-  {
-    "start": 970.88,
-    "end": 975.68,
-    "en": "Yeah I guess it's not mysterious that the primes behave kind of randomly because there's sort of no reason for them to be",
+    "start": 968.54,
+    "end": 973.52,
+    "en": "But we can't prove that. Yeah, I guess it's not mysterious that the primes behave kind of randomly",
     "ko": "하지만 신비로운 건 정말로 무작위성을 강요하는 메커니즘이 뭐냐는 거야. 이건 그냥 없어."
   },
   {
-    "start": 977.34,
-    "end": 983.76,
-    "en": "to have any kind of secret pattern But what is mysterious is what is the mechanism that really",
+    "start": 973.52,
+    "end": 979.32,
+    "en": "because there's sort of no reason for them to be, to have any kind of secret pattern.",
     "ko": ""
   },
   {
-    "start": 983.76,
+    "start": 979.86,
+    "end": 984.78,
+    "en": "But what is mysterious is what is the mechanism that really forces the randomness to happen?",
+    "ko": ""
+  },
+  {
+    "start": 984.78,
     "end": 986.72,
-    "en": "forces the randomness to happen And this is just absent",
+    "en": "And this is just absent.",
     "ko": ""
   }
 ]
