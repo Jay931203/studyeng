@@ -49,7 +49,8 @@ export const categories: Category[] = [
   { id: 'daily', label: '일상', icon: '☕' },
   { id: 'entertainment', label: '예능', icon: '🎤' },
   { id: 'music', label: '음악', icon: '🎵' },
-  { id: 'animation', label: '애니', icon: '🎨' }
+  { id: 'animation', label: '애니', icon: '🎨' },
+]
 
 export const series: Series[] = [
   // === Drama Series ===
@@ -2221,6 +2222,7 @@ export const series: Series[] = [
     thumbnailEmoji: '',
     episodeCount: 4,
   }
+]
 
 export const seedVideos = defineSeedVideos([
   // === Auto-added videos ===
@@ -39963,7 +39965,8 @@ export const seedVideos = defineSeedVideos([
     clipEnd: 0,
     format: 'shorts',
     subtitles: [],
-  })
+  }
+])
 
 // Helper functions
 export function getSeriesById(seriesId: string): Series | undefined {

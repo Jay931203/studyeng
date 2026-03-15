@@ -125,8 +125,6 @@ function ExpressionCard({
   onInteract,
   onPlaySegment,
   onSwipeDismiss,
-  onNavigatePrev,
-  onNavigateNext,
   familiarCount,
   showHints,
   showSwipeHint,
@@ -136,8 +134,6 @@ function ExpressionCard({
   onInteract?: () => void
   onPlaySegment?: (start: number, end: number) => void
   onSwipeDismiss?: () => void
-  onNavigatePrev?: () => void
-  onNavigateNext?: () => void
   familiarCount?: number
   showHints?: boolean
   showSwipeHint?: boolean
@@ -159,16 +155,8 @@ function ExpressionCard({
   const handleDragEnd = (_: unknown, info: PanInfo) => {
     const absOffset = Math.abs(info.offset.x)
     const absVelocity = Math.abs(info.velocity.x)
-    // Strong swipe = dismiss as familiar
-    if (absOffset > SWIPE_THRESHOLD * 2.5 || absVelocity > 400) {
+    if (absOffset > SWIPE_THRESHOLD || absVelocity > 200) {
       onSwipeDismiss?.()
-    // Lighter swipe = navigate between cards
-    } else if (absOffset > SWIPE_THRESHOLD || absVelocity > 200) {
-      if (info.offset.x > 0) {
-        onNavigatePrev?.()
-      } else {
-        onNavigateNext?.()
-      }
     }
   }
 
@@ -446,8 +434,6 @@ function WordCard({
   onInteract,
   onPlaySegment,
   onSwipeDismiss,
-  onNavigatePrev,
-  onNavigateNext,
   familiarCount,
   showHints,
   showSwipeHint,
@@ -457,8 +443,6 @@ function WordCard({
   onInteract?: () => void
   onPlaySegment?: (start: number, end: number) => void
   onSwipeDismiss?: () => void
-  onNavigatePrev?: () => void
-  onNavigateNext?: () => void
   familiarCount?: number
   showHints?: boolean
   showSwipeHint?: boolean
@@ -478,16 +462,8 @@ function WordCard({
   const handleDragEnd = (_: unknown, info: PanInfo) => {
     const absOffset = Math.abs(info.offset.x)
     const absVelocity = Math.abs(info.velocity.x)
-    // Strong swipe = dismiss as familiar
-    if (absOffset > SWIPE_THRESHOLD * 2.5 || absVelocity > 400) {
+    if (absOffset > SWIPE_THRESHOLD || absVelocity > 200) {
       onSwipeDismiss?.()
-    // Lighter swipe = navigate between cards
-    } else if (absOffset > SWIPE_THRESHOLD || absVelocity > 200) {
-      if (info.offset.x > 0) {
-        onNavigatePrev?.()
-      } else {
-        onNavigateNext?.()
-      }
     }
   }
 
@@ -736,23 +712,9 @@ export function PrimingCard({
     return !dismissedIds.has(id)
   })
   const visible = visibleItems.length > 0
-
-  // Clamp index when items get dismissed
-  useEffect(() => {
-    if (currentCardIndex >= visibleItems.length && visibleItems.length > 0) {
-      setCurrentCardIndex(visibleItems.length - 1)
-    }
-  }, [currentCardIndex, visibleItems.length])
-
-  const goToPrevCard = useCallback(() => {
-    setCurrentCardIndex((i) => Math.max(0, i - 1))
-    triggerHaptic([15])
-  }, [])
-
-  const goToNextCard = useCallback(() => {
-    setCurrentCardIndex((i) => Math.min(visibleItems.length - 1, i + 1))
-    triggerHaptic([15])
-  }, [visibleItems.length])
+  const displayCardIndex = visibleItems.length > 0
+    ? Math.min(currentCardIndex, visibleItems.length - 1)
+    : 0
 
   const storedAutoStartEnabled = useSettingsStore((state) => state.primingAutoStartEnabled)
   const setStoredAutoStartEnabled = useSettingsStore((state) => state.setPrimingAutoStartEnabled)
@@ -806,29 +768,22 @@ export function PrimingCard({
     [onPlaySegment],
   )
 
-  const handleSwipeDismiss = useCallback(
-    (expr: Expression) => {
-      const exprId = expr.exprId || expr.canonical
-      triggerHaptic([30, 20, 40])
-      setDismissedIds((prev) => new Set([...prev, exprId]))
-      onMarkFamiliar?.(exprId)
-      trackEvent(AnalyticsEvents.EXPRESSION_FAMILIAR, { expression: expr.canonical })
-      // Pause auto start when user interacts
-      setAutoStartEnabled(false)
-    },
-    [onMarkFamiliar],
-  )
+  const handleSwipeDismiss = (expr: Expression) => {
+    const exprId = expr.exprId || expr.canonical
+    triggerHaptic([30, 20, 40])
+    setDismissedIds((prev) => new Set([...prev, exprId]))
+    onMarkFamiliar?.(exprId)
+    trackEvent(AnalyticsEvents.EXPRESSION_FAMILIAR, { expression: expr.canonical })
+    setAutoStartEnabled(false)
+  }
 
-  const handleWordSwipeDismiss = useCallback(
-    (word: WordItem) => {
-      triggerHaptic([30, 20, 40])
-      setDismissedIds((prev) => new Set([...prev, word.wordId]))
-      onMarkFamiliar?.(word.wordId)
-      trackEvent(AnalyticsEvents.EXPRESSION_FAMILIAR, { expression: word.canonical })
-      setAutoStartEnabled(false)
-    },
-    [onMarkFamiliar],
-  )
+  const handleWordSwipeDismiss = (word: WordItem) => {
+    triggerHaptic([30, 20, 40])
+    setDismissedIds((prev) => new Set([...prev, word.wordId]))
+    onMarkFamiliar?.(word.wordId)
+    trackEvent(AnalyticsEvents.EXPRESSION_FAMILIAR, { expression: word.canonical })
+    setAutoStartEnabled(false)
+  }
 
   return (
     <AnimatePresence>
@@ -923,7 +878,7 @@ export function PrimingCard({
             >
               <AnimatePresence mode="wait">
                 {visibleItems.map((item, index) => {
-                  if (index !== currentCardIndex) return null
+                  if (index !== displayCardIndex) return null
                   if (item.type === 'expression') {
                     const expr = item.data as Expression
                     const id = expr.exprId || expr.canonical
@@ -941,11 +896,9 @@ export function PrimingCard({
                           onInteract={pauseAutoStart}
                           onPlaySegment={handlePreviewSegment}
                           onSwipeDismiss={() => handleSwipeDismiss(expr)}
-                          onNavigatePrev={currentCardIndex > 0 ? goToPrevCard : undefined}
-                          onNavigateNext={currentCardIndex < visibleItems.length - 1 ? goToNextCard : undefined}
                           familiarCount={(familiarCounts?.[id] ?? 0) + (dismissedIds.has(id) ? 1 : 0)}
                           showHints={guideHintsEnabled}
-                          showSwipeHint={false}
+                          showSwipeHint={guideHintsEnabled && displayCardIndex === 0}
                         />
                       </motion.div>
                     )
@@ -965,11 +918,9 @@ export function PrimingCard({
                         onInteract={pauseAutoStart}
                         onPlaySegment={handlePreviewSegment}
                         onSwipeDismiss={() => handleWordSwipeDismiss(word)}
-                        onNavigatePrev={currentCardIndex > 0 ? goToPrevCard : undefined}
-                        onNavigateNext={currentCardIndex < visibleItems.length - 1 ? goToNextCard : undefined}
                         familiarCount={(familiarCounts?.[word.wordId] ?? 0) + (dismissedIds.has(word.wordId) ? 1 : 0)}
                         showHints={guideHintsEnabled}
-                        showSwipeHint={false}
+                        showSwipeHint={guideHintsEnabled && displayCardIndex === 0}
                       />
                     </motion.div>
                   )
@@ -990,8 +941,8 @@ export function PrimingCard({
                       }}
                       className="h-[6px] rounded-full transition-all duration-200"
                       style={{
-                        width: i === currentCardIndex ? 18 : 6,
-                        backgroundColor: i === currentCardIndex
+                        width: i === displayCardIndex ? 18 : 6,
+                        backgroundColor: i === displayCardIndex
                           ? 'var(--accent-text, #5eead4)'
                           : 'rgba(255, 255, 255, 0.25)',
                       }}
