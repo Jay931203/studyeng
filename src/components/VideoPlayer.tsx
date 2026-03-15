@@ -363,6 +363,11 @@ export function VideoPlayer({
   const iconTimerRef = useRef<number | null>(null)
   const gameContinueTimerRef = useRef<number | null>(null)
   const playbackStartedNotifiedRef = useRef(false)
+  const suppressTapUntilRef = useRef(0)
+
+  const suppressVideoTap = useCallback(() => {
+    suppressTapUntilRef.current = performance.now() + 450
+  }, [])
 
   useEffect(() => {
     if (playbackStarted) {
@@ -450,6 +455,10 @@ export function VideoPlayer({
   }, [])
 
   const handleTap = () => {
+    if (performance.now() < suppressTapUntilRef.current) {
+      return
+    }
+
     if (gameActive) return
 
     const ytPlayer = player.current as
@@ -571,7 +580,16 @@ export function VideoPlayer({
   const subtitleLayoutToggleButton = showLandscapeSubtitleLayoutToggle ? (
     <button
       type="button"
+      onPointerDown={(event) => {
+        suppressVideoTap()
+        event.stopPropagation()
+      }}
+      onPointerUp={(event) => {
+        suppressVideoTap()
+        event.stopPropagation()
+      }}
       onClick={(event) => {
+        suppressVideoTap()
         event.stopPropagation()
         cycleLandscapeSubtitleLayout()
       }}
@@ -858,7 +876,18 @@ export function VideoPlayer({
         <div
           className="absolute z-[26]"
           style={{ right: subtitleToggleInsetRight, top: subtitleToggleInsetTop }}
-          onClick={(event) => event.stopPropagation()}
+          onPointerDown={(event) => {
+            suppressVideoTap()
+            event.stopPropagation()
+          }}
+          onPointerUp={(event) => {
+            suppressVideoTap()
+            event.stopPropagation()
+          }}
+          onClick={(event) => {
+            suppressVideoTap()
+            event.stopPropagation()
+          }}
         >
           {subtitleLayoutToggleButton}
         </div>
