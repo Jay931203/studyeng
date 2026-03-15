@@ -39,12 +39,15 @@ function FlowNote() {
           <span className="rounded-full bg-[var(--bg-secondary)] px-3 py-1 text-xs font-medium text-[var(--text-secondary)]">
             저장
           </span>
+          <span className="rounded-full bg-[var(--bg-secondary)] px-3 py-1 text-xs font-medium text-[var(--text-secondary)]">
+            Learn
+          </span>
         </div>
         <p className="mt-4 text-xl font-bold text-[var(--text-primary)]">
-          쇼츠에서 보고, 자막에서 멈추고, 필요한 표현만 남겨두세요.
+          쇼츠와 시리즈에서 보고, 자막에서 멈추고, Learn에서 다시 꺼내 보세요.
         </p>
         <p className="mt-2 text-sm leading-relaxed text-[var(--text-secondary)]">
-          계정을 연결하면 이어보기와 저장 표현, 다시 볼 흐름이 끊기지 않게 묶입니다.
+          계정을 연결하면 이어보기, 저장 표현, XP와 게임 복습 흐름이 한 계정에 묶입니다.
         </p>
       </div>
   )
@@ -96,11 +99,11 @@ function LoginPageContent() {
             />
             <FeatureRow
               title="반응형 추천"
-              description="넘긴 장면들이 다음 피드에 바로 반영됩니다."
+              description="내 레벨과 본 흐름이 홈과 쇼츠 추천에 바로 반영됩니다."
             />
             <FeatureRow
-              title="가볍게 시작"
-              description="둘러본 뒤 필요할 때 연결해도 됩니다."
+              title="게임과 XP"
+              description="Learn에서 저장 표현과 게임, XP 흐름이 이어집니다."
             />
           </div>
         </div>
@@ -127,7 +130,10 @@ function LoginPageContent() {
               저장 표현 유지
             </span>
             <span className="rounded-full bg-[var(--bg-secondary)] px-3 py-1 text-xs font-medium text-[var(--text-secondary)]">
-              추천 반영
+              레벨 맞춤 추천
+            </span>
+            <span className="rounded-full bg-[var(--bg-secondary)] px-3 py-1 text-xs font-medium text-[var(--text-secondary)]">
+              Learn 복습
             </span>
           </div>
 

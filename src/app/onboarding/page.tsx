@@ -121,9 +121,9 @@ function OnboardingPageContent() {
                 </p>
                 <Logo className="h-8 mx-auto mt-4 mb-3 text-white" />
                 <p className="mb-12 text-lg leading-relaxed text-gray-400">
-                  처음 한 번만 감각을 맞추면
+                  쇼츠와 시리즈를 넘기며 보고,
                   <br />
-                  오늘 볼 장면과 복습 흐름이 바로 정리됩니다.
+                  저장한 표현은 게임과 XP 흐름으로 바로 이어집니다.
                 </p>
                 <button
                   onClick={() => setStep(1)}
@@ -140,7 +140,7 @@ function OnboardingPageContent() {
                   지금 영어 감각은 어느 정도인가요?
                 </h2>
                 <p className="mb-6 text-sm text-gray-400">
-                  선택한 난이도는 오늘 장면과 복습 순서에 반영됩니다.
+                  선택한 난이도는 홈 추천, 쇼츠 랜덤, 표현 추천에 반영됩니다.
                 </p>
                 <div className="mb-8 flex flex-col gap-3">
                   {LEVELS.map((level) => (
@@ -173,13 +173,14 @@ function OnboardingPageContent() {
                   이렇게 사용해보세요
                 </h2>
                 <p className="mb-6 text-sm text-gray-400">
-                  영상을 보면서 자막을 자유롭게 활용할 수 있어요.
+                  영상에서 바로 저장하고, 피드를 바꾸고, Learn에서 이어 복습할 수 있어요.
                 </p>
                 <div className="mb-6 flex flex-col gap-3">
                   {[
                     { gesture: '탭', desc: '해당 장면으로 이동' },
                     { gesture: '두 번 탭', desc: '표현 저장 / 해제' },
                     { gesture: '길게 누르기', desc: '자막 고정 (프리즈)' },
+                    { gesture: 'Series | Shorts', desc: '하단 또는 가로 모드 스위처로 피드 전환' },
                   ].map((item) => (
                     <div
                       key={item.gesture}
@@ -193,6 +194,20 @@ function OnboardingPageContent() {
                   ))}
                 </div>
                 <div className="mb-8 rounded-xl border border-white/10 bg-white/5 p-4">
+                  <div className="flex items-center gap-3 border-b border-white/10 pb-4">
+                    <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[var(--accent-primary)]/15 text-[var(--accent-text)]">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4">
+                        <path d="M10 3a1 1 0 0 1 1 1v5.382l2.447 2.447a1 1 0 0 1-1.414 1.414l-2.74-2.74A1 1 0 0 1 9 9.796V4a1 1 0 0 1 1-1Z" />
+                        <path fillRule="evenodd" d="M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm0-14a6 6 0 1 0 0 12 6 6 0 0 0 0-12Z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium text-white">Learn 복습</p>
+                      <p className="mt-0.5 text-xs text-gray-400">
+                        저장 표현과 게임, XP 흐름은 Learn 탭에서 다시 이어집니다.
+                      </p>
+                    </div>
+                  </div>
                   <div className="flex items-center gap-3">
                     <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/10">
                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 text-gray-400">
@@ -202,7 +217,7 @@ function OnboardingPageContent() {
                     <div>
                       <p className="text-sm font-medium text-white">리모콘</p>
                       <p className="mt-0.5 text-xs text-gray-400">
-                        가로 모드에서 화면 우측 하단 버튼으로 재생/이동/고정을 조작할 수 있어요.
+                        가로 모드에서는 플로팅 리모콘으로 재생, 이동, 프리즈를 조작할 수 있어요.
                       </p>
                     </div>
                   </div>
@@ -211,7 +226,7 @@ function OnboardingPageContent() {
                   onClick={finish}
                   className="w-full rounded-xl bg-[var(--accent-primary)] py-3.5 font-medium text-white"
                 >
-                  오늘 장면 받기
+                  시작하기
                 </button>
               </div>
             )}
