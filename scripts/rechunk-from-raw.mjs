@@ -12,9 +12,10 @@
  */
 
 import { readFile, writeFile, readdir } from 'fs/promises'
-import { join, dirname } from 'path'
+import { join, dirname, basename } from 'path'
 import { fileURLToPath } from 'url'
 import { existsSync } from 'fs'
+import { execSync } from 'child_process'
 import { loadSeedData } from './lib/load-seed-data.mjs'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -31,6 +32,19 @@ const specificId = args.find(a => a.startsWith('--id='))?.split('=')[1]
 const dryRun = args.includes('--dry')
 
 async function main() {
+  // Build set of reseg-protected files (manually segmented in bad95bf1)
+  const resegProtected = new Set()
+  try {
+    const resegFiles = execSync('git ls-tree --name-only bad95bf1 public/transcripts/', { encoding: 'utf-8' })
+    for (const line of resegFiles.trim().split('\n')) {
+      if (line) resegProtected.add(basename(line).replace('.json', ''))
+    }
+    console.log(`Loaded ${resegProtected.size} reseg-protected files from bad95bf1\n`)
+  } catch (err) {
+    console.warn(`WARNING: Could not load reseg file list from bad95bf1: ${err.message}`)
+    console.warn('Proceeding without reseg protection\n')
+  }
+
   // Load seed data for clipStart/clipEnd
   const { seedVideos } = await loadSeedData(SEED_VIDEOS_PATH)
   const clipMap = new Map()
@@ -70,6 +84,12 @@ async function main() {
   let skipped = 0
 
   for (const id of toProcess) {
+    if (resegProtected.has(id)) {
+      console.log(`  Skipping ${id} (reseg protected)`)
+      skipped++
+      continue
+    }
+
     try {
       const rawData = JSON.parse(await readFile(join(WHISPER_RAW_DIR, `${id}.json`), 'utf-8'))
       const existingTranscript = JSON.parse(await readFile(join(TRANSCRIPTS_DIR, `${id}.json`), 'utf-8'))
