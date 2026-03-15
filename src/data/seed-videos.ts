@@ -49,8 +49,7 @@ export const categories: Category[] = [
   { id: 'daily', label: '일상', icon: '☕' },
   { id: 'entertainment', label: '예능', icon: '🎤' },
   { id: 'music', label: '음악', icon: '🎵' },
-  { id: 'animation', label: '애니', icon: '🎨' },
-]
+  { id: 'animation', label: '애니', icon: '🎨' }
 
 export const series: Series[] = [
   // === Drama Series ===
@@ -2221,11 +2220,10 @@ export const series: Series[] = [
     description: '버밍엄 갱단의 거친 영국 영어',
     thumbnailEmoji: '',
     episodeCount: 4,
-  },
-]
+  }
 
 export const seedVideos = defineSeedVideos([
-  // === Auto-added videos ===
+  // === Auto-added videos ===
   {
     id: 'the-office-ep10',
     youtubeId: '9Ht_GI2zOxo',
@@ -2249,7 +2247,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'the-office',
     episodeNumber: 3,
     subtitles: [],
-  },
+  },
   {
     id: 'friends-s1-ep7',
     youtubeId: 'wi5Q3rlQaMI',
@@ -5346,7 +5344,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'game-of-thrones',
     episodeNumber: 11,
     subtitles: [],
-  },
+  },
   {
     id: 'house-md-ep1',
     youtubeId: 'mATlzmlaSQE',
@@ -7890,7 +7888,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'pursuit-happyness',
     episodeNumber: 10,
     subtitles: [],
-  },
+  },
   {
     id: 'pursuit-happyness-ep15',
     youtubeId: '9BJUGcy22mY',
@@ -14755,7 +14753,10 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'ted-ed',
     episodeNumber: 12,
     subtitles: [],
-  },
+  },
+
+
+
   {
     id: 'mkbhd-ep1',
     youtubeId: '9gk_rl3y_SU',
@@ -17287,7 +17288,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'disney-songs',
     episodeNumber: 4,
     subtitles: [],
-  },
+  },
   {
     id: 'disney-songs-ep7',
     youtubeId: 'pnZbiKKydWU',
@@ -18403,7 +18404,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'toy-story',
     episodeNumber: 10,
     subtitles: [],
-  },
+  },
   {
     id: 'toy-story-ep12',
     youtubeId: 'M-JHGjBmPEg',
@@ -18705,18 +18706,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   {
-    id: 'despicable-me-minions-ep6',
-    youtubeId: '5Nhl4f2r8rc',
-    title: 'The Minions\' Epic Banana Battle',
-    category: 'animation',
-    difficulty: 1,
-    clipStart: 30,
-    clipEnd: 90,
-    seriesId: 'despicable-me-minions',
-    episodeNumber: 5,
-    subtitles: [],
-  },
-  {
     id: 'despicable-me-minions-ep7',
     youtubeId: 'HENVx4Xg2P4',
     title: 'MINIONS: THE RISE OF GRU Clip - "Minions Flying A Plane"',
@@ -18896,7 +18885,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'pixar-moments',
     episodeNumber: 5,
     subtitles: [],
-  },
+  },
   {
     id: 'pixar-moments-ep12',
     youtubeId: 'grMFdgIRdxA',
@@ -18943,18 +18932,6 @@ export const seedVideos = defineSeedVideos([
     clipEnd: 90,
     seriesId: 'pixar-moments',
     episodeNumber: 11,
-    subtitles: [],
-  },
-  {
-    id: 'pixar-moments-ep16',
-    youtubeId: '_nbVTUYVKxg',
-    title: 'For The Birds (1080p) (Pixar Short Films)',
-    category: 'animation',
-    difficulty: 1,
-    clipStart: 30,
-    clipEnd: 90,
-    seriesId: 'pixar-moments',
-    episodeNumber: 12,
     subtitles: [],
   },
   {
@@ -19172,7 +19149,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'shrek',
     episodeNumber: 5,
     subtitles: [],
-  },
+  },
   {
     id: 'shrek-ep7',
     youtubeId: '9OfSzje7e1w',
@@ -19724,7 +19701,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'up',
     episodeNumber: 1,
     subtitles: [],
-  },
+  },
   {
     id: 'up-ep3',
     youtubeId: '9SzPApTK33g',
@@ -19868,7 +19845,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'up',
     episodeNumber: 14,
     subtitles: [],
-  },
+  },
   {
     id: 'up-ep16',
     youtubeId: '_mAycORmun8',
@@ -19988,7 +19965,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'how-to-train-your-dragon',
     episodeNumber: 5,
     subtitles: [],
-  },
+  },
   {
     id: 'how-to-train-your-dragon-ep7',
     youtubeId: '_PbmR4L3W2U',
@@ -20120,7 +20097,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'kung-fu-panda',
     episodeNumber: 1,
     subtitles: [],
-  },
+  },
   {
     id: 'kung-fu-panda-ep3',
     youtubeId: '0_1NU60qHWs',
@@ -20229,18 +20206,6 @@ export const seedVideos = defineSeedVideos([
     episodeNumber: 11,
     subtitles: [],
   },
-  {
-    id: 'kung-fu-panda-ep12',
-    youtubeId: 'hTpVCu5DzpA',
-    title: 'Kung Fu Panda 2 (2011) - Opening Battle Scene',
-    category: 'animation',
-    difficulty: 1,
-    clipStart: 30,
-    clipEnd: 90,
-    seriesId: 'kung-fu-panda',
-    episodeNumber: 12,
-    subtitles: [],
-  },
   {
     id: 'madagascar-ep1',
     youtubeId: 'JaTAjmSppvA',
@@ -20830,7 +20795,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'moana',
     episodeNumber: 3,
     subtitles: [],
-  },
+  },
   {
     id: 'moana-ep7',
     youtubeId: 'SgXpsZa8_i4',
@@ -21547,7 +21512,7 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
 
-  // --- Friends 추가 ---
+  // --- Friends 추가 ---
   {
     id: 'friends-joey-finds-out',
     youtubeId: 'XZVHmRvfDHM',
@@ -24192,7 +24157,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'celebrity-interviews',
     episodeNumber: 5,
     subtitles: [],
-  },
+  },
   {
     id: 'celebrity-interviews-06',
     youtubeId: 'cISYzA36-ZY',
@@ -24991,7 +24956,7 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
 
-  // --- hip-hop-classics ---
+  // --- hip-hop-classics ---
   {
     id: 'hip-hop-classics-02',
     youtubeId: 'j5-yKhDd64s',
@@ -25783,7 +25748,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'ted-talks-b2',
     episodeNumber: 19,
     subtitles: [],
-  },
+  },
   {
     id: 'ted-talks-b2-ep22',
     youtubeId: 'R1vskiVDwl4',
@@ -25807,7 +25772,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'ted-talks-b2',
     episodeNumber: 23,
     subtitles: [],
-  },
+  },
   {
     id: 'ted-talks-b2-ep26',
     youtubeId: 'P_6vDLq64gE',
@@ -26023,7 +25988,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'ted-talks-b2',
     episodeNumber: 44,
     subtitles: [],
-  },
+  },
   {
     id: 'ted-talks-b2-ep46',
     youtubeId: 'yqc9zX04DXs',
@@ -26059,7 +26024,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'ted-talks-b2',
     episodeNumber: 48,
     subtitles: [],
-  },
+  },
   {
     id: 'ted-talks-b2-ep50',
     youtubeId: '8KkKuTCFvzI',
@@ -26071,7 +26036,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'ted-talks-b2',
     episodeNumber: 50,
     subtitles: [],
-  },
+  },
   {
     id: 'ted-talks-b2-ep53',
     youtubeId: 'NDQ1Mi5I4rg',
@@ -26107,7 +26072,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'ted-talks-b2',
     episodeNumber: 55,
     subtitles: [],
-  },
+  },
   {
     id: 'ted-talks-b2-ep58',
     youtubeId: 'nUdsTizSxSI',
@@ -26143,7 +26108,9 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'talk-shows-b2',
     episodeNumber: 2,
     subtitles: [],
-  },
+  },
+
+
   {
     id: 'talk-shows-b2-ep9',
     youtubeId: '7F_rb5CZ5T8',
@@ -26191,7 +26158,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'comedy-b2',
     episodeNumber: 1,
     subtitles: [],
-  },
+  },
   {
     id: 'comedy-b2-ep3',
     youtubeId: 'Gd9-PcOPjgk',
@@ -26215,7 +26182,8 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'comedy-b2',
     episodeNumber: 4,
     subtitles: [],
-  },
+  },
+
   {
     id: 'news-docs-b2-ep4',
     youtubeId: '2GFaN9-1iz0',
@@ -26251,7 +26219,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'news-docs-b2',
     episodeNumber: 6,
     subtitles: [],
-  },
+  },
   
   {
     id: 'suits-clips-ep2',
@@ -26264,7 +26232,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'suits-clips',
     episodeNumber: 2,
     subtitles: [],
-  },
+  },
   
   {
     id: 'suits-clips-ep5',
@@ -26352,7 +26320,7 @@ export const seedVideos = defineSeedVideos([
     episodeNumber: 13,
     subtitles: [],
   },
-  
+  
   {
     id: 'breaking-bad-clips-ep2',
     youtubeId: 'YGenFlvyQ0g',
@@ -26635,11 +26603,11 @@ export const seedVideos = defineSeedVideos([
     episodeNumber: 3,
     subtitles: [],
   },
-  
   
   
   
-  
+  
+  
   {
     id: 'shark-tank-clips-ep12',
     youtubeId: 'EjfKk8_6YX0',
@@ -26690,7 +26658,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'downton-abbey-clips',
     episodeNumber: 5,
     subtitles: [],
-  },
+  },
   {
     id: 'downton-abbey-clips-ep7',
     youtubeId: 'asdBnvCdSoc',
@@ -26779,7 +26747,7 @@ export const seedVideos = defineSeedVideos([
     episodeNumber: 2,
     subtitles: [],
   },
-  
+  
   
   {
     id: 'ted-talks-b2-extra-ep6',
@@ -26792,7 +26760,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'ted-talks-b2-extra',
     episodeNumber: 6,
     subtitles: [],
-  },
+  },
   {
     id: 'veep-clips-ep1',
     youtubeId: 'HAItaBPQHAs',
@@ -26967,18 +26935,6 @@ export const seedVideos = defineSeedVideos([
   },
   
   {
-    id: 'late-night-clips-ep18',
-    youtubeId: 'AeEYQ62t8hA',
-    title: 'The Final Episode | Late Late Show with James Corden',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'late-night-clips',
-    episodeNumber: 18,
-    subtitles: [],
-  },
-  {
     id: 'late-night-clips-ep19',
     youtubeId: 'Htti4Ne10d0',
     title: 'Late Night Nightmare w/ Kimmel, Meyers, Colbert, Fallon, Letterman & Noah',
@@ -27088,7 +27044,7 @@ export const seedVideos = defineSeedVideos([
   },
   
   
-  
+  
   {
     id: 'last-week-tonight-ep10',
     youtubeId: 'cGZkCPo7tC0',
@@ -27113,7 +27069,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'last-week-tonight',
     episodeNumber: 12,
     subtitles: [],
-  },
+  },
   
   
   {
@@ -27187,7 +27143,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'jordan-peterson-lectures',
     episodeNumber: 6,
     subtitles: [],
-  },
+  },
   {
     id: 'lex-fridman-clips-ep1',
     youtubeId: '3x1b_S6Qp2Q',
@@ -27311,7 +27267,8 @@ export const seedVideos = defineSeedVideos([
     episodeNumber: 7,
     subtitles: [],
   },
-  
+  
+
   {
     id: 'lex-fridman-clips-ep9',
     youtubeId: 'FzkCLR378fE',
@@ -27323,8 +27280,8 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'lex-fridman-clips',
     episodeNumber: 9,
     subtitles: [],
-  },
-  
+  },
+  
   {
     id: 'lex-fridman-clips-ep11',
     youtubeId: '79CVn9MP-BE',
@@ -27336,10 +27293,10 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'lex-fridman-clips',
     episodeNumber: 11,
     subtitles: [],
-  },
-  
-  
-  
+  },
+  
+  
+  
   {
     id: 'lex-fridman-clips-ep15',
     youtubeId: 'Tc28vDtkB6o',
@@ -27351,10 +27308,10 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'lex-fridman-clips',
     episodeNumber: 15,
     subtitles: [],
-  },
-  
-  
-  
+  },
+  
+  
+  
   {
     id: 'lex-fridman-clips-ep19',
     youtubeId: 'wR_VDIj7bM8',
@@ -27366,7 +27323,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'lex-fridman-clips',
     episodeNumber: 19,
     subtitles: [],
-  },
+  },
   {
     id: 'lex-fridman-clips-ep20',
     youtubeId: 'lvjq4saqfWQ',
@@ -27378,7 +27335,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'lex-fridman-clips',
     episodeNumber: 20,
     subtitles: [],
-  },
+  },
   {
     id: 'lex-fridman-clips-ep21',
     youtubeId: 'CuDs6tkKluw',
@@ -27390,7 +27347,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'lex-fridman-clips',
     episodeNumber: 21,
     subtitles: [],
-  },
+  },
   {
     id: 'lex-fridman-clips-ep22',
     youtubeId: 'TBssn62HcKw',
@@ -27415,8 +27372,8 @@ export const seedVideos = defineSeedVideos([
     episodeNumber: 23,
     subtitles: [],
   },
-  
-  
+  
+  
   {
     id: 'lex-fridman-clips-ep25',
     youtubeId: 'bpMHBPdBySQ',
@@ -27428,7 +27385,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'lex-fridman-clips',
     episodeNumber: 25,
     subtitles: [],
-  },
+  },
   {
     id: 'lex-fridman-clips-ep26',
     youtubeId: 'd50-oe-_Vto',
@@ -27440,11 +27397,11 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'lex-fridman-clips',
     episodeNumber: 26,
     subtitles: [],
-  },
+  },
   
-  
-  
-  
+  
+  
+  
   {
     id: 'lex-fridman-clips-ep31',
     youtubeId: '9kB14zbtLOk',
@@ -27456,7 +27413,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'lex-fridman-clips',
     episodeNumber: 31,
     subtitles: [],
-  },
+  },
   {
     id: 'lex-fridman-clips-ep32',
     youtubeId: 'OFLvAjGo-r8',
@@ -27481,18 +27438,6 @@ export const seedVideos = defineSeedVideos([
     episodeNumber: 33,
     subtitles: [],
   },
-  {
-    id: 'lex-fridman-clips-ep34',
-    youtubeId: 'oBGFmwzHNNo',
-    title: 'Lex Clips - Secret Anti-Hitler Resistance Network Inside Germany',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 34,
-    subtitles: [],
-  },
   
   {
     id: 'lex-fridman-clips-ep37',
@@ -27530,7 +27475,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'lex-fridman-clips',
     episodeNumber: 40,
     subtitles: [],
-  },
+  },
   {
     id: 'lex-fridman-clips-ep42',
     youtubeId: 'g4OxNyNhVSM',
@@ -27544,18 +27489,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   
-  {
-    id: 'lex-fridman-clips-ep44',
-    youtubeId: 'nSz0R_S4QMk',
-    title: 'Lex Clips - The Biggest Mystery in Science (Adam Frank)',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 44,
-    subtitles: [],
-  },
   {
     id: 'lex-fridman-clips-ep45',
     youtubeId: 'CKCizquUQXE',
@@ -27800,18 +27733,6 @@ export const seedVideos = defineSeedVideos([
     episodeNumber: 6,
     subtitles: [],
   },
-  {
-    id: 'oxford-union-debates-ep7',
-    youtubeId: '8uK3rOl7I-Q',
-    title: 'Oxford Union - European Army Full Debate',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'oxford-union-debates',
-    episodeNumber: 7,
-    subtitles: [],
-  },
   
   
   {
@@ -27885,7 +27806,10 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'intelligence-squared',
     episodeNumber: 5,
     subtitles: [],
-  },
+  },
+
+
+
   {
     id: 'bbc-earth-attenborough-ep2',
     youtubeId: 'B3OjfK0t1XM',
@@ -28005,7 +27929,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'yale-lectures',
     episodeNumber: 4,
     subtitles: [],
-  },
+  },
   {
     id: 'ken-burns-docs-ep2',
     youtubeId: '3j-3Xi5BcKs',
@@ -28017,7 +27941,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'ken-burns-docs',
     episodeNumber: 2,
     subtitles: [],
-  },
+  },
   {
     id: 'george-carlin-ep2',
     youtubeId: 'cgps85scy1g',
@@ -28055,30 +27979,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   
-  {
-    id: 'george-carlin-ep6',
-    youtubeId: 'OxmiSRD0ZqU',
-    title: 'George Carlin - It\'s Bad for You 1080p Remaster',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'george-carlin',
-    episodeNumber: 6,
-    subtitles: [],
-  },
-  {
-    id: 'george-carlin-ep7',
-    youtubeId: 'pmZZDorMWYU',
-    title: 'George Carlin - Complaints and Grievances Full Special 2001',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'george-carlin',
-    episodeNumber: 7,
-    subtitles: [],
-  },
   {
     id: 'monty-python-ep1',
     youtubeId: 'iV2ViNJFZC8',
@@ -28138,7 +28038,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'monty-python',
     episodeNumber: 5,
     subtitles: [],
-  },
+  },
   {
     id: 'monty-python-ep8',
     youtubeId: 'FZqs36C5sgM',
@@ -28186,7 +28086,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'eddie-izzard',
     episodeNumber: 3,
     subtitles: [],
-  },
+  },
   {
     id: 'eddie-izzard-ep5',
     youtubeId: 'cXxsxmaobxs',
@@ -28198,7 +28098,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'eddie-izzard',
     episodeNumber: 5,
     subtitles: [],
-  },
+  },
   {
     id: 'qi-panel-show-ep2',
     youtubeId: 's0JQcV3nGow',
@@ -28246,7 +28146,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'qi-panel-show',
     episodeNumber: 5,
     subtitles: [],
-  },
+  },
   {
     id: 'qi-panel-show-ep7',
     youtubeId: '0OFXL0jIMR4',
@@ -28270,7 +28170,10 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'would-i-lie-to-you',
     episodeNumber: 1,
     subtitles: [],
-  },
+  },
+
+
+
   {
     id: '8-out-of-10-cats-countdown-ep2',
     youtubeId: 'qkpyd2lr4dI',
@@ -28294,7 +28197,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'academic-lectures',
     episodeNumber: 1,
     subtitles: [],
-  },
+  },
   {
     id: 'academic-lectures-ep3',
     youtubeId: '5MgBikgcWnY',
@@ -28318,9 +28221,9 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'mock-the-week',
     episodeNumber: 1,
     subtitles: [],
-  },
+  },
   
-  
+  
   {
     id: 'mit-ocw-lectures-ep4',
     youtubeId: '0JUN9aDxVmI',
@@ -28333,7 +28236,7 @@ export const seedVideos = defineSeedVideos([
     episodeNumber: 4,
     subtitles: [],
   },
-  
+  
   {
     id: 'taskmaster-ep3',
     youtubeId: 'GMwM9okS-x4',
@@ -28347,7 +28250,7 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   
-  
+  
   {
     id: 'taskmaster-ep7',
     youtubeId: 'H2LolDNgO9g',
@@ -28437,7 +28340,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'yes-minister',
     episodeNumber: 1,
     subtitles: [],
-  },
+  },
   
   {
     id: 'yes-minister-ep4',
@@ -28450,7 +28353,9 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'yes-minister',
     episodeNumber: 4,
     subtitles: [],
-  },
+  },
+
+
   {
     id: 'blackadder-ep5',
     youtubeId: 'jr_hZ3rtxy4',
@@ -28463,7 +28368,7 @@ export const seedVideos = defineSeedVideos([
     episodeNumber: 5,
     subtitles: [],
   },
-  
+  
   {
     id: 'fry-and-laurie-ep2',
     youtubeId: 'Qq1ksYmqqo0',
@@ -28477,19 +28382,7 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   
-  
-  {
-    id: 'bill-burr-ep4',
-    youtubeId: '2O2bKu-3U3U',
-    title: 'Bill Burr - You People Are All the Same',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'bill-burr',
-    episodeNumber: 4,
-    subtitles: [],
-  },
+  
   
   {
     id: 'ricky-gervais-ep2',
@@ -28538,7 +28431,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'jimmy-carr',
     episodeNumber: 2,
     subtitles: [],
-  },
+  },
   {
     id: 'ricky-gervais-show-ep1',
     youtubeId: '7sUL8d0VFOo',
@@ -28634,7 +28527,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'ricky-gervais-show',
     episodeNumber: 8,
     subtitles: [],
-  },
+  },
   {
     id: 'only-fools-and-horses-ep3',
     youtubeId: 'NiVvDUXpuPo',
@@ -28975,7 +28868,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'shark-tank-b2',
     episodeNumber: 7,
     subtitles: [],
-  },
+  },
   {
     id: 'shark-tank-b2-ep9',
     youtubeId: 'lTYN2HmQM2s',
@@ -29025,7 +28918,7 @@ export const seedVideos = defineSeedVideos([
     seriesId: 'social-network-b2',
     episodeNumber: 4,
     subtitles: [],
-  },
+  },
   {
     id: 'wolf-wall-street-b2-ep2',
     youtubeId: 'MJXLV_DMKa0',
@@ -37729,17 +37622,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   {
-    id: 'shorts-_PpIUO7FNDM',
-    youtubeId: '_PpIUO7FNDM',
-    title: 'Spoilers ahead  recap alert',
-    category: 'entertainment',
-    difficulty: 3,
-    clipStart: 0,
-    clipEnd: 0,
-    format: 'shorts',
-    subtitles: [],
-  },
-  {
     id: 'shorts-savEbCxTFeg',
     youtubeId: 'savEbCxTFeg',
     title: `We're gonna have a high, high-end year. #BroadCity`,
@@ -37795,17 +37677,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   {
-    id: 'shorts-xvUwxzjCYMY',
-    youtubeId: 'xvUwxzjCYMY',
-    title: 'Mr Bean Catches The Camera Thief',
-    category: 'entertainment',
-    difficulty: 1,
-    clipStart: 0,
-    clipEnd: 0,
-    format: 'shorts',
-    subtitles: [],
-  },
-  {
     id: 'shorts-LzE32oDUD9k',
     youtubeId: 'LzE32oDUD9k',
     title: 'The frustration is palpable. #Workaholics',
@@ -37833,17 +37704,6 @@ export const seedVideos = defineSeedVideos([
     title: 'Someone get Gayle some prunes. #KattWilliams',
     category: 'entertainment',
     difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    format: 'shorts',
-    subtitles: [],
-  },
-  {
-    id: 'shorts-cRx1gYUXL2U',
-    youtubeId: 'cRx1gYUXL2U',
-    title: `Mr Bean's Picnic At The Park`,
-    category: 'entertainment',
-    difficulty: 1,
     clipStart: 0,
     clipEnd: 0,
     format: 'shorts',
@@ -38009,17 +37869,6 @@ export const seedVideos = defineSeedVideos([
     title: 'THE Harvey Greco?! #Digman',
     category: 'entertainment',
     difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    format: 'shorts',
-    subtitles: [],
-  },
-  {
-    id: 'shorts-H3vDzzPmZSY',
-    youtubeId: 'H3vDzzPmZSY',
-    title: 'Mr Bean Tries To Dry His Trousers In The Bathroom',
-    category: 'entertainment',
-    difficulty: 1,
     clipStart: 0,
     clipEnd: 0,
     format: 'shorts',
@@ -38796,28 +38645,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   {
-    id: 'shorts--eZc08rGfYU',
-    youtubeId: '-eZc08rGfYU',
-    title: 'UP into SPACE#FirstMan #Shorts',
-    category: 'movie',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    format: 'shorts',
-    subtitles: [],
-  },
-  {
-    id: 'shorts-UfbxSqq4koE',
-    youtubeId: 'UfbxSqq4koE',
-    title: 'teamwork makes the dream work',
-    category: 'movie',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    format: 'shorts',
-    subtitles: [],
-  },
-  {
     id: 'shorts-cysGnqhnLFM',
     youtubeId: 'cysGnqhnLFM',
     title: 'HR getting in the way of NSFW Halloween activities. #Community',
@@ -39032,17 +38859,6 @@ export const seedVideos = defineSeedVideos([
     title: 'CAUGHT STEALING  Hank Tries Refusing a Drink at the Bar (Scene)',
     category: 'movie',
     difficulty: 3,
-    clipStart: 0,
-    clipEnd: 0,
-    format: 'shorts',
-    subtitles: [],
-  },
-  {
-    id: 'shorts-69hY14f04-g',
-    youtubeId: '69hY14f04-g',
-    title: 'from city to city',
-    category: 'movie',
-    difficulty: 5,
     clipStart: 0,
     clipEnd: 0,
     format: 'shorts',
@@ -40006,17 +39822,6 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   {
-    id: 'shorts-bMquuQRFxgo',
-    youtubeId: 'bMquuQRFxgo',
-    title: 'The journey of leaving the tower, from sketch to screen',
-    category: 'animation',
-    difficulty: 2,
-    clipStart: 0,
-    clipEnd: 0,
-    format: 'shorts',
-    subtitles: [],
-  },
-  {
     id: 'shorts-OS4r9M0XpzM',
     youtubeId: 'OS4r9M0XpzM',
     title: 'Prepare to go where no wimpy kid has gone before',
@@ -40028,42 +39833,9 @@ export const seedVideos = defineSeedVideos([
     subtitles: [],
   },
   {
-    id: 'shorts-wNsXASNl-FY',
-    youtubeId: 'wNsXASNl-FY',
-    title: 'A reminder to shine your brightest this New Year.',
-    category: 'animation',
-    difficulty: 2,
-    clipStart: 0,
-    clipEnd: 0,
-    format: 'shorts',
-    subtitles: [],
-  },
-  {
-    id: 'shorts-z-Fpi3iLZaE',
-    youtubeId: 'z-Fpi3iLZaE',
-    title: `Pixar's Up from Storyboard to Final Animation...`,
-    category: 'animation',
-    difficulty: 2,
-    clipStart: 0,
-    clipEnd: 0,
-    format: 'shorts',
-    subtitles: [],
-  },
-  {
     id: 'shorts-nXgE2h0AFUE',
     youtubeId: 'nXgE2h0AFUE',
     title: 'Pixar foods to add to your dinner table.',
-    category: 'animation',
-    difficulty: 2,
-    clipStart: 0,
-    clipEnd: 0,
-    format: 'shorts',
-    subtitles: [],
-  },
-  {
-    id: 'shorts-fvhsuFCH3tM',
-    youtubeId: 'fvhsuFCH3tM',
-    title: `unhinged, laugh out loud hilarious, and Pixar's funniest movie...`,
     category: 'animation',
     difficulty: 2,
     clipStart: 0,
@@ -40191,8 +39963,7 @@ export const seedVideos = defineSeedVideos([
     clipEnd: 0,
     format: 'shorts',
     subtitles: [],
-  },
-])
+  })
 
 // Helper functions
 export function getSeriesById(seriesId: string): Series | undefined {
