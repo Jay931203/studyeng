@@ -1,33 +1,188 @@
 [
-  {"start":0,"end":5.08,"en":"So, I'm happy to report we have succeeded in re-routing our flagships.","ko":"기쁘게도 주력 제품의 경로 재설정에 성공했습니다."},
-  {"start":5.12,"end":7,"en":"Way ahead of schedule, yet again.","ko":"또다시 일정보다 훨씬 앞서서요."},
-  {"start":8.02,"end":11.7,"en":"This has allowed us to improve our USPs by 90%.","ko":"이를 통해 USP를 90% 개선할 수 있었습니다."},
-  {"start":13.14,"end":16.86,"en":"That's nine out of every ten. Excellent, thank you Samuel.","ko":"열 개 중 아홉 개네요. 훌륭해요, 감사합니다 사무엘."},
-  {"start":18,"end":20.84,"en":"Timothy, what's the status with the Linear Solutions?","ko":"티모시, 리니어 솔루션즈 상황은 어때요?"},
-  {"start":21.32,"end":23.64,"en":"Could you give us the latest on the Square project?","ko":"스퀘어 프로젝트 최신 현황을 알려주시겠어요?"},
-  {"start":24.06,"end":28.02,"en":"The Linear Solutions department has, yet again, functioned at full capacity","ko":"리니어 솔루션즈 부서가 또다시 최대 역량으로 운영되었고"},
-  {"start":28.02,"end":31.78,"en":"and we have fulfilled 114% of this month's objectives.","ko":"이번 달 목표의 114%를 달성했습니다."},
-  {"start":32.68,"end":36.1,"en":"You can read the handouts for a detailed account, but in short,","ko":"자세한 내용은 유인물에서 보실 수 있고, 간단히 말하면,"},
-  {"start":36.42,"end":40.52,"en":"as I reported last week, we've decided to use the right angle for the Square project.","ko":"지난주 보고드린 대로, 스퀘어 프로젝트에 직각을 사용하기로 했습니다."},
-  {"start":40.84,"end":44.02,"en":"Now, there's still some debate as to how big a right angle is,","ko":"자, 직각이 정확히 얼마인지는 아직 논쟁 중인데,"},
-  {"start":44.3,"end":50.38,"en":"so we're testing currently at 90, 97, 100 and 101 degrees.","ko":"현재 90도, 97도, 100도, 101도로 테스트 중입니다."},
-  {"start":50.96,"end":54.18,"en":"As agreed, I've ensured Anderson cross-checks the design,","ko":"합의한 대로, 앤더슨이 디자인을 교차 검증하도록 했고,"},
-  {"start":54.18,"end":57.44,"en":"removing any left angles and doesn't use them in future.","ko":"왼쪽 각도를 모두 제거하고 앞으로 사용하지 않도록 했습니다."},
-  {"start":58.5,"end":62.18,"en":"Overall, we have very good progress with the design. Are we on track with the schedule?","ko":"전반적으로 디자인 진행이 매우 좋습니다. 일정에 맞춰가고 있나요?"},
-  {"start":62.9,"end":68.88,"en":"When are we required to start delivering? I'm happy to report that we are ready to start first deliveries tomorrow,","ko":"납품은 언제 시작해야 하죠? 기쁘게도 내일 첫 납품을 시작할 준비가 됐습니다,"},
-  {"start":69.22,"end":71.56,"en":"which is way ahead of the requested delivery schedule.","ko":"요청된 납품 일정보다 훨씬 앞서 있습니다."},
-  {"start":71.74,"end":77.08,"en":"We've only just finished system testing the prototype and are only halfway through performance testing.","ko":"프로토타입 시스템 테스트를 겨우 끝냈고 성능 테스트는 절반밖에 안 됐어요."},
-  {"start":77.44,"end":80.06,"en":"We haven't even released an alpha version yet.","ko":"알파 버전도 아직 출시 안 했어요."},
-  {"start":80.12,"end":82.82,"en":"As I said earlier, we've had very good progress with the design.","ko":"아까 말씀드렸듯이, 디자인 진행이 매우 좋았습니다."},
-  {"start":82.82,"end":85.06,"en":"Yes, we've had very good progress,","ko":"네, 진행이 매우 좋았죠,"},
-  {"start":85.3,"end":89.3,"en":"but I'd say the design of the product is only 75% complete.","ko":"하지만 제품 디자인은 75%밖에 완성되지 않았어요."},
-  {"start":89.52,"end":91.62,"en":"Well, exactly. That's three out of every four.","ko":"바로 그거예요. 네 개 중 세 개죠."},
-  {"start":91.84,"end":93.9,"en":"So, we're ready to start shipping tomorrow.","ko":"그러니까 내일 출하 시작할 준비가 된 거죠."},
-  {"start":94.34,"end":97.22,"en":"What? It... it doesn't work like that.","ko":"뭐라고요? 그... 그렇게 되는 게 아니잖아요."},
-  {"start":98.54,"end":101.86,"en":"We'll produce, say, four units, but only ship the first three.","ko":"네 개를 생산하되, 세 개만 먼저 출하하는 거죠."},
-  {"start":102.14,"end":107.02,"en":"Then, when you're finally 100% complete with the design, we can then ship the fourth.","ko":"그다음, 디자인이 최종 100% 완성되면 네 번째를 출하하면 됩니다."},
-  {"start":110.4,"end":113.2,"en":"Excellent work, Timothy. You can proceed with the production.","ko":"훌륭한 작업이에요, 티모시. 생산을 진행하세요."},
-  {"start":114.02,"end":117.56,"en":"Anderson, send me, please, a revised delivery schedule so I can share it with the client.","ko":"앤더슨, 수정된 납품 일정을 보내주세요, 고객에게 공유할 수 있도록."},
-  {"start":118.54,"end":122.46,"en":"Well, thank you, everyone. This was very productive.","ko":"자, 감사합니다, 여러분. 매우 생산적이었습니다."},
-  {"start":122.84,"end":123.64,"en":"Yet again.","ko":"또다시."}
+  {
+    "start": 0,
+    "end": 5.08,
+    "en": "So, I'm happy to report we have succeeded in re-routing our flagships.",
+    "ko": "기쁘게도 주력 제품의 경로 재설정에 성공했습니다."
+  },
+  {
+    "start": 5.12,
+    "end": 7,
+    "en": "Way ahead of schedule, yet again.",
+    "ko": "또다시 일정보다 훨씬 앞서서요."
+  },
+  {
+    "start": 8.02,
+    "end": 11.7,
+    "en": "This has allowed us to improve our USPs by 90%.",
+    "ko": "이를 통해 USP를 90% 개선할 수 있었습니다."
+  },
+  {
+    "start": 13.14,
+    "end": 16.86,
+    "en": "That's nine out of every ten. Excellent, thank you Samuel.",
+    "ko": "열 개 중 아홉 개네요. 훌륭해요, 감사합니다 사무엘."
+  },
+  {
+    "start": 18,
+    "end": 20.84,
+    "en": "Timothy, what's the status with the Linear Solutions?",
+    "ko": "티모시, 리니어 솔루션즈 상황은 어때요?"
+  },
+  {
+    "start": 21.32,
+    "end": 23.64,
+    "en": "Could you give us the latest on the Square project?",
+    "ko": "스퀘어 프로젝트 최신 현황을 알려주시겠어요?"
+  },
+  {
+    "start": 24.06,
+    "end": 28.02,
+    "en": "The Linear Solutions department has, yet again, functioned at full capacity",
+    "ko": "리니어 솔루션즈 부서가 또다시 최대 역량으로 운영되었고"
+  },
+  {
+    "start": 28.02,
+    "end": 31.78,
+    "en": "and we have fulfilled 114% of this month's objectives.",
+    "ko": "이번 달 목표의 114%를 달성했습니다."
+  },
+  {
+    "start": 32.68,
+    "end": 36.1,
+    "en": "You can read the handouts for a detailed account, but in short,",
+    "ko": "자세한 내용은 유인물에서 보실 수 있고, 간단히 말하면,"
+  },
+  {
+    "start": 36.42,
+    "end": 40.52,
+    "en": "as I reported last week, we've decided to use the right angle for the Square project.",
+    "ko": "지난주 보고드린 대로, 스퀘어 프로젝트에 직각을 사용하기로 했습니다."
+  },
+  {
+    "start": 40.84,
+    "end": 44.02,
+    "en": "Now, there's still some debate as to how big a right angle is,",
+    "ko": "자, 직각이 정확히 얼마인지는 아직 논쟁 중인데,"
+  },
+  {
+    "start": 44.3,
+    "end": 50.38,
+    "en": "so we're testing currently at 90, 97, 100 and 101 degrees.",
+    "ko": "현재 90도, 97도, 100도, 101도로 테스트 중입니다."
+  },
+  {
+    "start": 50.96,
+    "end": 54.18,
+    "en": "As agreed, I've ensured Anderson cross-checks the design,",
+    "ko": "합의한 대로, 앤더슨이 디자인을 교차 검증하도록 했고,"
+  },
+  {
+    "start": 54.18,
+    "end": 57.44,
+    "en": "removing any left angles and doesn't use them in future.",
+    "ko": "왼쪽 각도를 모두 제거하고 앞으로 사용하지 않도록 했습니다."
+  },
+  {
+    "start": 58.5,
+    "end": 62.18,
+    "en": "Overall, we have very good progress with the design. Are we on track with the schedule?",
+    "ko": "전반적으로 디자인 진행이 매우 좋습니다. 일정에 맞춰가고 있나요?"
+  },
+  {
+    "start": 62.9,
+    "end": 68.88,
+    "en": "When are we required to start delivering? I'm happy to report that we are ready to start first deliveries tomorrow,",
+    "ko": "납품은 언제 시작해야 하죠? 기쁘게도 내일 첫 납품을 시작할 준비가 됐습니다,"
+  },
+  {
+    "start": 69.22,
+    "end": 71.56,
+    "en": "which is way ahead of the requested delivery schedule.",
+    "ko": "요청된 납품 일정보다 훨씬 앞서 있습니다."
+  },
+  {
+    "start": 71.74,
+    "end": 77.08,
+    "en": "We've only just finished system testing the prototype and are only halfway through performance testing.",
+    "ko": "프로토타입 시스템 테스트를 겨우 끝냈고 성능 테스트는 절반밖에 안 됐어요."
+  },
+  {
+    "start": 77.44,
+    "end": 80.06,
+    "en": "We haven't even released an alpha version yet.",
+    "ko": "알파 버전도 아직 출시 안 했어요."
+  },
+  {
+    "start": 80.12,
+    "end": 82.82,
+    "en": "As I said earlier, we've had very good progress with the design.",
+    "ko": "아까 말씀드렸듯이, 디자인 진행이 매우 좋았습니다."
+  },
+  {
+    "start": 82.82,
+    "end": 85.06,
+    "en": "Yes, we've had very good progress,",
+    "ko": "네, 진행이 매우 좋았죠,"
+  },
+  {
+    "start": 85.3,
+    "end": 89.3,
+    "en": "but I'd say the design of the product is only 75% complete.",
+    "ko": "하지만 제품 디자인은 75%밖에 완성되지 않았어요."
+  },
+  {
+    "start": 89.52,
+    "end": 91.62,
+    "en": "Well, exactly. That's three out of every four.",
+    "ko": "바로 그거예요. 네 개 중 세 개죠."
+  },
+  {
+    "start": 91.84,
+    "end": 93.9,
+    "en": "So, we're ready to start shipping tomorrow.",
+    "ko": "그러니까 내일 출하 시작할 준비가 된 거죠."
+  },
+  {
+    "start": 94.34,
+    "end": 97.22,
+    "en": "What? It... it doesn't work like that.",
+    "ko": "뭐라고요? 그... 그렇게 되는 게 아니잖아요."
+  },
+  {
+    "start": 98.54,
+    "end": 101.86,
+    "en": "We'll produce, say, four units, but only ship the first three.",
+    "ko": "네 개를 생산하되, 세 개만 먼저 출하하는 거죠."
+  },
+  {
+    "start": 102.14,
+    "end": 107.02,
+    "en": "Then, when you're finally 100% complete with the design, we can then ship the fourth.",
+    "ko": "그다음, 디자인이 최종 100% 완성되면 네 번째를 출하하면 됩니다."
+  },
+  {
+    "start": 110.4,
+    "end": 113.2,
+    "en": "Excellent work, Timothy. You can proceed with the production.",
+    "ko": "훌륭한 작업이에요, 티모시. 생산을 진행하세요."
+  },
+  {
+    "start": 114.02,
+    "end": 117.56,
+    "en": "Anderson, send me, please, a revised delivery schedule so I can share it with the client.",
+    "ko": "앤더슨, 수정된 납품 일정을 보내주세요, 고객에게 공유할 수 있도록."
+  },
+  {
+    "start": 118.54,
+    "end": 122.46,
+    "en": "Well, thank you, everyone. This was very productive.",
+    "ko": "자, 감사합니다, 여러분. 매우 생산적이었습니다."
+  },
+  {
+    "start": 122.84,
+    "end": 123.64,
+    "en": "Yet again.",
+    "ko": "또다시."
+  }
 ]
