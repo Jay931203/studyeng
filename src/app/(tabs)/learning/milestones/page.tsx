@@ -14,8 +14,46 @@ import { useMilestoneStore } from '@/stores/useMilestoneStore'
 import { useTierStore } from '@/stores/useTierStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
+
+const TRANSLATIONS = {
+  ko: {
+    milestones: '마일스톤',
+    readyToClaim: '바로 수령 가능',
+    claimed: '수령 완료',
+    accumulatedXp: '누적 수령 XP',
+    claimableNow: '지금 받을 수 있음',
+    claimableNowDesc: '조건을 채워 바로 받을 수 있는 보상입니다.',
+    claimXp: 'XP 받기',
+    inProgress: '진행 중',
+    inProgressDesc: '조금만 더 진행하면 열리는 보상입니다.',
+    claimedTitle: '수령 완료',
+    claimedDesc: '이미 총 XP에 반영된 보상입니다.',
+    noItems: '아직 해당 항목이 없습니다.',
+    claimedLabel: '수령 완료',
+    inProgressLabel: '진행 중',
+  },
+  ja: {
+    milestones: 'マイルストーン',
+    readyToClaim: 'すぐ受取可能',
+    claimed: '受取済み',
+    accumulatedXp: '累計獲得 XP',
+    claimableNow: '今すぐ受け取れる',
+    claimableNowDesc: '条件を満たしてすぐ受け取れる報酬です。',
+    claimXp: 'XPを受け取る',
+    inProgress: '進行中',
+    inProgressDesc: 'もう少し進めば解放される報酬です。',
+    claimedTitle: '受取済み',
+    claimedDesc: '既に総XPに反映された報酬です。',
+    noItems: 'まだ該当する項目がありません。',
+    claimedLabel: '受取済み',
+    inProgressLabel: '進行中',
+  },
+} as const
 
 export default function MilestonesPage() {
+  const locale = useLocaleStore((s) => s.locale)
+  const T = TRANSLATIONS[locale === 'ja' ? 'ja' : 'ko']
   const router = useRouter()
   const streakDays = useUserStore((state) => state.streakDays)
   const totalGameSessions = useGameProgressStore((state) => state.getTotalSessions())
@@ -78,39 +116,48 @@ export default function MilestonesPage() {
             </svg>
           </button>
           <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-            마일스톤
+            {T.milestones}
           </p>
         </div>
 
         <SurfaceCard className="p-5">
           <p className="text-sm text-[var(--text-secondary)]">{MILESTONE_EXPLAINER}</p>
           <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
-            <SummaryStat label="바로 수령 가능" value={summary.readyCount} />
-            <SummaryStat label="수령 완료" value={summary.claimedCount} />
-            <SummaryStat label="누적 수령 XP" value={`${summary.claimedXp} XP`} />
+            <SummaryStat label={T.readyToClaim} value={summary.readyCount} />
+            <SummaryStat label={T.claimed} value={summary.claimedCount} />
+            <SummaryStat label={T.accumulatedXp} value={`${summary.claimedXp} XP`} />
           </div>
         </SurfaceCard>
 
         <MilestoneSection
-          title="지금 받을 수 있음"
-          description="조건을 채워 바로 받을 수 있는 보상입니다."
+          title={T.claimableNow}
+          description={T.claimableNowDesc}
           missions={ready}
-          actionLabel="XP 받기"
+          actionLabel={T.claimXp}
+          emptyLabel={T.noItems}
+          claimedLabel={T.claimedLabel}
+          inProgressLabel={T.inProgressLabel}
           onAction={(missionId, readyToClaim) => {
             claimMilestone(missionId, readyToClaim)
           }}
         />
 
         <MilestoneSection
-          title="진행 중"
-          description="조금만 더 진행하면 열리는 보상입니다."
+          title={T.inProgress}
+          description={T.inProgressDesc}
           missions={inProgress}
+          emptyLabel={T.noItems}
+          claimedLabel={T.claimedLabel}
+          inProgressLabel={T.inProgressLabel}
         />
 
         <MilestoneSection
-          title="수령 완료"
-          description="이미 총 XP에 반영된 보상입니다."
+          title={T.claimedTitle}
+          description={T.claimedDesc}
           missions={claimed}
+          emptyLabel={T.noItems}
+          claimedLabel={T.claimedLabel}
+          inProgressLabel={T.inProgressLabel}
         />
       </div>
     </AppPage>
@@ -138,12 +185,18 @@ function MilestoneSection({
   missions,
   actionLabel,
   onAction,
+  emptyLabel,
+  claimedLabel,
+  inProgressLabel,
 }: {
   title: string
   description: string
   missions: ReturnType<typeof buildMilestoneMissions>
   actionLabel?: string
   onAction?: (missionId: string, ready: boolean) => void
+  emptyLabel?: string
+  claimedLabel?: string
+  inProgressLabel?: string
 }) {
   return (
     <SurfaceCard className="p-5">
@@ -153,7 +206,7 @@ function MilestoneSection({
       <p className="mt-2 text-sm text-[var(--text-secondary)]">{description}</p>
 
       {missions.length === 0 ? (
-        <p className="mt-4 text-sm text-[var(--text-muted)]">아직 해당 항목이 없습니다.</p>
+        <p className="mt-4 text-sm text-[var(--text-muted)]">{emptyLabel}</p>
       ) : (
         <div className="mt-4 space-y-3">
           {missions.map((mission) => (
@@ -181,7 +234,7 @@ function MilestoneSection({
                     </button>
                   ) : (
                     <span className="mt-3 inline-block text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]">
-                      {mission.claimed ? '수령 완료' : '진행 중'}
+                      {mission.claimed ? (claimedLabel ?? '수령 완료') : (inProgressLabel ?? '진행 중')}
                     </span>
                   )}
                 </div>

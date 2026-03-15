@@ -3,6 +3,7 @@ import { persist } from 'zustand/middleware'
 
 type SubtitleMode = 'none' | 'en' | 'en-ko'
 type LandscapeSubtitleLayout = 'auto' | 'side' | 'bottom' | 'overlay'
+type PortraitSubtitleLayout = 'bottom' | 'overlay'
 type PlaybackOrderMode = 'sequence' | 'shuffle'
 
 type RepeatMode = 'off' | 'x2' | 'x3'
@@ -10,6 +11,7 @@ type RepeatMode = 'off' | 'x2' | 'x3'
 interface PlayerState {
   subtitleMode: SubtitleMode
   landscapeSubtitleLayout: LandscapeSubtitleLayout
+  portraitSubtitleLayout: PortraitSubtitleLayout
   playbackOrderMode: PlaybackOrderMode
   playbackRate: number
   isLooping: boolean
@@ -44,6 +46,7 @@ interface PlayerState {
 
   toggleSubtitleMode: () => void
   cycleLandscapeSubtitleLayout: () => void
+  cyclePortraitSubtitleLayout: () => void
   setPlaybackOrderMode: (mode: PlaybackOrderMode) => void
   setPlaybackRate: (rate: number) => void
   setLoop: (start: number, end: number) => void
@@ -70,6 +73,7 @@ interface PlayerState {
 
 const subtitleCycle: SubtitleMode[] = ['none', 'en', 'en-ko']
 const landscapeSubtitleLayoutCycle: LandscapeSubtitleLayout[] = ['auto', 'side', 'bottom', 'overlay']
+const portraitSubtitleLayoutCycle: PortraitSubtitleLayout[] = ['bottom', 'overlay']
 
 /**
  * Shared mutable ref for high-frequency currentTime updates.
@@ -96,6 +100,7 @@ export const pauseRef: { current: (() => void) | null } = { current: null }
 export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
   subtitleMode: 'en',
   landscapeSubtitleLayout: 'auto',
+  portraitSubtitleLayout: 'bottom',
   playbackOrderMode: 'shuffle',
   playbackRate: 1,
   isLooping: false,
@@ -132,6 +137,13 @@ export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
     const next =
       landscapeSubtitleLayoutCycle[(current + 1) % landscapeSubtitleLayoutCycle.length]
     set({ landscapeSubtitleLayout: next })
+  },
+
+  cyclePortraitSubtitleLayout: () => {
+    const current = portraitSubtitleLayoutCycle.indexOf(get().portraitSubtitleLayout)
+    const next =
+      portraitSubtitleLayoutCycle[(current + 1) % portraitSubtitleLayoutCycle.length]
+    set({ portraitSubtitleLayout: next })
   },
 
   setPlaybackOrderMode: (mode) => {
@@ -239,6 +251,7 @@ export const usePlayerStore = create<PlayerState>()(persist((set, get) => ({
     partialize: (state) => ({
       subtitleMode: state.subtitleMode,
       landscapeSubtitleLayout: state.landscapeSubtitleLayout,
+      portraitSubtitleLayout: state.portraitSubtitleLayout,
       playbackOrderMode: state.playbackOrderMode,
       playbackRate: state.playbackRate,
       gameModeEnabled: state.gameModeEnabled,

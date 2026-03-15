@@ -68,16 +68,20 @@ export function VideoFeed({
     landscapeBottomSubtitleHeight,
   } = useViewportLayout()
   const landscapeSubtitleLayout = usePlayerStore((state) => state.landscapeSubtitleLayout)
-  const useLandscapeOverlaySubtitles =
-    isLandscapeViewport && landscapeSubtitleLayout === 'overlay'
+  const portraitSubtitleLayout = usePlayerStore((state) => state.portraitSubtitleLayout)
+  const useOverlaySubtitles = isLandscapeViewport
+    ? landscapeSubtitleLayout === 'overlay'
+    : portraitSubtitleLayout === 'overlay'
   const useLandscapeSplitPlayer =
-    landscapeSubtitleLayout === 'side'
-      ? isLandscapeViewport
-      : landscapeSubtitleLayout === 'bottom'
-        ? false
-        : landscapeSubtitleLayout === 'overlay'
+    !isLandscapeViewport
+      ? false
+      : landscapeSubtitleLayout === 'side'
+        ? true
+        : landscapeSubtitleLayout === 'bottom'
           ? false
-        : autoLandscapeSplitPlayer
+          : landscapeSubtitleLayout === 'overlay'
+            ? false
+            : autoLandscapeSplitPlayer
   const landscapeVideoPaneWidth = `${landscapeVideoPaneWidthPercent}%`
   const landscapeOverlayWidth = `calc(${landscapeVideoPaneWidth} - 24px)`
   const landscapeProgressMarkerOffset = `calc(${landscapeVideoPaneWidth} - 16px)`
@@ -741,7 +745,7 @@ export function VideoFeed({
             format={currentVideo.format}
             isLandscapeViewport={isLandscapeViewport}
             useLandscapeSplitLayout={useLandscapeSplitPlayer}
-            useLandscapeOverlaySubtitles={useLandscapeOverlaySubtitles}
+            useOverlaySubtitles={useOverlaySubtitles}
             landscapeVideoPaneWidth={landscapeVideoPaneWidth}
             landscapeBottomSubtitleHeight={landscapeBottomSubtitleHeight}
             onClipComplete={handleClipComplete}

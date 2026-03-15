@@ -6,6 +6,8 @@ import { useAdminStore } from '@/stores/useAdminStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useSettingsStore } from '@/stores/useSettingsStore'
 import { useThemeStore } from '@/stores/useThemeStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
+import { getLocalizedSubtitle } from '@/lib/localeUtils'
 import { DoubleTapTip } from './DoubleTapTip'
 import { SaveToast } from './SaveToast'
 import type { SubtitleEntry } from '@/data/seed-videos'
@@ -59,6 +61,7 @@ export function LyricsSubtitles({
   onSeek,
   visibleLineCount = 3,
 }: LyricsSubtitlesProps) {
+  const locale = useLocaleStore((s) => s.locale)
   const isRainbowTheme = useThemeStore((state) => state.colorTheme === 'rainbow')
   const subtitleGuidesEnabled = useSettingsStore((state) => state.subtitleGuidesEnabled)
   const subtitleMode = usePlayerStore((state) => state.subtitleMode)
@@ -147,6 +150,7 @@ export function LyricsSubtitles({
   const [showFreezeIndicator, setShowFreezeIndicator] = useState(false)
   const [freezeIndicatorText, setFreezeIndicatorText] = useState('FREEZE ON')
   const freezeIndicatorTimerRef = useRef<number | null>(null)
+  const [edgeSpacerHeight, setEdgeSpacerHeight] = useState(60)
 
   // First-time tooltip
   const [showFreezeTip, setShowFreezeTip] = useState(() => {
@@ -163,6 +167,26 @@ export function LyricsSubtitles({
 
     return () => clearTimeout(timer)
   }, [showFreezeTip])
+
+  useEffect(() => {
+    const container = containerRef.current
+    if (!container) return
+
+    const updateSpacerHeight = () => {
+      setEdgeSpacerHeight(Math.max(Math.round(container.clientHeight / 2 - 44), 60))
+    }
+
+    updateSpacerHeight()
+
+    if (typeof ResizeObserver === 'undefined') {
+      window.addEventListener('resize', updateSpacerHeight)
+      return () => window.removeEventListener('resize', updateSpacerHeight)
+    }
+
+    const observer = new ResizeObserver(updateSpacerHeight)
+    observer.observe(container)
+    return () => observer.disconnect()
+  }, [])
 
   const showFreezeNotice = useCallback((text: string, duration: number) => {
     setFreezeIndicatorText(text)
@@ -482,7 +506,7 @@ export function LyricsSubtitles({
       >
         <div className="flex flex-col items-center gap-2">
           {/* Top spacer to allow first item to center */}
-          <div className="h-[60px] flex-shrink-0" />
+          <div className="flex-shrink-0" style={{ height: `${edgeSpacerHeight}px` }} />
 
           {subtitles.map((sub, idx) => {
             // When game is active, hide all subtitles after the frozen one
@@ -746,12 +770,12 @@ export function LyricsSubtitles({
                   >
                     <>
                       <span>{sub.en}</span>
-                      {(isActive || isFrozen) && showKo && sub.ko && (
+                      {(isActive || isFrozen) && showKo && getLocalizedSubtitle(sub, locale) && (
                         <p
                           className="mt-0.5 text-xs"
                           style={{ color: isFrozen ? 'var(--freeze-icon)' : 'var(--accent-text)' }}
                         >
-                          {sub.ko}
+                          {getLocalizedSubtitle(sub, locale)}
                         </p>
                       )}
                     </>
@@ -763,7 +787,7 @@ export function LyricsSubtitles({
 
           {/* Game quiz UI — shown inline after the frozen subtitle */}
           {/* Bottom spacer to allow last item to center */}
-          <div className="h-[60px] flex-shrink-0" />
+          <div className="flex-shrink-0" style={{ height: `${edgeSpacerHeight}px` }} />
         </div>
       </div>
 

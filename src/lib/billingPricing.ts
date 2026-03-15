@@ -14,10 +14,16 @@ export const YEARLY_BASE_SAVINGS_PERCENT = Math.round(
   ((YEARLY_REFERENCE_PRICE - YEARLY_BASE_PRICE) / YEARLY_REFERENCE_PRICE) * 100,
 )
 
-const wonFormatter = new Intl.NumberFormat('ko-KR')
+export function formatPrice(value: number, locale: 'ko' | 'ja' = 'ko'): string {
+  if (locale === 'ja') {
+    return `¥${Math.round(value * 0.11).toLocaleString()}`
+  }
+  return `${new Intl.NumberFormat('ko-KR').format(Math.max(0, Math.round(value)))}원`
+}
 
+/** @deprecated Use formatPrice() instead */
 export function formatWon(value: number) {
-  return `${wonFormatter.format(Math.max(0, Math.round(value)))}원`
+  return formatPrice(value, 'ko')
 }
 
 export function getDiscountedPrice(basePrice: number, discountPercent: number) {
@@ -58,6 +64,7 @@ export function getSavingsPercent(referencePrice: number, currentPrice: number) 
   )
 }
 
-export function formatDiscountText(label: string, discountPercent: number) {
-  return discountPercent > 0 ? `${label} ${discountPercent}%` : `${label} 없음`
+export function formatDiscountText(label: string, discountPercent: number, locale: 'ko' | 'ja' = 'ko') {
+  const none = locale === 'ja' ? 'なし' : '없음'
+  return discountPercent > 0 ? `${label} ${discountPercent}%` : `${label} ${none}`
 }

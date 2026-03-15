@@ -11,10 +11,40 @@ import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useMilestoneStore } from '@/stores/useMilestoneStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { useLevelStore } from '@/stores/useLevelStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
 import { LEVEL_LABELS, CEFR_ORDER } from '@/types/level'
 import type { CefrLevel, ChallengeTransition } from '@/types/level'
 
+const TRANSLATIONS = {
+  ko: {
+    levelHint: '레벨을 선택한 뒤 적용하거나 도전할 수 있습니다.',
+    gamePlays: '게임 플레이',
+    milestonesAchieved: '마일스톤 달성',
+    videosWatched: '시청한 영상',
+    totalViews: '총 조회수',
+    count: (n: number) => `${n}회`,
+    items: (n: number) => `${n}개`,
+    currentLevel: '현재 레벨입니다.',
+    challengeHint: '선택 후 하단 Challenge 버튼으로 도전합니다.',
+    lowerLevelHint: '낮은 레벨로는 바로 변경됩니다.',
+  },
+  ja: {
+    levelHint: 'レベルを選択して適用またはチャレンジできます。',
+    gamePlays: 'ゲームプレイ',
+    milestonesAchieved: 'マイルストーン達成',
+    videosWatched: '視聴した動画',
+    totalViews: '合計再生数',
+    count: (n: number) => `${n}回`,
+    items: (n: number) => `${n}件`,
+    currentLevel: '現在のレベルです。',
+    challengeHint: '選択後、下部のChallengeボタンで挑戦します。',
+    lowerLevelHint: '低いレベルにはすぐ変更されます。',
+  },
+} as const
+
 export default function StatsPage() {
+  const locale = useLocaleStore((s) => s.locale)
+  const T = TRANSLATIONS[locale === 'ja' ? 'ja' : 'ko']
   const router = useRouter()
   const level = useOnboardingStore((state) => state.level)
   const setLevel = useOnboardingStore((state) => state.setLevel)
@@ -38,10 +68,10 @@ export default function StatsPage() {
   const selectionIsHigher = selectedIdx > currentIdx
 
   const pickerHelperText = useMemo(() => {
-    if (selectionIsCurrent) return '현재 레벨입니다.'
-    if (selectionIsHigher) return '선택 후 하단 Challenge 버튼으로 도전합니다.'
-    return '낮은 레벨로는 바로 변경됩니다.'
-  }, [selectionIsCurrent, selectionIsHigher])
+    if (selectionIsCurrent) return T.currentLevel
+    if (selectionIsHigher) return T.challengeHint
+    return T.lowerLevelHint
+  }, [selectionIsCurrent, selectionIsHigher, T])
 
   const handleBack = () => {
     if (typeof window !== 'undefined' && window.history.length > 1) {
@@ -121,7 +151,7 @@ export default function StatsPage() {
             </svg>
           </button>
           <p className="mt-1.5 text-xs text-[var(--text-muted)]">
-            레벨을 선택한 뒤 적용하거나 도전할 수 있습니다.
+            {T.levelHint}
           </p>
         </SurfaceCard>
 
@@ -131,10 +161,10 @@ export default function StatsPage() {
           </p>
 
           <div className="space-y-2.5">
-            <SummaryRow label="게임 플레이" value={`${totalSessions}회`} />
-            <SummaryRow label="마일스톤 달성" value={`${achievedMilestones}개`} />
-            <SummaryRow label="시청한 영상" value={`${totalWatched}개`} />
-            <SummaryRow label="총 조회수" value={`${totalViews}회`} />
+            <SummaryRow label={T.gamePlays} value={T.count(totalSessions)} />
+            <SummaryRow label={T.milestonesAchieved} value={T.items(achievedMilestones)} />
+            <SummaryRow label={T.videosWatched} value={T.items(totalWatched)} />
+            <SummaryRow label={T.totalViews} value={T.count(totalViews)} />
           </div>
         </SurfaceCard>
 

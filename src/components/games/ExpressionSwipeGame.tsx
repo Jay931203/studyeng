@@ -11,9 +11,35 @@ import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useLevelStore } from '@/stores/useLevelStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useUserStore } from '@/stores/useUserStore'
+import { useLocaleStore, type SupportedLocale } from '@/stores/useLocaleStore'
 import { triggerHaptic } from '@/lib/haptic'
 import { calculateSessionXP } from '@/lib/xp/sessionXp'
 import { checkGameMilestones, checkStreakMilestones } from '@/stores/useMilestoneStore'
+
+const TRANSLATIONS = {
+  ko: {
+    replay: '다시 하기',
+    finish: '끝내기',
+    loadError: '표현을 불러올 수 없습니다.',
+    wordFallback: '예문이 준비된 단어만 출제됩니다.',
+    exprFallback: '가장 자연스러운 뜻을 탭해 고르세요.',
+    myChoice: '내가 고른 뜻',
+    correctAnswer: '정답',
+  },
+  ja: {
+    replay: 'もう一度',
+    finish: '終了',
+    loadError: '表現を読み込めません。',
+    wordFallback: '例文が用意された単語のみ出題されます。',
+    exprFallback: '最も自然な意味をタップして選んでください。',
+    myChoice: '選んだ意味',
+    correctAnswer: '正解',
+  },
+} as const
+
+function getT(locale: SupportedLocale) {
+  return TRANSLATIONS[locale === 'ja' ? 'ja' : 'ko']
+}
 
 interface ExpressionSwipeGameProps {
   onComplete: (correct: boolean) => void
@@ -449,6 +475,8 @@ function StreakFlash({ streak }: { streak: number }) {
 }
 
 export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
+  const locale = useLocaleStore((s) => s.locale)
+  const T = getT(locale)
   const level = useOnboardingStore((state) => state.level)
   const updateLeitner = useGameProgressStore((state) => state.updateLeitner)
   const updateBestStreak = useGameProgressStore((state) => state.updateBestStreak)
@@ -543,7 +571,7 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
       setFeedback({
         correct: isCorrect,
         title: isCorrect ? 'GOOD' : 'MISS',
-        detail: isCorrect ? choice.text : `정답: ${currentCard.actualMeaningKo}`,
+        detail: isCorrect ? choice.text : `${T.correctAnswer}: ${currentCard.actualMeaningKo}`,
       })
 
       triggerHaptic(isCorrect ? 40 : [30, 50, 30])
@@ -675,10 +703,10 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
                     {result.expression}
                   </p>
                   <p className="mt-1 text-xs" style={{ color: 'var(--text-muted)' }}>
-                    내가 고른 뜻: {result.selectedMeaningKo}
+                    {T.myChoice}: {result.selectedMeaningKo}
                   </p>
                   <p className="mt-1 text-sm" style={{ color: 'var(--text-secondary)' }}>
-                    정답: {result.actualMeaningKo}
+                    {T.correctAnswer}: {result.actualMeaningKo}
                   </p>
                 </div>
               ))}
@@ -697,7 +725,7 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
                 color: 'var(--text-primary)',
               }}
             >
-              다시 하기
+              {T.replay}
             </button>
           )}
           <button
@@ -708,7 +736,7 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
               color: '#fff',
             }}
           >
-            끝내기
+            {T.finish}
           </button>
         </div>
       </motion.div>
@@ -718,7 +746,7 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
   if (!currentCard) {
     return (
       <div className="flex h-full items-center justify-center">
-        <p style={{ color: 'var(--text-muted)' }}>표현을 불러올 수 없습니다.</p>
+        <p style={{ color: 'var(--text-muted)' }}>{T.loadError}</p>
       </div>
     )
   }
@@ -726,8 +754,8 @@ export function ExpressionSwipeGame({ onComplete }: ExpressionSwipeGameProps) {
   const supportText =
     currentCard.contextEn ??
     (currentCard.type === 'word'
-      ? '예문이 준비된 단어만 출제됩니다.'
-      : '가장 자연스러운 뜻을 탭해 고르세요.')
+      ? T.wordFallback
+      : T.exprFallback)
 
   return (
     <div className="relative flex h-full flex-col px-5 pb-5 pt-3">

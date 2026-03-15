@@ -17,13 +17,43 @@ import { useLikeStore } from '@/stores/useLikeStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
 import { CEFR_ORDER, LEVEL_LABELS } from '@/types/level'
+
+const TRANSLATIONS = {
+  ko: {
+    viewDetails: '상세보기',
+    level: '레벨',
+    nextLevel: (name: string) => `다음 단계 ${name}`,
+    maxLevel: '현재 최고 레벨',
+    savedExpressions: '저장 표현',
+    likedVideos: (n: number) => `좋아요한 영상 ${n}개`,
+    completedVideos: '완료한 영상',
+    totalPlays: (n: number) => `전체 재생 ${n}회`,
+    noLikedVideos: '아직 좋아요한 영상이 없습니다.',
+    noSavedExpressions: '아직 저장한 표현이 없습니다.',
+  },
+  ja: {
+    viewDetails: '詳細',
+    level: 'レベル',
+    nextLevel: (name: string) => `次のステップ ${name}`,
+    maxLevel: '現在の最高レベル',
+    savedExpressions: '保存した表現',
+    likedVideos: (n: number) => `お気に入り動画 ${n}件`,
+    completedVideos: '視聴済み動画',
+    totalPlays: (n: number) => `全再生 ${n}回`,
+    noLikedVideos: 'お気に入りの動画はまだありません。',
+    noSavedExpressions: '保存した表現はまだありません。',
+  },
+} as const
 
 const categoryLabels = Object.fromEntries(
   categories.map((category) => [category.id, category.label]),
 ) as Record<string, string>
 
 export default function LearningPage() {
+  const locale = useLocaleStore((s) => s.locale)
+  const T = TRANSLATIONS[locale === 'ja' ? 'ja' : 'ko']
   const router = useRouter()
   const { phrases, removePhrase } = usePhraseStore()
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)
@@ -62,28 +92,28 @@ export default function LearningPage() {
               href="/learning/stats"
               className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
             >
-              상세보기
+              {T.viewDetails}
             </Link>
           </div>
 
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 xl:grid-cols-3">
             <OverviewStatCard
-              label="레벨"
+              label={T.level}
               value={LEVEL_LABELS[level]}
-              detail={nextLevelLabel ? `다음 단계 ${nextLevelLabel}` : '현재 최고 레벨'}
+              detail={nextLevelLabel ? T.nextLevel(nextLevelLabel) : T.maxLevel}
               accent
             />
 
             <OverviewStatCard
-              label="저장 표현"
+              label={T.savedExpressions}
               value={phrases.length}
-              detail={`좋아요한 영상 ${likedVideos.length}개`}
+              detail={T.likedVideos(likedVideos.length)}
             />
 
             <OverviewStatCard
-              label="완료한 영상"
+              label={T.completedVideos}
               value={watchedVideoIds.length}
-              detail={`전체 재생 ${totalViews}회`}
+              detail={T.totalPlays(totalViews)}
             />
           </div>
         </SurfaceCard>
@@ -100,14 +130,14 @@ export default function LearningPage() {
                 href="/learning/liked"
                 className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
               >
-                상세보기
+                {T.viewDetails}
               </Link>
             )}
           </div>
 
           {likedVideos.length === 0 ? (
             <div className="rounded-[24px] border border-dashed border-[var(--border-card)] px-5 py-8 text-center">
-              <p className="text-sm text-[var(--text-secondary)]">아직 좋아요한 영상이 없습니다.</p>
+              <p className="text-sm text-[var(--text-secondary)]">{T.noLikedVideos}</p>
             </div>
           ) : (
             <div className="flex flex-col gap-2">
@@ -174,14 +204,14 @@ export default function LearningPage() {
                 href="/learning/saved"
                 className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
               >
-                상세보기
+                {T.viewDetails}
               </Link>
             )}
           </div>
 
           {phrases.length === 0 ? (
             <div className="rounded-[24px] border border-dashed border-[var(--border-card)] px-5 py-8 text-center">
-              <p className="text-sm text-[var(--text-secondary)]">아직 저장한 표현이 없습니다.</p>
+              <p className="text-sm text-[var(--text-secondary)]">{T.noSavedExpressions}</p>
             </div>
           ) : (
             <div className="flex flex-col gap-3">

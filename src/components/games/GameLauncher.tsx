@@ -8,7 +8,27 @@ import { ListenFillGame } from './ListenFillGame'
 import { SurfaceCard } from '@/components/ui/AppPage'
 import { useDailyMissionStore } from '@/stores/useDailyMissionStore'
 import { usePlayerStore } from '@/stores/usePlayerStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
 import { trackEvent, AnalyticsEvents } from '@/lib/analytics'
+
+const TRANSLATIONS = {
+  ko: {
+    nextLineGuess: '다음 대사 맞히기',
+    startFromShortsPlayer: '쇼츠 플레이어에서 바로 시작',
+    meaningMatch: '뜻 매칭',
+    meaningMatchDesc: '표현 뜻 고르기',
+    listenFill: '듣고 채우기',
+    listenFillDesc: '오디오 빈칸 맞히기',
+  },
+  ja: {
+    nextLineGuess: '次のセリフを当てよう',
+    startFromShortsPlayer: 'ショーツプレイヤーからすぐ開始',
+    meaningMatch: '意味マッチング',
+    meaningMatchDesc: '表現の意味を選ぶ',
+    listenFill: '聞いて埋める',
+    listenFillDesc: '音声の空欄を当てる',
+  },
+} as const
 
 type GameType = 'expression-swipe' | 'listen-fill'
 
@@ -54,6 +74,8 @@ function GameCard({
 
 export function GameLauncher() {
   const router = useRouter()
+  const locale = useLocaleStore((s) => s.locale)
+  const T = TRANSLATIONS[locale === 'ja' ? 'ja' : 'ko']
   const [activeGame, setActiveGame] = useState<GameType | null>(null)
   const incrementMission = useDailyMissionStore((state) => state.incrementMission)
   const setGameModeEnabled = usePlayerStore((state) => state.setGameModeEnabled)
@@ -113,10 +135,10 @@ export function GameLauncher() {
             </div>
             <div className="min-w-0 flex-1">
               <span className="block text-sm font-semibold text-[var(--text-primary)]">
-                다음 대사 맞히기
+                {T.nextLineGuess}
               </span>
               <span className="mt-0.5 block text-xs text-[var(--text-muted)]">
-                쇼츠 플레이어에서 바로 시작
+                {T.startFromShortsPlayer}
               </span>
             </div>
           </div>
@@ -124,8 +146,8 @@ export function GameLauncher() {
 
         <div className="grid grid-cols-2 gap-3">
           <GameCard
-            title="뜻 매칭"
-            description="표현 뜻 고르기"
+            title={T.meaningMatch}
+            description={T.meaningMatchDesc}
             tone="accent"
             onClick={() => launchGame('expression-swipe')}
             icon={
@@ -136,8 +158,8 @@ export function GameLauncher() {
           />
 
           <GameCard
-            title="듣고 채우기"
-            description="오디오 빈칸 맞히기"
+            title={T.listenFill}
+            description={T.listenFillDesc}
             tone="muted"
             onClick={() => launchGame('listen-fill')}
             icon={

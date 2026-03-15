@@ -9,6 +9,7 @@ import {
   getTodayIsoDate,
 } from '@/lib/learningDashboard'
 import {
+  formatPrice,
   formatWon,
   getMonthlyDiscountedPrice,
   getSavingsPercent,
@@ -29,9 +30,85 @@ import {
   useTierStore,
 } from '@/stores/useTierStore'
 import { useUserStore } from '@/stores/useUserStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
+
+const TRANSLATIONS = {
+  ko: {
+    details: '상세보기',
+    tierStatus: '등급 상태',
+    benefitGuide: '혜택 안내',
+    totalXp: '총 XP',
+    cumulativeXp: '누적 학습 보상 XP',
+    todayEarned: '오늘 적립',
+    todayEarnedDetail: '오늘 실제로 적립된 XP',
+    games: '게임',
+    gameDetail: '게임 완료 기준으로 적립됩니다.',
+    videos: '영상',
+    videoDetail: '영상 완료 기준으로 적립됩니다.',
+    streakLabel: '출석 · 연속 학습',
+    streakDetailActive: (target: number, days: number) =>
+      `오늘 첫 영상 또는 게임 완료 시 ${target} XP 적립 · 현재 ${days}일 연속`,
+    streakDetailNew: '오늘 첫 영상 또는 게임 완료 시 10 XP부터 시작됩니다.',
+    close: '닫기',
+    benefitGuideDescription:
+      '누적 XP로 등급이 열리고, 이번 달 300 XP를 채우면 현재 잠금 등급 혜택을 유지하거나 바로 복구할 수 있습니다.',
+    currentBenefit: '현재 적용 혜택',
+    monthlyFinalPrice: '월간 최종가',
+    yearlyFinalPrice: '연간 최종가',
+    thisMonth: (current: number, threshold: number) =>
+      `이번 달 ${current.toLocaleString()} / ${threshold} XP`,
+    joinNow: '가입 즉시 시작',
+    xpFrom: (threshold: number) => `${threshold.toLocaleString()} XP부터`,
+    current: '현재',
+    totalDiscount: (percent: number) => `총 ${percent}% 할인`,
+    footerNote:
+      '완료된 달 기준으로 300 XP 미만이 2개월 연속 이어지면 적용 혜택이 1단계 내려갑니다. 이번 달 300 XP를 채우면 잠금된 최고 혜택으로 바로 돌아옵니다.',
+  },
+  ja: {
+    details: '詳細',
+    tierStatus: 'ランクステータス',
+    benefitGuide: '特典案内',
+    totalXp: '合計XP',
+    cumulativeXp: '累積学習報酬XP',
+    todayEarned: '今日の獲得',
+    todayEarnedDetail: '今日実際に獲得したXP',
+    games: 'ゲーム',
+    gameDetail: 'ゲーム完了基準で付与されます。',
+    videos: '動画',
+    videoDetail: '動画完了基準で付与されます。',
+    streakLabel: '出席・連続学習',
+    streakDetailActive: (target: number, days: number) =>
+      `今日の最初の動画またはゲーム完了時に${target} XP付与 · 現在${days}日連続`,
+    streakDetailNew: '今日の最初の動画またはゲーム完了時に10 XPから開始されます。',
+    close: '閉じる',
+    benefitGuideDescription:
+      '累積XPでランクが解放され、今月300 XPを達成すると現在のロック中のランク特典を維持、または即時復旧できます。',
+    currentBenefit: '現在適用中の特典',
+    monthlyFinalPrice: '月額最終価格',
+    yearlyFinalPrice: '年額最終価格',
+    thisMonth: (current: number, threshold: number) =>
+      `今月 ${current.toLocaleString()} / ${threshold} XP`,
+    joinNow: '登録後すぐ開始',
+    xpFrom: (threshold: number) => `${threshold.toLocaleString()} XPから`,
+    current: '現在',
+    totalDiscount: (percent: number) => `合計${percent}%割引`,
+    footerNote:
+      '完了した月基準で300 XP未満が2ヶ月連続すると、適用特典が1段階下がります。今月300 XPを達成するとロック中の最高特典にすぐ戻ります。',
+  },
+} as const
+
+type LocaleKey = keyof typeof TRANSLATIONS
+
+function useT() {
+  const locale = useLocaleStore((s) => s.locale)
+  const key: LocaleKey = locale in TRANSLATIONS ? (locale as LocaleKey) : 'ko'
+  return TRANSLATIONS[key]
+}
 
 export function TodayDashboard() {
   const router = useRouter()
+  const t = useT()
+  const locale = useLocaleStore((s) => s.locale)
   const [showTierGuide, setShowTierGuide] = useState(false)
   const totalXP = useUserStore((state) => state.getTotalXP())
   const streakDays = useUserStore((state) => state.streakDays)
@@ -51,6 +128,7 @@ export function TodayDashboard() {
   const videoXpPct = Math.min((dailyVideoXP / DAILY_VIDEO_XP_TARGET) * 100, 100)
   const streakBonusPct = streakTarget > 0 ? Math.min((streakBonusToday / streakTarget) * 100, 100) : 0
 
+  const priceLocale = locale === 'ja' ? 'ja' : 'ko'
   const currentMonthlyPrice = getMonthlyDiscountedPrice(benefitSnapshot.monthlyDiscount)
   const currentYearlyPrice = getYearlyRenewalPrice(
     benefitSnapshot.yearlyRenewalDiscount,
@@ -87,7 +165,7 @@ export function TodayDashboard() {
             onClick={() => router.push('/learning/xp')}
             className="text-[11px] font-medium text-[var(--text-muted)]"
           >
-            상세보기
+            {t.details}
           </button>
         </div>
 
@@ -98,7 +176,7 @@ export function TodayDashboard() {
         >
           <div className="flex items-start justify-between gap-3">
             <div className="min-w-0">
-              <p className="text-[11px] text-[var(--text-secondary)]">등급 상태</p>
+              <p className="text-[11px] text-[var(--text-secondary)]">{t.tierStatus}</p>
               <p className="mt-1 text-base font-semibold text-[var(--text-primary)]">
                 {TIER_NAMES[benefitSnapshot.benefitTier]}
               </p>
@@ -107,45 +185,45 @@ export function TodayDashboard() {
               </p>
             </div>
             <span className="shrink-0 rounded-full bg-[var(--bg-primary)] px-2.5 py-1 text-[10px] font-medium text-[var(--text-muted)]">
-              혜택 안내
+              {t.benefitGuide}
             </span>
           </div>
         </button>
 
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           <StatCard
-            label="총 XP"
+            label={t.totalXp}
             value={`${totalXP.toLocaleString()} XP`}
-            detail="누적 학습 보상 XP"
+            detail={t.cumulativeXp}
           />
           <StatCard
-            label="오늘 적립"
+            label={t.todayEarned}
             value={`+${todayTotal} XP`}
-            detail="오늘 실제로 적립된 XP"
+            detail={t.todayEarnedDetail}
           />
         </div>
 
         <div className="mt-5 space-y-3">
           <ProgressRow
-            label="게임"
+            label={t.games}
             value={`${gameXpToday}/${DAILY_SESSION_XP_CAP} XP`}
             progress={gameXpPct}
-            detail="게임 완료 기준으로 적립됩니다."
+            detail={t.gameDetail}
           />
           <ProgressRow
-            label="영상"
+            label={t.videos}
             value={`${dailyVideoXP}/${DAILY_VIDEO_XP_TARGET} XP`}
             progress={videoXpPct}
-            detail="영상 완료 기준으로 적립됩니다."
+            detail={t.videoDetail}
           />
           <ProgressRow
-            label="출석 · 연속 학습"
+            label={t.streakLabel}
             value={`${streakBonusToday}/${streakTarget} XP`}
             progress={streakBonusPct}
             detail={
               streakDays > 0
-                ? `오늘 첫 영상 또는 게임 완료 시 ${streakTarget} XP 적립 · 현재 ${streakDays}일 연속`
-                : '오늘 첫 영상 또는 게임 완료 시 10 XP부터 시작됩니다.'
+                ? t.streakDetailActive(streakTarget, streakDays)
+                : t.streakDetailNew
             }
           />
         </div>
@@ -164,10 +242,10 @@ export function TodayDashboard() {
               <div className="flex items-start justify-between gap-3">
                 <div>
                   <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-                    혜택 안내
+                    {t.benefitGuide}
                   </p>
                   <p className="mt-1 text-sm text-[var(--text-secondary)]">
-                    누적 XP로 등급이 열리고, 이번 달 300 XP를 채우면 현재 잠금 등급 혜택을 유지하거나 바로 복구할 수 있습니다.
+                    {t.benefitGuideDescription}
                   </p>
                 </div>
                 <button
@@ -175,31 +253,31 @@ export function TodayDashboard() {
                   onClick={() => setShowTierGuide(false)}
                   className="rounded-full bg-[var(--bg-secondary)] px-2.5 py-1 text-xs font-semibold text-[var(--text-secondary)]"
                 >
-                  닫기
+                  {t.close}
                 </button>
               </div>
             </div>
 
             <div className="max-h-[70vh] overflow-y-auto px-5 py-4">
               <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)]/30 px-4 py-3">
-                <p className="text-[11px] text-[var(--text-secondary)]">현재 적용 혜택</p>
+                <p className="text-[11px] text-[var(--text-secondary)]">{t.currentBenefit}</p>
                 <div className="mt-1 flex items-center justify-between gap-3">
                   <p className="text-base font-semibold text-[var(--text-primary)]">
                     {TIER_NAMES[benefitSnapshot.benefitTier]}
                   </p>
                   <div className="text-right">
-                    <p className="text-[11px] text-[var(--text-muted)]">월간 최종가</p>
+                    <p className="text-[11px] text-[var(--text-muted)]">{t.monthlyFinalPrice}</p>
                     <p className="text-sm font-semibold text-[var(--text-primary)]">
-                      {formatWon(currentMonthlyPrice)}
+                      {formatPrice(currentMonthlyPrice, priceLocale)}
                     </p>
                   </div>
                 </div>
                 <div className="mt-2 flex items-center justify-between gap-3">
                   <p className="text-[11px] text-[var(--text-secondary)]">
-                    연간 최종가 {formatWon(currentYearlyPrice)}
+                    {t.yearlyFinalPrice} {formatPrice(currentYearlyPrice, priceLocale)}
                   </p>
                   <p className="text-[11px] text-[var(--text-muted)]">
-                    이번 달 {benefitSnapshot.currentMonthXp.toLocaleString()} / {MONTHLY_ACTIVE_THRESHOLD} XP
+                    {t.thisMonth(benefitSnapshot.currentMonthXp, MONTHLY_ACTIVE_THRESHOLD)}
                   </p>
                 </div>
               </div>
@@ -220,27 +298,27 @@ export function TodayDashboard() {
                           {row.tierName}
                         </p>
                         <p className="mt-0.5 text-[11px] text-[var(--text-muted)]">
-                          {row.threshold === 0 ? '가입 즉시 시작' : `${row.threshold.toLocaleString()} XP부터`}
+                          {row.threshold === 0 ? t.joinNow : t.xpFrom(row.threshold)}
                         </p>
                       </div>
                       {row.isCurrent ? (
                         <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-1 text-[10px] font-semibold text-[var(--accent-text)]">
-                          현재
+                          {t.current}
                         </span>
                       ) : null}
                     </div>
                     <div className="mt-2 grid grid-cols-2 gap-2 text-[11px]">
                       <CompactPrice
-                        label="월간 최종가"
-                        original={formatWon(MONTHLY_REFERENCE_PRICE)}
-                        current={formatWon(row.monthlyPrice)}
-                        detail={`총 ${row.monthlySavings}% 할인`}
+                        label={t.monthlyFinalPrice}
+                        original={formatPrice(MONTHLY_REFERENCE_PRICE, priceLocale)}
+                        current={formatPrice(row.monthlyPrice, priceLocale)}
+                        detail={t.totalDiscount(row.monthlySavings)}
                       />
                       <CompactPrice
-                        label="연간 최종가"
-                        original={formatWon(YEARLY_REFERENCE_PRICE)}
-                        current={formatWon(row.yearlyPrice)}
-                        detail={`총 ${row.yearlySavings}% 할인`}
+                        label={t.yearlyFinalPrice}
+                        original={formatPrice(YEARLY_REFERENCE_PRICE, priceLocale)}
+                        current={formatPrice(row.yearlyPrice, priceLocale)}
+                        detail={t.totalDiscount(row.yearlySavings)}
                       />
                     </div>
                   </div>
@@ -248,7 +326,7 @@ export function TodayDashboard() {
               </div>
 
               <p className="mt-4 text-[11px] leading-relaxed text-[var(--text-muted)]">
-                완료된 달 기준으로 300 XP 미만이 2개월 연속 이어지면 적용 혜택이 1단계 내려갑니다. 이번 달 300 XP를 채우면 잠금된 최고 혜택으로 바로 돌아옵니다.
+                {t.footerNote}
               </p>
             </div>
           </div>

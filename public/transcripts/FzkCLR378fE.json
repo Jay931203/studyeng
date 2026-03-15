@@ -1,332 +1,590 @@
 [
   {
     "start": 2.52,
-    "end": 12.72,
-    "en": "So there's a lot of curiosity about the different players in the game One of the OGs is OpenAI You've had several years of experience at OpenAI What's your story and history there Yeah",
+    "end": 7.32,
+    "en": "So there's a lot of curiosity about the different players in the game. One of the OGs is OpenAI.",
     "ko": "그래서 게임의 다양한 플레이어들에 대한 호기심이 많아. OG 중 하나가 OpenAI야. 그래서 게임의 다양한 플레이어들에 대한 호기심이 많아. OG 중 하나가 OpenAI야."
   },
   {
-    "start": 12.72,
-    "end": 23.62,
-    "en": "So I was at OpenAI for roughly five years For the last I think it was a couple of years I was vice president of research there Probably",
+    "start": 8,
+    "end": 12.18,
+    "en": "You've had several years of experience at OpenAI. What's your story and history there?",
+    "ko": "그래서 게임의 다양한 플레이어들에 대한 호기심이 많아. OG 중 하나가 OpenAI야. 그래서 게임의 다양한 플레이어들에 대한 호기심이 많아. OG 중 하나가 OpenAI야."
+  },
+  {
+    "start": 12.46,
+    "end": 18.68,
+    "en": "Yeah. So I was at OpenAI for roughly five years. For the last, I think it was a couple",
     "ko": "나는 OpenAI에서 대략 5년 정도 있었어. 마지막 몇 년 동안은 연구 부사장이었어."
   },
   {
-    "start": 23.62,
-    "end": 33.78,
-    "en": "myself and Ilya Sutskever were the ones who really kind of set the research direction around 2016 or 2017 I first started to really believe in or at",
+    "start": 18.68,
+    "end": 24.86,
+    "en": "of years, I was vice president of research there. Probably myself and Ilya Sutskever",
+    "ko": ""
+  },
+  {
+    "start": 24.86,
+    "end": 32.26,
+    "en": "were the ones who really kind of set the research direction around 2016 or 2017. I first started",
     "ko": "아마 나랑 일리야 수츠케버가 2016년이나 2017년쯤 연구 방향을 설정한 사람들일 거야. 일리야가 유명하게 내게 말했을 때, 나는 스케일링 가설에 대한 믿음을 확고히 했어."
   },
   {
-    "start": 33.78,
-    "end": 44.22,
-    "en": "least confirm my belief in the scaling hypothesis when Ilya famously said to me the thing you need to understand about these models is they just want to learn The models just want to learn And",
+    "start": 32.26,
+    "end": 37,
+    "en": "to really believe in, or at least confirm my belief in the scaling hypothesis when Ilya",
+    "ko": ""
+  },
+  {
+    "start": 37,
+    "end": 41.06,
+    "en": "famously said to me, the thing you need to understand about these models is they just",
     "ko": "일리야가 유명하게 내게 말했을 때, 나는 스케일링 가설에 대한 믿음을 확고히 했어. 모델들은 배우고 싶어해. 가끔 이런 한 문장, 선 Zen 코너 같은 게 있어서, 듣고 나면 모든 게 설명되는 기분이야."
   },
   {
-    "start": 44.22,
-    "end": 54.48,
-    "en": "again sometimes there are these one sentences these Zen cones that you hear them and you're like ah that explains everything That explains a thousand things that I've",
+    "start": 41.06,
+    "end": 47.28,
+    "en": "want to learn. The models just want to learn. And again, sometimes there are these one sentences,",
+    "ko": ""
+  },
+  {
+    "start": 47.5,
+    "end": 53.1,
+    "en": "these Zen cones that you hear them and you're like, ah, that explains everything. That explains",
     "ko": "가끔 이런 한 문장, 선 Zen 코너 같은 게 있어서, 듣고 나면 모든 게 설명되는 기분이야. 그게 내가 본 천 가지를 설명해줘."
   },
   {
-    "start": 54.48,
-    "end": 64.52,
-    "en": "seen And then ever after I had this visualization in my head of like you optimize the models in the right way you point the models in the right way They just want to learn They just want to",
+    "start": 53.1,
+    "end": 59,
+    "en": "a thousand things that I've seen. And then ever after I had this visualization in my head of",
+    "ko": ""
+  },
+  {
+    "start": 59.26,
+    "end": 62.58,
+    "en": "like, you optimize the models in the right way, you point the models in the right way.",
     "ko": "그 이후로는 모델들을 올바른 방향으로 최적화하면 그들이 배우고 싶어한다는 시각이 생겼어. 그들은 문제를 해결하고 싶어해. 문제의 종류와 상관없이 말이야. 그들은 문제를 해결하고 싶어해. 문제의 종류와 상관없이 말이야."
   },
   {
-    "start": 64.52,
-    "end": 74.66,
-    "en": "solve the problem regardless of what the problem is So get out of their way basically Get out of their way Yeah Don't impose your own ideas about how they should learn And this was the same thing as Rich Sutton",
+    "start": 62.8,
+    "end": 66.64,
+    "en": "They just want to learn. They just want to solve the problem regardless of what the problem is.",
+    "ko": ""
+  },
+  {
+    "start": 66.8,
+    "end": 68.1,
+    "en": "So get out of their way, basically.",
     "ko": "그들은 문제를 해결하고 싶어해. 문제의 종류와 상관없이 말이야. 그러니까 방해하지 마. 그러니까 방해하지 마."
   },
   {
-    "start": 74.66,
-    "end": 86.14,
-    "en": "put out in The Bitter Lesson or Gurin put out in The Scaling from Ilya",
+    "start": 68.46,
+    "end": 73.62,
+    "en": "Get out of their way. Yeah. Don't impose your own ideas about how they should learn. And this was",
+    "ko": "그들은 문제를 해결하고 싶어해. 문제의 종류와 상관없이 말이야. 그러니까 방해하지 마. 그러니까 방해하지 마."
+  },
+  {
+    "start": 73.62,
+    "end": 81.62,
+    "en": "the same thing as Rich Sutton put out in The Bitter Lesson or Gurin put out in The Scaling",
     "ko": "일리야와 알렉 라드포드 같은 사람들이 처음 GPT-1을 만들었어."
   },
   {
-    "start": 86.14,
-    "end": 96.38,
-    "en": "and from others folks like Alec Radford who did the original GPT 1 and then ran really hard with it me and my collaborators",
-    "ko": "인간 피드백을 통한 안전성과 내구성을 다루려는 시도였어. 토론과 증폭, 해석 가능성에 중점을 두었지."
+    "start": 83.96,
+    "end": 91.54,
+    "en": "from Ilya and from others, folks like Alec Radford, who did the original GPT-1,",
+    "ko": ""
   },
   {
-    "start": 96.38,
-    "end": 106.62,
-    "en": "on GPT 2 GPT 3 RL from human feedback which was an attempt to kind of deal with the early safety and durability things like debate and amplification heavy",
+    "start": 92.66,
+    "end": 98.54,
+    "en": "and then ran really hard with it, me and my collaborators on GPT-2, GPT-3,",
+    "ko": ""
+  },
+  {
+    "start": 99.02,
+    "end": 103.42,
+    "en": "RL from human feedback, which was an attempt to kind of deal with the early safety and durability,",
     "ko": "토론과 증폭, 해석 가능성에 중점을 두었지. 안전성과 스케일링의 조합이 2018년, 2019년, 2020년 동안 있었어. 그 시기에 나와 내 동료들은 아마도 Anthropic의 공동 창립자가 되었어."
   },
   {
-    "start": 106.62,
-    "end": 117.42,
-    "en": "on interpretability So again the combination of safety plus scaling probably 2018 2019 2020 those were kind of the years when",
+    "start": 104.12,
+    "end": 108.68,
+    "en": "things like debate and amplification, heavy on interpretability. So again,",
+    "ko": ""
+  },
+  {
+    "start": 108.68,
+    "end": 116.6,
+    "en": "the combination of safety plus scaling, probably 2018, 2019, 2020, those were kind of the years",
     "ko": "그 시기에 나와 내 동료들은 아마도 Anthropic의 공동 창립자가 되었어. 그때 우리는 비전을 가지고 방향을 이끌었지."
   },
   {
-    "start": 117.42,
-    "end": 127.84,
-    "en": "myself and my collaborators probably many of whom became co founders of Anthropic kind of really had a vision and",
+    "start": 116.66,
+    "end": 124.66,
+    "en": "when myself and my collaborators, probably many of whom became co-founders of Anthropic,",
     "ko": "왜 떠났어? 왜 떠나기로 결정했어? 내가 OpenAI에서 본 것은 스케일링 가설을 이해하게 되었고, 안전성의 중요성을 깨달았다는 거야."
   },
   {
-    "start": 127.84,
-    "end": 138.06,
-    "en": "drove the direction Why'd you leave Why'd you decide to leave Yeah So look I'm going to put things this way and I think it ties to the race to the",
+    "start": 125.24,
+    "end": 129.14,
+    "en": "kind of really had a vision and drove the direction.",
+    "ko": ""
+  },
+  {
+    "start": 129.54,
+    "end": 131.48,
+    "en": "Why'd you leave? Why'd you decide to leave?",
     "ko": "내가 OpenAI에서 본 것은 스케일링 가설을 이해하게 되었고, 안전성의 중요성을 깨달았다는 거야. OpenAI는 첫 번째는 동의하고, 두 번째는 항상 메시지의 일부였어. OpenAI는 첫 번째는 동의하고, 두 번째는 항상 메시지의 일부였어."
   },
   {
-    "start": 138.06,
-    "end": 148.34,
-    "en": "top right Which is in my time at OpenAI what I'd come to see is I'd come to appreciate the scaling hypothesis and as I'd come to appreciate kind of the importance of",
+    "start": 131.48,
+    "end": 138.06,
+    "en": "Yeah. So look, I'm going to put things this way, and I think it ties to the race to the top,",
+    "ko": "내가 OpenAI에서 본 것은 스케일링 가설을 이해하게 되었고, 안전성의 중요성을 깨달았다는 거야. OpenAI는 첫 번째는 동의하고, 두 번째는 항상 메시지의 일부였어. OpenAI는 첫 번째는 동의하고, 두 번째는 항상 메시지의 일부였어."
+  },
+  {
+    "start": 138.5,
+    "end": 144.26,
+    "en": "right? Which is, in my time at OpenAI, what I'd come to see is I'd come to appreciate the",
     "ko": "하지만 그곳에서 보낸 많은 시간 동안 나는 이 문제를 어떻게 다뤄야 하는지에 대한 특정 비전을 가졌어. 조직이 가져야 할 원칙 같은 것들 말이야."
   },
   {
-    "start": 148.34,
-    "end": 158.96,
-    "en": "safety along with the scaling hypothesis The first one I think OpenAI was getting on board with The second one in a way had always been part of OpenAI's",
+    "start": 144.26,
+    "end": 149.26,
+    "en": "scaling hypothesis, and as I'd come to appreciate kind of the importance of safety along with the",
+    "ko": "하지만 그곳에서 보낸 많은 시간 동안 나는 이 문제를 어떻게 다뤄야 하는지에 대한 특정 비전을 가졌어. 조직이 가져야 할 원칙 같은 것들 말이야."
+  },
+  {
+    "start": 149.26,
+    "end": 155.52,
+    "en": "scaling hypothesis. The first one, I think, OpenAI was getting on board with. The second",
     "ko": "회사가 이걸 해야 하는지에 대한 많은 논의가 있었어. 우리가 마이크로소프트와의 거래를 싫어해서 떠났다고 말할 수는 없어."
   },
   {
-    "start": 158.96,
-    "end": 169.28,
-    "en": "messaging but over many years of the time that I spent there I think I had a particular vision of how we should handle these",
+    "start": 155.52,
+    "end": 163.52,
+    "en": "one in a way had always been part of OpenAI's messaging, but over many years of the time that I",
+    "ko": ""
+  },
+  {
+    "start": 164.38,
+    "end": 170.34,
+    "en": "spent there, I think I had a particular vision of how we should handle these things, how we should",
     "ko": "우리가 마이크로소프트와의 거래를 싫어해서 떠났다고 말할 수는 없어. 그건 사실이 아니야. 우리는 상업화가 싫어서 떠난 게 아니야."
   },
   {
-    "start": 169.28,
-    "end": 179.6,
-    "en": "things how we should be brought out in the world the kind of principles that the organization should have And look I mean there were like many many discussions about",
+    "start": 170.34,
+    "end": 176.78,
+    "en": "be brought out in the world, the kind of principles that the organization should have. And look, I",
     "ko": "우리는 GPD-3를 만들었고, 그 모델이 상업화된 거야. 문명이 매우 강력한 AI로 나아가고 있어. 조심스럽고 간단한 방법은 뭐야?"
   },
   {
-    "start": 179.6,
-    "end": 189.72,
-    "en": "like should the company do this Should the People say like we left because we didn't like the deal with Microsoft False",
+    "start": 176.78,
+    "end": 184.78,
+    "en": "mean, there were like many, many discussions about like, should the company do this? Should the",
+    "ko": ""
+  },
+  {
+    "start": 185.5,
+    "end": 190.84,
+    "en": "People say like, we left because we didn't like the deal with Microsoft. False. Although, you know,",
     "ko": "문명이 매우 강력한 AI로 나아가고 있어. 조심스럽고 간단한 방법은 뭐야? 조직과 개인에 대한 신뢰를 구축하는 정직한 방법은 뭐야?"
   },
   {
-    "start": 190.18,
-    "end": 200.22,
-    "en": "Although you know it was like a lot of discussion a lot of questions about exactly how we do the deal with Microsoft We left because we didn't like commercialization That's not true We built GPD 3 which was the model",
+    "start": 190.86,
+    "end": 194.6,
+    "en": "it was like a lot of discussion, a lot of questions about exactly how we do the deal with",
     "ko": "우리는 여기서 어떻게 거기로 갈 수 있을까? 우리는 여기서 어떻게 거기로 갈 수 있을까?"
   },
   {
-    "start": 200.22,
-    "end": 210.36,
-    "en": "that was commercialized I was involved in commercialization It's more again about how do you do it Like civilization is going down this path to very",
+    "start": 194.94,
+    "end": 198.86,
+    "en": "Microsoft. We left because we didn't like commercialization. That's not true. We built",
+    "ko": "우리는 여기서 어떻게 거기로 갈 수 있을까? 우리는 여기서 어떻게 거기로 갈 수 있을까?"
+  },
+  {
+    "start": 198.86,
+    "end": 204.58,
+    "en": "GPD 3, which was the model that was commercialized. I was involved in commercialization. It's more,",
+    "ko": ""
+  },
+  {
+    "start": 205.04,
+    "end": 211.08,
+    "en": "again, about how do you do it? Like civilization is going down this path to very powerful AI.",
     "ko": "어떻게 제대로 할 수 있는 비전을 가질 수 있을까? 안전성이 단지..."
   },
   {
-    "start": 210.36,
-    "end": 220.62,
-    "en": "powerful AI What's the way to do it that is cautious straightforward honest that builds trust in",
+    "start": 211.08,
+    "end": 219.08,
+    "en": "What's the way to do it that is cautious, straightforward, honest, that builds trust",
     "ko": "신중하고 직설적이어야 해."
   },
   {
-    "start": 220.62,
-    "end": 230.88,
-    "en": "the organization and in individuals How do we get from here to there And how do we have a real vision for how to get it right How can safety not just be something",
+    "start": 220.12,
+    "end": 226.68,
+    "en": "in the organization and in individuals? How do we get from here to there? And how do we have a real",
     "ko": "조직과 개인 간의 신뢰를 쌓는 정직함이 필요해. 여기서 저기로 어떻게 가고, 올바르게 가기 위한 진정한 비전을 어떻게 가질 수 있을까?"
   },
   {
-    "start": 230.88,
-    "end": 240.94,
-    "en": "we say because it helps with recruiting And you know I think at the end of the day if you have a vision for that forget about anyone else's vision I don't want to talk about",
+    "start": 226.68,
+    "end": 232.16,
+    "en": "vision for how to get it right? How can safety not just be something we say because it helps",
+    "ko": ""
+  },
+  {
+    "start": 232.16,
+    "end": 238.64,
+    "en": "with recruiting? And, you know, I think at the end of the day, if you have a vision for that,",
     "ko": "채용에 도움이 되니까 우리가 하는 말이야. 결국에는 네 비전이 있다면 다른 사람의 비전은 잊어버려. 다른 사람의 비전은 말하고 싶지 않아."
   },
   {
-    "start": 240.94,
-    "end": 251.16,
-    "en": "anyone else's vision If you have a vision for how to do it you should go off and you should do that vision It is incredibly unproductive to try and argue with someone else's vision You",
+    "start": 238.64,
+    "end": 242.54,
+    "en": "forget about anyone else's vision. I don't want to talk about anyone else's vision. If you have",
+    "ko": ""
+  },
+  {
+    "start": 242.54,
+    "end": 247.48,
+    "en": "a vision for how to do it, you should go off and you should do that vision. It is incredibly",
     "ko": "네 비전이 있다면 다른 사람의 비전은 잊어버려. 다른 사람의 비전은 말하고 싶지 않아. 어떻게 할지에 대한 비전이 있다면 그 비전을 실현하러 가야 해. 다른 사람의 비전과 논쟁하는 건 정말 비생산적이야. 어떻게 할지에 대한 비전이 있다면 그 비전을 실현하러 가야 해. 다른 사람의 비전과 논쟁하는 건 정말 비생산적이야."
   },
   {
-    "start": 251.16,
-    "end": 261.2,
-    "en": "might think they're not doing it the right way You might think they're dishonest Who knows Maybe you're right Maybe you're not But what you should do is you should take some people",
+    "start": 247.82,
+    "end": 252.42,
+    "en": "unproductive to try and argue with someone else's vision. You might think they're not doing it the",
+    "ko": ""
+  },
+  {
+    "start": 252.42,
+    "end": 256.86,
+    "en": "right way. You might think they're dishonest. Who knows? Maybe you're right. Maybe you're not.",
     "ko": "누가 알겠어? 네가 맞을 수도 있고 아닐 수도 있어. 하지만 네가 해야 할 건, 믿을 수 있는 사람들을 데리고 가서 함께 네 비전을 실현하는 거야."
   },
   {
-    "start": 261.2,
-    "end": 271.3,
-    "en": "you trust and you should go off together and you should make your vision happen And if your vision is compelling if you can make it appeal to people some you know some combination of ethically",
+    "start": 258.7,
+    "end": 262.9,
+    "en": "But what you should do is you should take some people you trust and you should go off together",
+    "ko": ""
+  },
+  {
+    "start": 262.98,
+    "end": 267.28,
+    "en": "and you should make your vision happen. And if your vision is compelling, if you can make it",
     "ko": "하지만 네가 해야 할 건, 믿을 수 있는 사람들을 데리고 가서 함께 네 비전을 실현하는 거야. 하지만 네가 해야 할 건, 믿을 수 있는 사람들을 데리고 가서 함께 네 비전을 실현하는 거야. 네 비전이 매력적이라면, 사람들에게 어필할 수 있다면,"
   },
   {
-    "start": 272.02,
-    "end": 282.08,
-    "en": "you know in the market you know if you can make a company that's a place people want to join that you know engages in practices that people think",
+    "start": 267.4,
+    "end": 274.14,
+    "en": "appeal to people, some, you know, some combination of ethically, you know, in the market, you know,",
+    "ko": ""
+  },
+  {
+    "start": 274.14,
+    "end": 281.12,
+    "en": "if you can make a company that's a place people want to join, that, you know, engages in practices",
     "ko": "네 비전이 매력적이라면, 사람들에게 어필할 수 있다면, 사람들이 가입하고 싶어하는 회사를 만들 수 있어야 해. 사람들이 합리적이라고 생각하는 방식으로 운영하면서."
   },
   {
-    "start": 282.08,
-    "end": 292.44,
-    "en": "are reasonable while managing to maintain its position in the ecosystem at the same time if you do that people will copy it And the fact that you are doing it",
+    "start": 281.12,
+    "end": 287.16,
+    "en": "that people think are reasonable while managing to maintain its position in the ecosystem at the",
+    "ko": ""
+  },
+  {
+    "start": 287.16,
+    "end": 292.88,
+    "en": "same time, if you do that, people will copy it. And the fact that you are doing it, especially",
     "ko": "생태계에서의 위치를 유지하는 것도 중요해. 그렇게 하면 사람들이 따라 할 거야. 특히 네가 그걸 더 잘하고 있다는 사실이 그들의 행동을 변화시킬 거야."
   },
   {
-    "start": 292.58,
-    "end": 302.72,
-    "en": "especially the fact that you're doing it better than they are causes them to change their behavior in a much more compelling way than if they're your boss and you're arguing with them I just",
+    "start": 292.88,
+    "end": 297.98,
+    "en": "the fact that you're doing it better than they are, causes them to change their behavior in a",
     "ko": "상사와 논쟁하는 것보다 훨씬 더 설득력 있게 행동을 변화시킬 수 있어. 더 구체적으로 말할 방법이 없지만, 다른 사람의 비전을 네 비전처럼 보이게 하려는 건 비생산적이야."
   },
   {
-    "start": 302.72,
-    "end": 312.78,
-    "en": "I don't know how to be any more specific about it than that But I think it's generally very unproductive to try and get someone else's vision to look like your vision It's much more",
+    "start": 297.98,
+    "end": 302.88,
+    "en": "much more compelling way than if they're your boss and you're arguing with them. I just, I don't know",
+    "ko": ""
+  },
+  {
+    "start": 302.88,
+    "end": 308.12,
+    "en": "how to be any more specific about it than that. But I think it's generally very unproductive to",
     "ko": "더 구체적으로 말할 방법이 없지만, 다른 사람의 비전을 네 비전처럼 보이게 하려는 건 비생산적이야. 깨끗한 실험을 하고, 이게 우리의 비전이라고 말하는 게 훨씬 생산적이야."
   },
   {
-    "start": 312.78,
-    "end": 322.98,
-    "en": "productive to go off and do a clean experiment and say this is our vision This is how we're going to do things Your choice is you can ignore us",
+    "start": 308.12,
+    "end": 313.88,
+    "en": "try and get someone else's vision to look like your vision. It's much more productive to go off",
+    "ko": ""
+  },
+  {
+    "start": 313.88,
+    "end": 319.12,
+    "en": "and do a clean experiment and say, this is our vision. This is how we're going to do things.",
     "ko": "네 선택은 우리를 무시하거나, 우리가 하는 걸 거부하거나, 아니면 우리처럼 더 변해가는 거야. 모방은 가장 진정한 칭찬이야. 이건 고객의 행동에서도 나타나고,"
   },
   {
-    "start": 323.24,
-    "end": 333.26,
-    "en": "you can reject what we're doing or you can start to become more like us And imitation is the sincerest form of flattery And you know that",
-    "ko": "모방은 가장 진정한 칭찬이야. 이건 고객의 행동에서도 나타나고, 대중의 행동에서도 나타나고, 사람들이 일하고 싶어하는 곳에서도 나타나."
+    "start": 319.12,
+    "end": 327.12,
+    "en": "Your choice is you can ignore us, you can reject what we're doing, or you can start to become more",
+    "ko": ""
   },
   {
-    "start": 333.26,
-    "end": 343.6,
-    "en": "plays out in the behavior of customers that pays out in the behavior of the public that plays out in the behavior of where people choose to work And again again at the end it's",
+    "start": 327.78,
+    "end": 334.68,
+    "en": "like us. And imitation is the sincerest form of flattery. And, you know, that plays out in the",
+    "ko": ""
+  },
+  {
+    "start": 334.68,
+    "end": 339,
+    "en": "behavior of customers, that pays out in the behavior of the public, that plays out in the",
     "ko": "결국 한 회사가 이기고 다른 회사가 지는 게 중요한 게 아니야. 우리가 어떤 관행에 참여하고, 사람들이 진정으로 매력을 느낀다면,"
   },
   {
-    "start": 343.6,
-    "end": 353.76,
-    "en": "not about one company winning or another company winning If we or another company are engaging in some practice that you know people",
+    "start": 339,
+    "end": 344.56,
+    "en": "behavior of where people choose to work. And again, again, at the end, it's not about one",
+    "ko": "결국 한 회사가 이기고 다른 회사가 지는 게 중요한 게 아니야. 우리가 어떤 관행에 참여하고, 사람들이 진정으로 매력을 느낀다면,"
+  },
+  {
+    "start": 344.66,
+    "end": 351.64,
+    "en": "company winning or another company winning. If we or another company are engaging in some practice",
     "ko": "그건 겉모습이 아닌 실질적인 것이어야 해."
   },
   {
-    "start": 353.76,
-    "end": 365,
-    "en": "find genuinely appealing and I want it to be in substance not just in appearance And you know I think researchers are sophisticated and they look at substance And",
+    "start": 351.94,
+    "end": 358.38,
+    "en": "that, you know, people find genuinely appealing, and I want it to be in substance, not just in",
     "ko": "연구자들은 정교하고 실질적인 것을 바라봐. 그건 훌륭한 성공이야. 정상에 오르는 경주와 같아."
   },
   {
-    "start": 365,
-    "end": 375.08,
-    "en": "then other companies start copying that practice and they win because they copied that practice That's great That's success That's like the race to the top It doesn't matter who wins in the end",
+    "start": 358.38,
+    "end": 363.38,
+    "en": "appearance. And, you know, I think researchers are sophisticated and they look at substance.",
+    "ko": "연구자들은 정교하고 실질적인 것을 바라봐. 그건 훌륭한 성공이야. 정상에 오르는 경주와 같아."
+  },
+  {
+    "start": 364.44,
+    "end": 369.46,
+    "en": "And then other companies start copying that practice and they win because they copied that",
+    "ko": ""
+  },
+  {
+    "start": 369.46,
+    "end": 374.32,
+    "en": "practice. That's great. That's success. That's like the race to the top. It doesn't matter who",
     "ko": "결국 누가 이기든 상관없어. 모두가 서로의 좋은 관행을 따라 하고 있다면. 결국 누가 이기든 상관없어. 모두가 서로의 좋은 관행을 따라 하고 있다면."
   },
   {
-    "start": 375.44,
-    "end": 385.52,
-    "en": "as long as everyone is copying everyone else's good practices right One way I think of it is like the thing we're all afraid of is the race to the bottom right And the race to the bottom doesn't matter who wins because we all",
+    "start": 374.32,
+    "end": 379.22,
+    "en": "wins in the end, as long as everyone is copying everyone else's good practices, right? One way I",
+    "ko": ""
+  },
+  {
+    "start": 379.22,
+    "end": 383.16,
+    "en": "think of it is like, the thing we're all afraid of is the race to the bottom, right? And the race to",
     "ko": "내가 생각하는 한 가지 방법은 우리가 모두 두려워하는 것이 바닥으로의 경주라는 거야. 바닥으로의 경주는 누가 이기든 상관없어. 우리는 모두 지게 돼. 가장 극단적인 경우, 자율 AI가 우리를 지배하게 된다면,"
   },
   {
-    "start": 385.52,
-    "end": 395.86,
-    "en": "lose right Like you know in the most extreme world we make this autonomous AI that you know the robots enslave us or whatever right I mean that's half joking but you know that is the most",
+    "start": 383.16,
+    "end": 387.68,
+    "en": "the bottom doesn't matter who wins because we all lose, right? Like, you know, in the most extreme",
+    "ko": ""
+  },
+  {
+    "start": 387.72,
+    "end": 392.44,
+    "en": "world, we make this autonomous AI that, you know, the robots enslave us or whatever, right? I mean,",
     "ko": "가장 극단적인 경우, 자율 AI가 우리를 지배하게 된다면, 가장 극단적인 경우, 자율 AI가 우리를 지배하게 된다면, 그건 반 농담이지만, 가장 극단적인 상황이야."
   },
   {
-    "start": 395.86,
-    "end": 406.08,
-    "en": "extreme thing that could happen Then it doesn't matter which company was ahead If instead you create a race to the top where people are competing",
+    "start": 392.58,
+    "end": 398.96,
+    "en": "that's half joking, but, you know, that is the most extreme thing that could happen. Then it",
+    "ko": ""
+  },
+  {
+    "start": 398.96,
+    "end": 404.8,
+    "en": "doesn't matter which company was ahead. If instead you create a race to the top where people are",
     "ko": "그건 반 농담이지만, 가장 극단적인 상황이야. 대신 사람들이 좋은 관행에 참여하기 위해 경쟁하는 정상으로의 경주를 만들어야 해."
   },
   {
-    "start": 406.08,
-    "end": 416.26,
-    "en": "to engage in good practices then you know at the end of the day you know it doesn't matter who ends up winning It doesn't even matter who started the race to the top The",
+    "start": 405.6,
+    "end": 411.5,
+    "en": "competing to engage in good practices, then, you know, at the end of the day, you know, it doesn't",
     "ko": "결국 누가 이기든 상관없어. 누가 정상으로의 경주를 시작했는지도 중요하지 않아. 중요한 건 도덕적이 되는 게 아니라 시스템을 이전보다 더 나은 균형으로 만드는 거야."
   },
   {
-    "start": 416.26,
-    "end": 426.54,
-    "en": "point isn't to be virtuous The point is to get the system into a better equilibrium than it was before And individual companies can play some role in doing this Individual companies can",
+    "start": 411.5,
+    "end": 416.52,
+    "en": "matter who ends up winning. It doesn't even matter who started the race to the top. The point isn't",
+    "ko": "결국 누가 이기든 상관없어. 누가 정상으로의 경주를 시작했는지도 중요하지 않아. 중요한 건 도덕적이 되는 게 아니라 시스템을 이전보다 더 나은 균형으로 만드는 거야."
+  },
+  {
+    "start": 416.52,
+    "end": 421.34,
+    "en": "to be virtuous. The point is to get the system into a better equilibrium than it was before.",
     "ko": "개별 회사들이 이 과정에서 역할을 할 수 있어. 개별 회사들이 시작할 수 있고, 이를 가속화할 수 있어."
   },
   {
-    "start": 426.54,
+    "start": 421.76,
+    "end": 427.26,
+    "en": "And individual companies can play some role in doing this. Individual companies can, you know,",
+    "ko": ""
+  },
+  {
+    "start": 427.26,
+    "end": 432.56,
+    "en": "can help to start it, can help to accelerate it. And frankly, I think individuals at other",
+    "ko": "개별 회사들이 시작할 수 있고, 이를 가속화할 수 있어. 솔직히 다른 회사의 개인들도 이걸 해왔어."
+  },
+  {
+    "start": 432.56,
     "end": 437,
-    "en": "you know can help to start it can help to accelerate it And frankly I think individuals at other companies have done this as well right The individuals that when we put out an RSP",
+    "en": "companies have done this as well, right? The individuals that, when we put out an RSP,",
     "ko": "개별 회사들이 시작할 수 있고, 이를 가속화할 수 있어. 솔직히 다른 회사의 개인들도 이걸 해왔어."
   },
   {
     "start": 437.56,
-    "end": 448.02,
-    "en": "react by pushing harder to get something similar done at other companies Sometimes other companies do something that's like we're like oh it's a good practice We",
+    "end": 445.08,
+    "en": "react by pushing harder to get something similar done at other companies. Sometimes other companies",
     "ko": "우리가 RSP를 내놓을 때, 다른 회사에서 비슷한 걸 하려고 더 열심히 밀어붙이는 사람들이 있어. 가끔 다른 회사들이 우리가 좋다고 생각하는 좋은 관행을 하기도 해."
   },
   {
-    "start": 448.02,
-    "end": 458.18,
-    "en": "think that's good We should adopt it too The only difference is you know I think we try to be more forward leaning We try to adopt more of these practices first and",
+    "start": 445.08,
+    "end": 449.04,
+    "en": "do something that's like, we're like, oh, it's a good practice. We think that's good. We should",
+    "ko": ""
+  },
+  {
+    "start": 449.04,
+    "end": 455.84,
+    "en": "adopt it too. The only difference is, you know, I think we try to be more forward-leaning. We try",
     "ko": "우리는 더 앞서 나가려고 하고, 다른 사람들이 발명했을 때 더 빨리 채택하려고 해. 이런 역동성이 우리가 주목해야 할 부분이라고 생각해."
   },
   {
-    "start": 458.18,
-    "end": 469.08,
-    "en": "adopt them more quickly when others invent them But I think this dynamic is what we should be pointing at And I think it abstracts away the question of you",
+    "start": 455.84,
+    "end": 461.2,
+    "en": "to adopt more of these practices first and adopt them more quickly when others invent them. But",
+    "ko": ""
+  },
+  {
+    "start": 461.2,
+    "end": 466.54,
+    "en": "I think this dynamic is what we should be pointing at. And I think it abstracts away",
     "ko": "이런 역동성이 우리가 주목해야 할 부분이라고 생각해. 어느 회사가 이기고 누가 신뢰하는지에 대한 질문을 추상화해. 안전이란 단순히 어떤 회사가 이기는지, 누가 신뢰하는지를 추상화하는 게 아니야."
   },
   {
-    "start": 469.08,
-    "end": 479.34,
-    "en": "know which company's winning who trusts who I think all these questions of drama are profoundly uninteresting And the thing that matters is the ecosystem",
-    "ko": "안전이란 단순히 어떤 회사가 이기는지, 누가 신뢰하는지를 추상화하는 게 아니야. 드라마에 대한 이런 질문들은 정말 흥미롭지 않다고 생각해."
+    "start": 466.76,
+    "end": 473.86,
+    "en": "the question of, you know, which company's winning, who trusts who. I think all these questions of",
+    "ko": ""
   },
   {
-    "start": 479.34,
-    "end": 489.7,
-    "en": "that we all operate in and how to make that ecosystem better because that constrains all the players And so Anthropic is this kind of clean experiment built on a foundation of like what",
+    "start": 473.86,
+    "end": 480.28,
+    "en": "drama are profoundly uninteresting. And the thing that matters is the ecosystem that we all operate",
+    "ko": ""
+  },
+  {
+    "start": 480.28,
+    "end": 483.84,
+    "en": "in and how to make that ecosystem better, because that constrains all the players.",
     "ko": "중요한 건 우리가 운영하는 생태계와 그 생태계를 어떻게 더 좋게 만들 수 있는지야. 모든 플레이어를 제약하는 거니까."
   },
   {
-    "start": 489.7,
-    "end": 499.84,
-    "en": "concretely AISAT should look like Look I'm sure we've made plenty of mistakes along the way The perfect organization doesn't exist It has to deal with the imperfection",
+    "start": 483.84,
+    "end": 490.44,
+    "en": "And so Anthropic is this kind of clean experiment built on a foundation of like what concretely",
+    "ko": ""
+  },
+  {
+    "start": 490.44,
+    "end": 495.5,
+    "en": "AISAT should look like. Look, I'm sure we've made plenty of mistakes along the way. The perfect",
     "ko": "그래서 Anthropic은 이런 깨끗한 실험을 기반으로 만들어졌어. AISAT가 구체적으로 어떤 모습이어야 하는지에 대한 거야."
   },
   {
-    "start": 499.84,
-    "end": 510,
-    "en": "of a thousand employees It has to deal with the imperfection of our leaders including me It has to deal with the imperfection of the people we've put to you know to oversee the imperfection",
+    "start": 495.74,
+    "end": 501.7,
+    "en": "organization doesn't exist. It has to deal with the imperfection of a thousand employees. It has",
     "ko": "AISAT가 구체적으로 어떤 모습이어야 하는지에 대한 거야. 우리가 가는 길에 실수를 많이 했던 건 확실해. 우리가 가는 길에 실수를 많이 했던 건 확실해."
   },
   {
-    "start": 510,
-    "end": 520.12,
-    "en": "of the leaders like the board and the long term benefit trust It's all a set of imperfect people trying to aim imperfectly at some ideal that will never perfectly",
+    "start": 501.7,
+    "end": 506.08,
+    "en": "to deal with the imperfection of our leaders, including me. It has to deal with the imperfection",
+    "ko": "AISAT가 구체적으로 어떤 모습이어야 하는지에 대한 거야. 우리가 가는 길에 실수를 많이 했던 건 확실해. 우리가 가는 길에 실수를 많이 했던 건 확실해."
+  },
+  {
+    "start": 506.08,
+    "end": 512.24,
+    "en": "of the people we've put to, you know, to oversee the imperfection of the leaders, like the board",
+    "ko": ""
+  },
+  {
+    "start": 512.24,
+    "end": 518.7,
+    "en": "and the long-term benefit trust. It's all a set of imperfect people trying to aim imperfectly at",
     "ko": "우리가 가는 길에 실수를 많이 했던 건 확실해. 완벽한 조직은 없어. 천 명의 직원들의 불완전함을 다뤄야 해. 리더들의 불완전함을 감독하는 사람들의 불완전함도 다뤄야 해."
   },
   {
-    "start": 520.12,
+    "start": 518.7,
+    "end": 523.34,
+    "en": "some ideal that will never perfectly be achieved. That's what you sign up for. That's what it will",
+    "ko": ""
+  },
+  {
+    "start": 523.34,
     "end": 530.14,
-    "en": "be achieved That's what you sign up for That's what it will always be But imperfect doesn't mean you just give up There's better and there's worse And",
+    "en": "always be. But imperfect doesn't mean you just give up. There's better and there's worse. And",
     "ko": "리더들의 불완전함을 감독하는 사람들의 불완전함도 다뤄야 해. 모두가 불완전한 사람들이 모여서 결코 완벽하게 이룰 수 없는 이상을 목표로 하고 있어."
   },
   {
     "start": 530.64,
-    "end": 541.02,
-    "en": "hopefully we can begin to build we can do well enough that we can begin to build some practices that the whole industry engages in And then you know my guess is that multiple",
+    "end": 536.44,
+    "en": "hopefully we can begin to build, we can do well enough that we can begin to build some practices",
     "ko": "그게 우리가 선택한 거야. 항상 그럴 거고. 하지만 불완전하다고 포기하는 건 아니야."
   },
   {
-    "start": 541.02,
-    "end": 551.22,
-    "en": "of these companies will be successful Anthropic will be successful These other companies like ones I've been at the past will also be successful And some will be more successful than others That's less",
+    "start": 536.64,
+    "end": 541.66,
+    "en": "that the whole industry engages in. And then, you know, my guess is that multiple of these companies",
+    "ko": ""
+  },
+  {
+    "start": 541.66,
+    "end": 546.4,
+    "en": "will be successful. Anthropic will be successful. These other companies, like ones I've been at the",
     "ko": "더 나은 것도 있고 더 나쁜 것도 있어. 희망적으로 우리는 산업 전체가 참여할 수 있는 관행을 만들기 시작할 수 있을 거야."
   },
   {
-    "start": 551.22,
-    "end": 561.58,
-    "en": "important than again that we align the incentives of the industry And that happens partly through the race to the top partly through things like RSP partly through again selected",
+    "start": 546.4,
+    "end": 551.68,
+    "en": "past, will also be successful. And some will be more successful than others. That's less important",
+    "ko": "더 나은 것도 있고 더 나쁜 것도 있어. 희망적으로 우리는 산업 전체가 참여할 수 있는 관행을 만들기 시작할 수 있을 거야."
+  },
+  {
+    "start": 551.8,
+    "end": 556.8,
+    "en": "than, again, that we align the incentives of the industry. And that happens partly through the race",
     "ko": "희망적으로 우리는 산업 전체가 참여할 수 있는 관행을 만들기 시작할 수 있을 거야. Anthropic도 성공할 거고, 내가 과거에 있었던 다른 회사들도 성공할 거야."
   },
   {
-    "start": 561.58,
+    "start": 556.8,
     "end": 562.72,
-    "en": "surgical regulation",
+    "en": "to the top, partly through things like RSP, partly through, again, selected surgical regulation.",
     "ko": ""
   }
 ]

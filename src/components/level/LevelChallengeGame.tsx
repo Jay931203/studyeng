@@ -8,9 +8,43 @@ import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useLevelStore, computeXpForSwipe } from '@/stores/useLevelStore'
 import { useLevelChallengeStore } from '@/stores/useLevelChallengeStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
 import { triggerHaptic } from '@/lib/haptic'
 import type { ChallengeTransition } from '@/types/level'
 import { displayLevelName } from '@/types/level'
+
+const TRANSLATIONS = {
+  ko: {
+    startChallenge: '도전 시작',
+    expressionCards: (n: number) => `${n}장의 표현 카드`,
+    passRequirement: (n: number) => `${n}장 이상 알고 있으면 다음 레벨에 도전합니다. (80%)`,
+    retryAnytime: '실패해도 바로 다시 도전 가능',
+    dontKnow: '몰라요',
+    know: '알아요',
+    loadError: '표현을 불러올 수 없습니다',
+    earnedXp: '획득 XP',
+    missedExpressions: '몰랐던 표현',
+    needMore: (n: number) => `${n}장 이상 필요 (80%)`,
+    retryNow: '바로 다시 도전',
+    goBack: '돌아가기',
+    later: '나중에 다시',
+  },
+  ja: {
+    startChallenge: 'チャレンジ開始',
+    expressionCards: (n: number) => `${n}枚の表現カード`,
+    passRequirement: (n: number) => `${n}枚以上知っていれば次のレベルに挑戦します。(80%)`,
+    retryAnytime: '失敗してもすぐ再挑戦可能',
+    dontKnow: '分からない',
+    know: '知ってる',
+    loadError: '表現を読み込めません',
+    earnedXp: '獲得 XP',
+    missedExpressions: '知らなかった表現',
+    needMore: (n: number) => `${n}枚以上必要 (80%)`,
+    retryNow: 'すぐ再挑戦',
+    goBack: '戻る',
+    later: 'あとで再挑戦',
+  },
+} as const
 
 // ---------------------------------------------------------------------------
 // Constants
@@ -66,6 +100,8 @@ function FloatingXP({ xp }: { xp: number }) {
 // ---------------------------------------------------------------------------
 
 export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameProps) {
+  const locale = useLocaleStore((s) => s.locale)
+  const T = TRANSLATIONS[locale === 'ja' ? 'ja' : 'ko']
   const currentLevel = useOnboardingStore((s) => s.level)
   const setLevel = useOnboardingStore((s) => s.setLevel)
   const updateLeitner = useGameProgressStore((s) => s.updateLeitner)
@@ -356,19 +392,19 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
                 <span className="shrink-0 text-xs font-bold" style={{ color: 'var(--text-muted)' }}>
                   01
                 </span>
-                <span>{CARDS_TOTAL}장의 표현 카드</span>
+                <span>{T.expressionCards(CARDS_TOTAL)}</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="shrink-0 text-xs font-bold" style={{ color: 'var(--text-muted)' }}>
                   02
                 </span>
-                <span>{PASS_THRESHOLD}장 이상 알고 있으면 다음 레벨에 도전합니다. (80%)</span>
+                <span>{T.passRequirement(PASS_THRESHOLD)}</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="shrink-0 text-xs font-bold" style={{ color: 'var(--text-muted)' }}>
                   03
                 </span>
-                <span>실패해도 바로 다시 도전 가능</span>
+                <span>{T.retryAnytime}</span>
               </div>
             </div>
           </div>
@@ -383,7 +419,7 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
               boxShadow: '0 4px 24px var(--accent-glow)',
             }}
           >
-            도전 시작
+            {T.startChallenge}
           </motion.button>
         </div>
       </div>
@@ -425,7 +461,7 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
           </p>
           {!passed && (
             <p className="mt-2 text-sm" style={{ color: 'var(--text-muted)' }}>
-              {PASS_THRESHOLD}장 이상 필요 (80%)
+              {T.needMore(PASS_THRESHOLD)}
             </p>
           )}
         </div>
@@ -441,7 +477,7 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
         >
           <div className="text-center">
             <p className="text-xs mb-1" style={{ color: 'var(--text-muted)' }}>
-              획득 XP
+              {T.earnedXp}
             </p>
             <p className="text-xl font-bold" style={{ color: 'var(--accent-text)' }}>
               +{Math.round(roundXP * 10) / 10}
@@ -453,7 +489,7 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
         {!passed && missedResults.length > 0 && (
           <div className="w-full max-w-sm mb-6">
             <p className="text-xs uppercase tracking-wider mb-3" style={{ color: 'var(--text-muted)' }}>
-              몰랐던 표현
+              {T.missedExpressions}
             </p>
             <div className="space-y-2">
               {missedResults.map(({ exprId, expression, meaningKo }) => (
@@ -488,7 +524,7 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
                 backgroundColor: 'var(--accent-primary)',
               }}
             >
-              바로 다시 도전
+              {T.retryNow}
             </motion.button>
           )}
           <button
@@ -500,7 +536,7 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
               color: passed ? '#fff' : 'var(--text-primary)',
             }}
           >
-            {passed ? '돌아가기' : '나중에 다시'}
+            {passed ? T.goBack : T.later}
           </button>
         </div>
       </motion.div>
@@ -514,7 +550,7 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
   if (!currentCard) {
     return (
       <div className="flex items-center justify-center h-full">
-        <p style={{ color: 'var(--text-muted)' }}>표현을 불러올 수 없습니다</p>
+        <p style={{ color: 'var(--text-muted)' }}>{T.loadError}</p>
       </div>
     )
   }
@@ -628,7 +664,7 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
                   color: 'var(--text-secondary)',
                 }}
               >
-                몰라요
+                {T.dontKnow}
               </motion.button>
               <motion.button
                 whileTap={{ scale: 0.95 }}
@@ -640,7 +676,7 @@ export function LevelChallengeGame({ targetLevel, onClose }: LevelChallengeGameP
                   color: '#fff',
                 }}
               >
-                알아요
+                {T.know}
               </motion.button>
             </div>
           </motion.div>

@@ -14,12 +14,160 @@ import { useAdminStore } from '@/stores/useAdminStore'
 import { usePremiumStore } from '@/stores/usePremiumStore'
 import { usePlayerStore } from '@/stores/usePlayerStore'
 import { useSettingsStore } from '@/stores/useSettingsStore'
+import { useLocaleStore, type SupportedLocale } from '@/stores/useLocaleStore'
 import { usePushStore } from '@/stores/usePushStore'
 import {
   useThemeStore,
   type ThemeAccent,
   type ThemeBackground,
 } from '@/stores/useThemeStore'
+
+const TRANSLATIONS = {
+  ko: {
+    guest: '게스트',
+    account: '계정',
+    logout: '로그아웃',
+    continueWithGoogle: 'Google로 계속',
+    continueWithKakao: 'Kakao로 계속',
+    settings: '설정',
+    translateLang: '번역 언어 선택',
+    theme: '테마',
+    background: '배경',
+    color: '색상',
+    gameMode: '게임 모드',
+    gameModeDesc: '시청 중 게임 등장',
+    vibration: '진동',
+    vibrationDesc: '고정, 저장, 유사 표현 등장 시 진동',
+    remote: '리모컨',
+    remoteDesc: '쇼츠 플레이어 리모컨 표시',
+    guide: '안내',
+    guideDesc: '자막, Key Picks, 사용법 힌트 표시',
+    notifications: '알림',
+    notifBrowserPrompt: '브라우저 설정에서 알림을 허용해주세요',
+    streakReminder: '스트릭 리마인더 알림',
+    legalSupport: '법률 및 지원',
+    support: '지원',
+    terms: '이용약관',
+    privacy: '개인정보처리방침',
+    deleteAccount: '계정 삭제',
+    subscription: '구독',
+    forcePro: '강제 PRO',
+    forceFree: '강제 FREE',
+    none: '없음',
+    authUnavailable: '로그인 비활성화',
+    adminLocalTest: '로컬 테스트 전용입니다. 실제 결제는 유지하고 앱에서만 PRO/FREE를 강제로 적용합니다.',
+    actualSubscription: '실제 구독',
+    forceProDesc: '강제 FREE는 실제 구독이 있어도 앱을 무료 상태처럼 테스트합니다.',
+  },
+  ja: {
+    guest: 'ゲスト',
+    account: 'アカウント',
+    logout: 'ログアウト',
+    continueWithGoogle: 'Googleで続ける',
+    continueWithKakao: 'Kakaoで続ける',
+    settings: '設定',
+    translateLang: '翻訳言語を選択',
+    theme: 'テーマ',
+    background: '背景',
+    color: 'カラー',
+    gameMode: 'ゲームモード',
+    gameModeDesc: '視聴中にゲームが登場',
+    vibration: 'バイブレーション',
+    vibrationDesc: 'ピン留め、保存、類似表現の出現時に振動',
+    remote: 'リモコン',
+    remoteDesc: 'ショートプレーヤーのリモコンを表示',
+    guide: 'ガイド',
+    guideDesc: '字幕、Key Picks、使い方ヒントを表示',
+    notifications: '通知',
+    notifBrowserPrompt: 'ブラウザの設定で通知を許可してください',
+    streakReminder: 'ストリークリマインダー通知',
+    legalSupport: '法律とサポート',
+    support: 'サポート',
+    terms: '利用規約',
+    privacy: 'プライバシーポリシー',
+    deleteAccount: 'アカウント削除',
+    subscription: 'サブスクリプション',
+    forcePro: '強制PRO',
+    forceFree: '強制FREE',
+    none: 'なし',
+    authUnavailable: 'ログイン無効',
+    adminLocalTest: 'ローカルテスト専用です。実際の決済は維持し、アプリでのみPRO/FREEを強制的に適用します。',
+    actualSubscription: '実際のサブスクリプション',
+    forceProDesc: '強制FREEは実際のサブスクリプションがあってもアプリを無料状態のようにテストします。',
+  },
+  'zh-TW': {
+    guest: '訪客',
+    account: '帳號',
+    logout: '登出',
+    continueWithGoogle: '使用 Google 繼續',
+    continueWithKakao: '使用 Kakao 繼續',
+    settings: '設定',
+    translateLang: '選擇翻譯語言',
+    theme: '主題',
+    background: '背景',
+    color: '顏色',
+    gameMode: '遊戲模式',
+    gameModeDesc: '觀看時出現遊戲',
+    vibration: '振動',
+    vibrationDesc: '釘選、儲存、相似表達出現時振動',
+    remote: '遙控器',
+    remoteDesc: '顯示短影片播放器遙控器',
+    guide: '引導',
+    guideDesc: '顯示字幕、Key Picks、使用提示',
+    notifications: '通知',
+    notifBrowserPrompt: '請在瀏覽器設定中允許通知',
+    streakReminder: '連續學習提醒通知',
+    legalSupport: '法律與支援',
+    support: '支援',
+    terms: '使用條款',
+    privacy: '隱私權政策',
+    deleteAccount: '刪除帳號',
+    subscription: '訂閱',
+    forcePro: '強制 PRO',
+    forceFree: '強制 FREE',
+    none: '無',
+    authUnavailable: '登入已停用',
+    adminLocalTest: '僅供本地測試。實際付款保持不變，僅在應用程式中強制套用 PRO/FREE。',
+    actualSubscription: '實際訂閱',
+    forceProDesc: '強制 FREE 即使有實際訂閱也會將應用程式當作免費狀態測試。',
+  },
+  vi: {
+    guest: 'Khach',
+    account: 'Tai khoan',
+    logout: 'Dang xuat',
+    continueWithGoogle: 'Tiep tuc voi Google',
+    continueWithKakao: 'Tiep tuc voi Kakao',
+    settings: 'Cai dat',
+    translateLang: 'Chon ngon ngu dich',
+    theme: 'Giao dien',
+    background: 'Nen',
+    color: 'Mau sac',
+    gameMode: 'Che do tro choi',
+    gameModeDesc: 'Tro choi xuat hien khi xem',
+    vibration: 'Rung',
+    vibrationDesc: 'Rung khi ghim, luu, bieu dat tuong tu xuat hien',
+    remote: 'Dieu khien',
+    remoteDesc: 'Hien thi dieu khien trinh phat Shorts',
+    guide: 'Huong dan',
+    guideDesc: 'Hien thi phu de, Key Picks, goi y su dung',
+    notifications: 'Thong bao',
+    notifBrowserPrompt: 'Vui long cho phep thong bao trong cai dat trinh duyet',
+    streakReminder: 'Thong bao nhac streak',
+    legalSupport: 'Phap ly va ho tro',
+    support: 'Ho tro',
+    terms: 'Dieu khoan su dung',
+    privacy: 'Chinh sach bao mat',
+    deleteAccount: 'Xoa tai khoan',
+    subscription: 'Dang ky',
+    forcePro: 'Buoc PRO',
+    forceFree: 'Buoc FREE',
+    none: 'Khong',
+    authUnavailable: 'Dang nhap bi vo hieu hoa',
+    adminLocalTest: 'Chi dung cho thu nghiem cuc bo. Thanh toan thuc te duoc giu nguyen, chi ap dung cuong che PRO/FREE trong ung dung.',
+    actualSubscription: 'Dang ky thuc te',
+    forceProDesc: 'Buoc FREE se thu nghiem ung dung nhu trang thai mien phi ngay ca khi co dang ky thuc te.',
+  },
+} as const
 
 const BACKGROUND_OPTIONS = [
   { id: 'dark' as const, swatchClass: 'bg-[#050505] border border-white/10' },
@@ -79,6 +227,9 @@ export default function ProfilePage() {
   const setHapticEnabled = useSettingsStore((state) => state.setHapticEnabled)
   const setRemoteEnabled = useSettingsStore((state) => state.setRemoteEnabled)
   const setSubtitleGuidesEnabled = useSettingsStore((state) => state.setSubtitleGuidesEnabled)
+  const locale = useLocaleStore((state) => state.locale)
+  const setLocale = useLocaleStore((state) => state.setLocale)
+  const T = TRANSLATIONS[locale]
   const gameModeEnabled = usePlayerStore((state) => state.gameModeEnabled)
   const setGameModeEnabled = usePlayerStore((state) => state.setGameModeEnabled)
   const pushPermission = usePushStore((state) => state.permission)
@@ -110,7 +261,7 @@ export default function ProfilePage() {
     user?.user_metadata?.full_name ??
     user?.user_metadata?.name ??
     user?.email?.split('@')[0] ??
-    '게스트'
+    T.guest
 
   const copyBundle = async () => {
     const json = exportReportBundle()
@@ -125,16 +276,16 @@ export default function ProfilePage() {
 
   const premiumOverrideLabel =
     premiumOverride === 'premium'
-      ? '강제 PRO'
+      ? T.forcePro
       : premiumOverride === 'free'
-        ? '강제 FREE'
-        : '없음'
+        ? T.forceFree
+        : T.none
 
   return (
     <AppPage>
       {!authAvailable && (
         <section className="mb-6 rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-5 py-4">
-          <p className="text-sm font-semibold text-[var(--text-secondary)]">로그인 비활성화</p>
+          <p className="text-sm font-semibold text-[var(--text-secondary)]">{T.authUnavailable}</p>
         </section>
       )}
 
@@ -144,7 +295,7 @@ export default function ProfilePage() {
             animate={{ opacity: 1, y: 0 }}
             className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] p-6 shadow-[var(--card-shadow)]"
           >
-            <SectionLabel label="계정" />
+            <SectionLabel label={T.account} />
             <div className="flex items-center gap-4">
               <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-[var(--accent-primary)] to-[var(--accent-secondary)] text-2xl font-bold text-white">
                 {user?.user_metadata?.avatar_url ? (
@@ -166,7 +317,7 @@ export default function ProfilePage() {
                   {profileName}
                 </p>
                 <p className="mt-1 truncate text-sm text-[var(--text-secondary)]">
-                  {user?.email ?? '게스트'}
+                  {user?.email ?? T.guest}
                 </p>
               </div>
             </div>
@@ -177,7 +328,7 @@ export default function ProfilePage() {
                   onClick={signOut}
                   className="w-full rounded-2xl bg-[var(--bg-secondary)] py-3 text-sm font-medium text-[var(--text-primary)]"
                 >
-                  로그아웃
+                  {T.logout}
                 </button>
               ) : (
                 <div className="grid gap-3">
@@ -186,14 +337,14 @@ export default function ProfilePage() {
                     disabled={!authAvailable}
                     className="w-full rounded-2xl bg-white py-3 text-sm font-medium text-black disabled:cursor-not-allowed disabled:opacity-50"
                   >
-                    Google로 계속
+                    {T.continueWithGoogle}
                   </button>
                   <button
                     onClick={() => signInWithKakao('/profile')}
                     disabled={!authAvailable}
                     className="w-full rounded-2xl bg-[#FEE500] py-3 text-sm font-medium text-[#191919] disabled:cursor-not-allowed disabled:opacity-50"
                   >
-                    Kakao로 계속
+                    {T.continueWithKakao}
                   </button>
                 </div>
               )}
@@ -203,18 +354,45 @@ export default function ProfilePage() {
           <BillingManagementCard />
 
           <SurfaceCard className="p-6">
-            <SectionLabel label="설정" />
+            <SectionLabel label={T.settings} />
 
             <div className="divide-y divide-[var(--border-card)]/40">
+              <div className="flex items-center justify-between px-1 py-3">
+                <div>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">Language / 言語</p>
+                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">{T.translateLang}</p>
+                </div>
+                <div className="flex gap-1 rounded-xl bg-[var(--bg-secondary)] p-1">
+                  {([
+                    { id: 'ko' as SupportedLocale, label: '한국어' },
+                    { id: 'ja' as SupportedLocale, label: '日本語' },
+                    { id: 'zh-TW' as SupportedLocale, label: '繁體中文' },
+                    { id: 'vi' as SupportedLocale, label: 'Tiếng Việt' },
+                  ]).map((option) => (
+                    <button
+                      key={option.id}
+                      onClick={() => setLocale(option.id)}
+                      className={`rounded-lg px-3 py-1.5 text-xs font-semibold transition-colors ${
+                        locale === option.id
+                          ? 'bg-[var(--accent-primary)] text-white'
+                          : 'text-[var(--text-secondary)]'
+                      }`}
+                    >
+                      {option.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
               <div className="px-1 py-4">
                 <div className="mb-4">
-                  <p className="text-sm font-medium text-[var(--text-primary)]">테마</p>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">{T.theme}</p>
                 </div>
 
                 <div className="flex flex-wrap items-center gap-6">
                   <div className="flex items-center gap-4">
                     <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">
-                      배경
+                      {T.background}
                     </p>
                     <div className="flex min-h-10 items-center gap-3">
                       {BACKGROUND_OPTIONS.map((option) => (
@@ -233,7 +411,7 @@ export default function ProfilePage() {
                   </div>
 
                   <div className="flex items-center gap-4">
-                    <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">색상</p>
+                    <p className="shrink-0 text-xs font-semibold text-[var(--text-muted)]">{T.color}</p>
                     <div className="flex min-h-10 items-center gap-3">
                       {COLOR_OPTIONS.map((option) => (
                         <button
@@ -254,8 +432,8 @@ export default function ProfilePage() {
 
               <div className="flex items-center justify-between px-1 py-3">
                 <div>
-                  <p className="text-sm font-medium text-[var(--text-primary)]">게임 모드</p>
-                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">시청 중 게임 등장</p>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">{T.gameMode}</p>
+                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">{T.gameModeDesc}</p>
                 </div>
                 <button
                   onClick={() => setGameModeEnabled(!gameModeEnabled)}
@@ -275,8 +453,8 @@ export default function ProfilePage() {
 
               <div className="flex items-center justify-between px-1 py-3">
                 <div>
-                  <p className="text-sm font-medium text-[var(--text-primary)]">진동</p>
-                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">고정, 저장, 유사 표현 등장 시 진동</p>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">{T.vibration}</p>
+                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">{T.vibrationDesc}</p>
                 </div>
                 <button
                   onClick={() => setHapticEnabled(!hapticEnabled)}
@@ -296,9 +474,9 @@ export default function ProfilePage() {
 
               <div className="flex items-center justify-between px-1 py-3">
                 <div>
-                  <p className="text-sm font-medium text-[var(--text-primary)]">리모컨</p>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">{T.remote}</p>
                   <p className="mt-0.5 text-xs text-[var(--text-muted)]">
-                    쇼츠 플레이어 리모컨 표시
+                    {T.remoteDesc}
                   </p>
                 </div>
                 <button
@@ -319,9 +497,9 @@ export default function ProfilePage() {
 
               <div className="flex items-center justify-between px-1 py-3">
                 <div>
-                  <p className="text-sm font-medium text-[var(--text-primary)]">자막 안내</p>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">{T.guide}</p>
                   <p className="mt-0.5 text-xs text-[var(--text-muted)]">
-                    쇼츠/시리즈 자막 하단 안내 문구
+                    {T.guideDesc}
                   </p>
                 </div>
                 <button
@@ -342,11 +520,11 @@ export default function ProfilePage() {
 
               <div className="flex items-center justify-between px-1 py-3">
                 <div>
-                  <p className="text-sm font-medium text-[var(--text-primary)]">알림</p>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">{T.notifications}</p>
                   <p className="mt-0.5 text-xs text-[var(--text-muted)]">
                     {pushPermission === 'denied'
-                      ? '브라우저 설정에서 알림을 허용해주세요'
-                      : '스트릭 리마인더 알림'}
+                      ? T.notifBrowserPrompt
+                      : T.streakReminder}
                   </p>
                 </div>
                 <button
@@ -401,7 +579,7 @@ export default function ProfilePage() {
                           PRO ACCESS TEST
                         </p>
                         <p className="mt-1 text-xs text-[var(--text-muted)]">
-                          로컬 테스트 전용입니다. 실제 결제는 유지하고 앱에서만 PRO/FREE를 강제로 적용합니다.
+                          {T.adminLocalTest}
                         </p>
                       </div>
                       <span
@@ -425,7 +603,7 @@ export default function ProfilePage() {
                             : 'bg-[var(--bg-card)] text-[var(--text-secondary)]'
                         }`}
                       >
-                        실제 구독
+                        {T.actualSubscription}
                       </button>
                       <button
                         type="button"
@@ -436,7 +614,7 @@ export default function ProfilePage() {
                             : 'bg-[var(--bg-card)] text-[var(--text-secondary)]'
                         }`}
                       >
-                        강제 PRO
+                        {T.forcePro}
                       </button>
                       <button
                         type="button"
@@ -447,17 +625,17 @@ export default function ProfilePage() {
                             : 'bg-[var(--bg-card)] text-[var(--text-secondary)]'
                         }`}
                       >
-                        강제 FREE
+                        {T.forceFree}
                       </button>
                     </div>
 
                     <p className="mt-3 text-xs text-[var(--text-muted)]">
-                      실제 구독 {entitlementPremium ? 'PRO' : 'FREE'} · 앱 적용{' '}
-                      {appliedPremium ? 'PRO' : 'FREE'} · 오버라이드 {premiumOverrideLabel}
+                      {T.actualSubscription} {entitlementPremium ? 'PRO' : 'FREE'} · App{' '}
+                      {appliedPremium ? 'PRO' : 'FREE'} · Override {premiumOverrideLabel}
                     </p>
                     {premiumOverride === 'free' && (
                       <p className="mt-1 text-xs text-[var(--text-muted)]">
-                        강제 FREE는 실제 구독이 있어도 앱을 무료 상태처럼 테스트합니다.
+                        {T.forceProDesc}
                       </p>
                     )}
                   </div>
@@ -494,11 +672,11 @@ export default function ProfilePage() {
         )}
 
         <SurfaceCard className="overflow-hidden p-6">
-          <SectionLabel label="법률 및 지원" />
+          <SectionLabel label={T.legalSupport} />
           <div className="-mx-6 -mb-6 overflow-hidden">
-            <LegalLink href="/support" label="지원" />
-            <LegalLink href="/terms" label="이용약관" />
-            <LegalLink href="/privacy" label="개인정보처리방침" />
+            <LegalLink href="/support" label={T.support} />
+            <LegalLink href="/terms" label={T.terms} />
+            <LegalLink href="/privacy" label={T.privacy} />
           </div>
         </SurfaceCard>
       </div>
@@ -509,7 +687,7 @@ export default function ProfilePage() {
             onClick={() => setShowDeleteModal(true)}
             className="w-full rounded-2xl bg-[var(--bg-secondary)] py-3 text-sm font-medium text-red-400"
           >
-            계정 삭제
+            {T.deleteAccount}
           </button>
         </div>
       )}

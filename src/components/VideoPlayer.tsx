@@ -25,12 +25,35 @@ import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { triggerHaptic } from '@/lib/haptic'
 import { trackEvent, AnalyticsEvents } from '@/lib/analytics'
+import { useLocaleStore } from '@/stores/useLocaleStore'
+import { getLocalizedSubtitle } from '@/lib/localeUtils'
 import { LyricsSubtitles } from './LyricsSubtitles'
 import { PrimingCard } from './PrimingCard'
 import { ProgressBar } from './ProgressBar'
 import { SaveToast } from './SaveToast'
 import { SubtitleGame } from './SubtitleGame'
 import type { SubtitleEntry } from '@/data/seed-videos'
+
+const TRANSLATIONS = {
+  ko: {
+    side: '우측',
+    bottom: '하단',
+    overlay: '오버레이',
+    auto: '자동',
+    retry: '다시 시도',
+    nextVideo: '다음 영상',
+    loadingSubtitles: '자막 로드 중',
+  },
+  ja: {
+    side: '右側',
+    bottom: '下部',
+    overlay: 'オーバーレイ',
+    auto: '自動',
+    retry: 'リトライ',
+    nextVideo: '次の動画',
+    loadingSubtitles: '字幕読み込み中',
+  },
+} as const
 
 interface VideoPlayerProps {
   videoId?: string
@@ -347,6 +370,7 @@ export function VideoPlayer({
 
   const [overlayVisible, setOverlayVisible] = useState(true)
   const [showPauseIcon, setShowPauseIcon] = useState(false)
+  const [gameXpAwarded, setGameXpAwarded] = useState(0)
   const [pauseIconType, setPauseIconType] = useState<'play' | 'pause'>('pause')
   const iconTimerRef = useRef<number | null>(null)
   const gameContinueTimerRef = useRef<number | null>(null)
@@ -486,9 +510,11 @@ export function VideoPlayer({
   const handleGameAnswer = (choiceIndex: number) => {
     answerGame(choiceIndex)
     const isCorrect = choiceIndex === gameCorrectIndex
+    let awarded = 0
     if (isCorrect) {
-      useGameProgressStore.getState().addGameXP(5)
+      awarded = useGameProgressStore.getState().addGameXP(5)
     }
+    setGameXpAwarded(awarded)
     useDailyMissionStore.getState().incrementMission('play-game')
   }
 
@@ -524,6 +550,7 @@ export function VideoPlayer({
 
     const resumeDelay = gameResult === 'wrong' ? 1900 : 1500
     gameContinueTimerRef.current = window.setTimeout(() => {
+      setGameXpAwarded(0)
       setFreezeSubIndex(null)
       clearGame()
       playRef.current?.()
@@ -861,6 +888,7 @@ export function VideoPlayer({
             choices={gameChoices}
             correctIndex={gameCorrectIndex}
             result={gameResult}
+            xpAwarded={gameXpAwarded}
             onAnswer={handleGameAnswer}
           />
         </div>
@@ -943,7 +971,7 @@ export function VideoPlayer({
               showKo={subtitleMode === 'en-ko'}
               onSavePhrase={onSavePhrase}
               onSeek={(time) => seekTo(time)}
-              bottomOffset="24px"
+              bottomOffset={isLandscapeViewport ? '24px' : '56px'}
             />
           )}
 

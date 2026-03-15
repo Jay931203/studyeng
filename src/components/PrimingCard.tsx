@@ -3,16 +3,20 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion, useMotionValue, useTransform, type PanInfo } from 'framer-motion'
 import { useSettingsStore } from '@/stores/useSettingsStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
+import { getLocalizedMeaning } from '@/lib/localeUtils'
 import { triggerHaptic } from '@/lib/haptic'
 import { trackEvent, AnalyticsEvents } from '@/lib/analytics'
 
 interface Expression {
   canonical: string
   meaning_ko: string
+  meaning_ja?: string
   category: string
   cefr: string
   sentenceEn: string
   sentenceKo: string
+  sentenceJa?: string
   start?: number
   end?: number
   exprId?: string
@@ -22,10 +26,12 @@ interface WordItem {
   wordId: string
   canonical: string
   meaning_ko: string
+  meaning_ja?: string
   pos: string
   cefr: string
   sentenceEn: string
   sentenceKo: string
+  sentenceJa?: string
   surfaceForm?: string
   start?: number
   end?: number
@@ -44,16 +50,29 @@ interface PrimingCardProps {
 const AUTO_START_COUNTDOWN_MS = 5000
 const SWIPE_THRESHOLD = 56
 
-const CATEGORY_LABELS: Record<string, string> = {
-  phrasal_verb: '구동사',
-  idiom: '관용구',
-  collocation: '연어',
-  fixed_expression: '표현',
-  discourse_marker: '담화',
-  slang: '슬랭',
-  hedging: '완곡',
-  exclamation: '감탄',
-  filler: '필러',
+const CATEGORY_LABELS: Record<string, Record<string, string>> = {
+  ko: {
+    phrasal_verb: '구동사',
+    idiom: '관용구',
+    collocation: '연어',
+    fixed_expression: '표현',
+    discourse_marker: '담화',
+    slang: '슬랭',
+    hedging: '완곡',
+    exclamation: '감탄',
+    filler: '필러',
+  },
+  ja: {
+    phrasal_verb: '句動詞',
+    idiom: '慣用句',
+    collocation: '連語',
+    fixed_expression: '表現',
+    discourse_marker: '談話',
+    slang: 'スラング',
+    hedging: '婉曲',
+    exclamation: '感嘆',
+    filler: 'フィラー',
+  },
 }
 
 function getCefrColor(cefr: string): { bg: string; text: string } {
@@ -85,11 +104,13 @@ function ExpressionCard({
   onSwipeDismiss?: () => void
   familiarCount?: number
 }) {
+  const locale = useLocaleStore((s) => s.locale)
+  const langKey = locale === 'ja' ? 'ja' : 'ko'
   const [flipped, setFlipped] = useState(false)
   const [playing, setPlaying] = useState(false)
   const didDragRef = useRef(false)
   const cefrColor = getCefrColor(expr.cefr)
-  const categoryLabel = CATEGORY_LABELS[expr.category] ?? expr.category
+  const categoryLabel = CATEGORY_LABELS[langKey]?.[expr.category] ?? expr.category
 
   const count = familiarCount ?? 0
 
@@ -194,7 +215,7 @@ function ExpressionCard({
               className="mt-1 text-[13px] leading-snug"
               style={{ color: 'rgba(255, 255, 255, 0.55)' }}
             >
-              {expr.meaning_ko}
+              {getLocalizedMeaning(expr, locale)}
             </p>
             <div className="mt-2.5 flex items-center gap-1.5">
               <span
@@ -241,7 +262,7 @@ function ExpressionCard({
               className="mt-1.5 line-clamp-2 text-[13px] leading-snug"
               style={{ color: 'rgba(255, 255, 255, 0.55)' }}
             >
-              {expr.sentenceKo}
+              {(locale === 'ja' && expr.sentenceJa) ? expr.sentenceJa : expr.sentenceKo}
             </p>
             <button
               type="button"
@@ -295,20 +316,37 @@ function ExpressionCard({
   )
 }
 
-const POS_LABELS: Record<string, string> = {
-  noun: '명사',
-  verb: '동사',
-  adj: '형용사',
-  adv: '부사',
-  prep: '전치사',
-  conj: 'conj',
-  det: 'det',
-  pron: '대명사',
-  intj: 'intj',
-  adjective: '형용사',
-  adverb: '부사',
-  preposition: '전치사',
-  pronoun: '대명사',
+const POS_LABELS: Record<string, Record<string, string>> = {
+  ko: {
+    noun: '명사',
+    verb: '동사',
+    adj: '형용사',
+    adv: '부사',
+    prep: '전치사',
+    conj: 'conj',
+    det: 'det',
+    pron: '대명사',
+    intj: 'intj',
+    adjective: '형용사',
+    adverb: '부사',
+    preposition: '전치사',
+    pronoun: '대명사',
+  },
+  ja: {
+    noun: '名詞',
+    verb: '動詞',
+    adj: '形容詞',
+    adv: '副詞',
+    prep: '前置詞',
+    conj: 'conj',
+    det: 'det',
+    pron: '代名詞',
+    intj: 'intj',
+    adjective: '形容詞',
+    adverb: '副詞',
+    preposition: '前置詞',
+    pronoun: '代名詞',
+  },
 }
 
 function WordCard({
@@ -326,11 +364,13 @@ function WordCard({
   onSwipeDismiss?: () => void
   familiarCount?: number
 }) {
+  const locale = useLocaleStore((s) => s.locale)
+  const langKey = locale === 'ja' ? 'ja' : 'ko'
   const [flipped, setFlipped] = useState(false)
   const [playing, setPlaying] = useState(false)
   const didDragRef = useRef(false)
   const cefrColor = getCefrColor(word.cefr)
-  const posLabel = POS_LABELS[word.pos] ?? word.pos
+  const posLabel = POS_LABELS[langKey]?.[word.pos] ?? word.pos
   const count = familiarCount ?? 0
 
   const x = useMotionValue(0)
@@ -433,7 +473,7 @@ function WordCard({
               className="mt-0.5 text-[13px] leading-snug"
               style={{ color: 'rgba(255, 255, 255, 0.55)' }}
             >
-              {word.meaning_ko}
+              {getLocalizedMeaning(word, locale)}
             </p>
             <div className="mt-2 flex items-center gap-1.5">
               <span
@@ -480,7 +520,7 @@ function WordCard({
               className="mt-1.5 line-clamp-2 text-[13px] leading-snug"
               style={{ color: 'rgba(255, 255, 255, 0.55)' }}
             >
-              {word.sentenceKo}
+              {(locale === 'ja' && word.sentenceJa) ? word.sentenceJa : word.sentenceKo}
             </p>
             <button
               type="button"
@@ -562,6 +602,7 @@ export function PrimingCard({
   onMarkFamiliar,
   familiarCounts,
 }: PrimingCardProps) {
+  const locale = useLocaleStore((s) => s.locale)
   const guideHintsEnabled = useSettingsStore((state) => state.subtitleGuidesEnabled)
   const mixedItems = buildMixedItems(expressions, words ?? [], 3)
   const [dismissedIds, setDismissedIds] = useState<Set<string>>(new Set())
@@ -797,7 +838,7 @@ export function PrimingCard({
               <span className="text-[14px] font-semibold">
                 {visibleItems.length < mixedItems.length
                   ? `${visibleItems.length}/${mixedItems.length} remaining`
-                  : '탭해서 보기'}
+                  : locale === 'ja' ? 'タップして見る' : '탭해서 보기'}
               </span>
               {autoStartEnabled && (
                 <span className="ml-1 inline-flex items-center gap-2 rounded-full bg-black/15 px-2.5 py-1 text-[11px] font-semibold text-white/90">
