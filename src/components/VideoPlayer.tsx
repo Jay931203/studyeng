@@ -142,6 +142,8 @@ export function VideoPlayer({
   children,
 }: VideoPlayerProps) {
   const isShortsFormat = format === 'shorts'
+  const locale = useLocaleStore((s) => s.locale)
+  const T = TRANSLATIONS[locale === 'ja' ? 'ja' : 'ko']
   const containerId = `yt-player-${useId().replace(/:/g, '')}`
 
   const { subtitles: fetchedSubtitles, loading: transcriptLoading } = useTranscript(youtubeId)
@@ -577,15 +579,15 @@ export function VideoPlayer({
 
   const subtitleLayoutLabel = isLandscapeViewport
     ? landscapeSubtitleLayout === 'side'
-      ? '우측'
+      ? T.side
       : landscapeSubtitleLayout === 'bottom'
-        ? '하단'
+        ? T.bottom
         : landscapeSubtitleLayout === 'overlay'
-          ? '오버레이'
-          : '자동'
+          ? T.overlay
+          : T.auto
     : portraitSubtitleLayout === 'overlay'
-      ? '오버레이'
-      : '하단'
+      ? T.overlay
+      : T.bottom
   const showSubtitleLayoutToggle =
     !isShortsFormat && subtitleMode !== 'none' && subtitles.length > 0
   const subtitleToggleInsetTop = isLandscapeViewport
@@ -691,10 +693,12 @@ export function VideoPlayer({
           exprId: ve.expression.id,
           canonical: ve.expression.canonical,
           meaning_ko: ve.expression.meaning_ko,
+          meaning_ja: (ve.expression as unknown as Record<string, unknown>).meaning_ja as string | undefined,
           category: ve.expression.category,
           cefr: ve.expression.cefr,
           sentenceEn: ve.sentence.en,
           sentenceKo: ve.sentence.ko,
+          sentenceJa: (ve.sentence as unknown as Record<string, unknown>).ja as string | undefined,
           start: sub?.start,
           end: sub?.end,
         }
@@ -705,10 +709,12 @@ export function VideoPlayer({
           wordId: `word:${vw.word.id}`,
           canonical: vw.word.canonical,
           meaning_ko: vw.word.meaning_ko,
+          meaning_ja: (vw.word as unknown as Record<string, unknown>).meaning_ja as string | undefined,
           pos: vw.word.pos,
           cefr: vw.word.cefr,
           sentenceEn: vw.sentence.en,
           sentenceKo: vw.sentence.ko,
+          sentenceJa: (vw.sentence as unknown as Record<string, unknown>).ja as string | undefined,
           surfaceForm: vw.surfaceForm,
           start: sub?.start,
           end: sub?.end,
@@ -806,7 +812,7 @@ export function VideoPlayer({
                 color: 'var(--player-muted)',
               }}
             >
-              다시 시도
+              {T.retry}
             </button>
             {onVideoErrorSkip && (
               <button
@@ -820,7 +826,7 @@ export function VideoPlayer({
                 className="rounded-lg px-4 py-2 text-xs font-medium text-white"
                 style={{ backgroundColor: 'var(--accent-primary)' }}
               >
-                다음 영상
+                {T.nextVideo}
               </button>
             )}
           </div>
@@ -869,7 +875,7 @@ export function VideoPlayer({
               }}
             />
             <span className="text-[10px]" style={{ color: 'var(--player-muted)' }}>
-              자막 로드 중
+              {T.loadingSubtitles}
             </span>
           </div>
         </div>
@@ -1042,6 +1048,7 @@ function ShortsSubtitleOverlay({
   onSeek?: (time: number) => void
   bottomOffset?: string
 }) {
+  const locale = useLocaleStore((s) => s.locale)
   const activeSubIndex = usePlayerStore((state) => state.activeSubIndex)
   const freezeSubIndex = usePlayerStore((state) => state.freezeSubIndex)
   const setFreezeSubIndex = usePlayerStore((state) => state.setFreezeSubIndex)
@@ -1195,12 +1202,12 @@ function ShortsSubtitleOverlay({
         >
           {activeSub.en}
         </p>
-        {showKo && activeSub.ko && (
+        {showKo && getLocalizedSubtitle(activeSub, locale) && (
           <p
             className="mt-1 text-[13px] leading-snug"
             style={{ color: 'rgba(255, 255, 255, 0.7)' }}
           >
-            {activeSub.ko}
+            {getLocalizedSubtitle(activeSub, locale)}
           </p>
         )}
         {subtitleGuidesEnabled && (

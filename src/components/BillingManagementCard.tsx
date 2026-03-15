@@ -7,7 +7,6 @@ import type { PurchasesPackage } from '@revenuecat/purchases-typescript-internal
 import { getBillingConfig, type BillingPlan } from '@/lib/billing'
 import {
   formatPrice,
-  formatWon,
   getMonthlyDiscountedPrice,
   getSavingsPercent,
   getYearlyRenewalPrice,
@@ -120,6 +119,8 @@ const TRANSLATIONS = {
   },
 } as const
 
+type BillingTranslations = typeof TRANSLATIONS[BillingLocale]
+
 interface BillingStatusPayload {
   enabled: boolean
   isPremium: boolean
@@ -155,7 +156,7 @@ interface BillingManagementCardProps {
 
 const ANDROID_APP_ID = 'com.studyeng.app'
 
-function getWebPlanOptions(t: typeof TRANSLATIONS['ko']): Record<BillingPlan, Omit<PlanOption, 'detail' | 'comparePrice' | 'price' | 'savingsText'>> {
+function getWebPlanOptions(t: BillingTranslations): Record<BillingPlan, Omit<PlanOption, 'detail' | 'comparePrice' | 'price' | 'savingsText'>> {
   return {
     yearly: {
       id: 'yearly',
@@ -169,7 +170,7 @@ function getWebPlanOptions(t: typeof TRANSLATIONS['ko']): Record<BillingPlan, Om
   }
 }
 
-function getPlanLabel(planKey: string | null | undefined, t: typeof TRANSLATIONS['ko']) {
+function getPlanLabel(planKey: string | null | undefined, t: BillingTranslations) {
   switch (planKey) {
     case 'premium_yearly':
       return t.yearly

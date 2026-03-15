@@ -234,7 +234,7 @@ function MilestoneSection({
                     </button>
                   ) : (
                     <span className="mt-3 inline-block text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]">
-                      {mission.claimed ? (claimedLabel ?? '수령 완료') : (inProgressLabel ?? '진행 중')}
+                      {mission.claimed ? (claimedLabel ?? 'Claimed') : (inProgressLabel ?? 'In Progress')}
                     </span>
                   )}
                 </div>

@@ -6,7 +6,6 @@ import { type BillingPlan } from '@/lib/billing'
 import {
   formatDiscountText,
   formatPrice,
-  formatWon,
   getMonthlyDiscountedPrice,
   getYearlyRenewalPrice,
   MONTHLY_BASE_PRICE,
@@ -100,6 +99,8 @@ const TRANSLATIONS = {
   },
 } as const
 
+type PremiumTranslations = typeof TRANSLATIONS[BillingLocale]
+
 interface PremiumModalProps {
   isOpen: boolean
   onClose: () => void
@@ -110,7 +111,7 @@ function getTriggerMessage(
   trigger: 'video-limit' | 'phrase-limit',
   trialDaysRemaining: number,
   inTrial: boolean,
-  t: typeof TRANSLATIONS['ko'],
+  t: PremiumTranslations,
 ): string {
   if (trigger === 'phrase-limit') return t.phraseLimitReached
   if (inTrial && trialDaysRemaining > 0) {
@@ -119,7 +120,7 @@ function getTriggerMessage(
   return t.dailyLimitReached
 }
 
-function getPlanDetails(t: typeof TRANSLATIONS['ko'], locale: BillingLocale): Record<
+function getPlanDetails(t: PremiumTranslations, locale: BillingLocale): Record<
   BillingPlan,
   { label: string; detail: string; price: string; comparePrice?: string; subdetail?: string; highlight?: boolean }
 > {
@@ -140,7 +141,7 @@ function getPlanDetails(t: typeof TRANSLATIONS['ko'], locale: BillingLocale): Re
   }
 }
 
-function getPlanOptionDetail(plan: BillingPlan, tierName: string, t: typeof TRANSLATIONS['ko']) {
+function getPlanOptionDetail(plan: BillingPlan, tierName: string, t: PremiumTranslations) {
   if (plan === 'yearly') {
     return `${tierName} ${t.tierYearlyFinal}`
   }

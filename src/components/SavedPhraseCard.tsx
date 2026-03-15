@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion'
 import { getCatalogSeriesById, getCatalogVideoById } from '@/lib/catalog'
+import { useLocaleStore } from '@/stores/useLocaleStore'
+import { getLocalizedSubtitle } from '@/lib/localeUtils'
 import type { SavedPhrase } from '@/stores/usePhraseStore'
 
 interface SavedPhraseCardProps {
@@ -11,6 +13,7 @@ interface SavedPhraseCardProps {
 }
 
 export function SavedPhraseCard({ phrase, onDelete, onPlay }: SavedPhraseCardProps) {
+  const locale = useLocaleStore((s) => s.locale)
   const seriesId = getCatalogVideoById(phrase.videoId)?.seriesId
   const seriesTitle = seriesId ? getCatalogSeriesById(seriesId)?.title : null
 
@@ -26,7 +29,7 @@ export function SavedPhraseCard({ phrase, onDelete, onPlay }: SavedPhraseCardPro
     >
       <div className="min-w-0">
         <p className="font-medium leading-relaxed text-[var(--text-primary)]">{phrase.en}</p>
-        <p className="mt-1.5 text-sm text-[var(--text-muted)]">{phrase.ko}</p>
+        <p className="mt-1.5 text-sm text-[var(--text-muted)]">{getLocalizedSubtitle(phrase, locale)}</p>
       </div>
 
       <div className="mt-3 flex items-center justify-between gap-3 border-t border-[var(--border-card)] pt-3">

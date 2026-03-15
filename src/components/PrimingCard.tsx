@@ -48,7 +48,7 @@ interface PrimingCardProps {
 }
 
 const AUTO_START_COUNTDOWN_MS = 5000
-const SWIPE_THRESHOLD = 56
+const SWIPE_THRESHOLD = 34
 
 const CATEGORY_LABELS: Record<string, Record<string, string>> = {
   ko: {
@@ -96,6 +96,8 @@ function ExpressionCard({
   onPlaySegment,
   onSwipeDismiss,
   familiarCount,
+  showHints,
+  showSwipeHint,
 }: {
   expr: Expression
   index: number
@@ -103,6 +105,8 @@ function ExpressionCard({
   onPlaySegment?: (start: number, end: number) => void
   onSwipeDismiss?: () => void
   familiarCount?: number
+  showHints?: boolean
+  showSwipeHint?: boolean
 }) {
   const locale = useLocaleStore((s) => s.locale)
   const langKey = locale === 'ja' ? 'ja' : 'ko'
@@ -119,7 +123,7 @@ function ExpressionCard({
   const opacity = useTransform(x, [-SWIPE_THRESHOLD * 2, 0, SWIPE_THRESHOLD * 2], [0.3, 1, 0.3])
 
   const handleDragEnd = (_: unknown, info: PanInfo) => {
-    if (Math.abs(info.offset.x) > SWIPE_THRESHOLD || Math.abs(info.velocity.x) > 420) {
+    if (Math.abs(info.offset.x) > SWIPE_THRESHOLD || Math.abs(info.velocity.x) > 240) {
       onSwipeDismiss?.()
     }
   }
@@ -152,8 +156,9 @@ function ExpressionCard({
         dragDirectionLock
         dragPropagation={false}
         dragSnapToOrigin
-        dragElastic={0.6}
+        dragElastic={0.24}
         dragMomentum={false}
+        whileDrag={{ scale: 0.985 }}
         onDragStart={() => {
           didDragRef.current = true
           onInteract?.()
@@ -240,7 +245,7 @@ function ExpressionCard({
                 className="ml-auto text-[10px]"
                 style={{ color: 'rgba(255, 255, 255, 0.3)' }}
               >
-                tap
+                {showHints ? 'tap' : ''}
               </span>
             </div>
           </div>
@@ -303,15 +308,27 @@ function ExpressionCard({
                 />
               </svg>
             </button>
-            <span
-              className="absolute bottom-3 right-4 text-[10px]"
-              style={{ color: 'rgba(255, 255, 255, 0.25)' }}
-            >
-              already know? swipe
-            </span>
+            {showHints && (
+              <span
+                className="absolute bottom-3 right-4 text-[10px]"
+                style={{ color: 'rgba(255, 255, 255, 0.25)' }}
+              >
+                already know? swipe
+              </span>
+            )}
           </div>
         </motion.div>
       </motion.div>
+      {showSwipeHint && (
+        <div
+          className="mt-3 flex items-center justify-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em]"
+          style={{ color: 'rgba(255, 255, 255, 0.5)' }}
+        >
+          <span aria-hidden="true">←</span>
+          <span>{locale === 'ja' ? '知ってたらスワイプ' : '익숙하면 밀어서 넘기기'}</span>
+          <span aria-hidden="true">→</span>
+        </div>
+      )}
     </motion.div>
   )
 }
@@ -356,6 +373,8 @@ function WordCard({
   onPlaySegment,
   onSwipeDismiss,
   familiarCount,
+  showHints,
+  showSwipeHint,
 }: {
   word: WordItem
   index: number
@@ -363,6 +382,8 @@ function WordCard({
   onPlaySegment?: (start: number, end: number) => void
   onSwipeDismiss?: () => void
   familiarCount?: number
+  showHints?: boolean
+  showSwipeHint?: boolean
 }) {
   const locale = useLocaleStore((s) => s.locale)
   const langKey = locale === 'ja' ? 'ja' : 'ko'
@@ -377,7 +398,7 @@ function WordCard({
   const opacity = useTransform(x, [-SWIPE_THRESHOLD * 2, 0, SWIPE_THRESHOLD * 2], [0.3, 1, 0.3])
 
   const handleDragEnd = (_: unknown, info: PanInfo) => {
-    if (Math.abs(info.offset.x) > SWIPE_THRESHOLD || Math.abs(info.velocity.x) > 420) {
+    if (Math.abs(info.offset.x) > SWIPE_THRESHOLD || Math.abs(info.velocity.x) > 240) {
       onSwipeDismiss?.()
     }
   }
@@ -410,8 +431,9 @@ function WordCard({
         dragDirectionLock
         dragPropagation={false}
         dragSnapToOrigin
-        dragElastic={0.6}
+        dragElastic={0.24}
         dragMomentum={false}
+        whileDrag={{ scale: 0.985 }}
         onDragStart={() => {
           didDragRef.current = true
           onInteract?.()
@@ -498,7 +520,7 @@ function WordCard({
                 className="ml-auto text-[10px]"
                 style={{ color: 'rgba(255, 255, 255, 0.3)' }}
               >
-                tap
+                {showHints ? 'tap' : ''}
               </span>
             </div>
           </div>
@@ -561,15 +583,27 @@ function WordCard({
                 />
               </svg>
             </button>
-            <span
-              className="absolute bottom-3 right-4 text-[10px]"
-              style={{ color: 'rgba(255, 255, 255, 0.25)' }}
-            >
-              already know? swipe
-            </span>
+            {showHints && (
+              <span
+                className="absolute bottom-3 right-4 text-[10px]"
+                style={{ color: 'rgba(255, 255, 255, 0.25)' }}
+              >
+                already know? swipe
+              </span>
+            )}
           </div>
         </motion.div>
       </motion.div>
+      {showSwipeHint && (
+        <div
+          className="mt-3 flex items-center justify-center gap-2 text-[10px] font-semibold uppercase tracking-[0.16em]"
+          style={{ color: 'rgba(255, 255, 255, 0.5)' }}
+        >
+          <span aria-hidden="true">←</span>
+          <span>{locale === 'ja' ? '知ってたらスワイプ' : '익숙하면 밀어서 넘기기'}</span>
+          <span aria-hidden="true">→</span>
+        </div>
+      )}
     </motion.div>
   )
 }
@@ -790,11 +824,13 @@ export function PrimingCard({
                       <ExpressionCard
                         key={id}
                         expr={expr}
-                        index={index}
+                      index={index}
                       onInteract={pauseAutoStart}
                       onPlaySegment={handlePreviewSegment}
                       onSwipeDismiss={() => handleSwipeDismiss(expr)}
                       familiarCount={(familiarCounts?.[id] ?? 0) + (dismissedIds.has(id) ? 1 : 0)}
+                      showHints={guideHintsEnabled}
+                      showSwipeHint={guideHintsEnabled && index === 0}
                     />
                   )
                 }
@@ -808,6 +844,8 @@ export function PrimingCard({
                       onPlaySegment={handlePreviewSegment}
                       onSwipeDismiss={() => handleWordSwipeDismiss(word)}
                       familiarCount={(familiarCounts?.[word.wordId] ?? 0) + (dismissedIds.has(word.wordId) ? 1 : 0)}
+                      showHints={guideHintsEnabled}
+                      showSwipeHint={guideHintsEnabled && index === 0}
                     />
                   )
                 })}
