@@ -436,6 +436,7 @@ export function LyricsSubtitles({
   return (
     <div
       className="w-full h-full z-10 pointer-events-auto relative"
+      data-no-feed-drag="true"
       onClick={(e) => e.stopPropagation()}
     >
       {subtitleGuidesEnabled && <DoubleTapTip />}

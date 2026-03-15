@@ -711,7 +711,7 @@ export function VideoFeed({
           dragListener={false}
           dragConstraints={{ top: 0, bottom: 0 }}
           dragElastic={canDragFeed ? 0.15 : 0}
-          onPointerDown={handleFeedPointerDown}
+          onPointerDownCapture={handleFeedPointerDown}
           onDragStart={() => {
             if (!canDragFeed) return
             setIsSwiping(true)

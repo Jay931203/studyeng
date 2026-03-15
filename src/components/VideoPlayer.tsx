@@ -1065,6 +1065,7 @@ function ShortsSubtitleOverlay({
   return (
     <div
       className="absolute left-0 right-0 z-[12] flex justify-center px-4"
+      data-no-feed-drag="true"
       style={{ bottom: bottomOffset }}
     >
       <div className="pointer-events-none absolute -top-11 left-1/2 -translate-x-1/2">
