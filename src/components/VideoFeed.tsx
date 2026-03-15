@@ -464,7 +464,10 @@ export function VideoFeed({
     resetRepeatCount()
 
     if (nextRouteVideo) {
-      router.push(buildShortsUrl(nextRouteVideo.id, nextRouteVideo.seriesId), { scroll: false })
+      router.push(
+        buildShortsUrl(nextRouteVideo.id, nextRouteVideo.seriesId, { seriesPlayback: true }),
+        { scroll: false },
+      )
       return true
     }
 
@@ -575,9 +578,14 @@ export function VideoFeed({
     resetRepeatCount()
 
     if (previousRouteVideo) {
-      router.push(buildShortsUrl(previousRouteVideo.id, previousRouteVideo.seriesId), {
-        scroll: false,
-      })
+      router.push(
+        buildShortsUrl(previousRouteVideo.id, previousRouteVideo.seriesId, {
+          seriesPlayback: true,
+        }),
+        {
+          scroll: false,
+        },
+      )
       return
     }
 
@@ -880,7 +888,12 @@ export function VideoFeed({
                           setDirection(nextIndex > currentIndex ? 1 : -1)
                           setCurrentIndex(nextIndex)
                         } else {
-                          router.push(buildShortsUrl(episode.id, seriesInfo.id), { scroll: false })
+                          router.push(
+                            buildShortsUrl(episode.id, seriesInfo.id, {
+                              seriesPlayback: true,
+                            }),
+                            { scroll: false },
+                          )
                         }
                       }}
                       className={`min-w-[88px] rounded-2xl px-3 py-2 text-left ${

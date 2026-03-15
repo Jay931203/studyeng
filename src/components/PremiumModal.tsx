@@ -3,10 +3,18 @@
 import { useEffect, useMemo, useState } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { type BillingPlan } from '@/lib/billing'
+import {
+  formatDiscountText,
+  formatWon,
+  getMonthlyDiscountedPrice,
+  getYearlyRenewalPrice,
+  MONTHLY_BASE_PRICE,
+  YEARLY_REFERENCE_PRICE,
+} from '@/lib/billingPricing'
 import { isNative } from '@/lib/platform'
 import { useAuth } from '@/hooks/useAuth'
 import { usePremiumStore, FREE_DAILY_VIEW_LIMIT } from '@/stores/usePremiumStore'
-import { YEARLY_BASE_SAVINGS_PERCENT, useTierStore } from '@/stores/useTierStore'
+import { TIER_NAMES, YEARLY_BASE_SAVINGS_PERCENT, useTierStore } from '@/stores/useTierStore'
 import { ModalFeatureList, ModalHeader, ModalShell } from '@/components/ui/ModalShell'
 import type { PurchasesPackage } from '@revenuecat/purchases-typescript-internal-esm'
 
@@ -30,31 +38,28 @@ function getTriggerMessage(
 
 const PLAN_DETAILS: Record<
   BillingPlan,
-  { label: string; detail: string; price: string; highlight?: boolean }
+  { label: string; detail: string; price: string; comparePrice?: string; subdetail?: string; highlight?: boolean }
 > = {
   yearly: {
     label: '연간 플랜',
-    detail: '1년 기준으로 가장 저렴한 옵션',
+    detail: '월간 12회 대비 기본 할인에 등급 혜택이 더해집니다.',
     price: '79,900원 / 년',
+    comparePrice: formatWon(YEARLY_REFERENCE_PRICE),
     highlight: true,
   },
   monthly: {
     label: '월간 플랜',
-    detail: '가볍게 시작하는 월 구독',
+    detail: '지금 바로 시작하기 좋은 월간 플랜입니다.',
     price: '9,900원 / 월',
   },
 }
 
-function getPlanOptionDetail(
-  plan: BillingPlan,
-  monthlyDiscount: number,
-  yearlyRenewalDiscount: number,
-) {
+function getPlanOptionDetail(plan: BillingPlan, tierName: string) {
   if (plan === 'yearly') {
-    return `월간 12회 대비 약 ${YEARLY_BASE_SAVINGS_PERCENT}% 저렴 · 다음 연간 갱신 ${yearlyRenewalDiscount}% 추가`
+    return `${tierName} 등급 기준 연간 최종가`
   }
 
-  return `현재 혜택 기준 다음 달 결제 ${monthlyDiscount}% 적용`
+  return `${tierName} 등급 기준 월간 최종가`
 }
 
 export function PremiumModal({
@@ -199,7 +204,7 @@ export function PremiumModal({
         description={
           inTrial && trialDaysRemaining > 0
             ? '무료 체험 중 — 업그레이드하면 체험 후에도 무제한으로 이용할 수 있습니다.'
-            : `프리미엄으로 업그레이드하면 모든 기능을 제한 없이 이용할 수 있고, 현재 등급 기준 다음 월간 ${benefitSnapshot.monthlyDiscount}% · 연간 갱신 ${benefitSnapshot.yearlyRenewalDiscount}% 혜택이 이어집니다.`
+            : '프리미엄으로 업그레이드하면 모든 기능을 제한 없이 이용할 수 있고, 현재 등급 혜택은 다음 결제 주기부터 반영됩니다.'
         }
         onClose={onClose}
       />
@@ -214,7 +219,7 @@ export function PremiumModal({
       />
 
       <p className="mb-4 text-center text-xs text-[var(--text-secondary)]">
-        연간 플랜은 기본가가 이미 더 낮고, 등급 혜택은 다음 연간 갱신 때 추가로 반영됩니다.
+        연간은 기본가 자체가 더 저렴하고, 등급 혜택은 다음 연간 갱신 때 추가로 반영됩니다.
       </p>
 
       <div className="mb-5 grid gap-3">
@@ -241,7 +246,15 @@ export function PremiumModal({
                         {isYearly ? '연간 플랜' : '월간 플랜'}
                       </p>
                       <p className="mt-1 text-xs text-[var(--text-secondary)]">
-                        {getPlanOptionDetail(isYearly ? 'yearly' : 'monthly', benefitSnapshot.monthlyDiscount, benefitSnapshot.yearlyRenewalDiscount)}
+                        {getPlanOptionDetail(
+                          isYearly ? 'yearly' : 'monthly',
+                          TIER_NAMES[benefitSnapshot.benefitTier],
+                        )}
+                      </p>
+                      <p className="mt-1 text-[11px] text-[var(--text-muted)]">
+                        {isYearly
+                          ? `기본 ${YEARLY_BASE_SAVINGS_PERCENT}% + ${formatDiscountText('추가 할인', benefitSnapshot.yearlyRenewalDiscount)}`
+                          : formatDiscountText('추가 할인', benefitSnapshot.monthlyDiscount)}
                       </p>
                     </div>
                     {isYearly && (
@@ -250,9 +263,16 @@ export function PremiumModal({
                       </span>
                     )}
                   </div>
-                  <p className="mt-3 text-lg font-bold text-[var(--text-primary)]">
-                    {pkg.product.priceString}
-                  </p>
+                  <div className="mt-3 flex items-baseline gap-2">
+                    <span className="text-xs text-[var(--text-muted)] line-through">
+                      {isYearly ? formatWon(YEARLY_REFERENCE_PRICE) : formatWon(MONTHLY_BASE_PRICE)}
+                    </span>
+                    <p className="text-lg font-bold text-[var(--text-primary)]">
+                      {isYearly
+                        ? `${formatWon(getYearlyRenewalPrice(benefitSnapshot.yearlyRenewalDiscount))} / 년`
+                        : `${formatWon(getMonthlyDiscountedPrice(benefitSnapshot.monthlyDiscount))} / 월`}
+                    </p>
+                  </div>
                 </button>
               )
             })
@@ -276,7 +296,15 @@ export function PremiumModal({
                         {details.label}
                       </p>
                       <p className="mt-1 text-xs text-[var(--text-secondary)]">
-                        {getPlanOptionDetail(plan, benefitSnapshot.monthlyDiscount, benefitSnapshot.yearlyRenewalDiscount)}
+                        {getPlanOptionDetail(
+                          plan,
+                          TIER_NAMES[benefitSnapshot.benefitTier],
+                        )}
+                      </p>
+                      <p className="mt-1 text-[11px] text-[var(--text-muted)]">
+                        {plan === 'yearly'
+                          ? `기본 ${YEARLY_BASE_SAVINGS_PERCENT}% + ${formatDiscountText(`${TIER_NAMES[benefitSnapshot.benefitTier]} 추가 할인`, benefitSnapshot.yearlyRenewalDiscount)}`
+                          : formatDiscountText(`${TIER_NAMES[benefitSnapshot.benefitTier]} 추가 할인`, benefitSnapshot.monthlyDiscount)}
                       </p>
                     </div>
                     {details.highlight && (
@@ -285,9 +313,16 @@ export function PremiumModal({
                       </span>
                     )}
                   </div>
-                  <p className="mt-3 text-lg font-bold text-[var(--text-primary)]">
-                    {details.price}
-                  </p>
+                  <div className="mt-3 flex items-baseline gap-2">
+                    {details.comparePrice ? (
+                      <span className="text-xs text-[var(--text-muted)] line-through">{details.comparePrice}</span>
+                    ) : null}
+                    <p className="text-lg font-bold text-[var(--text-primary)]">
+                      {plan === 'yearly'
+                        ? `${formatWon(getYearlyRenewalPrice(benefitSnapshot.yearlyRenewalDiscount))} / 년`
+                        : `${formatWon(getMonthlyDiscountedPrice(benefitSnapshot.monthlyDiscount))} / 월`}
+                    </p>
+                  </div>
                 </button>
               )
             })}

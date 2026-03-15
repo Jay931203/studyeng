@@ -163,6 +163,17 @@ export default function ExplorePage() {
     [clearDeletedFlag, router],
   )
 
+  const openSeriesShorts = useCallback(
+    (videoId?: string | null, seriesId?: string | null) => {
+      if (!videoId) return
+      clearDeletedFlag(videoId)
+      router.push(buildShortsUrl(videoId, seriesId, { seriesPlayback: true }), {
+        scroll: false,
+      })
+    },
+    [clearDeletedFlag, router],
+  )
+
   const scrollToSeriesSection = useCallback(() => {
     seriesSectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }, [])
@@ -432,7 +443,7 @@ export default function ExplorePage() {
                         selectedSeries.id,
                         seriesEpisodes.map((video) => video.id),
                       ) ?? seriesEpisodes[0]?.id
-                    openShorts(nextId, selectedSeries.id)
+                    openSeriesShorts(nextId, selectedSeries.id)
                   }}
                   className="mt-6 w-full rounded-2xl bg-[var(--accent-primary)] py-3.5 text-sm font-semibold text-white"
                 >
@@ -448,7 +459,7 @@ export default function ExplorePage() {
                   <motion.button
                     key={video.id}
                     whileTap={{ scale: 0.98 }}
-                    onClick={() => openShorts(video.id, selectedSeries.id)}
+                    onClick={() => openSeriesShorts(video.id, selectedSeries.id)}
                     className="flex w-full items-center gap-3 rounded-[20px] border border-[var(--border-card)] bg-[var(--bg-card)] p-3 text-left shadow-[var(--card-shadow)]"
                   >
                     <div className="relative h-[56px] w-[100px] shrink-0 overflow-hidden rounded-xl">
@@ -597,7 +608,7 @@ export default function ExplorePage() {
               <motion.button
                 key={item.seriesItem.id}
                 whileTap={{ scale: 0.99 }}
-                onClick={() => openShorts(item.nextVideo.id, item.seriesItem.id)}
+                onClick={() => openSeriesShorts(item.nextVideo.id, item.seriesItem.id)}
                 className="w-[260px] shrink-0 overflow-hidden rounded-xl border border-[var(--border-card)] bg-[var(--bg-card)] text-left shadow-[var(--card-shadow)]"
               >
                 <div className="relative aspect-[2] overflow-hidden">
@@ -689,7 +700,7 @@ export default function ExplorePage() {
               }}
               className="shrink-0 text-[11px] font-semibold uppercase tracking-[0.08em] text-[var(--accent-text)]"
             >
-              VIEW ALL
+              상세보기
             </button>
           </div>
         </div>

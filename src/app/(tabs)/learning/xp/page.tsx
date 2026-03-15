@@ -164,12 +164,12 @@ export default function XPPage() {
 
           <div className="mt-4 space-y-2.5">
             <InfoRow
-              label="다음 월간 결제"
+              label="월간 최종가"
               value={formatWon(getMonthlyDiscountedPrice(benefitSnapshot.monthlyDiscount))}
               detail={formatDiscountText('월간 추가 할인', benefitSnapshot.monthlyDiscount)}
             />
             <InfoRow
-              label="다음 연간 갱신"
+              label="연간 최종가"
               value={formatWon(getYearlyRenewalPrice(benefitSnapshot.yearlyRenewalDiscount))}
               detail={formatDiscountText('연간 갱신 할인', benefitSnapshot.yearlyRenewalDiscount)}
             />
@@ -238,7 +238,7 @@ export default function XPPage() {
               progress={streakBonusPct}
               detail={
                 streakDays > 0
-                  ? `오늘 첫 영상 또는 게임 완료 시 10 XP · 현재 ${streakDays}일 연속 학습`
+                  ? `오늘 첫 영상 또는 게임 완료 시 ${streakTarget} XP · 현재 ${streakDays}일 연속 학습`
                   : '오늘 첫 영상 또는 게임을 완료하면 연속 학습 보너스가 시작됩니다.'
               }
             />
@@ -260,7 +260,7 @@ export default function XPPage() {
               onClick={() => router.push('/learning/milestones')}
               className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
             >
-              상세 보기
+              상세보기
             </button>
           </div>
 
@@ -281,7 +281,7 @@ export default function XPPage() {
               onClick={() => router.push('/learning/xp/history')}
               className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
             >
-              상세 보기
+              상세보기
             </button>
           </div>
           <XpHistoryFeed events={xpHistory} limit={8} />
@@ -302,7 +302,7 @@ export default function XPPage() {
               onClick={() => router.push('/learning/xp/activity')}
               className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
             >
-              상세 보기
+              상세보기
             </button>
           </div>
 

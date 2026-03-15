@@ -47,6 +47,7 @@ function ShortsFeedContent() {
   const hiddenVideoIdSet = useMemo(() => createHiddenVideoIdSet(hiddenVideos), [hiddenVideos])
   const videoId = searchParams.get('v')
   const seriesId = searchParams.get('series')
+  const playlistMode = searchParams.get('playlist') === 'series'
   const seekTime = searchParams.get('t')
   const reviewPhraseId = searchParams.get('phraseId')
   const feedParam = searchParams.get('feed')
@@ -54,17 +55,17 @@ function ShortsFeedContent() {
   const setPlaybackOrderMode = usePlayerStore((state) => state.setPlaybackOrderMode)
 
   const entryPlaybackOrderMode =
-    feedMode === 'shorts' ? 'shuffle' : seriesId && videoId ? 'sequence' : 'shuffle'
+    feedMode === 'shorts' ? 'shuffle' : playlistMode && seriesId && videoId ? 'sequence' : 'shuffle'
 
   const navigationKey =
-    buildShortsUrl(videoId, seriesId) +
+    buildShortsUrl(videoId, seriesId, { seriesPlayback: playlistMode }) +
     (feedParam ? `&feed=${feedParam}` : '') +
     (seekTime ? `&t=${seekTime}` : '') +
     (reviewPhraseId ? `&phraseId=${reviewPhraseId}` : '')
 
   useEffect(() => {
     setPlaybackOrderMode(entryPlaybackOrderMode)
-  }, [entryPlaybackOrderMode, feedMode, seriesId, setPlaybackOrderMode, videoId])
+  }, [entryPlaybackOrderMode, feedMode, playlistMode, seriesId, setPlaybackOrderMode, videoId])
 
   const feedVideos = useMemo(() => {
     const baseVideos =
@@ -119,7 +120,7 @@ function ShortsFeedContent() {
       return shuffleArray(feedVideos)
     }
 
-    if (seriesId && videoId) {
+    if (playlistMode && seriesId && videoId) {
       return filterHiddenVideos(seriesPlaylist(seriesId, videoId, options), hiddenVideoIdSet)
     }
 
@@ -141,13 +142,15 @@ function ShortsFeedContent() {
     }
 
     return filterHiddenVideos(recommendVideos(feedVideos, options), hiddenVideoIdSet)
-  }, [feedMode, feedVideos, hiddenVideoIdSet, recommendationSnapshot, seriesId, videoId])
+  }, [feedMode, feedVideos, hiddenVideoIdSet, playlistMode, recommendationSnapshot, seriesId, videoId])
 
   useEffect(() => {
     if (!videoId || !hiddenVideoIdSet.has(videoId)) return
 
     const fallback = recommended[0]
-    const baseUrl = buildShortsUrl(fallback?.id, fallback?.seriesId)
+    const baseUrl = buildShortsUrl(fallback?.id, fallback?.seriesId, {
+      seriesPlayback: playlistMode,
+    })
     const nextUrl =
       feedMode === 'shorts'
         ? baseUrl.includes('?')
@@ -156,7 +159,7 @@ function ShortsFeedContent() {
         : baseUrl
 
     router.replace(nextUrl, { scroll: false })
-  }, [feedMode, hiddenVideoIdSet, recommended, router, videoId])
+  }, [feedMode, hiddenVideoIdSet, playlistMode, recommended, router, videoId])
 
   return (
     <VideoFeed

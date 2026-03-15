@@ -13,6 +13,8 @@ import {
   formatWon,
   getMonthlyDiscountedPrice,
   getYearlyRenewalPrice,
+  MONTHLY_BASE_PRICE,
+  YEARLY_REFERENCE_PRICE,
 } from '@/lib/billingPricing'
 import { DAILY_SESSION_XP_CAP } from '@/lib/xp/sessionXp'
 import { getStreakBonusXP } from '@/lib/xp/streakBonus'
@@ -42,7 +44,7 @@ export function TodayDashboard() {
   const today = getTodayIsoDate()
   const benefitSnapshot = getBenefitSnapshot()
   const gameXpToday = getDailyTotalGameXP()
-  const streakTarget = getStreakBonusXP(Math.max(streakDays, 1))
+  const streakTarget = streakDays > 0 ? getStreakBonusXP(streakDays) : 0
   const streakBonusToday = streakBonusDate === today ? dailyStreakBonusXP : 0
   const todayTotal = gameXpToday + dailyVideoXP + streakBonusToday
   const gameXpPct = Math.min((gameXpToday / DAILY_SESSION_XP_CAP) * 100, 100)
@@ -61,7 +63,7 @@ export function TodayDashboard() {
             onClick={() => router.push('/learning/xp')}
             className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
           >
-            상세 보기
+            상세보기
           </button>
         </div>
 
@@ -75,7 +77,6 @@ export function TodayDashboard() {
             label="등급 상태"
             title={TIER_NAMES[benefitSnapshot.benefitTier]}
             detail={getBenefitStatusLine(benefitSnapshot)}
-            titleClassName="text-[var(--accent-primary)]"
             onClick={() => setShowTierGuide(true)}
           />
         </div>
@@ -109,12 +110,12 @@ export function TodayDashboard() {
                   : '잠김'
             }
             progress={streakBonusPct}
-            detail={
-              streakDays > 0
-                ? `오늘 첫 영상 또는 게임 완료 시 10 XP · 현재 ${streakDays}일 연속 학습`
-                : '오늘 첫 영상 또는 게임을 완료하면 연속 학습 보너스가 시작됩니다.'
-            }
-          />
+              detail={
+                streakDays > 0
+                  ? `오늘 첫 영상 또는 게임 완료 시 ${streakTarget} XP · 현재 ${streakDays}일 연속 학습`
+                  : '오늘 첫 영상 또는 게임을 완료하면 연속 학습 보너스가 시작됩니다.'
+              }
+            />
         </div>
       </div>
 
@@ -157,7 +158,7 @@ export function TodayDashboard() {
               </p>
             </div>
 
-            <div className="space-y-2">
+            <div className="space-y-1.5">
               {TIER_NAMES.map((tierName, index) => {
                 const monthlyDiscount = MONTHLY_PLAN_DISCOUNTS[index]
                 const yearlyDiscount = YEARLY_PLAN_RENEWAL_DISCOUNTS[index]
@@ -173,8 +174,8 @@ export function TodayDashboard() {
                         : 'border-[var(--border-card)] bg-[var(--bg-card)]'
                     }`}
                   >
-                    <div className="flex items-start justify-between gap-3">
-                      <div>
+                    <div className="flex items-center justify-between gap-3">
+                      <div className="min-w-0">
                         <p
                           className={`text-sm font-semibold ${
                             isCurrent ? 'text-[var(--accent-primary)]' : 'text-[var(--text-primary)]'
@@ -182,33 +183,35 @@ export function TodayDashboard() {
                         >
                           {tierName}
                         </p>
-                        <p className="mt-1 text-[11px] text-[var(--text-muted)]">
-                          {index === 0
-                            ? '0 XP부터 시작'
-                            : `${TIER_THRESHOLDS[index].toLocaleString()} XP 이상`}
+                        <p className="mt-0.5 text-[11px] text-[var(--text-muted)]">
+                          {index === 0 ? '0 XP부터 시작' : `${TIER_THRESHOLDS[index].toLocaleString()} XP 이상`}
                         </p>
                       </div>
-                      {isCurrent ? (
-                        <span className="rounded-full bg-[var(--accent-primary)] px-2 py-1 text-[10px] font-semibold text-white">
-                          현재 혜택
-                        </span>
-                      ) : isUnlocked ? (
-                        <span className="rounded-full bg-[var(--bg-secondary)] px-2 py-1 text-[10px] font-semibold text-[var(--text-secondary)]">
-                          잠금 완료
-                        </span>
-                      ) : null}
+                      <div className="flex items-center gap-2">
+                        {isCurrent ? (
+                          <span className="rounded-full bg-[var(--accent-primary)] px-2 py-1 text-[10px] font-semibold text-white">
+                            현재
+                          </span>
+                        ) : isUnlocked ? (
+                          <span className="rounded-full bg-[var(--bg-secondary)] px-2 py-1 text-[10px] font-semibold text-[var(--text-secondary)]">
+                            잠금 완료
+                          </span>
+                        ) : null}
+                      </div>
                     </div>
 
-                    <div className="mt-3 grid grid-cols-2 gap-2">
-                      <GuidePrice
-                        label="월간 예상가"
-                        value={formatWon(getMonthlyDiscountedPrice(monthlyDiscount))}
+                    <div className="mt-2 grid grid-cols-[1fr_1fr] gap-2 text-[11px]">
+                      <CompactPrice
+                        label="월간 최종가"
+                        original={formatWon(MONTHLY_BASE_PRICE)}
+                        current={formatWon(getMonthlyDiscountedPrice(monthlyDiscount))}
                         detail={formatDiscountText('추가 할인', monthlyDiscount)}
                       />
-                      <GuidePrice
-                        label="연간 갱신가"
-                        value={formatWon(getYearlyRenewalPrice(yearlyDiscount))}
-                        detail={formatDiscountText('갱신 할인', yearlyDiscount)}
+                      <CompactPrice
+                        label="연간 최종가"
+                        original={formatWon(YEARLY_REFERENCE_PRICE)}
+                        current={formatWon(getYearlyRenewalPrice(yearlyDiscount))}
+                        detail={`기본 33% + ${formatDiscountText('추가 할인', yearlyDiscount)}`}
                       />
                     </div>
                   </div>
@@ -264,13 +267,11 @@ function InfoBlock({
   title,
   detail,
   onClick,
-  titleClassName,
 }: {
   label: string
   title: string
   detail: string
   onClick?: () => void
-  titleClassName?: string
 }) {
   const Element = onClick ? 'button' : 'div'
 
@@ -287,25 +288,30 @@ function InfoBlock({
           </span>
         ) : null}
       </div>
-      <p className={`text-sm font-semibold ${titleClassName ?? 'text-[var(--text-primary)]'}`}>{title}</p>
+      <p className="text-sm font-semibold text-[var(--text-primary)]">{title}</p>
       <p className="mt-1 text-[11px] text-[var(--text-muted)]">{detail}</p>
     </Element>
   )
 }
 
-function GuidePrice({
+function CompactPrice({
   label,
-  value,
+  original,
+  current,
   detail,
 }: {
   label: string
-  value: string
+  original: string
+  current: string
   detail: string
 }) {
   return (
     <div className="rounded-2xl bg-[var(--bg-primary)]/70 px-3 py-2">
       <p className="text-[10px] text-[var(--text-muted)]">{label}</p>
-      <p className="mt-1 text-sm font-semibold text-[var(--text-primary)]">{value}</p>
+      <div className="mt-1 flex items-center gap-1.5">
+        <span className="text-[10px] text-[var(--text-muted)] line-through">{original}</span>
+        <span className="text-sm font-semibold text-[var(--text-primary)]">{current}</span>
+      </div>
       <p className="mt-1 text-[10px] text-[var(--text-muted)]">{detail}</p>
     </div>
   )

@@ -8,6 +8,8 @@ import { getBillingConfig, type BillingPlan } from '@/lib/billing'
 import {
   formatDiscountText,
   formatWon,
+  MONTHLY_BASE_PRICE,
+  YEARLY_REFERENCE_PRICE,
   getMonthlyDiscountedPrice,
   getYearlyRenewalPrice,
 } from '@/lib/billingPricing'
@@ -47,6 +49,8 @@ interface PlanOption {
   label: string
   detail: string
   price: string
+  comparePrice?: string
+  subdetail?: string
   highlight?: string
 }
 
@@ -61,14 +65,15 @@ const WEB_PLAN_OPTIONS: Record<BillingPlan, PlanOption> = {
   yearly: {
     id: 'yearly',
     label: '연간',
-    detail: '기본가가 가장 크게 할인되는 플랜',
+    detail: '월간 12회 대비 기본 할인에 등급 혜택이 더해집니다.',
     price: '79,900원 / 년',
+    comparePrice: '118,800원',
     highlight: '추천',
   },
   monthly: {
     id: 'monthly',
     label: '월간',
-    detail: '가볍게 시작하고 다음 달 혜택을 바로 반영',
+    detail: '지금 바로 시작하기 좋은 월간 플랜입니다.',
     price: '9,900원 / 월',
   },
 }
@@ -118,16 +123,12 @@ function getStoreManagementUrl() {
   }
 }
 
-function getPlanBenefitDetail(
-  plan: BillingPlan,
-  monthlyDiscount: number,
-  yearlyRenewalDiscount: number,
-) {
+function getPlanBenefitDetail(plan: BillingPlan, tierName: string) {
   if (plan === 'yearly') {
-    return `월간 12회 대비 약 ${YEARLY_BASE_SAVINGS_PERCENT}% 저렴 · 다음 연간 갱신 ${yearlyRenewalDiscount}% 적용`
+    return `${tierName} 등급 기준 연간 최종가`
   }
 
-  return `현재 혜택 기준 다음 달 결제 ${monthlyDiscount}% 적용`
+  return `${tierName} 등급 기준 월간 최종가`
 }
 
 function formatCardBrand(brand: string | null | undefined) {
@@ -170,6 +171,9 @@ function PlanTile({
           <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">
             {option.detail}
           </p>
+          {option.subdetail ? (
+            <p className="mt-1 text-[11px] text-[var(--text-muted)]">{option.subdetail}</p>
+          ) : null}
         </div>
         {(current || option.highlight) && (
           <span
@@ -183,7 +187,12 @@ function PlanTile({
           </span>
         )}
       </div>
-      <p className="mt-3 text-base font-bold text-[var(--text-primary)]">{option.price}</p>
+      <div className="mt-3 flex items-baseline gap-2">
+        {option.comparePrice ? (
+          <span className="text-xs text-[var(--text-muted)] line-through">{option.comparePrice}</span>
+        ) : null}
+        <p className="text-base font-bold text-[var(--text-primary)]">{option.price}</p>
+      </div>
     </button>
   )
 }
@@ -391,16 +400,6 @@ export function BillingManagementCard({
       : null
   const benefitItems = [
     {
-      label: '다음 월간 결제',
-      value: formatWon(getMonthlyDiscountedPrice(benefitSnapshot.monthlyDiscount)),
-      detail: formatDiscountText('월간 추가 할인', benefitSnapshot.monthlyDiscount),
-    },
-    {
-      label: '다음 연간 갱신',
-      value: formatWon(getYearlyRenewalPrice(benefitSnapshot.yearlyRenewalDiscount)),
-      detail: formatDiscountText('연간 갱신 할인', benefitSnapshot.yearlyRenewalDiscount),
-    },
-    {
       label: '이번 달 활동',
       value: `${benefitSnapshot.currentMonthXp.toLocaleString()} / ${MONTHLY_ACTIVE_THRESHOLD} XP`,
       detail: '300 XP를 채우면 현재 잠금 등급 혜택을 유지하거나 복구할 수 있습니다.',
@@ -444,10 +443,15 @@ export function BillingManagementCard({
           label: yearly ? '연간' : '월간',
           detail: getPlanBenefitDetail(
             yearly ? 'yearly' : 'monthly',
-            benefitSnapshot.monthlyDiscount,
-            benefitSnapshot.yearlyRenewalDiscount,
+            TIER_NAMES[benefitSnapshot.benefitTier],
           ),
-          price: pkg.product.priceString,
+          price: yearly
+            ? `${formatWon(getYearlyRenewalPrice(benefitSnapshot.yearlyRenewalDiscount))} / 년`
+            : `${formatWon(getMonthlyDiscountedPrice(benefitSnapshot.monthlyDiscount))} / 월`,
+          comparePrice: yearly ? formatWon(YEARLY_REFERENCE_PRICE) : formatWon(MONTHLY_BASE_PRICE),
+          subdetail: yearly
+            ? `기본 ${YEARLY_BASE_SAVINGS_PERCENT}% + ${formatDiscountText(`${TIER_NAMES[benefitSnapshot.benefitTier]} 추가 할인`, benefitSnapshot.yearlyRenewalDiscount)}`
+            : formatDiscountText(`${TIER_NAMES[benefitSnapshot.benefitTier]} 추가 할인`, benefitSnapshot.monthlyDiscount),
           highlight: yearly ? '추천' : undefined,
         } satisfies PlanOption
       })
@@ -458,20 +462,30 @@ export function BillingManagementCard({
         ...WEB_PLAN_OPTIONS.yearly,
         detail: getPlanBenefitDetail(
           'yearly',
-          benefitSnapshot.monthlyDiscount,
-          benefitSnapshot.yearlyRenewalDiscount,
+          TIER_NAMES[benefitSnapshot.benefitTier],
         ),
+        price: `${formatWon(getYearlyRenewalPrice(benefitSnapshot.yearlyRenewalDiscount))} / 년`,
+        comparePrice: formatWon(YEARLY_REFERENCE_PRICE),
+        subdetail: `기본 ${YEARLY_BASE_SAVINGS_PERCENT}% + ${formatDiscountText(`${TIER_NAMES[benefitSnapshot.benefitTier]} 추가 할인`, benefitSnapshot.yearlyRenewalDiscount)}`,
       },
       {
         ...WEB_PLAN_OPTIONS.monthly,
         detail: getPlanBenefitDetail(
           'monthly',
-          benefitSnapshot.monthlyDiscount,
-          benefitSnapshot.yearlyRenewalDiscount,
+          TIER_NAMES[benefitSnapshot.benefitTier],
         ),
+        price: `${formatWon(getMonthlyDiscountedPrice(benefitSnapshot.monthlyDiscount))} / 월`,
+        comparePrice: formatWon(MONTHLY_BASE_PRICE),
+        subdetail: formatDiscountText(`${TIER_NAMES[benefitSnapshot.benefitTier]} 추가 할인`, benefitSnapshot.monthlyDiscount),
       },
     ]
-  }, [benefitSnapshot.monthlyDiscount, benefitSnapshot.yearlyRenewalDiscount, native, nativePackages])
+  }, [
+    benefitSnapshot.benefitTier,
+    benefitSnapshot.monthlyDiscount,
+    benefitSnapshot.yearlyRenewalDiscount,
+    native,
+    nativePackages,
+  ])
 
   const handlePortal = async () => {
     setManaging(true)
@@ -641,7 +655,7 @@ export function BillingManagementCard({
             href="/profile/membership"
             className="shrink-0 text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
           >
-            상세 보기
+            상세보기
           </Link>
         </div>
       )}
@@ -778,9 +792,9 @@ export function BillingManagementCard({
                       <span className="text-sm font-medium text-[var(--text-primary)]">
                         {item.value}
                       </span>
-                      {item.detail && (
+                      {item.detail ? (
                         <p className="text-[10px] text-[var(--text-secondary)]">{item.detail}</p>
-                      )}
+                      ) : null}
                     </div>
                   </div>
                 ))}

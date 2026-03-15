@@ -27,6 +27,7 @@ export default function LikedPage() {
   const likes = useLikeStore((s) => s.likes)
   const toggleLike = useLikeStore((s) => s.toggleLike)
   const clearDeletedFlag = useWatchHistoryStore((s) => s.clearDeletedFlag)
+  const viewCounts = useWatchHistoryStore((s) => s.viewCounts)
   const hiddenVideos = useAdminStore((state) => state.hiddenVideos)
   const hiddenVideoIdSet = useMemo(() => createHiddenVideoIdSet(hiddenVideos), [hiddenVideos])
 
@@ -94,6 +95,7 @@ export default function LikedPage() {
             <div className="flex flex-col gap-2">
               <AnimatePresence>
                 {filteredVideos.map((video) => {
+                  const count = viewCounts[video.id] ?? 0
                   const categoryLabel = categoryLabels[video.category] ?? ''
                   const seriesTitle = video.seriesId
                     ? getCatalogSeriesById(video.seriesId)?.title
@@ -121,6 +123,11 @@ export default function LikedPage() {
                             sizes="80px"
                             className="object-cover"
                           />
+                          {count > 1 && (
+                            <div className="absolute bottom-0.5 right-0.5 rounded bg-black/70 px-1 py-0.5 text-[9px] font-bold text-white">
+                              x{count > 99 ? '99+' : count}
+                            </div>
+                          )}
                         </div>
 
                         <div className="min-w-0 flex-1">
@@ -136,6 +143,14 @@ export default function LikedPage() {
                             <span className="text-xs text-[var(--text-muted)]">{categoryLabel}</span>
                             <span className="text-[10px] text-[var(--text-muted)]">&middot;</span>
                             <span className="text-xs text-[var(--text-muted)]">Lv.{video.difficulty}</span>
+                            {count > 0 && (
+                              <>
+                                <span className="text-[10px] text-[var(--text-muted)]">&middot;</span>
+                                <span className="text-xs font-medium text-[var(--text-muted)]">
+                                  x{count > 99 ? '99+' : count}
+                                </span>
+                              </>
+                            )}
                           </div>
                         </div>
                       </button>

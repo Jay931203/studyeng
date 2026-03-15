@@ -62,7 +62,7 @@ export default function LearningPage() {
               href="/learning/stats"
               className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
             >
-              VIEW ALL
+              상세보기
             </Link>
           </div>
 
@@ -100,7 +100,7 @@ export default function LearningPage() {
                 href="/learning/liked"
                 className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
               >
-                VIEW ALL
+                상세보기
               </Link>
             )}
           </div>
@@ -112,6 +112,7 @@ export default function LearningPage() {
           ) : (
             <div className="flex flex-col gap-2">
               {likedVideos.slice(0, 5).map((video) => {
+                const count = viewCounts[video.id] ?? 0
                 const categoryLabel = categoryLabels[video.category] ?? ''
                 const seriesTitle = video.seriesId
                   ? getCatalogSeriesById(video.seriesId)?.title
@@ -134,6 +135,11 @@ export default function LearningPage() {
                         sizes="80px"
                         className="object-cover"
                       />
+                      {count > 1 && (
+                        <div className="absolute bottom-0.5 right-0.5 rounded bg-black/70 px-1 py-0.5 text-[9px] font-bold text-white">
+                          x{count > 99 ? '99+' : count}
+                        </div>
+                      )}
                     </div>
 
                     <div className="min-w-0 flex-1">
@@ -149,6 +155,14 @@ export default function LearningPage() {
                         <span className="text-xs text-[var(--text-muted)]">{categoryLabel}</span>
                         <span className="text-[10px] text-[var(--text-muted)]">&middot;</span>
                         <span className="text-xs text-[var(--text-muted)]">Lv.{video.difficulty}</span>
+                        {count > 0 && (
+                          <>
+                            <span className="text-[10px] text-[var(--text-muted)]">&middot;</span>
+                            <span className="text-xs font-medium text-[var(--text-muted)]">
+                              x{count > 99 ? '99+' : count}
+                            </span>
+                          </>
+                        )}
                       </div>
                     </div>
                   </button>
@@ -168,7 +182,7 @@ export default function LearningPage() {
                 href="/learning/saved"
                 className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
               >
-                VIEW ALL
+                상세보기
               </Link>
             )}
           </div>

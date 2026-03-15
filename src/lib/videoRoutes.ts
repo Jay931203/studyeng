@@ -1,4 +1,12 @@
-export function buildShortsUrl(videoId?: string | null, seriesId?: string | null) {
+interface BuildShortsUrlOptions {
+  seriesPlayback?: boolean
+}
+
+export function buildShortsUrl(
+  videoId?: string | null,
+  seriesId?: string | null,
+  options: BuildShortsUrlOptions = {},
+) {
   const params = new URLSearchParams()
 
   if (videoId) {
@@ -7,6 +15,10 @@ export function buildShortsUrl(videoId?: string | null, seriesId?: string | null
 
   if (seriesId) {
     params.set('series', seriesId)
+  }
+
+  if (options.seriesPlayback && seriesId) {
+    params.set('playlist', 'series')
   }
 
   const query = params.toString()

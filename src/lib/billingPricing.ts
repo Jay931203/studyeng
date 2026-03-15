@@ -1,5 +1,6 @@
 export const MONTHLY_BASE_PRICE = 9900
 export const YEARLY_BASE_PRICE = 79900
+export const YEARLY_REFERENCE_PRICE = MONTHLY_BASE_PRICE * 12
 
 const wonFormatter = new Intl.NumberFormat('ko-KR')
 
