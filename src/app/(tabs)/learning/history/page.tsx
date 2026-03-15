@@ -187,7 +187,7 @@ export default function WatchHistoryPage() {
                                 sizes="80px"
                                 className="object-cover"
                               />
-                              {count > 1 && (
+                              {count > 0 && (
                                 <div className="absolute bottom-0.5 right-0.5 rounded bg-black/70 px-1 py-0.5 text-[9px] font-bold text-white">
                                   x{count > 99 ? '99+' : count}
                                 </div>

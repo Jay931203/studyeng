@@ -107,7 +107,7 @@ export function WatchHistory() {
             href="/learning/history"
             className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
           >
-            VIEW ALL
+            상세보기
           </Link>
         )}
       </div>
@@ -153,7 +153,7 @@ export function WatchHistory() {
                             sizes="80px"
                             className="object-cover"
                           />
-                          {count > 1 && (
+                          {count > 0 && (
                             <div className="absolute bottom-0.5 right-0.5 rounded bg-black/70 px-1 py-0.5 text-[9px] font-bold text-white">
                               x{count > 99 ? '99+' : count}
                             </div>
