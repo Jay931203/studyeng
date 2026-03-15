@@ -3,20 +3,6 @@
 import Link from 'next/link'
 import { isBillingEnabled } from '@/lib/billing'
 
-const PAYMENT_TERMS = [
-  '유료 구독 상품의 가격과 적용 조건은 서비스 화면에 명확히 표시합니다.',
-  '결제와 구독 관리는 회사가 지정한 결제 대행사 및 관리 수단을 통해 처리합니다.',
-  '결제 완료, 자동 갱신, 해지, 환불 기준은 서비스 화면과 결제 대행사 정책에 함께 표시합니다.',
-  '환불과 철회 가능 범위는 전자상거래 등 관련 법령과 결제 대행사 정책을 따릅니다.',
-]
-
-const NO_PAYMENT_TERMS = [
-  '현재 버전의 서비스는 앱 내 유료 결제 및 구독 상품을 제공하지 않습니다.',
-  '향후 유료 상품이 도입되는 경우, 가격과 적용 조건을 서비스 화면에 별도로 표시하고 사전 공지합니다.',
-  '결제 기능 도입 이후의 결제 수단, 환불 기준, 해지 절차는 별도 정책으로 안내합니다.',
-  '실제 결제 및 환불이 발생하는 경우 관련 법령을 따릅니다.',
-]
-
 function Section({
   title,
   children,
@@ -27,7 +13,7 @@ function Section({
   return (
     <section>
       <h2 className="mb-3 text-base font-bold text-[var(--text-primary)]">{title}</h2>
-      {children}
+      <div className="space-y-3 text-sm leading-relaxed text-[var(--text-secondary)]">{children}</div>
     </section>
   )
 }
@@ -54,59 +40,68 @@ export default function TermsPage() {
         <h1 className="text-lg font-bold">이용약관</h1>
       </div>
 
-      <div className="mx-auto max-w-2xl space-y-8 px-5 py-6 pb-20 text-sm leading-relaxed text-[var(--text-secondary)]">
-        <p className="text-xs text-[var(--text-muted)]">시행일: 2026년 3월 7일</p>
+      <div className="mx-auto max-w-2xl space-y-8 px-5 py-6 pb-20">
+        <p className="text-xs text-[var(--text-muted)]">시행일: 2026년 3월 15일</p>
 
-        <Section title="제1조 (목적)">
+        <Section title="1. 서비스 개요">
           <p>
-            이 약관은 Shortee가 제공하는 영어 학습 서비스의 이용 조건과 회사 및 이용자의
-            권리, 의무, 책임사항을 규정하는 것을 목적으로 합니다.
+            StudyEng는 영상 기반 영어 학습 서비스를 제공합니다. 사용자는 계정을 생성해 학습 기록, 저장 표현,
+            게임 진행 상황, 구독 상태를 관리할 수 있습니다.
           </p>
         </Section>
 
-        <Section title="제2조 (정의)">
-          <ol className="list-decimal list-inside space-y-2">
-            <li>서비스는 회사가 제공하는 학습 콘텐츠, 복습 기능, 추천 기능, 관련 부가 기능을 말합니다.</li>
-            <li>이용자는 이 약관에 동의하고 서비스를 이용하는 회원 및 비회원을 말합니다.</li>
-            <li>회원은 소셜 로그인 등 회사가 제공하는 방식으로 계정을 연동한 이용자를 말합니다.</li>
-            <li>콘텐츠는 서비스에 제공되는 영상, 텍스트, 자막, 이미지 등 학습 자료를 말합니다.</li>
-          </ol>
+        <Section title="2. 계정과 이용">
+          <ul className="list-disc space-y-2 pl-5">
+            <li>사용자는 정확한 계정 정보를 제공해야 합니다.</li>
+            <li>계정 보안 책임은 사용자에게 있으며, 비정상 접근이 의심되면 즉시 알려야 합니다.</li>
+            <li>서비스 남용, 불법 이용, 타인 권리 침해가 확인되면 이용이 제한될 수 있습니다.</li>
+          </ul>
         </Section>
 
-        <Section title="제3조 (서비스 이용)">
-          <ol className="list-decimal list-inside space-y-2">
-            <li>회사는 안정적인 서비스 제공을 위해 시스템 점검, 교체, 장애 대응을 수행할 수 있습니다.</li>
-            <li>서비스 중 일부 기능은 로그인 여부, 운영 정책, 시스템 상태에 따라 제한될 수 있습니다.</li>
-            <li>이용자는 회사의 사전 승인 없이 서비스를 복제, 전송, 배포하거나 상업적으로 이용할 수 없습니다.</li>
-          </ol>
+        <Section title="3. 유료 구독">
+          {billingEnabled ? (
+            <>
+              <p>
+                프리미엄 구독은 월간 또는 연간 플랜으로 제공될 수 있으며, 실제 결제와 갱신은 웹 결제 제공자
+                또는 각 앱스토어 결제 시스템을 통해 처리됩니다.
+              </p>
+              <ul className="list-disc space-y-2 pl-5">
+                <li>가격, 할인, 갱신 조건은 결제 전 화면과 스토어 표시에 따릅니다.</li>
+                <li>네이티브 앱 구독의 해지 및 관리 는 Google Play 또는 App Store에서 진행합니다.</li>
+                <li>웹 결제 구독의 관리 는 별도의 결제 관리 페이지에서 진행합니다.</li>
+              </ul>
+            </>
+          ) : (
+            <p>
+              현재 버전에서는 유료 구독이 비활성화되어 있을 수 있습니다. 유료 기능이 활성화되면 가격과 이용
+              조건은 앱 및 스토어 화면에 별도로 안내됩니다.
+            </p>
+          )}
         </Section>
 
-        <Section title="제4조 (회원가입 및 탈퇴)">
-          <ol className="list-decimal list-inside space-y-2">
-            <li>회원가입은 이용자가 약관에 동의하고 회사가 제공하는 로그인 방식을 통해 완료됩니다.</li>
-            <li>회원은 서비스 설정 또는 고객지원 채널을 통해 탈퇴를 요청할 수 있습니다.</li>
-            <li>탈퇴 후 보관이 필요한 정보는 관련 법령 및 개인정보처리방침에 따라 처리됩니다.</li>
-          </ol>
+        <Section title="4. 콘텐츠와 기능">
+          <p>
+            서비스 내 영상, 자막, 표현, 게임 콘텐츠는 학습 목적에 맞춰 제공되며, 콘텐츠 구성과 기능은 사전
+            고지 없이 업데이트될 수 있습니다.
+          </p>
         </Section>
 
-        <Section title="제5조 (결제 및 환불)">
-          <ol className="list-decimal list-inside space-y-2">
-            {(billingEnabled ? PAYMENT_TERMS : NO_PAYMENT_TERMS).map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ol>
+        <Section title="5. 계정 삭제와 종료">
+          <p>
+            사용자는 앱 내 계정 삭제 기능을 통해 계정을 종료할 수 있습니다. 법령상 보관 의무가 있는 정보를
+            제외한 개인 데이터는 삭제 정책에 따라 처리됩니다.
+          </p>
         </Section>
 
-        <Section title="제6조 (면책)">
-          <ol className="list-decimal list-inside space-y-2">
-            <li>회사는 천재지변, 통신 장애, 외부 플랫폼 장애 등 불가항력 사유로 인한 손해에 책임을 지지 않습니다.</li>
-            <li>서비스에 제공되는 학습 콘텐츠는 참고 자료이며, 회사는 완전성이나 특정 목적 적합성을 보증하지 않습니다.</li>
-            <li>외부 플랫폼 콘텐츠에는 해당 플랫폼의 정책과 약관이 함께 적용될 수 있습니다.</li>
-          </ol>
+        <Section title="6. 책임 제한">
+          <p>
+            당사는 서비스의 안정적 운영을 위해 노력하지만, 네트워크 환경, 외부 플랫폼 장애, 스토어 정책 변경,
+            기기 호환성 문제 등으로 일부 기능이 제한될 수 있습니다.
+          </p>
         </Section>
 
-        <Section title="제7조 (문의)">
-          <p>서비스 문의: support@shortee.app</p>
+        <Section title="7. 문의">
+          <p>서비스 및 약관 문의: support@shortee.app</p>
         </Section>
       </div>
     </div>

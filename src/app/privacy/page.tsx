@@ -3,13 +3,20 @@
 import Link from 'next/link'
 import { isBillingEnabled } from '@/lib/billing'
 
-const OPTIONAL_COLLECTION_NO_BILLING = [
-  '결제 기능은 현재 제공하지 않으며, 결제 정보는 수집하지 않습니다.',
-]
-
-const OPTIONAL_COLLECTION_WITH_BILLING = [
-  '결제 기능 이용 시 결제 대행사를 통해 필요한 결제 정보가 처리될 수 있습니다.',
-]
+function Section({
+  title,
+  children,
+}: {
+  title: string
+  children: React.ReactNode
+}) {
+  return (
+    <section>
+      <h2 className="mb-3 text-base font-bold text-[var(--text-primary)]">{title}</h2>
+      <div className="space-y-3 text-sm leading-relaxed text-[var(--text-secondary)]">{children}</div>
+    </section>
+  )
+}
 
 export default function PrivacyPage() {
   const billingEnabled = isBillingEnabled()
@@ -33,71 +40,64 @@ export default function PrivacyPage() {
         <h1 className="text-lg font-bold">개인정보처리방침</h1>
       </div>
 
-      <div className="mx-auto max-w-2xl space-y-8 px-5 py-6 pb-20 text-sm leading-relaxed text-[var(--text-secondary)]">
-        <p className="text-xs text-[var(--text-muted)]">시행일: 2026년 3월 7일</p>
+      <div className="mx-auto max-w-2xl space-y-8 px-5 py-6 pb-20">
+        <p className="text-xs text-[var(--text-muted)]">시행일: 2026년 3월 15일</p>
 
-        <section>
-          <h2 className="mb-3 text-base font-bold text-[var(--text-primary)]">1. 수집 항목</h2>
-          <div className="space-y-3 rounded-xl border border-[var(--border-card)] bg-[var(--bg-card)] p-4">
-            <div>
-              <p className="mb-1 text-xs font-medium text-[var(--text-primary)]">필수 항목</p>
-              <p className="text-xs">이메일, 이름, 프로필 이미지, 학습 기록, 기기/브라우저 로그</p>
-            </div>
-            <div>
-              <p className="mb-1 text-xs font-medium text-[var(--text-primary)]">선택 항목</p>
-              <ul className="list-disc list-inside space-y-1 text-xs">
-                {(billingEnabled
-                  ? OPTIONAL_COLLECTION_WITH_BILLING
-                  : OPTIONAL_COLLECTION_NO_BILLING
-                ).map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <h2 className="mb-3 text-base font-bold text-[var(--text-primary)]">2. 이용 목적</h2>
-          <ul className="list-disc list-inside space-y-1">
-            <li>회원 식별, 계정 관리, 부정 이용 방지</li>
-            <li>학습 콘텐츠 제공, 진행률 기록, 개인화 추천</li>
-            <li>서비스 품질 개선, 장애 대응, 고객 문의 처리</li>
-            {billingEnabled && <li>결제 처리, 구독 상태 확인, 환불 및 해지 처리</li>}
+        <Section title="1. 수집하는 정보">
+          <p>StudyEng는 서비스 제공을 위해 다음 정보를 수집할 수 있습니다.</p>
+          <ul className="list-disc space-y-2 pl-5">
+            <li>회원 계정 정보: 이메일, 로그인 식별자, 인증 세션 정보</li>
+            <li>학습 정보: 시청 기록, 저장한 표현, 좋아요, 레벨, XP, 게임 진행 상황</li>
+            <li>기기 및 사용 정보: 접속 로그, 오류 로그, 기기 종류, 앱 버전, 접속 시간</li>
+            {billingEnabled ? (
+              <li>결제 관련 정보: 구독 상태, 상품 유형, 결제 제공자가 전달한 구독 식별 정보</li>
+            ) : null}
           </ul>
-        </section>
+        </Section>
 
-        <section>
-          <h2 className="mb-3 text-base font-bold text-[var(--text-primary)]">3. 보관 기간</h2>
+        <Section title="2. 정보 이용 목적">
+          <ul className="list-disc space-y-2 pl-5">
+            <li>회원 인증, 로그인 유지, 계정 보안 관리</li>
+            <li>학습 기록 저장, 추천 제공, XP 및 레벨 계산</li>
+            <li>구독 상태 확인, 프리미엄 기능 제공, 구매 복원 처리</li>
+            <li>오류 분석, 서비스 품질 개선, 부정 사용 방지</li>
+            <li>문의 대응 및 공지 전달</li>
+          </ul>
+        </Section>
+
+        <Section title="3. 결제 및 외부 서비스">
           <p>
-            개인정보는 수집 및 이용 목적이 달성되면 지체 없이 파기합니다. 다만 관계 법령에 따라
-            일정 기간 보관이 필요한 정보는 해당 기간 동안 안전하게 보관합니다.
+            웹 결제는 Stripe를 통해 처리될 수 있으며, 네이티브 앱 결제는 Google Play, App Store,
+            RevenueCat 연동을 통해 처리될 수 있습니다.
           </p>
-        </section>
+          <p>
+            당사는 카드 번호와 같은 민감한 결제 정보를 직접 저장하지 않습니다. 실제 결제 정보는 각 결제
+            제공자의 정책에 따라 처리됩니다.
+          </p>
+        </Section>
 
-        <section>
-          <h2 className="mb-3 text-base font-bold text-[var(--text-primary)]">4. 제3자 제공 및 처리 위탁</h2>
-          <p className="mb-2">회사는 원칙적으로 개인정보를 외부에 제공하지 않습니다. 다만 아래 서비스가 처리에 관여할 수 있습니다.</p>
-          <ul className="list-disc list-inside space-y-1">
-            <li>Supabase: 인증 및 데이터 저장</li>
-            <li>Vercel: 서비스 호스팅</li>
-            <li>Google/Kakao: 로그인 인증</li>
-            {billingEnabled && <li>결제 대행사: 결제 및 구독 관리</li>}
+        <Section title="4. 정보 보관 기간">
+          <p>
+            회원 정보와 학습 기록은 서비스 제공 기간 동안 보관되며, 계정 삭제 요청 시 관련 법령상 보관이
+            필요한 정보를 제외하고 지체 없이 삭제 또는 비식별화합니다.
+          </p>
+        </Section>
+
+        <Section title="5. 이용자 권리">
+          <ul className="list-disc space-y-2 pl-5">
+            <li>본인 정보 열람, 수정, 삭제 요청</li>
+            <li>구독 상태 확인 및 관리</li>
+            <li>계정 삭제 요청</li>
           </ul>
-        </section>
+          <p>
+            계정 삭제는 앱 내 프로필 화면에서 직접 진행할 수 있으며, 추가 문의는 지원 페이지 또는 이메일로
+            접수할 수 있습니다.
+          </p>
+        </Section>
 
-        <section>
-          <h2 className="mb-3 text-base font-bold text-[var(--text-primary)]">5. 이용자 권리</h2>
-          <ul className="list-disc list-inside space-y-1">
-            <li>개인정보 열람, 정정, 삭제, 처리 정지 요구</li>
-            <li>동의 철회 및 회원 탈퇴</li>
-            <li>문의 채널을 통한 처리 요청</li>
-          </ul>
-        </section>
-
-        <section className="border-t border-[var(--border-card)] pt-6">
-          <p className="text-xs text-[var(--text-muted)]">문의: privacy@shortee.app</p>
-        </section>
+        <Section title="6. 문의">
+          <p>개인정보 및 서비스 문의: support@shortee.app</p>
+        </Section>
       </div>
     </div>
   )
