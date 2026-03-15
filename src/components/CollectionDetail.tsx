@@ -15,7 +15,9 @@ import {
 import { getCatalogVideoById } from '@/lib/catalog'
 import { createHiddenVideoIdSet } from '@/lib/videoVisibility'
 import { buildShortsUrl } from '@/lib/videoRoutes'
+import { t } from '@/lib/uiTranslations'
 import { useAdminStore } from '@/stores/useAdminStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 
 interface CollectionDetailViewProps {
@@ -31,6 +33,7 @@ interface GroupedVideo {
 
 export function CollectionDetailView({ collectionId }: CollectionDetailViewProps) {
   const router = useRouter()
+  const locale = useLocaleStore((state) => state.locale)
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)
   const hiddenVideos = useAdminStore((state) => state.hiddenVideos)
   const hiddenVideoIdSet = useMemo(() => createHiddenVideoIdSet(hiddenVideos), [hiddenVideos])
@@ -118,7 +121,7 @@ export function CollectionDetailView({ collectionId }: CollectionDetailViewProps
         <button
           onClick={handleBack}
           className="text-[var(--text-secondary)] transition-transform active:scale-90"
-          aria-label="뒤로"
+          aria-label={t('back', locale)}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -149,7 +152,7 @@ export function CollectionDetailView({ collectionId }: CollectionDetailViewProps
           </p>
         )}
         <p className="mt-3 text-xs text-[var(--text-muted)]">
-          {totalSentences}문장 / {totalVideos}영상
+          {totalSentences}{t('sentencesUnit', locale)} / {totalVideos}{t('videosUnit', locale)}
         </p>
       </SurfaceCard>
 
@@ -173,10 +176,10 @@ export function CollectionDetailView({ collectionId }: CollectionDetailViewProps
       {!loading && error && (
         <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] px-6 py-10 text-center shadow-[var(--card-shadow)]">
           <p className="text-sm font-medium text-[var(--text-primary)]">
-            컬렉션 데이터를 불러올 수 없습니다
+            {t('collectionLoadError', locale)}
           </p>
           <p className="mt-2 text-xs leading-relaxed text-[var(--text-secondary)]">
-            아직 준비 중이거나 네트워크 문제일 수 있습니다. 잠시 후 다시 시도해 주세요.
+            {t('collectionLoadErrorDescription', locale)}
           </p>
         </div>
       )}
@@ -215,7 +218,7 @@ export function CollectionDetailView({ collectionId }: CollectionDetailViewProps
                     {video.title}
                   </p>
                   <p className="mt-0.5 text-xs text-[var(--text-muted)]">
-                    {video.sentences.length}문장
+                    {video.sentences.length}{t('sentencesUnit', locale)}
                   </p>
                 </div>
               </div>
@@ -246,10 +249,10 @@ export function CollectionDetailView({ collectionId }: CollectionDetailViewProps
       {!loading && !error && groupedVideos.length === 0 && (
         <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] px-6 py-10 text-center shadow-[var(--card-shadow)]">
           <p className="text-sm font-medium text-[var(--text-primary)]">
-            이 컬렉션에 아직 영상이 없습니다
+            {t('collectionEmpty', locale)}
           </p>
           <p className="mt-2 text-xs leading-relaxed text-[var(--text-secondary)]">
-            곧 관련 영상이 추가될 예정입니다.
+            {t('collectionEmptyDescription', locale)}
           </p>
         </div>
       )}

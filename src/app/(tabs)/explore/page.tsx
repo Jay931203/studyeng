@@ -26,19 +26,18 @@ import { createHiddenVideoIdSet, filterHiddenVideos } from '@/lib/videoVisibilit
 import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useAdminStore } from '@/stores/useAdminStore'
 import { useLikeStore } from '@/stores/useLikeStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useRecommendationStore } from '@/stores/useRecommendationStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
-
-const categoryLabels: Record<CategoryId, string> = {
-  daily: '일상',
-  drama: '드라마',
-  movie: '영화',
-  entertainment: '예능',
-  music: '음악',
-  animation: '애니',
-}
+import {
+  t,
+  getCategoryLabels,
+  formatSeriesDescription,
+  formatShortsCount,
+  formatEpisodeCount,
+} from '@/lib/uiTranslations'
 
 interface ContinueSeriesCard {
   seriesItem: SeriesType
@@ -65,6 +64,8 @@ export default function ExplorePage() {
   const level = useOnboardingStore((state) => state.level)
   const recentVideoIds = useRecommendationStore((state) => state.recentVideoIds)
   const videoSignals = useRecommendationStore((state) => state.videoSignals)
+  const locale = useLocaleStore((state) => state.locale)
+  const categoryLabels = getCategoryLabels(locale)
   const {
     watchedEpisodes,
     completionCounts,
@@ -137,7 +138,7 @@ export default function ExplorePage() {
     () => filteredSeries.reduce((total, seriesItem) => total + seriesItem.episodeCount, 0),
     [filteredSeries],
   )
-  const seriesSectionDescription = `${filteredSeries.length}개 시리즈 · ${filteredSeriesVideoCount}개 영상`
+  const seriesSectionDescription = formatSeriesDescription(filteredSeries.length, filteredSeriesVideoCount, locale)
 
   const buildExploreUrl = useCallback(
     (seriesId: string | null) => {
@@ -536,7 +537,7 @@ export default function ExplorePage() {
               )}
             </div>
             <span className="truncate text-xs font-medium text-[var(--text-primary)]">
-              {user ? `${profileName}님` : 'PROFILE'}
+              {user ? profileName : 'PROFILE'}
             </span>
           </button>
         )}
@@ -549,7 +550,7 @@ export default function ExplorePage() {
               <div>
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="rounded-full bg-[var(--accent-glow)] px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.18em] text-[var(--accent-text)]">
-                    Recommended
+                    {t('recommendedBadge', locale)}
                   </span>
                   <span className="rounded-full border border-[var(--border-card)] px-2.5 py-1 text-[10px] font-medium uppercase tracking-[0.12em] text-[var(--text-secondary)]">
                     {categoryLabels[spotlightVideo.category]}
@@ -565,13 +566,13 @@ export default function ExplorePage() {
                   onClick={() => openShorts(spotlightVideo.id, spotlightVideo.seriesId)}
                   className="rounded-full border border-[var(--accent-primary)]/24 bg-[var(--accent-glow)] px-5 py-2.5 text-sm font-semibold text-[var(--text-primary)]"
                 >
-                  바로 보기
+                  {t('watchNow', locale)}
                 </button>
                 <button
                   onClick={scrollToSeriesSection}
                   className="rounded-full border border-[var(--border-card)] bg-[var(--bg-card)]/65 px-5 py-2.5 text-sm font-medium text-[var(--text-secondary)]"
                 >
-                  시리즈 보기
+                  {t('viewSeries', locale)}
                 </button>
               </div>
             </div>
@@ -614,7 +615,7 @@ export default function ExplorePage() {
 
       {continueSeries.length > 0 && (
         <section className="mb-8 overflow-hidden">
-          <SectionHeader title="이어보는 시리즈" />
+          <SectionHeader title={t('continueWatching', locale)} />
 
           <div className="flex gap-3 overflow-x-auto pb-2 no-scrollbar">
             {continueSeries.map((item) => (
@@ -642,7 +643,7 @@ export default function ExplorePage() {
                 </div>
                 <div className="px-3 py-2.5">
                   <p className="truncate text-xs font-medium text-[var(--text-primary)]">
-                    다음: {item.nextVideo.title}
+                    {t('next', locale)}: {item.nextVideo.title}
                   </p>
                 </div>
               </motion.button>
@@ -653,7 +654,7 @@ export default function ExplorePage() {
 
       {shuffledShorts.length > 0 && (
         <section className="mb-8 overflow-hidden">
-          <SectionHeader title="쇼츠" description={`${shuffledShorts.length}개의 영상`} />
+          <SectionHeader title={t('shorts', locale)} description={formatShortsCount(shuffledShorts.length, locale)} />
 
           <div className="flex gap-2.5 overflow-x-auto pb-2 no-scrollbar">
             {shuffledShorts.map((video) => (
@@ -685,7 +686,7 @@ export default function ExplorePage() {
       )}
 
       <section className="mb-8">
-        <SectionHeader title="추천 영상" />
+        <SectionHeader title={t('recommended', locale)} />
         <div className="grid grid-cols-2 gap-3 xl:grid-cols-4">
           {recommended.map((video) => (
             <VideoCard
@@ -699,7 +700,7 @@ export default function ExplorePage() {
 
       <section ref={seriesSectionRef} className="mb-8">
         <div className="mb-4">
-          <h2 className="text-2xl font-bold text-[var(--text-primary)]">시리즈</h2>
+          <h2 className="text-2xl font-bold text-[var(--text-primary)]">{t('series', locale)}</h2>
           <div className="mt-1 flex items-center justify-between gap-3">
             <p className="text-sm leading-relaxed text-[var(--text-secondary)]">
               {seriesSectionDescription}
@@ -713,7 +714,7 @@ export default function ExplorePage() {
               }}
               className="shrink-0 text-[11px] font-semibold uppercase tracking-[0.08em] text-[var(--accent-text)]"
             >
-              상세보기
+              {t('seeAll', locale)}
             </button>
           </div>
         </div>
@@ -727,7 +728,7 @@ export default function ExplorePage() {
                 : 'bg-[var(--bg-secondary)] text-[var(--text-secondary)]'
             }`}
           >
-            전체
+            {t('all', locale)}
           </button>
           {(Object.keys(categoryLabels) as CategoryId[]).map((categoryId) => (
             <button
@@ -774,7 +775,7 @@ export default function ExplorePage() {
                         {categoryLabels[seriesItem.category]}
                       </span>
                       <span className="rounded-full bg-black/40 px-2 py-0.5 text-[11px] text-white/80 backdrop-blur-sm">
-                        {seriesItem.episodeCount}개
+                        {formatEpisodeCount(seriesItem.episodeCount, locale)}
                       </span>
                     </div>
                   </div>
@@ -784,7 +785,7 @@ export default function ExplorePage() {
                     {seriesItem.title}
                   </p>
                   <div className="mt-2 flex items-center gap-2 text-xs text-[var(--text-secondary)]">
-                    <span>진행률 {getSeriesProgress(seriesItem.id, seriesItem.episodeCount)}%</span>
+                    <span>{t('progress', locale)} {getSeriesProgress(seriesItem.id, seriesItem.episodeCount)}%</span>
                   </div>
                 </div>
               </motion.button>

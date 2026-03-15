@@ -15,20 +15,20 @@ import {
   getCatalogVideosBySeries,
 } from '@/lib/catalog'
 import { getSeriesSearchTerms, matchesSearchText } from '@/lib/seriesSearch'
+import {
+  t,
+  getCategoryLabels,
+  formatSeriesDescription,
+  formatEpisodeCount,
+} from '@/lib/uiTranslations'
 import { createHiddenVideoIdSet, filterHiddenVideos } from '@/lib/videoVisibility'
 import { useAdminStore } from '@/stores/useAdminStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
 
-const categoryLabels: Record<CategoryId, string> = {
-  daily: '일상',
-  drama: '드라마',
-  movie: '영화',
-  entertainment: '예능',
-  music: '음악',
-  animation: '애니',
-}
+const categoryIds = ['daily', 'drama', 'movie', 'entertainment', 'music', 'animation']
 
 function isCategoryId(value: string | null): value is CategoryId {
-  return typeof value === 'string' && value in categoryLabels
+  return typeof value === 'string' && categoryIds.includes(value)
 }
 
 export default function ExploreSeriesPage() {
@@ -39,6 +39,8 @@ export default function ExploreSeriesPage() {
     isCategoryId(initialCategory) ? initialCategory : 'all',
   )
   const [query, setQuery] = useState('')
+  const locale = useLocaleStore((state) => state.locale)
+  const categoryLabels = getCategoryLabels(locale)
   const hiddenVideos = useAdminStore((state) => state.hiddenVideos)
   const hiddenVideoIdSet = useMemo(() => createHiddenVideoIdSet(hiddenVideos), [hiddenVideos])
 
@@ -113,7 +115,7 @@ export default function ExploreSeriesPage() {
             </svg>
           </button>
           <div className="min-w-0">
-            <h1 className="text-2xl font-bold text-[var(--text-primary)]">시리즈</h1>
+            <h1 className="text-2xl font-bold text-[var(--text-primary)]">{t('series', locale)}</h1>
           </div>
         </div>
 
@@ -130,7 +132,7 @@ export default function ExploreSeriesPage() {
               <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                 <div>
                   <p className="text-sm text-[var(--text-secondary)]">
-                    {filteredSeries.length}개 시리즈 · {visibleVideoCount}개 영상
+                    {formatSeriesDescription(filteredSeries.length, visibleVideoCount, locale)}
                   </p>
                 </div>
                 <div className="relative w-full sm:max-w-sm">
@@ -150,7 +152,7 @@ export default function ExploreSeriesPage() {
                     type="text"
                     value={query}
                     onChange={(event) => setQuery(event.target.value)}
-                    placeholder="시리즈 제목이나 키워드 검색"
+                    placeholder={t('searchSeriesPlaceholder', locale)}
                     className="w-full rounded-2xl border border-[var(--border-card)] bg-[var(--bg-primary)]/55 py-3 pl-11 pr-11 text-sm text-[var(--text-primary)] outline-none transition focus:border-[var(--accent-primary)] focus:ring-2 focus:ring-[rgba(var(--accent-primary-rgb),0.18)]"
                   />
                   {query && (
@@ -185,7 +187,7 @@ export default function ExploreSeriesPage() {
                         }
                   }
                 >
-                  전체
+                  {t('all', locale)}
                 </button>
                 {(Object.keys(categoryLabels) as CategoryId[]).map((categoryId) => (
                   <button
@@ -212,7 +214,7 @@ export default function ExploreSeriesPage() {
 
               {filteredSeries.length === 0 ? (
                 <div className="rounded-[24px] border border-dashed border-[var(--border-card)] px-5 py-16 text-center">
-                  <p className="text-sm text-[var(--text-secondary)]">조건에 맞는 시리즈가 없습니다.</p>
+                  <p className="text-sm text-[var(--text-secondary)]">{t('noSeriesMatch', locale)}</p>
                 </div>
               ) : (
                 <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
@@ -245,7 +247,7 @@ export default function ExploreSeriesPage() {
                                 {categoryLabels[seriesItem.category]}
                               </span>
                               <span className="rounded-full bg-black/40 px-2 py-0.5 text-[11px] text-white/80 backdrop-blur-sm">
-                                {seriesItem.episodeCount}개
+                                {formatEpisodeCount(seriesItem.episodeCount, locale)}
                               </span>
                             </div>
                           </div>

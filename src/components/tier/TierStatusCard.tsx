@@ -8,7 +8,49 @@ import {
   TIER_DISCOUNTS,
   type TierLevel,
 } from '@/stores/useTierStore'
+import { useLocaleStore, type SupportedLocale } from '@/stores/useLocaleStore'
 import { useEffect } from 'react'
+
+// ---------------------------------------------------------------------------
+// Translations
+// ---------------------------------------------------------------------------
+
+const T: Record<string, Record<SupportedLocale, string>> = {
+  discountActive: {
+    ko: '구독 {n}% 할인 적용 중',
+    ja: 'サブスク {n}% 割引適用中',
+    'zh-TW': '訂閱 {n}% 折扣套用中',
+    vi: 'Dang ap dung giam {n}% thue bao',
+  },
+  earnXpForDiscount: {
+    ko: 'XP를 쌓아 할인 혜택을 받으세요',
+    ja: 'XPを貯めて割引を受けましょう',
+    'zh-TW': '累積 XP 以獲得折扣',
+    vi: 'Tich XP de nhan uu dai giam gia',
+  },
+  xpToNextTier: {
+    ko: '다음 등급까지 {n} XP',
+    ja: '次のランクまで {n} XP',
+    'zh-TW': '距下一等級還需 {n} XP',
+    vi: 'Con {n} XP den hang tiep theo',
+  },
+  monthlyXp: {
+    ko: '이번 달 XP',
+    ja: '今月の XP',
+    'zh-TW': '本月 XP',
+    vi: 'XP thang nay',
+  },
+}
+
+function t(key: string, locale: SupportedLocale, vars?: Record<string, string | number>): string {
+  let str = T[key]?.[locale] ?? T[key]?.ko ?? key
+  if (vars) {
+    for (const [k, v] of Object.entries(vars)) {
+      str = str.replace(`{${k}}`, String(v))
+    }
+  }
+  return str
+}
 
 // ---------------------------------------------------------------------------
 // Tier color mapping (CSS-variable friendly, no emojis)
@@ -48,6 +90,7 @@ const TIER_COLORS: Record<TierLevel, { bg: string; text: string; bar: string }> 
 }
 
 export function TierStatusCard() {
+  const locale = useLocaleStore((s) => s.locale)
   const currentTier = useTierStore((s) => s.currentTier)
   const championLegacy = useTierStore((s) => s.championLegacy)
   const recalculateTier = useTierStore((s) => s.recalculateTier)
@@ -97,11 +140,11 @@ export function TierStatusCard() {
           </div>
           {discount > 0 ? (
             <p className="mt-0.5 text-xs text-[var(--text-muted)]">
-              구독 {discount}% 할인 적용 중
+              {t('discountActive', locale, { n: discount })}
             </p>
           ) : (
             <p className="mt-0.5 text-xs text-[var(--text-muted)]">
-              XP를 쌓아 할인 혜택을 받으세요
+              {t('earnXpForDiscount', locale)}
             </p>
           )}
         </div>
@@ -123,7 +166,7 @@ export function TierStatusCard() {
             />
           </div>
           <p className="mt-1.5 text-[11px] text-[var(--text-muted)]">
-            다음 등급까지 {nextTierXp.toLocaleString()} XP
+            {t('xpToNextTier', locale, { n: nextTierXp.toLocaleString() })}
           </p>
         </div>
       )}
@@ -148,7 +191,7 @@ export function TierStatusCard() {
 
       {/* Monthly XP */}
       <div className="mt-4 flex items-center justify-between rounded-xl bg-[var(--bg-primary)] px-3 py-2.5">
-        <span className="text-[11px] font-medium text-[var(--text-muted)]">이번 달 XP</span>
+        <span className="text-[11px] font-medium text-[var(--text-muted)]">{t('monthlyXp', locale)}</span>
         <span className="text-sm font-bold text-[var(--text-primary)]">
           {monthlyXp.toLocaleString()} XP
         </span>

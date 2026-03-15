@@ -9,17 +9,14 @@ import {
   type LearningFeedFilterValue,
 } from '@/components/LearningFeedFilter'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
-import { categories } from '@/data/seed-videos'
 import { getCatalogSeriesById, getCatalogVideoById } from '@/lib/catalog'
+import { getCategoryLabels } from '@/lib/uiTranslations'
 import { createHiddenVideoIdSet, filterHiddenVideos } from '@/lib/videoVisibility'
 import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useAdminStore } from '@/stores/useAdminStore'
 import { useLikeStore } from '@/stores/useLikeStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
-
-const categoryLabels = Object.fromEntries(
-  categories.map((category) => [category.id, category.label]),
-) as Record<string, string>
 
 export default function LikedPage() {
   const router = useRouter()
@@ -28,6 +25,8 @@ export default function LikedPage() {
   const toggleLike = useLikeStore((s) => s.toggleLike)
   const clearDeletedFlag = useWatchHistoryStore((s) => s.clearDeletedFlag)
   const viewCounts = useWatchHistoryStore((s) => s.viewCounts)
+  const locale = useLocaleStore((state) => state.locale)
+  const categoryLabels = getCategoryLabels(locale)
   const hiddenVideos = useAdminStore((state) => state.hiddenVideos)
   const hiddenVideoIdSet = useMemo(() => createHiddenVideoIdSet(hiddenVideos), [hiddenVideos])
 

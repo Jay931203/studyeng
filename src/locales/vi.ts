@@ -50,6 +50,9 @@ const vi: LocaleStrings = {
     episodeCount: (n: number) => `${n} tập`,
     progress: (pct: number) => `Tiến độ ${pct}%`,
     profileSuffix: '',
+    viewMore: 'Xem chi tiết',
+    seriesSearchPlaceholder: 'Tìm tiêu đề hoặc từ khóa series',
+    noMatchingSeries: 'Không có series phù hợp.',
   },
 
   categories: {
@@ -96,6 +99,32 @@ const vi: LocaleStrings = {
     challengeHint: 'Chọn rồi nhấn nút Challenge bên dưới để thử thách.',
     lowerLevelHint: 'Hạ cấp sẽ được áp dụng ngay lập tức.',
     mySummary: 'MY SUMMARY',
+  },
+
+  milestones: {
+    first_video_complete: { label: 'Hoàn thành video đầu tiên', description: 'Xem hết 1 video.' },
+    videos_10: { label: 'Hoàn thành 10 video', description: 'Xem hết 10 video khác nhau.' },
+    videos_50: { label: 'Hoàn thành 50 video', description: 'Xem hết 50 video khác nhau.' },
+    videos_100: { label: 'Hoàn thành 100 video', description: 'Xem hết 100 video khác nhau.' },
+    first_game_complete: { label: 'Hoàn thành trò chơi đầu tiên', description: 'Hoàn thành trò chơi học tập lần đầu.' },
+    games_20: { label: 'Hoàn thành 20 trò chơi', description: 'Hoàn thành 20 phiên trò chơi học tập.' },
+    streak_7: { label: 'Học liên tục 7 ngày', description: 'Học liên tục 7 ngày.' },
+    streak_30: { label: 'Học liên tục 30 ngày', description: 'Học liên tục 30 ngày.' },
+    first_level_challenge_pass: { label: 'Vượt qua thử thách cấp độ đầu tiên', description: 'Vượt qua 1 thử thách cấp độ.' },
+    tier_learner: { label: 'Đạt hạng Learner', description: 'Đạt hạng Learner.' },
+    tier_regular: { label: 'Đạt hạng Regular', description: 'Đạt hạng Regular.' },
+    tier_dedicated: { label: 'Đạt hạng Dedicated', description: 'Đạt hạng Dedicated.' },
+    tier_champion: { label: 'Đạt hạng Champion', description: 'Đạt hạng Champion.' },
+    tier_legend: { label: 'Đạt hạng Legend', description: 'Đạt hạng Legend.' },
+  } as Record<string, { label: string; description: string }>,
+
+  xpReasons: {
+    videoComplete: 'XP hoàn thành video',
+    gameProficiency: 'XP thành thạo trò chơi',
+    gameComplete: 'XP hoàn thành trò chơi',
+    streakBonus: 'Thưởng học liên tục',
+    milestoneClaim: (label: string) => `Nhận cột mốc · ${label}`,
+    defaultReward: 'Phần thưởng XP',
   },
 
   xp: {
@@ -349,6 +378,60 @@ const vi: LocaleStrings = {
 
   viewingStats: {
     dayLabels: ['CN', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7'],
+    totalViewed: 'T\u1ED5ng xem',
+    savedExpressions: 'C\u1EE5m t\u1EEB \u0111\u00E3 l\u01B0u',
+    streakLoop: 'Chu\u1ED7i li\u00EAn t\u1EE5c',
+    countItems: (n: number) => `${n}`,
+    countDays: (n: number) => `${n} ng\u00E0y`,
+    countTimes: (n: number) => `${n} l\u1EA7n`,
+    categoryPreference: 'S\u1EDF th\u00EDch th\u1EC3 lo\u1EA1i',
+    topSeries: (n: number) => `Series xem nhi\u1EC1u nh\u1EA5t Top ${n}`,
+    preferredDifficulty: '\u0110\u1ED9 kh\u00F3 \u01B0u th\u00EDch',
+    preferredSuffix: (label: string) => `Th\u00EDch ${label}`,
+    easy: 'D\u1EC5',
+    medium: 'Trung b\u00ECnh',
+    hard: 'Kh\u00F3',
+    weeklyActivity: 'Ho\u1EA1t \u0111\u1ED9ng tu\u1EA7n n\u00E0y',
+    categoryLabels: {
+      drama: 'Phim truy\u1EC1n h\u00ECnh',
+      movie: 'Phim',
+      daily: 'Cu\u1ED9c s\u1ED1ng',
+      entertainment: 'Gi\u1EA3i tr\u00ED',
+      music: '\u00C2m nh\u1EA1c',
+      animation: 'Ho\u1EA1t h\u00ECnh',
+    } as Record<string, string>,
+  },
+
+  xpHistory: {
+    title: 'L\u1ECBch s\u1EED XP',
+    totalXp: 'T\u1ED5ng XP hi\u1EC7n t\u1EA1i',
+    recordCount: 'S\u1ED1 b\u1EA3n ghi',
+    recordCountValue: (n: number) => `${n} m\u1EE5c`,
+    description: 'Hi\u1EC3n th\u1ECB l\u1ECBch s\u1EED nh\u1EADn v\u00E0 tr\u1EEB XP theo th\u1EE9 t\u1EF1 m\u1EDBi nh\u1EA5t. R\u1EE7i ro h\u1EA1ng do thi\u1EBFu ho\u1EA1t \u0111\u1ED9ng h\u00E0ng th\u00E1ng c\u00F3 th\u1EC3 xem t\u1EA1i ph\u1EA7n ho\u1EA1t \u0111\u1ED9ng h\u00E0ng th\u00E1ng trong chi ti\u1EBFt XP.',
+    allHistory: 'To\u00E0n b\u1ED9 l\u1ECBch s\u1EED',
+    emptyHistory: 'Ch\u01B0a c\u00F3 ho\u1EA1t \u0111\u1ED9ng XP n\u00E0o \u0111\u01B0\u1EE3c ghi nh\u1EADn.',
+    emptyFeed: 'Ch\u01B0a c\u00F3 bi\u1EBFn \u0111\u1ED9ng XP n\u00E0o \u0111\u01B0\u1EE3c ghi nh\u1EADn.',
+  },
+
+  dailyMissions: {
+    watchVideos: { title: 'Xem video', description: (n: number) => `Xem ${n} video h\u00F4m nay` },
+    playGame: { title: 'Th\u1EED th\u00E1ch game', description: 'Ch\u01A1i 1 v\u00E1n game' },
+    savePhrase: { title: 'L\u01B0u c\u1EE5m t\u1EEB', description: 'L\u01B0u 1 c\u1EE5m t\u1EEB' },
+  },
+
+  activity: {
+    monthlyActivity: 'Ho\u1EA1t \u0111\u1ED9ng h\u00E0ng th\u00E1ng',
+    currentBenefit: 'Quy\u1EC1n l\u1EE3i \u0111ang \u00E1p d\u1EE5ng',
+    monthlyActivityHint: (threshold: number) =>
+      `\u0110\u1EA1t ${threshold} XP th\u00E1ng n\u00E0y \u0111\u1EC3 kh\u00F4i ph\u1EE5c ngay quy\u1EC1n l\u1EE3i cao nh\u1EA5t \u0111\u00E3 kh\u00F3a.`,
+    monthlyRecord: 'L\u1ECBch s\u1EED th\u00E1ng',
+    thisMonthProgress: 'Ti\u1EBFn \u0111\u1ED9 th\u00E1ng n\u00E0y',
+    benefitMaintained: 'Th\u00E1ng \u0111\u1EA1t ti\u00EAu chu\u1EA9n duy tr\u00EC quy\u1EC1n l\u1EE3i',
+    benefitFailed: 'Th\u00E1ng kh\u00F4ng \u0111\u1EA1t ti\u00EAu chu\u1EA9n duy tr\u00EC quy\u1EC1n l\u1EE3i',
+    criteriaMet: '\u0110\u1EA1t',
+    criteriaNotMet: 'Ch\u01B0a \u0111\u1EA1t',
+    activityXp: 'XP ho\u1EA1t \u0111\u1ED9ng',
+    lockedTierAtTime: 'H\u1EA1ng \u0111\u00E3 kh\u00F3a l\u00FAc \u0111\u00F3',
   },
 }
 

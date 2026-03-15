@@ -2,11 +2,22 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { useLocaleStore, SupportedLocale } from '@/stores/useLocaleStore'
+
+const t: Record<string, Record<SupportedLocale, string>> = {
+  doubleTapToSave: {
+    ko: '두 번 탭해서 저장 또는 해제',
+    ja: 'ダブルタップで保存/解除',
+    'zh-TW': '雙擊儲存或取消',
+    vi: 'Cham hai lan de luu hoac bo',
+  },
+}
 
 const STORAGE_KEY = 'studyeng-seen-tips'
 
 export function DoubleTapTip() {
   const [visible, setVisible] = useState(false)
+  const locale = useLocaleStore((s) => s.locale)
 
   const dismiss = () => {
     setVisible(false)
@@ -63,7 +74,7 @@ export function DoubleTapTip() {
               className="whitespace-nowrap text-[11px] font-medium"
               style={{ color: 'var(--player-muted)' }}
             >
-              두 번 탭해서 저장 또는 해제
+              {t.doubleTapToSave[locale]}
             </span>
           </div>
         </motion.div>

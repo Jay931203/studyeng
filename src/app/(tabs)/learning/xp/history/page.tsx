@@ -4,11 +4,13 @@ import { useRouter } from 'next/navigation'
 import { XpHistoryFeed } from '@/components/learning/XpHistoryFeed'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
 import { useUserStore } from '@/stores/useUserStore'
+import { useTranslation } from '@/locales/useTranslation'
 
 export default function XpHistoryPage() {
   const router = useRouter()
   const xpHistory = useUserStore((state) => state.xpHistory)
   const totalXP = useUserStore((state) => state.getTotalXP())
+  const { t } = useTranslation()
 
   const handleBack = () => {
     if (typeof window !== 'undefined' && window.history.length > 1) {
@@ -36,36 +38,35 @@ export default function XpHistoryPage() {
             </svg>
           </button>
           <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-            XP 기록
+            {t('xpHistory.title')}
           </p>
         </div>
 
         <SurfaceCard className="p-5">
           <div className="grid gap-3 sm:grid-cols-2">
             <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)]/40 px-4 py-3">
-              <p className="text-xs text-[var(--text-muted)]">현재 총 XP</p>
+              <p className="text-xs text-[var(--text-muted)]">{t('xpHistory.totalXp')}</p>
               <p className="mt-2 text-lg font-semibold text-[var(--text-primary)]">
                 {totalXP.toLocaleString()} XP
               </p>
             </div>
             <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)]/40 px-4 py-3">
-              <p className="text-xs text-[var(--text-muted)]">기록 수</p>
+              <p className="text-xs text-[var(--text-muted)]">{t('xpHistory.recordCount')}</p>
               <p className="mt-2 text-lg font-semibold text-[var(--text-primary)]">
-                {xpHistory.length.toLocaleString()}개
+                {t('xpHistory.recordCountValue')(xpHistory.length)}
               </p>
             </div>
           </div>
           <p className="mt-4 text-sm text-[var(--text-secondary)]">
-            XP 적립과 차감 내역을 최신순으로 보여줍니다. 월간 활동 부족에 따른 등급 리스크는 XP 상세의
-            월간 활동 섹션에서 함께 확인할 수 있습니다.
+            {t('xpHistory.description')}
           </p>
         </SurfaceCard>
 
         <SurfaceCard className="p-5">
           <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-            전체 내역
+            {t('xpHistory.allHistory')}
           </p>
-          <XpHistoryFeed events={xpHistory} emptyCopy="아직 기록된 XP 활동이 없습니다." />
+          <XpHistoryFeed events={xpHistory} emptyCopy={t('xpHistory.emptyHistory')} />
         </SurfaceCard>
       </div>
     </AppPage>

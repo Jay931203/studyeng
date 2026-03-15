@@ -6,16 +6,14 @@ import { useMemo } from 'react'
 import { useRouter } from 'next/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
 import { SurfaceCard } from '@/components/ui/AppPage'
-import { categories, type VideoData } from '@/data/seed-videos'
+import { type VideoData } from '@/data/seed-videos'
 import { getCatalogSeriesById, getCatalogVideoById } from '@/lib/catalog'
+import { t as uiT, getCategoryLabels } from '@/lib/uiTranslations'
 import { createHiddenVideoIdSet } from '@/lib/videoVisibility'
 import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useAdminStore } from '@/stores/useAdminStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
-
-const categoryLabels = Object.fromEntries(
-  categories.map((category) => [category.id, category.label]),
-) as Record<string, string>
 
 function formatDateLabel(timestamp: number): string {
   const date = new Date(timestamp)
@@ -42,6 +40,8 @@ export function WatchHistory() {
   const router = useRouter()
   const { watchRecords, viewCounts, watchedVideoIds, removeRecord, clearDeletedFlag } =
     useWatchHistoryStore()
+  const locale = useLocaleStore((state) => state.locale)
+  const categoryLabels = getCategoryLabels(locale)
   const hiddenVideos = useAdminStore((state) => state.hiddenVideos)
   const hiddenVideoIdSet = useMemo(() => createHiddenVideoIdSet(hiddenVideos), [hiddenVideos])
 
@@ -107,7 +107,7 @@ export function WatchHistory() {
             href="/learning/history"
             className="text-[11px] font-medium uppercase tracking-wide text-[var(--text-muted)]"
           >
-            상세보기
+            {uiT('seeAll', locale)}
           </Link>
         )}
       </div>

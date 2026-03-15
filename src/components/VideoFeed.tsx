@@ -26,6 +26,7 @@ import { useRecommendationStore } from '@/stores/useRecommendationStore'
 import { useLevelStore } from '@/stores/useLevelStore'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useLocaleStore } from '@/stores/useLocaleStore'
+import { getLocaleStrings } from '@/locales/index'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { difficultyToCefrLevel } from '@/types/level'
@@ -520,7 +521,8 @@ export function VideoFeed({
         const videoXP = levelStore.awardVideoXP(currentVideo.id, 1.0)
         levelStore.recordVideoCompletion(currentVideo.id, 1.0)
         if (videoXP > 0) {
-          useUserStore.getState().gainXp(Math.round(videoXP), '영상 완료 XP')
+          const strings = getLocaleStrings(useLocaleStore.getState().locale)
+          useUserStore.getState().gainXp(Math.round(videoXP), strings.xpReasons.videoComplete)
         }
 
         const gameStore = useGameProgressStore.getState()

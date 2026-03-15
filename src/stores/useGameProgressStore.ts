@@ -2,6 +2,8 @@ import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { DAILY_SESSION_XP_CAP } from '@/lib/xp/sessionXp'
 import { getStreakBonusXP } from '@/lib/xp/streakBonus'
+import { getLocaleStrings } from '@/locales/index'
+import { useLocaleStore } from './useLocaleStore'
 import { useUserStore } from './useUserStore'
 
 interface LeitnerEntry {
@@ -11,6 +13,10 @@ interface LeitnerEntry {
 }
 
 const DAILY_GAME_XP_CAP = DAILY_SESSION_XP_CAP
+
+function getXpStrings() {
+  return getLocaleStrings(useLocaleStore.getState().locale).xpReasons
+}
 
 interface GameProgressState {
   leitner: { [exprId: string]: LeitnerEntry }
@@ -141,7 +147,7 @@ export const useGameProgressStore = create<GameProgressState>()(
 
         // Feed capped amount into visible reward XP
         if (actual > 0) {
-          useUserStore.getState().gainXp(Math.round(actual), '게임 숙련 XP')
+          useUserStore.getState().gainXp(Math.round(actual), getXpStrings().gameProficiency)
         }
 
         return actual
@@ -181,7 +187,7 @@ export const useGameProgressStore = create<GameProgressState>()(
         if (actual > 0) {
           set({ dailySessionXP: current + actual, dailySessionXPDate: today })
 
-          useUserStore.getState().gainXp(Math.round(actual), '게임 완료 XP')
+          useUserStore.getState().gainXp(Math.round(actual), getXpStrings().gameComplete)
         }
 
         return actual
@@ -209,7 +215,7 @@ export const useGameProgressStore = create<GameProgressState>()(
           monthlyStreakXPMonth: currentMonth,
         })
 
-        useUserStore.getState().gainXp(Math.round(actual), '연속 학습 보너스')
+        useUserStore.getState().gainXp(Math.round(actual), getXpStrings().streakBonus)
 
         return actual
       },

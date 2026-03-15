@@ -4,6 +4,7 @@ import type { ReactNode } from 'react'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { usePathname, useRouter, useSearchParams } from 'next/navigation'
+import { useTranslation } from '@/locales/useTranslation'
 import { Logo } from './Logo'
 
 type NavTabIcon = 'home' | 'play' | 'bookmark' | 'settings'
@@ -12,35 +13,15 @@ type FeedOption = 'series' | 'shorts'
 type NavTab = {
   href: string
   icon: NavTabIcon
-  label: string
-  description?: string
+  labelKey: 'home' | 'seriesAndShorts' | 'my' | 'settings'
+  descKey: 'homeDesc' | 'seriesAndShortsDesc' | 'myDesc' | 'settingsDesc'
 }
 
 const tabs: readonly NavTab[] = [
-  {
-    href: '/explore',
-    icon: 'home',
-    label: 'Home',
-    description: '탐색과 추천',
-  },
-  {
-    href: '/shorts',
-    icon: 'play',
-    label: 'Series & Shorts',
-    description: '시리즈와 쇼츠',
-  },
-  {
-    href: '/learning',
-    icon: 'bookmark',
-    label: 'My',
-    description: '저장 표현과 복습',
-  },
-  {
-    href: '/profile',
-    icon: 'settings',
-    label: 'Settings',
-    description: '계정과 설정',
-  },
+  { href: '/explore', icon: 'home', labelKey: 'home', descKey: 'homeDesc' },
+  { href: '/shorts', icon: 'play', labelKey: 'seriesAndShorts', descKey: 'seriesAndShortsDesc' },
+  { href: '/learning', icon: 'bookmark', labelKey: 'my', descKey: 'myDesc' },
+  { href: '/profile', icon: 'settings', labelKey: 'settings', descKey: 'settingsDesc' },
 ]
 
 const icons: Record<NavTabIcon, (active: boolean) => ReactNode> = {
@@ -258,8 +239,11 @@ export function LandscapeFeedSwitcher() {
 }
 
 export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
+  const { t } = useTranslation()
   const { pathname, isLegacyShortsAlias, activeFeed, feedAnimationKey, navigateToFeed, getTabHref } =
     useFeedNavigation()
+  const getTabLabel = (tab: NavTab) => t(`nav.${tab.labelKey}`) as string
+  const getTabDesc = (tab: NavTab) => t(`nav.${tab.descKey}`) as string
 
   if (mode === 'rail') {
     return (
@@ -276,7 +260,7 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
               <Link
                 key={tab.href}
                 href={getTabHref(tab)}
-                aria-label={tab.label}
+                aria-label={getTabLabel(tab)}
                 aria-current={active ? 'page' : undefined}
                 className={`flex w-full flex-col items-center justify-center gap-1 rounded-[20px] px-2 py-3 text-center transition-all ${
                   active
@@ -286,7 +270,7 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
               >
                 <div className="relative z-10">{icons[tab.icon](active)}</div>
                 <span className="whitespace-nowrap text-[10px] font-medium leading-none">
-                  {tab.label}
+                  {getTabLabel(tab)}
                 </span>
               </Link>
             )
@@ -307,7 +291,7 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
               <Link
                 key={tab.href}
                 href={getTabHref(tab)}
-                aria-label={tab.label}
+                aria-label={getTabLabel(tab)}
                 aria-current={active ? 'page' : undefined}
                 className={`rounded-2xl border px-4 py-3 transition-all ${
                   active
@@ -327,13 +311,11 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
                   </div>
                   <div className="min-w-0">
                     <p className="text-sm font-semibold text-[var(--text-primary)]">
-                      {tab.label}
+                      {getTabLabel(tab)}
                     </p>
-                    {tab.description ? (
-                      <p className="mt-0.5 text-xs text-[var(--text-muted)]">
-                        {tab.description}
-                      </p>
-                    ) : null}
+                    <p className="mt-0.5 text-xs text-[var(--text-muted)]">
+                      {getTabDesc(tab)}
+                    </p>
                   </div>
                 </div>
               </Link>
@@ -415,7 +397,7 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
                     }
                   : undefined
               }
-              aria-label={tab.label}
+              aria-label={getTabLabel(tab)}
               aria-current={active ? 'page' : undefined}
               className={`relative flex flex-col items-center justify-center gap-1 rounded-[20px] px-1 py-2 transition-all duration-200 active:scale-95 ${
                 active
@@ -443,7 +425,7 @@ export function BottomNav({ mode = 'bottom' }: BottomNavProps) {
                 className="whitespace-nowrap text-[10px] font-medium leading-none"
                 style={{ color: active ? 'var(--nav-active)' : 'var(--nav-inactive)' }}
               >
-                {tab.label}
+                {getTabLabel(tab)}
               </span>
             </Link>
           )

@@ -50,6 +50,9 @@ const ja: LocaleStrings = {
     episodeCount: (n: number) => `${n}本`,
     progress: (pct: number) => `進捗 ${pct}%`,
     profileSuffix: 'さん',
+    viewMore: '詳細',
+    seriesSearchPlaceholder: 'シリーズタイトルやキーワードで検索',
+    noMatchingSeries: '条件に合うシリーズがありません。',
   },
 
   categories: {
@@ -96,6 +99,32 @@ const ja: LocaleStrings = {
     challengeHint: '下のChallengeボタンで挑戦します。',
     lowerLevelHint: '低いレベルにはすぐ変更されます。',
     mySummary: 'MY SUMMARY',
+  },
+
+  milestones: {
+    first_video_complete: { label: '初の動画完走', description: '動画1本を最後まで視聴してください。' },
+    videos_10: { label: '動画10本完走', description: '異なる動画10本を最後まで視聴してください。' },
+    videos_50: { label: '動画50本完走', description: '異なる動画50本を最後まで視聴してください。' },
+    videos_100: { label: '動画100本完走', description: '異なる動画100本を最後まで視聴してください。' },
+    first_game_complete: { label: '初のゲーム完了', description: '学習ゲームを初めて完了してください。' },
+    games_20: { label: 'ゲーム20回完了', description: '学習ゲームセッションを20回完了してください。' },
+    streak_7: { label: '7日連続学習', description: '7日間連続で学習を続けてください。' },
+    streak_30: { label: '30日連続学習', description: '30日間連続で学習を続けてください。' },
+    first_level_challenge_pass: { label: '初のレベルチャレンジ通過', description: 'レベルチャレンジを1回通過してください。' },
+    tier_learner: { label: 'Learnerランク達成', description: 'Learnerランクに到達してください。' },
+    tier_regular: { label: 'Regularランク達成', description: 'Regularランクに到達してください。' },
+    tier_dedicated: { label: 'Dedicatedランク達成', description: 'Dedicatedランクに到達してください。' },
+    tier_champion: { label: 'Championランク達成', description: 'Championランクに到達してください。' },
+    tier_legend: { label: 'Legendランク達成', description: 'Legendランクに到達してください。' },
+  } as Record<string, { label: string; description: string }>,
+
+  xpReasons: {
+    videoComplete: '動画完了XP',
+    gameProficiency: 'ゲーム熟練XP',
+    gameComplete: 'ゲーム完了XP',
+    streakBonus: '連続学習ボーナス',
+    milestoneClaim: (label: string) => `マイルストーン受取 · ${label}`,
+    defaultReward: 'XP報酬',
   },
 
   xp: {
@@ -349,6 +378,60 @@ const ja: LocaleStrings = {
 
   viewingStats: {
     dayLabels: ['日', '月', '火', '水', '木', '金', '土'],
+    totalViewed: '累計視聴',
+    savedExpressions: '保存した表現',
+    streakLoop: '連続ループ',
+    countItems: (n: number) => `${n}個`,
+    countDays: (n: number) => `${n}日`,
+    countTimes: (n: number) => `${n}回`,
+    categoryPreference: 'カテゴリ傾向',
+    topSeries: (n: number) => `よく見たシリーズ Top ${n}`,
+    preferredDifficulty: '好みの難易度',
+    preferredSuffix: (label: string) => `${label} を好む`,
+    easy: 'やさしい',
+    medium: 'ふつう',
+    hard: 'むずかしい',
+    weeklyActivity: '今週の活動',
+    categoryLabels: {
+      drama: 'ドラマ',
+      movie: '映画',
+      daily: '日常',
+      entertainment: 'エンタメ',
+      music: '音楽',
+      animation: 'アニメ',
+    } as Record<string, string>,
+  },
+
+  xpHistory: {
+    title: 'XP 履歴',
+    totalXp: '現在の合計XP',
+    recordCount: '記録数',
+    recordCountValue: (n: number) => `${n}件`,
+    description: 'XPの獲得と差引の履歴を新しい順に表示します。月間活動不足によるランクリスクはXP詳細の月間活動セクションで確認できます。',
+    allHistory: '全履歴',
+    emptyHistory: 'まだ記録されたXP活動がありません。',
+    emptyFeed: 'まだ記録されたXP変動がありません。',
+  },
+
+  dailyMissions: {
+    watchVideos: { title: '動画視聴', description: (n: number) => `今日動画を${n}本見る` },
+    playGame: { title: 'ゲームチャレンジ', description: 'ゲームを1回プレイする' },
+    savePhrase: { title: '表現を保存', description: '表現を1つ保存する' },
+  },
+
+  activity: {
+    monthlyActivity: '月間活動',
+    currentBenefit: '現在の適用特典',
+    monthlyActivityHint: (threshold: number) =>
+      `今月${threshold} XPを達成するとロックされた最高特典にすぐ復帰できます。`,
+    monthlyRecord: '月別記録',
+    thisMonthProgress: '今月の進行状況',
+    benefitMaintained: '特典維持基準を達成した月',
+    benefitFailed: '特典維持基準を下回った月',
+    criteriaMet: '基準達成',
+    criteriaNotMet: '基準未達',
+    activityXp: '活動XP',
+    lockedTierAtTime: '当時のロックランク',
   },
 }
 

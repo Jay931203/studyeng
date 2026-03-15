@@ -1,5 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
+import { getLocaleStrings } from '@/locales/index'
+import { useLocaleStore } from './useLocaleStore'
 import { useUserStore } from './useUserStore'
 
 export type MilestoneMetric = 'videos' | 'games' | 'streak' | 'challenge' | 'tier'
@@ -168,7 +170,9 @@ export const useMilestoneStore = create<MilestoneState>()(
           },
         }))
 
-        useUserStore.getState().gainXp(def.xp, `마일스톤 수령 · ${def.label}`)
+        const strings = getLocaleStrings(useLocaleStore.getState().locale)
+        const milestoneLabel = strings.milestones[def.id]?.label ?? def.label
+        useUserStore.getState().gainXp(def.xp, strings.xpReasons.milestoneClaim(milestoneLabel))
 
         return def.xp
       },

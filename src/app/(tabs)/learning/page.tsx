@@ -10,8 +10,8 @@ import { SavedPhraseCard } from '@/components/SavedPhraseCard'
 import { WatchHistory } from '@/components/WatchHistory'
 import { GameLauncher } from '@/components/games/GameLauncher'
 import { AppPage, SurfaceCard } from '@/components/ui/AppPage'
-import { categories } from '@/data/seed-videos'
 import { getCatalogSeriesById, getCatalogVideoById } from '@/lib/catalog'
+import { getCategoryLabels } from '@/lib/uiTranslations'
 import { buildShortsUrl } from '@/lib/videoRoutes'
 import { useLikeStore } from '@/stores/useLikeStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
@@ -71,13 +71,10 @@ const TRANSLATIONS = {
   },
 } as const
 
-const categoryLabels = Object.fromEntries(
-  categories.map((category) => [category.id, category.label]),
-) as Record<string, string>
-
 export default function LearningPage() {
   const locale = useLocaleStore((s) => s.locale)
   const T = TRANSLATIONS[locale as keyof typeof TRANSLATIONS] ?? TRANSLATIONS.ko
+  const categoryLabels = getCategoryLabels(locale)
   const router = useRouter()
   const { phrases, removePhrase } = usePhraseStore()
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)

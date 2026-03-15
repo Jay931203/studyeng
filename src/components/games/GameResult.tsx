@@ -1,6 +1,28 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { useLocaleStore, SupportedLocale } from '@/stores/useLocaleStore'
+
+const t: Record<string, Record<SupportedLocale, string>> = {
+  correct: {
+    ko: '맞았어',
+    ja: '正解',
+    'zh-TW': '答對了',
+    vi: 'Chinh xac',
+  },
+  wrong: {
+    ko: '틀렸어',
+    ja: '不正解',
+    'zh-TW': '答錯了',
+    vi: 'Sai roi',
+  },
+  tapToContinue: {
+    ko: '탭해서 계속',
+    ja: 'タップして続ける',
+    'zh-TW': '點擊繼續',
+    vi: 'Cham de tiep tuc',
+  },
+}
 
 interface GameResultProps {
   correct: boolean
@@ -9,6 +31,8 @@ interface GameResultProps {
 }
 
 export function GameResult({ correct, xpEarned, onContinue }: GameResultProps) {
+  const locale = useLocaleStore((s) => s.locale)
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -42,7 +66,7 @@ export function GameResult({ correct, xpEarned, onContinue }: GameResultProps) {
           )}
         </div>
         <p className="mb-2 text-2xl font-bold text-[var(--text-primary)]">
-          {correct ? '맞았어' : '틀렸어'}
+          {correct ? t.correct[locale] : t.wrong[locale]}
         </p>
         {correct && xpEarned > 0 && (
           <motion.p
@@ -54,7 +78,7 @@ export function GameResult({ correct, xpEarned, onContinue }: GameResultProps) {
             +{xpEarned} XP
           </motion.p>
         )}
-        <p className="mt-6 text-sm text-[var(--text-muted)]">탭해서 계속</p>
+        <p className="mt-6 text-sm text-[var(--text-muted)]">{t.tapToContinue[locale]}</p>
       </motion.div>
     </motion.div>
   )

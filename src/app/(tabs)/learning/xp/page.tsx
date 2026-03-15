@@ -11,7 +11,7 @@ import {
   getBenefitStatusLine,
   getMilestoneSummary,
   getTodayIsoDate,
-  MONTHLY_ACTIVITY_EXPLAINER,
+  getMonthlyActivityExplainer,
 } from '@/lib/learningDashboard'
 import {
   formatWon,
@@ -30,6 +30,8 @@ import { useMilestoneStore } from '@/stores/useMilestoneStore'
 import { MONTHLY_ACTIVE_THRESHOLD, TIER_NAMES, type TierLevel, useTierStore } from '@/stores/useTierStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
+import { getLocaleStrings } from '@/locales'
 
 const TIER_COLORS: Record<TierLevel, { bg: string; text: string; bar: string }> = {
   0: {
@@ -46,6 +48,11 @@ const TIER_COLORS: Record<TierLevel, { bg: string; text: string; bar: string }> 
 
 export default function XPPage() {
   const router = useRouter()
+  const locale = useLocaleStore((s) => s.locale)
+  const strings = getLocaleStrings(locale)
+  const T = strings.xp
+  const tierT = strings.tier
+  const commonT = strings.common
   const totalXP = useUserStore((state) => state.getTotalXP())
   const streakDays = useUserStore((state) => state.streakDays)
   const xpHistory = useUserStore((state) => state.xpHistory)
@@ -91,6 +98,7 @@ export default function XPPage() {
       currentTier,
     },
     achievedMilestones,
+    locale,
   )
   const milestoneSummary = getMilestoneSummary(milestoneMissions)
   const { next, progress } = getTierProgress()
@@ -130,13 +138,13 @@ export default function XPPage() {
             </svg>
           </button>
           <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-            MY XP
+            {T.myXp}
           </p>
         </div>
 
         <SurfaceCard className="p-5">
           <p className="mb-4 text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-            혜택 상태
+            {tierT.benefitStatus}
           </p>
 
           <span className={`inline-flex rounded-full px-3 py-1 text-xs font-semibold ${tierColors.bg} ${tierColors.text}`}>
@@ -144,29 +152,29 @@ export default function XPPage() {
           </span>
 
           <p className="mt-3 text-sm text-[var(--text-secondary)]">
-            {getBenefitStatusLine(benefitSnapshot)}
+            {getBenefitStatusLine(benefitSnapshot, locale)}
           </p>
 
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
             <PriceInfoBlock
-              label="월간 최종가"
+              label={tierT.monthlyFinalPrice}
               original={formatWon(MONTHLY_REFERENCE_PRICE)}
               current={formatWon(monthlyPrice)}
-              detail={`총 ${monthlySavings}% 할인`}
+              detail={tierT.totalDiscount(monthlySavings)}
             />
             <PriceInfoBlock
-              label="연간 최종가"
+              label={tierT.yearlyFinalPrice}
               original={formatWon(YEARLY_REFERENCE_PRICE)}
               current={formatWon(yearlyPrice)}
-              detail={`총 ${yearlySavings}% 할인`}
+              detail={tierT.totalDiscount(yearlySavings)}
             />
           </div>
 
           <div className="mt-4 space-y-2.5">
             <InfoRow
-              label="이번 달 활동"
+              label={tierT.thisMonthActivity}
               value={`${benefitSnapshot.currentMonthXp.toLocaleString()} / ${MONTHLY_ACTIVE_THRESHOLD} XP`}
-              detail="이번 달 300 XP를 채우면 잠금된 최고 혜택으로 바로 복구할 수 있습니다."
+              detail={tierT.thisMonthActivityHint}
             />
           </div>
 
@@ -187,28 +195,28 @@ export default function XPPage() {
                 />
               </div>
               <p className="mt-1.5 text-[11px] text-[var(--text-muted)]">
-                다음 등급까지 {benefitSnapshot.nextTierXp.toLocaleString()} XP 남음
+                {T.nextTierRemaining(benefitSnapshot.nextTierXp.toLocaleString())}
               </p>
             </div>
           ) : (
             <p className="mt-4 text-[11px] text-[var(--text-muted)]">
-              최고 등급 혜택을 유지 중입니다. 이번 달 활동만 채우면 그대로 이어집니다.
+              {T.maxTierMaintained}
             </p>
           )}
         </SurfaceCard>
 
         <section className="grid gap-4 px-1 sm:grid-cols-2">
           <StatSection
-            title="총 XP"
+            title={T.totalXp}
             value={`${totalXP.toLocaleString()} XP`}
-            detail="게임, 영상, 출석 · 연속 학습, 마일스톤 수령 XP가 모두 누적됩니다."
+            detail={T.totalXpDetail}
           >
             <div className="mt-4 border-t border-[var(--border-card)] pt-4">
               <div className="space-y-2.5">
-                <InfoRow label="영상 누적 XP" value={`${videoXPTotal} XP`} />
-                <InfoRow label="마일스톤 누적 XP" value={`${milestoneXP} XP`} />
+                <InfoRow label={T.videoAccumulatedXp} value={`${videoXPTotal} XP`} />
+                <InfoRow label={T.milestoneAccumulatedXp} value={`${milestoneXP} XP`} />
                 <InfoRow
-                  label="이번 달 활동 XP"
+                  label={T.thisMonthActivityXp}
                   value={`${benefitSnapshot.currentMonthXp.toLocaleString()} XP`}
                 />
               </div>
@@ -216,31 +224,31 @@ export default function XPPage() {
           </StatSection>
 
           <StatSection
-            title="오늘 적립"
+            title={T.todayEarned}
             value={`+${todayTotal} XP`}
-            detail="오늘 실제로 적립된 XP 기준입니다."
+            detail={T.todayDetail}
           >
             <div className="mt-4 space-y-3.5">
               <ProgressRow
-                label="게임"
+                label={T.games}
                 value={`${gameXpToday}/${DAILY_SESSION_XP_CAP} XP`}
                 progress={gameXpPct}
-                detail="게임 완료 기준으로 적립됩니다."
+                detail={T.gameXpDetail}
               />
               <ProgressRow
-                label="영상"
+                label={T.videos}
                 value={`${dailyVideoXP}/${DAILY_VIDEO_XP_TARGET} XP`}
                 progress={videoXpPct}
-                detail="영상 완료 기준으로 적립됩니다."
+                detail={T.videoXpDetail}
               />
               <ProgressRow
-                label="출석 · 연속 학습"
+                label={T.attendance}
                 value={`${streakBonusToday}/${streakTarget} XP`}
                 progress={streakBonusPct}
                 detail={
                   streakDays > 0
-                    ? `오늘 첫 영상 또는 게임 완료 시 ${streakTarget} XP 적립 · 현재 ${streakDays}일 연속`
-                    : '오늘 첫 영상 또는 게임 완료 시 10 XP부터 시작됩니다.'
+                    ? T.streakDetailActive(streakTarget, streakDays)
+                    : T.streakDetailInactive
                 }
               />
             </div>
@@ -251,10 +259,10 @@ export default function XPPage() {
           <div className="flex items-center justify-between gap-3">
             <div>
               <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-                마일스톤
+                {T.milestones}
               </p>
               <p className="mt-2 text-sm text-[var(--text-secondary)]">
-                마일스톤 보상은 자동 적립이 아니라, 조건 달성 뒤 직접 수령하는 구조입니다.
+                {T.milestoneDetail}
               </p>
             </div>
             <button
@@ -262,28 +270,28 @@ export default function XPPage() {
               onClick={() => router.push('/learning/milestones')}
               className="text-[11px] font-medium text-[var(--text-muted)]"
             >
-              상세보기
+              {commonT.viewMore}
             </button>
           </div>
 
           <div className="mt-4 grid gap-3 sm:grid-cols-3">
-            <SummaryBox label="바로 수령 가능" value={String(milestoneSummary.readyCount)} />
-            <SummaryBox label="수령 완료" value={String(milestoneSummary.claimedCount)} />
-            <SummaryBox label="누적 수령 XP" value={`${milestoneSummary.claimedXp} XP`} />
+            <SummaryBox label={T.readyToClaim} value={String(milestoneSummary.readyCount)} />
+            <SummaryBox label={T.claimed} value={String(milestoneSummary.claimedCount)} />
+            <SummaryBox label={T.claimedXp} value={`${milestoneSummary.claimedXp} XP`} />
           </div>
         </SurfaceCard>
 
         <SurfaceCard className="p-5">
           <div className="mb-4 flex items-center justify-between gap-3">
             <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-              최근 XP 기록
+              {T.recentXpHistory}
             </p>
             <button
               type="button"
               onClick={() => router.push('/learning/xp/history')}
               className="text-[11px] font-medium text-[var(--text-muted)]"
             >
-              상세보기
+              {commonT.viewMore}
             </button>
           </div>
           <XpHistoryFeed events={xpHistory} limit={8} />
@@ -293,10 +301,10 @@ export default function XPPage() {
           <div className="mb-4 flex items-center justify-between gap-3">
             <div>
               <p className="text-[13px] font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-                이번 달 활동
+                {T.thisMonthActivity}
               </p>
               <p className="mt-2 text-sm text-[var(--text-secondary)]">
-                {MONTHLY_ACTIVITY_EXPLAINER}
+                {getMonthlyActivityExplainer(locale)}
               </p>
             </div>
             <button
@@ -304,13 +312,13 @@ export default function XPPage() {
               onClick={() => router.push('/learning/xp/activity')}
               className="text-[11px] font-medium text-[var(--text-muted)]"
             >
-              상세보기
+              {commonT.viewMore}
             </button>
           </div>
 
           <div className="space-y-2">
             <div className="flex items-center justify-between gap-3 text-sm">
-              <span className="text-[var(--text-secondary)]">이번 달 진행</span>
+              <span className="text-[var(--text-secondary)]">{T.thisMonthProgress}</span>
               <span className="font-medium text-[var(--text-primary)]">
                 {benefitSnapshot.currentMonthXp.toLocaleString()} / {MONTHLY_ACTIVE_THRESHOLD} XP
               </span>
@@ -325,8 +333,8 @@ export default function XPPage() {
             </div>
             <p className="text-[11px] text-[var(--text-muted)]">
               {benefitSnapshot.currentMonthActive
-                ? `${TIER_NAMES[benefitSnapshot.benefitTier]} 혜택 유지 기준을 이미 채웠습니다.`
-                : `${MONTHLY_ACTIVE_THRESHOLD - benefitSnapshot.currentMonthXp} XP 더 모으면 이번 달 기준을 채웁니다.`}
+                ? T.tierMaintained(TIER_NAMES[benefitSnapshot.benefitTier])
+                : T.xpRemaining(MONTHLY_ACTIVE_THRESHOLD - benefitSnapshot.currentMonthXp)}
             </p>
           </div>
         </SurfaceCard>

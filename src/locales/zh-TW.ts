@@ -50,6 +50,9 @@ const zhTW: LocaleStrings = {
     episodeCount: (n: number) => `${n} 集`,
     progress: (pct: number) => `進度 ${pct}%`,
     profileSuffix: '',
+    viewMore: '查看詳情',
+    seriesSearchPlaceholder: '搜尋系列標題或關鍵字',
+    noMatchingSeries: '沒有符合條件的系列。',
   },
 
   categories: {
@@ -96,6 +99,32 @@ const zhTW: LocaleStrings = {
     challengeHint: '選擇後點擊下方 Challenge 按鈕進行挑戰。',
     lowerLevelHint: '降低等級會立即變更。',
     mySummary: 'MY SUMMARY',
+  },
+
+  milestones: {
+    first_video_complete: { label: '首部影片完成', description: '觀看完1部影片。' },
+    videos_10: { label: '10部影片完成', description: '觀看完10部不同的影片。' },
+    videos_50: { label: '50部影片完成', description: '觀看完50部不同的影片。' },
+    videos_100: { label: '100部影片完成', description: '觀看完100部不同的影片。' },
+    first_game_complete: { label: '首次遊戲完成', description: '首次完成學習遊戲。' },
+    games_20: { label: '遊戲20次完成', description: '完成20次學習遊戲。' },
+    streak_7: { label: '連續學習7天', description: '連續7天學習。' },
+    streak_30: { label: '連續學習30天', description: '連續30天學習。' },
+    first_level_challenge_pass: { label: '首次等級挑戰通過', description: '通過1次等級挑戰。' },
+    tier_learner: { label: '達到 Learner 等級', description: '達到 Learner 等級。' },
+    tier_regular: { label: '達到 Regular 等級', description: '達到 Regular 等級。' },
+    tier_dedicated: { label: '達到 Dedicated 等級', description: '達到 Dedicated 等級。' },
+    tier_champion: { label: '達到 Champion 等級', description: '達到 Champion 等級。' },
+    tier_legend: { label: '達到 Legend 等級', description: '達到 Legend 等級。' },
+  } as Record<string, { label: string; description: string }>,
+
+  xpReasons: {
+    videoComplete: '影片完成 XP',
+    gameProficiency: '遊戲熟練 XP',
+    gameComplete: '遊戲完成 XP',
+    streakBonus: '連續學習獎勵',
+    milestoneClaim: (label: string) => `里程碑領取 · ${label}`,
+    defaultReward: 'XP 獎勵',
   },
 
   xp: {
@@ -349,6 +378,60 @@ const zhTW: LocaleStrings = {
 
   viewingStats: {
     dayLabels: ['日', '一', '二', '三', '四', '五', '六'],
+    totalViewed: '累計觀看',
+    savedExpressions: '已儲存表達',
+    streakLoop: '連續循環',
+    countItems: (n: number) => `${n}個`,
+    countDays: (n: number) => `${n}天`,
+    countTimes: (n: number) => `${n}次`,
+    categoryPreference: '類別偏好',
+    topSeries: (n: number) => `最常看的系列 Top ${n}`,
+    preferredDifficulty: '偏好難度',
+    preferredSuffix: (label: string) => `偏好${label}`,
+    easy: '簡單',
+    medium: '普通',
+    hard: '困難',
+    weeklyActivity: '本週活動',
+    categoryLabels: {
+      drama: '戲劇',
+      movie: '電影',
+      daily: '日常',
+      entertainment: '綜藝',
+      music: '音樂',
+      animation: '動畫',
+    } as Record<string, string>,
+  },
+
+  xpHistory: {
+    title: 'XP 記錄',
+    totalXp: '目前總 XP',
+    recordCount: '記錄數',
+    recordCountValue: (n: number) => `${n} 筆`,
+    description: '按時間倒序顯示 XP 獲取與扣除記錄。月度活動不足導致的等級風險請在 XP 詳情的月度活動區段查看。',
+    allHistory: '完整記錄',
+    emptyHistory: '尚無 XP 活動記錄。',
+    emptyFeed: '尚無 XP 變動記錄。',
+  },
+
+  dailyMissions: {
+    watchVideos: { title: '觀看影片', description: (n: number) => `今天觀看 ${n} 部影片` },
+    playGame: { title: '遊戲挑戰', description: '完成 1 場遊戲' },
+    savePhrase: { title: '儲存片語', description: '儲存 1 個片語' },
+  },
+
+  activity: {
+    monthlyActivity: '月度活動',
+    currentBenefit: '目前適用福利',
+    monthlyActivityHint: (threshold: number) =>
+      `本月達成${threshold} XP後可立即恢復已鎖定的最高福利。`,
+    monthlyRecord: '月度記錄',
+    thisMonthProgress: '本月進行狀況',
+    benefitMaintained: '達成福利維持標準的月份',
+    benefitFailed: '未達福利維持標準的月份',
+    criteriaMet: '達標',
+    criteriaNotMet: '未達標',
+    activityXp: '活動 XP',
+    lockedTierAtTime: '當時的鎖定等級',
   },
 }
 

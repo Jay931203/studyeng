@@ -4,11 +4,28 @@ import { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import { GameResult } from './GameResult'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
+import { useLocaleStore, type SupportedLocale } from '@/stores/useLocaleStore'
+import { getLocalizedSubtitle } from '@/lib/localeUtils'
+
+const TRANSLATIONS: Record<SupportedLocale, { prompt: string }> = {
+  ko: { prompt: '다음에 올 대사는?' },
+  ja: { prompt: '次のセリフは？' },
+  'zh-TW': { prompt: '下一句台詞是？' },
+  vi: { prompt: 'Cau thoai tiep theo la gi?' },
+}
+
+interface SubtitleSegment {
+  en: string
+  ko?: string
+  ja?: string
+  zhTW?: string
+  vi?: string
+}
 
 interface ListeningGameProps {
-  currentSubtitle: { en: string; ko: string }
-  nextSubtitle: { en: string; ko: string }
-  choicePool: { en: string; ko: string }[]
+  currentSubtitle: SubtitleSegment
+  nextSubtitle: SubtitleSegment
+  choicePool: SubtitleSegment[]
   onComplete: (correct: boolean) => void
 }
 
@@ -74,6 +91,8 @@ export function ListeningGame({
   choicePool,
   onComplete,
 }: ListeningGameProps) {
+  const locale = useLocaleStore((s) => s.locale)
+  const t = TRANSLATIONS[locale]
   const { currentSentence, choices } = useMemo(() => {
     const decoys = generateDecoys(nextSubtitle.en, currentSubtitle.en, choicePool)
     const shuffledChoices = shuffle([nextSubtitle.en, ...decoys])
@@ -103,7 +122,7 @@ export function ListeningGame({
   return (
     <div className="flex flex-col items-center justify-center h-full px-6">
       <p className="mb-3 text-xs uppercase tracking-wider text-[var(--text-muted)]">
-        다음에 올 대사는?
+        {t.prompt}
       </p>
 
       {/* Current sentence display */}
@@ -113,7 +132,7 @@ export function ListeningGame({
             {currentSentence}
           </p>
           <p className="mt-1.5 text-center text-xs text-[var(--text-muted)]">
-            {currentSubtitle.ko}
+            {getLocalizedSubtitle(currentSubtitle, locale)}
           </p>
         </div>
         <div className="flex justify-center mt-2">
@@ -142,7 +161,7 @@ export function ListeningGame({
             {nextSubtitle.en}
           </p>
           <p className="mt-1 text-xs text-[var(--text-muted)]">
-            {nextSubtitle.ko}
+            {getLocalizedSubtitle(nextSubtitle, locale)}
           </p>
         </motion.div>
       )}

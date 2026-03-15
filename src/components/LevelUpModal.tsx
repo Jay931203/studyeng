@@ -2,9 +2,26 @@
 
 import { motion, AnimatePresence } from 'framer-motion'
 import { useUserStore } from '@/stores/useUserStore'
+import { useLocaleStore, SupportedLocale } from '@/stores/useLocaleStore'
+
+const t: Record<string, Record<SupportedLocale, string>> = {
+  levelUp: {
+    ko: '레벨 업',
+    ja: 'レベルアップ',
+    'zh-TW': '升級',
+    vi: 'Len cap',
+  },
+  tapToContinue: {
+    ko: '탭해서 계속',
+    ja: 'タップして続ける',
+    'zh-TW': '點擊繼續',
+    vi: 'Cham de tiep tuc',
+  },
+}
 
 export function LevelUpModal() {
   const { level, showLevelUp, dismissLevelUp } = useUserStore()
+  const locale = useLocaleStore((s) => s.locale)
 
   return (
     <AnimatePresence>
@@ -30,9 +47,9 @@ export function LevelUpModal() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
               </svg>
             </div>
-            <p className="text-white text-2xl font-bold mb-3">레벨 업</p>
+            <p className="text-white text-2xl font-bold mb-3">{t.levelUp[locale]}</p>
             <p className="text-[var(--accent-text)] text-5xl font-black">{level}</p>
-            <p className="text-gray-500 text-sm mt-6">탭해서 계속</p>
+            <p className="text-gray-500 text-sm mt-6">{t.tapToContinue[locale]}</p>
           </motion.div>
         </motion.div>
       )}

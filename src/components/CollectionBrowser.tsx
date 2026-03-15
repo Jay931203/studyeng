@@ -9,9 +9,12 @@ import {
   getCollectionsByGroup,
   type CollectionSummary,
 } from '@/lib/collections'
+import { t } from '@/lib/uiTranslations'
+import { useLocaleStore } from '@/stores/useLocaleStore'
 
 export function CollectionBrowser() {
   const router = useRouter()
+  const locale = useLocaleStore((state) => state.locale)
   const groups = useMemo(() => getCollectionGroups(), [])
   const [activeGroup, setActiveGroup] = useState(groups[0]?.id ?? 'situation')
 
@@ -28,7 +31,7 @@ export function CollectionBrowser() {
 
   return (
     <section className="mb-8">
-      <SectionHeader title="컬렉션" />
+      <SectionHeader title={t('collections', locale)} />
 
       {/* Group tabs */}
       <div className="mb-4 flex gap-2 overflow-x-auto pb-1 no-scrollbar">
@@ -71,9 +74,9 @@ export function CollectionBrowser() {
                 {collection.name}
               </p>
               <div className="mt-2 flex items-center gap-2 text-xs text-[var(--text-secondary)]">
-                <span>{collection.sentenceCount}문장</span>
+                <span>{collection.sentenceCount}{t('sentencesUnit', locale)}</span>
                 <span className="text-[var(--text-muted)]">/</span>
-                <span>{collection.videoCount}영상</span>
+                <span>{collection.videoCount}{t('videosUnit', locale)}</span>
               </div>
             </motion.button>
           ))}
@@ -81,10 +84,10 @@ export function CollectionBrowser() {
       ) : (
         <div className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-card)] px-6 py-10 text-center shadow-[var(--card-shadow)]">
           <p className="text-sm font-medium text-[var(--text-primary)]">
-            태그 데이터 준비 중
+            {t('tagDataPreparing', locale)}
           </p>
           <p className="mt-2 text-xs leading-relaxed text-[var(--text-secondary)]">
-            상황, 분위기, 문법 등 다양한 컬렉션이 곧 추가됩니다.
+            {t('tagDataPreparingDescription', locale)}
           </p>
         </div>
       )}

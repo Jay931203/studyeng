@@ -5,7 +5,56 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useLevelStore } from '@/stores/useLevelStore'
 import { useOnboardingStore } from '@/stores/useOnboardingStore'
 import { useFamiliarityStore } from '@/stores/useFamiliarityStore'
+import { useLocaleStore, SupportedLocale } from '@/stores/useLocaleStore'
 import { displayLevelName } from '@/types/level'
+
+const t = {
+  somethingsChanging: {
+    ko: "Something's changing...",
+    ja: "Something's changing...",
+    'zh-TW': "Something's changing...",
+    vi: "Something's changing...",
+  },
+  absorbedNaturally: {
+    ko: '어느새 흡수하고 있었네요.',
+    ja: 'いつの間にか吸収していましたね。',
+    'zh-TW': '不知不覺中已經吸收了。',
+    vi: 'Ban da tiep thu mot cach tu nhien.',
+  },
+  expressionsLearned: (count: number, locale: SupportedLocale) => {
+    const templates: Record<SupportedLocale, (n: number) => string> = {
+      ko: (n) => `${n}개 표현을 자연스럽게 익혔어요`,
+      ja: (n) => `${n}個の表現を自然に身につけました`,
+      'zh-TW': (n) => `自然學會了 ${n} 個表達`,
+      vi: (n) => `Da hoc duoc ${n} cau mot cach tu nhien`,
+    }
+    return templates[locale](count)
+  },
+  fullyMastered: (count: number, locale: SupportedLocale) => {
+    const templates: Record<SupportedLocale, (n: number) => string> = {
+      ko: (n) => `그 중 ${n}개는 완전히 내 것이 됐어요`,
+      ja: (n) => `そのうち${n}個は完全に自分のものになりました`,
+      'zh-TW': (n) => `其中 ${n} 個已經完全掌握了`,
+      vi: (n) => `Trong do ${n} cau da thanh thao hoan toan`,
+    }
+    return templates[locale](count)
+  },
+  keepIt: {
+    ko: 'Keep it',
+    ja: 'Keep it',
+    'zh-TW': 'Keep it',
+    vi: 'Keep it',
+  },
+  stayAt: (label: string, locale: SupportedLocale) => {
+    const templates: Record<SupportedLocale, (l: string) => string> = {
+      ko: (l) => `Stay at ${l}`,
+      ja: (l) => `Stay at ${l}`,
+      'zh-TW': (l) => `Stay at ${l}`,
+      vi: (l) => `Stay at ${l}`,
+    }
+    return templates[locale](label)
+  },
+} as const
 
 export function LevelUpCelebration() {
   const pendingLevelUp = useLevelStore((s) => s.pendingLevelUp)
@@ -15,6 +64,7 @@ export function LevelUpCelebration() {
   const setLevel = useOnboardingStore((s) => s.setLevel)
   const currentLevel = useOnboardingStore((s) => s.level)
   const familiarEntries = useFamiliarityStore((s) => s.entries)
+  const locale = useLocaleStore((s) => s.locale)
 
   const familiarCount = Object.values(familiarEntries).filter((e) => e.count >= 3).length
   const totalSwipedCount = Object.keys(familiarEntries).length
@@ -56,7 +106,7 @@ export function LevelUpCelebration() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.5 }}
           >
-            Something's changing...
+            {t.somethingsChanging[locale]}
           </motion.p>
 
           {/* Level transition */}
@@ -100,7 +150,7 @@ export function LevelUpCelebration() {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.4, duration: 0.5 }}
           >
-            어느새 흡수하고 있었네요.
+            {t.absorbedNaturally[locale]}
           </motion.p>
 
           {/* Stats */}
@@ -119,16 +169,16 @@ export function LevelUpCelebration() {
                 className="text-lg font-bold"
                 style={{ color: 'var(--text-primary)' }}
               >
-                {totalSwipedCount}개
+                {totalSwipedCount}
               </span>
-              {' '}표현을 자연스럽게 익혔어요
+              {' '}{t.expressionsLearned(totalSwipedCount, locale)}
             </p>
             {familiarCount > 0 && (
               <p
                 className="mt-1 text-xs"
                 style={{ color: 'var(--text-muted)' }}
               >
-                그 중 {familiarCount}개는 완전히 내 것이 됐어요
+                {t.fullyMastered(familiarCount, locale)}
               </p>
             )}
           </motion.div>
@@ -167,7 +217,7 @@ export function LevelUpCelebration() {
               }}
               whileTap={{ scale: 0.97 }}
             >
-              Keep it
+              {t.keepIt[locale]}
             </motion.button>
             <button
               type="button"
@@ -175,7 +225,7 @@ export function LevelUpCelebration() {
               className="w-full rounded-2xl py-3 text-xs font-medium"
               style={{ color: 'var(--text-muted)' }}
             >
-              Stay at {fromLabel}
+              {t.stayAt(fromLabel, locale)}
             </button>
           </motion.div>
         </div>

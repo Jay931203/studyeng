@@ -2,8 +2,10 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
-import { categories, type VideoData } from '@/data/seed-videos'
+import { type VideoData } from '@/data/seed-videos'
 import { getCatalogSeriesById } from '@/lib/catalog'
+import { getCategoryLabels } from '@/lib/uiTranslations'
+import { useLocaleStore } from '@/stores/useLocaleStore'
 
 interface VideoCardProps {
   video: VideoData
@@ -11,8 +13,9 @@ interface VideoCardProps {
 }
 
 export function VideoCard({ video, onClick }: VideoCardProps) {
-  const categoryLabel =
-    categories.find((category) => category.id === video.category)?.label ?? video.category
+  const locale = useLocaleStore((state) => state.locale)
+  const categoryLabelsMap = getCategoryLabels(locale)
+  const categoryLabel = categoryLabelsMap[video.category] ?? video.category
   const seriesTitle = video.seriesId ? getCatalogSeriesById(video.seriesId)?.title : null
   const metaLabel = video.seriesId
     ? video.episodeNumber

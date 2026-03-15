@@ -5,6 +5,8 @@ import { MetricCard, SurfaceCard } from '@/components/ui/AppPage'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
 import { usePhraseStore } from '@/stores/usePhraseStore'
 import { useUserStore } from '@/stores/useUserStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
+import { getLocaleStrings } from '@/locales'
 import {
   seedVideos,
   series as allSeries,
@@ -13,10 +15,10 @@ import {
 
 // ─── Helpers ──────────────────────────────────────────────
 
-function getDayLabel(daysAgo: number): string {
+function getDayLabel(daysAgo: number, dayLabels: string[]): string {
   const d = new Date()
   d.setDate(d.getDate() - daysAgo)
-  return ['일', '월', '화', '수', '목', '금', '토'][d.getDay()]
+  return dayLabels[d.getDay()]
 }
 
 function CategoryBar({
@@ -58,10 +60,12 @@ function SeriesRow({
   rank,
   title,
   count,
+  countTimesLabel,
 }: {
   rank: number
   title: string
   count: number
+  countTimesLabel: string
 }) {
   return (
     <div className="flex items-center gap-3 py-1.5">
@@ -72,7 +76,7 @@ function SeriesRow({
         {title}
       </span>
       <span className="flex-shrink-0 text-xs tabular-nums text-[var(--text-muted)]">
-        {count}회
+        {countTimesLabel}
       </span>
     </div>
   )
@@ -146,6 +150,8 @@ function WeekBar({
 // ─── Main Component ───────────────────────────────────────
 
 export function ViewingStats() {
+  const locale = useLocaleStore((s) => s.locale)
+  const T = getLocaleStrings(locale).viewingStats
   const viewCounts = useWatchHistoryStore((s) => s.viewCounts)
   const watchRecords = useWatchHistoryStore((s) => s.watchRecords)
   const watchedVideoIds = useWatchHistoryStore((s) => s.watchedVideoIds)
@@ -185,13 +191,13 @@ export function ViewingStats() {
     return categories
       .map((cat) => ({
         id: cat.id,
-        label: cat.label,
+        label: T.categoryLabels[cat.id] ?? cat.id,
         count: counts[cat.id] ?? 0,
         percent: Math.round(((counts[cat.id] ?? 0) / total) * 100),
       }))
       .filter((c) => c.count > 0)
       .sort((a, b) => b.count - a.count)
-  }, [watchedVideoIds, viewCounts, videoMap, totalWatched])
+  }, [watchedVideoIds, viewCounts, videoMap, totalWatched, T.categoryLabels])
 
   // ── Top 5 series ──
   const topSeries = useMemo(() => {
@@ -250,7 +256,7 @@ export function ViewingStats() {
       const dayEnd = new Date(dayStart)
       dayEnd.setDate(dayEnd.getDate() + 1)
       return {
-        label: getDayLabel(daysAgo),
+        label: getDayLabel(daysAgo, T.dayLabels),
         start: dayStart.getTime(),
         end: dayEnd.getTime(),
         count: 0,
@@ -268,15 +274,17 @@ export function ViewingStats() {
 
     const maxCount = Math.max(...days.map((d) => d.count), 1)
     return { days, maxCount }
-  }, [statsNow, watchRecords])
+  }, [statsNow, watchRecords, T.dayLabels])
 
   // ── Find preferred difficulty label ──
-  const preferredDifficulty = useMemo(() => {
+  const preferredDifficultyKey = useMemo(() => {
     const { easy, medium, hard } = difficultyStats
-    if (easy >= medium && easy >= hard) return '쉬움'
-    if (medium >= easy && medium >= hard) return '보통'
-    return '어려움'
+    if (easy >= medium && easy >= hard) return 'easy' as const
+    if (medium >= easy && medium >= hard) return 'medium' as const
+    return 'hard' as const
   }, [difficultyStats])
+
+  const preferredDifficultyLabel = T[preferredDifficultyKey]
 
   // Don't render if there's no data at all
   if (totalWatched === 0) return null
@@ -286,11 +294,11 @@ export function ViewingStats() {
       <div className="flex flex-col gap-3">
         <SurfaceCard className="rounded-[28px] p-4">
           <div className="grid grid-cols-3 gap-3">
-            <MetricCard label="누적 시청" value={`${totalWatched}개`} className="text-center" />
-            <MetricCard label="저장 표현" value={`${phrases.length}개`} className="text-center" />
+            <MetricCard label={T.totalViewed} value={T.countItems(totalWatched)} className="text-center" />
+            <MetricCard label={T.savedExpressions} value={T.countItems(phrases.length)} className="text-center" />
             <MetricCard
-              label="연속 루프"
-              value={`${Math.max(streakDays, totalViews > 0 ? 1 : 0)}일`}
+              label={T.streakLoop}
+              value={T.countDays(Math.max(streakDays, totalViews > 0 ? 1 : 0))}
               className="text-center"
             />
           </div>
@@ -299,7 +307,7 @@ export function ViewingStats() {
         {categoryStats.length > 0 && (
           <SurfaceCard className="rounded-[28px] p-4">
             <h3 className="mb-3 text-sm font-semibold text-[var(--text-primary)]">
-              카테고리 선호도
+              {T.categoryPreference}
             </h3>
             <div className="flex flex-col gap-2">
               {categoryStats.map((cat, i) => (
@@ -317,7 +325,7 @@ export function ViewingStats() {
         {topSeries.length > 0 && (
           <SurfaceCard className="rounded-[28px] p-4">
             <h3 className="mb-2 text-sm font-semibold text-[var(--text-primary)]">
-              많이 본 시리즈 Top {Math.min(topSeries.length, 5)}
+              {T.topSeries(Math.min(topSeries.length, 5))}
             </h3>
             <div className="flex flex-col">
               {topSeries.map((s, i) => (
@@ -326,6 +334,7 @@ export function ViewingStats() {
                   rank={i + 1}
                   title={s.title}
                   count={s.count}
+                  countTimesLabel={T.countTimes(s.count)}
                 />
               ))}
             </div>
@@ -335,34 +344,34 @@ export function ViewingStats() {
         <SurfaceCard className="rounded-[28px] p-4">
           <div className="mb-3 flex items-baseline justify-between">
             <h3 className="text-sm font-semibold text-[var(--text-primary)]">
-              선호 난이도
+              {T.preferredDifficulty}
             </h3>
             <span className="text-xs text-[var(--accent-text)]">
-              {preferredDifficulty} 선호
+              {T.preferredSuffix(preferredDifficultyLabel)}
             </span>
           </div>
           <div className="grid grid-cols-3 gap-3">
             <DifficultySegment
-              label="쉬움"
+              label={T.easy}
               percent={difficultyStats.easy}
-              isActive={preferredDifficulty === '쉬움'}
+              isActive={preferredDifficultyKey === 'easy'}
             />
             <DifficultySegment
-              label="보통"
+              label={T.medium}
               percent={difficultyStats.medium}
-              isActive={preferredDifficulty === '보통'}
+              isActive={preferredDifficultyKey === 'medium'}
             />
             <DifficultySegment
-              label="어려움"
+              label={T.hard}
               percent={difficultyStats.hard}
-              isActive={preferredDifficulty === '어려움'}
+              isActive={preferredDifficultyKey === 'hard'}
             />
           </div>
         </SurfaceCard>
 
         <SurfaceCard className="rounded-[28px] p-4">
           <h3 className="mb-3 text-sm font-semibold text-[var(--text-primary)]">
-            이번 주 활동
+            {T.weeklyActivity}
           </h3>
           <div className="grid grid-cols-7 gap-1">
             {weeklyActivity.days.map((day, i) => (

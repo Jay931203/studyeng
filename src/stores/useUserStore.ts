@@ -1,7 +1,9 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
 import { shouldUpdateStreak } from '@/lib/gamification'
+import { getLocaleStrings } from '@/locales/index'
 import { debouncedSyncProfile } from '@/lib/supabase/sync'
+import { useLocaleStore } from './useLocaleStore'
 
 export interface XpHistoryEvent {
   id: string
@@ -46,7 +48,10 @@ export const useUserStore = create<UserState>()(persist((set, get) => ({
     debouncedSyncProfile()
   },
 
-  gainXp: (amount, reason = 'XP 보상') => {
+  gainXp: (amount, reason) => {
+    if (!reason) {
+      reason = getLocaleStrings(useLocaleStore.getState().locale).xpReasons.defaultReward
+    }
     if (amount <= 0) return
     const { level, xp, totalXpEarned, xpHistory } = get()
     const xpForLevel = getXpForLevel(level)

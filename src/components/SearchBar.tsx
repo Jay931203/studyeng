@@ -2,14 +2,13 @@
 
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { categories } from '@/data/seed-videos'
 import { searchVideos, type SearchResult } from '@/lib/search'
 import { createHiddenVideoIdSet } from '@/lib/videoVisibility'
 import { buildShortsUrl } from '@/lib/videoRoutes'
+import { t, getCategoryLabels, formatResultsCount } from '@/lib/uiTranslations'
 import { useAdminStore } from '@/stores/useAdminStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
-
-const categoryLabels = Object.fromEntries(categories.map((category) => [category.id, category.label]))
 
 export function SearchBar() {
   const [query, setQuery] = useState('')
@@ -21,6 +20,8 @@ export function SearchBar() {
   const searchIdRef = useRef(0)
   const router = useRouter()
   const clearDeletedFlag = useWatchHistoryStore((state) => state.clearDeletedFlag)
+  const locale = useLocaleStore((state) => state.locale)
+  const categoryLabels = getCategoryLabels(locale)
   const hiddenVideos = useAdminStore((state) => state.hiddenVideos)
   const hiddenVideoIdSet = useMemo(() => createHiddenVideoIdSet(hiddenVideos), [hiddenVideos])
 
@@ -63,7 +64,7 @@ export function SearchBar() {
   return (
     <section className="relative">
       <label htmlFor="video-search" className="sr-only">
-        표현 또는 주제 검색
+        {t('searchExpressionLabel', locale)}
       </label>
       <div className="relative">
         <svg
@@ -96,12 +97,12 @@ export function SearchBar() {
             if (blurTimerRef.current) clearTimeout(blurTimerRef.current)
             blurTimerRef.current = window.setTimeout(() => setFocused(false), 200)
           }}
-          placeholder="표현, 장면, 상황 검색"
+          placeholder={t('searchPlaceholder', locale)}
           className="w-full rounded-2xl border border-[var(--border-card)] bg-[var(--bg-primary)]/55 py-3 pl-11 pr-11 text-sm text-[var(--text-primary)] outline-none transition focus:border-[var(--accent-primary)] focus:ring-2 focus:ring-[rgba(var(--accent-primary-rgb),0.18)]"
         />
         {normalizedQuery.length > 0 && (
           <span className="absolute right-10 top-1/2 -translate-y-1/2 rounded-full bg-[var(--bg-secondary)] px-2.5 py-1 text-[11px] font-medium text-[var(--text-secondary)]">
-            {results.length}개 결과
+            {formatResultsCount(results.length, locale)}
           </span>
         )}
         {query && (
@@ -111,7 +112,7 @@ export function SearchBar() {
               setResults([])
             }}
             className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full p-1 text-[var(--text-muted)] transition hover:bg-[var(--bg-secondary)]"
-            aria-label="검색어 지우기"
+            aria-label={t('clearSearch', locale)}
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4">
               <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
@@ -142,7 +143,7 @@ export function SearchBar() {
                     <p className="mt-1 truncate text-xs text-[var(--text-secondary)]">
                       {result.matchedPhrase
                         ? `"${result.matchedPhrase.en}"`
-                        : '이 장면으로 바로 이동'}
+                        : t('goToScene', locale)}
                     </p>
                   </div>
                   <span className="rounded-full bg-[var(--bg-secondary)] px-2.5 py-1 text-[10px] font-medium text-[var(--text-secondary)]">
@@ -154,10 +155,10 @@ export function SearchBar() {
           ) : (
             <div className="rounded-2xl bg-[var(--bg-card)]/40 px-4 py-5 text-center">
               <p className="text-sm font-medium text-[var(--text-primary)]">
-                아직 맞는 장면이 없습니다
+                {t('noResults', locale)}
               </p>
               <p className="mt-1 text-xs leading-relaxed text-[var(--text-secondary)]">
-                다른 키워드로 좁혀 보거나 빠른 키워드를 눌러보세요.
+                {t('noResultsHint', locale)}
               </p>
             </div>
           )}
