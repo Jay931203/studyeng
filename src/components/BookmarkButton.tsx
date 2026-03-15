@@ -2,6 +2,12 @@
 
 import { motion } from 'framer-motion'
 import { useBookmarkStore } from '@/stores/useBookmarkStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
+
+const T = {
+  unbookmark: { ko: '북마크 해제', ja: 'ブックマーク解除', 'zh-TW': '取消書籤', vi: 'Bo danh dau' },
+  bookmark: { ko: '북마크', ja: 'ブックマーク', 'zh-TW': '書籤', vi: 'Danh dau' },
+} as const
 
 interface BookmarkButtonProps {
   videoId: string
@@ -9,6 +15,7 @@ interface BookmarkButtonProps {
 
 export function BookmarkButton({ videoId }: BookmarkButtonProps) {
   const { toggleBookmark, isBookmarked } = useBookmarkStore()
+  const locale = useLocaleStore((s) => s.locale)
   const bookmarked = isBookmarked(videoId)
 
   return (
@@ -19,7 +26,7 @@ export function BookmarkButton({ videoId }: BookmarkButtonProps) {
         toggleBookmark(videoId)
       }}
       className="bg-black/50 backdrop-blur-sm w-10 h-10 rounded-full flex items-center justify-center"
-      aria-label={bookmarked ? '북마크 해제' : '북마크'}
+      aria-label={bookmarked ? T.unbookmark[locale] : T.bookmark[locale]}
     >
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"

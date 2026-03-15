@@ -4,6 +4,18 @@ import { useCallback, useState } from 'react'
 import { motion } from 'framer-motion'
 import { buildShortsUrl } from '@/lib/videoRoutes'
 import { SaveToast } from './SaveToast'
+import { useLocaleStore } from '@/stores/useLocaleStore'
+
+const T = {
+  shareText: {
+    ko: 'Shortee에서 이 장면 다시 보기',
+    ja: 'Shorteeでこのシーンをもう一度見る',
+    'zh-TW': '在Shortee重新觀看這個場景',
+    vi: 'Xem lai canh nay tren Shortee',
+  },
+  share: { ko: '공유하기', ja: '共有する', 'zh-TW': '分享', vi: 'Chia se' },
+  linkCopied: { ko: '링크를 복사했어요', ja: 'リンクをコピーしました', 'zh-TW': '已複製連結', vi: 'Da sao chep lien ket' },
+} as const
 
 interface ShareButtonProps {
   videoId: string
@@ -12,15 +24,17 @@ interface ShareButtonProps {
 
 export function ShareButton({ videoId, videoTitle }: ShareButtonProps) {
   const [showToast, setShowToast] = useState(false)
+  const locale = useLocaleStore((s) => s.locale)
 
   const handleShare = useCallback(
     async (event: React.MouseEvent) => {
       event.stopPropagation()
 
       const shareUrl = `${window.location.origin}${buildShortsUrl(videoId)}`
+      const shareTextStr = T.shareText[locale]
       const shareText = videoTitle
-        ? `${videoTitle} - Shortee에서 이 장면 다시 보기`
-        : 'Shortee에서 이 장면 다시 보기'
+        ? `${videoTitle} - ${shareTextStr}`
+        : shareTextStr
 
       if (typeof navigator !== 'undefined' && navigator.share) {
         try {
@@ -51,7 +65,7 @@ export function ShareButton({ videoId, videoTitle }: ShareButtonProps) {
       setShowToast(true)
       window.setTimeout(() => setShowToast(false), 2000)
     },
-    [videoId, videoTitle],
+    [videoId, videoTitle, locale],
   )
 
   return (
@@ -60,7 +74,7 @@ export function ShareButton({ videoId, videoTitle }: ShareButtonProps) {
         whileTap={{ scale: 0.8 }}
         onClick={handleShare}
         className="flex h-10 w-10 items-center justify-center rounded-full bg-black/50 backdrop-blur-sm"
-        aria-label="공유하기"
+        aria-label={T.share[locale]}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +91,7 @@ export function ShareButton({ videoId, videoTitle }: ShareButtonProps) {
           />
         </svg>
       </motion.button>
-      <SaveToast show={showToast} message="링크를 복사했어요" />
+      <SaveToast show={showToast} message={T.linkCopied[locale]} />
     </>
   )
 }

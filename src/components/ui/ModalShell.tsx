@@ -2,6 +2,11 @@
 
 import type { ReactNode } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
+import { useLocaleStore } from '@/stores/useLocaleStore'
+
+const T = {
+  closeModal: { ko: '모달 닫기', ja: '閉じる', 'zh-TW': '關閉', vi: 'Dong' },
+} as const
 
 function joinClassNames(...tokens: Array<string | false | null | undefined>) {
   return tokens.filter(Boolean).join(' ')
@@ -79,6 +84,8 @@ export function ModalHeader({
   description: string
   onClose: () => void
 }) {
+  const locale = useLocaleStore((s) => s.locale)
+
   return (
     <div className="mb-5 flex items-start justify-between gap-4 text-left">
       <div>
@@ -91,7 +98,7 @@ export function ModalHeader({
       <button
         onClick={onClose}
         className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--bg-secondary)] text-[var(--text-muted)]"
-        aria-label="모달 닫기"
+        aria-label={T.closeModal[locale]}
       >
         ×
       </button>

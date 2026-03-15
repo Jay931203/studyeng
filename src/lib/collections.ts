@@ -7,6 +7,7 @@
  */
 
 import type { CollectionGroup } from '@/data/collection-templates'
+import type { SupportedLocale } from '@/stores/useLocaleStore'
 
 // --- Types ---
 
@@ -87,6 +88,45 @@ const groupLabels: Record<CollectionGroup, string> = {
   theme: '테마별 영어',
 }
 
+const groupLabelsI18n: Record<CollectionGroup, Record<SupportedLocale, string>> = {
+  situation: {
+    ko: '상황별 영어',
+    ja: 'シーン別英語',
+    'zh-TW': '情境英語',
+    vi: 'Tieng Anh theo tinh huong',
+  },
+  vibe: {
+    ko: '분위기별 영어',
+    ja: '雰囲気別英語',
+    'zh-TW': '氛圍英語',
+    vi: 'Tieng Anh theo khong khi',
+  },
+  function: {
+    ko: '기능별 영어',
+    ja: '機能別英語',
+    'zh-TW': '功能英語',
+    vi: 'Tieng Anh theo chuc nang',
+  },
+  level: {
+    ko: '레벨별 영어',
+    ja: 'レベル別英語',
+    'zh-TW': '等級英語',
+    vi: 'Tieng Anh theo cap do',
+  },
+  grammar: {
+    ko: '문법별 영어',
+    ja: '文法別英語',
+    'zh-TW': '文法英語',
+    vi: 'Tieng Anh theo ngu phap',
+  },
+  theme: {
+    ko: '테마별 영어',
+    ja: 'テーマ別英語',
+    'zh-TW': '主題英語',
+    vi: 'Tieng Anh theo chu de',
+  },
+}
+
 const groupOrder: CollectionGroup[] = [
   'situation',
   'vibe',
@@ -121,10 +161,13 @@ export function getCollectionsByGroup(group: string): CollectionSummary[] {
 }
 
 /**
- * Get the ordered list of collection groups with Korean labels.
+ * Get the ordered list of collection groups with localized labels.
  */
-export function getCollectionGroups(): { id: string; label: string }[] {
-  return groupOrder.map((id) => ({ id, label: groupLabels[id] }))
+export function getCollectionGroups(locale?: SupportedLocale): { id: string; label: string }[] {
+  return groupOrder.map((id) => ({
+    id,
+    label: locale ? (groupLabelsI18n[id]?.[locale] ?? groupLabels[id]) : groupLabels[id],
+  }))
 }
 
 /**

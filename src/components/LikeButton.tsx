@@ -2,6 +2,12 @@
 
 import { motion } from 'framer-motion'
 import { useLikeStore } from '@/stores/useLikeStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
+
+const T = {
+  unlike: { ko: '좋아요 취소', ja: 'いいね取消', 'zh-TW': '取消喜歡', vi: 'Bo thich' },
+  like: { ko: '좋아요', ja: 'いいね', 'zh-TW': '喜歡', vi: 'Thich' },
+} as const
 
 interface LikeButtonProps {
   videoId: string
@@ -9,6 +15,7 @@ interface LikeButtonProps {
 
 export function LikeButton({ videoId }: LikeButtonProps) {
   const { toggleLike, isLiked } = useLikeStore()
+  const locale = useLocaleStore((s) => s.locale)
   const liked = isLiked(videoId)
 
   return (
@@ -19,7 +26,7 @@ export function LikeButton({ videoId }: LikeButtonProps) {
         toggleLike(videoId)
       }}
       className="bg-black/50 backdrop-blur-sm w-10 h-10 rounded-full flex items-center justify-center"
-      aria-label={liked ? '좋아요 취소' : '좋아요'}
+      aria-label={liked ? T.unlike[locale] : T.like[locale]}
     >
       <motion.svg
         xmlns="http://www.w3.org/2000/svg"

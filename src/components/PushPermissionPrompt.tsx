@@ -5,6 +5,24 @@ import { useEffect, useState } from 'react'
 import { isNative } from '@/lib/platform'
 import { usePushStore } from '@/stores/usePushStore'
 import { useUserStore } from '@/stores/useUserStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
+
+const T = {
+  streakDays: {
+    ko: (n: number) => `${n}일 연속 중`,
+    ja: (n: number) => `${n}日連続中`,
+    'zh-TW': (n: number) => `連續${n}天`,
+    vi: (n: number) => `${n} ngay lien tiep`,
+  },
+  notifDescription: {
+    ko: '매일 알림을 받아 연속 기록을 이어가세요. 언제든 설정에서 끌 수 있어요.',
+    ja: '毎日の通知で連続記録を続けましょう。設定からいつでもオフにできます。',
+    'zh-TW': '每天接收通知以保持連續紀錄。隨時可在設定中關閉。',
+    vi: 'Nhan thong bao hang ngay de duy tri chuoi lien tiep. Ban co the tat trong cai dat bat cu luc nao.',
+  },
+  later: { ko: '나중에', ja: '後で', 'zh-TW': '稍後', vi: 'De sau' },
+  enableNotif: { ko: '알림 받기', ja: '通知を受け取る', 'zh-TW': '接收通知', vi: 'Nhan thong bao' },
+} as const
 
 /**
  * PushPermissionPrompt
@@ -25,6 +43,7 @@ export function PushPermissionPrompt({ visible, onClose }: Props) {
   const native = isNative()
   const { shouldShowPrompt, subscribe, dismiss, permission } = usePushStore()
   const streakDays = useUserStore((state) => state.streakDays)
+  const locale = useLocaleStore((s) => s.locale)
 
   const [show, setShow] = useState(false)
   const [loading, setLoading] = useState(false)
@@ -70,7 +89,7 @@ export function PushPermissionPrompt({ visible, onClose }: Props) {
 
   const streakLine =
     streakDays > 0
-      ? `${streakDays}일 연속 중`
+      ? T.streakDays[locale](streakDays)
       : null
 
   return (
@@ -122,7 +141,7 @@ export function PushPermissionPrompt({ visible, onClose }: Props) {
         </div>
 
         <p className="mb-4 text-xs leading-relaxed text-[var(--text-secondary)]">
-          매일 알림을 받아 연속 기록을 이어가세요. 언제든 설정에서 끌 수 있어요.
+          {T.notifDescription[locale]}
         </p>
 
         <div className="flex gap-2">
@@ -130,14 +149,14 @@ export function PushPermissionPrompt({ visible, onClose }: Props) {
             onClick={handleDismiss}
             className="flex-1 rounded-xl bg-[var(--bg-secondary)] py-2.5 text-xs font-medium text-[var(--text-secondary)]"
           >
-            나중에
+            {T.later[locale]}
           </button>
           <button
             onClick={handleAllow}
             disabled={loading}
             className="flex-1 rounded-xl bg-[var(--accent-primary)] py-2.5 text-xs font-semibold text-white disabled:opacity-60"
           >
-            {loading ? '...' : '알림 받기'}
+            {loading ? '...' : T.enableNotif[locale]}
           </button>
         </div>
       </div>

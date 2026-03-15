@@ -291,7 +291,7 @@ async function pullAdminState(userId: string, email?: string | null) {
   const isAdmin = await resolveAdminAccess(userId, email)
   if (isAdmin === null) {
     useAdminStore.setState({
-      adminSyncError: '관리자 권한을 확인하지 못했습니다. 잠시 후 다시 시도해 주세요.',
+      adminSyncError: 'Could not verify admin access. Please try again later.',
     })
     return false
   }
@@ -308,7 +308,7 @@ async function pullAdminState(userId: string, email?: string | null) {
   if (issueResponse.error) {
     console.warn('[ops-sync] issue reports pull failed:', issueResponse.error.message)
     useAdminStore.setState({
-      adminSyncError: '운영 이슈를 서버에서 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.',
+      adminSyncError: 'Could not load issue reports from the server. Please try again later.',
     })
     return false
   }
@@ -316,7 +316,7 @@ async function pullAdminState(userId: string, email?: string | null) {
   if (flagResponse.error) {
     console.warn('[ops-sync] subtitle flags pull failed:', flagResponse.error.message)
     useAdminStore.setState({
-      adminSyncError: '플래그 목록을 서버에서 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.',
+      adminSyncError: 'Could not load subtitle flags from the server. Please try again later.',
     })
     return false
   }

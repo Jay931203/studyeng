@@ -1,11 +1,17 @@
 'use client'
 
 import { usePlayerStore } from '@/stores/usePlayerStore'
+import { useLocaleStore } from '@/stores/useLocaleStore'
+
+const T = {
+  repeat: { ko: '반복 재생', ja: 'リピート再生', 'zh-TW': '重複播放', vi: 'Phat lai' },
+} as const
 
 const REPEAT_CYCLE = ['off', 'x2', 'x3'] as const
 
 export function RepeatButton() {
   const { repeatMode, setRepeatMode } = usePlayerStore()
+  const locale = useLocaleStore((s) => s.locale)
 
   const handleTap = (e: React.PointerEvent) => {
     e.stopPropagation()
@@ -23,7 +29,7 @@ export function RepeatButton() {
       className={`backdrop-blur-sm w-10 h-10 rounded-full flex items-center justify-center transition-colors ${
         isActive ? 'bg-purple-500 text-white' : 'bg-black/50 text-white'
       }`}
-      title="반복 재생"
+      title={T.repeat[locale]}
     >
       <div className="flex flex-col items-center leading-none">
         <svg

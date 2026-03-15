@@ -135,7 +135,7 @@ export const useAdminStore = create<AdminState>()(
           if (!userId) {
             set((state) => ({
               flaggedSubtitles: mergeFlags(state.flaggedSubtitles, [existingFlag]),
-              adminSyncError: '로그인 후 다시 시도해 주세요.',
+              adminSyncError: 'Please log in and try again.',
             }))
             return
           }
@@ -147,7 +147,7 @@ export const useAdminStore = create<AdminState>()(
             } catch {
               set((state) => ({
                 flaggedSubtitles: mergeFlags(state.flaggedSubtitles, [existingFlag]),
-                adminSyncError: '플래그 해제가 서버에 반영되지 않았습니다. 다시 시도해 주세요.',
+                adminSyncError: 'Flag removal was not synced to the server. Please try again.',
               }))
             }
           })()
@@ -172,7 +172,7 @@ export const useAdminStore = create<AdminState>()(
             flaggedSubtitles: state.flaggedSubtitles.filter(
               (flag) => flagKey(flag) !== flagKey(nextFlag),
             ),
-            adminSyncError: '로그인 후 다시 시도해 주세요.',
+            adminSyncError: 'Please log in and try again.',
           }))
           return
         }
@@ -186,7 +186,7 @@ export const useAdminStore = create<AdminState>()(
               flaggedSubtitles: state.flaggedSubtitles.filter(
                 (flag) => flagKey(flag) !== flagKey(nextFlag),
               ),
-              adminSyncError: '플래그 저장이 서버에 반영되지 않았습니다. 다시 시도해 주세요.',
+              adminSyncError: 'Flag was not synced to the server. Please try again.',
             }))
           }
         })()
@@ -207,7 +207,7 @@ export const useAdminStore = create<AdminState>()(
         if (!userId) {
           set((state) => ({
             flaggedSubtitles: mergeFlags(state.flaggedSubtitles, removedFlags),
-            adminSyncError: '로그인 후 다시 시도해 주세요.',
+            adminSyncError: 'Please log in and try again.',
           }))
           return
         }
@@ -219,7 +219,7 @@ export const useAdminStore = create<AdminState>()(
           } catch {
             set((state) => ({
               flaggedSubtitles: mergeFlags(state.flaggedSubtitles, removedFlags),
-              adminSyncError: '플래그 정리가 서버에 반영되지 않았습니다. 다시 시도해 주세요.',
+              adminSyncError: 'Flag cleanup was not synced to the server. Please try again.',
             }))
           }
         })()
@@ -340,7 +340,7 @@ export const useAdminStore = create<AdminState>()(
         if (!userId) {
           set((state) => ({
             issues: state.issues.filter((currentIssue) => currentIssue.id !== issue.id),
-            adminSyncError: '로그인 후 다시 시도해 주세요.',
+            adminSyncError: 'Please log in and try again.',
           }))
           return false
         }
@@ -355,7 +355,7 @@ export const useAdminStore = create<AdminState>()(
         } catch {
           set((state) => ({
             issues: state.issues.filter((currentIssue) => currentIssue.id !== issue.id),
-            adminSyncError: '이슈 등록이 서버에 반영되지 않았습니다. 다시 시도해 주세요.',
+            adminSyncError: 'Issue report was not synced to the server. Please try again.',
           }))
           return false
         }
@@ -375,7 +375,7 @@ export const useAdminStore = create<AdminState>()(
           if (!issueToRestore) return
           set((state) => ({
             issues: mergeIssues(state.issues, [issueToRestore]),
-            adminSyncError: '로그인 후 다시 시도해 주세요.',
+            adminSyncError: 'Please log in and try again.',
           }))
           return
         }
@@ -391,7 +391,7 @@ export const useAdminStore = create<AdminState>()(
             if (!issueToRestore) return
             set((state) => ({
               issues: mergeIssues(state.issues, [issueToRestore]),
-              adminSyncError: '이슈 해결 상태가 서버에 반영되지 않았습니다. 다시 시도해 주세요.',
+              adminSyncError: 'Issue resolution was not synced to the server. Please try again.',
             }))
           }
         })()
@@ -410,7 +410,7 @@ export const useAdminStore = create<AdminState>()(
         if (!userId) {
           set((state) => ({
             issues: mergeIssues(state.issues, resolvedIssues),
-            adminSyncError: '로그인 후 다시 시도해 주세요.',
+            adminSyncError: 'Please log in and try again.',
           }))
           return
         }
@@ -425,7 +425,7 @@ export const useAdminStore = create<AdminState>()(
           } catch {
             set((state) => ({
               issues: mergeIssues(state.issues, resolvedIssues),
-              adminSyncError: '해결 이슈 정리가 서버에 반영되지 않았습니다. 다시 시도해 주세요.',
+              adminSyncError: 'Resolved issue cleanup was not synced to the server. Please try again.',
             }))
           }
         })()
