@@ -2221,7 +2221,7 @@ export const series: Series[] = [
     description: '버밍엄 갱단의 거친 영국 영어',
     thumbnailEmoji: '',
     episodeCount: 4,
-  }
+  },
 ]
 
 export const seedVideos = defineSeedVideos([

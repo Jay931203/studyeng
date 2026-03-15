@@ -21,14 +21,11 @@ const t = {
     'zh-TW': '不知不覺中已經吸收了。',
     vi: 'Ban da tiep thu mot cach tu nhien.',
   },
-  expressionsLearned: (count: number, locale: SupportedLocale) => {
-    const templates: Record<SupportedLocale, (n: number) => string> = {
-      ko: (n) => `${n}개 표현을 자연스럽게 익혔어요`,
-      ja: (n) => `${n}個の表現を自然に身につけました`,
-      'zh-TW': (n) => `自然學會了 ${n} 個表達`,
-      vi: (n) => `Da hoc duoc ${n} cau mot cach tu nhien`,
-    }
-    return templates[locale](count)
+  expressionsLearnedSuffix: {
+    ko: '개 표현을 자연스럽게 익혔어요',
+    ja: '個の表現を自然に身につけました',
+    'zh-TW': ' 個表達已自然學會',
+    vi: ' bieu dat da hoc tu nhien',
   },
   fullyMastered: (count: number, locale: SupportedLocale) => {
     const templates: Record<SupportedLocale, (n: number) => string> = {
@@ -171,7 +168,7 @@ export function LevelUpCelebration() {
               >
                 {totalSwipedCount}
               </span>
-              {' '}{t.expressionsLearned(totalSwipedCount, locale)}
+              {t.expressionsLearnedSuffix[locale]}
             </p>
             {familiarCount > 0 && (
               <p

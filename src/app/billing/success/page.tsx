@@ -6,6 +6,7 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import { LogoFull } from '@/components/Logo'
 import { sanitizeAppPath } from '@/lib/navigation'
 import { usePremiumStore } from '@/stores/usePremiumStore'
+import { getPersistedLocale, BILLING_SUCCESS_STRINGS } from '@/lib/i18n-error'
 
 function BillingSuccessPageContent() {
   const router = useRouter()
@@ -14,6 +15,7 @@ function BillingSuccessPageContent() {
   const sessionId = useMemo(() => searchParams.get('session_id'), [searchParams])
   const nextPath = useMemo(() => sanitizeAppPath(searchParams.get('next'), '/profile'), [searchParams])
   const [status, setStatus] = useState<'syncing' | 'done' | 'error'>('syncing')
+  const locale = getPersistedLocale()
 
   useEffect(() => {
     if (!sessionId) {
@@ -64,22 +66,21 @@ function BillingSuccessPageContent() {
       <div className="w-full max-w-md rounded-[32px] border border-[var(--border-card)] bg-[var(--bg-card)] p-8 text-center shadow-2xl">
         <LogoFull className="mx-auto h-10 text-[var(--text-primary)]" />
         <h1 className="mt-6 text-2xl font-bold text-[var(--text-primary)]">
-          {status === 'error' ? '결제 확인이 지연되고 있습니다' : '구독을 확인하고 있습니다'}
+          {status === 'error'
+            ? BILLING_SUCCESS_STRINGS.titleError[locale]
+            : BILLING_SUCCESS_STRINGS.titleSyncing[locale]}
         </h1>
         <p className="mt-3 text-sm leading-relaxed text-[var(--text-secondary)]">
-          {status === 'syncing' &&
-            '결제 완료 후 프리미엄 권한을 계정에 반영하는 중입니다.'}
-          {status === 'done' &&
-            '프리미엄 권한 반영이 끝났습니다. 잠시 후 프로필로 이동합니다.'}
-          {status === 'error' &&
-            '권한 반영이 늦어질 수 있습니다. 잠시 후 프로필에서 상태를 다시 확인해 주세요.'}
+          {status === 'syncing' && BILLING_SUCCESS_STRINGS.descSyncing[locale]}
+          {status === 'done' && BILLING_SUCCESS_STRINGS.descDone[locale]}
+          {status === 'error' && BILLING_SUCCESS_STRINGS.descError[locale]}
         </p>
         <div className="mt-6">
           <Link
             href={nextPath}
             className="inline-flex rounded-2xl bg-[var(--accent-primary)] px-5 py-3 text-sm font-semibold text-white"
           >
-            프로필로 이동
+            {BILLING_SUCCESS_STRINGS.goToProfile[locale]}
           </Link>
         </div>
       </div>
@@ -88,12 +89,13 @@ function BillingSuccessPageContent() {
 }
 
 function BillingSuccessFallback() {
+  const locale = getPersistedLocale()
   return (
     <div className="flex min-h-dvh items-center justify-center px-6 py-12">
       <div className="w-full max-w-md rounded-[32px] border border-[var(--border-card)] bg-[var(--bg-card)] p-8 text-center shadow-2xl">
         <LogoFull className="mx-auto h-10 text-[var(--text-primary)]" />
         <h1 className="mt-6 text-2xl font-bold text-[var(--text-primary)]">
-          구독 상태를 확인하는 중입니다
+          {BILLING_SUCCESS_STRINGS.fallbackTitle[locale]}
         </h1>
       </div>
     </div>

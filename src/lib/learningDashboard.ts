@@ -4,7 +4,13 @@ import {
   type BenefitSnapshot,
   type TierLevel,
 } from '@/stores/useTierStore'
-import { MILESTONES, type AchievedEntry, type MilestoneDefinition } from '@/stores/useMilestoneStore'
+import {
+  MILESTONES,
+  getMilestoneDescription,
+  getMilestoneLabel,
+  type AchievedEntry,
+  type MilestoneDefinition,
+} from '@/stores/useMilestoneStore'
 
 export type SupportedLocale = 'ko' | 'ja' | 'zh-TW' | 'vi'
 
@@ -136,6 +142,8 @@ export interface MilestoneProgressInput {
 }
 
 export interface MilestoneMission extends MilestoneDefinition {
+  label: string
+  description: string
   current: number
   progress: number
   ready: boolean
@@ -238,6 +246,8 @@ export function buildMilestoneMissions(
 
     return {
       ...def,
+      label: getMilestoneLabel(def.id),
+      description: getMilestoneDescription(def.id),
       current,
       progress,
       claimed,

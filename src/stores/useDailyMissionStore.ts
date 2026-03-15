@@ -1,5 +1,7 @@
 import { create } from 'zustand'
 import { persist } from 'zustand/middleware'
+import { getLocaleStrings } from '@/locales/index'
+import { useLocaleStore } from './useLocaleStore'
 import { useOnboardingStore } from './useOnboardingStore'
 import { useDiscountStore } from './useDiscountStore'
 
@@ -24,13 +26,18 @@ interface DailyMissionState {
   resetState: () => void
 }
 
+function getMissionStrings() {
+  return getLocaleStrings(useLocaleStore.getState().locale).dailyMissions
+}
+
 function getDefaultMissions(): DailyMission[] {
   const dailyGoal = useOnboardingStore.getState().dailyGoal || 5
+  const s = getMissionStrings()
   return [
     {
       id: 'watch-videos',
-      title: '영상 시청',
-      description: `오늘 영상 ${dailyGoal}개 보기`,
+      title: s.watchVideos.title,
+      description: s.watchVideos.description(dailyGoal),
       target: dailyGoal,
       current: 0,
       completed: false,
@@ -38,8 +45,8 @@ function getDefaultMissions(): DailyMission[] {
     },
     {
       id: 'play-game',
-      title: '게임 도전',
-      description: '게임 1판 하기',
+      title: s.playGame.title,
+      description: s.playGame.description,
       target: 1,
       current: 0,
       completed: false,
@@ -47,8 +54,8 @@ function getDefaultMissions(): DailyMission[] {
     },
     {
       id: 'save-phrase',
-      title: '표현 저장',
-      description: '표현 1개 저장하기',
+      title: s.savePhrase.title,
+      description: s.savePhrase.description,
       target: 1,
       current: 0,
       completed: false,

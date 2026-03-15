@@ -3,9 +3,11 @@
 import { useRouter } from 'next/navigation'
 import { BillingManagementCard } from '@/components/BillingManagementCard'
 import { AppPage } from '@/components/ui/AppPage'
+import { getPersistedLocale, MEMBERSHIP_STRINGS } from '@/lib/i18n-error'
 
 export default function ProfileMembershipPage() {
   const router = useRouter()
+  const locale = getPersistedLocale()
 
   const handleBack = () => {
     if (typeof window !== 'undefined' && window.history.length > 1) {
@@ -36,7 +38,7 @@ export default function ProfileMembershipPage() {
           </button>
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.06em] text-[var(--accent-text)]">
-              구독
+              {MEMBERSHIP_STRINGS.label[locale]}
             </p>
           </div>
         </div>
