@@ -871,34 +871,6 @@ export function VideoPlayer({
     )
   }
 
-  if (useLandscapeOverlaySubtitles) {
-    return (
-      <div
-        className="relative h-full w-full"
-        style={{ backgroundColor: 'var(--player-surface)' }}
-      >
-        {videoArea}
-
-        {subtitleMode !== 'none' && subtitles.length > 0 && (
-          <ShortsSubtitleOverlay
-            subtitles={subtitles}
-            videoId={videoId ?? youtubeId}
-            showKo={subtitleMode === 'en-ko'}
-            onSavePhrase={onSavePhrase}
-            onSeek={(time) => seekTo(time)}
-            bottomOffset="24px"
-          />
-        )}
-
-        <div className="absolute bottom-0 left-0 right-0 z-[15]">
-          <ProgressBar />
-        </div>
-
-        {primingOverlay}
-      </div>
-    )
-  }
-
   return (
     <div
       className="relative h-full w-full"
@@ -913,37 +885,58 @@ export function VideoPlayer({
           style={useLandscapeSplitLayout ? { width: landscapeVideoPaneWidth } : undefined}
         >
           {videoArea}
+
+          {useLandscapeOverlaySubtitles && subtitleMode !== 'none' && subtitles.length > 0 && (
+            <ShortsSubtitleOverlay
+              subtitles={subtitles}
+              videoId={videoId ?? youtubeId}
+              showKo={subtitleMode === 'en-ko'}
+              onSavePhrase={onSavePhrase}
+              onSeek={(time) => seekTo(time)}
+              bottomOffset="24px"
+            />
+          )}
+
+          {useLandscapeOverlaySubtitles && (
+            <div className="absolute bottom-0 left-0 right-0 z-[15]">
+              <ProgressBar />
+            </div>
+          )}
         </div>
 
-        {useLandscapeSplitLayout && (
+        {useLandscapeSplitLayout && !useLandscapeOverlaySubtitles && (
           <div
             className="h-full w-px flex-shrink-0"
             style={{ backgroundColor: 'var(--player-divider)' }}
           />
         )}
 
-        <div
-          className={
-            useLandscapeSplitLayout
-              ? 'relative flex min-w-0 flex-1 flex-col'
-              : 'relative flex-shrink-0'
-          }
-          style={{
-            backgroundColor: 'var(--player-surface)',
-            height: isLandscapeViewport ? `${landscapeBottomSubtitleHeight}px` : '176px',
-          }}
-        >
-          {useLandscapeSplitLayout ? (
-            <>
-              <div className="min-h-0 flex-1">{subtitlePanel}</div>
-              {progressArea}
-            </>
-          ) : (
-            subtitlePanel
-          )}
-        </div>
+        {!useLandscapeOverlaySubtitles && (
+          <>
+            <div
+              className={
+                useLandscapeSplitLayout
+                  ? 'relative flex min-w-0 flex-1 flex-col'
+                  : 'relative flex-shrink-0'
+              }
+              style={{
+                backgroundColor: 'var(--player-surface)',
+                height: isLandscapeViewport ? `${landscapeBottomSubtitleHeight}px` : '176px',
+              }}
+            >
+              {useLandscapeSplitLayout ? (
+                <>
+                  <div className="min-h-0 flex-1">{subtitlePanel}</div>
+                  {progressArea}
+                </>
+              ) : (
+                subtitlePanel
+              )}
+            </div>
 
-        {!useLandscapeSplitLayout && progressArea}
+            {!useLandscapeSplitLayout && progressArea}
+          </>
+        )}
       </div>
 
       {primingOverlay}
