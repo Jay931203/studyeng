@@ -558,21 +558,23 @@ export function BillingManagementCard({
             )}
           </div>
 
-          <div className="grid gap-3 sm:grid-cols-2">
-            {planOptions.map((option) => (
-              <div
-                key={option.id}
-                className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)]/30 px-4 py-3"
-              >
-                <p className="text-[11px] text-[var(--text-secondary)]">{option.label}</p>
-                <div className="mt-1 flex items-center gap-2">
-                  <span className="text-[11px] text-[var(--text-muted)] line-through">{option.comparePrice}</span>
-                  <span className="text-sm font-semibold text-[var(--text-primary)]">{option.price}</span>
+          {!currentPremium && (
+            <div className="grid gap-3 sm:grid-cols-2">
+              {planOptions.map((option) => (
+                <div
+                  key={option.id}
+                  className="rounded-2xl border border-[var(--border-card)] bg-[var(--bg-secondary)]/30 px-4 py-3"
+                >
+                  <p className="text-[11px] text-[var(--text-secondary)]">{option.label}</p>
+                  <div className="mt-1 flex items-center gap-2">
+                    <span className="text-[11px] text-[var(--text-muted)] line-through">{option.comparePrice}</span>
+                    <span className="text-sm font-semibold text-[var(--text-primary)]">{option.price}</span>
+                  </div>
+                  <p className="mt-1 text-[10px] text-[var(--text-muted)]">{option.savingsText}</p>
                 </div>
-                <p className="mt-1 text-[10px] text-[var(--text-muted)]">{option.savingsText}</p>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
         </div>
       )}
 

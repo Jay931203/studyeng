@@ -4,6 +4,7 @@ export const YEARLY_BASE_PRICE = 79900
 export const YEARLY_REFERENCE_PRICE = MONTHLY_REFERENCE_PRICE * 12
 
 const YEARLY_MONTHLY_MARGIN = 1000
+const YEARLY_SAVINGS_MARGIN_PERCENT = 3
 
 export const MONTHLY_BASE_SAVINGS_PERCENT = Math.round(
   ((MONTHLY_REFERENCE_PRICE - MONTHLY_BASE_PRICE) / MONTHLY_REFERENCE_PRICE) * 100,
@@ -33,7 +34,20 @@ export function getYearlyRenewalPrice(
 ) {
   const discountedYearly = getDiscountedPrice(YEARLY_BASE_PRICE, yearlyDiscountPercent)
   const monthlyEquivalent = getMonthlyDiscountedPrice(monthlyDiscountPercent) * 12
-  return Math.min(discountedYearly, Math.max(0, monthlyEquivalent - YEARLY_MONTHLY_MARGIN))
+  const monthlySavingsPercent = getSavingsPercent(
+    MONTHLY_REFERENCE_PRICE,
+    getMonthlyDiscountedPrice(monthlyDiscountPercent),
+  )
+  const yearlySavingsFloorPrice = Math.round(
+    (YEARLY_REFERENCE_PRICE * (100 - Math.min(99, monthlySavingsPercent + YEARLY_SAVINGS_MARGIN_PERCENT))) /
+      100,
+  )
+
+  return Math.min(
+    discountedYearly,
+    Math.max(0, monthlyEquivalent - YEARLY_MONTHLY_MARGIN),
+    yearlySavingsFloorPrice,
+  )
 }
 
 export function getSavingsPercent(referencePrice: number, currentPrice: number) {
