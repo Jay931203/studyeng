@@ -1,7 +1,14 @@
 'use client'
 
-import { AnimatePresence, motion, type PanInfo } from 'framer-motion'
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { AnimatePresence, motion, useDragControls, type PanInfo } from 'framer-motion'
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+  type PointerEvent as ReactPointerEvent,
+} from 'react'
 import { useRouter } from 'next/navigation'
 import { series as allSeries, type VideoData } from '@/data/seed-videos'
 import { useViewportLayout } from '@/hooks/useOrientation'
@@ -19,6 +26,7 @@ import { useLevelStore } from '@/stores/useLevelStore'
 import { useGameProgressStore } from '@/stores/useGameProgressStore'
 import { useUserStore } from '@/stores/useUserStore'
 import { useWatchHistoryStore } from '@/stores/useWatchHistoryStore'
+import { difficultyToCefrLevel } from '@/types/level'
 import { AdminReportButton } from './AdminReportButton'
 import { FloatingRemote } from './FloatingRemote'
 import { PremiumModal } from './PremiumModal'
@@ -100,6 +108,7 @@ export function VideoFeed({
     history: [currentIndex],
     pointer: 0,
   }))
+  const feedDragControls = useDragControls()
 
   const repeatIndicatorTimerRef = useRef<number | null>(null)
   const initialReviewMarkedRef = useRef(false)
@@ -638,6 +647,16 @@ export function VideoFeed({
     },
     [handleNextVideo, handlePrevVideo],
   )
+  const showHeaderHomeButton = isLandscapeViewport
+  const canDragFeed = !feedSwipeLocked && !showSeriesEpisodes && videos.length > 1
+  const handleFeedPointerDown = useCallback(
+    (event: ReactPointerEvent<HTMLDivElement>) => {
+      if (!canDragFeed) return
+      if (event.pointerType === 'mouse') return
+      feedDragControls.start(event)
+    },
+    [canDragFeed, feedDragControls],
+  )
 
   if (!currentVideo) return null
 
@@ -653,8 +672,7 @@ export function VideoFeed({
       ? findPlayableHistoryEntry(activeShuffleNavigation.pointer + 1, 1) !== null ||
         hasAlternativePlayableVideo
       : findSeriesNavigationTarget(1) !== null || findPlayableIndex(currentIndex + 1, 1) >= 0
-  const showHeaderHomeButton = isLandscapeViewport
-  const canDragFeed = !feedSwipeLocked && !showSeriesEpisodes && videos.length > 1
+  const currentVideoLevel = difficultyToCefrLevel(currentVideo.difficulty)
 
   const seriesInfo = currentVideo.seriesId
     ? allSeries.find((series) => series.id === currentVideo.seriesId)
@@ -678,8 +696,11 @@ export function VideoFeed({
           exit={{ y: direction > 0 ? '-100%' : '100%' }}
           transition={{ type: 'tween', duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
           drag={canDragFeed ? 'y' : false}
+          dragControls={feedDragControls}
+          dragListener={false}
           dragConstraints={{ top: 0, bottom: 0 }}
           dragElastic={canDragFeed ? 0.15 : 0}
+          onPointerDown={handleFeedPointerDown}
           onDragStart={() => {
             if (!canDragFeed) return
             setIsSwiping(true)
@@ -829,6 +850,16 @@ export function VideoFeed({
                     x{currentVideoViewCount}
                   </span>
                 )}
+                <span
+                  className="shrink-0 rounded-full border px-1.5 py-0.5 text-[9px] font-semibold leading-none sm:text-[10px]"
+                  style={{
+                    backgroundColor: 'rgba(var(--accent-primary-rgb), 0.14)',
+                    borderColor: 'rgba(var(--accent-primary-rgb), 0.34)',
+                    color: 'var(--accent-text)',
+                  }}
+                >
+                  {currentVideoLevel}
+                </span>
               </div>
             </div>
 

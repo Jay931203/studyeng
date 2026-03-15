@@ -40,3 +40,15 @@ export function displayLevelName(level: string): string {
   if (level in LEGACY_LEVEL_MIGRATION) return LEVEL_LABELS[LEGACY_LEVEL_MIGRATION[level]]
   return level
 }
+
+/**
+ * Map the app's 1-6 video difficulty scale to a CEFR level badge.
+ */
+export function difficultyToCefrLevel(difficulty: number): CefrLevel {
+  if (difficulty <= 1) return 'A1'
+  if (difficulty === 2) return 'A2'
+  if (difficulty === 3) return 'B1'
+  if (difficulty === 4) return 'B2'
+  if (difficulty === 5) return 'C1'
+  return 'C2'
+}
