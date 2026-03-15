@@ -38,7 +38,7 @@ async function main() {
     clipMap.set(v.youtubeId, { clipStart: v.clipStart || 0, clipEnd: v.clipEnd || 0 })
   }
 
-  // Find all whisper-raw files that have proper raw format (savedAt field)
+  // Find all whisper-raw files (both new and old formats)
   const rawFiles = await readdir(WHISPER_RAW_DIR)
   const rawIds = []
 
@@ -49,7 +49,8 @@ async function main() {
 
     try {
       const data = JSON.parse(await readFile(join(WHISPER_RAW_DIR, f), 'utf-8'))
-      if (data.savedAt && data.segments && data.segments.length > 0) {
+      const segments = extractSegments(data)
+      if (segments && segments.length > 0) {
         rawIds.push(id)
       }
     } catch {}
@@ -81,8 +82,9 @@ async function main() {
       const clip = clipMap.get(id) || { clipStart: 0, clipEnd: 0 }
       const isFullVideo = clip.clipStart === 0 && clip.clipEnd === 0
 
-      // Get raw segments with proper sentence boundaries
-      let rawSegments = rawData.segments
+      // Get raw segments with proper sentence boundaries (handles both formats)
+      const extractedSegments = extractSegments(rawData)
+      let rawSegments = extractedSegments
         .filter(s => s.text && s.text.trim().length > 0)
         .map(s => ({
           start: round2(s.start),
@@ -171,6 +173,40 @@ async function main() {
   console.log(`Segments before: ${totalSegsBefore}`)
   console.log(`Segments after: ${totalSegsAfter}`)
   console.log(`Ko translations matched: ${totalKoMatched}/${totalKoTotal} (${totalKoTotal > 0 ? Math.round(100 * totalKoMatched / totalKoTotal) : 0}%)`)
+}
+
+/**
+ * Extract segments from raw data, handling both formats:
+ * - New format: {savedAt, segments: [{start, end, text}], words: [...]}
+ * - Old format: Array of {start, end, en, ko} (text in 'en' field)
+ * - Indexed object: {0: {start, end, text/en}, 1: ...}
+ * Returns array of {start, end, text}.
+ */
+function extractSegments(data) {
+  // New format: {savedAt, segments}
+  if (data.savedAt && Array.isArray(data.segments)) {
+    return data.segments
+  }
+
+  // Old format: array of segments (text may be in 'en' or 'text' field)
+  if (Array.isArray(data)) {
+    return data.map(s => ({
+      start: s.start,
+      end: s.end,
+      text: s.text || s.en || '',
+    }))
+  }
+
+  // Indexed object: {0: {...}, 1: {...}, ...}
+  if (typeof data === 'object' && data['0'] && typeof data['0'].start === 'number') {
+    return Object.values(data).map(s => ({
+      start: s.start,
+      end: s.end,
+      text: s.text || s.en || '',
+    }))
+  }
+
+  return []
 }
 
 /**
