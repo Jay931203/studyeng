@@ -69,7 +69,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '90년대 뉴욕 친구들의 일상 영어',
     thumbnailEmoji: '',
-    episodeCount: 11,
+    episodeCount: 10,
   },
   {
     id: 'modern-family',
@@ -211,7 +211,7 @@ export const series: Series[] = [
     category: 'daily',
     description: '세계 최고의 강연으로 배우는 영어',
     thumbnailEmoji: '',
-    episodeCount: 20,
+    episodeCount: 17,
   },
   {
     id: 'daily-english',
@@ -293,7 +293,7 @@ export const series: Series[] = [
     category: 'daily',
     description: '영어 회화 필수 표현 모음',
     thumbnailEmoji: '',
-    episodeCount: 5,
+    episodeCount: 4,
   },
 
   // === New Music Series ===
@@ -1047,7 +1047,7 @@ export const series: Series[] = [
     category: 'daily',
     description: '최신 TED 강연 모음',
     thumbnailEmoji: '',
-    episodeCount: 7,
+    episodeCount: 6,
   },
   {
     id: 'crash-course',
@@ -1777,7 +1777,7 @@ export const series: Series[] = [
     category: 'daily',
     description: '뉴스와 다큐멘터리의 심층 영어',
     thumbnailEmoji: '📺',
-    episodeCount: 4,
+    episodeCount: 3,
   },
   {
     id: 'suits-clips',
@@ -1785,7 +1785,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '법률 드라마의 치열한 논쟁과 설득',
     thumbnailEmoji: '⚖️',
-    episodeCount: 13,
+    episodeCount: 9,
   },
   {
     id: 'breaking-bad-clips',
@@ -1793,7 +1793,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '긴장감 넘치는 범죄 드라마 명장면',
     thumbnailEmoji: '🧪',
-    episodeCount: 10,
+    episodeCount: 8,
   },
   {
     id: 'better-call-saul-clips',
@@ -1809,7 +1809,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '천재 의사 하우스의 독설과 진단',
     thumbnailEmoji: '🏥',
-    episodeCount: 14,
+    episodeCount: 10,
   },
   {
     id: 'shark-tank-clips',
@@ -1817,7 +1817,7 @@ export const series: Series[] = [
     category: 'daily',
     description: '창업 투자 오디션의 협상과 설득',
     thumbnailEmoji: '🦈',
-    episodeCount: 10,
+    episodeCount: 4,
   },
   {
     id: 'downton-abbey-clips',
@@ -1825,7 +1825,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '영국 귀족 저택의 격식 있는 영어',
     thumbnailEmoji: '🏰',
-    episodeCount: 15,
+    episodeCount: 9,
   },
   {
     id: 'ted-talks-b2-extra',
@@ -1833,7 +1833,7 @@ export const series: Series[] = [
     category: 'daily',
     description: 'TED 강연 추가 모음',
     thumbnailEmoji: '🎤',
-    episodeCount: 5,
+    episodeCount: 3,
   },
   {
     id: 'veep-clips',
@@ -1841,7 +1841,7 @@ export const series: Series[] = [
     category: 'drama',
     description: '미국 정치 풍자 코미디',
     thumbnailEmoji: '🏛️',
-    episodeCount: 2,
+    episodeCount: 1,
   },
   {
     id: 'late-night-clips',
@@ -1849,7 +1849,7 @@ export const series: Series[] = [
     category: 'daily',
     description: '미국 심야 토크쇼 하이라이트',
     thumbnailEmoji: '🌙',
-    episodeCount: 22,
+    episodeCount: 18,
   },
   {
     id: 'last-week-tonight',
@@ -1857,7 +1857,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '존 올리버의 시사 풍자 코미디',
     thumbnailEmoji: '📰',
-    episodeCount: 14,
+    episodeCount: 8,
   },
   {
     id: 'jordan-peterson-lectures',
@@ -1873,7 +1873,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '과학, 기술, 철학 심층 팟캐스트',
     thumbnailEmoji: '🎧',
-    episodeCount: 66,
+    episodeCount: 42,
   },
   {
     id: 'noam-chomsky-interviews',
@@ -1889,7 +1889,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '옥스포드 대학 토론 클럽의 격식 있는 토론',
     thumbnailEmoji: '🎓',
-    episodeCount: 10,
+    episodeCount: 8,
   },
   {
     id: 'intelligence-squared',
@@ -1945,7 +1945,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '전설적인 스탠드업 코미디언의 사회 풍자',
     thumbnailEmoji: '🎤',
-    episodeCount: 6,
+    episodeCount: 5,
   },
   {
     id: 'monty-python',
@@ -2003,14 +2003,7 @@ export const series: Series[] = [
     thumbnailEmoji: '🎓',
     episodeCount: 2,
   },
-  {
-    id: 'mock-the-week',
-    title: 'Mock the Week',
-    category: 'entertainment',
-    description: '영국 시사 코미디 패널쇼',
-    thumbnailEmoji: '📰',
-    episodeCount: 1,
-  },
+  
   {
     id: 'pbs-frontline',
     title: 'PBS Frontline',
@@ -2019,21 +2012,14 @@ export const series: Series[] = [
     thumbnailEmoji: '🔍',
     episodeCount: 0,
   },
-  {
-    id: 'bbc-newsnight',
-    title: 'BBC Newsnight Interviews',
-    category: 'daily',
-    description: 'BBC 뉴스나이트 심층 인터뷰',
-    thumbnailEmoji: '📺',
-    episodeCount: 1,
-  },
+  
   {
     id: 'mit-ocw-lectures',
     title: 'MIT OpenCourseWare',
     category: 'daily',
     description: 'MIT 공개 강의',
     thumbnailEmoji: '🏫',
-    episodeCount: 3,
+    episodeCount: 2,
   },
   {
     id: 'taskmaster',
@@ -2041,7 +2027,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '영국 코미디 미션 예능',
     thumbnailEmoji: '⏱️',
-    episodeCount: 6,
+    episodeCount: 3,
   },
   {
     id: 'peep-show',
@@ -2049,7 +2035,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '영국 시트콤의 어색한 일상 코미디',
     thumbnailEmoji: '👀',
-    episodeCount: 11,
+    episodeCount: 6,
   },
   {
     id: 'yes-minister',
@@ -2057,7 +2043,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '영국 정치 풍자 시트콤의 고전',
     thumbnailEmoji: '🏛️',
-    episodeCount: 3,
+    episodeCount: 2,
   },
   {
     id: 'blackadder',
@@ -2065,7 +2051,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '로완 앳킨슨의 역사 코미디 시트콤',
     thumbnailEmoji: '🎭',
-    episodeCount: 2,
+    episodeCount: 1,
   },
   {
     id: 'fry-and-laurie',
@@ -2073,7 +2059,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '프라이와 로리의 영국식 스케치 코미디',
     thumbnailEmoji: '🎭',
-    episodeCount: 2,
+    episodeCount: 1,
   },
   {
     id: 'bill-burr',
@@ -2081,7 +2067,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '빌 버의 거침없는 스탠드업 코미디',
     thumbnailEmoji: '🔥',
-    episodeCount: 4,
+    episodeCount: 2,
   },
   {
     id: 'ricky-gervais',
@@ -2113,7 +2099,7 @@ export const series: Series[] = [
     category: 'entertainment',
     description: '영국 국민 시트콤 명장면',
     thumbnailEmoji: '🚐',
-    episodeCount: 2,
+    episodeCount: 1,
   },
   {
     id: 'allo-allo',
@@ -2203,7 +2189,7 @@ export const series: Series[] = [
     category: 'drama',
     description: 'BBC 셜록의 추리와 대화',
     thumbnailEmoji: '',
-    episodeCount: 9,
+    episodeCount: 8,
   },
   {
     id: 'crown-b2',
@@ -21426,18 +21412,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 7,
     subtitles: [],
   },
-  {
-    id: 'the-lion-king-ep9',
-    youtubeId: 'rB2FfXL2GHo',
-    title: 'Simba and Mufasa scene',
-    category: 'animation',
-    difficulty: 1,
-    clipStart: 28,
-    clipEnd: 88,
-    seriesId: 'the-lion-king',
-    episodeNumber: 8,
-    subtitles: [],
-  },
+  
 
   // ============================================================
   // === DRAMA (existing videos) ================================
@@ -22402,18 +22377,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 17,
     subtitles: [],
   },
-  {
-    id: 'anim-pixar-quotes',
-    youtubeId: 'B9G71qT5eu4',
-    title: 'Best Pixar Life Quotes',
-    category: 'animation',
-    difficulty: 2,
-    clipStart: 5,
-    clipEnd: 65,
-    seriesId: 'pixar-moments',
-    episodeNumber: 18,
-    subtitles: [],
-  },
+  
 
   // ============================================================
   // === DAILY (13 videos) ======================================
@@ -22456,18 +22420,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 9,
     subtitles: [],
   },
-  {
-    id: 'ted-vulnerability',
-    youtubeId: 'iCvmsMzlF7o',
-    title: 'The Power of Vulnerability',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 15,
-    clipEnd: 70,
-    seriesId: 'ted-talks',
-    episodeNumber: 10,
-    subtitles: [],
-  },
+  
   {
     id: 'ted-grit',
     youtubeId: 'H14bBuluwB8',
@@ -22711,18 +22664,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 17,
     subtitles: [],
   },
-  {
-    id: 'eng-pronunciation',
-    youtubeId: 'n4NVPg2kHv4',
-    title: 'Common Pronunciation Mistakes',
-    category: 'daily',
-    difficulty: 1,
-    clipStart: 5,
-    clipEnd: 65,
-    seriesId: 'english-lessons',
-    episodeNumber: 5,
-    subtitles: [],
-  },
+  
 
   // --- TED Talks 추가 ---
   {
@@ -22737,18 +22679,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 19,
     subtitles: [],
   },
-  {
-    id: 'ted-introverts',
-    youtubeId: 'c0KYU2j0TM4',
-    title: 'The Power of Introverts',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 20,
-    clipEnd: 75,
-    seriesId: 'ted-talks',
-    episodeNumber: 20,
-    subtitles: [],
-  },
+  
 
   // ============================================================
   // === ADDITIONAL VIDEOS ======================================
@@ -24527,18 +24458,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 5,
     subtitles: [],
   },
-  {
-    id: 'ted-talks-2-11',
-    youtubeId: 'vhhgI4tSMwc',
-    title: 'What I Learned from 100 Days of Rejection - Jia Jiang',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 60,
-    seriesId: 'ted-talks-2',
-    episodeNumber: 6,
-    subtitles: [],
-  },
+  
   {
     id: 'ted-talks-2-12',
     youtubeId: 'RcGyVTAoXEU',
@@ -26469,18 +26389,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 6,
     subtitles: [],
   },
-  {
-    id: 'suits-clips-ep1',
-    youtubeId: 'fC7TFHGjE1U',
-    title: 'The Harvey Specter and Travis Tanner Rivalry | Suits',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'suits-clips',
-    episodeNumber: 1,
-    subtitles: [],
-  },
+  
   {
     id: 'suits-clips-ep2',
     youtubeId: 'adRHR75CrrI',
@@ -26493,18 +26402,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 2,
     subtitles: [],
   },
-  {
-    id: 'suits-clips-ep4',
-    youtubeId: 'Rqy1RxCdnQg',
-    title: 'Hardman\'s Most Vicious Moves | Suits',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'suits-clips',
-    episodeNumber: 4,
-    subtitles: [],
-  },
+  
   {
     id: 'suits-clips-ep5',
     youtubeId: 'k7WKxKfHKiw',
@@ -26541,18 +26439,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 7,
     subtitles: [],
   },
-  {
-    id: 'suits-clips-ep8',
-    youtubeId: 'l7j4hTd_gk4',
-    title: 'The One about The Duck Painting | Suits',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'suits-clips',
-    episodeNumber: 8,
-    subtitles: [],
-  },
+  
   {
     id: 'suits-clips-ep9',
     youtubeId: 'pFfHaXuyR3Y',
@@ -26577,18 +26464,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 10,
     subtitles: [],
   },
-  {
-    id: 'suits-clips-ep11',
-    youtubeId: '10HzWKZCB8A',
-    title: 'Donna Starts Working for Louis | Suits',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'suits-clips',
-    episodeNumber: 11,
-    subtitles: [],
-  },
+  
   {
     id: 'suits-clips-ep12',
     youtubeId: 'CLjMTb19oTE',
@@ -26613,18 +26489,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 13,
     subtitles: [],
   },
-  {
-    id: 'suits-clips-ep14',
-    youtubeId: 'QuaiWEr7q-4',
-    title: 'When the Client Was Innocent | Suits',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'suits-clips',
-    episodeNumber: 14,
-    subtitles: [],
-  },
+  
   {
     id: 'breaking-bad-clips-ep2',
     youtubeId: 'YGenFlvyQ0g',
@@ -26697,18 +26562,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 7,
     subtitles: [],
   },
-  {
-    id: 'breaking-bad-clips-ep8',
-    youtubeId: 'sm7bkc1REUI',
-    title: 'Top 10 Breaking Bad Scenes | WatchMojo',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'breaking-bad-clips',
-    episodeNumber: 8,
-    subtitles: [],
-  },
+  
   {
     id: 'breaking-bad-clips-ep9',
     youtubeId: 'CZSWDdmxmus',
@@ -26721,18 +26575,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 9,
     subtitles: [],
   },
-  {
-    id: 'breaking-bad-clips-ep10',
-    youtubeId: 'PpYbnF1Z87E',
-    title: 'Top Moments Of Season 2 Part 2 | Breaking Bad',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'breaking-bad-clips',
-    episodeNumber: 10,
-    subtitles: [],
-  },
+  
   {
     id: 'better-call-saul-clips-ep1',
     youtubeId: '-yqGJjAfVyo',
@@ -26805,18 +26648,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 3,
     subtitles: [],
   },
-  {
-    id: 'house-md-clips-ep4',
-    youtubeId: 'EC5Lr3sZlqc',
-    title: 'She\'s a Schizophrenic Mother with No Money | House M.D.',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'house-md-clips',
-    episodeNumber: 4,
-    subtitles: [],
-  },
+  
   {
     id: 'house-md-clips-ep5',
     youtubeId: 'K5SVX-P1akM',
@@ -26829,18 +26661,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 5,
     subtitles: [],
   },
-  {
-    id: 'house-md-clips-ep6',
-    youtubeId: 'BTMDUCS0my4',
-    title: 'Do You Know Number 1? | House M.D.',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'house-md-clips',
-    episodeNumber: 6,
-    subtitles: [],
-  },
+  
   {
     id: 'house-md-clips-ep7',
     youtubeId: 'ybBf_rR_7a0',
@@ -26925,30 +26746,8 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 13,
     subtitles: [],
   },
-  {
-    id: 'house-md-clips-ep14',
-    youtubeId: 'hbj_dUWJJkA',
-    title: 'Cases you can\'t keep your eyes off | House M.D.',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'house-md-clips',
-    episodeNumber: 14,
-    subtitles: [],
-  },
-  {
-    id: 'shark-tank-clips-ep1',
-    youtubeId: 'RUDKS3oJGEs',
-    title: 'A Rare All Shark Deal Then A Brutal Rejection | Shark Tank',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'shark-tank-clips',
-    episodeNumber: 1,
-    subtitles: [],
-  },
+  
+  
   {
     id: 'shark-tank-clips-ep2',
     youtubeId: 'nOny2wfqKs8',
@@ -26973,66 +26772,11 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 3,
     subtitles: [],
   },
-  {
-    id: 'shark-tank-clips-ep4',
-    youtubeId: '_DEbXiNw8Tg',
-    title: 'She Risked $1M of Her Own Money | Shark Tank',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'shark-tank-clips',
-    episodeNumber: 4,
-    subtitles: [],
-  },
-  {
-    id: 'shark-tank-clips-ep6',
-    youtubeId: 'ROEIKUsiMy4',
-    title: 'Mr. Wonderful\'s Not-So-Wonderful Offer | Shark Tank',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'shark-tank-clips',
-    episodeNumber: 6,
-    subtitles: [],
-  },
-  {
-    id: 'shark-tank-clips-ep7',
-    youtubeId: 'PsVWOy9awxU',
-    title: 'The Fish & Chips Pitch That Never Aired | Shark Tank',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'shark-tank-clips',
-    episodeNumber: 7,
-    subtitles: [],
-  },
-  {
-    id: 'shark-tank-clips-ep8',
-    youtubeId: '75CFrWb0Das',
-    title: 'Bidding War Erupts Between Mr. Wonderful And Daniel | Shark Tank',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'shark-tank-clips',
-    episodeNumber: 8,
-    subtitles: [],
-  },
-  {
-    id: 'shark-tank-clips-ep9',
-    youtubeId: '-K6gICEYB9Y',
-    title: 'Robert Pushes Daniel To Partner With Him On This Deal | Shark Tank',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'shark-tank-clips',
-    episodeNumber: 9,
-    subtitles: [],
-  },
+  
+  
+  
+  
+  
   {
     id: 'shark-tank-clips-ep12',
     youtubeId: 'EjfKk8_6YX0',
@@ -27057,18 +26801,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 13,
     subtitles: [],
   },
-  {
-    id: 'downton-abbey-clips-ep1',
-    youtubeId: 'G9Fez6hBVSs',
-    title: 'Matthew\'s Final Will | Downton Abbey',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'downton-abbey-clips',
-    episodeNumber: 1,
-    subtitles: [],
-  },
+  
   {
     id: 'downton-abbey-clips-ep2',
     youtubeId: 'jGTBTlXIoWs',
@@ -27081,30 +26814,8 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 2,
     subtitles: [],
   },
-  {
-    id: 'downton-abbey-clips-ep3',
-    youtubeId: 'QYFaQQ054e0',
-    title: 'Satisfying Comeuppances | Downton Abbey',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'downton-abbey-clips',
-    episodeNumber: 3,
-    subtitles: [],
-  },
-  {
-    id: 'downton-abbey-clips-ep4',
-    youtubeId: 'w-6uyLSm2Js',
-    title: 'Downton Becomes A Convalescent Home | Downton Abbey',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'downton-abbey-clips',
-    episodeNumber: 4,
-    subtitles: [],
-  },
+  
+  
   {
     id: 'downton-abbey-clips-ep5',
     youtubeId: '5VRSfMts4mo',
@@ -27129,18 +26840,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 7,
     subtitles: [],
   },
-  {
-    id: 'downton-abbey-clips-ep8',
-    youtubeId: '5T3uLQ4fgFM',
-    title: 'The Downton Staff Revolt | Downton Abbey',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'downton-abbey-clips',
-    episodeNumber: 8,
-    subtitles: [],
-  },
+  
   {
     id: 'downton-abbey-clips-ep9',
     youtubeId: 'CNZE3O0UgtQ',
@@ -27189,18 +26889,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 12,
     subtitles: [],
   },
-  {
-    id: 'downton-abbey-clips-ep13',
-    youtubeId: '5SO9d_1ZpVo',
-    title: 'A Mansion With Two Sides | Downton Abbey',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'downton-abbey-clips',
-    episodeNumber: 13,
-    subtitles: [],
-  },
+  
   {
     id: 'downton-abbey-clips-ep14',
     youtubeId: 'EqFbNeQ9F4A',
@@ -27213,30 +26902,8 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 14,
     subtitles: [],
   },
-  {
-    id: 'downton-abbey-clips-ep15',
-    youtubeId: '4_U5CsDhi4Y',
-    title: 'Some of the Abbey\'s Most Shocking Scandals | Downton Abbey',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'downton-abbey-clips',
-    episodeNumber: 15,
-    subtitles: [],
-  },
-  {
-    id: 'ted-talks-b2-extra-ep1',
-    youtubeId: 'ryca2RwoUQI',
-    title: 'The Tiny Organisms Transforming Farming | TED',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'ted-talks-b2-extra',
-    episodeNumber: 1,
-    subtitles: [],
-  },
+  
+  
   {
     id: 'ted-talks-b2-extra-ep2',
     youtubeId: '6xIEpiISflw',
@@ -27249,30 +26916,8 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 2,
     subtitles: [],
   },
-  {
-    id: 'ted-talks-b2-extra-ep3',
-    youtubeId: '3yGSaeOUHik',
-    title: 'A Surprisingly Effective Way to Fight Misinformation | TED',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'ted-talks-b2-extra',
-    episodeNumber: 3,
-    subtitles: [],
-  },
-  {
-    id: 'ted-talks-b2-extra-ep5',
-    youtubeId: 'rIg-Zt7bFHY',
-    title: 'My Year Living with a Robot | TED',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'ted-talks-b2-extra',
-    episodeNumber: 5,
-    subtitles: [],
-  },
+  
+  
   {
     id: 'ted-talks-b2-extra-ep6',
     youtubeId: 'KW0kDxU7LEg',
@@ -27309,18 +26954,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 2,
     subtitles: [],
   },
-  {
-    id: 'late-night-clips-ep1',
-    youtubeId: 'k2dspRpGxmI',
-    title: 'Conan O\'Brien Takes The Colbert Questionert | Late Show',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'late-night-clips',
-    episodeNumber: 1,
-    subtitles: [],
-  },
+  
   {
     id: 'late-night-clips-ep2',
     youtubeId: 'qLPiXCRcORU',
@@ -27369,30 +27003,8 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 5,
     subtitles: [],
   },
-  {
-    id: 'late-night-clips-ep6',
-    youtubeId: 'j4vcHuc3VzI',
-    title: 'Jon Sniffs Out GOP\'s Hypocrisy on War, Free Speech | Daily Show',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'late-night-clips',
-    episodeNumber: 6,
-    subtitles: [],
-  },
-  {
-    id: 'late-night-clips-ep7',
-    youtubeId: 'TeNioHuBOhQ',
-    title: 'GOP\'s Next-Level Hypocrisy on Minnesota ICE Protests | Daily Show',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'late-night-clips',
-    episodeNumber: 7,
-    subtitles: [],
-  },
+  
+  
   {
     id: 'late-night-clips-ep8',
     youtubeId: 'o0hSosE9-HY',
@@ -27429,18 +27041,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 10,
     subtitles: [],
   },
-  {
-    id: 'late-night-clips-ep11',
-    youtubeId: 'BVCbazka2eg',
-    title: 'The Boys of Bridgerton | Tonight Show',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'late-night-clips',
-    episodeNumber: 11,
-    subtitles: [],
-  },
+  
   {
     id: 'late-night-clips-ep12',
     youtubeId: '4EgvyNLMZ18',
@@ -27501,18 +27102,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 16,
     subtitles: [],
   },
-  {
-    id: 'late-night-clips-ep17',
-    youtubeId: 'ocpGfxJ_S1g',
-    title: 'The Last Late Late Show Chapter 6 The Final Day | Late Late Show',
-    category: 'daily',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'late-night-clips',
-    episodeNumber: 17,
-    subtitles: [],
-  },
+  
   {
     id: 'late-night-clips-ep18',
     youtubeId: 'AeEYQ62t8hA',
@@ -27633,42 +27223,9 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 5,
     subtitles: [],
   },
-  {
-    id: 'last-week-tonight-ep6',
-    youtubeId: '6UsHHOCH4q8',
-    title: 'John Oliver on Tobacco',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'last-week-tonight',
-    episodeNumber: 6,
-    subtitles: [],
-  },
-  {
-    id: 'last-week-tonight-ep7',
-    youtubeId: 'hxUAntt1z2c',
-    title: 'John Oliver on Debt Buyers',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'last-week-tonight',
-    episodeNumber: 7,
-    subtitles: [],
-  },
-  {
-    id: 'last-week-tonight-ep8',
-    youtubeId: 'poL7l-Uk3I8',
-    title: 'John Oliver on Elected Judges',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'last-week-tonight',
-    episodeNumber: 8,
-    subtitles: [],
-  },
+  
+  
+  
   {
     id: 'last-week-tonight-ep10',
     youtubeId: 'cGZkCPo7tC0',
@@ -27681,18 +27238,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 10,
     subtitles: [],
   },
-  {
-    id: 'last-week-tonight-ep11',
-    youtubeId: 'LfgSEwjAeno',
-    title: 'John Oliver on Medical Devices',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'last-week-tonight',
-    episodeNumber: 11,
-    subtitles: [],
-  },
+  
   {
     id: 'last-week-tonight-ep12',
     youtubeId: 'ETR9qrVS17g',
@@ -27705,30 +27251,8 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 12,
     subtitles: [],
   },
-  {
-    id: 'last-week-tonight-ep14',
-    youtubeId: 'o8yiYCHMAlM',
-    title: 'John Oliver on Public Defenders',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'last-week-tonight',
-    episodeNumber: 14,
-    subtitles: [],
-  },
-  {
-    id: 'last-week-tonight-ep15',
-    youtubeId: 'PuNIwYsz7PI',
-    title: 'John Oliver on Opioids',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'last-week-tonight',
-    episodeNumber: 15,
-    subtitles: [],
-  },
+  
+  
   {
     id: 'jordan-peterson-lectures-ep1',
     youtubeId: 'aMcjxSThD54',
@@ -27861,18 +27385,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 3,
     subtitles: [],
   },
-  {
-    id: 'lex-fridman-clips-ep3',
-    youtubeId: 'UITqB6T22sY',
-    title: 'Lex Clips - Terence Tao: Most Beautiful Idea in Mathematics',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 3,
-    subtitles: [],
-  },
+  
   {
     id: 'lex-fridman-clips-ep4',
     youtubeId: 'Kbk9BiPhm7o',
@@ -27885,18 +27398,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 4,
     subtitles: [],
   },
-  {
-    id: 'lex-fridman-clips-ep4',
-    youtubeId: 'O63IWwLbMPI',
-    title: 'Lex Clips - The Hardest Problem in Mathematics',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 4,
-    subtitles: [],
-  },
+  
   {
     id: 'lex-fridman-clips-ep5',
     youtubeId: 'pwN8u6HFH8U',
@@ -27933,18 +27435,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 6,
     subtitles: [],
   },
-  {
-    id: 'lex-fridman-clips-ep6',
-    youtubeId: 'T9Knc3Mdcec',
-    title: 'Lex Clips - Timeline for AGI: 2030 with 50% Chance',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 6,
-    subtitles: [],
-  },
+  
   {
     id: 'lex-fridman-clips-ep7',
     youtubeId: '0m3hGZvD-0s',
@@ -27957,18 +27448,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 7,
     subtitles: [],
   },
-  {
-    id: 'lex-fridman-clips-ep7',
-    youtubeId: 'GrloGdp5wdc',
-    title: 'Lex Clips - Scaling Laws of AI Explained',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 7,
-    subtitles: [],
-  },
+  
   {
     id: 'lex-fridman-clips-ep9',
     youtubeId: 'FzkCLR378fE',
@@ -27981,18 +27461,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 9,
     subtitles: [],
   },
-  {
-    id: 'lex-fridman-clips-ep10',
-    youtubeId: 'prTAsdltgHU',
-    title: 'Lex Clips - Most Powerful Military Force in WWII',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 10,
-    subtitles: [],
-  },
+  
   {
     id: 'lex-fridman-clips-ep11',
     youtubeId: '79CVn9MP-BE',
@@ -28005,42 +27474,9 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 11,
     subtitles: [],
   },
-  {
-    id: 'lex-fridman-clips-ep12',
-    youtubeId: 'qxUpD_w0CWA',
-    title: 'Lex Clips - Battle of Stalingrad: The Biggest Battle of WWII',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 12,
-    subtitles: [],
-  },
-  {
-    id: 'lex-fridman-clips-ep13',
-    youtubeId: '3mh9_BKIK_g',
-    title: 'Lex Clips - D-Day: The Most Epic Operation of WWII',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 13,
-    subtitles: [],
-  },
-  {
-    id: 'lex-fridman-clips-ep14',
-    youtubeId: 'feGmdSTKeIE',
-    title: 'Lex Clips - Physicist Explains Four Dimensions of Spacetime',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 14,
-    subtitles: [],
-  },
+  
+  
+  
   {
     id: 'lex-fridman-clips-ep15',
     youtubeId: 'Tc28vDtkB6o',
@@ -28053,42 +27489,9 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 15,
     subtitles: [],
   },
-  {
-    id: 'lex-fridman-clips-ep16',
-    youtubeId: 'LkzVoelKqRY',
-    title: 'Lex Clips - The Genius of Albert Einstein (Janna Levin)',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 16,
-    subtitles: [],
-  },
-  {
-    id: 'lex-fridman-clips-ep17',
-    youtubeId: '_jlL1feRYTU',
-    title: 'Lex Clips - Physicist Explains Black Holes',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 17,
-    subtitles: [],
-  },
-  {
-    id: 'lex-fridman-clips-ep18',
-    youtubeId: 'k5T9qf8Xf0E',
-    title: 'Lex Clips - Deciphering the Cuneiform Ancient Language',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 18,
-    subtitles: [],
-  },
+  
+  
+  
   {
     id: 'lex-fridman-clips-ep19',
     youtubeId: 'wR_VDIj7bM8',
@@ -28149,30 +27552,8 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 23,
     subtitles: [],
   },
-  {
-    id: 'lex-fridman-clips-ep23',
-    youtubeId: 'rN7FDz6CDgI',
-    title: 'Lex Clips - The Hidden Reality of Occultism',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 23,
-    subtitles: [],
-  },
-  {
-    id: 'lex-fridman-clips-ep24',
-    youtubeId: 'CeS0vDQDtws',
-    title: 'Lex Clips - The Most Powerful Intelligence Agency in History',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 24,
-    subtitles: [],
-  },
+  
+  
   {
     id: 'lex-fridman-clips-ep25',
     youtubeId: 'bpMHBPdBySQ',
@@ -28197,54 +27578,10 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 26,
     subtitles: [],
   },
-  {
-    id: 'lex-fridman-clips-ep27',
-    youtubeId: 'EVc3Ro8aVy0',
-    title: 'Lex Clips - Thule Secret Society Influence on Nazi Ideology',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 27,
-    subtitles: [],
-  },
-  {
-    id: 'lex-fridman-clips-ep28',
-    youtubeId: 'VzoLTm7g5sA',
-    title: 'Lex Clips - Dimensions of Reality Beyond Spacetime',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 28,
-    subtitles: [],
-  },
-  {
-    id: 'lex-fridman-clips-ep29',
-    youtubeId: 'gg8tYYQSFl4',
-    title: 'Lex Clips - General Relativity Explained by Physicist',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 29,
-    subtitles: [],
-  },
-  {
-    id: 'lex-fridman-clips-ep30',
-    youtubeId: 'FcbQ3eZ6yC8',
-    title: 'Lex Clips - Are the Aliens Hiding? (Janna Levin)',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 30,
-    subtitles: [],
-  },
+  
+  
+  
+  
   {
     id: 'lex-fridman-clips-ep31',
     youtubeId: '9kB14zbtLOk',
@@ -28293,18 +27630,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 34,
     subtitles: [],
   },
-  {
-    id: 'lex-fridman-clips-ep36',
-    youtubeId: 'z0WkQp5giXs',
-    title: 'Lex Clips - Nazi Invasion of Soviet Union: Operation Barbarossa',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 36,
-    subtitles: [],
-  },
+  
   {
     id: 'lex-fridman-clips-ep37',
     youtubeId: '7B3uhnzSfhE',
@@ -28329,18 +27655,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 38,
     subtitles: [],
   },
-  {
-    id: 'lex-fridman-clips-ep39',
-    youtubeId: 'IIcYAZSskEE',
-    title: 'Lex Clips - The Brutal Childhood of Genghis Khan',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 39,
-    subtitles: [],
-  },
+  
   {
     id: 'lex-fridman-clips-ep40',
     youtubeId: 'zhVoAC9cViA',
@@ -28365,18 +27680,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 42,
     subtitles: [],
   },
-  {
-    id: 'lex-fridman-clips-ep43',
-    youtubeId: 'NGGvjZBrlxs',
-    title: 'Lex Clips - The Crisis in Physics: A New Theory of Consciousness',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 43,
-    subtitles: [],
-  },
+  
   {
     id: 'lex-fridman-clips-ep44',
     youtubeId: 'nSz0R_S4QMk',
@@ -28401,18 +27705,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 45,
     subtitles: [],
   },
-  {
-    id: 'lex-fridman-clips-ep46',
-    youtubeId: '7d7gIRJIjN0',
-    title: 'Lex Clips - The Kardashev Scale: Type I, II, III Civilizations',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 46,
-    subtitles: [],
-  },
+  
   {
     id: 'lex-fridman-clips-ep47',
     youtubeId: 'u-k8faOgT1I',
@@ -28425,18 +27718,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 47,
     subtitles: [],
   },
-  {
-    id: 'lex-fridman-clips-ep48',
-    youtubeId: '_AZ41EhzkOM',
-    title: 'Lex Clips - What Might Aliens Look Like?',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 48,
-    subtitles: [],
-  },
+  
   {
     id: 'lex-fridman-clips-ep49',
     youtubeId: 'lkccA2VPjRc',
@@ -28497,30 +27779,8 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 53,
     subtitles: [],
   },
-  {
-    id: 'lex-fridman-clips-ep54',
-    youtubeId: 'ci6gefF432c',
-    title: 'Lex Clips - What Caused the Great Depression?',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 54,
-    subtitles: [],
-  },
-  {
-    id: 'lex-fridman-clips-ep55',
-    youtubeId: 'Thu62ebbcEQ',
-    title: 'Lex Clips - Schools of Economics Explained',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'lex-fridman-clips',
-    episodeNumber: 55,
-    subtitles: [],
-  },
+  
+  
   {
     id: 'lex-fridman-clips-ep56',
     youtubeId: 'LmIXk-S4grY',
@@ -28689,30 +27949,8 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 7,
     subtitles: [],
   },
-  {
-    id: 'oxford-union-debates-ep8',
-    youtubeId: 'p79y4OWMtVg',
-    title: 'Oxford Union - Karinsh on European Army (Proposition)',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'oxford-union-debates',
-    episodeNumber: 8,
-    subtitles: [],
-  },
-  {
-    id: 'oxford-union-debates-ep9',
-    youtubeId: 'gbc0hJ9E4O8',
-    title: 'Oxford Union - Hew Strachan on European Army',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'oxford-union-debates',
-    episodeNumber: 9,
-    subtitles: [],
-  },
+  
+  
   {
     id: 'oxford-union-debates-ep10',
     youtubeId: 'VOmEEcbgQk4',
@@ -28953,18 +28191,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 4,
     subtitles: [],
   },
-  {
-    id: 'george-carlin-ep5',
-    youtubeId: 'KLODGhEyLvk',
-    title: 'George Carlin - Dumb Americans (Life Is Worth Losing 2005)',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'george-carlin',
-    episodeNumber: 5,
-    subtitles: [],
-  },
+  
   {
     id: 'george-carlin-ep6',
     youtubeId: 'OxmiSRD0ZqU',
@@ -29229,30 +28456,8 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 1,
     subtitles: [],
   },
-  {
-    id: 'bbc-newsnight-ep1',
-    youtubeId: '3YR4CseY9pk',
-    title: 'BBC Newsnight - Jeremy Paxman vs Russell Brand Full Interview',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'bbc-newsnight',
-    episodeNumber: 1,
-    subtitles: [],
-  },
-  {
-    id: 'mit-ocw-lectures-ep1',
-    youtubeId: 'gDL4Zf2yEa4',
-    title: 'MIT OCW - Gilbert Strang: Linear Algebra Lecture 1',
-    category: 'daily',
-    difficulty: 5,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'mit-ocw-lectures',
-    episodeNumber: 1,
-    subtitles: [],
-  },
+  
+  
   {
     id: 'mit-ocw-lectures-ep4',
     youtubeId: '0JUN9aDxVmI',
@@ -29265,18 +28470,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 4,
     subtitles: [],
   },
-  {
-    id: 'taskmaster-ep1',
-    youtubeId: 'LeHwjnUR5Ag',
-    title: 'Taskmaster - Efficiently Shell an Egg Full Task',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'taskmaster',
-    episodeNumber: 1,
-    subtitles: [],
-  },
+  
   {
     id: 'taskmaster-ep3',
     youtubeId: 'GMwM9okS-x4',
@@ -29289,30 +28483,8 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 3,
     subtitles: [],
   },
-  {
-    id: 'taskmaster-ep4',
-    youtubeId: 'q24fBeRvCH8',
-    title: 'Taskmaster - Make This Mannequin Come Alive Full Task',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'taskmaster',
-    episodeNumber: 4,
-    subtitles: [],
-  },
-  {
-    id: 'taskmaster-ep5',
-    youtubeId: '4RjwTrBethE',
-    title: 'Taskmaster - Make the Best Kids TV Sidekick',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'taskmaster',
-    episodeNumber: 5,
-    subtitles: [],
-  },
+  
+  
   {
     id: 'taskmaster-ep7',
     youtubeId: 'H2LolDNgO9g',
@@ -29325,30 +28497,8 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 7,
     subtitles: [],
   },
-  {
-    id: 'peep-show-ep1',
-    youtubeId: 'CKOkAnDODog',
-    title: 'Peep Show - When Johnson Runs the Show',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'peep-show',
-    episodeNumber: 1,
-    subtitles: [],
-  },
-  {
-    id: 'peep-show-ep2',
-    youtubeId: 'y89er7NJ9lk',
-    title: 'Peep Show - The Absolute Madness of Super Hans',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'peep-show',
-    episodeNumber: 2,
-    subtitles: [],
-  },
+  
+  
   {
     id: 'peep-show-ep3',
     youtubeId: 'qJiKUzHhZVw',
@@ -29373,18 +28523,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 4,
     subtitles: [],
   },
-  {
-    id: 'peep-show-ep5',
-    youtubeId: '5Yw0oMNa5Wc',
-    title: 'Peep Show - How Mark Fell For Sophie',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'peep-show',
-    episodeNumber: 5,
-    subtitles: [],
-  },
+  
   {
     id: 'peep-show-ep6',
     youtubeId: 'kSi5B9gRcaQ',
@@ -29409,18 +28548,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 7,
     subtitles: [],
   },
-  {
-    id: 'peep-show-ep8',
-    youtubeId: 'GHfZTr-UuG4',
-    title: 'Peep Show - Season 9 Episode 6 Finale',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'peep-show',
-    episodeNumber: 8,
-    subtitles: [],
-  },
+  
   {
     id: 'peep-show-ep9',
     youtubeId: '35sZP2p2o58',
@@ -29433,30 +28561,8 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 9,
     subtitles: [],
   },
-  {
-    id: 'peep-show-ep10',
-    youtubeId: '-gfCyUJP6yc',
-    title: 'Peep Show - Nancy vs Jeremy Tense Reunion',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'peep-show',
-    episodeNumber: 10,
-    subtitles: [],
-  },
-  {
-    id: 'peep-show-ep11',
-    youtubeId: 'bsbQKqTpDR8',
-    title: 'Peep Show - Hiding From the Board',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'peep-show',
-    episodeNumber: 11,
-    subtitles: [],
-  },
+  
+  
   {
     id: 'yes-minister-ep1',
     youtubeId: 'wi3OcAfCoME',
@@ -29469,18 +28575,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 1,
     subtitles: [],
   },
-  {
-    id: 'yes-minister-ep3',
-    youtubeId: 'h6BpkhAF8jQ',
-    title: 'Yes Prime Minister - 3 Times Sir Humphrey Slipped Up',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'yes-minister',
-    episodeNumber: 3,
-    subtitles: [],
-  },
+  
   {
     id: 'yes-minister-ep4',
     youtubeId: 'wOrJT-Q8CKE',
@@ -29505,18 +28600,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 5,
     subtitles: [],
   },
-  {
-    id: 'blackadder-ep6',
-    youtubeId: 'df2hO0rhX6o',
-    title: 'Blackadder - Stephen Fry Best Bits as Melchett and Duke of Wellington',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'blackadder',
-    episodeNumber: 6,
-    subtitles: [],
-  },
+  
   {
     id: 'fry-and-laurie-ep2',
     youtubeId: 'Qq1ksYmqqo0',
@@ -29529,30 +28613,8 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 2,
     subtitles: [],
   },
-  {
-    id: 'bill-burr-ep1',
-    youtubeId: 'mfjnDLbCroQ',
-    title: 'Bill Burr - 15 Minutes of Stand-Up Comedy (Netflix)',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'bill-burr',
-    episodeNumber: 1,
-    subtitles: [],
-  },
-  {
-    id: 'bill-burr-ep2',
-    youtubeId: '3jMhoGUiIkk',
-    title: 'Bill Burr - The Philadelphia Incident',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'bill-burr',
-    episodeNumber: 2,
-    subtitles: [],
-  },
+  
+  
   {
     id: 'bill-burr-ep4',
     youtubeId: '2O2bKu-3U3U',
@@ -29565,18 +28627,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 4,
     subtitles: [],
   },
-  {
-    id: 'ricky-gervais-ep1',
-    youtubeId: '4UQTaw6yXa4',
-    title: 'Ricky Gervais - 25 Minutes Of Top Notch Comedy',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'ricky-gervais',
-    episodeNumber: 1,
-    subtitles: [],
-  },
+  
   {
     id: 'ricky-gervais-ep2',
     youtubeId: '8Q1z0CMjKXc',
@@ -29733,18 +28784,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 3,
     subtitles: [],
   },
-  {
-    id: 'only-fools-and-horses-ep4',
-    youtubeId: 'q6nzN_1gc9E',
-    title: 'Only Fools and Horses - 3 Hysterical Trigger Scenes',
-    category: 'entertainment',
-    difficulty: 6,
-    clipStart: 0,
-    clipEnd: 0,
-    seriesId: 'only-fools-and-horses',
-    episodeNumber: 4,
-    subtitles: [],
-  },
+  
   {
     id: 'allo-allo-ep1',
     youtubeId: 'arz5XoMF5NM',
@@ -30281,18 +29321,7 @@ export const seedVideos: VideoData[] = ([
     episodeNumber: 9,
     subtitles: [],
   },
-  {
-    id: 'sherlock-b2-ep10',
-    youtubeId: 'wvfbVXTjLRI',
-    title: 'Sherlock - The End Of An Era',
-    category: 'drama',
-    difficulty: 4,
-    clipStart: 0,
-    clipEnd: 60,
-    seriesId: 'sherlock-b2',
-    episodeNumber: 10,
-    subtitles: [],
-  },
+  
   {
     id: 'crown-b2-ep1',
     youtubeId: 'h__WOG4McSU',
