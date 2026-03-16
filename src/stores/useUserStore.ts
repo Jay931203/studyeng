@@ -55,9 +55,9 @@ export const useUserStore = create<UserState>()(persist((set, get) => ({
     }
     if (amount <= 0) return
 
-    // Apply streak multiplier: 1 + min(streakDays * 0.01, 1.0) → max 2x at 100 days
+    // Apply streak multiplier: 1 + min((streakDays - 1) * 0.1, 1.0) → max 2x at 10+ days
     const streakDays = get().streakDays
-    const multiplier = 1 + Math.min(streakDays * 0.01, 1.0)
+    const multiplier = 1 + Math.min(Math.max((streakDays - 1) * 0.1, 0), 1.0)
     amount = Math.round(amount * multiplier * 100) / 100
 
     const { level, xp, totalXpEarned, xpHistory } = get()
@@ -121,7 +121,7 @@ export const useUserStore = create<UserState>()(persist((set, get) => ({
    */
   getStreakMultiplier: () => {
     const { streakDays } = get()
-    return 1 + Math.min(streakDays * 0.01, 1.0)
+    return 1 + Math.min(Math.max((streakDays - 1) * 0.1, 0), 1.0)
   },
 
   /**

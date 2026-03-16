@@ -1,12 +1,11 @@
 // ---------------------------------------------------------------------------
-// Streak Bonus XP — one daily attendance-style bonus for keeping the streak
+// Streak Bonus XP — fixed daily attendance bonus
 // ---------------------------------------------------------------------------
 
 /**
- * Returns the streak bonus XP for the given streak length.
+ * Returns the streak bonus XP. Fixed 10 XP regardless of streak length.
  * Only awarded once per day when user completes a video or game session.
  */
-export function getStreakBonusXP(streakDays: number): number {
-  if (streakDays <= 0) return 0
-  return Math.min(streakDays, 7) * 10
+export function getStreakBonusXP(_streakDays: number): number {
+  return 10
 }

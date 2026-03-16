@@ -49,7 +49,7 @@ const LEVEL_THRESHOLDS: Record<string, number> = {
 }
 
 const MIN_EXPRESSIONS_FOR_LEVELUP = 10
-const DAILY_VIDEO_XP_CAP = 15
+const DAILY_VIDEO_XP_CAP = 20
 
 // ---------------------------------------------------------------------------
 // Types
@@ -240,7 +240,7 @@ export const useLevelStore = create<LevelState>()(
         if (currentAwards >= 10) return 0
 
         // Base XP proportional to completion, full at >80%
-        const proposedXp = completionRate >= 0.8 ? 3 : Math.round(completionRate * 3 * 10) / 10
+        const proposedXp = completionRate >= 0.8 ? 2 : Math.round(completionRate * 2 * 10) / 10
         const today = new Date().toISOString().slice(0, 10)
         const currentDailyVideoXP = get().dailyVideoXPDate === today ? get().dailyVideoXP : 0
         const remaining = Math.max(0, DAILY_VIDEO_XP_CAP - currentDailyVideoXP)

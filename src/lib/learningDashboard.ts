@@ -130,7 +130,7 @@ function getT(locale: SupportedLocale = 'ko'): DashboardTranslations {
   return TRANSLATIONS[locale] ?? TRANSLATIONS.ko
 }
 
-export const DAILY_VIDEO_XP_TARGET = 15
+export const DAILY_VIDEO_XP_TARGET = 20
 export const DAILY_STREAK_BONUS_TARGET = 1
 
 export interface MilestoneProgressInput {
