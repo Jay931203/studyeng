@@ -40,6 +40,8 @@ const TRANSLATIONS = {
     remoteDesc: '자막 옆 컨트롤 버튼 표시',
     guide: '안내',
     guideDesc: '자막, Key Picks, 사용법 힌트 표시',
+    smartSubtitles: 'SMART SUBTITLES',
+    smartSubtitlesDesc: '고정 자막에 표현 힌트 표시',
     notifications: '알림',
     notifBrowserPrompt: '브라우저 설정에서 알림을 허용해주세요',
     streakReminder: '스트릭 리마인더 알림',
@@ -75,6 +77,8 @@ const TRANSLATIONS = {
     remoteDesc: '字幕横のコントロールボタンを表示',
     guide: 'ガイド',
     guideDesc: '字幕、Key Picks、使い方ヒントを表示',
+    smartSubtitles: 'SMART SUBTITLES',
+    smartSubtitlesDesc: 'フリーズ字幕に表現ヒントを表示',
     notifications: '通知',
     notifBrowserPrompt: 'ブラウザの設定で通知を許可してください',
     streakReminder: 'ストリークリマインダー通知',
@@ -110,6 +114,8 @@ const TRANSLATIONS = {
     remoteDesc: '顯示字幕旁控制按鈕',
     guide: '引導',
     guideDesc: '顯示字幕、Key Picks、使用提示',
+    smartSubtitles: 'SMART SUBTITLES',
+    smartSubtitlesDesc: '在凍結字幕上顯示表達提示',
     notifications: '通知',
     notifBrowserPrompt: '請在瀏覽器設定中允許通知',
     streakReminder: '連續學習提醒通知',
@@ -145,6 +151,8 @@ const TRANSLATIONS = {
     remoteDesc: 'Hien thi nut dieu khien ben canh phu de',
     guide: 'Huong dan',
     guideDesc: 'Hien thi phu de, Key Picks, goi y su dung',
+    smartSubtitles: 'SMART SUBTITLES',
+    smartSubtitlesDesc: 'Hien thi goi y bieu dat tren phu de dong bang',
     notifications: 'Thong bao',
     notifBrowserPrompt: 'Vui long cho phep thong bao trong cai dat trinh duyet',
     streakReminder: 'Thong bao nhac streak',
@@ -226,9 +234,11 @@ export default function ProfilePage() {
   const hapticEnabled = useSettingsStore((state) => state.hapticEnabled)
   const remoteEnabled = useSettingsStore((state) => state.remoteEnabled)
   const subtitleGuidesEnabled = useSettingsStore((state) => state.subtitleGuidesEnabled)
+  const smartSubtitlesEnabled = useSettingsStore((state) => state.smartSubtitlesEnabled)
   const setHapticEnabled = useSettingsStore((state) => state.setHapticEnabled)
   const setRemoteEnabled = useSettingsStore((state) => state.setRemoteEnabled)
   const setSubtitleGuidesEnabled = useSettingsStore((state) => state.setSubtitleGuidesEnabled)
+  const setSmartSubtitlesEnabled = useSettingsStore((state) => state.setSmartSubtitlesEnabled)
   const locale = useLocaleStore((state) => state.locale)
   const setLocale = useLocaleStore((state) => state.setLocale)
   const T = TRANSLATIONS[locale]
@@ -485,6 +495,27 @@ export default function ProfilePage() {
                   <span
                     className={`absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white transition-transform ${
                       subtitleGuidesEnabled ? 'translate-x-5' : ''
+                    }`}
+                  />
+                </button>
+              </div>
+
+              <div className="flex items-center justify-between px-1 py-3">
+                <div>
+                  <p className="text-sm font-medium text-[var(--text-primary)]">{T.smartSubtitles}</p>
+                  <p className="mt-0.5 text-xs text-[var(--text-muted)]">{T.smartSubtitlesDesc}</p>
+                </div>
+                <button
+                  onClick={() => setSmartSubtitlesEnabled(!smartSubtitlesEnabled)}
+                  className={`relative h-6 w-11 rounded-full ${
+                    smartSubtitlesEnabled ? 'bg-[var(--accent-primary)]' : 'bg-[var(--bg-secondary)]'
+                  }`}
+                  role="switch"
+                  aria-checked={smartSubtitlesEnabled}
+                >
+                  <span
+                    className={`absolute left-0.5 top-0.5 h-5 w-5 rounded-full bg-white transition-transform ${
+                      smartSubtitlesEnabled ? 'translate-x-5' : ''
                     }`}
                   />
                 </button>

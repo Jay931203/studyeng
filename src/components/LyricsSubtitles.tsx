@@ -133,43 +133,51 @@ function AnnotatedSubtitleText({
     const matchedText = text.slice(m.startIdx, m.endIdx)
 
     if (m.isFamiliar) {
-      // Familiar: subtle green underline
+      // Familiar: small green dot below text
       parts.push(
         <span
           key={`e-${m.startIdx}`}
-          style={{
-            textDecorationLine: 'underline',
-            textDecorationColor: 'rgba(74, 222, 128, 0.5)',
-            textDecorationStyle: 'solid',
-            textDecorationThickness: '1.5px',
-            textUnderlineOffset: '3px',
-          }}
+          className="relative inline-block"
         >
           {matchedText}
+          <span
+            className="absolute left-1/2 -translate-x-1/2"
+            style={{
+              bottom: '-4px',
+              width: '3px',
+              height: '3px',
+              borderRadius: '50%',
+              backgroundColor: '#4ade80',
+            }}
+          />
         </span>,
       )
     } else if (m.isAtLevel) {
-      // At user's level but not familiar: subtle blue dotted underline, tappable
+      // At user's level but not familiar: small blue dot below text, tappable
       parts.push(
         <span
           key={`e-${m.startIdx}`}
           role="button"
           tabIndex={-1}
+          className="relative inline-block"
           onClick={(e) => {
             e.stopPropagation()
             const rect = (e.target as HTMLElement).getBoundingClientRect()
             onExpressionTap(m, rect)
           }}
-          style={{
-            textDecorationLine: 'underline',
-            textDecorationColor: 'rgba(96, 165, 250, 0.5)',
-            textDecorationStyle: 'dotted',
-            textDecorationThickness: '1.5px',
-            textUnderlineOffset: '3px',
-            cursor: 'pointer',
-          }}
+          style={{ cursor: 'pointer' }}
         >
           {matchedText}
+          <span
+            className="absolute left-1/2 -translate-x-1/2"
+            style={{
+              bottom: '-4px',
+              width: '3px',
+              height: '3px',
+              borderRadius: '50%',
+              backgroundColor: '#60a5fa',
+            }}
+          />
         </span>,
       )
     } else {
@@ -340,6 +348,7 @@ export function LyricsSubtitles({
   const [edgeSpacerHeight, setEdgeSpacerHeight] = useState(60)
 
   // Smart subtitle expression matching
+  const smartSubtitlesEnabled = useSettingsStore((state) => state.smartSubtitlesEnabled)
   const familiarityIsFamiliar = useFamiliarityStore((s) => s.isFamiliar)
   const userCefrLevel = useOnboardingStore((s) => s.level)
 
@@ -719,7 +728,8 @@ export function LyricsSubtitles({
                 className="h-3 w-3"
                 style={{ color: 'var(--accent-text)' }}
               >
-                <path d="M10.5 3.75a2 2 0 0 0-2.826 0L3.162 8.36a2 2 0 0 0 0 2.828l4.512 4.61a2 2 0 0 0 2.826 0 1.786 1.786 0 0 0 0-2.573L7.26 10l3.24-3.225a1.786 1.786 0 0 0 0-2.574v-.001ZM7.5 9.25a.75.75 0 0 0 0 1.5h9.25a.75.75 0 0 0 0-1.5H7.5Z" />
+                <path d="M10 3.75a.75.75 0 0 0-1.264-.546L4.703 7H3.167a.75.75 0 0 0-.7.48A6.985 6.985 0 0 0 2 10c0 .887.165 1.737.468 2.52.111.29.39.48.699.48h1.536l4.033 3.796A.75.75 0 0 0 10 16.25V3.75ZM15.95 5.05a.75.75 0 0 0-1.06 1.061 5.5 5.5 0 0 1 0 7.778.75.75 0 0 0 1.06 1.06 7 7 0 0 0 0-9.899Z" />
+                <path d="M13.829 7.172a.75.75 0 0 0-1.061 1.06 2.5 2.5 0 0 1 0 3.536.75.75 0 0 0 1.06 1.06 4 4 0 0 0 0-5.656Z" />
               </svg>
             </button>
           )}
@@ -1022,7 +1032,7 @@ export function LyricsSubtitles({
                   >
                     <>
                       <span>
-                        {(isActive || isFrozen) ? (
+                        {(smartSubtitlesEnabled && isFrozen) ? (
                           <AnnotatedSubtitleText
                             text={sub.en}
                             matches={findExpressionMatches(sub.en, videoId, idx, familiarityIsFamiliar, userCefrLevel)}
