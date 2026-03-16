@@ -612,6 +612,22 @@ export default function ExplorePage() {
 
         <div className="flex flex-col gap-4">
           <SearchBar />
+          <button
+            onClick={() => router.push('/explore/learn')}
+            className="flex items-center justify-between rounded-2xl border border-[var(--accent-primary)]/18 bg-[var(--accent-glow)] px-5 py-3.5 text-left transition-colors"
+          >
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--accent-text)]">
+                LEARN
+              </p>
+              <p className="mt-1 text-sm font-medium text-[var(--text-primary)]">
+                {t('learnExpressions', locale)}
+              </p>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5 text-[var(--accent-text)]">
+              <path fillRule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638l-3.96-4.158a.75.75 0 1 1 1.08-1.04l5.25 5.5a.75.75 0 0 1 0 1.08l-5.25 5.5a.75.75 0 1 1-1.08-1.04l3.96-4.158H3.75A.75.75 0 0 1 3 10z" clipRule="evenodd" />
+            </svg>
+          </button>
         </div>
       </section>
 

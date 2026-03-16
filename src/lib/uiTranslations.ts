@@ -598,6 +598,13 @@ const translations = {
     'zh-TW': '喜歡',
     vi: 'Thích',
   },
+  // Learn page
+  learnExpressions: {
+    ko: '100개 표현 클래스로 학습하기',
+    ja: '100の表現クラスで学ぶ',
+    'zh-TW': '透過100個表達課程學習',
+    vi: 'Học qua 100 lớp biểu đạt',
+  },
   // Repeat button
   repeatPlay: {
     ko: '반복 재생',
