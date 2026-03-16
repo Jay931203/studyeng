@@ -1,175 +1,268 @@
 'use client'
 
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { useLocaleStore } from '@/stores/useLocaleStore'
-import { CHAT_STRINGS } from '@/data/support-faq'
+import { useAuth } from '@/hooks/useAuth'
+import type {
+  SupportLocale,
+  SupportMessageRecord,
+  SupportThreadRecord,
+} from '@/lib/supportChat'
 
 const SUPPORT_EMAIL = 'support@shortee.app'
-const STORAGE_KEY = 'studyeng-support-chat'
+const POLL_INTERVAL_MS = 15000
 
-interface ChatMessage {
-  id: string
-  role: 'user' | 'assistant'
-  content: string
-  timestamp: number
-  needsHuman?: boolean
-}
-
-function generateId() {
-  return `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`
-}
-
-function loadMessages(): ChatMessage[] {
-  if (typeof window === 'undefined') return []
-  try {
-    const stored = localStorage.getItem(STORAGE_KEY)
-    if (stored) {
-      const parsed = JSON.parse(stored) as ChatMessage[]
-      // Only keep messages from last 7 days
-      const weekAgo = Date.now() - 7 * 24 * 60 * 60 * 1000
-      return parsed.filter((m) => m.timestamp > weekAgo)
-    }
-  } catch {
-    // ignore
+const STRINGS: Record<
+  SupportLocale,
+  {
+    chatTitle: string
+    chatSubtitle: string
+    welcomeMessage: string
+    inputPlaceholder: string
+    send: string
+    thinking: string
+    close: string
+    loginNeeded: string
+    loginAction: string
+    emailFallback: string
+    humanBadge: string
+    autoBadge: string
+    adminBadge: string
+    officeHours: string
+    waitingAdmin: string
+    waitingUser: string
+    resolved: string
+    open: string
   }
-  return []
+> = {
+  ko: {
+    chatTitle: '문의 채팅',
+    chatSubtitle: 'Shortee 지원',
+    welcomeMessage: '문의 내용을 남겨주시면 자동 안내가 먼저 답하고, 필요하면 관리자가 이어서 확인해요.',
+    inputPlaceholder: '문의 내용을 입력해 주세요',
+    send: '보내기',
+    thinking: '답변 준비 중...',
+    close: '닫기',
+    loginNeeded: '1:1 문의는 로그인 후 사용할 수 있어요.',
+    loginAction: '로그인하기',
+    emailFallback: '이메일 문의',
+    humanBadge: '담당자 확인 필요',
+    autoBadge: '자동 안내',
+    adminBadge: '관리자 답변',
+    officeHours: '관리자 답변 시간',
+    waitingAdmin: '답변 대기',
+    waitingUser: '안내 완료',
+    resolved: '해결됨',
+    open: '접수됨',
+  },
+  ja: {
+    chatTitle: 'お問い合わせ',
+    chatSubtitle: 'Shortee サポート',
+    welcomeMessage: '問い合わせを送ると自動案内が先に返答し、必要なら担当者が続けて確認します。',
+    inputPlaceholder: 'お問い合わせ内容を入力してください',
+    send: '送信',
+    thinking: '返信を準備中...',
+    close: '閉じる',
+    loginNeeded: '1:1サポートはログイン後に利用できます。',
+    loginAction: 'ログイン',
+    emailFallback: 'メール問い合わせ',
+    humanBadge: '担当者確認',
+    autoBadge: '自動案内',
+    adminBadge: '担当者返信',
+    officeHours: '担当者返信時間',
+    waitingAdmin: '返信待ち',
+    waitingUser: '案内済み',
+    resolved: '解決済み',
+    open: '受付済み',
+  },
+  'zh-TW': {
+    chatTitle: '客服對話',
+    chatSubtitle: 'Shortee 支援',
+    welcomeMessage: '送出問題後會先收到自動 안내，必要時客服會接著回覆。',
+    inputPlaceholder: '請輸入問題內容',
+    send: '送出',
+    thinking: '正在準備回覆...',
+    close: '關閉',
+    loginNeeded: '登入後才能使用 1:1 客服。',
+    loginAction: '登入',
+    emailFallback: '電子郵件',
+    humanBadge: '需要人工確認',
+    autoBadge: '自動 안내',
+    adminBadge: '客服回覆',
+    officeHours: '客服回覆時間',
+    waitingAdmin: '等待回覆',
+    waitingUser: '已 안내',
+    resolved: '已解決',
+    open: '已受理',
+  },
+  vi: {
+    chatTitle: 'Chat ho tro',
+    chatSubtitle: 'Ho tro Shortee',
+    welcomeMessage: 'Hay de lai noi dung. He thong se tra loi tu dong truoc, sau do nhan vien se tiep tuc neu can.',
+    inputPlaceholder: 'Nhap noi dung can ho tro',
+    send: 'Gui',
+    thinking: 'Dang chuan bi tra loi...',
+    close: 'Dong',
+    loginNeeded: 'Ho tro 1:1 can dang nhap.',
+    loginAction: 'Dang nhap',
+    emailFallback: 'Email',
+    humanBadge: 'Can nhan vien xem',
+    autoBadge: 'Tra loi tu dong',
+    adminBadge: 'Nhan vien tra loi',
+    officeHours: 'Gio tra loi',
+    waitingAdmin: 'Dang cho tra loi',
+    waitingUser: 'Da huong dan',
+    resolved: 'Da xu ly',
+    open: 'Da tiep nhan',
+  },
 }
 
-function saveMessages(messages: ChatMessage[]) {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(messages))
-  } catch {
-    // ignore
+interface ChatPayload {
+  thread: SupportThreadRecord
+  messages: SupportMessageRecord[]
+  workingHours: string
+  autoReply?: {
+    reply: string
   }
+  persistedAssistant?: boolean
+}
+
+function formatTime(timestamp: string, locale: SupportLocale) {
+  return new Intl.DateTimeFormat(locale === 'zh-TW' ? 'zh-Hant-TW' : locale, {
+    month: 'numeric',
+    day: 'numeric',
+    hour: 'numeric',
+    minute: '2-digit',
+  }).format(new Date(timestamp))
 }
 
 export function SupportChat() {
-  const locale = useLocaleStore((s) => s.locale)
-  const T = CHAT_STRINGS
+  const locale = useLocaleStore((state) => state.locale)
+  const safeLocale = (locale === 'ja' || locale === 'zh-TW' || locale === 'vi' || locale === 'ko'
+    ? locale
+    : 'ko') as SupportLocale
+  const t = STRINGS[safeLocale]
+  const { user, authAvailable, signInWithGoogle } = useAuth()
   const [isOpen, setIsOpen] = useState(false)
-  const [messages, setMessages] = useState<ChatMessage[]>([])
+  const [thread, setThread] = useState<SupportThreadRecord | null>(null)
+  const [messages, setMessages] = useState<SupportMessageRecord[]>([])
+  const [workingHours, setWorkingHours] = useState('평일 10:00-18:00 (KST)')
   const [input, setInput] = useState('')
   const [isLoading, setIsLoading] = useState(false)
-  const [hydrated, setHydrated] = useState(false)
+  const [isHydrated, setIsHydrated] = useState(false)
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
 
+  const loadThread = useCallback(async () => {
+    if (!user) return
+
+    const response = await fetch('/api/support/chat', { cache: 'no-store' })
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}`)
+    }
+
+    const data = (await response.json()) as ChatPayload
+    setThread(data.thread)
+    setMessages(data.messages)
+    setWorkingHours(data.workingHours)
+  }, [user])
+
   useEffect(() => {
-    setMessages(loadMessages())
-    setHydrated(true)
+    setIsHydrated(true)
   }, [])
 
   useEffect(() => {
-    if (hydrated) {
-      saveMessages(messages)
-    }
-  }, [messages, hydrated])
+    if (!isOpen || !user) return
+
+    void loadThread()
+    const timer = window.setInterval(() => {
+      void loadThread()
+    }, POLL_INTERVAL_MS)
+
+    return () => window.clearInterval(timer)
+  }, [isOpen, loadThread, user])
 
   useEffect(() => {
-    if (isOpen) {
-      // Small delay to let animation finish
-      const timer = setTimeout(() => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
-        inputRef.current?.focus()
-      }, 150)
-      return () => clearTimeout(timer)
-    }
+    if (!isOpen) return
+    const timer = window.setTimeout(() => {
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+      inputRef.current?.focus()
+    }, 120)
+    return () => window.clearTimeout(timer)
   }, [isOpen, messages.length])
+
+  const statusLabel = useMemo(() => {
+    if (!thread) return t.open
+    if (thread.status === 'waiting_admin') return t.waitingAdmin
+    if (thread.status === 'waiting_user') return t.waitingUser
+    if (thread.status === 'resolved') return t.resolved
+    return t.open
+  }, [t, thread])
 
   const sendMessage = useCallback(async () => {
     const trimmed = input.trim()
-    if (!trimmed || isLoading) return
+    if (!trimmed || isLoading || !user) return
 
-    const userMessage: ChatMessage = {
-      id: generateId(),
-      role: 'user',
-      content: trimmed,
-      timestamp: Date.now(),
-    }
-
-    setMessages((prev) => [...prev, userMessage])
-    setInput('')
     setIsLoading(true)
+    setInput('')
 
     try {
-      const history = messages.map((m) => ({
-        role: m.role,
-        content: m.content,
-      }))
-
-      const res = await fetch('/api/support/chat', {
+      const response = await fetch('/api/support/chat', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           message: trimmed,
-          locale,
-          history,
+          locale: safeLocale,
         }),
       })
 
-      if (!res.ok) {
-        throw new Error(`HTTP ${res.status}`)
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`)
       }
 
-      const data = await res.json()
-
-      const assistantMessage: ChatMessage = {
-        id: generateId(),
-        role: 'assistant',
-        content: data.reply || T.errorMessage[locale],
-        timestamp: Date.now(),
-        needsHuman: data.needsHuman,
+      const data = (await response.json()) as ChatPayload
+      setThread(data.thread)
+      if (data.autoReply && data.persistedAssistant === false) {
+        setMessages([
+          ...data.messages,
+          {
+            id: `local-auto-${Date.now()}`,
+            threadId: data.thread.id,
+            senderRole: 'assistant',
+            senderUserId: null,
+            content: data.autoReply.reply,
+            metadata: { automated: true, localOnly: true },
+            createdAt: new Date().toISOString(),
+          },
+        ])
+      } else {
+        setMessages(data.messages)
       }
-
-      setMessages((prev) => [...prev, assistantMessage])
-    } catch {
-      const errorMessage: ChatMessage = {
-        id: generateId(),
-        role: 'assistant',
-        content: T.errorMessage[locale],
-        timestamp: Date.now(),
-      }
-      setMessages((prev) => [...prev, errorMessage])
+    } catch (error) {
+      console.error('[support-chat] send failed:', error)
     } finally {
       setIsLoading(false)
     }
-  }, [input, isLoading, messages, locale, T])
+  }, [input, isLoading, safeLocale, user])
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault()
-      sendMessage()
-    }
-  }
-
-  const clearChat = () => {
-    setMessages([])
-    saveMessages([])
-  }
-
-  if (!hydrated) return null
+  if (!isHydrated) return null
 
   return (
     <>
-      {/* Floating Chat Button */}
       <AnimatePresence>
         {!isOpen && (
           <motion.button
-            initial={{ scale: 0, opacity: 0 }}
+            initial={{ scale: 0.92, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0, opacity: 0 }}
-            transition={{ type: 'spring', stiffness: 300, damping: 24 }}
+            exit={{ scale: 0.92, opacity: 0 }}
+            transition={{ type: 'spring', stiffness: 280, damping: 24 }}
             onClick={() => setIsOpen(true)}
-            className="fixed bottom-[calc(env(safe-area-inset-bottom,0px)+80px)] right-4 z-[180] flex h-14 w-14 items-center justify-center rounded-full bg-[var(--accent-primary)] text-white shadow-lg lg:bottom-6 lg:right-6"
-            aria-label={T.chatTitle[locale]}
+            className="fixed bottom-[calc(env(safe-area-inset-bottom,0px)+80px)] right-4 z-[180] flex h-14 w-14 items-center justify-center rounded-full text-white shadow-lg lg:bottom-6 lg:right-6"
+            style={{ backgroundColor: 'var(--accent-primary)' }}
+            aria-label={t.chatTitle}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              className="h-6 w-6"
-            >
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
               <path
                 fillRule="evenodd"
                 d="M4.848 2.771A49.144 49.144 0 0112 2.25c2.43 0 4.817.178 7.152.52 1.978.292 3.348 2.024 3.348 3.97v6.02c0 1.946-1.37 3.678-3.348 3.97a48.901 48.901 0 01-3.476.383.39.39 0 00-.297.17l-2.755 4.133a.75.75 0 01-1.248 0l-2.755-4.133a.39.39 0 00-.297-.17 48.9 48.9 0 01-3.476-.384c-1.978-.29-3.348-2.024-3.348-3.97V6.741c0-1.946 1.37-3.68 3.348-3.97z"
@@ -180,142 +273,185 @@ export function SupportChat() {
         )}
       </AnimatePresence>
 
-      {/* Chat Modal */}
       <AnimatePresence>
         {isOpen && (
           <>
-            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-[200] bg-black/60 backdrop-blur-sm lg:hidden"
+              className="fixed inset-0 z-[200] bg-black/65 lg:hidden"
               onClick={() => setIsOpen(false)}
             />
 
-            {/* Chat Panel */}
             <motion.div
-              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              initial={{ opacity: 0, y: 28, scale: 0.96 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 40, scale: 0.95 }}
-              transition={{ type: 'spring', stiffness: 320, damping: 28 }}
-              className="fixed inset-x-0 bottom-0 z-[210] mx-auto flex max-h-[min(85vh,640px)] w-full max-w-lg flex-col overflow-hidden rounded-t-[24px] border border-[var(--border-card)] bg-[var(--bg-card)] shadow-2xl lg:inset-auto lg:bottom-6 lg:right-6 lg:left-auto lg:w-[400px] lg:rounded-[24px]"
+              exit={{ opacity: 0, y: 28, scale: 0.96 }}
+              transition={{ type: 'spring', stiffness: 280, damping: 26 }}
+              className="fixed inset-x-0 bottom-0 z-[210] mx-auto flex max-h-[min(88vh,720px)] w-full max-w-lg flex-col overflow-hidden rounded-t-[24px] border lg:inset-auto lg:bottom-6 lg:right-6 lg:left-auto lg:w-[420px] lg:rounded-[24px]"
+              style={{
+                borderColor: 'var(--border-card)',
+                backgroundColor: 'var(--bg-primary)',
+                boxShadow: '0 20px 48px rgba(0,0,0,0.45)',
+              }}
             >
-              {/* Header */}
-              <div className="flex items-center justify-between border-b border-[var(--border-card)] px-5 py-4">
-                <div>
+              <div
+                className="flex items-start justify-between gap-3 border-b px-5 py-4"
+                style={{ borderColor: 'var(--border-card)' }}
+              >
+                <div className="min-w-0">
                   <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[var(--accent-text)]">
-                    {T.chatSubtitle[locale]}
+                    {t.chatSubtitle}
                   </p>
-                  <h2 className="mt-1 text-lg font-bold text-[var(--text-primary)]">
-                    {T.chatTitle[locale]}
-                  </h2>
+                  <h2 className="mt-1 text-lg font-bold text-[var(--text-primary)]">{t.chatTitle}</h2>
+                  <div className="mt-2 flex flex-wrap items-center gap-2 text-[11px] text-[var(--text-secondary)]">
+                    <span>{t.officeHours}</span>
+                    <span className="rounded-full px-2 py-1" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+                      {workingHours}
+                    </span>
+                    <span className="rounded-full px-2 py-1" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+                      {statusLabel}
+                    </span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  {messages.length > 0 && (
-                    <button
-                      onClick={clearChat}
-                      className="rounded-lg px-2.5 py-1.5 text-xs font-medium text-[var(--text-muted)] transition-colors hover:bg-[var(--bg-secondary)]"
-                    >
-                      {T.clearChat[locale]}
-                    </button>
-                  )}
-                  <button
-                    onClick={() => setIsOpen(false)}
-                    className="flex h-8 w-8 items-center justify-center rounded-full bg-[var(--bg-secondary)] text-[var(--text-muted)]"
-                    aria-label="Close"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4">
-                      <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
-                    </svg>
-                  </button>
-                </div>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="flex h-8 w-8 items-center justify-center rounded-full"
+                  style={{ backgroundColor: 'var(--bg-secondary)', color: 'var(--text-muted)' }}
+                  aria-label={t.close}
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4">
+                    <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
+                  </svg>
+                </button>
               </div>
 
-              {/* Messages Area */}
-              <div className="flex-1 space-y-4 overflow-y-auto overscroll-contain px-5 py-4">
-                {/* Welcome message */}
-                {messages.length === 0 && (
-                  <div className="flex justify-start">
-                    <div className="max-w-[85%] rounded-2xl rounded-tl-md bg-[var(--bg-secondary)] px-4 py-3 text-sm leading-relaxed text-[var(--text-primary)]">
-                      {T.welcomeMessage[locale]}
-                    </div>
+              {!user ? (
+                <div className="flex flex-1 flex-col justify-between px-5 py-5">
+                  <div className="rounded-2xl px-4 py-4 text-sm leading-relaxed text-[var(--text-primary)]" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+                    {t.loginNeeded}
                   </div>
-                )}
-
-                {messages.map((msg) => (
-                  <div
-                    key={msg.id}
-                    className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
-                  >
-                    <div
-                      className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${
-                        msg.role === 'user'
-                          ? 'rounded-tr-md bg-[var(--accent-primary)] text-white'
-                          : 'rounded-tl-md bg-[var(--bg-secondary)] text-[var(--text-primary)]'
-                      }`}
+                  <div className="mt-4 flex flex-col gap-3">
+                    {authAvailable && (
+                      <button
+                        type="button"
+                        onClick={() => signInWithGoogle('/support')}
+                        className="rounded-xl px-4 py-3 text-sm font-semibold text-white"
+                        style={{ backgroundColor: 'var(--accent-primary)' }}
+                      >
+                        {t.loginAction}
+                      </button>
+                    )}
+                    <a
+                      href={`mailto:${SUPPORT_EMAIL}`}
+                      className="rounded-xl border px-4 py-3 text-center text-sm font-semibold text-[var(--text-primary)]"
+                      style={{ borderColor: 'var(--border-card)', backgroundColor: 'var(--bg-secondary)' }}
                     >
-                      <p className="whitespace-pre-wrap">{msg.content}</p>
-
-                      {msg.needsHuman && (
-                        <div className="mt-3 border-t border-[var(--border-card)]/40 pt-3">
-                          <p className="text-xs text-[var(--text-muted)]">
-                            {T.humanHandoff[locale]}
-                          </p>
-                          <a
-                            href={`mailto:${SUPPORT_EMAIL}`}
-                            className="mt-2 inline-block rounded-lg bg-[var(--accent-primary)]/15 px-3 py-1.5 text-xs font-semibold text-[var(--accent-text)]"
-                          >
-                            {SUPPORT_EMAIL}
-                          </a>
-                        </div>
-                      )}
-                    </div>
+                      {t.emailFallback}
+                    </a>
                   </div>
-                ))}
-
-                {isLoading && (
-                  <div className="flex justify-start">
-                    <div className="max-w-[85%] rounded-2xl rounded-tl-md bg-[var(--bg-secondary)] px-4 py-3">
-                      <div className="flex items-center gap-2 text-xs text-[var(--text-muted)]">
-                        <span className="inline-flex gap-1">
-                          <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-[var(--text-muted)]" style={{ animationDelay: '0ms' }} />
-                          <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-[var(--text-muted)]" style={{ animationDelay: '150ms' }} />
-                          <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-[var(--text-muted)]" style={{ animationDelay: '300ms' }} />
-                        </span>
-                        <span>{T.thinking[locale]}</span>
+                </div>
+              ) : (
+                <>
+                  <div className="flex-1 space-y-4 overflow-y-auto px-5 py-4">
+                    {messages.length === 0 && (
+                      <div className="rounded-2xl px-4 py-4 text-sm leading-relaxed text-[var(--text-primary)]" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+                        {t.welcomeMessage}
                       </div>
+                    )}
+
+                    {messages.map((message) => {
+                      const isUser = message.senderRole === 'user'
+                      const label =
+                        message.senderRole === 'assistant'
+                          ? t.autoBadge
+                          : message.senderRole === 'admin'
+                            ? t.adminBadge
+                            : null
+
+                      return (
+                        <div
+                          key={message.id}
+                          className={`flex ${isUser ? 'justify-end' : 'justify-start'}`}
+                        >
+                          <div
+                            className="max-w-[86%] rounded-2xl px-4 py-3 text-sm leading-relaxed"
+                            style={{
+                              backgroundColor: isUser ? 'var(--accent-primary)' : 'var(--bg-secondary)',
+                              color: isUser ? '#ffffff' : 'var(--text-primary)',
+                            }}
+                          >
+                            {label && (
+                              <p className="mb-1 text-[10px] font-semibold uppercase tracking-[0.12em] opacity-80">
+                                {label}
+                              </p>
+                            )}
+                            <p className="whitespace-pre-wrap">{message.content}</p>
+                            <p className="mt-2 text-[10px] opacity-70">
+                              {formatTime(message.createdAt, safeLocale)}
+                            </p>
+                          </div>
+                        </div>
+                      )
+                    })}
+
+                    {isLoading && (
+                      <div className="flex justify-start">
+                        <div className="rounded-2xl px-4 py-3 text-xs text-[var(--text-secondary)]" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+                          {t.thinking}
+                        </div>
+                      </div>
+                    )}
+                    <div ref={messagesEndRef} />
+                  </div>
+
+                  <div className="border-t px-4 pb-[max(env(safe-area-inset-bottom,10px),10px)] pt-3" style={{ borderColor: 'var(--border-card)' }}>
+                    {thread?.needsHuman && (
+                      <div
+                        className="mb-3 rounded-xl border px-3 py-2 text-xs text-[var(--text-primary)]"
+                        style={{
+                          borderColor: 'rgba(var(--accent-primary-rgb), 0.28)',
+                          backgroundColor: 'rgba(var(--accent-primary-rgb), 0.12)',
+                        }}
+                      >
+                        {t.humanBadge}
+                      </div>
+                    )}
+                    <div className="flex items-end gap-2">
+                      <textarea
+                        ref={inputRef}
+                        value={input}
+                        onChange={(event) => setInput(event.target.value)}
+                        onKeyDown={(event) => {
+                          if (event.key === 'Enter' && !event.shiftKey) {
+                            event.preventDefault()
+                            void sendMessage()
+                          }
+                        }}
+                        placeholder={t.inputPlaceholder}
+                        rows={1}
+                        className="max-h-28 min-h-[44px] flex-1 resize-none rounded-xl border px-4 py-2.5 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:outline-none"
+                        style={{
+                          borderColor: 'var(--border-card)',
+                          backgroundColor: 'var(--bg-secondary)',
+                        }}
+                      />
+                      <button
+                        onClick={() => void sendMessage()}
+                        disabled={!input.trim() || isLoading}
+                        className="flex h-11 w-11 items-center justify-center rounded-xl text-white transition-opacity disabled:opacity-40"
+                        style={{ backgroundColor: 'var(--accent-primary)' }}
+                        aria-label={t.send}
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
+                          <path d="M3.105 2.289a.75.75 0 00-.826.95l1.414 4.925A1.5 1.5 0 005.135 9.25h6.115a.75.75 0 010 1.5H5.135a1.5 1.5 0 00-1.442 1.086l-1.414 4.926a.75.75 0 00.826.95 28.896 28.896 0 0015.293-7.154.75.75 0 000-1.115A28.897 28.897 0 003.105 2.289z" />
+                        </svg>
+                      </button>
                     </div>
                   </div>
-                )}
-
-                <div ref={messagesEndRef} />
-              </div>
-
-              {/* Input Area */}
-              <div className="border-t border-[var(--border-card)] px-4 pb-[max(env(safe-area-inset-bottom,8px),8px)] pt-3">
-                <div className="flex items-end gap-2">
-                  <textarea
-                    ref={inputRef}
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    onKeyDown={handleKeyDown}
-                    placeholder={T.inputPlaceholder[locale]}
-                    rows={1}
-                    className="max-h-24 min-h-[40px] flex-1 resize-none rounded-xl border border-[var(--border-card)] bg-[var(--bg-secondary)] px-4 py-2.5 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)] focus:border-[var(--accent-primary)] focus:outline-none"
-                  />
-                  <button
-                    onClick={sendMessage}
-                    disabled={!input.trim() || isLoading}
-                    className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[var(--accent-primary)] text-white transition-opacity disabled:opacity-40"
-                    aria-label={T.sendButton[locale]}
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
-                      <path d="M3.105 2.289a.75.75 0 00-.826.95l1.414 4.925A1.5 1.5 0 005.135 9.25h6.115a.75.75 0 010 1.5H5.135a1.5 1.5 0 00-1.442 1.086l-1.414 4.926a.75.75 0 00.826.95 28.896 28.896 0 0015.293-7.154.75.75 0 000-1.115A28.897 28.897 0 003.105 2.289z" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
+                </>
+              )}
             </motion.div>
           </>
         )}

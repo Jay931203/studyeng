@@ -12,6 +12,7 @@ import {
   type FaqItem,
 } from '@/data/support-faq'
 import { SupportChat } from '@/components/SupportChat'
+import { SupportInbox } from '@/components/SupportInbox'
 
 const SUPPORT_EMAIL = 'support@shortee.app'
 
@@ -268,6 +269,8 @@ export default function HelpCenterPage() {
             </a>
           </div>
         </div>
+
+        <SupportInbox />
       </div>
 
       {/* Floating Support Chat */}
